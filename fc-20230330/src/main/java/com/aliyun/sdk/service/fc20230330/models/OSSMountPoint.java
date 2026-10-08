@@ -110,7 +110,10 @@ public class OSSMountPoint extends TeaModel {
         } 
 
         /**
-         * bucketName.
+         * <p>The OSS bucket that you want to mount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-bucket</p>
          */
         public Builder bucketName(String bucketName) {
             this.bucketName = bucketName;
@@ -118,7 +121,10 @@ public class OSSMountPoint extends TeaModel {
         }
 
         /**
-         * bucketPath.
+         * <p>The path of the mounted OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/my-dir</p>
          */
         public Builder bucketPath(String bucketPath) {
             this.bucketPath = bucketPath;
@@ -126,7 +132,10 @@ public class OSSMountPoint extends TeaModel {
         }
 
         /**
-         * endpoint.
+         * <p>The OSS endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://oss-cn-shanghai.aliyuncs.com">http://oss-cn-shanghai.aliyuncs.com</a></p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -134,7 +143,10 @@ public class OSSMountPoint extends TeaModel {
         }
 
         /**
-         * mountDir.
+         * <p>The mount directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/dir</p>
          */
         public Builder mountDir(String mountDir) {
             this.mountDir = mountDir;
@@ -142,7 +154,10 @@ public class OSSMountPoint extends TeaModel {
         }
 
         /**
-         * readOnly.
+         * <p>Specifies whether it is read-only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = readOnly;

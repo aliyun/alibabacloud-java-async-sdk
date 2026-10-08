@@ -74,7 +74,7 @@ public class GetFunctionRequest extends Request {
         } 
 
         /**
-         * <p>Ready</p>
+         * <p>The function name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetFunctionRequest extends Request {
         }
 
         /**
-         * <p>2023-03-10T10:10:10Z</p>
+         * <p>The function version or alias.</p>
          * 
          * <strong>example:</strong>
          * <p>LATEST</p>

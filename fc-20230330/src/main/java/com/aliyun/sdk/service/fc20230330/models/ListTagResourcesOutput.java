@@ -80,7 +80,10 @@ public class ListTagResourcesOutput extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next_token</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -88,7 +91,10 @@ public class ListTagResourcesOutput extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,7 @@ public class ListTagResourcesOutput extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * <p>The information about the queried resources and tags.</p>
          */
         public Builder tagResources(java.util.List<TagResource> tagResources) {
             this.tagResources = tagResources;

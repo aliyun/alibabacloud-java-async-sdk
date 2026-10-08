@@ -67,7 +67,7 @@ public class ListAsyncInvokeConfigOutput extends TeaModel {
         } 
 
         /**
-         * configs.
+         * <p>The configurations of the asynchronous invocation.</p>
          */
         public Builder configs(java.util.List<AsyncConfig> configs) {
             this.configs = configs;
@@ -75,7 +75,10 @@ public class ListAsyncInvokeConfigOutput extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8bj81uI8n****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

@@ -88,7 +88,7 @@ public class PutConcurrencyConfigRequest extends Request {
         }
 
         /**
-         * <p>The concurrency configurations.</p>
+         * <p>The concurrency configuration of the function.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(PutConcurrencyInput body) {

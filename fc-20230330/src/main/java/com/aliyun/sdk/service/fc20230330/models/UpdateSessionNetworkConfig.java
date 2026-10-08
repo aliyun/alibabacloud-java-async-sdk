@@ -96,7 +96,7 @@ public class UpdateSessionNetworkConfig extends TeaModel {
         }
 
         /**
-         * rules.
+         * <p>The request transform rules configured by exact target host. If omitted, existing rules are retained. An empty object clears all rules, and a non-empty object replaces all rules entirely. Null is not supported. The transform.headers and transform.headerValueReplacements fields are supported.</p>
          */
         public Builder rules(java.util.Map<String, java.util.List<SessionNetworkRule>> rules) {
             this.rules = rules;

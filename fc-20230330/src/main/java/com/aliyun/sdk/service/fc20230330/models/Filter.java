@@ -54,7 +54,7 @@ public class Filter extends TeaModel {
         } 
 
         /**
-         * key.
+         * <p>Description of event filter rules.</p>
          */
         public Builder key(Key key) {
             this.key = key;

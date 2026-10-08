@@ -88,7 +88,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * <p>The function information</p>
+         * <p>The function information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(UpdateFunctionInput body) {

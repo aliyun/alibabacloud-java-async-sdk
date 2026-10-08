@@ -80,7 +80,10 @@ public class RegistryNetworkConfig extends TeaModel {
         } 
 
         /**
-         * securityGroupId.
+         * <p>The ID of the security group that can be used to connect to the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-xxxxxxxxxxxxxx</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -88,7 +91,10 @@ public class RegistryNetworkConfig extends TeaModel {
         }
 
         /**
-         * vSwitchId.
+         * <p>The ID of the vSwitch that can be used to connect to the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxxxxxxxxxxxxx</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -96,7 +102,10 @@ public class RegistryNetworkConfig extends TeaModel {
         }
 
         /**
-         * vpcId.
+         * <p>The ID of the virtual private cloud (VPC) that can be used to connect to the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxxxxxxxxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

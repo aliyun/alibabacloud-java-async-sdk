@@ -67,7 +67,7 @@ public class SessionNetworkRuleTransform extends TeaModel {
         } 
 
         /**
-         * headerValueReplacements.
+         * <p>The list of rules for replacing placeholders in HTTP header values before the request is forwarded to the matched host.</p>
          */
         public Builder headerValueReplacements(java.util.List<SessionNetworkHeaderValueReplacement> headerValueReplacements) {
             this.headerValueReplacements = headerValueReplacements;
@@ -75,7 +75,7 @@ public class SessionNetworkRuleTransform extends TeaModel {
         }
 
         /**
-         * headers.
+         * <p>The HTTP headers injected or overwritten before the request is forwarded to the matched host. Header values are returned in plaintext in GetSession and ListSessions.</p>
          */
         public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;

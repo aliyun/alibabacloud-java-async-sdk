@@ -119,7 +119,10 @@ public class CustomHealthCheckConfig extends TeaModel {
         } 
 
         /**
-         * failureThreshold.
+         * <p>The threshold for health check failures. When this value is reached, the system considers the health check failed. Valid values: 1 to 120. Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder failureThreshold(Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
@@ -127,7 +130,10 @@ public class CustomHealthCheckConfig extends TeaModel {
         }
 
         /**
-         * httpGetUrl.
+         * <p>The health check URL of the custom container. The URL can be up to 2,048 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/ready</p>
          */
         public Builder httpGetUrl(String httpGetUrl) {
             this.httpGetUrl = httpGetUrl;
@@ -135,7 +141,10 @@ public class CustomHealthCheckConfig extends TeaModel {
         }
 
         /**
-         * initialDelaySeconds.
+         * <p>The delay between the container startup and the health check. Valid values: 0 to 120. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder initialDelaySeconds(Integer initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
@@ -143,7 +152,10 @@ public class CustomHealthCheckConfig extends TeaModel {
         }
 
         /**
-         * periodSeconds.
+         * <p>The health check period. Valid values: 1 to 120. Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder periodSeconds(Integer periodSeconds) {
             this.periodSeconds = periodSeconds;
@@ -151,7 +163,10 @@ public class CustomHealthCheckConfig extends TeaModel {
         }
 
         /**
-         * successThreshold.
+         * <p>The threshold for health check successes. When this value is reached, the system considers the health check successful. Valid values: 1 to 120. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder successThreshold(Integer successThreshold) {
             this.successThreshold = successThreshold;
@@ -159,7 +174,10 @@ public class CustomHealthCheckConfig extends TeaModel {
         }
 
         /**
-         * timeoutSeconds.
+         * <p>The timeout period of the health check. Unit: seconds. Valid values: 1 to 3. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;

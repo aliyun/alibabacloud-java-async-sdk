@@ -102,7 +102,7 @@ public class PutAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * <p>The configurations of asynchronous function invocations.</p>
+         * <p>The asynchronous invocation configuration of the function.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(PutAsyncInvokeConfigInput body) {
@@ -112,7 +112,7 @@ public class PutAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * <p>The version or alias of the function.</p>
+         * <p>The function version or alias.</p>
          * 
          * <strong>example:</strong>
          * <p>LATEST</p>

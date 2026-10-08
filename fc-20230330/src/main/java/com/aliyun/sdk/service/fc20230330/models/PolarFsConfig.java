@@ -80,7 +80,10 @@ public class PolarFsConfig extends TeaModel {
         } 
 
         /**
-         * groupId.
+         * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder groupId(Integer groupId) {
             this.groupId = groupId;
@@ -88,7 +91,7 @@ public class PolarFsConfig extends TeaModel {
         }
 
         /**
-         * mountPoints.
+         * <p>The mount points.</p>
          */
         public Builder mountPoints(java.util.List<PolarFsMountConfig> mountPoints) {
             this.mountPoints = mountPoints;
@@ -96,7 +99,10 @@ public class PolarFsConfig extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder userId(Integer userId) {
             this.userId = userId;

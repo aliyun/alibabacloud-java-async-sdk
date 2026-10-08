@@ -108,6 +108,7 @@ public class PathConfig extends TeaModel {
         } 
 
         /**
+         * <p>The name of the function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,7 +120,7 @@ public class PathConfig extends TeaModel {
         }
 
         /**
-         * methods.
+         * <p>The supported methods.</p>
          */
         public Builder methods(java.util.List<String> methods) {
             this.methods = methods;
@@ -127,6 +128,7 @@ public class PathConfig extends TeaModel {
         }
 
         /**
+         * <p>The route matching rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +140,10 @@ public class PathConfig extends TeaModel {
         }
 
         /**
-         * qualifier.
+         * <p>The version or alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myAlias</p>
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -146,7 +151,7 @@ public class PathConfig extends TeaModel {
         }
 
         /**
-         * rewriteConfig.
+         * <p>The rewrite configuration.</p>
          */
         public Builder rewriteConfig(RewriteConfig rewriteConfig) {
             this.rewriteConfig = rewriteConfig;

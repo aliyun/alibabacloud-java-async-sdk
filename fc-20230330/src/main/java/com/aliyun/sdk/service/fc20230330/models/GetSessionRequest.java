@@ -99,7 +99,7 @@ public class GetSessionRequest extends Request {
         }
 
         /**
-         * <p>The session ID.</p>
+         * <p>The ID of the session to query.</p>
          * 
          * <strong>example:</strong>
          * <p>test-sessionid-index1</p>
@@ -111,7 +111,7 @@ public class GetSessionRequest extends Request {
         }
 
         /**
-         * <p>The function alias or version associated with the queried session ID.</p>
+         * <p>The function alias or version associated with the session ID to query.</p>
          * 
          * <strong>example:</strong>
          * <p>aliasName1</p>

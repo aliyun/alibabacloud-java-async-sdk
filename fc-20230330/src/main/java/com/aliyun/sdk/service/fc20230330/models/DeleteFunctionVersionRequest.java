@@ -75,7 +75,7 @@ public class DeleteFunctionVersionRequest extends Request {
         } 
 
         /**
-         * <p>函数版本。</p>
+         * <p>The name of the function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,6 +88,7 @@ public class DeleteFunctionVersionRequest extends Request {
         }
 
         /**
+         * <p>The version of the function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

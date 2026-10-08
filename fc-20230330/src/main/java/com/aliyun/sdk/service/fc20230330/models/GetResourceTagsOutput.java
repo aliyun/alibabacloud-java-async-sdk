@@ -80,7 +80,10 @@ public class GetResourceTagsOutput extends TeaModel {
         } 
 
         /**
-         * resouceType.
+         * <p>The name of the resource type. Valid values: ALIYUN::FC::FUNCTION and ALIYUN::FC::SERVICE. The former name is used in Function Compute 3.0, and the latter name is used in earlier versions of Function Compute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::FC::FUNCTION</p>
          */
         public Builder resouceType(String resouceType) {
             this.resouceType = resouceType;
@@ -88,7 +91,10 @@ public class GetResourceTagsOutput extends TeaModel {
         }
 
         /**
-         * resourceArn.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-shanghai:****:functions/demo</p>
          */
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = resourceArn;
@@ -96,7 +102,7 @@ public class GetResourceTagsOutput extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The tag dictionary.</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             this.tags = tags;

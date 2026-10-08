@@ -101,7 +101,7 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * <p>The number of versions to be returned.</p>
+         * <p>The number of versions to return.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -113,7 +113,7 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * <p>The initial version of the layer.</p>
+         * <p>The version from which to start the query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

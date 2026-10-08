@@ -81,7 +81,7 @@ public class LifecycleHook extends TeaModel {
         } 
 
         /**
-         * command.
+         * <p>The callback command for the function lifecycle initialization phase. The handler and command parameters for the lifecycle hook execution entry point cannot be configured at the same time. Only one can take effect. Configuring both produces an error.</p>
          */
         public Builder command(java.util.List<String> command) {
             this.command = command;
@@ -89,7 +89,10 @@ public class LifecycleHook extends TeaModel {
         }
 
         /**
-         * handler.
+         * <p>The execution entry point of the hook, similar in meaning to the handler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index.initializer</p>
          */
         public Builder handler(String handler) {
             this.handler = handler;
@@ -97,7 +100,10 @@ public class LifecycleHook extends TeaModel {
         }
 
         /**
-         * timeout.
+         * <p>The timeout period of the hook, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;

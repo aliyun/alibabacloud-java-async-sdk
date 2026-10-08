@@ -54,7 +54,10 @@ public class AccelerationInfo extends TeaModel {
         } 
 
         /**
-         * status.
+         * <p>The status of image acceleration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder status(String status) {
             this.status = status;

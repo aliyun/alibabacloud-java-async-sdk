@@ -158,7 +158,10 @@ public class SourceKafkaParameters extends TeaModel {
         } 
 
         /**
-         * ConsumerGroup.
+         * <p>The group ID of the consumer that subscribes to the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
          */
         public Builder consumerGroup(String consumerGroup) {
             this.consumerGroup = consumerGroup;
@@ -166,7 +169,10 @@ public class SourceKafkaParameters extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the EventBridge instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-8vb64581862c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -174,7 +180,10 @@ public class SourceKafkaParameters extends TeaModel {
         }
 
         /**
-         * Network.
+         * <p>The network type. Default value: Default. The value PublicNetwork specifies a virtual private cloud (VPC) network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder network(String network) {
             this.network = network;
@@ -182,7 +191,10 @@ public class SourceKafkaParameters extends TeaModel {
         }
 
         /**
-         * OffsetReset.
+         * <p>The offset. earliest: consumes messages from the earliest offset. latest: consumes messages from the latest offset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
          */
         public Builder offsetReset(String offsetReset) {
             this.offsetReset = offsetReset;
@@ -190,7 +202,10 @@ public class SourceKafkaParameters extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the ApsaraMQ for Kafka instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -198,7 +213,10 @@ public class SourceKafkaParameters extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1iv19sp1msc7zot4****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -206,7 +224,10 @@ public class SourceKafkaParameters extends TeaModel {
         }
 
         /**
-         * Topic.
+         * <p>The name of the topic in the ApsaraMQ for Kafka instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>popvip_center_robot_order</p>
          */
         public Builder topic(String topic) {
             this.topic = topic;
@@ -214,7 +235,10 @@ public class SourceKafkaParameters extends TeaModel {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp179l3llg3jjxwrq72****</p>
          */
         public Builder vSwitchIds(String vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -222,7 +246,10 @@ public class SourceKafkaParameters extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vblalsi0vbhizr77****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

@@ -158,7 +158,10 @@ public class ProvisionConfig extends TeaModel {
         } 
 
         /**
-         * alwaysAllocateCPU.
+         * <p>Specifies whether to always allocate CPU to function instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder alwaysAllocateCPU(Boolean alwaysAllocateCPU) {
             this.alwaysAllocateCPU = alwaysAllocateCPU;
@@ -166,7 +169,10 @@ public class ProvisionConfig extends TeaModel {
         }
 
         /**
-         * alwaysAllocateGPU.
+         * <p>Specifies whether to always allocate GPU to function instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder alwaysAllocateGPU(Boolean alwaysAllocateGPU) {
             this.alwaysAllocateGPU = alwaysAllocateGPU;
@@ -174,7 +180,10 @@ public class ProvisionConfig extends TeaModel {
         }
 
         /**
-         * current.
+         * <p>The actual number of resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(Long current) {
             this.current = current;
@@ -182,7 +191,10 @@ public class ProvisionConfig extends TeaModel {
         }
 
         /**
-         * currentError.
+         * <p>The error message when provisioned instance creation fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image not found</p>
          */
         public Builder currentError(String currentError) {
             this.currentError = currentError;
@@ -190,7 +202,10 @@ public class ProvisionConfig extends TeaModel {
         }
 
         /**
-         * defaultTarget.
+         * <p>The default number of resources when all metric-based scaling policies and scheduled scaling policies are inactive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder defaultTarget(Long defaultTarget) {
             this.defaultTarget = defaultTarget;
@@ -198,7 +213,10 @@ public class ProvisionConfig extends TeaModel {
         }
 
         /**
-         * functionArn.
+         * <p>The resource descriptor of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-shanghai:124:functions/myFunction/prod</p>
          */
         public Builder functionArn(String functionArn) {
             this.functionArn = functionArn;
@@ -206,7 +224,7 @@ public class ProvisionConfig extends TeaModel {
         }
 
         /**
-         * scheduledActions.
+         * <p>The scheduled scaling policy configurations.</p>
          */
         public Builder scheduledActions(java.util.List<ScheduledAction> scheduledActions) {
             this.scheduledActions = scheduledActions;
@@ -214,7 +232,18 @@ public class ProvisionConfig extends TeaModel {
         }
 
         /**
-         * target.
+         * <p>The current target number of resources. If a metric-based scaling policy or scheduled scaling policy exists, this value is the number of resources calculated by the policy. Otherwise, it is the default number of provisioned instances.</p>
+         * <blockquote>
+         * <p>What is the difference between target and defaultTarget?\
+         * Assume that the number of provisioned instances is configured as 1, and then a scheduled scaling policy is added to set the number of provisioned instances to 5 during a specific time period.</p>
+         * <ul>
+         * <li>During the <strong>active period</strong> of the scheduled scaling policy, target and defaultTarget are 5 and 1, respectively.</li>
+         * <li>During the <strong>inactive period</strong> of the scheduled scaling policy, both target and defaultTarget are 1.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder target(Long target) {
             this.target = target;
@@ -222,7 +251,7 @@ public class ProvisionConfig extends TeaModel {
         }
 
         /**
-         * targetTrackingPolicies.
+         * <p>The metric-based scaling policy configurations.</p>
          */
         public Builder targetTrackingPolicies(java.util.List<TargetTrackingPolicy> targetTrackingPolicies) {
             this.targetTrackingPolicies = targetTrackingPolicies;

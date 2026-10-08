@@ -89,7 +89,7 @@ public class StopAsyncTaskRequest extends Request {
         } 
 
         /**
-         * <p>The function name.</p>
+         * <p>The name of the function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

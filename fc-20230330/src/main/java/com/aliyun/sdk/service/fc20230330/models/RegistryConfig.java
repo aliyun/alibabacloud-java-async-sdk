@@ -80,7 +80,7 @@ public class RegistryConfig extends TeaModel {
         } 
 
         /**
-         * authConfig.
+         * <p>The authentication configuration.</p>
          */
         public Builder authConfig(RegistryAuthConfig authConfig) {
             this.authConfig = authConfig;
@@ -88,7 +88,7 @@ public class RegistryConfig extends TeaModel {
         }
 
         /**
-         * certConfig.
+         * <p>The certificate configuration.</p>
          */
         public Builder certConfig(RegistryCertConfig certConfig) {
             this.certConfig = certConfig;
@@ -96,7 +96,7 @@ public class RegistryConfig extends TeaModel {
         }
 
         /**
-         * networkConfig.
+         * <p>The network configuration.</p>
          */
         public Builder networkConfig(RegistryNetworkConfig networkConfig) {
             this.networkConfig = networkConfig;

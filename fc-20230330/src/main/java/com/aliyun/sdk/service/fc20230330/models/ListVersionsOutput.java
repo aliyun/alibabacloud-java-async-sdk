@@ -80,7 +80,10 @@ public class ListVersionsOutput extends TeaModel {
         } 
 
         /**
-         * direction.
+         * <p>The sorting method of versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FORWARD</p>
          */
         public Builder direction(String direction) {
             this.direction = direction;
@@ -88,7 +91,10 @@ public class ListVersionsOutput extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The ID of the next version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -96,7 +102,7 @@ public class ListVersionsOutput extends TeaModel {
         }
 
         /**
-         * versions.
+         * <p>The version IDs.</p>
          */
         public Builder versions(java.util.List<Version> versions) {
             this.versions = versions;

@@ -67,7 +67,7 @@ public class EventSourceConfig extends TeaModel {
         } 
 
         /**
-         * eventSourceParameters.
+         * <p>The event source. Custom event sources include Message Service (MNS), ApsaraMQ for RocketMQ, ApsaraMQ for RabbitMQ, ApsaraMQ for Kafka, ApsaraMQ for MQTT, and Data Transmission Service (DTS).</p>
          */
         public Builder eventSourceParameters(EventSourceParameters eventSourceParameters) {
             this.eventSourceParameters = eventSourceParameters;
@@ -75,7 +75,22 @@ public class EventSourceConfig extends TeaModel {
         }
 
         /**
-         * eventSourceType.
+         * <p>The event source type. Valid values:</p>
+         * <ul>
+         * <li><strong>Default</strong>: Alibaba Cloud EventBridge sources</li>
+         * <li><strong>MNS</strong>: Message Service (MNS)</li>
+         * <li><strong>RocketMQ</strong>: ApsaraMQ for RocketMQ</li>
+         * <li><strong>RabbitMQ</strong>: ApsaraMQ for RabbitMQ</li>
+         * <li><strong>Kafka</strong>: ApsaraMQ for Kafka</li>
+         * <li><strong>MQTT</strong>: ApsaraMQ for MQTT</li>
+         * <li><strong>DTS</strong>: DTS</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter cannot be updated. If you specify this parameter when you update the configurations, it does not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>MNS</p>
          */
         public Builder eventSourceType(String eventSourceType) {
             this.eventSourceType = eventSourceType;

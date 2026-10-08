@@ -132,7 +132,10 @@ public class AsyncConfig extends TeaModel {
         } 
 
         /**
-         * asyncTask.
+         * <p>Specifies whether to enable the asynchronous task feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder asyncTask(Boolean asyncTask) {
             this.asyncTask = asyncTask;
@@ -140,7 +143,10 @@ public class AsyncConfig extends TeaModel {
         }
 
         /**
-         * createdTime.
+         * <p>The time when the asynchronous invocation configuration was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006-01-02T15:04:05Z07:00</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -148,7 +154,7 @@ public class AsyncConfig extends TeaModel {
         }
 
         /**
-         * destinationConfig.
+         * <p>The destination configuration.</p>
          */
         public Builder destinationConfig(DestinationConfig destinationConfig) {
             this.destinationConfig = destinationConfig;
@@ -156,7 +162,10 @@ public class AsyncConfig extends TeaModel {
         }
 
         /**
-         * functionArn.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-shanghai:1234/functions/my-func</p>
          */
         public Builder functionArn(String functionArn) {
             this.functionArn = functionArn;
@@ -164,7 +173,10 @@ public class AsyncConfig extends TeaModel {
         }
 
         /**
-         * lastModifiedTime.
+         * <p>The time when the asynchronous invocation was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006-01-02T15:04:05Z07:00</p>
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -172,7 +184,10 @@ public class AsyncConfig extends TeaModel {
         }
 
         /**
-         * maxAsyncEventAgeInSeconds.
+         * <p>The maximum time to live (TTL) value of an event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder maxAsyncEventAgeInSeconds(Long maxAsyncEventAgeInSeconds) {
             this.maxAsyncEventAgeInSeconds = maxAsyncEventAgeInSeconds;
@@ -180,7 +195,10 @@ public class AsyncConfig extends TeaModel {
         }
 
         /**
-         * maxAsyncRetryAttempts.
+         * <p>The number of times when an asynchronous invocation is retried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxAsyncRetryAttempts(Long maxAsyncRetryAttempts) {
             this.maxAsyncRetryAttempts = maxAsyncRetryAttempts;

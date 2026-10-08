@@ -192,7 +192,10 @@ public class UpdateSessionInput extends TeaModel {
         }
 
         /**
-         * disableSessionIdReuse.
+         * <p>Specifies whether to disable session ID reuse after the session expires. Default value: False, which indicates that after a session expires, you can use the same session ID to initiate requests. The system treats the request as a new session and binds it to a new instance. If you set this parameter to True, the session ID cannot be reused after the session expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableSessionIdReuse(Boolean disableSessionIdReuse) {
             this.disableSessionIdReuse = disableSessionIdReuse;
@@ -256,7 +259,10 @@ public class UpdateSessionInput extends TeaModel {
         }
 
         /**
-         * sessionIdleTimeoutInSeconds.
+         * <p>The session idle timeout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         public Builder sessionIdleTimeoutInSeconds(Long sessionIdleTimeoutInSeconds) {
             this.sessionIdleTimeoutInSeconds = sessionIdleTimeoutInSeconds;
@@ -264,7 +270,10 @@ public class UpdateSessionInput extends TeaModel {
         }
 
         /**
-         * sessionTTLInSeconds.
+         * <p>The session lifetime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21600</p>
          */
         public Builder sessionTTLInSeconds(Long sessionTTLInSeconds) {
             this.sessionTTLInSeconds = sessionTTLInSeconds;

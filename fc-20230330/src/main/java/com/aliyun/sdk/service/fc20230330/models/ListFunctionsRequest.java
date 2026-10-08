@@ -185,7 +185,7 @@ public class ListFunctionsRequest extends Request {
         } 
 
         /**
-         * <p>The description of the functions to retrieve.</p>
+         * <p>The function description to filter by.</p>
          * 
          * <strong>example:</strong>
          * <p>test_description</p>
@@ -197,12 +197,12 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * <p>The version of Function Compute to which the functions belong.</p>
+         * <p>The version to which the function belongs. Valid values:</p>
          * <ul>
-         * <li>v3: Only lists functions of Function Compute 3.0.</li>
-         * <li>v2: Only lists functions of Function Compute 2.0.</li>
+         * <li>v3: lists only FC 3.0 functions.</li>
+         * <li>v2: lists only FC 2.0 functions.</li>
          * </ul>
-         * <p>By default, this parameter is left empty and functions in both Function Compute 3.0 and Function Compute 2.0 are listed.</p>
+         * <p>If not specified, both FC 3.0 and FC 2.0 functions are listed.</p>
          * 
          * <strong>example:</strong>
          * <p>v3</p>
@@ -214,7 +214,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * functionName.
+         * <p>The function name.</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("functionName", functionName);
@@ -223,7 +223,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * <p>The GPU type of the functions to retrieve.</p>
+         * <p>The function GPU type to filter by.</p>
          * 
          * <strong>example:</strong>
          * <p>fc.gpu.tesla.1</p>
@@ -235,7 +235,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * <p>The number of functions to return. The minimum value is 1 and the maximum value is 100.</p>
+         * <p>The number of functions to return. Minimum value: 1. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -259,7 +259,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the function name.</p>
+         * <p>The function name prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>my-func</p>
@@ -271,7 +271,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -280,7 +280,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * <p>The runtime of the functions to retrieve.</p>
+         * <p>The function runtime to filter by.</p>
          * 
          * <strong>example:</strong>
          * <p>python3.10</p>
@@ -292,7 +292,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * <p>The tag of the functions to retrieve.</p>
+         * <p>The function tags to filter by.</p>
          */
         public Builder tags(java.util.List<Tag> tags) {
             String tagsShrink = shrink(tags, "tags", "json");

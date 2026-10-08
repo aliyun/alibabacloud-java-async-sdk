@@ -67,7 +67,10 @@ public class OutputCodeLocation extends TeaModel {
         } 
 
         /**
-         * location.
+         * <p>The address of the code package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xyz.oss-cn-shanghai.aliyuncs.com/xxx/xxx/xxx">https://xyz.oss-cn-shanghai.aliyuncs.com/xxx/xxx/xxx</a></p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -75,7 +78,10 @@ public class OutputCodeLocation extends TeaModel {
         }
 
         /**
-         * repositoryType.
+         * <p>The type of the code package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder repositoryType(String repositoryType) {
             this.repositoryType = repositoryType;

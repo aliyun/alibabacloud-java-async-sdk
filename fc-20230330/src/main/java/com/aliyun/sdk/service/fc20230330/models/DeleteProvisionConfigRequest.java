@@ -90,7 +90,7 @@ public class DeleteProvisionConfigRequest extends Request {
          * <p>The function alias.</p>
          * 
          * <strong>example:</strong>
-         * <p>LATEST</p>
+         * <p>prod</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

@@ -67,7 +67,10 @@ public class ListAsyncTaskOutput extends TeaModel {
         } 
 
         /**
-         * nextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNCNhYmM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -75,7 +78,7 @@ public class ListAsyncTaskOutput extends TeaModel {
         }
 
         /**
-         * tasks.
+         * <p>The asynchronous tasks.</p>
          */
         public Builder tasks(java.util.List<AsyncTask> tasks) {
             this.tasks = tasks;

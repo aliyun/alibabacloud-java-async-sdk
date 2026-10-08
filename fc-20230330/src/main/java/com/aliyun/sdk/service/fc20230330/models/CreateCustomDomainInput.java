@@ -159,7 +159,7 @@ public class CreateCustomDomainInput extends TeaModel {
         } 
 
         /**
-         * authConfig.
+         * <p>Permission authentication configuration.</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.authConfig = authConfig;
@@ -167,7 +167,7 @@ public class CreateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * certConfig.
+         * <p>HTTPS certificate information.</p>
          */
         public Builder certConfig(CertConfig certConfig) {
             this.certConfig = certConfig;
@@ -183,6 +183,7 @@ public class CreateCustomDomainInput extends TeaModel {
         }
 
         /**
+         * <p>Domain name. Enter a custom domain name that has an ICP filing with Alibaba Cloud or has added Alibaba Cloud to the ICP filing information as a service provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +203,10 @@ public class CreateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>Protocol type supported by the domain. HTTP: supports HTTP only. HTTPS: supports HTTPS only. HTTP,HTTPS: supports both HTTP and HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -210,7 +214,7 @@ public class CreateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * routeConfig.
+         * <p>Route table: maps PATHs to functions when accessing the custom domain.</p>
          */
         public Builder routeConfig(RouteConfig routeConfig) {
             this.routeConfig = routeConfig;
@@ -218,7 +222,7 @@ public class CreateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * tlsConfig.
+         * <p>TLS configuration information.</p>
          */
         public Builder tlsConfig(TLSConfig tlsConfig) {
             this.tlsConfig = tlsConfig;
@@ -226,7 +230,7 @@ public class CreateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * wafConfig.
+         * <p>Web Application Firewall configuration information.</p>
          */
         public Builder wafConfig(WAFConfig wafConfig) {
             this.wafConfig = wafConfig;

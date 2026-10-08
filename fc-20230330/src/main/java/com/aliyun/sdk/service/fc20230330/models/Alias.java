@@ -119,7 +119,7 @@ public class Alias extends TeaModel {
         } 
 
         /**
-         * additionalVersionWeight.
+         * <p>The weight of the canary release version.</p>
          */
         public Builder additionalVersionWeight(java.util.Map<String, Float> additionalVersionWeight) {
             this.additionalVersionWeight = additionalVersionWeight;
@@ -127,7 +127,10 @@ public class Alias extends TeaModel {
         }
 
         /**
-         * aliasName.
+         * <p>The name of the alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         public Builder aliasName(String aliasName) {
             this.aliasName = aliasName;
@@ -135,7 +138,10 @@ public class Alias extends TeaModel {
         }
 
         /**
-         * createdTime.
+         * <p>The time when the alias was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006-01-02T15:04:05Z07:00</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -143,7 +149,10 @@ public class Alias extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alias for pre env</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -151,7 +160,10 @@ public class Alias extends TeaModel {
         }
 
         /**
-         * lastModifiedTime.
+         * <p>The time when the alias was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006-01-02T15:04:05Z07:00</p>
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -159,7 +171,10 @@ public class Alias extends TeaModel {
         }
 
         /**
-         * versionId.
+         * <p>The version to which the alias points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;

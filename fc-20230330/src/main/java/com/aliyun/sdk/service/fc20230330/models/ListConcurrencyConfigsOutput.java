@@ -67,7 +67,7 @@ public class ListConcurrencyConfigsOutput extends TeaModel {
         } 
 
         /**
-         * configs.
+         * <p>The list of concurrency configurations.</p>
          */
         public Builder configs(java.util.List<ConcurrencyConfig> configs) {
             this.configs = configs;
@@ -75,7 +75,10 @@ public class ListConcurrencyConfigsOutput extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If this parameter is not returned, all the concurrency configurations are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next_token</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

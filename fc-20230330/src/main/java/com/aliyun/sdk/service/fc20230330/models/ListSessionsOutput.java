@@ -67,7 +67,10 @@ public class ListSessionsOutput extends TeaModel {
         } 
 
         /**
-         * nextToken.
+         * <p>The starting position for the next session list query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNCNhYmM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -75,7 +78,7 @@ public class ListSessionsOutput extends TeaModel {
         }
 
         /**
-         * sessions.
+         * <p>The list of sessions.</p>
          */
         public Builder sessions(java.util.List<Session> sessions) {
             this.sessions = sessions;

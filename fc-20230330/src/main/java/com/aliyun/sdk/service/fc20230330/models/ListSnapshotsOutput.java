@@ -69,7 +69,7 @@ public class ListSnapshotsOutput extends TeaModel {
         } 
 
         /**
-         * nextToken.
+         * <p>The token used to retrieve the next page of results. This parameter is not returned if no more results are available.</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -77,6 +77,7 @@ public class ListSnapshotsOutput extends TeaModel {
         }
 
         /**
+         * <p>The list of snapshots.</p>
          * <p>This parameter is required.</p>
          */
         public Builder snapshots(java.util.List<Snapshot> snapshots) {

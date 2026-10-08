@@ -102,7 +102,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * <p>The provisioned configuration information.</p>
+         * <p>The provisioned configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(PutProvisionConfigInput body) {
@@ -115,7 +115,7 @@ public class PutProvisionConfigRequest extends Request {
          * <p>The function alias.</p>
          * 
          * <strong>example:</strong>
-         * <p>LATEST</p>
+         * <p>prod</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

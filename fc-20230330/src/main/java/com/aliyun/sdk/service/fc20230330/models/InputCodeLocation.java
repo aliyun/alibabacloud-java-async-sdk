@@ -94,7 +94,10 @@ public class InputCodeLocation extends TeaModel {
         } 
 
         /**
-         * checksum.
+         * <p>The CRC-64 value of the function code package. If checksum is provided, Function Compute checks whether the checksum of the code package is the same as that provided.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2825179536350****</p>
          */
         public Builder checksum(String checksum) {
             this.checksum = checksum;
@@ -102,7 +105,10 @@ public class InputCodeLocation extends TeaModel {
         }
 
         /**
-         * ossBucketName.
+         * <p>The name of the OSS bucket where the ZIP package of the function code is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-bucket</p>
          */
         public Builder ossBucketName(String ossBucketName) {
             this.ossBucketName = ossBucketName;
@@ -110,7 +116,10 @@ public class InputCodeLocation extends TeaModel {
         }
 
         /**
-         * ossObjectName.
+         * <p>The name of the OSS object where the ZIP package of the function code is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-object</p>
          */
         public Builder ossObjectName(String ossObjectName) {
             this.ossObjectName = ossObjectName;
@@ -118,7 +127,10 @@ public class InputCodeLocation extends TeaModel {
         }
 
         /**
-         * zipFile.
+         * <p>The ZIP package of the function code that is encoded in Base64 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UEsDBAoAAAAAANF</p>
          */
         public Builder zipFile(String zipFile) {
             this.zipFile = zipFile;

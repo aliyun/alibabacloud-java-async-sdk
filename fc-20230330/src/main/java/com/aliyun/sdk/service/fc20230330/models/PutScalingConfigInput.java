@@ -132,7 +132,10 @@ public class PutScalingConfigInput extends TeaModel {
         } 
 
         /**
-         * enableMixMode.
+         * <p>Specifies whether to enable the mix mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder enableMixMode(Boolean enableMixMode) {
             this.enableMixMode = enableMixMode;
@@ -140,7 +143,10 @@ public class PutScalingConfigInput extends TeaModel {
         }
 
         /**
-         * enableOnDemandScaling.
+         * <p>Specifies whether to enable on-demand scaling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder enableOnDemandScaling(Boolean enableOnDemandScaling) {
             this.enableOnDemandScaling = enableOnDemandScaling;
@@ -148,7 +154,7 @@ public class PutScalingConfigInput extends TeaModel {
         }
 
         /**
-         * horizontalScalingPolicies.
+         * <p>The horizontal scaling policies.</p>
          */
         public Builder horizontalScalingPolicies(java.util.List<ScalingPolicy> horizontalScalingPolicies) {
             this.horizontalScalingPolicies = horizontalScalingPolicies;
@@ -156,7 +162,10 @@ public class PutScalingConfigInput extends TeaModel {
         }
 
         /**
-         * minInstances.
+         * <p>The minimum number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minInstances(Long minInstances) {
             this.minInstances = minInstances;
@@ -164,7 +173,10 @@ public class PutScalingConfigInput extends TeaModel {
         }
 
         /**
-         * requestDispatchPolicy.
+         * <p>The request dispatch policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Balanced</p>
          */
         public Builder requestDispatchPolicy(String requestDispatchPolicy) {
             this.requestDispatchPolicy = requestDispatchPolicy;
@@ -172,7 +184,10 @@ public class PutScalingConfigInput extends TeaModel {
         }
 
         /**
-         * residentPoolId.
+         * <p>The ID of the resident resource pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fc-pool-a2b664c1f87171j4******</p>
          */
         public Builder residentPoolId(String residentPoolId) {
             this.residentPoolId = residentPoolId;
@@ -180,7 +195,7 @@ public class PutScalingConfigInput extends TeaModel {
         }
 
         /**
-         * scheduledPolicies.
+         * <p>The scheduled elastic policies.</p>
          */
         public Builder scheduledPolicies(java.util.List<ScheduledPolicy> scheduledPolicies) {
             this.scheduledPolicies = scheduledPolicies;

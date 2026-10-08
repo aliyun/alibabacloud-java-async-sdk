@@ -184,7 +184,10 @@ public class ScalingConfigStatus extends TeaModel {
         } 
 
         /**
-         * currentError.
+         * <p>The error message that is returned when an instance fails to be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image not found</p>
          */
         public Builder currentError(String currentError) {
             this.currentError = currentError;
@@ -192,7 +195,10 @@ public class ScalingConfigStatus extends TeaModel {
         }
 
         /**
-         * currentInstances.
+         * <p>The current number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentInstances(Long currentInstances) {
             this.currentInstances = currentInstances;
@@ -200,7 +206,10 @@ public class ScalingConfigStatus extends TeaModel {
         }
 
         /**
-         * enableMixMode.
+         * <p>Specifies whether mix mode is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder enableMixMode(Boolean enableMixMode) {
             this.enableMixMode = enableMixMode;
@@ -208,7 +217,10 @@ public class ScalingConfigStatus extends TeaModel {
         }
 
         /**
-         * enableOnDemandScaling.
+         * <p>Specifies whether on-demand scaling is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder enableOnDemandScaling(Boolean enableOnDemandScaling) {
             this.enableOnDemandScaling = enableOnDemandScaling;
@@ -216,7 +228,10 @@ public class ScalingConfigStatus extends TeaModel {
         }
 
         /**
-         * functionArn.
+         * <p>The resource identifier of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-shanghai:124:functions/myFunction/prod</p>
          */
         public Builder functionArn(String functionArn) {
             this.functionArn = functionArn;
@@ -224,7 +239,7 @@ public class ScalingConfigStatus extends TeaModel {
         }
 
         /**
-         * horizontalScalingPolicies.
+         * <p>The horizontal scaling policies.</p>
          */
         public Builder horizontalScalingPolicies(java.util.List<ScalingPolicy> horizontalScalingPolicies) {
             this.horizontalScalingPolicies = horizontalScalingPolicies;
@@ -232,7 +247,10 @@ public class ScalingConfigStatus extends TeaModel {
         }
 
         /**
-         * minInstances.
+         * <p>The minimum number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minInstances(Long minInstances) {
             this.minInstances = minInstances;
@@ -240,7 +258,10 @@ public class ScalingConfigStatus extends TeaModel {
         }
 
         /**
-         * requestDispatchPolicy.
+         * <p>The request dispatch policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Balanced</p>
          */
         public Builder requestDispatchPolicy(String requestDispatchPolicy) {
             this.requestDispatchPolicy = requestDispatchPolicy;
@@ -248,7 +269,10 @@ public class ScalingConfigStatus extends TeaModel {
         }
 
         /**
-         * residentPoolId.
+         * <p>The ID of the resident resource pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fc-pool-a2b664c1f87171j4******</p>
          */
         public Builder residentPoolId(String residentPoolId) {
             this.residentPoolId = residentPoolId;
@@ -256,7 +280,7 @@ public class ScalingConfigStatus extends TeaModel {
         }
 
         /**
-         * scheduledPolicies.
+         * <p>The scheduled scaling policies.</p>
          */
         public Builder scheduledPolicies(java.util.List<ScheduledPolicy> scheduledPolicies) {
             this.scheduledPolicies = scheduledPolicies;
@@ -264,7 +288,10 @@ public class ScalingConfigStatus extends TeaModel {
         }
 
         /**
-         * targetInstances.
+         * <p>The target number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder targetInstances(Long targetInstances) {
             this.targetInstances = targetInstances;

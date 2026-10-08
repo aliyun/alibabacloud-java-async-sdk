@@ -69,6 +69,7 @@ public class RegexRule extends TeaModel {
         } 
 
         /**
+         * <p>The matching rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +81,7 @@ public class RegexRule extends TeaModel {
         }
 
         /**
+         * <p>The replacement rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

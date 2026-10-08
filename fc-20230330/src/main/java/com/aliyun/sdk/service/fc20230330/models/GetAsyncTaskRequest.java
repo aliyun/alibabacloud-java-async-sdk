@@ -102,7 +102,7 @@ public class GetAsyncTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the asynchronous task.</p>
+         * <p>The asynchronous task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class GetAsyncTaskRequest extends Request {
         }
 
         /**
-         * <p>The version or alias of the function.</p>
+         * <p>The function version or alias.</p>
          * 
          * <strong>example:</strong>
          * <p>LATEST</p>

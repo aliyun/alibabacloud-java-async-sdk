@@ -150,7 +150,10 @@ public class TargetTrackingPolicy extends TeaModel {
         } 
 
         /**
-         * endTime.
+         * <p>The end time of the policy, in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-10T10:10:10Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -158,6 +161,7 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
+         * <p>The maximum number of provisioned instances for scale-out.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,6 +173,7 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
+         * <p>The threshold value for metric-based auto scaling.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +185,7 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
+         * <p>The metric type for tracing. ProvisionedConcurrencyUtilization: the concurrency utilization of provisioned instances. CPUUtilization: the CPU utilization. GPUMemUtilization: the GPU utilization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +197,7 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
+         * <p>The minimum number of provisioned instances for scale-in.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +209,7 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
+         * <p>The policy name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +221,10 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
-         * startTime.
+         * <p>The time when the policy starts to take effect, in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-10T10:10:10Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -221,7 +232,10 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
-         * timeZone.
+         * <p>The time zone. If the time zone parameter is empty, the time of startTime and endTime must be in UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timeZone(String timeZone) {
             this.timeZone = timeZone;

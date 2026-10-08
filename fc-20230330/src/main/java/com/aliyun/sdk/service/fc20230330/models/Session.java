@@ -309,7 +309,10 @@ public class Session extends TeaModel {
         }
 
         /**
-         * containerId.
+         * <p>The instance ID of the function associated with the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-68999e02-16a1955c-d2a03d1ccs</p>
          */
         public Builder containerId(String containerId) {
             this.containerId = containerId;
@@ -317,7 +320,10 @@ public class Session extends TeaModel {
         }
 
         /**
-         * createdTime.
+         * <p>The time when the session was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-01T08:15:27Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -325,7 +331,15 @@ public class Session extends TeaModel {
         }
 
         /**
-         * disableSessionIdReuse.
+         * <p>Specifies whether to disable session ID reuse after the session expires. Valid values:</p>
+         * <ul>
+         * <li>False: After the session expires, you can use the same session ID to initiate requests. The system treats it as a new session and binds it to a new instance.</li>
+         * <li>True: After the session expires, the session ID cannot be reused.</li>
+         * </ul>
+         * <p>Default value: False.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableSessionIdReuse(Boolean disableSessionIdReuse) {
             this.disableSessionIdReuse = disableSessionIdReuse;
@@ -349,7 +363,10 @@ public class Session extends TeaModel {
         }
 
         /**
-         * functionName.
+         * <p>The name of the function to which the session belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>functionName1</p>
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -365,7 +382,10 @@ public class Session extends TeaModel {
         }
 
         /**
-         * lastModifiedTime.
+         * <p>The time when the session was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-01T18:15:27Z</p>
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -373,7 +393,7 @@ public class Session extends TeaModel {
         }
 
         /**
-         * nasConfig.
+         * <p>The NAS configuration. After configuration, the instance associated with the session can access the specified NAS resource.</p>
          */
         public Builder nasConfig(NASConfig nasConfig) {
             this.nasConfig = nasConfig;
@@ -405,7 +425,10 @@ public class Session extends TeaModel {
         }
 
         /**
-         * qualifier.
+         * <p>The qualifier passed when the customer created the session. If not specified, the default value is LATEST.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliasName1</p>
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -413,7 +436,10 @@ public class Session extends TeaModel {
         }
 
         /**
-         * sessionAffinityType.
+         * <p>The session affinity type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HEADER_FIELD</p>
          */
         public Builder sessionAffinityType(String sessionAffinityType) {
             this.sessionAffinityType = sessionAffinityType;
@@ -421,7 +447,10 @@ public class Session extends TeaModel {
         }
 
         /**
-         * sessionId.
+         * <p>The unique identifier of the function session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81f70ae156904eb9b7d43e12f511fe58</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -429,7 +458,10 @@ public class Session extends TeaModel {
         }
 
         /**
-         * sessionIdleTimeoutInSeconds.
+         * <p>The session idle timeout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         public Builder sessionIdleTimeoutInSeconds(Long sessionIdleTimeoutInSeconds) {
             this.sessionIdleTimeoutInSeconds = sessionIdleTimeoutInSeconds;
@@ -437,7 +469,14 @@ public class Session extends TeaModel {
         }
 
         /**
-         * sessionStatus.
+         * <p>The session status. Valid values:</p>
+         * <ul>
+         * <li>Active: The session is valid.</li>
+         * <li>Expired: The session has expired.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder sessionStatus(String sessionStatus) {
             this.sessionStatus = sessionStatus;
@@ -445,7 +484,10 @@ public class Session extends TeaModel {
         }
 
         /**
-         * sessionTTLInSeconds.
+         * <p>The maximum session lifetime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21600</p>
          */
         public Builder sessionTTLInSeconds(Long sessionTTLInSeconds) {
             this.sessionTTLInSeconds = sessionTTLInSeconds;

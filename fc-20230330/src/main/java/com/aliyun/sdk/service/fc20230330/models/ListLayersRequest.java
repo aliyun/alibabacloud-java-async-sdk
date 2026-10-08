@@ -115,7 +115,7 @@ public class ListLayersRequest extends Request {
         } 
 
         /**
-         * <p>The number of layers that are returned</p>
+         * <p>The number of layers to return.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -127,7 +127,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The token that marks the start of the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>MTIzNCNhYmM=</p>
@@ -139,7 +139,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the layer is official. Valid values: true and false.</p>
+         * <p>Specifies whether the layer is an official layer. Valid values: true and false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -151,7 +151,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * <p>The name prefix of the layer.</p>
+         * <p>The prefix of the layer name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-layer</p>

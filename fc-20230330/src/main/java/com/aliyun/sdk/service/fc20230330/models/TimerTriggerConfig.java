@@ -80,7 +80,10 @@ public class TimerTriggerConfig extends TeaModel {
         } 
 
         /**
-         * cronExpression.
+         * <p>The trigger period expression. You can specify to trigger based on a time interval. For example, the expression @every 4m indicates that the triggering is performed every four minutes. You can also specify to trigger based on a cron expression, for example, 0 0 4 \* \* \*.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 4 * * *</p>
          */
         public Builder cronExpression(String cronExpression) {
             this.cronExpression = cronExpression;
@@ -88,7 +91,10 @@ public class TimerTriggerConfig extends TeaModel {
         }
 
         /**
-         * enable.
+         * <p>Specify whether to enable the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -96,7 +102,10 @@ public class TimerTriggerConfig extends TeaModel {
         }
 
         /**
-         * payload.
+         * <p>Enter custom parameters. The trigger message is used as the value of the payload in the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;workflowInstanceId&quot;:&quot;39639&quot;}</p>
          */
         public Builder payload(String payload) {
             this.payload = payload;

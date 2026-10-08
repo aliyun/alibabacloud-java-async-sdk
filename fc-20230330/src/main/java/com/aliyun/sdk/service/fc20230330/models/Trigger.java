@@ -210,7 +210,10 @@ public class Trigger extends TeaModel {
         } 
 
         /**
-         * createdTime.
+         * <p>The time when the trigger was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-20T02:28:21Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -218,7 +221,10 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -226,7 +232,7 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * httpTrigger.
+         * <p>The information about the HTTP trigger.</p>
          */
         public Builder httpTrigger(HTTPTrigger httpTrigger) {
             this.httpTrigger = httpTrigger;
@@ -234,7 +240,10 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * invocationRole.
+         * <p>The role that is used by the event source such as OSS to invoke the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::151641468453****:role/my-role</p>
          */
         public Builder invocationRole(String invocationRole) {
             this.invocationRole = invocationRole;
@@ -242,7 +251,10 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * lastModifiedTime.
+         * <p>The time when the trigger was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-23T06:32:43Z</p>
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -250,7 +262,10 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * qualifier.
+         * <p>The version or alias of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -258,7 +273,10 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * sourceArn.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the event source for the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:oss:cn-hangzhou:151641468453****:my-bucket</p>
          */
         public Builder sourceArn(String sourceArn) {
             this.sourceArn = sourceArn;
@@ -266,7 +284,10 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -274,7 +295,10 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * targetArn.
+         * <p>The ARN of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:oss:cn-hangzhou:151641468453****:my-bucket</p>
          */
         public Builder targetArn(String targetArn) {
             this.targetArn = targetArn;
@@ -282,7 +306,20 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * triggerConfig.
+         * <p>The configurations of the trigger. The configurations vary based on trigger types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;events&quot;: [
+         *             &quot;oss:ObjectCreated:*&quot;
+         *       ],
+         *       &quot;filter&quot;: {
+         *             &quot;key&quot;: {
+         *                   &quot;prefix&quot;: &quot;/prefix&quot;,
+         *                   &quot;suffix&quot;: &quot;.zip&quot;
+         *             }
+         *       }
+         * }</p>
          */
         public Builder triggerConfig(String triggerConfig) {
             this.triggerConfig = triggerConfig;
@@ -290,7 +327,10 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * triggerId.
+         * <p>The unique ID of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>546959b5-ce1a-4991-8891-df7a02b25086</p>
          */
         public Builder triggerId(String triggerId) {
             this.triggerId = triggerId;
@@ -298,7 +338,10 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * triggerName.
+         * <p>The name of the trigger. The name contains only letters, digits, hyphens (-), and underscores (_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultTrigger</p>
          */
         public Builder triggerName(String triggerName) {
             this.triggerName = triggerName;
@@ -306,7 +349,10 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * triggerType.
+         * <p>The type of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         public Builder triggerType(String triggerType) {
             this.triggerType = triggerType;

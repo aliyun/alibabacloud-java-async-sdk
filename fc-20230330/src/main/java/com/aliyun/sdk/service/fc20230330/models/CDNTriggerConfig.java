@@ -93,7 +93,10 @@ public class CDNTriggerConfig extends TeaModel {
         } 
 
         /**
-         * eventName.
+         * <p>The name of the trigger event. For more information, see <a href="https://help.aliyun.com/document_detail/2513636.html">CDN events</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CdnDomainStarted</p>
          */
         public Builder eventName(String eventName) {
             this.eventName = eventName;
@@ -101,7 +104,10 @@ public class CDNTriggerConfig extends TeaModel {
         }
 
         /**
-         * eventVersion.
+         * <p>The version of the trigger event. Only the 1.0.0 event version is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder eventVersion(String eventVersion) {
             this.eventVersion = eventVersion;
@@ -109,7 +115,7 @@ public class CDNTriggerConfig extends TeaModel {
         }
 
         /**
-         * filter.
+         * <p>The details of the event filtering rules.</p>
          */
         public Builder filter(java.util.Map<String, java.util.List<String>> filter) {
             this.filter = filter;
@@ -117,7 +123,10 @@ public class CDNTriggerConfig extends TeaModel {
         }
 
         /**
-         * notes.
+         * <p>The description of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>缓存事件触发器</p>
          */
         public Builder notes(String notes) {
             this.notes = notes;

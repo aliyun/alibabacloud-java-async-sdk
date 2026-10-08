@@ -88,7 +88,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * <p>The trigger configurations.</p>
+         * <p>The trigger configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(CreateTriggerInput body) {

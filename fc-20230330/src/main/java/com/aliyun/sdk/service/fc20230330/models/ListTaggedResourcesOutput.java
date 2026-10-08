@@ -67,7 +67,10 @@ public class ListTaggedResourcesOutput extends TeaModel {
         } 
 
         /**
-         * nextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next_token</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -75,7 +78,7 @@ public class ListTaggedResourcesOutput extends TeaModel {
         }
 
         /**
-         * resources.
+         * <p>The tagged resources.</p>
          */
         public Builder resources(java.util.List<Resource> resources) {
             this.resources = resources;

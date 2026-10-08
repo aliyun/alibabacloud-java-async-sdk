@@ -83,6 +83,7 @@ public class CertConfig extends TeaModel {
         } 
 
         /**
+         * <p>The name of the certificate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -94,6 +95,7 @@ public class CertConfig extends TeaModel {
         }
 
         /**
+         * <p>The certificate in the .pem format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,6 +107,7 @@ public class CertConfig extends TeaModel {
         }
 
         /**
+         * <p>The private key in the .pem format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

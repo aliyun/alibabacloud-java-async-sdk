@@ -60,7 +60,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The configuration of the resource tag.</p>
+         * <p>The resource tag configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(TagResourcesInput body) {

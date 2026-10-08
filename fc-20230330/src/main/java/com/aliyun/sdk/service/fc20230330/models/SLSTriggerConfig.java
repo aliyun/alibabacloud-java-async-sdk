@@ -106,7 +106,10 @@ public class SLSTriggerConfig extends TeaModel {
         } 
 
         /**
-         * enable.
+         * <p>Specifies whether to enable the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -114,7 +117,7 @@ public class SLSTriggerConfig extends TeaModel {
         }
 
         /**
-         * functionParameter.
+         * <p>The invocation configurations. Simple Log Service passes the configurations into the function as part of the event. The configuration content must be a JSON string.</p>
          */
         public Builder functionParameter(java.util.Map<String, String> functionParameter) {
             this.functionParameter = functionParameter;
@@ -122,7 +125,7 @@ public class SLSTriggerConfig extends TeaModel {
         }
 
         /**
-         * jobConfig.
+         * <p>The interval at which the trigger reads logs, and the retry configuration upon errors.</p>
          */
         public Builder jobConfig(JobConfig jobConfig) {
             this.jobConfig = jobConfig;
@@ -130,7 +133,7 @@ public class SLSTriggerConfig extends TeaModel {
         }
 
         /**
-         * logConfig.
+         * <p>The log configurations of the trigger.</p>
          */
         public Builder logConfig(SLSTriggerLogConfig logConfig) {
             this.logConfig = logConfig;
@@ -138,7 +141,7 @@ public class SLSTriggerConfig extends TeaModel {
         }
 
         /**
-         * sourceConfig.
+         * <p>The configurations of the trigger source.</p>
          */
         public Builder sourceConfig(SourceConfig sourceConfig) {
             this.sourceConfig = sourceConfig;

@@ -128,7 +128,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The token that is used to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>MTIzNCNhYmM=</p>
@@ -140,7 +140,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource IDs.</p>
+         * <p>The list of resource IDs.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             String resourceIdShrink = shrink(resourceId, "ResourceId", "json");
@@ -150,11 +150,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ALIYUN::FC:FUNCTION</p>
+         * <p>ALIYUN::FC::FUNCTION</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -163,8 +163,8 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
-         * <p>You can query up to 20 tags at a time.</p>
+         * <p>The list of tags.</p>
+         * <p>You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -234,7 +234,7 @@ public class ListTagResourcesRequest extends Request {
 
             /**
              * <p>The tag key.</p>
-             * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>k1</p>
@@ -246,7 +246,7 @@ public class ListTagResourcesRequest extends Request {
 
             /**
              * <p>The tag value.</p>
-             * <p>The tag value can be up to 128 characters in length and can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It can be an empty string.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>

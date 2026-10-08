@@ -54,7 +54,7 @@ public class DeadLetterQueue extends TeaModel {
         } 
 
         /**
-         * Arn.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.</p>
          */
         public Builder arn(String arn) {
             this.arn = arn;

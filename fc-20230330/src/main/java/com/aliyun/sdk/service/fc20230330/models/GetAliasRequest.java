@@ -88,7 +88,7 @@ public class GetAliasRequest extends Request {
         }
 
         /**
-         * <p>The function alias.</p>
+         * <p>Function alias</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

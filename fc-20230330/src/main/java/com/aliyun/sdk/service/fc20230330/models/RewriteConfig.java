@@ -80,7 +80,7 @@ public class RewriteConfig extends TeaModel {
         } 
 
         /**
-         * equalRules.
+         * <p>The exact match rules.</p>
          */
         public Builder equalRules(java.util.List<EqualRule> equalRules) {
             this.equalRules = equalRules;
@@ -88,7 +88,7 @@ public class RewriteConfig extends TeaModel {
         }
 
         /**
-         * regexRules.
+         * <p>The regex matching rules.</p>
          */
         public Builder regexRules(java.util.List<RegexRule> regexRules) {
             this.regexRules = regexRules;
@@ -96,7 +96,7 @@ public class RewriteConfig extends TeaModel {
         }
 
         /**
-         * wildcardRules.
+         * <p>The wildcard matching rules.</p>
          */
         public Builder wildcardRules(java.util.List<WildcardRule> wildcardRules) {
             this.wildcardRules = wildcardRules;

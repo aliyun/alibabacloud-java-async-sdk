@@ -87,7 +87,7 @@ public class DisableFunctionInvocationRequest extends Request {
         } 
 
         /**
-         * <p>The name of the function whose invocation you want to disable.</p>
+         * <p>The name of the function to disable.</p>
          * 
          * <strong>example:</strong>
          * <p>helloworld</p>
@@ -99,7 +99,7 @@ public class DisableFunctionInvocationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to immediately terminate all ongoing requests.</p>
+         * <p>Specifies whether to immediately stop all ongoing requests.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -111,7 +111,10 @@ public class DisableFunctionInvocationRequest extends Request {
         }
 
         /**
-         * <p>The reason for disabling the function&quot;s invocation.</p>
+         * <p>The reason for disabling the function invocation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Service decommission</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("reason", reason);

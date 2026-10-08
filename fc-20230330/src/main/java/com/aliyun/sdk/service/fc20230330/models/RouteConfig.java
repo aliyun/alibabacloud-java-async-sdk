@@ -54,7 +54,7 @@ public class RouteConfig extends TeaModel {
         } 
 
         /**
-         * routes.
+         * <p>The route configurations.</p>
          */
         public Builder routes(java.util.List<PathConfig> routes) {
             this.routes = routes;

@@ -67,7 +67,10 @@ public class ListScalingConfigsOutput extends TeaModel {
         } 
 
         /**
-         * nextToken.
+         * <p>Paging token for the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next_token</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -75,7 +78,7 @@ public class ListScalingConfigsOutput extends TeaModel {
         }
 
         /**
-         * scalingConfigs.
+         * <p>Function scaling configuration information</p>
          */
         public Builder scalingConfigs(java.util.List<ScalingConfigStatus> scalingConfigs) {
             this.scalingConfigs = scalingConfigs;

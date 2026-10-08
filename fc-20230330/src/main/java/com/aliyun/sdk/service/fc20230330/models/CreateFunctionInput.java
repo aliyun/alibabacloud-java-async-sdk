@@ -516,7 +516,7 @@ public class CreateFunctionInput extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The ZIP package of the function code. Specify either code or customContainerConfig.</p>
          */
         public Builder code(InputCodeLocation code) {
             this.code = code;
@@ -524,7 +524,10 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * cpu.
+         * <p>The CPU specification of the function in vCPU. The value must be a multiple of 0.05 vCPU. The minimum value is 0.05 and the maximum value is 16. The ratio of cpu to memorySize (in GB) must be between 1:1 and 1:4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cpu(Float cpu) {
             this.cpu = cpu;
@@ -532,7 +535,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * customContainerConfig.
+         * <p>The configuration of the custom container runtime. After successful configuration, the function can use a custom container image to execute the function. Specify either code or customContainerConfig.</p>
          */
         public Builder customContainerConfig(CustomContainerConfig customContainerConfig) {
             this.customContainerConfig = customContainerConfig;
@@ -540,7 +543,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * customDNS.
+         * <p>The custom DNS configuration.</p>
          */
         public Builder customDNS(CustomDNS customDNS) {
             this.customDNS = customDNS;
@@ -548,7 +551,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * customRuntimeConfig.
+         * <p>The custom runtime configuration.</p>
          */
         public Builder customRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {
             this.customRuntimeConfig = customRuntimeConfig;
@@ -556,7 +559,10 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my function</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -564,7 +570,16 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * disableInjectCredentials.
+         * <p>Specifies whether to disable STS token injection. Valid values:</p>
+         * <ul>
+         * <li>None: Injects STS tokens in all methods.</li>
+         * <li>Env: Does not inject STS tokens into environment variables.</li>
+         * <li>Request: Does not inject STS tokens into requests, including context and headers.</li>
+         * <li>All: Does not inject STS tokens in any method.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Env</p>
          */
         public Builder disableInjectCredentials(String disableInjectCredentials) {
             this.disableInjectCredentials = disableInjectCredentials;
@@ -572,7 +587,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * disableOndemand.
+         * <p>Specifies whether to disable the creation of on-demand instances. After this feature is enabled, on-demand instances are not created and only provisioned instances can be used.</p>
          */
         public Builder disableOndemand(Boolean disableOndemand) {
             this.disableOndemand = disableOndemand;
@@ -580,7 +595,10 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * diskSize.
+         * <p>The disk specification of the function in MB. Valid values: 512 and 10240.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512</p>
          */
         public Builder diskSize(Integer diskSize) {
             this.diskSize = diskSize;
@@ -588,7 +606,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * enableLongLiving.
+         * <p>Specifies whether to allow provisioned instances of GPU functions to be long-running. When this feature is enabled, function instances that are created are not injected with STS tokens.</p>
          */
         public Builder enableLongLiving(Boolean enableLongLiving) {
             this.enableLongLiving = enableLongLiving;
@@ -596,7 +614,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * environmentVariables.
+         * <p>The environment variables of the function. You can access the configured environment variables in the runtime environment.</p>
          */
         public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.environmentVariables = environmentVariables;
@@ -604,6 +622,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
+         * <p>The name of the function. The name can contain only letters, digits, underscores (_), and hyphens (-). It cannot start with a digit or hyphen (-). The name must be 1 to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -615,7 +634,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * gpuConfig.
+         * <p>The GPU configuration of the function.</p>
          */
         public Builder gpuConfig(GPUConfig gpuConfig) {
             this.gpuConfig = gpuConfig;
@@ -623,6 +642,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
+         * <p>The function entry point. The specific format is related to the runtime.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -634,7 +654,10 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * idleTimeout.
+         * <p>The instance deferred release time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.idleTimeout = idleTimeout;
@@ -642,7 +665,10 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * instanceConcurrency.
+         * <p>The maximum concurrency of an instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder instanceConcurrency(Integer instanceConcurrency) {
             this.instanceConcurrency = instanceConcurrency;
@@ -650,7 +676,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * instanceIsolationMode.
+         * <p>The instance isolation mode.</p>
          */
         public Builder instanceIsolationMode(String instanceIsolationMode) {
             this.instanceIsolationMode = instanceIsolationMode;
@@ -658,7 +684,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * instanceLifecycleConfig.
+         * <p>The instance lifecycle hook method configuration.</p>
          */
         public Builder instanceLifecycleConfig(InstanceLifecycleConfig instanceLifecycleConfig) {
             this.instanceLifecycleConfig = instanceLifecycleConfig;
@@ -666,7 +692,10 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * internetAccess.
+         * <p>Specifies whether the function can access the Internet. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder internetAccess(Boolean internetAccess) {
             this.internetAccess = internetAccess;
@@ -674,7 +703,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * juiceFsConfig.
+         * <p>The JuiceFs mount configuration.</p>
          */
         public Builder juiceFsConfig(JuiceFsConfig juiceFsConfig) {
             this.juiceFsConfig = juiceFsConfig;
@@ -682,7 +711,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * layers.
+         * <p>The list of layers. Multiple layers are merged in descending order of array index. Content from a layer with a smaller index overwrites files with the same name from a layer with a larger index.</p>
          */
         public Builder layers(java.util.List<String> layers) {
             this.layers = layers;
@@ -690,7 +719,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * logConfig.
+         * <p>The log configuration. Logs generated by the function are written to the configured Logstore.</p>
          */
         public Builder logConfig(LogConfig logConfig) {
             this.logConfig = logConfig;
@@ -698,7 +727,10 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * memorySize.
+         * <p>The memory specification of the function in MB. The value must be a multiple of 64 MB. The minimum value is 128 MB and the maximum value is 32 GB. The ratio of cpu to memorySize (in GB) must be between 1:1 and 1:4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512</p>
          */
         public Builder memorySize(Integer memorySize) {
             this.memorySize = memorySize;
@@ -714,7 +746,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * nasConfig.
+         * <p>The NAS configuration. After you configure this parameter, the function can access the specified NAS resources.</p>
          */
         public Builder nasConfig(NASConfig nasConfig) {
             this.nasConfig = nasConfig;
@@ -722,7 +754,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * ossMountConfig.
+         * <p>The OSS mount configuration.</p>
          */
         public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
             this.ossMountConfig = ossMountConfig;
@@ -730,7 +762,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * polarFsConfig.
+         * <p>The PolarFs configuration. After you configure this parameter, the function can access the specified PolarFs resources.</p>
          */
         public Builder polarFsConfig(PolarFsConfig polarFsConfig) {
             this.polarFsConfig = polarFsConfig;
@@ -746,7 +778,10 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * role.
+         * <p>The RAM role that you grant to Function Compute. After the role is configured, Function Compute assumes this role to generate temporary access credentials. You can use the temporary access credentials of this role in the function to access specified Alibaba Cloud services such as OSS and OTS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::188077086902****:role/fc-test</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -754,6 +789,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
+         * <p>The runtime environment of the function. Currently supported runtime environments include: nodejs12, nodejs14, nodejs16, nodejs18, nodejs20, go1, python3, python3.9, python3.10, python3.12, java8, java11, php7.2, dotnetcore3.1, custom, custom.debian10, custom.debian11, custom.debian12, and custom-container.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -765,7 +801,10 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * sessionAffinity.
+         * <p>The session affinity policy for Function Compute invocation requests. To implement request affinity for the MCP SSE protocol, set this parameter to MCP_SSE. To use cookie-based affinity, set this parameter to GENERATED_COOKIE. To use header-based affinity, set this parameter to HEADER_FIELD. If this parameter is not set or is set to NONE, no affinity is applied and requests are routed based on the default scheduling policy of Function Compute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MCP_SSE</p>
          */
         public Builder sessionAffinity(String sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
@@ -773,7 +812,10 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * sessionAffinityConfig.
+         * <p>The session affinity configuration that corresponds to the sessionAffinity type. For MCP_SSE affinity, configure MCPSSESessionAffinityConfig. For cookie-based affinity, configure CookieSessionAffinityConfig. For header field affinity, configure HeaderFieldSessionAffinityConfig.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;sseEndpointPath\&quot;:\&quot;/sse\&quot;, \&quot;sessionConcurrencyPerInstance\&quot;:20}</p>
          */
         public Builder sessionAffinityConfig(String sessionAffinityConfig) {
             this.sessionAffinityConfig = sessionAffinityConfig;
@@ -781,7 +823,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tag> tags) {
             this.tags = tags;
@@ -789,7 +831,10 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * timeout.
+         * <p>The timeout period for function execution in seconds. The minimum value is 1, the maximum value is 86400, and the default value is 3. The function is terminated if it exceeds this time limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;
@@ -797,7 +842,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * tracingConfig.
+         * <p>The tracing configuration. After Function Compute is integrated with Tracing Analysis, you can record the time consumed by requests in Function Compute, view the cold start time of functions, and record the time consumed by internal operations of functions.</p>
          */
         public Builder tracingConfig(TracingConfig tracingConfig) {
             this.tracingConfig = tracingConfig;
@@ -805,7 +850,7 @@ public class CreateFunctionInput extends TeaModel {
         }
 
         /**
-         * vpcConfig.
+         * <p>The VPC configuration. After you configure this parameter, the function can access the specified VPC resources.</p>
          */
         public Builder vpcConfig(VPCConfig vpcConfig) {
             this.vpcConfig = vpcConfig;

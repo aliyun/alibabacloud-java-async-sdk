@@ -219,7 +219,10 @@ public class CreateSessionInput extends TeaModel {
         }
 
         /**
-         * disableSessionIdReuse.
+         * <p>Specifies whether to disable session ID reuse. Default value: False, which indicates that after a session expires, you can use the same SessionID to initiate requests. The system treats this as a new session and binds it to a new instance. If set to True, the SessionID cannot be reused after the session expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableSessionIdReuse(Boolean disableSessionIdReuse) {
             this.disableSessionIdReuse = disableSessionIdReuse;
@@ -243,7 +246,7 @@ public class CreateSessionInput extends TeaModel {
         }
 
         /**
-         * juiceFsConfig.
+         * <p>The JuiceFs mount configuration.</p>
          */
         public Builder juiceFsConfig(JuiceFsConfig juiceFsConfig) {
             this.juiceFsConfig = juiceFsConfig;
@@ -251,7 +254,7 @@ public class CreateSessionInput extends TeaModel {
         }
 
         /**
-         * nasConfig.
+         * <p>The NAS configuration. After this parameter is configured, instances associated with the session can access the specified NAS resources.</p>
          */
         public Builder nasConfig(NASConfig nasConfig) {
             this.nasConfig = nasConfig;
@@ -267,7 +270,7 @@ public class CreateSessionInput extends TeaModel {
         }
 
         /**
-         * ossMountConfig.
+         * <p>The OSS configuration. After this parameter is configured, instances associated with the session can access the specified OSS resources.</p>
          */
         public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
             this.ossMountConfig = ossMountConfig;
@@ -275,7 +278,7 @@ public class CreateSessionInput extends TeaModel {
         }
 
         /**
-         * polarFsConfig.
+         * <p>The PolarFs configuration. After this parameter is configured, instances associated with the session can access the specified PolarFs resources.</p>
          */
         public Builder polarFsConfig(PolarFsConfig polarFsConfig) {
             this.polarFsConfig = polarFsConfig;
@@ -283,7 +286,10 @@ public class CreateSessionInput extends TeaModel {
         }
 
         /**
-         * sessionId.
+         * <p>The custom session ID. If not configured, the server generates one. If configured, this value is used as the session ID. This parameter is applicable only to the HEADER_FIELD affinity mode. Format: The length is limited to [0,64]. The first character must be from <strong>a-zA-Z0-9_</strong>. Subsequent characters can be from <strong>a-zA-Z0-9_-</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom-test-session-id</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -291,7 +297,10 @@ public class CreateSessionInput extends TeaModel {
         }
 
         /**
-         * sessionIdleTimeoutInSeconds.
+         * <p>The session idle timeout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         public Builder sessionIdleTimeoutInSeconds(Long sessionIdleTimeoutInSeconds) {
             this.sessionIdleTimeoutInSeconds = sessionIdleTimeoutInSeconds;
@@ -299,7 +308,10 @@ public class CreateSessionInput extends TeaModel {
         }
 
         /**
-         * sessionTTLInSeconds.
+         * <p>The session lifetime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21600</p>
          */
         public Builder sessionTTLInSeconds(Long sessionTTLInSeconds) {
             this.sessionTTLInSeconds = sessionTTLInSeconds;

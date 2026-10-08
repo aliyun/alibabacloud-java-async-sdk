@@ -80,7 +80,10 @@ public class Resource extends TeaModel {
         } 
 
         /**
-         * resouceType.
+         * <p>The name of the resource type. For a function in Function Compute 3.0, use ALIYUN::FC::FUNCTION. For a service in an earlier version of Function Compute, use ALIYUN::FC::SERVICE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::FC::FUNCTION</p>
          */
         public Builder resouceType(String resouceType) {
             this.resouceType = resouceType;
@@ -88,7 +91,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * resourceArn.
+         * <p>The Alibaba Cloud resource descriptor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-shanghai:****:functions/demo</p>
          */
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = resourceArn;
@@ -96,7 +102,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The tag dictionary.</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             this.tags = tags;

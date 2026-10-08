@@ -103,7 +103,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to delete all tags.</p>
+         * <p>Specifies whether to remove all tags.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -115,7 +115,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource identifiers.</p>
+         * <p>A list of resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -139,7 +139,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tag to remove. You can specify a maximum of 50 tags.</p>
+         * <p>The keys of the tags to remove. You can specify up to 50 tag keys.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             String tagKeyShrink = shrink(tagKey, "TagKey", "json");

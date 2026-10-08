@@ -74,7 +74,7 @@ public class GetProvisionConfigRequest extends Request {
         } 
 
         /**
-         * <p>The function name.</p>
+         * <p>The name of the function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,10 +87,10 @@ public class GetProvisionConfigRequest extends Request {
         }
 
         /**
-         * <p>The function alias.</p>
+         * <p>The alias of the function.</p>
          * 
          * <strong>example:</strong>
-         * <p>LATEST</p>
+         * <p>prod</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

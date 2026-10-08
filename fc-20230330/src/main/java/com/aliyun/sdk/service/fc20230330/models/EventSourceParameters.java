@@ -119,7 +119,7 @@ public class EventSourceParameters extends TeaModel {
         } 
 
         /**
-         * sourceDTSParameters.
+         * <p>Custom parameter settings when the event source is Data Transmission Service DTS.</p>
          */
         public Builder sourceDTSParameters(SourceDTSParameters sourceDTSParameters) {
             this.sourceDTSParameters = sourceDTSParameters;
@@ -127,7 +127,7 @@ public class EventSourceParameters extends TeaModel {
         }
 
         /**
-         * sourceKafkaParameters.
+         * <p>Custom parameter settings when the event source is Kafka.</p>
          */
         public Builder sourceKafkaParameters(SourceKafkaParameters sourceKafkaParameters) {
             this.sourceKafkaParameters = sourceKafkaParameters;
@@ -135,7 +135,7 @@ public class EventSourceParameters extends TeaModel {
         }
 
         /**
-         * sourceMNSParameters.
+         * <p>Custom parameter settings when the event source is Simple Message Queue (formerly MNS).</p>
          */
         public Builder sourceMNSParameters(SourceMNSParameters sourceMNSParameters) {
             this.sourceMNSParameters = sourceMNSParameters;
@@ -143,7 +143,7 @@ public class EventSourceParameters extends TeaModel {
         }
 
         /**
-         * sourceMQTTParameters.
+         * <p>Custom parameter settings when the event source is ApsaraMQ for MQTT.</p>
          */
         public Builder sourceMQTTParameters(SourceMQTTParameters sourceMQTTParameters) {
             this.sourceMQTTParameters = sourceMQTTParameters;
@@ -151,7 +151,7 @@ public class EventSourceParameters extends TeaModel {
         }
 
         /**
-         * sourceRabbitMQParameters.
+         * <p>Custom parameter settings when the event source is Message Queue for RabbitMQ.</p>
          */
         public Builder sourceRabbitMQParameters(SourceRabbitMQParameters sourceRabbitMQParameters) {
             this.sourceRabbitMQParameters = sourceRabbitMQParameters;
@@ -159,7 +159,7 @@ public class EventSourceParameters extends TeaModel {
         }
 
         /**
-         * sourceRocketMQParameters.
+         * <p>Custom parameter settings when the event source is Message Queue for RocketMQ.</p>
          */
         public Builder sourceRocketMQParameters(SourceRocketMQParameters sourceRocketMQParameters) {
             this.sourceRocketMQParameters = sourceRocketMQParameters;

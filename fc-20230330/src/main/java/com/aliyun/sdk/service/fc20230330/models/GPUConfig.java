@@ -68,7 +68,10 @@ public class GPUConfig extends TeaModel {
         } 
 
         /**
-         * gpuMemorySize.
+         * <p>The GPU memory size. Unit: MB. The value is a multiple of 1024 MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder gpuMemorySize(Integer gpuMemorySize) {
             this.gpuMemorySize = gpuMemorySize;
@@ -76,7 +79,10 @@ public class GPUConfig extends TeaModel {
         }
 
         /**
-         * gpuType.
+         * <p>The type of GPU cards. Valid values: fc.gpu.tesla.1: Tesla T4 fc.gpu.ampere.1: Ampere A10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fc.gpu.ampere.1</p>
          */
         public Builder gpuType(String gpuType) {
             this.gpuType = gpuType;

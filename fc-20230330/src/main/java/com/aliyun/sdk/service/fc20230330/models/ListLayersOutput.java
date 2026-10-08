@@ -67,7 +67,7 @@ public class ListLayersOutput extends TeaModel {
         } 
 
         /**
-         * layers.
+         * <p>The layers.</p>
          */
         public Builder layers(java.util.List<Layer> layers) {
             this.layers = layers;
@@ -75,7 +75,10 @@ public class ListLayersOutput extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The name of the start layer for the next query, which is also the token used to obtain more results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next-layer-name</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

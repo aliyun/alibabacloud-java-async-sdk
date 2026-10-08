@@ -67,7 +67,10 @@ public class ConcurrencyConfig extends TeaModel {
         } 
 
         /**
-         * functionArn.
+         * <p>The Alibaba Cloud Resource Name (ARN).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-shanghai:123:functions/demo</p>
          */
         public Builder functionArn(String functionArn) {
             this.functionArn = functionArn;
@@ -75,7 +78,10 @@ public class ConcurrencyConfig extends TeaModel {
         }
 
         /**
-         * reservedConcurrency.
+         * <p>The reserved concurrency of the function. Other functions cannot use the concurrency. The reserved concurrency includes the total concurrency of provisioned instances and on-demand instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder reservedConcurrency(Long reservedConcurrency) {
             this.reservedConcurrency = reservedConcurrency;

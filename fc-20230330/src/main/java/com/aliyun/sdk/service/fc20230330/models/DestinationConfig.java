@@ -67,7 +67,7 @@ public class DestinationConfig extends TeaModel {
         } 
 
         /**
-         * onFailure.
+         * <p>Structure that defines the destination for failed invocations.</p>
          */
         public Builder onFailure(Destination onFailure) {
             this.onFailure = onFailure;
@@ -75,7 +75,7 @@ public class DestinationConfig extends TeaModel {
         }
 
         /**
-         * onSuccess.
+         * <p>Structure that defines the destination for successful invocations.</p>
          */
         public Builder onSuccess(Destination onSuccess) {
             this.onSuccess = onSuccess;

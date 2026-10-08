@@ -119,7 +119,7 @@ public class MicroSandboxConfig extends TeaModel {
         } 
 
         /**
-         * acrInstanceId.
+         * <p>The instance ID of the Container Registry (ACR) Enterprise Edition image repository. This parameter is used together with MicroSandbox images. This parameter is optional. If not provided, the server resolves it as needed.</p>
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.acrInstanceId = acrInstanceId;
@@ -127,7 +127,7 @@ public class MicroSandboxConfig extends TeaModel {
         }
 
         /**
-         * image.
+         * <p>The image address.</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -135,7 +135,7 @@ public class MicroSandboxConfig extends TeaModel {
         }
 
         /**
-         * osType.
+         * <p>The operating system type.</p>
          */
         public Builder osType(String osType) {
             this.osType = osType;
@@ -143,7 +143,7 @@ public class MicroSandboxConfig extends TeaModel {
         }
 
         /**
-         * readyCommand.
+         * <p>The ready command.</p>
          */
         public Builder readyCommand(String readyCommand) {
             this.readyCommand = readyCommand;
@@ -151,7 +151,7 @@ public class MicroSandboxConfig extends TeaModel {
         }
 
         /**
-         * registryConfig.
+         * <p>The image repository configuration.</p>
          */
         public Builder registryConfig(RegistryConfig registryConfig) {
             this.registryConfig = registryConfig;
@@ -159,7 +159,7 @@ public class MicroSandboxConfig extends TeaModel {
         }
 
         /**
-         * startCommand.
+         * <p>The start command.</p>
          */
         public Builder startCommand(String startCommand) {
             this.startCommand = startCommand;

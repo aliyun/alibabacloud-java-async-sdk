@@ -75,7 +75,7 @@ public class GetTriggerRequest extends Request {
         } 
 
         /**
-         * <p>The function name.</p>
+         * <p>The name of the function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetTriggerRequest extends Request {
         }
 
         /**
-         * <p>The trigger name.</p>
+         * <p>The name of the trigger.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

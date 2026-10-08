@@ -87,7 +87,7 @@ public class ListCustomDomainsRequest extends Request {
         } 
 
         /**
-         * <p>The number of custom domain names returned.</p>
+         * <p>The number of custom domain names to return.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -99,7 +99,7 @@ public class ListCustomDomainsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The token that is used to start paging.</p>
          * 
          * <strong>example:</strong>
          * <p>MTIzNCNhYmM=</p>
@@ -111,7 +111,7 @@ public class ListCustomDomainsRequest extends Request {
         }
 
         /**
-         * <p>The domain name prefix.</p>
+         * <p>The prefix of the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>foo</p>

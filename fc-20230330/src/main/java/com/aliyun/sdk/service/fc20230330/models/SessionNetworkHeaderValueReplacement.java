@@ -67,7 +67,10 @@ public class SessionNetworkHeaderValueReplacement extends TeaModel {
         } 
 
         /**
-         * placeholder.
+         * <p>The fake value. A placeholder used by code in the sandbox. The gateway performs an exact substring match on this string within the header value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sbx-notion-key-0001</p>
          */
         public Builder placeholder(String placeholder) {
             this.placeholder = placeholder;
@@ -75,7 +78,10 @@ public class SessionNetworkHeaderValueReplacement extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The real value. The actual value after the placeholder is replaced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ntn_real_secret_xxx</p>
          */
         public Builder value(String value) {
             this.value = value;

@@ -55,6 +55,7 @@ public class PutConcurrencyInput extends TeaModel {
         } 
 
         /**
+         * <p>The reserved concurrency of the function. Other functions cannot use the concurrency. The reserved concurrency includes the total concurrency of provisioned instances and on-demand instances.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

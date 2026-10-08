@@ -121,7 +121,10 @@ public class PutProvisionConfigInput extends TeaModel {
         } 
 
         /**
-         * alwaysAllocateCPU.
+         * <p>Specifies whether to always allocate CPU. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder alwaysAllocateCPU(Boolean alwaysAllocateCPU) {
             this.alwaysAllocateCPU = alwaysAllocateCPU;
@@ -129,7 +132,10 @@ public class PutProvisionConfigInput extends TeaModel {
         }
 
         /**
-         * alwaysAllocateGPU.
+         * <p>Specifies whether to always allocate GPU. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder alwaysAllocateGPU(Boolean alwaysAllocateGPU) {
             this.alwaysAllocateGPU = alwaysAllocateGPU;
@@ -137,7 +143,16 @@ public class PutProvisionConfigInput extends TeaModel {
         }
 
         /**
-         * defaultTarget.
+         * <p>The default minimum number of provisioned instances. Valid values: 0 to 10000.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If no metric-based auto elastic policy or scheduled elastic policy is configured, the current minimum number of instances equals the minimum number of instances you configured.</li>
+         * <li>If you configured multiple elastic policies for the minimum number of instances, the system calculates the minimum number of instances triggered by each policy and uses the maximum value among the elastic policies that are effective at the current time as the current minimum number of instances.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder defaultTarget(Long defaultTarget) {
             this.defaultTarget = defaultTarget;
@@ -145,7 +160,7 @@ public class PutProvisionConfigInput extends TeaModel {
         }
 
         /**
-         * scheduledActions.
+         * <p>The scheduled scaling configuration.</p>
          */
         public Builder scheduledActions(java.util.List<ScheduledAction> scheduledActions) {
             this.scheduledActions = scheduledActions;
@@ -153,6 +168,10 @@ public class PutProvisionConfigInput extends TeaModel {
         }
 
         /**
+         * <blockquote>
+         * <p>Notice: This parameter is no longer recommended. Use the defaultTarget parameter instead.</notice>
+         * The target number of provisioned resources. Valid values: 0 to 10000.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +183,7 @@ public class PutProvisionConfigInput extends TeaModel {
         }
 
         /**
-         * targetTrackingPolicies.
+         * <p>The metric-based scaling policy configuration.</p>
          */
         public Builder targetTrackingPolicies(java.util.List<TargetTrackingPolicy> targetTrackingPolicies) {
             this.targetTrackingPolicies = targetTrackingPolicies;

@@ -185,7 +185,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * endTimeMs.
+         * <p>The end time of the query range, specified as a UNIX timestamp in milliseconds.</p>
          */
         public Builder endTimeMs(Long endTimeMs) {
             this.putQueryParameter("endTimeMs", endTimeMs);
@@ -194,7 +194,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * instanceIds.
+         * <p>A list of instance IDs to return.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "instanceIds", "json");
@@ -204,7 +204,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * instanceStatus.
+         * <p>An array of instance statuses. The operation returns only instances whose status is in this array.</p>
          */
         public Builder instanceStatus(java.util.List<String> instanceStatus) {
             String instanceStatusShrink = shrink(instanceStatus, "instanceStatus", "json");
@@ -214,7 +214,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * limit.
+         * <p>The maximum number of instances to return.</p>
          */
         public Builder limit(String limit) {
             this.putQueryParameter("limit", limit);
@@ -235,7 +235,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * startKey.
+         * <p>The token that specifies where to start the query. It is returned in a truncated response and can be used to retrieve the next page of results.</p>
          */
         public Builder startKey(String startKey) {
             this.putQueryParameter("startKey", startKey);
@@ -244,7 +244,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * startTimeMs.
+         * <p>The start time of the query range, specified as a UNIX timestamp in milliseconds.</p>
          */
         public Builder startTimeMs(Long startTimeMs) {
             this.putQueryParameter("startTimeMs", startTimeMs);
@@ -253,7 +253,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to list all instances. Valid values: true and false.</p>
+         * <p>Specifies whether to list all active instances.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

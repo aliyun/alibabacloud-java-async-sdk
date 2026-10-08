@@ -236,7 +236,10 @@ public class AsyncTask extends TeaModel {
         } 
 
         /**
-         * alreadyRetriedTimes.
+         * <p>The number of retries after the asynchronous task fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder alreadyRetriedTimes(Long alreadyRetriedTimes) {
             this.alreadyRetriedTimes = alreadyRetriedTimes;
@@ -244,7 +247,10 @@ public class AsyncTask extends TeaModel {
         }
 
         /**
-         * destinationStatus.
+         * <p>The final state of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder destinationStatus(String destinationStatus) {
             this.destinationStatus = destinationStatus;
@@ -252,7 +258,10 @@ public class AsyncTask extends TeaModel {
         }
 
         /**
-         * durationMs.
+         * <p>The execution duration of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder durationMs(Long durationMs) {
             this.durationMs = durationMs;
@@ -260,7 +269,10 @@ public class AsyncTask extends TeaModel {
         }
 
         /**
-         * endTime.
+         * <p>The end time of the asynchronous task. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1633449590000</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -268,7 +280,7 @@ public class AsyncTask extends TeaModel {
         }
 
         /**
-         * events.
+         * <p>The events of the asynchronous task.</p>
          */
         public Builder events(java.util.List<AsyncTaskEvent> events) {
             this.events = events;
@@ -276,7 +288,10 @@ public class AsyncTask extends TeaModel {
         }
 
         /**
-         * functionArn.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-shanghai:1234/functions/my-func</p>
          */
         public Builder functionArn(String functionArn) {
             this.functionArn = functionArn;
@@ -284,7 +299,10 @@ public class AsyncTask extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * <p>The ID of the instance that corresponds to the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D4-*******9FD1-882707E</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -292,7 +310,10 @@ public class AsyncTask extends TeaModel {
         }
 
         /**
-         * qualifier.
+         * <p>The version or alias of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -300,7 +321,10 @@ public class AsyncTask extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request corresponding to this asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e026ae92-61e5-472f-b32d-1c9e3c4e****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -308,7 +332,10 @@ public class AsyncTask extends TeaModel {
         }
 
         /**
-         * returnPayload.
+         * <p>The content of the response after the asynchronous task is executed. The maximum size is 1 MB. This parameter is in public preview. If you want to use this parameter, <a href="https://help.aliyun.com/document_detail/2513733.html">contact us</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>result</p>
          */
         public Builder returnPayload(String returnPayload) {
             this.returnPayload = returnPayload;
@@ -316,7 +343,10 @@ public class AsyncTask extends TeaModel {
         }
 
         /**
-         * startedTime.
+         * <p>The start time of the asynchronous task. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1633449590000</p>
          */
         public Builder startedTime(Long startedTime) {
             this.startedTime = startedTime;
@@ -324,7 +354,21 @@ public class AsyncTask extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The state of the asynchronous task.</p>
+         * <ul>
+         * <li>Enqueued: The asynchronous invocation is enqueued and waiting to be executed.</li>
+         * <li>Succeeded: The invocation is successful.</li>
+         * <li>Failed: The invocation fails.</li>
+         * <li>Running: The invocation is being executed.</li>
+         * <li>Stopped: The invocation is terminated.</li>
+         * <li>Stopping: The invocation is being terminated.</li>
+         * <li>Invalid: The invocation is invalid and not executed due to specific reasons. For example, the function is deleted.</li>
+         * <li>Expired: The maximum validity period of messages is specified for asynchronous invocation. The invocation is discarded and not executed because the specified maximum validity period of messages expires.</li>
+         * <li>Retrying: The asynchronous invocation is being retried due to an execution error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -332,7 +376,10 @@ public class AsyncTask extends TeaModel {
         }
 
         /**
-         * taskErrorMessage.
+         * <p>The error message for an asynchronous task failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnhandledInvocationError</p>
          */
         public Builder taskErrorMessage(String taskErrorMessage) {
             this.taskErrorMessage = taskErrorMessage;
@@ -340,7 +387,10 @@ public class AsyncTask extends TeaModel {
         }
 
         /**
-         * taskId.
+         * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e026ae92-61e5-472f-b32d-1c9e3c4e****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -348,7 +398,10 @@ public class AsyncTask extends TeaModel {
         }
 
         /**
-         * taskPayload.
+         * <p>The content of the input parameter during asynchronous task execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>body</p>
          */
         public Builder taskPayload(String taskPayload) {
             this.taskPayload = taskPayload;

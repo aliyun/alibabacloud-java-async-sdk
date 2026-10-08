@@ -88,6 +88,7 @@ public class CreateSnapshotRequest extends Request {
         } 
 
         /**
+         * <p>The name of the function from which to create the snapshot.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body for creating a snapshot.</p>
          */
         public Builder body(CreateSnapshotInput body) {
             this.putBodyParameter("body", body);
@@ -109,7 +110,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * <p>The function alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alias</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

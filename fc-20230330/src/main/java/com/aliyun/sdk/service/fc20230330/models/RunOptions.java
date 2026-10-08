@@ -106,7 +106,7 @@ public class RunOptions extends TeaModel {
         } 
 
         /**
-         * batchWindow.
+         * <p>The batch window configurations.</p>
          */
         public Builder batchWindow(BatchWindow batchWindow) {
             this.batchWindow = batchWindow;
@@ -114,7 +114,7 @@ public class RunOptions extends TeaModel {
         }
 
         /**
-         * deadLetterQueue.
+         * <p>Whether to enable dead-letter queues. If you configure this parameter, dead-letter queues are enabled. By default, dead-letter queues are not enabled and messages are discarded when the retry policy is exhausted. Queues of Simple Message Queue (formerly MNS), ApsaraMQ for RocketMQ, and ApsaraMQ for Kafka, and EventBridge event buses can be used as dead-letter queues.</p>
          */
         public Builder deadLetterQueue(DeadLetterQueue deadLetterQueue) {
             this.deadLetterQueue = deadLetterQueue;
@@ -122,7 +122,17 @@ public class RunOptions extends TeaModel {
         }
 
         /**
-         * errorsTolerance.
+         * <p>The fault tolerance policy. Valid values:</p>
+         * <ul>
+         * <li><strong>NONE</strong>: does not tolerate exceptions.</li>
+         * <li><strong>ALL</strong>: tolerates all exceptions.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value is <strong>NONE</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder errorsTolerance(String errorsTolerance) {
             this.errorsTolerance = errorsTolerance;
@@ -130,7 +140,14 @@ public class RunOptions extends TeaModel {
         }
 
         /**
-         * mode.
+         * <p>The underlying application mode when message data is pushed to Function Compute. Valid values:</p>
+         * <ul>
+         * <li><strong>event-streaming</strong>: the event streaming mode. In this mode, events are pushed in arrays. One or more message events are pushed to the function in batches based on your push configurations. This mode is suitable for end-to-end streaming data processing scenarios. The event streaming mode supports the following event sources: Simple Message Queue (formerly MNS), ApsaraMQ for RocketMQ, ApsaraMQ for RabbitMQ, ApsaraMQ for Kafka, ApsaraMQ for MQTT, and Data Transmission Service (DTS).</li>
+         * <li><strong>event-driven</strong>: the event mode. In event mode, a single message is passed to the function as event parameters at a time. Events follow the CloudEvents specifications. The event mode supports the following event sources: Default, Simple Message Queue (formerly MNS), ApsaraMQ for RocketMQ, and ApsaraMQ for RabbitMQ. In this mode, batch configurations are not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>event-streaming</p>
          */
         public Builder mode(String mode) {
             this.mode = mode;
@@ -138,7 +155,7 @@ public class RunOptions extends TeaModel {
         }
 
         /**
-         * retryStrategy.
+         * <p>The retry policy that you want to use if events fail to be pushed.</p>
          */
         public Builder retryStrategy(RetryStrategy retryStrategy) {
             this.retryStrategy = retryStrategy;

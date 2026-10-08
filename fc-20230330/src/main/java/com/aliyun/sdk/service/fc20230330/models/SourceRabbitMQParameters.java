@@ -93,7 +93,10 @@ public class SourceRabbitMQParameters extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amqp-cn-nif22u74****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -101,7 +104,10 @@ public class SourceRabbitMQParameters extends TeaModel {
         }
 
         /**
-         * QueueName.
+         * <p>The queue name of the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder queueName(String queueName) {
             this.queueName = queueName;
@@ -109,7 +115,10 @@ public class SourceRabbitMQParameters extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the ApsaraMQ for RabbitMQ instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -117,7 +126,10 @@ public class SourceRabbitMQParameters extends TeaModel {
         }
 
         /**
-         * VirtualHostName.
+         * <p>The vhost name of the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eb-connect</p>
          */
         public Builder virtualHostName(String virtualHostName) {
             this.virtualHostName = virtualHostName;

@@ -148,7 +148,10 @@ public class InstanceInfo extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ef6b6ff-7f7b-485e-ab49-501ac681****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -180,7 +183,10 @@ public class InstanceInfo extends TeaModel {
         }
 
         /**
-         * versionId.
+         * <p>The version of the function to which the instance belongs. If the instance is under the LATEST alias of the function, the returned version number is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;

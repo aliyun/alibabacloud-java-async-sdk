@@ -87,7 +87,7 @@ public class DeleteAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * <p>The version or alias of the function.</p>
+         * <p>The function version or alias.</p>
          * 
          * <strong>example:</strong>
          * <p>LATEST</p>

@@ -82,7 +82,10 @@ public class NASMountConfig extends TeaModel {
         } 
 
         /**
-         * enableTLS.
+         * <p>Specifies whether to use the Transport Layer Security (TLS) protocol to secure data transmission. Note: Only General-purpose NAS supports transmission encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTLS(Boolean enableTLS) {
             this.enableTLS = enableTLS;
@@ -90,7 +93,10 @@ public class NASMountConfig extends TeaModel {
         }
 
         /**
-         * mountDir.
+         * <p>The local mount directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/test</p>
          */
         public Builder mountDir(String mountDir) {
             this.mountDir = mountDir;
@@ -98,7 +104,10 @@ public class NASMountConfig extends TeaModel {
         }
 
         /**
-         * serverAddr.
+         * <p>The address of a NAS server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>***-uni85.cn-hangzhou.nas.com:/</p>
          */
         public Builder serverAddr(String serverAddr) {
             this.serverAddr = serverAddr;

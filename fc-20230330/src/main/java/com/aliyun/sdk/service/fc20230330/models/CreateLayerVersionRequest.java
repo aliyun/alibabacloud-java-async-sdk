@@ -88,7 +88,7 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * <p>The information about layer configurations.</p>
+         * <p>The configuration of the layer.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(CreateLayerVersionInput body) {

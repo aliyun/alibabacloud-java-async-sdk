@@ -55,7 +55,10 @@ public class PublishVersionInput extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>The description of the layer version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my version</p>
          */
         public Builder description(String description) {
             this.description = description;

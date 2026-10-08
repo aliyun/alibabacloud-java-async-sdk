@@ -95,7 +95,10 @@ public class VPCConfig extends TeaModel {
         } 
 
         /**
-         * role.
+         * <p>The RAM role that is assumed by Function Compute to access VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::188077086902****:role/fc-test</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -103,7 +106,10 @@ public class VPCConfig extends TeaModel {
         }
 
         /**
-         * securityGroupId.
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp18hj1wtxgy3b0***</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -111,7 +117,7 @@ public class VPCConfig extends TeaModel {
         }
 
         /**
-         * vSwitchIds.
+         * <p>The list of vSwitches.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -119,7 +125,10 @@ public class VPCConfig extends TeaModel {
         }
 
         /**
-         * vpcId.
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-***</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

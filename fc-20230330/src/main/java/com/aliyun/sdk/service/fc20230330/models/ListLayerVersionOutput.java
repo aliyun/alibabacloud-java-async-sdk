@@ -67,7 +67,7 @@ public class ListLayerVersionOutput extends TeaModel {
         } 
 
         /**
-         * layers.
+         * <p>The list of layer versions.</p>
          */
         public Builder layers(java.util.List<Layer> layers) {
             this.layers = layers;
@@ -75,7 +75,10 @@ public class ListLayerVersionOutput extends TeaModel {
         }
 
         /**
-         * nextVersion.
+         * <p>The next version, which is used to return more results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder nextVersion(Integer nextVersion) {
             this.nextVersion = nextVersion;

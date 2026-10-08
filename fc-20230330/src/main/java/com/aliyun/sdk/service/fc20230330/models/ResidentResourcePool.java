@@ -184,7 +184,7 @@ public class ResidentResourcePool extends TeaModel {
         } 
 
         /**
-         * <p>资源池实时分配情况，包含每个函数的具体分配情况</p>
+         * <p>The real-time allocation status of the resource pool, including the specific allocation details for each function.</p>
          */
         public Builder allocationStatus(ResidentResourceAllocationStatus allocationStatus) {
             this.allocationStatus = allocationStatus;
@@ -200,7 +200,7 @@ public class ResidentResourcePool extends TeaModel {
         }
 
         /**
-         * <p>代表创建时间的资源属性字段</p>
+         * <p>The resource property field that represents the creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          */
         public Builder createdTime(String createdTime) {
@@ -209,7 +209,7 @@ public class ResidentResourcePool extends TeaModel {
         }
 
         /**
-         * <p>资源池过期时间</p>
+         * <p>The expiration time of the resource pool.</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -217,7 +217,7 @@ public class ResidentResourcePool extends TeaModel {
         }
 
         /**
-         * <p>上次修改时间，包含扩容、续费、更名等操作</p>
+         * <p>The last modification time, including operations such as scaling, renewal, and renaming.</p>
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -241,7 +241,7 @@ public class ResidentResourcePool extends TeaModel {
         }
 
         /**
-         * <p>代表资源名称的资源属性字段</p>
+         * <p>The resource property field that represents the resource name.</p>
          */
         public Builder residentResourcePoolName(String residentResourcePoolName) {
             this.residentResourcePoolName = residentResourcePoolName;
@@ -249,7 +249,7 @@ public class ResidentResourcePool extends TeaModel {
         }
 
         /**
-         * <p>资源池总体规格</p>
+         * <p>The overall specifications of the resource pool.</p>
          */
         public Builder resourcePoolCapacity(ResidentResourceCapacity resourcePoolCapacity) {
             this.resourcePoolCapacity = resourcePoolCapacity;

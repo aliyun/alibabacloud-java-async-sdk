@@ -89,7 +89,7 @@ public class PutLayerACLRequest extends Request {
         } 
 
         /**
-         * <p>The layer name.</p>
+         * <p>The name of the layer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class PutLayerACLRequest extends Request {
         }
 
         /**
-         * <p>Specify the access permission of the layer. A value of 1 indicates public and a value of 0 indicates private. The default value is 0.</p>
+         * <p>The access permissions of the layer. Valid values: 1 (public) and 0 (private). The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -114,7 +114,7 @@ public class PutLayerACLRequest extends Request {
         }
 
         /**
-         * <p>Specify whether the layer is a public layer. Valid values: true and false.</p>
+         * <p>Specifies whether to make the layer public. Valid values: true and false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

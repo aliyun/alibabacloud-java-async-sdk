@@ -80,7 +80,10 @@ public class SourceMNSParameters extends TeaModel {
         } 
 
         /**
-         * IsBase64Decode.
+         * <p>Specify whether to enable Base64 encoding. Default value: true. Valid values: true false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isBase64Decode(Boolean isBase64Decode) {
             this.isBase64Decode = isBase64Decode;
@@ -88,7 +91,10 @@ public class SourceMNSParameters extends TeaModel {
         }
 
         /**
-         * QueueName.
+         * <p>The name of the queue of Simple Message Queue (formerly MNS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder queueName(String queueName) {
             this.queueName = queueName;
@@ -96,7 +102,10 @@ public class SourceMNSParameters extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region to which the queue of Simple Message Queue (formerly MNS) belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;

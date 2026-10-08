@@ -116,7 +116,10 @@ public class ListSnapshotsRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The function name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("functionName", functionName);
@@ -125,7 +128,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * limit.
+         * <p>The maximum number of snapshots to return. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -134,7 +140,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token used to retrieve more results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0be03****f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -143,7 +152,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * <p>The function alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alias</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -152,7 +164,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * sessionId.
+         * <p>The source session ID from which the snapshot was created. When specified, functionName must also be specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-session-id-1</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("sessionId", sessionId);

@@ -142,7 +142,7 @@ public class ListSessionsRequest extends Request {
         }
 
         /**
-         * <p>The number of sessions to be returned. If this parameter is not specified, 20 sessions are returned by default.</p>
+         * <p>The number of sessions to return. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -154,7 +154,7 @@ public class ListSessionsRequest extends Request {
         }
 
         /**
-         * <p>The token for the next page.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>MTIzNCNhYmM=</p>
@@ -166,7 +166,7 @@ public class ListSessionsRequest extends Request {
         }
 
         /**
-         * <p>The function alias or version.</p>
+         * <p>The function alias or version information.</p>
          * 
          * <strong>example:</strong>
          * <p>aliasName1</p>
@@ -178,7 +178,7 @@ public class ListSessionsRequest extends Request {
         }
 
         /**
-         * <p>The SessionId value to filter. If specified, all session information associated with this session ID in Active or Expired states is returned.</p>
+         * <p>The session ID to filter by. If specified, all Active or Expired status information associated with this session is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>test-session-id-1</p>
@@ -190,7 +190,7 @@ public class ListSessionsRequest extends Request {
         }
 
         /**
-         * <p>The session status to filter. By default, information for all sessions in the Active and Expired states is returned. You can specify Active to retrieve only active sessions, or Expired to retrieve only expired sessions.</p>
+         * <p>The session status to filter by. By default, all session information in Active or Expired status is returned. You can specify Active to retrieve only active session information, or specify Expired to retrieve only expired session information.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

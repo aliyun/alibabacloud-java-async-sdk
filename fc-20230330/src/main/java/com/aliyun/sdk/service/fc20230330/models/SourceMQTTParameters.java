@@ -80,7 +80,10 @@ public class SourceMQTTParameters extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt-****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -88,7 +91,10 @@ public class SourceMQTTParameters extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the ApsaraMQ for MQTT instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -96,7 +102,10 @@ public class SourceMQTTParameters extends TeaModel {
         }
 
         /**
-         * Topic.
+         * <p>The name of the topic in the ApsaraMQ for MQTT instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testTopic</p>
          */
         public Builder topic(String topic) {
             this.topic = topic;

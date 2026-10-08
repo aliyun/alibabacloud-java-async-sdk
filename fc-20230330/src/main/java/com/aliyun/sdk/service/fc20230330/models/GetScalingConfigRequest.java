@@ -73,7 +73,7 @@ public class GetScalingConfigRequest extends Request {
         } 
 
         /**
-         * <p>The name of the function.</p>
+         * <p>The function name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-func</p>
@@ -85,7 +85,7 @@ public class GetScalingConfigRequest extends Request {
         }
 
         /**
-         * <p>The alias of the function.</p>
+         * <p>The function alias.</p>
          * 
          * <strong>example:</strong>
          * <p>LATEST</p>

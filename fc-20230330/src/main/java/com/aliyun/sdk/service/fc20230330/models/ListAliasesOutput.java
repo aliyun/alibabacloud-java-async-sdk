@@ -67,7 +67,7 @@ public class ListAliasesOutput extends TeaModel {
         } 
 
         /**
-         * aliases.
+         * <p>The information about aliases.</p>
          */
         public Builder aliases(java.util.List<Alias> aliases) {
             this.aliases = aliases;
@@ -75,7 +75,10 @@ public class ListAliasesOutput extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The next version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

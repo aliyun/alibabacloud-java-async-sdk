@@ -67,7 +67,7 @@ public class RegistryCertConfig extends TeaModel {
         } 
 
         /**
-         * insecure.
+         * <p>Whether to skip certificate verification.</p>
          */
         public Builder insecure(Boolean insecure) {
             this.insecure = insecure;
@@ -75,7 +75,10 @@ public class RegistryCertConfig extends TeaModel {
         }
 
         /**
-         * rootCaCertBase64.
+         * <p>The certificate authority (CA) certificate of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cm9vdF9jYV9jZXJ0</p>
          */
         public Builder rootCaCertBase64(String rootCaCertBase64) {
             this.rootCaCertBase64 = rootCaCertBase64;

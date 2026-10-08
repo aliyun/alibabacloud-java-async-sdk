@@ -67,7 +67,7 @@ public class InstanceLifecycleConfig extends TeaModel {
         } 
 
         /**
-         * initializer.
+         * <p>Initializer method configuration</p>
          */
         public Builder initializer(LifecycleHook initializer) {
             this.initializer = initializer;
@@ -75,7 +75,7 @@ public class InstanceLifecycleConfig extends TeaModel {
         }
 
         /**
-         * preStop.
+         * <p>PreStop method configuration</p>
          */
         public Builder preStop(LifecycleHook preStop) {
             this.preStop = preStop;

@@ -67,7 +67,7 @@ public class JuiceFsConfig extends TeaModel {
         } 
 
         /**
-         * envs.
+         * <p>A map of environment variables (key-value pairs) to set for the JuiceFS client.</p>
          */
         public Builder envs(java.util.Map<String, String> envs) {
             this.envs = envs;
@@ -75,7 +75,7 @@ public class JuiceFsConfig extends TeaModel {
         }
 
         /**
-         * mountPoints.
+         * <p>An array of JuiceFsMountConfig objects, each specifying the configuration for a mount point.</p>
          */
         public Builder mountPoints(java.util.List<JuiceFsMountConfig> mountPoints) {
             this.mountPoints = mountPoints;

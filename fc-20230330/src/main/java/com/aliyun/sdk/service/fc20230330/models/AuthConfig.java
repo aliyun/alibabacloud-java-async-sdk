@@ -67,7 +67,10 @@ public class AuthConfig extends TeaModel {
         } 
 
         /**
-         * authInfo.
+         * <p>The authentication information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder authInfo(String authInfo) {
             this.authInfo = authInfo;
@@ -75,7 +78,10 @@ public class AuthConfig extends TeaModel {
         }
 
         /**
-         * authType.
+         * <p>The authentication type. Valid values: anonymous, function, and jwt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>anonymous</p>
          */
         public Builder authType(String authType) {
             this.authType = authType;

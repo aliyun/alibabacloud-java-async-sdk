@@ -106,7 +106,10 @@ public class HTTPTriggerConfig extends TeaModel {
         } 
 
         /**
-         * authConfig.
+         * <p>The authentication configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;JWKS&quot;:{&quot;foo&quot;:&quot;bar&quot;},&quot;TokenLookup&quot;:&quot;header:Authorization:Bearer,cookie:AuthorizationCookie&quot;,&quot;ClaimPassBy&quot;:&quot;query:uid:uid,header:name:name&quot;}</p>
          */
         public Builder authConfig(String authConfig) {
             this.authConfig = authConfig;
@@ -114,7 +117,19 @@ public class HTTPTriggerConfig extends TeaModel {
         }
 
         /**
-         * authType.
+         * <p>The authentication type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>function</strong>: Authentication is required.</p>
+         * </li>
+         * <li><p><strong>anonymous</strong>: Authentication is not required.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>The default value is <strong>function</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>anonymous</p>
          */
         public Builder authType(String authType) {
             this.authType = authType;
@@ -122,7 +137,7 @@ public class HTTPTriggerConfig extends TeaModel {
         }
 
         /**
-         * corsConfig.
+         * <p>The CORS configuration.</p>
          */
         public Builder corsConfig(CORSConfig corsConfig) {
             this.corsConfig = corsConfig;
@@ -130,7 +145,10 @@ public class HTTPTriggerConfig extends TeaModel {
         }
 
         /**
-         * disableURLInternet.
+         * <p>Specifies whether to disable access through the default public domain name. If set to true, accessing the default public URL of the function returns a 403 error. If set to false, access is not affected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableURLInternet(Boolean disableURLInternet) {
             this.disableURLInternet = disableURLInternet;
@@ -138,7 +156,7 @@ public class HTTPTriggerConfig extends TeaModel {
         }
 
         /**
-         * methods.
+         * <p>The list of request methods. Multiple methods can be supported simultaneously.</p>
          */
         public Builder methods(java.util.List<String> methods) {
             this.methods = methods;

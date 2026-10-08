@@ -223,7 +223,10 @@ public class CustomDomain extends TeaModel {
         } 
 
         /**
-         * accountId.
+         * <p>The ID of the Alibaba Cloud account (primary account).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>186851234023****</p>
          */
         public Builder accountId(String accountId) {
             this.accountId = accountId;
@@ -231,7 +234,10 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * apiVersion.
+         * <p>The API version of Function Compute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-30</p>
          */
         public Builder apiVersion(String apiVersion) {
             this.apiVersion = apiVersion;
@@ -239,7 +245,7 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * authConfig.
+         * <p>The authentication configuration.</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.authConfig = authConfig;
@@ -247,7 +253,7 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * certConfig.
+         * <p>The HTTPS certificate configuration.</p>
          */
         public Builder certConfig(CertConfig certConfig) {
             this.certConfig = certConfig;
@@ -255,7 +261,7 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * corsConfig.
+         * <p>The cross-origin resource sharing (CORS) configuration.</p>
          */
         public Builder corsConfig(CORSConfig corsConfig) {
             this.corsConfig = corsConfig;
@@ -263,7 +269,10 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * createdTime.
+         * <p>The time when the custom domain was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-30T08:02:19Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -271,7 +280,10 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * domainName.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -287,7 +299,10 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * lastModifiedTime.
+         * <p>The time when the custom domain was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-30T08:02:19Z</p>
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -295,7 +310,10 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>The protocols that are supported by the domain name. Valid values: HTTP (HTTP only), HTTPS (HTTPS only), and HTTP,HTTPS (both HTTP and HTTPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -303,7 +321,7 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * routeConfig.
+         * <p>The route table that maps paths to functions.</p>
          */
         public Builder routeConfig(RouteConfig routeConfig) {
             this.routeConfig = routeConfig;
@@ -311,7 +329,10 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * subdomainCount.
+         * <p>The number of subdomains.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder subdomainCount(String subdomainCount) {
             this.subdomainCount = subdomainCount;
@@ -319,7 +340,7 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * tlsConfig.
+         * <p>The TLS configuration.</p>
          */
         public Builder tlsConfig(TLSConfig tlsConfig) {
             this.tlsConfig = tlsConfig;
@@ -327,7 +348,7 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * wafConfig.
+         * <p>The Web Application Firewall (WAF) aconfiguration.</p>
          */
         public Builder wafConfig(WAFConfig wafConfig) {
             this.wafConfig = wafConfig;

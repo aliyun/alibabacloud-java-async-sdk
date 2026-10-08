@@ -186,7 +186,10 @@ public class Layer extends TeaModel {
         } 
 
         /**
-         * acl.
+         * <p>The permission of the layer. Valid value: 0 and 1. 0 specifies that the layer is private, and 1 specifies that the layer is public. By default, public layers are public. Custom layers can be set to private or public.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder acl(String acl) {
             this.acl = acl;
@@ -194,7 +197,7 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The information about the code package of the layer.</p>
          */
         public Builder code(OutputCodeLocation code) {
             this.code = code;
@@ -202,7 +205,10 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * codeChecksum.
+         * <p>The crc64 verification code of the layer code package, which is calculated based on ECMA-182.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2825179536350****</p>
          */
         public Builder codeChecksum(String codeChecksum) {
             this.codeChecksum = codeChecksum;
@@ -210,7 +216,10 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * codeSize.
+         * <p>The size of the layer code package. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>421</p>
          */
         public Builder codeSize(Long codeSize) {
             this.codeSize = codeSize;
@@ -218,7 +227,7 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * compatibleRuntime.
+         * <p>The runtimes that are supported by the layer.</p>
          */
         public Builder compatibleRuntime(java.util.List<String> compatibleRuntime) {
             this.compatibleRuntime = compatibleRuntime;
@@ -226,7 +235,10 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The time when the layer version was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-30T11:08:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -234,7 +246,10 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the layer version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My first layer</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -242,6 +257,7 @@ public class Layer extends TeaModel {
         }
 
         /**
+         * <p>The name of the layer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +269,10 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * layerVersionArn.
+         * <p>The name of the resource in the layer version. The name is in the acs:fc:{region}:{accountID}:layers/{layerName}/versions/{layerVersion} format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-beijing:186824xxxxxx:layers/fc_layer/versions/1</p>
          */
         public Builder layerVersionArn(String layerVersionArn) {
             this.layerVersionArn = layerVersionArn;
@@ -261,7 +280,10 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * license.
+         * <p>The license agreement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apache</p>
          */
         public Builder license(String license) {
             this.license = license;
@@ -269,7 +291,10 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The layer version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder version(Integer version) {
             this.version = version;

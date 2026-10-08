@@ -93,7 +93,7 @@ public class CustomRuntimeConfig extends TeaModel {
         } 
 
         /**
-         * args.
+         * <p>The arguments that are passed to the startup command.</p>
          */
         public Builder args(java.util.List<String> args) {
             this.args = args;
@@ -101,7 +101,7 @@ public class CustomRuntimeConfig extends TeaModel {
         }
 
         /**
-         * command.
+         * <p>The startup commands.</p>
          */
         public Builder command(java.util.List<String> command) {
             this.command = command;
@@ -109,7 +109,7 @@ public class CustomRuntimeConfig extends TeaModel {
         }
 
         /**
-         * healthCheckConfig.
+         * <p>The custom health check configuration of the function.</p>
          */
         public Builder healthCheckConfig(CustomHealthCheckConfig healthCheckConfig) {
             this.healthCheckConfig = healthCheckConfig;
@@ -117,7 +117,10 @@ public class CustomRuntimeConfig extends TeaModel {
         }
 
         /**
-         * port.
+         * <p>The port on which the HTTP server is listening.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9000</p>
          */
         public Builder port(Integer port) {
             this.port = port;

@@ -103,7 +103,7 @@ public class UpdateAliasRequest extends Request {
         }
 
         /**
-         * <p>The function alias name.</p>
+         * <p>The function alias.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class UpdateAliasRequest extends Request {
         }
 
         /**
-         * <p>The alias information to be updated.</p>
+         * <p>The alias information to update.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(UpdateAliasInput body) {

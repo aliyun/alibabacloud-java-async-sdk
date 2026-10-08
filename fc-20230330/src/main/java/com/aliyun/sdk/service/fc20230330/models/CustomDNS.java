@@ -80,7 +80,7 @@ public class CustomDNS extends TeaModel {
         } 
 
         /**
-         * dnsOptions.
+         * <p>The DNS resolution configurations in the resolv.conf file. Each item corresponds to a key-value pair in the key:value format, in which the key is required.</p>
          */
         public Builder dnsOptions(java.util.List<DNSOption> dnsOptions) {
             this.dnsOptions = dnsOptions;
@@ -88,7 +88,7 @@ public class CustomDNS extends TeaModel {
         }
 
         /**
-         * nameServers.
+         * <p>The IP addresses of the DNS server.</p>
          */
         public Builder nameServers(java.util.List<String> nameServers) {
             this.nameServers = nameServers;
@@ -96,7 +96,7 @@ public class CustomDNS extends TeaModel {
         }
 
         /**
-         * searches.
+         * <p>The search domains of DNS server.</p>
          */
         public Builder searches(java.util.List<String> searches) {
             this.searches = searches;

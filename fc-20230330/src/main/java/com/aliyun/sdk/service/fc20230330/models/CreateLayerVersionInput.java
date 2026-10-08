@@ -94,7 +94,7 @@ public class CreateLayerVersionInput extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The code information of the layer.</p>
          */
         public Builder code(InputCodeLocation code) {
             this.code = code;
@@ -102,7 +102,7 @@ public class CreateLayerVersionInput extends TeaModel {
         }
 
         /**
-         * compatibleRuntime.
+         * <p>The runtimes that are supported by the layer.</p>
          */
         public Builder compatibleRuntime(java.util.List<String> compatibleRuntime) {
             this.compatibleRuntime = compatibleRuntime;
@@ -110,7 +110,10 @@ public class CreateLayerVersionInput extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the layer version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my first layer</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -118,7 +121,10 @@ public class CreateLayerVersionInput extends TeaModel {
         }
 
         /**
-         * license.
+         * <p>The license agreement for the layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apache</p>
          */
         public Builder license(String license) {
             this.license = license;

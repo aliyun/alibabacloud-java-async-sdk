@@ -67,7 +67,7 @@ public class ListFunctionsOutput extends TeaModel {
         } 
 
         /**
-         * functions.
+         * <p>The information about functions.</p>
          */
         public Builder functions(java.util.List<Function> functions) {
             this.functions = functions;
@@ -75,7 +75,10 @@ public class ListFunctionsOutput extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next_function_name</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

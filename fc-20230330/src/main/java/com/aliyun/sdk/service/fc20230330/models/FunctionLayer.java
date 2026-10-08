@@ -67,7 +67,10 @@ public class FunctionLayer extends TeaModel {
         } 
 
         /**
-         * arn.
+         * <p>The resource identifier of the layer version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-beijing:186824xxxxxx:layers/fc_layer/versions/1</p>
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -75,7 +78,10 @@ public class FunctionLayer extends TeaModel {
         }
 
         /**
-         * size.
+         * <p>The size of the layer code package. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>421</p>
          */
         public Builder size(Long size) {
             this.size = size;

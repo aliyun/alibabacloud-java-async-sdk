@@ -54,7 +54,7 @@ public class EventSinkConfig extends TeaModel {
         } 
 
         /**
-         * deliveryOption.
+         * <p>The event push configurations.</p>
          */
         public Builder deliveryOption(DeliveryOption deliveryOption) {
             this.deliveryOption = deliveryOption;

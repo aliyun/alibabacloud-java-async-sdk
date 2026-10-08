@@ -67,7 +67,10 @@ public class RegistryAuthConfig extends TeaModel {
         } 
 
         /**
-         * password.
+         * <p>The image repository password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc***</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -75,7 +78,10 @@ public class RegistryAuthConfig extends TeaModel {
         }
 
         /**
-         * userName.
+         * <p>The image repository username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

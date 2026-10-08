@@ -95,7 +95,10 @@ public class UpdateTriggerInput extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>The description of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trigger for test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -103,7 +106,10 @@ public class UpdateTriggerInput extends TeaModel {
         }
 
         /**
-         * invocationRole.
+         * <p>The role that is used by the event source such as object Storage Service (OSS) to invoke the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1234567890:role/fc-test</p>
          */
         public Builder invocationRole(String invocationRole) {
             this.invocationRole = invocationRole;
@@ -111,7 +117,10 @@ public class UpdateTriggerInput extends TeaModel {
         }
 
         /**
-         * qualifier.
+         * <p>The version or alias of the service to which the function belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -119,7 +128,10 @@ public class UpdateTriggerInput extends TeaModel {
         }
 
         /**
-         * triggerConfig.
+         * <p>The configuration of the trigger. The configuration vary based on the trigger type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;events&quot;:[&quot;oss:ObjectCreated:*&quot;],&quot;filter&quot;:{&quot;key&quot;:{&quot;prefix&quot;:&quot;/prefix&quot;,&quot;suffix&quot;:&quot;.zip&quot;}}}</p>
          */
         public Builder triggerConfig(String triggerConfig) {
             this.triggerConfig = triggerConfig;

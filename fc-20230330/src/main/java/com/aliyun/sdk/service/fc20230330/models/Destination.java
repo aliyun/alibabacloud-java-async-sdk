@@ -55,7 +55,10 @@ public class Destination extends TeaModel {
         } 
 
         /**
-         * destination.
+         * <p>The descriptor of the destination for the asynchronous invocation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-shanghai:xxx:functions/f1</p>
          */
         public Builder destination(String destination) {
             this.destination = destination;

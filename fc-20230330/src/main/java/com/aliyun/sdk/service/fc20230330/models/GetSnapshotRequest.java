@@ -75,6 +75,7 @@ public class GetSnapshotRequest extends Request {
         } 
 
         /**
+         * <p>The function name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetSnapshotRequest extends Request {
         }
 
         /**
+         * <p>The snapshot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

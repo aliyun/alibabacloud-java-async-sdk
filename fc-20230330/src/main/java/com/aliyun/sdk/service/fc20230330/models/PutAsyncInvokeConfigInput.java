@@ -93,7 +93,10 @@ public class PutAsyncInvokeConfigInput extends TeaModel {
         } 
 
         /**
-         * asyncTask.
+         * <p>Optional. Specify whether to enable the asynchronous task feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder asyncTask(Boolean asyncTask) {
             this.asyncTask = asyncTask;
@@ -101,7 +104,7 @@ public class PutAsyncInvokeConfigInput extends TeaModel {
         }
 
         /**
-         * destinationConfig.
+         * <p>Optional. The struct of the destination of asynchronous invocations.</p>
          */
         public Builder destinationConfig(DestinationConfig destinationConfig) {
             this.destinationConfig = destinationConfig;
@@ -109,7 +112,10 @@ public class PutAsyncInvokeConfigInput extends TeaModel {
         }
 
         /**
-         * maxAsyncEventAgeInSeconds.
+         * <p>Optional. The maximum validity period of a message. Valid values: [1,604800]. Default value: 86400. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder maxAsyncEventAgeInSeconds(Long maxAsyncEventAgeInSeconds) {
             this.maxAsyncEventAgeInSeconds = maxAsyncEventAgeInSeconds;
@@ -117,7 +123,10 @@ public class PutAsyncInvokeConfigInput extends TeaModel {
         }
 
         /**
-         * maxAsyncRetryAttempts.
+         * <p>Optional. The maximum number of retries if an asynchronous invocation fails. Valid values: [0,8]. If you do not configure this parameter, the default number of retries is 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxAsyncRetryAttempts(Long maxAsyncRetryAttempts) {
             this.maxAsyncRetryAttempts = maxAsyncRetryAttempts;

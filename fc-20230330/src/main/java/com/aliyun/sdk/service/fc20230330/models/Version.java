@@ -93,7 +93,10 @@ public class Version extends TeaModel {
         } 
 
         /**
-         * createdTime.
+         * <p>The time when the version was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006-01-02T15:04:05Z07:00</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -101,7 +104,10 @@ public class Version extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the layer version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my version</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -109,7 +115,10 @@ public class Version extends TeaModel {
         }
 
         /**
-         * lastModifiedTime.
+         * <p>The time when the version was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006-01-02T15:04:05Z07:00</p>
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -117,7 +126,10 @@ public class Version extends TeaModel {
         }
 
         /**
-         * versionId.
+         * <p>The version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;

@@ -54,7 +54,7 @@ public class ListVpcBindingsOutput extends TeaModel {
         } 
 
         /**
-         * vpcIds.
+         * <p>The VPC IDs.</p>
          */
         public Builder vpcIds(java.util.List<String> vpcIds) {
             this.vpcIds = vpcIds;

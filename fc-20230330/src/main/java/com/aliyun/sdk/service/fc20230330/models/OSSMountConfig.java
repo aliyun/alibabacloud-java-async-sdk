@@ -54,7 +54,7 @@ public class OSSMountConfig extends TeaModel {
         } 
 
         /**
-         * mountPoints.
+         * <p>The OSS mount targets.</p>
          */
         public Builder mountPoints(java.util.List<OSSMountPoint> mountPoints) {
             this.mountPoints = mountPoints;

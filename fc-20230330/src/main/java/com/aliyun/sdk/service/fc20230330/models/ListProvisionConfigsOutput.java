@@ -67,7 +67,10 @@ public class ListProvisionConfigsOutput extends TeaModel {
         } 
 
         /**
-         * nextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next_token</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -75,7 +78,7 @@ public class ListProvisionConfigsOutput extends TeaModel {
         }
 
         /**
-         * provisionConfigs.
+         * <p>The provisioned configurations of the function.</p>
          */
         public Builder provisionConfigs(java.util.List<ProvisionConfig> provisionConfigs) {
             this.provisionConfigs = provisionConfigs;

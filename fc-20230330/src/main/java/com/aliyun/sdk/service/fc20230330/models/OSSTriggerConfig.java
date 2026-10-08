@@ -67,7 +67,7 @@ public class OSSTriggerConfig extends TeaModel {
         } 
 
         /**
-         * events.
+         * <p>The list of events. Enter an event related to OSS. For more information about event types,see <a href="https://help.aliyun.com/document_detail/2513613.html">OSS events</a>.</p>
          */
         public Builder events(java.util.List<String> events) {
             this.events = events;
@@ -75,7 +75,7 @@ public class OSSTriggerConfig extends TeaModel {
         }
 
         /**
-         * filter.
+         * <p>The event filtering rule.</p>
          */
         public Builder filter(Filter filter) {
             this.filter = filter;

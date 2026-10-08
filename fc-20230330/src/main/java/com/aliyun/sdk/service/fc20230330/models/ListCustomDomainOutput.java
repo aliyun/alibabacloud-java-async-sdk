@@ -67,7 +67,7 @@ public class ListCustomDomainOutput extends TeaModel {
         } 
 
         /**
-         * customDomains.
+         * <p>The custom domain names.</p>
          */
         public Builder customDomains(java.util.List<CustomDomain> customDomains) {
             this.customDomains = customDomains;
@@ -75,7 +75,10 @@ public class ListCustomDomainOutput extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next_domain_name</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

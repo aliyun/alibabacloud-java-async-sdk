@@ -145,7 +145,10 @@ public class SourceDTSParameters extends TeaModel {
         } 
 
         /**
-         * BrokerUrl.
+         * <p>The network address and port number of the change tracking instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts-cn-shanghai-vpc.com:18003</p>
          */
         public Builder brokerUrl(String brokerUrl) {
             this.brokerUrl = brokerUrl;
@@ -153,7 +156,10 @@ public class SourceDTSParameters extends TeaModel {
         }
 
         /**
-         * InitCheckPoint.
+         * <p>The UNIX timestamp that is generated when the SDK client consumes the first data record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1677340805</p>
          */
         public Builder initCheckPoint(Integer initCheckPoint) {
             this.initCheckPoint = initCheckPoint;
@@ -161,7 +167,10 @@ public class SourceDTSParameters extends TeaModel {
         }
 
         /**
-         * Password.
+         * <p>The consumer group password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsTest123</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -169,7 +178,10 @@ public class SourceDTSParameters extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region of the DTS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -177,7 +189,10 @@ public class SourceDTSParameters extends TeaModel {
         }
 
         /**
-         * Sid.
+         * <p>The consumer group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtse34j22j025a****</p>
          */
         public Builder sid(String sid) {
             this.sid = sid;
@@ -185,7 +200,10 @@ public class SourceDTSParameters extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e34z2gm325q****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -193,7 +211,10 @@ public class SourceDTSParameters extends TeaModel {
         }
 
         /**
-         * Topic.
+         * <p>The name of the tracked topic of the change tracking instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn_shanghai_vpc_rm_uf6398ykj0218****_dts_trigger_upgrade_from_old_version2</p>
          */
         public Builder topic(String topic) {
             this.topic = topic;
@@ -201,7 +222,10 @@ public class SourceDTSParameters extends TeaModel {
         }
 
         /**
-         * Username.
+         * <p>The account of the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts_trigger</p>
          */
         public Builder username(String username) {
             this.username = username;

@@ -60,7 +60,7 @@ public class GetLayerVersionByArnRequest extends Request {
         } 
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the layer.</p>
+         * <p>The ARN of the layer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

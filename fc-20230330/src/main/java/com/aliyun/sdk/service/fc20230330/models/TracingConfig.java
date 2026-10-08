@@ -67,7 +67,7 @@ public class TracingConfig extends TeaModel {
         } 
 
         /**
-         * params.
+         * <p>The parameters for Tracing Analysis. The value is a map[string]string where the key is &quot;endpoint&quot; and the value is the internal network endpoint for Tracing Analysis. For example: endpoint: http\://tracing-analysis-dc-hz.aliyuncs.com/adapt_xxx/api/otlp/traces.</p>
          */
         public Builder params(java.util.Map<String, String> params) {
             this.params = params;
@@ -75,7 +75,10 @@ public class TracingConfig extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The Protocol Type for Tracing Analysis. Only Jaeger is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jaeger</p>
          */
         public Builder type(String type) {
             this.type = type;

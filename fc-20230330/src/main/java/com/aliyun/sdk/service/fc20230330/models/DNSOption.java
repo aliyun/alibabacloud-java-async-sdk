@@ -69,7 +69,10 @@ public class DNSOption extends TeaModel {
         } 
 
         /**
-         * name.
+         * <p>The name of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ndots</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -77,7 +80,10 @@ public class DNSOption extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The value of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder value(String value) {
             this.value = value;

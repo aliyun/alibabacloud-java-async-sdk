@@ -119,7 +119,19 @@ public class EventBridgeTriggerConfig extends TeaModel {
         } 
 
         /**
-         * asyncInvocationType.
+         * <p>The method used by the trigger to invoke the function. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: synchronous call.</p>
+         * </li>
+         * <li><p><strong>false</strong>: asynchronous invocation.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Default value: <strong>false</strong></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder asyncInvocationType(Boolean asyncInvocationType) {
             this.asyncInvocationType = asyncInvocationType;
@@ -127,7 +139,10 @@ public class EventBridgeTriggerConfig extends TeaModel {
         }
 
         /**
-         * eventRuleFilterPattern.
+         * <p>Event pattern. Use JSON format. For detailed rules, see <a href="https://help.aliyun.com/document_detail/181432.html">event pattern</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder eventRuleFilterPattern(String eventRuleFilterPattern) {
             this.eventRuleFilterPattern = eventRuleFilterPattern;
@@ -135,7 +150,7 @@ public class EventBridgeTriggerConfig extends TeaModel {
         }
 
         /**
-         * eventSinkConfig.
+         * <p>Event target configuration</p>
          */
         public Builder eventSinkConfig(EventSinkConfig eventSinkConfig) {
             this.eventSinkConfig = eventSinkConfig;
@@ -143,7 +158,7 @@ public class EventBridgeTriggerConfig extends TeaModel {
         }
 
         /**
-         * eventSourceConfig.
+         * <p>Event source configuration.</p>
          */
         public Builder eventSourceConfig(EventSourceConfig eventSourceConfig) {
             this.eventSourceConfig = eventSourceConfig;
@@ -151,7 +166,7 @@ public class EventBridgeTriggerConfig extends TeaModel {
         }
 
         /**
-         * runOptions.
+         * <p>Environment parameter configuration</p>
          */
         public Builder runOptions(RunOptions runOptions) {
             this.runOptions = runOptions;
@@ -159,7 +174,19 @@ public class EventBridgeTriggerConfig extends TeaModel {
         }
 
         /**
-         * triggerEnable.
+         * <p>Whether to enable the trigger. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: enable the trigger.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disable the trigger.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Default value: <strong>true</strong></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder triggerEnable(Boolean triggerEnable) {
             this.triggerEnable = triggerEnable;

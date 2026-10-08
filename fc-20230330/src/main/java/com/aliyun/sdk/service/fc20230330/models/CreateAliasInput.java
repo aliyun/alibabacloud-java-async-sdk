@@ -96,7 +96,7 @@ public class CreateAliasInput extends TeaModel {
         } 
 
         /**
-         * additionalVersionWeight.
+         * <p>The weight of the canary release version.</p>
          */
         public Builder additionalVersionWeight(java.util.Map<String, Float> additionalVersionWeight) {
             this.additionalVersionWeight = additionalVersionWeight;
@@ -104,6 +104,7 @@ public class CreateAliasInput extends TeaModel {
         }
 
         /**
+         * <p>The name of the alias.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class CreateAliasInput extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my alias</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -123,6 +127,7 @@ public class CreateAliasInput extends TeaModel {
         }
 
         /**
+         * <p>The version to which the alias points.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

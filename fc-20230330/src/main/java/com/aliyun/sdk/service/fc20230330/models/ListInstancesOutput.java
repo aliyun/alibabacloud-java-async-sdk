@@ -67,7 +67,7 @@ public class ListInstancesOutput extends TeaModel {
         } 
 
         /**
-         * instances.
+         * <p>List of instance information.</p>
          */
         public Builder instances(java.util.List<InstanceInfo> instances) {
             this.instances = instances;

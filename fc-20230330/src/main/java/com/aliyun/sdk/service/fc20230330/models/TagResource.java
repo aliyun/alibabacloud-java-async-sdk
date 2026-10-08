@@ -93,7 +93,10 @@ public class TagResource extends TeaModel {
         } 
 
         /**
-         * ResourceId.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-shanghai:****:functions/demo</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -101,7 +104,11 @@ public class TagResource extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The name of the resource type.</p>
+         * <p>The function type in Function Compute 3.0 is ALIYUN::FC::FUNCTION, which is abbreviated as &quot;function&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>function</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -109,7 +116,10 @@ public class TagResource extends TeaModel {
         }
 
         /**
-         * TagKey.
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         public Builder tagKey(String tagKey) {
             this.tagKey = tagKey;
@@ -117,7 +127,10 @@ public class TagResource extends TeaModel {
         }
 
         /**
-         * TagValue.
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         public Builder tagValue(String tagValue) {
             this.tagValue = tagValue;

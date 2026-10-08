@@ -99,7 +99,7 @@ public class DeleteSessionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the session to be deleted.</p>
+         * <p>The session ID to delete.</p>
          * 
          * <strong>example:</strong>
          * <p>test-session-id-1</p>
@@ -111,7 +111,7 @@ public class DeleteSessionRequest extends Request {
         }
 
         /**
-         * <p>The function alias or version associated with the session to be deleted.</p>
+         * <p>The function alias or version associated with the session ID to delete.</p>
          * 
          * <strong>example:</strong>
          * <p>aliasName1</p>

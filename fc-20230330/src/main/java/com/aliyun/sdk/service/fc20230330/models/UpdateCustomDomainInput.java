@@ -132,7 +132,7 @@ public class UpdateCustomDomainInput extends TeaModel {
         } 
 
         /**
-         * authConfig.
+         * <p>The authentication configuration.</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.authConfig = authConfig;
@@ -140,7 +140,7 @@ public class UpdateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * certConfig.
+         * <p>The HTTPS certificate information.</p>
          */
         public Builder certConfig(CertConfig certConfig) {
             this.certConfig = certConfig;
@@ -148,7 +148,7 @@ public class UpdateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * corsConfig.
+         * <p>The CORS configuration.</p>
          */
         public Builder corsConfig(CORSConfig corsConfig) {
             this.corsConfig = corsConfig;
@@ -156,7 +156,15 @@ public class UpdateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>The protocol type supported by the domain name. Valid values:</p>
+         * <ul>
+         * <li>HTTP: Only the HTTP protocol is supported.</li>
+         * <li>HTTPS: Only the HTTPS protocol is supported.</li>
+         * <li>HTTP,HTTPS: Both HTTP and HTTPS protocols are supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -164,7 +172,7 @@ public class UpdateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * routeConfig.
+         * <p>The route table that maps paths to functions when the custom domain name is accessed.</p>
          */
         public Builder routeConfig(RouteConfig routeConfig) {
             this.routeConfig = routeConfig;
@@ -172,7 +180,7 @@ public class UpdateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * tlsConfig.
+         * <p>The TLS configuration information.</p>
          */
         public Builder tlsConfig(TLSConfig tlsConfig) {
             this.tlsConfig = tlsConfig;
@@ -180,7 +188,7 @@ public class UpdateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * wafConfig.
+         * <p>The Web Application Protection configuration information.</p>
          */
         public Builder wafConfig(WAFConfig wafConfig) {
             this.wafConfig = wafConfig;

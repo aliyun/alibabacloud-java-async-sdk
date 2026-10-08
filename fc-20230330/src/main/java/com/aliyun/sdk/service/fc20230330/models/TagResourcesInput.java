@@ -82,6 +82,7 @@ public class TagResourcesInput extends TeaModel {
         } 
 
         /**
+         * <p>The resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -90,7 +91,10 @@ public class TagResourcesInput extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FUNCTION</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -98,6 +102,7 @@ public class TagResourcesInput extends TeaModel {
         }
 
         /**
+         * <p>The tags.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {

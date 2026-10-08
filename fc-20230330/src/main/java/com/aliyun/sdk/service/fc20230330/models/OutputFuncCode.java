@@ -67,7 +67,10 @@ public class OutputFuncCode extends TeaModel {
         } 
 
         /**
-         * checksum.
+         * <p>The CRC-64 value of the function code package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder checksum(String checksum) {
             this.checksum = checksum;
@@ -75,7 +78,10 @@ public class OutputFuncCode extends TeaModel {
         }
 
         /**
-         * url.
+         * <p>The URL of the function code package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://func-code.oss-cn-shanghai.aliyuncs.com/1a2b3c4d5e6f">http://func-code.oss-cn-shanghai.aliyuncs.com/1a2b3c4d5e6f</a></p>
          */
         public Builder url(String url) {
             this.url = url;

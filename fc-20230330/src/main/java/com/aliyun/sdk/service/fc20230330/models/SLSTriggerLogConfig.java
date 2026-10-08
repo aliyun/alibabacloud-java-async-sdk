@@ -67,7 +67,10 @@ public class SLSTriggerLogConfig extends TeaModel {
         } 
 
         /**
-         * logstore.
+         * <p>The name of the Logstore. Exceptions and function execution statistics during function triggering are recorded in the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-sls-logstore-name</p>
          */
         public Builder logstore(String logstore) {
             this.logstore = logstore;
@@ -75,7 +78,10 @@ public class SLSTriggerLogConfig extends TeaModel {
         }
 
         /**
-         * project.
+         * <p>The name of the project. Exceptions that occur during function triggering and execution statistics are recorded in the Logstore under the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-sls-project-name</p>
          */
         public Builder project(String project) {
             this.project = project;

@@ -67,7 +67,10 @@ public class ListTriggersOutput extends TeaModel {
         } 
 
         /**
-         * nextToken.
+         * <p>The name of the next trigger. The pagination token that is used in the next request to retrieve a new page of results. If this parameter is not returned, all the layers are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next_token</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -75,7 +78,7 @@ public class ListTriggersOutput extends TeaModel {
         }
 
         /**
-         * triggers.
+         * <p>The triggers.</p>
          */
         public Builder triggers(java.util.List<Trigger> triggers) {
             this.triggers = triggers;

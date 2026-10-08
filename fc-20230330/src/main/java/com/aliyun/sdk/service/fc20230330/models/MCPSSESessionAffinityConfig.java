@@ -67,7 +67,10 @@ public class MCPSSESessionAffinityConfig extends TeaModel {
         } 
 
         /**
-         * sessionConcurrencyPerInstance.
+         * <p>The maximum number of sessions that a single instance can handle through simultaneous processing. Valid values: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder sessionConcurrencyPerInstance(Long sessionConcurrencyPerInstance) {
             this.sessionConcurrencyPerInstance = sessionConcurrencyPerInstance;
@@ -75,7 +78,10 @@ public class MCPSSESessionAffinityConfig extends TeaModel {
         }
 
         /**
-         * sseEndpointPath.
+         * <p>The SSE path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/sse</p>
          */
         public Builder sseEndpointPath(String sseEndpointPath) {
             this.sseEndpointPath = sseEndpointPath;

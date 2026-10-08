@@ -113,7 +113,7 @@ public class UpdateSessionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the session to be updated.</p>
+         * <p>The ID of the session to update.</p>
          * 
          * <strong>example:</strong>
          * <p>test-sessionid-1</p>
@@ -134,7 +134,7 @@ public class UpdateSessionRequest extends Request {
         }
 
         /**
-         * <p>The function alias or version associated with the session to be updated.</p>
+         * <p>The function alias or version associated with the session ID to update.</p>
          * 
          * <strong>example:</strong>
          * <p>aliasName1</p>

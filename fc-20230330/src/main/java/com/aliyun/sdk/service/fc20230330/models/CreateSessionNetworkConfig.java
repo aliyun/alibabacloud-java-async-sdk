@@ -138,7 +138,7 @@ public class CreateSessionNetworkConfig extends TeaModel {
         }
 
         /**
-         * rules.
+         * <p>The request transform rules configured by exact target host. Supports transform.headers and transform.headerValueReplacements.</p>
          */
         public Builder rules(java.util.Map<String, java.util.List<SessionNetworkRule>> rules) {
             this.rules = rules;

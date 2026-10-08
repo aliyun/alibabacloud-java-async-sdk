@@ -67,7 +67,10 @@ public class HTTPTrigger extends TeaModel {
         } 
 
         /**
-         * urlInternet.
+         * <p>The public domain address. You can access HTTP triggers over the Internet by using HTTP or HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://svc-func-xxxxxxxx.cn-hangzhou.fcapp.run">https://svc-func-xxxxxxxx.cn-hangzhou.fcapp.run</a></p>
          */
         public Builder urlInternet(String urlInternet) {
             this.urlInternet = urlInternet;
@@ -75,7 +78,10 @@ public class HTTPTrigger extends TeaModel {
         }
 
         /**
-         * urlIntranet.
+         * <p>The private endpoint. In a VPC, you can access HTTP triggers by using HTTP or HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://svc-func-xxxxxxxx.cn-hangzhou-vpc.fcapp.run">https://svc-func-xxxxxxxx.cn-hangzhou-vpc.fcapp.run</a></p>
          */
         public Builder urlIntranet(String urlIntranet) {
             this.urlIntranet = urlIntranet;

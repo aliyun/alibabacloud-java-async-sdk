@@ -75,7 +75,7 @@ public class CreateVpcBindingRequest extends Request {
         } 
 
         /**
-         * <p>The function name.</p>
+         * <p>The name of the function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class CreateVpcBindingRequest extends Request {
         }
 
         /**
-         * <p>The VPC binding configurations.</p>
+         * <p>The VPC binding configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(CreateVpcBindingInput body) {

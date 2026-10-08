@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PolarFsMountConfig</p>
  */
 public class PolarFsMountConfig extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("extraOptions")
+    private String extraOptions;
+
     @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
@@ -30,6 +33,7 @@ public class PolarFsMountConfig extends TeaModel {
     private String remoteDir;
 
     private PolarFsMountConfig(Builder builder) {
+        this.extraOptions = builder.extraOptions;
         this.instanceId = builder.instanceId;
         this.mountDir = builder.mountDir;
         this.readOnly = builder.readOnly;
@@ -46,6 +50,13 @@ public class PolarFsMountConfig extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return extraOptions
+     */
+    public String getExtraOptions() {
+        return this.extraOptions;
     }
 
     /**
@@ -77,6 +88,7 @@ public class PolarFsMountConfig extends TeaModel {
     }
 
     public static final class Builder {
+        private String extraOptions; 
         private String instanceId; 
         private String mountDir; 
         private Boolean readOnly; 
@@ -86,6 +98,7 @@ public class PolarFsMountConfig extends TeaModel {
         } 
 
         private Builder(PolarFsMountConfig model) {
+            this.extraOptions = model.extraOptions;
             this.instanceId = model.instanceId;
             this.mountDir = model.mountDir;
             this.readOnly = model.readOnly;
@@ -93,7 +106,18 @@ public class PolarFsMountConfig extends TeaModel {
         } 
 
         /**
-         * instanceId.
+         * extraOptions.
+         */
+        public Builder extraOptions(String extraOptions) {
+            this.extraOptions = extraOptions;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the PolarFS file system instance to mount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -101,7 +125,10 @@ public class PolarFsMountConfig extends TeaModel {
         }
 
         /**
-         * mountDir.
+         * <p>The local mount directory in the function\&quot;s runtime environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/polarfs</p>
          */
         public Builder mountDir(String mountDir) {
             this.mountDir = mountDir;
@@ -109,7 +136,10 @@ public class PolarFsMountConfig extends TeaModel {
         }
 
         /**
-         * readOnly.
+         * <p>Specifies whether the file system is mounted as read-only. If <code>true</code>, write operations are prohibited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = readOnly;
@@ -117,7 +147,10 @@ public class PolarFsMountConfig extends TeaModel {
         }
 
         /**
-         * remoteDir.
+         * <p>The directory within the PolarFS file system to mount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/share</p>
          */
         public Builder remoteDir(String remoteDir) {
             this.remoteDir = remoteDir;

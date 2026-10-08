@@ -106,7 +106,7 @@ public class JuiceFsMountConfig extends TeaModel {
         } 
 
         /**
-         * args.
+         * <p>An array of strings containing additional command-line arguments for the mount command. For example, use these arguments to set cache sizes or other performance-tuning options.</p>
          */
         public Builder args(java.util.List<String> args) {
             this.args = args;
@@ -114,7 +114,7 @@ public class JuiceFsMountConfig extends TeaModel {
         }
 
         /**
-         * mountDir.
+         * <p>The path within the function\&quot;s local filesystem to mount the volume. For example, /mnt/data. This parameter is required.</p>
          */
         public Builder mountDir(String mountDir) {
             this.mountDir = mountDir;
@@ -122,7 +122,7 @@ public class JuiceFsMountConfig extends TeaModel {
         }
 
         /**
-         * remoteDir.
+         * <p>The subdirectory within the JuiceFS volume to mount. If not specified, the root of the volume is mounted.</p>
          */
         public Builder remoteDir(String remoteDir) {
             this.remoteDir = remoteDir;
@@ -130,7 +130,7 @@ public class JuiceFsMountConfig extends TeaModel {
         }
 
         /**
-         * token.
+         * <p>The authentication token to access the JuiceFS volume.</p>
          */
         public Builder token(String token) {
             this.token = token;
@@ -138,7 +138,7 @@ public class JuiceFsMountConfig extends TeaModel {
         }
 
         /**
-         * volumeName.
+         * <p>The name of the JuiceFS volume to mount. This parameter is required.</p>
          */
         public Builder volumeName(String volumeName) {
             this.volumeName = volumeName;

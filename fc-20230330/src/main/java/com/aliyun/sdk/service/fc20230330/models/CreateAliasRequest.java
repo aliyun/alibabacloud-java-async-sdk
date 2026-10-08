@@ -75,7 +75,7 @@ public class CreateAliasRequest extends Request {
         } 
 
         /**
-         * <p>The function name.</p>
+         * <p>The name of the function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * <p>The request parameters for creating an alias.</p>
+         * <p>The request parameters to create an alias.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(CreateAliasInput body) {

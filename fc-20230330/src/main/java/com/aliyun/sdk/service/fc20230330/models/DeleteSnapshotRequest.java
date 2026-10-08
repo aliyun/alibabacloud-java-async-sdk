@@ -75,6 +75,7 @@ public class DeleteSnapshotRequest extends Request {
         } 
 
         /**
+         * <p>The function name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
+         * <p>The ID of the snapshot to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

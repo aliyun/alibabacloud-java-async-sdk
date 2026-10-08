@@ -68,7 +68,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>To update the resource group of a Function Compute resource, you must grant the user the ChangeResourceGroup permission on both the current resource group and the target resource group.</p>
+     * <p>To change the resource group of a Function Compute resource, you must have the ChangeResourceGroup permission for both the current and target resource groups.</p>
      * 
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -107,7 +107,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If you want to use a fixed domain name to access an application or function in a production environment of Function Compute, or to resolve the issue of forced downloads when accessing an HTTP trigger, you can bind a custom domain name to the application or function.</p>
+     * <p>You can attach a custom domain name to an application or function in Function Compute to access it through a fixed domain name in a production environment, or to resolve the forced download behavior when you access an HTTP trigger.</p>
      * 
      * @param request the request parameters of CreateCustomDomain  CreateCustomDomainRequest
      * @return CreateCustomDomainResponse
@@ -128,7 +128,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Resources of Function Compute are scheduled and run based on functions. A function usually refers to a code snippet that is written by a user and can be independently executed to respond to events and requests.</p>
+     * <p>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity such as authorization for oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</p>
      * 
      * @param request the request parameters of CreateFunction  CreateFunctionRequest
      * @return CreateFunctionResponse
@@ -185,12 +185,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该 API 用于从指定的微沙箱会话中创建一个用户快照。</li>
-     * <li>可选参数 <code>qualifier</code> 用于标识创建源会话时使用的有效别名或具体函数版本。如果省略，默认为 <code>LATEST</code>。</li>
-     * <li>必须提供 <code>sessionId</code> 参数，以指定要从中创建快照的客户端会话 ID。</li>
-     * <li>描述信息 <code>description</code> 是可选的，但若提供，则不能包含控制字符，并且长度限制为 256 个 UTF-8 字节。</li>
+     * <li>This API operation creates a user snapshot from a specified micro-sandbox session.</li>
+     * <li>The optional parameter <code>qualifier</code> identifies the valid alias or specific function version used when creating the source session. If omitted, it defaults to <code>LATEST</code>.</li>
+     * <li>The <code>sessionId</code> parameter is required to specify the client session ID from which to create the snapshot.</li>
+     * <li>The <code>description</code> parameter is optional. If provided, it cannot contain control characters and is limited to 256 UTF-8 bytes.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateSnapshot  CreateSnapshotRequest
@@ -427,6 +427,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API operation deletes a user MicroSandbox snapshot under the specified function.</li>
+     * <li>After successful deletion, the snapshot enters an asynchronous deletion process. The operation returns 202 Accepted to indicate that the deletion request has been accepted, without waiting for the cleanup of underlying physical resources such as templates and artifacts to complete.</li>
+     * <li>Repeated deletion of a snapshot that is already being deleted still returns 202 Accepted.</li>
+     * <li>If the specified snapshot does not exist under the current function scope, 204 No Content is returned to support idempotent deletion.</li>
+     * <li>If the snapshot is still being used by a resumed session, or there are consumer relations that have not been confirmed as clearable, 409 SnapshotInUse is returned and the snapshot is not deleted.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteSnapshot  DeleteSnapshotRequest
      * @return DeleteSnapshotResponse
      */
@@ -500,7 +509,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Exercise caution when you call this operation on a function in a production environment, as improper deactivation may lead to business disruptions.</p>
+     * <p>Use caution when calling this API for functions in a production environment because disabling function invocations can disrupt your services.</p>
      * 
      * @param request the request parameters of DisableFunctionInvocation  DisableFunctionInvocationRequest
      * @return DisableFunctionInvocationResponse
@@ -754,6 +763,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API operation retrieves the MicroSandbox snapshot information of a specified function for the user.</li>
+     * <li>Snapshot details are returned only when the snapshot belongs to the current function, has a status of Available, and has not expired.</li>
+     * <li>If the snapshot does not exist, has expired, is being created, is being deleted, is an internal snapshot, or does not belong to the current function, it is treated as invisible and a 404 SnapshotNotFound error is returned.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GetSnapshot  GetSnapshotRequest
      * @return GetSnapshotResponse
      */
@@ -946,7 +962,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>ListFunctions returns only a subset of a function\&quot;s attribute fields. To obtain the additional fields, which include state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
+     * <p>ListFunctions returns only a subset of function attribute fields. To retrieve more attribute fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
      * 
      * @param request the request parameters of ListFunctions  ListFunctionsRequest
      * @return ListFunctionsResponse
@@ -1074,6 +1090,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API operation lists MicroSandbox snapshots visible to the current account.</li>
+     * <li>Only unexpired snapshots in the Available state are returned.</li>
+     * <li>Four filtering methods are supported: account-level listing, filtering by function, filtering by function and source session ID, and filtering by function, source session ID, and qualifier at creation time.</li>
+     * <li>Results are paginated in stable descending order by creation time and snapshot ID.</li>
+     * <li>ListSnapshots uses a search index for queries, so eventual consistency delays may occur within a short period. GetSnapshot and creating a session from a snapshot use strongly consistent reads from the primary table.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListSnapshots  ListSnapshotsRequest
      * @return ListSnapshotsResponse
      */
@@ -1146,6 +1171,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Pauses an Active session by persisting the state of its associated execution environment and then releasing compute resources. After you invoke this operation, the session status changes to Paused, and the session no longer accepts function invocation requests. This operation retains the session configuration (such as SessionTTL) and SessionID. You can use it to break long-running tasks or save snapshots of development environments for cost optimization and state management. This operation applies to custom image functions configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</p>
+     * 
      * @param request the request parameters of PauseSession  PauseSessionRequest
      * @return PauseSessionResponse
      */
@@ -1272,6 +1300,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resumes a session that is in the Paused state. The system quickly restores the session in a new execution environment based on the previously persisted state, returning it to the state before it was paused. After the session is successfully resumed, its status changes back to Active, and it can continue to accept function calling requests that are routed to the restored instance. This operation applies to custom image functions that are configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</p>
+     * 
      * @param request the request parameters of ResumeSession  ResumeSessionRequest
      * @return ResumeSessionResponse
      */
@@ -1308,9 +1339,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.</p>
-     * 
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */

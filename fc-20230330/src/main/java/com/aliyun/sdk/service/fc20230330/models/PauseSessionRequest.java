@@ -101,7 +101,10 @@ public class PauseSessionRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The name of the function associated with the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -110,7 +113,10 @@ public class PauseSessionRequest extends Request {
         }
 
         /**
-         * sessionId.
+         * <p>The ID of the session to save.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-session-id-1</p>
          */
         public Builder sessionId(String sessionId) {
             this.putPathParameter("sessionId", sessionId);
@@ -128,7 +134,10 @@ public class PauseSessionRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * <p>The function alias or version associated with the session ID to save.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliasName1</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
