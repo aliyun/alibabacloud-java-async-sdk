@@ -113,6 +113,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OrderEndTime")
     private Long orderEndTime;
 
+    @com.aliyun.core.annotation.NameInMap("OrderProgress")
+    private String orderProgress;
+
     @com.aliyun.core.annotation.NameInMap("OrderStartTime")
     private Long orderStartTime;
 
@@ -188,6 +191,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         this.monitorExpandFlag = builder.monitorExpandFlag;
         this.monitorUseCount = builder.monitorUseCount;
         this.orderEndTime = builder.orderEndTime;
+        this.orderProgress = builder.orderProgress;
         this.orderStartTime = builder.orderStartTime;
         this.pendingResult = builder.pendingResult;
         this.province = builder.province;
@@ -441,6 +445,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return orderProgress
+     */
+    public String getOrderProgress() {
+        return this.orderProgress;
+    }
+
+    /**
      * @return orderStartTime
      */
     public Long getOrderStartTime() {
@@ -571,6 +582,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         private Integer monitorExpandFlag; 
         private Integer monitorUseCount; 
         private Long orderEndTime; 
+        private String orderProgress; 
         private Long orderStartTime; 
         private String pendingResult; 
         private String province; 
@@ -622,6 +634,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.monitorExpandFlag = model.monitorExpandFlag;
             this.monitorUseCount = model.monitorUseCount;
             this.orderEndTime = model.orderEndTime;
+            this.orderProgress = model.orderProgress;
             this.orderStartTime = model.orderStartTime;
             this.pendingResult = model.pendingResult;
             this.province = model.province;
@@ -639,10 +652,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether automatic hosting is enabled. Valid values:</p>
+         * <p>Specifies whether automatic hosting is enabled. Valid values:</p>
          * <ul>
          * <li>enable: Enabled.</li>
-         * <li>disable: Not enabled.</li>
+         * <li>disable: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -654,7 +667,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current version includes automatic hosting. Valid values:</p>
+         * <p>Specifies whether the current version includes automatic hosting. Valid values:</p>
          * <ul>
          * <li>1: Included.</li>
          * <li>0: Not included.</li>
@@ -669,7 +682,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The average waiting time for issuing a certificate of this specification. Unit: seconds.</p>
+         * <p>The average waiting time for issuing a certificate of this specification, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -691,12 +704,12 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</p>
+         * <p>The global certificate ID. The format is Certificate ID + &quot;-&quot; + Site region ID. This ID is commonly used across Alibaba Cloud services.</p>
          * <ul>
-         * <li>China site: certificate ID + &quot;-cn-hangzhou&quot;</li>
-         * <li>International site: certificate ID + &quot;-ap-southeast-1&quot;</li>
+         * <li>For the Chinese site, the format is Certificate ID + &quot;-cn-hangzhou&quot;.</li>
+         * <li>For the international site, the format is Certificate ID + &quot;-ap-southeast-1&quot;.
+         * For example, if the certificate ID is 123, the CertIdentifier for the Chinese site is &quot;123-cn-hangzhou&quot;, and for the international site, it is &quot;123-ap-southeast-1&quot;.</li>
          * </ul>
-         * <p>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the International site is &quot;123-ap-southeast-1&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>22783111-cn-hangzhou</p>
@@ -707,7 +720,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The certificate ID.</p>
+         * <p>The ID of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -729,7 +742,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the latest certificate, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</p>
+         * <p>The expiration time of the latest certificate. The value is a UNIX timestamp accurate to seconds. If no certificate is issued, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -740,7 +753,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the latest certificate, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</p>
+         * <p>The start time of the latest certificate. The value is a UNIX timestamp accurate to seconds. If no certificate is issued, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1781568000000</p>
@@ -751,7 +764,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The revocation time of the latest certificate, in UNIX timestamp format. The value is accurate to the second.</p>
+         * <p>The revocation time of the latest certificate. The value is a UNIX timestamp accurate to seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -766,7 +779,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
          * <ul>
          * <li><strong>issued</strong>: Issued.</li>
          * <li><strong>revoked</strong>: Revoked.</li>
-         * <li><strong>willExpire</strong>: About to expire.</li>
+         * <li><strong>willExpire</strong>: Expiring soon.</li>
          * <li><strong>expired</strong>: Expired.</li>
          * </ul>
          * 
@@ -790,7 +803,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The city where the company or organization of the certificate purchaser is located. This field is required when generating a certificate signing request. Default value: Beijing.</p>
+         * <p>The city where the company or organization of the user who purchased the certificate is located. This field is required when generating a CSR. Default value: Beijing.</p>
          * 
          * <strong>example:</strong>
          * <p>Beijing</p>
@@ -801,7 +814,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The company information ID.</p>
+         * <p>The ID of the company information.</p>
          * 
          * <strong>example:</strong>
          * <p>47305</p>
@@ -820,7 +833,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The country or region code of the certificate organization. For example, CN indicates China, and US indicates the United States. This field is required when generating a certificate signing request. Default value: CN.</p>
+         * <p>The code of the country or region where the organization specified in the certificate is located. For example, CN indicates China, and US indicates the United States. This field is required when generating a CSR. Default value: CN.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -842,7 +855,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of cloud resources to which the certificate has been deployed.</p>
+         * <p>The number of deployed cloud service resources.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -853,7 +866,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The used quota for cloud server deployment.</p>
+         * <p>The used quota for deployment to cloud servers.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -864,7 +877,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of associated expert service DingTalk groups.</p>
+         * <p>The list of associated DingTalk groups for expert services.</p>
          */
         public Builder dingGroupList(java.util.List<DingGroupList> dingGroupList) {
             this.dingGroupList = dingGroupList;
@@ -891,7 +904,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of exact-match domain names.</p>
+         * <p>The number of exact domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -902,10 +915,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The method used to generate the certificate signing request. Valid values:</p>
+         * <p>The method used to generate the CSR. Valid values:</p>
          * <ul>
-         * <li>online: System-generated. The Csr field is ignored.</li>
-         * <li>upload: User-uploaded. The Csr field is required.</li>
+         * <li>online: Generated by the system. The Csr field is ignored.</li>
+         * <li>upload: Uploaded by the user. The Csr field is required.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -917,7 +930,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time of the instance, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</p>
+         * <p>The expiration time of the instance. The value is a UNIX timestamp accurate to seconds. If no certificate has been issued, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -939,7 +952,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the instance, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</p>
+         * <p>The start time of the instance. The value is a UNIX timestamp accurate to seconds. If no certificate has been issued, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -950,10 +963,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance type. Valid values:</p>
+         * <p>The type of the instance. Valid values:</p>
          * <ul>
-         * <li>BUY: official certificate</li>
-         * <li>TEST: test certificate</li>
+         * <li>BUY: Official certificate.</li>
+         * <li>TEST: Test certificate.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -965,7 +978,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The certificate algorithm. Valid values:</p>
+         * <p>The algorithm of the certificate. Valid values:</p>
          * <ul>
          * <li><strong>RSA_2048</strong></li>
          * <li><strong>RSA_3072</strong></li>
@@ -983,7 +996,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the domain name monitoring quota can be expanded. Valid values:</p>
+         * <p>Specifies whether the quota for domain name monitoring can be expanded. Valid values:</p>
          * <ul>
          * <li>1: Yes.</li>
          * <li>0: No.</li>
@@ -1009,7 +1022,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the instance at the time of purchase, in UNIX timestamp format. This value is used to determine the purchase duration of the instance.</p>
+         * <p>The end time of the instance purchase. The value is a UNIX timestamp used to determine the purchase duration of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -1020,7 +1033,32 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the instance at the time of purchase, in UNIX timestamp format. This value is used to determine the refund time limit. The value is accurate to the second.</p>
+         * <p>The progress of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;orderProgress&quot;: [
+         *     {
+         *       &quot;certificateId&quot;: 12345,
+         *       &quot;certificateName&quot;: &quot;example.com&quot;,
+         *       &quot;notBefore&quot;: 1727000000000,
+         *       &quot;notAfter&quot;: 1735000000000,
+         *       &quot;stages&quot;: [
+         *         { &quot;name&quot;: &quot;apply&quot;, &quot;title&quot;: &quot;apply&quot;, &quot;status&quot;: &quot;completed&quot;, &quot;time&quot;: 1726990000000 },
+         *         { &quot;name&quot;: &quot;domainValidation&quot;, &quot;title&quot;: &quot;domainValidation&quot;, &quot;status&quot;: &quot;completed&quot;, &quot;time&quot;: 1727000000000 },
+         *         { &quot;name&quot;: &quot;issue&quot;, &quot;title&quot;: &quot;issue&quot;, &quot;status&quot;: &quot;completed&quot;, &quot;time&quot;: 1727000000000 }
+         *       ]
+         *     }
+         *   ]
+         * }</p>
+         */
+        public Builder orderProgress(String orderProgress) {
+            this.orderProgress = orderProgress;
+            return this;
+        }
+
+        /**
+         * <p>The start time of the instance purchase. The value is a UNIX timestamp accurate to seconds, used to determine the time limit for refunds.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -1031,7 +1069,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result returned by the CA during the last certificate operation.</p>
+         * <p>The result returned by the CA during the last operation on the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>pending</p>
@@ -1042,7 +1080,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The province or region where the company is located. This field is required when generating a certificate signing request. Default value: Beijing.</p>
+         * <p>The province or region where the company is located. This field is required when generating a CSR. Default value: Beijing.</p>
          * 
          * <strong>example:</strong>
          * <p>Beijing</p>
@@ -1053,7 +1091,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID of the request. It is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>B2CE1D02-6D5E-56E5-A9BD-EE288255C7F9</p>
@@ -1064,7 +1102,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek****wia</p>
@@ -1075,7 +1113,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The purchased instance specification.</p>
+         * <p>The specifications of the purchased instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ss.dv.t</p>
@@ -1089,12 +1127,12 @@ public class GetInstanceDetailResponseBody extends TeaModel {
          * <p>The instance status. Valid values:</p>
          * <ul>
          * <li><strong>inactive</strong>: Pending use.</li>
-         * <li><strong>pending</strong>: Under review. The latest certificate is being reviewed.</li>
-         * <li><strong>willExpire</strong>: The instance is about to expire.</li>
-         * <li><strong>expired</strong>: The instance has expired.</li>
+         * <li><strong>pending</strong>: Under review. The latest certificate is committed for review.</li>
+         * <li><strong>willExpire</strong>: Expiring soon.</li>
+         * <li><strong>expired</strong>: Expired.</li>
          * <li><strong>refund</strong>: Refunded.</li>
          * <li><strong>normal</strong>: Normal.</li>
-         * <li><strong>closed</strong>: Closed. The instance cannot be used.</li>
+         * <li><strong>closed</strong>: Shutdown and unavailable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1114,7 +1152,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total quota for cloud server deployment.</p>
+         * <p>The total quota for deployment to cloud servers.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -1138,12 +1176,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         /**
          * <p>The upgrade status of the instance. Valid values:</p>
          * <ul>
-         * <li><p>none: The instance has not been upgraded.</p>
-         * </li>
-         * <li><p>payed: The instance upgrade has been paid.</p>
-         * </li>
-         * <li><p>issued: The latest certificate has been issued for the instance upgrade.</p>
-         * </li>
+         * <li>none: The instance is not upgraded.</li>
+         * <li>payed: The instance upgrade is paid.</li>
+         * <li>issued: The latest certificate is issued for the instance upgrade.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1158,7 +1193,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
          * <p>The validation method for the certificate application. Valid values:</p>
          * <ul>
          * <li>DNS: DNS validation, using TXT or CNAME records.</li>
-         * <li>HTTP: File-based validation.</li>
+         * <li>HTTP: File validation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1170,7 +1205,11 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version type. Valid values: FOTA: system upgrade. APP: application upgrade.</p>
+         * <p>The version type. Valid values:</p>
+         * <ul>
+         * <li>FOTA: System upgrade.</li>
+         * <li>APP: Application upgrade.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1276,7 +1315,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID of the expert service DingTalk group.</p>
+             * <p>The instance ID of the DingTalk group for expert services.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -1287,7 +1326,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the expert service DingTalk group.</p>
+             * <p>The name of the DingTalk group for expert services.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -1298,10 +1337,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the expert service DingTalk group. Valid values:</p>
+             * <p>The type of the DingTalk group for expert services. Valid values:</p>
              * <ul>
-             * <li>expedite: application assistance</li>
-             * <li>remote: offline deployment</li>
+             * <li>expedite: Application assistance.</li>
+             * <li>remote: Offline deployment.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1313,7 +1352,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL for joining the expert service DingTalk group.</p>
+             * <p>The link to join the DingTalk group for expert services.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://123.com">https://123.com</a></p>
@@ -1448,7 +1487,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CNAME record value for verification-free authorization. This value may be empty.</p>
+             * <p>The CNAME record value for verification-free authorization. This parameter may be empty.</p>
              * 
              * <strong>example:</strong>
              * <p>123.com</p>
@@ -1459,7 +1498,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prefix for CNAME validation.</p>
+             * <p>The prefix used for CNAME validation.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -1514,7 +1553,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The host record value for validation.</p>
+             * <p>The value of the host record for validation.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -1584,7 +1623,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1595,7 +1634,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

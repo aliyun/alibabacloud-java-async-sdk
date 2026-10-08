@@ -61,6 +61,10 @@ public class ListInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionType")
+    private String versionType;
+
     private ListInstancesRequest(Builder builder) {
         super(builder);
         this.autoReissueFlag = builder.autoReissueFlag;
@@ -74,6 +78,7 @@ public class ListInstancesRequest extends Request {
         this.serverDeployFlag = builder.serverDeployFlag;
         this.showSize = builder.showSize;
         this.status = builder.status;
+        this.versionType = builder.versionType;
     }
 
     public static Builder builder() {
@@ -166,6 +171,13 @@ public class ListInstancesRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return versionType
+     */
+    public String getVersionType() {
+        return this.versionType;
+    }
+
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private Integer autoReissueFlag; 
         private String brand; 
@@ -178,6 +190,7 @@ public class ListInstancesRequest extends Request {
         private Integer serverDeployFlag; 
         private Integer showSize; 
         private String status; 
+        private String versionType; 
 
         private Builder() {
             super();
@@ -196,14 +209,11 @@ public class ListInstancesRequest extends Request {
             this.serverDeployFlag = request.serverDeployFlag;
             this.showSize = request.showSize;
             this.status = request.status;
+            this.versionType = request.versionType;
         } 
 
         /**
-         * <p>Specifies whether the instance is managed. Valid values:</p>
-         * <ul>
-         * <li>1: Managed.</li>
-         * <li>0: Not managed.</li>
-         * </ul>
+         * <p>Specifies whether the instance is managed. Valid values: 1 (managed) and 0 (not managed).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -257,7 +267,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page in a paged query. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the current page in a paging query. Settings the current page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -269,11 +279,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance type. Valid values:</p>
-         * <ul>
-         * <li>BUY: formal certificate.</li>
-         * <li>TEST: test certificate.</li>
-         * </ul>
+         * <p>The instance type. Valid values: BUY (official certificate) and TEST (test certificate).</p>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>
@@ -311,8 +317,8 @@ public class ListInstancesRequest extends Request {
         /**
          * <p>Specifies whether to return only instances that meet server deployment conditions. Valid values:</p>
          * <ul>
-         * <li>1: Yes.</li>
-         * <li>0: No.</li>
+         * <li>1: is.</li>
+         * <li>0: no.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,7 +331,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of instances to display per page in a paged query. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+         * <p>The number of instances to display per page in a paging query. Settings the number of instances displayed per page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -340,12 +346,12 @@ public class ListInstancesRequest extends Request {
          * <p>The instance status. Valid values:</p>
          * <ul>
          * <li><strong>inactive</strong>: Pending use.</li>
-         * <li><strong>pending</strong>: Under review. The latest certificate is being reviewed.</li>
+         * <li><strong>pending</strong>: Under review. The latest certificate is being submitted for review.</li>
          * <li><strong>willExpire</strong>: The instance is about to expire.</li>
          * <li><strong>expired</strong>: The instance has expired.</li>
          * <li><strong>refund</strong>: Refunded.</li>
          * <li><strong>normal</strong>: Normal.</li>
-         * <li><strong>closed</strong>: Closed. The instance is unavailable.</li>
+         * <li><strong>closed</strong>: Shutdown and unavailable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -354,6 +360,18 @@ public class ListInstancesRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>The version type. Valid values: basic (Basic Edition), standard (Standard Edition), professional (Professional Edition), and ultimate (Ultimate Edition).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>professional</p>
+         */
+        public Builder versionType(String versionType) {
+            this.putQueryParameter("VersionType", versionType);
+            this.versionType = versionType;
             return this;
         }
 
