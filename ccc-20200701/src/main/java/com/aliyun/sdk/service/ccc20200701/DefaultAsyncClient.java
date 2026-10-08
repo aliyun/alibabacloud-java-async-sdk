@@ -484,7 +484,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></p>
+     * <p>Accounts with RAM permissions can go to the Resource Access Management (RAM) console to query all RAM users managed under the Alibaba Cloud account. RAM console URL: <a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a>.</p>
      * 
      * @param request the request parameters of CheckBusinessHours  CheckBusinessHoursRequest
      * @return CheckBusinessHoursResponse

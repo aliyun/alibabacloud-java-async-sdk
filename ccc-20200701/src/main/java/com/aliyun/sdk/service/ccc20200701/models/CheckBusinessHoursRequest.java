@@ -74,6 +74,7 @@ public class CheckBusinessHoursRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class CheckBusinessHoursRequest extends Request {
         }
 
         /**
-         * Time.
+         * <p>The 13-digit timestamp. If this parameter is not specified, the current time is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1789526665860</p>
          */
         public Builder time(Long time) {
             this.putQueryParameter("Time", time);

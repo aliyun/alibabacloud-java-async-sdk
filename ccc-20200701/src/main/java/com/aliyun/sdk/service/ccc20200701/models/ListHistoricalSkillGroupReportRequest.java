@@ -50,6 +50,10 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
     @com.aliyun.core.annotation.Validation(maximum = 4133952000000D)
     private Long startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SummarizeByInstanceId")
+    private Boolean summarizeByInstanceId;
+
     private ListHistoricalSkillGroupReportRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
@@ -59,6 +63,7 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         this.pageSize = builder.pageSize;
         this.skillGroupIdList = builder.skillGroupIdList;
         this.startTime = builder.startTime;
+        this.summarizeByInstanceId = builder.summarizeByInstanceId;
     }
 
     public static Builder builder() {
@@ -123,6 +128,13 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return summarizeByInstanceId
+     */
+    public Boolean getSummarizeByInstanceId() {
+        return this.summarizeByInstanceId;
+    }
+
     public static final class Builder extends Request.Builder<ListHistoricalSkillGroupReportRequest, Builder> {
         private Long endTime; 
         private String instanceId; 
@@ -131,6 +143,7 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         private Integer pageSize; 
         private String skillGroupIdList; 
         private Long startTime; 
+        private Boolean summarizeByInstanceId; 
 
         private Builder() {
             super();
@@ -145,10 +158,11 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
             this.pageSize = request.pageSize;
             this.skillGroupIdList = request.skillGroupIdList;
             this.startTime = request.startTime;
+            this.summarizeByInstanceId = request.summarizeByInstanceId;
         } 
 
         /**
-         * <p>End time of the historical data to retrieve, formatted as a UNIX timestamp in milliseconds. This parameter is optional. The default value is the current time. The time precision for statistics is hourly, rounded down to the previous hour, and uses an open interval. For example, if the start time is 11:12:20 and the end time is 11:45:50, the aligned input time range becomes [11:00:00, 12:00:00), meaning greater than or equal to 11:00:00 and less than 12:00:00.</p>
+         * <p>The end time of the historical data to retrieve. Specify a UNIX timestamp in milliseconds. This parameter is optional. Default value: the current time. The statistical time precision is in hours. The end time is rounded up to the nearest hour, and the interval is open. For example, if the start time is 11:12:20 and the end time is 11:45:50, the aligned time range is [11:00:00, 12:00:00), which means greater than or equal to 11:00:00 and less than 12:00:00.</p>
          * 
          * <strong>example:</strong>
          * <p>1532707199000</p>
@@ -160,7 +174,7 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +187,7 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         }
 
         /**
-         * <p>Media type. The default value is Audio. Other valid values include Chat and Video.</p>
+         * <p>The media type. Default value: Audio. Valid values: Audio, Chat, and Video.</p>
          * 
          * <strong>example:</strong>
          * <p>VIDEO</p>
@@ -185,7 +199,7 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         }
 
         /**
-         * <p>Page number, ranging from 1 to 100.</p>
+         * <p>The page number. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +212,7 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         }
 
         /**
-         * <p>Page size, ranging from 1 to 100.</p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +225,7 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         }
 
         /**
-         * <p>List of skill group IDs to query, provided as a JSON array string. Each array element is a skill group ID. This parameter is optional. The default value is empty, which means all skill groups in the current page are queried.</p>
+         * <p>The list of skill group IDs to query. The value is a character string in the JSON array format, where each array element is a skill group ID. This parameter is optional. Default value: empty. An empty value indicates that all skill groups in the current paging are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;skillgroup1@ccc-test&quot;, &quot;skillgroup2@ccc-test2&quot;]</p>
@@ -223,7 +237,7 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         }
 
         /**
-         * <p>Start time of the historical data to retrieve, formatted as a UNIX timestamp in milliseconds. This parameter is optional. The default value is 00:00:00 of the current day. The earliest allowed value is 180 days before the current time. The time precision for statistics is hourly, rounded down to the previous hour, and uses a closed interval.</p>
+         * <p>The start time of the historical data to retrieve. Specify a UNIX timestamp in milliseconds. This parameter is optional. Default value: 00:00:00 on the current day. The earliest allowed time is 180 days before the current time. The statistical time precision is in hours. The start time is rounded down to the nearest hour, and the interval is closed.</p>
          * 
          * <strong>example:</strong>
          * <p>1532448000000</p>
@@ -231,6 +245,15 @@ public class ListHistoricalSkillGroupReportRequest extends Request {
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to aggregate data by instance ID.</p>
+         */
+        public Builder summarizeByInstanceId(Boolean summarizeByInstanceId) {
+            this.putQueryParameter("SummarizeByInstanceId", summarizeByInstanceId);
+            this.summarizeByInstanceId = summarizeByInstanceId;
             return this;
         }
 
