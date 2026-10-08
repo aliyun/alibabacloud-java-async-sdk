@@ -21,9 +21,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before using this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
      * <blockquote>
-     * <p>Notice: The total length of CreateJob operation parameters (including system-generated parameters) cannot exceed 65,536 bytes.</p>
+     * <p>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateJob  CreateJobRequest

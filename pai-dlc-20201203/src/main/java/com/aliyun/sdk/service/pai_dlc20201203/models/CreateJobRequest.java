@@ -415,8 +415,8 @@ public class CreateJobRequest extends Request {
         /**
          * <p>The visibility of the job. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: Visible to all users in this workspace.</li>
-         * <li>PRIVATE: Visible only to you and administrators in this workspace.</li>
+         * <li>PUBLIC: The job is visible to all members in the workspace.</li>
+         * <li>PRIVATE: The job is visible only to you and administrators in the workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -429,7 +429,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>The code source used by this job. Before the job nodes start, DLC automatically downloads the code configured in the code source and mounts it to a local directory in the container.</p>
+         * <p>The code source used by this job. Before the job nodes start, DLC automatically downloads the code configured in the code source and mounts it to a local directory of the container.</p>
          */
         public Builder codeSource(CodeSource codeSource) {
             this.putBodyParameter("CodeSource", codeSource);
@@ -465,7 +465,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is not currently supported. You can ignore it.</p>
+         * <p>This parameter is not supported and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>
@@ -486,7 +486,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the job. The naming rules are as follows:</p>
+         * <p>The name of the job. The naming conventions are as follows:</p>
          * <ul>
          * <li>The name cannot exceed 256 characters in length.</li>
          * <li>The name can contain digits, letters, underscores (_), periods (.), and hyphens (-).</li>
@@ -503,7 +503,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is not currently supported. You can ignore it.</p>
+         * <p>This parameter is not supported and can be ignored.</p>
          */
         public Builder elasticSpec(JobElasticSpec elasticSpec) {
             this.putBodyParameter("ElasticSpec", elasticSpec);
@@ -512,7 +512,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>The environment variable configurations.</p>
+         * <p>The environment variable configuration.</p>
          */
         public Builder envs(java.util.Map<String, String> envs) {
             this.putBodyParameter("Envs", envs);
@@ -521,7 +521,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>The maximum running time of the job, in minutes.</p>
+         * <p>The maximum running time of the job. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -533,7 +533,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p><strong>JobSpecs</strong> describes various configurations for job runtime, such as the image address, startup command, node resource declarations, and number of replicas.</p>
+         * <p><strong>JobSpecs</strong> describes various configurations for the job runtime, such as the image address, startup command, node resource declarations, and number of replicas.</p>
          * <p>A DLC job consists of different types of nodes. Nodes of the same type share identical configurations, which is called a JobSpec. <strong>JobSpecs</strong> describes the configurations of all node types and is an array of JobSpec objects.</p>
          * <p>This parameter is required.</p>
          */
@@ -568,7 +568,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>The additional configurations for this job. You can use this parameter to adjust the behavior of mounted data sources. For example, if the job has an OSS-type data source mounted, you can set this parameter to <code>fs.oss.download.thread.concurrency=4,fs.oss.download.queue.size=16</code> to override the default JindoFS parameters.</p>
+         * <p>The additional configuration for this node. You can use this parameter to adjust the behavior of mounted data sources. For example, if the node has an OSS data source mounted, you can set this parameter to <code>fs.oss.download.thread.concurrency=4,fs.oss.download.queue.size=16</code> to overwrite the default JindoFS parameter settings.</p>
          * 
          * <strong>example:</strong>
          * <p>key1=value1,key2=value2</p>
@@ -582,8 +582,8 @@ public class CreateJobRequest extends Request {
         /**
          * <p>The priority of the job. This is an optional parameter. Default value: 1. Valid values: 1 to 9.</p>
          * <ul>
-         * <li>1: The lowest priority.</li>
-         * <li>9: The highest priority.</li>
+         * <li>1: the lowest priority.</li>
+         * <li>9: the highest priority.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -598,8 +598,8 @@ public class CreateJobRequest extends Request {
         /**
          * <p>The resource group ID. This is an optional parameter.</p>
          * <ul>
-         * <li>If the value is empty, the job is submitted to the public resource group.</li>
-         * <li>If the current workspace is bound to a resource quota, you can specify the corresponding resource quota ID. For information about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</li>
+         * <li>If this parameter is left empty, the job is submitted to the public resource group.</li>
+         * <li>If the current workspace is attached to a resource quota, you can specify the corresponding resource quota ID. For details about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -624,7 +624,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>The additional parameter configurations for the job.</p>
+         * <p>The additional parameter settings for the job.</p>
          */
         public Builder settings(JobSettings settings) {
             this.putBodyParameter("Settings", settings);
@@ -635,7 +635,7 @@ public class CreateJobRequest extends Request {
         /**
          * <p>The success policy for distributed multi-node jobs. Currently, only TensorFlow multi-node jobs support this parameter.</p>
          * <ul>
-         * <li>ChiefWorker: The entire job is considered successful as long as the Chief pod finishes successfully.</li>
+         * <li>ChiefWorker: The entire job is considered successful when the Chief pod finishes successfully.</li>
          * <li>AllWorkers (default): The entire job is considered successful only when all Workers finish successfully.</li>
          * </ul>
          * 
@@ -673,7 +673,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>The folder name where the third-party Python library (requirements.txt) file is located. Before running the specified UserCommand on each node, PAI-DLC retrieves the requirements.txt file from the specified folder and runs <code>pip install -r</code> to install the libraries.</p>
+         * <p>The name of the folder where the Python third-party library (requirements.txt) file is located. Before running the specified UserCommand on each node, PAI-DLC retrieves the requirements.txt file from the specified folder and runs <code>pip install -r</code> to install the dependencies.</p>
          * 
          * <strong>example:</strong>
          * <p>/root/code/</p>
@@ -685,7 +685,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>The list of third-party Python libraries to install.</p>
+         * <p>The list of Python third-party libraries to install.</p>
          */
         public Builder thirdpartyLibs(java.util.List<String> thirdpartyLibs) {
             this.putBodyParameter("ThirdpartyLibs", thirdpartyLibs);
@@ -826,7 +826,7 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The branch of the code repository referenced when this job runs. This is an optional parameter. By default, the branch configured in the code source is used.</p>
+             * <p>The branch of the code repository referenced when the job runs. This is an optional parameter. By default, the branch configured in the code source is used.</p>
              * 
              * <strong>example:</strong>
              * <p>master</p>
@@ -848,7 +848,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The commit ID of the code to download for this job. This is an optional parameter. By default, the commit ID configured in the code source is used.</p>
+             * <p>The commit ID of the code to be downloaded for this job. This is an optional parameter. By default, the commit ID configured in the code source is used.</p>
              * 
              * <strong>example:</strong>
              * <p>44da109b5******</p>
@@ -859,7 +859,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the MountPath set for CodeSource is a shared cloud storage path. If set to true, the system enables code clone optimization. In multi-node job scenarios, the clone operation is performed on only one node, and other nodes can directly access the code through the shared cloud storage path.</p>
+             * <p>Marks whether the MountPath in CodeSource Settings is a shared cloud storage path. If set to true, the system enables code clone optimization. In multi-node deployment job scenarios, the clone operation is executed on only one node, and other nodes can directly access code through the shared cloud storage path.</p>
              */
             public Builder isSharedMountPath(Boolean isSharedMountPath) {
                 this.isSharedMountPath = isSharedMountPath;
@@ -1008,6 +1008,9 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Options")
         private String options;
 
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
+        private String roleArn;
+
         @com.aliyun.core.annotation.NameInMap("RoleChain")
         private String roleChain;
 
@@ -1022,6 +1025,7 @@ public class CreateJobRequest extends Request {
             this.mountAccess = builder.mountAccess;
             this.mountPath = builder.mountPath;
             this.options = builder.options;
+            this.roleArn = builder.roleArn;
             this.roleChain = builder.roleChain;
             this.uri = builder.uri;
         }
@@ -1084,6 +1088,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return roleArn
+         */
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        /**
          * @return roleChain
          */
         public String getRoleChain() {
@@ -1105,6 +1116,7 @@ public class CreateJobRequest extends Request {
             private String mountAccess; 
             private String mountPath; 
             private String options; 
+            private String roleArn; 
             private String roleChain; 
             private String uri; 
 
@@ -1119,12 +1131,13 @@ public class CreateJobRequest extends Request {
                 this.mountAccess = model.mountAccess;
                 this.mountPath = model.mountPath;
                 this.options = model.options;
+                this.roleArn = model.roleArn;
                 this.roleChain = model.roleChain;
                 this.uri = model.uri;
             } 
 
             /**
-             * <p>The access point ID. Currently, only CPFS Intelligent Computing access points are supported.</p>
+             * <p>The access point ID. Currently, only Cloud Parallel File Storage (CPFS) access points for intelligent computing are supported.</p>
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;
@@ -1132,7 +1145,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The ID of the data source. &lt;props=&quot;china&quot;&gt;For information about how to view the data source ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
+             * <p>The data source ID. &lt;props=&quot;china&quot;&gt;For information about how to view the data source ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>d-cn9dl*******</p>
@@ -1159,7 +1172,14 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * MountAccess.
+             * <p>The permission when the dataset is mounted. Valid values:</p>
+             * <ul>
+             * <li>RO: read-only mount</li>
+             * <li>RW: read and write mount</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RO</p>
              */
             public Builder mountAccess(String mountAccess) {
                 this.mountAccess = mountAccess;
@@ -1189,6 +1209,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder options(String options) {
                 this.options = options;
+                return this;
+            }
+
+            /**
+             * RoleArn.
+             */
+            public Builder roleArn(String roleArn) {
+                this.roleArn = roleArn;
                 return this;
             }
 
@@ -1310,10 +1338,10 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * <p>The default route. Valid values:</p>
+             * <p>The default routing. Valid values:</p>
              * <ul>
-             * <li>eth0: Uses the default network interface card (NIC) to access external networks through the public gateway.</li>
-             * <li>eth1: Uses the user elastic network interface (ENI) to access external networks through a private gateway. For the configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Configure a DSW instance to access the Internet through a dedicated public network gateway</a>.</li>
+             * <li>eth0: Uses the default network interface controller (NIC) to access external networks through the public gateway.</li>
+             * <li>eth1: Uses the user elastic network interfaces (ENIs) to access external networks through a private gateway. For the configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Configure a DSW instance to access the Internet through a dedicated public gateway</a>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1327,8 +1355,8 @@ public class CreateJobRequest extends Request {
             /**
              * <p>The extended CIDR blocks.</p>
              * <ul>
-             * <li>If the vSwitch ID is empty, this parameter is not required. The system automatically retrieves all CIDR blocks under the VPC.</li>
-             * <li>If the vSwitch ID is specified, this parameter is required. We recommend that you specify all CIDR blocks under the VPC.</li>
+             * <li>If the vSwitch ID is empty, this parameter is optional. The system automatically retrieves all CIDR blocks in the VPC.</li>
+             * <li>If the vSwitch ID is specified, this parameter is required. Specify all CIDR blocks in the VPC.</li>
              * </ul>
              */
             public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
@@ -1337,7 +1365,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The ID of the user security group.</p>
+             * <p>The ID of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-abcdef****</p>
@@ -1348,9 +1376,9 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The ID of the user vSwitch. This is an optional parameter.</p>
+             * <p>The ID of the vSwitch. This parameter is optional.</p>
              * <ul>
-             * <li>If the value is empty, the system automatically selects an appropriate vSwitch based on inventory availability.</li>
+             * <li>If this parameter is left empty, the system automatically selects an appropriate vSwitch based on inventory.</li>
              * <li>You can also specify a vSwitch ID.</li>
              * </ul>
              * 
@@ -1363,7 +1391,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>The ID of the user VPC.</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-abcdef****</p>

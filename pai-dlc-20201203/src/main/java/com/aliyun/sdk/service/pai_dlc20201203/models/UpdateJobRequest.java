@@ -129,7 +129,7 @@ public class UpdateJobRequest extends Request {
         } 
 
         /**
-         * <p>The job ID. To obtain the job ID, call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
+         * <p>The node ID. To retrieve the node ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc*************</p>
@@ -141,9 +141,9 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The visibility of the job. The visibility can only be expanded, not reduced. Valid values:</p>
+         * <p>The visibility of the node can only be expanded, not reduced. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: visible to all users in the workspace.</li>
+         * <li>PUBLIC: Visible to everyone in the workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The job specification definition.</p>
+         * <p>The node specifications.</p>
          */
         public Builder jobSpecs(java.util.List<JobSpec> jobSpecs) {
             this.putBodyParameter("JobSpecs", jobSpecs);
@@ -174,10 +174,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The priority of the job. Valid values: 1 to 9.</p>
+         * <p>The priority of the node. Valid values: 1 to 9.</p>
          * <ul>
-         * <li>1: the lowest priority.</li>
-         * <li>9: the highest priority.</li>
+         * <li>1: lowest priority.</li>
+         * <li>9: highest priority.</li>
          * </ul>
          * 
          * <strong>example:</strong>
