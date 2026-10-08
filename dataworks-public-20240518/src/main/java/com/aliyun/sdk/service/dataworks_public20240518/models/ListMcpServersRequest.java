@@ -160,7 +160,7 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
-         * <p>The visibility level for filtering the results.</p>
+         * <p>The visibility levels for filtering the results. You can specify multiple levels.</p>
          * 
          * <strong>example:</strong>
          * <ul>

@@ -407,7 +407,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The image reference data type. Valid values:</p>
+         * <p>The image reference type. Valid values:</p>
          * <ul>
          * <li>ACR: ACR image repository.</li>
          * <li>DataWorks: DataWorks official image.</li>
@@ -668,7 +668,7 @@ public class CreateImageRequest extends Request {
             /**
              * <p>The image sub-module. Valid values:</p>
              * <ul>
-             * <li>Scheduler: DataStudio.</li>
+             * <li>Scheduler: Data Studio.</li>
              * </ul>
              * 
              * <strong>example:</strong>

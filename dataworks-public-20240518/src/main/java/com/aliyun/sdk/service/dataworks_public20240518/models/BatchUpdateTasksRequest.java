@@ -499,7 +499,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * <p>The effective period of the epoch trigger. This parameter takes effect only when type is set to Scheduler. Format: <code>yyyy-mm-dd hh:mm:ss</code>.</p>
+             * <p>The time when the periodic trigger takes effect. This parameter takes effect only when type is set to Scheduler. Format: <code>yyyy-mm-dd hh:mm:ss</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1970-01-01 00:00:00</p>

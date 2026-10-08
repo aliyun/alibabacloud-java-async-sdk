@@ -572,7 +572,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries that meet the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>131</p>

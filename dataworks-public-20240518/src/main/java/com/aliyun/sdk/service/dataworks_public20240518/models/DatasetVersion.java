@@ -200,7 +200,7 @@ public class DatasetVersion extends TeaModel {
          * <p>The dataset version description.</p>
          * 
          * <strong>example:</strong>
-         * <p>初始版本</p>
+         * <p>Initial version</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -208,7 +208,7 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * <p>Creation time (milliseconds)</p>
+         * <p>Creation time, represented by a timestamp in milliseconds</p>
          * 
          * <strong>example:</strong>
          * <p>1736756055000</p>
@@ -252,15 +252,19 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * <p>The storage import configuration for the dataset; required configuration varies by storage type.</p>
-         * <p><strong>NAS</strong></p>
-         * <p>Refer to the return values from the file storage API DescribeFileSystems.</p>
+         * <p>The storage import configuration for the dataset. The required configuration varies by storage type.</p>
+         * <details>
+         * <summary>NAS</summary>
+         * For values, see the response of the File Storage NAS DescribeFileSystems API.
+         * 
+         * 
          * <pre><code class="language-JSON">{
-         * &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
-         * &quot;fileSystemStorageType&quot;:  &quot;Performance&quot; // The file system storage type.
-         * &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID of the mount point.
+         *   &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
+         *   &quot;fileSystemStorageType&quot;: &quot;Performance&quot;, // The file system storage type.
+         *   &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID of the mount point.
          * }
          * </code></pre>
+         * </details>
          */
         public Builder importInfo(java.util.Map<String, String> importInfo) {
             this.importInfo = importInfo;
@@ -276,7 +280,7 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * <p>Modification time (milliseconds)</p>
+         * <p>Modification time, represented by a timestamp in milliseconds</p>
          * 
          * <strong>example:</strong>
          * <p>1736756055000</p>

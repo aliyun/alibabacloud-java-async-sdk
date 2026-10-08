@@ -75,7 +75,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+         * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>61649187-0BCF-5E75-8D4B-64FDBEBBB447</p>
@@ -279,7 +279,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the workspace role.</p>
+             * <p>The role code of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>role_project_guest</p>
@@ -298,7 +298,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workspace role.</p>
+             * <p>The role name of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>Visitors</p>
@@ -310,7 +310,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
 
             /**
              * <p>The ID of the DataWorks workspace.</p>
-             * <p>Note: For default system workspace roles, the ProjectId returns a fixed value of -1.</p>
+             * <p>Note: For system default workspace roles, ProjectId returns a fixed value of -1.</p>
              * 
              * <strong>example:</strong>
              * <p>21229</p>
@@ -321,7 +321,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the workspace role.</p>
+             * <p>The role type of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>System</p>
@@ -417,7 +417,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number. Used for paging.</p>
+             * <p>The requested page number. Used for pagination.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -447,7 +447,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries that meet the conditions.</p>
+             * <p>The total number of entries that meet the filter conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>42</p>

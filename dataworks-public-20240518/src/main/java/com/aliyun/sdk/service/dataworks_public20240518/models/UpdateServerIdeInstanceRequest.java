@@ -482,7 +482,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The Alibaba Cloud account ID of the principal that assumes the role.</p>
+             * <p>The Alibaba Cloud account ID of the principal that owns the role to be assumed.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789012****</p>

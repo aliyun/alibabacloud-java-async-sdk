@@ -336,7 +336,7 @@ public class UpdateSkillRequest extends Request {
             } 
 
             /**
-             * <p>The list of visible project IDs.</p>
+             * <p>The IDs of the projects in which the Skill is visible.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -344,7 +344,7 @@ public class UpdateSkillRequest extends Request {
             }
 
             /**
-             * <p>The list of visible user IDs.</p>
+             * <p>The IDs of the users to whom the Skill is visible.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;

@@ -1810,7 +1810,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
              * <p>The trigger type.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Scheduler: Timed scheduling.</li>
+             * <li>Scheduler: Periodic scheduling.</li>
              * <li>Manual: Manual scheduling.</li>
              * <li>Streaming: Streaming scheduler.</li>
              * </ul>
@@ -2078,7 +2078,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp when the data development node was created.</p>
+             * <p>The timestamp when the Data Studio node was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1724505917000</p>
@@ -2108,9 +2108,9 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the DataStudio node.</p>
+             * <p>The unique identifier of the Data Studio node.</p>
              * <blockquote>
-             * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage. The parameter is still returned in the type defined in the SDK.</strong> Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you must manually correct the data type.</p>
+             * <p>&lt;notice&gt;This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage. The parameter is still returned in the type defined in the SDK.</strong> Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you must manually correct the data type.&gt;&lt;/notice&gt;</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2130,7 +2130,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the data development node was last modified.</p>
+             * <p>The timestamp when the Data Studio node was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>1724505917000</p>
@@ -2141,7 +2141,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data development node.</p>
+             * <p>The name of the Data Studio node.</p>
              * 
              * <strong>example:</strong>
              * <p>Node name</p>
@@ -2160,7 +2160,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the data development node.</p>
+             * <p>The owner of the Data Studio node.</p>
              * 
              * <strong>example:</strong>
              * <p>110755000425XXXX</p>
@@ -2171,7 +2171,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace to which the data development node belongs.</p>
+             * <p>The ID of the workspace to which the Data Studio node belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>65133</p>
@@ -2338,7 +2338,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of dependent nodes returned by the query.</p>
+             * <p>The list of dependency nodes returned by the query.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;

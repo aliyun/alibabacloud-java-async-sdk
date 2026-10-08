@@ -114,10 +114,10 @@ public class UpdateColumnBusinessMetadataRequest extends Request {
         }
 
         /**
-         * <p>The custom attributes of the column, specified as key-value pairs. The key is the attribute identifier, and the value is an array that can contain at most one element. An empty array deletes the attribute\&quot;s value. To avoid overwriting the column\&quot;s business description, omit the <code>Description</code> parameter from the request. An empty object (<code>{}</code>) indicates that no custom attributes are updated.</p>
+         * <p>The custom attributes of the column, specified as key-value pairs. The key is the attribute identifier, and the value is an array that can contain at most one element. An empty array deletes the attribute\&quot;s value. When Description is omitted, providing this parameter can prevent the column\&quot;s business description from being cleared. An empty object (<code>{}</code>) indicates that no custom attributes are updated.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;biz_owner&quot;:[&quot;张三&quot;]}</p>
+         * <p>{&quot;biz_owner&quot;:[&quot;Zhang San&quot;]}</p>
          */
         public Builder customAttributes(java.util.Map<String, java.util.List<String>> customAttributes) {
             String customAttributesShrink = shrink(customAttributes, "CustomAttributes", "json");

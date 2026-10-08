@@ -129,7 +129,7 @@ public class CreateRouteRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>10001</p>
+         * <p>1000</p>
          */
         public Builder networkId(Long networkId) {
             this.putBodyParameter("NetworkId", networkId);

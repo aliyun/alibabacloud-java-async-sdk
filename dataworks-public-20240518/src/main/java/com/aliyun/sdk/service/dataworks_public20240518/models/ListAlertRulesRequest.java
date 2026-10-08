@@ -240,7 +240,7 @@ public class ListAlertRulesRequest extends Request {
         }
 
         /**
-         * <p>The alert triggering condition.</p>
+         * <p>The list of alert types.</p>
          */
         public Builder types(java.util.List<String> types) {
             String typesShrink = shrink(types, "Types", "json");

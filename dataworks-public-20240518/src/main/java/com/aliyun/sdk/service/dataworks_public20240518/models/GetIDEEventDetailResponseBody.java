@@ -219,7 +219,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data source with which the file is associated.</p>
+             * <p>The unique identifier of the data source with which the file is associated.</p>
              * 
              * <strong>example:</strong>
              * <p>odps_source</p>
@@ -323,7 +323,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
             /**
              * <p>The output name of the parent file on which the current file depends.</p>
-             * <p>This parameter corresponds to the Output Name of Ancestor Node parameter under Parent Nodes in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+             * <p>This parameter corresponds to the Output Name of Ancestor Node parameter under Parent Nodes in the Dependencies section of the Properties tab on the Data Studio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>dw_project_root</p>
@@ -411,7 +411,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
             /**
              * <p>The output name of the current file.</p>
-             * <p>This parameter corresponds to the Output Name parameter under Output Name of Current Node in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+             * <p>This parameter corresponds to the Output Name parameter under Output Name of Current Node in the Dependencies section of the Properties tab on the Data Studio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>dw_project.002_out</p>
@@ -423,7 +423,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
             /**
              * <p>The output table name of the current file.</p>
-             * <p>This parameter corresponds to the Output Table Name parameter under Output Name of Current Node in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+             * <p>This parameter corresponds to the Output Table Name parameter under Output Name of Current Node in the Dependencies section of the Properties tab on the Data Studio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>ods_user_info_d</p>
@@ -623,7 +623,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The interval at which the node corresponding to the file is rerun. Unit: milliseconds.</p>
+             * <p>The interval at which the node corresponding to the file is automatically rerun. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120000</p>
@@ -634,7 +634,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the node corresponding to the file can be rerun.</p>
+             * <p>The number of automatic reruns.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -657,7 +657,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
             /**
              * <p>The type of the scheduling cycle of the node that corresponds to the file. Valid values: NOT_DAY and DAY. The value NOT_DAY indicates that the node is scheduled to run by minute or hour. The value DAY indicates that the node is scheduled to run by day, week, or month.</p>
-             * <p>This parameter corresponds to the Scheduling Cycle parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+             * <p>This parameter corresponds to the Scheduling Cycle parameter in the Schedule section of the Properties tab on the Data Studio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>DAY</p>
@@ -669,7 +669,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
             /**
              * <p>The ID of the node on which the node that corresponds to the file depends when the DependentType parameter is set to USER_DEFINE. Multiple IDs are separated by commas (,).</p>
-             * <p>The value of this parameter is equivalent to the ID of the node that you specified after you select Other Nodes for Cross-Cycle Dependency (Original Previous-Cycle Dependency) in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+             * <p>The value of this parameter is equivalent to the ID of the node that you specified after you select Other Nodes for Cross-Cycle Dependency (Original Previous-Cycle Dependency) in the Dependencies section of the Properties tab on the Data Studio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>5,10,15,20</p>
@@ -718,7 +718,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
             /**
              * <p>The scheduling parameters of the node.</p>
-             * <p>This parameter corresponds to the Scheduling Parameter section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information about the configurations of scheduling parameters, see <a href="https://help.aliyun.com/document_detail/137548.html">Configure scheduling parameters</a>.</p>
+             * <p>This parameter corresponds to the Scheduling Parameter section of the Properties tab on the Data Studio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information about the configurations of scheduling parameters, see <a href="https://help.aliyun.com/document_detail/137548.html">Configure scheduling parameters</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>a=x b=y</p>
@@ -731,14 +731,11 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the node that corresponds to the file can be rerun. Valid values:</p>
              * <ul>
-             * <li><p>ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.</p>
-             * </li>
-             * <li><p>FAILURE_ALLOWED: The node can be rerun only after it fails to run.</p>
-             * </li>
-             * <li><p>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</p>
-             * </li>
+             * <li>ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.</li>
+             * <li>FAILURE_ALLOWED: The node can be rerun only after it fails to run.</li>
+             * <li>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</li>
              * </ul>
-             * <p>This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+             * <p>This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab on the Data Studio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>ALL_ALLOWED</p>
@@ -1063,18 +1060,12 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             /**
              * <p>The module to which the file belongs. Valid values:</p>
              * <ul>
-             * <li><p>NORMAL: The file is used for DataStudio.</p>
-             * </li>
-             * <li><p>MANUAL: The file is used for a manually triggered node.</p>
-             * </li>
-             * <li><p>MANUAL_BIZ: The file is used for a manually triggered workflow.</p>
-             * </li>
-             * <li><p>SKIP: The file is used for a dry-run node in DataStudio.</p>
-             * </li>
-             * <li><p>ADHOCQUERY: The file is used for an ad hoc query.</p>
-             * </li>
-             * <li><p>COMPONENT: The file is used for a script template.</p>
-             * </li>
+             * <li>NORMAL: The file is used for Data Studio.</li>
+             * <li>MANUAL: The file is used for a manually triggered node.</li>
+             * <li>MANUAL_BIZ: The file is used for a manually triggered workflow.</li>
+             * <li>SKIP: The file is used for a dry-run node in Data Studio.</li>
+             * <li>ADHOCQUERY: The file is used for an ad hoc query.</li>
+             * <li>COMPONENT: The file is used for component management.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1308,7 +1299,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data source with which the file is associated.</p>
+             * <p>The unique identifier of the data source with which the file is associated.</p>
              * 
              * <strong>example:</strong>
              * <p>odps_source</p>
@@ -1398,18 +1389,12 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             /**
              * <p>The module to which the file belongs. Valid values:</p>
              * <ul>
-             * <li><p>NORMAL: The file is used for DataStudio.</p>
-             * </li>
-             * <li><p>MANUAL: The file is used for a manually triggered node.</p>
-             * </li>
-             * <li><p>MANUAL_BIZ: The file is used for a manually triggered workflow.</p>
-             * </li>
-             * <li><p>SKIP: The file is used for a dry-run node in DataStudio.</p>
-             * </li>
-             * <li><p>ADHOCQUERY: The file is used for an ad hoc query.</p>
-             * </li>
-             * <li><p>COMPONENT: The file is used for a script template.</p>
-             * </li>
+             * <li>NORMAL: The file is used for Data Studio.</li>
+             * <li>MANUAL: The file is used for a manually triggered node.</li>
+             * <li>MANUAL_BIZ: The file is used for a manually triggered workflow.</li>
+             * <li>SKIP: The file is used for a dry-run node in Data Studio.</li>
+             * <li>ADHOCQUERY: The file is used for an ad hoc query.</li>
+             * <li>COMPONENT: The file is used for component management.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1517,7 +1502,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data source with which the file is associated.</p>
+             * <p>The unique identifier of the data source with which the file is associated.</p>
              * 
              * <strong>example:</strong>
              * <p>odps_source</p>
@@ -1828,7 +1813,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data source to which the table belongs.</p>
+             * <p>The unique identifier of the data source to which the table belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>odps_source</p>
@@ -1867,7 +1852,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the table.</p>
+             * <p>The Location information of the external table.</p>
              * 
              * <strong>example:</strong>
              * <p>hdfs://path/to/object</p>

@@ -767,7 +767,7 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
              * <p>Time when the request was submitted.</p>
              * 
              * <strong>example:</strong>
-             * <p>申请时间</p>
+             * <p>Application time</p>
              */
             public Builder applicationTime(Long applicationTime) {
                 this.applicationTime = applicationTime;
@@ -808,7 +808,7 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
              * <p>Reason for the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>业务需要</p>
+             * <p>Business requirement</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;

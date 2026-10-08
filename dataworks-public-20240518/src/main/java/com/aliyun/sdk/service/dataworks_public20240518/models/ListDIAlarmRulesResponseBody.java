@@ -747,16 +747,11 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             /**
              * <p>The metric type in the alert rule. Valid values:</p>
              * <ul>
-             * <li><p>Heartbeat</p>
-             * </li>
-             * <li><p>FailoverCount</p>
-             * </li>
-             * <li><p>Delay</p>
-             * </li>
-             * <li><p>DdlReport</p>
-             * </li>
-             * <li><p>ResourceUtilization</p>
-             * </li>
+             * <li>Heartbeat: task status alert</li>
+             * <li>FailoverCount: failover count alert</li>
+             * <li>Delay: task latency alert</li>
+             * <li>DdlReport: DDL notification</li>
+             * <li>ResourceUtilization: resource group utilization</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -910,7 +905,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries that meet the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>

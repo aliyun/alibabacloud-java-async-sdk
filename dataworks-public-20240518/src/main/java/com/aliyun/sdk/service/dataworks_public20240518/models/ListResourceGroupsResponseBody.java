@@ -571,7 +571,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the order for the resource group.</p>
+             * <p>The order instance ID for the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>c442b330-3b10-4584-959e-736e4edXXXXX</p>
@@ -596,7 +596,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
              * <p>The description of the resource group.</p>
              * 
              * <strong>example:</strong>
-             * <p>Create a general-purpose resource group for common tasks.</p>
+             * <p>创建用于普通任务的通用资源组</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;

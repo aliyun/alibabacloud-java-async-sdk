@@ -70,7 +70,7 @@ public class DeleteDataSourceResponseBody extends TeaModel {
          * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>B56432E0-2112-5C97-88D0-AA0AE5****</p>
+         * <p>B56432E0-2112-5C97-88D0-AA0AE5C75C74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

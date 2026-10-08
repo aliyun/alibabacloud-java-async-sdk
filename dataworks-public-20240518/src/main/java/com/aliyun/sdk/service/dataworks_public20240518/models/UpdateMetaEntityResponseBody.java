@@ -91,7 +91,7 @@ public class UpdateMetaEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the update operation.</p>
+         * <p>The updated entity or the result of the write operation.</p>
          */
         public Builder result(Result result) {
             this.result = result;

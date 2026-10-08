@@ -138,7 +138,7 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the collection.</p>
+         * <p>The name of the collection.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,14 +163,11 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * <p>The collection name.</p>
+         * <p>The collection type. Valid values:</p>
          * <ul>
-         * <li><p>Category</p>
-         * </li>
-         * <li><p>Album</p>
-         * </li>
-         * <li><p>AlbumCategory: Album subcategory.</p>
-         * </li>
+         * <li>Category: category.</li>
+         * <li>Album: data album.</li>
+         * <li>AlbumCategory: album subcategory.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

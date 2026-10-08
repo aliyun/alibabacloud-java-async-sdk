@@ -75,7 +75,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
@@ -101,6 +101,9 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
+        @com.aliyun.core.annotation.NameInMap("ObjectType")
+        private String objectType;
+
         @com.aliyun.core.annotation.NameInMap("OperationContent")
         private String operationContent;
 
@@ -110,14 +113,19 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
+        @com.aliyun.core.annotation.NameInMap("TaskInstanceId")
+        private Long taskInstanceId;
+
         @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private OperationLogs(Builder builder) {
             this.createTime = builder.createTime;
+            this.objectType = builder.objectType;
             this.operationContent = builder.operationContent;
             this.operationSeq = builder.operationSeq;
             this.taskId = builder.taskId;
+            this.taskInstanceId = builder.taskInstanceId;
             this.user = builder.user;
         }
 
@@ -134,6 +142,13 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return objectType
+         */
+        public String getObjectType() {
+            return this.objectType;
         }
 
         /**
@@ -158,6 +173,13 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskInstanceId
+         */
+        public Long getTaskInstanceId() {
+            return this.taskInstanceId;
+        }
+
+        /**
          * @return user
          */
         public String getUser() {
@@ -166,9 +188,11 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTime; 
+            private String objectType; 
             private String operationContent; 
             private Long operationSeq; 
             private Long taskId; 
+            private Long taskInstanceId; 
             private String user; 
 
             private Builder() {
@@ -176,20 +200,38 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
 
             private Builder(OperationLogs model) {
                 this.createTime = model.createTime;
+                this.objectType = model.objectType;
                 this.operationContent = model.operationContent;
                 this.operationSeq = model.operationSeq;
                 this.taskId = model.taskId;
+                this.taskInstanceId = model.taskInstanceId;
                 this.user = model.user;
             } 
 
             /**
-             * <p>The time when the operation log was generated.</p>
+             * <p>The time when the operation logs are generated.</p>
+             * <p>The format is a 13-digit number, such as <code>1710239005403</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1710239005403</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * <p>The object type. Valid values:</p>
+             * <ul>
+             * <li>Task: node</li>
+             * <li>TaskInstance: node instance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TaskInstance</p>
+             */
+            public Builder objectType(String objectType) {
+                this.objectType = objectType;
                 return this;
             }
 
@@ -205,7 +247,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the operation.</p>
+             * <p>The operation sequence number.</p>
              * 
              * <strong>example:</strong>
              * <p>1111</p>
@@ -216,7 +258,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task on which the operation was performed.</p>
+             * <p>The ID of the node on which the operation was performed.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -227,7 +269,18 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ID of the operator.</p>
+             * <p>The ID of the node instance on which the operation was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
+             */
+            public Builder taskInstanceId(Long taskInstanceId) {
+                this.taskInstanceId = taskInstanceId;
+                return this;
+            }
+
+            /**
+             * <p>The account ID of the user who performed the operation.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -323,7 +376,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation logs.</p>
+             * <p>The list of operation logs.</p>
              */
             public Builder operationLogs(java.util.List<OperationLogs> operationLogs) {
                 this.operationLogs = operationLogs;
@@ -353,7 +406,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

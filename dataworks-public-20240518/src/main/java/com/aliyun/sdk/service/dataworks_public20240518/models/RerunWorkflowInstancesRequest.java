@@ -237,7 +237,7 @@ public class RerunWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The end trigger time of the manual workflow instance used for matching. This parameter must be used together with the StartTriggerTime.</p>
+         * <p>The end trigger time (creation time) of the manual workflow instance used for matching. This parameter must be used together with the StartTriggerTime.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -249,8 +249,7 @@ public class RerunWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The environment of the workspace. Valid values:</p>
-         * <p>Prod Dev</p>
+         * <p>The environment of the workspace. Valid values: Prod (production) and Dev (development).</p>
          * 
          * <strong>example:</strong>
          * <p>Prod</p>
@@ -320,13 +319,6 @@ public class RerunWorkflowInstancesRequest extends Request {
 
         /**
          * <p>The status used for matching manual workflow instances.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Success</p>
-         * </li>
-         * <li><p>Failure</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Failure</p>
@@ -338,8 +330,7 @@ public class RerunWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The type of the workflow instance. Valid values:</p>
-         * <p>ManualWorkflow.</p>
+         * <p>The type of the workflow instance. Valid value: ManualWorkflow (manual workflow).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

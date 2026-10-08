@@ -167,14 +167,7 @@ public class ListWorkflowDefinitionsRequest extends Request {
         }
 
         /**
-         * <p>Filter condition: The type of the workflow. The default value is CycleWorkflow.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>CycleWorkflow</p>
-         * </li>
-         * <li><p>ManualWorkflow</p>
-         * </li>
-         * </ul>
+         * <p>The ID of the owner, which is the account UID of the workspace administrator. To view the UID, log on to the Alibaba Cloud console and go to the Security Management section of Account Management.</p>
          * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
@@ -198,7 +191,7 @@ public class ListWorkflowDefinitionsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the data to retrieve, used for pagination.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -210,7 +203,7 @@ public class ListWorkflowDefinitionsRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to query the ID.</p>
          * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
          * <p>This parameter is required.</p>
          * 

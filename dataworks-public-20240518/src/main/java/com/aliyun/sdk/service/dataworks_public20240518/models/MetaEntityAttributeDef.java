@@ -156,7 +156,7 @@ public class MetaEntityAttributeDef extends TeaModel {
          * <p>Attribute description</p>
          * 
          * <strong>example:</strong>
-         * <p>层级描述</p>
+         * <p>Hierarchy description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -164,7 +164,7 @@ public class MetaEntityAttributeDef extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the attribute appears on the product page. Default is true.</p>
+         * <p>Indicates whether the attribute appears on the details page. Default is true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -178,7 +178,7 @@ public class MetaEntityAttributeDef extends TeaModel {
          * <p>Display name. It can be up to 32 characters long.</p>
          * 
          * <strong>example:</strong>
-         * <p>API编码</p>
+         * <p>API code</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;

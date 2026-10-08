@@ -1026,7 +1026,7 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Spec code for the content of the data quality monitoring.</p>
+             * <p>Spec code for the content of the data quality monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality Spec configuration description</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>{

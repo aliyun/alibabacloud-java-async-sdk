@@ -178,7 +178,7 @@ public class MetaEntityDef extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务API</p>
+         * <p>Business API</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -189,7 +189,7 @@ public class MetaEntityDef extends TeaModel {
          * <p>The entity type.</p>
          * 
          * <strong>example:</strong>
-         * <p>custom_entity-biz_api</p>
+         * <p>custom_entity-customer_api</p>
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
@@ -222,7 +222,7 @@ public class MetaEntityDef extends TeaModel {
          * <p>The name of the type definition.</p>
          * 
          * <strong>example:</strong>
-         * <p>biz_api</p>
+         * <p>customer_api</p>
          */
         public Builder name(String name) {
             this.name = name;

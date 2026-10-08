@@ -441,14 +441,11 @@ public class UpdateDataQualityScanRequest extends Request {
             } 
 
             /**
-             * <p>The engine type. These settings are only supported for the EMR compute engine.This setting? Valid values:</p>
+             * <p>The engine type. These settings are only supported for the EMR compute engine. Valid values:</p>
              * <ul>
-             * <li><p>Hive: Hive SQL</p>
-             * </li>
-             * <li><p>Spark: Spark SQL</p>
-             * </li>
-             * <li><p>Kyuubi</p>
-             * </li>
+             * <li>Hive: Hive SQL</li>
+             * <li>Spark: Spark SQL</li>
+             * <li>Kyuubi</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -460,7 +457,7 @@ public class UpdateDataQualityScanRequest extends Request {
             }
 
             /**
-             * <p>Additional Hive engine parameters. Currently, only the mapreduce.job.queuename parameter is supported.</p>
+             * <p>Additional Hive engine parameters. Currently, only the mapreduce.job.queuename parameter is supported to configure the queue.</p>
              * 
              * <strong>example:</strong>
              * <p>mapreduce.job.queuename=dq_queue</p>
@@ -471,7 +468,7 @@ public class UpdateDataQualityScanRequest extends Request {
             }
 
             /**
-             * <p>Additional Spark engine parameters. Currently, only the spark.yarn.queue parameter is supported.</p>
+             * <p>Additional Spark engine parameters. Currently, only the spark.yarn.queue parameter is supported to configure the queue.</p>
              * 
              * <strong>example:</strong>
              * <p>spark.yarn.queue=dq_queue</p>
@@ -828,7 +825,7 @@ public class UpdateDataQualityScanRequest extends Request {
             } 
 
             /**
-             * <p>The default number of CUs configured for task running.</p>
+             * <p>The CU consumption configured for task execution.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>

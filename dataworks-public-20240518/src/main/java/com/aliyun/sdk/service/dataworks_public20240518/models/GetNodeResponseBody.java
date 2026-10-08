@@ -385,7 +385,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the corresponding scheduling task after the node is published.</p>
+             * <p>The ID of the corresponding scheduling task after the node is deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>700006680527</p>

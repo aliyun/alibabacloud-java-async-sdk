@@ -196,7 +196,7 @@ public class CreateSkillRequest extends Request {
          * <p>The <strong>Skill description</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>数据分析技能</p>
+         * <p>Data analytics skill.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -248,7 +248,7 @@ public class CreateSkillRequest extends Request {
          * <p>The <strong>version note</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>初版</p>
+         * <p>Initial version.</p>
          */
         public Builder versionNote(String versionNote) {
             this.putBodyParameter("VersionNote", versionNote);

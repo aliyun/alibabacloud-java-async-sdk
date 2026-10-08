@@ -67,7 +67,7 @@ public class GetDataQualityScanRunLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The node task logs information.</p>
+         * <p>The task log information.</p>
          */
         public Builder logSegment(LogSegment logSegment) {
             this.logSegment = logSegment;
@@ -144,7 +144,7 @@ public class GetDataQualityScanRunLogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The node task logs.</p>
+             * <p>The task logs.</p>
              * 
              * <strong>example:</strong>
              * <p>Running on Serverless_resource_group_xxxxx

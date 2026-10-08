@@ -67,7 +67,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The paged query result of quality evaluation nodes.</p>
+         * <p>The paged query result of quality evaluation tasks.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -144,7 +144,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cause that triggers the hook.</p>
+             * <p>The condition that triggers the hook.</p>
              * 
              * <strong>example:</strong>
              * <p>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</p>
@@ -466,7 +466,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cause that triggers the notification.</p>
+             * <p>The condition that triggers the notification.</p>
              * 
              * <strong>example:</strong>
              * <p>${severity} == &quot;High&quot;</p>
@@ -889,7 +889,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback settings during the epoch of data quality evaluation task instances. Currently, only one hook that blocks a scheduling node instance is supported.</p>
+             * <p>The callback settings during the lifecycle of data quality evaluation task instances. Currently, only one hook that blocks a scheduling node instance is supported.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -908,7 +908,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data quality evaluation task. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. The name can be up to 255 characters in length.</p>
+             * <p>The name of the data quality evaluation task. The name can contain digits, English letters, Chinese characters, and half-width or full-width punctuation marks. The name can be up to 255 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>Data quality verification task</p>

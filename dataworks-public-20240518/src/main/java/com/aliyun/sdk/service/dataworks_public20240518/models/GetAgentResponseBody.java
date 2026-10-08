@@ -173,7 +173,7 @@ public class GetAgentResponseBody extends TeaModel {
              * <p>The sub-agent display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>子助手</p>
+             * <p>Sub-assistant</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -940,7 +940,7 @@ public class GetAgentResponseBody extends TeaModel {
              * <p><strong>The description.</strong></p>
              * 
              * <strong>example:</strong>
-             * <p>数据分析助手</p>
+             * <p>Data analysis assistant</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -951,7 +951,7 @@ public class GetAgentResponseBody extends TeaModel {
              * <p><strong>The display name.</strong></p>
              * 
              * <strong>example:</strong>
-             * <p>我的助手</p>
+             * <p>My assistant</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -1043,7 +1043,7 @@ public class GetAgentResponseBody extends TeaModel {
              * <p><strong>The system prompt.</strong></p>
              * 
              * <strong>example:</strong>
-             * <p>你是一个数据分析助手。</p>
+             * <p>You are a data analysis assistant.</p>
              */
             public Builder systemPrompt(String systemPrompt) {
                 this.systemPrompt = systemPrompt;

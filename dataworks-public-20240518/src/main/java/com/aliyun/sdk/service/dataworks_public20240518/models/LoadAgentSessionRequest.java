@@ -194,7 +194,7 @@ public class LoadAgentSessionRequest extends Request {
              * <p>Specifies whether to use resumable transfer. If the SSE stream is interrupted due to issues like an unstable network connection, you can set this parameter to <code>true</code> to re-fetch the stream data from the point of failure.</p>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>true or false</p>
              */
             public Builder isReload(Boolean isReload) {
                 this.isReload = isReload;

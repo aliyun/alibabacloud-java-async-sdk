@@ -70,7 +70,7 @@ public class DeleteDIJobResponseBody extends TeaModel {
          * <p>The request ID. You can troubleshoot issues based on the ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>D33D4A51-5845-579A-B4BA-FAADD0F****</p>
+         * <p>D33D4A51-5845-579A-B4BA-FAADD0F83D53</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DeleteDIJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>true</p>
+         * <p>Indicates whether the call was successful. Valid values: true: successful; false: failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

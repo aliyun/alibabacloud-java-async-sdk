@@ -129,7 +129,7 @@ public class CreateProjectRoleRequest extends Request {
          * <p>The client token.</p>
          * 
          * <strong>example:</strong>
-         * <p>保留字段</p>
+         * <p>Reserved field</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);

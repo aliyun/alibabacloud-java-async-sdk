@@ -78,7 +78,7 @@ public class UpdateDataQualityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the rule template is updated.</p>
+         * <p>Indicates whether the rule template is updated successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

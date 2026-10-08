@@ -225,7 +225,7 @@ public class CreateProcessDefinitionRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一个示例策略</p>
+         * <p>This is a sample policy</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -247,7 +247,7 @@ public class CreateProcessDefinitionRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>我的审批策略</p>
+         * <p>My Approval Policy</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

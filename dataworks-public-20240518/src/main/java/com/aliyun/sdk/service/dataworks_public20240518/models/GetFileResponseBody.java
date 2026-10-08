@@ -710,7 +710,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code type of the file. Different file types use different code. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks Edge Zone Collection</a>.</p>
+             * <p>The code type of the file. Different file types use different code. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -755,7 +755,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the scheduling task generated in the CDN mapping system after the file is submitted.</p>
+             * <p>The ID of the scheduling task generated in the scheduling system after the file is submitted.</p>
              * 
              * <strong>example:</strong>
              * <p>300001</p>
@@ -777,7 +777,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If the current file is an internal file of a composite edge zone file, this field identifies the ID of the corresponding composite edge zone file.</p>
+             * <p>If the current file is an internal file of a combined node file, this field identifies the ID of the corresponding combined node file.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -790,18 +790,12 @@ public class GetFileResponseBody extends TeaModel {
             /**
              * <p>The function module to which the file belongs. Valid values:</p>
              * <ul>
-             * <li><p>NORMAL: Data Development.</p>
-             * </li>
-             * <li><p>MANUAL: One-time task.</p>
-             * </li>
-             * <li><p>MANUAL_BIZ: Manually triggered workflow.</p>
-             * </li>
-             * <li><p>SKIP: Dry-run scheduling in Data Development.</p>
-             * </li>
-             * <li><p>ADHOCQUERY: Ad-hoc query.</p>
-             * </li>
-             * <li><p>COMPONENT: Widget Management.</p>
-             * </li>
+             * <li>NORMAL: Data Studio.</li>
+             * <li>MANUAL: Manually triggered task.</li>
+             * <li>MANUAL_BIZ: Manually triggered workflow.</li>
+             * <li>SKIP: Dry-run scheduling in Data Studio.</li>
+             * <li>ADHOCQUERY: Ad-hoc query.</li>
+             * <li>COMPONENT: Component Management.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1044,7 +1038,7 @@ public class GetFileResponseBody extends TeaModel {
 
             /**
              * <p>Output name of the file.</p>
-             * <p>This parameter corresponds to the value in the &quot;Output Name&quot; column when &quot;Same Cycle&quot; is selected under &quot;Scan Configuration &gt; Schedule Dependency&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+             * <p>This parameter corresponds to the value in the &quot;Output Name&quot; column when &quot;Same Cycle&quot; is selected under &quot;Schedule Configuration &gt; Schedule Dependency&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>dw_project.002_out</p>
@@ -1056,7 +1050,7 @@ public class GetFileResponseBody extends TeaModel {
 
             /**
              * <p>Output value of the file.</p>
-             * <p>This parameter corresponds to the value in the &quot;Output Table&quot; column when &quot;Same Cycle&quot; is selected under &quot;Scan Configuration &gt; Schedule Dependency&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+             * <p>This parameter corresponds to the value in the &quot;Output Table&quot; column when &quot;Same Cycle&quot; is selected under &quot;Schedule Configuration &gt; Schedule Dependency&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>ods_user_info_d</p>
@@ -1152,7 +1146,7 @@ public class GetFileResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the output parameter in the edge zone context.</p>
+             * <p>The description of the output parameter in the node context.</p>
              * 
              * <strong>example:</strong>
              * <p>It\&quot;s a context output parameter.</p>
@@ -1175,16 +1169,13 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the expression for the edge zone context output parameter. Valid values are as follows:</p>
+             * <p>The type of the expression for the node context output parameter. Valid values are as follows:</p>
              * <ul>
-             * <li><p>1: constant</p>
-             * </li>
-             * <li><p>2: variable</p>
-             * </li>
-             * <li><p>3: pass-through variable from a parameter node</p>
-             * </li>
+             * <li>1: constant</li>
+             * <li>2: variable</li>
+             * <li>3: pass-through variable from a parameter node</li>
              * </ul>
-             * <p>This parameter corresponds to the &quot;Type&quot; field in the &quot;Scan Configuration &gt; Edge Zone Context &gt; Output Parameters of This Node&quot; section for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+             * <p>This parameter corresponds to the &quot;Type&quot; field in the &quot;Schedule Configuration &gt; Node Context &gt; Output Parameters of This Node&quot; section for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1195,8 +1186,8 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expression of the output parameter in the edge zone context.</p>
-             * <p>This parameter corresponds to the &quot;Value&quot; field in the &quot;Scan Configuration &gt; Edge Zone Context &gt; Output Parameters of This Node&quot; section for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+             * <p>The expression of the output parameter in the node context.</p>
+             * <p>This parameter corresponds to the &quot;Value&quot; field in the &quot;Schedule Configuration &gt; Node Context &gt; Output Parameters of This Node&quot; section for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>${bizdate}</p>
@@ -1572,8 +1563,8 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of recurrence, including NOT_DAY (minute, hour) and DAY (day, week, month).</p>
-             * <p>This parameter corresponds to &quot;Schedule Configuration &gt; Time Properties &gt; Recurrence&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+             * <p>The type of scheduling cycle, including NOT_DAY (minute, hour) and DAY (day, week, month).</p>
+             * <p>This parameter corresponds to &quot;Schedule Configuration &gt; Time Properties &gt; Scheduling Cycle&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>DAY</p>
@@ -1618,7 +1609,7 @@ public class GetFileResponseBody extends TeaModel {
 
             /**
              * <p>The UNIX timestamp, in milliseconds, when automatic scheduling stops.</p>
-             * <p>This parameter corresponds to the millisecond UNIX timestamp of the end time configured in the &quot;Scan Configuration &gt; Time Properties &gt; Effective Date&quot; setting for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+             * <p>This parameter corresponds to the millisecond UNIX timestamp of the end time configured in the &quot;Schedule Configuration &gt; Time Properties &gt; Effective Date&quot; setting for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>4155787800000</p>
@@ -1684,7 +1675,7 @@ public class GetFileResponseBody extends TeaModel {
 
             /**
              * <p>Schedule parameter.</p>
-             * <p>This parameter corresponds to the &quot;Scan Configuration &gt; Parameters&quot; setting for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. You can refer to the <a href="https://help.aliyun.com/document_detail/137548.html">Schedule Parameters</a> documentation for configuration details.</p>
+             * <p>This parameter corresponds to the &quot;Schedule Configuration &gt; Parameters&quot; setting for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. You can refer to the <a href="https://help.aliyun.com/document_detail/137548.html">Schedule Parameters</a> documentation for configuration details.</p>
              * 
              * <strong>example:</strong>
              * <p>a=x b=y</p>
@@ -1697,14 +1688,11 @@ public class GetFileResponseBody extends TeaModel {
             /**
              * <p>Rerun property. Valid values:</p>
              * <ul>
-             * <li><p>ALL_ALLOWED: The job can be rerun regardless of whether it previously Succeeded or failed.</p>
-             * </li>
-             * <li><p>FAILURE_ALLOWED: The job cannot be rerun if it previously Succeeded, but can be rerun if it previously failed.</p>
-             * </li>
-             * <li><p>ALL_DENIED: The job cannot be rerun regardless of whether it previously Succeeded or failed.</p>
-             * </li>
+             * <li>ALL_ALLOWED: The job can be rerun regardless of whether it previously Succeeded or failed.</li>
+             * <li>FAILURE_ALLOWED: The job cannot be rerun if it previously Succeeded, but can be rerun if it previously failed.</li>
+             * <li>ALL_DENIED: The job cannot be rerun regardless of whether it previously Succeeded or failed.</li>
              * </ul>
-             * <p>This parameter corresponds to the &quot;Scan Configuration &gt; Time Properties &gt; Rerun Property&quot; setting for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+             * <p>This parameter corresponds to the &quot;Schedule Configuration &gt; Time Properties &gt; Rerun Property&quot; setting for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>ALL_ALLOWED</p>
@@ -1728,14 +1716,10 @@ public class GetFileResponseBody extends TeaModel {
             /**
              * <p>The schedule type. Valid values:</p>
              * <ul>
-             * <li><p>NORMAL: Normal scheduling task.</p>
-             * </li>
-             * <li><p>MANUAL: One-time task, which is not included in regular scheduling and corresponds to a node in a manually triggered workflow.</p>
-             * </li>
-             * <li><p>PAUSE: Paused task.</p>
-             * </li>
-             * <li><p>SKIP: Dry-run task, which is included in regular scheduling but is immediately marked as Succeeded when scheduled.</p>
-             * </li>
+             * <li>NORMAL: Normal scheduling task.</li>
+             * <li>MANUAL: Manually triggered task, which is not included in regular scheduling and corresponds to a node in a manually triggered workflow.</li>
+             * <li>PAUSE: Paused task.</li>
+             * <li>SKIP: Dry-run task, which is included in regular scheduling but is immediately marked as Succeeded when scheduled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1771,14 +1755,12 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to skip execution. Valid values:</p>
+             * <p>Indicates whether to pause scheduling. Valid values:</p>
              * <ul>
-             * <li><p>true: Skip execution.</p>
-             * </li>
-             * <li><p>false: Do not skip execution.</p>
-             * </li>
+             * <li>true: Pause scheduling.</li>
+             * <li>false: Do not pause scheduling.</li>
              * </ul>
-             * <p>This parameter corresponds to the setting &quot;Schedule Type&quot; under &quot;Schedule Configuration &gt; Time Properties&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, when it is set to &quot;skip execution&quot;.</p>
+             * <p>This parameter corresponds to the setting &quot;Schedule Type&quot; under &quot;Schedule Configuration &gt; Time Properties&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, when it is set to &quot;pause scheduling&quot;.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

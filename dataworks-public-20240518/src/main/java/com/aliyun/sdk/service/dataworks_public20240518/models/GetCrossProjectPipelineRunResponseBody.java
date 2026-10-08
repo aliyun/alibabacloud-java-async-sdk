@@ -546,7 +546,7 @@ public class GetCrossProjectPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The object type of the publish object.</p>
+             * <p>The type of the deployment object.</p>
              * 
              * <strong>example:</strong>
              * <p>ODPS_SQL</p>

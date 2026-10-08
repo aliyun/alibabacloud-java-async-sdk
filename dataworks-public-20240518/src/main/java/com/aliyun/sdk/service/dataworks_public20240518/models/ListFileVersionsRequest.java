@@ -177,7 +177,7 @@ public class ListFileVersionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DataWorks workspace. You can click the small wrench icon in the upper-right corner of the page to go to the storage management page and view the ID.</p>
+         * <p>The ID of the DataWorks workspace. You can click the small wrench icon in the upper-right corner of the page to go to the workspace management page and view the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100001</p>
@@ -189,7 +189,7 @@ public class ListFileVersionsRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the DataStudio page.</p>
+         * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the Data Studio page.</p>
          * <p>You must set either this parameter or ProjectId to determine the DataWorks workspace for this API call.</p>
          * 
          * <strong>example:</strong>

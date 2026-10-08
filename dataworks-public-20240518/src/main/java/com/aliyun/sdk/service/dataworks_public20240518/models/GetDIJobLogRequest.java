@@ -177,7 +177,7 @@ public class GetDIJobLogRequest extends Request {
         }
 
         /**
-         * <p>The node ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

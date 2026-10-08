@@ -545,7 +545,7 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to apply the scheduling configuration immediately after the file is published.</p>
+         * <p>Specifies whether to apply the scheduling configuration immediately after the file is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -559,12 +559,10 @@ public class UpdateFileRequest extends Request {
         /**
          * <p>Specifies whether to enable automatic parsing for the file. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
-         * <p>This parameter corresponds to the Analyze Code setting in Properties &gt; Dependencies for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the Analyze Code setting in Properties &gt; Dependencies for Data Studio nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -577,7 +575,7 @@ public class UpdateFileRequest extends Request {
 
         /**
          * <p>The interval at which the node is automatically rerun after a failure. Unit: milliseconds. Maximum value: 1800000 milliseconds (30 minutes).</p>
-         * <p>This parameter corresponds to the Rerun interval parameter in Properties &gt; Schedule &gt; Auto Rerun upon Failure for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. In the console, the unit of the rerun interval is minutes. Convert the time unit when you call this operation.</p>
+         * <p>This parameter corresponds to the Rerun interval parameter in Properties &gt; Schedule &gt; Auto Rerun upon Failure for Data Studio nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. In the console, the unit of the rerun interval is minutes. Convert the time unit when you call this operation.</p>
          * 
          * <strong>example:</strong>
          * <p>120000</p>
@@ -675,7 +673,7 @@ public class UpdateFileRequest extends Request {
 
         /**
          * <p>The IDs of the nodes on which the current node depends. This parameter takes effect only when the DependentType parameter is set to USER_DEFINE. Separate multiple node IDs with commas (,).</p>
-         * <p>This parameter corresponds to the Other Nodes option in Properties &gt; Dependencies &gt; Cross-cycle Dependency (Original Previous-cycle Dependency) for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the Other Nodes option in Properties &gt; Dependencies &gt; Cross-cycle Dependency (Original Previous-cycle Dependency) for Data Studio nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>5,10,15,20</p>
@@ -689,14 +687,10 @@ public class UpdateFileRequest extends Request {
         /**
          * <p>The dependency mode on the previous cycle. Valid values:</p>
          * <ul>
-         * <li><p>SELF: Depends on the current node.</p>
-         * </li>
-         * <li><p>CHILD: Depends on the child nodes.</p>
-         * </li>
-         * <li><p>USER_DEFINE: Depends on other nodes.</p>
-         * </li>
-         * <li><p>NONE: No dependencies. Does not depend on the previous cycle.</p>
-         * </li>
+         * <li>SELF: Depends on the current node.</li>
+         * <li>CHILD: Depends on the level-1 child nodes.</li>
+         * <li>USER_DEFINE: Depends on other nodes.</li>
+         * <li>NONE: No dependencies. Does not depend on the previous cycle.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -771,7 +765,7 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * <p>This parameter corresponds to the Skip The Dry-Run Property Of The Ancestor Node option in Properties &gt; Dependencies &gt; Cross-cycle Dependency (Original Previous-cycle Dependency) when Instances of Current Node or Level-1 Child Node is selected for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the Skip The Dry-Run Property Of The Ancestor Node option in Properties &gt; Dependencies &gt; Cross-cycle Dependency (Original Previous-cycle Dependency) when Instances of Current Node or Level-1 Child Node is selected for Data Studio nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -796,7 +790,7 @@ public class UpdateFileRequest extends Request {
 
         /**
          * <p>The output names of the ancestor nodes on which the current node depends. Separate multiple output names with commas (,).</p>
-         * <p>This parameter corresponds to the Output Name of Ancestor Node setting in Properties &gt; Dependencies for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the Output Name of Ancestor Node setting in Properties &gt; Dependencies for Data Studio nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * <blockquote>
          * <p>This parameter is required when you call the CreateDISyncTask or UpdateFile operation to create a batch synchronization node.</p>
          * </blockquote>
@@ -812,7 +806,7 @@ public class UpdateFileRequest extends Request {
 
         /**
          * <p>The input context parameters of the node. The value must be in the JSON format. For more information about the parameter structure, see the InputContextParameterList parameter in the response parameters of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</p>
-         * <p>This parameter corresponds to the Input Parameters setting in Properties &gt; Input and Output Parameters for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the Input Parameters setting in Properties &gt; Input and Output Parameters for Data Studio nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;ValueSource&quot;: &quot;project_001.first_node:bizdate_param&quot;,&quot;ParameterName&quot;: &quot;bizdate_input&quot;}]</p>
@@ -825,7 +819,7 @@ public class UpdateFileRequest extends Request {
 
         /**
          * <p>The outputs of the node.</p>
-         * <p>This parameter corresponds to the Output Name setting in Properties &gt; Dependencies for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the Output Name setting in Properties &gt; Dependencies for Data Studio nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>dw_project.ods_user_info_d</p>
@@ -838,7 +832,7 @@ public class UpdateFileRequest extends Request {
 
         /**
          * <p>The output context parameters of the node. The value must be in the JSON format. For more information about the parameter structure, see the OutputContextParameterList parameter in the response parameters of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</p>
-         * <p>This parameter corresponds to the Output Parameters setting in Properties &gt; Input and Output Parameters for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the Output Parameters setting in Properties &gt; Input and Output Parameters for Data Studio nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;Type&quot;: 1,&quot;Value&quot;: &quot;${bizdate}&quot;,&quot;ParameterName&quot;: &quot;bizdate_param&quot;}]</p>
@@ -863,7 +857,7 @@ public class UpdateFileRequest extends Request {
 
         /**
          * <p>The scheduling parameters of the node.</p>
-         * <p>This parameter corresponds to the Scheduling Parameter setting in Properties for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/137548.html">Scheduling parameters</a>.</p>
+         * <p>This parameter corresponds to the Scheduling Parameter setting in Properties for Data Studio nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/137548.html">Scheduling parameters</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>x=a y=b z=c</p>
@@ -902,25 +896,11 @@ public class UpdateFileRequest extends Request {
         /**
          * <p>The rerun policy. Valid values:</p>
          * <ul>
-         * <li><p>ALL_ALLOWED: Reruns are allowed regardless of whether the task succeeds or fails.</p>
-         * </li>
-         * <li><p>FAILURE_ALLOWED: Reruns are allowed only when the task fails.</p>
-         * </li>
-         * <li><p>ALL_DENIED: Reruns are not allowed regardless of whether the task succeeds or fails.</p>
-         * </li>
+         * <li>ALL_ALLOWED: Reruns are allowed regardless of whether the task succeeds or fails.</li>
+         * <li>FAILURE_ALLOWED: Reruns are allowed only when the task fails.</li>
+         * <li>ALL_DENIED: Reruns are not allowed regardless of whether the task succeeds or fails.</li>
          * </ul>
          * <p>This parameter corresponds to the Support for Rerun setting in Scheduling &gt; Scheduling Policies for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>ALL_ALLOWD</p>
-         * </li>
-         * <li><p>FAILURE_ALLOWED</p>
-         * </li>
-         * <li><p>ALL_DENIED</p>
-         * </li>
-         * <li><p>ALL_ALLOWED</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ALL_ALLOWED</p>
@@ -932,7 +912,7 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * <p>The resource group for the task published from the file. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the available resource groups in the workspace.</p>
+         * <p>The resource group for the task deployed from the file. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the available resource groups in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>default_group</p>
@@ -979,12 +959,10 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to start the task immediately after it is published. Valid values:</p>
+         * <p>Specifies whether to start the task immediately after it is deployed. Valid values:</p>
          * <ul>
-         * <li><p>true: Start the task immediately after it is published.</p>
-         * </li>
-         * <li><p>false: Do not start the task immediately after it is published.</p>
-         * </li>
+         * <li>true: Start the task immediately after it is deployed.</li>
+         * <li>false: Do not start the task immediately after it is deployed.</li>
          * </ul>
          * <p>This parameter corresponds to the Start Method setting in Configuration &gt; Scheduling Policies in the right-side navigation pane on the editing page for EMR Spark Streaming and EMR Streaming SQL tasks in Data Studio in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
@@ -998,14 +976,12 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to skip execution. Valid values:</p>
+         * <p>Specifies whether to pause scheduling. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true: Pause scheduling.</li>
+         * <li>false: Do not pause scheduling.</li>
          * </ul>
-         * <p>This parameter corresponds to the Skip Execution option in Properties &gt; Schedule &gt; Recurrence for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the Pause Scheduling option in Properties &gt; Schedule &gt; Recurrence for Data Studio nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

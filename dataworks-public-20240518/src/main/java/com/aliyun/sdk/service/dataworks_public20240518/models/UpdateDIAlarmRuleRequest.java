@@ -222,7 +222,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
          * <p>The description of the alert rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alert rule description.</p>
+         * <p>The description of the alert rule.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -257,16 +257,11 @@ public class UpdateDIAlarmRuleRequest extends Request {
         /**
          * <p>The metric type in the alert rule. Valid values:</p>
          * <ul>
-         * <li><p>Heartbeat</p>
-         * </li>
-         * <li><p>FailoverCount</p>
-         * </li>
-         * <li><p>Delay</p>
-         * </li>
-         * <li><p>DdlReport</p>
-         * </li>
-         * <li><p>ResourceUtilization</p>
-         * </li>
+         * <li>Heartbeat: task status alert</li>
+         * <li>FailoverCount: failover count alert</li>
+         * <li>Delay: task latency alert</li>
+         * <li>DdlReport: DDL notification</li>
+         * <li>ResourceUtilization: resource group utilization</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -372,14 +367,10 @@ public class UpdateDIAlarmRuleRequest extends Request {
             /**
              * <p>The alert notification method. Valid values:</p>
              * <ul>
-             * <li><p>Mail</p>
-             * </li>
-             * <li><p>Phone</p>
-             * </li>
-             * <li><p>Sms</p>
-             * </li>
-             * <li><p>Ding</p>
-             * </li>
+             * <li>Mail: email</li>
+             * <li>Phone: phone call</li>
+             * <li>Sms: SMS</li>
+             * <li>Ding: DingTalk</li>
              * </ul>
              */
             public Builder channels(java.util.List<String> channels) {
@@ -720,7 +711,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * <p>The types of DDL operations for which the alert rule takes effect.</p>
+             * <p>The types of DDL operations for which the alert rule takes effect. This setting takes effect only for DDL notifications.</p>
              */
             public Builder ddlTypes(java.util.List<String> ddlTypes) {
                 this.ddlTypes = ddlTypes;

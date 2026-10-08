@@ -335,7 +335,7 @@ public class UpdateTaskAsyncRequest extends Request {
         }
 
         /**
-         * <p>The client unique code of the node, which uniquely identifies a node. This code is used for asynchronous operations and idempotence. If you do not specify this parameter during creation, the system automatically generates one. The code is uniquely bound to the resource ID. When updating or deleting a resource, if you specify this parameter, it must be the same as the client unique code specified during creation.</p>
+         * <p>The client unique code of the node, used to uniquely identify a node. This code is used for asynchronous processing and idempotence. If you do not specify this parameter when creating a node, the system automatically generates a value and binds it to the resource ID. If you specify this parameter when updating or deleting a resource, the value must match the client unique code used when the resource was created.</p>
          * 
          * <strong>example:</strong>
          * <p>Workflow_0bc5213917368545132902xxxxxxxx</p>
@@ -420,8 +420,8 @@ public class UpdateTaskAsyncRequest extends Request {
         /**
          * <p>The instance generation mode. Valid values:</p>
          * <ul>
-         * <li>T+1: Generates instances the next day.</li>
-         * <li>Immediately: Generates instances immediately. Note: Only periodic instances whose scheduled time is at least 10 minutes after the node publish time are generated. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and publish nodes, but new nodes do not automatically generate instances.</li>
+         * <li>T+1: generates instances the next day.</li>
+         * <li>Immediately: generates instances immediately. Note: only periodic instances whose scheduled time is more than 10 minutes after the node publish time are generated normally. During the full-to-instance conversion period (22:00–24:00), real-time instance conversion is not supported. You can submit and publish nodes, but new nodes are not automatically converted to instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -480,11 +480,11 @@ public class UpdateTaskAsyncRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the node can be rerun. Valid values:</p>
+         * <p>The configuration that specifies whether the node can be rerun. Valid values:</p>
          * <ul>
-         * <li>AllDenied: Cannot be rerun regardless of success or failure.</li>
-         * <li>FailureAllowed: Can be rerun only upon failure.</li>
-         * <li>AllAllowed: Can be rerun regardless of success or failure.</li>
+         * <li>AllDenied: the node cannot be rerun regardless of whether it succeeds or fails.</li>
+         * <li>FailureAllowed: the node can be rerun only if it fails.</li>
+         * <li>AllAllowed: the node can be rerun regardless of whether it succeeds or fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -497,7 +497,7 @@ public class UpdateTaskAsyncRequest extends Request {
         }
 
         /**
-         * <p>The number of retries. This parameter takes effect when the node is configured to allow reruns.</p>
+         * <p>The number of retries. This parameter takes effect only when the node is configured to allow reruns.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -509,7 +509,7 @@ public class UpdateTaskAsyncRequest extends Request {
         }
 
         /**
-         * <p>The runtime environment configuration, such as schedule resource group information.</p>
+         * <p>The runtime environment configuration, such as the resource group information.</p>
          */
         public Builder runtimeResource(RuntimeResource runtimeResource) {
             String runtimeResourceShrink = shrink(runtimeResource, "RuntimeResource", "json");
@@ -519,7 +519,7 @@ public class UpdateTaskAsyncRequest extends Request {
         }
 
         /**
-         * <p>The script information.</p>
+         * <p>The runtime script information.</p>
          */
         public Builder script(Script script) {
             String scriptShrink = shrink(script, "Script", "json");
@@ -529,7 +529,7 @@ public class UpdateTaskAsyncRequest extends Request {
         }
 
         /**
-         * <p>The list of data asset tags to bind.</p>
+         * <p>The list of data asset tags to attach.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -539,7 +539,7 @@ public class UpdateTaskAsyncRequest extends Request {
         }
 
         /**
-         * <p>The timeout setting for scheduling configuration.</p>
+         * <p>The timeout period defined in the scheduling configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -693,10 +693,10 @@ public class UpdateTaskAsyncRequest extends Request {
             /**
              * <p>The dependency type. Valid values:</p>
              * <ul>
-             * <li>CrossCycleDependsOnChildren: cross-cycle dependency on first-level child nodes</li>
-             * <li>CrossCycleDependsOnSelf: cross-cycle dependency on the current node</li>
-             * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</li>
-             * <li>Normal: same-cycle dependency</li>
+             * <li>CrossCycleDependsOnChildren: cross-cycle dependency on first-level child nodes.</li>
+             * <li>CrossCycleDependsOnSelf: cross-cycle dependency on the node itself.</li>
+             * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes.</li>
+             * <li>Normal: same-cycle dependency.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -709,7 +709,7 @@ public class UpdateTaskAsyncRequest extends Request {
             }
 
             /**
-             * <p>The output identifier of the upstream node. This field is returned when the dependency type is same-cycle dependency and input content is set.</p>
+             * <p>The output identifier of the upstream node. This field is returned for same-cycle dependencies when the input content is configured.</p>
              * 
              * <strong>example:</strong>
              * <p>pre.odps_sql_demo_0</p>
@@ -720,7 +720,7 @@ public class UpdateTaskAsyncRequest extends Request {
             }
 
             /**
-             * <p>The ID of the upstream node. This field is returned when the dependency type is cross-cycle dependency on other nodes or same-cycle dependency without input content set. It is not returned in other cases.</p>
+             * <p>The ID of the upstream node. This field is returned for cross-cycle dependencies on other nodes and for same-cycle dependencies when no input content is configured. It is not returned in other cases.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -815,12 +815,12 @@ public class UpdateTaskAsyncRequest extends Request {
             }
 
             /**
-             * <p>The type. Valid values:</p>
+             * <p>The variable type. Valid values:</p>
              * <ul>
-             * <li>Constant: constant</li>
-             * <li>PassThrough: parameter node output</li>
-             * <li>System: variable</li>
-             * <li>NodeOutput: script output</li>
+             * <li>Constant: constant.</li>
+             * <li>PassThrough: output of a pass-through parameter node.</li>
+             * <li>System: system variable.</li>
+             * <li>NodeOutput: script output.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1039,12 +1039,12 @@ public class UpdateTaskAsyncRequest extends Request {
             }
 
             /**
-             * <p>The type. Valid values:</p>
+             * <p>The variable type. Valid values:</p>
              * <ul>
-             * <li>Constant: constant</li>
-             * <li>PassThrough: parameter node output</li>
-             * <li>System: variable</li>
-             * <li>NodeOutput: script output</li>
+             * <li>Constant: constant.</li>
+             * <li>PassThrough: output of a pass-through parameter node.</li>
+             * <li>System: system variable.</li>
+             * <li>NodeOutput: script output.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1215,7 +1215,7 @@ public class UpdateTaskAsyncRequest extends Request {
             } 
 
             /**
-             * <p>The CU consumption configured for the node.</p>
+             * <p>The CU consumption for the node runtime configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -1226,7 +1226,7 @@ public class UpdateTaskAsyncRequest extends Request {
             }
 
             /**
-             * <p>The image ID configured for the node.</p>
+             * <p>The image ID for the node runtime configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>i-xxxxxx</p>
@@ -1237,7 +1237,7 @@ public class UpdateTaskAsyncRequest extends Request {
             }
 
             /**
-             * <p>The identifier of the schedule resource group configured for the node.</p>
+             * <p>The identifier of the schedule resource group for the node runtime configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>63900680</p>
@@ -1524,7 +1524,7 @@ public class UpdateTaskAsyncRequest extends Request {
             } 
 
             /**
-             * <p>The cron expression. This parameter takes effect when type is set to Scheduler.</p>
+             * <p>The cron expression. This parameter takes effect when Type is set to Scheduler.</p>
              * 
              * <strong>example:</strong>
              * <p>00 00 00 * * ?</p>
@@ -1535,10 +1535,10 @@ public class UpdateTaskAsyncRequest extends Request {
             }
 
             /**
-             * <p>The epoch type. This parameter takes effect when Type is set to Scheduler and the cron expression specifies timed scheduling within a specific hour. Default value: Daily. Valid values:</p>
+             * <p>The scheduling cycle type. This parameter takes effect when Type is set to Scheduler and the cron expression specifies a timed scheduling at a specific hour. Default value: Daily. Valid values:</p>
              * <ul>
-             * <li>Daily: daily scheduling</li>
-             * <li>NotDaily: hourly scheduling</li>
+             * <li>Daily: daily scheduling.</li>
+             * <li>NotDaily: hourly scheduling.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1550,7 +1550,7 @@ public class UpdateTaskAsyncRequest extends Request {
             }
 
             /**
-             * <p>The time when the periodic trigger expires. This parameter takes effect when type is set to Scheduler. Format: <code>yyyy-mm-dd hh:mm:ss</code>.</p>
+             * <p>The time when the periodic trigger expires. This parameter takes effect when Type is set to Scheduler. The format is <code>yyyy-mm-dd hh:mm:ss</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>9999-01-01 00:00:00</p>
@@ -1561,11 +1561,11 @@ public class UpdateTaskAsyncRequest extends Request {
             }
 
             /**
-             * <p>The run mode when the trigger fires. This parameter takes effect when type is set to Scheduler. Valid values:</p>
+             * <p>The run mode when the trigger fires. This parameter takes effect when Type is set to Scheduler. Valid values:</p>
              * <ul>
-             * <li>Pause: paused</li>
-             * <li>Skip: dry run</li>
-             * <li>Normal: normal execution</li>
+             * <li>Pause: paused.</li>
+             * <li>Skip: dry run.</li>
+             * <li>Normal: normal run.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1577,7 +1577,7 @@ public class UpdateTaskAsyncRequest extends Request {
             }
 
             /**
-             * <p>The effective period of the epoch trigger. This parameter takes effect when type is set to Scheduler. Format: <code>yyyy-mm-dd hh:mm:ss</code>.</p>
+             * <p>The time at which the scheduled trigger takes effect. This parameter takes effect when Type is set to Scheduler. The format is <code>yyyy-mm-dd hh:mm:ss</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1970-01-01 00:00:00</p>
@@ -1590,8 +1590,8 @@ public class UpdateTaskAsyncRequest extends Request {
             /**
              * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li>Scheduler: periodic scheduling trigger</li>
-             * <li>Manual: manual trigger</li>
+             * <li>Scheduler: scheduled periodic trigger.</li>
+             * <li>Manual: manual trigger.</li>
              * </ul>
              * 
              * <strong>example:</strong>

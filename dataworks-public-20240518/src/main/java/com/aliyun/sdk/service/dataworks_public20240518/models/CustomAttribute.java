@@ -207,7 +207,7 @@ public class CustomAttribute extends TeaModel {
          * <p>Display name for the custom attribute. It must be fewer than 128 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务负责人</p>
+         * <p>Business owner</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;

@@ -344,7 +344,7 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
              * <p>Display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>查询结果-单次展示记录值上限</p>
+             * <p>Query Results - Single Display Record Limit</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -637,7 +637,7 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
              * <p><strong>Display name</strong></p>
              * 
              * <strong>example:</strong>
-             * <p>数据分析</p>
+             * <p>Data Analysis</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -983,7 +983,7 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
              * <p><strong>Policy description</strong></p>
              * 
              * <strong>example:</strong>
-             * <p>控制数据分析模块的查询结果安全行为</p>
+             * <p>Controls the security behavior of query results in the Data Analysis module.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1016,7 +1016,7 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
              * <p><strong>Policy name</strong></p>
              * 
              * <strong>example:</strong>
-             * <p>默认数据分析策略</p>
+             * <p>Default Data Analysis Policy</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1162,7 +1162,7 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
              * <p>Purchased DataWorks edition name.</p>
              * 
              * <strong>example:</strong>
-             * <p>标准版</p>
+             * <p>Standard Edition</p>
              */
             public Builder editionDisplayName(String editionDisplayName) {
                 this.editionDisplayName = editionDisplayName;

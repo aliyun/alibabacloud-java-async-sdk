@@ -135,7 +135,7 @@ public class DeleteDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the synchronization task.</p>
+         * <p>The alert rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

@@ -183,10 +183,8 @@ public class ListComputeResourcesRequest extends Request {
         /**
          * <p>The environment type of the computing resource. Valid values:</p>
          * <ul>
-         * <li><p>Dev</p>
-         * </li>
-         * <li><p>Prod</p>
-         * </li>
+         * <li>Dev: development environment.</li>
+         * <li>Prod: production environment.</li>
          * </ul>
          * 
          * <strong>example:</strong>

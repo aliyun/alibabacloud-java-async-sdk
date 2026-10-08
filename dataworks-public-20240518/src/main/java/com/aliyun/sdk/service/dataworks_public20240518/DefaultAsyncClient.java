@@ -253,7 +253,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, Storage Management Administrator, Project Owner, or O&amp;M Engineer</li>
+     * <li>Tenant Owner, Workspace Administrator, Project Owner, or O&amp;M Engineer</li>
      * </ul>
      * 
      * @param request the request parameters of AssociateProjectToResourceGroup  AssociateProjectToResourceGroupRequest
@@ -437,7 +437,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, Storage Management Administrator, Project Owner, or O&amp;M Engineer</li>
+     * <li>Tenant Owner, Workspace Administrator, Project Owner, or O&amp;M Engineer</li>
      * </ul>
      * 
      * @param request the request parameters of CloneDataSource  CloneDataSourceRequest
@@ -911,7 +911,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>You must have at least one of the following roles in the DataWorks project workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, Storage Management Administrator, Project Owner, or O&amp;M</li>
+     * <li>Tenant Owner, workspace administrator, Project Owner, or O&amp;M</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDataSource  CreateDataSourceRequest
@@ -934,7 +934,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
      * <li>To share a data source from Workspace A to Workspace B, you must have the data source sharing permissions in both workspaces. You must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
@@ -1196,7 +1196,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of CreateNetwork  CreateNetworkRequest
      * @return CreateNetworkResponse
@@ -1262,8 +1262,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: This operation does not support batch operations. If you specify multiple publish entities in the parameters, all entities except the first one are ignored.
-     * Notice: This operation may not be available in earlier versions of the SDK. In this case, use the CreateDeployment operation. The parameters are the same as those described in this topic.</p>
+     * <p>&lt;notice&gt;This operation does not support batch operations. If you specify multiple entities to deploy in the parameters, all entities except the first one are ignored.&gt;&lt;/notice&gt;
+     * &lt;notice&gt;This operation may not be available in earlier versions of the SDK. In this case, use the CreateDeployment operation. The parameters are the same as those described in this topic.&gt;&lt;/notice&gt;</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreatePipelineRun  CreatePipelineRunRequest
@@ -1399,7 +1399,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of CreateRoute  CreateRouteRequest
      * @return CreateRouteResponse
@@ -1648,7 +1648,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <ol>
      * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
-     * <li>You must have at least one of the following roles in the DataWorks workspace: tenant owner, storage management administrator, project owner, or O&amp;M engineer.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace: tenant owner, workspace administrator, project owner, or O&amp;M engineer.</li>
      * </ol>
      * 
      * @param request the request parameters of DeleteCertificate  DeleteCertificateRequest
@@ -1671,7 +1671,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: After a UDF function is published, it cannot be deleted. You must offline the function before deleting it.</p>
+     * <p>&lt;notice&gt;After a UDF function is published, it cannot be deleted. You must undeploy the function before deleting it.&gt;&lt;/notice&gt;</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteComponent  DeleteComponentRequest
@@ -1766,6 +1766,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * 
      * @param request the request parameters of DeleteDIAlarmRule  DeleteDIAlarmRuleRequest
      * @return DeleteDIAlarmRuleResponse
      */
@@ -1785,7 +1788,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of DeleteDIJob  DeleteDIJobRequest
      * @return DeleteDIJobResponse
@@ -1959,11 +1962,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
      * <li>To call this operation, you must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O&amp;M</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteDataSource  DeleteDataSourceRequest
@@ -1986,7 +1989,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
      * <li>To delete a sharing rule of a data source from Workspace A to Workspace B, you must have the data source sharing permissions in Workspace A or Workspace B. You must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
@@ -2248,7 +2251,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: After a node is published, it cannot be deleted. You must offline the node before deleting it.</p>
+     * <p>&lt;notice&gt;After a node is deployed, it cannot be deleted. You must undeploy the node before deleting it.&gt;&lt;/notice&gt;</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteNode  DeleteNodeRequest
@@ -2270,7 +2273,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only in DataWorks professional edition and later versions.</p>
+     * <p>This operation is available only in DataWorks Professional Edition and later versions.</p>
      * 
      * @param request the request parameters of DeleteParameter  DeleteParameterRequest
      * @return DeleteParameterResponse
@@ -2406,7 +2409,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <ol>
      * <li>This operation requires DataWorks Basic Edition or a later version.</li>
-     * <li><strong>Before you use this operation, ensure you understand the billing method and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> for DataWorks resource groups.</strong></li>
+     * <li><strong>Before you use this operation, ensure you understand the billing method and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> for DataWorks general-purpose resource groups.</strong></li>
      * <li><strong>Before you use this operation, ensure you have created the Service-Linked Role AliyunServiceRoleForDataWorks.</strong></li>
      * </ol>
      * 
@@ -2429,7 +2432,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of DeleteRoute  DeleteRouteRequest
      * @return DeleteRouteResponse
@@ -2553,7 +2556,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of DeleteTask  DeleteTaskRequest
      * @return DeleteTaskResponse
@@ -2596,7 +2599,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: After a workflow is published, it cannot be deleted. You must offline the workflow before deleting it.</p>
+     * <p>&lt;notice&gt;After a workflow is published, it cannot be deleted. You must undeploy the workflow before deleting it.&gt;&lt;/notice&gt;</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteWorkflowDefinition  DeleteWorkflowDefinitionRequest
@@ -2871,9 +2874,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: The stages of a publish flow are sequential. For more information, see the response of GetPipelineRun. You cannot skip or repeat a stage.
-     * Notice: The execution is asynchronous. The response only indicates that the stage is triggered, not that the stage is executed. Check the response of GetPipelineRun for the execution result.
-     * Notice: This operation may not be available in earlier SDK versions. In this case, use the ExecDeploymentStage operation. The parameters are the same as those described in this document.</p>
+     * <p>&lt;notice&gt;The stages of a deployment process are sequential. For more information, see the response of GetPipelineRun. You cannot skip or repeat a stage.&gt;&lt;/notice&gt;
+     * &lt;notice&gt;The execution is asynchronous. The response only indicates that the stage is triggered, not that the stage is executed. Check the response of GetPipelineRun for the execution result.&gt;&lt;/notice&gt;
+     * &lt;notice&gt;This operation may not be available in earlier SDK versions. In this case, use the ExecDeploymentStage operation. The parameters are the same as those described in this document.&gt;&lt;/notice&gt;</p>
      * </blockquote>
      * 
      * @param request the request parameters of ExecPipelineRunStage  ExecPipelineRunStageRequest
@@ -2939,7 +2942,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>Request</h2>
-     * <p>This API uses an agent\&quot;s name, provided as a parameter, to retrieve its detailed configuration, including the model configuration, system prompt, and tool list.</p>
+     * <p>This API retrieves detailed configuration information for the specified agent name, including but not limited to the model configuration, system prompt, and tool list. You must provide the exact agent name as a request parameter.</p>
      * 
      * @param request the request parameters of GetAgent  GetAgentRequest
      * @return GetAgentResponse
@@ -3114,8 +3117,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This feature is available only in DataWorks Basic Edition and later versions.</li>
-     * <li>You must have at least one of the following roles in the DataWorks project: Tenant Owner, Space Administrator, Deployment, Developer, Project Owner, or O\&amp;M.</li>
+     * <li>This feature is available only in DataWorks Basic Edition or a higher edition.</li>
+     * <li>You must have at least one of the following roles in the DataWorks project: Tenant Owner, Space Administrator, Deployment, Developer, Project Owner, or O&amp;M.</li>
      * </ol>
      * 
      * @param request the request parameters of GetCertificate  GetCertificateRequest
@@ -3215,7 +3218,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, Storage Management Administrator, Deployment, Developer, Project Owner, or O&amp;M Engineer</li>
+     * <li>Tenant Owner, Workspace Administrator, Deployment, Developer, Project Owner, or O&amp;M Engineer</li>
      * </ul>
      * 
      * @param request the request parameters of GetComputeResourceAuthUserMappings  GetComputeResourceAuthUserMappingsRequest
@@ -3957,7 +3960,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of GetNetwork  GetNetworkRequest
      * @return GetNetworkResponse
@@ -4233,7 +4236,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of GetRoute  GetRouteRequest
      * @return GetRouteResponse
@@ -4452,6 +4455,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * 
      * @param request the request parameters of GetTask  GetTaskRequest
      * @return GetTaskResponse
      */
@@ -4492,7 +4498,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of GetTaskInstanceLog  GetTaskInstanceLogRequest
      * @return GetTaskInstanceLogResponse
@@ -4534,7 +4540,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of GetWorkflow  GetWorkflowRequest
      * @return GetWorkflowResponse
@@ -4594,7 +4600,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of GrantMemberProjectRoles  GrantMemberProjectRolesRequest
      * @return GrantMemberProjectRolesResponse
@@ -4651,7 +4657,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>After the call, poll the final status by calling <code>GetSemanticJobDetail</code>. If necessary, call <code>GetSemanticJobLog</code> for diagnostics.</li>
      * </ol>
      * <h2>Precautions</h2>
-     * <p>A successful response indicates only that the stop request has been processed. It does not mean that the job has reached a desired state.</p>
+     * <p>A successful response indicates only that the stop request has been processed. It does not mean that the job has reached a terminal state.</p>
      * 
      * @param request the request parameters of KillSemanticJob  KillSemanticJobRequest
      * @return KillSemanticJobResponse
@@ -4811,8 +4817,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks: Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace: Tenant Owner, Workspace Administrator, Deployer, Developer, Guest, Project Owner, Operator, Model Designer, Security Administrator, Data Analyst, Open Platform Administrator, or Data Governance Administrator.</li>
      * </ol>
      * 
      * @param request the request parameters of ListCertificates  ListCertificatesRequest
@@ -4879,9 +4885,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or a more advanced edition is required.</li>
-     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
-     * <li>Tenant Owner, Workspace Administrator, Deploy, Developer, Visitor, Project Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, Development Platform Administrator, Data Governance Administrator</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace: Tenant Owner, Workspace Administrator, Deployer, Developer, Guest, Project Owner, Operator, Model Designer, Security Administrator, Data Analyst, Open Platform Administrator, or Data Governance Administrator.</li>
      * </ol>
      * 
      * @param request the request parameters of ListComputeResources  ListComputeResourcesRequest
@@ -5104,6 +5109,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * 
      * @param request the request parameters of ListDIAlarmRules  ListDIAlarmRulesRequest
      * @return ListDIAlarmRulesResponse
      */
@@ -5123,7 +5131,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * @param request the request parameters of ListDIJobEvents  ListDIJobEventsRequest
      * @return ListDIJobEventsResponse
@@ -5144,7 +5152,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of ListDIJobMetrics  ListDIJobMetricsRequest
      * @return ListDIJobMetricsResponse
@@ -5165,7 +5173,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of ListDIJobRunDetails  ListDIJobRunDetailsRequest
      * @return ListDIJobRunDetailsResponse
@@ -5439,7 +5447,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
      * <li>To query the sharing rules of a data source associated with a workspace, you must have the data source sharing permissions in that workspace. You must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
@@ -5466,11 +5474,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
      * <li>To call this operation, you must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</li>
+     * <li>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</li>
      * </ul>
      * 
      * @param request the request parameters of ListDataSources  ListDataSourcesRequest
@@ -5608,6 +5616,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * 
      * @param request the request parameters of ListDownstreamTasks  ListDownstreamTasksRequest
      * @return ListDownstreamTasksResponse
      */
@@ -5869,7 +5880,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <p>This operation retrieves a paginated list of all MCP Servers within your account. You can filter the list by search keyword and visibility level, and control pagination by specifying the maximum number of results and a next page token.</p>
      * <ul>
      * <li><strong>Q</strong>: Optional. The search keyword for a fuzzy search on MCP Server names.</li>
-     * <li><strong>Visibility</strong>: Optional. The visibility level for filtering the results.</li>
+     * <li><strong>Visibility</strong>: Optional. The visibility levels for filtering the results. You can specify multiple levels, such as TENANT, PROJECT, or USER.</li>
      * <li><strong>MaxResults</strong>: Optional. The maximum number of results to return per page. By default, no limit is applied.</li>
      * <li><strong>NextToken</strong>: Optional. The next page token from a previous response. Use this parameter to retrieve the next page of results.</li>
      * </ul>
@@ -6009,7 +6020,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of ListNetworks  ListNetworksRequest
      * @return ListNetworksResponse
@@ -6266,7 +6277,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of ListProjectRoles  ListProjectRolesRequest
      * @return ListProjectRolesResponse
@@ -6286,6 +6297,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * 
      * @param request the request parameters of ListProjects  ListProjectsRequest
      * @return ListProjectsResponse
      */
@@ -6570,7 +6584,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries a paged query list of personal development environment (ServerIDE) instances with paging. You can filter results by workspace, resource group, keyword, owner, and instance child class.</p>
+     * <p>Queries a paged query list of personal development environment (ServerIDE) instances with paging. You can filter results by workspace, resource group, keyword, owner, and instance subtype.</p>
      * 
      * @param request the request parameters of ListServerIdeInstances  ListServerIdeInstancesRequest
      * @return ListServerIdeInstancesResponse
@@ -6660,7 +6674,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.
+     * <p>DataWorks Basic Edition or a higher edition is required.
      * Only operation logs generated within the previous 31 days can be queried.</p>
      * 
      * @param request the request parameters of ListTaskInstanceOperationLogs  ListTaskInstanceOperationLogsRequest
@@ -6703,8 +6717,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.
-     * Only operation logs generated within the previous 31 days can be queried.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this API.
+     * You can only query operation logs from the past 31 days.</p>
      * 
      * @param request the request parameters of ListTaskOperationLogs  ListTaskOperationLogsRequest
      * @return ListTaskOperationLogsResponse
@@ -6767,7 +6781,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of ListUpstreamTasks  ListUpstreamTasksRequest
      * @return ListUpstreamTasksResponse
@@ -7064,7 +7078,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of RemoveTaskInstanceDependencies  RemoveTaskInstanceDependenciesRequest
      * @return RemoveTaskInstanceDependenciesResponse
@@ -7217,7 +7231,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of ResumeTaskInstances  ResumeTaskInstancesRequest
      * @return ResumeTaskInstancesResponse
@@ -7391,7 +7405,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of SetSuccessTaskInstances  SetSuccessTaskInstancesRequest
      * @return SetSuccessTaskInstancesResponse
@@ -7412,7 +7426,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of StartDIJob  StartDIJobRequest
      * @return StartDIJobResponse
@@ -7596,7 +7610,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of StopWorkflowInstances  StopWorkflowInstancesRequest
      * @return StopWorkflowInstancesResponse
@@ -7653,7 +7667,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of SuspendTaskInstances  SuspendTaskInstancesRequest
      * @return SuspendTaskInstancesResponse
@@ -7697,8 +7711,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <ol>
      * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
-     * <li>You must have at least one of the following roles in the DataWorks project space:
-     * Tenant Owner, Space Administrator, Deployment, Developer, Project Owner, or O\&amp;M.</li>
+     * <li>You must have at least one of the following roles in the DataWorks project space:&lt;br&gt;
+     *  Tenant Owner, Workspace Administrator, Deployer, Developer, Project Owner, or Operator.</li>
      * </ol>
      * 
      * @param request the request parameters of TestDataSourceConnectivity  TestDataSourceConnectivityRequest
@@ -7720,7 +7734,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of TriggerSchedulerTaskInstance  TriggerSchedulerTaskInstanceRequest
      * @return TriggerSchedulerTaskInstanceResponse
@@ -7845,8 +7859,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <ol>
      * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
-     * <li>You must have at least one of the following roles in the DataWorks project space:</li>
-     * <li>Tenant Owner, tenant administrator, Space Administrator, Project Owner, or O\&amp;M</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
+     * <li>Tenant Owner, tenant administrator, Workspace Administrator, Project Owner, or Operator</li>
      * </ol>
      * 
      * @param request the request parameters of UpdateComputeResource  UpdateComputeResourceRequest
@@ -7871,7 +7885,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ol>
      * <li>DataWorks Basic Edition or a higher edition is required.</li>
      * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
-     * <li>Tenant owner, tenant administrator, storage management administrator, project owner, or O&amp;M engineer.</li>
+     * <li>Tenant owner, tenant administrator, workspace administrator, project owner, or O&amp;M engineer.</li>
      * </ol>
      * 
      * @param request the request parameters of UpdateComputeResourceAuthUserMappings  UpdateComputeResourceAuthUserMappingsRequest
@@ -7942,6 +7956,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * 
      * @param request the request parameters of UpdateDIAlarmRule  UpdateDIAlarmRuleRequest
      * @return UpdateDIAlarmRuleResponse
      */
@@ -8128,6 +8145,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.
+     * You must have at least one of the following roles in the DataWorks workspace: tenant owner, tenant administrator, workspace administrator, project owner, or operator.</p>
+     * 
      * @param request the request parameters of UpdateDataSource  UpdateDataSourceRequest
      * @return UpdateDataSourceResponse
      */
@@ -8493,7 +8514,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of UpdateRoute  UpdateRouteRequest
      * @return UpdateRouteResponse
@@ -8628,9 +8649,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API operation updates the information of a specified node, including but not limited to the node name, description, and owner.</li>
-     * <li>The changes are synchronized to DataStudio, and DataStudio creates a new saved version.</li>
-     * <li>You can set detailed parameters such as the trigger method, runtime environment configuration, and dependencies of the node.</li>
+     * <li>This API is asynchronous. Use the <code>GetUpdateTaskResult</code> operation to poll for the update result.</li>
+     * <li>This API updates the information of a specified node, including but not limited to the node name, description, and owner.</li>
+     * <li>Changes are synchronized to Data Studio, and Data Studio creates a new saved version.</li>
+     * <li>Supports settings for the node trigger method, runtime environment configuration, dependencies, and other detailed parameters.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateTaskAsync  UpdateTaskAsyncRequest

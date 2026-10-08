@@ -808,7 +808,7 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
              * <p>Application reason</p>
              * 
              * <strong>example:</strong>
-             * <p>业务需要</p>
+             * <p>Business requirement</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;

@@ -337,7 +337,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The output identifier of the dependent task.</p>
+             * <p>The output identifier of the upstream task.</p>
              * 
              * <strong>example:</strong>
              * <p>pre.odps_sql_demo_0</p>

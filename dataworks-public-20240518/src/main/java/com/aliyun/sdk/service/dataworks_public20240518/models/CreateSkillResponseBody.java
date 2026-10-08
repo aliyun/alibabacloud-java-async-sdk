@@ -339,7 +339,7 @@ public class CreateSkillResponseBody extends TeaModel {
              * <p>The Skill description.</p>
              * 
              * <strong>example:</strong>
-             * <p>数据分析技能</p>
+             * <p>Data analytics skill.</p>
              */
             public Builder description(String description) {
                 this.description = description;

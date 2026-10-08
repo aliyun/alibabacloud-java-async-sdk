@@ -301,7 +301,7 @@ public class ListNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the network resource. Valid values: Pending, Creating, Running, Deleting, and Deleted.</p>
+             * <p>The status of the network resource. Valid values: Pending: waiting; Creating: being created; Running: running normally; Deleting: being deleted; Deleted: deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -449,7 +449,7 @@ public class ListNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries that meet the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

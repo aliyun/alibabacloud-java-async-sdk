@@ -98,7 +98,7 @@ public class ExecCrossProjectPipelineRunRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cross-workspace publish flow.</p>
+         * <p>The ID of the cross-workspace deployment flow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

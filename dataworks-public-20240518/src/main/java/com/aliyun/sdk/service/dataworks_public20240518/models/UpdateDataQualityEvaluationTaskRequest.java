@@ -434,7 +434,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
              * <p>Fluctuation-type rules must use an expression to represent the fluctuation threshold. For example:</p>
              * <ul>
              * <li>Fluctuation rises above 0.01: $checkValue &gt; 0.01</li>
-             * <li>Fluctuation drops below 0.01: $checkValue &lt; -0.01</li>
+             * <li>A decrease in the fluctuation rate of more than 0.01: $checkValue &lt; -0.01</li>
              * <li>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</li>
              * </ul>
              * <p>Fixed-value-type rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
@@ -555,7 +555,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
              * <p>Fluctuation-type rules must use an expression to represent the fluctuation threshold. For example:</p>
              * <ul>
              * <li>Fluctuation rises above 0.01: $checkValue &gt; 0.01</li>
-             * <li>Fluctuation drops below 0.01: $checkValue &lt; -0.01</li>
+             * <li>A decrease in the fluctuation rate of more than 0.01: $checkValue &lt; -0.01</li>
              * <li>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</li>
              * </ul>
              * <p>Fixed-value-type rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
@@ -675,7 +675,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
              * <p>Fluctuation-type rules must use an expression to represent the fluctuation threshold. For example:</p>
              * <ul>
              * <li>Fluctuation rises above 0.01: $checkValue &gt; 0.01</li>
-             * <li>Fluctuation drops below 0.01: $checkValue &lt; -0.01</li>
+             * <li>A decrease in the fluctuation rate of more than 0.01: $checkValue &lt; -0.01</li>
              * <li>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</li>
              * </ul>
              * <p>Fixed-value-type rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>

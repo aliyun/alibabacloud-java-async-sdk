@@ -339,7 +339,7 @@ public class CreateMcpServerRequest extends Request {
             } 
 
             /**
-             * <p>The list of project IDs that are visible. This parameter takes effect when Visibility is set to <code>PROJECT</code>.</p>
+             * <p>The IDs of the projects in which the MCP Server is visible. This parameter takes effect when Visibility is set to <code>PROJECT</code>.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -347,7 +347,7 @@ public class CreateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The list of user IDs that are visible. This parameter takes effect when Visibility is set to <code>USER</code>.</p>
+             * <p>The IDs of the users to whom the MCP Server is visible. This parameter takes effect when Visibility is set to <code>USER</code>.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
