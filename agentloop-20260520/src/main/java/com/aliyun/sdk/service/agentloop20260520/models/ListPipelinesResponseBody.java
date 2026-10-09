@@ -169,6 +169,60 @@ public class ListPipelinesResponseBody extends TeaModel {
      *
      * <p>ListPipelinesResponseBody</p>
      */
+    public static class Continuous extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("fromTime")
+        private Long fromTime;
+
+        private Continuous(Builder builder) {
+            this.fromTime = builder.fromTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Continuous create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fromTime
+         */
+        public Long getFromTime() {
+            return this.fromTime;
+        }
+
+        public static final class Builder {
+            private Long fromTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Continuous model) {
+                this.fromTime = model.fromTime;
+            } 
+
+            /**
+             * fromTime.
+             */
+            public Builder fromTime(Long fromTime) {
+                this.fromTime = fromTime;
+                return this;
+            }
+
+            public Continuous build() {
+                return new Continuous(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListPipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPipelinesResponseBody</p>
+     */
     public static class RunOnce extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fromTime")
         private Long fromTime;
@@ -332,6 +386,9 @@ public class ListPipelinesResponseBody extends TeaModel {
      * <p>ListPipelinesResponseBody</p>
      */
     public static class ExecutePolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("continuous")
+        private Continuous continuous;
+
         @com.aliyun.core.annotation.NameInMap("mode")
         private String mode;
 
@@ -342,6 +399,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         private Scheduled scheduled;
 
         private ExecutePolicy(Builder builder) {
+            this.continuous = builder.continuous;
             this.mode = builder.mode;
             this.runOnce = builder.runOnce;
             this.scheduled = builder.scheduled;
@@ -353,6 +411,13 @@ public class ListPipelinesResponseBody extends TeaModel {
 
         public static ExecutePolicy create() {
             return builder().build();
+        }
+
+        /**
+         * @return continuous
+         */
+        public Continuous getContinuous() {
+            return this.continuous;
         }
 
         /**
@@ -377,6 +442,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Continuous continuous; 
             private String mode; 
             private RunOnce runOnce; 
             private Scheduled scheduled; 
@@ -385,10 +451,19 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             private Builder(ExecutePolicy model) {
+                this.continuous = model.continuous;
                 this.mode = model.mode;
                 this.runOnce = model.runOnce;
                 this.scheduled = model.scheduled;
             } 
+
+            /**
+             * continuous.
+             */
+            public Builder continuous(Continuous continuous) {
+                this.continuous = continuous;
+                return this;
+            }
 
             /**
              * <p>The scheduling mode. Valid values:</p>
@@ -407,6 +482,9 @@ public class ListPipelinesResponseBody extends TeaModel {
 
             /**
              * <p>The parameters for one-time execution. This parameter has a value only when mode is set to RunOnce.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;fromTime&quot;:1735660800,&quot;toTime&quot;:1735664400}</p>
              */
             public Builder runOnce(RunOnce runOnce) {
                 this.runOnce = runOnce;
@@ -415,6 +493,9 @@ public class ListPipelinesResponseBody extends TeaModel {
 
             /**
              * <p>The parameters for periodic scheduling. This parameter has a value only when mode is set to Scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;interval&quot;:&quot;1h&quot;,&quot;fromTime&quot;:1735660800}</p>
              */
             public Builder scheduled(Scheduled scheduled) {
                 this.scheduled = scheduled;
@@ -1216,6 +1297,84 @@ public class ListPipelinesResponseBody extends TeaModel {
      *
      * <p>ListPipelinesResponseBody</p>
      */
+    public static class InputFields extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private InputFields(Builder builder) {
+            this.name = builder.name;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InputFields create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputFields model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The destination type. Valid values: dataset or condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>condition</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public InputFields build() {
+                return new InputFields(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListPipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPipelinesResponseBody</p>
+     */
     public static class Logstore extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("logstore")
         private String logstore;
@@ -1323,19 +1482,156 @@ public class ListPipelinesResponseBody extends TeaModel {
      *
      * <p>ListPipelinesResponseBody</p>
      */
+    public static class Enrich extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("columns")
+        private java.util.List<String> columns;
+
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        private Enrich(Builder builder) {
+            this.columns = builder.columns;
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Enrich create() {
+            return builder().build();
+        }
+
+        /**
+         * @return columns
+         */
+        public java.util.List<String> getColumns() {
+            return this.columns;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> columns; 
+            private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(Enrich model) {
+                this.columns = model.columns;
+                this.enabled = model.enabled;
+            } 
+
+            /**
+             * columns.
+             */
+            public Builder columns(java.util.List<String> columns) {
+                this.columns = columns;
+                return this;
+            }
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public Enrich build() {
+                return new Enrich(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListPipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPipelinesResponseBody</p>
+     */
+    public static class Trajectory extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enrich")
+        private Enrich enrich;
+
+        private Trajectory(Builder builder) {
+            this.enrich = builder.enrich;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Trajectory create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enrich
+         */
+        public Enrich getEnrich() {
+            return this.enrich;
+        }
+
+        public static final class Builder {
+            private Enrich enrich; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trajectory model) {
+                this.enrich = model.enrich;
+            } 
+
+            /**
+             * enrich.
+             */
+            public Builder enrich(Enrich enrich) {
+                this.enrich = enrich;
+                return this;
+            }
+
+            public Trajectory build() {
+                return new Trajectory(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListPipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPipelinesResponseBody</p>
+     */
     public static class Source extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dataset")
         private SourceDataset dataset;
 
+        @com.aliyun.core.annotation.NameInMap("inputFields")
+        private java.util.List<InputFields> inputFields;
+
         @com.aliyun.core.annotation.NameInMap("logstore")
         private Logstore logstore;
+
+        @com.aliyun.core.annotation.NameInMap("trajectory")
+        private Trajectory trajectory;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Source(Builder builder) {
             this.dataset = builder.dataset;
+            this.inputFields = builder.inputFields;
             this.logstore = builder.logstore;
+            this.trajectory = builder.trajectory;
             this.type = builder.type;
         }
 
@@ -1355,10 +1651,24 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return inputFields
+         */
+        public java.util.List<InputFields> getInputFields() {
+            return this.inputFields;
+        }
+
+        /**
          * @return logstore
          */
         public Logstore getLogstore() {
             return this.logstore;
+        }
+
+        /**
+         * @return trajectory
+         */
+        public Trajectory getTrajectory() {
+            return this.trajectory;
         }
 
         /**
@@ -1370,7 +1680,9 @@ public class ListPipelinesResponseBody extends TeaModel {
 
         public static final class Builder {
             private SourceDataset dataset; 
+            private java.util.List<InputFields> inputFields; 
             private Logstore logstore; 
+            private Trajectory trajectory; 
             private String type; 
 
             private Builder() {
@@ -1378,12 +1690,17 @@ public class ListPipelinesResponseBody extends TeaModel {
 
             private Builder(Source model) {
                 this.dataset = model.dataset;
+                this.inputFields = model.inputFields;
                 this.logstore = model.logstore;
+                this.trajectory = model.trajectory;
                 this.type = model.type;
             } 
 
             /**
              * <p>The dataset datasource config in the current AgentSpace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;dataset&quot;:&quot;my-dataset&quot;,&quot;filter&quot;:&quot;status = \&quot;pending\&quot;&quot;}</p>
              */
             public Builder dataset(SourceDataset dataset) {
                 this.dataset = dataset;
@@ -1391,10 +1708,29 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
+             * inputFields.
+             */
+            public Builder inputFields(java.util.List<InputFields> inputFields) {
+                this.inputFields = inputFields;
+                return this;
+            }
+
+            /**
              * <p>The Simple Log Service (SLS) Logstore datasource config.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;project&quot;:&quot;my-sls-project&quot;,&quot;logstore&quot;:&quot;agent-logs&quot;}</p>
              */
             public Builder logstore(Logstore logstore) {
                 this.logstore = logstore;
+                return this;
+            }
+
+            /**
+             * trajectory.
+             */
+            public Builder trajectory(Trajectory trajectory) {
+                this.trajectory = trajectory;
                 return this;
             }
 
@@ -1610,6 +1946,9 @@ public class ListPipelinesResponseBody extends TeaModel {
 
             /**
              * <p>The execution policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;mode&quot;:&quot;RunOnce&quot;,&quot;runOnce&quot;:{&quot;fromTime&quot;:1735660800,&quot;toTime&quot;:1735664400}}</p>
              */
             public Builder executePolicy(ExecutePolicy executePolicy) {
                 this.executePolicy = executePolicy;
@@ -1680,6 +2019,9 @@ public class ListPipelinesResponseBody extends TeaModel {
 
             /**
              * <p>The pipeline data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;logstore&quot;,&quot;logstore&quot;:{&quot;project&quot;:&quot;my-sls-project&quot;,&quot;logstore&quot;:&quot;agent-logs&quot;},&quot;inputFields&quot;:[{&quot;name&quot;:&quot;question&quot;,&quot;type&quot;:&quot;text&quot;}]}</p>
              */
             public Builder source(Source source) {
                 this.source = source;

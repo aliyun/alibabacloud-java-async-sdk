@@ -994,13 +994,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>agentSpace</strong> must be an AgentSpace instance that has been created under the current account.</li>
-     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type. The <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and located in the same region.</li>
-     * <li><strong>pipeline.nodes</strong> must contain at least one node of the <code>Source</code> type and cannot be empty.</li>
+     * <li><strong>agentSpace</strong> must be an AgentSpace instance created under the current account.</li>
+     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type, and <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and reside in the same region.</li>
+     * <li><strong>pipeline.nodes</strong> must contain at least one <code>Source</code> node and cannot be empty.</li>
      * <li><strong>fromTime</strong> and <strong>toTime</strong> are UNIX timestamps in seconds. <strong>fromTime</strong> must be earlier than <strong>toTime</strong>.</li>
-     * <li>A maximum of 5 records are returned. Internal fields of the data source system are automatically filtered out.</li>
+     * <li>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</li>
      * </ul>
      * 
      * @param request the request parameters of PreviewPipeline  PreviewPipelineRequest

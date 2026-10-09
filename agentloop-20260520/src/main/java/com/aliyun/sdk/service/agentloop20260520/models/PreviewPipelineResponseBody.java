@@ -80,7 +80,10 @@ public class PreviewPipelineResponseBody extends TeaModel {
         } 
 
         /**
-         * <p><code>data</code> is a collection of sample rows (maps within an array) that contains only the first N rows (up to 5 by default) and does not reflect the complete write plan.</p>
+         * <p>The collection of sample rows for the preview result. Each row is a key-value structure. The array contains only the first N rows, up to 5 rows by default, and does not reflect the complete write plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;status&quot;:&quot;200&quot;,&quot;method&quot;:&quot;POST&quot;}]</p>
          */
         public Builder data(java.util.List<java.util.Map<String, String>> data) {
             this.data = data;
@@ -96,7 +99,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. You can use this ID to locate the request when you troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -164,6 +167,9 @@ public class PreviewPipelineResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scanBytes")
         private Long scanBytes;
 
+        @com.aliyun.core.annotation.NameInMap("schema")
+        private java.util.Map<String, MetaSchemaValue> schema;
+
         @com.aliyun.core.annotation.NameInMap("terms")
         private java.util.List<java.util.Map<String, ?>> terms;
 
@@ -186,6 +192,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             this.processedRows = builder.processedRows;
             this.progress = builder.progress;
             this.scanBytes = builder.scanBytes;
+            this.schema = builder.schema;
             this.terms = builder.terms;
             this.whereQuery = builder.whereQuery;
         }
@@ -304,6 +311,13 @@ public class PreviewPipelineResponseBody extends TeaModel {
         }
 
         /**
+         * @return schema
+         */
+        public java.util.Map<String, MetaSchemaValue> getSchema() {
+            return this.schema;
+        }
+
+        /**
          * @return terms
          */
         public java.util.List<java.util.Map<String, ?>> getTerms() {
@@ -333,6 +347,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             private Long processedRows; 
             private String progress; 
             private Long scanBytes; 
+            private java.util.Map<String, MetaSchemaValue> schema; 
             private java.util.List<java.util.Map<String, ?>> terms; 
             private String whereQuery; 
 
@@ -355,12 +370,13 @@ public class PreviewPipelineResponseBody extends TeaModel {
                 this.processedRows = model.processedRows;
                 this.progress = model.progress;
                 this.scanBytes = model.scanBytes;
+                this.schema = model.schema;
                 this.terms = model.terms;
                 this.whereQuery = model.whereQuery;
             } 
 
             /**
-             * <p>The aggregation analysis SPL statement.</p>
+             * <p>The SPL statement for aggregation analysis.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -373,7 +389,10 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p><code>meta.columnTypes</code> provides the mapping from column names to data types (string / long / double / json).</p>
+             * <p>The list of data types for each column. This field provides a mapping from column names to data types, such as string, long, double, and json.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;long&quot;,&quot;string&quot;]</p>
              */
             public Builder columnTypes(java.util.List<String> columnTypes) {
                 this.columnTypes = columnTypes;
@@ -392,7 +411,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores consumed.</p>
+             * <p>The number of consumed CPU cores.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -403,7 +422,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU time consumed, in seconds.</p>
+             * <p>The consumed CPU time in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -414,7 +433,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query duration, in milliseconds.</p>
+             * <p>The query duration in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1200</p>
@@ -425,7 +444,10 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the query is an SQL query.</p>
+             * <p>Specifies whether an SQL query is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasSQL(Boolean hasSQL) {
                 this.hasSQL = hasSQL;
@@ -433,7 +455,10 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether nanosecond-level ordering is enabled.</p>
+             * <p>Specifies whether nanosecond-level ordering is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAccurate(Boolean isAccurate) {
                 this.isAccurate = isAccurate;
@@ -442,6 +467,9 @@ public class PreviewPipelineResponseBody extends TeaModel {
 
             /**
              * <p>The list of result column names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;status&quot;,&quot;method&quot;,&quot;path&quot;]</p>
              */
             public Builder keys(java.util.List<String> keys) {
                 this.keys = keys;
@@ -449,7 +477,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of rows that can be returned.</p>
+             * <p>The maximum number of rows returned in the result.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -460,7 +488,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query mode identifier.</p>
+             * <p>The identifier of the query mode.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -471,7 +499,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of data bytes processed.</p>
+             * <p>The number of bytes of processed data.</p>
              * 
              * <strong>example:</strong>
              * <p>524288</p>
@@ -493,7 +521,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Log Service (SLS) query progress. A value of Complete indicates that the query is complete.</p>
+             * <p>The Simple Log Service (SLS) query progress. A value of Complete indicates that the query is completed.</p>
              * 
              * <strong>example:</strong>
              * <p>Complete</p>
@@ -504,7 +532,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of raw data bytes scanned.</p>
+             * <p>The number of bytes of scanned raw data.</p>
              * 
              * <strong>example:</strong>
              * <p>1048576</p>
@@ -515,7 +543,21 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type and aggregation information of columns.</p>
+             * <p>The dataset schema of the final pipeline output. The keys are field names, and the type in the values supports text, long, double, and json. The field order is determined by the keys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;status&quot;:{&quot;type&quot;:&quot;long&quot;}}</p>
+             */
+            public Builder schema(java.util.Map<String, MetaSchemaValue> schema) {
+                this.schema = schema;
+                return this;
+            }
+
+            /**
+             * <p>The column types and aggregation information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;column&quot;:&quot;status&quot;,&quot;type&quot;:&quot;long&quot;}]</p>
              */
             public Builder terms(java.util.List<java.util.Map<String, ?>> terms) {
                 this.terms = terms;
@@ -523,7 +565,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The filter condition SPL statement.</p>
+             * <p>The SPL statement for the filter condition.</p>
              * 
              * <strong>example:</strong>
              * <p>status: 200</p>
