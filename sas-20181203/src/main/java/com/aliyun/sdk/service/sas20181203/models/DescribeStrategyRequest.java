@@ -101,10 +101,10 @@ public class DescribeStrategyRequest extends Request {
         } 
 
         /**
-         * <p>The type of the baseline check policy that you want to query. Valid values:</p>
+         * <p>The type of the policies to query. Valid values:</p>
          * <ul>
-         * <li><strong>common</strong>: standard baseline check policy</li>
-         * <li><strong>custom</strong>: custom baseline check policy</li>
+         * <li><strong>common</strong>: standard policy</li>
+         * <li><strong>custom</strong>: custom policy</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,10 +117,10 @@ public class DescribeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class DescribeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the baseline check policy that you want to query. Separate multiple IDs with commas (,).</p>
+         * <p>The IDs of the policies to query. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>8164248</p>

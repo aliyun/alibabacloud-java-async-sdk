@@ -172,7 +172,7 @@ public class ListCloudAssetInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The data list queried by keyword.</p>
+         * <p>The data list to query by keyword.</p>
          */
         public Builder cloudAssetQueryData(java.util.List<CloudAssetQueryData> cloudAssetQueryData) {
             this.putQueryParameter("CloudAssetQueryData", cloudAssetQueryData);
@@ -181,7 +181,7 @@ public class ListCloudAssetInstancesRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud asset instance types.</p>
+         * <p>The asset list of cloud asset instances.</p>
          */
         public Builder cloudAssetTypes(java.util.List<CloudAssetTypes> cloudAssetTypes) {
             this.putQueryParameter("CloudAssetTypes", cloudAssetTypes);
@@ -190,14 +190,14 @@ public class ListCloudAssetInstancesRequest extends Request {
         }
 
         /**
-         * <p>The search conditions for assets. This parameter is in JSON format and contains the following fields:</p>
+         * <p>The search criteria for assets. This parameter is in JSON format and contains the following fields:</p>
          * <ul>
-         * <li><strong>name</strong>: The search item.</li>
-         * <li><strong>value</strong>: The value of the search item.</li>
-         * <li><strong>logicalExp</strong>: The logical relationship between multiple search item values. Valid values:<ul>
-         * <li><strong>OR</strong>: The search item values are evaluated using the OR operator.</li>
-         * <li><strong>AND</strong>: The search item values are evaluated using the AND operator.<blockquote>
-         * <p>You can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the supported search conditions.</p>
+         * <li><strong>name</strong>: The search field.</li>
+         * <li><strong>value</strong>: The value of the search field.</li>
+         * <li><strong>logicalExp</strong>: The logical relationship between multiple search field values. Valid values:<ul>
+         * <li><strong>OR</strong>: Multiple search field values are evaluated using an OR relationship.</li>
+         * <li><strong>AND</strong>: Multiple search field values are evaluated using an AND relationship.<blockquote>
+         * <p>You can call <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> to query the supported search criteria.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -214,7 +214,7 @@ public class ListCloudAssetInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page in a paging query.</p>
+         * <p>The page number to return in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -239,10 +239,10 @@ public class ListCloudAssetInstancesRequest extends Request {
         }
 
         /**
-         * <p>The logical relationship between multiple search conditions. Valid values:</p>
+         * <p>The logical relationship between multiple search criteria. Valid values:</p>
          * <ul>
-         * <li><strong>OR</strong>: The search conditions are evaluated using the OR operator.</li>
-         * <li><strong>AND</strong>: The search conditions are evaluated using the AND operator.</li>
+         * <li><strong>OR</strong>: Multiple search criteria are evaluated using an OR relationship.</li>
+         * <li><strong>AND</strong>: Multiple search criteria are evaluated using an AND relationship.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class ListCloudAssetInstancesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. Maximum value: 100. Default value: 20.</p>
+         * <p>The maximum number of rows per page. Maximum value: 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -267,7 +267,7 @@ public class ListCloudAssetInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The ID of the region where the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -279,9 +279,9 @@ public class ListCloudAssetInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account of the resource folder member accounts.</p>
+         * <p>The ID of the main account of the resource folder member accounts.</p>
          * <blockquote>
-         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * <p>Call <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</p>
          * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
@@ -361,7 +361,7 @@ public class ListCloudAssetInstancesRequest extends Request {
             }
 
             /**
-             * <p>The query operator. Currently, only INCLUDE is supported.</p>
+             * <p>The query operator. Only INCLUDE is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>INCLUDE</p>
@@ -444,9 +444,9 @@ public class ListCloudAssetInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The subtype of the cloud service.</p>
+             * <p>The subtype of the cloud product.</p>
              * <blockquote>
-             * <p>For specific meanings, refer to the AssetSubType parameter in the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</p>
+             * <p>For more information, see the AssetSubType field in <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -460,7 +460,7 @@ public class ListCloudAssetInstancesRequest extends Request {
             /**
              * <p>The type of the cloud asset.</p>
              * <blockquote>
-             * <p>For specific meanings, refer to the AssetType parameter in the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</p>
+             * <p>For more information, see the AssetType field in <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -475,10 +475,10 @@ public class ListCloudAssetInstancesRequest extends Request {
              * <p>The server vendor. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: Alibaba Cloud asset</li>
-             * <li><strong>1</strong>: Non-cloud asset</li>
+             * <li><strong>1</strong>: off-cloud asset</li>
              * <li><strong>2</strong>: IDC asset</li>
-             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: Third-party cloud asset</li>
-             * <li><strong>8</strong>: Lightweight asset</li>
+             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: other cloud assets</li>
+             * <li><strong>8</strong>: lightweight asset</li>
              * </ul>
              * 
              * <strong>example:</strong>

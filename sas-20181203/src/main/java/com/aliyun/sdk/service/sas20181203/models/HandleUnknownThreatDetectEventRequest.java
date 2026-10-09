@@ -97,7 +97,10 @@ public class HandleUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * HandleRemark.
+         * <p>The handling remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Confirmed and handled</p>
          */
         public Builder handleRemark(String handleRemark) {
             this.putQueryParameter("HandleRemark", handleRemark);

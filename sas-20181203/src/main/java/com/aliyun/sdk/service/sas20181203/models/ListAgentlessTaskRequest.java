@@ -74,6 +74,10 @@ public class ListAgentlessTaskRequest extends Request {
     private String taskId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskIdList")
+    private java.util.List<String> taskIdList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
@@ -93,6 +97,7 @@ public class ListAgentlessTaskRequest extends Request {
         this.targetName = builder.targetName;
         this.targetType = builder.targetType;
         this.taskId = builder.taskId;
+        this.taskIdList = builder.taskIdList;
         this.uuid = builder.uuid;
     }
 
@@ -208,6 +213,13 @@ public class ListAgentlessTaskRequest extends Request {
     }
 
     /**
+     * @return taskIdList
+     */
+    public java.util.List<String> getTaskIdList() {
+        return this.taskIdList;
+    }
+
+    /**
      * @return uuid
      */
     public String getUuid() {
@@ -229,6 +241,7 @@ public class ListAgentlessTaskRequest extends Request {
         private String targetName; 
         private Integer targetType; 
         private String taskId; 
+        private java.util.List<String> taskIdList; 
         private String uuid; 
 
         private Builder() {
@@ -251,11 +264,12 @@ public class ListAgentlessTaskRequest extends Request {
             this.targetName = request.targetName;
             this.targetType = request.targetType;
             this.taskId = request.taskId;
+            this.taskIdList = request.taskIdList;
             this.uuid = request.uuid;
         } 
 
         /**
-         * <p>The page number of the current page in a paged query. This parameter implements paging.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -331,7 +345,7 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page in a paged query. This parameter implements paging.</p>
+         * <p>The maximum number of entries to return per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -345,8 +359,8 @@ public class ListAgentlessTaskRequest extends Request {
         /**
          * <p>Specifies whether to query the root task list. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Root tasks.</li>
-         * <li><strong>false</strong>: Subtasks.</li>
+         * <li><strong>true</strong>: Queries root tasks.</li>
+         * <li><strong>false</strong>: Queries subtasks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -383,12 +397,12 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * <p>The detection status. Valid values:</p>
+         * <p>The status of the detection task. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Detecting.</li>
-         * <li><strong>2</strong>: Completed.</li>
-         * <li><strong>3</strong>: Failed.</li>
-         * <li><strong>4</strong>: Timed out.</li>
+         * <li><strong>1</strong>: running</li>
+         * <li><strong>2</strong>: completed</li>
+         * <li><strong>3</strong>: failed</li>
+         * <li><strong>4</strong>: timed out</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -401,7 +415,7 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the detection target.</p>
+         * <p>The name of the scan target.</p>
          * 
          * <strong>example:</strong>
          * <p>source-test-obj-0****</p>
@@ -413,7 +427,7 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * <p>The scan object type. Valid values:</p>
+         * <p>The object type of the scan. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: snapshot </li>
          * <li><strong>2</strong>: image</li>
@@ -429,7 +443,7 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the root task. Specify this parameter to query the subtask list of a root task.</p>
+         * <p>The ID of the root task. Specify this parameter when you query the list of subtasks under a root task.</p>
          * 
          * <strong>example:</strong>
          * <p>d7b2acf8d362742123e4a84e1bf8****</p>
@@ -437,6 +451,16 @@ public class ListAgentlessTaskRequest extends Request {
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * <p>The list of task IDs to return. You can specify up to 100 IDs. You must specify RootTask and cannot specify this parameter together with TaskId. If RootTask is set to true, root tasks are queried. If RootTask is set to false, subtasks are queried, and cross-root task queries are allowed. If RootTaskId is specified, the intersection is returned.</p>
+         */
+        public Builder taskIdList(java.util.List<String> taskIdList) {
+            String taskIdListShrink = shrink(taskIdList, "TaskIdList", "json");
+            this.putQueryParameter("TaskIdList", taskIdListShrink);
+            this.taskIdList = taskIdList;
             return this;
         }
 

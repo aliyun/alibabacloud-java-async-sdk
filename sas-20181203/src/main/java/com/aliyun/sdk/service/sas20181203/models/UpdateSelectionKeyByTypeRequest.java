@@ -102,13 +102,13 @@ public class UpdateSelectionKeyByTypeRequest extends Request {
         } 
 
         /**
-         * <p>The business type of asset selection. Valid values:</p>
+         * <p>The business type of the asset selection. Valid values:</p>
          * <ul>
-         * <li><strong>VIRUS_SCAN_CYCLE_CONFIG</strong>: trojan scan configuration.</li>
-         * <li><strong>VIRUS_SCAN_ONCE_TASK</strong>: trojan scan one-time scan.</li>
-         * <li><strong>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</strong>: agentless detection alert whitelisting rule.</li>
-         * <li><strong>AGENTLESS_VUL_WHITE_LIST_[ID]</strong>: agentless detection vulnerability whitelisting rule.</li>
-         * <li><strong>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</strong>: core file protection.</li>
+         * <li><strong>VIRUS_SCAN_CYCLE_CONFIG</strong>: virus scan cycle configuration</li>
+         * <li><strong>VIRUS_SCAN_ONCE_TASK</strong>: one-time virus scan task</li>
+         * <li><strong>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</strong>: agentless detection alert whitelist rule</li>
+         * <li><strong>AGENTLESS_VUL_WHITE_LIST_[ID]</strong>: agentless detection vulnerability whitelist rule</li>
+         * <li><strong>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</strong>: core file protection</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,10 @@ public class UpdateSelectionKeyByTypeRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token used to ensure the idempotence of the request. Use a different token for different requests. Only ASCII characters are supported. The token can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -130,10 +133,10 @@ public class UpdateSelectionKeyByTypeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run for this request. Valid values:</p>
          * <ul>
-         * <li>true: performs only a dry run without performing the actual operation.</li>
-         * <li>false: performs the actual request.</li>
+         * <li>true: performs only a dry run without executing the actual operation.</li>
+         * <li>false: executes the request normally.</li>
          * </ul>
          * <p>Default value: false.</p>
          */

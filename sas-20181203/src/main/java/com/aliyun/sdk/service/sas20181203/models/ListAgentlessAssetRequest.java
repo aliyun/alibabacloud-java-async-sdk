@@ -171,7 +171,7 @@ public class ListAgentlessAssetRequest extends Request {
         } 
 
         /**
-         * <p>The page number in a paginated query.</p>
+         * <p>The page number in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -183,11 +183,11 @@ public class ListAgentlessAssetRequest extends Request {
         }
 
         /**
-         * <p>The type of the cloud disk. Values:</p>
+         * <p>The type of the cloud disk. Valid values:</p>
          * <ul>
-         * <li><p><strong>system</strong>: System disk</p>
+         * <li><p><strong>system</strong>: system cloud disk</p>
          * </li>
-         * <li><p><strong>data</strong>: Data disk</p>
+         * <li><p><strong>data</strong>: data cloud disk</p>
          * </li>
          * </ul>
          * 
@@ -213,7 +213,7 @@ public class ListAgentlessAssetRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The list of asset instance IDs to query.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -234,7 +234,7 @@ public class ListAgentlessAssetRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of items to return per page in a paginated query.</p>
+         * <p>The maximum number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -270,11 +270,11 @@ public class ListAgentlessAssetRequest extends Request {
         }
 
         /**
-         * <p>The type of the detection target. Values:</p>
+         * <p>The object type of the detection target. Valid values:</p>
          * <ul>
-         * <li><p><strong>3</strong>: User snapshot</p>
+         * <li><p><strong>3</strong>: user snapshot</p>
          * </li>
-         * <li><p><strong>4</strong>: User-defined image</p>
+         * <li><p><strong>4</strong>: user-defined image</p>
          * </li>
          * </ul>
          * 

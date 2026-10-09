@@ -615,6 +615,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRestoreJobResponse> createRestoreJob(CreateRestoreJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Starts a Security Center trial. Before calling this operation, call GetCanTrySas to check trial eligibility and retrieve the TryVersion and TryType values. You can start a trial only when TryType is not 0.</p>
+     * 
      * @param request the request parameters of CreateSasTrial  CreateSasTrialRequest
      * @return CreateSasTrialResponse
      */
@@ -1390,7 +1393,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple criteria.</p>
+     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. You can also set logical relationships between different search criteria to find assets that match multiple conditions.</p>
      * 
      * @param request the request parameters of DescribeCloudCenterInstances  DescribeCloudCenterInstancesRequest
      * @return DescribeCloudCenterInstancesResponse
@@ -3262,7 +3265,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for Security Center agentless detection can call this operation. UuidList can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of first occurrence. The returned Data is keyed by UUID and does not aggregate results across multiple resources. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics and remain consistent across all resources in the same request.</p>
+     * <p>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for the agentless detection feature of Security Center can call this operation. The UuidList parameter can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of their first appearance. The returned Data is keyed by UUID, and the results for multiple resources are not aggregated. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics, and the results for each resource in the same request remain consistent.</p>
      * 
      * @param request the request parameters of GetAgentlessTaskCountBatch  GetAgentlessTaskCountBatchRequest
      * @return GetAgentlessTaskCountBatchResponse
@@ -4154,6 +4157,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAegisForLingjunStatusResponse> listAegisForLingjunStatus(ListAegisForLingjunStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of assets for agentless detection.</p>
+     * 
      * @param request the request parameters of ListAgentlessAsset  ListAgentlessAssetRequest
      * @return ListAgentlessAssetResponse
      */
