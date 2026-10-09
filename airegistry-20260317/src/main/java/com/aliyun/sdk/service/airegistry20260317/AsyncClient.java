@@ -152,6 +152,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishSkillVersionResponse> publishSkillVersion(PublishSkillVersionRequest request);
 
     /**
+     * @param request the request parameters of RedraftSkillVersion  RedraftSkillVersionRequest
+     * @return RedraftSkillVersionResponse
+     */
+    CompletableFuture<RedraftSkillVersionResponse> redraftSkillVersion(RedraftSkillVersionRequest request);
+
+    /**
      * @param request the request parameters of SubmitPromptVersion  SubmitPromptVersionRequest
      * @return SubmitPromptVersionResponse
      */
