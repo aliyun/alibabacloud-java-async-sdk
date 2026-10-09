@@ -145,7 +145,7 @@ public class CreatePdfTranslateTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response time in milliseconds</p>
+         * <p>The response duration of the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -156,7 +156,7 @@ public class CreatePdfTranslateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response data. Returns the task ID. Use this ID to query the task status and result.</p>
+         * <p>The response data. The task ID is returned. You can use this ID to query the task status and results.</p>
          * 
          * <strong>example:</strong>
          * <p>3284627354</p>
@@ -167,7 +167,7 @@ public class CreatePdfTranslateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data type</p>
+         * <p>The data type.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -178,7 +178,7 @@ public class CreatePdfTranslateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -189,7 +189,7 @@ public class CreatePdfTranslateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -200,7 +200,7 @@ public class CreatePdfTranslateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5E3FBAF1-17AF-53B7-AF0A-CDCEEB6DE658</p>
@@ -211,7 +211,7 @@ public class CreatePdfTranslateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -222,7 +222,7 @@ public class CreatePdfTranslateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Timestamp</p>
+         * <p>The timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-24 11:54:34</p>

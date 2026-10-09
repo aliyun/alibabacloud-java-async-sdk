@@ -75,7 +75,7 @@ public class GetQualityCheckTaskResultRequest extends Request {
         } 
 
         /**
-         * <p>Workspace ID</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetQualityCheckTaskResultRequest extends Request {
         }
 
         /**
-         * <p>Task ID</p>
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

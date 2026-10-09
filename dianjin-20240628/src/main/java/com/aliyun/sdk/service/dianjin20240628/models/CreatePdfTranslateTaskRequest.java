@@ -133,7 +133,7 @@ public class CreatePdfTranslateTaskRequest extends Request {
         } 
 
         /**
-         * <p>Workspace ID</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class CreatePdfTranslateTaskRequest extends Request {
         }
 
         /**
-         * <p>Document ID</p>
+         * <p>The document ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,12 +159,12 @@ public class CreatePdfTranslateTaskRequest extends Request {
         }
 
         /**
-         * <p>Domain knowledge used as reference during translation</p>
+         * <p>The domain knowledge referenced during translation.</p>
          * 
          * <strong>example:</strong>
-         * <p>净利润 (Net Profit)
-         * 英文：Net Profit
-         * 中文：净利润（通常指扣除所有费用和税后的利润）</p>
+         * <p>Net Profit
+         * English: Net Profit
+         * Chinese: Net profit (typically refers to the profit after deducting all expenses and taxes)</p>
          */
         public Builder knowledge(String knowledge) {
             this.putBodyParameter("knowledge", knowledge);
@@ -173,7 +173,7 @@ public class CreatePdfTranslateTaskRequest extends Request {
         }
 
         /**
-         * <p>Document library ID</p>
+         * <p>The document library ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class CreatePdfTranslateTaskRequest extends Request {
         }
 
         /**
-         * <p>Model ID</p>
+         * <p>The model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,10 +199,10 @@ public class CreatePdfTranslateTaskRequest extends Request {
         }
 
         /**
-         * <p>Target language. Default is Chinese</p>
+         * <p>The target language. Default value: Chinese.</p>
          * 
          * <strong>example:</strong>
-         * <p>中文</p>
+         * <p>Chinese</p>
          */
         public Builder translateTo(String translateTo) {
             this.putBodyParameter("translateTo", translateTo);

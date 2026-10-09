@@ -75,7 +75,7 @@ public class DeleteLibraryRequest extends Request {
         } 
 
         /**
-         * <p>Workspace</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteLibraryRequest extends Request {
         }
 
         /**
-         * <p>Document library ID</p>
+         * <p>The document library ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
