@@ -947,7 +947,28 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a Supabase project in a specified region and zone. This operation supports the Free, pay-as-you-go, and subscription billing methods. You can specify the network, specifications, storage, access IP address whitelist, DPI engine version, and auto start/stop configurations.</p>
+     * <p>The instance must be in the Running state. After a successful call, you can call ListSupabaseBackupJobs to query the progress of the backup job and call ListSupabaseDataBackups to query backup sets.</p>
+     * 
+     * @param request the request parameters of CreateSupabaseBackup  CreateSupabaseBackupRequest
+     * @return CreateSupabaseBackupResponse
+     */
+    @Override
+    public CompletableFuture<CreateSupabaseBackupResponse> createSupabaseBackup(CreateSupabaseBackupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateSupabaseBackup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSupabaseBackupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSupabaseBackupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a Supabase project in a specified region and active zone. This operation supports the free, pay-as-you-go, and subscription billing methods. You can specify the network, specifications, storage, access whitelist, DPI engine version, and auto-start and auto-stop configurations.</p>
      * 
      * @param request the request parameters of CreateSupabaseProject  CreateSupabaseProjectRequest
      * @return CreateSupabaseProjectResponse
@@ -3073,6 +3094,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To modify the policy, call ModifySupabaseBackupPolicy.</p>
+     * 
+     * @param request the request parameters of DescribeSupabaseBackupPolicy  DescribeSupabaseBackupPolicyRequest
+     * @return DescribeSupabaseBackupPolicyResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSupabaseBackupPolicyResponse> describeSupabaseBackupPolicy(DescribeSupabaseBackupPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSupabaseBackupPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSupabaseBackupPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSupabaseBackupPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeSupportFeatures  DescribeSupportFeaturesRequest
      * @return DescribeSupportFeaturesResponse
      */
@@ -3592,6 +3634,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetSupabaseProjectDashboardAccountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the specifications and zones available for creating Supabase projects in a specified region.</p>
+     * 
+     * @param request the request parameters of GetSupabaseProjectSpec  GetSupabaseProjectSpecRequest
+     * @return GetSupabaseProjectSpecResponse
+     */
+    @Override
+    public CompletableFuture<GetSupabaseProjectSpecResponse> getSupabaseProjectSpec(GetSupabaseProjectSpecRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetSupabaseProjectSpec").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSupabaseProjectSpecResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSupabaseProjectSpecResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation queries the currently recommended stable version and the latest upgradable version for a specified Supabase project.</p>
+     * 
+     * @param request the request parameters of GetSupabaseUpdateVersion  GetSupabaseUpdateVersionRequest
+     * @return GetSupabaseUpdateVersionResponse
+     */
+    @Override
+    public CompletableFuture<GetSupabaseUpdateVersionResponse> getSupabaseUpdateVersion(GetSupabaseUpdateVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetSupabaseUpdateVersion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSupabaseUpdateVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSupabaseUpdateVersionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4271,6 +4355,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListSupabaseBackupJobs  ListSupabaseBackupJobsRequest
+     * @return ListSupabaseBackupJobsResponse
+     */
+    @Override
+    public CompletableFuture<ListSupabaseBackupJobsResponse> listSupabaseBackupJobs(ListSupabaseBackupJobsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSupabaseBackupJobs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSupabaseBackupJobsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSupabaseBackupJobsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSupabaseDataBackups  ListSupabaseDataBackupsRequest
+     * @return ListSupabaseDataBackupsResponse
+     */
+    @Override
+    public CompletableFuture<ListSupabaseDataBackupsResponse> listSupabaseDataBackups(ListSupabaseDataBackupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSupabaseDataBackups").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSupabaseDataBackupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSupabaseDataBackupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <ul>
      * <li>This operation queries the tag list of Supabase instances.</li>
@@ -4923,6 +5043,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifySupabaseAutoScalePolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can call DescribeSupabaseBackupPolicy to query the current backup policy, and then call this operation again to confirm the configurations after the modification.</p>
+     * 
+     * @param request the request parameters of ModifySupabaseBackupPolicy  ModifySupabaseBackupPolicyRequest
+     * @return ModifySupabaseBackupPolicyResponse
+     */
+    @Override
+    public CompletableFuture<ModifySupabaseBackupPolicyResponse> modifySupabaseBackupPolicy(ModifySupabaseBackupPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifySupabaseBackupPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifySupabaseBackupPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifySupabaseBackupPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5759,6 +5900,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateSaasServiceVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Upgrades a specified Supabase project to a target minor version. You can query the supported target versions by calling GetSupabaseUpdateVersion.</p>
+     * 
+     * @param request the request parameters of UpdateSupabaseVersion  UpdateSupabaseVersionRequest
+     * @return UpdateSupabaseVersionResponse
+     */
+    @Override
+    public CompletableFuture<UpdateSupabaseVersionResponse> updateSupabaseVersion(UpdateSupabaseVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateSupabaseVersion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateSupabaseVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateSupabaseVersionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

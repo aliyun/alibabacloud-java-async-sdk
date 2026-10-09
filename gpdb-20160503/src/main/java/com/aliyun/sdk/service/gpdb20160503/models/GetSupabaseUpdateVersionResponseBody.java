@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateSupabaseProjectResponseBody} extends {@link TeaModel}
+ * {@link GetSupabaseUpdateVersionResponseBody} extends {@link TeaModel}
  *
- * <p>CreateSupabaseProjectResponseBody</p>
+ * <p>GetSupabaseUpdateVersionResponseBody</p>
  */
-public class CreateSupabaseProjectResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("OrderId")
-    private String orderId;
+public class GetSupabaseUpdateVersionResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("LatestVersion")
+    private String latestVersion;
 
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
@@ -26,17 +26,21 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateSupabaseProjectResponseBody(Builder builder) {
-        this.orderId = builder.orderId;
+    @com.aliyun.core.annotation.NameInMap("StableVersion")
+    private String stableVersion;
+
+    private GetSupabaseUpdateVersionResponseBody(Builder builder) {
+        this.latestVersion = builder.latestVersion;
         this.projectId = builder.projectId;
         this.requestId = builder.requestId;
+        this.stableVersion = builder.stableVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateSupabaseProjectResponseBody create() {
+    public static GetSupabaseUpdateVersionResponseBody create() {
         return builder().build();
     }
 
@@ -45,10 +49,10 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
     }
 
     /**
-     * @return orderId
+     * @return latestVersion
      */
-    public String getOrderId() {
-        return this.orderId;
+    public String getLatestVersion() {
+        return this.latestVersion;
     }
 
     /**
@@ -65,33 +69,42 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return stableVersion
+     */
+    public String getStableVersion() {
+        return this.stableVersion;
+    }
+
     public static final class Builder {
-        private String orderId; 
+        private String latestVersion; 
         private String projectId; 
         private String requestId; 
+        private String stableVersion; 
 
         private Builder() {
         } 
 
-        private Builder(CreateSupabaseProjectResponseBody model) {
-            this.orderId = model.orderId;
+        private Builder(GetSupabaseUpdateVersionResponseBody model) {
+            this.latestVersion = model.latestVersion;
             this.projectId = model.projectId;
             this.requestId = model.requestId;
+            this.stableVersion = model.stableVersion;
         } 
 
         /**
-         * <p>The associated order ID.</p>
+         * <p>The latest upgradable version.</p>
          * 
          * <strong>example:</strong>
-         * <p>278880417310796</p>
+         * <p>20240731</p>
          */
-        public Builder orderId(String orderId) {
-            this.orderId = orderId;
+        public Builder latestVersion(String latestVersion) {
+            this.latestVersion = latestVersion;
             return this;
         }
 
         /**
-         * <p>The Supabase instance ID.</p>
+         * <p>The ID of the Supabase project.</p>
          * 
          * <strong>example:</strong>
          * <p>spb-xxxx</p>
@@ -112,8 +125,19 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
             return this;
         }
 
-        public CreateSupabaseProjectResponseBody build() {
-            return new CreateSupabaseProjectResponseBody(this);
+        /**
+         * <p>The recommended stable version for upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20240630</p>
+         */
+        public Builder stableVersion(String stableVersion) {
+            this.stableVersion = stableVersion;
+            return this;
+        }
+
+        public GetSupabaseUpdateVersionResponseBody build() {
+            return new GetSupabaseUpdateVersionResponseBody(this);
         } 
 
     } 

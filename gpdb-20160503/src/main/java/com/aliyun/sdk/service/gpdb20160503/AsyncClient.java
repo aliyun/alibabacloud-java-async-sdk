@@ -365,7 +365,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a Supabase project in a specified region and zone. This operation supports the Free, pay-as-you-go, and subscription billing methods. You can specify the network, specifications, storage, access IP address whitelist, DPI engine version, and auto start/stop configurations.</p>
+     * <p>The instance must be in the Running state. After a successful call, you can call ListSupabaseBackupJobs to query the progress of the backup job and call ListSupabaseDataBackups to query backup sets.</p>
+     * 
+     * @param request the request parameters of CreateSupabaseBackup  CreateSupabaseBackupRequest
+     * @return CreateSupabaseBackupResponse
+     */
+    CompletableFuture<CreateSupabaseBackupResponse> createSupabaseBackup(CreateSupabaseBackupRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a Supabase project in a specified region and active zone. This operation supports the free, pay-as-you-go, and subscription billing methods. You can specify the network, specifications, storage, access whitelist, DPI engine version, and auto-start and auto-stop configurations.</p>
      * 
      * @param request the request parameters of CreateSupabaseProject  CreateSupabaseProjectRequest
      * @return CreateSupabaseProjectResponse
@@ -1207,6 +1216,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeStreamingJobResponse> describeStreamingJob(DescribeStreamingJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>To modify the policy, call ModifySupabaseBackupPolicy.</p>
+     * 
+     * @param request the request parameters of DescribeSupabaseBackupPolicy  DescribeSupabaseBackupPolicyRequest
+     * @return DescribeSupabaseBackupPolicyResponse
+     */
+    CompletableFuture<DescribeSupabaseBackupPolicyResponse> describeSupabaseBackupPolicy(DescribeSupabaseBackupPolicyRequest request);
+
+    /**
      * @param request the request parameters of DescribeSupportFeatures  DescribeSupportFeaturesRequest
      * @return DescribeSupportFeaturesResponse
      */
@@ -1418,6 +1436,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSupabaseProjectDashboardAccountResponse
      */
     CompletableFuture<GetSupabaseProjectDashboardAccountResponse> getSupabaseProjectDashboardAccount(GetSupabaseProjectDashboardAccountRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the specifications and zones available for creating Supabase projects in a specified region.</p>
+     * 
+     * @param request the request parameters of GetSupabaseProjectSpec  GetSupabaseProjectSpecRequest
+     * @return GetSupabaseProjectSpecResponse
+     */
+    CompletableFuture<GetSupabaseProjectSpecResponse> getSupabaseProjectSpec(GetSupabaseProjectSpecRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This operation queries the currently recommended stable version and the latest upgradable version for a specified Supabase project.</p>
+     * 
+     * @param request the request parameters of GetSupabaseUpdateVersion  GetSupabaseUpdateVersionRequest
+     * @return GetSupabaseUpdateVersionResponse
+     */
+    CompletableFuture<GetSupabaseUpdateVersionResponse> getSupabaseUpdateVersion(GetSupabaseUpdateVersionRequest request);
 
     /**
      * <b>description</b> :
@@ -1671,6 +1707,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListStreamingJobsResponse
      */
     CompletableFuture<ListStreamingJobsResponse> listStreamingJobs(ListStreamingJobsRequest request);
+
+    /**
+     * @param request the request parameters of ListSupabaseBackupJobs  ListSupabaseBackupJobsRequest
+     * @return ListSupabaseBackupJobsResponse
+     */
+    CompletableFuture<ListSupabaseBackupJobsResponse> listSupabaseBackupJobs(ListSupabaseBackupJobsRequest request);
+
+    /**
+     * @param request the request parameters of ListSupabaseDataBackups  ListSupabaseDataBackupsRequest
+     * @return ListSupabaseDataBackupsResponse
+     */
+    CompletableFuture<ListSupabaseDataBackupsResponse> listSupabaseDataBackups(ListSupabaseDataBackupsRequest request);
 
     /**
      * <b>description</b> :
@@ -1933,6 +1981,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifySupabaseAutoScalePolicyResponse
      */
     CompletableFuture<ModifySupabaseAutoScalePolicyResponse> modifySupabaseAutoScalePolicy(ModifySupabaseAutoScalePolicyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>You can call DescribeSupabaseBackupPolicy to query the current backup policy, and then call this operation again to confirm the configurations after the modification.</p>
+     * 
+     * @param request the request parameters of ModifySupabaseBackupPolicy  ModifySupabaseBackupPolicyRequest
+     * @return ModifySupabaseBackupPolicyResponse
+     */
+    CompletableFuture<ModifySupabaseBackupPolicyResponse> modifySupabaseBackupPolicy(ModifySupabaseBackupPolicyRequest request);
 
     /**
      * <b>description</b> :
@@ -2277,6 +2334,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSaasServiceVersionResponse
      */
     CompletableFuture<UpdateSaasServiceVersionResponse> updateSaasServiceVersion(UpdateSaasServiceVersionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Upgrades a specified Supabase project to a target minor version. You can query the supported target versions by calling GetSupabaseUpdateVersion.</p>
+     * 
+     * @param request the request parameters of UpdateSupabaseVersion  UpdateSupabaseVersionRequest
+     * @return UpdateSupabaseVersionResponse
+     */
+    CompletableFuture<UpdateSupabaseVersionResponse> updateSupabaseVersion(UpdateSupabaseVersionRequest request);
 
     /**
      * <b>description</b> :

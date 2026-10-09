@@ -27,8 +27,16 @@ public class CreateSupabaseProjectRequest extends Request {
     private Boolean autoScale;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
+    private String backupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateOptions")
+    private String createOptions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskPerformanceLevel")
@@ -70,6 +78,10 @@ public class CreateSupabaseProjectRequest extends Request {
     private String securityIPList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcProjectId")
+    private String srcProjectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageSize")
     private Long storageSize;
 
@@ -100,7 +112,9 @@ public class CreateSupabaseProjectRequest extends Request {
         super(builder);
         this.accountPassword = builder.accountPassword;
         this.autoScale = builder.autoScale;
+        this.backupId = builder.backupId;
         this.clientToken = builder.clientToken;
+        this.createOptions = builder.createOptions;
         this.diskPerformanceLevel = builder.diskPerformanceLevel;
         this.engineVersion = builder.engineVersion;
         this.lightweight = builder.lightweight;
@@ -110,6 +124,7 @@ public class CreateSupabaseProjectRequest extends Request {
         this.projectSpec = builder.projectSpec;
         this.regionId = builder.regionId;
         this.securityIPList = builder.securityIPList;
+        this.srcProjectId = builder.srcProjectId;
         this.storageSize = builder.storageSize;
         this.tags = builder.tags;
         this.usedTime = builder.usedTime;
@@ -146,10 +161,24 @@ public class CreateSupabaseProjectRequest extends Request {
     }
 
     /**
+     * @return backupId
+     */
+    public String getBackupId() {
+        return this.backupId;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return createOptions
+     */
+    public String getCreateOptions() {
+        return this.createOptions;
     }
 
     /**
@@ -216,6 +245,13 @@ public class CreateSupabaseProjectRequest extends Request {
     }
 
     /**
+     * @return srcProjectId
+     */
+    public String getSrcProjectId() {
+        return this.srcProjectId;
+    }
+
+    /**
      * @return storageSize
      */
     public Long getStorageSize() {
@@ -260,7 +296,9 @@ public class CreateSupabaseProjectRequest extends Request {
     public static final class Builder extends Request.Builder<CreateSupabaseProjectRequest, Builder> {
         private String accountPassword; 
         private Boolean autoScale; 
+        private String backupId; 
         private String clientToken; 
+        private String createOptions; 
         private String diskPerformanceLevel; 
         private String engineVersion; 
         private Boolean lightweight; 
@@ -270,6 +308,7 @@ public class CreateSupabaseProjectRequest extends Request {
         private String projectSpec; 
         private String regionId; 
         private String securityIPList; 
+        private String srcProjectId; 
         private Long storageSize; 
         private java.util.List<Tags> tags; 
         private String usedTime; 
@@ -285,7 +324,9 @@ public class CreateSupabaseProjectRequest extends Request {
             super(request);
             this.accountPassword = request.accountPassword;
             this.autoScale = request.autoScale;
+            this.backupId = request.backupId;
             this.clientToken = request.clientToken;
+            this.createOptions = request.createOptions;
             this.diskPerformanceLevel = request.diskPerformanceLevel;
             this.engineVersion = request.engineVersion;
             this.lightweight = request.lightweight;
@@ -295,6 +336,7 @@ public class CreateSupabaseProjectRequest extends Request {
             this.projectSpec = request.projectSpec;
             this.regionId = request.regionId;
             this.securityIPList = request.securityIPList;
+            this.srcProjectId = request.srcProjectId;
             this.storageSize = request.storageSize;
             this.tags = request.tags;
             this.usedTime = request.usedTime;
@@ -304,7 +346,7 @@ public class CreateSupabaseProjectRequest extends Request {
         } 
 
         /**
-         * <p>The password of the initial account.</p>
+         * <p>The initial account password.</p>
          * <p>Password rules:</p>
          * <ul>
          * <li>The password must be 8 to 32 characters in length.</li>
@@ -323,7 +365,7 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto start/stop. If this parameter is not specified, the default value is false.</p>
+         * <p>Specifies whether to enable auto-start and auto-stop. If you do not specify this parameter, the default value is false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -335,7 +377,22 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. Ensures that duplicate requests do not result in duplicate operations.</p>
+         * <p>The backup set ID.</p>
+         * <blockquote>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/3064623.html">ListSupabaseDataBackups</a> to view the IDs of all backup sets under the target Supabase project.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2176307784</p>
+         */
+        public Builder backupId(String backupId) {
+            this.putQueryParameter("BackupId", backupId);
+            this.backupId = backupId;
+            return this;
+        }
+
+        /**
+         * <p>The client token. It is used to ensure idempotence and prevent duplicate requests from executing the same operation.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -347,7 +404,19 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The performance level (PL) of the cloud disk. If this parameter is not specified, the default value PL0 is used.</p>
+         * <p>The optional creation parameters. The default value is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        public Builder createOptions(String createOptions) {
+            this.putQueryParameter("CreateOptions", createOptions);
+            this.createOptions = createOptions;
+            return this;
+        }
+
+        /**
+         * <p>The performance level of the cloud disk. If you do not specify this parameter, the default value is PL0.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>PL0</li>
@@ -366,7 +435,7 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The DPI engine version. If this parameter is not specified, the default value PG15 is used. PG17 and later versions support the data sandbox (branch) feature.</p>
+         * <p>The DPI engine version. If you do not specify this parameter, the default value is PG15. PostgreSQL 17 and later versions support the data sandbox (branch) feature.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>PG15: PostgreSQL 15.</li>
@@ -383,7 +452,10 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * Lightweight.
+         * <p>Specifies whether the project is the lightweight edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder lightweight(Boolean lightweight) {
             this.putQueryParameter("Lightweight", lightweight);
@@ -392,12 +464,12 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The billing type. If this parameter is not specified, the default value Free is used.</p>
+         * <p>The billing method. If you do not specify this parameter, the default value is Free.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Free: Free tier.</li>
-         * <li>Postpaid: Pay-as-you-go.</li>
-         * <li>Prepaid: Subscription.</li>
+         * <li>Free: the free billing method.</li>
+         * <li>Postpaid: pay-as-you-go.</li>
+         * <li>Prepaid: subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -410,7 +482,7 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value Month is used.</p>
+         * <p>The unit of the subscription duration. This parameter takes effect only when PayType is set to Prepaid. If you do not specify this parameter, the default value is Month.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>Month: month.</li>
@@ -431,7 +503,7 @@ public class CreateSupabaseProjectRequest extends Request {
          * <p>Naming rules:</p>
          * <ul>
          * <li>The name must be 1 to 128 characters in length.</li>
-         * <li>The name can contain letters, digits, hyphens (-), and underscores (_).</li>
+         * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
          * <li>The name must start with a letter or an underscore (_).</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -446,7 +518,7 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The specifications of the Supabase project. The Free billing type uses free-tier specifications. For paid billing types, the specifications must match those available in the console.</p>
+         * <p>The specifications of the Supabase project. The free billing method uses the free specifications. For paid billing methods, the specifications must be consistent with those available in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -459,7 +531,7 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Specifies the region in which to create the project.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -471,7 +543,7 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The IP address whitelist. Separate multiple IP addresses or CIDR blocks with commas (,). If this parameter is not specified, the default value 0.0.0.0/0 is used.</p>
+         * <p>The IP address whitelist. Separate multiple IP addresses or CIDR blocks with commas (,). If you do not specify this parameter, the default value 0.0.0.0/0 is used.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -484,7 +556,19 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The storage size, in GB. If this parameter is not specified for non-Free billing types, the default value is 1 GB.</p>
+         * <p>The ID of the Supabase project to which the backup set belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spb-xxxxxxxx</p>
+         */
+        public Builder srcProjectId(String srcProjectId) {
+            this.putQueryParameter("SrcProjectId", srcProjectId);
+            this.srcProjectId = srcProjectId;
+            return this;
+        }
+
+        /**
+         * <p>The storage capacity. Unit: GB. If you do not specify this parameter for a non-free billing method, the default value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -496,7 +580,7 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -505,7 +589,7 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value is 1.</p>
+         * <p>The subscription duration of the resource. This parameter takes effect only when PayType is set to Prepaid. If you do not specify this parameter, the default value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -543,7 +627,7 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The zone ID. The zone of the vSwitch specified by VSwitchId must be the same as this parameter value.</p>
+         * <p>The zone ID. The zone of the vSwitch specified by VSwitchId must be the same as the value of this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -615,7 +699,15 @@ public class CreateSupabaseProjectRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key. Limits:</p>
+             * <ul>
+             * <li>It cannot be an empty string.</li>
+             * <li>It can be up to 128 characters in length.</li>
+             * <li>It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>test-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -623,7 +715,10 @@ public class CreateSupabaseProjectRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The value can be an empty string. It can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-value</p>
              */
             public Builder value(String value) {
                 this.value = value;
