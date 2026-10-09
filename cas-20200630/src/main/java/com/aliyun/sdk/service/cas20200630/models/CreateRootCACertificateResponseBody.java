@@ -93,7 +93,7 @@ public class CreateRootCACertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The root CA certificate in the PEM format.</p>
+         * <p>The created root certificate in PEM format.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----</p>
@@ -104,7 +104,7 @@ public class CreateRootCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The certificate chain of the root CA certificate.</p>
+         * <p>The CA certificate chain of the created root certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n</p>
@@ -115,7 +115,7 @@ public class CreateRootCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the root CA certificate.</p>
+         * <p>The unique identifier of the created root CA certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>1a83bcbb89e562885e40aa0108f5****</p>
@@ -126,7 +126,7 @@ public class CreateRootCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>6D9B4C5F-7140-5B41-924C-329181DC00C1</p>

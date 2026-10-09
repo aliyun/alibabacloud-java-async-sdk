@@ -60,9 +60,9 @@ public class DescribeClientCertificateStatusRequest extends Request {
         } 
 
         /**
-         * <p>The unique identifiers of the client certificates or server certificates that you want to query. Separate multiple unique identifiers with commas (,).</p>
+         * <p>The unique identifiers of the client certificates or server certificates to query. Separate multiple certificate identifiers with commas (,).</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> operation to query the unique identifiers of all client certificates and server certificates.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/465990.html">ListClientCertificate</a> to query the unique identifiers of all client certificates and server certificates.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -104,6 +104,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The IDs of the resources.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -125,6 +127,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The type of the resource. Set the value to <strong>instance</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +140,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags to add to the resources. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -207,7 +210,10 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -215,7 +221,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

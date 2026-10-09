@@ -67,7 +67,7 @@ public class ListCACertificateLogResponseBody extends TeaModel {
         } 
 
         /**
-         * LogList.
+         * <p>A list of operation logs for the CA certificate.</p>
          */
         public Builder logList(java.util.List<LogList> logList) {
             this.logList = logList;
@@ -75,7 +75,10 @@ public class ListCACertificateLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class ListCACertificateLogResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The description of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>add sub-root ca</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -175,7 +181,10 @@ public class ListCACertificateLogResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time of the operation. This is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634539509000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -183,7 +192,10 @@ public class ListCACertificateLogResponseBody extends TeaModel {
             }
 
             /**
-             * Identifier.
+             * <p>The unique identifier of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160ae6bb538d538c70c01f81dcf2****</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -191,7 +203,16 @@ public class ListCACertificateLogResponseBody extends TeaModel {
             }
 
             /**
-             * OpType.
+             * <p>The type of the operation. Valid values:</p>
+             * <ul>
+             * <li><p><strong>ADD</strong>: A CA certificate is created.</p>
+             * </li>
+             * <li><p><strong>UPDATE</strong>: The status of the CA certificate is updated.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ADD</p>
              */
             public Builder opType(String opType) {
                 this.opType = opType;

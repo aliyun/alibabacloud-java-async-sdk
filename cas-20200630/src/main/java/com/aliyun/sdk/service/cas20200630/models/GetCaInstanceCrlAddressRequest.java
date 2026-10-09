@@ -73,7 +73,10 @@ public class GetCaInstanceCrlAddressRequest extends Request {
         } 
 
         /**
-         * CaIdentifier.
+         * <p>The CA certificate identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1f0167b4-ee84-XXX-49bc4d39fa68</p>
          */
         public Builder caIdentifier(String caIdentifier) {
             this.putQueryParameter("CaIdentifier", caIdentifier);
@@ -82,7 +85,10 @@ public class GetCaInstanceCrlAddressRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The zone ID of the China Application Security (CAS) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1f047318-0815-XXX-f7ceb76b5c0a</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

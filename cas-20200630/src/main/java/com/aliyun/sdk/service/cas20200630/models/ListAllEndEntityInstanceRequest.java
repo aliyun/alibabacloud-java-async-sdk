@@ -130,7 +130,10 @@ public class ListAllEndEntityInstanceRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -139,7 +142,10 @@ public class ListAllEndEntityInstanceRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return for this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -148,7 +154,10 @@ public class ListAllEndEntityInstanceRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to retrieve the next page of results. You can get this token from the \<code>NextToken\\</code> response parameter of the previous query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -157,7 +166,10 @@ public class ListAllEndEntityInstanceRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * <p>The ID of the parent instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37633</p>
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -166,7 +178,10 @@ public class ListAllEndEntityInstanceRequest extends Request {
         }
 
         /**
-         * RecursiveChildren.
+         * <p>Specifies whether to return information about the billing type in the response. Valid values: -<strong>0</strong>: The information is not returned. -<strong>1</strong>: The information is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder recursiveChildren(Integer recursiveChildren) {
             this.putQueryParameter("RecursiveChildren", recursiveChildren);
@@ -175,7 +190,10 @@ public class ListAllEndEntityInstanceRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);

@@ -60,6 +60,10 @@ public class DescribeClientCertificateForSerialNumberRequest extends Request {
         } 
 
         /**
+         * <p>The serial numbers of the client certificates or server certificates that you want to query. Separate multiple serial numbers with commas (,).</p>
+         * <blockquote>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> to query the serial numbers of all client certificates and server certificates.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

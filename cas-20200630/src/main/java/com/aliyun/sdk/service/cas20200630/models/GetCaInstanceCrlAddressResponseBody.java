@@ -119,7 +119,10 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * CaInstanceStatus.
+         * <p>The status of the CA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder caInstanceStatus(String caInstanceStatus) {
             this.caInstanceStatus = caInstanceStatus;
@@ -127,7 +130,10 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
         }
 
         /**
-         * CaType.
+         * <p>The CA type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uploadCA</p>
          */
         public Builder caType(String caType) {
             this.caType = caType;
@@ -135,7 +141,10 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
         }
 
         /**
-         * CrlUrl.
+         * <p>The CRL URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://crl-cn-publish.oss-cn-hangzhou.aliyuncs.com/pca/crl/35118048/1f0be094-14bd-6caa-bd7f-db45730d510a.crl">https://crl-cn-publish.oss-cn-hangzhou.aliyuncs.com/pca/crl/35118048/1f0be094-14bd-6caa-bd7f-db45730d510a.crl</a></p>
          */
         public Builder crlUrl(String crlUrl) {
             this.crlUrl = crlUrl;
@@ -143,7 +152,10 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
         }
 
         /**
-         * HashCode.
+         * <p>The hash code used to identify whether new revoked certificates exist in the CRL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5481d1b1228fXXX40ee70dc8cd</p>
          */
         public Builder hashCode(String hashCode) {
             this.hashCode = hashCode;
@@ -151,7 +163,10 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
         }
 
         /**
-         * NextUpdateTime.
+         * <p>The next update time of the CRL. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1778688000000</p>
          */
         public Builder nextUpdateTime(String nextUpdateTime) {
             this.nextUpdateTime = nextUpdateTime;

@@ -132,7 +132,7 @@ public class CreateClientCertificateWithCsrResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>CertKmcRep1.</p>
+         * <p>The encrypted certificate ciphertext.</p>
          * 
          * <strong>example:</strong>
          * <p>userSeal=MHkCIEu94PQAahFWuFk%</p>
@@ -145,12 +145,12 @@ public class CreateClientCertificateWithCsrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cert Sign Buf Kmc.</p>
+         * <p>The encrypted certificate content.</p>
          * 
          * <strong>example:</strong>
-         * <p>userSeal=MHkCIEu94PQAahFWuFk%</p>
+         * <p>MIIDYDCCAwWgAwIBAgIU</p>
          * <hr>
-         * <p>EtFw%2FkMMBjw8i5bFfSkV%2FIUrcOJD</p>
+         * <p>TmTk0CS3WNweqsjMEETyxd2pzU6DA</p>
          */
         public Builder certSignBufKmc(String certSignBufKmc) {
             this.certSignBufKmc = certSignBufKmc;
@@ -158,7 +158,7 @@ public class CreateClientCertificateWithCsrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The certificate chain of the client certificate.</p>
+         * <p>The CA certificate chain.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n</p>
@@ -180,7 +180,7 @@ public class CreateClientCertificateWithCsrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>31C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -191,10 +191,10 @@ public class CreateClientCertificateWithCsrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The serial number of the server certificate.</p>
+         * <p>The certificate serial number.</p>
          * 
          * <strong>example:</strong>
-         * <p>0f29522da2dae7a1c4b6ab7132ad3c06</p>
+         * <p>084bde9cd233f0ddae33adc438cfbbbd****</p>
          */
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = serialNumber;

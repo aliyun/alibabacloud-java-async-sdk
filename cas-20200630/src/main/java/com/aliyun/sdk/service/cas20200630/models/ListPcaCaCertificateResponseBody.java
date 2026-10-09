@@ -106,7 +106,7 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * List.
+         * <p>The list of CA certificates.</p>
          */
         public Builder list(java.util.List<List> list) {
             this.list = list;
@@ -114,7 +114,10 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page of results. Leave this parameter empty to start the query from the first page. If this parameter is not returned, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-123456789ABC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the result set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -269,7 +281,10 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * CertIdentifier.
+             * <p>The certificate identifier. Use this identifier to query certificate details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1ef78be5-******-b5ef0f0eba3d</p>
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -277,7 +292,10 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CommonName.
+             * <p>The common name of the certificate. This value matches the CommonName field in the certificate Subject.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Example Co., Ltd.</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -285,7 +303,10 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * IssuerIdentifier.
+             * <p>The identifier of the issuer certificate. Use this identifier to query the issuer certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1ef78be5-******-b5ef0f0eba3d</p>
              */
             public Builder issuerIdentifier(String issuerIdentifier) {
                 this.issuerIdentifier = issuerIdentifier;
@@ -293,7 +314,10 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateCaInstanceId.
+             * <p>The ID of the private CA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cas_deposit-cn-******</p>
              */
             public Builder privateCaInstanceId(String privateCaInstanceId) {
                 this.privateCaInstanceId = privateCaInstanceId;
@@ -301,7 +325,10 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateCaRegionId.
+             * <p>The region ID of the private CA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder privateCaRegionId(String privateCaRegionId) {
                 this.privateCaRegionId = privateCaRegionId;
@@ -309,7 +336,10 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The certificate status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ISSUE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -317,7 +347,10 @@ public class ListPcaCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>166********</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

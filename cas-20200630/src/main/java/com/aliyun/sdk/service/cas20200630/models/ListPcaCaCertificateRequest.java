@@ -96,7 +96,11 @@ public class ListPcaCaCertificateRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return on each page. The default value is 20.</p>
+         * <p>Valid values: 1 to 2000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -105,7 +109,10 @@ public class ListPcaCaCertificateRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page of results. Leave this parameter empty to start the query from the first page. If this parameter is not returned, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

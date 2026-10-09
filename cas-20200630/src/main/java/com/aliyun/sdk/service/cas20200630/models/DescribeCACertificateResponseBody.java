@@ -80,7 +80,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the CA certificate.</p>
+         * <p>The details of the CA certificate.</p>
          */
         public Builder certificate(Certificate certificate) {
             this.certificate = certificate;
@@ -88,7 +88,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -168,7 +168,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Usage status</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -176,7 +179,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BMS</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -685,7 +691,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The expiration date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The expiration date of the CA certificate. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1665819958000</p>
@@ -696,11 +702,11 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption algorithm of the CA certificate. Valid values:</p>
+             * <p>The encryption algorithm type of the CA certificate. Valid values:</p>
              * <ul>
-             * <li><strong>RSA</strong>: the Rivest-Shamir-Adleman (RSA) algorithm.</li>
-             * <li><strong>ECC</strong>: the elliptic curve cryptography (ECC) algorithm.</li>
-             * <li><strong>SM2</strong>: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.</li>
+             * <li><strong>RSA</strong>: RSA algorithm.</li>
+             * <li><strong>ECC</strong>: ECC algorithm.</li>
+             * <li><strong>SM2</strong>: SM2 (Chinese national cryptographic) algorithm.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -712,7 +718,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The issuance date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The issuance date of the CA certificate. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1634283958000</p>
@@ -723,17 +729,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>CA certificate chain.</p>
+             * <p>The complete certificate chain.</p>
              * 
              * <strong>example:</strong>
              * <p>-----BEGIN CERTIFICATE-----
-             * 用户证书
              * -----END CERTIFICATE-----</p>
              * <p>-----BEGIN CERTIFICATE-----
-             * 中间证书
              * -----END CERTIFICATE-----</p>
              * <p>-----BEGIN CERTIFICATE-----
-             * 根证书
              * -----END CERTIFICATE-----</p>
              */
             public Builder caCertChain(String caCertChain) {
@@ -742,7 +745,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of certificates issued by private CA instances.</p>
+             * <p>The number of certificates issued by the private CA instance.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -753,7 +756,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertMaxTime.
+             * <p>The maximum validity period for certificates issued by the CA, specified by certMaxTime. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder certMaxTime(Integer certMaxTime) {
                 this.certMaxTime = certMaxTime;
@@ -761,7 +767,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remaining number of assignable certificate quotas.</p>
+             * <p>The number of remaining certificate quotas available for allocation.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -785,8 +791,8 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             /**
              * <p>The type of the CA certificate. Valid values:</p>
              * <ul>
-             * <li><strong>ROOT</strong>: root CA certificate</li>
-             * <li><strong>SUB_ROOT</strong>: intermediate CA certificate</li>
+             * <li><strong>ROOT</strong>: root CA certificate.</li>
+             * <li><strong>SUB_ROOT</strong>: sub-CA certificate.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -798,7 +804,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>The identifier of the hardware security module (HSM) cluster. (The CA is enabled by using an HSM.)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX-id</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -806,7 +815,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The common name or abbreviation of the organization that is associated with the CA certificate.</p>
+             * <p>The common name or abbreviation of the organization associated with the CA certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>Aliyun</p>
@@ -817,8 +826,8 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the country in which the organization is located.</p>
-             * <p>For more information about country codes, see the <strong>&quot;Country codes&quot;</strong> section of the <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a> topic.</p>
+             * <p>The country code of the organization associated with the CA certificate.</p>
+             * <p>For more information about country codes, see the <strong>International codes</strong> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company information</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>CN</p>
@@ -829,7 +838,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>CRL validity period: 1-365 days.</p>
+             * <p>The CRL validity period, ranging from 1 to 365 days.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>
@@ -840,7 +849,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the certificate revocation list (CRL) feature.</p>
+             * <p>The certificate revocation list (CRL) status (enabling status).</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>
@@ -851,7 +860,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The address of the CRL.</p>
+             * <p>The CRL URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://crl-cn-publish.oss-cn-hangzhou.aliyuncs.com/pca/crl/1925647866611395/1ed40789-483f-6023-b6b8-29ddd3bb0a9a.crl">https://crl-cn-publish.oss-cn-hangzhou.aliyuncs.com/pca/crl/1925647866611395/1ed40789-483f-6023-b6b8-29ddd3bb0a9a.crl</a></p>
@@ -862,7 +871,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * FullAlgorithm.
+             * <p>The algorithm with key length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RSA_2048</p>
              */
             public Builder fullAlgorithm(String fullAlgorithm) {
                 this.fullAlgorithm = fullAlgorithm;
@@ -881,7 +893,15 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * IssuerType.
+             * <p>The issuing CA authority. Valid values:</p>
+             * <ul>
+             * <li>local: private certificate.</li>
+             * <li>iTrusChina: compliant CA.</li>
+             * <li>external: externally imported.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>local</p>
              */
             public Builder issuerType(String issuerType) {
                 this.issuerType = issuerType;
@@ -889,7 +909,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * KeyIndex.
+             * <p>The key index position in the HSM. (The CA is enabled by using an HSM.)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder keyIndex(Integer keyIndex) {
                 this.keyIndex = keyIndex;
@@ -908,7 +931,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the city in which the organization is located.</p>
+             * <p>The city where the organization associated with the CA certificate is located.</p>
              * 
              * <strong>example:</strong>
              * <p>Hangzhou</p>
@@ -930,10 +953,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the organization that is associated with the CA certificate.</p>
+             * <p>The name of the organization associated with the CA certificate.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alibaba Cloud Computing Co., Ltd.</p>
+             * <p>aliyun</p>
              */
             public Builder organization(String organization) {
                 this.organization = organization;
@@ -941,7 +964,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the department or branch in the organization that is associated with the CA certificate.</p>
+             * <p>The name of the department in the organization associated with the CA certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>Security</p>
@@ -952,9 +975,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the root CA certificate from which the CA certificate is issued.</p>
+             * <p>The unique identifier of the root CA certificate that issued this CA certificate.</p>
              * <blockquote>
-             * <p> This parameter is returned only if the value of the <strong>CertificateType</strong> parameter is <strong>SUB_ROOT</strong>. The value SUB_ROOT indicates an intermediate CA certificate.</p>
+             * <p>This parameter is returned only when <strong>CertificateType</strong> is <strong>SUB_ROOT</strong> (sub-CA certificate).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -966,7 +989,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the certificate belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2pxd7ekpoo2y</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -974,7 +1000,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1018,7 +1044,8 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the province, municipality, or autonomous region in which the organization is located.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;The province, municipality, or autonomous region where the organization associated with the CA certificate is located.
+             * &lt;props=&quot;intl&quot;&gt;The province or state where the organization associated with the CA certificate is located.</p>
              * 
              * <strong>example:</strong>
              * <p>Zhejiang</p>
@@ -1031,8 +1058,8 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             /**
              * <p>The status of the CA certificate. Valid values:</p>
              * <ul>
-             * <li><strong>ISSUE</strong>: The CA certificate is issued.</li>
-             * <li><strong>REVOKE</strong>: The CA certificate is revoked.</li>
+             * <li><strong>ISSUE</strong>: issued.</li>
+             * <li><strong>REVOKE</strong>: revoked.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1044,18 +1071,19 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user attribute of the CA certificate, which contains the following information:</p>
+             * <p>The subject attributes of the CA certificate, which include the following information:</p>
              * <ul>
-             * <li><strong>C</strong>: the country code in which the organization is located</li>
-             * <li><strong>O</strong>: the name of the organization</li>
-             * <li><strong>OU</strong>: the name of the department or branch in the organization</li>
-             * <li><strong>L</strong>: the name of the city in which the organization is located</li>
-             * <li><strong>ST</strong>: the name of the province, municipality, or autonomous region in which the organization is located</li>
-             * <li><strong>CN</strong>: the common name or abbreviation of the organization</li>
+             * <li><strong>C</strong>: The country code of the organization.</li>
+             * <li><strong>O</strong>: The name of the organization.</li>
+             * <li><strong>OU</strong>: The department of the organization.</li>
+             * <li><strong>L</strong>: The city where the organization is located.
+             * &lt;props=&quot;china&quot;&gt;- <strong>ST</strong>: The province, municipality, or autonomous region where the organization is located.
+             * &lt;props=&quot;intl&quot;&gt;- <strong>ST</strong>: The province or state where the organization is located.</li>
+             * <li><strong>CN</strong>: The common name or abbreviation of the organization.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>C=CN,O=Alibaba Cloud Computing Co., Ltd.,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
+             * <p>C=CN,O=aliyun,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
              */
             public Builder subjectDN(String subjectDN) {
                 this.subjectDN = subjectDN;
@@ -1063,7 +1091,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1085,7 +1113,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
              * <p>The validity period of the CA certificate. Unit: years.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>1</p>
              */
             public Builder years(Integer years) {
                 this.years = years;

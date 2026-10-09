@@ -80,7 +80,10 @@ public class AssignCertificateCountResponseBody extends TeaModel {
         } 
 
         /**
-         * CertCount.
+         * <p>The number of allocated certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder certCount(Integer certCount) {
             this.certCount = certCount;
@@ -88,7 +91,10 @@ public class AssignCertificateCountResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentYearFreeCertCount.
+         * <p>The number of free certificates in the current year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder currentYearFreeCertCount(Integer currentYearFreeCertCount) {
             this.currentYearFreeCertCount = currentYearFreeCertCount;
@@ -96,7 +102,10 @@ public class AssignCertificateCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E77C4794-F24F-58CB-9929-F0F0C0EDE7B2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

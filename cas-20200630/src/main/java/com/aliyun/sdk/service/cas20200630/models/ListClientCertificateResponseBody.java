@@ -132,7 +132,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the details about all client certificates and server certificates.</p>
+         * <p>A list of details about the client or server-side certificates.</p>
          */
         public Builder certificateList(java.util.List<CertificateList> certificateList) {
             this.certificateList = certificateList;
@@ -140,7 +140,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the current page.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -151,7 +151,10 @@ public class ListClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>Paging parameter: the maximum number of entries in the result set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -159,7 +162,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of pages returned.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -181,7 +184,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of certificates that are returned per page.</p>
+         * <p>The number of certificates returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -192,7 +195,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of client certificates and server certificates that are returned.</p>
+         * <p>The total number of client and server-side certificates that are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -586,9 +589,12 @@ public class ListClientCertificateResponseBody extends TeaModel {
             /**
              * <p>The type of the encryption algorithm of the certificate. Valid values:</p>
              * <ul>
-             * <li><strong>RSA</strong>: the Rivest-Shamir-Adleman (RSA) algorithm.</li>
-             * <li><strong>ECC</strong>: the elliptic curve cryptography (ECC) algorithm.</li>
-             * <li><strong>SM2</strong>: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.</li>
+             * <li><p><strong>RSA</strong>: RSA algorithm.</p>
+             * </li>
+             * <li><p><strong>ECC</strong>: ECC algorithm.</p>
+             * </li>
+             * <li><p><strong>SM2</strong>: SM2 algorithm.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -600,7 +606,10 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * AliasName.
+             * <p>The name of the issued certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>生产培训10.153.13.177</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -621,8 +630,10 @@ public class ListClientCertificateResponseBody extends TeaModel {
             /**
              * <p>The type of the certificate. Valid values:</p>
              * <ul>
-             * <li><strong>CLIENT</strong>: client certificate</li>
-             * <li><strong>SERVER</strong>: server certificate</li>
+             * <li><p><strong>CLIENT</strong>: a client certificate.</p>
+             * </li>
+             * <li><p><strong>SERVER</strong>: a server-side certificate.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -645,8 +656,8 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the country in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
-             * <p>For more information about country codes, see the <strong>&quot;Country codes&quot;</strong> section of the <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a> topic.</p>
+             * <p>The country code of the country where the organization associated with the issuing subordinate CA certificate is located.</p>
+             * <p>For more information about country codes, see the <strong>Country codes</strong> section of <a href="https://help.aliyun.com/document_detail/198289.html">Manage company information</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>CN</p>
@@ -657,7 +668,10 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CustomIdentifier.
+             * <p>The custom identifier, which is a unique key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>48d8d3ecc9976d9ecd2b2f25</strong></strong></p>
              */
             public Builder customIdentifier(String customIdentifier) {
                 this.customIdentifier = customIdentifier;
@@ -676,7 +690,10 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12321</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -706,7 +723,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+             * <p>The city where the organization associated with the issuing subordinate CA certificate is located.</p>
              * 
              * <strong>example:</strong>
              * <p>Hangzhou</p>
@@ -728,10 +745,10 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+             * <p>The name of the organization that is associated with the issuing subordinate CA certificate.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alibaba Cloud Computing Co., Ltd.</p>
+             * <p>阿里云计算有限公司</p>
              */
             public Builder organization(String organization) {
                 this.organization = organization;
@@ -739,7 +756,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.</p>
+             * <p>The name of the department of the organization that is associated with the issuing subordinate certificate authority (CA) certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>Security</p>
@@ -750,7 +767,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the intermediate certificate from which the client certificate is issued.</p>
+             * <p>The unique identifier of the subordinate CA certificate that issued this certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>160ae6bb538d538c70c01f81dcf2****</p>
@@ -761,7 +778,10 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the certificate belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmyxa2uv6cu5a</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -769,18 +789,22 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subject alternative name (SAN) extension of the certificate. The value indicates additional information, including the additional domain names or IP addresses that are associated with the certificate.</p>
-             * <p>The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:</p>
+             * <p>The Subject Alternative Name (SAN) extension of the certificate. This extension indicates other domain names, IP addresses, and so on that are associated with the certificate.</p>
+             * <p>This parameter is a string that is converted from a JSON array. Each element in the JSON array is a struct that corresponds to a SAN extension. Each SAN extension struct contains the following parameters:</p>
              * <ul>
-             * <li><p><strong>Type</strong>: the type of the extension. Data type: integer. Valid values:</p>
+             * <li><p><strong>Type</strong>: The type of the extension. This parameter is of the Integer type. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: an email address</li>
-             * <li><strong>2</strong>: a domain name</li>
-             * <li><strong>6</strong>: a Uniform Resource Identifier (URI)</li>
-             * <li><strong>7</strong>: an IP address</li>
+             * <li><p><strong>1</strong>: an email address.</p>
+             * </li>
+             * <li><p><strong>2</strong>: a domain name.</p>
+             * </li>
+             * <li><p><strong>6</strong>: a Uniform Resource Identifier (URI).</p>
+             * </li>
+             * <li><p><strong>7</strong>: an IP address.</p>
+             * </li>
              * </ul>
              * </li>
-             * <li><p><strong>Value</strong>: the value of the extension. Data type: string.</p>
+             * <li><p><strong>Value</strong>: The content of the extension. This parameter is of the String type.</p>
              * </li>
              * </ul>
              * 
@@ -826,7 +850,8 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the organization associated with the issuing subordinate CA certificate is located.
+             * &lt;props=&quot;intl&quot;&gt;The name of the province or state where the organization associated with the issuing subordinate CA certificate is located.</p>
              * 
              * <strong>example:</strong>
              * <p>Zhejiang</p>
@@ -839,8 +864,10 @@ public class ListClientCertificateResponseBody extends TeaModel {
             /**
              * <p>The status of the certificate. Valid values:</p>
              * <ul>
-             * <li><strong>ISSUE</strong>: issued</li>
-             * <li><strong>REVOKE</strong>: revoked</li>
+             * <li><p><strong>ISSUE</strong>: The certificate is issued.</p>
+             * </li>
+             * <li><p><strong>REVOKE</strong>: The certificate is revoked.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -852,18 +879,31 @@ public class ListClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The distinguished name (DN) extension of the certificate, which indicates the user of the certificate. The DN extension includes the following information:</p>
+             * <p>The Distinguished Name (DN) of the certificate. The DN indicates the user of the certificate and contains the following information:</p>
              * <ul>
-             * <li><strong>C</strong>: the country</li>
-             * <li><strong>O</strong>: the organization</li>
-             * <li><strong>OU</strong>: the department</li>
-             * <li><strong>L</strong>: the city</li>
-             * <li><strong>ST</strong>: the province, municipality, or autonomous region</li>
-             * <li><strong>CN</strong>: the common name</li>
+             * <li><p><strong>C</strong>: The country.</p>
+             * </li>
+             * <li><p><strong>O</strong>: The organization.</p>
+             * </li>
+             * <li><p><strong>OU</strong>: The department.</p>
+             * </li>
+             * <li><p><strong>L</strong>: The city.</p>
+             * </li>
+             * </ul>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
+             * <ul>
+             * <li><strong>ST</strong>: The province, municipality, or autonomous region.</li>
+             * </ul>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <ul>
+             * <li><p><strong>ST</strong>: The province or state.</p>
+             * </li>
+             * <li><p><strong>CN</strong>: The common name.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>C=CN,O=Alibaba Cloud Computing Co., Ltd.,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
+             * <p>C=CN,O=阿里云计算有限公司,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
              */
             public Builder subjectDN(String subjectDN) {
                 this.subjectDN = subjectDN;

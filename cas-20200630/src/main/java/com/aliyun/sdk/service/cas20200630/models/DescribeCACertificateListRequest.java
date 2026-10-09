@@ -157,10 +157,10 @@ public class DescribeCACertificateListRequest extends Request {
         } 
 
         /**
-         * <p>Ca status.</p>
+         * <p>The current status of the CA. Valid values:</p>
          * <ul>
-         * <li>issue: inUse.</li>
-         * <li>forbidden: forbidden.</li>
+         * <li>issue: enabled.</li>
+         * <li>forbidden: disabled.</li>
          * <li>revoke: revoked.</li>
          * </ul>
          * 
@@ -174,11 +174,11 @@ public class DescribeCACertificateListRequest extends Request {
         }
 
         /**
-         * <p>The type of the certificate. Valid values:</p>
+         * <p>The type of the CA. Valid values:</p>
          * <ul>
-         * <li>root: rootCA.</li>
-         * <li>subRoot: subCA.</li>
-         * <li>externalCa: import.</li>
+         * <li>root: root CA.</li>
+         * <li>subRoot: subordinate CA.</li>
+         * <li>externalCa: externally imported CA.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class DescribeCACertificateListRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the current page in a paging query. Settings: specify the desired page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -205,11 +205,11 @@ public class DescribeCACertificateListRequest extends Request {
         /**
          * <p>The unique identifier of the CA certificate.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> operation to query the unique identifiers of all CA certificates.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> to query the unique identifiers of all CA certificates.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>160ae6bb538d538c70c01f81dcf2****</p>
+         * <p>1ee47e24-c51b-67cc-aa6b-1f7561cf9d9a</p>
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);
@@ -218,11 +218,11 @@ public class DescribeCACertificateListRequest extends Request {
         }
 
         /**
-         * <p>The CA Issuer Type.</p>
+         * <p>The issuing authority of the CA. Valid values:</p>
          * <ul>
-         * <li>local: Private certificate.</li>
-         * <li>iTrusChina: Compliance CA.</li>
-         * <li>external: External Import.</li>
+         * <li>local: private certificate.</li>
+         * <li>iTrusChina: compliance CA.</li>
+         * <li>external: externally imported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,7 +235,10 @@ public class DescribeCACertificateListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2716559.html">ListResources</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ae******4wia</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -244,7 +247,7 @@ public class DescribeCACertificateListRequest extends Request {
         }
 
         /**
-         * <p>The number of CA certificates per page. Default value: <strong>20</strong>.</p>
+         * <p>The number of CA certificates per page in a paging query. Settings: specify the desired number of entries per page. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -256,10 +259,10 @@ public class DescribeCACertificateListRequest extends Request {
         }
 
         /**
-         * <p>valid time.</p>
+         * <p>The time-based validity status of the CA. Valid values:</p>
          * <ul>
-         * <li>valid: means in the valid period.</li>
-         * <li>notValid: means expired.</li>
+         * <li>valid: The CA is within its validity period.</li>
+         * <li>notValid: The CA has expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>

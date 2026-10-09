@@ -115,7 +115,10 @@ public class UpdatePcaCertificateRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * <p>The alias of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-name</p>
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -124,7 +127,10 @@ public class UpdatePcaCertificateRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A client token used to ensure the idempotence of the request. The client generates this value to make sure that it is unique among different requests. The token can be a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXX</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -133,7 +139,13 @@ public class UpdatePcaCertificateRequest extends Request {
         }
 
         /**
-         * Identifier.
+         * <p>The unique identifier of the CA certificate.</p>
+         * <blockquote>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> to query the unique identifiers of all CA certificates.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>160ae6bb538d538c70c01f81dcf2****</p>
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);
@@ -142,7 +154,10 @@ public class UpdatePcaCertificateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ae******4wia</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -151,7 +166,7 @@ public class UpdatePcaCertificateRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>A list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -219,7 +234,10 @@ public class UpdatePcaCertificateRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>runtime</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -227,7 +245,10 @@ public class UpdatePcaCertificateRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -145,7 +145,10 @@ public class ListAllEndEntityInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the instance list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -153,7 +156,7 @@ public class ListAllEndEntityInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * List.
+         * <p>The list of instances.</p>
          */
         public Builder list(java.util.List<java.util.Map<String, ?>> list) {
             this.list = list;
@@ -161,7 +164,10 @@ public class ListAllEndEntityInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned in this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -169,7 +175,10 @@ public class ListAllEndEntityInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token that you can use to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -177,7 +186,10 @@ public class ListAllEndEntityInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -185,7 +197,10 @@ public class ListAllEndEntityInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443C05A8-6C16-52B5-BB97-5D8798F7A49A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class ListAllEndEntityInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ShowSize.
+         * <p>The maximum number of entries displayed on each page of a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -201,7 +219,10 @@ public class ListAllEndEntityInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

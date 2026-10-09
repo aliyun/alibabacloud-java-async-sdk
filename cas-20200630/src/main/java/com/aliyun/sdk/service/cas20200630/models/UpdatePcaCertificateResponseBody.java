@@ -67,7 +67,7 @@ public class UpdatePcaCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The error details of the authorization.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -75,7 +75,7 @@ public class UpdatePcaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>09470F19-CEE8-5C63-BF2C-02B5E3F07A17</p>
@@ -209,7 +209,10 @@ public class UpdatePcaCertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The unauthorized operation that you attempted to perform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yundun-cert:XXX</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -217,7 +220,18 @@ public class UpdatePcaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The identity that is used for authorization in the request. Valid values:</p>
+             * <ul>
+             * <li><p>RAM user: UID of the RAM user</p>
+             * </li>
+             * <li><p>RAM role: RoleName:RoleSessionName</p>
+             * </li>
+             * <li><p>Federated user: ProviderType/ProviderName</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RoleSessionName</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -225,7 +239,7 @@ public class UpdatePcaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>AuthPrincipalOwnerId</p>
+             * <p>The ID of the Alibaba Cloud account to which the authorized principal belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>186XXX</p>
@@ -236,7 +250,10 @@ public class UpdatePcaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SubUser</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -244,7 +261,10 @@ public class UpdatePcaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The complete diagnostic information that is encrypted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaEjlETkzRkQ5QjVELTI3NTEtM0I2Ni1BM0E1LThBQUYzMkJBNEJCQg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -252,7 +272,10 @@ public class UpdatePcaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The reason why the authorization failed. Valid values: ExplicitDeny: The authorization is explicitly denied. ImplicitDeny: The authorization is implicitly denied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -260,7 +283,10 @@ public class UpdatePcaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The type of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

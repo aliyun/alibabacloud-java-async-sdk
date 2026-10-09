@@ -78,7 +78,7 @@ public class DescribeCACertificateCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of created CA certificates, which includes root CA certificates and intermediate CA certificates.</p>
+         * <p>The total number of your CA certificates, including root and subordinate CA certificates.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

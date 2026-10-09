@@ -93,7 +93,16 @@ public class CreateExternalCACertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * Certificate.
+         * <p>The certificate content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIIEkjCCA3qgAwIBAgIQCgFBQgAAAVOFc2oLheynCDANBgkqhkiG9w0BAQsFADA/
+         * ...
+         * ...
+         * ...
+         * KOqkqm57TH2H3eDJAkSnh6/DNFu0Qg==
+         * -----END CERTIFICATE-----</p>
          */
         public Builder certificate(String certificate) {
             this.certificate = certificate;
@@ -101,7 +110,17 @@ public class CreateExternalCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateChain.
+         * <p>The CA certificate chain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * ...
+         * ...
+         * -----END CERTIFICATE-----
+         * -----BEGIN CERTIFICATE-----
+         * ...
+         * ...
+         * -----END CERTIFICATE-----</p>
          */
         public Builder certificateChain(String certificateChain) {
             this.certificateChain = certificateChain;
@@ -109,7 +128,10 @@ public class CreateExternalCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Identifier.
+         * <p>The unique identifier of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ed4068c-6f1b-6deb-8e32-3f8439a851cb</p>
          */
         public Builder identifier(String identifier) {
             this.identifier = identifier;
@@ -117,7 +139,10 @@ public class CreateExternalCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-123456789ABC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

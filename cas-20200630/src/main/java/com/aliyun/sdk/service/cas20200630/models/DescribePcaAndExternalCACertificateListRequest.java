@@ -101,7 +101,10 @@ public class DescribePcaAndExternalCACertificateListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -110,7 +113,10 @@ public class DescribePcaAndExternalCACertificateListRequest extends Request {
         }
 
         /**
-         * Identifiers.
+         * <p>The certificate identifiers. Separate multiple identifiers with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaa,bbb</p>
          */
         public Builder identifiers(String identifiers) {
             this.putQueryParameter("Identifiers", identifiers);
@@ -119,7 +125,10 @@ public class DescribePcaAndExternalCACertificateListRequest extends Request {
         }
 
         /**
-         * KeyWord.
+         * <p>The search keyword. Fuzzy search by name, domain name, or SANs is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -128,7 +137,10 @@ public class DescribePcaAndExternalCACertificateListRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * <p>The number of records to display per page. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);

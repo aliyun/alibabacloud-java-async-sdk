@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AssignCertificateCountRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaIdentifier")
+    private String caIdentifier;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CertTotalCount")
     private Integer certTotalCount;
 
@@ -27,6 +31,7 @@ public class AssignCertificateCountRequest extends Request {
 
     private AssignCertificateCountRequest(Builder builder) {
         super(builder);
+        this.caIdentifier = builder.caIdentifier;
         this.certTotalCount = builder.certTotalCount;
         this.id = builder.id;
     }
@@ -45,6 +50,13 @@ public class AssignCertificateCountRequest extends Request {
     }
 
     /**
+     * @return caIdentifier
+     */
+    public String getCaIdentifier() {
+        return this.caIdentifier;
+    }
+
+    /**
      * @return certTotalCount
      */
     public Integer getCertTotalCount() {
@@ -59,6 +71,7 @@ public class AssignCertificateCountRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AssignCertificateCountRequest, Builder> {
+        private String caIdentifier; 
         private Integer certTotalCount; 
         private Long id; 
 
@@ -68,12 +81,28 @@ public class AssignCertificateCountRequest extends Request {
 
         private Builder(AssignCertificateCountRequest request) {
             super(request);
+            this.caIdentifier = request.caIdentifier;
             this.certTotalCount = request.certTotalCount;
             this.id = request.id;
         } 
 
         /**
-         * CertTotalCount.
+         * <p>The identifier of the CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1f0167b4-ee84-XXX-49bc4d39fa68</p>
+         */
+        public Builder caIdentifier(String caIdentifier) {
+            this.putQueryParameter("CaIdentifier", caIdentifier);
+            this.caIdentifier = caIdentifier;
+            return this;
+        }
+
+        /**
+         * <p>The total number of certificate records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder certTotalCount(Integer certTotalCount) {
             this.putQueryParameter("CertTotalCount", certTotalCount);
@@ -82,7 +111,10 @@ public class AssignCertificateCountRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the data source to which the certificate belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33285</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

@@ -106,7 +106,7 @@ public class CreateServerCertificateWithCsrResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The certificate chain of the server certificate.</p>
+         * <p>The CA certificate chain.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n</p>
@@ -128,7 +128,7 @@ public class CreateServerCertificateWithCsrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>55C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -139,7 +139,7 @@ public class CreateServerCertificateWithCsrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The serial number of the server certificate.</p>
+         * <p>The certificate serial number.</p>
          * 
          * <strong>example:</strong>
          * <p>084bde9cd233f0ddae33adc438cfbbbd****</p>

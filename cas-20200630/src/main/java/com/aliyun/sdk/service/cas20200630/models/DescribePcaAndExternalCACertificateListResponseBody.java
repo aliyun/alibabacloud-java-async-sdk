@@ -119,7 +119,7 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         } 
 
         /**
-         * CertificateList.
+         * <p>The list of certificates.</p>
          */
         public Builder certificateList(java.util.List<CertificateList> certificateList) {
             this.certificateList = certificateList;
@@ -127,7 +127,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -135,7 +138,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         }
 
         /**
-         * PageCount.
+         * <p>The number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -143,7 +149,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         }
 
         /**
-         * ShowSize.
+         * <p>The number of records to display per page. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -159,7 +171,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -485,7 +500,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             } 
 
             /**
-             * AfterDate.
+             * <p>The certificate expiration time. The value is a timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1787539908871</p>
              */
             public Builder afterDate(Long afterDate) {
                 this.afterDate = afterDate;
@@ -493,7 +511,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * Algorithm.
+             * <p>The certificate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RSA</p>
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -501,7 +522,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * BeforeDate.
+             * <p>The certificate issuance time. The value is a timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1787539908871</p>
              */
             public Builder beforeDate(Long beforeDate) {
                 this.beforeDate = beforeDate;
@@ -509,7 +533,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * CertificateType.
+             * <p>The certificate type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUB_ROOT</p>
              */
             public Builder certificateType(String certificateType) {
                 this.certificateType = certificateType;
@@ -517,7 +544,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * CommonName.
+             * <p>The primary domain name bound to the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun.com</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -525,7 +555,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * CountryCode.
+             * <p>The country code of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -533,7 +566,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * Identifier.
+             * <p>The certificate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>05e148d8d3ecc9976d9ecd2b2f25****</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -541,7 +577,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * KeySize.
+             * <p>The size of the certificate key. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder keySize(Integer keySize) {
                 this.keySize = keySize;
@@ -549,7 +588,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * Locality.
+             * <p>The primary domain name bound to the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder locality(String locality) {
                 this.locality = locality;
@@ -557,7 +599,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * Md5.
+             * <p>The MD5 value bound to the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>05e148d8d3ecc9976d9ecd2b2f25****</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -565,7 +610,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * Organization.
+             * <p>The certificate organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Computing Co., Ltd</p>
              */
             public Builder organization(String organization) {
                 this.organization = organization;
@@ -573,7 +621,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * OrganizationUnit.
+             * <p>The certification authority that issued the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security</p>
              */
             public Builder organizationUnit(String organizationUnit) {
                 this.organizationUnit = organizationUnit;
@@ -581,7 +632,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * ParentIdentifier.
+             * <p>The parent certificate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1a83bcbb89e562885e40aa0108f5****</p>
              */
             public Builder parentIdentifier(String parentIdentifier) {
                 this.parentIdentifier = parentIdentifier;
@@ -589,7 +643,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * Sans.
+             * <p>All domain names bound to the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[ {&quot;Type&quot;: 7, &quot;Value&quot;: &quot;192.0.XX.XX&quot;}, {&quot;Type&quot;: 2, &quot;Value&quot;: &quot;<a href="http://www.aliyundoc.com%22%7D">www.aliyundoc.com&quot;}</a>, ]</p>
              */
             public Builder sans(String sans) {
                 this.sans = sans;
@@ -597,7 +654,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * SerialNumber.
+             * <p>The certificate serial number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62b2b943a32d96883a6650e672ea0276****</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -605,7 +665,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * Sha2.
+             * <p>The primary domain name bound to the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14dcc8afc7578e1fcec36d658f7e20de18f6957bbac42b373a66bc9de4e9****</p>
              */
             public Builder sha2(String sha2) {
                 this.sha2 = sha2;
@@ -613,7 +676,15 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * SignAlgorithm.
+             * <p>The certificate signature algorithm. Valid values:</p>
+             * <ul>
+             * <li><strong>prefix</strong>: Prefix match.</li>
+             * <li><strong>match</strong>: Exact match.</li>
+             * <li><strong>any</strong>: Match all.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA256WITHRSA</p>
              */
             public Builder signAlgorithm(String signAlgorithm) {
                 this.signAlgorithm = signAlgorithm;
@@ -621,7 +692,17 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * State.
+             * <p>The certificate state. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong>: Effective.</li>
+             * <li><strong>checking</strong>: Checking whether the domain name is on Alibaba Cloud Dynamic Route for CDN.</li>
+             * <li><strong>cname_error</strong>: The domain name is not pointed to an Alibaba Cloud Global Accelerator (GA) instance.</li>
+             * <li><strong>domain_invalid</strong>: The domain name contains invalid characters.</li>
+             * <li><strong>unsupport_wildcard</strong>: Wildcard domain names are not supported.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -629,7 +710,17 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * Status.
+             * <p>The certificate status. Valid values:</p>
+             * <ul>
+             * <li><strong>payed</strong>: Paid.</li>
+             * <li><strong>checking</strong>: Being reviewed.</li>
+             * <li><strong>issued</strong>: Issued.</li>
+             * <li><strong>revoked</strong>: Revoked.</li>
+             * <li><strong>checked_fail</strong>: Review failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ISSUE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -637,7 +728,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * SubjectDN.
+             * <p>The certificate subject (owner), represented in DN format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C=CN,O=Alibaba Cloud Computing Co. Ltd.,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
              */
             public Builder subjectDN(String subjectDN) {
                 this.subjectDN = subjectDN;
@@ -645,7 +739,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * X509Certificate.
+             * <p>The x.509 certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN CERTIFICATE----- …… -----END CERTIFICATE-----</p>
              */
             public Builder x509Certificate(String x509Certificate) {
                 this.x509Certificate = x509Certificate;
@@ -653,7 +750,10 @@ public class DescribePcaAndExternalCACertificateListResponseBody extends TeaMode
             }
 
             /**
-             * Years.
+             * <p>The number of years for which the certificate was purchased.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder years(Integer years) {
                 this.years = years;

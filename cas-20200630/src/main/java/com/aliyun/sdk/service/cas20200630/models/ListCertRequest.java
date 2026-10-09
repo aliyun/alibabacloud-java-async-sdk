@@ -185,7 +185,10 @@ public class ListCertRequest extends Request {
         } 
 
         /**
-         * AfterDate.
+         * <p>The host record bound to the certificate, in the YYYY-MM-DD format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-13</p>
          */
         public Builder afterDate(String afterDate) {
             this.putQueryParameter("AfterDate", afterDate);
@@ -194,7 +197,10 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * BeforeDate.
+         * <p>The modification time of the certificate, in the YYYY-MM-DD format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-09-04</p>
          */
         public Builder beforeDate(String beforeDate) {
             this.putQueryParameter("BeforeDate", beforeDate);
@@ -203,7 +209,10 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -212,7 +221,10 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * InstanceUuid.
+         * <p>The UUID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ef79512-569b-6a4e-9105-9b91473562f7</p>
          */
         public Builder instanceUuid(String instanceUuid) {
             this.putQueryParameter("InstanceUuid", instanceUuid);
@@ -221,7 +233,10 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -230,7 +245,10 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. If this parameter is empty, no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -239,7 +257,10 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * ParentIdentifier.
+         * <p>The identifier of the intermediate CA that issued the certificate. You can call <a href="https://help.aliyun.com/document_detail/465957.html">DescribeCACertificateList</a> to query the unique identifier of a CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>273ae6bb538d538c70c01f81jh2****</p>
          */
         public Builder parentIdentifier(String parentIdentifier) {
             this.putQueryParameter("ParentIdentifier", parentIdentifier);
@@ -248,7 +269,10 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * <p>The total size of the certificate. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);
@@ -257,7 +281,14 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The certificate status. Valid values:</p>
+         * <ul>
+         * <li>ISSUE: Normal.</li>
+         * <li>REVOKE: Revoked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ISSUE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -266,7 +297,15 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The certificate type. Valid values:</p>
+         * <ul>
+         * <li>SERVER: server certificate.</li>
+         * <li>CLIENT: client certificate.</li>
+         * <li>END_ENTITY: end-entity certificate.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CLIENT</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

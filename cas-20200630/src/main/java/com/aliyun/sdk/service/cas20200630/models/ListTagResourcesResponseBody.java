@@ -67,7 +67,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D69A58F-345C-4FDE-88E4-BF5189484043</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -325,7 +328,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxResults.
+             * <p>The maximum number of entries returned for this call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -333,7 +339,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token that is used to start the next query. If this parameter is empty, no more results exist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24262</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -341,7 +350,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagResources.
+             * <p>The tag resources.</p>
              */
             public Builder tagResources(DataTagResources tagResources) {
                 this.tagResources = tagResources;

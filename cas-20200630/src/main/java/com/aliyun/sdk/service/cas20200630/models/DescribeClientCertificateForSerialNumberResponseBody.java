@@ -67,7 +67,7 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         } 
 
         /**
-         * CertificateList.
+         * <p>The details of the client certificates or server certificates.</p>
          */
         public Builder certificateList(java.util.List<CertificateList> certificateList) {
             this.certificateList = certificateList;
@@ -75,7 +75,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -401,7 +404,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             } 
 
             /**
-             * AfterDate.
+             * <p>The expiration date of the certificate. The format is YYYY-MM-DD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-23T16:15Z</p>
              */
             public Builder afterDate(String afterDate) {
                 this.afterDate = afterDate;
@@ -409,7 +415,15 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * Algorithm.
+             * <p>The encryption algorithm type of the certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>RSA</strong>: RSA algorithm.</li>
+             * <li><strong>ECC</strong>: ECC algorithm.</li>
+             * <li><strong>SM2</strong>: SM2 algorithm.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RSA</p>
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -417,7 +431,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * BeforeDate.
+             * <p>The issuance date of the certificate. The format is YYYY-MM-DD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-28T16:15Z</p>
              */
             public Builder beforeDate(String beforeDate) {
                 this.beforeDate = beforeDate;
@@ -425,7 +442,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * CertificateType.
+             * <p>The type of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUB_ROOT</p>
              */
             public Builder certificateType(String certificateType) {
                 this.certificateType = certificateType;
@@ -433,7 +453,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * CommonName.
+             * <p>The common name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun.com</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -441,7 +464,11 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * CountryCode.
+             * <p>The code of the country where the organization associated with the subordinate CA certificate that issued this certificate is located.</p>
+             * <p>For more information about country codes, see the <strong>International codes</strong> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company information</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -449,7 +476,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * Identifier.
+             * <p>The unique identifier of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d3b95700998e47afc4d95f886579****</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -457,7 +487,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * KeySize.
+             * <p>The key length of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4096</p>
              */
             public Builder keySize(Integer keySize) {
                 this.keySize = keySize;
@@ -465,7 +498,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * Locality.
+             * <p>The name of the city where the organization associated with the subordinate CA certificate that issued this certificate is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder locality(String locality) {
                 this.locality = locality;
@@ -473,7 +509,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * Md5.
+             * <p>The MD5 fingerprint of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d3b95700998e47afc4d95f886579****</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -481,7 +520,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * Organization.
+             * <p>The name of the organization associated with the subordinate CA certificate that issued this certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Computing Co., Ltd</p>
              */
             public Builder organization(String organization) {
                 this.organization = organization;
@@ -489,7 +531,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * OrganizationUnit.
+             * <p>The name of the department in the organization associated with the subordinate CA certificate that issued this certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security</p>
              */
             public Builder organizationUnit(String organizationUnit) {
                 this.organizationUnit = organizationUnit;
@@ -497,7 +542,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * ParentIdentifier.
+             * <p>If this parameter is not empty, the client certificate is issued by Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1a83bcbb89e562885e40aa0108f5****</p>
              */
             public Builder parentIdentifier(String parentIdentifier) {
                 this.parentIdentifier = parentIdentifier;
@@ -505,7 +553,21 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * Sans.
+             * <p>The Subject Alternative Name (SAN) extension of the certificate, which indicates other domain names or IP addresses associated with the certificate.</p>
+             * <p>This parameter is represented as a string converted from a JSON array. Each element in the JSON array is a structure that corresponds to a SAN extension. Each SAN extension structure contains the following parameters:</p>
+             * <ul>
+             * <li><strong>Type</strong>: An Integer value that indicates the type of the extension. Valid values:<ul>
+             * <li><strong>1</strong>: an email address.</li>
+             * <li><strong>2</strong>: a domain name.</li>
+             * <li><strong>6</strong>: a Uniform Resource Identifier (URI).</li>
+             * <li><strong>7</strong>: an IP address.</li>
+             * </ul>
+             * </li>
+             * <li><strong>Value</strong>: A String value that indicates the content of the extension.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>[ {&quot;Type&quot;: 7, &quot;Value&quot;: &quot;192.0.XX.XX&quot;}, {&quot;Type&quot;: 2, &quot;Value&quot;: &quot;<a href="http://www.aliyundoc.com%22%7D">www.aliyundoc.com&quot;}</a>, ]</p>
              */
             public Builder sans(String sans) {
                 this.sans = sans;
@@ -513,7 +575,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * SerialNumber.
+             * <p>The serial number of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>084bde9cd233f0ddae33adc438cfbbbd****</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -521,7 +586,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * Sha2.
+             * <p>The SHA-256 fingerprint of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14dcc8afc7578e1fcec36d658f7e20de18f6957bbac42b373a66bc9de4e9****</p>
              */
             public Builder sha2(String sha2) {
                 this.sha2 = sha2;
@@ -529,7 +597,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * SignAlgorithm.
+             * <p>The signature algorithm of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA256WITHRSA</p>
              */
             public Builder signAlgorithm(String signAlgorithm) {
                 this.signAlgorithm = signAlgorithm;
@@ -537,7 +608,11 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * State.
+             * <p>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the organization associated with the subordinate CA certificate that issued this certificate is located.
+             * &lt;props=&quot;intl&quot;&gt;The name of the province or state where the organization associated with the subordinate CA certificate that issued this certificate is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -545,7 +620,14 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * Status.
+             * <p>The status of the certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>ISSUE</strong>: issued.</li>
+             * <li><strong>REVOKE</strong>: revoked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ISSUE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -553,7 +635,19 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * SubjectDN.
+             * <p>The distinguished name (DN) attribute of the certificate, which indicates the subject of the certificate. The DN contains the following information:</p>
+             * <ul>
+             * <li><strong>C</strong>: The country.</li>
+             * <li><strong>O</strong>: The organization.</li>
+             * <li><strong>OU</strong>: The department.</li>
+             * <li><strong>L</strong>: The city.
+             * &lt;props=&quot;china&quot;&gt;- <strong>ST</strong>: The province, municipality, or autonomous region.
+             * &lt;props=&quot;intl&quot;&gt;- <strong>ST</strong>: The province or state.</li>
+             * <li><strong>CN</strong>: The common name.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>C=CN,O=Alibaba Cloud Computing Co., Ltd.,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
              */
             public Builder subjectDN(String subjectDN) {
                 this.subjectDN = subjectDN;
@@ -561,7 +655,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * X509Certificate.
+             * <p>The content of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN CERTIFICATE-----  ...... -----END CERTIFICATE-----</p>
              */
             public Builder x509Certificate(String x509Certificate) {
                 this.x509Certificate = x509Certificate;
@@ -569,7 +666,10 @@ public class DescribeClientCertificateForSerialNumberResponseBody extends TeaMod
             }
 
             /**
-             * Years.
+             * <p>The validity period of the certificate. Unit: years.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder years(Integer years) {
                 this.years = years;

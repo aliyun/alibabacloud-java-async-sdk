@@ -132,7 +132,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return for this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -141,7 +144,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to start the next query. If this parameter is empty, no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -150,6 +156,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +169,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource ID.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -171,6 +178,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Set the value to <strong>instance</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +191,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The information about the instances and tags that are queried.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -251,7 +259,10 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag to query. You can specify multiple tag keys. n is a positive integer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -259,7 +270,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The value of n can be from 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

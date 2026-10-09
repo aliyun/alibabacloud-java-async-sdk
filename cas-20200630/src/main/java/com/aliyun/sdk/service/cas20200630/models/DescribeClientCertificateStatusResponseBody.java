@@ -67,7 +67,7 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the status information about the certificates.</p>
+         * <p>The detailed status information of the certificates.</p>
          */
         public Builder certificateStatus(java.util.List<CertificateStatus> certificateStatus) {
             this.certificateStatus = certificateStatus;
@@ -157,13 +157,13 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The date on which the certificate was revoked.</p>
+             * <p>The date when the certificate was revoked. The value is a UNIX timestamp in milliseconds.</p>
              * <blockquote>
-             * <p> This parameter is returned only when the value of the <strong>Status</strong> parameter is <strong>revoked</strong>. The value revoked indicates that the certificate is revoked.</p>
+             * <p>This parameter is returned only when <strong>Status</strong> is <strong>revoked</strong>, which indicates that the certificate has been revoked.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>2021-01-01T00:00Z</p>
+             * <p>1787539908871</p>
              */
             public Builder revokeTime(Long revokeTime) {
                 this.revokeTime = revokeTime;
@@ -182,10 +182,10 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the certificate. Valid values:</p>
+             * <p>The current status of the certificate. Valid values:</p>
              * <ul>
-             * <li><strong>good</strong>: The certificate is not revoked.</li>
-             * <li><strong>revoked</strong>: The certificate is revoked.</li>
+             * <li><strong>good</strong>: The certificate has not been revoked.</li>
+             * <li><strong>revoked</strong>: The certificate has been revoked.</li>
              * <li><strong>unknown</strong>: The server cannot determine the status of the certificate.</li>
              * </ul>
              * 

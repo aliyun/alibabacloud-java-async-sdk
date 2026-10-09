@@ -104,7 +104,10 @@ public class MoveResourceGroupRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -113,6 +116,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the destination resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +129,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the resource to move.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +142,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The type of the resource. Set the value to <strong>instance</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
