@@ -80,7 +80,7 @@ public class DescribeNetworkInstanceListResponseBody extends TeaModel {
         } 
 
         /**
-         * NetworkInstanceList.
+         * <p>The details of the network instances.</p>
          */
         public Builder networkInstanceList(java.util.List<NetworkInstanceList> networkInstanceList) {
             this.networkInstanceList = networkInstanceList;
@@ -88,7 +88,10 @@ public class DescribeNetworkInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D2373503-3921-59F2-93A6-3DA7FB7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeNetworkInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -188,7 +194,10 @@ public class DescribeNetworkInstanceListResponseBody extends TeaModel {
             } 
 
             /**
-             * NetworkInstanceId.
+             * <p>The ID of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-m5ewlqkuf7or****</p>
              */
             public Builder networkInstanceId(String networkInstanceId) {
                 this.networkInstanceId = networkInstanceId;
@@ -196,7 +205,10 @@ public class DescribeNetworkInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInstanceName.
+             * <p>The name of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-test</p>
              */
             public Builder networkInstanceName(String networkInstanceName) {
                 this.networkInstanceName = networkInstanceName;
@@ -204,7 +216,10 @@ public class DescribeNetworkInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInstanceType.
+             * <p>The type of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkInstanceType(String networkInstanceType) {
                 this.networkInstanceType = networkInstanceType;
@@ -212,7 +227,10 @@ public class DescribeNetworkInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;

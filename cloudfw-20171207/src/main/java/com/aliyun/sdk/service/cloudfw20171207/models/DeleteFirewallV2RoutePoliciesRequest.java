@@ -87,7 +87,7 @@ public class DeleteFirewallV2RoutePoliciesRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the VPC firewall.</p>
+         * <p>The ID of the VPC firewall instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vfw-tr-d5ba592ac6c84aff****</p>
@@ -99,10 +99,12 @@ public class DeleteFirewallV2RoutePoliciesRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +117,7 @@ public class DeleteFirewallV2RoutePoliciesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the routing policy.</p>
+         * <p>The ID of the firewall routing policy.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-2d06d3568fd74d60****</p>

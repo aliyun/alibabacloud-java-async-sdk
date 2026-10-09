@@ -106,7 +106,10 @@ public class DescribeRiskEventStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * AttackAppCnt.
+         * <p>The number of attacked applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder attackAppCnt(Integer attackAppCnt) {
             this.attackAppCnt = attackAppCnt;
@@ -114,7 +117,10 @@ public class DescribeRiskEventStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * AttackCnt.
+         * <p>The attack count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder attackCnt(Integer attackCnt) {
             this.attackCnt = attackCnt;
@@ -122,7 +128,10 @@ public class DescribeRiskEventStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * AttackIpCnt.
+         * <p>The number of attacked assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder attackIpCnt(Integer attackIpCnt) {
             this.attackIpCnt = attackIpCnt;
@@ -130,7 +139,10 @@ public class DescribeRiskEventStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * DropCnt.
+         * <p>The drop count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder dropCnt(Integer dropCnt) {
             this.dropCnt = dropCnt;
@@ -138,7 +150,10 @@ public class DescribeRiskEventStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F93A490D-9E92-5AA4-BA79-600FFC09****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

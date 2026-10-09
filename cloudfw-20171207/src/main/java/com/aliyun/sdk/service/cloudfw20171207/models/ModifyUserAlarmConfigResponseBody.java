@@ -54,7 +54,10 @@ public class ModifyUserAlarmConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3B168A0F-A43D-5FD0-8059-B51BDD6E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -80,7 +80,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The domain names in outbound connections.</p>
+         * <p>The list of outbound domains.</p>
          */
         public Builder domainList(java.util.List<DomainList> domainList) {
             this.domainList = domainList;
@@ -88,7 +88,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
@@ -99,7 +99,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of the domain names in outbound connections.</p>
+         * <p>The total number of outbound domains.</p>
          * 
          * <strong>example:</strong>
          * <p>132</p>
@@ -168,7 +168,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationName.
+             * <p>The application names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -176,7 +179,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The application port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -282,12 +288,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the tag. Valid values:</p>
-             * <ul>
-             * <li><strong>Suspicious</strong></li>
-             * <li><strong>Malicious</strong></li>
-             * <li><strong>Trusted</strong></li>
-             * </ul>
+             * <p>The categorization of the intelligence label. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>Trusted</p>
@@ -298,12 +299,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk level. Valid values:</p>
-             * <ul>
-             * <li><strong>1</strong>: low</li>
-             * <li><strong>2</strong>: medium</li>
-             * <li><strong>3</strong>: high</li>
-             * </ul>
+             * <p>The risk assessment level. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -314,10 +310,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the tag.</p>
+             * <p>The tag description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Tag indicating that the domain name is added to the whitelist</p>
+             * <p>tag-describe</p>
              */
             public Builder tagDescribe(String tagDescribe) {
                 this.tagDescribe = tagDescribe;
@@ -325,7 +321,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the tag.</p>
+             * <p>The intelligence label ID.</p>
              * 
              * <strong>example:</strong>
              * <p>AliYun</p>
@@ -336,10 +332,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the tag.</p>
+             * <p>The tag name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Tag indicating that the domain name is added to the whitelist</p>
+             * <p>tag-name</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -744,11 +740,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether an access control policy is configured. Valid values:</p>
-             * <ul>
-             * <li><strong>Uncovered</strong>: no</li>
-             * <li><strong>FullCoverage</strong>: yes</li>
-             * </ul>
+             * <p>Indicates whether the access control policy provides coverage. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>Uncovered</p>
@@ -759,10 +751,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The suggestion in an access control policy.</p>
+             * <p>The ACL recommendation details.</p>
              * 
              * <strong>example:</strong>
-             * <p>Allows the traffic.</p>
+             * <p>RecommendedRelease</p>
              */
             public Builder aclRecommendDetail(String aclRecommendDetail) {
                 this.aclRecommendDetail = aclRecommendDetail;
@@ -770,11 +762,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the access control policy. Valid values:</p>
-             * <ul>
-             * <li><strong>normal</strong>: healthy</li>
-             * <li><strong>abnormal</strong>: unhealthy</li>
-             * </ul>
+             * <p>The health status of the access control policy. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -788,7 +776,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
              * <p>The name of the address book.</p>
              * 
              * <strong>example:</strong>
-             * <p>The address book for outbound connections</p>
+             * <p>Outreach Address Book</p>
              */
             public Builder addressGroupName(String addressGroupName) {
                 this.addressGroupName = addressGroupName;
@@ -815,7 +803,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationPortList.
+             * <p>The list of application ports.</p>
              */
             public Builder applicationPortList(java.util.List<ApplicationPortList> applicationPortList) {
                 this.applicationPortList = applicationPortList;
@@ -823,7 +811,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound asset count.</p>
+             * <p>The total number of assets with outbound connections.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -834,10 +822,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website service.</p>
+             * <p>The website business.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alibaba Cloud</p>
+             * <p>Aliyun</p>
              */
             public Builder business(String business) {
                 this.business = business;
@@ -845,12 +833,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the tag. Valid values:</p>
-             * <ul>
-             * <li><strong>Suspicious</strong></li>
-             * <li><strong>Malicious</strong></li>
-             * <li><strong>Trusted</strong></li>
-             * </ul>
+             * <p>The categorization of the intelligence label. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>Trusted</p>
@@ -861,11 +844,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type ID of the service to which the domain name belongs. Valid values:</p>
-             * <ul>
-             * <li><strong>Aliyun</strong>: Alibaba Cloud services</li>
-             * <li><strong>NotAliyun</strong>: third-party services</li>
-             * </ul>
+             * <p>The product category ID. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>Aliyun</p>
@@ -876,14 +855,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the service to which the domain name belongs. Valid values:</p>
-             * <ul>
-             * <li><strong>Alibaba Cloud services</strong></li>
-             * <li><strong>Third-party services</strong></li>
-             * </ul>
+             * <p>The category name of the product. Valid values:</p>
              * 
              * <strong>example:</strong>
-             * <p>Alibaba Cloud services</p>
+             * <p>Alibaba Cloud Product</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -891,7 +866,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name in outbound connections.</p>
+             * <p>The domain name of the outbound connections.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -902,10 +877,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the group to which the access control policy belongs.</p>
+             * <p>The group name of the rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>Group of addresses in outbound connections</p>
+             * <p>group-name</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -913,11 +888,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an <code>access control policy</code> is configured for the domain name. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: yes</li>
-             * <li><strong>false</strong>: no</li>
-             * </ul>
+             * <p>Indicates whether an ACL covers the management of this domain name. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -928,11 +899,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an access control policy is recommended. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: yes</li>
-             * <li><strong>false</strong>: no</li>
-             * </ul>
+             * <p>Indicates whether an ACL recommendation exists. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -943,7 +910,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The volume of inbound traffic.</p>
+             * <p>The inbound traffic.</p>
              * 
              * <strong>example:</strong>
              * <p>3214</p>
@@ -954,11 +921,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the domain name is marked as normal. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: normal</li>
-             * <li><strong>false</strong>: abnormal</li>
-             * </ul>
+             * <p>Indicates whether the outbound domain is marked as normal. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -969,10 +932,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the organization.</p>
+             * <p>The organization name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alibaba Cloud Computing Co., Ltd.</p>
+             * <p>Alibaba Cloud Computing Limited</p>
              */
             public Builder organization(String organization) {
                 this.organization = organization;
@@ -980,7 +943,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The volume of outbound traffic.</p>
+             * <p>The outbound traffic.</p>
              * 
              * <strong>example:</strong>
              * <p>4582</p>
@@ -991,7 +954,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound private asset count.</p>
+             * <p>The total number of private network assets with outbound connections.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1002,7 +965,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the access control policy.</p>
+             * <p>The ACL rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>add-dfadf-f****</p>
@@ -1013,10 +976,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the access control policy.</p>
+             * <p>The ACL rule name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Default rule</p>
+             * <p>acl-name</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1024,10 +987,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the domain name is secure.</p>
+             * <p>The security reason.</p>
              * 
              * <strong>example:</strong>
-             * <p>Intelligent policy: The destination domain name belongs to Alibaba Cloud Computing Co., Ltd. The domain name mainly provides services for Alibaba Cloud. No security risks are found, and you can add the domain name to the whitelist.</p>
+             * <p>Smart policy: The target domain name belongs to Aliyun Computing Co., Ltd., and its main business is Aliyun. No security risks have been found. It can be used to configure an outreach whitelist.</p>
              */
             public Builder securityReason(String securityReason) {
                 this.securityReason = securityReason;
@@ -1035,12 +998,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The suggestion to handle the traffic of the domain name in outbound connections. Valid values:</p>
-             * <ul>
-             * <li><strong>pass</strong>: allow</li>
-             * <li><strong>alert</strong>: monitor</li>
-             * <li><strong>drop</strong>: deny</li>
-             * </ul>
+             * <p>The security policy for the Outbound Domain. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>pass</p>
@@ -1062,7 +1020,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of tags.</p>
+             * <p>The list of tags.</p>
              */
             public Builder tagList(java.util.List<TagList> tagList) {
                 this.tagList = tagList;
@@ -1070,7 +1028,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total volume of traffic. Unit: bytes.</p>
+             * <p>The total traffic. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>800</p>

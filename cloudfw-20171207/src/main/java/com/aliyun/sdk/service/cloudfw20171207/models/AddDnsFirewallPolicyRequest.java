@@ -222,6 +222,12 @@ public class AddDnsFirewallPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The action that Cloud Firewall performs on the traffic in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>accept</strong>: Allow.</li>
+         * <li><strong>drop</strong>: Deny.</li>
+         * <li><strong>log</strong>: Monitor.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,10 +240,11 @@ public class AddDnsFirewallPolicyRequest extends Request {
         }
 
         /**
+         * <p>The description of the access control policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Allow specified domain names</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -246,6 +253,13 @@ public class AddDnsFirewallPolicyRequest extends Request {
         }
 
         /**
+         * <p>The destination address in the access control policy.</p>
+         * <ul>
+         * <li>If <strong>DestinationType</strong> is set to net, <strong>Destination</strong> is a destination CIDR block. Example: 1.2.3.4/24.</li>
+         * <li>If <strong>DestinationType</strong> is set to group, <strong>Destination</strong> is a destination address book name. Example: db_group.</li>
+         * <li>If <strong>DestinationType</strong> is set to domain, <strong>Destination</strong> is a destination domain name. Example: *.aliyuncs.com.</li>
+         * <li>If <strong>DestinationType</strong> is set to location, <strong>Destination</strong> is a destination area (see the area positional encoding below). Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,6 +272,7 @@ public class AddDnsFirewallPolicyRequest extends Request {
         }
 
         /**
+         * <p>The type of the destination address in the DNS firewall access control policy. Only group (destination address book) and domain (destination domain name) are supported. net and CIDR addresses are not applicable to this operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,7 +285,13 @@ public class AddDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * Direction.
+         * <p>The traffic direction of the DNS firewall access control policy.</p>
+         * <blockquote>
+         * <p>This parameter is not validated on the backend. When you create or modify a DNS firewall policy, the direction is always stored as <strong>out</strong> (outbound). Passing <strong>in</strong> does not cause an error or take effect. The DNS firewall supports only outbound policies.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>out</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -279,6 +300,13 @@ public class AddDnsFirewallPolicyRequest extends Request {
         }
 
         /**
+         * <p>The IP address version. Valid values:</p>
+         * <ul>
+         * <li><p><strong>4</strong>: IPv4</p>
+         * </li>
+         * <li><p><strong>6</strong>: IPv6</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -291,7 +319,14 @@ public class AddDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -300,6 +335,7 @@ public class AddDnsFirewallPolicyRequest extends Request {
         }
 
         /**
+         * <p>The policy priority of the DNS firewall policy. Valid values: 1 to 20000. A smaller value indicates a higher policy priority.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -312,6 +348,11 @@ public class AddDnsFirewallPolicyRequest extends Request {
         }
 
         /**
+         * <p>The enabled status of the access control policy. The policy is enabled by default after creation. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enable the access control policy.</li>
+         * <li><strong>false</strong>: Disable the access control policy.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -324,6 +365,13 @@ public class AddDnsFirewallPolicyRequest extends Request {
         }
 
         /**
+         * <p>The source address in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><p>If <strong>SourceType</strong> is set to <code>net</code>, Source is a source CIDR block. Example: 10.2.XX.XX/24.</p>
+         * </li>
+         * <li><p>If <strong>SourceType</strong> is set to <code>group</code>, Source is a source address book name. Example: db_group.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -336,7 +384,10 @@ public class AddDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>140.205.118.97</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -345,6 +396,13 @@ public class AddDnsFirewallPolicyRequest extends Request {
         }
 
         /**
+         * <p>The type of the source address in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>net</strong>: source CIDR block</p>
+         * </li>
+         * <li><p><strong>group</strong>: source address book</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

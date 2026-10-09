@@ -143,7 +143,10 @@ public class DescribeIpsPrivateAssocRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -152,7 +155,16 @@ public class DescribeIpsPrivateAssocRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -161,7 +173,10 @@ public class DescribeIpsPrivateAssocRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The Alibaba Cloud account ID of the resource owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -170,7 +185,10 @@ public class DescribeIpsPrivateAssocRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -179,7 +197,10 @@ public class DescribeIpsPrivateAssocRequest extends Request {
         }
 
         /**
-         * PublicIp.
+         * <p>The public IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.0.113.1</p>
          */
         public Builder publicIp(String publicIp) {
             this.putQueryParameter("PublicIp", publicIp);
@@ -188,7 +209,10 @@ public class DescribeIpsPrivateAssocRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-c5vhmjdfp5t****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -197,7 +221,10 @@ public class DescribeIpsPrivateAssocRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>close</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

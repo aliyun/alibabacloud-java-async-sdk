@@ -93,7 +93,10 @@ public class ReleaseExpiredInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -101,7 +104,16 @@ public class ReleaseExpiredInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ReleaseStatus.
+         * <p>Indicates whether the instance was released:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder releaseStatus(String releaseStatus) {
             this.releaseStatus = releaseStatus;
@@ -109,7 +121,10 @@ public class ReleaseExpiredInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9EC1DB0F-EE53-5D36-B5DA-71CB******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,10 @@ public class ReleaseExpiredInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

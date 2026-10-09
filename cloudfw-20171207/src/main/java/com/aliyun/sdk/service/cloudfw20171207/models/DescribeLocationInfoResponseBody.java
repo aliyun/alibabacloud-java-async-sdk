@@ -119,7 +119,10 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * CnCount.
+         * <p>The number of regions in China.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>340</p>
          */
         public Builder cnCount(Integer cnCount) {
             this.cnCount = cnCount;
@@ -127,7 +130,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * CnList.
+         * <p>The list of regions in China.</p>
          */
         public Builder cnList(java.util.List<CnList> cnList) {
             this.cnList = cnList;
@@ -135,7 +138,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * CnProvinceList.
+         * <p>The information about provinces and cities in China.</p>
          */
         public Builder cnProvinceList(java.util.List<CnProvinceList> cnProvinceList) {
             this.cnProvinceList = cnProvinceList;
@@ -143,7 +146,10 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OverseasCount.
+         * <p>The number of regions outside China.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>238</p>
          */
         public Builder overseasCount(Integer overseasCount) {
             this.overseasCount = overseasCount;
@@ -151,7 +157,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OverseasList.
+         * <p>The list of regions outside China.</p>
          */
         public Builder overseasList(java.util.List<OverseasList> overseasList) {
             this.overseasList = overseasList;
@@ -159,7 +165,10 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD3BE433-FAB0-55D8-918A-69B306****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -225,7 +234,10 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * LocId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3301</p>
              */
             public Builder locId(String locId) {
                 this.locId = locId;
@@ -233,7 +245,10 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LocName.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou City</p>
              */
             public Builder locName(String locName) {
                 this.locName = locName;
@@ -300,7 +315,10 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * LocId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder locId(String locId) {
                 this.locId = locId;
@@ -308,7 +326,10 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LocName.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder locName(String locName) {
                 this.locName = locName;
@@ -375,7 +396,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Cities.
+             * <p>The list of city codes.</p>
              */
             public Builder cities(java.util.List<Cities> cities) {
                 this.cities = cities;
@@ -383,7 +404,10 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ProvinceName.
+             * <p>The name of the province.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang</p>
              */
             public Builder provinceName(String provinceName) {
                 this.provinceName = provinceName;
@@ -450,7 +474,10 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * LocId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>US</p>
              */
             public Builder locId(String locId) {
                 this.locId = locId;
@@ -458,7 +485,10 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LocName.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>United States</p>
              */
             public Builder locName(String locName) {
                 this.locName = locName;

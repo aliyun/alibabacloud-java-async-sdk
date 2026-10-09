@@ -102,6 +102,7 @@ public class AddAclBackupDataRequest extends Request {
         } 
 
         /**
+         * <p>The backup time, specified as a Unix timestamp (the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class AddAclBackupDataRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the backup data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj-001</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -123,7 +127,10 @@ public class AddAclBackupDataRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -132,7 +139,10 @@ public class AddAclBackupDataRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>115.194.124.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

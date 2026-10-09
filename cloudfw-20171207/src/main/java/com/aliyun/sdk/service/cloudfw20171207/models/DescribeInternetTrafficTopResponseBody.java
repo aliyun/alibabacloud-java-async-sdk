@@ -93,7 +93,10 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         } 
 
         /**
-         * DataCount.
+         * <p>The number of traffic data entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder dataCount(Integer dataCount) {
             this.dataCount = dataCount;
@@ -101,7 +104,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         }
 
         /**
-         * DataList.
+         * <p>The list of traffic data.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -109,7 +112,10 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         }
 
         /**
-         * DataType.
+         * <p>The type of traffic data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in_src_ip</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -117,7 +123,10 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +244,10 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
             } 
 
             /**
-             * DataName.
+             * <p>The name of the country.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>US</p>
              */
             public Builder dataName(String dataName) {
                 this.dataName = dataName;
@@ -243,7 +255,10 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
             }
 
             /**
-             * DataValue.
+             * <p>The inbound traffic percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.12</p>
              */
             public Builder dataValue(String dataValue) {
                 this.dataValue = dataValue;
@@ -251,7 +266,10 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
             }
 
             /**
-             * IsSubscribed.
+             * <p>Indicates whether the data is subscribed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isSubscribed(Boolean isSubscribed) {
                 this.isSubscribed = isSubscribed;
@@ -259,7 +277,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
             }
 
             /**
-             * LabelList.
+             * <p>The list of labels.</p>
              */
             public Builder labelList(java.util.List<String> labelList) {
                 this.labelList = labelList;
@@ -267,7 +285,10 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
             }
 
             /**
-             * SessionCount.
+             * <p>The number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder sessionCount(Long sessionCount) {
                 this.sessionCount = sessionCount;
@@ -275,7 +296,10 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBytes.
+             * <p>The total traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalBytes(Long totalBytes) {
                 this.totalBytes = totalBytes;

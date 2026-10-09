@@ -103,7 +103,16 @@ public class UpdateSecurityProxyRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -112,6 +121,7 @@ public class UpdateSecurityProxyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the NAT firewall.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +134,7 @@ public class UpdateSecurityProxyRequest extends Request {
         }
 
         /**
+         * <p>The name of the NAT firewall. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +147,14 @@ public class UpdateSecurityProxyRequest extends Request {
         }
 
         /**
-         * StrictMode.
+         * <p>Specifies whether to enable strict mode. Valid values:</p>
+         * <ul>
+         * <li>1: strict mode.</li>
+         * <li>0: loose mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder strictMode(Integer strictMode) {
             this.putQueryParameter("StrictMode", strictMode);

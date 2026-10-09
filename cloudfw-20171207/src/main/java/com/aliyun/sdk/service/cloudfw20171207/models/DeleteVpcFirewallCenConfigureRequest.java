@@ -88,10 +88,12 @@ public class DeleteVpcFirewallCenConfigureRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,7 +106,7 @@ public class DeleteVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * <p>The UID of a member account of the current Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -116,7 +118,7 @@ public class DeleteVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs of VPC firewalls.</p>
+         * <p>The list of instance IDs of VPC border firewalls.</p>
          * <p>This parameter is required.</p>
          */
         public Builder vpcFirewallIdList(java.util.List<String> vpcFirewallIdList) {

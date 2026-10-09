@@ -54,10 +54,10 @@ public class ModifyControlPolicyPriorityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>586F34E8-3F16-4C08-9FFC-8FFDC64B9D0D</p>
+         * <p>586F34E8-3F16-4C08-9FFC-8FFDC64B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

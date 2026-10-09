@@ -106,7 +106,10 @@ public class DescribeNatFirewallQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * ExceptionCount.
+         * <p>The number of nodes that are in an abnormal state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder exceptionCount(Long exceptionCount) {
             this.exceptionCount = exceptionCount;
@@ -114,7 +117,10 @@ public class DescribeNatFirewallQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F98BAA59-5863-5B61-8FD4-C5E96813****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +128,10 @@ public class DescribeNatFirewallQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of quotas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,7 +139,10 @@ public class DescribeNatFirewallQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * UnprotectedCount.
+         * <p>The number of unprotected assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder unprotectedCount(Long unprotectedCount) {
             this.unprotectedCount = unprotectedCount;
@@ -138,7 +150,10 @@ public class DescribeNatFirewallQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * UsedCount.
+         * <p>The number of used quotas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder usedCount(Long usedCount) {
             this.usedCount = usedCount;

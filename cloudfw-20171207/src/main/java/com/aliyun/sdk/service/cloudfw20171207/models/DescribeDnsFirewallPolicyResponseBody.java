@@ -106,7 +106,10 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.pageNo = pageNo;
@@ -114,7 +117,10 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Policys.
+         * <p>The DNS firewall access control policies.</p>
          */
         public Builder policys(java.util.List<Policys> policys) {
             this.policys = policys;
@@ -130,7 +136,10 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A4ACDE9-9F9F-56C1-B3B7-60971BA1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -399,7 +411,18 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * AclAction.
+             * <p>The action that is performed on traffic that matches the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>accept</strong>: allows the traffic.</p>
+             * </li>
+             * <li><p><strong>drop</strong>: denies the traffic.</p>
+             * </li>
+             * <li><p><strong>log</strong>: monitors the traffic.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>accept</p>
              */
             public Builder aclAction(String aclAction) {
                 this.aclAction = aclAction;
@@ -407,7 +430,10 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * AclUuid.
+             * <p>The unique ID of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01281255-d220-4db1-8f4f-c4df221a****</p>
              */
             public Builder aclUuid(String aclUuid) {
                 this.aclUuid = aclUuid;
@@ -415,7 +441,10 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -423,7 +452,18 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Destination.
+             * <p>The destination address in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p>If <strong>DestinationType</strong> is <code>net</code>, the value of this parameter is a destination CIDR block.</p>
+             * </li>
+             * <li><p>If <strong>DestinationType</strong> is <code>domain</code>, the value of this parameter is a destination domain.</p>
+             * </li>
+             * <li><p>If <strong>DestinationType</strong> is <code>group</code>, the value of this parameter is the name of a destination address book.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>x.x.x.x/32</p>
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -431,7 +471,7 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationAddrs.
+             * <p>The destination addresses in the address book.</p>
              */
             public Builder destinationAddrs(java.util.List<String> destinationAddrs) {
                 this.destinationAddrs = destinationAddrs;
@@ -439,7 +479,16 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationGroupType.
+             * <p>The type of the destination address book in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>ip</strong>: an IP address book</p>
+             * </li>
+             * <li><p><strong>domain</strong>: a domain address book</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder destinationGroupType(String destinationGroupType) {
                 this.destinationGroupType = destinationGroupType;
@@ -447,7 +496,20 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationType.
+             * <p>The type of the destination address in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>net</strong>: destination CIDR block</p>
+             * </li>
+             * <li><p><strong>group</strong>: destination address book</p>
+             * </li>
+             * <li><p><strong>domain</strong>: destination domain</p>
+             * </li>
+             * <li><p><strong>location</strong>: destination location</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>net</p>
              */
             public Builder destinationType(String destinationType) {
                 this.destinationType = destinationType;
@@ -455,7 +517,16 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Direction.
+             * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
+             * <ul>
+             * <li><p><strong>in</strong>: inbound traffic</p>
+             * </li>
+             * <li><p><strong>out</strong>: outbound traffic</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>in</p>
              */
             public Builder direction(String direction) {
                 this.direction = direction;
@@ -463,7 +534,10 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * HitLastTime.
+             * <p>The last time the policy was hit. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579261141</p>
              */
             public Builder hitLastTime(Long hitLastTime) {
                 this.hitLastTime = hitLastTime;
@@ -471,7 +545,10 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * HitTimes.
+             * <p>The number of hits for the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder hitTimes(Long hitTimes) {
                 this.hitTimes = hitTimes;
@@ -479,7 +556,16 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion.
+             * <p>The IP version supported by the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>4</strong>: IPv4</p>
+             * </li>
+             * <li><p><strong>6</strong>: IPv6</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder ipVersion(Integer ipVersion) {
                 this.ipVersion = ipVersion;
@@ -487,7 +573,10 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the access control policy. A smaller value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -495,7 +584,16 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Release.
+             * <p>Indicates whether the access control policy is enabled. After a policy is created, it is enabled by default. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: enabled</p>
+             * </li>
+             * <li><p><strong>false</strong>: disabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder release(String release) {
                 this.release = release;
@@ -503,7 +601,18 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source address in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p>If <strong>SourceType</strong> is <code>net</code>, the value of this parameter is a source CIDR block. Example: 192.0.XX.XX/24.</p>
+             * </li>
+             * <li><p>If <strong>SourceType</strong> is <code>group</code>, the value of this parameter is the name of a source address book. Example: db_group.</p>
+             * </li>
+             * <li><p>If <strong>SourceType</strong> is <code>location</code>, the value of this parameter is a location. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX/24</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -511,7 +620,7 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SourceAddrs.
+             * <p>The source addresses.</p>
              */
             public Builder sourceAddrs(java.util.List<String> sourceAddrs) {
                 this.sourceAddrs = sourceAddrs;
@@ -519,7 +628,22 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SourceGroupType.
+             * <p>The type of the source address book in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>ip</strong>: an IP address book</p>
+             * </li>
+             * <li><p><strong>tag</strong>: a tag address book</p>
+             * </li>
+             * <li><p><strong>domain</strong>: a domain address book</p>
+             * </li>
+             * <li><p><strong>threat</strong>: a threat intelligence address book</p>
+             * </li>
+             * <li><p><strong>backsrc</strong>: a back-to-origin address book</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder sourceGroupType(String sourceGroupType) {
                 this.sourceGroupType = sourceGroupType;
@@ -527,7 +651,16 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The type of the source address in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>net</strong>: a source CIDR block</p>
+             * </li>
+             * <li><p><strong>group</strong>: a source address book</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>net</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

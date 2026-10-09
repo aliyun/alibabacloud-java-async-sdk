@@ -104,7 +104,14 @@ public class CreateNatFirewallPreCheckRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -113,6 +120,7 @@ public class CreateNatFirewallPreCheckRequest extends Request {
         }
 
         /**
+         * <p>The ID of the NAT gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +133,10 @@ public class CreateNatFirewallPreCheckRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the NAT gateway.</p>
+         * <blockquote>
+         * <p>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +149,7 @@ public class CreateNatFirewallPreCheckRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the VPC-connected instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

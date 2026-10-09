@@ -93,7 +93,7 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The returned data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -101,7 +101,10 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxBandwidthTime.
+         * <p>The timestamp when the peak total traffic occurred. The value is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1758470400</p>
          */
         public Builder maxBandwidthTime(Long maxBandwidthTime) {
             this.maxBandwidthTime = maxBandwidthTime;
@@ -109,7 +112,7 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxBandwidthTimeBps.
+         * <p>The traffic distribution at the time of peak total traffic.</p>
          */
         public Builder maxBandwidthTimeBps(MaxBandwidthTimeBps maxBandwidthTimeBps) {
             this.maxBandwidthTimeBps = maxBandwidthTimeBps;
@@ -117,7 +120,10 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E7F94C7-781F-5192-86CF-DB085****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +228,10 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * InternetBps.
+             * <p>The Internet firewall traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder internetBps(Long internetBps) {
                 this.internetBps = internetBps;
@@ -230,7 +239,10 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * NatBps.
+             * <p>The NAT firewall traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder natBps(Long natBps) {
                 this.natBps = natBps;
@@ -238,7 +250,11 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the traffic occurred. The value is a UNIX timestamp in seconds.</p>
+             * <p>If the data at this point in time has not been processed, the values of other fields are -1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1758470400</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -246,7 +262,10 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBps.
+             * <p>The total firewall traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder totalBps(Long totalBps) {
                 this.totalBps = totalBps;
@@ -254,7 +273,10 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * VpcBps.
+             * <p>The VPC firewall traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder vpcBps(Long vpcBps) {
                 this.vpcBps = vpcBps;
@@ -347,7 +369,10 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * InternetBps.
+             * <p>The Internet firewall traffic at the time of peak total traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder internetBps(Long internetBps) {
                 this.internetBps = internetBps;
@@ -355,7 +380,10 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * NatBps.
+             * <p>The NAT firewall traffic at the time of peak total traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder natBps(Long natBps) {
                 this.natBps = natBps;
@@ -363,7 +391,10 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBps.
+             * <p>The peak total traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder totalBps(Long totalBps) {
                 this.totalBps = totalBps;
@@ -371,7 +402,10 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * VpcBps.
+             * <p>The VPC firewall traffic at the time of peak total traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder vpcBps(Long vpcBps) {
                 this.vpcBps = vpcBps;

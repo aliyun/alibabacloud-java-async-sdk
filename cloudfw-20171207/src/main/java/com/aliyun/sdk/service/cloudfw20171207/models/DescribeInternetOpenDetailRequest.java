@@ -283,7 +283,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         } 
 
         /**
-         * AssetsInstanceId.
+         * <p>The ID of the asset. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf6faknmuby7ezht****</p>
          */
         public Builder assetsInstanceId(String assetsInstanceId) {
             this.putQueryParameter("AssetsInstanceId", assetsInstanceId);
@@ -292,7 +295,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * AssetsInstanceName.
+         * <p>The name of the asset. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_test</p>
          */
         public Builder assetsInstanceName(String assetsInstanceName) {
             this.putQueryParameter("AssetsInstanceName", assetsInstanceName);
@@ -301,7 +307,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * AssetsType.
+         * <p>The type of the asset for an exact match. If you leave this parameter empty, all asset types are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsPublicIP</p>
          */
         public Builder assetsType(String assetsType) {
             this.putQueryParameter("AssetsType", assetsType);
@@ -310,7 +319,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -319,7 +331,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1745251200</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -328,7 +343,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -337,7 +355,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -346,7 +367,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>The port for an exact match. The value must be an integer from 1 to 65535. If you leave this parameter empty, all ports are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9100</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -355,7 +379,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * PublicIp.
+         * <p>The public IP address for an exact match. If you leave this parameter empty, all public IP addresses are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.0.13.XX</p>
          */
         public Builder publicIp(String publicIp) {
             this.putQueryParameter("PublicIp", publicIp);
@@ -364,7 +391,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -373,7 +403,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * RiskLevel.
+         * <p>The risk level. If you leave this parameter empty, all risk levels are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -382,7 +415,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The name of the application for an exact match. If you leave this parameter empty, all applications are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMB</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -391,7 +427,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * ServiceNameFuzzy.
+         * <p>The name of the application for a fuzzy match. If you leave this parameter empty, all applications are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMB</p>
          */
         public Builder serviceNameFuzzy(String serviceNameFuzzy) {
             this.putQueryParameter("ServiceNameFuzzy", serviceNameFuzzy);
@@ -400,7 +439,7 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * SortList.
+         * <p>The sorting conditions.</p>
          */
         public Builder sortList(java.util.List<SortList> sortList) {
             this.putQueryParameter("SortList", sortList);
@@ -409,7 +448,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the access request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222.212.86.7XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -418,7 +460,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656837360</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -427,7 +472,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
         }
 
         /**
-         * SuggestLevel.
+         * <p>The recommended policy level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder suggestLevel(String suggestLevel) {
             this.putQueryParameter("SuggestLevel", suggestLevel);
@@ -495,7 +543,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
             } 
 
             /**
-             * Dir.
+             * <p>The sort order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asc</p>
              */
             public Builder dir(String dir) {
                 this.dir = dir;
@@ -503,7 +554,10 @@ public class DescribeInternetOpenDetailRequest extends Request {
             }
 
             /**
-             * SortKey.
+             * <p>The sorting key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServiceName</p>
              */
             public Builder sortKey(String sortKey) {
                 this.sortKey = sortKey;

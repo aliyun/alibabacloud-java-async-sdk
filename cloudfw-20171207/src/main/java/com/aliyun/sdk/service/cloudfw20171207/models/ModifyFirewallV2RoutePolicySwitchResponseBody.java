@@ -54,7 +54,7 @@ public class ModifyFirewallV2RoutePolicySwitchResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1F6D4A8D-EC01-5996-A61A-AA3B56490C00</p>

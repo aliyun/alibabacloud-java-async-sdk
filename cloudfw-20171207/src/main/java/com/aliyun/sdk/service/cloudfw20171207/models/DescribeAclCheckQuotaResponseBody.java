@@ -67,7 +67,7 @@ public class DescribeAclCheckQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * Quota.
+         * <p>The quota.</p>
          */
         public Builder quota(Quota quota) {
             this.quota = quota;
@@ -75,7 +75,10 @@ public class DescribeAclCheckQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D5483BF-2262-586D-8706-BDDB8B42****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class DescribeAclCheckQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableQuota.
+             * <p>The available quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder availableQuota(Long availableQuota) {
                 this.availableQuota = availableQuota;
@@ -175,7 +181,10 @@ public class DescribeAclCheckQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumedQuota.
+             * <p>The consumed quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500</p>
              */
             public Builder consumedQuota(Long consumedQuota) {
                 this.consumedQuota = consumedQuota;
@@ -183,7 +192,10 @@ public class DescribeAclCheckQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQuota.
+             * <p>The total quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder totalQuota(Long totalQuota) {
                 this.totalQuota = totalQuota;
@@ -191,7 +203,10 @@ public class DescribeAclCheckQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the quota was last updated. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1724982259</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

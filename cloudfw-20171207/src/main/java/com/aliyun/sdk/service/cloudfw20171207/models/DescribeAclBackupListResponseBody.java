@@ -80,7 +80,7 @@ public class DescribeAclBackupListResponseBody extends TeaModel {
         } 
 
         /**
-         * Backups.
+         * <p>The backup records.</p>
          */
         public Builder backups(java.util.List<Backups> backups) {
             this.backups = backups;
@@ -88,7 +88,10 @@ public class DescribeAclBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C9105F2-9F31-5A62-8D52-FA65A3E5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeAclBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -175,7 +181,10 @@ public class DescribeAclBackupListResponseBody extends TeaModel {
             } 
 
             /**
-             * AclCount.
+             * <p>The number of access control policies in the backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder aclCount(Integer aclCount) {
                 this.aclCount = aclCount;
@@ -183,7 +192,10 @@ public class DescribeAclBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * BackUpTime.
+             * <p>The time when the backup was created. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1743683400</p>
              */
             public Builder backUpTime(Long backUpTime) {
                 this.backUpTime = backUpTime;
@@ -191,7 +203,10 @@ public class DescribeAclBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;

@@ -93,7 +93,10 @@ public class DescribeSensitiveSwitchResponseBody extends TeaModel {
         } 
 
         /**
-         * OpenCount.
+         * <p>The total number of enabled items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder openCount(Long openCount) {
             this.openCount = openCount;
@@ -101,7 +104,10 @@ public class DescribeSensitiveSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7F3ED45-5556-5AF3-ADE3-EE48FFF0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +115,10 @@ public class DescribeSensitiveSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +126,7 @@ public class DescribeSensitiveSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * UserSensitiveDataSwitchList.
+         * <p>The list of sensitive data detection switches.</p>
          */
         public Builder userSensitiveDataSwitchList(java.util.List<UserSensitiveDataSwitchList> userSensitiveDataSwitchList) {
             this.userSensitiveDataSwitchList = userSensitiveDataSwitchList;
@@ -222,7 +231,10 @@ public class DescribeSensitiveSwitchResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryName.
+             * <p>The name of the sensitive credential category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Identity card</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -230,7 +242,10 @@ public class DescribeSensitiveSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the sensitive credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sensitive ID card data leakage</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +253,10 @@ public class DescribeSensitiveSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveCategory.
+             * <p>The type of the sensitive credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id_card</p>
              */
             public Builder sensitiveCategory(String sensitiveCategory) {
                 this.sensitiveCategory = sensitiveCategory;
@@ -246,7 +264,10 @@ public class DescribeSensitiveSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveLevel.
+             * <p>The sensitivity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S3</p>
              */
             public Builder sensitiveLevel(String sensitiveLevel) {
                 this.sensitiveLevel = sensitiveLevel;
@@ -254,7 +275,10 @@ public class DescribeSensitiveSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchStatus.
+             * <p>The status of the sensitive data detection switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder switchStatus(Integer switchStatus) {
                 this.switchStatus = switchStatus;

@@ -80,7 +80,10 @@ public class DescribeAccessInstanceZoneListResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31306819-C4BC-56F3-BBE6-*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeAccessInstanceZoneListResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneList.
+         * <p>The list of zones.</p>
          */
         public Builder zoneList(java.util.List<String> zoneList) {
             this.zoneList = zoneList;
@@ -96,7 +99,7 @@ public class DescribeAccessInstanceZoneListResponseBody extends TeaModel {
         }
 
         /**
-         * Zones.
+         * <p>The list of zones.</p>
          */
         public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;
@@ -162,7 +165,10 @@ public class DescribeAccessInstanceZoneListResponseBody extends TeaModel {
             } 
 
             /**
-             * LocalName.
+             * <p>The name of the zone in the local language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing Area G</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -170,7 +176,10 @@ public class DescribeAccessInstanceZoneListResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

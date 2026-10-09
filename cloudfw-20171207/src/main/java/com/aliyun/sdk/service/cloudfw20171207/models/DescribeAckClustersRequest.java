@@ -160,7 +160,10 @@ public class DescribeAckClustersRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the ACK cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb0f5640b1b2d404cad6ba21509d7847b</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -169,7 +172,10 @@ public class DescribeAckClustersRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * <p>The name of the ACK cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-cluster-name</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -178,7 +184,10 @@ public class DescribeAckClustersRequest extends Request {
         }
 
         /**
-         * ClusterSpec.
+         * <p>The specification of the ACK cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack.pro.small</p>
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putQueryParameter("ClusterSpec", clusterSpec);
@@ -187,7 +196,10 @@ public class DescribeAckClustersRequest extends Request {
         }
 
         /**
-         * ConnectorStatus.
+         * <p>The status of the ACK cluster connector.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ready</p>
          */
         public Builder connectorStatus(String connectorStatus) {
             this.putQueryParameter("ConnectorStatus", connectorStatus);
@@ -196,7 +208,10 @@ public class DescribeAckClustersRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The Alibaba Cloud UID of the account to which the ACK cluster resources belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135809047715****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -205,6 +220,7 @@ public class DescribeAckClustersRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,6 +233,7 @@ public class DescribeAckClustersRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +246,7 @@ public class DescribeAckClustersRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the ACK cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

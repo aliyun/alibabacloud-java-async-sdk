@@ -54,7 +54,10 @@ public class DeleteDnsFirewallPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32314C1E-82CF-582C-853A-B1773F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

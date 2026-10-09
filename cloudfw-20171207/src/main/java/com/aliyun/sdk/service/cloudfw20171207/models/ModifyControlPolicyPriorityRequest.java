@@ -75,11 +75,11 @@ public class ModifyControlPolicyPriorityRequest extends Request {
         } 
 
         /**
-         * <p>The UUID of the access control policy.</p>
+         * <p>The unique ID of the access control policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>3770d603-3534-4878-b845-f00095ee5048</p>
+         * <p>3770d603-3534-4878-b845-f00095ee****</p>
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);

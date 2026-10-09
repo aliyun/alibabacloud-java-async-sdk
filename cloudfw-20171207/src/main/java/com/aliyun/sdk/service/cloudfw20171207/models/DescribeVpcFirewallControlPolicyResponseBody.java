@@ -80,7 +80,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access control policies.</p>
+         * <p>The information about the access control policies of the virtual private cloud (VPC) firewall.</p>
          */
         public Builder policys(java.util.List<Policys> policys) {
             this.policys = policys;
@@ -88,7 +88,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
@@ -99,7 +99,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of access control policies returned.</p>
+         * <p>The total number of access control policies for the virtual private cloud (VPC) firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -584,12 +584,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
-             * <ul>
-             * <li><strong>accept</strong>: allows the traffic.</li>
-             * <li><strong>drop</strong>: denies the traffic.</li>
-             * <li><strong>log</strong>: monitors the traffic.</li>
-             * </ul>
+             * <p>The action (settings) that Cloud Firewall performs on the traffic in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>accept</p>
@@ -600,7 +595,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the access control policy.</p>
+             * <p>The unique identity ID of the access control policy of the virtual private cloud (VPC) firewall.</p>
              * 
              * <strong>example:</strong>
              * <p>4037fbf7-3e39-4634-92a4-d0155247****</p>
@@ -611,7 +606,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application ID in the access control policy.</p>
+             * <p>The ID of the application with traffic settings in the access control policy of the virtual private cloud (VPC) firewall.</p>
              * 
              * <strong>example:</strong>
              * <p>10**</p>
@@ -622,23 +617,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application types supported by the access control policy. We recommend that you specify ApplicationNameList. Valid values:</p>
-             * <ul>
-             * <li><strong>HTTP</strong></li>
-             * <li><strong>HTTPS</strong></li>
-             * <li><strong>MySQL</strong></li>
-             * <li><strong>SMTP</strong></li>
-             * <li><strong>SMTPS</strong></li>
-             * <li><strong>RDP</strong></li>
-             * <li><strong>VNC</strong></li>
-             * <li><strong>SSH</strong></li>
-             * <li><strong>Redis</strong></li>
-             * <li><strong>MQTT</strong></li>
-             * <li><strong>MongoDB</strong></li>
-             * <li><strong>Memcache</strong></li>
-             * <li><strong>SSL</strong></li>
-             * <li><strong>ANY</strong>: all application types</li>
-             * </ul>
+             * <p>The application type supported by the access control policy of the virtual private cloud (VPC) firewall. Use ApplicationNameList instead. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -649,7 +628,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application types supported by the access control policy.</p>
+             * <p>The list of application names.</p>
              */
             public Builder applicationNameList(java.util.List<String> applicationNameList) {
                 this.applicationNameList = applicationNameList;
@@ -657,7 +636,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access control policy was created. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The time when the policy was created. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1761062400</p>
@@ -668,7 +647,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the access control policy.</p>
+             * <p>The description of the access control policy of the virtual private cloud (VPC) firewall.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -679,7 +658,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination port in the access control policy.</p>
+             * <p>The destination port of the traffic in the access control policy of the virtual private cloud (VPC) firewall.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -690,7 +669,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the destination port address book in the access control policy.</p>
+             * <p>The name of the destination port address book for the traffic in the access control policy of the virtual private cloud (VPC) firewall.</p>
              * 
              * <strong>example:</strong>
              * <p>my_port_group</p>
@@ -701,7 +680,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ports in the destination port address book of the access control policy.</p>
+             * <p>The details of the destination port address book in the access control policy of the virtual private cloud (VPC) firewall.</p>
              */
             public Builder destPortGroupPorts(java.util.List<String> destPortGroupPorts) {
                 this.destPortGroupPorts = destPortGroupPorts;
@@ -709,11 +688,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the destination port in the access control policy. Valid values:</p>
-             * <ul>
-             * <li><strong>port</strong>: port</li>
-             * <li><strong>group</strong>: port address book</li>
-             * </ul>
+             * <p>The destination port type for the traffic in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>port</p>
@@ -724,12 +699,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination address in the access control policy. Valid values:</p>
-             * <ul>
-             * <li>If <strong>DestinationType</strong> is set to <code>net</code>, the value of this parameter is a CIDR block.</li>
-             * <li>If <strong>DestinationType</strong> is set to <code>domain</code>, the value of this parameter is a domain name.</li>
-             * <li>If <strong>DestinationType</strong> is set to <code>group</code>, the value of this parameter is an address book name.</li>
-             * </ul>
+             * <p>The destination address in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>192.0.XX.XX/24</p>
@@ -740,7 +710,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CIDR blocks in the destination address book of the access control policy.</p>
+             * <p>The CIDR block information in the destination address book of the access control policy of the virtual private cloud (VPC) firewall.</p>
              */
             public Builder destinationGroupCidrs(java.util.List<String> destinationGroupCidrs) {
                 this.destinationGroupCidrs = destinationGroupCidrs;
@@ -749,10 +719,6 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
 
             /**
              * <p>The type of the destination address book in the access control policy. Valid values:</p>
-             * <ul>
-             * <li><strong>ip</strong>: an address book that includes one or more CIDR blocks</li>
-             * <li><strong>domain</strong>: an address book that includes one or more domain names</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ip</p>
@@ -763,12 +729,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the destination address in the access control policy. Valid values:</p>
-             * <ul>
-             * <li><strong>net</strong>: CIDR block</li>
-             * <li><strong>group</strong>: address book</li>
-             * <li><strong>domain</strong>: domain name</li>
-             * </ul>
+             * <p>The destination address type in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>net</p>
@@ -779,12 +740,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name resolution method of the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:</p>
-             * <ul>
-             * <li><strong>FQDN</strong>: fully qualified domain name (FQDN)-based resolution</li>
-             * <li><strong>DNS</strong>: DNS-based dynamic resolution</li>
-             * <li><strong>FQDN_AND_DNS</strong>: FQDN and DNS-based dynamic resolution</li>
-             * </ul>
+             * <p>The domain name resolution method of the access control policy. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>FQDN</p>
@@ -795,10 +751,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.</p>
-             * <blockquote>
-             * <p> If RepeatType is set to Permanent, EndTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must be specified.</p>
-             * </blockquote>
+             * <p>The end time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The time must be on the hour or half hour and must be at least 30 minutes later than the start time.</p>
              * 
              * <strong>example:</strong>
              * <p>1694764800</p>
@@ -809,7 +762,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access control policy was last hit. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The most recent time of hits. The value is a UNIX timestamp in seconds format.</p>
              * 
              * <strong>example:</strong>
              * <p>1579261141</p>
@@ -820,7 +773,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of hits for the access control policy.</p>
+             * <p>The number of hits for the access control policy of the virtual private cloud (VPC) firewall.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -831,7 +784,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+             * <p>The UID of a member account of the current Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>258039427902****</p>
@@ -842,7 +795,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access control policy was modified. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The time when the policy was modified. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1761062400</p>
@@ -853,8 +806,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the access control policy.</p>
-             * <p>The priority value starts from 1. A smaller priority value indicates a higher priority.</p>
+             * <p>The priority of the access control policy of the virtual private cloud (VPC) firewall.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -865,13 +817,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol type in the access control policy. Valid values:</p>
-             * <ul>
-             * <li><strong>TCP</strong></li>
-             * <li><strong>UDP</strong></li>
-             * <li><strong>ICMP</strong></li>
-             * <li><strong>ANY</strong>: all protocol types</li>
-             * </ul>
+             * <p>The protocol type of the traffic in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>TCP</p>
@@ -882,11 +828,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
+             * <p>The enabled status of the access control policy. The policy is enabled by default after creation. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -897,20 +839,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The days of a week or of a month on which the access control policy takes effect.</p>
-             * <ul>
-             * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is left empty. Example: [].</li>
-             * <li>If RepeatType is set to Weekly, RepeatDays must be specified. Example: [0, 6].</li>
-             * </ul>
-             * <blockquote>
-             * <p> If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.</p>
-             * </blockquote>
-             * <ul>
-             * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays must be specified. Example: [1, 31].</li>
-             * </ul>
-             * <blockquote>
-             * <p> If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.</p>
-             * </blockquote>
+             * <p>The collection of recurrence days for the policy validity period of the access control policy.</p>
              */
             public Builder repeatDays(java.util.List<Long> repeatDays) {
                 this.repeatDays = repeatDays;
@@ -918,10 +847,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of RepeatStartTime.</p>
-             * <blockquote>
-             * <p> If RepeatType is set to Permanent or None, RepeatEndTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must be specified.</p>
-             * </blockquote>
+             * <p>The recurrence end time of the policy validity period. The value is in the HH:mm format using a 24-hour clock, such as 23:00.</p>
              * 
              * <strong>example:</strong>
              * <p>23:30</p>
@@ -932,10 +858,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of RepeatEndTime.</p>
-             * <blockquote>
-             * <p> If RepeatType is set to Permanent or None, RepeatStartTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
-             * </blockquote>
+             * <p>The recurrence start time of the policy validity period. The value is in the HH:mm format using a 24-hour clock, such as 08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>08:00</p>
@@ -946,14 +869,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
-             * <ul>
-             * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
-             * <li><strong>None</strong>: The policy takes effect for only once.</li>
-             * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
-             * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
-             * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
-             * </ul>
+             * <p>The recurrence type of the policy validity period for the access control policy. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>Permanent</p>
@@ -964,11 +880,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source address in the access control policy. Valid values:</p>
-             * <ul>
-             * <li>If <strong>SourceType</strong> is set to <code>net</code>, the value of this parameter is a CIDR block.</li>
-             * <li>If <strong>SourceType</strong> is set to <code>group</code>, the value of this parameter is an address book name.</li>
-             * </ul>
+             * <p>The source address in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>192.0.XX.XX/24</p>
@@ -979,7 +891,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CIDR blocks in the source address book of the access control policy.</p>
+             * <p>The details of the source address book in the access control policy of the virtual private cloud (VPC) firewall.</p>
              */
             public Builder sourceGroupCidrs(java.util.List<String> sourceGroupCidrs) {
                 this.sourceGroupCidrs = sourceGroupCidrs;
@@ -987,7 +899,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the source address book in the access control policy. The value is fixed as <strong>ip</strong>. The value indicates an address book that includes one or more CIDR blocks.</p>
+             * <p>The type of the source address book in the access control policy. The only valid value is <strong>ip</strong>, which indicates an IP address book that contains one or more CIDR blocks.</p>
              * 
              * <strong>example:</strong>
              * <p>ip</p>
@@ -998,11 +910,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the source address in the access control policy. Valid values:</p>
-             * <ul>
-             * <li><strong>net</strong>: CIDR block</li>
-             * <li><strong>group</strong>: address book</li>
-             * </ul>
+             * <p>The source address type in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>net</p>
@@ -1013,10 +921,10 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy. The quota that is consumed by an access control policy is calculated by using the following formula: Quota that is consumed by an access control policy = Number of source addresses × Number of destination addresses (number of CIDR blocks or domain names) × Number of applications × Number of port ranges.</p>
+             * <p>The number of access control policy specifications consumed, which is the cumulative number of specifications consumed by each policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>10,000</p>
+             * <p>10000</p>
              */
             public Builder spreadCnt(Long spreadCnt) {
                 this.spreadCnt = spreadCnt;
@@ -1024,10 +932,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of EndTime.</p>
-             * <blockquote>
-             * <p> If RepeatType is set to Permanent, StartTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must be specified.</p>
-             * </blockquote>
+             * <p>The start time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The time must be on the hour or half hour and must be at least 30 minutes earlier than the end time.</p>
              * 
              * <strong>example:</strong>
              * <p>1694761200</p>

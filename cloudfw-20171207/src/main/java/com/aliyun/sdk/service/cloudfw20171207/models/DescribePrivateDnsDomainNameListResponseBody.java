@@ -106,7 +106,7 @@ public class DescribePrivateDnsDomainNameListResponseBody extends TeaModel {
         } 
 
         /**
-         * DomainNameList.
+         * <p>The list of domain names.</p>
          */
         public Builder domainNameList(java.util.List<String> domainNameList) {
             this.domainNameList = domainNameList;
@@ -114,7 +114,10 @@ public class DescribePrivateDnsDomainNameListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -122,7 +125,10 @@ public class DescribePrivateDnsDomainNameListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribePrivateDnsDomainNameListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>822B9125-6E1A-551C-8EAF-6E7AE74****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribePrivateDnsDomainNameListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of private DNS domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

@@ -342,7 +342,10 @@ public class DescribeIPSRulesRequest extends Request {
         } 
 
         /**
-         * AttackApp.
+         * <p>The application targeted by the attack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMB</p>
          */
         public Builder attackApp(String attackApp) {
             this.putQueryParameter("AttackApp", attackApp);
@@ -351,7 +354,7 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * AttackAppCategory.
+         * <p>The categories of applications targeted by attacks.</p>
          */
         public Builder attackAppCategory(java.util.List<String> attackAppCategory) {
             this.putQueryParameter("AttackAppCategory", attackAppCategory);
@@ -360,7 +363,7 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * AttackApps.
+         * <p>The applications targeted by attacks.</p>
          */
         public Builder attackApps(java.util.List<String> attackApps) {
             this.putQueryParameter("AttackApps", attackApps);
@@ -369,7 +372,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * AttackType.
+         * <p>The attack type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Web attack</p>
          */
         public Builder attackType(String attackType) {
             this.putQueryParameter("AttackType", attackType);
@@ -378,7 +384,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * Cve.
+         * <p>The CVE ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2026-25253</p>
          */
         public Builder cve(String cve) {
             this.putQueryParameter("Cve", cve);
@@ -387,7 +396,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * DefaultAction.
+         * <p>The status of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder defaultAction(String defaultAction) {
             this.putQueryParameter("DefaultAction", defaultAction);
@@ -396,7 +408,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * FirewallType.
+         * <p>The type of firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VpcFirewall</p>
          */
         public Builder firewallType(String firewallType) {
             this.putQueryParameter("FirewallType", firewallType);
@@ -405,7 +420,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -414,7 +432,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -423,6 +444,7 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -435,6 +457,7 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -447,7 +470,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * QueryModify.
+         * <p>Indicates whether to retrieve only modified rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder queryModify(String queryModify) {
             this.putQueryParameter("QueryModify", queryModify);
@@ -456,7 +482,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * RuleAction.
+         * <p>The rule action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alert</p>
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -465,7 +494,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * RuleClass.
+         * <p>The inspection mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dropStrict</p>
          */
         public Builder ruleClass(String ruleClass) {
             this.putQueryParameter("RuleClass", ruleClass);
@@ -474,7 +506,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f835533b-01ef-49f4-b172-85bbfd0e****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -483,7 +518,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * RuleLevel.
+         * <p>The rule level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleLevel(Long ruleLevel) {
             this.putQueryParameter("RuleLevel", ruleLevel);
@@ -492,7 +530,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nmap scan detection</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -501,6 +542,7 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
+         * <p>The rule type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -513,7 +555,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The field to sort by.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UpdateTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -522,7 +567,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.139.222.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -531,7 +579,10 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * VpcFirewallId.
+         * <p>The instance ID of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-rnbkqx4a8er21a****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

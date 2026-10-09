@@ -106,7 +106,14 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
         } 
 
         /**
-         * DomainGroupUseDns.
+         * <p>Indicates whether the whitelist is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder domainGroupUseDns(Boolean domainGroupUseDns) {
             this.domainGroupUseDns = domainGroupUseDns;
@@ -114,7 +121,14 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * NatDomainGroupUseDns.
+         * <p>Indicates whether domain name DNS is supported in NAT scenarios. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder natDomainGroupUseDns(Boolean natDomainGroupUseDns) {
             this.natDomainGroupUseDns = natDomainGroupUseDns;
@@ -122,7 +136,10 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D45133B-DBC0-506B-9DF9-AB0735D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +147,14 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * SupportMessageType.
+         * <p>Indicates whether the message type is supported. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportMessageType(Boolean supportMessageType) {
             this.supportMessageType = supportMessageType;
@@ -138,7 +162,14 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * VpcDomainGroupUseDns.
+         * <p>Indicates whether domain name DNS is supported in VPC scenarios. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder vpcDomainGroupUseDns(Boolean vpcDomainGroupUseDns) {
             this.vpcDomainGroupUseDns = vpcDomainGroupUseDns;

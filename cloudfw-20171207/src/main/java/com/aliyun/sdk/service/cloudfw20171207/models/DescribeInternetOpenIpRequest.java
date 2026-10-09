@@ -265,7 +265,7 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number for a paged query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -278,7 +278,7 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the public IP address exposure. Specify the value as a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1663640336</p>
@@ -292,8 +292,8 @@ public class DescribeInternetOpenIpRequest extends Request {
         /**
          * <p>The language of the content within the response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -306,7 +306,7 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -355,12 +355,12 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * <p>The risk level. If you leave this parameter empty, all risk levels are queried. Valid values:</p>
+         * <p>The risk level. If this parameter is not specified, all risk levels are returned. Valid values:</p>
          * <ul>
          * <li><strong>3</strong>: high risk</li>
          * <li><strong>2</strong>: medium risk</li>
          * <li><strong>1</strong>: low risk</li>
-         * <li><strong>0</strong>: no risk</li>
+         * <li><strong>0</strong>: no risk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,7 +373,7 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * <p>The application.</p>
+         * <p>The application name to query.</p>
          * 
          * <strong>example:</strong>
          * <p>SSH</p>
@@ -385,7 +385,7 @@ public class DescribeInternetOpenIpRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the public IP address exposure. Specify the value as a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1681957629</p>

@@ -301,7 +301,10 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -310,7 +313,10 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
-         * AssetIP.
+         * <p>The IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder assetIP(String assetIP) {
             this.putQueryParameter("AssetIP", assetIP);
@@ -319,7 +325,10 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
-         * AssetRegion.
+         * <p>The region where the asset resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder assetRegion(String assetRegion) {
             this.putQueryParameter("AssetRegion", assetRegion);
@@ -328,6 +337,7 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
+         * <p>The data type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,7 +350,10 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
-         * Direction.
+         * <p>The traffic direction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -349,7 +362,10 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
-         * DstIP.
+         * <p>The destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.144.124.XXX</p>
          */
         public Builder dstIP(String dstIP) {
             this.putQueryParameter("DstIP", dstIP);
@@ -358,7 +374,10 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
-         * DstPort.
+         * <p>The destination port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder dstPort(String dstPort) {
             this.putQueryParameter("DstPort", dstPort);
@@ -367,6 +386,7 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -379,7 +399,10 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
-         * IpProperty.
+         * <p>The IP address property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy</p>
          */
         public Builder ipProperty(String ipProperty) {
             this.putQueryParameter("IpProperty", ipProperty);
@@ -388,7 +411,10 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
-         * Isp.
+         * <p>The Internet Service Provider (ISP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -397,7 +423,10 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -406,7 +435,10 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
-         * Location.
+         * <p>The area.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou City</p>
          */
         public Builder location(String location) {
             this.putQueryParameter("Location", location);
@@ -415,7 +447,10 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
-         * RuleResult.
+         * <p>The action triggered by the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleResult(String ruleResult) {
             this.putQueryParameter("RuleResult", ruleResult);
@@ -424,7 +459,10 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sorting method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in_bytes</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -433,6 +471,7 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
+         * <p>The source identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -445,7 +484,10 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60.12.220.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -454,7 +496,10 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
-         * SrcIP.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.169.XXX</p>
          */
         public Builder srcIP(String srcIP) {
             this.putQueryParameter("SrcIP", srcIP);
@@ -463,6 +508,7 @@ public class DescribeNetworkTrafficTopRatioRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -101,7 +101,10 @@ public class DescribeOutgoingRiskTrendRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Use a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1755051062</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -110,7 +113,10 @@ public class DescribeOutgoingRiskTrendRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -119,7 +125,10 @@ public class DescribeOutgoingRiskTrendRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>219.145.94.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -128,7 +137,10 @@ public class DescribeOutgoingRiskTrendRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range to query. Use a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1733882648</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

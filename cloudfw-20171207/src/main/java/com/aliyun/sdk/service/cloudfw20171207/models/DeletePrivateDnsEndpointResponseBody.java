@@ -54,7 +54,10 @@ public class DeletePrivateDnsEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>822B9125-6E1A-551C-8EAF-6E7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

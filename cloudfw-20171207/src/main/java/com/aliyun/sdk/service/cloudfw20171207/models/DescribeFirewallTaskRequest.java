@@ -101,7 +101,7 @@ public class DescribeFirewallTaskRequest extends Request {
         } 
 
         /**
-         * <p>子实例 ID。TaskId 和 ChildInstanceId 至少需要提供一个，未指定时 API 返回 ErrorParameters(400)。</p>
+         * <p>The child instance ID. You must specify at least one of ChildInstanceId and TaskId. If both are empty, the error MissingParameter.TaskId (-360448) is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>vfw-tr-cd6000c588214403****</p>
@@ -113,7 +113,14 @@ public class DescribeFirewallTaskRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -122,7 +129,7 @@ public class DescribeFirewallTaskRequest extends Request {
         }
 
         /**
-         * <p>任务 ID。TaskId 和 ChildInstanceId 至少需要提供一个，未指定时 API 返回 ErrorParameters(400)。</p>
+         * <p>The task ID. You must specify at least one of TaskId and ChildInstanceId. If both are empty, the error MissingParameter.TaskId (-360448, At least one of TaskId or ChildInstanceId is required.) is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>199431783</p>
@@ -134,7 +141,16 @@ public class DescribeFirewallTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the task. Valid values:</p>
+         * <ul>
+         * <li><p><strong>NAT</strong>: NAT firewall task</p>
+         * </li>
+         * <li><p><strong>VPC</strong>: VPC firewall task</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

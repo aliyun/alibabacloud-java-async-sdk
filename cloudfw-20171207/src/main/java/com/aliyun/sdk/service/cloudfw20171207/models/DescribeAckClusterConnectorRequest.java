@@ -74,6 +74,10 @@ public class DescribeAckClusterConnectorRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the ACK cluster connector. You can obtain the value from:</p>
+         * <ul>
+         * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Lists ACK cluster connectors.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +90,10 @@ public class DescribeAckClusterConnectorRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language in which the health status error reason of the ACK cluster connector is displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

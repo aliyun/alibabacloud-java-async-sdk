@@ -245,7 +245,13 @@ public class AddAddressBookRequest extends Request {
         } 
 
         /**
-         * AckClusterConnectorId.
+         * <p>The ACK cluster connector ID. You can obtain the value from the following operation:</p>
+         * <ul>
+         * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Lists ACK cluster connectors.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-7c1bad6c3cc84c33baab1</p>
          */
         public Builder ackClusterConnectorId(String ackClusterConnectorId) {
             this.putQueryParameter("AckClusterConnectorId", ackClusterConnectorId);
@@ -254,7 +260,10 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * AckLabels.
+         * <p>The list of ACK cluster pod labels.</p>
+         * <blockquote>
+         * <p>A maximum of 10 labels are supported.</p>
+         * </blockquote>
          */
         public Builder ackLabels(java.util.List<AckLabels> ackLabels) {
             this.putQueryParameter("AckLabels", ackLabels);
@@ -263,7 +272,10 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * AckNamespaces.
+         * <p>The list of ACK cluster pod namespaces.</p>
+         * <blockquote>
+         * <p>A maximum of 10 namespaces are supported.</p>
+         * </blockquote>
          */
         public Builder ackNamespaces(java.util.List<String> ackNamespaces) {
             this.putQueryParameter("AckNamespaces", ackNamespaces);
@@ -272,18 +284,21 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The addresses that you want to add to the address book. Separate multiple addresses with commas (,).</p>
+         * <p>The addresses in the address book. Separate multiple addresses with commas (,). Use a space to separate an address from its description within a single address element.</p>
          * <blockquote>
-         * <p> If you set GroupType to <code>ip</code>, <code>port</code> or <code>domain</code>, you must specify AddressList.</p>
+         * <p>This parameter is required when GroupType is set to <code>ip</code>, <code>port</code>, or <code>domain</code>.</p>
          * </blockquote>
          * <ul>
-         * <li>If you set GroupType to <code>ip</code>, you must add IP addresses to the address book. Example: 192.0.XX.XX/32,192.0.XX.XX/24.</li>
-         * <li>If you set GroupType to <code>port</code>, you must add port numbers or port ranges to the address book. Example: 80,100/200.</li>
-         * <li>If you set GroupType to <code>domain</code>, you must add domain names to the address book. Example: example.com,aliyundoc.com.</li>
+         * <li><p>When GroupType is set to <code>ip</code>, enter IP addresses in the address list. Example: 192.0.XX.XX/32 Development CIDR block,10.0.0.X/24,192.0.XX.XX/24 Test CIDR block.</p>
+         * </li>
+         * <li><p>When GroupType is set to <code>port</code>, enter ports or port ranges in the address list. Example: 80 HTTP port,100/200,3306 Database port.</p>
+         * </li>
+         * <li><p>When GroupType is set to <code>domain</code>, enter domain names in the address list. Example: example.com Test domain name,aliyundoc.com,<a href="http://www.aliyun.com">www.aliyun.com</a> Alibaba Cloud official website.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>192.0.XX.XX/32, 192.0.XX.XX/24</p>
+         * <p>192.0.XX.XX/32 ,192.0.XX.XX/24</p>
          */
         public Builder addressList(String addressList) {
             this.putQueryParameter("AddressList", addressList);
@@ -292,7 +307,7 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * AssetMemberUids.
+         * <p>The list of member accounts for the asset address book.</p>
          */
         public Builder assetMemberUids(java.util.List<Long> assetMemberUids) {
             String assetMemberUidsShrink = shrink(assetMemberUids, "AssetMemberUids", "json");
@@ -302,7 +317,7 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * AssetRegionResourceTypes.
+         * <p>The list of regions and resource types for the asset address book.</p>
          */
         public Builder assetRegionResourceTypes(java.util.List<AssetRegionResourceTypes> assetRegionResourceTypes) {
             String assetRegionResourceTypesShrink = shrink(assetRegionResourceTypes, "AssetRegionResourceTypes", "json");
@@ -312,11 +327,7 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically add public IP addresses of ECS instances to the address book if the instances match the specified tags. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong> (default): no</li>
-         * </ul>
+         * <p>Indicates whether to automatically add the public IP addresses of Elastic Compute Service (ECS) instances that match the specified tags to the address book.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -354,13 +365,7 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The type of the address book. Valid values:</p>
-         * <ul>
-         * <li><strong>ip</strong>: IP address book</li>
-         * <li><strong>domain</strong>: domain address book</li>
-         * <li><strong>port</strong>: port address book</li>
-         * <li><strong>tag</strong>: ECS tag-based address book</li>
-         * </ul>
+         * <p>The type of the address book.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -373,11 +378,7 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
-         * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
-         * </ul>
+         * <p>The language type of the address book description.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -401,7 +402,7 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The ECS tags that you want to match.</p>
+         * <p>The ECS tag list.</p>
          */
         public Builder tagList(java.util.List<TagList> tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -410,11 +411,7 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The logical relation among the ECS tags that you want to match. Valid values:</p>
-         * <ul>
-         * <li><strong>and</strong> (default): Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</li>
-         * <li><strong>or</strong>: The public IP addresses of ECS instances that match one of the specified tags can be added to the address book.</li>
-         * </ul>
+         * <p>The logical relationship among multiple ECS tags to match.</p>
          * 
          * <strong>example:</strong>
          * <p>and</p>
@@ -485,7 +482,10 @@ public class AddAddressBookRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the ACK cluster pod label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -493,7 +493,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the ACK cluster pod label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storage-operator</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -755,7 +758,10 @@ public class AddAddressBookRequest extends Request {
             } 
 
             /**
-             * AiGatewayEIP.
+             * <p>The asset type: AIGatewayEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder aiGatewayEIP(Boolean aiGatewayEIP) {
                 this.aiGatewayEIP = aiGatewayEIP;
@@ -763,7 +769,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * AlbEIP.
+             * <p>The asset type: AlbEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder albEIP(Boolean albEIP) {
                 this.albEIP = albEIP;
@@ -771,7 +780,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * ApiGatewayEIP.
+             * <p>The asset type: ApigEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder apiGatewayEIP(Boolean apiGatewayEIP) {
                 this.apiGatewayEIP = apiGatewayEIP;
@@ -779,7 +791,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * BastionHostEgressIP.
+             * <p>The asset type: BastionHostEgressIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bastionHostEgressIP(Boolean bastionHostEgressIP) {
                 this.bastionHostEgressIP = bastionHostEgressIP;
@@ -787,7 +802,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * BastionHostIP.
+             * <p>The asset type: BastionHostIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bastionHostIP(Boolean bastionHostIP) {
                 this.bastionHostIP = bastionHostIP;
@@ -795,7 +813,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * BastionHostIngressIP.
+             * <p>The asset type: BastionHostIngressIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bastionHostIngressIP(Boolean bastionHostIngressIP) {
                 this.bastionHostIngressIP = bastionHostIngressIP;
@@ -803,7 +824,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * EIP.
+             * <p>The asset type: EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder EIP(Boolean EIP) {
                 this.EIP = EIP;
@@ -811,7 +835,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * EcsEIP.
+             * <p>The asset type: EcsEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ecsEIP(Boolean ecsEIP) {
                 this.ecsEIP = ecsEIP;
@@ -819,7 +846,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * EcsPublicIP.
+             * <p>The asset type: EcsPublicIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ecsPublicIP(Boolean ecsPublicIP) {
                 this.ecsPublicIP = ecsPublicIP;
@@ -827,7 +857,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * EniEIP.
+             * <p>The asset type: EniEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder eniEIP(Boolean eniEIP) {
                 this.eniEIP = eniEIP;
@@ -835,7 +868,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * GaEIP.
+             * <p>The asset type: GaEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder gaEIP(Boolean gaEIP) {
                 this.gaEIP = gaEIP;
@@ -843,7 +879,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * HAVIP.
+             * <p>The asset type: HAVIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder HAVIP(Boolean HAVIP) {
                 this.HAVIP = HAVIP;
@@ -851,7 +890,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * NatEIP.
+             * <p>The asset type: NatEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder natEIP(Boolean natEIP) {
                 this.natEIP = natEIP;
@@ -859,7 +901,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * NatPublicIP.
+             * <p>The asset type: NatPublicIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder natPublicIP(Boolean natPublicIP) {
                 this.natPublicIP = natPublicIP;
@@ -867,7 +912,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * NlbEIP.
+             * <p>The asset type: NlbEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder nlbEIP(Boolean nlbEIP) {
                 this.nlbEIP = nlbEIP;
@@ -875,7 +923,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * SlbEIP.
+             * <p>The asset type: SlbEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder slbEIP(Boolean slbEIP) {
                 this.slbEIP = slbEIP;
@@ -883,7 +934,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * SlbPublicIP.
+             * <p>The asset type: SlbPublicIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder slbPublicIP(Boolean slbPublicIP) {
                 this.slbPublicIP = slbPublicIP;
@@ -1028,7 +1082,10 @@ public class AddAddressBookRequest extends Request {
             } 
 
             /**
-             * AiGatewayEIPv6.
+             * <p>The asset type: AIGatewayEIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder aiGatewayEIPv6(Boolean aiGatewayEIPv6) {
                 this.aiGatewayEIPv6 = aiGatewayEIPv6;
@@ -1036,7 +1093,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * AlbIPv6.
+             * <p>The asset type: AlbIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder albIPv6(Boolean albIPv6) {
                 this.albIPv6 = albIPv6;
@@ -1044,7 +1104,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * ApiGatewayEIPv6.
+             * <p>The asset type: ApigEIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder apiGatewayEIPv6(Boolean apiGatewayEIPv6) {
                 this.apiGatewayEIPv6 = apiGatewayEIPv6;
@@ -1052,7 +1115,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * EcsIPv6.
+             * <p>The asset type: EcsIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ecsIPv6(Boolean ecsIPv6) {
                 this.ecsIPv6 = ecsIPv6;
@@ -1060,7 +1126,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * EniEIPv6.
+             * <p>The asset type: EniEIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder eniEIPv6(Boolean eniEIPv6) {
                 this.eniEIPv6 = eniEIPv6;
@@ -1068,7 +1137,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * GaEIPv6.
+             * <p>The asset type: GaEIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder gaEIPv6(Boolean gaEIPv6) {
                 this.gaEIPv6 = gaEIPv6;
@@ -1076,7 +1148,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * NlbIPv6.
+             * <p>The asset type: NlbIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder nlbIPv6(Boolean nlbIPv6) {
                 this.nlbIPv6 = nlbIPv6;
@@ -1084,7 +1159,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * SlbIPv6.
+             * <p>The asset type: SlbIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder slbIPv6(Boolean slbIPv6) {
                 this.slbIPv6 = slbIPv6;
@@ -1151,7 +1229,7 @@ public class AddAddressBookRequest extends Request {
             } 
 
             /**
-             * Ipv4.
+             * <p>The IPv4 asset type.</p>
              */
             public Builder ipv4(Ipv4 ipv4) {
                 this.ipv4 = ipv4;
@@ -1159,7 +1237,7 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * Ipv6.
+             * <p>The IPv6 asset type.</p>
              */
             public Builder ipv6(Ipv6 ipv6) {
                 this.ipv6 = ipv6;
@@ -1226,7 +1304,10 @@ public class AddAddressBookRequest extends Request {
             } 
 
             /**
-             * AssetRegionId.
+             * <p>The region ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder assetRegionId(String assetRegionId) {
                 this.assetRegionId = assetRegionId;
@@ -1234,7 +1315,7 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * <p>The asset type.</p>
              */
             public Builder resourceType(ResourceType resourceType) {
                 this.resourceType = resourceType;

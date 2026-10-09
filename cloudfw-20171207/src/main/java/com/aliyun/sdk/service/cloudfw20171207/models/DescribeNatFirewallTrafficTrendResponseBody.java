@@ -106,7 +106,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The statistics on traffic.</p>
+         * <p>A list of traffic statistics.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -114,7 +114,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum inbound network throughput, which indicates the maximum number of bits that are sent inbound per second. Unit: bit/s.</p>
+         * <p>The peak inbound network throughput. Unit: bps.</p>
          * 
          * <strong>example:</strong>
          * <p>18038632</p>
@@ -125,7 +125,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum outbound network throughput, which indicates the maximum number of bits that are sent outbound per second. Unit: bit/s.</p>
+         * <p>The peak outbound network throughput. Unit: bps.</p>
          * 
          * <strong>example:</strong>
          * <p>122596487</p>
@@ -136,7 +136,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total maximum inbound and outbound network throughput, which indicates the maximum number of bits that are sent inbound and outbound per second. Unit: bit/s.</p>
+         * <p>The peak total network throughput for inbound and outbound traffic. Unit: bps.</p>
          * 
          * <strong>example:</strong>
          * <p>66953194</p>
@@ -147,7 +147,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>87F23A3A-6F57-59C3-8237-A090D0613D71</p>
@@ -242,7 +242,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum inbound network throughput, which indicates the maximum number of bits that are sent inbound per second. Unit: bit/s.</p>
+             * <p>The peak inbound network throughput. Unit: bps.</p>
              * 
              * <strong>example:</strong>
              * <p>18038632</p>
@@ -253,7 +253,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum outbound network throughput, which indicates the maximum number of bits that are sent outbound per second. Unit: bit/s.</p>
+             * <p>The peak outbound network throughput. Unit: bps.</p>
              * 
              * <strong>example:</strong>
              * <p>122596487</p>
@@ -264,7 +264,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total maximum inbound and outbound network throughput, which indicates the maximum number of bits that are sent inbound and outbound per second. Unit: bit/s.</p>
+             * <p>The peak total network throughput for inbound and outbound traffic. Unit: bps.</p>
              * 
              * <strong>example:</strong>
              * <p>66953194</p>
@@ -275,7 +275,7 @@ public class DescribeNatFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The time of the query. This value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1734418980</p>

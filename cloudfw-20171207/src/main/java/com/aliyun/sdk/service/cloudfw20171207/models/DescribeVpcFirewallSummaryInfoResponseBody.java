@@ -548,7 +548,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * AvailableVpcFirewallQuota.
+         * <p>The remaining available quota for VPC firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder availableVpcFirewallQuota(Integer availableVpcFirewallQuota) {
             this.availableVpcFirewallQuota = availableVpcFirewallQuota;
@@ -556,7 +559,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * CenExpressConnectVpcCount.
+         * <p>The number of VPCs connected through Cloud Enterprise Network (CEN).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder cenExpressConnectVpcCount(Integer cenExpressConnectVpcCount) {
             this.cenExpressConnectVpcCount = cenExpressConnectVpcCount;
@@ -564,7 +570,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * CenFirewallVpcCount.
+         * <p>The number of CEN VPCs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder cenFirewallVpcCount(Integer cenFirewallVpcCount) {
             this.cenFirewallVpcCount = cenFirewallVpcCount;
@@ -572,7 +581,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * CenTrVpcCount.
+         * <p>The total number of VPCs connected through CEN transit routers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder cenTrVpcCount(Integer cenTrVpcCount) {
             this.cenTrVpcCount = cenTrVpcCount;
@@ -580,7 +592,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ClosedCenFirewallCount.
+         * <p>The number of configured but disabled CEN firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder closedCenFirewallCount(Integer closedCenFirewallCount) {
             this.closedCenFirewallCount = closedCenFirewallCount;
@@ -588,7 +603,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ClosedExpressConnectFirewallCount.
+         * <p>The number of configured but disabled Express Connect firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder closedExpressConnectFirewallCount(Integer closedExpressConnectFirewallCount) {
             this.closedExpressConnectFirewallCount = closedExpressConnectFirewallCount;
@@ -596,7 +614,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ClosedVpcFirewallCount.
+         * <p>The number of all configured but disabled VPC firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder closedVpcFirewallCount(Integer closedVpcFirewallCount) {
             this.closedVpcFirewallCount = closedVpcFirewallCount;
@@ -604,7 +625,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ConfiguredCenFirewallCount.
+         * <p>The number of configured CEN Basic Edition firewall instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder configuredCenFirewallCount(Integer configuredCenFirewallCount) {
             this.configuredCenFirewallCount = configuredCenFirewallCount;
@@ -612,7 +636,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ConfiguredCenFirewallRegionCount.
+         * <p>The number of configured CEN regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder configuredCenFirewallRegionCount(Integer configuredCenFirewallRegionCount) {
             this.configuredCenFirewallRegionCount = configuredCenFirewallRegionCount;
@@ -620,7 +647,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ConfiguredCenFirewallVpcCount.
+         * <p>The number of configured CEN VPCs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         public Builder configuredCenFirewallVpcCount(Integer configuredCenFirewallVpcCount) {
             this.configuredCenFirewallVpcCount = configuredCenFirewallVpcCount;
@@ -628,7 +658,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ConfiguredCenTrFirewallCount.
+         * <p>The number of configured CEN transit router firewall instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder configuredCenTrFirewallCount(Integer configuredCenTrFirewallCount) {
             this.configuredCenTrFirewallCount = configuredCenTrFirewallCount;
@@ -636,7 +669,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ConfiguredExpressConnectFirewallCount.
+         * <p>The number of configured Express Connect circuits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder configuredExpressConnectFirewallCount(Integer configuredExpressConnectFirewallCount) {
             this.configuredExpressConnectFirewallCount = configuredExpressConnectFirewallCount;
@@ -644,7 +680,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ConfiguredExpressConnectVpcCount.
+         * <p>The number of configured Express Connect VPCs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder configuredExpressConnectVpcCount(Integer configuredExpressConnectVpcCount) {
             this.configuredExpressConnectVpcCount = configuredExpressConnectVpcCount;
@@ -652,7 +691,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ConfiguredVpcFirewallCount.
+         * <p>The number of all configured VPC firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder configuredVpcFirewallCount(Integer configuredVpcFirewallCount) {
             this.configuredVpcFirewallCount = configuredVpcFirewallCount;
@@ -660,7 +702,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ConfiguredVpcFirewallVpcCount.
+         * <p>The number of VPCs with firewalls configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder configuredVpcFirewallVpcCount(Integer configuredVpcFirewallVpcCount) {
             this.configuredVpcFirewallVpcCount = configuredVpcFirewallVpcCount;
@@ -668,7 +713,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ExpressConnectVpcCount.
+         * <p>The number of Express Connect VPCs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder expressConnectVpcCount(Integer expressConnectVpcCount) {
             this.expressConnectVpcCount = expressConnectVpcCount;
@@ -676,7 +724,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * NotConfiguredCenFirewallCount.
+         * <p>The number of unconfigured CEN firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder notConfiguredCenFirewallCount(Integer notConfiguredCenFirewallCount) {
             this.notConfiguredCenFirewallCount = notConfiguredCenFirewallCount;
@@ -684,7 +735,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * NotConfiguredCenTrFirewallCount.
+         * <p>The number of unconfigured CEN transit router firewall instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder notConfiguredCenTrFirewallCount(Integer notConfiguredCenTrFirewallCount) {
             this.notConfiguredCenTrFirewallCount = notConfiguredCenTrFirewallCount;
@@ -692,7 +746,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * NotConfiguredExpressConnectFirewallCount.
+         * <p>The number of unconfigured Express Connect firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder notConfiguredExpressConnectFirewallCount(Integer notConfiguredExpressConnectFirewallCount) {
             this.notConfiguredExpressConnectFirewallCount = notConfiguredExpressConnectFirewallCount;
@@ -700,7 +757,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * NotConfiguredVpcFirewallCount.
+         * <p>The number of all unconfigured VPC firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder notConfiguredVpcFirewallCount(Integer notConfiguredVpcFirewallCount) {
             this.notConfiguredVpcFirewallCount = notConfiguredVpcFirewallCount;
@@ -708,7 +768,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OpenedCenExpressConnectVpcCount.
+         * <p>The number of enabled and active VPC connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder openedCenExpressConnectVpcCount(Integer openedCenExpressConnectVpcCount) {
             this.openedCenExpressConnectVpcCount = openedCenExpressConnectVpcCount;
@@ -716,7 +779,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OpenedCenFirewallCount.
+         * <p>The number of enabled CEN firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder openedCenFirewallCount(Integer openedCenFirewallCount) {
             this.openedCenFirewallCount = openedCenFirewallCount;
@@ -724,7 +790,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OpenedCenFirewallVpcCount.
+         * <p>The number of VPCs protected by CEN firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder openedCenFirewallVpcCount(Integer openedCenFirewallVpcCount) {
             this.openedCenFirewallVpcCount = openedCenFirewallVpcCount;
@@ -732,7 +801,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OpenedCenTrFirewallVpcCount.
+         * <p>The number of VPCs protected by CEN transit router firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder openedCenTrFirewallVpcCount(Integer openedCenTrFirewallVpcCount) {
             this.openedCenTrFirewallVpcCount = openedCenTrFirewallVpcCount;
@@ -740,7 +812,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OpenedEcrCount.
+         * <p>The number of CEN Express Connect Router (ECR) instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder openedEcrCount(Integer openedEcrCount) {
             this.openedEcrCount = openedEcrCount;
@@ -748,7 +823,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OpenedExpressConnectFirewallCount.
+         * <p>The number of enabled Express Connect firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder openedExpressConnectFirewallCount(Integer openedExpressConnectFirewallCount) {
             this.openedExpressConnectFirewallCount = openedExpressConnectFirewallCount;
@@ -756,7 +834,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OpenedExpressConnectVpcCount.
+         * <p>The number of VPCs protected by Express Connect firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder openedExpressConnectVpcCount(Integer openedExpressConnectVpcCount) {
             this.openedExpressConnectVpcCount = openedExpressConnectVpcCount;
@@ -764,7 +845,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OpenedPeerTrCount.
+         * <p>The number of protected inter-region connections through CEN transit routers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder openedPeerTrCount(Integer openedPeerTrCount) {
             this.openedPeerTrCount = openedPeerTrCount;
@@ -772,7 +856,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OpenedVbrCount.
+         * <p>The total number of protected Virtual Border Routers (VBRs) through CEN transit routers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder openedVbrCount(Integer openedVbrCount) {
             this.openedVbrCount = openedVbrCount;
@@ -780,7 +867,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OpenedVpcCount.
+         * <p>The total number of protected VPCs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17</p>
          */
         public Builder openedVpcCount(Integer openedVpcCount) {
             this.openedVpcCount = openedVpcCount;
@@ -788,7 +878,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OpenedVpcFirewallCount.
+         * <p>The number of all enabled VPC firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder openedVpcFirewallCount(Integer openedVpcFirewallCount) {
             this.openedVpcFirewallCount = openedVpcFirewallCount;
@@ -796,7 +889,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OpenedVpnCount.
+         * <p>The total number of protected VPN connections through CEN transit routers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder openedVpnCount(Integer openedVpnCount) {
             this.openedVpnCount = openedVpnCount;
@@ -804,7 +900,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8AABEF64-7ABF-52CB-BA6C-0598E3DB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -812,7 +911,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalEcrCount.
+         * <p>The total number of ECR instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalEcrCount(Integer totalEcrCount) {
             this.totalEcrCount = totalEcrCount;
@@ -820,7 +922,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPeerTrCount.
+         * <p>The total number of inter-region connections through CEN transit routers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalPeerTrCount(Integer totalPeerTrCount) {
             this.totalPeerTrCount = totalPeerTrCount;
@@ -828,7 +933,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalVbrCount.
+         * <p>The total number of VBRs through CEN transit routers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalVbrCount(Integer totalVbrCount) {
             this.totalVbrCount = totalVbrCount;
@@ -836,7 +944,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalVpcCount.
+         * <p>The total number of interconnected VPCs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalVpcCount(Integer totalVpcCount) {
             this.totalVpcCount = totalVpcCount;
@@ -844,7 +955,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalVpcFirewallQuota.
+         * <p>The total VPC firewall quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalVpcFirewallQuota(Integer totalVpcFirewallQuota) {
             this.totalVpcFirewallQuota = totalVpcFirewallQuota;
@@ -852,7 +966,10 @@ public class DescribeVpcFirewallSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalVpnCount.
+         * <p>The total number of VPN connections through CEN transit routers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalVpnCount(Integer totalVpnCount) {
             this.totalVpnCount = totalVpnCount;

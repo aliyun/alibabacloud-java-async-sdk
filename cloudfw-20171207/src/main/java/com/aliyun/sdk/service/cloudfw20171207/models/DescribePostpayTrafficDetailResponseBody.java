@@ -80,7 +80,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0525EADE-C112-5702-A5BC-0E2F6F94DB23</p>
@@ -91,7 +91,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of traffic statistics entries.</p>
          * 
          * <strong>example:</strong>
          * <p>132</p>
@@ -102,7 +102,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistics on traffic.</p>
+         * <p>The traffic statistics list.</p>
          */
         public Builder trafficList(java.util.List<TrafficList> trafficList) {
             this.trafficList = trafficList;
@@ -272,7 +272,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The inbound network throughput, which indicates the total number of bytes that are received Unit: bytes.</p>
+             * <p>The inbound network throughput (total bytes). Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1115096939</p>
@@ -283,7 +283,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the asset.</p>
+             * <p>The ID of the asset instance.</p>
              * 
              * <strong>example:</strong>
              * <p>i-8vb2d7c9mtn0bo9qcraq</p>
@@ -294,7 +294,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asset type. This value takes effect only for the Internet firewall.</p>
+             * <p>The asset type. This value takes effect only for Internet border traffic.</p>
              * 
              * <strong>example:</strong>
              * <p>EcsPublicIP</p>
@@ -305,7 +305,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound network throughput, which indicates the total number of bytes that are sent. Unit: bytes.</p>
+             * <p>The outbound network throughput (total bytes). Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>100000000</p>
@@ -316,7 +316,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Protection duration. Unit: hours.</p>
+             * <p>The protection duration. Unit: hours.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -338,7 +338,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource ID. The resource ID for the Internet firewall is the public IP address that is protected the Internet firewall, and the resource ID for a NAT firewall is the instance ID of the NAT firewall.</p>
+             * <p>The resource ID. For Internet border traffic, this is the public IP address of the asset. For NAT border traffic, this is the firewall instance ID of the asset.</p>
              * 
              * <strong>example:</strong>
              * <p>39.106.146.214</p>
@@ -349,7 +349,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total inbound and outbound network throughput, which indicates the total number of bytes that are received and sent. Unit: bytes.</p>
+             * <p>The total network throughput in both inbound and outbound directions (total bytes sent and received). Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1215096939</p>
@@ -360,7 +360,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The date on which the statistics are collected.</p>
+             * <p>The date of the traffic statistics.</p>
              * 
              * <strong>example:</strong>
              * <p>20231001</p>
@@ -371,11 +371,14 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic type. Valid values:</p>
+             * <p>The type of traffic boundary for statistics. Valid values:</p>
              * <ul>
-             * <li><strong>EIP_TRAFFIC</strong>: traffic for the Internet firewall</li>
-             * <li><strong>NatGateway_TRAFFIC</strong>: traffic for NAT firewalls</li>
-             * <li><strong>VPC_TRAFFIC</strong>: traffic for VPC firewalls</li>
+             * <li><p><strong>EIP_TRAFFIC</strong>: Internet border traffic.</p>
+             * </li>
+             * <li><p><strong>NatGateway_TRAFFIC</strong>: NAT border traffic.</p>
+             * </li>
+             * <li><p><strong>VPC_TRAFFIC</strong>: VPC border traffic.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

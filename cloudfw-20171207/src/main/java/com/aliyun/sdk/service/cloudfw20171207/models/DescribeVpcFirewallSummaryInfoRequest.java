@@ -73,7 +73,16 @@ public class DescribeVpcFirewallSummaryInfoRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -82,7 +91,12 @@ public class DescribeVpcFirewallSummaryInfoRequest extends Request {
         }
 
         /**
-         * UserType.
+         * <p>The user type. Valid values:</p>
+         * <p><strong>buy</strong>: paid user.</p>
+         * <p><strong>free</strong>: free user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>buy</p>
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

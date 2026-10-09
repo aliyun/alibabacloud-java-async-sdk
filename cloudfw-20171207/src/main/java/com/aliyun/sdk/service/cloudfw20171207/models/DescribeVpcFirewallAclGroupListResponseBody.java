@@ -80,7 +80,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the access control policy groups.</p>
+         * <p>The access control policy groups.</p>
          */
         public Builder aclGroupList(java.util.List<AclGroupList> aclGroupList) {
             this.aclGroupList = aclGroupList;
@@ -88,7 +88,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
@@ -99,7 +99,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of the policy groups that are returned.</p>
+         * <p>The total number of access control policy groups.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -155,10 +155,12 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies Whether strict mode is enabled. Valid values:</p>
+             * <p>Indicates whether strict mode is enabled. Valid values:</p>
              * <ul>
-             * <li>1: yes</li>
-             * <li>0: no</li>
+             * <li><p>1: Strict mode is enabled.</p>
+             * </li>
+             * <li><p>0: Strict mode is disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -281,7 +283,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>ACL engine mode.</p>
+             * <p>The ACL engine mode.</p>
              */
             public Builder aclConfig(AclConfig aclConfig) {
                 this.aclConfig = aclConfig;
@@ -289,14 +291,14 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the policy group.</p>
+             * <p>The ID of the access control policy group for the VPC boundary firewall.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.</p>
-             * <p>Example: cen-ervw0g12b5jbw****</p>
+             * <li><p>If the VPC boundary firewall protects a Cloud Enterprise Network (CEN) instance, the policy group ID is the ID of the CEN instance.</p>
+             * <p>Example: cen-ervw0g12b5jbw\<em>\</em>\<em>\</em></p>
              * </li>
-             * <li><p>If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.</p>
-             * <p>Example: vfw-a42bbb7b887148c9****</p>
+             * <li><p>If the VPC boundary firewall protects an Express Connect circuit, the policy group ID is the ID of the VPC boundary firewall instance.</p>
+             * <p>Example: vfw-a42bbb7b887148c9\<em>\</em>\<em>\</em></p>
              * </li>
              * </ul>
              * 
@@ -309,10 +311,12 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the policy group. Valid values:</p>
+             * <p>The name of the access control policy group for the VPC boundary firewall.</p>
              * <ul>
-             * <li>If the VPC firewall is used to protect a CEN instance, the value of this parameter is the name of the CEN instance.</li>
-             * <li>If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance name of the VPC firewall.</li>
+             * <li><p>If the VPC boundary firewall protects a Cloud Enterprise Network instance, the group name is the name of the CEN instance.</p>
+             * </li>
+             * <li><p>If the VPC boundary firewall protects an Express Connect circuit, the group name is the name of the VPC boundary firewall instance.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -324,7 +328,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of access control policies in the policy group.</p>
+             * <p>The number of policies in the access control policy group.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>
@@ -335,10 +339,12 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether it is the default firewall. Values:</p>
+             * <p>Indicates whether the policy group is a default group. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: It is the default firewall.</li>
-             * <li><strong>false</strong>: It is not the default firewall.</li>
+             * <li><p><strong>true</strong>: The policy group is a default group.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The policy group is not a default group.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -350,7 +356,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+             * <p>The ID of the member account.</p>
              * 
              * <strong>example:</strong>
              * <p>258039427902****</p>

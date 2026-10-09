@@ -80,7 +80,7 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -88,7 +88,10 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5BE1AA4-934A-5085-89CC-9AD1CAC3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +220,10 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
             } 
 
             /**
-             * IP.
+             * <p>The IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a.com</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -222,7 +231,10 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * IpsHitCnt.
+             * <p>The number of IPS hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ipsHitCnt(Long ipsHitCnt) {
                 this.ipsHitCnt = ipsHitCnt;
@@ -230,7 +242,10 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * SessionCount.
+             * <p>The number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder sessionCount(Long sessionCount) {
                 this.sessionCount = sessionCount;
@@ -238,7 +253,10 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBytes.
+             * <p>The total traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253023143</p>
              */
             public Builder totalBytes(Long totalBytes) {
                 this.totalBytes = totalBytes;
@@ -246,7 +264,10 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC where the asset resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a.com</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -254,7 +275,10 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * <p>The name of the VPC where the asset resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1mos0vhefmx5ah6****</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

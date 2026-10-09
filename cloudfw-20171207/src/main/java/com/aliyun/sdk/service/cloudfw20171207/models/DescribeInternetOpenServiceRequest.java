@@ -199,7 +199,10 @@ public class DescribeInternetOpenServiceRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -208,7 +211,10 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The value is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1753804800</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -217,7 +223,10 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -226,7 +235,10 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,7 +247,10 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3389</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -244,7 +259,10 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * RiskLevel.
+         * <p>The risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -253,7 +271,10 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The name of the application for an exact match. If you do not specify this parameter, all applications are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMB</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -262,7 +283,10 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * ServiceNameFuzzy.
+         * <p>The name of the application for a fuzzy match. If you do not specify this parameter, all applications are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMB</p>
          */
         public Builder serviceNameFuzzy(String serviceNameFuzzy) {
             this.putQueryParameter("ServiceNameFuzzy", serviceNameFuzzy);
@@ -271,7 +295,10 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122.200.64.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -280,7 +307,10 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range to query. The value is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1755742107</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -289,7 +319,10 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * SuggestLevel.
+         * <p>The recommended policy level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder suggestLevel(String suggestLevel) {
             this.putQueryParameter("SuggestLevel", suggestLevel);

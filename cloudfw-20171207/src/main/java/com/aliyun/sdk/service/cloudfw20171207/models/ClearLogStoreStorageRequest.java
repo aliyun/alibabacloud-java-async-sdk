@@ -59,7 +59,10 @@ public class ClearLogStoreStorageRequest extends Request {
         } 
 
         /**
-         * Site.
+         * <p>The site name for which to clear logs. If only one logStore exists, you can leave this parameter empty. If two logStores exist, set this parameter to cn or intl.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder site(String site) {
             this.putQueryParameter("Site", site);

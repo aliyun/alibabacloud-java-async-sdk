@@ -54,7 +54,10 @@ public class ModifyDnsFirewallPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C50C2A9-4BBB-5504-8ADA-C41A79****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

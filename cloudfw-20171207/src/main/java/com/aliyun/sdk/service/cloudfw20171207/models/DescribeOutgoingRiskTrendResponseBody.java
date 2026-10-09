@@ -106,7 +106,7 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The list of returned data.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -114,7 +114,10 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Interval.
+         * <p>The time interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Integer interval) {
             this.interval = interval;
@@ -122,7 +125,10 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CA8D98E-A71B-5856-A658-3E8B3152E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +136,10 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRiskDomain.
+         * <p>The total number of threat domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalRiskDomain(Integer totalRiskDomain) {
             this.totalRiskDomain = totalRiskDomain;
@@ -138,7 +147,10 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRiskIp.
+         * <p>The total number of threat IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalRiskIp(Integer totalRiskIp) {
             this.totalRiskIp = totalRiskIp;
@@ -217,7 +229,10 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * RiskDomain.
+             * <p>The number of threat domain names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder riskDomain(Integer riskDomain) {
                 this.riskDomain = riskDomain;
@@ -225,7 +240,10 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
             }
 
             /**
-             * RiskIp.
+             * <p>The number of threat IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder riskIp(Integer riskIp) {
                 this.riskIp = riskIp;
@@ -233,7 +251,10 @@ public class DescribeOutgoingRiskTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659405600</p>
              */
             public Builder time(Long time) {
                 this.time = time;

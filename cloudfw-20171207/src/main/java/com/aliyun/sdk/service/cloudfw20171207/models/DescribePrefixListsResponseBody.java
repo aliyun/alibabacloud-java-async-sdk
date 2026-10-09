@@ -67,7 +67,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the prefix lists.</p>
+         * <p>An array of prefix lists.</p>
          */
         public Builder prefixList(java.util.List<PrefixList> prefixList) {
             this.prefixList = prefixList;
@@ -75,7 +75,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>67FD76C2-C493-5815-8107-643FD7AB77C7</p>
@@ -209,10 +209,12 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address family of the prefix list. Valid values:</p>
+             * <p>The address family of the prefix list. Valid values:</p>
              * <ul>
-             * <li>IPv4</li>
-             * <li>IPv6</li>
+             * <li><p>IPv4</p>
+             * </li>
+             * <li><p>IPv6</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -235,7 +237,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time the prefix list was created. The timestamp is in ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-16T08:31:06Z</p>
@@ -246,7 +248,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description.</p>
+             * <p>The description of the prefix list.</p>
              * 
              * <strong>example:</strong>
              * <p>TCP_14900-14911</p>
@@ -268,7 +270,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the prefix list.</p>
+             * <p>The prefix list ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pl-uf64nco3ujjqchx6aaji</p>
@@ -279,7 +281,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the prefix list.</p>
+             * <p>The prefix list name.</p>
              * 
              * <strong>example:</strong>
              * <p>participant-name</p>

@@ -87,7 +87,10 @@ public class ListTlsInspectCACertificatesRequest extends Request {
         } 
 
         /**
-         * CaCertId.
+         * <p>The CA certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C3E91391-16CD-1BFC-A133-******D429</p>
          */
         public Builder caCertId(String caCertId) {
             this.putQueryParameter("CaCertId", caCertId);
@@ -96,7 +99,10 @@ public class ListTlsInspectCACertificatesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number for paging. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +111,10 @@ public class ListTlsInspectCACertificatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries per page for paging. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

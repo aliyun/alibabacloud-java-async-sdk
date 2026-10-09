@@ -80,7 +80,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the assets.</p>
+         * <p>The asset details returned.</p>
          */
         public Builder assetList(java.util.List<AssetList> assetList) {
             this.assetList = assetList;
@@ -88,7 +88,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>443C5781-1C03-5FCD-8EC5-FB9C0B9AC396</p>
@@ -194,7 +194,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the server.</p>
+             * <p>The server IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>39.108.XX.XX</p>
@@ -205,11 +205,13 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
+             * <p>The IP address version of the assets protected by Cloud Firewall.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><strong>4</strong>: IPv4</li>
-             * <li><strong>6</strong>: IPv6</li>
+             * <li><p><strong>4</strong>: IPv4 address.</p>
+             * </li>
+             * <li><p><strong>6</strong>: IPv6 address.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -221,7 +223,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the risk.</p>
+             * <p>The risk reason.</p>
              * 
              * <strong>example:</strong>
              * <p>other</p>
@@ -234,9 +236,9 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
             /**
              * <p>The risk level. Valid values:</p>
              * <ul>
-             * <li><strong>low</strong></li>
-             * <li><strong>middle</strong></li>
-             * <li><strong>high</strong></li>
+             * <li><strong>low</strong>: low risk</li>
+             * <li><strong>middle</strong>: medium risk</li>
+             * <li><strong>high</strong>: high risk</li>
              * </ul>
              * 
              * <strong>example:</strong>

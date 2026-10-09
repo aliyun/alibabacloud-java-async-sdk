@@ -88,6 +88,7 @@ public class ResetRuleHitCountRequest extends Request {
         } 
 
         /**
+         * <p>The unique ID of the access control policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,16 @@ public class ResetRuleHitCountRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong>: Chinese (default)</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -109,7 +119,10 @@ public class ResetRuleHitCountRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the requester.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112.64.126.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

@@ -115,7 +115,7 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number in a paged query. Default value: 1. For more information about paging, see the corresponding parameter descriptions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,7 +127,10 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the VPC firewall.</p>
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+         * <blockquote>
+         * <p>FirewallId is required. If this parameter is not specified, the ErrorParameters (400) error is returned. You can call DescribeTrFirewallsV2List to obtain the FirewallId. Prerequisites: CEN Enterprise Edition with a transit router and VPC mount are configured, and the FirewallId is obtained by calling DescribeTrFirewallsV2List.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>vfw-tr-d5ba592ac6c84aff****</p>
@@ -139,9 +142,9 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>
          * </ul>
          * 
@@ -155,7 +158,7 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>The maximum number of entries per page in a paged query. Default value: 10. For more information about paging, see the corresponding parameter descriptions.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -167,7 +170,7 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the routing policy.</p>
+         * <p>The ID of the firewall routing policy.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-7b66257c14e141fb****</p>

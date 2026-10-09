@@ -73,7 +73,10 @@ public class ModifyCfwInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the Cloud Firewall instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cfw_elasticity_public_cn-zsk39m******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -82,7 +85,7 @@ public class ModifyCfwInstanceRequest extends Request {
         }
 
         /**
-         * UpdateList.
+         * <p>A list of instance properties to update.</p>
          */
         public Builder updateList(java.util.List<UpdateList> updateList) {
             this.putQueryParameter("UpdateList", updateList);
@@ -150,7 +153,27 @@ public class ModifyCfwInstanceRequest extends Request {
             } 
 
             /**
-             * Code.
+             * <p>The code of the instance property to update.
+             * The following codes are supported:</p>
+             * <ul>
+             * <li><p>\<code>Code\\</code>: \<code>MajorVersion\\</code>. Set \<code>Value\\</code> to \<code>2\\</code>. This is available only for pay-as-you-go 1.0 users to upgrade their instances to pay-as-you-go 2.0.</p>
+             * <blockquote>
+             * <p>Warning: </p>
+             * </blockquote>
+             * <p>Make sure you understand the billing methods and pricing of pay-as-you-go 2.0.</p>
+             * <blockquote>
+             * <p>Warning: </p>
+             * </blockquote>
+             * <p>Note that if log delivery is enabled before the upgrade, it will remain enabled after the upgrade, and logs will be delivered to a new Logstore.</p>
+             * </li>
+             * <li><p>\<code>Code\\</code>: \<code>ThreatIntelligence\\</code>. This is available only for pay-as-you-go 2.0 users to enable or disable the threat intelligence feature. Set \<code>Value\\</code> to \<code>1\\</code> to enable the feature or \<code>0\\</code> to disable it.</p>
+             * </li>
+             * <li><p>\<code>Code\\</code>: \<code>Sdl\\</code>. This is available only for pay-as-you-go 2.0 users to enable or disable the sensitive data leak detection feature. Set \<code>Value\\</code> to \<code>1\\</code> to enable the feature or \<code>0\\</code> to disable it.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Sdl</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -158,7 +181,10 @@ public class ModifyCfwInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value for the specified \<code>Code\\</code>. For valid values, see the description of the \<code>Code\\</code> parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;

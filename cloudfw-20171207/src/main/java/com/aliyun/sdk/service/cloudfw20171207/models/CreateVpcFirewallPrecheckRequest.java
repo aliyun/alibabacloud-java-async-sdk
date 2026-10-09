@@ -143,7 +143,10 @@ public class CreateVpcFirewallPrecheckRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-iv8m2lj2fqg1xt****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -152,7 +155,16 @@ public class CreateVpcFirewallPrecheckRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -161,7 +173,10 @@ public class CreateVpcFirewallPrecheckRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of the member account of Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128599825273****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -170,7 +185,18 @@ public class CreateVpcFirewallPrecheckRequest extends Request {
         }
 
         /**
-         * NetworkInstanceType.
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cen_firewall</strong></p>
+         * </li>
+         * <li><p><strong>cen_tr_firewall</strong></p>
+         * </li>
+         * <li><p><strong>ec_firewall</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cen_tr_firewall</p>
          */
         public Builder networkInstanceType(String networkInstanceType) {
             this.putQueryParameter("NetworkInstanceType", networkInstanceType);
@@ -179,7 +205,10 @@ public class CreateVpcFirewallPrecheckRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -188,7 +217,10 @@ public class CreateVpcFirewallPrecheckRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * <p>The ID of the transit router instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-t4n16htuv1jalj9cq****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -197,7 +229,10 @@ public class CreateVpcFirewallPrecheckRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp132e2wpu9o6qth****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

@@ -67,7 +67,10 @@ public class CreateVpcFirewallCenManualConfigureResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B14757D0-4640-4B44-AC67-7F558F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateVpcFirewallCenManualConfigureResponseBody extends TeaModel {
         }
 
         /**
-         * VpcFirewallId.
+         * <p>The ID of the VPC border firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-m5e7dbc4y****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.vpcFirewallId = vpcFirewallId;

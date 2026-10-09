@@ -73,7 +73,7 @@ public class EnableSdlProtectedAssetRequest extends Request {
         } 
 
         /**
-         * <p>需开启数据泄露保护的资产 IP 列表。</p>
+         * <p>The list of IP assets. At least one IP address is required to enable protection.</p>
          */
         public Builder ipList(java.util.List<String> ipList) {
             this.putQueryParameter("IpList", ipList);
@@ -82,7 +82,14 @@ public class EnableSdlProtectedAssetRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

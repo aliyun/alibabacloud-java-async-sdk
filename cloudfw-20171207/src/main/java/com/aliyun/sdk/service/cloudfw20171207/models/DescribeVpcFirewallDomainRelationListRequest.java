@@ -215,7 +215,10 @@ public class DescribeVpcFirewallDomainRelationListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -224,7 +227,7 @@ public class DescribeVpcFirewallDomainRelationListRequest extends Request {
         }
 
         /**
-         * DomainList.
+         * <p>The list of domain names.</p>
          */
         public Builder domainList(java.util.List<String> domainList) {
             this.putQueryParameter("DomainList", domainList);
@@ -233,7 +236,10 @@ public class DescribeVpcFirewallDomainRelationListRequest extends Request {
         }
 
         /**
-         * DstIP.
+         * <p>The destination IP address to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34.136.111.XXX</p>
          */
         public Builder dstIP(String dstIP) {
             this.putQueryParameter("DstIP", dstIP);
@@ -242,7 +248,10 @@ public class DescribeVpcFirewallDomainRelationListRequest extends Request {
         }
 
         /**
-         * DstVpcId.
+         * <p>The ID of the destination VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp10w5nb30r4jzfyc****</p>
          */
         public Builder dstVpcId(String dstVpcId) {
             this.putQueryParameter("DstVpcId", dstVpcId);
@@ -251,6 +260,7 @@ public class DescribeVpcFirewallDomainRelationListRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,7 +273,16 @@ public class DescribeVpcFirewallDomainRelationListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -272,7 +291,10 @@ public class DescribeVpcFirewallDomainRelationListRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order in which to sort the queried entries. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -281,7 +303,10 @@ public class DescribeVpcFirewallDomainRelationListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -290,7 +315,14 @@ public class DescribeVpcFirewallDomainRelationListRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The field by which to sort the queried entries. Valid values:</p>
+         * <p>Default value: TotalBytes.</p>
+         * <p>Valid values:</p>
+         * <p>TotalBytes: Order by total traffic.</p>
+         * <p>SessionCount: Order by session count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TotalBytes</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -299,7 +331,10 @@ public class DescribeVpcFirewallDomainRelationListRequest extends Request {
         }
 
         /**
-         * SrcIP.
+         * <p>The source IP address to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.92.x.x</p>
          */
         public Builder srcIP(String srcIP) {
             this.putQueryParameter("SrcIP", srcIP);
@@ -308,7 +343,10 @@ public class DescribeVpcFirewallDomainRelationListRequest extends Request {
         }
 
         /**
-         * SrcVpcId.
+         * <p>The ID of the source VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-t4nlt09olhpazpoeg****</p>
          */
         public Builder srcVpcId(String srcVpcId) {
             this.putQueryParameter("SrcVpcId", srcVpcId);
@@ -317,6 +355,7 @@ public class DescribeVpcFirewallDomainRelationListRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -103,6 +103,7 @@ public class ModifyUserSlsLogStorageTimeRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class ModifyUserSlsLogStorageTimeRequest extends Request {
         }
 
         /**
-         * LogVersion.
+         * <p>The log version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder logVersion(Integer logVersion) {
             this.putQueryParameter("LogVersion", logVersion);
@@ -124,7 +128,10 @@ public class ModifyUserSlsLogStorageTimeRequest extends Request {
         }
 
         /**
-         * SlsRegionId.
+         * <p>The region ID of Log Service (SLS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1</p>
          */
         public Builder slsRegionId(String slsRegionId) {
             this.putQueryParameter("SlsRegionId", slsRegionId);
@@ -133,6 +140,7 @@ public class ModifyUserSlsLogStorageTimeRequest extends Request {
         }
 
         /**
+         * <p>The retention period, in days.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * InfoList.
+         * <p>A list of detailed information about the Logstores.</p>
          */
         public Builder infoList(java.util.List<InfoList> infoList) {
             this.infoList = infoList;
@@ -127,7 +127,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ItemList.
+         * <p>A list of Simple Log Service projects.</p>
          */
         public Builder itemList(java.util.List<ItemList> itemList) {
             this.itemList = itemList;
@@ -135,7 +135,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * LogVersion.
+         * <p>The log version. A value of 1 indicates that there is one Logstore. A value of 2 indicates that there are two Logstores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder logVersion(String logVersion) {
             this.logVersion = logVersion;
@@ -143,7 +146,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * LogstoreName.
+         * <p>The name of the Logstore in Simple Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rs-stats</p>
          */
         public Builder logstoreName(String logstoreName) {
             this.logstoreName = logstoreName;
@@ -151,7 +157,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project in Simple Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudfirewallnew-project-199053910542****-cn-hangzhou</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -159,7 +168,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7036EBAB-F85F-5AAE-976F-C75AEE59****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -277,7 +289,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigStatus.
+             * <p>The configuration status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success_finished</p>
              */
             public Builder configStatus(String configStatus) {
                 this.configStatus = configStatus;
@@ -285,7 +300,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DispatchName.
+             * <p>The name of the delivery type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>internet-traffic-log</p>
              */
             public Builder dispatchName(String dispatchName) {
                 this.dispatchName = dispatchName;
@@ -293,7 +311,15 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DispatchValue.
+             * <p>The key for the log categorization. Valid values:</p>
+             * <p><strong>internet_log</strong></p>
+             * <p><strong>vpc_firewall_log</strong></p>
+             * <p><strong>nat_firewall_log</strong></p>
+             * <p><strong>ipv6_firewall_log</strong></p>
+             * <p><strong>dns_firewall_log</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv6_firewall_log</p>
              */
             public Builder dispatchValue(String dispatchValue) {
                 this.dispatchValue = dispatchValue;
@@ -301,7 +327,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether this delivery type is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -309,7 +338,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FilterKeys.
+             * <p>The detailed delivery configurations for the Internet and VPCs.</p>
              */
             public Builder filterKeys(java.util.List<String> filterKeys) {
                 this.filterKeys = filterKeys;
@@ -317,7 +346,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * <p>The value is fixed to log_type. You can ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log_type</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -410,7 +442,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * ItemList.
+             * <p>The details of the log delivery configuration.</p>
              */
             public Builder itemList(java.util.List<InfoListItemList> itemList) {
                 this.itemList = itemList;
@@ -418,7 +450,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * LogstoreName.
+             * <p>The name of the Logstore in Simple Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudfirewall-logstore</p>
              */
             public Builder logstoreName(String logstoreName) {
                 this.logstoreName = logstoreName;
@@ -426,7 +461,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The name of the project in Simple Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudfirewall-project-1204872307283650-cn-hangzhou</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -434,7 +472,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Site.
+             * <p>\<code>cn\\</code> indicates the Chinese mainland. \<code>intl\\</code> indicates regions outside the Chinese mainland. \<code>global\\</code> indicates global.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder site(String site) {
                 this.site = site;
@@ -553,7 +594,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigStatus.
+             * <p>The status of the delivery configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success_finished</p>
              */
             public Builder configStatus(String configStatus) {
                 this.configStatus = configStatus;
@@ -561,7 +605,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DispatchName.
+             * <p>The name of the log delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>internet-traffic-log</p>
              */
             public Builder dispatchName(String dispatchName) {
                 this.dispatchName = dispatchName;
@@ -569,7 +616,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DispatchValue.
+             * <p>The value of the log to be delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>internet_log</p>
              */
             public Builder dispatchValue(String dispatchValue) {
                 this.dispatchValue = dispatchValue;
@@ -577,7 +627,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>The delivery status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -585,7 +638,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FilterKeys.
+             * <p>The supported filter conditions.</p>
              */
             public Builder filterKeys(java.util.List<String> filterKeys) {
                 this.filterKeys = filterKeys;
@@ -593,7 +646,10 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * <p>The name of the search type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log_type</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;

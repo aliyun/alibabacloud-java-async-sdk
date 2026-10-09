@@ -115,7 +115,7 @@ public class DescribeAccessInstanceTaskRequest extends Request {
         } 
 
         /**
-         * <p>同步节点 ID。TaskId 与 AccessInstanceId 至少须提供一个，未同时提供时 API 返回 400 错误。</p>
+         * <p>The synchronization node ID. You must specify at least one of AccessInstanceId and TaskId. If both are empty, the error MissingParameter.TaskIdOrAccessInstanceId (-200550) is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>pdi-3bc2f91695ee48bd9377</p>
@@ -127,7 +127,10 @@ public class DescribeAccessInstanceTaskRequest extends Request {
         }
 
         /**
-         * AccessInstanceType.
+         * <p>The synchronization node type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AckClusterConnector</p>
          */
         public Builder accessInstanceType(String accessInstanceType) {
             this.putQueryParameter("AccessInstanceType", accessInstanceType);
@@ -136,7 +139,10 @@ public class DescribeAccessInstanceTaskRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -145,7 +151,10 @@ public class DescribeAccessInstanceTaskRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -154,7 +163,7 @@ public class DescribeAccessInstanceTaskRequest extends Request {
         }
 
         /**
-         * <p>任务 ID。TaskId 与 AccessInstanceId 至少须提供一个，未同时提供时 API 返回 400 错误。</p>
+         * <p>The task ID. You must specify at least one of TaskId and AccessInstanceId. If both are empty, the error MissingParameter.TaskIdOrAccessInstanceId (-200550, TaskId and AccessInstanceId cannot be empty at the same time. Provide at least one.) is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>task-c92d4544ef7b6a42</p>

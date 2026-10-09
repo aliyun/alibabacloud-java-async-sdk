@@ -185,7 +185,16 @@ public class DescribeSecurityProxyRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language type for the request and response messages. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -194,7 +203,10 @@ public class DescribeSecurityProxyRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of the member accounts of the current Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -203,7 +215,10 @@ public class DescribeSecurityProxyRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * <p>The ID of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-zm0h3c1exm5bifuorg8c5</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -212,7 +227,10 @@ public class DescribeSecurityProxyRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -221,7 +239,10 @@ public class DescribeSecurityProxyRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries per page in a paged query. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +251,10 @@ public class DescribeSecurityProxyRequest extends Request {
         }
 
         /**
-         * ProxyId.
+         * <p>The ID of the NAT firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy-nat80d763eb0dee4eacaec9</p>
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("ProxyId", proxyId);
@@ -239,7 +263,10 @@ public class DescribeSecurityProxyRequest extends Request {
         }
 
         /**
-         * ProxyName.
+         * <p>The name of the NAT firewall. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat-idmp-fir</p>
          */
         public Builder proxyName(String proxyName) {
             this.putQueryParameter("ProxyName", proxyName);
@@ -248,7 +275,10 @@ public class DescribeSecurityProxyRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>The region ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -257,7 +287,19 @@ public class DescribeSecurityProxyRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of Cloud Firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>configuring</strong>: Being created.</li>
+         * <li><strong>deleting</strong>: Being deleted.</li>
+         * <li><strong>normal</strong>: Normal.</li>
+         * <li><strong>abnormal</strong>: Abnormal.</li>
+         * <li><strong>opening</strong>: Being enabled.</li>
+         * <li><strong>closing</strong>: Being disabled.</li>
+         * <li><strong>closed</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -266,7 +308,10 @@ public class DescribeSecurityProxyRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The VPC-connected instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbwbo90rq0anm6t****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

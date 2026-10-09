@@ -67,7 +67,10 @@ public class CreateInstanceSyncTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Module.
+         * <p>The application module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ips_server</p>
          */
         public Builder module(String module) {
             this.module = module;
@@ -75,7 +78,10 @@ public class CreateInstanceSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D19D8F70-D64B-5A95-905A-6073BF4A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

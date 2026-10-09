@@ -229,15 +229,7 @@ public class DescribeControlPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
-         * <ul>
-         * <li><strong>accept</strong>: allows the traffic.</li>
-         * <li><strong>drop</strong>: denies the traffic.</li>
-         * <li><strong>log</strong>: monitors the traffic.</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you do not specify this parameter, access control policies of all action types are queried.</p>
-         * </blockquote>
+         * <p>The action that Cloud Firewall performs on the traffic in the access control policy. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>accept</p>
@@ -249,7 +241,7 @@ public class DescribeControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the access control policy.</p>
+         * <p>The unique ID of the access control policy. You must specify at least one of AclUuid and Direction. If AclUuid is specified, you can query the policy by its ID.</p>
          * 
          * <strong>example:</strong>
          * <p>00281255-d220-4db1-8f4f-c4df221a****</p>
@@ -261,8 +253,7 @@ public class DescribeControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
-         * <p>Default value: 1.</p>
+         * <p>The page number of the current page displayed in a paging query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,13 +266,10 @@ public class DescribeControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The description of the access control policy. Fuzzy match is supported.</p>
-         * <blockquote>
-         * <p> If you do not specify this parameter, access control policies that have descriptions are queried.</p>
-         * </blockquote>
+         * <p>The description of the access control policy. Fuzzy queries are supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Allow access to office network segment</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -290,16 +278,7 @@ public class DescribeControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The destination address in the access control policy. Fuzzy match is supported. The value of this parameter varies based on the value of the DestinationType parameter.</p>
-         * <ul>
-         * <li>If you set DestinationType to <code>net</code>, the value of Destination is a CIDR block. Example: 10.0.3.0/24.</li>
-         * <li>If you set DestinationType to <code>domain</code>, the value of Destination is a domain name. Example: aliyun.</li>
-         * <li>If you set DestinationType to <code>group</code>, the value of Destination is the name of an address book. Example: db_group.</li>
-         * <li>If you set DestinationType to <code>location</code>, the value of Destination is the name of a location. For more information about location codes, see AddControlPolicy. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you do not specify this parameter, access control policies of all destination address types are queried.</p>
-         * </blockquote>
+         * <p>The destination address in the access control policy. Fuzzy queries are supported. The value varies depending on the DestinationType (destination type).</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
@@ -311,11 +290,7 @@ public class DescribeControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The direction of the traffic to which the access control policies apply. Valid values:</p>
-         * <ul>
-         * <li><strong>in</strong>: inbound.</li>
-         * <li><strong>out</strong>: outbound.</li>
-         * </ul>
+         * <p>The traffic direction controlled by the access control policy. Valid values: in (inbound) or out (outbound). You must specify at least one of Direction and AclUuid. If AclUuid is not specified, you must specify a non-empty Direction. Otherwise, the ErrorParametersDirection error is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>in</p>
@@ -327,11 +302,7 @@ public class DescribeControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The IP version of the address in the access control policy. Valid values:</p>
-         * <ul>
-         * <li><strong>4</strong>: IPv4 (default)</li>
-         * <li><strong>6</strong>: IPv6</li>
-         * </ul>
+         * <p>The supported IP address version. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -343,11 +314,7 @@ public class DescribeControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
-         * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
-         * <li><strong>en</strong>: English</li>
-         * </ul>
+         * <p>The language type for receiving messages. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -359,7 +326,7 @@ public class DescribeControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The maximum number of entries per page displayed in a paging query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -372,16 +339,7 @@ public class DescribeControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the protocol in the access control policy. Valid values:</p>
-         * <ul>
-         * <li><strong>TCP</strong></li>
-         * <li><strong>UDP</strong></li>
-         * <li><strong>ICMP</strong></li>
-         * <li><strong>ANY</strong>: all types of protocols</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you do not specify this parameter, access control policies of all protocol types are queried.</p>
-         * </blockquote>
+         * <p>The protocol type of the traffic in the access control policy. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -393,11 +351,7 @@ public class DescribeControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The access control policy is enabled.</li>
-         * <li><strong>false</strong>: The access control policy is disabled.</li>
-         * </ul>
+         * <p>The enabled status of the access control policy. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -409,14 +363,7 @@ public class DescribeControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
-         * <ul>
-         * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
-         * <li><strong>None</strong>: The policy takes effect for only once.</li>
-         * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
-         * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
-         * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
-         * </ul>
+         * <p>The recurrence type of the policy validity period for the access control policy. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Permanent</p>
@@ -428,15 +375,7 @@ public class DescribeControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The source address in the access control policy. Fuzzy match is supported. The value of this parameter depends on the value of the SourceType parameter.</p>
-         * <ul>
-         * <li>If SourceType is set to <code>net</code>, the value of Source must be a CIDR block. Example: 192.0.XX.XX/24.</li>
-         * <li>If SourceType is set to <code>group</code>, the value of Source must be the name of an address book. Example: db_group. If the db_group address book does not contain addresses, all source addresses are queried.</li>
-         * <li>If SourceType is set to <code>location</code>, the value of Source must be a location. Example: beijing.</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you do not specify this parameter, access control policies of all source address types are queried.</p>
-         * </blockquote>
+         * <p>The source address in the access control policy. Fuzzy queries are supported. The value varies depending on the SourceType (source type).</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>

@@ -59,7 +59,16 @@ public class DescribeAttackAppCategoryRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the request and response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

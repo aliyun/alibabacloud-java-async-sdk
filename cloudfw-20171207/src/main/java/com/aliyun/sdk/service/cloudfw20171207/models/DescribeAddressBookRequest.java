@@ -157,7 +157,7 @@ public class DescribeAddressBookRequest extends Request {
         } 
 
         /**
-         * AssetMemberUids.
+         * <p>The list of member accounts for the asset address book.</p>
          */
         public Builder assetMemberUids(java.util.List<Long> assetMemberUids) {
             String assetMemberUidsShrink = shrink(assetMemberUids, "AssetMemberUids", "json");
@@ -167,7 +167,7 @@ public class DescribeAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The port that is included in the address book. This parameter takes effect only when the <strong>GroupType</strong> parameter is set to <strong>port</strong>.</p>
+         * <p>Queries address books that contain the specified port. This parameter takes effect only when the <strong>GroupType</strong> parameter is set to <strong>port</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -179,8 +179,8 @@ public class DescribeAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number in a paged query.</p>
+         * <p>Default value: 1, which indicates that the first page of data is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -192,19 +192,10 @@ public class DescribeAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The type of the address book. Valid values:</p>
-         * <ul>
-         * <li><strong>ip</strong>: IP address book</li>
-         * <li><strong>domain</strong>: domain address book</li>
-         * <li><strong>port</strong>: port address book</li>
-         * <li><strong>tag</strong>: Elastic Compute Service (ECS) tag-based address book</li>
-         * <li><strong>allCloud</strong>: cloud service address book</li>
-         * <li><strong>threat</strong>: threat intelligence address book</li>
-         * <li><strong>ipv6</strong>: IPv6 address book<blockquote>
-         * <p> If you do not specify a type, the domain address books and ECS tag-based address books are queried.</p>
+         * <p>The type of the address book.</p>
+         * <blockquote>
+         * <p>If you do not set this parameter, IP address books and ECS tag-based address books are queried.</p>
          * </blockquote>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -216,7 +207,10 @@ public class DescribeAddressBookRequest extends Request {
         }
 
         /**
-         * GroupUuid.
+         * <p>The unique ID of the address book.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f04ac7ce-628b-4cb7-be61-310222b7****</p>
          */
         public Builder groupUuid(String groupUuid) {
             this.putQueryParameter("GroupUuid", groupUuid);
@@ -225,10 +219,10 @@ public class DescribeAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request. Valid values:</p>
+         * <p>The language type for the address book description. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
+         * <li><strong>zh</strong>: Chinese (default).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,8 +235,8 @@ public class DescribeAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Default value: 10. Maximum value: 50.</p>
+         * <p>The number of address books on each page in a paged query.</p>
+         * <p>Default value: 10, which indicates that each page contains 10 results. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -254,7 +248,7 @@ public class DescribeAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The query condition that is used to search for the address book.</p>
+         * <p>The search condition. Enter the address book information that you want to query.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>

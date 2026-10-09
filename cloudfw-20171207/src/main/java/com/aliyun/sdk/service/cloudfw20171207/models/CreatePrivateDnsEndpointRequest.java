@@ -246,7 +246,11 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         } 
 
         /**
+         * <p>The name of the private instance.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accessInstanceName(String accessInstanceName) {
             this.putQueryParameter("AccessInstanceName", accessInstanceName);
@@ -255,6 +259,12 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
+         * <p>The type of the cloud firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>internet</strong></li>
+         * <li><strong>vpc</strong></li>
+         * <li><strong>nat</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         public Builder firewallType(java.util.List<String> firewallType) {
@@ -264,7 +274,14 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * <p>The IP protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UDP</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -273,7 +290,10 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of the Alibaba Cloud member accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -282,7 +302,10 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -291,7 +314,13 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * PrimaryDns.
+         * <p>The primary DNS server.</p>
+         * <blockquote>
+         * <p>When PrivateDnsType is set to Custom, you must specify PrimaryDns and StandbyDns.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         public Builder primaryDns(String primaryDns) {
             this.putQueryParameter("PrimaryDns", primaryDns);
@@ -300,7 +329,10 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * PrimaryVSwitchId.
+         * <p>The ID of the primary vSwitch. The zone of PrimaryVSwitchId and StandbyVSwitchId must be a zone that supports private DNS. Otherwise, an error is returned. The region must also be in the supported list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6b0dkyryer8******</p>
          */
         public Builder primaryVSwitchId(String primaryVSwitchId) {
             this.putQueryParameter("PrimaryVSwitchId", primaryVSwitchId);
@@ -309,7 +341,10 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * PrimaryVSwitchIp.
+         * <p>The IP address of the primary vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.1.1.1</p>
          */
         public Builder primaryVSwitchIp(String primaryVSwitchIp) {
             this.putQueryParameter("PrimaryVSwitchIp", primaryVSwitchIp);
@@ -318,6 +353,11 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
+         * <p>The type of private DNS. When PrivateDnsType is set to Custom, Port and IpProtocol are required. When PrivateDnsType is set to PrivateZone, the backend automatically sets the port to 53 and uses the default protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>PrivateZone</strong></li>
+         * <li><strong>Custom</strong> (default)</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,6 +370,7 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,7 +383,13 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * StandbyDns.
+         * <p>The secondary DNS server.</p>
+         * <blockquote>
+         * <p>When PrivateDnsType is set to Custom, you must specify PrimaryDns and StandbyDns.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.2</p>
          */
         public Builder standbyDns(String standbyDns) {
             this.putQueryParameter("StandbyDns", standbyDns);
@@ -351,7 +398,10 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * StandbyVSwitchId.
+         * <p>The ID of the secondary vSwitch. The zone of PrimaryVSwitchId and StandbyVSwitchId must be a zone that supports private DNS. Otherwise, error code -200534 is returned. The region must also be in the supported list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-8vb6jk75wfcwn******</p>
          */
         public Builder standbyVSwitchId(String standbyVSwitchId) {
             this.putQueryParameter("StandbyVSwitchId", standbyVSwitchId);
@@ -360,7 +410,10 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * StandbyVSwitchIp.
+         * <p>The IP address of the secondary vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.2.2.2</p>
          */
         public Builder standbyVSwitchIp(String standbyVSwitchIp) {
             this.putQueryParameter("StandbyVSwitchIp", standbyVSwitchIp);
@@ -369,6 +422,7 @@ public class CreatePrivateDnsEndpointRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the VPC-connected instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

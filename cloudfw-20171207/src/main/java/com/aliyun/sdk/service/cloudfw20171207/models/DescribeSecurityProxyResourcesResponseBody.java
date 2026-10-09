@@ -67,7 +67,10 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8E8D50E-9F45-5662-B116-A1D0807F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceList.
+         * <p>The list of resources.</p>
          */
         public Builder resourceList(java.util.List<ResourceList> resourceList) {
             this.resourceList = resourceList;
@@ -167,7 +170,10 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * DestinationCidr.
+             * <p>The destination CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.70.XX/24</p>
              */
             public Builder destinationCidr(String destinationCidr) {
                 this.destinationCidr = destinationCidr;
@@ -175,7 +181,10 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * NextHopId.
+             * <p>The ID of the next hop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-2zey0w2u02u1x584m****</p>
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -183,7 +192,10 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * NextHopType.
+             * <p>The network type of the next hop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NatGateway</p>
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -191,7 +203,10 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteTableId.
+             * <p>The ID of the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-2ze409pp09d994a****</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -297,7 +312,10 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * Detail.
+             * <p>The status of the NAT Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -305,7 +323,10 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * <p>The ID of the NAT Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-bp1bm0k2t8i6ooxu****</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -313,7 +334,10 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayName.
+             * <p>The name of the NAT Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-test</p>
              */
             public Builder natGatewayName(String natGatewayName) {
                 this.natGatewayName = natGatewayName;
@@ -321,7 +345,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * NatRouteEntryList.
+             * <p>The list of NAT route tables.</p>
              */
             public Builder natRouteEntryList(java.util.List<NatRouteEntryList> natRouteEntryList) {
                 this.natRouteEntryList = natRouteEntryList;
@@ -329,7 +353,10 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the NAT Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -435,7 +462,10 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * CidrBlock.
+             * <p>The IPv4 CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -443,7 +473,10 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUid.
+             * <p>The UID of the member account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>157862808111****</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -451,7 +484,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * NatGateways.
+             * <p>The list of NAT gateways.</p>
              */
             public Builder natGateways(java.util.List<NatGateways> natGateways) {
                 this.natGateways = natGateways;
@@ -459,7 +492,10 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vbuzirdl3w1r7exw****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -467,7 +503,10 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz94a4q37rgl7g****</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -534,7 +573,10 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * RegionNo.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -542,7 +584,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcList.
+             * <p>The list of VPCs.</p>
              */
             public Builder vpcList(java.util.List<VpcList> vpcList) {
                 this.vpcList = vpcList;

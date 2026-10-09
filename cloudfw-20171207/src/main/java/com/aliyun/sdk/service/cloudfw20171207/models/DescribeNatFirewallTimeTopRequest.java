@@ -158,7 +158,10 @@ public class DescribeNatFirewallTimeTopRequest extends Request {
         } 
 
         /**
-         * Interval.
+         * <p>The time interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -167,7 +170,10 @@ public class DescribeNatFirewallTimeTopRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -176,7 +182,10 @@ public class DescribeNatFirewallTimeTopRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The maximum number of top entries to return. The default value is 200. Valid values: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
@@ -185,7 +194,10 @@ public class DescribeNatFirewallTimeTopRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * <p>The ID of the NAT Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-uf62zzi7000bca7zn****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -194,7 +206,10 @@ public class DescribeNatFirewallTimeTopRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sorting method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>total_max_bps</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -203,7 +218,10 @@ public class DescribeNatFirewallTimeTopRequest extends Request {
         }
 
         /**
-         * SrcPrivateIP.
+         * <p>The private IP address of the NAT Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.100.134.XXX</p>
          */
         public Builder srcPrivateIP(String srcPrivateIP) {
             this.putQueryParameter("SrcPrivateIP", srcPrivateIP);
@@ -212,7 +230,10 @@ public class DescribeNatFirewallTimeTopRequest extends Request {
         }
 
         /**
-         * SrcPublicIP.
+         * <p>The public IP address of the NAT Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.93.47.XXX</p>
          */
         public Builder srcPublicIP(String srcPublicIP) {
             this.putQueryParameter("SrcPublicIP", srcPublicIP);
@@ -221,6 +242,7 @@ public class DescribeNatFirewallTimeTopRequest extends Request {
         }
 
         /**
+         * <p>The point in time to query the traffic data. This is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

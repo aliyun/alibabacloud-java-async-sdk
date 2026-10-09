@@ -157,7 +157,10 @@ public class DescribeFirewallVSwitchRequest extends Request {
         } 
 
         /**
-         * FirewallId.
+         * <p>The instance ID of the VPC border firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-tr-5b202e7f0be64611****</p>
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -166,7 +169,10 @@ public class DescribeFirewallVSwitchRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -175,7 +181,10 @@ public class DescribeFirewallVSwitchRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of the member account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102910763545****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -184,7 +193,10 @@ public class DescribeFirewallVSwitchRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -193,7 +205,10 @@ public class DescribeFirewallVSwitchRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,7 +217,10 @@ public class DescribeFirewallVSwitchRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -211,7 +229,10 @@ public class DescribeFirewallVSwitchRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6b5lyul0x******</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -220,7 +241,10 @@ public class DescribeFirewallVSwitchRequest extends Request {
         }
 
         /**
-         * VswitchId.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1sqg9w******</p>
          */
         public Builder vswitchId(String vswitchId) {
             this.putQueryParameter("VswitchId", vswitchId);

@@ -118,7 +118,14 @@ public class DescribeVpcFirewallManualVSwitchListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -127,7 +134,10 @@ public class DescribeVpcFirewallManualVSwitchListRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of the member accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18820897691****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -145,6 +155,7 @@ public class DescribeVpcFirewallManualVSwitchListRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +168,7 @@ public class DescribeVpcFirewallManualVSwitchListRequest extends Request {
         }
 
         /**
+         * <p>The VPC-connected instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

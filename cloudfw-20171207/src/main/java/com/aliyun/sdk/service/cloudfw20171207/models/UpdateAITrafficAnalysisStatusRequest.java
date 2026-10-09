@@ -59,7 +59,16 @@ public class UpdateAITrafficAnalysisStatusRequest extends Request {
         } 
 
         /**
-         * Status.
+         * <p>The enabling status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>open</strong>: Enables the feature.</p>
+         * </li>
+         * <li><p><strong>close</strong>: Disables the feature.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

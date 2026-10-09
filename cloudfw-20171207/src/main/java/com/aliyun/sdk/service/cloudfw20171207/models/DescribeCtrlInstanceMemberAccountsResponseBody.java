@@ -80,7 +80,10 @@ public class DescribeCtrlInstanceMemberAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceMemberCount.
+         * <p>The number of Cloud Firewall member accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder instanceMemberCount(Long instanceMemberCount) {
             this.instanceMemberCount = instanceMemberCount;
@@ -88,7 +91,10 @@ public class DescribeCtrlInstanceMemberAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxInstanceMemberNum.
+         * <p>The maximum number of member accounts supported by Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxInstanceMemberNum(Long maxInstanceMemberNum) {
             this.maxInstanceMemberNum = maxInstanceMemberNum;
@@ -96,7 +102,10 @@ public class DescribeCtrlInstanceMemberAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9CC69FDA-69F6-585B-9262-A306F425****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

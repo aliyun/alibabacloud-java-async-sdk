@@ -59,7 +59,7 @@ public class ModifyThreatIntelligenceSwitchRequest extends Request {
         } 
 
         /**
-         * CategoryList.
+         * <p>The list of threat intelligence categories.</p>
          */
         public Builder categoryList(java.util.List<CategoryList> categoryList) {
             this.putQueryParameter("CategoryList", categoryList);
@@ -140,7 +140,16 @@ public class ModifyThreatIntelligenceSwitchRequest extends Request {
             } 
 
             /**
-             * Action.
+             * <p>The action of the rule. Valid values:</p>
+             * <ul>
+             * <li><p><strong>alert</strong>: observation</p>
+             * </li>
+             * <li><p><strong>drop</strong>: block</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>alert</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -148,7 +157,10 @@ public class ModifyThreatIntelligenceSwitchRequest extends Request {
             }
 
             /**
-             * CategoryId.
+             * <p>The ID of the threat intelligence category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IpOutThreatTorExit</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -156,7 +168,16 @@ public class ModifyThreatIntelligenceSwitchRequest extends Request {
             }
 
             /**
-             * EnableStatus.
+             * <p>The status of the switch. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: enabled</p>
+             * </li>
+             * <li><p><strong>0</strong>: disabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enableStatus(String enableStatus) {
                 this.enableStatus = enableStatus;

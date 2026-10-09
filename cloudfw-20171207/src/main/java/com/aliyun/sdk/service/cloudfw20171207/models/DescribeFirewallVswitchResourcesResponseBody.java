@@ -80,7 +80,10 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A81E99DF-07CF-5EE4-966A-9FF9F2F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -96,7 +102,7 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * VswitchList.
+         * <p>The list of vSwitches.</p>
          */
         public Builder vswitchList(java.util.List<VswitchList> vswitchList) {
             this.vswitchList = vswitchList;
@@ -175,7 +181,10 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * FirewallId.
+             * <p>The ID of the firewall instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vfw-tr-37145c8f5ede45e9****</p>
              */
             public Builder firewallId(String firewallId) {
                 this.firewallId = firewallId;
@@ -183,7 +192,10 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * FirewallName.
+             * <p>The name of the Cloud Firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-Firewall</p>
              */
             public Builder firewallName(String firewallName) {
                 this.firewallName = firewallName;
@@ -191,7 +203,10 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * FirewallType.
+             * <p>The type of the Cloud Firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NatFirewall</p>
              */
             public Builder firewallType(String firewallType) {
                 this.firewallType = firewallType;
@@ -362,7 +377,10 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableIpCount.
+             * <p>The number of available IP addresses in the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder availableIpCount(String availableIpCount) {
                 this.availableIpCount = availableIpCount;
@@ -370,7 +388,10 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * <p>The IPv4 CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.XX/16</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -378,7 +399,10 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The details of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -386,7 +410,7 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * FirewallList.
+             * <p>The list of firewalls.</p>
              */
             public Builder firewallList(java.util.List<FirewallList> firewallList) {
                 this.firewallList = firewallList;
@@ -394,7 +418,10 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteTableId.
+             * <p>The ID of the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-uf6ml7rgw5gzzdr****</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -402,7 +429,16 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteTableType.
+             * <p>The type of the route table. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Custom</strong>: a custom route table.</p>
+             * </li>
+             * <li><p><strong>System</strong>: a system route table.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder routeTableType(String routeTableType) {
                 this.routeTableType = routeTableType;
@@ -410,7 +446,10 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The configuration status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>open</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -418,7 +457,10 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp10qla9mgi42eo****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -426,7 +468,10 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchName.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-test</p>
              */
             public Builder vswitchName(String vswitchName) {
                 this.vswitchName = vswitchName;
@@ -434,7 +479,10 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

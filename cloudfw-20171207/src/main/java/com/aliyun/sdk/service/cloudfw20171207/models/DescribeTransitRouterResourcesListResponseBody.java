@@ -67,7 +67,10 @@ public class DescribeTransitRouterResourcesListResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A61A2516-0A22-5B3F-986B-3D4BF2A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeTransitRouterResourcesListResponseBody extends TeaModel {
         }
 
         /**
-         * TransitRouterAttachedResources.
+         * <p>The list of Transit Router resources.</p>
          */
         public Builder transitRouterAttachedResources(java.util.List<TransitRouterAttachedResources> transitRouterAttachedResources) {
             this.transitRouterAttachedResources = transitRouterAttachedResources;
@@ -154,7 +157,10 @@ public class DescribeTransitRouterResourcesListResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eas-r-8k1a6jjofkp0cq****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -162,7 +168,10 @@ public class DescribeTransitRouterResourcesListResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -170,7 +179,10 @@ public class DescribeTransitRouterResourcesListResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The asset type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

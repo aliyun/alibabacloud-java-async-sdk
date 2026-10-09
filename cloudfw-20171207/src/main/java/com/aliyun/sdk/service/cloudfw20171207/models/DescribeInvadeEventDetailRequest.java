@@ -117,6 +117,7 @@ public class DescribeInvadeEventDetailRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the asset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class DescribeInvadeEventDetailRequest extends Request {
         }
 
         /**
+         * <p>The UUID of the threat detection event.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class DescribeInvadeEventDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -150,7 +155,10 @@ public class DescribeInvadeEventDetailRequest extends Request {
         }
 
         /**
-         * PublicIP.
+         * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>182.92.103.XXX</p>
          */
         public Builder publicIP(String publicIP) {
             this.putQueryParameter("PublicIP", publicIP);
@@ -159,7 +167,10 @@ public class DescribeInvadeEventDetailRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>218.76.30.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

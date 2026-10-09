@@ -54,7 +54,7 @@ public class CreateSlsLogDispatchResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>850A84D6************00090125EEB1</p>

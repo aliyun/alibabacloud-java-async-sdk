@@ -80,7 +80,7 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         } 
 
         /**
-         * ProxyList.
+         * <p>The list of NAT firewalls.</p>
          */
         public Builder proxyList(java.util.List<ProxyList> proxyList) {
             this.proxyList = proxyList;
@@ -88,7 +88,10 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -318,7 +324,10 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
             } 
 
             /**
-             * CidrBlock.
+             * <p>The IPv4 CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -326,7 +335,10 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The error details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -334,7 +346,10 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUid.
+             * <p>The UID of the Cloud Firewall member accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1797733170015112</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -342,7 +357,10 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * <p>The ID of the NAT gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-2zex8sf4s5vus8rq3rjqo</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -350,7 +368,10 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayName.
+             * <p>The name of the NAT gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs-slb-eip-waf</p>
              */
             public Builder natGatewayName(String natGatewayName) {
                 this.natGatewayName = natGatewayName;
@@ -358,7 +379,10 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyId.
+             * <p>The ID of the NAT firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proxy-nat4921f192b6cf438d93f8</p>
              */
             public Builder proxyId(String proxyId) {
                 this.proxyId = proxyId;
@@ -366,7 +390,10 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyName.
+             * <p>The name of the NAT firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nat-idmp-fir</p>
              */
             public Builder proxyName(String proxyName) {
                 this.proxyName = proxyName;
@@ -374,7 +401,10 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-1</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -382,7 +412,7 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
             }
 
             /**
-             * SnatIpList.
+             * <p>The list of SNAT IP addresses.</p>
              */
             public Builder snatIpList(java.util.List<String> snatIpList) {
                 this.snatIpList = snatIpList;
@@ -390,7 +420,19 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of Cloud Firewall. Valid values:</p>
+             * <ul>
+             * <li><strong>configuring</strong>: Being created.</li>
+             * <li><strong>deleting</strong>: Being deleted.</li>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>abnormal</strong>: Abnormal.</li>
+             * <li><strong>opening</strong>: Being enabled.</li>
+             * <li><strong>closing</strong>: Being disabled.</li>
+             * <li><strong>closed</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -398,7 +440,14 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
             }
 
             /**
-             * StrictMode.
+             * <p>Indicates whether strict mode is enabled. Valid values:</p>
+             * <ul>
+             * <li>1: Strict mode is enabled.</li>
+             * <li>0: Strict mode is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder strictMode(Integer strictMode) {
                 this.strictMode = strictMode;
@@ -406,7 +455,10 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The ID of the vSwitch to which the Cloud Firewall interface belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-5gu2qqfmjmwl8ktzgfekl</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -414,7 +466,10 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC-connected instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9xn35tq33hunzvpu0se</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -422,7 +477,10 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * <p>The name of the VPC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1kw9igsq0yyzeanqamx</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

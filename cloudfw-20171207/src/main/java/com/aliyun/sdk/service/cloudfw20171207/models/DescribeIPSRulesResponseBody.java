@@ -158,7 +158,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * DropCount.
+         * <p>The number of rules that have the <code>drop</code> action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>976</p>
          */
         public Builder dropCount(Long dropCount) {
             this.dropCount = dropCount;
@@ -166,7 +169,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
         }
 
         /**
-         * HighRiskCount.
+         * <p>The number of high-risk rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>518</p>
          */
         public Builder highRiskCount(Long highRiskCount) {
             this.highRiskCount = highRiskCount;
@@ -174,7 +180,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
         }
 
         /**
-         * OpenCount.
+         * <p>The total number of enabled rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1752</p>
          */
         public Builder openCount(Long openCount) {
             this.openCount = openCount;
@@ -182,7 +191,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.pageNo = pageNo;
@@ -190,7 +202,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -198,7 +213,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6DF55258-1448-5386-B263-4771D081****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +224,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The list of rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -214,7 +232,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -222,7 +243,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
         }
 
         /**
-         * UserDefineCount.
+         * <p>The total number of user-defined rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder userDefineCount(Long userDefineCount) {
             this.userDefineCount = userDefineCount;
@@ -444,7 +468,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * AttackApp.
+             * <p>The target application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMB</p>
              */
             public Builder attackApp(String attackApp) {
                 this.attackApp = attackApp;
@@ -452,7 +479,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AttackType.
+             * <p>The attack type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Exception connection</p>
              */
             public Builder attackType(String attackType) {
                 this.attackType = attackType;
@@ -460,7 +490,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentMode.
+             * <p>The current action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alert</p>
              */
             public Builder currentMode(String currentMode) {
                 this.currentMode = currentMode;
@@ -468,7 +501,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Cve.
+             * <p>The CVE ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cve-2024-38816</p>
              */
             public Builder cve(String cve) {
                 this.cve = cve;
@@ -476,7 +512,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultMode.
+             * <p>The default action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alert</p>
              */
             public Builder defaultMode(String defaultMode) {
                 this.defaultMode = defaultMode;
@@ -484,7 +523,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>A description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -492,7 +534,11 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleClass.
+             * <p>The engine mode.</p>
+             * <p>This parameter takes effect only when <code>DefaultMode</code> is set to <code>drop</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleClass(Integer ruleClass) {
                 this.ruleClass = ruleClass;
@@ -500,7 +546,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f532f59d-2026-436b-8209-e04d8ebc2****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -508,7 +557,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleLevel.
+             * <p>The rule level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleLevel(Long ruleLevel) {
                 this.ruleLevel = ruleLevel;
@@ -516,7 +568,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Nmap扫描探测</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -524,7 +579,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleUuid.
+             * <p>The rule UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d401b0cb-dc64-4bbe-bba0-3e7c744****</p>
              */
             public Builder ruleUuid(String ruleUuid) {
                 this.ruleUuid = ruleUuid;
@@ -532,7 +590,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The UNIX timestamp for when the rule was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1775101028</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -540,7 +601,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UserDefined.
+             * <p>Specifies whether the rule is user-defined.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userDefined(String userDefined) {
                 this.userDefined = userDefined;
@@ -548,7 +612,10 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UserStatus.
+             * <p>The user-defined status of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userStatus(Integer userStatus) {
                 this.userStatus = userStatus;

@@ -132,6 +132,7 @@ public class DescribeVpcFirewallTrafficTrendRequest extends Request {
         } 
 
         /**
+         * <p>The end time. The value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +145,14 @@ public class DescribeVpcFirewallTrafficTrendRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -153,7 +161,10 @@ public class DescribeVpcFirewallTrafficTrendRequest extends Request {
         }
 
         /**
-         * PeerVpcId.
+         * <p>The instance ID of the peer VPC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-j6c7mscdg4hfqanfi****</p>
          */
         public Builder peerVpcId(String peerVpcId) {
             this.putQueryParameter("PeerVpcId", peerVpcId);
@@ -162,7 +173,10 @@ public class DescribeVpcFirewallTrafficTrendRequest extends Request {
         }
 
         /**
-         * PrivateIP.
+         * <p>The private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.21.186.XXX</p>
          */
         public Builder privateIP(String privateIP) {
             this.putQueryParameter("PrivateIP", privateIP);
@@ -171,6 +185,7 @@ public class DescribeVpcFirewallTrafficTrendRequest extends Request {
         }
 
         /**
+         * <p>The start time. The value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,6 +198,7 @@ public class DescribeVpcFirewallTrafficTrendRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the VPC-connected instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

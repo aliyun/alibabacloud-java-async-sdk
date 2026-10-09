@@ -200,7 +200,15 @@ public class ModifyDnsFirewallPolicyRequest extends Request {
         } 
 
         /**
-         * AclAction.
+         * <p>The action that the access control policy performs on traffic in Cloud Firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>accept</strong>: allows the traffic.</li>
+         * <li><strong>drop</strong>: deny the traffic.</li>
+         * <li><strong>log</strong>: monitors the traffic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>log</p>
          */
         public Builder aclAction(String aclAction) {
             this.putQueryParameter("AclAction", aclAction);
@@ -209,6 +217,7 @@ public class ModifyDnsFirewallPolicyRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the access control policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +230,10 @@ public class ModifyDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -230,7 +242,16 @@ public class ModifyDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * Destination.
+         * <p>The destination address in the access control policy.</p>
+         * <ul>
+         * <li>If <strong>DestinationType</strong> is set to net, <strong>Destination</strong> is a destination CIDR block. Example: 1.2.3.4/24.</li>
+         * <li>If <strong>DestinationType</strong> is set to group, <strong>Destination</strong> is the name of a destination address book. Example: db_group.</li>
+         * <li>If <strong>DestinationType</strong> is set to domain, <strong>Destination</strong> is a destination domain name. Example: *.aliyuncs.com.</li>
+         * <li>If <strong>DestinationType</strong> is set to location, <strong>Destination</strong> is a destination area. For more information about area positional encoding, see the following sections. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>db_group</p>
          */
         public Builder destination(String destination) {
             this.putQueryParameter("Destination", destination);
@@ -239,7 +260,16 @@ public class ModifyDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * DestinationType.
+         * <p>The type of the destination address in the access control policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>net</strong>: destination CIDR block</li>
+         * <li><strong>group</strong>: destination address book</li>
+         * <li><strong>domain</strong>: destination domain name</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>net</p>
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -248,7 +278,14 @@ public class ModifyDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -257,7 +294,10 @@ public class ModifyDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The policy priority of the access control policy before the modification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -266,7 +306,14 @@ public class ModifyDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * Release.
+         * <p>Specifies whether to enable the access control policy. The policy is enabled by default after it is created. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables the access control policy.</li>
+         * <li><strong>false</strong>: disables the access control policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder release(String release) {
             this.putQueryParameter("Release", release);
@@ -284,7 +331,10 @@ public class ModifyDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -293,7 +343,16 @@ public class ModifyDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The type of the source address in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>net</strong>: source CIDR block</p>
+         * </li>
+         * <li><p><strong>group</strong>: source address book</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>net</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

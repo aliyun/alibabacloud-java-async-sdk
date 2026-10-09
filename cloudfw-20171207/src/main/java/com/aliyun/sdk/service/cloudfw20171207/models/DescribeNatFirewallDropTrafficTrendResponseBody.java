@@ -93,7 +93,7 @@ public class DescribeNatFirewallDropTrafficTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The data list on the overview page.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -101,7 +101,10 @@ public class DescribeNatFirewallDropTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * DropSessionMax.
+         * <p>The maximum number of dropped sessions (peak value) within the corresponding period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62436</p>
          */
         public Builder dropSessionMax(Long dropSessionMax) {
             this.dropSessionMax = dropSessionMax;
@@ -109,7 +112,10 @@ public class DescribeNatFirewallDropTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * DropSessionMaxTime.
+         * <p>The period in which the maximum number of dropped sessions occurred. The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970 (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1525662720</p>
          */
         public Builder dropSessionMaxTime(String dropSessionMaxTime) {
             this.dropSessionMaxTime = dropSessionMaxTime;
@@ -117,7 +123,10 @@ public class DescribeNatFirewallDropTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -196,7 +205,10 @@ public class DescribeNatFirewallDropTrafficTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * DropSession.
+             * <p>The number of blocked sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder dropSession(Long dropSession) {
                 this.dropSession = dropSession;
@@ -204,7 +216,10 @@ public class DescribeNatFirewallDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The data timestamp. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659405600</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -212,7 +227,10 @@ public class DescribeNatFirewallDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSession.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>153188</p>
              */
             public Builder totalSession(Long totalSession) {
                 this.totalSession = totalSession;

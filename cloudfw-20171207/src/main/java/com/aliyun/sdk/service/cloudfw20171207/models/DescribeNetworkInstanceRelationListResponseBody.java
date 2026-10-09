@@ -80,7 +80,7 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
         } 
 
         /**
-         * NetworkInstanceList.
+         * <p>The information about the network instances.</p>
          */
         public Builder networkInstanceList(java.util.List<NetworkInstanceList> networkInstanceList) {
             this.networkInstanceList = networkInstanceList;
@@ -88,7 +88,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>284FF89D-4F70-546F-8EF6-77E0A530****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -201,7 +207,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             } 
 
             /**
-             * AttachmentId.
+             * <p>The ID of the network instance connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-b92yqn***</p>
              */
             public Builder attachmentId(String attachmentId) {
                 this.attachmentId = attachmentId;
@@ -209,7 +218,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * AttachmentName.
+             * <p>The name of the network instance connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>att-test1</p>
              */
             public Builder attachmentName(String attachmentName) {
                 this.attachmentName = attachmentName;
@@ -217,7 +229,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * CenId.
+             * <p>The ID of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-sdij1***</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -225,7 +240,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * CenName.
+             * <p>The name of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder cenName(String cenName) {
                 this.cenName = cenName;
@@ -233,7 +251,16 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterType.
+             * <p>The type of the transit router. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Basic</strong>: Basic Edition transit router.</p>
+             * </li>
+             * <li><p><strong>Enterprise</strong>: Enterprise Edition transit router.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enterprise</p>
              */
             public Builder transitRouterType(String transitRouterType) {
                 this.transitRouterType = transitRouterType;
@@ -339,7 +366,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             } 
 
             /**
-             * AttachmentId.
+             * <p>The ID of the network instance connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-b9dyqn***</p>
              */
             public Builder attachmentId(String attachmentId) {
                 this.attachmentId = attachmentId;
@@ -347,7 +377,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * AttachmentName.
+             * <p>The name of the network instance connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>att-test2</p>
              */
             public Builder attachmentName(String attachmentName) {
                 this.attachmentName = attachmentName;
@@ -355,7 +388,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * CenId.
+             * <p>The ID of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-sdij1***</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -363,7 +399,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * CenName.
+             * <p>The name of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder cenName(String cenName) {
                 this.cenName = cenName;
@@ -371,7 +410,16 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterType.
+             * <p>The version of the transit router. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Basic</strong>: Basic Edition transit router.</p>
+             * </li>
+             * <li><p><strong>Enterprise</strong>: Enterprise Edition transit router.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enterprise</p>
              */
             public Builder transitRouterType(String transitRouterType) {
                 this.transitRouterType = transitRouterType;
@@ -477,7 +525,7 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             } 
 
             /**
-             * AssociatedCen.
+             * <p>The associated CEN instance.</p>
              */
             public Builder associatedCen(java.util.List<PeerNetworkInstanceListAssociatedCen> associatedCen) {
                 this.associatedCen = associatedCen;
@@ -485,7 +533,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInstanceId.
+             * <p>The ID of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-dsf232d****</p>
              */
             public Builder networkInstanceId(String networkInstanceId) {
                 this.networkInstanceId = networkInstanceId;
@@ -493,7 +544,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInstanceName.
+             * <p>The name of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-test</p>
              */
             public Builder networkInstanceName(String networkInstanceName) {
                 this.networkInstanceName = networkInstanceName;
@@ -501,7 +555,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInstanceType.
+             * <p>The type of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkInstanceType(String networkInstanceType) {
                 this.networkInstanceType = networkInstanceType;
@@ -509,7 +566,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -641,7 +701,7 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             } 
 
             /**
-             * AssociatedCen.
+             * <p>The associated CEN instance.</p>
              */
             public Builder associatedCen(java.util.List<AssociatedCen> associatedCen) {
                 this.associatedCen = associatedCen;
@@ -649,7 +709,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectType.
+             * <p>The connection type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen</p>
              */
             public Builder connectType(String connectType) {
                 this.connectType = connectType;
@@ -657,7 +720,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInstanceId.
+             * <p>The ID of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2vcwfqbrh4kr****</p>
              */
             public Builder networkInstanceId(String networkInstanceId) {
                 this.networkInstanceId = networkInstanceId;
@@ -665,7 +731,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInstanceName.
+             * <p>The name of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-test</p>
              */
             public Builder networkInstanceName(String networkInstanceName) {
                 this.networkInstanceName = networkInstanceName;
@@ -673,7 +742,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInstanceType.
+             * <p>The type of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkInstanceType(String networkInstanceType) {
                 this.networkInstanceType = networkInstanceType;
@@ -681,7 +753,7 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * PeerNetworkInstanceList.
+             * <p>The list of peer network instances.</p>
              */
             public Builder peerNetworkInstanceList(java.util.List<PeerNetworkInstanceList> peerNetworkInstanceList) {
                 this.peerNetworkInstanceList = peerNetworkInstanceList;
@@ -689,7 +761,10 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;

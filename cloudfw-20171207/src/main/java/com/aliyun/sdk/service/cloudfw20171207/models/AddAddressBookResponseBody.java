@@ -67,7 +67,7 @@ public class AddAddressBookResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The UUID of the returned address book.</p>
+         * <p>The unique ID of the address book returned after the address book is created.</p>
          * 
          * <strong>example:</strong>
          * <p>f04ac7ce-628b-4cb7-be61-310222b7****</p>

@@ -102,7 +102,10 @@ public class CreateVpcFirewallTaskRequest extends Request {
         } 
 
         /**
-         * Content.
+         * <p>The content of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -111,7 +114,16 @@ public class CreateVpcFirewallTaskRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response message. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -120,7 +132,10 @@ public class CreateVpcFirewallTaskRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -129,6 +144,7 @@ public class CreateVpcFirewallTaskRequest extends Request {
         }
 
         /**
+         * <p>The name of the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

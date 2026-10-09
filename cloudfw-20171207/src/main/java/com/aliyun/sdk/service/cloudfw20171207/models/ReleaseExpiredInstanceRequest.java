@@ -60,6 +60,7 @@ public class ReleaseExpiredInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Cloud Firewall instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

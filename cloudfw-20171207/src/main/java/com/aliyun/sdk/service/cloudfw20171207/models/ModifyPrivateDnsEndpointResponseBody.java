@@ -54,7 +54,10 @@ public class ModifyPrivateDnsEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6B780BD6-282C-51A9-A8E6-59F636BAFA54</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

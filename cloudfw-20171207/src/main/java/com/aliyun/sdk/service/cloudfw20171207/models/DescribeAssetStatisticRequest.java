@@ -73,11 +73,7 @@ public class DescribeAssetStatisticRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request. Valid values:</p>
-         * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
-         * </ul>
+         * <p>The language of the request and response. Valid values:- <strong>zh</strong>: Chinese- <strong>en</strong>: English.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>

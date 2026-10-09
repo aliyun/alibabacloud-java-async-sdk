@@ -54,7 +54,10 @@ public class EnableSdlProtectedAssetResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

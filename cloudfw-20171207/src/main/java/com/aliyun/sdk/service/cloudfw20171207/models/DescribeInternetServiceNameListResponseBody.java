@@ -67,7 +67,10 @@ public class DescribeInternetServiceNameListResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91B01BCD-DFB0-5CA8-9191-5B38C62****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeInternetServiceNameListResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceNameList.
+         * <p>A list of application names.</p>
          */
         public Builder serviceNameList(java.util.List<String> serviceNameList) {
             this.serviceNameList = serviceNameList;

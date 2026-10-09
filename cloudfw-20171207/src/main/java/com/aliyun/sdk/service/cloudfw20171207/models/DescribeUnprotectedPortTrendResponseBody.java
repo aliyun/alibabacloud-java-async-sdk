@@ -80,7 +80,7 @@ public class DescribeUnprotectedPortTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -88,7 +88,10 @@ public class DescribeUnprotectedPortTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Interval.
+         * <p>The time interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Integer interval) {
             this.interval = interval;
@@ -96,7 +99,10 @@ public class DescribeUnprotectedPortTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E599A84E-CD22-5E42-A2A9-01A254AC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +168,10 @@ public class DescribeUnprotectedPortTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of interceptions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -170,7 +179,10 @@ public class DescribeUnprotectedPortTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659405600</p>
              */
             public Builder time(Long time) {
                 this.time = time;

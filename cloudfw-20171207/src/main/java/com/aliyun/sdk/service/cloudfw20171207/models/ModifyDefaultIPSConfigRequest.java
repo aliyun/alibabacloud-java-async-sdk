@@ -144,10 +144,12 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable basic protection. Valid values:</p>
+         * <p>Specifies whether to enable Basic Policies. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><p><strong>1</strong>: Enable.</p>
+         * </li>
+         * <li><p><strong>0</strong>: shutdown.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,8 +164,10 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         /**
          * <p>Specifies whether to enable threat intelligence. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><p><strong>1</strong>: Enable.</p>
+         * </li>
+         * <li><p><strong>0</strong>: Disable.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -176,10 +180,12 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language type of the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default)</li>
-         * <li><strong>en</strong></li>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,7 +198,7 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * <p>The maximum amount of traffic that can be processed by the sensitive data leak detection feature each day.</p>
+         * <p>The daily traffic limit for sensitive data detection.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -204,10 +210,12 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable virtual patching. Valid values:</p>
+         * <p>Specifies whether to enable virtual patches. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><p><strong>1</strong>: Enable.</p>
+         * </li>
+         * <li><p><strong>0</strong>: Disable.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,11 +228,14 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * <p>The level of the rule group for the IPS. Valid values:</p>
+         * <p>The IPS rules group. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: loose</li>
-         * <li><strong>2</strong>: medium</li>
-         * <li><strong>3</strong>: strict</li>
+         * <li><p><strong>1</strong>: Loose rule group.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Medium rule group.</p>
+         * </li>
+         * <li><p><strong>3</strong>: Strict rule group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,10 +248,12 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * <p>The mode of the IPS. Valid values:</p>
+         * <p>The IPS defense mode. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: block mode</li>
-         * <li><strong>0</strong>: monitor mode</li>
+         * <li><p><strong>1</strong>: Block Mode.</p>
+         * </li>
+         * <li><p><strong>0</strong>: monitor mode.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

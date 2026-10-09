@@ -132,7 +132,10 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * CurProtectedCnt.
+         * <p>The number of protected vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder curProtectedCnt(Integer curProtectedCnt) {
             this.curProtectedCnt = curProtectedCnt;
@@ -140,7 +143,10 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
         }
 
         /**
-         * CurUnprotectedCnt.
+         * <p>The number of unprotected vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder curUnprotectedCnt(Integer curUnprotectedCnt) {
             this.curUnprotectedCnt = curUnprotectedCnt;
@@ -148,7 +154,7 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
         }
 
         /**
-         * DataList.
+         * <p>The list of returned data.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -156,7 +162,10 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. The value is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731551104</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -164,7 +173,10 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Interval.
+         * <p>The time interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Integer interval) {
             this.interval = interval;
@@ -172,7 +184,10 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05BEF2B5-EAAA-509D-9824-E3C7DC17****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. The value is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1749434787</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -259,7 +277,10 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * ProtectedVulnCnt.
+             * <p>The number of protected vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder protectedVulnCnt(Integer protectedVulnCnt) {
                 this.protectedVulnCnt = protectedVulnCnt;
@@ -267,7 +288,10 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The timestamp of the vulnerability scan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1525833105</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -275,7 +299,10 @@ public class DescribeUnprotectedVulnTrendResponseBody extends TeaModel {
             }
 
             /**
-             * UnprotectedVulnCnt.
+             * <p>The number of unprotected vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder unprotectedVulnCnt(Integer unprotectedVulnCnt) {
                 this.unprotectedVulnCnt = unprotectedVulnCnt;

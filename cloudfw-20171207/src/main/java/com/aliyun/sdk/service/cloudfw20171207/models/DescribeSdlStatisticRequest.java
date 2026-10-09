@@ -87,7 +87,10 @@ public class DescribeSdlStatisticRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time. The value is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1748916368</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -96,7 +99,10 @@ public class DescribeSdlStatisticRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +111,10 @@ public class DescribeSdlStatisticRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. The value is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656664560</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

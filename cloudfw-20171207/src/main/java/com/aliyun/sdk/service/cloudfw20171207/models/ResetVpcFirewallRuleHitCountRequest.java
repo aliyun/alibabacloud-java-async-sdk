@@ -74,7 +74,8 @@ public class ResetVpcFirewallRuleHitCountRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the access control policy.</p>
+         * <p>The unique ID of the access control policy.</p>
+         * <p>To reset the hit count of an access control policy, specify the unique ID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/159758.html">DescribeVpcFirewallControlPolicy</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,11 +88,13 @@ public class ResetVpcFirewallRuleHitCountRequest extends Request {
         }
 
         /**
-         * <p>The natural language of the request and response. </p>
+         * <p>The language of the request and response.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

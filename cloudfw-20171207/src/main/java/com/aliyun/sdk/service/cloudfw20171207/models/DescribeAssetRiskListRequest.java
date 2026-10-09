@@ -102,15 +102,13 @@ public class DescribeAssetRiskListRequest extends Request {
         } 
 
         /**
-         * <p>The IP addresses to query. Separate the IP addresses with commas (,). You can specify up to 20 IP addresses at a time.</p>
+         * <p>The list of IP addresses to query. Separate multiple IP addresses with commas (,). You can query up to 20 IP addresses at a time. This parameter is required in practice. If this parameter is not specified, the API returns a 400 error.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>Example IPv4 address: 47.97.XX.XX.</p>
-         * </li>
-         * <li><p>Example IPv6 address: 2001:db8:ffff:ffff:ffff:XXXX:ffff.</p>
-         * </li>
+         * <li>IPv4 example: 47.97.XX.XX.</li>
+         * <li>IPv6 example: 2001:db8:ffff:ffff:ffff:XXXX:ffff.</li>
          * </ul>
+         * </blockquote>
          */
         public Builder ipAddrList(java.util.List<String> ipAddrList) {
             this.putQueryParameter("IpAddrList", ipAddrList);
@@ -119,11 +117,13 @@ public class DescribeAssetRiskListRequest extends Request {
         }
 
         /**
-         * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
+         * <p>The IP version of the assets protected by Cloud Firewall.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>4</strong> (default): IPv4</li>
-         * <li><strong>6</strong>: IPv6</li>
+         * <li><p><strong>4</strong> (default): IPv4</p>
+         * </li>
+         * <li><p><strong>6</strong>: IPv6</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -137,7 +137,7 @@ public class DescribeAssetRiskListRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language type of the response message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>

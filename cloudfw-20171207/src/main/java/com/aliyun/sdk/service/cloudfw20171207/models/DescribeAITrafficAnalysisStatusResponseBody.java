@@ -67,7 +67,10 @@ public class DescribeAITrafficAnalysisStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E7F94C7-781F-5192-86CF-DB085****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,16 @@ public class DescribeAITrafficAnalysisStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The enabling status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>open</strong></p>
+         * </li>
+         * <li><p><strong>close</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder status(String status) {
             this.status = status;

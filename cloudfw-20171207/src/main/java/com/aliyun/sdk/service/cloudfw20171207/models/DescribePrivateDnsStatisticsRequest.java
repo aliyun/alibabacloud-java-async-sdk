@@ -73,7 +73,10 @@ public class DescribePrivateDnsStatisticsRequest extends Request {
         } 
 
         /**
-         * DomainNameCreatedEndTime.
+         * <p>The end of the domain name creation time. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1726305596</p>
          */
         public Builder domainNameCreatedEndTime(Long domainNameCreatedEndTime) {
             this.putQueryParameter("DomainNameCreatedEndTime", domainNameCreatedEndTime);
@@ -82,7 +85,10 @@ public class DescribePrivateDnsStatisticsRequest extends Request {
         }
 
         /**
-         * DomainNameCreatedStartTime.
+         * <p>The start of the domain name creation time. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725864531</p>
          */
         public Builder domainNameCreatedStartTime(Long domainNameCreatedStartTime) {
             this.putQueryParameter("DomainNameCreatedStartTime", domainNameCreatedStartTime);

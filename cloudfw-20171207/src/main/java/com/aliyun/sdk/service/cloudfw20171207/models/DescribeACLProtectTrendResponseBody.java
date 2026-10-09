@@ -159,7 +159,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of internal requests that are blocked by the ACL feature.</p>
+         * <p>The number of inbound interceptions by Internet access control.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -181,7 +181,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The interval for returning data. Unit: seconds.</p>
+         * <p>The step size of the returned data, in seconds. This indicates the interval between consecutive data points.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -192,7 +192,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of external requests that are blocked by the ACL feature.</p>
+         * <p>The number of outbound interceptions by Internet access control.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -214,7 +214,10 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalAlertCnt.
+         * <p>The cumulative sum of AlertCnt across all time points within the query time range. This represents the total number of sessions that matched an ACL policy and triggered the monitor (alert) action during the entire time period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalAlertCnt(Long totalAlertCnt) {
             this.totalAlertCnt = totalAlertCnt;
@@ -222,7 +225,10 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPassCnt.
+         * <p>The cumulative sum of PassCnt across all time points within the query time range. This represents the total number of sessions that matched an ACL policy and were allowed during the entire time period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalPassCnt(Long totalPassCnt) {
             this.totalPassCnt = totalPassCnt;
@@ -230,7 +236,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of requests that are blocked by the ACL feature.</p>
+         * <p>The total number of Internet access control interceptions.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -241,7 +247,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistics on the requests that are blocked by the ACL feature.</p>
+         * <p>The list of Internet access control interception trend data.</p>
          */
         public Builder trendList(java.util.List<TrendList> trendList) {
             this.trendList = trendList;
@@ -333,7 +339,10 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * AlertCnt.
+             * <p>The total number of sessions that matched an ACL policy and triggered the monitor (alert) action during the time interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder alertCnt(Integer alertCnt) {
                 this.alertCnt = alertCnt;
@@ -341,7 +350,10 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
             }
 
             /**
-             * PassCnt.
+             * <p>The total number of sessions that matched an ACL policy and were allowed during the time interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder passCnt(Integer passCnt) {
                 this.passCnt = passCnt;
@@ -349,7 +361,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of requests that are blocked by ACL on the current day.</p>
+             * <p>The number of Internet access control interceptions on the day.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -360,7 +372,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UNIX timestamp at midnight (00:00:00) of each day, which indicates the date of the current day. Unit: seconds.</p>
+             * <p>The timestamp of 00:00 of each day, in seconds. This indicates the date.</p>
              * 
              * <strong>example:</strong>
              * <p>1697299200</p>

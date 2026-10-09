@@ -271,7 +271,10 @@ public class DescribeOutgoingAssetListRequest extends Request {
         } 
 
         /**
-         * AssetsRegion.
+         * <p>The region ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder assetsRegion(String assetsRegion) {
             this.putQueryParameter("AssetsRegion", assetsRegion);
@@ -280,7 +283,10 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -289,6 +295,7 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +308,10 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The follow status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subscribe</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -310,7 +320,10 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * IPType.
+         * <p>Queries outbound connections routed from a private network through a NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NatPrivate</p>
          */
         public Builder IPType(String IPType) {
             this.putQueryParameter("IPType", IPType);
@@ -319,7 +332,10 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -328,7 +344,10 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * <p>The ID of the NAT Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp123456g******</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -337,7 +356,10 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * NatGatewayName.
+         * <p>The name of the NAT Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-test</p>
          */
         public Builder natGatewayName(String natGatewayName) {
             this.putQueryParameter("NatGatewayName", natGatewayName);
@@ -346,7 +368,10 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sorting order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -355,7 +380,10 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -364,7 +392,10 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * PrivateIP.
+         * <p>The private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.200.33.XXX</p>
          */
         public Builder privateIP(String privateIP) {
             this.putQueryParameter("PrivateIP", privateIP);
@@ -373,7 +404,10 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * PublicIP.
+         * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.116.70.XXX</p>
          */
         public Builder publicIP(String publicIP) {
             this.putQueryParameter("PublicIP", publicIP);
@@ -382,7 +416,10 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the public IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NatEIP</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -391,7 +428,10 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * SecurityRisk.
+         * <p>The security risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>risk</p>
          */
         public Builder securityRisk(String securityRisk) {
             this.putQueryParameter("SecurityRisk", securityRisk);
@@ -400,7 +440,10 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sorting basis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InBytes</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -409,6 +452,7 @@ public class DescribeOutgoingAssetListRequest extends Request {
         }
 
         /**
+         * <p>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

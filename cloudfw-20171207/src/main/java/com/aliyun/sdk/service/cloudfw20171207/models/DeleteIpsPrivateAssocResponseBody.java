@@ -54,7 +54,10 @@ public class DeleteIpsPrivateAssocResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133173B9-8010-5DF5*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

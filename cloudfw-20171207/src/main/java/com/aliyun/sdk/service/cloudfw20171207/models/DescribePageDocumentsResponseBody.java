@@ -106,7 +106,7 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
         } 
 
         /**
-         * Docs.
+         * <p>The list of documents.</p>
          */
         public Builder docs(java.util.List<Docs> docs) {
             this.docs = docs;
@@ -114,7 +114,10 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * ImageUrl.
+         * <p>The image URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/tfs/TB1E4FCAuT2gK0jSZFvXXXnFXXa-3399-662.png">https://img.alicdn.com/tfs/TB1E4FCAuT2gK0jSZFvXXXnFXXa-3399-662.png</a></p>
          */
         public Builder imageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
@@ -122,7 +125,10 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The application module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg_server</p>
          */
         public Builder module(String module) {
             this.module = module;
@@ -130,7 +136,7 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * More.
+         * <p>The list of additional resources.</p>
          */
         public Builder more(More more) {
             this.more = more;
@@ -138,7 +144,10 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C81E1AD-08C0-5E09-853B-FDC77B90****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +213,10 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
             } 
 
             /**
-             * Title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -212,7 +224,10 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The document path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://notify-center-test.ybaobx.com/webhook/arms">https://notify-center-test.ybaobx.com/webhook/arms</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -279,7 +294,10 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
             } 
 
             /**
-             * Title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -287,7 +305,10 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The document path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://zjysfy.womanhospital.cn/pub/hos/0/noneBackGround.png">https://zjysfy.womanhospital.cn/pub/hos/0/noneBackGround.png</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

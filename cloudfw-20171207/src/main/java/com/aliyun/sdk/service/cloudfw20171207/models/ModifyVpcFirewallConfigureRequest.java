@@ -135,8 +135,10 @@ public class ModifyVpcFirewallConfigureRequest extends Request {
         /**
          * <p>The language of the content within the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,13 +151,15 @@ public class ModifyVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * <p>The CIDR blocks of the local VPC. The value is a JSON string that contains the following parameters:</p>
+         * <p>The CIDR block information of the local VPC, in JSON format. The following parameters are included:</p>
          * <ul>
-         * <li><strong>RouteTableId</strong>: the ID of the route table for the local VPC.</li>
-         * <li><strong>RouteEntryList</strong>: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the local VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the local VPC.</li>
+         * <li><p><strong>RouteTableId</strong>: the routing table ID of the local VPC.</p>
+         * </li>
+         * <li><p><strong>RouteEntryList</strong>: specified in JSON format and contains DestinationCidr (the destination CIDR block of the local VPC) and NextHopInstanceId (the next hop instance ID of the local VPC).</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/342892.html">DescribeVpcFirewallDetail</a> operation to query the CIDR blocks of local VPCs for VPC firewalls.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/342892.html">DescribeVpcFirewallDetail</a> operation to query the CIDR block information of the local VPC for the virtual private cloud (VPC) firewall.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -169,7 +173,7 @@ public class ModifyVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * <p>The UID of the member accounts of the current Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -181,13 +185,15 @@ public class ModifyVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * <p>The CIDR blocks of the peer VPC. The value is a JSON string that contains the following parameters:</p>
+         * <p>The CIDR block information of the peer VPC, in JSON format. The following parameters are included:</p>
          * <ul>
-         * <li><strong>RouteTableId</strong>: the ID of the route table for the peer VPC.</li>
-         * <li><strong>RouteEntryList</strong>: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the peer VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the peer VPC.</li>
+         * <li><p><strong>RouteTableId</strong>: the routing table ID of the peer VPC.</p>
+         * </li>
+         * <li><p><strong>RouteEntryList</strong>: specified in JSON format and contains DestinationCidr (the destination CIDR block of the peer VPC) and NextHopInstanceId (the next hop instance ID of the peer VPC).</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/342892.html">DescribeVpcFirewallDetail</a> operation to query the CIDR blocks of peer VPCs for VPC firewalls.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/342892.html">DescribeVpcFirewallDetail</a> operation to query the CIDR block information of the peer VPC for the virtual private cloud (VPC) firewall.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -201,9 +207,9 @@ public class ModifyVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the VPC firewall.</p>
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance ID of the virtual private cloud (VPC) firewall.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -217,11 +223,11 @@ public class ModifyVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * <p>The instance name of the VPC firewall.</p>
+         * <p>The instance name of the virtual private cloud (VPC) firewall.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test firewall</p>
+         * <p>test-vpc-firewall</p>
          */
         public Builder vpcFirewallName(String vpcFirewallName) {
             this.putQueryParameter("VpcFirewallName", vpcFirewallName);

@@ -60,7 +60,7 @@ public class DeleteInstanceMembersRequest extends Request {
         } 
 
         /**
-         * <p>The UIDs of the members.</p>
+         * <p>The UIDs of the member accounts.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

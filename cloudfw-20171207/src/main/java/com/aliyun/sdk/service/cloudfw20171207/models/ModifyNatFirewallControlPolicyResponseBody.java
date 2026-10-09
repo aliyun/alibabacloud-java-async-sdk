@@ -54,10 +54,10 @@ public class ModifyNatFirewallControlPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>3868197C-E6E8-52CD-8358-05E3308430E2</p>
+         * <p>3768197C-E6E8-52CD-8358-*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

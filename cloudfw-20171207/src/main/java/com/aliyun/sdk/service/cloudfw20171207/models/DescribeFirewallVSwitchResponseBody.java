@@ -80,7 +80,10 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1562A68-99FA-5D6B-BD5B-2F959F25****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -96,7 +102,7 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * VswitchList.
+         * <p>The list of vSwitches.</p>
          */
         public Builder vswitchList(java.util.List<VswitchList> vswitchList) {
             this.vswitchList = vswitchList;
@@ -162,7 +168,10 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             } 
 
             /**
-             * FirewallId.
+             * <p>The instance ID of the firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vfw-tr-37145c8f5ede45e9****</p>
              */
             public Builder firewallId(String firewallId) {
                 this.firewallId = firewallId;
@@ -170,7 +179,10 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * FirewallName.
+             * <p>The name of the Cloud Firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-Firewall</p>
              */
             public Builder firewallName(String firewallName) {
                 this.firewallName = firewallName;
@@ -341,7 +353,10 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableIpCount.
+             * <p>The number of available IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder availableIpCount(String availableIpCount) {
                 this.availableIpCount = availableIpCount;
@@ -349,7 +364,10 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * <p>The IPv4 CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.XX/16</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -357,7 +375,10 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * FirewallCount.
+             * <p>The number of intrusion prevention events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder firewallCount(String firewallCount) {
                 this.firewallCount = firewallCount;
@@ -365,7 +386,7 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * FirewallList.
+             * <p>The list of firewalls.</p>
              */
             public Builder firewallList(java.util.List<FirewallList> firewallList) {
                 this.firewallList = firewallList;
@@ -373,7 +394,10 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUid.
+             * <p>The UID of the member account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>184480249330****</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -381,7 +405,10 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -389,7 +416,10 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zeez7gymz5r4pi****am</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -397,7 +427,10 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp10qla9mgi42eo****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -405,7 +438,10 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchName.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-test</p>
              */
             public Builder vswitchName(String vswitchName) {
                 this.vswitchName = vswitchName;
@@ -413,7 +449,10 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

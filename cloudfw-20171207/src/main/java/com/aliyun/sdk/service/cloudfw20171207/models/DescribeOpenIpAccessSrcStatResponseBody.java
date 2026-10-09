@@ -80,7 +80,10 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0DC783F1-B3A7-578D-8A63-*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
         }
 
         /**
-         * StatList.
+         * <p>The list of statistics.</p>
          */
         public Builder statList(java.util.List<StatList> statList) {
             this.statList = statList;
@@ -96,7 +99,10 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -188,7 +194,10 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
             } 
 
             /**
-             * AbnormalSrcIp.
+             * <p>The number of abnormal source IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder abnormalSrcIp(Long abnormalSrcIp) {
                 this.abnormalSrcIp = abnormalSrcIp;
@@ -196,7 +205,10 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
             }
 
             /**
-             * App.
+             * <p>The application type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder app(String app) {
                 this.app = app;
@@ -204,7 +216,10 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
             }
 
             /**
-             * NormalSrcIp.
+             * <p>The number of normal source IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder normalSrcIp(Long normalSrcIp) {
                 this.normalSrcIp = normalSrcIp;
@@ -212,7 +227,10 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6163</p>
              */
             public Builder port(String port) {
                 this.port = port;

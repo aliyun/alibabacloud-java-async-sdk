@@ -258,7 +258,7 @@ public class DescribeAssetListRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Valid values: 1 to 50.</p>
+         * <p>The page number of the current page in a paginated query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,10 +271,10 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * <p>The IP version of the asset that is protected by Cloud Firewall. Valid values:</p>
+         * <p>The IP version of the assets protected by Cloud Firewall. Valid values:</p>
          * <ul>
-         * <li><strong>4</strong>: IPv4 (default)</li>
-         * <li><strong>6</strong>: IPv6</li>
+         * <li><strong>4</strong> (default): IPv4.</li>
+         * <li><strong>6</strong>: IPv6.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,10 +287,10 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language type of the response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -303,7 +303,7 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * <p>The UID of the member that is added to Cloud Firewall.</p>
+         * <p>The UID of the Cloud Firewall member account.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -315,11 +315,11 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * <p>The time when the asset was added. Valid values:</p>
+         * <p>The time when the asset was discovered. Valid values:</p>
          * <ul>
-         * <li><strong>discovered in 1 hour</strong>: within one hour.</li>
-         * <li><strong>discovered in 1 day</strong>: within one day.</li>
-         * <li><strong>discovered in 7 days</strong>: within seven days.</li>
+         * <li><strong>discovered in 1 hour</strong>: The asset was discovered within 1 hour.</li>
+         * <li><strong>discovered in 1 day</strong>: The asset was discovered within 1 day.</li>
+         * <li><strong>discovered in 7 days</strong>: The asset was discovered within 7 days.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -332,7 +332,7 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * <p>Whether to query external traffic information.</p>
+         * <p>Specifies whether to query outbound traffic information.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -344,7 +344,7 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 50.</p>
+         * <p>The number of Cloud Firewall-protected assets to display on each page in a paginated query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -357,9 +357,9 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * <p>The region ID of your Cloud Firewall.</p>
+         * <p>The region ID of the Cloud Firewall.</p>
          * <blockquote>
-         * <p>For more information about the regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * <p>For more information about regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -372,19 +372,27 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * <p>The type of the asset. Valid values:</p>
+         * <p>The asset type. Valid values:</p>
          * <ul>
-         * <li><strong>BastionHostEgressIP</strong>: the egress IP address of a bastion host</li>
-         * <li><strong>BastionHostIngressIP</strong>: the ingress IP address of a bastion host</li>
-         * <li><strong>EcsEIP</strong>: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</li>
-         * <li><strong>EcsPublicIP</strong>: the public IP address of an ECS instance</li>
-         * <li><strong>EIP</strong>: the EIP</li>
-         * <li><strong>EniEIP</strong>: the EIP of an elastic network interface (ENI)</li>
-         * <li><strong>NatEIP</strong>: the EIP of a NAT gateway</li>
-         * <li><strong>SlbEIP</strong>: the EIP of a Server Load Balancer (SLB) instance or a Classic Load Balancer (CLB) instance</li>
-         * <li><strong>SlbPublicIP</strong>: the public IP address of an SLB instance or a CLB instance</li>
-         * <li><strong>NatPublicIP</strong>: the public IP address of a NAT gateway</li>
-         * <li><strong>HAVIP</strong>: the high-availability virtual IP address (HAVIP)</li>
+         * <li><strong>BastionHostEgressIP</strong>: Bastion host egress IP.</li>
+         * <li><strong>BastionHostIngressIP</strong>: Bastion host ingress IP.</li>
+         * <li><strong>EcsEIP</strong>: ECS EIP.</li>
+         * <li><strong>EcsPublicIP</strong>: ECS public IP.</li>
+         * <li><strong>EIP</strong>: Elastic IP address.</li>
+         * <li><strong>EniEIP</strong>: Elastic network interface EIP.</li>
+         * <li><strong>NatEIP</strong>: NAT EIP.</li>
+         * <li><strong>SlbEIP</strong>: SLB EIP (CLB EIP).</li>
+         * <li><strong>SlbPublicIP</strong>: SLB public IP (CLB public IP).</li>
+         * <li><strong>NatPublicIP</strong>: NAT public IP.</li>
+         * <li><strong>HAVIP</strong>: High-availability virtual IP.</li>
+         * <li><strong>NlbEIP</strong>: NLB EIP.</li>
+         * <li><strong>ApiGatewayEIP</strong>: API Gateway public IP.</li>
+         * <li><strong>AlbEIP</strong>: ALB EIP.</li>
+         * <li><strong>AiGatewayEIP</strong>: AI Gateway public IP.</li>
+         * <li><strong>GaEIP</strong>: GA EIP.</li>
+         * <li><strong>SwasEIP</strong>: Simple Application Server public IP.</li>
+         * <li><strong>EcdEIP</strong>: Elastic Desktop Service public IP.</li>
+         * <li><strong>BastionHostIP</strong>: Bastion host IP.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -397,7 +405,7 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * <p>The instance ID or IP address of the asset.</p>
+         * <p>The IP address or instance ID of the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
@@ -409,7 +417,7 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * <p>Data leakage detection activation status.</p>
+         * <p>The status of data leakage detection.</p>
          * 
          * <strong>example:</strong>
          * <p>open</p>
@@ -421,15 +429,15 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * <p>The status of the security group policy. Valid values:</p>
+         * <p>The security group policy status. Valid values:</p>
          * <ul>
-         * <li><strong>pass</strong>: delivered</li>
-         * <li><strong>block</strong>: undelivered</li>
-         * <li><strong>unsupport</strong>: unsupported</li>
-         * </ul>
-         * <blockquote>
-         * <p>If you do not specify this parameter, the assets on which security group policies in all states take effect are queried.</p>
+         * <li><strong>pass</strong>: Delivered.</li>
+         * <li><strong>block</strong>: Not delivered.</li>
+         * <li><strong>unsupport</strong>: Not supported.<blockquote>
+         * <p>If this parameter is not set, all security group policy statuses are queried.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>pass</p>
@@ -441,15 +449,15 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * <p>The status of the firewall. Valid values:</p>
+         * <p>The Cloud Firewall status. Valid values:</p>
          * <ul>
-         * <li><strong>open</strong>: The firewall is enabled.</li>
-         * <li><strong>opening</strong>: The firewall is being enabled.</li>
-         * <li><strong>closed</strong>: The firewall is disabled.</li>
-         * <li><strong>closing</strong>: The firewall is being disabled.</li>
+         * <li><strong>open</strong>: Protected.</li>
+         * <li><strong>opening</strong>: Protection enabling.</li>
+         * <li><strong>closed</strong>: Not protected.</li>
+         * <li><strong>closing</strong>: Protection disabling.</li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the assets that are configured for firewalls in all states are queried.</p>
+         * <p>If this parameter is not set, all firewall statuses are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -474,10 +482,10 @@ public class DescribeAssetListRequest extends Request {
         }
 
         /**
-         * <p>The edition of Cloud Firewall. Valid values:</p>
+         * <p>The user type. Valid values:</p>
          * <ul>
-         * <li><strong>buy</strong>: a paid edition (default)</li>
-         * <li><strong>free</strong>: Free Edition</li>
+         * <li><strong>buy</strong> (default): Paid user.</li>
+         * <li><strong>free</strong>: Free user.</li>
          * </ul>
          * 
          * <strong>example:</strong>

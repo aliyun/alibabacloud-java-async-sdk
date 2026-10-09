@@ -59,7 +59,10 @@ public class DescribeTaskDispatchStatusRequest extends Request {
         } 
 
         /**
-         * TaskId.
+         * <p>The task ID, which is the unique identifier of the log configuration modification task. Obtain this value from the TaskId response parameter of the ModifySlsDispatchConfig operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65db4ce2418b44b3be7c3xxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

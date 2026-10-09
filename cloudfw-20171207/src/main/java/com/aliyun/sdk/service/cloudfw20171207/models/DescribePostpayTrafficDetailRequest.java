@@ -174,7 +174,8 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number in a paged query.
+         * Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -186,11 +187,11 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify a value in the YYYYMMDD format.</p>
+         * <p>The end time of the query. Specify the value in the YYYYMMDD format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>20230130</p>
+         * <p>20240131</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -199,10 +200,10 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,10 +216,10 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * <p>The field based on which you want to sort the query results. Valid values:</p>
+         * <p>The field by which to sort the results. Valid values:</p>
          * <ul>
-         * <li><strong>resourceId</strong></li>
-         * <li><strong>trafficDay</strong></li>
+         * <li><strong>resourceId</strong>: resource ID.</li>
+         * <li><strong>trafficDay</strong>: date.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,7 +232,7 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * <p>The number of entries per page in a paged query. Default value: 10. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -243,7 +244,7 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region information.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -255,7 +256,7 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * <p>The instance ID or the IP address of the asset.</p>
+         * <p>The IP address or instance ID of the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
@@ -267,11 +268,11 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify a value in the YYYYMMDD format.</p>
+         * <p>The start time of the query. Specify the value in the YYYYMMDD format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>20230101</p>
+         * <p>20240101</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -280,16 +281,19 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * <p>The traffic type. This parameter is required. Valid values:</p>
+         * <p>The type of traffic boundary for statistics. This parameter is required. Valid values:</p>
          * <ul>
-         * <li><strong>EIP_TRAFFIC</strong>: traffic for the Internet firewall.</li>
-         * <li><strong>NatGateway_TRAFFIC</strong>: traffic for NAT firewalls.</li>
-         * <li><strong>VPC_TRAFFIC</strong>: traffic for virtual private cloud (VPC) firewalls.</li>
+         * <li><p><strong>EIP_TRAFFIC</strong>: Internet border traffic.</p>
+         * </li>
+         * <li><p><strong>NatGateway_TRAFFIC</strong>: NAT border traffic.</p>
+         * </li>
+         * <li><p><strong>VPC_TRAFFIC</strong>: VPC border traffic.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>EIP_TRAFFIC</p>
+         * <p>VPC_TRAFFIC</p>
          */
         public Builder trafficType(String trafficType) {
             this.putQueryParameter("TrafficType", trafficType);

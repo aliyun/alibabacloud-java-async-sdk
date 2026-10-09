@@ -398,10 +398,10 @@ public class ModifyControlPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
+         * <p>The action that the access control policy performs on the traffic that passes through the firewall. Valid values:</p>
          * <ul>
-         * <li><strong>accept</strong>: allows the traffic.</li>
-         * <li><strong>drop</strong>: denies the traffic.</li>
+         * <li><strong>accept</strong>: allows access.</li>
+         * <li><strong>drop</strong>: deny.</li>
          * <li><strong>log</strong>: monitors the traffic.</li>
          * </ul>
          * 
@@ -415,9 +415,9 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the access control policy.</p>
+         * <p>The unique ID of the access control policy.</p>
          * <blockquote>
-         * <p> To modify an access control policy, you must specify the UUID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/138866.html">DescribeControlPolicy</a> interface to query the UUID.</p>
+         * <p>To modify an access control policy, you must provide the unique ID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/138866.html">DescribeControlPolicy</a> operation to obtain the ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -431,7 +431,7 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the application that the access control policy supports. Valid values:</p>
+         * <p>The application type supported by the access control policy. The following application types are supported:</p>
          * <ul>
          * <li><strong>ANY</strong></li>
          * <li><strong>HTTP</strong></li>
@@ -449,10 +449,10 @@ public class ModifyControlPolicyRequest extends Request {
          * <li><strong>SSL</strong></li>
          * </ul>
          * <blockquote>
-         * <p> The value <strong>ANY</strong> indicates all types of applications.</p>
+         * <p><strong>ANY</strong> indicates that the policy applies to all types of applications.</p>
          * </blockquote>
          * <blockquote>
-         * <p> You must specify one of the ApplicationNameList and ApplicationName parameters. If you configure both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.</p>
+         * <p>You must specify either ApplicationNameList or ApplicationName. You cannot leave both parameters empty. If you specify both parameters, the value of ApplicationNameList takes precedence.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -465,9 +465,9 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The application names.</p>
+         * <p>The application name list.</p>
          * <blockquote>
-         * <p> You must specify one of the ApplicationNameList and ApplicationName parameters. If you configure both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.</p>
+         * <p>You must specify either ApplicationNameList or ApplicationName. You cannot leave both parameters empty. If you specify both parameters, the value of ApplicationNameList takes precedence.</p>
          * </blockquote>
          */
         public Builder applicationNameList(java.util.List<String> applicationNameList) {
@@ -477,7 +477,10 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>保证请求幂等性的客户端令牌。由客户端生成，需保证在不同请求间唯一；数据类型 String，大小写敏感，格式为 [0-9a-zA-Z-_]{1,64}，建议使用 UUID。服务端在有效期内（600 秒）保证幂等：相同 ClientToken 且相同业务参数的重复请求返回与首次一致的结果；相同 ClientToken 但业务参数不同时返回 HTTP 400 及 IdempotentParameterMismatch 错误码。</p>
+         * <p>The idempotence token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddadxefexxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -540,10 +543,10 @@ public class ModifyControlPolicyRequest extends Request {
         /**
          * <p>The destination address in the access control policy.</p>
          * <ul>
-         * <li>If <strong>DestinationType</strong> is set to net, the value of <strong>Destination</strong> is a CIDR block. Example: 1.2.XX.XX/24.</li>
-         * <li>If <strong>DestinationType</strong> is set to group, the value of <strong>Destination</strong> is an address book. Example: db_group.</li>
-         * <li>If <strong>DestinationType</strong> is set to domain, the value of <strong>Destination</strong> is a domain name. Example: *.aliyuncs.com.</li>
-         * <li>If <strong>DestinationType</strong> is set to location, the value of <strong>Destination</strong> is a location. For more information about the location codes, see the &quot;AddControlPolicy&quot; topic. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
+         * <li>If <strong>DestinationType</strong> is set to net, <strong>Destination</strong> is a destination CIDR block. Example: 1.2.XX.XX/24.</li>
+         * <li>If <strong>DestinationType</strong> is set to group, <strong>Destination</strong> is a destination address book name. Example: db_group.</li>
+         * <li>If <strong>DestinationType</strong> is set to domain, <strong>Destination</strong> is a destination domain name. Example: *.aliyuncs.com.</li>
+         * <li>If <strong>DestinationType</strong> is set to location, <strong>Destination</strong> is a destination area. For more information about area positional encoding, see the following sections. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -558,10 +561,10 @@ public class ModifyControlPolicyRequest extends Request {
         /**
          * <p>The type of the destination address in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>net</strong>: CIDR block</li>
-         * <li><strong>group</strong>: address book</li>
-         * <li><strong>domain</strong>: domain name</li>
-         * <li><strong>location</strong>: location</li>
+         * <li><strong>net</strong>: destination CIDR block</li>
+         * <li><strong>group</strong>: destination address book</li>
+         * <li><strong>domain</strong>: destination domain name</li>
+         * <li><strong>location</strong>: destination region</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -574,7 +577,7 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
+         * <p>The traffic direction of the access control policy. Valid values:</p>
          * <ul>
          * <li><strong>in</strong>: inbound traffic</li>
          * <li><strong>out</strong>: outbound traffic</li>
@@ -590,9 +593,9 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The domain name resolution method of the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:</p>
+         * <p>The domain name resolution method of the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>FQDN</strong>: fully qualified domain name (FQDN)-based resolution</li>
+         * <li><strong>FQDN</strong>: FQDN-based</li>
          * <li><strong>DNS</strong>: DNS-based dynamic resolution</li>
          * <li><strong>FQDN_AND_DNS</strong>: FQDN and DNS-based dynamic resolution</li>
          * </ul>
@@ -607,7 +610,7 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>是否只预检此次请求。取值 true 时仅执行参数合法性、身份权限、资源存在性、配额限制与依赖关系等执行前校验，不创建/更新/删除真实资源、不触发真实异步任务、不产生计费/通知/回调等下游副作用；预检成功时响应中 DryRun=true，与真实调用响应可区分；预检失败返回可机器识别的错误码。取值 false（默认）表示正常发起请求并执行变更操作。</p>
+         * <p>Specifies whether to perform a dry run.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -616,9 +619,9 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.</p>
+         * <p>The end time of the Policy Validity Period of the access control policy. The value is a UNIX timestamp in seconds format. The time must be on the hour or half hour and must be at least 30 minutes later than the start time. Settings for the end time.</p>
          * <blockquote>
-         * <p> If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * <p>If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -631,9 +634,9 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>
          * </ul>
          * 
@@ -647,7 +650,7 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The protocol type that the access control policy supports. Valid values:</p>
+         * <p>The security protocol type in the access control policy. The following protocol types are supported:</p>
          * <ul>
          * <li><strong>ANY</strong></li>
          * <li><strong>TCP</strong></li>
@@ -655,10 +658,10 @@ public class ModifyControlPolicyRequest extends Request {
          * <li><strong>ICMP</strong></li>
          * </ul>
          * <blockquote>
-         * <p> The value <strong>ANY</strong> indicates all types of applications.</p>
+         * <p><strong>ANY</strong> indicates that the policy applies to all protocol types.</p>
          * </blockquote>
          * <blockquote>
-         * <p> If the traffic direction is outbound and the destination address is a threat intelligence address book of the domain name type or a cloud service address book, you can set Proto to TCP or ANY. If you set Proto to TCP, you can set ApplicationName to HTTP, HTTPS, SMTP, SMTPS, and SSL. If you set Proto to ANY, you can set ApplicationName to ANY.</p>
+         * <p>If the traffic direction is outbound and the destination address is a threat intelligence address book or cloud service address book of the domain type, you can set the protocol to TCP or ANY. If you select TCP, the application can be set to HTTP, HTTPS, SMTP, SMTPS, or SSL. If you select ANY, the application can only be set to ANY.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -671,10 +674,10 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The status of the access control policy. Valid values:</p>
+         * <p>The enabling status of the access control policy. Valid values:</p>
          * <ul>
-         * <li>true: enabled</li>
-         * <li>false: disabled</li>
+         * <li>true: The policy is enabled.</li>
+         * <li>false: The policy is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -687,20 +690,21 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The days of a week or of a month on which the access control policy takes effect.</p>
+         * <p>The days of a week or of a month on which the access control policy takes effect. Settings for the Policy Validity Period.</p>
          * <ul>
-         * <li>If you set RepeatType to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, the value of this parameter is an empty array. Example: []</li>
-         * <li>If you set RepeatType to Weekly, you must specify this parameter. Example: [0, 6]</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you set RepeatType to Weekly, the fields in the value of this parameter cannot be repeated.</p>
+         * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is an empty array.
+         * Example: []</li>
+         * <li>If RepeatType is set to Weekly, RepeatDays must not be empty.
+         * Example: [0, 6]<blockquote>
+         * <p>If RepeatType is set to Weekly, the values in RepeatDays cannot be repeated.</p>
          * </blockquote>
-         * <ul>
-         * <li>If you set RepeatType to <code>Monthly</code>, you must specify this parameter. Example: [1, 31]</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.</p>
+         * </li>
+         * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays must not be empty.
+         * Example: [1, 31]<blockquote>
+         * <p>If RepeatType is set to Monthly, the values in RepeatDays cannot be repeated.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          */
         public Builder repeatDays(java.util.List<Long> repeatDays) {
             this.putQueryParameter("RepeatDays", repeatDays);
@@ -709,9 +713,9 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of RepeatStartTime.</p>
+         * <p>The recurrence end time of the policy validity period. The time is in the HH:mm format and uses a 24-hour clock. Example: 23:00.</p>
          * <blockquote>
-         * <p> If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * <p>If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -724,9 +728,9 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of RepeatEndTime.</p>
+         * <p>The recurrence start time of the policy validity period. The time is in the HH:mm format and uses a 24-hour clock. Example: 08:00.</p>
          * <blockquote>
-         * <p> If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * <p>If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -739,13 +743,13 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+         * <p>The recurrence type for the policy validity period of the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
-         * <li><strong>None</strong>: The policy takes effect for only once.</li>
-         * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
-         * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
-         * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+         * <li><strong>Permanent</strong> (default): always</li>
+         * <li><strong>None</strong>: one-time</li>
+         * <li><strong>Daily</strong>: daily</li>
+         * <li><strong>Weekly</strong>: weekly</li>
+         * <li><strong>Monthly</strong>: monthly</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -760,9 +764,9 @@ public class ModifyControlPolicyRequest extends Request {
         /**
          * <p>The source address in the access control policy.</p>
          * <ul>
-         * <li>If <strong>SourceType</strong> is set to net, the value of <strong>Source</strong> is a CIDR block. Example: 1.2.XX.XX/24.</li>
-         * <li>If <strong>SourceType</strong> is set to group, the value of <strong>Source</strong> is an address book. Example: db_group.</li>
-         * <li>If <strong>SourceType</strong> is set to location, the value of <strong>Source</strong> is a location. For more information about the location codes, see the &quot;AddControlPolicy&quot; topic. Example: [&quot;BJ11&quot;, &quot;ZB&quot;]</li>
+         * <li>If <strong>SourceType</strong> is set to net, <strong>Source</strong> is a source CIDR block. Example: 1.2.XX.XX/24.</li>
+         * <li>If <strong>SourceType</strong> is set to group, <strong>Source</strong> is a source address book name. Example: db_group.</li>
+         * <li>If <strong>SourceType</strong> is set to location, <strong>Source</strong> is a source area. For more information about area positional encoding, see the following sections. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -777,9 +781,9 @@ public class ModifyControlPolicyRequest extends Request {
         /**
          * <p>The type of the source address in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>net</strong>: CIDR block</li>
-         * <li><strong>group</strong>: address book</li>
-         * <li><strong>location</strong>: location</li>
+         * <li><strong>net</strong>: source CIDR block</li>
+         * <li><strong>group</strong>: source address book</li>
+         * <li><strong>location</strong>: source region</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -792,9 +796,9 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of EndTime.</p>
+         * <p>The start time of the Policy Validity Period of the access control policy. The value is a UNIX timestamp in seconds format. The time must be on the hour or half hour and must be at least 30 minutes earlier than the end time. Settings for the start time.</p>
          * <blockquote>
-         * <p> If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * <p>If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

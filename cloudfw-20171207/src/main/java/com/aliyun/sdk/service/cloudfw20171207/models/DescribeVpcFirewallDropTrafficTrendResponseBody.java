@@ -80,7 +80,7 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The list of returned data.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -88,7 +88,10 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * DropSessionMax.
+         * <p>The maximum number of blocked connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder dropSessionMax(Long dropSessionMax) {
             this.dropSessionMax = dropSessionMax;
@@ -96,7 +99,10 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C87C1797-02E6-5EEB-A943-4416207D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +220,10 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * AclDrop.
+             * <p>The number of sessions blocked by the access control list (ACL).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder aclDrop(Long aclDrop) {
                 this.aclDrop = aclDrop;
@@ -222,7 +231,10 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * DataTime.
+             * <p>The data timestamp. The value is a string in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-25 12:00:00</p>
              */
             public Builder dataTime(String dataTime) {
                 this.dataTime = dataTime;
@@ -230,7 +242,10 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * DropSession.
+             * <p>The number of blocked sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder dropSession(Long dropSession) {
                 this.dropSession = dropSession;
@@ -238,7 +253,10 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * IpsDrop.
+             * <p>The number of sessions blocked by the intrusion prevention system (IPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder ipsDrop(Long ipsDrop) {
                 this.ipsDrop = ipsDrop;
@@ -246,7 +264,10 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The data timestamp. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659405600</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -254,7 +275,10 @@ public class DescribeVpcFirewallDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSession.
+             * <p>The total number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>153188</p>
              */
             public Builder totalSession(Long totalSession) {
                 this.totalSession = totalSession;

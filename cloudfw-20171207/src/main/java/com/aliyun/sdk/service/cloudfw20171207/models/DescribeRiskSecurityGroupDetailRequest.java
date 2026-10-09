@@ -159,7 +159,10 @@ public class DescribeRiskSecurityGroupDetailRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the security group instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2vc0p803vgxumn6r****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -168,7 +171,10 @@ public class DescribeRiskSecurityGroupDetailRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-instance-name</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -177,7 +183,16 @@ public class DescribeRiskSecurityGroupDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -186,6 +201,7 @@ public class DescribeRiskSecurityGroupDetailRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +214,7 @@ public class DescribeRiskSecurityGroupDetailRequest extends Request {
         }
 
         /**
+         * <p>The number of the page to return.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +227,10 @@ public class DescribeRiskSecurityGroupDetailRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -219,7 +239,10 @@ public class DescribeRiskSecurityGroupDetailRequest extends Request {
         }
 
         /**
-         * RuleUuid.
+         * <p>The UUID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3b1adf8d-1949-4c8e-809b-fb92ee11****</p>
          */
         public Builder ruleUuid(String ruleUuid) {
             this.putQueryParameter("RuleUuid", ruleUuid);
@@ -228,7 +251,10 @@ public class DescribeRiskSecurityGroupDetailRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>220.189.117.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

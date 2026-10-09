@@ -67,7 +67,10 @@ public class CreateAclCheckResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4FB718F0-CC04-5A12-B17B-188CFC3F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class CreateAclCheckResponseBody extends TeaModel {
         }
 
         /**
-         * TaskIds.
+         * <p>The list of task IDs.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {
             this.taskIds = taskIds;

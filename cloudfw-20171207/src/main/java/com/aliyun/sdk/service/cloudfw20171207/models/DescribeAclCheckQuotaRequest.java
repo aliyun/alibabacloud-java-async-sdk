@@ -59,7 +59,10 @@ public class DescribeAclCheckQuotaRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

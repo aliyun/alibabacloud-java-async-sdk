@@ -59,10 +59,12 @@ public class DescribePostpayTrafficTotalRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

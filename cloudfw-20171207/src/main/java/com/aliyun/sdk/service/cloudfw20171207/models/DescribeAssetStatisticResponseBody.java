@@ -93,7 +93,10 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * AutoResourceEnable.
+         * <p>Indicates whether automatic traffic redirection is enabled. Valid values:- <strong>true</strong>: Enabled.- <strong>false</strong>: Disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoResourceEnable(Boolean autoResourceEnable) {
             this.autoResourceEnable = autoResourceEnable;
@@ -101,7 +104,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * GeneralInstanceSpecStatistic.
+         * <p>The general instance specifications for the 2.0 billing model.</p>
          */
         public Builder generalInstanceSpecStatistic(GeneralInstanceSpecStatistic generalInstanceSpecStatistic) {
             this.generalInstanceSpecStatistic = generalInstanceSpecStatistic;
@@ -120,7 +123,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistics on specifications.</p>
+         * <p>The quota usage statistics information.</p>
          */
         public Builder resourceSpecStatistic(ResourceSpecStatistic resourceSpecStatistic) {
             this.resourceSpecStatistic = resourceSpecStatistic;
@@ -186,7 +189,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * MemberList.
+             * <p>The list of members in the region.</p>
              */
             public Builder memberList(java.util.List<String> memberList) {
                 this.memberList = memberList;
@@ -194,7 +197,10 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -261,7 +267,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * MemberList.
+             * <p>The list of members in the region.</p>
              */
             public Builder memberList(java.util.List<String> memberList) {
                 this.memberList = memberList;
@@ -269,7 +275,10 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -414,7 +423,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * CfwGeneralInstanceRegionStatistic.
+             * <p>The region-specific statistics of Internet firewall instances.</p>
              */
             public Builder cfwGeneralInstanceRegionStatistic(java.util.List<CfwGeneralInstanceRegionStatistic> cfwGeneralInstanceRegionStatistic) {
                 this.cfwGeneralInstanceRegionStatistic = cfwGeneralInstanceRegionStatistic;
@@ -422,7 +431,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * CfwTotalGeneralInstanceRegionStatistic.
+             * <p>The full region-specific statistics of Internet firewall instances.</p>
              */
             public Builder cfwTotalGeneralInstanceRegionStatistic(java.util.List<CfwTotalGeneralInstanceRegionStatistic> cfwTotalGeneralInstanceRegionStatistic) {
                 this.cfwTotalGeneralInstanceRegionStatistic = cfwTotalGeneralInstanceRegionStatistic;
@@ -430,7 +439,10 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCfwGeneralInstanceCnt.
+             * <p>The total number of instances for the Internet firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCfwGeneralInstanceCnt(Integer totalCfwGeneralInstanceCnt) {
                 this.totalCfwGeneralInstanceCnt = totalCfwGeneralInstanceCnt;
@@ -438,7 +450,10 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCfwGeneralInstanceUsedCnt.
+             * <p>The number of instances with the Internet firewall enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCfwGeneralInstanceUsedCnt(Integer totalCfwGeneralInstanceUsedCnt) {
                 this.totalCfwGeneralInstanceUsedCnt = totalCfwGeneralInstanceUsedCnt;
@@ -446,7 +461,10 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TotalGeneralInstanceUsedCnt.
+             * <p>The total quota of general instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalGeneralInstanceUsedCnt(Integer totalGeneralInstanceUsedCnt) {
                 this.totalGeneralInstanceUsedCnt = totalGeneralInstanceUsedCnt;
@@ -454,7 +472,10 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNatGeneralInstanceCnt.
+             * <p>The total number of instances for the NAT firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNatGeneralInstanceCnt(Integer totalNatGeneralInstanceCnt) {
                 this.totalNatGeneralInstanceCnt = totalNatGeneralInstanceCnt;
@@ -462,7 +483,10 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNatGeneralInstanceUsedCnt.
+             * <p>The number of instances with the NAT firewall enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNatGeneralInstanceUsedCnt(Integer totalNatGeneralInstanceUsedCnt) {
                 this.totalNatGeneralInstanceUsedCnt = totalNatGeneralInstanceUsedCnt;
@@ -470,7 +494,10 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TotalVfwGeneralInstanceUsedCnt.
+             * <p>The number of instances with the VPC firewall enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalVfwGeneralInstanceUsedCnt(Integer totalVfwGeneralInstanceUsedCnt) {
                 this.totalVfwGeneralInstanceUsedCnt = totalVfwGeneralInstanceUsedCnt;
@@ -563,7 +590,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of public IP addresses that can be protected.</p>
+             * <p>The quota for protected public IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -574,7 +601,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of public IP addresses that are protected.</p>
+             * <p>The number of public IP addresses with protection enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -585,7 +612,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of public IP addresses that can enable data leakage detection.</p>
+             * <p>The quota for IP addresses with sensitive data protection.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -596,7 +623,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of public IP addresses that enabled data leakage detection.</p>
+             * <p>The number of IP addresses with sensitive data protection enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

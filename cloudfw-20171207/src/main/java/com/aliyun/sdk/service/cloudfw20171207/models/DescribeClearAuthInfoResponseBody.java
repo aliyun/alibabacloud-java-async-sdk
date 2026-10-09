@@ -80,7 +80,10 @@ public class DescribeClearAuthInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * EndTime.
+         * <p>The UNIX timestamp when the authorization expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1755964800</p>
          */
         public Builder endTime(Integer endTime) {
             this.endTime = endTime;
@@ -88,7 +91,10 @@ public class DescribeClearAuthInfoResponseBody extends TeaModel {
         }
 
         /**
-         * LeftTimes.
+         * <p>The number of remaining clears.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder leftTimes(Integer leftTimes) {
             this.leftTimes = leftTimes;
@@ -96,7 +102,10 @@ public class DescribeClearAuthInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8DDEE254-5639-5548-82D1-AAAC7347****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

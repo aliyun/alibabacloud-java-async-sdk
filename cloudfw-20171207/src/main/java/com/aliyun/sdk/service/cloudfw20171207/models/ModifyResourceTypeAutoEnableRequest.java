@@ -87,7 +87,10 @@ public class ModifyResourceTypeAutoEnableRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -96,7 +99,10 @@ public class ModifyResourceTypeAutoEnableRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -105,7 +111,10 @@ public class ModifyResourceTypeAutoEnableRequest extends Request {
         }
 
         /**
-         * ResourceTypeAutoEnable.
+         * <p>Specifies whether to enable automatic protection for the resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;SlbEIP&quot;:true,&quot;GaEIP&quot;:false,&quot;EcsIPv6&quot;:true,&quot;NatPublicIP&quot;:true,&quot;SlbIPv6&quot;:false,&quot;BastionHostIngressIP&quot;:false,&quot;EIP&quot;:true,&quot;NatEIP&quot;:true,&quot;SlbPublicIP&quot;:true,&quot;EcsEIP&quot;:true,&quot;EniEIP&quot;:true,&quot;HAVIP&quot;:true,&quot;NlbEIP&quot;:true,&quot;NlbIPv6&quot;:false,&quot;EniEIPv6&quot;:false,&quot;EcsPublicIP&quot;:true,&quot;AlbIPv6&quot;:true,&quot;BastionHostIP&quot;:false,&quot;BastionHostEgressIP&quot;:true,&quot;GaEIPV6&quot;:false,&quot;AlbEIP&quot;:false}</p>
          */
         public Builder resourceTypeAutoEnable(String resourceTypeAutoEnable) {
             this.putQueryParameter("ResourceTypeAutoEnable", resourceTypeAutoEnable);

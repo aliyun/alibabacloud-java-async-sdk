@@ -67,7 +67,10 @@ public class UpdateSecurityProxyResponseBody extends TeaModel {
         } 
 
         /**
-         * Module.
+         * <p>The application module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ips_server</p>
          */
         public Builder module(String module) {
             this.module = module;
@@ -75,7 +78,10 @@ public class UpdateSecurityProxyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E2CCAB4-E789-5BC9-88DC-5CE0358E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -67,7 +67,7 @@ public class DescribeRegionResourceTypeAutoEnableResponseBody extends TeaModel {
         } 
 
         /**
-         * RegionResourceAutoEnable.
+         * <p>The traffic redirection settings for asset types in each region.</p>
          */
         public Builder regionResourceAutoEnable(java.util.Map<String, java.util.Map<String, ?>> regionResourceAutoEnable) {
             this.regionResourceAutoEnable = regionResourceAutoEnable;

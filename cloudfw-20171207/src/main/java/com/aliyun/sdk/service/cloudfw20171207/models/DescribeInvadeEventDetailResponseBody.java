@@ -288,7 +288,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * AssetsInstanceId.
+         * <p>The instance ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-8vb2nmm070m****</p>
          */
         public Builder assetsInstanceId(String assetsInstanceId) {
             this.assetsInstanceId = assetsInstanceId;
@@ -296,7 +299,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * AssetsInstanceName.
+         * <p>The name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_test</p>
          */
         public Builder assetsInstanceName(String assetsInstanceName) {
             this.assetsInstanceName = assetsInstanceName;
@@ -304,7 +310,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EventDesc.
+         * <p>The description of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder eventDesc(String eventDesc) {
             this.eventDesc = eventDesc;
@@ -312,7 +321,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EventDetail.
+         * <p>The details of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder eventDetail(String eventDetail) {
             this.eventDetail = eventDetail;
@@ -320,7 +332,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EventKey.
+         * <p>The key of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C&amp;CActivity</p>
          */
         public Builder eventKey(String eventKey) {
             this.eventKey = eventKey;
@@ -328,7 +343,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EventName.
+         * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event_test</p>
          */
         public Builder eventName(String eventName) {
             this.eventName = eventName;
@@ -336,7 +354,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EventUuid.
+         * <p>The UUID of the threat detection event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa6e786c-5034-457a-8e05-1c63fab****</p>
          */
         public Builder eventUuid(String eventUuid) {
             this.eventUuid = eventUuid;
@@ -344,7 +365,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FirstTime.
+         * <p>The time when the event first occurred. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735006706</p>
          */
         public Builder firstTime(Integer firstTime) {
             this.firstTime = firstTime;
@@ -352,7 +376,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * IsIgnore.
+         * <p>Indicates whether the event is ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isIgnore(Boolean isIgnore) {
             this.isIgnore = isIgnore;
@@ -360,7 +387,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * LastTime.
+         * <p>The time when the event last occurred. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1740104108</p>
          */
         public Builder lastTime(Integer lastTime) {
             this.lastTime = lastTime;
@@ -368,7 +398,7 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * OperationList.
+         * <p>The list of remediation operations.</p>
          */
         public Builder operationList(java.util.List<OperationList> operationList) {
             this.operationList = operationList;
@@ -376,7 +406,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateIP.
+         * <p>The private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.21.186.XXX</p>
          */
         public Builder privateIP(String privateIP) {
             this.privateIP = privateIP;
@@ -384,7 +417,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ProcessStatus.
+         * <p>The handling status of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder processStatus(Integer processStatus) {
             this.processStatus = processStatus;
@@ -392,7 +428,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PublicIP.
+         * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106.15.185.XXX</p>
          */
         public Builder publicIP(String publicIP) {
             this.publicIP = publicIP;
@@ -400,7 +439,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Reference.
+         * <p>The reference information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder reference(String reference) {
             this.reference = reference;
@@ -408,7 +450,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RegionNo.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionNo(String regionNo) {
             this.regionNo = regionNo;
@@ -416,7 +461,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8022D695-4A35-50BC-8697-EA9C233A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -424,7 +472,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RiskLevel.
+         * <p>The risk level of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder riskLevel(Integer riskLevel) {
             this.riskLevel = riskLevel;
@@ -432,7 +483,7 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * UnhandleOperationList.
+         * <p>The list of unhandled operations.</p>
          */
         public Builder unhandleOperationList(java.util.List<UnhandleOperationList> unhandleOperationList) {
             this.unhandleOperationList = unhandleOperationList;
@@ -498,7 +549,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Args.
+             * <p>The parameters for the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder args(String args) {
                 this.args = args;
@@ -506,7 +560,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Operate.
+             * <p>The operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RunMode</p>
              */
             public Builder operate(String operate) {
                 this.operate = operate;
@@ -573,7 +630,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Args.
+             * <p>The parameters for the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder args(String args) {
                 this.args = args;
@@ -581,7 +641,10 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Operate.
+             * <p>The operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RunMode</p>
              */
             public Builder operate(String operate) {
                 this.operate = operate;

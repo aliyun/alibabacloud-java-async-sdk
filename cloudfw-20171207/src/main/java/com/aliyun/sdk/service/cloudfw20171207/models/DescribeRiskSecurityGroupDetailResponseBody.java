@@ -106,7 +106,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -114,7 +117,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33C94306-2064-5A06-9645-01419967****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RiskSgDetail.
+         * <p>The details of the risk security group.</p>
          */
         public Builder riskSgDetail(java.util.List<RiskSgDetail> riskSgDetail) {
             this.riskSgDetail = riskSgDetail;
@@ -138,7 +147,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +242,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * EcsInstanceId.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1gra23yai47d8e****</p>
              */
             public Builder ecsInstanceId(String ecsInstanceId) {
                 this.ecsInstanceId = ecsInstanceId;
@@ -238,7 +253,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EcsInstanceName.
+             * <p>The name of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tyf_test</p>
              */
             public Builder ecsInstanceName(String ecsInstanceName) {
                 this.ecsInstanceName = ecsInstanceName;
@@ -246,7 +264,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIp.
+             * <p>The private IP address of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.24.121.XXX</p>
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -254,7 +275,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIp.
+             * <p>The public IP address of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.107.141.XXX</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -373,7 +397,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -381,7 +408,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -389,7 +419,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -397,7 +430,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleStatus.
+             * <p>The status of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -405,7 +441,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleUuid.
+             * <p>The UUID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4c1e72c9-6690-408b-9048-065f0f10****</p>
              */
             public Builder ruleUuid(String ruleUuid) {
                 this.ruleUuid = ruleUuid;
@@ -413,7 +452,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The optimization suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -558,7 +600,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * EcsCount.
+             * <p>The number of associated ECS instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ecsCount(Integer ecsCount) {
                 this.ecsCount = ecsCount;
@@ -566,7 +611,7 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EcsInfo.
+             * <p>The ECS information.</p>
              */
             public Builder ecsInfo(java.util.List<EcsInfo> ecsInfo) {
                 this.ecsInfo = ecsInfo;
@@ -574,7 +619,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the security group instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2vc0p803vgxumn6r****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -582,7 +630,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-instance-name</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -590,7 +641,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -598,7 +652,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -606,7 +663,7 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleInfo.
+             * <p>The information about the risk security group rule.</p>
              */
             public Builder ruleInfo(java.util.List<RuleInfo> ruleInfo) {
                 this.ruleInfo = ruleInfo;
@@ -614,7 +671,10 @@ public class DescribeRiskSecurityGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vbuzirdl3w1r7exw****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

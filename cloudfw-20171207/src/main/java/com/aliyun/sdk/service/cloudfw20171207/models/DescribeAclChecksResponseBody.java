@@ -67,7 +67,7 @@ public class DescribeAclChecksResponseBody extends TeaModel {
         } 
 
         /**
-         * CheckRecords.
+         * <p>The list of ACL check records.</p>
          */
         public Builder checkRecords(CheckRecords checkRecords) {
             this.checkRecords = checkRecords;
@@ -75,7 +75,10 @@ public class DescribeAclChecksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AABB1B7-C81F-5158-9EF9-B2DD5D3D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +222,10 @@ public class DescribeAclChecksResponseBody extends TeaModel {
             } 
 
             /**
-             * AclPendingCount.
+             * <p>The number of pending ACL check tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder aclPendingCount(Long aclPendingCount) {
                 this.aclPendingCount = aclPendingCount;
@@ -227,7 +233,10 @@ public class DescribeAclChecksResponseBody extends TeaModel {
             }
 
             /**
-             * AclTotalCount.
+             * <p>The total number of ACL checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder aclTotalCount(Long aclTotalCount) {
                 this.aclTotalCount = aclTotalCount;
@@ -235,7 +244,10 @@ public class DescribeAclChecksResponseBody extends TeaModel {
             }
 
             /**
-             * CheckName.
+             * <p>The name of the ACL check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AddressBookDomainValid</p>
              */
             public Builder checkName(String checkName) {
                 this.checkName = checkName;
@@ -243,7 +255,10 @@ public class DescribeAclChecksResponseBody extends TeaModel {
             }
 
             /**
-             * CheckStatus.
+             * <p>The status of the ACL check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Checked</p>
              */
             public Builder checkStatus(String checkStatus) {
                 this.checkStatus = checkStatus;
@@ -251,7 +266,10 @@ public class DescribeAclChecksResponseBody extends TeaModel {
             }
 
             /**
-             * CheckType.
+             * <p>The type of ACL check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AddressBookGather</p>
              */
             public Builder checkType(String checkType) {
                 this.checkType = checkType;
@@ -259,7 +277,10 @@ public class DescribeAclChecksResponseBody extends TeaModel {
             }
 
             /**
-             * LastCheckTime.
+             * <p>The UNIX timestamp of the last check, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1724982259</p>
              */
             public Builder lastCheckTime(String lastCheckTime) {
                 this.lastCheckTime = lastCheckTime;
@@ -267,7 +288,10 @@ public class DescribeAclChecksResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Medium</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -275,7 +299,10 @@ public class DescribeAclChecksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the ACL check task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-c92d4544ef7b6a42</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -342,7 +369,10 @@ public class DescribeAclChecksResponseBody extends TeaModel {
             } 
 
             /**
-             * AclType.
+             * <p>The type of ACL check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internet</p>
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -350,7 +380,7 @@ public class DescribeAclChecksResponseBody extends TeaModel {
             }
 
             /**
-             * Records.
+             * <p>The list of ACL check records.</p>
              */
             public Builder records(java.util.List<Records> records) {
                 this.records = records;

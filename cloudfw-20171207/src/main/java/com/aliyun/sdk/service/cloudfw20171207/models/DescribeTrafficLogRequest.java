@@ -636,7 +636,10 @@ public class DescribeTrafficLogRequest extends Request {
         } 
 
         /**
-         * AclPreRuleId.
+         * <p>The ACL pre-match rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000000-0000-0000-0000-000000000000</p>
          */
         public Builder aclPreRuleId(String aclPreRuleId) {
             this.putQueryParameter("AclPreRuleId", aclPreRuleId);
@@ -645,7 +648,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * AclPreState.
+         * <p>The ACL pre-match status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder aclPreState(String aclPreState) {
             this.putQueryParameter("AclPreState", aclPreState);
@@ -654,7 +660,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * AppDpiState.
+         * <p>The application identification status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder appDpiState(String appDpiState) {
             this.putQueryParameter("AppDpiState", appDpiState);
@@ -663,7 +672,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -672,7 +684,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * AssetRegion.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder assetRegion(String assetRegion) {
             this.putQueryParameter("AssetRegion", assetRegion);
@@ -681,7 +696,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * AttackType.
+         * <p>The attack type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder attackType(String attackType) {
             this.putQueryParameter("AttackType", attackType);
@@ -690,7 +708,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -699,7 +720,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * Direction.
+         * <p>The traffic direction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>out</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -708,7 +732,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -717,7 +744,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * DomainUrl.
+         * <p>The URL in the flow log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainUrl(String domainUrl) {
             this.putQueryParameter("DomainUrl", domainUrl);
@@ -726,7 +756,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * DstIP.
+         * <p>The destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>182.92.206.XXX</p>
          */
         public Builder dstIP(String dstIP) {
             this.putQueryParameter("DstIP", dstIP);
@@ -735,7 +768,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * DstPort.
+         * <p>The destination port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9876</p>
          */
         public Builder dstPort(String dstPort) {
             this.putQueryParameter("DstPort", dstPort);
@@ -744,7 +780,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * DstVpcId.
+         * <p>The destination VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz95m1aq9b0h****vk1yb</p>
          */
         public Builder dstVpcId(String dstVpcId) {
             this.putQueryParameter("DstVpcId", dstVpcId);
@@ -753,7 +792,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * DstVpcRegionNo.
+         * <p>The region of the destination VPC asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder dstVpcRegionNo(String dstVpcRegionNo) {
             this.putQueryParameter("DstVpcRegionNo", dstVpcRegionNo);
@@ -762,6 +804,7 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
+         * <p>The end time. Specify a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -774,7 +817,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * FirewallType.
+         * <p>The firewall type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VpcFirewall</p>
          */
         public Builder firewallType(String firewallType) {
             this.putQueryParameter("FirewallType", firewallType);
@@ -783,7 +829,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * FlowType.
+         * <p>The flow log type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder flowType(String flowType) {
             this.putQueryParameter("FlowType", flowType);
@@ -792,7 +841,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * <p>The protocol type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>icmp</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -801,7 +853,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * <p>The IP version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -810,7 +865,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * Isp.
+         * <p>The Internet service provider (ISP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -819,7 +877,14 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response message. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -828,7 +893,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * Location.
+         * <p>The region of the source or destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder location(String location) {
             this.putQueryParameter("Location", location);
@@ -837,7 +905,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of one of the member accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128599825273****</p>
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -846,7 +917,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * NatFirewallId.
+         * <p>The NAT firewall ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-tr-7a9c8901ed394****</p>
          */
         public Builder natFirewallId(String natFirewallId) {
             this.putQueryParameter("NatFirewallId", natFirewallId);
@@ -855,7 +929,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * <p>The NAT gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-2zew6yn017hhzbm****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -864,7 +941,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Maximum value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -873,7 +953,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * QueryId.
+         * <p>The query ID. If the query is too large, a query ID is returned. Use this query ID to retrieve results in subsequent requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d158c8ed-bc57-40fd-86d3-468169d4cfe2</p>
          */
         public Builder queryId(String queryId) {
             this.putQueryParameter("QueryId", queryId);
@@ -882,7 +965,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8b115ae3-da64-4b80-81c1-1cd2dd42****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -891,7 +977,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * RuleResult.
+         * <p>The rule action result. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ruleResult(String ruleResult) {
             this.putQueryParameter("RuleResult", ruleResult);
@@ -900,7 +989,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * RuleSource.
+         * <p>The rule source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleSource(String ruleSource) {
             this.putQueryParameter("RuleSource", ruleSource);
@@ -909,7 +1001,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * RuleSourceFinal.
+         * <p>The final effective module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleSourceFinal(String ruleSourceFinal) {
             this.putQueryParameter("RuleSourceFinal", ruleSourceFinal);
@@ -918,6 +1013,7 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
+         * <p>The tracing watermark.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -930,7 +1026,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The IP address of the access source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139.217.234.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -939,7 +1038,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * SrcIP.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.68.60.XXX</p>
          */
         public Builder srcIP(String srcIP) {
             this.putQueryParameter("SrcIP", srcIP);
@@ -948,7 +1050,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * SrcPort.
+         * <p>The source port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8082</p>
          */
         public Builder srcPort(String srcPort) {
             this.putQueryParameter("SrcPort", srcPort);
@@ -957,7 +1062,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * SrcPrivateIP.
+         * <p>The private source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.100.134.XX</p>
          */
         public Builder srcPrivateIP(String srcPrivateIP) {
             this.putQueryParameter("SrcPrivateIP", srcPrivateIP);
@@ -966,7 +1074,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * SrcVpcId.
+         * <p>The source VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9309pkwe06lv****tk4</p>
          */
         public Builder srcVpcId(String srcVpcId) {
             this.putQueryParameter("SrcVpcId", srcVpcId);
@@ -975,7 +1086,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * SrcVpcRegionNo.
+         * <p>The region of the source VPC asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder srcVpcRegionNo(String srcVpcRegionNo) {
             this.putQueryParameter("SrcVpcRegionNo", srcVpcRegionNo);
@@ -984,6 +1098,7 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
+         * <p>The start time. Specify a UNIX timestamp in seconds. Only data within the last 7 days can be queried. We recommend that a single query span no more than one day.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -996,7 +1111,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * TlsScopeId.
+         * <p>The TLS inspection scope ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tis-98fd64c5****</p>
          */
         public Builder tlsScopeId(String tlsScopeId) {
             this.putQueryParameter("TlsScopeId", tlsScopeId);
@@ -1005,7 +1123,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * VpcFirewallId.
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-a42bbb7b887148c9****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);
@@ -1014,7 +1135,10 @@ public class DescribeTrafficLogRequest extends Request {
         }
 
         /**
-         * VulLevel.
+         * <p>The vulnerability level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder vulLevel(String vulLevel) {
             this.putQueryParameter("VulLevel", vulLevel);

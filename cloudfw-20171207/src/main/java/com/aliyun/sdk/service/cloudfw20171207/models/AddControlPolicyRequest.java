@@ -435,7 +435,7 @@ public class AddControlPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
+         * <p>The action configured in the access control policy for the traffic that passes through Cloud Firewall. Valid values:</p>
          * <ul>
          * <li><strong>accept</strong>: allows the traffic.</li>
          * <li><strong>drop</strong>: denies the traffic.</li>
@@ -470,10 +470,10 @@ public class AddControlPolicyRequest extends Request {
          * <li><strong>SSL_No_Cert</strong></li>
          * <li><strong>SSL</strong></li>
          * <li><strong>VNC</strong></li>
-         * <li><strong>ANY</strong></li>
+         * <li><strong>ANY</strong> (all application types)</li>
          * </ul>
          * <blockquote>
-         * <p>The value of this parameter is based on the value of Proto. If Proto is set to TCP, you can set ApplicationName to any valid value. If Proto is set to UDP, ICMP, or ANY, you can set ApplicationName only to ANY. You must specify at least one of the ApplicationNameList and ApplicationName parameters.</p>
+         * <p>The supported application types depend on the value of the protocol type (Proto). If Proto is set to TCP, ApplicationName can be set to any of the preceding application types. If Proto is set to UDP, ICMP, or ANY, ApplicationName can be set only to ANY. You must specify either ApplicationNameList or ApplicationName. You cannot leave both of them empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -486,7 +486,7 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The application types supported by the access control policy.</p>
+         * <p>The list of application types supported by the access control policy.</p>
          */
         public Builder applicationNameList(java.util.List<String> applicationNameList) {
             this.putQueryParameter("ApplicationNameList", applicationNameList);
@@ -495,7 +495,10 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>保证请求幂等性的客户端令牌。由客户端生成，需保证在不同请求间唯一；数据类型 String，大小写敏感，格式为 [0-9a-zA-Z-_]{1,64}，建议使用 UUID。服务端在有效期内（600 秒）保证幂等：相同 ClientToken 且相同业务参数的重复请求返回与首次一致的结果；相同 ClientToken 但业务参数不同时返回 HTTP 400 及 IdempotentParameterMismatch 错误码。</p>
+         * <p>The idempotence token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddadxefexxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -508,7 +511,7 @@ public class AddControlPolicyRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Allows traffic</p>
+         * <p>Release flow</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -519,19 +522,19 @@ public class AddControlPolicyRequest extends Request {
         /**
          * <p>The destination port in the access control policy. Valid values:</p>
          * <ul>
-         * <li>If Proto is set to ICMP, DestPort is automatically left empty.</li>
+         * <li>If the protocol type is ICMP, the value of DestPort is empty.</li>
          * </ul>
          * <blockquote>
-         * <p>If Proto is set to ICMP, access control does not take effect on the destination port.</p>
+         * <p>If the protocol type is ICMP, access control on the destination port is not supported.</p>
          * </blockquote>
          * <ul>
-         * <li>If Proto is set to TCP, UDP, or ANY and DestPortType is set to group, DestPort is empty.</li>
+         * <li>If the protocol type is TCP, UDP, or ANY, and the destination port type (DestPortType) is group, the value of DestPort is empty.</li>
          * </ul>
          * <blockquote>
-         * <p>If DestPortType is set to group, you do not need to specify the destination port number. All ports on which the access control policy takes effect are included in the destination port address book.</p>
+         * <p>If the destination port type of the access control policy is set to group (port address book), you do not need to specify a destination port number. All ports that the access control policy manages are included in the port address book.</p>
          * </blockquote>
          * <ul>
-         * <li>If Proto is set to TCP, UDP, or ANY and DestPortType is set to port, the value of DestPort is the destination port number.</li>
+         * <li>If the protocol type is TCP, UDP, or ANY, and the destination port type (DestPortType) is port, the value of DestPort is the destination port number.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -546,7 +549,7 @@ public class AddControlPolicyRequest extends Request {
         /**
          * <p>The name of the destination port address book in the access control policy.</p>
          * <blockquote>
-         * <p>If DestPortType is set to group, you must specify the name of the destination port address book.</p>
+         * <p>If DestPortType is set to group, you must specify the destination port address book name.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -579,19 +582,22 @@ public class AddControlPolicyRequest extends Request {
          * <p>The destination address in the access control policy.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>If DestinationType is set to net, the value of this parameter is a CIDR block.</p>
+         * <li><p>If DestinationType is set to net, the value of Destination is a destination CIDR block.</p>
          * <p>Example: 1.2.XX.XX/24</p>
          * </li>
-         * <li><p>If DestinationType is set to group, the value of this parameter is an address book name.</p>
+         * <li><p>If DestinationType is set to group, the value of Destination is a destination address book name.</p>
          * <p>Example: db_group</p>
          * </li>
-         * <li><p>If DestinationType is set to domain, the value of this parameter is a domain name.</p>
+         * <li><p>If DestinationType is set to domain, the value of Destination is a destination domain name.</p>
          * <p>Example: *.aliyuncs.com</p>
          * </li>
-         * <li><p>If DestinationType is set to location, the value of this parameter is a location.</p>
-         * <p>Example: [&quot;BJ11&quot;, &quot;ZB&quot;]</p>
+         * <li><p>If DestinationType is set to location, the value of Destination is a destination region.</p>
+         * <p>Example: [&quot;BJ11&quot;, &quot;ZB&quot;\]</p>
          * </li>
          * </ul>
+         * <blockquote>
+         * <p>If Destination is set to a destination region, for more information, see <a href="https://help.aliyun.com/document_detail/2854161.html">Region codes</a>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -606,10 +612,10 @@ public class AddControlPolicyRequest extends Request {
         /**
          * <p>The type of the destination address in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>net</strong>: CIDR block</li>
-         * <li><strong>group</strong>: address book</li>
-         * <li><strong>domain</strong>: domain name</li>
-         * <li><strong>location</strong>: location</li>
+         * <li><strong>net</strong>: destination CIDR block</li>
+         * <li><strong>group</strong>: destination address book</li>
+         * <li><strong>domain</strong>: destination domain name</li>
+         * <li><strong>location</strong>: destination region</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -623,10 +629,10 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
+         * <p>The traffic direction of the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>in</strong>: inbound traffic</li>
-         * <li><strong>out</strong>: outbound traffic</li>
+         * <li><strong>in</strong>: inbound traffic access control</li>
+         * <li><strong>out</strong>: outbound traffic access control</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -642,7 +648,7 @@ public class AddControlPolicyRequest extends Request {
         /**
          * <p>The domain name resolution method of the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>FQDN</strong>: fully qualified domain name (FQDN)-based resolution</li>
+         * <li><strong>FQDN</strong>: FQDN-based</li>
          * <li><strong>DNS</strong>: DNS-based dynamic resolution</li>
          * <li><strong>FQDN_AND_DNS</strong>: FQDN and DNS-based dynamic resolution</li>
          * </ul>
@@ -657,7 +663,7 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>是否只预检此次请求。取值 true 时仅执行参数合法性、身份权限、资源存在性、配额限制与依赖关系等执行前校验，不创建真实策略、不触发真实异步任务、不产生计费/通知/回调等下游副作用；预检成功时不创建策略且响应中不返回 AclUuid（真实调用会返回新建策略的 AclUuid），据此与真实调用响应区分；预检失败返回可机器识别的错误码。取值 false（默认）表示正常发起请求并创建策略。</p>
+         * <p>Specifies whether to perform a dry run.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -666,9 +672,9 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+         * <p>The end time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The value must be on the hour or half hour and must be at least 30 minutes later than the start time.</p>
          * <blockquote>
-         * <p> If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * <p>If RepeatType is set to Permanent, EndTime is empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must have a value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -681,11 +687,13 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The IP version supported by the access control policy.</p>
+         * <p>The IP address version supported.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>4</strong>: IPv4</li>
-         * <li><strong>6</strong>: IPv6</li>
+         * <li><p><strong>4</strong>: IPv4</p>
+         * </li>
+         * <li><p><strong>6</strong>: IPv6</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -698,9 +706,9 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>
          * </ul>
          * 
@@ -727,13 +735,16 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The protocol type supported by the access control policy. Valid values:</p>
+         * <p>The protocol type in the access control policy. Valid values:</p>
          * <ul>
          * <li><strong>ANY</strong></li>
          * <li><strong>TCP</strong></li>
          * <li><strong>UDP</strong></li>
          * <li><strong>ICMP</strong></li>
          * </ul>
+         * <blockquote>
+         * <p>If the traffic direction is outbound and the destination address is a threat intelligence address book or cloud service address book of the domain type, only TCP is supported. The application type can be set to HTTP, HTTPS, SMTP, SMTPS, or SSL.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -746,10 +757,12 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:</p>
+         * <p>Specifies whether to enable the access control policy. The policy is enabled by default after it is created. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables the access control policy.</li>
-         * <li><strong>false</strong>: disables the access control policy.</li>
+         * <li><p><strong>true</strong>: enables the access control policy.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disables the access control policy.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -762,20 +775,21 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The days of a week or of a month on which the access control policy takes effect.</p>
+         * <p>The days of the recurrence for the policy validity period of the access control policy.</p>
          * <ul>
-         * <li>If you set RepeatType to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, leave this parameter empty. Example: [].</li>
-         * <li>If you set RepeatType to Weekly, you must specify this parameter. Example: [0, 6].</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you set RepeatType to Weekly, the fields in the value of this parameter cannot be repeated.</p>
+         * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is an empty collection.
+         * Example: []</li>
+         * <li>If RepeatType is set to Weekly, RepeatDays cannot be empty.
+         * Example: [0, 6]<blockquote>
+         * <p>If RepeatType is set to Weekly, values in RepeatDays cannot be repeated.</p>
          * </blockquote>
-         * <ul>
-         * <li>If you set RepeatType to <code>Monthly</code>, you must specify this parameter. Example: [1, 31].</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.</p>
+         * </li>
+         * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays cannot be empty.
+         * Example: [1, 31]<blockquote>
+         * <p>If RepeatType is set to Monthly, values in RepeatDays cannot be repeated.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          */
         public Builder repeatDays(java.util.List<Long> repeatDays) {
             this.putQueryParameter("RepeatDays", repeatDays);
@@ -784,9 +798,10 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The point in time when the recurrence ends. Example: 23:30. The end time must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+         * <p>The recurrence end time of the policy validity period for the access control policy. Example: 23:30. The value must be on the hour or half hour and must be at least 30 minutes later than the recurrence start time.</p>
          * <blockquote>
-         * <p> If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * <p>If RepeatType is set to Permanent or None, RepeatEndTime is empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must have a value.
+         * The time is in the HH:mm format (24-hour clock). Example: 08:00 or 23:30.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -799,9 +814,10 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The point in time when the recurrence starts. Example: 08:00. The start time must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+         * <p>The recurrence start time of the policy validity period for the access control policy. Example: 08:00. The value must be on the hour or half hour and must be at least 30 minutes earlier than the recurrence end time.</p>
          * <blockquote>
-         * <p> If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * <p>If RepeatType is set to Permanent or None, RepeatStartTime is empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatStartTime must have a value.
+         * The time is in the HH:mm format (24-hour clock). Example: 08:00 or 23:30.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -814,13 +830,13 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+         * <p>The recurrence type of the policy validity period for the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
-         * <li><strong>None</strong>: The policy takes effect for only once.</li>
-         * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
-         * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
-         * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+         * <li><strong>Permanent</strong> (default): The policy is always valid.</li>
+         * <li><strong>None</strong>: The policy is valid for a specified single time period.</li>
+         * <li><strong>Daily</strong>: The policy is valid on a daily basis.</li>
+         * <li><strong>Weekly</strong>: The policy is valid on a weekly basis.</li>
+         * <li><strong>Monthly</strong>: The policy is valid on a monthly basis.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -835,16 +851,19 @@ public class AddControlPolicyRequest extends Request {
         /**
          * <p>The source address in the access control policy. Valid values:</p>
          * <ul>
-         * <li><p>If SourceType is set to net, the value of this parameter is a CIDR block.</p>
+         * <li><p>If SourceType is set to net, the value of Source is a source CIDR block.</p>
          * <p>Example: 1.1.XX.XX/24</p>
          * </li>
-         * <li><p>If SourceType is set to group, the value of this parameter is an address book name.</p>
+         * <li><p>If SourceType is set to group, the value of Source is a source address book name.</p>
          * <p>Example: db_group</p>
          * </li>
-         * <li><p>If SourceType is set to location, the value of this parameter is a location.</p>
-         * <p>Example: [&quot;BJ11&quot;, &quot;ZB&quot;]</p>
+         * <li><p>If SourceType is set to location, the value of Source is a source region.</p>
+         * <p>Example: [&quot;BJ11&quot;, &quot;ZB&quot;\]</p>
          * </li>
          * </ul>
+         * <blockquote>
+         * <p>If Source is set to a source region, for more information, see <a href="https://help.aliyun.com/document_detail/2854161.html">Region codes</a>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -871,9 +890,9 @@ public class AddControlPolicyRequest extends Request {
         /**
          * <p>The type of the source address in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>net</strong>: CIDR block</li>
-         * <li><strong>group</strong>: address book</li>
-         * <li><strong>location</strong>: location</li>
+         * <li><strong>net</strong>: source CIDR block</li>
+         * <li><strong>group</strong>: source address book</li>
+         * <li><strong>location</strong>: source region</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -887,9 +906,9 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+         * <p>The start time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The value must be on the hour or half hour and must be at least 30 minutes earlier than the end time.</p>
          * <blockquote>
-         * <p> If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * <p>If RepeatType is set to Permanent, StartTime is empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must have a value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

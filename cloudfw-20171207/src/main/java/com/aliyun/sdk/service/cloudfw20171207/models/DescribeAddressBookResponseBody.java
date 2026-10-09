@@ -106,7 +106,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the address book.</p>
+         * <p>The list of address books.</p>
          */
         public Builder acls(java.util.List<Acls> acls) {
             this.acls = acls;
@@ -114,7 +114,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of address books on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of the returned address books.</p>
+         * <p>The total number of address books.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -216,7 +216,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The key of the pod label in the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -224,7 +227,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the pod label in the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storage-operator</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -291,7 +297,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Address information in the address book.</p>
+             * <p>The address information of the address book.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.1/32</p>
@@ -302,10 +308,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Single address description.</p>
+             * <p>The description of the individual address.</p>
              * 
              * <strong>example:</strong>
-             * <p>description</p>
+             * <p>Single Address Description</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -567,7 +573,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             } 
 
             /**
-             * AiGatewayEIP.
+             * <p>The asset type: AIGatewayEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder aiGatewayEIP(Boolean aiGatewayEIP) {
                 this.aiGatewayEIP = aiGatewayEIP;
@@ -575,7 +584,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * AlbEIP.
+             * <p>The asset type: AlbEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder albEIP(Boolean albEIP) {
                 this.albEIP = albEIP;
@@ -583,7 +595,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * ApiGatewayEIP.
+             * <p>The asset type: ApigEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder apiGatewayEIP(Boolean apiGatewayEIP) {
                 this.apiGatewayEIP = apiGatewayEIP;
@@ -591,7 +606,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * BastionHostEgressIP.
+             * <p>The asset type: BastionHostEgressIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bastionHostEgressIP(Boolean bastionHostEgressIP) {
                 this.bastionHostEgressIP = bastionHostEgressIP;
@@ -599,7 +617,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * BastionHostIP.
+             * <p>The asset type: BastionHostIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bastionHostIP(Boolean bastionHostIP) {
                 this.bastionHostIP = bastionHostIP;
@@ -607,7 +628,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * BastionHostIngressIP.
+             * <p>The asset type: BastionHostIngressIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bastionHostIngressIP(Boolean bastionHostIngressIP) {
                 this.bastionHostIngressIP = bastionHostIngressIP;
@@ -615,7 +639,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * EIP.
+             * <p>The asset type: EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder EIP(Boolean EIP) {
                 this.EIP = EIP;
@@ -623,7 +650,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * EcsEIP.
+             * <p>The asset type: EcsEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ecsEIP(Boolean ecsEIP) {
                 this.ecsEIP = ecsEIP;
@@ -631,7 +661,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * EcsPublicIP.
+             * <p>The asset type: EcsPublicIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ecsPublicIP(Boolean ecsPublicIP) {
                 this.ecsPublicIP = ecsPublicIP;
@@ -639,7 +672,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * EniEIP.
+             * <p>The asset type: EniEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder eniEIP(Boolean eniEIP) {
                 this.eniEIP = eniEIP;
@@ -647,7 +683,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * GaEIP.
+             * <p>The asset type: GaEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder gaEIP(Boolean gaEIP) {
                 this.gaEIP = gaEIP;
@@ -655,7 +694,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * HAVIP.
+             * <p>The asset type: HAVIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder HAVIP(Boolean HAVIP) {
                 this.HAVIP = HAVIP;
@@ -663,7 +705,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * NatEIP.
+             * <p>The asset type: NatEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder natEIP(Boolean natEIP) {
                 this.natEIP = natEIP;
@@ -671,7 +716,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * NatPublicIP.
+             * <p>The asset type: NatPublicIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder natPublicIP(Boolean natPublicIP) {
                 this.natPublicIP = natPublicIP;
@@ -679,7 +727,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * NlbEIP.
+             * <p>The asset type: NlbEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder nlbEIP(Boolean nlbEIP) {
                 this.nlbEIP = nlbEIP;
@@ -687,7 +738,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * SlbEIP.
+             * <p>The asset type: SlbEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder slbEIP(Boolean slbEIP) {
                 this.slbEIP = slbEIP;
@@ -695,7 +749,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * SlbPublicIP.
+             * <p>The asset type: SlbPublicIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder slbPublicIP(Boolean slbPublicIP) {
                 this.slbPublicIP = slbPublicIP;
@@ -840,7 +897,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             } 
 
             /**
-             * AiGatewayEIPv6.
+             * <p>The asset type: AIGatewayEIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder aiGatewayEIPv6(Boolean aiGatewayEIPv6) {
                 this.aiGatewayEIPv6 = aiGatewayEIPv6;
@@ -848,7 +908,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * AlbIPv6.
+             * <p>The asset type: AlbIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder albIPv6(Boolean albIPv6) {
                 this.albIPv6 = albIPv6;
@@ -856,7 +919,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * ApiGatewayEIPv6.
+             * <p>The asset type: ApigEIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder apiGatewayEIPv6(Boolean apiGatewayEIPv6) {
                 this.apiGatewayEIPv6 = apiGatewayEIPv6;
@@ -864,7 +930,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * EcsIPv6.
+             * <p>The asset type: EcsIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ecsIPv6(Boolean ecsIPv6) {
                 this.ecsIPv6 = ecsIPv6;
@@ -872,7 +941,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * EniEIPv6.
+             * <p>The asset type: EniEIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder eniEIPv6(Boolean eniEIPv6) {
                 this.eniEIPv6 = eniEIPv6;
@@ -880,7 +952,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * GaEIPv6.
+             * <p>The asset type: GaEIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder gaEIPv6(Boolean gaEIPv6) {
                 this.gaEIPv6 = gaEIPv6;
@@ -888,7 +963,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * NlbIPv6.
+             * <p>The asset type: NlbIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder nlbIPv6(Boolean nlbIPv6) {
                 this.nlbIPv6 = nlbIPv6;
@@ -896,7 +974,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * SlbIPv6.
+             * <p>The asset type: SlbIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder slbIPv6(Boolean slbIPv6) {
                 this.slbIPv6 = slbIPv6;
@@ -963,7 +1044,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             } 
 
             /**
-             * Ipv4.
+             * <p>The IPv4 asset type.</p>
              */
             public Builder ipv4(Ipv4 ipv4) {
                 this.ipv4 = ipv4;
@@ -971,7 +1052,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6.
+             * <p>The IPv6 asset type.</p>
              */
             public Builder ipv6(Ipv6 ipv6) {
                 this.ipv6 = ipv6;
@@ -1038,7 +1119,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetRegionId.
+             * <p>The region ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder assetRegionId(String assetRegionId) {
                 this.assetRegionId = assetRegionId;
@@ -1046,7 +1130,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The asset type.</p>
              */
             public Builder resourceType(ResourceType resourceType) {
                 this.resourceType = resourceType;
@@ -1127,7 +1211,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
              * <p>The value of the ECS tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>admin</p>
+             * <p>ALL VALUE</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1402,7 +1486,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             } 
 
             /**
-             * AckClusterConnectorId.
+             * <p>The ID of the ACK cluster connector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ac-7c1bad6c3cc84c33baab</p>
              */
             public Builder ackClusterConnectorId(String ackClusterConnectorId) {
                 this.ackClusterConnectorId = ackClusterConnectorId;
@@ -1410,7 +1497,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * AckClusterConnectorName.
+             * <p>The name of the ACK cluster connector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack-cluster-connector-name</p>
              */
             public Builder ackClusterConnectorName(String ackClusterConnectorName) {
                 this.ackClusterConnectorName = ackClusterConnectorName;
@@ -1418,7 +1508,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * AckLabels.
+             * <p>The list of pod labels in the ACK cluster.</p>
              */
             public Builder ackLabels(java.util.List<AckLabels> ackLabels) {
                 this.ackLabels = ackLabels;
@@ -1426,7 +1516,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * AckNamespaces.
+             * <p>The list of pod namespaces in the ACK cluster.</p>
              */
             public Builder ackNamespaces(java.util.List<String> ackNamespaces) {
                 this.ackNamespaces = ackNamespaces;
@@ -1434,7 +1524,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The addresses in the address book.</p>
+             * <p>The address list of the address book.</p>
              */
             public Builder addressList(java.util.List<String> addressList) {
                 this.addressList = addressList;
@@ -1453,7 +1543,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of addresses in the address book, each with a single address description.</p>
+             * <p>The address list of the address book that includes descriptions for individual addresses.</p>
              */
             public Builder addresses(java.util.List<Addresses> addresses) {
                 this.addresses = addresses;
@@ -1461,7 +1551,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * AssetMemberUids.
+             * <p>The list of member accounts for the asset address book.</p>
              */
             public Builder assetMemberUids(java.util.List<Long> assetMemberUids) {
                 this.assetMemberUids = assetMemberUids;
@@ -1469,7 +1559,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * AssetRegionResourceTypes.
+             * <p>The list of regions and resource types for the asset address book.</p>
              */
             public Builder assetRegionResourceTypes(java.util.List<AssetRegionResourceTypes> assetRegionResourceTypes) {
                 this.assetRegionResourceTypes = assetRegionResourceTypes;
@@ -1477,10 +1567,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the public IP addresses of ECS instances are automatically added to the address book if the instances match the specified tags. The setting takes effect on both newly purchased ECS instances whose tag settings are complete and ECS instances whose tag settings are modified. Valid values:</p>
+             * <p>Indicates whether the public IP addresses of ECS instances that match new tags are automatically added to the address book. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: yes</li>
-             * <li><strong>0</strong>: no</li>
+             * <li><strong>0</strong>: The public IP addresses are not automatically added.</li>
+             * <li><strong>1</strong>: The public IP addresses are automatically added.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1495,7 +1585,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
              * <p>The description of the address book.</p>
              * 
              * <strong>example:</strong>
-             * <p>my address book</p>
+             * <p>DEMO</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1514,15 +1604,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the address book. Valid values:</p>
-             * <ul>
-             * <li><strong>ip</strong>: IP address book</li>
-             * <li><strong>domain</strong>: domain address book</li>
-             * <li><strong>port</strong>: port address book</li>
-             * <li><strong>tag</strong>: ECS tag-based address book</li>
-             * <li><strong>allCloud</strong>: cloud service address book</li>
-             * <li><strong>threat</strong>: threat intelligence address book</li>
-             * </ul>
+             * <p>The type of the address book.</p>
              * 
              * <strong>example:</strong>
              * <p>ip</p>
@@ -1533,7 +1615,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the address book.</p>
+             * <p>The unique ID of the address book.</p>
              * 
              * <strong>example:</strong>
              * <p>f04ac7ce-628b-4cb7-be61-310222b7****</p>
@@ -1544,7 +1626,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the address book is referenced.</p>
+             * <p>The number of times the address book is referenced.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1555,7 +1637,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region of the ACK cluster connector to which the address book belongs when GroupType is an ACK address book.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -1563,7 +1648,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details about the ECS tags that can be automatically added to the address book.</p>
+             * <p>The list of ECS tags.</p>
              */
             public Builder tagList(java.util.List<TagList> tagList) {
                 this.tagList = tagList;
@@ -1571,10 +1656,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logical relationship among ECS tags. Valid values:</p>
+             * <p>The relationship between multiple ECS tags. Valid values:</p>
              * <ul>
-             * <li><strong>and</strong>: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</li>
-             * <li><strong>or</strong>: The public IP addresses of ECS instances that match any of the specified tags can be added to the address book.</li>
+             * <li><strong>or</strong>: The relationship between multiple tags is OR. The public IP address of an ECS instance that matches any tag is added to the address book.</li>
+             * <li><strong>and</strong>: The relationship between multiple tags is AND. The public IP address of an ECS instance that matches all tags is added to the address book.</li>
              * </ul>
              * 
              * <strong>example:</strong>

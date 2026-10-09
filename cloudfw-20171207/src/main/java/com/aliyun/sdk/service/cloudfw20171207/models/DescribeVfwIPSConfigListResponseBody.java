@@ -106,7 +106,10 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNo.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -114,7 +117,10 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         }
 
         /**
-         * VfwIpsSwitchConfigList.
+         * <p>The configuration list.</p>
          */
         public Builder vfwIpsSwitchConfigList(java.util.List<VfwIpsSwitchConfigList> vfwIpsSwitchConfigList) {
             this.vfwIpsSwitchConfigList = vfwIpsSwitchConfigList;
@@ -282,7 +294,10 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
             } 
 
             /**
-             * BasicRules.
+             * <p>The status of the Basic Policies switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder basicRules(Integer basicRules) {
                 this.basicRules = basicRules;
@@ -290,7 +305,10 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUid.
+             * <p>The UID of the member accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>134646920647****</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -298,7 +316,10 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * PatchRules.
+             * <p>The status of the virtual patches switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder patchRules(Integer patchRules) {
                 this.patchRules = patchRules;
@@ -306,7 +327,10 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * RuleClass.
+             * <p>The rule class for Block Mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleClass(Integer ruleClass) {
                 this.ruleClass = ruleClass;
@@ -314,7 +338,10 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * RunMode.
+             * <p>The defense mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder runMode(Integer runMode) {
                 this.runMode = runMode;
@@ -322,7 +349,10 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcFirewallId.
+             * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-h678sl4wv3yd5v****</p>
              */
             public Builder vpcFirewallId(String vpcFirewallId) {
                 this.vpcFirewallId = vpcFirewallId;
@@ -330,7 +360,7 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcFirewallIdList.
+             * <p>The list of instance IDs of virtual private cloud (VPC) firewalls.</p>
              */
             public Builder vpcFirewallIdList(java.util.List<String> vpcFirewallIdList) {
                 this.vpcFirewallIdList = vpcFirewallIdList;
@@ -338,7 +368,10 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcFirewallName.
+             * <p>The instance name of the virtual private cloud (VPC) firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-test</p>
              */
             public Builder vpcFirewallName(String vpcFirewallName) {
                 this.vpcFirewallName = vpcFirewallName;

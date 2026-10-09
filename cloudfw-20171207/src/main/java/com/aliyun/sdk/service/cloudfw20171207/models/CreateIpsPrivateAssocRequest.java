@@ -73,7 +73,10 @@ public class CreateIpsPrivateAssocRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the request and response messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -82,7 +85,10 @@ public class CreateIpsPrivateAssocRequest extends Request {
         }
 
         /**
-         * <p>资源实例 ID。本参数实际为必填项，未提供时 API 返回 -103201。取值约束：仅接受已受云防火墙保护的 NAT 网关实例 ID（格式 ngw-<em>），传入 vpc-</em>、eip-* 等其他资源类型将被拒绝。</p>
+         * <p>The ID of the Internet NAT gateway instance to associate. This parameter is required. If this parameter is not specified, ErrorParamsNotEnough is returned (HTTP 400, Parameters are insufficient.).</p>
+         * <blockquote>
+         * <p>The backend does not validate the ID format. Instead, it queries the instance in the Cloud Firewall private network asset table for the current account. If the instance is not found, ErrorParamsInvalid is returned (HTTP 400, Invalid Params). Common scenarios include the resource type not being a NAT gateway, the resource not being managed by Cloud Firewall, or a newly created NAT gateway for which asynchronous asset synchronization has not yet completed.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ngw-c5vhmjdfp5t****</p>

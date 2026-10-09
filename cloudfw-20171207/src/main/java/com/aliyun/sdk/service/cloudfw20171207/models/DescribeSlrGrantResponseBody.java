@@ -80,7 +80,10 @@ public class DescribeSlrGrantResponseBody extends TeaModel {
         } 
 
         /**
-         * IsGranted.
+         * <p>Indicates whether the authorization is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isGranted(Boolean isGranted) {
             this.isGranted = isGranted;
@@ -88,7 +91,10 @@ public class DescribeSlrGrantResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1BD3D277-AE2F-5609-893F-FF7A72A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class DescribeSlrGrantResponseBody extends TeaModel {
         }
 
         /**
-         * UserType.
+         * <p>The type of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sub</p>
          */
         public Builder userType(String userType) {
             this.userType = userType;

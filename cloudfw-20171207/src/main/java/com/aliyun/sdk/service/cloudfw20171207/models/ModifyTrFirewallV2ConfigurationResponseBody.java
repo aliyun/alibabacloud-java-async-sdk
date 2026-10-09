@@ -54,7 +54,7 @@ public class ModifyTrFirewallV2ConfigurationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A74C8FDD-2BEF-52D5-8B01-EB6FD94606F9</p>

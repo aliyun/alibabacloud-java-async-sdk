@@ -132,7 +132,10 @@ public class DescribeInternetDropTrafficTrendRequest extends Request {
         } 
 
         /**
-         * Direction.
+         * <p>The traffic direction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>out</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -141,6 +144,7 @@ public class DescribeInternetDropTrafficTrendRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query, specified as a timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +157,10 @@ public class DescribeInternetDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -162,6 +169,7 @@ public class DescribeInternetDropTrafficTrendRequest extends Request {
         }
 
         /**
+         * <p>The traceability code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +182,10 @@ public class DescribeInternetDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.136.21.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -183,6 +194,7 @@ public class DescribeInternetDropTrafficTrendRequest extends Request {
         }
 
         /**
+         * <p>The start time, specified as a timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

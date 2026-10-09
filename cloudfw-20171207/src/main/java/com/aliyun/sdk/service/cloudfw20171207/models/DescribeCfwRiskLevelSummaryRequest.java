@@ -87,7 +87,10 @@ public class DescribeCfwRiskLevelSummaryRequest extends Request {
         } 
 
         /**
-         * <p>The instance type.</p>
+         * <p>The instance type. Valid value:</p>
+         * <ul>
+         * <li><strong>ecs</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>EcsEIP</p>
@@ -99,11 +102,13 @@ public class DescribeCfwRiskLevelSummaryRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response.</p>
+         * <p>The language of the response.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,9 +121,9 @@ public class DescribeCfwRiskLevelSummaryRequest extends Request {
         }
 
         /**
-         * <p>The region ID of your Cloud Firewall.</p>
+         * <p>The ID of the region where Cloud Firewall is deployed.</p>
          * <blockquote>
-         * <p> For more information about Cloud Firewall supported regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * <p>For more information about the regions where Cloud Firewall is available, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

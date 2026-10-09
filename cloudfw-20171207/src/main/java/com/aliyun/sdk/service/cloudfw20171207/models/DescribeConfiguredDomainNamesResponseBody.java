@@ -93,7 +93,7 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
         } 
 
         /**
-         * DomainNames.
+         * <p>The list of domain names.</p>
          */
         public Builder domainNames(java.util.List<DomainNames> domainNames) {
             this.domainNames = domainNames;
@@ -101,7 +101,10 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The application module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg_server</p>
          */
         public Builder module(String module) {
             this.module = module;
@@ -109,7 +112,10 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09A2D6F1-EA1B-56D9-977D-74878405****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -209,7 +218,10 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -217,7 +229,10 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -225,7 +240,10 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
             }
 
             /**
-             * IsMalicious.
+             * <p>Indicates whether the domain name is malicious. Valid values: <code>0</code> (not malicious) and <code>1</code> (malicious).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isMalicious(Boolean isMalicious) {
                 this.isMalicious = isMalicious;
@@ -233,7 +251,10 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
             }
 
             /**
-             * OperationTime.
+             * <p>The time of the operation, specified as a Unix timestamp in seconds. Example: <code>1672502400</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1534408189</p>
              */
             public Builder operationTime(Integer operationTime) {
                 this.operationTime = operationTime;

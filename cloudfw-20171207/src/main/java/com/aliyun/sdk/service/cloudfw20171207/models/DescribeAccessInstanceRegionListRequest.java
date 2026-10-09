@@ -73,10 +73,13 @@ public class DescribeAccessInstanceRegionListRequest extends Request {
         } 
 
         /**
-         * <p>实例状态（可选），用于按状态筛选。本接口的地域列表查询主要依据 AccessInstanceType 分流。</p>
+         * <p>The sync node status. Used to filter by status.</p>
+         * <blockquote>
+         * <p>Currently, only the &quot;created&quot; status is supported for filtering. Passing other values (such as &quot;ready&quot;) causes the request to fail.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>ready</p>
+         * <p>created</p>
          */
         public Builder accessInstanceStatus(String accessInstanceStatus) {
             this.putQueryParameter("AccessInstanceStatus", accessInstanceStatus);
@@ -85,7 +88,13 @@ public class DescribeAccessInstanceRegionListRequest extends Request {
         }
 
         /**
-         * <p>实例类型。可选值 PrivateDns（默认，不传时等同 PrivateDns）、AckClusterConnector；传入其他值时返回 ErrorParameters。</p>
+         * <p>The sync node type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>PrivateDns</strong>: Private DNS (default value if not specified).</p>
+         * </li>
+         * <li><p><strong>AckClusterConnector</strong>: ACK cluster connector.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>AckClusterConnector</p>

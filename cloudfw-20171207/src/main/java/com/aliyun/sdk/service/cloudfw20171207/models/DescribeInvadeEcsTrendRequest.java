@@ -101,7 +101,10 @@ public class DescribeInvadeEcsTrendRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. This is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1733796528</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -110,7 +113,10 @@ public class DescribeInvadeEcsTrendRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -119,7 +125,10 @@ public class DescribeInvadeEcsTrendRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.230.45.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -128,7 +137,10 @@ public class DescribeInvadeEcsTrendRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range to query. This is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1736561456</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

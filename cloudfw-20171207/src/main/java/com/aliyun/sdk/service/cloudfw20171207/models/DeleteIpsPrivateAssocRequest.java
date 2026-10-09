@@ -73,7 +73,16 @@ public class DeleteIpsPrivateAssocRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the request and response messages. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -82,7 +91,10 @@ public class DeleteIpsPrivateAssocRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-c5vhmjdfp5t****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

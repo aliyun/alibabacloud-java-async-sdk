@@ -87,7 +87,7 @@ public class UpdatePostpayUserVpcStatusRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of Cloud Firewall.</p>
+         * <p>The ID of the Cloud Firewall instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cfw_elasticity_public_cn-************</p>
@@ -99,11 +99,10 @@ public class UpdatePostpayUserVpcStatusRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response.</p>
-         * <p>Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default)</li>
-         * <li><strong>en</strong></li>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,9 +115,9 @@ public class UpdatePostpayUserVpcStatusRequest extends Request {
         }
 
         /**
-         * <p>The operation type.</p>
+         * <p>The operation type. Currently, only the activation operation is supported. Valid values:</p>
          * <ul>
-         * <li>Set the value to open.</li>
+         * <li>open: activation</li>
          * </ul>
          * 
          * <strong>example:</strong>

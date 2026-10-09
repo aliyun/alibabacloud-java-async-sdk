@@ -106,7 +106,7 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * AlarmConfig.
+         * <p>The alarm configuration.</p>
          */
         public Builder alarmConfig(java.util.List<AlarmConfig> alarmConfig) {
             this.alarmConfig = alarmConfig;
@@ -114,7 +114,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         }
 
         /**
-         * AlarmLang.
+         * <p>The language of the alarm notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder alarmLang(String alarmLang) {
             this.alarmLang = alarmLang;
@@ -122,7 +125,7 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ContactConfig.
+         * <p>The contact information.</p>
          */
         public Builder contactConfig(java.util.List<ContactConfig> contactConfig) {
             this.contactConfig = contactConfig;
@@ -130,7 +133,7 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultContact.
+         * <p>Information about the default alarm contact.</p>
          */
         public Builder defaultContact(DefaultContact defaultContact) {
             this.defaultContact = defaultContact;
@@ -138,7 +141,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9D250177-4F11-58B8-9AFE-A4624FF1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +262,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AlarmHour.
+             * <p>The alarm threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder alarmHour(Integer alarmHour) {
                 this.alarmHour = alarmHour;
@@ -264,7 +273,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmNotify.
+             * <p>The notification method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder alarmNotify(Integer alarmNotify) {
                 this.alarmNotify = alarmNotify;
@@ -272,7 +284,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmPeriod.
+             * <p>The alarm period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder alarmPeriod(Integer alarmPeriod) {
                 this.alarmPeriod = alarmPeriod;
@@ -280,7 +295,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmType.
+             * <p>The alarm type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bandwidth</p>
              */
             public Builder alarmType(String alarmType) {
                 this.alarmType = alarmType;
@@ -288,7 +306,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmValue.
+             * <p>The value that triggers the alarm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder alarmValue(String alarmValue) {
                 this.alarmValue = alarmValue;
@@ -296,7 +317,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmWeekDay.
+             * <p>The alarm retry count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder alarmWeekDay(Integer alarmWeekDay) {
                 this.alarmWeekDay = alarmWeekDay;
@@ -389,7 +413,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Email.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1530811****@qq.com</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -397,7 +424,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MobilePhone.
+             * <p>The mobile number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -405,7 +435,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The contact name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1531123****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -413,7 +446,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the contact. Valid values: <strong>0</strong> (Disabled) and <strong>1</strong> (Enabled).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -506,7 +542,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Email.
+             * <p>The email address of the default contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1530811****@qq.com</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -514,7 +553,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MobilePhone.
+             * <p>The mobile number of the default contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1531123****</p>
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -522,7 +564,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the default contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -530,7 +575,10 @@ public class DescribeUserAlarmConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. Valid values: <strong>normal</strong> (Normal) and <strong>disable</strong> (Disabled).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -160,7 +160,10 @@ public class DescribeConfiguredDomainNamesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -169,6 +172,7 @@ public class DescribeConfiguredDomainNamesRequest extends Request {
         }
 
         /**
+         * <p>The traffic direction.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +185,10 @@ public class DescribeConfiguredDomainNamesRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -190,6 +197,7 @@ public class DescribeConfiguredDomainNamesRequest extends Request {
         }
 
         /**
+         * <p>The group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +210,10 @@ public class DescribeConfiguredDomainNamesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -211,7 +222,10 @@ public class DescribeConfiguredDomainNamesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -220,6 +234,7 @@ public class DescribeConfiguredDomainNamesRequest extends Request {
         }
 
         /**
+         * <p>The trace code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +247,10 @@ public class DescribeConfiguredDomainNamesRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.202.149.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

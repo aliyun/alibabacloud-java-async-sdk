@@ -81,7 +81,10 @@ public class DescribeSecurityModeResponseBody extends TeaModel {
         } 
 
         /**
-         * Module.
+         * <p>The application module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg_server</p>
          */
         public Builder module(String module) {
             this.module = module;
@@ -89,7 +92,10 @@ public class DescribeSecurityModeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C6D68A02-54D5-5F5C-A8AA-6D6C2874****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +103,12 @@ public class DescribeSecurityModeResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityMode.
+         * <p>The security mode. Valid values:</p>
+         * <p><strong>0</strong>: disabled.</p>
+         * <p><strong>1</strong>: enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder securityMode(Integer securityMode) {
             this.securityMode = securityMode;

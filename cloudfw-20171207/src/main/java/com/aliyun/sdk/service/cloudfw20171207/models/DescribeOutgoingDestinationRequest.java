@@ -300,7 +300,10 @@ public class DescribeOutgoingDestinationRequest extends Request {
         } 
 
         /**
-         * AclCoverage.
+         * <p>The policy coverage status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FullCoverage</p>
          */
         public Builder aclCoverage(String aclCoverage) {
             this.putQueryParameter("AclCoverage", aclCoverage);
@@ -309,7 +312,10 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * ApplicationName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -318,7 +324,10 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>The category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliYun</p>
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -327,7 +336,10 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -336,7 +348,13 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * DstIP.
+         * <p>The legacy destination IP parameter.</p>
+         * <blockquote>
+         * <p>The POP gateway passes this parameter through, but the backend of this operation does not read it. Specifying this parameter has no filtering effect. To filter by IP address, use PublicIP or PrivateIP. If only DstIP is specified, the operation returns MissingParameter.IpFilter (-340415) because no valid IP filtering parameter is provided.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.111XXX</p>
          */
         public Builder dstIP(String dstIP) {
             this.putQueryParameter("DstIP", dstIP);
@@ -345,6 +363,7 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -357,7 +376,10 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * IsAITraffic.
+         * <p>Specifies whether to collect statistics only on traffic that accesses AI services. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isAITraffic(String isAITraffic) {
             this.putQueryParameter("IsAITraffic", isAITraffic);
@@ -366,7 +388,10 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type of the received message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -375,7 +400,10 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -384,7 +412,10 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -393,7 +424,10 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -402,7 +436,13 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * PrivateIP.
+         * <p>The private IP address.</p>
+         * <blockquote>
+         * <p>At least one of PublicIP and PrivateIP must be specified.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10.111.53XXX</p>
          */
         public Builder privateIP(String privateIP) {
             this.putQueryParameter("PrivateIP", privateIP);
@@ -411,7 +451,13 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * PublicIP.
+         * <p>The public IP address.</p>
+         * <blockquote>
+         * <p>At least one of PublicIP and PrivateIP must be specified.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>47.96.74.XXX</p>
          */
         public Builder publicIP(String publicIP) {
             this.putQueryParameter("PublicIP", publicIP);
@@ -420,7 +466,10 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * SecuritySuggest.
+         * <p>The security policy for the Outbound Domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder securitySuggest(String securitySuggest) {
             this.putQueryParameter("SecuritySuggest", securitySuggest);
@@ -429,7 +478,10 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The field by which to sort the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InBytes</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -438,7 +490,7 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * <p>访问源的IP地址。（该字段已经废弃）</p>
+         * <p>The IP address of the access source. <strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>106.3.198.XXX</p>
@@ -450,6 +502,7 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -462,7 +515,10 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * TagId.
+         * <p>The tag ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FirstFlow</p>
          */
         public Builder tagId(String tagId) {
             this.putQueryParameter("TagId", tagId);

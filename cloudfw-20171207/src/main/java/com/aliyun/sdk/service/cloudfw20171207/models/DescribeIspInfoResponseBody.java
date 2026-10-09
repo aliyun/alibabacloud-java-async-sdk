@@ -80,7 +80,7 @@ public class DescribeIspInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The list of ISPs.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -88,7 +88,10 @@ public class DescribeIspInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeIspInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -162,7 +168,10 @@ public class DescribeIspInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * IspId.
+             * <p>The ID of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>isp-dhyw2lxfpc****</p>
              */
             public Builder ispId(Integer ispId) {
                 this.ispId = ispId;
@@ -170,7 +179,10 @@ public class DescribeIspInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * <p>The name of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>telecom</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;

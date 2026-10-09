@@ -67,7 +67,10 @@ public class CreateVpcFirewallTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Module.
+         * <p>The application module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ips_server</p>
          */
         public Builder module(String module) {
             this.module = module;
@@ -75,7 +78,10 @@ public class CreateVpcFirewallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53252B14-BF7C-5A2D-9750-56F827EB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

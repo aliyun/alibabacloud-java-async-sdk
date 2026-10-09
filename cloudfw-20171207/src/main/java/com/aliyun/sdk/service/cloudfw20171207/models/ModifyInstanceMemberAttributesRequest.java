@@ -60,7 +60,7 @@ public class ModifyInstanceMemberAttributesRequest extends Request {
         } 
 
         /**
-         * <p>The members that to be modified.</p>
+         * <p>The member accounts in Cloud Firewall.</p>
          * <p>This parameter is required.</p>
          */
         public Builder members(java.util.List<Members> members) {
@@ -131,7 +131,7 @@ public class ModifyInstanceMemberAttributesRequest extends Request {
             } 
 
             /**
-             * <p>The remarks of the member in Cloud Firewall.</p>
+             * <p>The description of the member account.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ModifyInstanceMemberAttributesRequest extends Request {
             }
 
             /**
-             * <p>The UID of the member in Cloud Firewall.</p>
+             * <p>The UID of the member account.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

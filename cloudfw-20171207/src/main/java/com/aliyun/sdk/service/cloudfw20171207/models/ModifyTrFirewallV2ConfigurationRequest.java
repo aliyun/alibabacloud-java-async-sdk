@@ -87,7 +87,10 @@ public class ModifyTrFirewallV2ConfigurationRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the VPC firewall.</p>
+         * <p>The instance ID of the VPC firewall. You can call DescribeTrFirewallsV2List to obtain the ID.</p>
+         * <blockquote>
+         * <p>Note: FirewallId and FirewallName are jointly required. Both parameters must be provided at the same time. If either parameter is missing, the operation returns a 400 error.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>vfw-tr-bcdf89d405ce4bd2****</p>
@@ -100,9 +103,12 @@ public class ModifyTrFirewallV2ConfigurationRequest extends Request {
 
         /**
          * <p>The instance name of the VPC firewall.</p>
+         * <blockquote>
+         * <p>Note: FirewallId and FirewallName are jointly required. Both parameters must be provided at the same time. If either parameter is missing, the operation returns a 400 error.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>Test instance</p>
+         * <p>vpc-firewall</p>
          */
         public Builder firewallName(String firewallName) {
             this.putQueryParameter("FirewallName", firewallName);

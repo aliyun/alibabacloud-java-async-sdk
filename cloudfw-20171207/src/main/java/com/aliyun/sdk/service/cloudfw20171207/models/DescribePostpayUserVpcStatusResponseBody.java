@@ -91,11 +91,11 @@ public class DescribePostpayUserVpcStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the VPC Firewall feature. Valid values:</p>
+         * <p>The status of the Cloud Firewall VPC firewall switch module. Valid values:</p>
          * <ul>
-         * <li><strong>open</strong>: enabled</li>
-         * <li><strong>init</strong>: being enabled</li>
-         * <li><strong>closed</strong>: disabled</li>
+         * <li><strong>open</strong>: The module is enabled.</li>
+         * <li><strong>init</strong>: The module is being enabled.</li>
+         * <li><strong>closed</strong>: The module is not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class DescribePostpayUserVpcStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of days during which no asset is added to the VPC Firewall feature for protection. This parameter is valid only when the value of Status is open.</p>
+         * <p>The number of days during which protection is not enabled. This parameter is valid only when the module is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

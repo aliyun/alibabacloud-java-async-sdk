@@ -91,7 +91,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tasks.</p>
+         * <p>The list of tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -246,7 +246,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The time when the task was created. This is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1706595827</p>
@@ -257,7 +257,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task expires. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The time when the task expires. This is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1714371828</p>
@@ -279,7 +279,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the OSS file.</p>
+             * <p>The URL of the Object Storage Service (OSS) file.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://cfw-table-download-cn.oss-cn-hangzhou.aliyuncs.com/%E4%BA%92%E8%81%94%E7%BD%91%E8%BE%B9%E7%95%8C%E9%98%B2%E7%81%AB%E5%A2%99%E8%B5%84%E4%BA%A7-IPv4_1069.csv?Expires=1708583913&OSSAccessKeyId=****&Signature=******%3D">https://cfw-table-download-cn.oss-cn-hangzhou.aliyuncs.com/%E4%BA%92%E8%81%94%E7%BD%91%E8%BE%B9%E7%95%8C%E9%98%B2%E7%81%AB%E5%A2%99%E8%B5%84%E4%BA%A7-IPv4_1069.csv?Expires=1708583913&amp;OSSAccessKeyId=****&amp;Signature=******%3D</a></p>
@@ -292,10 +292,14 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             /**
              * <p>The status of the task. Valid values:</p>
              * <ul>
-             * <li><strong>finish</strong></li>
-             * <li><strong>start</strong></li>
-             * <li><strong>error</strong></li>
-             * <li><strong>expire</strong>: The task file is invalid and cannot be downloaded.</li>
+             * <li><p><strong>finish</strong>: The task is complete.</p>
+             * </li>
+             * <li><p><strong>start</strong>: The task has started.</p>
+             * </li>
+             * <li><p><strong>error</strong>: The task failed.</p>
+             * </li>
+             * <li><p><strong>expire</strong>: The task has expired. The task file is no longer valid and cannot be downloaded.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -321,7 +325,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
              * <p>The name of the task.</p>
              * 
              * <strong>example:</strong>
-             * <p>Internet Boundary Firewall Assets - IPv4</p>
+             * <p>Internet Border Firewall Assets-IPv4</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

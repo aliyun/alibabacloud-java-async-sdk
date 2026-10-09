@@ -90,6 +90,7 @@ public class AddPrivateDnsDomainNameRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the private DNS resolution instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class AddPrivateDnsDomainNameRequest extends Request {
         }
 
         /**
+         * <p>The list of private domain names to add.</p>
          * <p>This parameter is required.</p>
          */
         public Builder domainNameList(java.util.List<String> domainNameList) {
@@ -111,6 +113,10 @@ public class AddPrivateDnsDomainNameRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <p>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

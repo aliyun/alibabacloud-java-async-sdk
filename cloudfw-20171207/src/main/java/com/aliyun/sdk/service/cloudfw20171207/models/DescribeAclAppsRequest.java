@@ -132,6 +132,17 @@ public class DescribeAclAppsRequest extends Request {
         } 
 
         /**
+         * <p>The ACL type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Internet</strong></p>
+         * </li>
+         * <li><p><strong>NAT</strong></p>
+         * </li>
+         * <li><p><strong>VPC</strong></p>
+         * </li>
+         * <li><p><strong>All</strong></p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +155,16 @@ public class DescribeAclAppsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -153,6 +173,7 @@ public class DescribeAclAppsRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,6 +186,7 @@ public class DescribeAclAppsRequest extends Request {
         }
 
         /**
+         * <p>The page size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,7 +199,18 @@ public class DescribeAclAppsRequest extends Request {
         }
 
         /**
-         * Popular.
+         * <p>Specifies whether the application is common. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: common</p>
+         * </li>
+         * <li><p><strong>0</strong>: not common</p>
+         * </li>
+         * <li><p>If you omit this parameter (the default), all applications are returned.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder popular(Integer popular) {
             this.putQueryParameter("Popular", popular);
@@ -186,7 +219,7 @@ public class DescribeAclAppsRequest extends Request {
         }
 
         /**
-         * Protocols.
+         * <p>The list of protocol types.</p>
          */
         public Builder protocols(java.util.List<String> protocols) {
             this.putQueryParameter("Protocols", protocols);

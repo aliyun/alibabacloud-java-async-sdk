@@ -67,7 +67,7 @@ public class DescribeInstanceRdAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * Accounts.
+         * <p>The account information.</p>
          */
         public Builder accounts(java.util.List<Accounts> accounts) {
             this.accounts = accounts;
@@ -75,7 +75,10 @@ public class DescribeInstanceRdAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06D1EC07-C9EB-58AC-A750-C87C9A0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class DescribeInstanceRdAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The ID of the member accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>171054237268****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -149,7 +155,10 @@ public class DescribeInstanceRdAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The name of the member account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;

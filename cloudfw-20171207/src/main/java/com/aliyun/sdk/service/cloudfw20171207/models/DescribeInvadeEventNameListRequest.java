@@ -101,7 +101,10 @@ public class DescribeInvadeEventNameListRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time. This is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1738780437</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -110,7 +113,10 @@ public class DescribeInvadeEventNameListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -119,7 +125,10 @@ public class DescribeInvadeEventNameListRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36.112.73.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -128,7 +137,10 @@ public class DescribeInvadeEventNameListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. This is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1757620800</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

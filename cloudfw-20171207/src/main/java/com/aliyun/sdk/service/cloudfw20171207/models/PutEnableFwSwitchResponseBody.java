@@ -80,7 +80,7 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status information of the asset when it is not synchronized to Cloud Firewall.</p>
+         * <p>The status information list for assets that are not synchronized.</p>
          */
         public Builder abnormalResourceStatusList(java.util.List<AbnormalResourceStatusList> abnormalResourceStatusList) {
             this.abnormalResourceStatusList = abnormalResourceStatusList;
@@ -88,7 +88,10 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>标识本次为 DryRun 预检成功响应；取值 true 表示仅完成预检、未执行真实变更。真实调用不返回该字段或为 false。</p>
+         * <p>Indicates whether this response is a dry run success response. A value of true indicates that only the dry run was completed and no actual changes were made. This field is not returned or is set to false for actual calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.dryRun = dryRun;
@@ -96,7 +99,7 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B2841452-CB8D-4F7D-B247-38E1CF7334F8</p>
@@ -178,9 +181,9 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The message displayed when the asset is not synchronized to Cloud Firewall. Valid values:</p>
+             * <p>The message when the asset is not synchronized. Valid values:</p>
              * <ul>
-             * <li>cloudfirewall do not sync this ip address: This IP address is not synchronized to Cloud Firewall.</li>
+             * <li>cloudfirewall do not sync this ip address: Cloud Firewall did not synchronize this asset IP address.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -192,7 +195,7 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the asset.</p>
+             * <p>The asset IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>203.0.113.0</p>
@@ -203,9 +206,9 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the asset when it is not synchronized to Cloud Firewall. Valid values:</p>
+             * <p>The status when the asset is not synchronized. Valid values:</p>
              * <ul>
-             * <li>ip_not_sync: The asset is not synchronized.</li>
+             * <li>ip_not_sync: the asset is not synchronized.</li>
              * </ul>
              * 
              * <strong>example:</strong>

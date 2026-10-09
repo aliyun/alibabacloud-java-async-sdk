@@ -145,7 +145,10 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * IsFound.
+         * <p>Indicates whether the task exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isFound(Boolean isFound) {
             this.isFound = isFound;
@@ -153,7 +156,10 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +167,10 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskFinishTimestamp.
+         * <p>The task completion time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17151381075</p>
          */
         public Builder taskFinishTimestamp(Long taskFinishTimestamp) {
             this.taskFinishTimestamp = taskFinishTimestamp;
@@ -169,7 +178,10 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3c9d576f-fce0-4caa-9116-15033509bdb6</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -177,7 +189,10 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create an ACK cluster connector</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -185,7 +200,10 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStartTimestamp.
+         * <p>The task creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17151361285</p>
          */
         public Builder taskStartTimestamp(Long taskStartTimestamp) {
             this.taskStartTimestamp = taskStartTimestamp;
@@ -193,7 +211,10 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -201,7 +222,7 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskSteps.
+         * <p>The task steps.</p>
          */
         public Builder taskSteps(java.util.List<TaskSteps> taskSteps) {
             this.taskSteps = taskSteps;
@@ -280,7 +301,10 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * StepName.
+             * <p>The step name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Obtain ACK cluster information</p>
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -288,7 +312,10 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StepProgress.
+             * <p>The step progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder stepProgress(String stepProgress) {
                 this.stepProgress = stepProgress;
@@ -296,7 +323,10 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StepStatus.
+             * <p>The step status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>finished</p>
              */
             public Builder stepStatus(String stepStatus) {
                 this.stepStatus = stepStatus;

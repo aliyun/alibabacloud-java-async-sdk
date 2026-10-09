@@ -271,7 +271,10 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         } 
 
         /**
-         * AclCoverage.
+         * <p>The policy coverage status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FullCoverage</p>
          */
         public Builder aclCoverage(String aclCoverage) {
             this.putQueryParameter("AclCoverage", aclCoverage);
@@ -280,7 +283,10 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -289,7 +295,7 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * <p>要查询的目的域名。Domain 与 DomainList 至少提供其一，未指定时 API 返回 ErrorDomainName(400)。</p>
+         * <p>The destination domain name to query. You must specify at least one of Domain or DomainList. If neither is specified, the API returns ErrorDomainName.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -301,7 +307,7 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * <p>要查询的目的域名列表。Domain 与 DomainList 至少提供其一，未指定时 API 返回 ErrorDomainName(400)。</p>
+         * <p>The list of destination domain names to query. You must specify at least one of Domain or DomainList. If neither is specified, the API returns ErrorDomainName.</p>
          */
         public Builder domainList(java.util.List<String> domainList) {
             this.putQueryParameter("DomainList", domainList);
@@ -310,6 +316,7 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. Specify the value as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -322,7 +329,10 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * IPType.
+         * <p>Queries outbound connections from NAT private IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NatPrivate</p>
          */
         public Builder IPType(String IPType) {
             this.putQueryParameter("IPType", IPType);
@@ -331,7 +341,10 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -340,7 +353,10 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * <p>The ID of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-uf62zzi7000bca7zn****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -349,7 +365,10 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -358,7 +377,10 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -367,7 +389,10 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * PrivateIP.
+         * <p>The private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.210.0.XXX</p>
          */
         public Builder privateIP(String privateIP) {
             this.putQueryParameter("PrivateIP", privateIP);
@@ -376,7 +401,10 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * PublicIP.
+         * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.96.181.XXX</p>
          */
         public Builder publicIP(String publicIP) {
             this.putQueryParameter("PublicIP", publicIP);
@@ -385,7 +413,10 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OutBytes</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -394,7 +425,10 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121.15.137.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -403,6 +437,7 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. Specify the value as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -415,7 +450,10 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * TagId.
+         * <p>The tag ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FirstFlow</p>
          */
         public Builder tagId(String tagId) {
             this.putQueryParameter("TagId", tagId);

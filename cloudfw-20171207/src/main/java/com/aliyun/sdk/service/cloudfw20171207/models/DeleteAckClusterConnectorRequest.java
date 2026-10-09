@@ -60,6 +60,7 @@ public class DeleteAckClusterConnectorRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the ACK cluster connector.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

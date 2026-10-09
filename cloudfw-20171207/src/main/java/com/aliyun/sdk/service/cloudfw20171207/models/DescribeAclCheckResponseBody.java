@@ -67,7 +67,7 @@ public class DescribeAclCheckResponseBody extends TeaModel {
         } 
 
         /**
-         * CheckRecord.
+         * <p>The check record.</p>
          */
         public Builder checkRecord(CheckRecord checkRecord) {
             this.checkRecord = checkRecord;
@@ -75,7 +75,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25E655B0-CAED-53D4-8054-F983126****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * Address.
+             * <p>The address in the address book.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX/32</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -149,7 +155,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Note.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reviewed</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -216,7 +225,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The key of the ECS tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ss</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -224,7 +236,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The value of the ECS tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tfTestAcc0</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -902,7 +917,18 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * AclAction.
+             * <p>The action performed on traffic that matches the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>accept</strong>: allow</p>
+             * </li>
+             * <li><p><strong>drop</strong>: deny</p>
+             * </li>
+             * <li><p><strong>log</strong>: monitor</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>log</p>
              */
             public Builder aclAction(String aclAction) {
                 this.aclAction = aclAction;
@@ -910,7 +936,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * AclUuid.
+             * <p>The unique ID of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>997b38e0-01fa-4db7-8d30-02ebf6fdb747</p>
              */
             public Builder aclUuid(String aclUuid) {
                 this.aclUuid = aclUuid;
@@ -918,7 +947,7 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * AddressList.
+             * <p>The addresses in the address book.</p>
              */
             public Builder addressList(java.util.List<String> addressList) {
                 this.addressList = addressList;
@@ -926,7 +955,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * AddressListCount.
+             * <p>The number of addresses in the address book.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder addressListCount(Integer addressListCount) {
                 this.addressListCount = addressListCount;
@@ -934,7 +966,7 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Addresses.
+             * <p>The addresses and their remarks.</p>
              */
             public Builder addresses(java.util.List<Addresses> addresses) {
                 this.addresses = addresses;
@@ -942,7 +974,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationId.
+             * <p>The ID of the application that is used in the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plugin_idp4_ciam</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -950,7 +985,40 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationName.
+             * <p>The application type supported by the access control policy for the VPC firewall. We recommend that you use the ApplicationNameList parameter instead. Valid values:</p>
+             * <ul>
+             * <li><p><strong>HTTP</strong></p>
+             * </li>
+             * <li><p><strong>HTTPS</strong></p>
+             * </li>
+             * <li><p><strong>MySQL</strong></p>
+             * </li>
+             * <li><p><strong>SMTP</strong></p>
+             * </li>
+             * <li><p><strong>SMTPS</strong></p>
+             * </li>
+             * <li><p><strong>RDP</strong></p>
+             * </li>
+             * <li><p><strong>VNC</strong></p>
+             * </li>
+             * <li><p><strong>SSH</strong></p>
+             * </li>
+             * <li><p><strong>Redis</strong></p>
+             * </li>
+             * <li><p><strong>MQTT</strong></p>
+             * </li>
+             * <li><p><strong>MongoDB</strong></p>
+             * </li>
+             * <li><p><strong>Memcache</strong></p>
+             * </li>
+             * <li><p><strong>SSL</strong></p>
+             * </li>
+             * <li><p><strong>ANY</strong>: All application types.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ANY</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -958,7 +1026,39 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationNameList.
+             * <p>The application types that are supported by the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>FTP</strong></p>
+             * </li>
+             * <li><p><strong>HTTP</strong></p>
+             * </li>
+             * <li><p><strong>HTTPS</strong></p>
+             * </li>
+             * <li><p><strong>Memcache</strong></p>
+             * </li>
+             * <li><p><strong>MongoDB</strong></p>
+             * </li>
+             * <li><p><strong>MQTT</strong></p>
+             * </li>
+             * <li><p><strong>MySQL</strong></p>
+             * </li>
+             * <li><p><strong>RDP</strong></p>
+             * </li>
+             * <li><p><strong>Redis</strong></p>
+             * </li>
+             * <li><p><strong>SMTP</strong></p>
+             * </li>
+             * <li><p><strong>SMTPS</strong></p>
+             * </li>
+             * <li><p><strong>SSH</strong></p>
+             * </li>
+             * <li><p><strong>SSL</strong></p>
+             * </li>
+             * <li><p><strong>VNC</strong></p>
+             * </li>
+             * <li><p><strong>ANY</strong> (indicates all application types)</p>
+             * </li>
+             * </ul>
              */
             public Builder applicationNameList(java.util.List<String> applicationNameList) {
                 this.applicationNameList = applicationNameList;
@@ -966,7 +1066,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * AutoAddTagEcs.
+             * <p>Indicates whether to automatically add the public IP addresses of new ECS instances that match the tags to the address book. New ECS instances include newly purchased instances with the specified tags and existing instances whose tags are modified to match.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder autoAddTagEcs(Integer autoAddTagEcs) {
                 this.autoAddTagEcs = autoAddTagEcs;
@@ -974,7 +1077,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the policy was created, provided as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1761062400</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -982,7 +1088,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_policy</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -990,7 +1099,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * DestPort.
+             * <p>The destination port that is used in the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80/80</p>
              */
             public Builder destPort(String destPort) {
                 this.destPort = destPort;
@@ -998,7 +1110,16 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * DestPortGroup.
+             * <p>The name of the destination port address book.</p>
+             * <ul>
+             * <li><p><strong>port</strong>: Port</p>
+             * </li>
+             * <li><p><strong>group</strong>: Port address book</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>my_port_group</p>
              */
             public Builder destPortGroup(String destPortGroup) {
                 this.destPortGroup = destPortGroup;
@@ -1006,7 +1127,7 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * DestPortGroupPorts.
+             * <p>The ports in the destination port address book.</p>
              */
             public Builder destPortGroupPorts(java.util.List<String> destPortGroupPorts) {
                 this.destPortGroupPorts = destPortGroupPorts;
@@ -1014,7 +1135,16 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * DestPortType.
+             * <p>The type of the destination port in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>port</strong>: port</p>
+             * </li>
+             * <li><p><strong>group</strong>: port address book</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>port</p>
              */
             public Builder destPortType(String destPortType) {
                 this.destPortType = destPortType;
@@ -1022,7 +1152,23 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Destination.
+             * <p>The destination address in the access control policy. The value of this parameter varies based on the value of DestinationType.</p>
+             * <ul>
+             * <li><p>If the value of DestinationType is<code>net</code>, the value of this parameter is a CIDR block. Example: 10.0.3.0/24.</p>
+             * </li>
+             * <li><p>If the value of DestinationType is<code>domain</code>, the value of this parameter is a domain name. Example: aliyun.</p>
+             * </li>
+             * <li><p>If the value of DestinationType is<code>group</code>, the value of this parameter is the name of an address book. Example: db_group.</p>
+             * </li>
+             * <li><p>If the value of DestinationType is<code>location</code>, the value of this parameter is a location. For more information about the location codes, see AddControlPolicy. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p>If this parameter is omitted, all types of destination addresses are retrieved.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>kms.cn-shanghai.aliyuncs.com</p>
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -1030,7 +1176,7 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationGroupCidrs.
+             * <p>The CIDR blocks in the destination address book.</p>
              */
             public Builder destinationGroupCidrs(java.util.List<String> destinationGroupCidrs) {
                 this.destinationGroupCidrs = destinationGroupCidrs;
@@ -1038,7 +1184,22 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationGroupType.
+             * <p>The type of the destination address book in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>ip</strong>: an IP address book, which contains one or more CIDR blocks.</p>
+             * </li>
+             * <li><p><strong>tag</strong>: an ECS tag-based address book, which contains the public IP addresses of ECS instances that have specific tags.</p>
+             * </li>
+             * <li><p><strong>domain</strong>: a domain name address book, which contains one or more domain names.</p>
+             * </li>
+             * <li><p><strong>threat</strong>: a threat intelligence address book, which contains one or more malicious IP addresses or domain names.</p>
+             * </li>
+             * <li><p><strong>backsrc</strong>: a back-to-source address book, which contains the back-to-source IP addresses of one or more Anti-DDoS or WAF instances.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>domain</p>
              */
             public Builder destinationGroupType(String destinationGroupType) {
                 this.destinationGroupType = destinationGroupType;
@@ -1046,7 +1207,20 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationType.
+             * <p>The type of the destination address in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>net</strong>: destination CIDR block</p>
+             * </li>
+             * <li><p><strong>group</strong>: destination address book</p>
+             * </li>
+             * <li><p><strong>domain</strong>: destination domain name</p>
+             * </li>
+             * <li><p><strong>location</strong>: destination region</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>domain</p>
              */
             public Builder destinationType(String destinationType) {
                 this.destinationType = destinationType;
@@ -1054,7 +1228,16 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Direction.
+             * <p>The direction of internet traffic. Valid values:</p>
+             * <ul>
+             * <li><p><strong>in</strong>: inbound traffic</p>
+             * </li>
+             * <li><p><strong>out</strong>: outbound traffic</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>out</p>
              */
             public Builder direction(String direction) {
                 this.direction = direction;
@@ -1062,7 +1245,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * DnsResult.
+             * <p>The result of the DNS resolution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder dnsResult(String dnsResult) {
                 this.dnsResult = dnsResult;
@@ -1070,7 +1256,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * DnsResultTime.
+             * <p>The time of the DNS resolution, provided as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579261141</p>
              */
             public Builder dnsResultTime(Long dnsResultTime) {
                 this.dnsResultTime = dnsResultTime;
@@ -1078,7 +1267,18 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * DomainResolveType.
+             * <p>The DNS resolution method of the domain name in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: FQDN-based resolution</p>
+             * </li>
+             * <li><p><strong>1</strong>: DNS-based dynamic resolution</p>
+             * </li>
+             * <li><p><strong>2</strong>: FQDN-based and DNS-based dynamic resolution</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FQDN</p>
              */
             public Builder domainResolveType(Integer domainResolveType) {
                 this.domainResolveType = domainResolveType;
@@ -1086,7 +1286,13 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the policy validity period. This is a UNIX timestamp, accurate to the second. The time must be on the hour or half-hour and must be at least 30 minutes later than the start time.</p>
+             * <blockquote>
+             * <p>This parameter is empty if RepeatType is set to Permanent. It is required if RepeatType is set to None, Daily, Weekly, or Monthly.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1758334822</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -1094,7 +1300,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the address book.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhong Kui Open White List</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1102,7 +1311,24 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * <p>The type of the address book. Valid values:</p>
+             * <ul>
+             * <li><p><strong>ip</strong>: IP address book</p>
+             * </li>
+             * <li><p><strong>domain</strong>: domain address book</p>
+             * </li>
+             * <li><p><strong>port</strong>: port address book</p>
+             * </li>
+             * <li><p><strong>tag</strong>: ECS tag-based address book</p>
+             * </li>
+             * <li><p><strong>allCloud</strong>: cloud service address book</p>
+             * </li>
+             * <li><p><strong>threat</strong>: threat intelligence address book</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -1110,7 +1336,11 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * GroupUuid.
+             * <p>The unique ID of the address book.</p>
+             * <p>This ID is required for other operations, such as deleting the address book. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/138869.html">DescribeAddressBook</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b91d86c3-2b52-4534-aae9-8d0339b12a48</p>
              */
             public Builder groupUuid(String groupUuid) {
                 this.groupUuid = groupUuid;
@@ -1118,7 +1348,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * HitLastTime.
+             * <p>The time when the policy was last hit, provided as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579261141</p>
              */
             public Builder hitLastTime(Long hitLastTime) {
                 this.hitLastTime = hitLastTime;
@@ -1126,7 +1359,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * HitTimes.
+             * <p>The hit count of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hitTimes(Long hitTimes) {
                 this.hitTimes = hitTimes;
@@ -1134,7 +1370,16 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion.
+             * <p>The IP version. Valid values:</p>
+             * <ul>
+             * <li><p><strong>4</strong>: IPv4</p>
+             * </li>
+             * <li><p><strong>6</strong>: IPv6</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder ipVersion(Integer ipVersion) {
                 this.ipVersion = ipVersion;
@@ -1142,7 +1387,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the policy was last modified, provided as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1761062400</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -1150,7 +1398,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * <p>The ID of the NAT gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-2ze4w62zbdkwjmoqeokgl</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -1158,7 +1409,11 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Order.
+             * <p>The priority of the access control policy.</p>
+             * <p>The priority starts from 1. A smaller value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -1166,7 +1421,22 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Proto.
+             * <p>The protocol type of the traffic in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>TCP</strong></p>
+             * </li>
+             * <li><p><strong>UDP</strong></p>
+             * </li>
+             * <li><p><strong>ICMP</strong></p>
+             * </li>
+             * <li><p><strong>ANY</strong>: All protocol types</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -1174,7 +1444,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceCount.
+             * <p>The number of policies that reference this address book.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder referenceCount(Integer referenceCount) {
                 this.referenceCount = referenceCount;
@@ -1182,7 +1455,16 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Release.
+             * <p>The status of the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: enabled</p>
+             * </li>
+             * <li><p><strong>false</strong>: disabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder release(String release) {
                 this.release = release;
@@ -1190,7 +1472,11 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatDays.
+             * <p>The days of a week or month on which the policy recurs.</p>
+             * <blockquote>
+             * <p>If RepeatType is set to Weekly, the valid values are 0 to 6. The week starts on Sunday.
+             * If RepeatType is set to Monthly, the valid values are 1 to 31.</p>
+             * </blockquote>
              */
             public Builder repeatDays(java.util.List<Long> repeatDays) {
                 this.repeatDays = repeatDays;
@@ -1198,7 +1484,13 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatEndTime.
+             * <p>The time when the policy stops to take effect. Example: 23:30. The time must be on the hour or half-hour and must be at least 30 minutes later than the recurrence start time.</p>
+             * <blockquote>
+             * <p>This parameter is returned empty if RepeatType is set to Permanent or None. This parameter is required if RepeatType is set to Daily, Weekly, or Monthly. The time is in the HH:mm format. Examples: 08:00 and 23:30.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>23:30</p>
              */
             public Builder repeatEndTime(String repeatEndTime) {
                 this.repeatEndTime = repeatEndTime;
@@ -1206,7 +1498,13 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatStartTime.
+             * <p>The time when the policy starts to take effect. Example: 08:00. The time must be on the hour or half-hour and must be at least 30 minutes earlier than the recurrence end time.</p>
+             * <blockquote>
+             * <p>This parameter is returned empty if RepeatType is set to Permanent or None. This parameter is required if RepeatType is set to Daily, Weekly, or Monthly. The time is in the HH:mm format. Examples: 08:00 and 23:30.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>08:00</p>
              */
             public Builder repeatStartTime(String repeatStartTime) {
                 this.repeatStartTime = repeatStartTime;
@@ -1214,7 +1512,22 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatType.
+             * <p>The recurrence type of the policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Permanent</strong> (default): The policy is always valid.</p>
+             * </li>
+             * <li><p><strong>None</strong>: The policy is valid only once.</p>
+             * </li>
+             * <li><p><strong>Daily</strong>: The policy recurs daily.</p>
+             * </li>
+             * <li><p><strong>Weekly</strong>: The policy recurs weekly.</p>
+             * </li>
+             * <li><p><strong>Monthly</strong>: The policy recurs monthly.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Permanent</p>
              */
             public Builder repeatType(String repeatType) {
                 this.repeatType = repeatType;
@@ -1222,7 +1535,18 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source address in the access control policy. The value of this parameter varies based on the value of SourceType.</p>
+             * <ul>
+             * <li><p>If <strong>SourceType</strong> is set to<code>net</code>, the value of this parameter is a CIDR block. Example: 192.0.XX.XX/24.</p>
+             * </li>
+             * <li><p>If <strong>SourceType</strong> is set to<code>group</code>, the value of this parameter is the name of a source address book. Example: db_group.</p>
+             * </li>
+             * <li><p>If <strong>SourceType</strong> is set to<code>location</code>, the value of this parameter is a location. For more information, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>172.28.7.167</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -1230,7 +1554,7 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * SourceGroupCidrs.
+             * <p>The CIDR blocks in the source address book.</p>
              */
             public Builder sourceGroupCidrs(java.util.List<String> sourceGroupCidrs) {
                 this.sourceGroupCidrs = sourceGroupCidrs;
@@ -1238,7 +1562,22 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * SourceGroupType.
+             * <p>The type of the source address book in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>ip</strong>: An address book that contains one or more IP addresses or CIDR blocks.</p>
+             * </li>
+             * <li><p><strong>tag</strong>: An address book that contains the public IP addresses of ECS instances with specific tags.</p>
+             * </li>
+             * <li><p><strong>domain</strong>: A domain name address book, which contains one or more domain names.</p>
+             * </li>
+             * <li><p><strong>threat</strong>: a threat intelligence address book, which contains one or more malicious IP addresses or domain names.</p>
+             * </li>
+             * <li><p><strong>backsrc</strong>: a back-to-source address book, which contains the back-to-source IP addresses of one or more Anti-DDoS or WAF instances.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder sourceGroupType(String sourceGroupType) {
                 this.sourceGroupType = sourceGroupType;
@@ -1246,7 +1585,18 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The type of the source address in the access control policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>net</strong>: a source CIDR block</p>
+             * </li>
+             * <li><p><strong>group</strong>: a source address book</p>
+             * </li>
+             * <li><p><strong>location</strong>: a source region</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>group</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1254,7 +1604,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * SpreadCnt.
+             * <p>The number of specification units that the policy consumes. The value is calculated by using the following formula: Number of source addresses × Number of destination addresses × Number of port ranges × Number of applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder spreadCnt(Integer spreadCnt) {
                 this.spreadCnt = spreadCnt;
@@ -1262,7 +1615,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start of the policy\&quot;s validity period, provided as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1730318400</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -1270,7 +1626,7 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * TagList.
+             * <p>The ECS tags.</p>
              */
             public Builder tagList(java.util.List<TagList> tagList) {
                 this.tagList = tagList;
@@ -1278,7 +1634,16 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * TagRelation.
+             * <p>The logical relationship among multiple ECS tags. Valid values:</p>
+             * <ul>
+             * <li><p><strong>and</strong>: An ECS instance must have all the specified tags.</p>
+             * </li>
+             * <li><p><strong>or</strong>: An ECS instance must have one of the specified tags.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>or</p>
              */
             public Builder tagRelation(String tagRelation) {
                 this.tagRelation = tagRelation;
@@ -1286,7 +1651,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * VpcFirewallId.
+             * <p>The instance ID of the VPC firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vfw-925514970c2c4bcab222</p>
              */
             public Builder vpcFirewallId(String vpcFirewallId) {
                 this.vpcFirewallId = vpcFirewallId;
@@ -1366,7 +1734,7 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * Acl.
+             * <p>The ACL check result.</p>
              */
             public Builder acl(Acl acl) {
                 this.acl = acl;
@@ -1374,7 +1742,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * AclAssessmentDetail.
+             * <p>The assessment details of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No traffic hit policy.</p>
              */
             public Builder aclAssessmentDetail(String aclAssessmentDetail) {
                 this.aclAssessmentDetail = aclAssessmentDetail;
@@ -1382,7 +1753,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * AclStatus.
+             * <p>The status of the ACL check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -1527,7 +1901,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * AclTotalCount.
+             * <p>The total number of access control policies at the time of the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder aclTotalCount(Long aclTotalCount) {
                 this.aclTotalCount = aclTotalCount;
@@ -1535,7 +1912,7 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Acls.
+             * <p>The ACL check results.</p>
              */
             public Builder acls(java.util.List<Acls> acls) {
                 this.acls = acls;
@@ -1543,7 +1920,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * CheckName.
+             * <p>The name of the ACL check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PolicyHitCountZero</p>
              */
             public Builder checkName(String checkName) {
                 this.checkName = checkName;
@@ -1551,7 +1931,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the ACL check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Due to business offline or other reasons, the number of hits of the object policy in a period of time is 0.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1559,7 +1942,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * LastCheckTime.
+             * <p>The time of the last check, provided as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1724982259</p>
              */
             public Builder lastCheckTime(String lastCheckTime) {
                 this.lastCheckTime = lastCheckTime;
@@ -1567,7 +1953,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1575,7 +1964,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * RecordAssessmentDetail.
+             * <p>The assessment details of the ACL check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>It is recommended to remove the invalid policy, while helping to save the specification.</p>
              */
             public Builder recordAssessmentDetail(String recordAssessmentDetail) {
                 this.recordAssessmentDetail = recordAssessmentDetail;
@@ -1583,7 +1975,10 @@ public class DescribeAclCheckResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-c92d4544ef7b6a42</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

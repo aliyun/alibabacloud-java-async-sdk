@@ -80,7 +80,14 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
         } 
 
         /**
-         * FirewallServiceMode.
+         * <p>The deployment mode of the virtual private cloud (VPC) firewall service. Valid values:</p>
+         * <ul>
+         * <li><strong>PrimaryStandby</strong>: active/standby mode.</li>
+         * <li><strong>MultiPrimary</strong>: active-active mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrimaryStandby</p>
          */
         public Builder firewallServiceMode(String firewallServiceMode) {
             this.firewallServiceMode = firewallServiceMode;
@@ -88,7 +95,10 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>337A4DBA-8A01-5E9C-99CA-84293E13****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +106,7 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneList.
+         * <p>The list of zones.</p>
          */
         public Builder zoneList(java.util.List<java.util.List<ZoneList>> zoneList) {
             this.zoneList = zoneList;
@@ -162,7 +172,10 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
             } 
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-c</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -170,7 +183,10 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
             }
 
             /**
-             * LocalName.
+             * <p>The zone name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou Zone C</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;

@@ -288,7 +288,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * IgnoreAssetCount.
+         * <p>The number of assets that are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ignoreAssetCount(Integer ignoreAssetCount) {
             this.ignoreAssetCount = ignoreAssetCount;
@@ -296,7 +299,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * IgnoreDomainCount.
+         * <p>The number of domain names that are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder ignoreDomainCount(Integer ignoreDomainCount) {
             this.ignoreDomainCount = ignoreDomainCount;
@@ -304,7 +310,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * IgnoreDstIPCount.
+         * <p>The number of destination IP addresses that are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ignoreDstIPCount(Integer ignoreDstIPCount) {
             this.ignoreDstIPCount = ignoreDstIPCount;
@@ -312,7 +321,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateRiskAssetCount.
+         * <p>The number of risky assets with outbound connections over a private network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder privateRiskAssetCount(Long privateRiskAssetCount) {
             this.privateRiskAssetCount = privateRiskAssetCount;
@@ -320,7 +332,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateTotalAssetCount.
+         * <p>The number of assets with outbound connections over a private network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder privateTotalAssetCount(Long privateTotalAssetCount) {
             this.privateTotalAssetCount = privateTotalAssetCount;
@@ -328,7 +343,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2BD70F4-48BF-5EFD-B103-F0763E27*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -336,7 +354,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RiskAssetCount.
+         * <p>The number of risky assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder riskAssetCount(Integer riskAssetCount) {
             this.riskAssetCount = riskAssetCount;
@@ -344,7 +365,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RiskDomainCount.
+         * <p>The number of risky domain names for outbound connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskDomainCount(Integer riskDomainCount) {
             this.riskDomainCount = riskDomainCount;
@@ -352,7 +376,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RiskDstIPCount.
+         * <p>The number of risky destination IP addresses for outbound connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskDstIPCount(Integer riskDstIPCount) {
             this.riskDstIPCount = riskDstIPCount;
@@ -360,7 +387,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * SubscribeAssetCount.
+         * <p>The number of assets that you follow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder subscribeAssetCount(Integer subscribeAssetCount) {
             this.subscribeAssetCount = subscribeAssetCount;
@@ -368,7 +398,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * SubscribeDomainCount.
+         * <p>The number of domain names that you follow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder subscribeDomainCount(Integer subscribeDomainCount) {
             this.subscribeDomainCount = subscribeDomainCount;
@@ -376,7 +409,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * SubscribeDstIPCount.
+         * <p>The number of destination IP addresses that you follow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder subscribeDstIPCount(Integer subscribeDstIPCount) {
             this.subscribeDstIPCount = subscribeDstIPCount;
@@ -384,7 +420,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * TotalAssetCount.
+         * <p>The total number of assets that have outbound connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder totalAssetCount(Integer totalAssetCount) {
             this.totalAssetCount = totalAssetCount;
@@ -392,7 +431,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * TotalDomainCount.
+         * <p>The total number of outbound domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalDomainCount(Integer totalDomainCount) {
             this.totalDomainCount = totalDomainCount;
@@ -400,7 +442,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * TotalDstIPCount.
+         * <p>The total number of destination IP addresses for outbound connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>107</p>
          */
         public Builder totalDstIPCount(Integer totalDstIPCount) {
             this.totalDstIPCount = totalDstIPCount;
@@ -408,7 +453,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * TotalProtocolCount.
+         * <p>The number of outbound connection protocols.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalProtocolCount(Integer totalProtocolCount) {
             this.totalProtocolCount = totalProtocolCount;
@@ -416,7 +464,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * UncoveredAclDomain.
+         * <p>The number of domain names that are not covered by a policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder uncoveredAclDomain(Integer uncoveredAclDomain) {
             this.uncoveredAclDomain = uncoveredAclDomain;
@@ -424,7 +475,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * UncoveredAclDstIP.
+         * <p>The number of destination IP addresses that are not covered by a policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder uncoveredAclDstIP(Integer uncoveredAclDstIP) {
             this.uncoveredAclDstIP = uncoveredAclDstIP;
@@ -432,7 +486,10 @@ public class DescribeOutgoingStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * UnknownProtocolRadio.
+         * <p>The percentage of traffic from unidentified protocols.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20.13</p>
          */
         public Builder unknownProtocolRadio(String unknownProtocolRadio) {
             this.unknownProtocolRadio = unknownProtocolRadio;

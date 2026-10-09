@@ -130,7 +130,7 @@ public class DescribeACLProtectTrendRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp that is accurate to seconds.</p>
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1670397599</p>
@@ -142,7 +142,15 @@ public class DescribeACLProtectTrendRequest extends Request {
         }
 
         /**
-         * FirewallType.
+         * <p>The type of the firewall border. Valid values:</p>
+         * <ul>
+         * <li><strong>internet</strong> (default): Internet Border firewall, which monitors traffic between the Internet and your assets.</li>
+         * <li><strong>vpc</strong>: virtual private cloud (VPC) firewalls, which monitor traffic between VPCs.</li>
+         * <li><strong>nat</strong>: NAT firewalls, which monitor traffic from internal-facing assets to the Internet.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder firewallType(String firewallType) {
             this.putQueryParameter("FirewallType", firewallType);
@@ -151,7 +159,16 @@ public class DescribeACLProtectTrendRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time aggregation granularity for trend data, in seconds. Valid values:</p>
+         * <ul>
+         * <li><strong>60</strong>: 1-minute granularity (uses the minute-level detail table).</li>
+         * <li><strong>1800</strong>: 30-minute granularity.</li>
+         * <li><strong>3600</strong>: 1-hour granularity.</li>
+         * <li><strong>86400</strong> (default): 1-day granularity.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -160,10 +177,12 @@ public class DescribeACLProtectTrendRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,7 +207,7 @@ public class DescribeACLProtectTrendRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp that is accurate to seconds.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1677050306</p>

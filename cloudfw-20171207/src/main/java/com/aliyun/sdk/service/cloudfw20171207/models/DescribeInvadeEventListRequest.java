@@ -282,7 +282,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ins_1321_asedb_****</p>
@@ -294,7 +294,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS_test</p>
@@ -306,8 +306,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
-         * <p>Default value: 1.</p>
+         * <p>Specifies the page number to return in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -319,7 +318,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query ends at the current time.</p>
+         * <p>Specifies the end time of the query. The value is a UNIX timestamp in seconds. If this parameter is not specified, the current time is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1656837360</p>
@@ -331,7 +330,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the breach awareness event.</p>
+         * <p>The ID of the compromise awareness event.</p>
          * 
          * <strong>example:</strong>
          * <p>69d189e2-ec17-4676-a2fe-02969234****</p>
@@ -343,7 +342,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The name of the breach awareness event.</p>
+         * <p>The name of the compromise awareness event.</p>
          * 
          * <strong>example:</strong>
          * <p>event_test</p>
@@ -355,7 +354,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the breach awareness event.</p>
+         * <p>The UUID of the compromise awareness event.</p>
          * 
          * <strong>example:</strong>
          * <p>fadd-dfdd-****</p>
@@ -367,11 +366,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the breach awareness event is ignored. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The breach awareness event is ignored.</li>
-         * <li><strong>false</strong>: The breach awareness event is not ignored.</li>
-         * </ul>
+         * <p>Specifies whether the compromise awareness event is ignored. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -383,11 +378,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
-         * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
-         * <li><strong>en</strong>: English</li>
-         * </ul>
+         * <p>The language type of the received message. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -399,7 +390,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member.</p>
+         * <p>The UID of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>135809047715****</p>
@@ -411,8 +402,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * <p>Default value: 6. Maximum value: 10.</p>
+         * <p>Specifies the number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -424,7 +414,10 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The handling status of breach awareness events.</p>
+         * <p>The list of processing statuses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1358090477156271</p>
          */
         public Builder processStatusList(java.util.List<Integer> processStatusList) {
             this.putQueryParameter("ProcessStatusList", processStatusList);
@@ -433,7 +426,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The risk levels.</p>
+         * <p>The risk assessment level.</p>
          */
         public Builder riskLevel(java.util.List<Integer> riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -442,7 +435,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The source IP address of the requester.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
@@ -454,7 +447,7 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query starts from 30 days before the current time.</p>
+         * <p>Specifies the start time of the query. The value is a UNIX timestamp in seconds. If this parameter is not specified, the query starts from the last 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>1656750960</p>

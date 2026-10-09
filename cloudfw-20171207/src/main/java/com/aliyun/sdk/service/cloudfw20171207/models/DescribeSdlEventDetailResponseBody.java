@@ -80,7 +80,10 @@ public class DescribeSdlEventDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D19D8F70-D64B-5A95-905A-6073BF4A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeSdlEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * SdlEventDetailList.
+         * <p>The list of events.</p>
          */
         public Builder sdlEventDetailList(java.util.List<SdlEventDetailList> sdlEventDetailList) {
             this.sdlEventDetailList = sdlEventDetailList;
@@ -96,7 +99,10 @@ public class DescribeSdlEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -201,7 +207,10 @@ public class DescribeSdlEventDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * EventName.
+             * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>event-test</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -209,7 +218,10 @@ public class DescribeSdlEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveDataCnt.
+             * <p>The amount of sensitive data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sensitiveDataCnt(Long sensitiveDataCnt) {
                 this.sensitiveDataCnt = sensitiveDataCnt;
@@ -217,7 +229,10 @@ public class DescribeSdlEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveLevel.
+             * <p>The sensitivity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S3</p>
              */
             public Builder sensitiveLevel(String sensitiveLevel) {
                 this.sensitiveLevel = sensitiveLevel;
@@ -225,7 +240,10 @@ public class DescribeSdlEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveType.
+             * <p>The type of sensitive data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Identity Card</p>
              */
             public Builder sensitiveType(String sensitiveType) {
                 this.sensitiveType = sensitiveType;
@@ -233,7 +251,10 @@ public class DescribeSdlEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753928907</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

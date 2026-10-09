@@ -103,11 +103,13 @@ public class DescribePolicyPriorUsedRequest extends Request {
         } 
 
         /**
-         * <p>The direction of the traffic to which the access control policy applies.</p>
+         * <p>The traffic direction of the access control policy.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>in</strong>: inbound.</li>
-         * <li><strong>out</strong>: outbound.</li>
+         * <li><p><strong>in</strong>: Inbound traffic</p>
+         * </li>
+         * <li><p><strong>out</strong>: Outbound traffic</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -121,11 +123,13 @@ public class DescribePolicyPriorUsedRequest extends Request {
         }
 
         /**
-         * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
+         * <p>The IP version for assets protected by Cloud Firewall.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>4</strong> (default): IPv4.</li>
-         * <li><strong>6</strong>: IPv6.</li>
+         * <li><p><strong>4</strong> (Default): IPv4</p>
+         * </li>
+         * <li><p><strong>6</strong>: IPv6</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -138,11 +142,13 @@ public class DescribePolicyPriorUsedRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response.</p>
+         * <p>The language of the request and response.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default)</li>
-         * <li><strong>en</strong></li>
+         * <li><p><strong>zh</strong> (Default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -130,6 +130,7 @@ public class ModifyUserAlarmConfigRequest extends Request {
         } 
 
         /**
+         * <p>Alert configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder alarmConfig(java.util.List<AlarmConfig> alarmConfig) {
@@ -139,7 +140,10 @@ public class ModifyUserAlarmConfigRequest extends Request {
         }
 
         /**
-         * AlarmLang.
+         * <p>Language for message notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder alarmLang(String alarmLang) {
             this.putQueryParameter("AlarmLang", alarmLang);
@@ -148,7 +152,7 @@ public class ModifyUserAlarmConfigRequest extends Request {
         }
 
         /**
-         * ContactConfig.
+         * <p>Contact configuration.</p>
          */
         public Builder contactConfig(java.util.List<ContactConfig> contactConfig) {
             String contactConfigShrink = shrink(contactConfig, "ContactConfig", "json");
@@ -158,7 +162,10 @@ public class ModifyUserAlarmConfigRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language used for requests and responses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -167,7 +174,10 @@ public class ModifyUserAlarmConfigRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>Source IP address of the requester.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>117.129.64.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -176,7 +186,10 @@ public class ModifyUserAlarmConfigRequest extends Request {
         }
 
         /**
-         * UseDefaultContact.
+         * <p>Use default contact method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder useDefaultContact(Integer useDefaultContact) {
             this.putQueryParameter("UseDefaultContact", useDefaultContact);
@@ -296,7 +309,10 @@ public class ModifyUserAlarmConfigRequest extends Request {
             } 
 
             /**
-             * AlarmHour.
+             * <p>Hour for alert notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder alarmHour(String alarmHour) {
                 this.alarmHour = alarmHour;
@@ -304,7 +320,10 @@ public class ModifyUserAlarmConfigRequest extends Request {
             }
 
             /**
-             * AlarmNotify.
+             * <p>Notification method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder alarmNotify(String alarmNotify) {
                 this.alarmNotify = alarmNotify;
@@ -312,7 +331,10 @@ public class ModifyUserAlarmConfigRequest extends Request {
             }
 
             /**
-             * AlarmPeriod.
+             * <p>Alert period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder alarmPeriod(String alarmPeriod) {
                 this.alarmPeriod = alarmPeriod;
@@ -320,7 +342,10 @@ public class ModifyUserAlarmConfigRequest extends Request {
             }
 
             /**
-             * AlarmType.
+             * <p>Alarm metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bandwidth</p>
              */
             public Builder alarmType(String alarmType) {
                 this.alarmType = alarmType;
@@ -328,7 +353,10 @@ public class ModifyUserAlarmConfigRequest extends Request {
             }
 
             /**
-             * AlarmValue.
+             * <p>Alert notification message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder alarmValue(String alarmValue) {
                 this.alarmValue = alarmValue;
@@ -336,7 +364,10 @@ public class ModifyUserAlarmConfigRequest extends Request {
             }
 
             /**
-             * AlarmWeekDay.
+             * <p>Day of the week for alert notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder alarmWeekDay(String alarmWeekDay) {
                 this.alarmWeekDay = alarmWeekDay;
@@ -429,7 +460,10 @@ public class ModifyUserAlarmConfigRequest extends Request {
             } 
 
             /**
-             * Email.
+             * <p>Mailbox.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91632****@qq.com</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -437,7 +471,10 @@ public class ModifyUserAlarmConfigRequest extends Request {
             }
 
             /**
-             * MobilePhone.
+             * <p>Mobile number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1351234****</p>
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -445,7 +482,10 @@ public class ModifyUserAlarmConfigRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>Alert notification recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ben</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -453,7 +493,10 @@ public class ModifyUserAlarmConfigRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>Alert status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

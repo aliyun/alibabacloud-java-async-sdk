@@ -67,7 +67,10 @@ public class ModifySlsDispatchConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4CD646BA-490F-5584-9272-B6FFE3BB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class ModifySlsDispatchConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID. Modifying log configurations is an asynchronous task. This field indicates the unique identifier of the task. You can use this ID to query the status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d8c995ec-40a5-4382-a3f3-57713096****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

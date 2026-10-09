@@ -80,7 +80,10 @@ public class GetTlsInspectCertificateDownloadUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * CaCertId.
+         * <p>The ID of the CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1f07c104-99ed-6b9a-b0bb-2938c9b8****</p>
          */
         public Builder caCertId(String caCertId) {
             this.caCertId = caCertId;
@@ -88,7 +91,10 @@ public class GetTlsInspectCertificateDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * DownloadUrl.
+         * <p>The download path of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cfw-tls-inspect-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/tls_cert%2F2025-08-13%2F1850">https://cfw-tls-inspect-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/tls_cert%2F2025-08-13%2F1850</a>****</p>
          */
         public Builder downloadUrl(String downloadUrl) {
             this.downloadUrl = downloadUrl;
@@ -96,7 +102,10 @@ public class GetTlsInspectCertificateDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>850A84D6-0DE4-4797-A1E8-******h4j6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

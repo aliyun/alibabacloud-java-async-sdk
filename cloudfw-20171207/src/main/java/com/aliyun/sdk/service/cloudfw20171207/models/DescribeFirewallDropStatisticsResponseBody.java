@@ -106,7 +106,10 @@ public class DescribeFirewallDropStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * AclDropCnt.
+         * <p>The number of packets blocked by access control list (ACL) policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder aclDropCnt(Long aclDropCnt) {
             this.aclDropCnt = aclDropCnt;
@@ -114,7 +117,10 @@ public class DescribeFirewallDropStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * IpsDropCnt.
+         * <p>The number of packets blocked by the intrusion prevention system (IPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder ipsDropCnt(Long ipsDropCnt) {
             this.ipsDropCnt = ipsDropCnt;
@@ -122,7 +128,10 @@ public class DescribeFirewallDropStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA1D173-D5DB-582E-9637-438D5CE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class DescribeFirewallDropStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalDropCnt.
+         * <p>The total number of blocked packets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalDropCnt(Long totalDropCnt) {
             this.totalDropCnt = totalDropCnt;
@@ -138,7 +150,10 @@ public class DescribeFirewallDropStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * VulnDropCnt.
+         * <p>The number of packets blocked by the vulnerability prevention feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder vulnDropCnt(Long vulnDropCnt) {
             this.vulnDropCnt = vulnDropCnt;

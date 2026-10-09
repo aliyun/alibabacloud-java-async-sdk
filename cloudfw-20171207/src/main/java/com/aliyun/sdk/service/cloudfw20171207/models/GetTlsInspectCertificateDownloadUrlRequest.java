@@ -60,6 +60,10 @@ public class GetTlsInspectCertificateDownloadUrlRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the CA certificate.</p>
+         * <blockquote>
+         * <p>Call the ListTlsInspectCACertificates operation to query existing CA certificates.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

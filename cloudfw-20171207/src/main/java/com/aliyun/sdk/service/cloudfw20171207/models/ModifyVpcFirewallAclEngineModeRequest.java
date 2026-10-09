@@ -89,7 +89,10 @@ public class ModifyVpcFirewallAclEngineModeRequest extends Request {
         } 
 
         /**
-         * MemberUid.
+         * <p>The UID of the Cloud Firewall member account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -98,6 +101,13 @@ public class ModifyVpcFirewallAclEngineModeRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable strict mode.</p>
+         * <ul>
+         * <li><p>1: strict mode</p>
+         * </li>
+         * <li><p>0: loose mode</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +120,7 @@ public class ModifyVpcFirewallAclEngineModeRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the VPC border firewall.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -17,10 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteControlPolicyResponseBody</p>
  */
 public class DeleteControlPolicyResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteControlPolicyResponseBody(Builder builder) {
+        this.dryRun = builder.dryRun;
         this.requestId = builder.requestId;
     }
 
@@ -37,6 +41,13 @@ public class DeleteControlPolicyResponseBody extends TeaModel {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -44,14 +55,24 @@ public class DeleteControlPolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean dryRun; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(DeleteControlPolicyResponseBody model) {
+            this.dryRun = model.dryRun;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * <p>Indicates whether the response is for a successful dry run. A value of true indicates that only the precheck is completed and no actual changes are made. This field is not returned or is set to false for actual calls.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * <p>The request ID.</p>

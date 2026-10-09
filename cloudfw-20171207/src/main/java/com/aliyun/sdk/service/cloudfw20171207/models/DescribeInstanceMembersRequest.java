@@ -115,7 +115,7 @@ public class DescribeInstanceMembersRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The default value is <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,7 +127,7 @@ public class DescribeInstanceMembersRequest extends Request {
         }
 
         /**
-         * <p>The remarks of the member. The remarks must be 1 to 256 characters in length.</p>
+         * <p>The description of the Cloud Firewall member account. The description must be 1 to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>renewal</p>
@@ -139,7 +139,7 @@ public class DescribeInstanceMembersRequest extends Request {
         }
 
         /**
-         * <p>The name of the member.</p>
+         * <p>The name of the Cloud Firewall member account.</p>
          * 
          * <strong>example:</strong>
          * <p>cloudfirewall_2</p>
@@ -151,7 +151,7 @@ public class DescribeInstanceMembersRequest extends Request {
         }
 
         /**
-         * <p>The UID of the member.</p>
+         * <p>The UID of the Cloud Firewall member account.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -164,7 +164,7 @@ public class DescribeInstanceMembersRequest extends Request {
 
         /**
          * <p>The number of entries per page.</p>
-         * <p>Default value: <strong>20</strong>.</p>
+         * <p>The default value is <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

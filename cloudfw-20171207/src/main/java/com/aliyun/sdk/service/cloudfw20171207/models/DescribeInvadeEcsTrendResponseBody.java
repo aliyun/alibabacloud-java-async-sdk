@@ -119,7 +119,7 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -127,7 +127,10 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range. This is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1736820365</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -135,7 +138,10 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Interval.
+         * <p>The time interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Integer interval) {
             this.interval = interval;
@@ -143,7 +149,10 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
         }
 
         /**
-         * InvadeEcsCount.
+         * <p>The total number of compromised hosts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder invadeEcsCount(Integer invadeEcsCount) {
             this.invadeEcsCount = invadeEcsCount;
@@ -151,7 +160,10 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F90E816D-BEE7-5BD6-95ED-474F54****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range. This is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1742177725</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -225,7 +240,10 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * EcsCount.
+             * <p>The number of ECS instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder ecsCount(Integer ecsCount) {
                 this.ecsCount = ecsCount;
@@ -233,7 +251,10 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659405600</p>
              */
             public Builder time(Long time) {
                 this.time = time;

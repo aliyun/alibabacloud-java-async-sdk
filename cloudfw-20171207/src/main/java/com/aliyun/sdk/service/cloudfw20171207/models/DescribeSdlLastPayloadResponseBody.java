@@ -106,7 +106,10 @@ public class DescribeSdlLastPayloadResponseBody extends TeaModel {
         } 
 
         /**
-         * DstPortList.
+         * <p>The destination port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder dstPortList(String dstPortList) {
             this.dstPortList = dstPortList;
@@ -114,7 +117,10 @@ public class DescribeSdlLastPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * Payload.
+         * <p>The attack payload of the intrusion prevention event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>302902010004067075626c6963a01c0204036a5f43020100020100300e300c06082b060102010101000500</p>
          */
         public Builder payload(String payload) {
             this.payload = payload;
@@ -122,7 +128,10 @@ public class DescribeSdlLastPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * ProtoList.
+         * <p>The protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder protoList(String protoList) {
             this.protoList = protoList;
@@ -141,7 +150,10 @@ public class DescribeSdlLastPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * SrcPortList.
+         * <p>The source port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1586</p>
          */
         public Builder srcPortList(String srcPortList) {
             this.srcPortList = srcPortList;

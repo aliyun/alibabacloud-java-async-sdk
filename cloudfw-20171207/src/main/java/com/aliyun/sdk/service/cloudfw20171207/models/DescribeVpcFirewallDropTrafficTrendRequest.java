@@ -129,7 +129,10 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1747792853</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -138,7 +141,16 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><p><strong>asc</strong>: ascending order.</p>
+         * </li>
+         * <li><p><strong>desc</strong>: descending order. This is the default value.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -147,7 +159,10 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sorting criterion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LastTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -156,7 +171,10 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183.237.161.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -165,7 +183,10 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656664560</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -174,7 +195,10 @@ public class DescribeVpcFirewallDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * TrafficTime.
+         * <p>The time point of the traffic. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1739337840</p>
          */
         public Builder trafficTime(Long trafficTime) {
             this.putQueryParameter("TrafficTime", trafficTime);

@@ -157,7 +157,10 @@ public class DescribeSensitiveSwitchRequest extends Request {
         } 
 
         /**
-         * CategoryName.
+         * <p>The name of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Identity card</p>
          */
         public Builder categoryName(String categoryName) {
             this.putQueryParameter("CategoryName", categoryName);
@@ -166,7 +169,10 @@ public class DescribeSensitiveSwitchRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -175,7 +181,10 @@ public class DescribeSensitiveSwitchRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -184,7 +193,10 @@ public class DescribeSensitiveSwitchRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -193,7 +205,10 @@ public class DescribeSensitiveSwitchRequest extends Request {
         }
 
         /**
-         * ParentCategory.
+         * <p>The parent class.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>universal_industry_template</p>
          */
         public Builder parentCategory(String parentCategory) {
             this.putQueryParameter("ParentCategory", parentCategory);
@@ -202,7 +217,10 @@ public class DescribeSensitiveSwitchRequest extends Request {
         }
 
         /**
-         * SensitiveCategory.
+         * <p>The type of the sensitive credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id_card</p>
          */
         public Builder sensitiveCategory(String sensitiveCategory) {
             this.putQueryParameter("SensitiveCategory", sensitiveCategory);
@@ -211,7 +229,10 @@ public class DescribeSensitiveSwitchRequest extends Request {
         }
 
         /**
-         * SensitiveLevel.
+         * <p>The sensitivity level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S3</p>
          */
         public Builder sensitiveLevel(String sensitiveLevel) {
             this.putQueryParameter("SensitiveLevel", sensitiveLevel);
@@ -220,7 +241,10 @@ public class DescribeSensitiveSwitchRequest extends Request {
         }
 
         /**
-         * SwitchStatus.
+         * <p>The status of the sensitive data detection switch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder switchStatus(String switchStatus) {
             this.putQueryParameter("SwitchStatus", switchStatus);

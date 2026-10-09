@@ -80,7 +80,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -88,7 +88,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The paging information for the paged query.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -425,12 +425,12 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The reason why recommended intelligent policies are unavailable. Valid values:</p>
+             * <p>The reason why no intelligent policies recommendation is available. Valid values:</p>
              * <ul>
-             * <li>No recommended intelligent policies are available.</li>
-             * <li>This feature is available only to some users.</li>
-             * <li>The policy configuration has been modified. No recommended intelligent policies are available.</li>
-             * <li>The recommended intelligent policies have been configured. No new recommended intelligent policies are available.</li>
+             * <li>No intelligent policies recommendation is available.</li>
+             * <li>This feature is currently available only to selected users.</li>
+             * <li>The policy configuration has been modified. No intelligent policies recommendation is available.</li>
+             * <li>Intelligent policies have been configured. No new intelligent policies recommendation is available.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -475,7 +475,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of ports.</p>
+             * <p>The total number of port details.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -486,10 +486,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether an access control policy is recommended. Valid values:</p>
+             * <p>Indicates whether a recommended ACL exists. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: A recommended ACL exists.</li>
+             * <li><strong>false</strong>: No recommended ACL exists.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -501,7 +501,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.</p>
+             * <p>The inbound network throughput (total bytes sent). Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>235</p>
@@ -512,7 +512,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+             * <p>The UID of the Cloud Firewall member account. For more information about member accounts, see multi-account management.</p>
              * 
              * <strong>example:</strong>
              * <p>14151892****7022</p>
@@ -523,7 +523,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.</p>
+             * <p>The outbound network throughput (total bytes sent). Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1123</p>
@@ -534,7 +534,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of ports.</p>
+             * <p>The port list.</p>
              */
             public Builder portList(java.util.List<String> portList) {
                 this.portList = portList;
@@ -569,7 +569,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
              * <li><strong>3</strong>: high risk</li>
              * <li><strong>2</strong>: medium risk</li>
              * <li><strong>1</strong>: low risk</li>
-             * <li><strong>0</strong>: no risk</li>
+             * <li><strong>0</strong>: no risk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -581,7 +581,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the risk.</p>
+             * <p>The risk reason.</p>
              * 
              * <strong>example:</strong>
              * <p>Previous traffic is all malicious traffic.</p>
@@ -592,7 +592,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of applications.</p>
+             * <p>The application list.</p>
              */
             public Builder serviceNameList(java.util.List<String> serviceNameList) {
                 this.serviceNameList = serviceNameList;
@@ -600,7 +600,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of source IPs.</p>
+             * <p>The number of source IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -611,7 +611,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total inbound and outbound network throughput, which indicates the total number of bytes that are sent inbound and outbound. Unit: bytes.</p>
+             * <p>The total traffic. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>253023143</p>
@@ -622,7 +622,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Outbound traffic in the last 7 days.</p>
+             * <p>The total reply traffic over the last 7 days.</p>
              * 
              * <strong>example:</strong>
              * <p>100000</p>
@@ -633,7 +633,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>For detailed traffic information, see the TotalBytes field.</p>
+             * <p>For specific traffic information, refer to the TotalBytes field.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -644,7 +644,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>For detailed traffic information, see the TotalBytes field.</p>
+             * <p>For specific traffic information, refer to the TotalBytes field.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -655,7 +655,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>For detailed traffic information, see the TotalBytes field.</p>
+             * <p>For specific traffic information, refer to the TotalBytes field.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -666,7 +666,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Reasons for not analyzing the protocol when the protocol is identified as Unknown.</p>
+             * <p>The reason why the protocol could not be identified when the identified protocol is Unknown.</p>
              */
             public Builder unknownReason(java.util.List<String> unknownReason) {
                 this.unknownReason = unknownReason;
@@ -746,7 +746,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number.</p>
+             * <p>The current page number in the paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -757,7 +757,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The maximum number of entries per page in the paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

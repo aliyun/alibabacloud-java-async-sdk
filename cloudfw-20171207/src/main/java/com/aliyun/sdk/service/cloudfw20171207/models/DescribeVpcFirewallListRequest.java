@@ -199,10 +199,12 @@ public class DescribeVpcFirewallListRequest extends Request {
         } 
 
         /**
-         * <p>The sub-type of the connection. Valid values:</p>
+         * <p>The subtype of the connection. Valid values:</p>
          * <ul>
-         * <li><strong>vpc2vpc</strong>: Express Connect connection</li>
-         * <li><strong>vpcpeer</strong>: peer connection</li>
+         * <li><p><strong>vpc2vpc</strong>: Express Connect.</p>
+         * </li>
+         * <li><p><strong>vpcpeer</strong>: peering connection.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,8 +217,8 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
-         * <p>Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -230,10 +232,14 @@ public class DescribeVpcFirewallListRequest extends Request {
         /**
          * <p>The status of the VPC firewall. Valid values:</p>
          * <ul>
-         * <li><strong>opened</strong>: The VPC firewall is enabled.</li>
-         * <li><strong>closed</strong>: The VPC firewall is disabled.</li>
-         * <li><strong>notconfigured</strong>: The VPC firewall is not configured.</li>
-         * <li><strong>configured</strong>: The VPC firewall is configured.</li>
+         * <li><p><strong>opened</strong>: The firewall is enabled.</p>
+         * </li>
+         * <li><p><strong>closed</strong>: The firewall is disabled.</p>
+         * </li>
+         * <li><p><strong>notconfigured</strong>: The firewall is not configured.</p>
+         * </li>
+         * <li><p><strong>configured</strong>: The firewall is configured.</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <p>If you do not specify this parameter, VPC firewalls in all states are queried.</p>
@@ -249,10 +255,12 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,7 +273,7 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * <p>The UID of the member account.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -277,7 +285,7 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * <p>Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -304,7 +312,7 @@ public class DescribeVpcFirewallListRequest extends Request {
         /**
          * <p>The region ID of the VPC.</p>
          * <blockquote>
-         * <p>For more information about the regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * <p>For more information about the regions where Cloud Firewall is supported, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -332,7 +340,7 @@ public class DescribeVpcFirewallListRequest extends Request {
          * <p>The instance name of the VPC firewall.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test firewall</p>
+         * <p>test-vpc-firewall</p>
          */
         public Builder vpcFirewallName(String vpcFirewallName) {
             this.putQueryParameter("VpcFirewallName", vpcFirewallName);
@@ -341,7 +349,7 @@ public class DescribeVpcFirewallListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The instance ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-8vbwbo90rq0anm6t****</p>

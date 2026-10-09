@@ -89,8 +89,8 @@ public class DeleteVpcFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the access control policy. </p>
-         * <p>To delete an access control policy, you must provide the ID of the policy. You can call the <strong>DescribeVpcFirewallControlPolicy</strong> operation to query the ID.</p>
+         * <p>The unique ID of the access control policy for the virtual private cloud (VPC) firewall.</p>
+         * <p>To delete an access control policy, you must provide the unique ID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/159758.html">DescribeVpcFirewallControlPolicy</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,10 +103,10 @@ public class DeleteVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The natural language of the request and response. Valid values: </p>
+         * <p>The language of the request and response.</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,16 +119,16 @@ public class DeleteVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the group to which the access control policy belongs. You can call the <strong>DescribeVpcFirewallAclGroupList</strong> operation to query the ID.  </p>
+         * <p>The ID of the access control policy group for the virtual private cloud (VPC) firewall. You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain the ID.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>If the VPC firewall is used to protect a CEN instance, the value of this parameter is the ID of the CEN instance.</li>
+         * <li><p>If the VPC firewall protects a CEN instance, the value is the instance ID of the CEN instance.</p>
+         * <p> Example: cen-ervw0g12b5jbw\<em>\</em>\*</p>
+         * </li>
+         * <li><p>If the VPC firewall protects an Express Connect circuit, the value is the instance ID of the VPC firewall.</p>
+         * <p>Example: vfw-a42bbb7b887148c9\<em>\</em>\*.</p>
+         * </li>
          * </ul>
-         * <p>Example: cen-ervw0g12b5jbw****</p>
-         * <ul>
-         * <li>If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall.</li>
-         * </ul>
-         * <p>Example: vfw-a42bbb7b887148c9****</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

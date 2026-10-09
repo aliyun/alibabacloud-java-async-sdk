@@ -118,7 +118,14 @@ public class DescribePageDocumentsRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language type. Valid values:</p>
+         * <ul>
+         * <li><strong>en</strong>: English.</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -127,6 +134,12 @@ public class DescribePageDocumentsRequest extends Request {
         }
 
         /**
+         * <p>The page name. Valid values:</p>
+         * <ul>
+         * <li><strong>overview</strong>: overview page</li>
+         * <li><strong>access</strong>: access control page</li>
+         * <li><strong>switch</strong>: firewall page.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +152,7 @@ public class DescribePageDocumentsRequest extends Request {
         }
 
         /**
+         * <p>The tracing code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +165,10 @@ public class DescribePageDocumentsRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223.167.221.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -160,6 +177,7 @@ public class DescribePageDocumentsRequest extends Request {
         }
 
         /**
+         * <p>The name of the protected object in the access control policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

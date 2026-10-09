@@ -89,8 +89,10 @@ public class DeleteAddressBookRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the address book.</p>
-         * <p>To delete the address book, you must provide the ID of the address book. You can call the DescribeAddressBook operation to query the ID.</p>
+         * <p>The unique ID of the address book.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeAddressBook~~">DescribeAddressBook</a> operation to query the ID.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,10 +105,10 @@ public class DeleteAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The natural language of the request and response. Valid values:</p>
+         * <p>The language type. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
          * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese (default).</li>
          * </ul>
          * 
          * <strong>example:</strong>

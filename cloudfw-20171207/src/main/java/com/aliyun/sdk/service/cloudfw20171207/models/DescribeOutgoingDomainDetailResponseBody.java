@@ -93,7 +93,7 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationNameList.
+         * <p>The list of application names.</p>
          */
         public Builder applicationNameList(java.util.List<String> applicationNameList) {
             this.applicationNameList = applicationNameList;
@@ -101,7 +101,7 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * AssetList.
+         * <p>The list of assets.</p>
          */
         public Builder assetList(java.util.List<AssetList> assetList) {
             this.assetList = assetList;
@@ -109,7 +109,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98AF5888-9606-59CF-888F-032A9ED0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +120,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -222,7 +228,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * ClassId.
+             * <p>The risk classification ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder classId(String classId) {
                 this.classId = classId;
@@ -230,7 +239,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -238,7 +250,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TagDescribe.
+             * <p>The tag description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagDescribe(String tagDescribe) {
                 this.tagDescribe = tagDescribe;
@@ -246,7 +261,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FirstFlow</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;
@@ -254,7 +272,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -568,7 +589,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * AclCoverage.
+             * <p>The policy coverage status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FullCoverage</p>
              */
             public Builder aclCoverage(String aclCoverage) {
                 this.aclCoverage = aclCoverage;
@@ -576,7 +600,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -584,7 +611,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTime.
+             * <p>The time of the first access. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1738548990</p>
              */
             public Builder firstTime(Integer firstTime) {
                 this.firstTime = firstTime;
@@ -592,7 +622,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InBytes.
+             * <p>The inbound traffic (response traffic), in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>244438.0</p>
              */
             public Builder inBytes(Long inBytes) {
                 this.inBytes = inBytes;
@@ -600,7 +633,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IpsHitCnt.
+             * <p>The number of IPS hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder ipsHitCnt(Long ipsHitCnt) {
                 this.ipsHitCnt = ipsHitCnt;
@@ -608,7 +644,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * <p>The time of the most recent access. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1739326614</p>
              */
             public Builder lastTime(Integer lastTime) {
                 this.lastTime = lastTime;
@@ -616,7 +655,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * <p>The NAT gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-bp1utx6wj4x9qu9tl****</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -624,7 +666,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayName.
+             * <p>The NAT gateway name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-test</p>
              */
             public Builder natGatewayName(String natGatewayName) {
                 this.natGatewayName = natGatewayName;
@@ -632,7 +677,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OutBytes.
+             * <p>The outbound traffic (request traffic), in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder outBytes(Long outBytes) {
                 this.outBytes = outBytes;
@@ -640,7 +688,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIP.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.21.242XXX</p>
              */
             public Builder privateIP(String privateIP) {
                 this.privateIP = privateIP;
@@ -648,7 +699,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIP.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.96.181.XXX</p>
              */
             public Builder publicIP(String publicIP) {
                 this.publicIP = publicIP;
@@ -656,7 +710,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -664,7 +721,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceId.
+             * <p>The ID of the asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf63wjhyoohc1g4z****</p>
              */
             public Builder resourceInstanceId(String resourceInstanceId) {
                 this.resourceInstanceId = resourceInstanceId;
@@ -672,7 +732,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceName.
+             * <p>The name of the asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceInstanceName(String resourceInstanceName) {
                 this.resourceInstanceName = resourceInstanceName;
@@ -680,7 +743,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The public IP address type of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NatEIP</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -688,7 +754,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The ACL rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08a58465-ff4d-4c47-8782-eb008301****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -696,7 +765,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -704,7 +776,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SessionCount.
+             * <p>The number of access sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sessionCount(Long sessionCount) {
                 this.sessionCount = sessionCount;
@@ -712,7 +787,7 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TagList.
+             * <p>The list of tag names.</p>
              */
             public Builder tagList(java.util.List<TagList> tagList) {
                 this.tagList = tagList;
@@ -720,7 +795,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBytes.
+             * <p>The total traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>321120825843</p>
              */
             public Builder totalBytes(String totalBytes) {
                 this.totalBytes = totalBytes;
@@ -728,7 +806,10 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-9dp16jgwgyvn****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

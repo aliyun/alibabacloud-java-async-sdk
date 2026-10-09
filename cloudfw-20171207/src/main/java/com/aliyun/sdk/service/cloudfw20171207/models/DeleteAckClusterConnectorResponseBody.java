@@ -54,7 +54,10 @@ public class DeleteAckClusterConnectorResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133173B9-8010-5DF5-8B93-********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

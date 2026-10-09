@@ -80,7 +80,10 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EED3674-74E7-54DC-8FD4-6A374133****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -96,7 +102,7 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchList.
+         * <p>The vSwitch list.</p>
          */
         public Builder vSwitchList(java.util.List<VSwitchList> vSwitchList) {
             this.vSwitchList = vSwitchList;
@@ -279,7 +285,13 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The UID of the Alibaba Cloud account.</p>
+             * <blockquote>
+             * <p>The primary account of the Cloud Firewall member accounts.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>122167357026****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -287,7 +299,10 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableIpAddressCount.
+             * <p>The number of available IP addresses in the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder availableIpAddressCount(Long availableIpAddressCount) {
                 this.availableIpAddressCount = availableIpAddressCount;
@@ -295,7 +310,10 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * <p>The IPv4 CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.31.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -303,7 +321,10 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The owner user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>137578716100****</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -311,7 +332,10 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -319,7 +343,10 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * RouteTableId.
+             * <p>The ID of the associate a prefix list with a route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-2zet3gyk01o07so****</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -327,7 +354,10 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -335,7 +365,10 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp10d0kcp907721z****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -343,7 +376,10 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-test</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -351,7 +387,10 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC-connected instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf62kq7c364sil2z2****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -359,7 +398,10 @@ public class DescribeVpcFirewallManualVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

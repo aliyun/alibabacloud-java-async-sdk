@@ -73,7 +73,10 @@ public class DescribeCreatedNatFirewallRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the request and response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -82,7 +85,10 @@ public class DescribeCreatedNatFirewallRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the requester.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121.225.255.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

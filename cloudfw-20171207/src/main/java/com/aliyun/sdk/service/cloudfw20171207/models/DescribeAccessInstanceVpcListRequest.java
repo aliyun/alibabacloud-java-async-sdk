@@ -116,7 +116,10 @@ public class DescribeAccessInstanceVpcListRequest extends Request {
         } 
 
         /**
-         * MemberUid.
+         * <p>The UID of the Alibaba Cloud account that owns the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135809047715****</p>
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -125,7 +128,10 @@ public class DescribeAccessInstanceVpcListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -134,7 +140,10 @@ public class DescribeAccessInstanceVpcListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -143,6 +152,7 @@ public class DescribeAccessInstanceVpcListRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +165,10 @@ public class DescribeAccessInstanceVpcListRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-j6cvhdscntzuvr0x****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

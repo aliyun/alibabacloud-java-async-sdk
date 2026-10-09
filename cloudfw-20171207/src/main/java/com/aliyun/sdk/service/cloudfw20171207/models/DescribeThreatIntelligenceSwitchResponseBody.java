@@ -80,7 +80,7 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
         } 
 
         /**
-         * CategoryList.
+         * <p>The list of threat intelligence categories.</p>
          */
         public Builder categoryList(java.util.List<CategoryList> categoryList) {
             this.categoryList = categoryList;
@@ -88,7 +88,10 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6B8E0379-2629-59A1-B811-96F3E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +220,12 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action of the rule. Valid values:</p>
+             * <p> <strong>alert</strong>: monitor mode.</p>
+             * <p> <strong>drop</strong>: Block Mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alert</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -222,7 +233,10 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryDescribe.
+             * <p>The category description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tor Export Malicious IP</p>
              */
             public Builder categoryDescribe(String categoryDescribe) {
                 this.categoryDescribe = categoryDescribe;
@@ -230,7 +244,10 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryId.
+             * <p>The ID of the threat intelligence category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000037</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -238,7 +255,10 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tor Export Malicious IP</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -246,7 +266,10 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryParentId.
+             * <p>The ID of the parent threat intelligence category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder categoryParentId(String categoryParentId) {
                 this.categoryParentId = categoryParentId;
@@ -254,7 +277,12 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * EnableStatus.
+             * <p>The enabling status. Valid values:</p>
+             * <p> <strong>1</strong>: enabled.</p>
+             * <p> <strong>0</strong>: disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enableStatus(Long enableStatus) {
                 this.enableStatus = enableStatus;

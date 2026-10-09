@@ -59,10 +59,12 @@ public class DescribeDefaultIPSConfigRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default)</li>
-         * <li><strong>en</strong></li>
+         * <li><p><strong>zh</strong>: Chinese. This is the default value.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

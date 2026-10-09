@@ -67,7 +67,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E7D4D635-0C70-5CEB-A609-851E94D51FBB</p>
@@ -78,10 +78,10 @@ public class ModifyTrFirewallV2RoutePolicyScopeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the routing policy.</p>
+         * <p>The ID of the firewall route policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>policy-4d724d0139df48f18091</p>
+         * <p>policy-4d724d0139df48f1****</p>
          */
         public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
             this.trFirewallRoutePolicyId = trFirewallRoutePolicyId;

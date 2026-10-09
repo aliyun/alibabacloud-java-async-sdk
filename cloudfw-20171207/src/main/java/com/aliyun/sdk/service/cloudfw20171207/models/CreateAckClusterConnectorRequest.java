@@ -176,6 +176,10 @@ public class CreateAckClusterConnectorRequest extends Request {
         } 
 
         /**
+         * <p>The ACK cluster ID. You can call the following operation to obtain the value:</p>
+         * <ul>
+         * <li><a href="~~DescribeAckClusters~~">DescribeAckClusters</a>: Queries the list of ACK clusters.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +192,7 @@ public class CreateAckClusterConnectorRequest extends Request {
         }
 
         /**
+         * <p>The name of the ACK cluster connector. The name must be 1 to 64 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +205,10 @@ public class CreateAckClusterConnectorRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The Alibaba Cloud UID of the account to which the ACK cluster resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135809047715****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -209,6 +217,10 @@ public class CreateAckClusterConnectorRequest extends Request {
         }
 
         /**
+         * <p>The primary vSwitch of the ACK cluster connector. You can call the following operation to obtain the value:</p>
+         * <ul>
+         * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Queries the list of synchronization node vSwitches.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +233,10 @@ public class CreateAckClusterConnectorRequest extends Request {
         }
 
         /**
-         * PrimaryVswitchIp.
+         * <p>The IP address of the primary vSwitch of the ACK cluster connector.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.100.1.1</p>
          */
         public Builder primaryVswitchIp(String primaryVswitchIp) {
             this.putQueryParameter("PrimaryVswitchIp", primaryVswitchIp);
@@ -230,6 +245,13 @@ public class CreateAckClusterConnectorRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the ACK cluster connector. You can call the following operation to obtain the value:</p>
+         * <ul>
+         * <li><a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a>: Queries the list of synchronization node regions.</li>
+         * </ul>
+         * <blockquote>
+         * <p>For more information about the regions supported by ACK cluster connectors in Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/2865120.html">ACK cluster synchronization nodes</a>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +264,13 @@ public class CreateAckClusterConnectorRequest extends Request {
         }
 
         /**
-         * StandbyVswitchId.
+         * <p>The standby vSwitch of the ACK cluster connector. You can call the following operation to obtain the value:</p>
+         * <ul>
+         * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Queries the list of synchronization node vSwitches.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2ze2gtlfozrab01cfo****</p>
          */
         public Builder standbyVswitchId(String standbyVswitchId) {
             this.putQueryParameter("StandbyVswitchId", standbyVswitchId);
@@ -251,7 +279,10 @@ public class CreateAckClusterConnectorRequest extends Request {
         }
 
         /**
-         * StandbyVswitchIp.
+         * <p>The IP address of the standby vSwitch of the ACK cluster connector.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.100.2.1</p>
          */
         public Builder standbyVswitchIp(String standbyVswitchIp) {
             this.putQueryParameter("StandbyVswitchIp", standbyVswitchIp);
@@ -260,6 +291,7 @@ public class CreateAckClusterConnectorRequest extends Request {
         }
 
         /**
+         * <p>The synchronization interval of the ACK cluster connector. Valid values: 2 to 60. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

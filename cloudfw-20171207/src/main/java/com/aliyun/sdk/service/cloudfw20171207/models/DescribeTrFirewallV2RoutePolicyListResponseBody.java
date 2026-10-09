@@ -102,7 +102,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The routing policies.</p>
+         * <p>The list of firewall routing policies.</p>
          */
         public Builder trFirewallRoutePolicies(java.util.List<TrFirewallRoutePolicies> trFirewallRoutePolicies) {
             this.trFirewallRoutePolicies = trFirewallRoutePolicies;
@@ -168,7 +168,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the secondary traffic redirection instance.</p>
+             * <p>The ID of the traffic redirection instance.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2ze9epancaw8t4sha****</p>
@@ -179,7 +179,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the secondary traffic redirection instance.</p>
+             * <p>The type of the traffic redirection instance.</p>
              * 
              * <strong>example:</strong>
              * <p>VPC</p>
@@ -249,7 +249,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the primary traffic redirection instance.</p>
+             * <p>The ID of the traffic redirection instance.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2ze9epancaw8t4sha****</p>
@@ -260,7 +260,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the primary traffic redirection instance.</p>
+             * <p>The type of the traffic redirection instance.</p>
              * 
              * <strong>example:</strong>
              * <p>VPC</p>
@@ -395,7 +395,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The secondary traffic redirection instances.</p>
+             * <p>The list of secondary traffic redirection instances.</p>
              */
             public Builder destCandidateList(java.util.List<DestCandidateList> destCandidateList) {
                 this.destCandidateList = destCandidateList;
@@ -403,10 +403,10 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the routing policy.</p>
+             * <p>The policy description.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Point to multipoint</p>
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -414,10 +414,10 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the routing policy.</p>
+             * <p>The policy name.</p>
              * 
              * <strong>example:</strong>
-             * <p>TEST_VPC_FW</p>
+             * <p>Singapore Point to Multipoint</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -425,14 +425,20 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the routing policy. Valid values:</p>
+             * <p>The policy status. Valid values:</p>
              * <ul>
-             * <li>creating: The policy is being created.</li>
-             * <li>deleting: The policy is being deleted.</li>
-             * <li>opening: The policy is being enabled.</li>
-             * <li>opened: The policy is enabled.</li>
-             * <li>closing: The policy is being disabled.</li>
-             * <li>closed: The policy is disabled.</li>
+             * <li><p>creating: being created</p>
+             * </li>
+             * <li><p>deleting: being deleted</p>
+             * </li>
+             * <li><p>opening: being enabled</p>
+             * </li>
+             * <li><p>opened: enabled</p>
+             * </li>
+             * <li><p>closing: being disabled</p>
+             * </li>
+             * <li><p>closed: disabled</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -444,11 +450,14 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the traffic redirection scenario of the VPC firewall. Valid values:</p>
+             * <p>The traffic redirection scenario type for the virtual private cloud (VPC) firewall on CEN Enterprise Edition. Valid values:</p>
              * <ul>
-             * <li><strong>fullmesh</strong>: interconnected instances</li>
-             * <li><strong>one_to_one</strong>: instance to instance</li>
-             * <li><strong>end_to_end</strong>: instance to instances</li>
+             * <li><p><strong>fullmesh</strong>: multi-point interconnection</p>
+             * </li>
+             * <li><p><strong>one_to_one</strong>: point-to-point</p>
+             * </li>
+             * <li><p><strong>end_to_end</strong>: point-to-multipoint</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -460,7 +469,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The primary traffic redirection instances.</p>
+             * <p>The list of primary traffic redirection instances.</p>
              */
             public Builder srcCandidateList(java.util.List<SrcCandidateList> srcCandidateList) {
                 this.srcCandidateList = srcCandidateList;
@@ -468,7 +477,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the routing policy.</p>
+             * <p>The ID of the firewall routing policy.</p>
              * 
              * <strong>example:</strong>
              * <p>policy-7b66257c14e141fb****</p>

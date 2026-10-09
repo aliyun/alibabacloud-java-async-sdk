@@ -80,7 +80,7 @@ public class DescribeAclAppsResponseBody extends TeaModel {
         } 
 
         /**
-         * AclApps.
+         * <p>The list of ACL applications.</p>
          */
         public Builder aclApps(java.util.List<AclApps> aclApps) {
             this.aclApps = aclApps;
@@ -88,7 +88,10 @@ public class DescribeAclAppsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9063AB86-6FFA-5B2D-A16D-697C966D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeAclAppsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +220,10 @@ public class DescribeAclAppsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder appId(Integer appId) {
                 this.appId = appId;
@@ -222,7 +231,10 @@ public class DescribeAclAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -230,7 +242,17 @@ public class DescribeAclAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Popular.
+             * <p>Indicates whether the application is common. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: common</p>
+             * </li>
+             * <li><p><strong>0</strong>: not common</p>
+             * </li>
+             * <li></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder popular(Integer popular) {
                 this.popular = popular;
@@ -238,7 +260,7 @@ public class DescribeAclAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocols.
+             * <p>The protocols supported by the application.</p>
              */
             public Builder protocols(java.util.List<String> protocols) {
                 this.protocols = protocols;
@@ -246,7 +268,18 @@ public class DescribeAclAppsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: Low</p>
+             * </li>
+             * <li><p><strong>2</strong>: Medium</p>
+             * </li>
+             * <li><p><strong>3</strong>: High</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -254,7 +287,16 @@ public class DescribeAclAppsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportFqdn.
+             * <p>Indicates whether the application supports <code>FQDN</code>. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: No</p>
+             * </li>
+             * <li><p><strong>1</strong>: Yes</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder supportFqdn(Integer supportFqdn) {
                 this.supportFqdn = supportFqdn;

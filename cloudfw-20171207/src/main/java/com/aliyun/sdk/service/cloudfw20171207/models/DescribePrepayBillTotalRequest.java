@@ -131,7 +131,11 @@ public class DescribePrepayBillTotalRequest extends Request {
         } 
 
         /**
-         * <p>账单类型。本参数实际为必填项，未传时返回 -103204（invalid params in request）错误。可选值：sdl（敏感数据保护）、elastic_traffic（弹性流量）。</p>
+         * <p>The bill type of the user. This parameter is required in practice. An error is returned if this parameter is not specified. Valid values:</p>
+         * <ul>
+         * <li>elastic_traffic: elastic traffic</li>
+         * <li>sdl: sensitive data leak detection traffic</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>sdl</p>
@@ -143,7 +147,10 @@ public class DescribePrepayBillTotalRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number in a paged query. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -152,6 +159,10 @@ public class DescribePrepayBillTotalRequest extends Request {
         }
 
         /**
+         * <p>The end time. Specify a UNIX timestamp in seconds.</p>
+         * <blockquote>
+         * <p>Because billing data is aggregated at the daily granularity, the timestamp must correspond to 00:00:00 of the day in CST (UTC+8). If the timestamp is not aligned to the start of the day, no data may be returned.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +175,12 @@ public class DescribePrepayBillTotalRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language. Enumerated value.
+         * Default value: zh.
+         * Valid value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -173,7 +189,10 @@ public class DescribePrepayBillTotalRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -182,6 +201,10 @@ public class DescribePrepayBillTotalRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. Specify a UNIX timestamp in seconds.</p>
+         * <blockquote>
+         * <p>Because billing data is aggregated at the daily granularity, the timestamp must correspond to 00:00:00 of the day in CST (UTC+8). If the timestamp is not aligned to the start of the day, no data may be returned.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

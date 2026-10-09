@@ -236,7 +236,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * AvgInBps.
+         * <p>The average inbound network throughput. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1264110</p>
          */
         public Builder avgInBps(Long avgInBps) {
             this.avgInBps = avgInBps;
@@ -244,7 +247,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * AvgOutBps.
+         * <p>The average outbound network throughput. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68915</p>
          */
         public Builder avgOutBps(Long avgOutBps) {
             this.avgOutBps = avgOutBps;
@@ -252,7 +258,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * AvgSession.
+         * <p>The average number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1995</p>
          */
         public Builder avgSession(Long avgSession) {
             this.avgSession = avgSession;
@@ -260,7 +269,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * AvgTotalBps.
+         * <p>The average total network throughput in both the outbound and inbound directions. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34291</p>
          */
         public Builder avgTotalBps(Long avgTotalBps) {
             this.avgTotalBps = avgTotalBps;
@@ -268,7 +280,7 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * DataList.
+         * <p>The data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -276,7 +288,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxBandwidthTime.
+         * <p>The timestamp when the peak bandwidth occurred. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1768008060</p>
          */
         public Builder maxBandwidthTime(Long maxBandwidthTime) {
             this.maxBandwidthTime = maxBandwidthTime;
@@ -284,7 +299,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxInBps.
+         * <p>The peak inbound network throughput. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1436</p>
          */
         public Builder maxInBps(Long maxInBps) {
             this.maxInBps = maxInBps;
@@ -292,7 +310,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxOutBps.
+         * <p>The peak outbound network throughput. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2128</p>
          */
         public Builder maxOutBps(Long maxOutBps) {
             this.maxOutBps = maxOutBps;
@@ -300,7 +321,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxSession.
+         * <p>The peak number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2003</p>
          */
         public Builder maxSession(Long maxSession) {
             this.maxSession = maxSession;
@@ -308,7 +332,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxTotalBps.
+         * <p>The peak total network throughput in both the outbound and inbound directions. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61947852</p>
          */
         public Builder maxTotalBps(Long maxTotalBps) {
             this.maxTotalBps = maxTotalBps;
@@ -316,7 +343,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45F8B9E6-8583-56B3-A127-1B421C9E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -324,7 +354,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalBytes.
+         * <p>The total traffic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>141688156232</p>
          */
         public Builder totalBytes(Long totalBytes) {
             this.totalBytes = totalBytes;
@@ -332,7 +365,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalInBytes.
+         * <p>The total inbound network throughput. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2659635037</p>
          */
         public Builder totalInBytes(Long totalInBytes) {
             this.totalInBytes = totalInBytes;
@@ -340,7 +376,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalOutBytes.
+         * <p>The total outbound network throughput. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399762701</p>
          */
         public Builder totalOutBytes(Long totalOutBytes) {
             this.totalOutBytes = totalOutBytes;
@@ -348,7 +387,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalSession.
+         * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1078757</p>
          */
         public Builder totalSession(Long totalSession) {
             this.totalSession = totalSession;
@@ -505,7 +547,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * InBps.
+             * <p>The inbound bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>187</p>
              */
             public Builder inBps(Long inBps) {
                 this.inBps = inBps;
@@ -513,7 +558,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * InBytes.
+             * <p>The inbound traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder inBytes(Long inBytes) {
                 this.inBytes = inBytes;
@@ -521,7 +569,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * InPps.
+             * <p>The inbound packet forwarding rate. Unit: pps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder inPps(Long inPps) {
                 this.inPps = inPps;
@@ -529,7 +580,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * NewConn.
+             * <p>The number of new connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder newConn(Long newConn) {
                 this.newConn = newConn;
@@ -537,7 +591,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * OutBps.
+             * <p>The outbound traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder outBps(Long outBps) {
                 this.outBps = outBps;
@@ -545,7 +602,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * OutBytes.
+             * <p>The total outbound network throughput. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>230</p>
              */
             public Builder outBytes(Long outBytes) {
                 this.outBytes = outBytes;
@@ -553,7 +613,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * OutPps.
+             * <p>The outbound packet forwarding rate. Unit: pps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder outPps(Long outPps) {
                 this.outPps = outPps;
@@ -561,7 +624,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * SessionCount.
+             * <p>The number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder sessionCount(Long sessionCount) {
                 this.sessionCount = sessionCount;
@@ -569,7 +635,10 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the traffic occurred. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1758470400</p>
              */
             public Builder time(Integer time) {
                 this.time = time;

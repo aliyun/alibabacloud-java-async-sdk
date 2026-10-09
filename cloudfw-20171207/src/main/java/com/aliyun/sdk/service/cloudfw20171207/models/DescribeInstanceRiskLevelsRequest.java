@@ -73,7 +73,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
         } 
 
         /**
-         * <p>The information about the instances.</p>
+         * <p>The list of instances.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.putQueryParameter("Instances", instances);
@@ -82,10 +82,12 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,7 +185,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
             } 
 
             /**
-             * <p>The instance ID of your Cloud Firewall.</p>
+             * <p>The ID of the Cloud Firewall instance.</p>
              * 
              * <strong>example:</strong>
              * <p>vipcloudfw-cn-7mz2fj8nm0u</p>
@@ -194,7 +196,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
             }
 
             /**
-             * <p>The public IP addresses of instances.</p>
+             * <p>The public IP address of the instance.</p>
              */
             public Builder internetIp(java.util.List<String> internetIp) {
                 this.internetIp = internetIp;

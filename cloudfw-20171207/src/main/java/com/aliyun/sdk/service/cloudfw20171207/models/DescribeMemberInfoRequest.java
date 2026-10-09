@@ -59,7 +59,10 @@ public class DescribeMemberInfoRequest extends Request {
         } 
 
         /**
-         * MemberUid.
+         * <p>The UID of the member account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150795602499****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);

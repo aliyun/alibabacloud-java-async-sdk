@@ -67,7 +67,7 @@ public class DescribeCreatedNatFirewallResponseBody extends TeaModel {
         } 
 
         /**
-         * CreatedNatFirewalls.
+         * <p>A list of the created NAT firewalls.</p>
          */
         public Builder createdNatFirewalls(java.util.List<CreatedNatFirewalls> createdNatFirewalls) {
             this.createdNatFirewalls = createdNatFirewalls;
@@ -75,7 +75,10 @@ public class DescribeCreatedNatFirewallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>072B5287-8A85-529E-BD47-F8AC2DB1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribeCreatedNatFirewallResponseBody extends TeaModel {
             } 
 
             /**
-             * NatFirewallId.
+             * <p>The ID of the NAT firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cfw-adk2ad45sf4t8****</p>
              */
             public Builder natFirewallId(String natFirewallId) {
                 this.natFirewallId = natFirewallId;
@@ -162,7 +168,10 @@ public class DescribeCreatedNatFirewallResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * <p>The ID of the NAT Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-uf6i0zkjtz4t2sttf****</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -170,7 +179,10 @@ public class DescribeCreatedNatFirewallResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayName.
+             * <p>The name of the NAT Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-text</p>
              */
             public Builder natGatewayName(String natGatewayName) {
                 this.natGatewayName = natGatewayName;

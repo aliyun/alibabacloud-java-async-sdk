@@ -54,7 +54,10 @@ public class ModifySensitiveSwitchResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID of the returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6169C0A4-B91A-5D48-AE4D-B9432D15****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

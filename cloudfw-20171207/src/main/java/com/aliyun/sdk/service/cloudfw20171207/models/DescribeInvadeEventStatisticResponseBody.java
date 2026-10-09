@@ -106,7 +106,10 @@ public class DescribeInvadeEventStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * HighOpenEventCnt.
+         * <p>The number of open high-risk vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder highOpenEventCnt(Integer highOpenEventCnt) {
             this.highOpenEventCnt = highOpenEventCnt;
@@ -114,7 +117,10 @@ public class DescribeInvadeEventStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * LowOpenEventCnt.
+         * <p>The number of open low-risk vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder lowOpenEventCnt(Integer lowOpenEventCnt) {
             this.lowOpenEventCnt = lowOpenEventCnt;
@@ -122,7 +128,10 @@ public class DescribeInvadeEventStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * MiddleOpenEventCnt.
+         * <p>The number of open medium-risk vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder middleOpenEventCnt(Integer middleOpenEventCnt) {
             this.middleOpenEventCnt = middleOpenEventCnt;
@@ -130,7 +139,10 @@ public class DescribeInvadeEventStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1530A01A-6901-5B72-AB88-28B6E96B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DescribeInvadeEventStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * TotalOpenEventCnt.
+         * <p>The total number of open vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalOpenEventCnt(Integer totalOpenEventCnt) {
             this.totalOpenEventCnt = totalOpenEventCnt;

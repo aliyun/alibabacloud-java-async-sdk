@@ -88,6 +88,8 @@ public class SetAutoProtectNewAssetsRequest extends Request {
         } 
 
         /**
+         * <p>Specifies whether to enable automatic traffic redirection. Valid values:</p>
+         * <p><strong>true****false</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +102,10 @@ public class SetAutoProtectNewAssetsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language. Valid values are zh (Chinese) and <strong>en</strong> (English). The default value is <strong>zh</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -109,7 +114,10 @@ public class SetAutoProtectNewAssetsRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60.182.79.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

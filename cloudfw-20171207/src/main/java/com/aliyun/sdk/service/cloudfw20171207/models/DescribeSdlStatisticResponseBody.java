@@ -67,7 +67,10 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>337A4DBA-8A01-5E9C-99CA-84293E13****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * SdlStatisticResp.
+         * <p>The details of the sensitive data.</p>
          */
         public Builder sdlStatisticResp(SdlStatisticResp sdlStatisticResp) {
             this.sdlStatisticResp = sdlStatisticResp;
@@ -154,7 +157,10 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetType.
+             * <p>The asset type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EIP</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -162,7 +168,10 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIp.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>116.62.66.XXX</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -170,7 +179,10 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficBytes.
+             * <p>The amount of traffic in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder trafficBytes(Long trafficBytes) {
                 this.trafficBytes = trafficBytes;
@@ -237,7 +249,10 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * PublicIp.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.101.68.XXX</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -245,7 +260,10 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficBytes.
+             * <p>The amount of traffic in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder trafficBytes(Long trafficBytes) {
                 this.trafficBytes = trafficBytes;
@@ -312,7 +330,10 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -320,7 +341,10 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id_card</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -400,7 +424,7 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * SdlAssetTopList.
+             * <p>A ranked list of sensitive data assets.</p>
              */
             public Builder sdlAssetTopList(java.util.List<SdlAssetTopList> sdlAssetTopList) {
                 this.sdlAssetTopList = sdlAssetTopList;
@@ -408,7 +432,7 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * SdlDstTopList.
+             * <p>A ranked list of sensitive data destinations.</p>
              */
             public Builder sdlDstTopList(java.util.List<SdlDstTopList> sdlDstTopList) {
                 this.sdlDstTopList = sdlDstTopList;
@@ -416,7 +440,7 @@ public class DescribeSdlStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * SdlEventTypeCountList.
+             * <p>A list of counts for each sensitive data event type.</p>
              */
             public Builder sdlEventTypeCountList(java.util.List<SdlEventTypeCountList> sdlEventTypeCountList) {
                 this.sdlEventTypeCountList = sdlEventTypeCountList;

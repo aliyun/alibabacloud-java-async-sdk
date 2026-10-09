@@ -229,14 +229,7 @@ public class DescribeOutgoingDomainRequest extends Request {
         } 
 
         /**
-         * <p>The type of the service. This parameter is empty by default. Valid values:</p>
-         * <ul>
-         * <li><strong>All</strong>: all services</li>
-         * <li><strong>RiskDomain</strong>: risky domain names</li>
-         * <li><strong>RiskIP</strong>: risky IP addresses</li>
-         * <li><strong>AliYun</strong>: Alibaba Cloud services</li>
-         * <li><strong>NotAliYun</strong>: third-party services</li>
-         * </ul>
+         * <p>The product category. Default value: empty. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>All</p>
@@ -248,8 +241,7 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
-         * <p>Default value: 1.</p>
+         * <p>The page number to return in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -261,11 +253,7 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * <p>The source of traffic for statistics. Valid values:</p>
-         * <ul>
-         * <li><strong>internet</strong> (default): the Internet firewall.</li>
-         * <li><strong>nat</strong>: NAT firewalls.</li>
-         * </ul>
+         * <p>The source of the traffic statistics. Default value: Internet firewall. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>nat</p>
@@ -277,7 +265,7 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * <p>The domain name in outbound connections.</p>
+         * <p>The domain name of the outbound connections.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -289,7 +277,7 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,11 +290,7 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to collect statistics only on AI service access traffic. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
-         * </ul>
+         * <p>Specifies whether to collect statistics only on traffic that accesses AI services. Default value: no. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -318,11 +302,7 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request. Valid values:</p>
-         * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
-         * <li><strong>en</strong>: English</li>
-         * </ul>
+         * <p>The language type of the request message. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -334,11 +314,7 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * <p>The method that you want to use to sort the query results. Valid values:</p>
-         * <ul>
-         * <li><strong>asc</strong></li>
-         * <li><strong>desc</strong> (default)</li>
-         * </ul>
+         * <p>The sort method. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -350,8 +326,7 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * <p>Default value: 6. Maximum value: 100.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -363,7 +338,7 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * <p>The public IP address of the Elastic Compute Service (ECS) instance that initiates outbound connections.</p>
+         * <p>The public IP address of the ECS instance that initiates the outbound connection.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
@@ -375,11 +350,7 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * <p>The field based on which you want to sort the query results. Valid values:</p>
-         * <ul>
-         * <li><strong>SessionCount</strong> (default): the number of requests.</li>
-         * <li><strong>TotalBytes</strong>: the total volume of traffic.</li>
-         * </ul>
+         * <p>The sort order based on the specified field. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>SessionCount</p>
@@ -391,7 +362,7 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -404,46 +375,7 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tag. Valid values:</p>
-         * <ul>
-         * <li><strong>AliYun</strong>: Alibaba Cloud service</li>
-         * <li><strong>RiskDomain</strong>: risky domain name</li>
-         * <li><strong>RiskIP</strong>: risky IP address</li>
-         * <li><strong>TrustedDomain</strong>: trusted website</li>
-         * <li><strong>AliPay</strong>: Alipay</li>
-         * <li><strong>DingDing</strong>: DingTalk</li>
-         * <li><strong>WeChat</strong>: WeChat</li>
-         * <li><strong>QQ</strong>: Tencent QQ</li>
-         * <li><strong>SecurityService</strong>: security service</li>
-         * <li><strong>Microsoft</strong>: Microsoft</li>
-         * <li><strong>Amazon</strong>: Amazon Web Services (AWS)</li>
-         * <li><strong>Pan</strong>: cloud disk</li>
-         * <li><strong>Map</strong>: map</li>
-         * <li><strong>Code</strong>: code hosting</li>
-         * <li><strong>SystemService</strong>: system service</li>
-         * <li><strong>Taobao</strong>: Taobao</li>
-         * <li><strong>Google</strong>: Google</li>
-         * <li><strong>ThirdPartyService</strong>: third-party service</li>
-         * <li><strong>FirstFlow</strong>: the first time when an outbound connection is initiated</li>
-         * <li><strong>Downloader</strong>: malicious download</li>
-         * <li><strong>Alexa Top1M</strong>: popular website</li>
-         * <li><strong>Miner</strong>: mining pool</li>
-         * <li><strong>Intelligence</strong>: threat intelligence</li>
-         * <li><strong>DDoS</strong>: DDoS trojan</li>
-         * <li><strong>Ransomware</strong>: ransomware</li>
-         * <li><strong>Spyware</strong>: spyware</li>
-         * <li><strong>Rogue</strong>: rogue software</li>
-         * <li><strong>Botnet</strong>: botnet</li>
-         * <li><strong>Suspicious</strong>: suspicious website</li>
-         * <li><strong>C&amp;C</strong>: command and control (C&amp;C)</li>
-         * <li><strong>Gang</strong>: gang</li>
-         * <li><strong>CVE</strong>: Common Vulnerabilities and Exposures (CVE)</li>
-         * <li><strong>Backdoor</strong>: webshell</li>
-         * <li><strong>Phishing</strong>: phishing website</li>
-         * <li><strong>APT</strong>: advanced persistent threat (APT) attack</li>
-         * <li><strong>Supply Chain Attack</strong>: supply chain attack</li>
-         * <li><strong>Malicious software</strong>: malware</li>
-         * </ul>
+         * <p>The intelligence tag ID. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>AliYun</p>

@@ -87,7 +87,10 @@ public class DescribeAccessInstanceZoneListRequest extends Request {
         } 
 
         /**
-         * AccessInstanceType.
+         * <p>The type of the access instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AckClusterConnector</p>
          */
         public Builder accessInstanceType(String accessInstanceType) {
             this.putQueryParameter("AccessInstanceType", accessInstanceType);
@@ -96,7 +99,10 @@ public class DescribeAccessInstanceZoneListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +111,10 @@ public class DescribeAccessInstanceZoneListRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>The region of the access instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);

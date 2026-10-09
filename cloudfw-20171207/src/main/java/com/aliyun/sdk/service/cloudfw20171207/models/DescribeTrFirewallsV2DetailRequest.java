@@ -73,7 +73,10 @@ public class DescribeTrFirewallsV2DetailRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the VPC firewall.</p>
+         * <p>The ID of the VPC firewall instance. This parameter is required. If this parameter is not specified, the error ErrorMissingFirewallId (-360444, firewall id is required) is returned.</p>
+         * <blockquote>
+         * <p>You can call DescribeTrFirewallsV2List to query existing FirewallId values (in the format of vfw-tr-\*). If no firewall has been created, create an Enterprise Edition transit router in the CEN console first, and then call CreateTrFirewallV2.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>vfw-tr-a5a6b89f46764928****</p>
@@ -85,9 +88,9 @@ public class DescribeTrFirewallsV2DetailRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>
          * </ul>
          * 

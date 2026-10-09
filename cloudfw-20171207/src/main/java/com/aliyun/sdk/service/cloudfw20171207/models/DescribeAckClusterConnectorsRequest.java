@@ -159,7 +159,10 @@ public class DescribeAckClusterConnectorsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ACK cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0E0C30C977463****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -168,7 +171,10 @@ public class DescribeAckClusterConnectorsRequest extends Request {
         }
 
         /**
-         * ConnectorName.
+         * <p>The name of the ACK cluster connector.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder connectorName(String connectorName) {
             this.putQueryParameter("ConnectorName", connectorName);
@@ -177,7 +183,10 @@ public class DescribeAckClusterConnectorsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language in which the unhealthy reason of the ACK cluster connector health status is displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -186,7 +195,10 @@ public class DescribeAckClusterConnectorsRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The Alibaba Cloud UID of the account to which the ACK cluster resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135809047715****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -195,6 +207,7 @@ public class DescribeAckClusterConnectorsRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,6 +220,7 @@ public class DescribeAckClusterConnectorsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +233,16 @@ public class DescribeAckClusterConnectorsRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>The region ID of the ACK cluster connector. You can call the following operation to obtain the value:</p>
+         * <ul>
+         * <li><a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a>: Queries the list of synchronization node regions.</li>
+         * </ul>
+         * <blockquote>
+         * <p>For more information about the regions supported by ACK cluster connectors in Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/2865120.html">ACK cluster synchronization nodes</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -228,7 +251,10 @@ public class DescribeAckClusterConnectorsRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The instance ID of the VPC-connected instance to which the ACK cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6b5lyul0x******</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

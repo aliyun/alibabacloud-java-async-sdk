@@ -67,7 +67,7 @@ public class DescribeNatFirewallAclGroupListResponseBody extends TeaModel {
         } 
 
         /**
-         * NatFirewalls.
+         * <p>The list of NAT firewalls.</p>
          */
         public Builder natFirewalls(java.util.List<NatFirewalls> natFirewalls) {
             this.natFirewalls = natFirewalls;
@@ -75,7 +75,10 @@ public class DescribeNatFirewallAclGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F06DE24D-6EB9-5F55-B588-7BB946DF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class DescribeNatFirewallAclGroupListResponseBody extends TeaModel {
             } 
 
             /**
-             * AclRuleCount.
+             * <p>The number of policies in the access control policy group of the NAT firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder aclRuleCount(Integer aclRuleCount) {
                 this.aclRuleCount = aclRuleCount;
@@ -188,7 +194,10 @@ public class DescribeNatFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the NAT firewall is the default one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -196,7 +205,10 @@ public class DescribeNatFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * <p>The ID of the NAT Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-2zed6z6qkd7ogc****</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -204,7 +216,10 @@ public class DescribeNatFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayName.
+             * <p>The name of the NAT Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-test</p>
              */
             public Builder natGatewayName(String natGatewayName) {
                 this.natGatewayName = natGatewayName;
@@ -212,7 +227,10 @@ public class DescribeNatFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;

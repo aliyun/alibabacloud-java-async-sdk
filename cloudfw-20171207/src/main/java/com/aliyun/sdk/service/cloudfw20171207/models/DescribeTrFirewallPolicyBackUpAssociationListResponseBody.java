@@ -67,7 +67,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
         } 
 
         /**
-         * <p>The route tables.</p>
+         * <p>The list of route tables to recover.</p>
          */
         public Builder policyAssociationBackupConfigs(java.util.List<PolicyAssociationBackupConfigs> policyAssociationBackupConfigs) {
             this.policyAssociationBackupConfigs = policyAssociationBackupConfigs;
@@ -75,7 +75,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C264A756-9B48-57E3-B312-716941E146C6</p>
@@ -197,7 +197,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
              * <p>The name of the traffic redirection instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>vpc-instance</p>
              */
             public Builder candidateName(String candidateName) {
                 this.candidateName = candidateName;
@@ -216,7 +216,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             }
 
             /**
-             * <p>The route table that is used after traffic redirection.</p>
+             * <p>The ID of the route table used after traffic redirection.</p>
              * 
              * <strong>example:</strong>
              * <p>vtb-wz9898grickmh5j09****</p>
@@ -227,7 +227,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             }
 
             /**
-             * <p>The ID of the route table.</p>
+             * <p>The ID of the original route table.</p>
              * 
              * <strong>example:</strong>
              * <p>vtb-wz9slp3s7m4qrzvnq****</p>

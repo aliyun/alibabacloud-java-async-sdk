@@ -115,7 +115,10 @@ public class DescribeVpcFirewallCenSummaryListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number for a paged query. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -124,7 +127,16 @@ public class DescribeVpcFirewallCenSummaryListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -133,7 +145,10 @@ public class DescribeVpcFirewallCenSummaryListRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of the member account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135809047715****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -142,7 +157,10 @@ public class DescribeVpcFirewallCenSummaryListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +169,12 @@ public class DescribeVpcFirewallCenSummaryListRequest extends Request {
         }
 
         /**
-         * TransitRouterType.
+         * <p>The type of the CEN transit router. Valid values:</p>
+         * <p><strong>Basic</strong>: Basic Edition</p>
+         * <p><strong>Enterprise</strong>: Enterprise Edition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         public Builder transitRouterType(String transitRouterType) {
             this.putQueryParameter("TransitRouterType", transitRouterType);

@@ -157,7 +157,10 @@ public class DescribeSdlEventSdListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -166,7 +169,10 @@ public class DescribeSdlEventSdListRequest extends Request {
         }
 
         /**
-         * DstIp.
+         * <p>The destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.102.XXX</p>
          */
         public Builder dstIp(String dstIp) {
             this.putQueryParameter("DstIp", dstIp);
@@ -175,7 +181,10 @@ public class DescribeSdlEventSdListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. The value is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1761185080</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -184,7 +193,10 @@ public class DescribeSdlEventSdListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type of the received message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -193,7 +205,10 @@ public class DescribeSdlEventSdListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,7 +217,10 @@ public class DescribeSdlEventSdListRequest extends Request {
         }
 
         /**
-         * SrcIp.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.0.XXX</p>
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);
@@ -211,7 +229,10 @@ public class DescribeSdlEventSdListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. The value is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656664560</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -220,7 +241,10 @@ public class DescribeSdlEventSdListRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The unique identifier ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa58cdf6-6cf8-493c-912d-97619a24****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

@@ -73,7 +73,14 @@ public class CreateInstanceSyncTaskRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language type. Valid values:</p>
+         * <ul>
+         * <li><strong>en</strong>: English.</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -82,7 +89,10 @@ public class CreateInstanceSyncTaskRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The IP address of the access source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60.182.79.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

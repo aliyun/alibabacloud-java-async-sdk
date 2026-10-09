@@ -201,7 +201,10 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -210,7 +213,10 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>www.****.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -219,6 +225,7 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends Request {
         }
 
         /**
+         * <p>The end time. This value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,7 +238,10 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends Request {
         }
 
         /**
-         * IP.
+         * <p>The IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.92.x.x</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("IP", ip);
@@ -240,7 +250,7 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends Request {
         }
 
         /**
-         * <p>是否查询 AI 流量。必传项，需传 &quot;true&quot;，否则返回参数错误。</p>
+         * <p>Specifies whether to collect only the traffic that accesses AI services. This parameter is required. Set this parameter to &quot;true&quot;. Otherwise, a parameter error is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -252,7 +262,14 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -261,7 +278,15 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort field. Valid values:</p>
+         * <ul>
+         * <li>TotalBytes: sorts by total traffic.</li>
+         * <li>SessionCount: sorts by session count.</li>
+         * </ul>
+         * <p>Default value: TotalBytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SessionCount</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -270,7 +295,10 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -279,7 +307,10 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sort order. Valid values: asc, desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -288,6 +319,7 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends Request {
         }
 
         /**
+         * <p>The start time. This value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,7 +332,10 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC where the asset resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-m5ewlqkuf7orclr1****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

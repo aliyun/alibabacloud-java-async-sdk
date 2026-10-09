@@ -67,7 +67,7 @@ public class ModifyAddressBookResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>标识本次为 DryRun 预检成功响应；取值 true 表示仅完成预检、未执行真实变更。真实调用不返回该字段或为 false。</p>
+         * <p>Indicates whether the request is a successful dry run. A value of true indicates that only the dry run is performed and no actual modifications are made.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.dryRun = dryRun;

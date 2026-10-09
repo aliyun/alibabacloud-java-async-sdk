@@ -67,7 +67,10 @@ public class SetAutoProtectNewAssetsResponseBody extends TeaModel {
         } 
 
         /**
-         * Module.
+         * <p>The firewall module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api_server</p>
          */
         public Builder module(String module) {
             this.module = module;
@@ -75,7 +78,10 @@ public class SetAutoProtectNewAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

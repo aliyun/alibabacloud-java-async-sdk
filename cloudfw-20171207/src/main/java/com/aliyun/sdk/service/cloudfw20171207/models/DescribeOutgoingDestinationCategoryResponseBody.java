@@ -80,7 +80,10 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1ED80BC-FFC8-57DB-8151-705DC31****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -96,7 +102,7 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * TypeList.
+         * <p>The list of outbound connections categorizations.</p>
          */
         public Builder typeList(java.util.List<TypeList> typeList) {
             this.typeList = typeList;
@@ -188,7 +194,10 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryDescribe.
+             * <p>The outbound connections categorization description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliYun</p>
              */
             public Builder categoryDescribe(String categoryDescribe) {
                 this.categoryDescribe = categoryDescribe;
@@ -196,7 +205,10 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryId.
+             * <p>The outbound connections categorization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -204,7 +216,10 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The outbound connections categorization name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliYun</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -212,7 +227,10 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * ClassId.
+             * <p>The outbound connections categorization level ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Trusted</p>
              */
             public Builder classId(String classId) {
                 this.classId = classId;
@@ -305,7 +323,7 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryList.
+             * <p>The list of outbound connections categorizations.</p>
              */
             public Builder categoryList(java.util.List<CategoryList> categoryList) {
                 this.categoryList = categoryList;
@@ -313,7 +331,10 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * TypeDescribe.
+             * <p>The fixed category description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliYun</p>
              */
             public Builder typeDescribe(String typeDescribe) {
                 this.typeDescribe = typeDescribe;
@@ -321,7 +342,10 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * TypeId.
+             * <p>The fixed category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder typeId(String typeId) {
                 this.typeId = typeId;
@@ -329,7 +353,10 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * <p>The fixed category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliYun</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;

@@ -146,7 +146,7 @@ public class DescribeOutgoingDestinationCategoryRequest extends Request {
         } 
 
         /**
-         * <p>目的分类 ID。有效取值为产品预定义的目的分类枚举（共 25+ 个），如 TrustedDomain（信誉网站）、AliPay（支付宝产品）、CDN（CDN 服务）等；完整枚举值及语义请参考产品文档。</p>
+         * <p>The destination category ID. In addition to All, RiskDomain, AliYun, and NotAliYun, the NotAliYun category also includes subcategories such as TrustedDomain, AliPay, DingDing, WeChat, Google, Alibaba, CDN, NAT, and TrustIP. More than 25 category values are supported. Use the categories returned by the API as the reference.</p>
          * 
          * <strong>example:</strong>
          * <p>All</p>
@@ -158,10 +158,14 @@ public class DescribeOutgoingDestinationCategoryRequest extends Request {
         }
 
         /**
-         * <p>目的类型。本参数实际为必填项，缺失时返回 ErrorDstType(-340149)。可选值：DST_TYPE_DOMAIN（域名）、DST_TYPE_IP（IP）。</p>
+         * <p>The destination type. This parameter is required. If this parameter is not specified, ErrorDstType is returned. The value is case-sensitive. Valid values:</p>
+         * <ul>
+         * <li>Domain: domain name.</li>
+         * <li>DstIP: destination IP address.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>domain</p>
+         * <p>Domain</p>
          */
         public Builder dstType(String dstType) {
             this.putQueryParameter("DstType", dstType);
@@ -170,6 +174,7 @@ public class DescribeOutgoingDestinationCategoryRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +187,10 @@ public class DescribeOutgoingDestinationCategoryRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type of the response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -191,7 +199,10 @@ public class DescribeOutgoingDestinationCategoryRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59.82.45.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -200,6 +211,7 @@ public class DescribeOutgoingDestinationCategoryRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +224,10 @@ public class DescribeOutgoingDestinationCategoryRequest extends Request {
         }
 
         /**
-         * TypeId.
+         * <p>The fixed category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder typeId(String typeId) {
             this.putQueryParameter("TypeId", typeId);

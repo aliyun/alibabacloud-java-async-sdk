@@ -193,10 +193,12 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         } 
 
         /**
-         * <p>The status of the VPC firewall after you create the firewall. Valid values:</p>
+         * <p>Settings for the enabling status of the virtual private cloud (VPC) firewall after it is created. Valid values:</p>
          * <ul>
-         * <li><strong>open</strong>: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.</li>
-         * <li><strong>close</strong>: After you create the VPC firewall, the VPC firewall is disabled. To enable the firewall, you can call the <a href="https://help.aliyun.com/document_detail/342935.html">ModifyVpcFirewallSwitchStatus</a> operation.</li>
+         * <li><p><strong>open</strong> (default): Protection is automatically enabled after the VPC firewall is created.</p>
+         * </li>
+         * <li><p><strong>close</strong>: Protection is not automatically enabled after the VPC firewall is created. You can invoke the <a href="https://help.aliyun.com/document_detail/342935.html">ModifyVpcFirewallSwitchStatus</a> operation to enable protection.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -210,10 +212,12 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,10 +230,10 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * <p>The CIDR blocks of the local VPC. The value is a JSON string that contains the following parameters:</p>
+         * <p>The CIDR block list of the local VPC, in JSON format. This parameter contains the following fields:</p>
          * <ul>
-         * <li><strong>RouteTableId</strong>: the ID of the route table for the local VPC.</li>
-         * <li><strong>RouteEntryList</strong>: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the local VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the local VPC.</li>
+         * <li><strong>RouteTableId</strong>: the route table ID of the local VPC.</li>
+         * <li><strong>RouteEntryList</strong>: specified in JSON format. This field contains DestinationCidr (the destination CIDR block of the local VPC) and NextHopInstanceId (the next hop instance ID of the local VPC).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -243,7 +247,7 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * <p>The ID of the local VPC.</p>
+         * <p>The instance ID of the local VPC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,7 +262,7 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         /**
          * <p>The region ID of the local VPC.</p>
          * <blockquote>
-         * <p> For more information about the regions in which Cloud Firewall is available, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * <p>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -272,7 +276,7 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * <p>The UID of the Alibaba Cloud member account.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -284,10 +288,10 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * <p>The CIDR blocks of the peer VPC. The value is a JSON string that contains the following parameters:</p>
+         * <p>The CIDR block list of the peer VPC, in JSON format. This parameter contains the following fields:</p>
          * <ul>
-         * <li><strong>RouteTableId</strong>: the ID of the route table for the peer VPC.</li>
-         * <li><strong>RouteEntryList</strong>: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the peer VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the peer VPC.</li>
+         * <li><strong>RouteTableId</strong>: the route table ID of the peer VPC.</li>
+         * <li><strong>RouteEntryList</strong>: specified in JSON format. This field contains DestinationCidr (the destination CIDR block of the peer VPC) and NextHopInstanceId (the next hop instance ID of the peer VPC).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -301,7 +305,7 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * <p>The ID of the peer VPC.</p>
+         * <p>The instance ID of the peer VPC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,7 +320,7 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         /**
          * <p>The region ID of the peer VPC.</p>
          * <blockquote>
-         * <p> For more information about Cloud Firewall supported regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * <p>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -330,11 +334,11 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * <p>The instance name of the VPC firewall.</p>
+         * <p>The instance name of the virtual private cloud (VPC) firewall.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>my-vpc-firewall</p>
+         * <p>test-vpc-firewall</p>
          */
         public Builder vpcFirewallName(String vpcFirewallName) {
             this.putQueryParameter("VpcFirewallName", vpcFirewallName);

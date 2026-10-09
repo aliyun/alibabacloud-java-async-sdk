@@ -67,7 +67,10 @@ public class CreateNatFirewallPreCheckResponseBody extends TeaModel {
         } 
 
         /**
-         * PreCheckId.
+         * <p>The dry run ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2122</p>
          */
         public Builder preCheckId(String preCheckId) {
             this.preCheckId = preCheckId;
@@ -75,7 +78,10 @@ public class CreateNatFirewallPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A426611F-04FA-5205-8D04-4F6DCF09****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

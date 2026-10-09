@@ -54,7 +54,10 @@ public class ModifyUserSlsLogStorageTimeResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>337A4DBA-8A01-5E9C-99CA-84293E13****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

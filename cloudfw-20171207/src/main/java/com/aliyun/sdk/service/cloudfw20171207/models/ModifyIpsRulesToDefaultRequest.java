@@ -130,7 +130,10 @@ public class ModifyIpsRulesToDefaultRequest extends Request {
         } 
 
         /**
-         * AttackApp.
+         * <p>The attack application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHP</p>
          */
         public Builder attackApp(String attackApp) {
             this.putQueryParameter("AttackApp", attackApp);
@@ -139,7 +142,14 @@ public class ModifyIpsRulesToDefaultRequest extends Request {
         }
 
         /**
-         * FirewallType.
+         * <p>The type of the cloud firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>VpcFirewall</strong>: virtual private cloud (VPC) firewalls.</li>
+         * <li><strong>InternetFirewall</strong> (default): the Internet border firewall.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InternetFirewall</p>
          */
         public Builder firewallType(String firewallType) {
             this.putQueryParameter("FirewallType", firewallType);
@@ -148,7 +158,16 @@ public class ModifyIpsRulesToDefaultRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -157,6 +176,11 @@ public class ModifyIpsRulesToDefaultRequest extends Request {
         }
 
         /**
+         * <p>The rule type. Valid values:</p>
+         * <ul>
+         * <li><strong>basicRule</strong></li>
+         * <li><strong>customize</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +193,7 @@ public class ModifyIpsRulesToDefaultRequest extends Request {
         }
 
         /**
-         * <p>规则列表。存在条件必填依赖：当 RuleType 为 customize 时，本参数与 AttackApp 至少须提供一个；仅传 RuleType 而不传 Rules 或 AttackApp 时，API 返回 400 ErrorParameters。</p>
+         * <p>The rule list. Conditional requirement: when RuleType is set to customize, you must specify at least one of this parameter or AttackApp. If you specify only RuleType without Rules or AttackApp, the API returns ErrorParameters.</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -184,7 +208,10 @@ public class ModifyIpsRulesToDefaultRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>140.205.118.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

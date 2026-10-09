@@ -67,7 +67,7 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
         } 
 
         /**
-         * AckClusterConnector.
+         * <p>The ACK cluster connector.</p>
          */
         public Builder ackClusterConnector(AckClusterConnector ackClusterConnector) {
             this.ackClusterConnector = ackClusterConnector;
@@ -75,7 +75,10 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D16AADE-DA2E-5CAB-AA3B-AA197D97****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -336,7 +339,13 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterId.
+             * <p>The ID of the ACK cluster. You can call the <a href="~~DescribeAckClusters~~">DescribeAckClusters</a> operation to query the list of ACK clusters.</p>
+             * <ul>
+             * <li><a href="~~DescribeAckClusters~~">DescribeAckClusters</a>: Queries a list of ACK clusters.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>c57ecf39ff32c415e8549a7df27a7e947</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -344,7 +353,10 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * <p>The name of the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack-cluster-name</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -352,7 +364,10 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectorHealthCheckStatus.
+             * <p>The health check status of the ACK cluster connector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder connectorHealthCheckStatus(String connectorHealthCheckStatus) {
                 this.connectorHealthCheckStatus = connectorHealthCheckStatus;
@@ -360,7 +375,13 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectorId.
+             * <p>The ID of the ACK cluster connector. You can call the <a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a> operation to query the list of ACK cluster connectors.</p>
+             * <ul>
+             * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Queries a list of ACK cluster connectors.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ac-7c1bad6c3cc84c33baab</p>
              */
             public Builder connectorId(String connectorId) {
                 this.connectorId = connectorId;
@@ -368,7 +389,10 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectorName.
+             * <p>The name of the ACK cluster connector. The name must be 1 to 64 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack-cluster-connector-name</p>
              */
             public Builder connectorName(String connectorName) {
                 this.connectorName = connectorName;
@@ -376,7 +400,10 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectorStatus.
+             * <p>The instance status of the ACK cluster connector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ready</p>
              */
             public Builder connectorStatus(String connectorStatus) {
                 this.connectorStatus = connectorStatus;
@@ -384,7 +411,10 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The UNIX timestamp when the ACK cluster connector was created. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1724982259</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -392,7 +422,10 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUid.
+             * <p>The Alibaba Cloud account ID (UID) of the account to which the ACK cluster resources belong.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>135809047715****</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -400,7 +433,13 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryVswitchId.
+             * <p>The primary vSwitch of the ACK cluster connector. You can call the <a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a> operation to query the list of vSwitches for synchronization nodes.</p>
+             * <ul>
+             * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Queries a list of vSwitches for synchronization nodes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2zerfbbje7dvnbii2****</p>
              */
             public Builder primaryVswitchId(String primaryVswitchId) {
                 this.primaryVswitchId = primaryVswitchId;
@@ -408,7 +447,10 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryVswitchIp.
+             * <p>The IP address of the primary vSwitch for the ACK cluster connector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.100.1.1</p>
              */
             public Builder primaryVswitchIp(String primaryVswitchIp) {
                 this.primaryVswitchIp = primaryVswitchIp;
@@ -416,7 +458,13 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryVswitchZoneId.
+             * <p>The zone of the primary vSwitch for the ACK cluster connector. You can call the <a href="~~DescribeAccessInstanceZoneList~~">DescribeAccessInstanceZoneList</a> operation to query the list of zones for synchronization nodes.</p>
+             * <ul>
+             * <li><a href="~~DescribeAccessInstanceZoneList~~">DescribeAccessInstanceZoneList</a>: Queries in batches the list of zones for the vSwitches of sync nodes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-g</p>
              */
             public Builder primaryVswitchZoneId(String primaryVswitchZoneId) {
                 this.primaryVswitchZoneId = primaryVswitchZoneId;
@@ -424,7 +472,16 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID of the ACK cluster connector. You can call the <a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a> operation to query the list of regions for synchronization nodes.</p>
+             * <ul>
+             * <li><a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a>: Queries the list of sync node regions.</li>
+             * </ul>
+             * <blockquote>
+             * <p>For more information about the regions that Cloud Firewall supports for ACK cluster connectors, see <a href="https://help.aliyun.com/document_detail/2865120.html">ACK cluster synchronization nodes</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -432,7 +489,13 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * StandbyVswitchId.
+             * <p>The standby vSwitch of the ACK cluster connector. You can call the <a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a> operation to query the list of vSwitches for synchronization nodes.</p>
+             * <ul>
+             * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Batch queries the list of vSwitches for synchronization nodes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2ze2gtlfozrab01cfo****</p>
              */
             public Builder standbyVswitchId(String standbyVswitchId) {
                 this.standbyVswitchId = standbyVswitchId;
@@ -440,7 +503,10 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * StandbyVswitchIp.
+             * <p>The IP address of the standby vSwitch for the ACK cluster connector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.100.2.1</p>
              */
             public Builder standbyVswitchIp(String standbyVswitchIp) {
                 this.standbyVswitchIp = standbyVswitchIp;
@@ -448,7 +514,13 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * StandbyVswitchZoneId.
+             * <p>The zone of the standby vSwitch for the ACK cluster connector. You can call the <a href="~~DescribeAccessInstanceZoneList~~">DescribeAccessInstanceZoneList</a> operation to query the list of zones for synchronization nodes.</p>
+             * <ul>
+             * <li><a href="~~DescribeAccessInstanceZoneList~~">DescribeAccessInstanceZoneList</a>: Batch queries the list of zones for the vSwitches of synchronization nodes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-h</p>
              */
             public Builder standbyVswitchZoneId(String standbyVswitchZoneId) {
                 this.standbyVswitchZoneId = standbyVswitchZoneId;
@@ -456,7 +528,10 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * Ttl.
+             * <p>The synchronization interval for the ACK cluster connector. Valid values: 2 to 60. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -464,7 +539,10 @@ public class UpdateAckClusterConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC to which the ACK cluster belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-j6cvhdscntzuvr0x****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

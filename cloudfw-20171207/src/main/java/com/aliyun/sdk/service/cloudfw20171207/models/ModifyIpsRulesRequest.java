@@ -132,7 +132,10 @@ public class ModifyIpsRulesRequest extends Request {
         } 
 
         /**
-         * FirewallType.
+         * <p>The type of the Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VpcFirewall</p>
          */
         public Builder firewallType(String firewallType) {
             this.putQueryParameter("FirewallType", firewallType);
@@ -141,7 +144,10 @@ public class ModifyIpsRulesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -150,6 +156,7 @@ public class ModifyIpsRulesRequest extends Request {
         }
 
         /**
+         * <p>The action of the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +169,7 @@ public class ModifyIpsRulesRequest extends Request {
         }
 
         /**
+         * <p>The type of the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,10 +182,11 @@ public class ModifyIpsRulesRequest extends Request {
         }
 
         /**
+         * <p>The list of rules.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;4664138c-4f81-4650-9c8d-2230ea0d****&quot;]</p>
+         * <p>[\&quot;4664138c-4f81-4650-9c8d-2230ea0d****\&quot;]</p>
          */
         public Builder rules(String rules) {
             this.putQueryParameter("Rules", rules);
@@ -186,7 +195,10 @@ public class ModifyIpsRulesRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>218.1.147.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

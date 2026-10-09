@@ -145,7 +145,7 @@ public class DescribeRiskEventTopAttackAppRequest extends Request {
         } 
 
         /**
-         * AttackApp.
+         * <p>The list of attacked applications.</p>
          */
         public Builder attackApp(java.util.List<String> attackApp) {
             this.putQueryParameter("AttackApp", attackApp);
@@ -154,7 +154,10 @@ public class DescribeRiskEventTopAttackAppRequest extends Request {
         }
 
         /**
-         * AttackType.
+         * <p>The type of attack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder attackType(String attackType) {
             this.putQueryParameter("AttackType", attackType);
@@ -163,7 +166,10 @@ public class DescribeRiskEventTopAttackAppRequest extends Request {
         }
 
         /**
-         * BuyVersion.
+         * <p>The purchased edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder buyVersion(String buyVersion) {
             this.putQueryParameter("BuyVersion", buyVersion);
@@ -172,6 +178,7 @@ public class DescribeRiskEventTopAttackAppRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +191,10 @@ public class DescribeRiskEventTopAttackAppRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -193,7 +203,10 @@ public class DescribeRiskEventTopAttackAppRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>182.150.22.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -202,6 +215,7 @@ public class DescribeRiskEventTopAttackAppRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

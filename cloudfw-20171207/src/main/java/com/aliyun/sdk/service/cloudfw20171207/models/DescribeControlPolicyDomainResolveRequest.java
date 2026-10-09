@@ -115,7 +115,7 @@ public class DescribeControlPolicyDomainResolveRequest extends Request {
         } 
 
         /**
-         * <p>需解析的域名。本参数实际为必填项，调用时需提供（required 保持 false 以兼容存量调用方契约）。</p>
+         * <p>The domain name. This parameter is required and must be specified when you call this operation.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -127,7 +127,10 @@ public class DescribeControlPolicyDomainResolveRequest extends Request {
         }
 
         /**
-         * FirewallType.
+         * <p>The type of the cloud firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internet</p>
          */
         public Builder firewallType(String firewallType) {
             this.putQueryParameter("FirewallType", firewallType);
@@ -136,7 +139,10 @@ public class DescribeControlPolicyDomainResolveRequest extends Request {
         }
 
         /**
-         * <p>IP 版本。本参数实际为必填项，调用时需提供。</p>
+         * <p>The IP address version. Valid values: <strong>4</strong> (IPv4) and <strong>6</strong> (IPv6).</p>
+         * <blockquote>
+         * <p>This parameter is unconditionally required and has no dependency on RegionNo. If this parameter is not specified, the error MissingParameter.IpVersion is returned (-200157). If the value is invalid, the error ErrorParameterIpVersion is returned (-200135).</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -148,7 +154,10 @@ public class DescribeControlPolicyDomainResolveRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -157,7 +166,7 @@ public class DescribeControlPolicyDomainResolveRequest extends Request {
         }
 
         /**
-         * <p>地域编号。本参数实际为必填项，调用时需提供（required 保持 false 以兼容存量调用方契约）。</p>
+         * <p>The region ID. This parameter is required. If this parameter is not specified, the error MissingParameter.RegionNo is returned (-200155, The required parameter \&quot;RegionNo\&quot; is not provided.).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

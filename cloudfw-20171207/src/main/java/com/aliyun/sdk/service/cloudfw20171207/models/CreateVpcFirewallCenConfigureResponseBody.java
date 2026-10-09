@@ -67,7 +67,7 @@ public class CreateVpcFirewallCenConfigureResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>850A84D6-0DE4-4797-A1E8-00090125h4j6</p>
@@ -78,7 +78,7 @@ public class CreateVpcFirewallCenConfigureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID of the VPC firewall.</p>
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>vfw-m5e7dbc4y****</p>

@@ -106,7 +106,10 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -114,7 +117,10 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>450D47F5-956E-543E-8502-2F71C8C54E72</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
         }
 
         /**
-         * Zones.
+         * <p>The list of zones.</p>
          */
         public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;
@@ -256,7 +268,10 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableIpAddressCount.
+             * <p>The number of available IP addresses in the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254</p>
              */
             public Builder availableIpAddressCount(Long availableIpAddressCount) {
                 this.availableIpAddressCount = availableIpAddressCount;
@@ -264,7 +279,10 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * <p>The IPv4 CIDR block of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -272,7 +290,10 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * FirewallVSwitch.
+             * <p>Indicates whether the vSwitch is in a VPC that is managed by Cloud Firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder firewallVSwitch(Boolean firewallVSwitch) {
                 this.firewallVSwitch = firewallVSwitch;
@@ -280,7 +301,10 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-qzeaol304m***</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -288,7 +312,10 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ManagedVSW</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -296,7 +323,10 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC to which the vSwitch belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6b5lyul0x******</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -363,7 +393,7 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
             } 
 
             /**
-             * VSwitchList.
+             * <p>The list of vSwitches.</p>
              */
             public Builder vSwitchList(java.util.List<VSwitchList> vSwitchList) {
                 this.vSwitchList = vSwitchList;
@@ -371,7 +401,10 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

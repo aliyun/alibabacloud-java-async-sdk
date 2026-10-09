@@ -143,7 +143,10 @@ public class DescribeTransitRouterResourcesListRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-djz1i6p8shzioz****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -152,7 +155,10 @@ public class DescribeTransitRouterResourcesListRequest extends Request {
         }
 
         /**
-         * FirewallId.
+         * <p>The instance ID of the border firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-tr-741de4c8956341****</p>
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -161,7 +167,10 @@ public class DescribeTransitRouterResourcesListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -170,7 +179,10 @@ public class DescribeTransitRouterResourcesListRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -179,7 +191,10 @@ public class DescribeTransitRouterResourcesListRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The asset type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TR</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -188,7 +203,10 @@ public class DescribeTransitRouterResourcesListRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * <p>The ID of the TransitRouter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-2zefgvkcl2qcexbb7****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -197,7 +215,10 @@ public class DescribeTransitRouterResourcesListRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9lllsbftdm0svpj****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

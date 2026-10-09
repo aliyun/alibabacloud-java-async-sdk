@@ -87,7 +87,10 @@ public class DescribeNatFirewallPrecheckDetailRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the request and response messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -96,7 +99,10 @@ public class DescribeNatFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * <p>The ID of the NAT Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp1okz6k7dge****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -105,7 +111,10 @@ public class DescribeNatFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);

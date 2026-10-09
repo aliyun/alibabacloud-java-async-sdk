@@ -133,6 +133,7 @@ public class ModifyPrivateDnsEndpointRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +146,11 @@ public class ModifyPrivateDnsEndpointRequest extends Request {
         }
 
         /**
+         * <p>The private instance name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accessInstanceName(String accessInstanceName) {
             this.putQueryParameter("AccessInstanceName", accessInstanceName);
@@ -154,7 +159,10 @@ public class ModifyPrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * PrimaryDns.
+         * <p>The primary DNS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         public Builder primaryDns(String primaryDns) {
             this.putQueryParameter("PrimaryDns", primaryDns);
@@ -163,6 +171,11 @@ public class ModifyPrivateDnsEndpointRequest extends Request {
         }
 
         /**
+         * <p>The private DNS type. Valid values:</p>
+         * <ul>
+         * <li><strong>PrivateZone</strong></li>
+         * <li><strong>Custom</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +188,7 @@ public class ModifyPrivateDnsEndpointRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +201,10 @@ public class ModifyPrivateDnsEndpointRequest extends Request {
         }
 
         /**
-         * StandbyDns.
+         * <p>The standby DNS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.2</p>
          */
         public Builder standbyDns(String standbyDns) {
             this.putQueryParameter("StandbyDns", standbyDns);

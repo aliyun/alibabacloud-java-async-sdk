@@ -80,7 +80,10 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * IsFound.
+         * <p>Indicates whether the task exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isFound(Boolean isFound) {
             this.isFound = isFound;
@@ -88,7 +91,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PrecheckDetail.
+         * <p>The precheck details.</p>
          */
         public Builder precheckDetail(PrecheckDetail precheckDetail) {
             this.precheckDetail = precheckDetail;
@@ -96,7 +99,10 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4FB718F0-CC04-5A12-B17B-188CFC3F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -188,7 +194,10 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Info.
+             * <p>The information about the precheck failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC Firewall Quota Full</p>
              */
             public Builder info(String info) {
                 this.info = info;
@@ -196,7 +205,10 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The precheck item name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Precheck test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -204,7 +216,18 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of each precheck item. Valid values:</p>
+             * <ul>
+             * <li><p><strong>running</strong>: The precheck is in progress.</p>
+             * </li>
+             * <li><p><strong>passed</strong>: The precheck passed.</p>
+             * </li>
+             * <li><p><strong>failed</strong>: The precheck failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>passed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -212,7 +235,10 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The suggested action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The VPC firewall quota is full. We recommend that you increase the firewall quota</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -305,7 +331,10 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * FailedCount.
+             * <p>The number of precheck rules that failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder failedCount(Integer failedCount) {
                 this.failedCount = failedCount;
@@ -313,7 +342,10 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The precheck instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -321,7 +353,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PrecheckEntities.
+             * <p>The execution details of each precheck item.</p>
              */
             public Builder precheckEntities(java.util.List<PrecheckEntities> precheckEntities) {
                 this.precheckEntities = precheckEntities;
@@ -329,7 +361,18 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PrecheckEntityGroupStatus.
+             * <p>The precheck status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>running</strong></p>
+             * </li>
+             * <li><p><strong>passed</strong></p>
+             * </li>
+             * <li><p><strong>failed</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder precheckEntityGroupStatus(String precheckEntityGroupStatus) {
                 this.precheckEntityGroupStatus = precheckEntityGroupStatus;
@@ -448,7 +491,10 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * FirewallId.
+             * <p>The firewall instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vfw-tr-7a9c8901ed394****</p>
              */
             public Builder firewallId(String firewallId) {
                 this.firewallId = firewallId;
@@ -456,7 +502,10 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInstanceId.
+             * <p>The network instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-m5emh0w6v2e15****</p>
              */
             public Builder networkInstanceId(String networkInstanceId) {
                 this.networkInstanceId = networkInstanceId;
@@ -464,7 +513,7 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PrecheckEntityGroups.
+             * <p>The list of precheck entity groups.</p>
              */
             public Builder precheckEntityGroups(java.util.List<PrecheckEntityGroups> precheckEntityGroups) {
                 this.precheckEntityGroups = precheckEntityGroups;
@@ -472,7 +521,18 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PrecheckStatus.
+             * <p>The precheck status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>running</strong>: The precheck is in progress.</p>
+             * </li>
+             * <li><p><strong>passed</strong>: The precheck passed.</p>
+             * </li>
+             * <li><p><strong>failed</strong>: The precheck failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>failed</p>
              */
             public Builder precheckStatus(String precheckStatus) {
                 this.precheckStatus = precheckStatus;
@@ -480,7 +540,10 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PrecheckTimestamp.
+             * <p>The precheck timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715136000</p>
              */
             public Builder precheckTimestamp(String precheckTimestamp) {
                 this.precheckTimestamp = precheckTimestamp;
@@ -488,7 +551,10 @@ public class DescribeVpcFirewallPrecheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;

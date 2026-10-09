@@ -129,7 +129,7 @@ public class DescribeSdlLastPayloadRequest extends Request {
         } 
 
         /**
-         * <p>目的 IP。可选参数，用于按目的 IP 过滤。</p>
+         * <p>The destination IP address. This is an optional parameter used to filter by destination IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>47.100.102.XXX</p>
@@ -141,7 +141,7 @@ public class DescribeSdlLastPayloadRequest extends Request {
         }
 
         /**
-         * <p>查询结束时间（秒级 Unix 时间戳）。本参数实际为必填项，缺失时 API 返回 -340111 错误。</p>
+         * <p>The end time of the query (UNIX timestamp in seconds). This parameter is required. If this parameter is not specified, the API returns an error.</p>
          * 
          * <strong>example:</strong>
          * <p>1534408267</p>
@@ -153,7 +153,14 @@ public class DescribeSdlLastPayloadRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -162,7 +169,7 @@ public class DescribeSdlLastPayloadRequest extends Request {
         }
 
         /**
-         * <p>敏感数据分类。本参数实际为必填项，缺失时 API 返回 -340103 错误。</p>
+         * <p>The type of sensitive credential. This parameter is required. If this parameter is not specified, the API returns an error.</p>
          * 
          * <strong>example:</strong>
          * <p>id_card</p>
@@ -174,7 +181,7 @@ public class DescribeSdlLastPayloadRequest extends Request {
         }
 
         /**
-         * <p>源 IP。可选参数，用于按源 IP 过滤。</p>
+         * <p>The source IP address. This is an optional parameter used to filter by source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>121.40.84.XXX</p>
@@ -186,7 +193,7 @@ public class DescribeSdlLastPayloadRequest extends Request {
         }
 
         /**
-         * <p>查询起始时间（秒级 Unix 时间戳）。本参数实际为必填项，缺失时 API 返回 -340111 错误。</p>
+         * <p>The start time of the query (UNIX timestamp in seconds). This parameter is required. If this parameter is not specified, the API returns an error.</p>
          * 
          * <strong>example:</strong>
          * <p>1656837360</p>

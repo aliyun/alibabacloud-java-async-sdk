@@ -106,7 +106,10 @@ public class DescribePostpayEnabledProtectionResponseBody extends TeaModel {
         } 
 
         /**
-         * DisabledDays.
+         * <p>The number of days that protection has been disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder disabledDays(Long disabledDays) {
             this.disabledDays = disabledDays;
@@ -114,7 +117,10 @@ public class DescribePostpayEnabledProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * DisabledType.
+         * <p>The type of asset for which protection is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat</p>
          */
         public Builder disabledType(String disabledType) {
             this.disabledType = disabledType;
@@ -122,7 +128,10 @@ public class DescribePostpayEnabledProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * IsEnabledProtection.
+         * <p>Indicates whether the protection feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isEnabledProtection(Boolean isEnabledProtection) {
             this.isEnabledProtection = isEnabledProtection;
@@ -130,7 +139,10 @@ public class DescribePostpayEnabledProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * IsOpenButDisabled.
+         * <p>Indicates whether the protection feature is activated but currently disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isOpenButDisabled(Boolean isOpenButDisabled) {
             this.isOpenButDisabled = isOpenButDisabled;
@@ -138,7 +150,10 @@ public class DescribePostpayEnabledProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95CA5E2B-E5FB-5838-BC50-6A2C763C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -145,7 +145,7 @@ public class DescribeRiskEventStatisticRequest extends Request {
         } 
 
         /**
-         * AttackApp.
+         * <p>The attacked application.</p>
          */
         public Builder attackApp(java.util.List<String> attackApp) {
             this.putQueryParameter("AttackApp", attackApp);
@@ -154,7 +154,41 @@ public class DescribeRiskEventStatisticRequest extends Request {
         }
 
         /**
-         * AttackType.
+         * <p>The attack type of the intrusion prevention event. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: anomalous connection</p>
+         * </li>
+         * <li><p><strong>2</strong>: command execution</p>
+         * </li>
+         * <li><p><strong>3</strong>: brute-force attack</p>
+         * </li>
+         * <li><p><strong>4</strong>: scanning</p>
+         * </li>
+         * <li><p><strong>5</strong>: other</p>
+         * </li>
+         * <li><p><strong>6</strong>: information leakage</p>
+         * </li>
+         * <li><p><strong>7</strong>: DoS attack</p>
+         * </li>
+         * <li><p><strong>8</strong>: overflow attack</p>
+         * </li>
+         * <li><p><strong>9</strong>: web attack</p>
+         * </li>
+         * <li><p><strong>10</strong>: trojan backdoor</p>
+         * </li>
+         * <li><p><strong>11</strong>: virus and worm</p>
+         * </li>
+         * <li><p><strong>12</strong>: mining</p>
+         * </li>
+         * <li><p><strong>13</strong>: reverse shell</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, all attack types are queried.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder attackType(String attackType) {
             this.putQueryParameter("AttackType", attackType);
@@ -163,7 +197,10 @@ public class DescribeRiskEventStatisticRequest extends Request {
         }
 
         /**
-         * BuyVersion.
+         * <p>The edition of Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder buyVersion(String buyVersion) {
             this.putQueryParameter("BuyVersion", buyVersion);
@@ -172,6 +209,7 @@ public class DescribeRiskEventStatisticRequest extends Request {
         }
 
         /**
+         * <p>The end time. The value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +222,10 @@ public class DescribeRiskEventStatisticRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -193,7 +234,10 @@ public class DescribeRiskEventStatisticRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>218.76.30.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -202,6 +246,7 @@ public class DescribeRiskEventStatisticRequest extends Request {
         }
 
         /**
+         * <p>The start time. The value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

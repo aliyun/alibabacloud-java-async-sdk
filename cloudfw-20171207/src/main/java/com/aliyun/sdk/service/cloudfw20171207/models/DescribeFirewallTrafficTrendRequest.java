@@ -87,7 +87,10 @@ public class DescribeFirewallTrafficTrendRequest extends Request {
         } 
 
         /**
-         * <p>查询结束时间。本参数实际为必填项，未提供时 API 返回 ErrorTimeError(400)。需提供秒级 Unix 时间戳，且 EndTime 应晚于 StartTime。</p>
+         * <p>The end time of the query. Specify a UNIX timestamp in seconds. This parameter is required. If this parameter is not specified, ErrorTimeError (400) is returned.</p>
+         * <blockquote>
+         * <p>The query interval (EndTime − StartTime) cannot exceed 90 days. If the interval exceeds 90 days, ErrorTimeError is returned. If the value is later than the current time, it is silently adjusted to the current time.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1758474000</p>
@@ -99,7 +102,14 @@ public class DescribeFirewallTrafficTrendRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response message.</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -108,7 +118,10 @@ public class DescribeFirewallTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>查询起始时间。本参数实际为必填项，未提供时 API 返回 ErrorTimeError(400)。需提供秒级 Unix 时间戳，且 StartTime 应早于 EndTime。</p>
+         * <p>The start time of the query. Specify a UNIX timestamp in seconds. This parameter is required. If this parameter is not specified, ErrorTimeError (400) is returned.</p>
+         * <blockquote>
+         * <p>The query interval (EndTime − StartTime) cannot exceed 90 days. If the interval exceeds 90 days, ErrorTimeError is returned. If the value is later than the current time, it is silently adjusted to the current time. If StartTime is later than EndTime, no error is returned, but the response contains empty data.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1758470400</p>

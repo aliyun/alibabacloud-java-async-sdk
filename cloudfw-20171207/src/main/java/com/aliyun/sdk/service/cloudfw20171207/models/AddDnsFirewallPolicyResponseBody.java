@@ -67,7 +67,10 @@ public class AddDnsFirewallPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * AclUuid.
+         * <p>The unique ID of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f88dae6f-XXX-XXX-613de9ab2be8</p>
          */
         public Builder aclUuid(String aclUuid) {
             this.aclUuid = aclUuid;
@@ -75,7 +78,10 @@ public class AddDnsFirewallPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71209DFE-XXX-XXX-52B4A4E9DA3B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

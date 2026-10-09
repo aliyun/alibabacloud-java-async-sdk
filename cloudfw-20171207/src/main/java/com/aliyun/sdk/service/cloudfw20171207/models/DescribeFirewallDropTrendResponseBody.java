@@ -93,7 +93,7 @@ public class DescribeFirewallDropTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The returned data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -101,7 +101,10 @@ public class DescribeFirewallDropTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxDropSession.
+         * <p>The maximum number of total blocked sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder maxDropSession(Long maxDropSession) {
             this.maxDropSession = maxDropSession;
@@ -109,7 +112,10 @@ public class DescribeFirewallDropTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxDropTime.
+         * <p>The time when the maximum number of total blocked sessions occurred. The value is a UNIX timestamp in seconds, such as 1672502400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656837360</p>
          */
         public Builder maxDropTime(Long maxDropTime) {
             this.maxDropTime = maxDropTime;
@@ -117,7 +123,10 @@ public class DescribeFirewallDropTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75E60025-43C5-5635-B7B7-272C5246****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +231,10 @@ public class DescribeFirewallDropTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * InternetDropSession.
+             * <p>The number of sessions blocked by the Internet firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder internetDropSession(Long internetDropSession) {
                 this.internetDropSession = internetDropSession;
@@ -230,7 +242,10 @@ public class DescribeFirewallDropTrendResponseBody extends TeaModel {
             }
 
             /**
-             * NatDropSession.
+             * <p>The number of sessions blocked by the NAT firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder natDropSession(Long natDropSession) {
                 this.natDropSession = natDropSession;
@@ -238,7 +253,11 @@ public class DescribeFirewallDropTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the traffic occurred. The value is a UNIX timestamp in seconds.</p>
+             * <p>If the data at this point in time has not been processed, the values of all other fields are -1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1758474000</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -246,7 +265,10 @@ public class DescribeFirewallDropTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDropSession.
+             * <p>The total number of sessions blocked by the firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder totalDropSession(Long totalDropSession) {
                 this.totalDropSession = totalDropSession;
@@ -254,7 +276,10 @@ public class DescribeFirewallDropTrendResponseBody extends TeaModel {
             }
 
             /**
-             * VpcDropSession.
+             * <p>The number of sessions blocked by the VPC firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder vpcDropSession(Long vpcDropSession) {
                 this.vpcDropSession = vpcDropSession;

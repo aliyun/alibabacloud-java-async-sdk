@@ -67,7 +67,7 @@ public class DescribeAckClusterPodLabelsResponseBody extends TeaModel {
         } 
 
         /**
-         * AckLabels.
+         * <p>A list of ACK labels.</p>
          */
         public Builder ackLabels(java.util.List<AckLabels> ackLabels) {
             this.ackLabels = ackLabels;
@@ -75,7 +75,10 @@ public class DescribeAckClusterPodLabelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6169C0A4-B91A-5D48-AE4D-B9432D15****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class DescribeAckClusterPodLabelsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -149,7 +155,10 @@ public class DescribeAckClusterPodLabelsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storage-operator</p>
              */
             public Builder value(String value) {
                 this.value = value;

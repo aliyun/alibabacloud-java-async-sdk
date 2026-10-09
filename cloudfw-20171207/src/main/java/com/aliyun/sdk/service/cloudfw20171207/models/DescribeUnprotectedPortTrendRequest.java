@@ -101,7 +101,10 @@ public class DescribeUnprotectedPortTrendRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time. Specify a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1751210395</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -110,7 +113,10 @@ public class DescribeUnprotectedPortTrendRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type of the received message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -119,7 +125,10 @@ public class DescribeUnprotectedPortTrendRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61.155.60.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -128,7 +137,10 @@ public class DescribeUnprotectedPortTrendRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. Specify a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655778046</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

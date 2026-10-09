@@ -115,7 +115,7 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number in a paging query. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,7 +127,10 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+         * <p>The instance ID of the virtual private cloud (VPC) firewalls.</p>
+         * <blockquote>
+         * <p>FirewallId is required. If it is not specified, ErrorParameters(400) is returned. TrFirewallRoutePolicyId must be used together with FirewallId. If TrFirewallRoutePolicyId is specified without FirewallId, ErrorParameters(400) is returned. If the value is invalid or does not exist, ErrorTrFirewallPolicyNotFound is returned.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>vfw-tr-8bcfa0f2f12d411e****</p>
@@ -139,7 +142,7 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language of the response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -155,7 +158,7 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>The maximum number of entries per page in a paging query. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -167,7 +170,7 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the routing policy.</p>
+         * <p>The ID of the firewall routing policy.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-7d5c672e37ee4175****</p>

@@ -93,7 +93,7 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         } 
 
         /**
-         * DataList.
+         * <p>The list of data entries.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -101,7 +101,7 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         }
 
         /**
-         * DstVpcList.
+         * <p>A list of destination VPCs.</p>
          */
         public Builder dstVpcList(java.util.List<DstVpcList> dstVpcList) {
             this.dstVpcList = dstVpcList;
@@ -109,7 +109,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5DDD596-1191-5F36-A504-8733045A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +120,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -391,7 +397,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             } 
 
             /**
-             * Business.
+             * <p>The business category of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Google</p>
              */
             public Builder business(String business) {
                 this.business = business;
@@ -399,7 +408,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -407,7 +419,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * DstIP.
+             * <p>The destination IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder dstIP(String dstIP) {
                 this.dstIP = dstIP;
@@ -415,7 +430,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * DstRegionId.
+             * <p>The ID of the destination region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder dstRegionId(String dstRegionId) {
                 this.dstRegionId = dstRegionId;
@@ -423,7 +441,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * DstVpcId.
+             * <p>The ID of the destination VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp10w5nb30r4jzfyc****</p>
              */
             public Builder dstVpcId(String dstVpcId) {
                 this.dstVpcId = dstVpcId;
@@ -431,7 +452,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * DstVpcName.
+             * <p>The name of the destination VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-****</p>
              */
             public Builder dstVpcName(String dstVpcName) {
                 this.dstVpcName = dstVpcName;
@@ -439,7 +463,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * FirstTime.
+             * <p>The Unix timestamp for the first access, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1767147003</p>
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -447,7 +474,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * GroupName.
+             * <p>The name of the organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Google</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -455,7 +485,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * IpsHitCnt.
+             * <p>The IPS hit count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ipsHitCnt(Long ipsHitCnt) {
                 this.ipsHitCnt = ipsHitCnt;
@@ -463,7 +496,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * LastTime.
+             * <p>The Unix timestamp for the last access, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1767147003</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -471,7 +507,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * RequestBytes.
+             * <p>The request traffic, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder requestBytes(Long requestBytes) {
                 this.requestBytes = requestBytes;
@@ -479,7 +518,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * ResponseBytes.
+             * <p>The response traffic, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder responseBytes(Long responseBytes) {
                 this.responseBytes = responseBytes;
@@ -487,7 +529,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * SessionCount.
+             * <p>The total number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder sessionCount(Long sessionCount) {
                 this.sessionCount = sessionCount;
@@ -495,7 +540,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * SrcIP.
+             * <p>The source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder srcIP(String srcIP) {
                 this.srcIP = srcIP;
@@ -503,7 +551,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * SrcRegionId.
+             * <p>The ID of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder srcRegionId(String srcRegionId) {
                 this.srcRegionId = srcRegionId;
@@ -511,7 +562,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * SrcVpcId.
+             * <p>The ID of the source VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-t4nlt09olhpazpoeg****</p>
              */
             public Builder srcVpcId(String srcVpcId) {
                 this.srcVpcId = srcVpcId;
@@ -519,7 +573,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * SrcVpcName.
+             * <p>The name of the source VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-****</p>
              */
             public Builder srcVpcName(String srcVpcName) {
                 this.srcVpcName = srcVpcName;
@@ -527,7 +584,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * TotalBytes.
+             * <p>The total traffic, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16287823</p>
              */
             public Builder totalBytes(Long totalBytes) {
                 this.totalBytes = totalBytes;
@@ -594,7 +654,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             } 
 
             /**
-             * VpcId.
+             * <p>The ID of the destination VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp10w5nb30r4jzfyc****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -602,7 +665,10 @@ public class DescribeVpcFirewallDomainRelationListResponseBody extends TeaModel 
             }
 
             /**
-             * VpcName.
+             * <p>The name of the destination VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-****</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

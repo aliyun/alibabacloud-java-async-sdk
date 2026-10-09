@@ -143,7 +143,7 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         } 
 
         /**
-         * <p>云企业网（CEN）实例 ID（可选）。本接口的预检查询实际使用 VpcId 与 TransitRouterId（二选一），不依赖 CenId。</p>
+         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-hxsqf2bv6di1a****</p>
@@ -155,7 +155,16 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -164,7 +173,10 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of the Cloud Firewall member accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>134388541648****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -173,7 +185,13 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * <p>网络实例类型（可选）。本接口的预检查询主要依据 VpcId 与 TransitRouterId 参数，不依赖本字段。</p>
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cen_firewall</strong>: CEN basic edition firewall</p>
+         * </li>
+         * <li><p><strong>cen_tr_firewall</strong>: CEN-TR firewall</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cen_firewall</p>
@@ -185,7 +203,7 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * <p>地域编号。本接口必填，缺失时返回 ErrorParameters(-360103)。</p>
+         * <p>The region ID. This parameter is required. If it is not specified, ErrorParameters is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -197,7 +215,7 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * <p>转发路由器（TR）实例 ID。VpcId 与 TransitRouterId 至少须提供其一，两者均缺省时返回 ErrorParameters(-360103)。</p>
+         * <p>The transit router instance ID. You must specify at least one of VpcId and TransitRouterId. Specify VpcId when querying a basic edition firewall, or specify TransitRouterId when querying a transit router (TR) scenario. If neither is specified, ErrorParameters is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-2vcn4u2g86tm72****</p>
@@ -209,7 +227,7 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * <p>VPC 实例 ID。VpcId 与 TransitRouterId 至少须提供其一：查询 VPC 边界防火墙时传 VpcId，查询转发路由器（TR）场景时传 TransitRouterId；两者均缺省时返回 ErrorParameters(-360103)。</p>
+         * <p>The VPC-connected instance ID. You must specify at least one of VpcId and TransitRouterId. Specify VpcId when querying a basic edition firewall, or specify TransitRouterId when querying a forward routing (TR) scenario. If neither is specified, ErrorParameters is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zev8s8rxao33xt****</p>

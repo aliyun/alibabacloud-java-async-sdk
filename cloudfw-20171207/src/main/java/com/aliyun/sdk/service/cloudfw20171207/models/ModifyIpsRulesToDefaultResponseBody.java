@@ -54,7 +54,10 @@ public class ModifyIpsRulesToDefaultResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B713361D-62E2-5FF0-9D29-BBFAAF40****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

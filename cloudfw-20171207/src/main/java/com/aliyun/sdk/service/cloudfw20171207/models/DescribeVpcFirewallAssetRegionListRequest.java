@@ -73,7 +73,10 @@ public class DescribeVpcFirewallAssetRegionListRequest extends Request {
         } 
 
         /**
-         * MemberUid.
+         * <p>The UID of the member accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -82,7 +85,10 @@ public class DescribeVpcFirewallAssetRegionListRequest extends Request {
         }
 
         /**
-         * VpcFirewallId.
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-m5e7dbc4y****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

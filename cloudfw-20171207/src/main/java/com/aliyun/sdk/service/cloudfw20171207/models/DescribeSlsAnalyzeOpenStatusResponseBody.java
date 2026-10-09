@@ -67,7 +67,12 @@ public class DescribeSlsAnalyzeOpenStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * OpenStatus.
+         * <p>The enabled status of SLS. Valid values:</p>
+         * <p><strong>true</strong>: enabled.</p>
+         * <p><strong>false</strong>: disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder openStatus(String openStatus) {
             this.openStatus = openStatus;
@@ -75,7 +80,10 @@ public class DescribeSlsAnalyzeOpenStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CC01A2B-92FB-535C-9415-9A951C20****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -80,7 +80,7 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The list of data.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -88,7 +88,7 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -96,7 +96,10 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135BF83A-0416-5A11-96BB-FA7604D4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -279,7 +282,10 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             } 
 
             /**
-             * AclId.
+             * <p>The access control ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acl-uf66n6l9mf3fgq8xs****</p>
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -287,7 +293,10 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             }
 
             /**
-             * AclStatus.
+             * <p>The status of access control.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -295,7 +304,10 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             }
 
             /**
-             * AclType.
+             * <p>The access control type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>white</p>
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -303,7 +315,10 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             }
 
             /**
-             * HealthStatus.
+             * <p>The health check status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -311,7 +326,10 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-2ze8v2x5kd9qyvp2****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -319,7 +337,10 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The name of the SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>buyerpro1</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -327,7 +348,10 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             }
 
             /**
-             * IpProtocol.
+             * <p>The protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -335,7 +359,10 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1883</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -343,7 +370,10 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIp.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.108.57.XXX</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -351,7 +381,10 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -359,7 +392,7 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
@@ -439,7 +472,10 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -447,7 +483,10 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -455,7 +494,10 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

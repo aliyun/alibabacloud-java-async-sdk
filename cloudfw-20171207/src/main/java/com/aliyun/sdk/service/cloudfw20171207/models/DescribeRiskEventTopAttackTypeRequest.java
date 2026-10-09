@@ -132,7 +132,10 @@ public class DescribeRiskEventTopAttackTypeRequest extends Request {
         } 
 
         /**
-         * BuyVersion.
+         * <p>The edition of Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder buyVersion(String buyVersion) {
             this.putQueryParameter("BuyVersion", buyVersion);
@@ -141,6 +144,7 @@ public class DescribeRiskEventTopAttackTypeRequest extends Request {
         }
 
         /**
+         * <p>The traffic direction.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +157,7 @@ public class DescribeRiskEventTopAttackTypeRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range for the query. The value must be a Unix timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +170,10 @@ public class DescribeRiskEventTopAttackTypeRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -174,7 +182,10 @@ public class DescribeRiskEventTopAttackTypeRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>140.210.153.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -183,6 +194,7 @@ public class DescribeRiskEventTopAttackTypeRequest extends Request {
         }
 
         /**
+         * <p>The start of the time range for the query. The value must be a Unix timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

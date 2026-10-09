@@ -91,7 +91,7 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task types.</p>
+         * <p>The list of task types.</p>
          */
         public Builder taskTypeArray(java.util.List<TaskTypeArray> taskTypeArray) {
             this.taskTypeArray = taskTypeArray;
@@ -99,7 +99,7 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -171,7 +171,7 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
              * <p>The name of the task type.</p>
              * 
              * <strong>example:</strong>
-             * <p>Internet Boundary Firewall Assets</p>
+             * <p>Internet Border Firewall Assets</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

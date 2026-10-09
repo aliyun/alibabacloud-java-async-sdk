@@ -145,7 +145,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         } 
 
         /**
-         * AggregateInternetTraffic.
+         * <p>The aggregated Internet traffic, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder aggregateInternetTraffic(Float aggregateInternetTraffic) {
             this.aggregateInternetTraffic = aggregateInternetTraffic;
@@ -153,7 +156,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         }
 
         /**
-         * AggregateNatTraffic.
+         * <p>The aggregated NAT traffic, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder aggregateNatTraffic(Float aggregateNatTraffic) {
             this.aggregateNatTraffic = aggregateNatTraffic;
@@ -161,7 +167,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         }
 
         /**
-         * AggregateSdlTraffic.
+         * <p>The aggregated sensitive data detection traffic, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder aggregateSdlTraffic(Float aggregateSdlTraffic) {
             this.aggregateSdlTraffic = aggregateSdlTraffic;
@@ -169,7 +178,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         }
 
         /**
-         * AggregateTotalTraffic.
+         * <p>The aggregated total traffic, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder aggregateTotalTraffic(Float aggregateTotalTraffic) {
             this.aggregateTotalTraffic = aggregateTotalTraffic;
@@ -177,7 +189,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         }
 
         /**
-         * AggregateVpcTraffic.
+         * <p>The aggregated VPC traffic, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder aggregateVpcTraffic(Float aggregateVpcTraffic) {
             this.aggregateVpcTraffic = aggregateVpcTraffic;
@@ -185,7 +200,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         }
 
         /**
-         * BillList.
+         * <p>The bill list.</p>
          */
         public Builder billList(java.util.List<BillList> billList) {
             this.billList = billList;
@@ -193,7 +208,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133173B9-8010-5DF5-8B93-********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +219,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -410,7 +431,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time, expressed as a second-level UNIX timestamp. The value is on the hour or on the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733710015</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -418,7 +442,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * InternetInstanceCnt.
+             * <p>The number of Internet instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder internetInstanceCnt(Long internetInstanceCnt) {
                 this.internetInstanceCnt = internetInstanceCnt;
@@ -426,7 +453,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * InternetTraffic.
+             * <p>The Internet traffic, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder internetTraffic(Float internetTraffic) {
                 this.internetTraffic = internetTraffic;
@@ -434,7 +464,13 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * IsDerated.
+             * <p>Indicates whether the bill is deducted. A value of 0 indicates that the bill is not deducted. Any value greater than 0 indicates that the bill is deducted. If the bill is deducted, it is not charged.</p>
+             * <blockquote>
+             * <p>This field is meaningful only when you query hourly data.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isDerated(Integer isDerated) {
                 this.isDerated = isDerated;
@@ -442,7 +478,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * LogStorage.
+             * <p>The log service usage duration, in T × h.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder logStorage(Long logStorage) {
                 this.logStorage = logStorage;
@@ -450,7 +489,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * NatInstanceCnt.
+             * <p>The number of NAT instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder natInstanceCnt(Long natInstanceCnt) {
                 this.natInstanceCnt = natInstanceCnt;
@@ -458,7 +500,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * NatTraffic.
+             * <p>The NAT traffic, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder natTraffic(Float natTraffic) {
                 this.natTraffic = natTraffic;
@@ -466,7 +511,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * Sdl.
+             * <p>The data leak detection usage duration, in hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sdl(Long sdl) {
                 this.sdl = sdl;
@@ -474,7 +522,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * SdlTraffic.
+             * <p>The sensitive data detection traffic, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sdlTraffic(Float sdlTraffic) {
                 this.sdlTraffic = sdlTraffic;
@@ -482,7 +533,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time, expressed as a second-level UNIX timestamp. The value is on the hour or on the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710206070000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -490,7 +544,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * ThreatIntelligence.
+             * <p>The threat intelligence usage duration, in hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder threatIntelligence(Long threatIntelligence) {
                 this.threatIntelligence = threatIntelligence;
@@ -498,7 +555,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * VpcInstanceCnt.
+             * <p>The number of VPC instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder vpcInstanceCnt(Long vpcInstanceCnt) {
                 this.vpcInstanceCnt = vpcInstanceCnt;
@@ -506,7 +566,10 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * VpcTraffic.
+             * <p>The VPC traffic, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder vpcTraffic(Float vpcTraffic) {
                 this.vpcTraffic = vpcTraffic;

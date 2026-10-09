@@ -67,7 +67,7 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
         } 
 
         /**
-         * Assets.
+         * <p>The statistics of the assets.</p>
          */
         public Builder assets(java.util.List<Assets> assets) {
             this.assets = assets;
@@ -75,7 +75,10 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B9BF7C33-9A23-5096-8568-A3DACAF0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
             } 
 
             /**
-             * AttackCnt.
+             * <p>The number of attacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder attackCnt(Integer attackCnt) {
                 this.attackCnt = attackCnt;
@@ -214,7 +220,10 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
             }
 
             /**
-             * DropCnt.
+             * <p>The number of dropped attempts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder dropCnt(Integer dropCnt) {
                 this.dropCnt = dropCnt;
@@ -222,7 +231,10 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.3.54.XXX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -230,7 +242,10 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -238,7 +253,10 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceId.
+             * <p>The ID of the asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-8vbdrjrxzt78****</p>
              */
             public Builder resourceInstanceId(String resourceInstanceId) {
                 this.resourceInstanceId = resourceInstanceId;
@@ -246,7 +264,10 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceName.
+             * <p>The name of the resource instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_resource</p>
              */
             public Builder resourceInstanceName(String resourceInstanceName) {
                 this.resourceInstanceName = resourceInstanceName;
@@ -254,7 +275,10 @@ public class DescribeRiskEventTopAttackAssetResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the resource instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EcsPublicIP</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

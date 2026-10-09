@@ -104,6 +104,7 @@ public class DescribeFirewallVswitchResourcesRequest extends Request {
         } 
 
         /**
+         * <p>The type of the Cloud Firewall.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +117,10 @@ public class DescribeFirewallVswitchResourcesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -125,6 +129,7 @@ public class DescribeFirewallVswitchResourcesRequest extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +142,7 @@ public class DescribeFirewallVswitchResourcesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the VPC instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

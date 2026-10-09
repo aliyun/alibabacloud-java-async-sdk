@@ -54,7 +54,10 @@ public class DeletePrivateDnsAllDomainNameResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B2841452-CB8D-4F7D-B247-38E1CF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

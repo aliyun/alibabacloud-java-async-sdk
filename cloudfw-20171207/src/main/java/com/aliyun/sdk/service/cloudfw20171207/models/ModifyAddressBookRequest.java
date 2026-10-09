@@ -274,7 +274,10 @@ public class ModifyAddressBookRequest extends Request {
         } 
 
         /**
-         * AckLabels.
+         * <p>The list of pod labels in the ACK cluster.</p>
+         * <blockquote>
+         * <p>A maximum of 10 labels are supported.</p>
+         * </blockquote>
          */
         public Builder ackLabels(java.util.List<AckLabels> ackLabels) {
             this.putQueryParameter("AckLabels", ackLabels);
@@ -283,7 +286,10 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * AckNamespaces.
+         * <p>The list of pod namespaces in the ACK cluster.</p>
+         * <blockquote>
+         * <p>A maximum of 10 namespaces are supported.</p>
+         * </blockquote>
          */
         public Builder ackNamespaces(java.util.List<String> ackNamespaces) {
             this.putQueryParameter("AckNamespaces", ackNamespaces);
@@ -292,15 +298,18 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The addresses in the address book. Separate multiple addresses with commas (,). If you set GroupType to <strong>ip</strong>, <strong>port</strong>, or <strong>domain</strong>, you must specify this parameter.</p>
+         * <p>The list of addresses in the address book. Separate multiple addresses with commas (,). For each address element, separate the address and the description with a space. You must specify this parameter when GroupType is set to <strong>ip</strong>, <strong>port</strong>, or <strong>domain</strong>.</p>
          * <ul>
-         * <li>If you set GroupType to <strong>ip</strong>, you must specify IP addresses for the address book. Example: 1.2.XX.XX/32,1.2.XX.XX/24.</li>
-         * <li>If you set GroupType to <strong>port</strong>, you must specify port numbers or port ranges for the address book. Example: 80/80,100/200.</li>
-         * <li>If you set GroupType to <strong>domain</strong>, you must specify domain names for the address book. Example: demo1.aliyun.com,demo2.aliyun.com.</li>
+         * <li><p>If GroupType is set to <strong>ip</strong>, enter IP addresses in the address list. Example: 1.2.XX.XX/32 Development CIDR block,10.0.0.X/24,1.2.XX.XX/24 Test CIDR block.</p>
+         * </li>
+         * <li><p>If GroupType is set to <strong>port</strong>, enter ports or port ranges in the address list. Example: 80/80 HTTP port,100/200,3306 Database port.</p>
+         * </li>
+         * <li><p>If GroupType is set to <strong>domain</strong>, enter domain names in the address list. Example: demo1.aliyun.com Test domain name,demo2.aliyun.com,<a href="http://www.aliyun.com">www.aliyun.com</a> Alibaba Cloud official website.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>192.0.XX.XX/32, 192.0.XX.XX/24</p>
+         * <p>192.0.XX.XX/32 ,192.0.XX.XX/24</p>
          */
         public Builder addressList(String addressList) {
             this.putQueryParameter("AddressList", addressList);
@@ -309,7 +318,7 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * AssetMemberUids.
+         * <p>The list of member accounts in the asset address book.</p>
          */
         public Builder assetMemberUids(java.util.List<Long> assetMemberUids) {
             String assetMemberUidsShrink = shrink(assetMemberUids, "AssetMemberUids", "json");
@@ -319,7 +328,7 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * AssetRegionResourceTypes.
+         * <p>The asset address book, region, and resource type list.</p>
          */
         public Builder assetRegionResourceTypes(java.util.List<AssetRegionResourceTypes> assetRegionResourceTypes) {
             String assetRegionResourceTypesShrink = shrink(assetRegionResourceTypes, "AssetRegionResourceTypes", "json");
@@ -329,11 +338,7 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically add public IP addresses of Elastic Compute Service (ECS) instances to the address book if the instances match the specified tags. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
-         * </ul>
+         * <p>Specifies if the automatic addition of the public IP addresses of Elastic Compute Service (ECS) instances that match the new labels to the address book is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -345,7 +350,10 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * <p>保证请求幂等性的客户端令牌。由客户端生成，需保证在不同请求间唯一；数据类型 String，大小写敏感，格式为 [0-9a-zA-Z-_]{1,64}，建议使用 UUID。服务端在有效期内（600 秒）保证幂等：相同 ClientToken 且相同业务参数的重复请求返回与首次一致的结果；相同 ClientToken 但业务参数不同时返回 HTTP 400 及 IdempotentParameterMismatch 错误码。</p>
+         * <p>The idempotency token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddadxefexxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -367,7 +375,7 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * <p>是否只预检此次请求。取值 true 时仅执行参数合法性、身份权限、资源存在性、配额限制与依赖关系等执行前校验，不创建/更新/删除真实资源、不触发真实异步任务、不产生计费/通知/回调等下游副作用；预检成功时响应中 DryRun=true，与真实调用响应可区分；预检失败返回可机器识别的错误码。取值 false（默认）表示正常发起请求并执行变更操作。</p>
+         * <p>The dry run mode.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -389,9 +397,9 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The ID of the address book.</p>
+         * <p>The UUID of the address book.</p>
          * <blockquote>
-         * <p> To modify the address book, you must provide the ID of the address book. You can call the <a href="https://help.aliyun.com/document_detail/138869.html">DescribeAddressBook</a> operation to query the ID.</p>
+         * <p>To obtain the value, call the <a href="~~DescribeAddressBook~~">DescribeAddressBook</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -405,11 +413,7 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
-         * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
-         * <li><strong>en</strong>: English</li>
-         * </ul>
+         * <p>The language type.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -421,15 +425,10 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * <p>Modification mode with the following values:</p>
-         * <ul>
-         * <li><strong>Cover</strong>: Use the value of the AddressList parameter to overwrite the original address book.</li>
-         * <li><strong>Append</strong>: After the original address book, append addresses using the value of the AddressList parameter.</li>
-         * <li><strong>Delete</strong>: Delete addresses using the value of the AddressList parameter from the address book.</li>
-         * </ul>
+         * <p>The modification mode.</p>
          * <blockquote>
-         * <p>When GroupType is <strong>ip</strong>, <strong>ipv6</strong>, <strong>port</strong>, or <strong>domain</strong>, if this parameter is not configured, the default is to use the <strong>Cover</strong> method to modify the address book.
-         * Notice: When GroupType is <strong>tag</strong>, this parameter must be empty.</notice></p>
+         * <p>If GroupType is set to <strong>ip</strong>, <strong>ipv6</strong>, <strong>port</strong>, or <strong>domain</strong> and this parameter is not specified, the <strong>Cover</strong> mode is used by default to modify the address book.
+         * Notice: If GroupType is set to <strong>tag</strong>, this parameter must be left empty.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -442,7 +441,7 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The source IP address of the requester.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
@@ -454,7 +453,7 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The ECS tags that you want to match.</p>
+         * <p>The list of ECS tags.</p>
          */
         public Builder tagList(java.util.List<TagList> tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -463,11 +462,7 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * <p>The logical relationship among ECS tags. Valid values:</p>
-         * <ul>
-         * <li><strong>and</strong>: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</li>
-         * <li><strong>or</strong>: The public IP addresses of ECS instances that match one of the specified tags can be added to the address book.</li>
-         * </ul>
+         * <p>The relationship between multiple ECS tags.</p>
          * 
          * <strong>example:</strong>
          * <p>and</p>
@@ -538,7 +533,10 @@ public class ModifyAddressBookRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the pod label in the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -546,7 +544,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the pod label in the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storage-operator</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -808,7 +809,10 @@ public class ModifyAddressBookRequest extends Request {
             } 
 
             /**
-             * AiGatewayEIP.
+             * <p>The asset type: AIGatewayEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder aiGatewayEIP(Boolean aiGatewayEIP) {
                 this.aiGatewayEIP = aiGatewayEIP;
@@ -816,7 +820,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * AlbEIP.
+             * <p>The asset type: AlbEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder albEIP(Boolean albEIP) {
                 this.albEIP = albEIP;
@@ -824,7 +831,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * ApiGatewayEIP.
+             * <p>The asset type: ApigEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder apiGatewayEIP(Boolean apiGatewayEIP) {
                 this.apiGatewayEIP = apiGatewayEIP;
@@ -832,7 +842,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * BastionHostEgressIP.
+             * <p>The asset type: BastionHostEgressIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bastionHostEgressIP(Boolean bastionHostEgressIP) {
                 this.bastionHostEgressIP = bastionHostEgressIP;
@@ -840,7 +853,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * BastionHostIP.
+             * <p>The asset type: BastionHostIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bastionHostIP(Boolean bastionHostIP) {
                 this.bastionHostIP = bastionHostIP;
@@ -848,7 +864,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * BastionHostIngressIP.
+             * <p>The asset type: BastionHostIngressIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bastionHostIngressIP(Boolean bastionHostIngressIP) {
                 this.bastionHostIngressIP = bastionHostIngressIP;
@@ -856,7 +875,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * EIP.
+             * <p>The asset type: EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder EIP(Boolean EIP) {
                 this.EIP = EIP;
@@ -864,7 +886,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * EcsEIP.
+             * <p>The asset type: EcsEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ecsEIP(Boolean ecsEIP) {
                 this.ecsEIP = ecsEIP;
@@ -872,7 +897,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * EcsPublicIP.
+             * <p>The asset type: EcsPublicIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ecsPublicIP(Boolean ecsPublicIP) {
                 this.ecsPublicIP = ecsPublicIP;
@@ -880,7 +908,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * EniEIP.
+             * <p>The asset type: EniEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder eniEIP(Boolean eniEIP) {
                 this.eniEIP = eniEIP;
@@ -888,7 +919,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * GaEIP.
+             * <p>The asset type: GaEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder gaEIP(Boolean gaEIP) {
                 this.gaEIP = gaEIP;
@@ -896,7 +930,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * HAVIP.
+             * <p>The asset type: HAVIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder HAVIP(Boolean HAVIP) {
                 this.HAVIP = HAVIP;
@@ -904,7 +941,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * NatEIP.
+             * <p>The asset type: NatEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder natEIP(Boolean natEIP) {
                 this.natEIP = natEIP;
@@ -912,7 +952,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * NatPublicIP.
+             * <p>The asset type: NatPublicIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder natPublicIP(Boolean natPublicIP) {
                 this.natPublicIP = natPublicIP;
@@ -920,7 +963,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * NlbEIP.
+             * <p>The asset type: NlbEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder nlbEIP(Boolean nlbEIP) {
                 this.nlbEIP = nlbEIP;
@@ -928,7 +974,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * SlbEIP.
+             * <p>The asset type: SlbEIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder slbEIP(Boolean slbEIP) {
                 this.slbEIP = slbEIP;
@@ -936,7 +985,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * SlbPublicIP.
+             * <p>The asset type: SlbPublicIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder slbPublicIP(Boolean slbPublicIP) {
                 this.slbPublicIP = slbPublicIP;
@@ -1081,7 +1133,10 @@ public class ModifyAddressBookRequest extends Request {
             } 
 
             /**
-             * AiGatewayEIPv6.
+             * <p>The asset type: AIGatewayEIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder aiGatewayEIPv6(Boolean aiGatewayEIPv6) {
                 this.aiGatewayEIPv6 = aiGatewayEIPv6;
@@ -1089,7 +1144,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * AlbIPv6.
+             * <p>The asset type: AlbIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder albIPv6(Boolean albIPv6) {
                 this.albIPv6 = albIPv6;
@@ -1097,7 +1155,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * ApiGatewayEIPv6.
+             * <p>The asset type: ApigEIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder apiGatewayEIPv6(Boolean apiGatewayEIPv6) {
                 this.apiGatewayEIPv6 = apiGatewayEIPv6;
@@ -1105,7 +1166,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * EcsIPv6.
+             * <p>The asset type: EcsIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ecsIPv6(Boolean ecsIPv6) {
                 this.ecsIPv6 = ecsIPv6;
@@ -1113,7 +1177,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * EniEIPv6.
+             * <p>The asset type: EniEIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder eniEIPv6(Boolean eniEIPv6) {
                 this.eniEIPv6 = eniEIPv6;
@@ -1121,7 +1188,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * GaEIPv6.
+             * <p>The asset type: GaEIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder gaEIPv6(Boolean gaEIPv6) {
                 this.gaEIPv6 = gaEIPv6;
@@ -1129,7 +1199,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * NlbIPv6.
+             * <p>The asset type: NlbIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder nlbIPv6(Boolean nlbIPv6) {
                 this.nlbIPv6 = nlbIPv6;
@@ -1137,7 +1210,10 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * SlbIPv6.
+             * <p>The asset type: SlbIPv6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder slbIPv6(Boolean slbIPv6) {
                 this.slbIPv6 = slbIPv6;
@@ -1204,7 +1280,7 @@ public class ModifyAddressBookRequest extends Request {
             } 
 
             /**
-             * Ipv4.
+             * <p>The IPv4 asset type.</p>
              */
             public Builder ipv4(Ipv4 ipv4) {
                 this.ipv4 = ipv4;
@@ -1212,7 +1288,7 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * Ipv6.
+             * <p>The IPv6 asset type.</p>
              */
             public Builder ipv6(Ipv6 ipv6) {
                 this.ipv6 = ipv6;
@@ -1279,7 +1355,10 @@ public class ModifyAddressBookRequest extends Request {
             } 
 
             /**
-             * AssetRegionId.
+             * <p>The asset region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder assetRegionId(String assetRegionId) {
                 this.assetRegionId = assetRegionId;
@@ -1287,7 +1366,7 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * <p>The asset type.</p>
              */
             public Builder resourceType(ResourceType resourceType) {
                 this.resourceType = resourceType;
@@ -1354,7 +1433,7 @@ public class ModifyAddressBookRequest extends Request {
             } 
 
             /**
-             * <p>The key of ECS tag N that you want to match.</p>
+             * <p>The key of the ECS tag.</p>
              * 
              * <strong>example:</strong>
              * <p>TXY</p>
@@ -1365,7 +1444,7 @@ public class ModifyAddressBookRequest extends Request {
             }
 
             /**
-             * <p>The value of ECS tag N that you want to match.</p>
+             * <p>The value of the ECS tag.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

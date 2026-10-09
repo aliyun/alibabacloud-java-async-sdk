@@ -106,7 +106,10 @@ public class DescribeMemberInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * AdminName.
+         * <p>The name of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tianzhuang</p>
          */
         public Builder adminName(String adminName) {
             this.adminName = adminName;
@@ -114,7 +117,10 @@ public class DescribeMemberInfoResponseBody extends TeaModel {
         }
 
         /**
-         * AdminUid.
+         * <p>The UID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>164705101205****</p>
          */
         public Builder adminUid(String adminUid) {
             this.adminUid = adminUid;
@@ -122,7 +128,10 @@ public class DescribeMemberInfoResponseBody extends TeaModel {
         }
 
         /**
-         * IsMember.
+         * <p>Indicates whether the account is a member account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isMember(Boolean isMember) {
             this.isMember = isMember;
@@ -130,7 +139,10 @@ public class DescribeMemberInfoResponseBody extends TeaModel {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of the member account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128720273643****</p>
          */
         public Builder memberUid(String memberUid) {
             this.memberUid = memberUid;
@@ -138,7 +150,10 @@ public class DescribeMemberInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2665618-3C41-51A4-8DAF-586FB68****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

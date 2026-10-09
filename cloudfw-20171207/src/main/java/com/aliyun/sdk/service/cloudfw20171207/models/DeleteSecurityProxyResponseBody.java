@@ -57,7 +57,7 @@ public class DeleteSecurityProxyResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>7447795A-39AB-52CB-8F92-128DF4898F36</p>
+         * <p>7447795A-39AB-52CB-8F92-128DF******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

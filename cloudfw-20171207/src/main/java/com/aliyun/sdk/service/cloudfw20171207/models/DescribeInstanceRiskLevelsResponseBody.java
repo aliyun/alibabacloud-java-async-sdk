@@ -67,7 +67,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the instances.</p>
+         * <p>The list of instance threats.</p>
          */
         public Builder instanceRisks(java.util.List<InstanceRisks> instanceRisks) {
             this.instanceRisks = instanceRisks;
@@ -157,7 +157,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP addresses of servers.</p>
+             * <p>The IP address of the server.</p>
              * 
              * <strong>example:</strong>
              * <p>203.107.XX.XX</p>
@@ -168,9 +168,9 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk levels. Valid values:</p>
+             * <p>The threat level. Valid value:</p>
              * <ul>
-             * <li><strong>medium</strong></li>
+             * <li><strong>medium</strong>: medium</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The risk levels of the Elastic Compute Service (ECS) instance.</p>
+             * <p>The list of threats for the ECS instances.</p>
              */
             public Builder details(java.util.List<Details> details) {
                 this.details = details;
@@ -273,7 +273,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of your Cloud Firewall.</p>
+             * <p>The ID of the Cloud Firewall instance.</p>
              * 
              * <strong>example:</strong>
              * <p>vipcloudfw-cn-7mz2fj8nm0u</p>
@@ -284,9 +284,9 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk levels. Valid values:</p>
+             * <p>The threat level. Valid value:</p>
              * <ul>
-             * <li><strong>medium</strong></li>
+             * <li><strong>medium</strong>: medium</li>
              * </ul>
              * 
              * <strong>example:</strong>

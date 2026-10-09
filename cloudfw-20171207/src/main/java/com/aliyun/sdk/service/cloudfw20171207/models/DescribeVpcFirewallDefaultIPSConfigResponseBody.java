@@ -108,8 +108,10 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether basic policies are enabled. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><p><strong>1</strong>: On.</p>
+         * </li>
+         * <li><p><strong>0</strong>: Off.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,8 +125,10 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether virtual patching is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><p><strong>1</strong>: On.</p>
+         * </li>
+         * <li><p><strong>0</strong>: Off.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -139,7 +143,7 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
          * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>850A84D6-0DE4-4797-A1E8-00090125adf1</p>
+         * <p>850A84D6-****-00090125adf1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,11 +151,14 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The level of the rule group for the IPS. Valid values:</p>
+         * <p>The IPS rule group. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: loose.</li>
-         * <li><strong>2</strong>: medium.</li>
-         * <li><strong>3</strong>: strict.</li>
+         * <li><p><strong>1</strong>: Loose rule group.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Medium rule group.</p>
+         * </li>
+         * <li><p><strong>3</strong>: Strict rule group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,8 +172,10 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         /**
          * <p>The mode of the intrusion prevention system (IPS). Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: block mode</li>
-         * <li><strong>0</strong>: monitor mode</li>
+         * <li><p><strong>1</strong>: Block Mode.</p>
+         * </li>
+         * <li><p><strong>0</strong>: Monitor Mode.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

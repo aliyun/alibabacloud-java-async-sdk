@@ -73,7 +73,10 @@ public class DescribeOutgoingRiskDomainAndIpCountRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The value is a UNIX timestamp that is accurate to the second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1751595213</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -82,7 +85,10 @@ public class DescribeOutgoingRiskDomainAndIpCountRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp that is accurate to the second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1749434787</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

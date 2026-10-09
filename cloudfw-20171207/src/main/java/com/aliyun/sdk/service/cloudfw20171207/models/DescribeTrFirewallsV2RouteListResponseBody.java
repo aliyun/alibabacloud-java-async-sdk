@@ -67,7 +67,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The route tables of Cloud Firewall.</p>
+         * <p>The route table list of Cloud Firewall.</p>
          */
         public Builder firewallRouteDetailList(java.util.List<FirewallRouteDetailList> firewallRouteDetailList) {
             this.firewallRouteDetailList = firewallRouteDetailList;
@@ -75,7 +75,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABF190A2-B4D0-53F6-995A-5690A721F91C</p>
@@ -181,7 +181,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the next hop for the route.</p>
+             * <p>The next hop ID of the route.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-attach-hnxab1y0pxn16p****</p>
@@ -192,7 +192,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the routing policy.</p>
+             * <p>The ID of the firewall routing policy.</p>
              * 
              * <strong>example:</strong>
              * <p>policy-04ecbbc6720d4f90****</p>
@@ -203,7 +203,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the route table to which the route entry belongs.</p>
+             * <p>The ID of the route table to which the route belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>vtb-2zeockxxxorv0mnhz****</p>

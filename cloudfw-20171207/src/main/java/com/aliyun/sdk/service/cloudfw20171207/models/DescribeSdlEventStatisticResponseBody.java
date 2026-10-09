@@ -119,7 +119,10 @@ public class DescribeSdlEventStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * AiSensitiveDataCount.
+         * <p>The number of AI-related leak threats.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder aiSensitiveDataCount(Long aiSensitiveDataCount) {
             this.aiSensitiveDataCount = aiSensitiveDataCount;
@@ -127,7 +130,10 @@ public class DescribeSdlEventStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * AssetCount.
+         * <p>The total number of assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder assetCount(Long assetCount) {
             this.assetCount = assetCount;
@@ -135,7 +141,10 @@ public class DescribeSdlEventStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5DDD596-1191-5F36-A504-8733045A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +152,10 @@ public class DescribeSdlEventStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * SensitiveDataCount.
+         * <p>The number of sensitive data leak events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder sensitiveDataCount(Long sensitiveDataCount) {
             this.sensitiveDataCount = sensitiveDataCount;
@@ -151,7 +163,10 @@ public class DescribeSdlEventStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -159,7 +174,10 @@ public class DescribeSdlEventStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * TotalTraffic.
+         * <p>The total traffic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalTraffic(Long totalTraffic) {
             this.totalTraffic = totalTraffic;

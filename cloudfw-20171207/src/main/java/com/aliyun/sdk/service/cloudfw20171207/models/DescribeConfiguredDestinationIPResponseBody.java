@@ -106,7 +106,7 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
         } 
 
         /**
-         * Destinations.
+         * <p>The list of destinations.</p>
          */
         public Builder destinations(java.util.List<Destinations> destinations) {
             this.destinations = destinations;
@@ -114,7 +114,10 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -122,7 +125,10 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0AE91F8-E6C5-50D4-983F-FC53672****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -243,7 +255,10 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -251,7 +266,10 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationIP.
+             * <p>The destination IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder destinationIP(String destinationIP) {
                 this.destinationIP = destinationIP;
@@ -259,7 +277,10 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationISP.
+             * <p>The ISP of the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>telecom</p>
              */
             public Builder destinationISP(String destinationISP) {
                 this.destinationISP = destinationISP;
@@ -267,7 +288,10 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationRegion.
+             * <p>The destination region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder destinationRegion(String destinationRegion) {
                 this.destinationRegion = destinationRegion;
@@ -275,7 +299,10 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * OperationTime.
+             * <p>The time of the operation. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1534408189</p>
              */
             public Builder operationTime(Integer operationTime) {
                 this.operationTime = operationTime;

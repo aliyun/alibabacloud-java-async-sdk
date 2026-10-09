@@ -158,7 +158,10 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * IsFound.
+         * <p>Indicates whether the task exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isFound(Boolean isFound) {
             this.isFound = isFound;
@@ -166,7 +169,10 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D5483BF-2262-586D-8706-BDDB8B42****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +180,10 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskFinishTimestamp.
+         * <p>The time when the task was completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17151381075</p>
          */
         public Builder taskFinishTimestamp(String taskFinishTimestamp) {
             this.taskFinishTimestamp = taskFinishTimestamp;
@@ -182,7 +191,10 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>189997648</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -190,7 +202,10 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>egressgw</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -198,7 +213,10 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStartTimestamp.
+         * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17151361285</p>
          */
         public Builder taskStartTimestamp(String taskStartTimestamp) {
             this.taskStartTimestamp = taskStartTimestamp;
@@ -206,7 +224,22 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>init</strong></p>
+         * </li>
+         * <li><p><strong>running</strong></p>
+         * </li>
+         * <li><p><strong>finished</strong></p>
+         * </li>
+         * <li><p><strong>rollback</strong></p>
+         * </li>
+         * <li><p><strong>rollbackDone</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>init</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -214,7 +247,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskSteps.
+         * <p>The task steps.</p>
          */
         public Builder taskSteps(java.util.List<TaskSteps> taskSteps) {
             this.taskSteps = taskSteps;
@@ -222,7 +255,10 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskWaitingTime.
+         * <p>The waiting time, in minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder taskWaitingTime(String taskWaitingTime) {
             this.taskWaitingTime = taskWaitingTime;
@@ -314,7 +350,10 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * StepInfo.
+             * <p>The task information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd</p>
              */
             public Builder stepInfo(String stepInfo) {
                 this.stepInfo = stepInfo;
@@ -322,7 +361,10 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StepName.
+             * <p>The name of the Cloud Firewall security step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create Firewall</p>
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -330,7 +372,10 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StepProgress.
+             * <p>The progress of the task step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder stepProgress(String stepProgress) {
                 this.stepProgress = stepProgress;
@@ -338,7 +383,20 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StepStatus.
+             * <p>The task step status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>init</strong> </p>
+             * </li>
+             * <li><p><strong>running</strong></p>
+             * </li>
+             * <li><p><strong>finished</strong></p>
+             * </li>
+             * <li><p><strong>failed</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>init</p>
              */
             public Builder stepStatus(String stepStatus) {
                 this.stepStatus = stepStatus;

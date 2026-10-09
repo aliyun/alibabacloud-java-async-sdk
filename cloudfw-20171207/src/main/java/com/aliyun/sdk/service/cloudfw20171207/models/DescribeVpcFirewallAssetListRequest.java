@@ -300,7 +300,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -309,7 +312,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
-         * AssetIP.
+         * <p>The IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder assetIP(String assetIP) {
             this.putQueryParameter("AssetIP", assetIP);
@@ -318,7 +324,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -327,7 +336,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
-         * Direction.
+         * <p>The traffic direction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -336,7 +348,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
-         * EcsInstanceId.
+         * <p>The instance ID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hp3ez3rs9bxwt034****</p>
          */
         public Builder ecsInstanceId(String ecsInstanceId) {
             this.putQueryParameter("EcsInstanceId", ecsInstanceId);
@@ -345,7 +360,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
-         * EcsInstanceName.
+         * <p>The name of the asset instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-ecs</p>
          */
         public Builder ecsInstanceName(String ecsInstanceName) {
             this.putQueryParameter("EcsInstanceName", ecsInstanceName);
@@ -354,6 +372,7 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
+         * <p>The end time. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -366,7 +385,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
-         * IPProtocol.
+         * <p>The protocol type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder IPProtocol(String IPProtocol) {
             this.putQueryParameter("IPProtocol", IPProtocol);
@@ -375,7 +397,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
-         * IsAITraffic.
+         * <p>Specifies whether to collect statistics only on traffic that accesses AI services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isAITraffic(String isAITraffic) {
             this.putQueryParameter("IsAITraffic", isAITraffic);
@@ -384,7 +409,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -393,7 +421,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -402,7 +433,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -411,7 +445,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
-         * PeerVpcId.
+         * <p>The instance ID of the peer VPC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-90rq0anm6t8vbwbo****</p>
          */
         public Builder peerVpcId(String peerVpcId) {
             this.putQueryParameter("PeerVpcId", peerVpcId);
@@ -420,7 +457,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5234</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -429,7 +469,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
-         * RiskLevel.
+         * <p>The risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -438,7 +481,10 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sort method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SessionCount</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -447,6 +493,7 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
+         * <p>The start time. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -459,6 +506,7 @@ public class DescribeVpcFirewallAssetListRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the VPC-connected instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

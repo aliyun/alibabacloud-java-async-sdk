@@ -132,7 +132,10 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * AbnormalPrivateDnsCount.
+         * <p>The number of private DNS instances in an abnormal state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder abnormalPrivateDnsCount(Long abnormalPrivateDnsCount) {
             this.abnormalPrivateDnsCount = abnormalPrivateDnsCount;
@@ -140,7 +143,10 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedPrivateDnsCount.
+         * <p>The number of created private DNS instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder createdPrivateDnsCount(Long createdPrivateDnsCount) {
             this.createdPrivateDnsCount = createdPrivateDnsCount;
@@ -148,7 +154,10 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * DomainNameTotalCount.
+         * <p>The total number of configured domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder domainNameTotalCount(Long domainNameTotalCount) {
             this.domainNameTotalCount = domainNameTotalCount;
@@ -156,7 +165,10 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * NewDomainNameTotalCount.
+         * <p>The number of configured domain names that were created within the specified time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder newDomainNameTotalCount(Long newDomainNameTotalCount) {
             this.newDomainNameTotalCount = newDomainNameTotalCount;
@@ -164,7 +176,10 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * NormalPrivateDnsCount.
+         * <p>The number of private DNS instances in a normal state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder normalPrivateDnsCount(Long normalPrivateDnsCount) {
             this.normalPrivateDnsCount = normalPrivateDnsCount;
@@ -172,7 +187,7 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateDnsRegionList.
+         * <p>A list of DNS regions.</p>
          */
         public Builder privateDnsRegionList(java.util.List<PrivateDnsRegionList> privateDnsRegionList) {
             this.privateDnsRegionList = privateDnsRegionList;
@@ -180,7 +195,10 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5716ED52-1B82-5DE1-8695-EFEC453D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -272,7 +290,10 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * DomainNameCount.
+             * <p>The number of configured domain names for private DNS in the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder domainNameCount(Long domainNameCount) {
                 this.domainNameCount = domainNameCount;
@@ -280,7 +301,10 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * NewDomainNameCount.
+             * <p>The number of configured domain names that were created in the region within the specified time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder newDomainNameCount(Long newDomainNameCount) {
                 this.newDomainNameCount = newDomainNameCount;
@@ -288,7 +312,10 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateDnsCount.
+             * <p>The number of private DNS instances in the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder privateDnsCount(Long privateDnsCount) {
                 this.privateDnsCount = privateDnsCount;
@@ -296,7 +323,10 @@ public class DescribePrivateDnsStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;

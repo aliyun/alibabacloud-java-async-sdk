@@ -73,7 +73,7 @@ public class DeleteTrFirewallV2Request extends Request {
         } 
 
         /**
-         * <p>The instance ID of the VPC firewall.</p>
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>vfw-tr-99bc4f0fc88b4d00****</p>
@@ -87,7 +87,7 @@ public class DeleteTrFirewallV2Request extends Request {
         /**
          * <p>The language of the content within the response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>
          * </ul>
          * 

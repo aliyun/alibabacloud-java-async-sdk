@@ -115,7 +115,7 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+         * <p>The instance ID of the VPC boundary firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>vfw-tr-5b202e7f0be64611****</p>
@@ -127,10 +127,12 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,10 +145,12 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to restore the traffic redirection configurations. Valid values:</p>
+         * <p>Specifies whether to restore the traffic redirection configuration. Valid values:</p>
          * <ul>
-         * <li>true: roll back</li>
-         * <li>false: withdraw</li>
+         * <li><p>true: Rolls back the route.</p>
+         * </li>
+         * <li><p>false: Revokes the route.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,7 +163,7 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the routing policy.</p>
+         * <p>The ID of the routing policy for the firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-93684cc5caa44b2e****</p>
@@ -171,10 +175,12 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * <p>The status of the routing policy. Valid values:</p>
+         * <p>The status of the policy. Valid values:</p>
          * <ul>
-         * <li>open: enabled</li>
-         * <li>close: disabled</li>
+         * <li><p>open: Enables the policy.</p>
+         * </li>
+         * <li><p>close: Disables the policy.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -75,7 +75,7 @@ public class BatchDeleteVpcFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The UUIDs of access control policies.</p>
+         * <p>The list of ACL UUIDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder aclUuidList(java.util.List<String> aclUuidList) {
@@ -85,7 +85,7 @@ public class BatchDeleteVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the VPC firewall.</p>
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

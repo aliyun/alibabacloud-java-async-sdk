@@ -87,7 +87,10 @@ public class DescribeSecurityProxyResourcesRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -96,7 +99,10 @@ public class DescribeSecurityProxyResourcesRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of the member account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>136481150091****</p>
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -105,7 +111,10 @@ public class DescribeSecurityProxyResourcesRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * <p>The ID of the NAT Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-uf6y16l23fm8hq0****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);

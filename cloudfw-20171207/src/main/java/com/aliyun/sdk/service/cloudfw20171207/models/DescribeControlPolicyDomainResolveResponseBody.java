@@ -67,7 +67,10 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
         }
 
         /**
-         * ResolveResult.
+         * <p>The domain name resolution results.</p>
          */
         public Builder resolveResult(java.util.List<ResolveResult> resolveResult) {
             this.resolveResult = resolveResult;
@@ -167,7 +170,10 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
             } 
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -175,7 +181,7 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddrList.
+             * <p>The IP address list.</p>
              */
             public Builder ipAddrList(java.util.List<String> ipAddrList) {
                 this.ipAddrList = ipAddrList;
@@ -183,7 +189,10 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion.
+             * <p>The supported IP address version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder ipVersion(Integer ipVersion) {
                 this.ipVersion = ipVersion;
@@ -191,7 +200,10 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970 (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579091739</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

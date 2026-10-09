@@ -143,7 +143,10 @@ public class DescribeVpcFirewallZoneRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-4xbjup276au29r****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -152,7 +155,10 @@ public class DescribeVpcFirewallZoneRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TransitRouter</p>
          */
         public Builder environment(String environment) {
             this.putQueryParameter("Environment", environment);
@@ -161,7 +167,10 @@ public class DescribeVpcFirewallZoneRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -170,7 +179,10 @@ public class DescribeVpcFirewallZoneRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of the Cloud Firewall member accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135809047715****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -179,7 +191,10 @@ public class DescribeVpcFirewallZoneRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -188,7 +203,10 @@ public class DescribeVpcFirewallZoneRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222.212.86.7XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -197,7 +215,10 @@ public class DescribeVpcFirewallZoneRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * <p>The transit router instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-m5etmb2q7e0mxcur****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

@@ -87,7 +87,10 @@ public class AddDomainResolveRealtimeTaskRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -96,7 +99,10 @@ public class AddDomainResolveRealtimeTaskRequest extends Request {
         }
 
         /**
-         * FirewallType.
+         * <p>The Cloud Firewall type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internet</p>
          */
         public Builder firewallType(String firewallType) {
             this.putQueryParameter("FirewallType", firewallType);
@@ -105,7 +111,10 @@ public class AddDomainResolveRealtimeTaskRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);

@@ -133,7 +133,10 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
         } 
 
         /**
-         * InternetInAclCount.
+         * <p>The number of inbound access control policies for the Internet firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder internetInAclCount(Integer internetInAclCount) {
             this.internetInAclCount = internetInAclCount;
@@ -141,7 +144,10 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * InternetOutAclCount.
+         * <p>The number of outbound access control policies that are created for the Internet firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder internetOutAclCount(Integer internetOutAclCount) {
             this.internetOutAclCount = internetOutAclCount;
@@ -149,7 +155,10 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * NatInAclCount.
+         * <p>The number of inbound access control policies for the NAT firewall.&gt;Notice: This field is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder natInAclCount(Integer natInAclCount) {
             this.natInAclCount = natInAclCount;
@@ -157,7 +166,10 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * NatOutAclCount.
+         * <p>The number of internal-to-external access control policies for the NAT firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder natOutAclCount(Integer natOutAclCount) {
             this.natOutAclCount = natOutAclCount;
@@ -165,7 +177,10 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27936D6C-1B7A-5A5A-B9E4-FBEBBDAA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,7 +188,10 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * TotalAclCount.
+         * <p>The total number of access control policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalAclCount(Integer totalAclCount) {
             this.totalAclCount = totalAclCount;
@@ -181,7 +199,10 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * VpcAclCount.
+         * <p>The number of access control policies for VPC firewalls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder vpcAclCount(Integer vpcAclCount) {
             this.vpcAclCount = vpcAclCount;

@@ -257,6 +257,7 @@ public class DescribeInternetTimeTopRequest extends Request {
         } 
 
         /**
+         * <p>The direction of the traffic.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +270,10 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the query time range, specified as a Unix timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1733796528</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -278,7 +282,10 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * IPType.
+         * <p>The network type of the IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder IPType(String IPType) {
             this.putQueryParameter("IPType", IPType);
@@ -287,7 +294,10 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time interval in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -296,7 +306,10 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -305,7 +318,10 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The maximum number of entries to return. The value must be between 1 and 50. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder limit(String limit) {
             this.putQueryParameter("Limit", limit);
@@ -314,7 +330,10 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * NatIP.
+         * <p>The NAT public IP address. If omitted, traffic data for all assets is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.97.66.XXX</p>
          */
         public Builder natIP(String natIP) {
             this.putQueryParameter("NatIP", natIP);
@@ -323,7 +342,10 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -332,7 +354,10 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The metric by which to sort the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in_bps</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -341,6 +366,7 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
+         * <p>The identifier for the trace source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -353,7 +379,10 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60.179.179.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -362,7 +391,10 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * SrcIP.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.153.18.XX</p>
          */
         public Builder srcIP(String srcIP) {
             this.putQueryParameter("SrcIP", srcIP);
@@ -371,7 +403,10 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the query time range, specified as a Unix timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1749434787</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -380,7 +415,10 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * TrafficTime.
+         * <p>The traffic timestamp to query, specified as a Unix timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1745222880</p>
          */
         public Builder trafficTime(String trafficTime) {
             this.putQueryParameter("TrafficTime", trafficTime);
@@ -389,7 +427,10 @@ public class DescribeInternetTimeTopRequest extends Request {
         }
 
         /**
-         * TrafficType.
+         * <p>The traffic type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EIP_TRAFFIC</p>
          */
         public Builder trafficType(String trafficType) {
             this.putQueryParameter("TrafficType", trafficType);

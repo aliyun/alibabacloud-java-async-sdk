@@ -246,7 +246,14 @@ public class CreateSecurityProxyRequest extends Request {
         } 
 
         /**
-         * FirewallServiceMode.
+         * <p>The deployment mode of the firewall service. Valid values:</p>
+         * <ul>
+         * <li><strong>PrimaryStandby</strong>: primary/standby mode.</li>
+         * <li><strong>MultiPrimary</strong>: active-active mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrimaryStandby</p>
          */
         public Builder firewallServiceMode(String firewallServiceMode) {
             this.putQueryParameter("FirewallServiceMode", firewallServiceMode);
@@ -255,7 +262,7 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * FirewallServiceZones.
+         * <p>The list of zone IDs used by the firewall service.</p>
          */
         public Builder firewallServiceZones(java.util.List<String> firewallServiceZones) {
             this.putQueryParameter("FirewallServiceZones", firewallServiceZones);
@@ -264,10 +271,10 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * <p>The status of the NAT firewall. Valid values:</p>
+         * <p>The security protection switch. Valid values:</p>
          * <ul>
-         * <li><strong>open</strong>: enabled</li>
-         * <li><strong>close</strong>: disabled</li>
+         * <li><strong>open</strong>: Enabled.</li>
+         * <li><strong>close</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -280,7 +287,10 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * FwVswitchZoneId.
+         * <p>The zone of the firewall vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-b</p>
          */
         public Builder fwVswitchZoneId(String fwVswitchZoneId) {
             this.putQueryParameter("FwVswitchZoneId", fwVswitchZoneId);
@@ -289,10 +299,10 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -309,7 +319,7 @@ public class CreateSecurityProxyRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ngw-bp1okz6k7s4n4mnk5f1g3</p>
+         * <p>ngw-bp1okz6k7******</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -318,7 +328,7 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * <p>The routes to be switched to the NAT gateway.</p>
+         * <p>The list of routes to be switched for the NAT gateway.</p>
          * <p>This parameter is required.</p>
          */
         public Builder natRouteEntryList(java.util.List<NatRouteEntryList> natRouteEntryList) {
@@ -328,11 +338,11 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * <p>The name of the NAT firewall. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (_). However, it cannot start with an underscore.</p>
+         * <p>The name of the NAT firewall. The name must be 4 to 50 characters in length and can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). It cannot start with an underscore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>nat-idmp-fir</p>
+         * <p>nat-firewall</p>
          */
         public Builder proxyName(String proxyName) {
             this.putQueryParameter("ProxyName", proxyName);
@@ -341,9 +351,9 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the virtual private cloud (VPC).</p>
+         * <p>The region ID of the VPC.</p>
          * <blockquote>
-         * <p> For more information about Cloud Firewall supported regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * <p>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -357,10 +367,10 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the strict mode. Valid values:</p>
+         * <p>Specifies whether to enable strict mode. Valid values:</p>
          * <ul>
-         * <li>1: yes</li>
-         * <li>0: no</li>
+         * <li>1: Enable strict mode.</li>
+         * <li>0: Disable strict mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -377,7 +387,7 @@ public class CreateSecurityProxyRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-uf6b5lyul0xfgv74i01ph</p>
+         * <p>vpc-uf6b5lyul0x******</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -386,11 +396,14 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * <p>The mode of the vSwitch that you want to use. Valid values:</p>
+         * <p>Specifies whether to use the automatic mode for the vSwitch. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: automatic</li>
-         * <li><strong>false</strong>: manual</li>
+         * <li><strong>true</strong>: automatic mode.</li>
+         * <li><strong>false</strong>: manual mode.</li>
          * </ul>
+         * <blockquote>
+         * <p>Default value: true. If VswitchAuto is set to true, VswitchCidr is required and must be a valid CIDR block. If VswitchAuto is set to false, VswitchId is required.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -402,7 +415,7 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * <p>The CIDR block of the vSwitch.</p>
+         * <p>The CIDR block of the vSwitch. This parameter is required when the automatic mode is used for the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>
@@ -414,10 +427,10 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch. This parameter is required if you set the VswitchAuto parameter to true.</p>
+         * <p>The ID of the vSwitch. This parameter is required when the manual mode is used for the vSwitch.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-bp1sqg9wms9w9y1uxcs1x</p>
+         * <p>vsw-bp1sqg9w******</p>
          */
         public Builder vswitchId(String vswitchId) {
             this.putQueryParameter("VswitchId", vswitchId);
@@ -531,7 +544,7 @@ public class CreateSecurityProxyRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>ngw-bp1okz6k7s4n4mnk5f1g3</p>
+             * <p>ngw-bp1okz6******</p>
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -539,7 +552,7 @@ public class CreateSecurityProxyRequest extends Request {
             }
 
             /**
-             * <p>The network type of the next hop. Set the value to NatGateway.</p>
+             * <p>The network type of the next hop. Valid value: NatGateway.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -551,11 +564,11 @@ public class CreateSecurityProxyRequest extends Request {
             }
 
             /**
-             * <p>The route table to which the default route of the NAT gateway belongs.</p>
+             * <p>The ID of the route table to which the default route of the NAT gateway belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>vtb-2ze13wrgz7wsu9yiqeffg</p>
+             * <p>vtb-2ze1******</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;

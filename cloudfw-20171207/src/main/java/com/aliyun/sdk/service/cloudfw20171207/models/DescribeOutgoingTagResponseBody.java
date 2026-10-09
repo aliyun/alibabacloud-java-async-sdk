@@ -80,7 +80,10 @@ public class DescribeOutgoingTagResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B532203E-813B-5BEB-B75B-315E1D08****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeOutgoingTagResponseBody extends TeaModel {
         }
 
         /**
-         * TagList.
+         * <p>The list of tags.</p>
          */
         public Builder tagList(java.util.List<TagList> tagList) {
             this.tagList = tagList;
@@ -96,7 +99,10 @@ public class DescribeOutgoingTagResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -201,7 +207,18 @@ public class DescribeOutgoingTagResponseBody extends TeaModel {
             } 
 
             /**
-             * ClassId.
+             * <p>The classification. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Suspicious</strong>: suspicious.</p>
+             * </li>
+             * <li><p><strong>Malicious</strong>: malicious.</p>
+             * </li>
+             * <li><p><strong>Trusted</strong>: trusted.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Trusted</p>
              */
             public Builder classId(String classId) {
                 this.classId = classId;
@@ -209,7 +226,20 @@ public class DescribeOutgoingTagResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk assessment level. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: no threat.</p>
+             * </li>
+             * <li><p><strong>1</strong>: low threat.</p>
+             * </li>
+             * <li><p><strong>2</strong>: medium threat.</p>
+             * </li>
+             * <li><p><strong>3</strong>: high threat.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -217,7 +247,10 @@ public class DescribeOutgoingTagResponseBody extends TeaModel {
             }
 
             /**
-             * TagDescribe.
+             * <p>The description of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test describe</p>
              */
             public Builder tagDescribe(String tagDescribe) {
                 this.tagDescribe = tagDescribe;
@@ -225,7 +258,10 @@ public class DescribeOutgoingTagResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The ID of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-6833388d18cc****</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;
@@ -233,7 +269,10 @@ public class DescribeOutgoingTagResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>The name of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test tag</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;

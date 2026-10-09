@@ -239,8 +239,8 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number to return.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -254,13 +254,17 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         /**
          * <p>The status of the VPC firewall. Valid values:</p>
          * <ul>
-         * <li><strong>opened</strong>: The VPC firewall is enabled.</li>
-         * <li><strong>closed</strong>: The VPC firewall is disabled.</li>
-         * <li><strong>notconfigured</strong>: The VPC firewall is not configured.</li>
-         * <li><strong>configured</strong>: The VPC firewall is configured but is not enabled.</li>
+         * <li><p><strong>opened</strong>: The firewall is enabled.</p>
+         * </li>
+         * <li><p><strong>closed</strong>: The firewall is disabled.</p>
+         * </li>
+         * <li><p><strong>notconfigured</strong>: The firewall is not configured.</p>
+         * </li>
+         * <li><p><strong>configured</strong>: The firewall is configured but is disabled.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+         * <p>If you leave this parameter empty, VPC firewalls in all states are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -273,10 +277,12 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -289,7 +295,7 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * <p>The UID of the member that is managed by your Alibaba Cloud account. The member is also an Alibaba Cloud account.</p>
+         * <p>The UID of a member account that is managed by your Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -337,7 +343,7 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         /**
          * <p>The region ID of the VPC.</p>
          * <blockquote>
-         * <p>For more information about the regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * <p>For more information about the regions that Cloud Firewall supports, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -350,13 +356,15 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * <p>The routing mode of the VPC firewall. Valid values:</p>
+         * <p>The routing mode. Valid values:</p>
          * <ul>
-         * <li><strong>auto</strong>: automatic mode</li>
-         * <li><strong>manual</strong>: manual mode</li>
+         * <li><p><strong>auto</strong>: automatic mode.</p>
+         * </li>
+         * <li><p><strong>manual</strong>: manual mode.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, VPC firewalls in all routing modes are queried.</p>
+         * <p>If you leave this parameter empty, VPC firewalls that use all routing modes are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -371,8 +379,10 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         /**
          * <p>The type of the transit router. Valid values:</p>
          * <ul>
-         * <li><strong>Basic</strong>: Basic Edition transit router</li>
-         * <li><strong>Enterprise</strong>: Enterprise Edition transit router</li>
+         * <li><p><strong>Basic</strong>: Basic Edition transit router.</p>
+         * </li>
+         * <li><p><strong>Enterprise</strong>: Enterprise Edition transit router.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -400,7 +410,7 @@ public class DescribeVpcFirewallCenListRequest extends Request {
          * <p>The instance name of the VPC firewall.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test firewall</p>
+         * <p>vpc-firewall-test</p>
          */
         public Builder vpcFirewallName(String vpcFirewallName) {
             this.putQueryParameter("VpcFirewallName", vpcFirewallName);

@@ -133,6 +133,7 @@ public class CreateVpcFirewallCenManualConfigureRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the CEN instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +146,16 @@ public class CreateVpcFirewallCenManualConfigureRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -154,7 +164,10 @@ public class CreateVpcFirewallCenManualConfigureRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of the member account of Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -163,6 +176,7 @@ public class CreateVpcFirewallCenManualConfigureRequest extends Request {
         }
 
         /**
+         * <p>The ID of the vSwitch that is used to create the elastic network interface (ENI) of the Cloud Firewall.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +189,11 @@ public class CreateVpcFirewallCenManualConfigureRequest extends Request {
         }
 
         /**
+         * <p>The name of the VPC border firewall.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-firewall-test</p>
          */
         public Builder vpcFirewallName(String vpcFirewallName) {
             this.putQueryParameter("VpcFirewallName", vpcFirewallName);
@@ -184,6 +202,7 @@ public class CreateVpcFirewallCenManualConfigureRequest extends Request {
         }
 
         /**
+         * <p>The ID of the VPC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

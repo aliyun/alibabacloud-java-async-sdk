@@ -80,7 +80,10 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
         }
 
         /**
-         * SdlEventSensitiveDataList.
+         * <p>The list of sensitive data involved in data leaks.</p>
          */
         public Builder sdlEventSensitiveDataList(java.util.List<SdlEventSensitiveDataList> sdlEventSensitiveDataList) {
             this.sdlEventSensitiveDataList = sdlEventSensitiveDataList;
@@ -96,7 +99,10 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +220,10 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
             } 
 
             /**
-             * SensitiveData.
+             * <p>The sensitive data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-N***************************SxiJ</p>
              */
             public Builder sensitiveData(String sensitiveData) {
                 this.sensitiveData = sensitiveData;
@@ -222,7 +231,10 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveDataCnt.
+             * <p>The number of occurrences of the sensitive data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder sensitiveDataCnt(Long sensitiveDataCnt) {
                 this.sensitiveDataCnt = sensitiveDataCnt;
@@ -230,7 +242,10 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveLevel.
+             * <p>The level of the sensitive data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S3</p>
              */
             public Builder sensitiveLevel(String sensitiveLevel) {
                 this.sensitiveLevel = sensitiveLevel;
@@ -238,7 +253,10 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveType.
+             * <p>The type of the sensitive data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id_card</p>
              */
             public Builder sensitiveType(String sensitiveType) {
                 this.sensitiveType = sensitiveType;
@@ -246,7 +264,10 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
             }
 
             /**
-             * SrcIp.
+             * <p>The source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.23.191.XXX</p>
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;
@@ -254,7 +275,10 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753928907</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

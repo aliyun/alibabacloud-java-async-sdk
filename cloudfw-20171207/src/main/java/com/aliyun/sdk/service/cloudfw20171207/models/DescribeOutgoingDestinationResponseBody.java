@@ -80,7 +80,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         } 
 
         /**
-         * DstList.
+         * <p>The destination address information.</p>
          */
         public Builder dstList(java.util.List<DstList> dstList) {
             this.dstList = dstList;
@@ -88,7 +88,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2845BA9-1642-5B27-9F04-8014DD94****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -188,7 +194,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             } 
 
             /**
-             * RiskLevel.
+             * <p>The risk assessment level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -196,7 +205,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * TagDescribe.
+             * <p>The tag description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-describe</p>
              */
             public Builder tagDescribe(String tagDescribe) {
                 this.tagDescribe = tagDescribe;
@@ -204,7 +216,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FirstFlow</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;
@@ -212,7 +227,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>verify</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -448,7 +466,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             } 
 
             /**
-             * AclRecommendDetail.
+             * <p>The recommended ACL content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RecommendedRelease</p>
              */
             public Builder aclRecommendDetail(String aclRecommendDetail) {
                 this.aclRecommendDetail = aclRecommendDetail;
@@ -456,7 +477,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * AclStatus.
+             * <p>The policy status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -464,7 +488,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * Business.
+             * <p>The domain name business.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder business(String business) {
                 this.business = business;
@@ -472,7 +499,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryId.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliYun</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -480,7 +510,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The category name of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>categor_test</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -488,7 +521,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * DstDomain.
+             * <p>The destination domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder dstDomain(String dstDomain) {
                 this.dstDomain = dstDomain;
@@ -496,7 +532,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * DstIP.
+             * <p>The destination IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101.6.15.XXX</p>
              */
             public Builder dstIP(String dstIP) {
                 this.dstIP = dstIP;
@@ -504,7 +543,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * DstType.
+             * <p>The destination type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>domain</p>
              */
             public Builder dstType(String dstType) {
                 this.dstType = dstType;
@@ -512,7 +554,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group-name</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -520,7 +565,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * HasAclRecommend.
+             * <p>Indicates whether a recommended ACL exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasAclRecommend(Boolean hasAclRecommend) {
                 this.hasAclRecommend = hasAclRecommend;
@@ -528,7 +576,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * InBytes.
+             * <p>The inbound traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder inBytes(Long inBytes) {
                 this.inBytes = inBytes;
@@ -536,7 +587,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * IsMarkNormal.
+             * <p>Indicates whether the entry is manually marked as normal by the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isMarkNormal(Boolean isMarkNormal) {
                 this.isMarkNormal = isMarkNormal;
@@ -544,7 +598,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * OutBytes.
+             * <p>The outbound traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder outBytes(Long outBytes) {
                 this.outBytes = outBytes;
@@ -552,7 +609,10 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * SessionCount.
+             * <p>The number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sessionCount(Long sessionCount) {
                 this.sessionCount = sessionCount;
@@ -560,7 +620,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * TagList.
+             * <p>The tag list.</p>
              */
             public Builder tagList(java.util.List<TagList> tagList) {
                 this.tagList = tagList;

@@ -54,7 +54,10 @@ public class DeleteAclBackupDataResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75E60025-43C5-5635-B7B7-272C5246****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -391,10 +391,10 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
+         * <p>The action that Cloud Firewall performs on the traffic in the virtual private cloud (VPC) firewall access control policy. Valid values:</p>
          * <ul>
          * <li><strong>accept</strong>: allows the traffic.</li>
-         * <li><strong>drop</strong>: blocks the traffic.</li>
+         * <li><strong>drop</strong>: denies the traffic.</li>
          * <li><strong>log</strong>: monitors the traffic.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -409,7 +409,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the applications that the access control policy supports. Valid values:</p>
+         * <p>The application type supported by the virtual private cloud (VPC) firewall access control policy. Valid values:</p>
          * <ul>
          * <li><strong>FTP</strong></li>
          * <li><strong>HTTP</strong></li>
@@ -425,7 +425,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
          * <li><strong>MongoDB</strong></li>
          * <li><strong>Memcache</strong></li>
          * <li><strong>SSL</strong></li>
-         * <li><strong>ANY</strong>: all types of applications</li>
+         * <li><strong>ANY</strong>: all application types</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -447,7 +447,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The description of the access control policy.</p>
+         * <p>The description of the virtual private cloud (VPC) firewall access control policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -460,9 +460,9 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The destination port in the access control policy. </p>
+         * <p>The destination port in the virtual private cloud (VPC) firewall access control policy for traffic access.</p>
          * <blockquote>
-         * <p> If <strong>DestPortType</strong> is set to <code>port</code>, you must specify this parameter.</p>
+         * <p>When <strong>DestPortType</strong> is set to <code>port</code>, configure this parameter. When Proto is set to TCP/UDP/ICMP, either DestPort (with DestPortType=port) or DestPortGroup (with DestPortType=group) is conditionally required. Otherwise, ErrorParametersDestPort(400) is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -475,9 +475,9 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the destination port address book in the access control policy. </p>
+         * <p>The name of the destination port address book for traffic access in the virtual private cloud (VPC) firewall access control policy.</p>
          * <blockquote>
-         * <p> If <strong>DestPortType</strong> is set to <code>group</code>, you must specify this parameter.</p>
+         * <p>When <strong>DestPortType</strong> is set to <code>group</code>, configure this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -490,7 +490,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the destination port in the access control policy. Valid values:</p>
+         * <p>The type of the destination port for traffic access in the virtual private cloud (VPC) firewall access control policy. Valid values:</p>
          * <ul>
          * <li><strong>port</strong>: port</li>
          * <li><strong>group</strong>: port address book</li>
@@ -506,11 +506,14 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The destination address in the access control policy. Valid values:</p>
+         * <p>The destination address in the virtual private cloud (VPC) firewall access control policy for traffic access. Valid values:</p>
          * <ul>
-         * <li>If <strong>DestinationType</strong> is set to <code>net</code>, the value of <strong>Destination</strong> must be a CIDR block.</li>
-         * <li>If <strong>DestinationType</strong> is set to <code>group</code>, the value of <strong>Destination</strong> must be an address book.</li>
-         * <li>If <strong>DestinationType</strong> is set to <code>domain</code>, the value of <strong>Destination</strong> must be a domain name.</li>
+         * <li><p>If <strong>DestinationType</strong> is set to <code>net</code>, the value of <strong>Destination</strong> is a destination CIDR block.</p>
+         * </li>
+         * <li><p>If <strong>DestinationType</strong> is set to <code>group</code>, the value of <strong>Destination</strong> is a destination address book name.</p>
+         * </li>
+         * <li><p>If <strong>DestinationType</strong> is set to <code>domain</code>, the value of <strong>Destination</strong> is a destination domain name.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -524,11 +527,11 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the destination address in the access control policy. Valid values:</p>
+         * <p>The type of the destination address in the virtual private cloud (VPC) firewall access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>net</strong>: CIDR block</li>
-         * <li><strong>group</strong>: address book</li>
-         * <li><strong>domain</strong>: domain name</li>
+         * <li><strong>net</strong>: destination CIDR block</li>
+         * <li><strong>group</strong>: destination address book</li>
+         * <li><strong>domain</strong>: destination domain name</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -544,13 +547,13 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         /**
          * <p>The domain name resolution method of the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>FQDN</strong>: fully qualified domain name (FQDN)-based resolution</li>
+         * <li><strong>FQDN</strong>: FQDN-based</li>
          * <li><strong>DNS</strong>: DNS-based dynamic resolution</li>
          * <li><strong>FQDN_AND_DNS</strong>: FQDN and DNS-based dynamic resolution</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>DNS</p>
+         * <p>FQDN</p>
          */
         public Builder domainResolveType(String domainResolveType) {
             this.putQueryParameter("DomainResolveType", domainResolveType);
@@ -559,9 +562,9 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+         * <p>The end time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The value must be on the hour or on the half hour and must be at least 30 minutes later than the start time.</p>
          * <blockquote>
-         * <p> If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * <p>When RepeatType is set to Permanent, EndTime is empty. When RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must have a value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -574,9 +577,9 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>
          * </ul>
          * 
@@ -590,7 +593,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * <p>The UID of a member account of the current Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -602,8 +605,8 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The priority of the access control policy. </p>
-         * <p>The priority value starts from 1. A smaller priority value indicates a higher priority.</p>
+         * <p>The priority of the virtual private cloud (VPC) firewall access control policy.</p>
+         * <p>The priority value starts from 1 and increases by increment. A smaller value indicates a higher priority.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -616,9 +619,9 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the protocol in the access control policy. Valid values:</p>
+         * <p>The security protocol type for traffic access in the virtual private cloud (VPC) firewall access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>ANY</strong> (If you are not sure about the protocol type, you can set this parameter to ANY.)</li>
+         * <li><strong>ANY</strong>: any protocol type</li>
          * <li><strong>TCP</strong></li>
          * <li><strong>UDP</strong></li>
          * <li><strong>ICMP</strong></li>
@@ -635,10 +638,10 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the access control policy. By default, an access control policy is enabled after the policy is created. Valid values: </p>
+         * <p>Specifies whether to enable the access control policy. The policy is enabled by default after it is created. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: enables the access control policy.</li>
-         * <li><strong>false</strong>: disables the access control policy.</li>
+         * <li><strong>false</strong>: does not enable the access control policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -653,18 +656,19 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         /**
          * <p>The days of a week or of a month on which the access control policy takes effect.</p>
          * <ul>
-         * <li>If you set RepeatType to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, leave this parameter empty. Example: [].</li>
-         * <li>If you set RepeatType to Weekly, you must specify this parameter. Example: [0, 6].</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you set RepeatType to Weekly, the fields in the value of this parameter cannot be repeated.</p>
+         * <li>When RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is an empty collection.
+         * Example: []</li>
+         * <li>When RepeatType is set to Weekly, RepeatDays cannot be empty.
+         * Example: [0, 6]<blockquote>
+         * <p>When RepeatType is set to Weekly, RepeatDays does not allow duplicate values.</p>
          * </blockquote>
-         * <ul>
-         * <li>If you set RepeatType to <code>Monthly</code>, you must specify this parameter. Example: [1, 31].</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.</p>
+         * </li>
+         * <li>When RepeatType is set to <code>Monthly</code>, RepeatDays cannot be empty.
+         * Example: [1, 31]<blockquote>
+         * <p>When RepeatType is set to Monthly, RepeatDays does not allow duplicate values.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          */
         public Builder repeatDays(java.util.List<Long> repeatDays) {
             this.putQueryParameter("RepeatDays", repeatDays);
@@ -673,9 +677,9 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+         * <p>The recurrence end time of the policy validity period for the access control policy. Example: 23:30. The value must be on the hour or on the half hour and must be at least 30 minutes later than the recurrence start time.</p>
          * <blockquote>
-         * <p> If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * <p>When RepeatType is set to Permanent or None, RepeatEndTime is empty. When RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must have a value. Format: HH:MM (24-hour clock). Example: 08:00.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -688,9 +692,9 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+         * <p>The recurrence start time of the policy validity period for the access control policy. Example: 08:00. The value must be on the hour or on the half hour and must be at least 30 minutes earlier than the recurrence end time.</p>
          * <blockquote>
-         * <p> If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * <p>When RepeatType is set to Permanent or None, RepeatStartTime is empty. When RepeatType is set to Daily, Weekly, or Monthly, RepeatStartTime must have a value. Format: HH:MM (24-hour clock). Example: 08:00.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -703,13 +707,13 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+         * <p>The recurrence type of the policy validity period for the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
-         * <li><strong>None</strong>: The policy takes effect for only once.</li>
-         * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
-         * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
-         * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+         * <li><strong>Permanent</strong> (default): always</li>
+         * <li><strong>None</strong>: one-time</li>
+         * <li><strong>Daily</strong>: daily</li>
+         * <li><strong>Weekly</strong>: weekly</li>
+         * <li><strong>Monthly</strong>: monthly</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -722,10 +726,10 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The source address in the access control policy. </p>
+         * <p>The source address in the virtual private cloud (VPC) firewall access control policy.</p>
          * <ul>
-         * <li>If SourceType is set to <code>net</code>, the value of Source must be a CIDR block.</li>
-         * <li>If SourceType is set to <code>group</code>, the value of Source must be an address book.</li>
+         * <li>If SourceType is set to <code>net</code>, the value of Source is a source CIDR block.</li>
+         * <li>If SourceType is set to <code>group</code>, the value of Source is a source address book name.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -739,10 +743,12 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the source address in the access control policy. Valid values:</p>
+         * <p>The type of the source address in the virtual private cloud (VPC) firewall access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>net</strong>: CIDR block</li>
-         * <li><strong>group</strong>: address book</li>
+         * <li><p><strong>net</strong>: source CIDR block</p>
+         * </li>
+         * <li><p><strong>group</strong>: source address book</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -756,9 +762,9 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+         * <p>The start time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The value must be on the hour or on the half hour and must be at least 30 minutes earlier than the end time.</p>
          * <blockquote>
-         * <p> If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * <p>When RepeatType is set to Permanent, StartTime is empty. When RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must have a value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -771,13 +777,15 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy group in which you want to create the access control policy. </p>
+         * <p>The ID of the virtual private cloud (VPC) firewall access control policy group.</p>
          * <ul>
-         * <li>If a VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.</li>
-         * <li>If a VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</li>
+         * <li><p>If the VPC firewall protects traffic between two VPCs connected through a CEN instance, the value of this parameter is the CEN instance ID.</p>
+         * </li>
+         * <li><p>If the VPC firewall protects traffic between two VPCs connected through an Express Connect circuit, the value of this parameter is the VPC firewall instance ID.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> You can call the <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/describevpcfirewallaclgrouplist">DescribeVpcFirewallAclGroupList</a> operation to query the IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -93,7 +93,10 @@ public class DescribeOutgoingRiskDomainAndIpCountResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE258AC0-6EDD-5929-AB47-165E9B54****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +104,10 @@ public class DescribeOutgoingRiskDomainAndIpCountResponseBody extends TeaModel {
         }
 
         /**
-         * RiskDomainCount.
+         * <p>The number of risk domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder riskDomainCount(Long riskDomainCount) {
             this.riskDomainCount = riskDomainCount;
@@ -109,7 +115,10 @@ public class DescribeOutgoingRiskDomainAndIpCountResponseBody extends TeaModel {
         }
 
         /**
-         * RiskIpCount.
+         * <p>The number of risk IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47</p>
          */
         public Builder riskIpCount(Long riskIpCount) {
             this.riskIpCount = riskIpCount;
@@ -117,7 +126,10 @@ public class DescribeOutgoingRiskDomainAndIpCountResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

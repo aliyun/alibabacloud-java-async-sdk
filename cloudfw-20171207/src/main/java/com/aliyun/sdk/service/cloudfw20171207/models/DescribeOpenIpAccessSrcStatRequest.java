@@ -115,7 +115,10 @@ public class DescribeOpenIpAccessSrcStatRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -124,7 +127,10 @@ public class DescribeOpenIpAccessSrcStatRequest extends Request {
         }
 
         /**
-         * DstIp.
+         * <p>The destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.102.XXX</p>
          */
         public Builder dstIp(String dstIp) {
             this.putQueryParameter("DstIp", dstIp);
@@ -133,7 +139,10 @@ public class DescribeOpenIpAccessSrcStatRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -142,7 +151,10 @@ public class DescribeOpenIpAccessSrcStatRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +163,10 @@ public class DescribeOpenIpAccessSrcStatRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

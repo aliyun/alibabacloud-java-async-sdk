@@ -23,8 +23,17 @@ public class DeleteControlPolicyRequest extends Request {
     private String aclUuid;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -38,7 +47,9 @@ public class DeleteControlPolicyRequest extends Request {
     private DeleteControlPolicyRequest(Builder builder) {
         super(builder);
         this.aclUuid = builder.aclUuid;
+        this.clientToken = builder.clientToken;
         this.direction = builder.direction;
+        this.dryRun = builder.dryRun;
         this.lang = builder.lang;
         this.sourceIp = builder.sourceIp;
     }
@@ -64,10 +75,24 @@ public class DeleteControlPolicyRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return direction
      */
     public String getDirection() {
         return this.direction;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -86,7 +111,9 @@ public class DeleteControlPolicyRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteControlPolicyRequest, Builder> {
         private String aclUuid; 
+        private String clientToken; 
         private String direction; 
+        private Boolean dryRun; 
         private String lang; 
         private String sourceIp; 
 
@@ -97,14 +124,16 @@ public class DeleteControlPolicyRequest extends Request {
         private Builder(DeleteControlPolicyRequest request) {
             super(request);
             this.aclUuid = request.aclUuid;
+            this.clientToken = request.clientToken;
             this.direction = request.direction;
+            this.dryRun = request.dryRun;
             this.lang = request.lang;
             this.sourceIp = request.sourceIp;
         } 
 
         /**
-         * <p>The UUID of the access control policy.</p>
-         * <p>To delete an access control policy, you must specify the UUID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/138866.html">DescribeControlPolicy</a> operation to query the UUID.</p>
+         * <p>The unique ID of the access control policy.</p>
+         * <p>To delete an access control policy, you must provide the unique ID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/138866.html">DescribeControlPolicy</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,11 +146,23 @@ public class DeleteControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The direction of the traffic to which the access control policy applies.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token. Make sure that the token is unique among different requests. The token must be a string that is case-sensitive and matches the regular expression [0-9a-zA-Z-_]{1,64}. We recommend that you use a UUID. The server ensures idempotence within the validity period of 600 seconds. If you send a repeated request with the same client token and the same business parameters, the server returns the same response as the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dedeaxfedxxx</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>The traffic direction controlled by the access control policy.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>in</strong>: inbound.</li>
-         * <li><strong>out</strong>: outbound.</li>
+         * <li><strong>in</strong>: inbound traffic</li>
+         * <li><strong>out</strong>: outbound traffic</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,11 +175,23 @@ public class DeleteControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response.</p>
+         * <p>Specifies whether to only precheck the request. If you set this parameter to true, the system only performs prechecks on parameter validity, identity permissions, resource existence, quota limits, and dependencies. The system does not create, update, or delete actual resources, trigger actual asynchronous traffic diversion tasks, or generate downstream side effects such as billing, notifications, or callbacks. If the precheck is successful, the response includes DryRun=true, which distinguishes it from the response of an actual call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The language of the request and response.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default)</li>
-         * <li><strong>en</strong></li>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>

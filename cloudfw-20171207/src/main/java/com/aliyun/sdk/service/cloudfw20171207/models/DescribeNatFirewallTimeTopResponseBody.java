@@ -93,7 +93,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         } 
 
         /**
-         * DataCount.
+         * <p>The number of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder dataCount(Long dataCount) {
             this.dataCount = dataCount;
@@ -101,7 +104,7 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         }
 
         /**
-         * DataList.
+         * <p>The list of data.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -109,7 +112,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5DDD596-1191-5F36-A504-8733045A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficTime.
+         * <p>The point in time when the traffic data was collected. This is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656923760</p>
          */
         public Builder trafficTime(String trafficTime) {
             this.trafficTime = trafficTime;
@@ -326,7 +335,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             } 
 
             /**
-             * InBps.
+             * <p>The inbound bandwidth. Unit: bps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>187</p>
              */
             public Builder inBps(Long inBps) {
                 this.inBps = inBps;
@@ -334,7 +346,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.66.231.XXX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -342,7 +357,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * NatFirewallId.
+             * <p>The ID of the NAT firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vfw-tr-7a9c8901ed394****</p>
              */
             public Builder natFirewallId(String natFirewallId) {
                 this.natFirewallId = natFirewallId;
@@ -350,7 +368,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * NatFirewallName.
+             * <p>The name of the NAT firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vfw-test</p>
              */
             public Builder natFirewallName(String natFirewallName) {
                 this.natFirewallName = natFirewallName;
@@ -358,7 +379,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * <p>The ID of the NAT Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-uf6pnry5vpawb****</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -366,7 +390,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayName.
+             * <p>The name of the NAT Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-test</p>
              */
             public Builder natGatewayName(String natGatewayName) {
                 this.natGatewayName = natGatewayName;
@@ -374,7 +401,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * NewConn.
+             * <p>The number of new connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder newConn(String newConn) {
                 this.newConn = newConn;
@@ -382,7 +412,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * OutBps.
+             * <p>The outbound bandwidth. Unit: bps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder outBps(Long outBps) {
                 this.outBps = outBps;
@@ -390,7 +423,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -398,7 +434,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceId.
+             * <p>The ID of the asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp130nn8h6157dir****</p>
              */
             public Builder resourceInstanceId(String resourceInstanceId) {
                 this.resourceInstanceId = resourceInstanceId;
@@ -406,7 +445,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceName.
+             * <p>The name of the asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceInstanceName(String resourceInstanceName) {
                 this.resourceInstanceName = resourceInstanceName;
@@ -414,7 +456,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * SessionCount.
+             * <p>The total number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder sessionCount(String sessionCount) {
                 this.sessionCount = sessionCount;
@@ -422,7 +467,10 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBps.
+             * <p>The total bandwidth. Unit: bps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>232</p>
              */
             public Builder totalBps(Long totalBps) {
                 this.totalBps = totalBps;

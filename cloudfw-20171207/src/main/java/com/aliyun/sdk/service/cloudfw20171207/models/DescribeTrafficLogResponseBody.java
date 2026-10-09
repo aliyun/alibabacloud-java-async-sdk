@@ -93,7 +93,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -101,7 +101,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -109,7 +109,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         }
 
         /**
-         * QueryId.
+         * <p>The query ID. If the query is too large, a query ID is returned first. Use this query ID to retrieve results in subsequent requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>398542bf-e001-47a3-aee2-b132b588e3c8</p>
          */
         public Builder queryId(String queryId) {
             this.queryId = queryId;
@@ -117,7 +120,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>633D92D1-768A-547F-8ADC-2870CF0A99F6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -196,7 +202,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             } 
 
             /**
-             * RegionNo.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -204,7 +213,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vba1c1em97h0ji71b****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -212,7 +224,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * <p>The VPC instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yi-vpc</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -292,7 +307,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             } 
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -300,7 +318,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sharepoint</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -308,7 +329,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * RuleSource.
+             * <p>The rule source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder ruleSource(String ruleSource) {
                 this.ruleSource = ruleSource;
@@ -388,7 +412,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             } 
 
             /**
-             * RegionNo.
+             * <p>The region ID of the source VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -396,7 +423,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The instance ID of the source VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vba1c1em97h0ji71****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -404,7 +434,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * <p>The instance name of the source VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yi-vpc</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -1082,7 +1115,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             } 
 
             /**
-             * AclPreRuleId.
+             * <p>The policy ID of the ACL pre-match. If this parameter is empty, all policies are included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder aclPreRuleId(String aclPreRuleId) {
                 this.aclPreRuleId = aclPreRuleId;
@@ -1090,7 +1126,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * AclPreRuleName.
+             * <p>The policy name of the ACL pre-match.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder aclPreRuleName(String aclPreRuleName) {
                 this.aclPreRuleName = aclPreRuleName;
@@ -1098,7 +1137,13 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * AclPreState.
+             * <p>The ACL pre-match status. Valid values:</p>
+             * <p><strong>app_unknown</strong>: application not identified.</p>
+             * <p><strong>domain_unknown</strong>: domain name not identified.</p>
+             * <p><strong>normal</strong>: normal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder aclPreState(String aclPreState) {
                 this.aclPreState = aclPreState;
@@ -1106,7 +1151,18 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * AppDpiState.
+             * <p>The application identification status. Valid values:</p>
+             * <p><strong>none</strong>: initial state.</p>
+             * <p><strong>policy_discard</strong>: connection establishment failed because the connection was blocked by a user ACL or threat intelligence rule.</p>
+             * <p><strong>tcp_not_establish</strong>: TCP connection establishment failed.</p>
+             * <p><strong>no_payload</strong>: connection established, but DPI has analyzed 0 payloads.</p>
+             * <p><strong>analysing</strong>: identification in progress.</p>
+             * <p><strong>unknown_loose</strong>: loose mode. Identification failed. Identification continues.</p>
+             * <p><strong>unknown_strict</strong>: strict mode. Identification failed.</p>
+             * <p><strong>success</strong>: identification succeeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder appDpiState(String appDpiState) {
                 this.appDpiState = appDpiState;
@@ -1114,7 +1170,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder appId(Integer appId) {
                 this.appId = appId;
@@ -1122,7 +1181,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -1130,7 +1192,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * AttackApp.
+             * <p>The name of the attacked application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebLogic</p>
              */
             public Builder attackApp(String attackApp) {
                 this.attackApp = attackApp;
@@ -1138,7 +1203,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * AttackType.
+             * <p>The attack type of the intrusion prevention event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder attackType(Integer attackType) {
                 this.attackType = attackType;
@@ -1146,7 +1214,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * CityId.
+             * <p>The city ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FI</p>
              */
             public Builder cityId(String cityId) {
                 this.cityId = cityId;
@@ -1154,7 +1225,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * CloseReason.
+             * <p>The close reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp_fin</p>
              */
             public Builder closeReason(String closeReason) {
                 this.closeReason = closeReason;
@@ -1162,7 +1236,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * CloudInstanceId.
+             * <p>The cloud service instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-*</p>
              */
             public Builder cloudInstanceId(String cloudInstanceId) {
                 this.cloudInstanceId = cloudInstanceId;
@@ -1170,7 +1247,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * CountryId.
+             * <p>The country ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>US</p>
              */
             public Builder countryId(String countryId) {
                 this.countryId = countryId;
@@ -1178,7 +1258,14 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * Direction.
+             * <p>The traffic direction. Valid values:</p>
+             * <ul>
+             * <li><strong>in</strong>: inbound.</li>
+             * <li><strong>out</strong>: outbound.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>in</p>
              */
             public Builder direction(String direction) {
                 this.direction = direction;
@@ -1186,7 +1273,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -1194,7 +1284,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * DomainUrl.
+             * <p>The URL in the flow log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx.com</p>
              */
             public Builder domainUrl(String domainUrl) {
                 this.domainUrl = domainUrl;
@@ -1202,7 +1295,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * DstIP.
+             * <p>The destination IP address. Indicates that the intrusion prevention event contains this destination IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.2.2</p>
              */
             public Builder dstIP(String dstIP) {
                 this.dstIP = dstIP;
@@ -1210,7 +1306,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * DstPort.
+             * <p>The destination port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder dstPort(Integer dstPort) {
                 this.dstPort = dstPort;
@@ -1218,7 +1317,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * DstVpc.
+             * <p>The destination VPC information.</p>
              */
             public Builder dstVpc(DstVpc dstVpc) {
                 this.dstVpc = dstVpc;
@@ -1226,7 +1325,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the data. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1751423363</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -1234,7 +1336,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * Ext.
+             * <p>The additional extended data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder ext(String ext) {
                 this.ext = ext;
@@ -1242,7 +1347,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * InBytes.
+             * <p>The inbound traffic in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>125</p>
              */
             public Builder inBytes(String inBytes) {
                 this.inBytes = inBytes;
@@ -1250,7 +1358,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * InPackets.
+             * <p>The number of inbound packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder inPackets(String inPackets) {
                 this.inPackets = inPackets;
@@ -1258,7 +1369,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * IpProtocol.
+             * <p>The protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -1266,7 +1380,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * <p>The Internet service provider (ISP).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FOP Dmytro Nedilskyi</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -1274,7 +1391,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * IspId.
+             * <p>The ISP ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50075069</p>
              */
             public Builder ispId(String ispId) {
                 this.ispId = ispId;
@@ -1282,7 +1402,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>The region of the source or destination IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1290,7 +1413,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUid.
+             * <p>The UID of the Cloud Firewall member accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14151892****7022</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -1298,7 +1424,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * OutBytes.
+             * <p>The outbound traffic in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>230</p>
              */
             public Builder outBytes(String outBytes) {
                 this.outBytes = outBytes;
@@ -1306,7 +1435,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * OutPackets.
+             * <p>The number of outbound packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder outPackets(String outPackets) {
                 this.outPackets = outPackets;
@@ -1314,7 +1446,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * PacketBytes.
+             * <p>The number of bytes in the packet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>355</p>
              */
             public Builder packetBytes(Long packetBytes) {
                 this.packetBytes = packetBytes;
@@ -1322,7 +1457,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * PacketCount.
+             * <p>The number of traffic packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder packetCount(Long packetCount) {
                 this.packetCount = packetCount;
@@ -1330,7 +1468,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIp.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.21.234.XXX</p>
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -1338,7 +1479,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * PrivatePort.
+             * <p>The private port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder privatePort(Integer privatePort) {
                 this.privatePort = privatePort;
@@ -1346,7 +1490,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1354,7 +1501,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the matched rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00000000-0000-0000-0000-000000000000</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -1362,7 +1512,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1370,7 +1523,15 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * RuleResult.
+             * <p>The final result of the traffic. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: allowed.</li>
+             * <li><strong>1</strong>: alerted.</li>
+             * <li><strong>2</strong>: dropped.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ruleResult(Integer ruleResult) {
                 this.ruleResult = ruleResult;
@@ -1378,7 +1539,17 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * RuleSource.
+             * <p>The source of the hit detection rule. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: none.</li>
+             * <li><strong>1</strong>: basic protection.</li>
+             * <li><strong>2</strong>: Virtual Patches.</li>
+             * <li><strong>3</strong>: access control.</li>
+             * <li><strong>4</strong>: threat intelligence.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ruleSource(String ruleSource) {
                 this.ruleSource = ruleSource;
@@ -1386,7 +1557,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The rule list.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -1394,7 +1565,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * SrcIP.
+             * <p>The source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder srcIP(String srcIP) {
                 this.srcIP = srcIP;
@@ -1402,7 +1576,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * SrcPort.
+             * <p>The port of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20206</p>
              */
             public Builder srcPort(Integer srcPort) {
                 this.srcPort = srcPort;
@@ -1410,7 +1587,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * SrcPrivateIP.
+             * <p>The private source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.101.7</p>
              */
             public Builder srcPrivateIP(String srcPrivateIP) {
                 this.srcPrivateIP = srcPrivateIP;
@@ -1418,7 +1598,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * SrcVpc.
+             * <p>The source VPC information.</p>
              */
             public Builder srcVpc(SrcVpc srcVpc) {
                 this.srcVpc = srcVpc;
@@ -1426,7 +1606,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the data. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1751423362</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -1434,7 +1617,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * TlsRuleId.
+             * <p>The ID of the matched TLS inspection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tir-xxx</p>
              */
             public Builder tlsRuleId(String tlsRuleId) {
                 this.tlsRuleId = tlsRuleId;
@@ -1442,7 +1628,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * TlsRuleName.
+             * <p>The name of the matched TLS inspection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tlsRuleName(String tlsRuleName) {
                 this.tlsRuleName = tlsRuleName;
@@ -1450,7 +1639,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * TlsScopeId.
+             * <p>The TLS inspection scope ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tls-xxx</p>
              */
             public Builder tlsScopeId(String tlsScopeId) {
                 this.tlsScopeId = tlsScopeId;
@@ -1458,7 +1650,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * VpcFirewallId.
+             * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vfw-4045ca7***</p>
              */
             public Builder vpcFirewallId(String vpcFirewallId) {
                 this.vpcFirewallId = vpcFirewallId;
@@ -1466,7 +1661,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * VulLevel.
+             * <p>The vulnerability level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder vulLevel(Integer vulLevel) {
                 this.vulLevel = vulLevel;
@@ -1546,7 +1744,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -1554,7 +1755,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1562,7 +1766,10 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

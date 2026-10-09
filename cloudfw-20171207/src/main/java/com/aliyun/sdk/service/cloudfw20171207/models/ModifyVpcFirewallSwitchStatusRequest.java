@@ -103,10 +103,12 @@ public class ModifyVpcFirewallSwitchStatusRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the VPC firewall. Valid values:</p>
+         * <p>The status of the virtual private cloud (VPC) firewall. Valid values:</p>
          * <ul>
-         * <li><strong>open</strong>: yes</li>
-         * <li><strong>close</strong>: no</li>
+         * <li><p><strong>open</strong>: Enable.</p>
+         * </li>
+         * <li><p><strong>close</strong>: Disable.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -122,8 +124,10 @@ public class ModifyVpcFirewallSwitchStatusRequest extends Request {
         /**
          * <p>The language of the content within the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +140,7 @@ public class ModifyVpcFirewallSwitchStatusRequest extends Request {
         }
 
         /**
-         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * <p>The UID of the member account of the current Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -148,9 +152,9 @@ public class ModifyVpcFirewallSwitchStatusRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the VPC firewall.</p>
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance ID of the VPC firewall.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -93,7 +93,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         } 
 
         /**
-         * DataCount.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         public Builder dataCount(Integer dataCount) {
             this.dataCount = dataCount;
@@ -101,7 +104,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         }
 
         /**
-         * DataList.
+         * <p>The list of data entries.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -109,7 +112,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F2D5C04-731F-50B0-ADE1-01637B3C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficTime.
+         * <p>The timestamp of the traffic data. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1734399660</p>
          */
         public Builder trafficTime(Integer trafficTime) {
             this.trafficTime = trafficTime;
@@ -391,7 +400,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             } 
 
             /**
-             * IP.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183.60.164.XXX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -399,7 +411,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * InBps.
+             * <p>The inbound bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>187</p>
              */
             public Builder inBps(Long inBps) {
                 this.inBps = inBps;
@@ -407,7 +422,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * InPps.
+             * <p>The inbound packet forwarding rate. Unit: pps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder inPps(Long inPps) {
                 this.inPps = inPps;
@@ -415,7 +433,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * <p>The ID of the NAT gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-wz98eedr5l5hkb8****e7</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -423,7 +444,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayName.
+             * <p>The name of the NAT gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-test</p>
              */
             public Builder natGatewayName(String natGatewayName) {
                 this.natGatewayName = natGatewayName;
@@ -431,7 +455,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * NatIP.
+             * <p>The public IP address of the NAT gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.97.66.XXX</p>
              */
             public Builder natIP(String natIP) {
                 this.natIP = natIP;
@@ -439,7 +466,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * NewConn.
+             * <p>The number of new connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder newConn(Long newConn) {
                 this.newConn = newConn;
@@ -447,7 +477,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * OutBps.
+             * <p>The outbound traffic. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder outBps(Long outBps) {
                 this.outBps = outBps;
@@ -455,7 +488,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * OutPps.
+             * <p>The outbound packet forwarding rate. Unit: pps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder outPps(Long outPps) {
                 this.outPps = outPps;
@@ -463,7 +499,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIP.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.21.186.XXX</p>
              */
             public Builder privateIP(String privateIP) {
                 this.privateIP = privateIP;
@@ -471,7 +510,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -479,7 +521,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceId.
+             * <p>The ID of the asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-bp14ue2rgktunncq****</p>
              */
             public Builder resourceInstanceId(String resourceInstanceId) {
                 this.resourceInstanceId = resourceInstanceId;
@@ -487,7 +532,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceName.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceInstanceName(String resourceInstanceName) {
                 this.resourceInstanceName = resourceInstanceName;
@@ -495,7 +543,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EcsPublicIP</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -503,7 +554,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * SessionCount.
+             * <p>The number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder sessionCount(Long sessionCount) {
                 this.sessionCount = sessionCount;
@@ -511,7 +565,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBps.
+             * <p>The total bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>232</p>
              */
             public Builder totalBps(Long totalBps) {
                 this.totalBps = totalBps;
@@ -519,7 +576,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPps.
+             * <p>The total number of packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88</p>
              */
             public Builder totalPps(Long totalPps) {
                 this.totalPps = totalPps;
@@ -527,7 +587,10 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the virtual private cloud (VPC) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9o0uzfjuj81fx7m****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

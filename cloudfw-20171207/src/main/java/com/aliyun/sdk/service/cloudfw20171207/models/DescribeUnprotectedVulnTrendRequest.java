@@ -101,7 +101,10 @@ public class DescribeUnprotectedVulnTrendRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time. Use a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1754878752</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -110,7 +113,16 @@ public class DescribeUnprotectedVulnTrendRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -119,7 +131,10 @@ public class DescribeUnprotectedVulnTrendRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112.15.190.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -128,7 +143,10 @@ public class DescribeUnprotectedVulnTrendRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. Use a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1740623016</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

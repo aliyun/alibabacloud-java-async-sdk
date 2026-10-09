@@ -80,7 +80,7 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         } 
 
         /**
-         * AssetList.
+         * <p>The list of assets.</p>
          */
         public Builder assetList(java.util.List<AssetList> assetList) {
             this.assetList = assetList;
@@ -88,7 +88,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A515672-FAAE-584F-B51C-B2586E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -370,7 +376,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetInstanceId.
+             * <p>The ID of the asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-8vbcmllue4d94nto****</p>
              */
             public Builder assetInstanceId(String assetInstanceId) {
                 this.assetInstanceId = assetInstanceId;
@@ -378,7 +387,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * AssetInstanceName.
+             * <p>The name of the asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder assetInstanceName(String assetInstanceName) {
                 this.assetInstanceName = assetInstanceName;
@@ -386,7 +398,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * AssetsRegion.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder assetsRegion(String assetsRegion) {
                 this.assetsRegion = assetsRegion;
@@ -394,7 +409,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The follow status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subscribe</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -402,7 +420,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * InBytes.
+             * <p>The inbound traffic, which is the response traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>244438</p>
              */
             public Builder inBytes(Long inBytes) {
                 this.inBytes = inBytes;
@@ -410,7 +431,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * IpsHitCnt.
+             * <p>The number of IPS hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder ipsHitCnt(Long ipsHitCnt) {
                 this.ipsHitCnt = ipsHitCnt;
@@ -418,7 +442,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * <p>The ID of the NAT Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-bp1utx6wj4x9qu9tl****</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -426,7 +453,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayName.
+             * <p>The name of the NAT Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-test</p>
              */
             public Builder natGatewayName(String natGatewayName) {
                 this.natGatewayName = natGatewayName;
@@ -434,7 +464,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * OutBytes.
+             * <p>The outbound traffic, which is the request traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder outBytes(Long outBytes) {
                 this.outBytes = outBytes;
@@ -442,7 +475,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * OutgoingDomainCnt.
+             * <p>The number of outbound domains.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder outgoingDomainCnt(Long outgoingDomainCnt) {
                 this.outgoingDomainCnt = outgoingDomainCnt;
@@ -450,7 +486,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * OutgoingDstIPCnt.
+             * <p>The number of outbound destination IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder outgoingDstIPCnt(Long outgoingDstIPCnt) {
                 this.outgoingDstIPCnt = outgoingDstIPCnt;
@@ -458,7 +497,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIP.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.21.242XXX</p>
              */
             public Builder privateIP(String privateIP) {
                 this.privateIP = privateIP;
@@ -466,7 +508,7 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIPList.
+             * <p>The list of private IP addresses.</p>
              */
             public Builder privateIPList(java.util.List<String> privateIPList) {
                 this.privateIPList = privateIPList;
@@ -474,7 +516,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIP.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.96.181.XXX</p>
              */
             public Builder publicIP(String publicIP) {
                 this.publicIP = publicIP;
@@ -482,7 +527,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the public IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EcsPublicIP</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -490,7 +538,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityRisk.
+             * <p>The security risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>risk</p>
              */
             public Builder securityRisk(String securityRisk) {
                 this.securityRisk = securityRisk;
@@ -498,7 +549,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * SessionCount.
+             * <p>The number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder sessionCount(Long sessionCount) {
                 this.sessionCount = sessionCount;
@@ -506,7 +560,10 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBytes.
+             * <p>The total traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12498767</p>
              */
             public Builder totalBytes(Long totalBytes) {
                 this.totalBytes = totalBytes;

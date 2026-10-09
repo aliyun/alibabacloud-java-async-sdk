@@ -106,7 +106,7 @@ public class DescribeAckClustersResponseBody extends TeaModel {
         } 
 
         /**
-         * Clusters.
+         * <p>A list of ACK clusters.</p>
          */
         public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;
@@ -114,7 +114,10 @@ public class DescribeAckClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -122,7 +125,10 @@ public class DescribeAckClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeAckClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5DDD596-1191-5F36-A504-8733045A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeAckClustersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -308,7 +320,10 @@ public class DescribeAckClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterId.
+             * <p>The ID of the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cb0f5640b1b2d404cad6ba21509d7847b</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -316,7 +331,10 @@ public class DescribeAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * <p>The name of the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack-cluster-name</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -324,7 +342,10 @@ public class DescribeAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterSpec.
+             * <p>The specification of the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack.pro.small</p>
              */
             public Builder clusterSpec(String clusterSpec) {
                 this.clusterSpec = clusterSpec;
@@ -332,7 +353,13 @@ public class DescribeAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterType.
+             * <p>The type of the ACK cluster. For more information about the valid values, see <a href="~~DescribeClustersV1~~">DescribeClustersV1</a>.</p>
+             * <ul>
+             * <li><a href="~~DescribeClustersV1~~">DescribeClustersV1</a>: Returns a list of ACK clusters in your account that meet specific criteria, such as the cluster type and specifications.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ManagedKubernetes</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -340,7 +367,10 @@ public class DescribeAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUid.
+             * <p>The Alibaba Cloud UID of the account to which the ACK cluster resources belong.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>135809047715****</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -348,7 +378,13 @@ public class DescribeAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * <p>The network plugin of the ACK cluster. For more information about the valid values, see <a href="~~DescribeClustersV1~~">DescribeClustersV1</a>.</p>
+             * <ul>
+             * <li><a href="~~DescribeClustersV1~~">DescribeClustersV1</a>: Lists the ACK clusters in your account that meet specified conditions, such as cluster type and specifications.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>terway-eniip</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -356,7 +392,13 @@ public class DescribeAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The subtype of the cluster. This parameter is available only when <code>ClusterType</code> is set to <code>ManagedKubernetes</code>. For more information about the valid values, see <a href="~~DescribeClustersV1~~">DescribeClustersV1</a>.</p>
+             * <ul>
+             * <li><a href="~~DescribeClustersV1~~">DescribeClustersV1</a>: Lists ACK clusters in your account that meet specified conditions, such as cluster type and specifications.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -364,7 +406,10 @@ public class DescribeAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -372,7 +417,13 @@ public class DescribeAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The running status of the ACK cluster. For more information about the valid values, see <a href="~~DescribeClustersV1~~">DescribeClustersV1</a>.</p>
+             * <ul>
+             * <li><a href="~~DescribeClustersV1~~">DescribeClustersV1</a>: Retrieves a list of ACK clusters in your account that meet specified conditions, such as cluster type and specifications.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -380,7 +431,10 @@ public class DescribeAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC where the ACK cluster is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2vcg932hsxsxuqbgl****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

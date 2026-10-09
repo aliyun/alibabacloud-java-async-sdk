@@ -87,7 +87,14 @@ public class ModifySensitiveSwitchRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language type. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -96,7 +103,10 @@ public class ModifySensitiveSwitchRequest extends Request {
         }
 
         /**
-         * SensitiveCategory.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id_card</p>
          */
         public Builder sensitiveCategory(String sensitiveCategory) {
             this.putQueryParameter("SensitiveCategory", sensitiveCategory);
@@ -105,7 +115,14 @@ public class ModifySensitiveSwitchRequest extends Request {
         }
 
         /**
-         * SwitchStatus.
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled.</li>
+         * <li><strong>0</strong>: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder switchStatus(String switchStatus) {
             this.putQueryParameter("SwitchStatus", switchStatus);

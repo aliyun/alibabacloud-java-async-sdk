@@ -73,7 +73,7 @@ public class DisableSdlProtectedAssetRequest extends Request {
         } 
 
         /**
-         * IpList.
+         * <p>The list of IP assets.</p>
          */
         public Builder ipList(java.util.List<String> ipList) {
             this.putQueryParameter("IpList", ipList);
@@ -82,7 +82,10 @@ public class DisableSdlProtectedAssetRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

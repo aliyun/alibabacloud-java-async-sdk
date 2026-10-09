@@ -171,7 +171,10 @@ public class DescribePrivateDnsEndpointListRequest extends Request {
         } 
 
         /**
-         * AccessInstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pd-12345</p>
          */
         public Builder accessInstanceId(String accessInstanceId) {
             this.putQueryParameter("AccessInstanceId", accessInstanceId);
@@ -180,7 +183,10 @@ public class DescribePrivateDnsEndpointListRequest extends Request {
         }
 
         /**
-         * AccessInstanceName.
+         * <p>The name of the private instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accessInstanceName(String accessInstanceName) {
             this.putQueryParameter("AccessInstanceName", accessInstanceName);
@@ -189,7 +195,18 @@ public class DescribePrivateDnsEndpointListRequest extends Request {
         }
 
         /**
-         * FirewallType.
+         * <p>The type of Cloud Firewall. Valid values:</p>
+         * <ul>
+         * <li><p><strong>internet</strong></p>
+         * </li>
+         * <li><p><strong>vpc</strong></p>
+         * </li>
+         * <li><p><strong>nat</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder firewallType(String firewallType) {
             this.putQueryParameter("FirewallType", firewallType);
@@ -198,7 +215,10 @@ public class DescribePrivateDnsEndpointListRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of the member account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135809047715****</p>
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -207,7 +227,10 @@ public class DescribePrivateDnsEndpointListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -216,7 +239,10 @@ public class DescribePrivateDnsEndpointListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,7 +251,10 @@ public class DescribePrivateDnsEndpointListRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -234,7 +263,20 @@ public class DescribePrivateDnsEndpointListRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>creating</strong>: The instance is being created.</p>
+         * </li>
+         * <li><p><strong>deleting</strong>: The instance is being deleted.</p>
+         * </li>
+         * <li><p><strong>normal</strong>: The instance is running as expected.</p>
+         * </li>
+         * <li><p><strong>updating</strong>: The instance is being updated.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -243,7 +285,10 @@ public class DescribePrivateDnsEndpointListRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbwbo90rq0anm6t****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

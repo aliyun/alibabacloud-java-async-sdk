@@ -80,7 +80,7 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -88,7 +88,10 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8EAC2347-E85A-5DFF-9F49-B8E1BAFB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -253,7 +259,10 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * InBytes.
+             * <p>The number of bytes received. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17845821669</p>
              */
             public Builder inBytes(Long inBytes) {
                 this.inBytes = inBytes;
@@ -261,7 +270,10 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OutBytes.
+             * <p>The number of bytes sent. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1123</p>
              */
             public Builder outBytes(Long outBytes) {
                 this.outBytes = outBytes;
@@ -269,7 +281,10 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PeerAssetIP.
+             * <p>The source IP address of the peer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.125.1.XX</p>
              */
             public Builder peerAssetIP(String peerAssetIP) {
                 this.peerAssetIP = peerAssetIP;
@@ -277,7 +292,10 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PeerAssetInstanceId.
+             * <p>The instance ID of the peer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-123451</p>
              */
             public Builder peerAssetInstanceId(String peerAssetInstanceId) {
                 this.peerAssetInstanceId = peerAssetInstanceId;
@@ -285,7 +303,10 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PeerAssetInstanceName.
+             * <p>The instance name of the peer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder peerAssetInstanceName(String peerAssetInstanceName) {
                 this.peerAssetInstanceName = peerAssetInstanceName;
@@ -293,7 +314,10 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PeerVpcId.
+             * <p>The instance ID of the peer VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-123411</p>
              */
             public Builder peerVpcId(String peerVpcId) {
                 this.peerVpcId = peerVpcId;
@@ -301,7 +325,10 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -309,7 +336,10 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SessionCount.
+             * <p>The total number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder sessionCount(Long sessionCount) {
                 this.sessionCount = sessionCount;
@@ -317,7 +347,10 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * peerVpcName.
+             * <p>The name of the peer VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-test</p>
              */
             public Builder peerVpcName(String peerVpcName) {
                 this.peerVpcName = peerVpcName;

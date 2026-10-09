@@ -80,7 +80,7 @@ public class DescribeInvadeEventNameListResponseBody extends TeaModel {
         } 
 
         /**
-         * EventNameList.
+         * <p>A list of anomalous activity names.</p>
          */
         public Builder eventNameList(java.util.List<EventNameList> eventNameList) {
             this.eventNameList = eventNameList;
@@ -88,7 +88,7 @@ public class DescribeInvadeEventNameListResponseBody extends TeaModel {
         }
 
         /**
-         * NameList.
+         * <p>A list of vulnerability names.</p>
          */
         public Builder nameList(java.util.List<String> nameList) {
             this.nameList = nameList;
@@ -96,7 +96,10 @@ public class DescribeInvadeEventNameListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6ABAA264-E7B5-5D66-8FC3-9253100****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +165,10 @@ public class DescribeInvadeEventNameListResponseBody extends TeaModel {
             } 
 
             /**
-             * EventKey.
+             * <p>The unique identifier of the vulnerability event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CActivity</p>
              */
             public Builder eventKey(String eventKey) {
                 this.eventKey = eventKey;
@@ -170,7 +176,10 @@ public class DescribeInvadeEventNameListResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * <p>The name of the vulnerability event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Suspicious central control communication</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;

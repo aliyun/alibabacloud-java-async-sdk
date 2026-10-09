@@ -104,7 +104,10 @@ public class UpdateAclCheckDetailStatusRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -113,6 +116,7 @@ public class UpdateAclCheckDetailStatusRequest extends Request {
         }
 
         /**
+         * <p>The modified status.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +129,7 @@ public class UpdateAclCheckDetailStatusRequest extends Request {
         }
 
         /**
+         * <p>The ACL check task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +142,7 @@ public class UpdateAclCheckDetailStatusRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier ID of the ACL policy in the ACL check details.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

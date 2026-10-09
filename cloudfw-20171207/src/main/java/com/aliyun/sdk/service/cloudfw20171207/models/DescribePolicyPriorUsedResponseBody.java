@@ -80,9 +80,9 @@ public class DescribePolicyPriorUsedResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The lowest priority of existing access control policies.</p>
+         * <p>The lowest priority of your access control policies.</p>
          * <blockquote>
-         * <p> The value -1 indicates the lowest priority.</p>
+         * <p>A larger value indicates a lower priority.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -105,9 +105,9 @@ public class DescribePolicyPriorUsedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The highest priority of existing access control policies.</p>
+         * <p>The highest priority of your access control policies.</p>
          * <blockquote>
-         * <p> The value 0 indicates the highest priority.</p>
+         * <p>A smaller value indicates a higher priority.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

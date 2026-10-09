@@ -104,10 +104,12 @@ public class BatchCopyVpcFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,13 +134,15 @@ public class BatchCopyVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy group of the source VPC firewall. Valid values:</p>
+         * <p>The ID of the access control policy group for the source virtual private cloud (VPC) firewall of this operation. Valid values:</p>
          * <ul>
-         * <li>If the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</li>
-         * <li>If the VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.</li>
+         * <li><p>If the VPC firewall protects traffic between a network instance in a Cloud Enterprise Network (CEN) instance (network instances include VPCs, VBRs, and CCNs) and a specified VPC, the policy group ID is the CEN instance ID.</p>
+         * </li>
+         * <li><p>If the VPC firewall protects traffic between two VPCs that are connected through Express Connect, the policy group ID is the VPC firewall instance ID.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the IDs of policy groups.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain this ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -152,13 +156,15 @@ public class BatchCopyVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy group of the destination VPC firewall. Valid values:</p>
+         * <p>The ID of the access control policy group for the destination virtual private cloud (VPC) firewall of this operation. Valid values:</p>
          * <ul>
-         * <li>If the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a VBR, or a CCN instance.</li>
-         * <li>If the VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.</li>
+         * <li><p>If the VPC firewall protects traffic between a network instance in a Cloud Enterprise Network (CEN) instance (network instances include VPCs, VBRs, and CCNs) and a specified VPC, the policy group ID is the CEN instance ID.</p>
+         * </li>
+         * <li><p>If the VPC firewall protects traffic between two VPCs that are connected through Express Connect, the policy group ID is the VPC firewall instance ID.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the IDs of policy groups.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain this ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

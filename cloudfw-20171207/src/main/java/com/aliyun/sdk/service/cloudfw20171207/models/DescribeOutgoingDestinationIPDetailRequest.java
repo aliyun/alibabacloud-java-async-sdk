@@ -258,7 +258,10 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         } 
 
         /**
-         * AclCoverage.
+         * <p>The status of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FullCoverage</p>
          */
         public Builder aclCoverage(String aclCoverage) {
             this.putQueryParameter("AclCoverage", aclCoverage);
@@ -267,7 +270,10 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -276,6 +282,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
+         * <p>The destination IP address.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,6 +295,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query. This is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,7 +308,10 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * IPType.
+         * <p>Describes the outbound connections from a private network through a NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NatPrivate</p>
          */
         public Builder IPType(String IPType) {
             this.putQueryParameter("IPType", IPType);
@@ -309,7 +320,10 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -318,7 +332,10 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * <p>The ID of the NAT Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-2zed6z6qkd7ogc****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -327,7 +344,10 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -336,7 +356,10 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -345,7 +368,10 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * PrivateIP.
+         * <p>The private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.210.0.XXX</p>
          */
         public Builder privateIP(String privateIP) {
             this.putQueryParameter("PrivateIP", privateIP);
@@ -354,7 +380,10 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * PublicIP.
+         * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder publicIP(String publicIP) {
             this.putQueryParameter("PublicIP", publicIP);
@@ -363,7 +392,10 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The field to use for sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InBytes</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -372,7 +404,10 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.202.193.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -381,6 +416,7 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
+         * <p>The start of the time range to query. This is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -393,7 +429,10 @@ public class DescribeOutgoingDestinationIPDetailRequest extends Request {
         }
 
         /**
-         * TagId.
+         * <p>The ID of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FirstFlow</p>
          */
         public Builder tagId(String tagId) {
             this.putQueryParameter("TagId", tagId);

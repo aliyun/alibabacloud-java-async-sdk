@@ -67,7 +67,10 @@ public class ResetRuleHitCountResponseBody extends TeaModel {
         } 
 
         /**
-         * Module.
+         * <p>The application module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg_server</p>
          */
         public Builder module(String module) {
             this.module = module;
@@ -75,7 +78,10 @@ public class ResetRuleHitCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>706B2093-CBA0-51B2-BEBF-58903FC6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

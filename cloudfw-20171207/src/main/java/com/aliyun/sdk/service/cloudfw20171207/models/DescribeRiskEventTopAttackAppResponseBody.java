@@ -67,7 +67,7 @@ public class DescribeRiskEventTopAttackAppResponseBody extends TeaModel {
         } 
 
         /**
-         * AttackApps.
+         * <p>The list of attacked applications.</p>
          */
         public Builder attackApps(java.util.List<AttackApps> attackApps) {
             this.attackApps = attackApps;
@@ -75,7 +75,10 @@ public class DescribeRiskEventTopAttackAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C9DDAD29-C6B3-5997-B757-FFB3F1C3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribeRiskEventTopAttackAppResponseBody extends TeaModel {
             } 
 
             /**
-             * App.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>live</p>
              */
             public Builder app(String app) {
                 this.app = app;
@@ -162,7 +168,10 @@ public class DescribeRiskEventTopAttackAppResponseBody extends TeaModel {
             }
 
             /**
-             * AttackCnt.
+             * <p>The number of attacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder attackCnt(Integer attackCnt) {
                 this.attackCnt = attackCnt;
@@ -170,7 +179,10 @@ public class DescribeRiskEventTopAttackAppResponseBody extends TeaModel {
             }
 
             /**
-             * DropCnt.
+             * <p>The number of intercepted attacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder dropCnt(Integer dropCnt) {
                 this.dropCnt = dropCnt;

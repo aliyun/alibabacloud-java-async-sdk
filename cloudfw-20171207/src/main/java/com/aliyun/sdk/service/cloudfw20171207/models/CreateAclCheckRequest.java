@@ -88,6 +88,7 @@ public class CreateAclCheckRequest extends Request {
         } 
 
         /**
+         * <p>The ACL check type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,7 @@ public class CreateAclCheckRequest extends Request {
         }
 
         /**
-         * CheckNames.
+         * <p>The list of ACL check names.</p>
          */
         public Builder checkNames(java.util.List<String> checkNames) {
             this.putQueryParameter("CheckNames", checkNames);
@@ -109,7 +110,10 @@ public class CreateAclCheckRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

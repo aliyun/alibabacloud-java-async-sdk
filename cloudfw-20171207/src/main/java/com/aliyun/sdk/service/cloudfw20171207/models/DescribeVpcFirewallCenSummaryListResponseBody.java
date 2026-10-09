@@ -80,7 +80,7 @@ public class DescribeVpcFirewallCenSummaryListResponseBody extends TeaModel {
         } 
 
         /**
-         * CenList.
+         * <p>The list of CEN instances.</p>
          */
         public Builder cenList(java.util.List<CenList> cenList) {
             this.cenList = cenList;
@@ -88,7 +88,10 @@ public class DescribeVpcFirewallCenSummaryListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>432D6CCA-5186-5B91-A2B8-10C8994B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeVpcFirewallCenSummaryListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -175,7 +181,10 @@ public class DescribeVpcFirewallCenSummaryListResponseBody extends TeaModel {
             } 
 
             /**
-             * CenId.
+             * <p>The ID of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-maqfw3abcmjy56****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -183,7 +192,10 @@ public class DescribeVpcFirewallCenSummaryListResponseBody extends TeaModel {
             }
 
             /**
-             * CenName.
+             * <p>The name of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder cenName(String cenName) {
                 this.cenName = cenName;
@@ -191,7 +203,7 @@ public class DescribeVpcFirewallCenSummaryListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNoList.
+             * <p>The list of region IDs for the VPC border firewall.</p>
              */
             public Builder regionNoList(java.util.List<String> regionNoList) {
                 this.regionNoList = regionNoList;

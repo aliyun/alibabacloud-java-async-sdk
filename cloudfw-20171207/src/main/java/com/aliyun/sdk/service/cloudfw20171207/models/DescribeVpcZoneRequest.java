@@ -104,8 +104,10 @@ public class DescribeVpcZoneRequest extends Request {
         /**
          * <p>The environment. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong></li>
-         * <li><strong>TransitRouter</strong></li>
+         * <li><p><strong>VPC</strong>: VPC</p>
+         * </li>
+         * <li><p><strong>TransitRouter</strong>: Transit Router</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,10 +120,12 @@ public class DescribeVpcZoneRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +138,7 @@ public class DescribeVpcZoneRequest extends Request {
         }
 
         /**
-         * <p>The UID of the member in Cloud Firewall.</p>
+         * <p>The UID of the Cloud Firewall member account.</p>
          * 
          * <strong>example:</strong>
          * <p>1415189284827022</p>

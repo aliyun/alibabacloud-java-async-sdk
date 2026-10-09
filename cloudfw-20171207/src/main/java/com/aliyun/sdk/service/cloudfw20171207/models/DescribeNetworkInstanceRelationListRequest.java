@@ -115,7 +115,10 @@ public class DescribeNetworkInstanceRelationListRequest extends Request {
         } 
 
         /**
-         * ConnectType.
+         * <p>The connection type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen</p>
          */
         public Builder connectType(String connectType) {
             this.putQueryParameter("ConnectType", connectType);
@@ -124,7 +127,10 @@ public class DescribeNetworkInstanceRelationListRequest extends Request {
         }
 
         /**
-         * FirewallConfigureStatus.
+         * <p>The configuration status of Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>notconfigured</p>
          */
         public Builder firewallConfigureStatus(String firewallConfigureStatus) {
             this.putQueryParameter("FirewallConfigureStatus", firewallConfigureStatus);
@@ -133,7 +139,10 @@ public class DescribeNetworkInstanceRelationListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -142,7 +151,10 @@ public class DescribeNetworkInstanceRelationListRequest extends Request {
         }
 
         /**
-         * NetworkInstanceId.
+         * <p>The ID of the local network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2vcwkr****</p>
          */
         public Builder networkInstanceId(String networkInstanceId) {
             this.putQueryParameter("NetworkInstanceId", networkInstanceId);
@@ -151,7 +163,10 @@ public class DescribeNetworkInstanceRelationListRequest extends Request {
         }
 
         /**
-         * PeerNetworkInstanceId.
+         * <p>The ID of the peer network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-dsf232d****</p>
          */
         public Builder peerNetworkInstanceId(String peerNetworkInstanceId) {
             this.putQueryParameter("PeerNetworkInstanceId", peerNetworkInstanceId);

@@ -131,7 +131,10 @@ public class DescribePostpayBillRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -140,7 +143,7 @@ public class DescribePostpayBillRequest extends Request {
         }
 
         /**
-         * <p>账单查询结束时间，使用秒级 Unix 时间戳表示，应晚于 StartTime。</p>
+         * <p>The end time of the bill query, expressed as a second-level UNIX timestamp. The value must be later than StartTime.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +156,11 @@ public class DescribePostpayBillRequest extends Request {
         }
 
         /**
-         * <p>账单聚合的时间粒度（秒）。本参数实际为必填项，未传时返回 ERR_PARAMS_INVALID(-103204)。可选值：3600（按整时聚合）、86400（按整天聚合）。</p>
+         * <p>Specifies the time interval for querying data. This is an enumeration value. This parameter is required. If this parameter is not specified, ERR_PARAMS_INVALID is returned. Valid values:</p>
+         * <ul>
+         * <li>3600: queries hourly data.</li>
+         * <li>86400: queries daily data.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -165,7 +172,12 @@ public class DescribePostpayBillRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language. This is an enumeration value.
+         * Default value: zh.
+         * Valid value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -174,7 +186,10 @@ public class DescribePostpayBillRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries per page in a paged query. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -183,7 +198,7 @@ public class DescribePostpayBillRequest extends Request {
         }
 
         /**
-         * <p>账单查询起始时间，使用秒级 Unix 时间戳表示。</p>
+         * <p>The start time of the bill query, expressed as a second-level UNIX timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

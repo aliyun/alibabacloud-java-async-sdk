@@ -104,8 +104,8 @@ public class DeleteNatFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The UUID of the access control policy.</p>
-         * <p>To delete an access control policy, you must provide the ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.</p>
+         * <p>The unique ID of the access control policy.</p>
+         * <p>To delete a security access control policy, you must provide the unique ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,10 +118,10 @@ public class DeleteNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The direction of the traffic to which the access control policy applies.</p>
+         * <p>The direction of traffic that the access control policy controls.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>out</strong>: outbound traffic</li>
+         * <li><strong>out</strong>: outbound traffic.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -135,9 +135,9 @@ public class DeleteNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language type of the response message. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>
          * </ul>
          * 

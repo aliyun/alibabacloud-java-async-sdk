@@ -80,7 +80,7 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -88,7 +88,10 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>924A6CCC-4EAD-5554-8AD0-45F5ED56****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -292,7 +298,10 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetIP.
+             * <p>The IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder assetIP(String assetIP) {
                 this.assetIP = assetIP;
@@ -300,7 +309,10 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * AssetInstanceId.
+             * <p>The ID of the asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-hp3ez3rs9bxwt034****</p>
              */
             public Builder assetInstanceId(String assetInstanceId) {
                 this.assetInstanceId = assetInstanceId;
@@ -308,7 +320,10 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * AssetInstanceName.
+             * <p>The name of the asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs-test</p>
              */
             public Builder assetInstanceName(String assetInstanceName) {
                 this.assetInstanceName = assetInstanceName;
@@ -316,7 +331,10 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * InBytes.
+             * <p>The inbound traffic, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder inBytes(Long inBytes) {
                 this.inBytes = inBytes;
@@ -324,7 +342,10 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * IpsHitCnt.
+             * <p>The number of IPS hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ipsHitCnt(Long ipsHitCnt) {
                 this.ipsHitCnt = ipsHitCnt;
@@ -332,7 +353,10 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * OutBytes.
+             * <p>The outbound traffic, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder outBytes(Long outBytes) {
                 this.outBytes = outBytes;
@@ -340,7 +364,7 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * PortList.
+             * <p>The list of ports.</p>
              */
             public Builder portList(java.util.List<String> portList) {
                 this.portList = portList;
@@ -348,7 +372,10 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -356,7 +383,10 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -364,7 +394,10 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * RiskReason.
+             * <p>The risk reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder riskReason(String riskReason) {
                 this.riskReason = riskReason;
@@ -372,7 +405,10 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * SessionCount.
+             * <p>The total number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder sessionCount(Long sessionCount) {
                 this.sessionCount = sessionCount;
@@ -380,7 +416,10 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBytes.
+             * <p>The total traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalBytes(Long totalBytes) {
                 this.totalBytes = totalBytes;

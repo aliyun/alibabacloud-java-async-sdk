@@ -106,7 +106,7 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessInstanceList.
+         * <p>A list of private instances.</p>
          */
         public Builder accessInstanceList(java.util.List<AccessInstanceList> accessInstanceList) {
             this.accessInstanceList = accessInstanceList;
@@ -114,7 +114,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -122,7 +125,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>850A84D6-0DE4-4797-A1E8-00090****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -386,7 +398,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessInstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder accessInstanceId(String accessInstanceId) {
                 this.accessInstanceId = accessInstanceId;
@@ -394,7 +409,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * AccessInstanceName.
+             * <p>The name of the private instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder accessInstanceName(String accessInstanceName) {
                 this.accessInstanceName = accessInstanceName;
@@ -402,7 +420,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * AliUid.
+             * <p>The UID of the Alibaba Cloud account that owns the Cloud Firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1379490574415****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -410,7 +431,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * DomainNameCount.
+             * <p>The number of domain names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder domainNameCount(Long domainNameCount) {
                 this.domainNameCount = domainNameCount;
@@ -418,7 +442,15 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * FirewallType.
+             * <p>The type of Cloud Firewall. Valid values:</p>
+             * <ul>
+             * <li><p><strong>internet</strong></p>
+             * </li>
+             * <li><p><strong>vpc</strong></p>
+             * </li>
+             * <li><p><strong>nat</strong></p>
+             * </li>
+             * </ul>
              */
             public Builder firewallType(java.util.List<String> firewallType) {
                 this.firewallType = firewallType;
@@ -426,7 +458,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the instance was created. The value is a UNIX timestamp measured in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715075765</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -434,7 +469,16 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * IpProtocol.
+             * <p>The IP protocol. Valid values:</p>
+             * <ul>
+             * <li><p><strong>TCP</strong></p>
+             * </li>
+             * <li><p><strong>UDP</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder ipProtocol(Integer ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -442,7 +486,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUid.
+             * <p>The UID of the Cloud Firewall member account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1844802493****</p>
              */
             public Builder memberUid(Long memberUid) {
                 this.memberUid = memberUid;
@@ -450,7 +497,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -458,7 +508,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryDns.
+             * <p>The primary DNS server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder primaryDns(String primaryDns) {
                 this.primaryDns = primaryDns;
@@ -466,7 +519,16 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateDnsType.
+             * <p>The type of private DNS. Valid values:</p>
+             * <ul>
+             * <li><p><strong>PrivateZone</strong></p>
+             * </li>
+             * <li><p><strong>Custom</strong> (default)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder privateDnsType(String privateDnsType) {
                 this.privateDnsType = privateDnsType;
@@ -474,7 +536,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The ID of the region where the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -482,7 +547,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * StandbyDns.
+             * <p>The standby DNS server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.2</p>
              */
             public Builder standbyDns(String standbyDns) {
                 this.standbyDns = standbyDns;
@@ -490,7 +558,22 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li><p><strong>creating</strong>: The instance is being created.</p>
+             * </li>
+             * <li><p><strong>deleting</strong>: The instance is being deleted.</p>
+             * </li>
+             * <li><p><strong>normal</strong>: The instance is running as expected.</p>
+             * </li>
+             * <li><p><strong>updating</strong>: The instance is being updated.</p>
+             * </li>
+             * <li><p><strong>abnormal</strong>: The instance is in an abnormal state.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -498,7 +581,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The unique ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -506,7 +592,10 @@ public class DescribePrivateDnsEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zelphbaourpun****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

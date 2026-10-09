@@ -93,7 +93,10 @@ public class DescribeNetworkTrafficTopRatioResponseBody extends TeaModel {
         } 
 
         /**
-         * DataCount.
+         * <p>The number of results returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataCount(Integer dataCount) {
             this.dataCount = dataCount;
@@ -101,7 +104,7 @@ public class DescribeNetworkTrafficTopRatioResponseBody extends TeaModel {
         }
 
         /**
-         * DataList.
+         * <p>The list of data values.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -109,7 +112,10 @@ public class DescribeNetworkTrafficTopRatioResponseBody extends TeaModel {
         }
 
         /**
-         * DataType.
+         * <p>The data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in_src_ip</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -117,7 +123,10 @@ public class DescribeNetworkTrafficTopRatioResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C05D58A1-28A9-563A-BB59-5F7D1867****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,10 @@ public class DescribeNetworkTrafficTopRatioResponseBody extends TeaModel {
             } 
 
             /**
-             * DataName.
+             * <p>The data name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder dataName(String dataName) {
                 this.dataName = dataName;
@@ -191,7 +203,10 @@ public class DescribeNetworkTrafficTopRatioResponseBody extends TeaModel {
             }
 
             /**
-             * DataValue.
+             * <p>The ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder dataValue(String dataValue) {
                 this.dataValue = dataValue;

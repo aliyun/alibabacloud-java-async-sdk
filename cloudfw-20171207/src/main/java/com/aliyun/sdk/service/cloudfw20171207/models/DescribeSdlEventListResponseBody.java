@@ -80,7 +80,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F06DE24D-6EB9-5F55-B588-7BB946DF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         }
 
         /**
-         * SdlEventDetailList.
+         * <p>An array of data leakage events.</p>
          */
         public Builder sdlEventDetailList(java.util.List<SdlEventDetailList> sdlEventDetailList) {
             this.sdlEventDetailList = sdlEventDetailList;
@@ -96,7 +99,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -500,7 +506,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetName.
+             * <p>The asset name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder assetName(String assetName) {
                 this.assetName = assetName;
@@ -508,7 +517,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * AssetPrivateIp.
+             * <p>The private IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.100.102.XXX</p>
              */
             public Builder assetPrivateIp(String assetPrivateIp) {
                 this.assetPrivateIp = assetPrivateIp;
@@ -516,7 +528,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * <p>The asset type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EIP</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -524,7 +539,18 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryClassId.
+             * <p>The intelligence tag category. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Suspicious</strong>: suspicious</p>
+             * </li>
+             * <li><p><strong>Malicious</strong>: malicious</p>
+             * </li>
+             * <li><p><strong>Trusted</strong>: trusted</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Trusted</p>
              */
             public Builder categoryClassId(String categoryClassId) {
                 this.categoryClassId = categoryClassId;
@@ -532,7 +558,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Trusted</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -540,7 +569,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * CityId.
+             * <p>The city ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>000</p>
              */
             public Builder cityId(String cityId) {
                 this.cityId = cityId;
@@ -548,7 +580,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * CountryId.
+             * <p>The country ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder countryId(String countryId) {
                 this.countryId = countryId;
@@ -556,7 +591,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * DstIp.
+             * <p>The destination IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>106.14.74.XXX</p>
              */
             public Builder dstIp(String dstIp) {
                 this.dstIp = dstIp;
@@ -564,7 +602,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * DstPortList.
+             * <p>The destination port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder dstPortList(String dstPortList) {
                 this.dstPortList = dstPortList;
@@ -572,7 +613,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EventCnt.
+             * <p>The number of events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder eventCnt(Long eventCnt) {
                 this.eventCnt = eventCnt;
@@ -580,7 +624,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EventLevel.
+             * <p>The event\&quot;s risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder eventLevel(String eventLevel) {
                 this.eventLevel = eventLevel;
@@ -588,7 +635,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * <p>The event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sensitive ID card data leakage</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -596,7 +646,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTime.
+             * <p>The first time the event occurred, as a Unix timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735697768</p>
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -604,7 +657,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * <p>The last time the event occurred, as a Unix timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1738636157</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -612,7 +668,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * LocationName.
+             * <p>The location of the destination IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Yuhang District, Hangzhou City, Zhejiang Province</p>
              */
             public Builder locationName(String locationName) {
                 this.locationName = locationName;
@@ -620,7 +679,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Payload.
+             * <p>The payload of the intrusion prevention event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3082002f02010004067075626c6963a082002002044c33a756020100020100308200103082000c06082b060102010105000500</p>
              */
             public Builder payload(String payload) {
                 this.payload = payload;
@@ -628,7 +690,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * ProtoList.
+             * <p>The protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protoList(String protoList) {
                 this.protoList = protoList;
@@ -636,7 +701,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -644,7 +712,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ce347a98f41e849188aa51c56b02a****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -652,7 +723,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceIdType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder resourceIdType(Integer resourceIdType) {
                 this.resourceIdType = resourceIdType;
@@ -660,7 +734,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveDataCnt.
+             * <p>The number of sensitive data items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sensitiveDataCnt(Long sensitiveDataCnt) {
                 this.sensitiveDataCnt = sensitiveDataCnt;
@@ -668,7 +745,7 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveDataList.
+             * <p>An array of sensitive data.</p>
              */
             public Builder sensitiveDataList(java.util.List<String> sensitiveDataList) {
                 this.sensitiveDataList = sensitiveDataList;
@@ -676,7 +753,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveLevel.
+             * <p>The sensitive data level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S3</p>
              */
             public Builder sensitiveLevel(String sensitiveLevel) {
                 this.sensitiveLevel = sensitiveLevel;
@@ -684,7 +764,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveType.
+             * <p>The sensitive data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Identity Card</p>
              */
             public Builder sensitiveType(String sensitiveType) {
                 this.sensitiveType = sensitiveType;
@@ -692,7 +775,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * SrcIp.
+             * <p>The source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>104.28.226.XX</p>
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;
@@ -700,7 +786,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * SrcPortList.
+             * <p>The source port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder srcPortList(String srcPortList) {
                 this.srcPortList = srcPortList;
@@ -708,7 +797,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficBytes.
+             * <p>The traffic volume in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder trafficBytes(Long trafficBytes) {
                 this.trafficBytes = trafficBytes;
@@ -716,7 +808,10 @@ public class DescribeSdlEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The unique identifier for the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b91035dc-8be4-411d-bec5-e6320af9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

@@ -87,7 +87,10 @@ public class DescribeNetworkInstanceListRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-x5jayxou71ad73****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -96,7 +99,10 @@ public class DescribeNetworkInstanceListRequest extends Request {
         }
 
         /**
-         * ConnectType.
+         * <p>The type of connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>expressconnect</p>
          */
         public Builder connectType(String connectType) {
             this.putQueryParameter("ConnectType", connectType);
@@ -105,7 +111,10 @@ public class DescribeNetworkInstanceListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

@@ -286,7 +286,7 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         } 
 
         /**
-         * <p>资产 IP。AssetIP 和 Port 至少需要提供一个，两者都为空时 API 返回 400 错误（-340165 asset ip and port cannot be empty at the same time）。</p>
+         * <p>The IP address of the local asset. You must specify at least one of AssetIP and Port. If both are left empty, the API returns a 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
@@ -298,7 +298,10 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -307,7 +310,17 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * Direction.
+         * <p>The traffic direction. Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound.</li>
+         * <li><strong>out</strong>: outbound.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not configure this parameter in Settings, traffic in all directions is queried.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -316,6 +329,7 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -328,7 +342,14 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * IPProtocol.
+         * <p>The protocol type. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong>: TCP protocol.</li>
+         * <li><strong>udp</strong>: UDP protocol.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder IPProtocol(String IPProtocol) {
             this.putQueryParameter("IPProtocol", IPProtocol);
@@ -337,7 +358,14 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -346,7 +374,14 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><strong>asc</strong>: ascending order.</li>
+         * <li><strong>desc</strong> (default): descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -355,7 +390,10 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -364,7 +402,10 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * PeerAssetIP.
+         * <p>The source IP address of the peer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.125.1.XX</p>
          */
         public Builder peerAssetIP(String peerAssetIP) {
             this.putQueryParameter("PeerAssetIP", peerAssetIP);
@@ -373,7 +414,10 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * PeerAssetInstanceId.
+         * <p>The instance ID of the peer asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-123451</p>
          */
         public Builder peerAssetInstanceId(String peerAssetInstanceId) {
             this.putQueryParameter("PeerAssetInstanceId", peerAssetInstanceId);
@@ -382,7 +426,10 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * PeerAssetInstanceName.
+         * <p>The instance name of the peer asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs22</p>
          */
         public Builder peerAssetInstanceName(String peerAssetInstanceName) {
             this.putQueryParameter("PeerAssetInstanceName", peerAssetInstanceName);
@@ -391,7 +438,10 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * PeerVpcId.
+         * <p>The instance ID of the peer VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-90rq0anm6t8vbwbo****</p>
          */
         public Builder peerVpcId(String peerVpcId) {
             this.putQueryParameter("PeerVpcId", peerVpcId);
@@ -400,7 +450,7 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * <p>访问端口。AssetIP 和 Port 至少需要提供一个，两者都为空时 API 返回 400 错误（-340165 asset ip and port cannot be empty at the same time）。</p>
+         * <p>The port number. You must specify at least one of AssetIP and Port. If both are left empty, the API returns a 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -412,7 +462,10 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * RiskLevel.
+         * <p>The risk assessment level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -421,7 +474,24 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sort field. Valid values:</p>
+         * <ul>
+         * <li><p><strong>InBytes</strong></p>
+         * </li>
+         * <li><p><strong>OutBytes</strong></p>
+         * </li>
+         * <li><p><strong>TotalBytes</strong></p>
+         * </li>
+         * <li><p><strong>InPackets</strong></p>
+         * </li>
+         * <li><p><strong>OutPackets</strong></p>
+         * </li>
+         * <li><p><strong>SessionCount</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InBytes</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -430,6 +500,7 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -442,7 +513,7 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * <p>VPC 实例 ID。必填项，为空时返回 ErrorVpcId(-340158) 错误。</p>
+         * <p>The VPC-connected instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

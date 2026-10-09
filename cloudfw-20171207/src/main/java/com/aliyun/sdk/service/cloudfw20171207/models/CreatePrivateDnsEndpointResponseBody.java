@@ -80,7 +80,10 @@ public class CreatePrivateDnsEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessInstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pd-12345</p>
          */
         public Builder accessInstanceId(String accessInstanceId) {
             this.accessInstanceId = accessInstanceId;
@@ -99,7 +102,10 @@ public class CreatePrivateDnsEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID, which uniquely identifies the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

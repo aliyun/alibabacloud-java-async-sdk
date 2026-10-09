@@ -106,7 +106,10 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -114,7 +117,10 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>450D47F5-956E-543E-8502-2F71C8C54E72</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
         }
 
         /**
-         * VpcList.
+         * <p>The list of VPCs.</p>
          */
         public Builder vpcList(java.util.List<VpcList> vpcList) {
             this.vpcList = vpcList;
@@ -217,7 +229,10 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
             } 
 
             /**
-             * FirewallVpc.
+             * <p>Indicates whether the VPC is managed by Cloud Firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder firewallVpc(Boolean firewallVpc) {
                 this.firewallVpc = firewallVpc;
@@ -225,7 +240,10 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze1t4irqj0fljlbb****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -233,7 +251,10 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * <p>The name of the VPC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud_Firewall_VPC</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

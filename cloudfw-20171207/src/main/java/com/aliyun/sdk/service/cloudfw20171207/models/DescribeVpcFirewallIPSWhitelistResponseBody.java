@@ -67,10 +67,10 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>B5EE02F9-4F21-56CA-AA49-F9F8D69483C1</p>
+         * <p>B5EE02F9<strong><strong>AA49</strong></strong>F9F8D69483C1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the IPS whitelist of the VPC firewall.</p>
+         * <p>The details of the VPC border firewall IPS whitelist.</p>
          */
         public Builder whitelists(java.util.List<Whitelists> whitelists) {
             this.whitelists = whitelists;
@@ -183,10 +183,10 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the list. Valid values:</p>
+             * <p>The list type. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: user-defined</li>
-             * <li><strong>2</strong>: address book</li>
+             * <li><strong>1</strong>: user-defined type</li>
+             * <li><strong>2</strong>: address book type.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entries in the list.</p>
+             * <p>The value of the corresponding list type.</p>
              * 
              * <strong>example:</strong>
              * <p>10.10.200.4/32,10.10.200.25/32</p>
@@ -209,10 +209,10 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the VPC firewall.</p>
+             * <p>The instance ID of the VPC border firewall.</p>
              * 
              * <strong>example:</strong>
-             * <p>vfw-57431e9abe424852a578</p>
+             * <p>cen-l6t5yj5fi762******</p>
              */
             public Builder vpcFirewallId(String vpcFirewallId) {
                 this.vpcFirewallId = vpcFirewallId;
@@ -220,7 +220,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array of entries in the list.</p>
+             * <p>The content of the list type array.</p>
              */
             public Builder whiteListValue(java.util.List<String> whiteListValue) {
                 this.whiteListValue = whiteListValue;
@@ -228,10 +228,10 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the whitelist. Valid values:</p>
+             * <p>The whitelist type. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: destination</li>
-             * <li><strong>2</strong>: source</li>
+             * <li><strong>1</strong>: destination type</li>
+             * <li><strong>2</strong>: source type.</li>
              * </ul>
              * 
              * <strong>example:</strong>

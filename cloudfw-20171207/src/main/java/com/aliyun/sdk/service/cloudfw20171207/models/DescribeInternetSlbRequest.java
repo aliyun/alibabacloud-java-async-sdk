@@ -199,7 +199,10 @@ public class DescribeInternetSlbRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -208,7 +211,10 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the SLB instance. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-2ze8v2x5kd9qyvp2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -217,7 +223,10 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the SLB instance. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -226,7 +235,10 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * <p>The protocol type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -235,7 +247,10 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -244,7 +259,10 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -253,7 +271,10 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>The port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63389</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -262,7 +283,10 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * PublicIp.
+         * <p>The public IP address. Fuzzy search is supported. If you do not specify this parameter, all public IP addresses are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.108.60.XXX</p>
          */
         public Builder publicIp(String publicIp) {
             this.putQueryParameter("PublicIp", publicIp);
@@ -271,7 +295,10 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>The region. If you do not specify this parameter, all regions are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -280,7 +307,10 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112.64.233.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -289,7 +319,10 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag. If you do not specify this parameter, all tags are searched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

@@ -131,7 +131,16 @@ public class DescribeOutgoingTagRequest extends Request {
         } 
 
         /**
-         * DstType.
+         * <p>The type of the destination. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Domain</strong>: domain name.</p>
+         * </li>
+         * <li><p><strong>DstIP</strong>: IP address.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Domain</p>
          */
         public Builder dstType(String dstType) {
             this.putQueryParameter("DstType", dstType);
@@ -140,6 +149,7 @@ public class DescribeOutgoingTagRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +162,16 @@ public class DescribeOutgoingTagRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -161,7 +180,10 @@ public class DescribeOutgoingTagRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60.179.226.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -170,6 +192,7 @@ public class DescribeOutgoingTagRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +205,10 @@ public class DescribeOutgoingTagRequest extends Request {
         }
 
         /**
-         * TagId.
+         * <p>The ID of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>103208</p>
          */
         public Builder tagId(String tagId) {
             this.putQueryParameter("TagId", tagId);

@@ -188,7 +188,10 @@ public class DescribeConfiguredDestinationIPRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -197,7 +200,10 @@ public class DescribeConfiguredDestinationIPRequest extends Request {
         }
 
         /**
-         * DestinationIP.
+         * <p>The destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         public Builder destinationIP(String destinationIP) {
             this.putQueryParameter("DestinationIP", destinationIP);
@@ -206,7 +212,10 @@ public class DescribeConfiguredDestinationIPRequest extends Request {
         }
 
         /**
-         * DestinationISP.
+         * <p>The destination ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
          */
         public Builder destinationISP(String destinationISP) {
             this.putQueryParameter("DestinationISP", destinationISP);
@@ -215,7 +224,10 @@ public class DescribeConfiguredDestinationIPRequest extends Request {
         }
 
         /**
-         * DestinationRegion.
+         * <p>The destination region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder destinationRegion(String destinationRegion) {
             this.putQueryParameter("DestinationRegion", destinationRegion);
@@ -224,6 +236,7 @@ public class DescribeConfiguredDestinationIPRequest extends Request {
         }
 
         /**
+         * <p>The traffic direction.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,6 +249,7 @@ public class DescribeConfiguredDestinationIPRequest extends Request {
         }
 
         /**
+         * <p>The group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,7 +262,10 @@ public class DescribeConfiguredDestinationIPRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -257,7 +274,10 @@ public class DescribeConfiguredDestinationIPRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -266,6 +286,7 @@ public class DescribeConfiguredDestinationIPRequest extends Request {
         }
 
         /**
+         * <p>The trace code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -278,7 +299,10 @@ public class DescribeConfiguredDestinationIPRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the visitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123.113.99.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

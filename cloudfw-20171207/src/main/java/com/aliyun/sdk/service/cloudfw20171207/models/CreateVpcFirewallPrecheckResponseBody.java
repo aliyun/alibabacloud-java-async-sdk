@@ -67,7 +67,10 @@ public class CreateVpcFirewallPrecheckResponseBody extends TeaModel {
         } 
 
         /**
-         * PrecheckId.
+         * <p>The ID of the precheck task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4197</p>
          */
         public Builder precheckId(String precheckId) {
             this.precheckId = precheckId;
@@ -75,7 +78,10 @@ public class CreateVpcFirewallPrecheckResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5BE1AA4-934A-5085-89CC-9AD1CAC3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

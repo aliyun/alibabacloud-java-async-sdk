@@ -67,7 +67,10 @@ public class DescribeTaskDispatchStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71209DFE-XXX-XXX-52B4A4E9DA3B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,17 @@ public class DescribeTaskDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The execution status of the task. Valid values:</p>
+         * <ul>
+         * <li>PENDING: pending execution.</li>
+         * <li>RUNNING: running.</li>
+         * <li>SUCCESS: succeeded.</li>
+         * <li>FAILED: failed.</li>
+         * <li>CANCELLED: cancelled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder status(String status) {
             this.status = status;

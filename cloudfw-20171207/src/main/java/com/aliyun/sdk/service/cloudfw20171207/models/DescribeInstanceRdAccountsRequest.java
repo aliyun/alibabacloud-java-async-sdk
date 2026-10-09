@@ -143,7 +143,10 @@ public class DescribeInstanceRdAccountsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -152,7 +155,10 @@ public class DescribeInstanceRdAccountsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type for the request and response messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -161,7 +167,10 @@ public class DescribeInstanceRdAccountsRequest extends Request {
         }
 
         /**
-         * MemberDesc.
+         * <p>The remarks of the Cloud Firewall member accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>renewal</p>
          */
         public Builder memberDesc(String memberDesc) {
             this.putQueryParameter("MemberDesc", memberDesc);
@@ -170,7 +179,10 @@ public class DescribeInstanceRdAccountsRequest extends Request {
         }
 
         /**
-         * MemberDisplayName.
+         * <p>The name of the Cloud Firewall member accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudfirewall_2</p>
          */
         public Builder memberDisplayName(String memberDisplayName) {
             this.putQueryParameter("MemberDisplayName", memberDisplayName);
@@ -179,7 +191,10 @@ public class DescribeInstanceRdAccountsRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of the member accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -188,7 +203,10 @@ public class DescribeInstanceRdAccountsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +215,10 @@ public class DescribeInstanceRdAccountsRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The IP address of the requester.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.170.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

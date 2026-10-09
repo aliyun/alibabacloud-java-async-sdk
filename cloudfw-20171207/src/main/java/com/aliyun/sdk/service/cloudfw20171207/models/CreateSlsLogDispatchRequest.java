@@ -73,7 +73,7 @@ public class CreateSlsLogDispatchRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the Simple Log Service project.</p>
+         * <p>The SLS region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-southeast-1</p>
@@ -85,7 +85,7 @@ public class CreateSlsLogDispatchRequest extends Request {
         }
 
         /**
-         * <p>The log retention period. Unit: days.</p>
+         * <p>The storage duration of logs. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

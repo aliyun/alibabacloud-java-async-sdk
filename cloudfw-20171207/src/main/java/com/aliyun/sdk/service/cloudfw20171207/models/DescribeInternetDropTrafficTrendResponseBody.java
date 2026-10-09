@@ -106,7 +106,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -114,7 +114,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * DropSessionMax.
+         * <p>The peak number of dropped sessions in the specified period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8090</p>
          */
         public Builder dropSessionMax(Long dropSessionMax) {
             this.dropSessionMax = dropSessionMax;
@@ -122,7 +125,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RatioAverage.
+         * <p>The average drop ratio for the entire query period, expressed as a percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.34</p>
          */
         public Builder ratioAverage(String ratioAverage) {
             this.ratioAverage = ratioAverage;
@@ -130,7 +136,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RingRatioAverage.
+         * <p>The average drop ratio from the previous cycle, expressed as a percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.23</p>
          */
         public Builder ringRatioAverage(String ringRatioAverage) {
             this.ringRatioAverage = ringRatioAverage;
@@ -321,7 +333,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * AclDrop.
+             * <p>The number of sessions dropped by access control list (ACL) rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder aclDrop(Long aclDrop) {
                 this.aclDrop = aclDrop;
@@ -329,7 +344,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * DataTime.
+             * <p>The current time point. The time is in the <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-25 12:00:00</p>
              */
             public Builder dataTime(String dataTime) {
                 this.dataTime = dataTime;
@@ -337,7 +355,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * DropRatio.
+             * <p>The ratio of dropped sessions to total sessions for this data point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dropRatio(String dropRatio) {
                 this.dropRatio = dropRatio;
@@ -345,7 +366,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * DropRing.
+             * <p>The number of dropped sessions for the corresponding data point in the previous cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dropRing(Long dropRing) {
                 this.dropRing = dropRing;
@@ -353,7 +377,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * DropRingRatio.
+             * <p>The drop ratio for the corresponding data point in the previous cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dropRingRatio(String dropRingRatio) {
                 this.dropRingRatio = dropRingRatio;
@@ -361,7 +388,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * DropSession.
+             * <p>The number of dropped sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder dropSession(Long dropSession) {
                 this.dropSession = dropSession;
@@ -369,7 +399,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * IpsDrop.
+             * <p>The number of sessions dropped by the intrusion prevention system (IPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder ipsDrop(Long ipsDrop) {
                 this.ipsDrop = ipsDrop;
@@ -377,7 +410,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * RingDataTime.
+             * <p>The corresponding time point in the previous cycle. The time is in the <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-25 12:00:00</p>
              */
             public Builder ringDataTime(String ringDataTime) {
                 this.ringDataTime = ringDataTime;
@@ -385,7 +421,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * RingTime.
+             * <p>The timestamp for the corresponding data point in the previous cycle. This value is a Unix timestamp that represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1724982259</p>
              */
             public Builder ringTime(Long ringTime) {
                 this.ringTime = ringTime;
@@ -393,7 +432,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659405600</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -401,7 +443,10 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSession.
+             * <p>The total number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalSession(Long totalSession) {
                 this.totalSession = totalSession;

@@ -80,7 +80,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The list of returned data.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -88,7 +88,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -96,7 +96,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3495E758-BB4B-5F5C-8AE0-897489F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -409,7 +412,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetsInstanceId.
+             * <p>The ID of the asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1ix9w22kv6aew9****</p>
              */
             public Builder assetsInstanceId(String assetsInstanceId) {
                 this.assetsInstanceId = assetsInstanceId;
@@ -417,7 +423,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AssetsName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>launch-advisor-2023****</p>
              */
             public Builder assetsName(String assetsName) {
                 this.assetsName = assetsName;
@@ -425,7 +434,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AssetsType.
+             * <p>The asset type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EcsEIP</p>
              */
             public Builder assetsType(String assetsType) {
                 this.assetsType = assetsType;
@@ -433,7 +445,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1123</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -441,7 +456,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InBytes.
+             * <p>The inbound traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder inBytes(Long inBytes) {
                 this.inBytes = inBytes;
@@ -449,7 +467,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OutBytes.
+             * <p>The outbound traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder outBytes(Long outBytes) {
                 this.outBytes = outBytes;
@@ -457,7 +478,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port that is exposed to the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3389</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -465,7 +489,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProbRisk.
+             * <p>The security threat.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder probRisk(String probRisk) {
                 this.probRisk = probRisk;
@@ -473,7 +500,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProbRiskDesc.
+             * <p>The description of the security threat.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder probRiskDesc(String probRiskDesc) {
                 this.probRiskDesc = probRiskDesc;
@@ -481,7 +511,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -489,7 +522,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIp.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.101.167.XX</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -497,7 +533,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -505,7 +544,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -513,7 +555,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskReason.
+             * <p>The cause of the risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder riskReason(String riskReason) {
                 this.riskReason = riskReason;
@@ -521,7 +566,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Redis</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -529,7 +577,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SuggestLevel.
+             * <p>The recommended policy level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder suggestLevel(Integer suggestLevel) {
                 this.suggestLevel = suggestLevel;
@@ -537,7 +588,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBytes.
+             * <p>The total traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalBytes(Long totalBytes) {
                 this.totalBytes = totalBytes;
@@ -545,7 +599,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficPercent1Day.
+             * <p>The percentage of traffic in the last 24 hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder trafficPercent1Day(String trafficPercent1Day) {
                 this.trafficPercent1Day = trafficPercent1Day;
@@ -553,7 +610,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficPercent30Day.
+             * <p>The percentage of traffic in the last 30 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48</p>
              */
             public Builder trafficPercent30Day(String trafficPercent30Day) {
                 this.trafficPercent30Day = trafficPercent30Day;
@@ -561,7 +621,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficPercent7Day.
+             * <p>The percentage of traffic in the last 7 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder trafficPercent7Day(String trafficPercent7Day) {
                 this.trafficPercent7Day = trafficPercent7Day;
@@ -569,7 +632,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UnknownReason.
+             * <p>The reason why the protocol is not detected when the protocol is identified as Unknown.</p>
              */
             public Builder unknownReason(java.util.List<String> unknownReason) {
                 this.unknownReason = unknownReason;
@@ -649,7 +712,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -657,7 +723,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -665,7 +734,10 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

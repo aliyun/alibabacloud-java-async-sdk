@@ -67,7 +67,7 @@ public class DescribeAttackAppCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * AppCategories.
+         * <p>The list of attack application categories.</p>
          */
         public Builder appCategories(java.util.List<AppCategories> appCategories) {
             this.appCategories = appCategories;
@@ -75,7 +75,10 @@ public class DescribeAttackAppCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID of the returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B14757D0-4640-4B44-AC67-7F558FE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,7 @@ public class DescribeAttackAppCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * AttackApps.
+             * <p>The list of attack applications.</p>
              */
             public Builder attackApps(java.util.List<String> attackApps) {
                 this.attackApps = attackApps;
@@ -149,7 +152,10 @@ public class DescribeAttackAppCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The name of the attack application category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;

@@ -80,7 +80,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Certificates.
+         * <p>The list of certificates.</p>
          */
         public Builder certificates(java.util.List<Certificates> certificates) {
             this.certificates = certificates;
@@ -88,7 +88,10 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF1E9B7-D6A0-4E9E-AD3E-******837D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +272,15 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Algorithm.
+             * <p>The encryption algorithm type of the CA certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>RSA</strong>: RSA algorithm.</li>
+             * <li><strong>ECC</strong>: ECC algorithm.</li>
+             * <li><strong>SM2</strong>: SM2 (Chinese national cryptographic) algorithm.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RSA</p>
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -274,7 +288,10 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * AliasName.
+             * <p>The certificate alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsa_ml_***_root</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -282,7 +299,10 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * CaCertId.
+             * <p>The CA certificate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2732BB48-2969-5716-B5D9-******CA85</p>
              */
             public Builder caCertId(String caCertId) {
                 this.caCertId = caCertId;
@@ -290,7 +310,14 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * CaCertType.
+             * <p>The type of the CA certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>ROOT</strong>: Root CA certificate.</li>
+             * <li><strong>SUB_ROOT</strong>: Subordinate CA certificate.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ROOT</p>
              */
             public Builder caCertType(String caCertType) {
                 this.caCertType = caCertType;
@@ -298,7 +325,10 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * CertChainExpirationTime.
+             * <p>The certificate chain expiration timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1934***149</p>
              */
             public Builder certChainExpirationTime(Long certChainExpirationTime) {
                 this.certChainExpirationTime = certChainExpirationTime;
@@ -306,7 +336,10 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTime.
+             * <p>The expiration timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1934***149</p>
              */
             public Builder expirationTime(Long expirationTime) {
                 this.expirationTime = expirationTime;
@@ -314,7 +347,10 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * KeySize.
+             * <p>The key length of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder keySize(Integer keySize) {
                 this.keySize = keySize;
@@ -322,7 +358,10 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCaCertId.
+             * <p>The parent CA certificate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>340BB48-2969-5716-B5D9-****ACA85</p>
              */
             public Builder parentCaCertId(String parentCaCertId) {
                 this.parentCaCertId = parentCaCertId;
@@ -330,7 +369,10 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * SignAlgorithm.
+             * <p>The signature algorithm of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA256WITHRSA</p>
              */
             public Builder signAlgorithm(String signAlgorithm) {
                 this.signAlgorithm = signAlgorithm;
@@ -338,7 +380,14 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The certificate status. Valid values:</p>
+             * <ul>
+             * <li><strong>ISSUE</strong>: Enabled.</li>
+             * <li><strong>REVOKE</strong>: Revoked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ISSUE</p>
              */
             public Builder status(String status) {
                 this.status = status;

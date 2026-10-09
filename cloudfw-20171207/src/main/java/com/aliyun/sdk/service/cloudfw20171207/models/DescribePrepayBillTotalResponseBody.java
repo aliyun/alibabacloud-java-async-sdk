@@ -80,7 +80,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         } 
 
         /**
-         * BillList.
+         * <p>The bill list, aggregated by day.</p>
          */
         public Builder billList(java.util.List<BillList> billList) {
             this.billList = billList;
@@ -88,7 +88,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>450D47F5-956E-543E-8502-***********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -318,7 +324,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             } 
 
             /**
-             * BilledDetectionTraffic.
+             * <p>The actual billed traffic for sensitive data leak detection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder billedDetectionTraffic(Float billedDetectionTraffic) {
                 this.billedDetectionTraffic = billedDetectionTraffic;
@@ -326,7 +335,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * DailyDetectionTraffic.
+             * <p>The sensitive data detection traffic of the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder dailyDetectionTraffic(Float dailyDetectionTraffic) {
                 this.dailyDetectionTraffic = dailyDetectionTraffic;
@@ -334,7 +346,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * DailyOverflowTraffic.
+             * <p>The total elastic traffic of the day. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder dailyOverflowTraffic(Float dailyOverflowTraffic) {
                 this.dailyOverflowTraffic = dailyOverflowTraffic;
@@ -342,7 +357,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultBandwidth.
+             * <p>The default bandwidth of the edition. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder defaultBandwidth(Long defaultBandwidth) {
                 this.defaultBandwidth = defaultBandwidth;
@@ -350,7 +368,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticBandwidth.
+             * <p>The elastic bandwidth value. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder elasticBandwidth(Long elasticBandwidth) {
                 this.elasticBandwidth = elasticBandwidth;
@@ -358,7 +379,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the day. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1761667200</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -366,7 +390,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionBandwidth.
+             * <p>The extended bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder extensionBandwidth(Long extensionBandwidth) {
                 this.extensionBandwidth = extensionBandwidth;
@@ -374,7 +401,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * InternetTrafficBandwidth.
+             * <p>The Internet traffic bandwidth. Unit: Gbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder internetTrafficBandwidth(Float internetTrafficBandwidth) {
                 this.internetTrafficBandwidth = internetTrafficBandwidth;
@@ -382,7 +412,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * MonthlyRemainingFreeTraffic.
+             * <p>The monthly free traffic for sensitive data detection. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder monthlyRemainingFreeTraffic(Float monthlyRemainingFreeTraffic) {
                 this.monthlyRemainingFreeTraffic = monthlyRemainingFreeTraffic;
@@ -390,7 +423,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * NatTrafficBandwidth.
+             * <p>The NAT traffic bandwidth. Unit: Gbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder natTrafficBandwidth(Float natTrafficBandwidth) {
                 this.natTrafficBandwidth = natTrafficBandwidth;
@@ -398,7 +434,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * OverflowTime.
+             * <p>The timestamp when the maximum bandwidth (Internet + VPC + NAT) of the day occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1761588300</p>
              */
             public Builder overflowTime(Long overflowTime) {
                 this.overflowTime = overflowTime;
@@ -406,7 +445,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the day. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1761580800</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -414,7 +456,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * TemporaryBandwidth.
+             * <p>The temporary upgrade bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder temporaryBandwidth(Long temporaryBandwidth) {
                 this.temporaryBandwidth = temporaryBandwidth;
@@ -422,7 +467,10 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
             }
 
             /**
-             * VpcTrafficBandwidth.
+             * <p>The VPC traffic bandwidth. Unit: Gbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder vpcTrafficBandwidth(Float vpcTrafficBandwidth) {
                 this.vpcTrafficBandwidth = vpcTrafficBandwidth;

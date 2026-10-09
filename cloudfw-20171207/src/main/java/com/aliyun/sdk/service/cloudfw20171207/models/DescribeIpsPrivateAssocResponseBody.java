@@ -93,7 +93,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
         } 
 
         /**
-         * IpsPrivateAssoc.
+         * <p>A list of details about private IP tracing for the intrusion prevention system (IPS).</p>
          */
         public Builder ipsPrivateAssoc(java.util.List<IpsPrivateAssoc> ipsPrivateAssoc) {
             this.ipsPrivateAssoc = ipsPrivateAssoc;
@@ -101,7 +101,10 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B2841452-CB8D-4F7D-B247-38E1CF7334F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,10 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +123,10 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
         }
 
         /**
-         * TotalOpenCount.
+         * <p>The total number of assets that have private IP tracing for the IPS enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalOpenCount(Long totalOpenCount) {
             this.totalOpenCount = totalOpenCount;
@@ -300,7 +309,10 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             } 
 
             /**
-             * AssocInfoStatus.
+             * <p>The status of private IP tracing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>close</p>
              */
             public Builder assocInfoStatus(String assocInfoStatus) {
                 this.assocInfoStatus = assocInfoStatus;
@@ -308,7 +320,10 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliuid:1096080848305847 assumeOssRole not exist,serviceName:aliyunesarealtimelogpushossrole</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -316,7 +331,10 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUid.
+             * <p>The Alibaba Cloud account ID of the resource owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1507956024994407</p>
              */
             public Builder memberUid(Long memberUid) {
                 this.memberUid = memberUid;
@@ -324,7 +342,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectedIpList.
+             * <p>A list of protected IP addresses.</p>
              */
             public Builder protectedIpList(java.util.List<String> protectedIpList) {
                 this.protectedIpList = protectedIpList;
@@ -332,7 +350,10 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -340,7 +361,10 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cba48ec510bb640559c6f5161cde58014</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -348,7 +372,10 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-0000000061279FB000001BBB31F9D673</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -356,7 +383,10 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the association.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>closed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -364,7 +394,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * UnprotectedIpList.
+             * <p>A list of unprotected IP addresses.</p>
              */
             public Builder unprotectedIpList(java.util.List<String> unprotectedIpList) {
                 this.unprotectedIpList = unprotectedIpList;
@@ -372,7 +402,10 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz92dxepli2pgnut796tf</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -380,7 +413,10 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf62vdtifj7kffpxrydqd</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

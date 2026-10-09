@@ -143,7 +143,10 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
         } 
 
         /**
-         * <p>The secondary traffic redirection instances.</p>
+         * <p>The list of secondary traffic redirection instances.</p>
+         * <blockquote>
+         * <p>DestCandidateList is required. If this parameter is not specified, ErrorParameters(400) is returned.</p>
+         * </blockquote>
          */
         public Builder destCandidateList(java.util.List<DestCandidateList> destCandidateList) {
             String destCandidateListShrink = shrink(destCandidateList, "DestCandidateList", "json");
@@ -153,7 +156,10 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the VPC firewall.</p>
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+         * <blockquote>
+         * <p>FirewallId is required. If this parameter is not specified, ErrorParameters(400) is returned. You can call DescribeTrFirewallsV2List to obtain instance ID.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>vfw-tr-f8ce36689b224f77****</p>
@@ -181,10 +187,10 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
         }
 
         /**
-         * <p>The description of the traffic redirection instance.</p>
+         * <p>The description of the traffic redirection scenario.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Singapore Point to Multipoint</p>
          */
         public Builder policyDescription(String policyDescription) {
             this.putQueryParameter("PolicyDescription", policyDescription);
@@ -193,10 +199,10 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the traffic redirection instance.</p>
+         * <p>The name of the traffic redirection scenario.</p>
          * 
          * <strong>example:</strong>
-         * <p>TEST_VPC_FW</p>
+         * <p>Singapore Point to Multipoint</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -205,11 +211,17 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the traffic redirection scenario of the VPC firewall. Valid values:</p>
+         * <p>The traffic redirection scenario type for the virtual private cloud (VPC) firewall for a CEN Enterprise Edition transit router. Valid values:</p>
          * <ul>
-         * <li><strong>fullmesh</strong>: interconnected instances</li>
-         * <li><strong>one_to_one</strong>: instance to instance</li>
-         * <li><strong>end_to_end</strong>: instance to instances</li>
+         * <li><p><strong>fullmesh</strong>: multi-point interconnection</p>
+         * </li>
+         * <li><p><strong>one_to_one</strong>: point-to-point</p>
+         * </li>
+         * <li><p><strong>end_to_end</strong>: point-to-multipoint</p>
+         * <blockquote>
+         * <p>PolicyType is required. If this parameter is not specified, ErrorParameters(400) is returned.</p>
+         * </blockquote>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,7 +234,10 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
         }
 
         /**
-         * <p>The primary traffic redirection instances.</p>
+         * <p>The list of primary traffic redirection instances.</p>
+         * <blockquote>
+         * <p>SrcCandidateList is required. If this parameter is not specified, ErrorParameters(400) is returned.</p>
+         * </blockquote>
          */
         public Builder srcCandidateList(java.util.List<SrcCandidateList> srcCandidateList) {
             String srcCandidateListShrink = shrink(srcCandidateList, "SrcCandidateList", "json");
@@ -302,7 +317,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
             }
 
             /**
-             * <p>The type of the traffic redirection instance.</p>
+             * <p>The type of the traffic redirection instance. Valid values: VPC, VBR, TR, ALL, VPN, and ECR.</p>
              * 
              * <strong>example:</strong>
              * <p>VPC</p>
@@ -383,7 +398,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
             }
 
             /**
-             * <p>The type of the traffic redirection instance.</p>
+             * <p>The type of the traffic redirection instance. Valid values: VPC, VBR, TR, VPN, and ECR.</p>
              * 
              * <strong>example:</strong>
              * <p>VPC</p>

@@ -197,7 +197,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * InfoList.
+         * <p>The information list.</p>
          */
         public Builder infoList(java.util.List<InfoList> infoList) {
             this.infoList = infoList;
@@ -205,7 +205,10 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * LogModifyQuota.
+         * <p>The number of times the log storage mode can be changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder logModifyQuota(Integer logModifyQuota) {
             this.logModifyQuota = logModifyQuota;
@@ -213,7 +216,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the SLS LogStore in the log service.</p>
+         * <p>The name of the SLS Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx-logstore</p>
@@ -224,7 +227,10 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * LogVersion.
+         * <p>The log version. 1: indicates one Logstore. 2: indicates two Logstores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder logVersion(Integer logVersion) {
             this.logVersion = logVersion;
@@ -232,7 +238,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Project name of the log service.</p>
+         * <p>The name of the Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>project-xxx-cn-hangzhou</p>
@@ -243,7 +249,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Available log storage capacity. Unit: Byte.</p>
+         * <p>The available log storage capacity, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>50000000</p>
@@ -254,7 +260,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID for log delivery.</p>
+         * <p>The ID of the region where logs are delivered.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -265,7 +271,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C6C3B72B********E95FB0A161</p>
@@ -276,7 +282,10 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -284,7 +293,10 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalQuota.
+         * <p>The total purchased log storage capacity, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50000000</p>
          */
         public Builder totalQuota(Long totalQuota) {
             this.totalQuota = totalQuota;
@@ -292,7 +304,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Log storage duration. Unit: days.</p>
+         * <p>The storage duration of logs, in days.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -303,9 +315,9 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Used storage capacity. Unit: Byte.</p>
+         * <p>The used storage capacity, in bytes.</p>
          * <blockquote>
-         * <p>The statistics of the log service have a delay of approximately two hours.</p>
+         * <p>Statistics from Simple Log Service may be delayed by up to two hours.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -466,7 +478,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the SLS LogStore in the log service.</p>
+             * <p>The name of the SLS Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx-logstore</p>
@@ -477,7 +489,10 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSplitShard.
+             * <p>The maximum number of shards supported for scaling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder maxSplitShard(Integer maxSplitShard) {
                 this.maxSplitShard = maxSplitShard;
@@ -485,10 +500,10 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Project name of the log service.</p>
+             * <p>The name of the Simple Log Service project.</p>
              * 
              * <strong>example:</strong>
-             * <p>project-xxx-cn-hangzhou</p>
+             * <p>cloudfirewall-project-14151892848****-cn-hangzhou</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -496,7 +511,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Available log storage capacity. Unit: Byte.</p>
+             * <p>The storage capacity threshold, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>50000000</p>
@@ -507,10 +522,10 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID for log delivery.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>cn-shanghai</p>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -518,7 +533,10 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Shard.
+             * <p>The number of shards in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder shard(Integer shard) {
                 this.shard = shard;
@@ -526,7 +544,10 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Site.
+             * <p>The location of the Logstore. Valid values: \<code>cn\\</code> for the Chinese mainland and \<code>intl\\</code> for regions outside the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder site(String site) {
                 this.site = site;
@@ -534,10 +555,10 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Log storage duration. Unit: days.</p>
+             * <p>The storage duration of logs, in days.</p>
              * 
              * <strong>example:</strong>
-             * <p>20</p>
+             * <p>180</p>
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -545,13 +566,10 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Used storage capacity. Unit: Byte.</p>
-             * <blockquote>
-             * <p>The statistics of the log service have a delay of approximately two hours.</p>
-             * </blockquote>
+             * <p>The amount of stored logs, in bytes.</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
+             * <p>21852955752</p>
              */
             public Builder used(Long used) {
                 this.used = used;

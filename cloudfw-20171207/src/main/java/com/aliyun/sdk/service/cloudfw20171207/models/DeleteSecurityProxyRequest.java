@@ -74,7 +74,7 @@ public class DeleteSecurityProxyRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -94,7 +94,7 @@ public class DeleteSecurityProxyRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>proxy-nat00ab412ef93d4275a6b5</p>
+         * <p>proxy-nat00ab******</p>
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("ProxyId", proxyId);

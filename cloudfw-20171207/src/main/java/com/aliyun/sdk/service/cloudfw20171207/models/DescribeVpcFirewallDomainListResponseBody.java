@@ -80,7 +80,7 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The list of returned data.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -88,7 +88,10 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133173B9-8010-5DF5-8B93-********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +272,7 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationNameList.
+             * <p>The list of application layer protocols.</p>
              */
             public Builder applicationNameList(java.util.List<String> applicationNameList) {
                 this.applicationNameList = applicationNameList;
@@ -274,7 +280,10 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * Business.
+             * <p>The business to which the domain name belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Google</p>
              */
             public Builder business(String business) {
                 this.business = business;
@@ -282,7 +291,10 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.a.com">www.a.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -290,7 +302,10 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The organization to which the domain name belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Google</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -298,7 +313,10 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * RequestBytes.
+             * <p>The volume of request traffic to the domain name. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3214</p>
              */
             public Builder requestBytes(Long requestBytes) {
                 this.requestBytes = requestBytes;
@@ -306,7 +324,10 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseBytes.
+             * <p>The volume of response traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4582</p>
              */
             public Builder responseBytes(Long responseBytes) {
                 this.responseBytes = responseBytes;
@@ -314,7 +335,10 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * SessionCount.
+             * <p>The number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder sessionCount(Long sessionCount) {
                 this.sessionCount = sessionCount;
@@ -322,7 +346,10 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * SrcIpCount.
+             * <p>The number of source IP addresses that are used to access the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder srcIpCount(Long srcIpCount) {
                 this.srcIpCount = srcIpCount;
@@ -330,7 +357,10 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * SrcVpcCount.
+             * <p>The number of source VPCs that are used to access the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder srcVpcCount(Long srcVpcCount) {
                 this.srcVpcCount = srcVpcCount;
@@ -338,7 +368,10 @@ public class DescribeVpcFirewallDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBytes.
+             * <p>The total traffic volume. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8111126106</p>
              */
             public Builder totalBytes(Long totalBytes) {
                 this.totalBytes = totalBytes;

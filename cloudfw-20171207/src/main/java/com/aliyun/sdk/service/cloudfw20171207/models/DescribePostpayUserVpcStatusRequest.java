@@ -73,7 +73,7 @@ public class DescribePostpayUserVpcStatusRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of Cloud Firewall.</p>
+         * <p>The ID of the Cloud Firewall instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cfw_elasticity_public_cn-************</p>
@@ -87,8 +87,8 @@ public class DescribePostpayUserVpcStatusRequest extends Request {
         /**
          * <p>The language of the content within the response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default)</li>
-         * <li><strong>en</strong></li>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>

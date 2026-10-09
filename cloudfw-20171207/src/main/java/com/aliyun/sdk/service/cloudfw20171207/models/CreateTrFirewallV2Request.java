@@ -314,7 +314,10 @@ public class CreateTrFirewallV2Request extends Request {
         } 
 
         /**
-         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>The ID of the CEN instance. Create a CEN instance in the CEN console first and make sure that an Enterprise Edition transit router has been created.</p>
+         * <blockquote>
+         * <p>Note: Although this parameter is marked as not required in the schema, it is actually required. If this parameter is not specified, the ErrorParameters (400) error is returned.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cen-4xbjup276au29r****</p>
@@ -326,7 +329,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * FirewallAttachmentZone.
+         * <p>The zone ID used by the firewall connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder firewallAttachmentZone(String firewallAttachmentZone) {
             this.putQueryParameter("FirewallAttachmentZone", firewallAttachmentZone);
@@ -338,7 +344,7 @@ public class CreateTrFirewallV2Request extends Request {
          * <p>The description of the firewall.</p>
          * 
          * <strong>example:</strong>
-         * <p>vfw-sz</p>
+         * <p>vpc-firewall-description</p>
          */
         public Builder firewallDescription(String firewallDescription) {
             this.putQueryParameter("FirewallDescription", firewallDescription);
@@ -347,10 +353,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The name of the firewall.</p>
+         * <p>The name of the Cloud Firewall instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>cfw_test2</p>
+         * <p>vpc-firewall-test</p>
          */
         public Builder firewallName(String firewallName) {
             this.putQueryParameter("FirewallName", firewallName);
@@ -359,7 +365,17 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * FirewallServiceMode.
+         * <p>The deployment mode of the firewall service. Valid values:</p>
+         * <ul>
+         * <li><strong>PrimaryStandby</strong>: Primary/standby mode.</li>
+         * <li><strong>MultiPrimary</strong>: Active-active mode.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If this parameter is not specified, the system automatically selects a deployment mode based on the capabilities of the transit router. If an invalid value is specified, the ErrorFwServiceMode (-360437) error is returned. The MultiPrimary mode does not support specifying zones.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>PrimaryStandby</p>
          */
         public Builder firewallServiceMode(String firewallServiceMode) {
             this.putQueryParameter("FirewallServiceMode", firewallServiceMode);
@@ -368,7 +384,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * FirewallServiceZones.
+         * <p>The list of zone IDs used by the firewall service.</p>
          */
         public Builder firewallServiceZones(java.util.List<String> firewallServiceZones) {
             this.putQueryParameter("FirewallServiceZones", firewallServiceZones);
@@ -377,7 +393,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The subnet CIDR block of the VPC in which the ENI of the firewall is stored in automatic mode.</p>
+         * <p>The subnet CIDR block used to store the firewall elastic network interface (ENI) in the firewall VPC in automatic mode.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.1.0/24</p>
@@ -389,7 +405,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The CIDR block that is allocated to the VPC created for the VPC firewall in automatic mode.</p>
+         * <p>The CIDR block of the firewall VPC in automatic mode.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/16</p>
@@ -401,7 +417,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The ID of the VPC in which the ENI associated with the VPC firewall is created in manual mode.</p>
+         * <p>The ID of the VPC in which the firewall ENI is created in manual mode.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9r5qvryn0lg3atb****</p>
@@ -413,7 +429,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch that is used to create the ENI in manual mode.</p>
+         * <p>The ID of the vSwitch in which the firewall ENI is created in manual mode.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf6ydz3vqj77mr5l6****</p>
@@ -425,9 +441,9 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>
          * </ul>
          * 
@@ -441,7 +457,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The region ID of the route router.</p>
+         * <p>The region ID of the Enterprise Edition transit router.</p>
+         * <blockquote>
+         * <p>Note: Although this parameter is marked as not required in the schema, it is actually required. If this parameter is not specified, the ErrorParameters (400) error is returned.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -453,11 +472,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The routing mode of the VPC firewall. Valid values:</p>
-         * <ul>
-         * <li><strong>managed</strong>: automatic mode</li>
-         * <li><strong>manual</strong>: manual mode</li>
-         * </ul>
+         * <p>The routing mode. Valid values: managed (automatic mode) and manual (manual mode). In managed mode, only FirewallVpcCidr is required. The FirewallSubnetCidr, TrAttachmentSlaveCidr, and TrAttachmentMasterCidr parameters are deprecated and do not need to be specified. In manual mode, specify FirewallVpcId, FirewallVswitchId, TrAttachmentSlaveZone, and TrAttachmentMasterZone.</p>
+         * <blockquote>
+         * <p>Note: Although this parameter is marked as not required in the schema, it is actually required. If this parameter is not specified, the ErrorParameters (400) error is returned.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>managed</p>
@@ -469,7 +487,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+         * <p>The primary subnet CIDR block used to connect to the TR in the firewall VPC in automatic mode.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.3.0/24</p>
@@ -481,7 +499,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The primary zone for the vSwitch.</p>
+         * <p>The primary zone of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-chengdu-a</p>
@@ -493,7 +511,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+         * <p>The secondary subnet CIDR block used to connect to the TR in the firewall VPC in automatic mode.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.16/28</p>
@@ -505,7 +523,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The secondary zone for the vSwitch.</p>
+         * <p>The secondary zone of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-chengdu-b</p>
@@ -517,7 +535,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * TrAttachmentZones.
+         * <p>The list of zone IDs used by the TR connection.</p>
          */
         public Builder trAttachmentZones(java.util.List<String> trAttachmentZones) {
             this.putQueryParameter("TrAttachmentZones", trAttachmentZones);
@@ -526,7 +544,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The ID of the transit router.</p>
+         * <p>The ID of the Enterprise Edition transit router instance. The transit router must belong to the CEN instance specified by CenId.</p>
+         * <blockquote>
+         * <p>Note: Although this parameter is marked as not required in the schema, it is actually required. If this parameter is not specified, the ErrorParameters (400) error is returned.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>tr-m5etmb2q7e0mxcur****</p>

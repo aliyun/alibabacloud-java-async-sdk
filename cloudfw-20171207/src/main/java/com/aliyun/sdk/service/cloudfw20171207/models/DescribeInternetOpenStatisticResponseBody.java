@@ -171,7 +171,10 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * InternetIpNum.
+         * <p>The total number of public IP addresses exposed to the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder internetIpNum(Integer internetIpNum) {
             this.internetIpNum = internetIpNum;
@@ -179,7 +182,10 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * InternetPortNum.
+         * <p>The total number of ports exposed to the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38</p>
          */
         public Builder internetPortNum(Integer internetPortNum) {
             this.internetPortNum = internetPortNum;
@@ -187,7 +193,10 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * InternetRiskIpNum.
+         * <p>The number of risky public IP addresses exposed to the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder internetRiskIpNum(Integer internetRiskIpNum) {
             this.internetRiskIpNum = internetRiskIpNum;
@@ -195,7 +204,10 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * InternetRiskPortNum.
+         * <p>The number of risky ports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder internetRiskPortNum(Integer internetRiskPortNum) {
             this.internetRiskPortNum = internetRiskPortNum;
@@ -203,7 +215,10 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * InternetRiskServiceNum.
+         * <p>The number of risky applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder internetRiskServiceNum(Integer internetRiskServiceNum) {
             this.internetRiskServiceNum = internetRiskServiceNum;
@@ -211,7 +226,10 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * InternetServiceNum.
+         * <p>The total number of applications exposed to the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder internetServiceNum(Integer internetServiceNum) {
             this.internetServiceNum = internetServiceNum;
@@ -219,7 +237,10 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * InternetSlbIpNum.
+         * <p>The number of public IP addresses of Server Load Balancer (SLB) instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder internetSlbIpNum(Integer internetSlbIpNum) {
             this.internetSlbIpNum = internetSlbIpNum;
@@ -227,7 +248,10 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * InternetSlbIpPortNum.
+         * <p>The number of public ports of SLB instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder internetSlbIpPortNum(Integer internetSlbIpPortNum) {
             this.internetSlbIpPortNum = internetSlbIpPortNum;
@@ -235,7 +259,10 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * InternetUnprotectedPortNum.
+         * <p>The number of ports that are not protected by an access control list (ACL).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder internetUnprotectedPortNum(Integer internetUnprotectedPortNum) {
             this.internetUnprotectedPortNum = internetUnprotectedPortNum;
@@ -243,7 +270,10 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6AB7822C-0D73-5D1D-81FD-45D4FB7C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

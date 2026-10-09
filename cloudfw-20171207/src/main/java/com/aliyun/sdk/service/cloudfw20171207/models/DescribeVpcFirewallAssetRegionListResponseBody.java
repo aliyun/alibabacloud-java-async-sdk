@@ -67,7 +67,7 @@ public class DescribeVpcFirewallAssetRegionListResponseBody extends TeaModel {
         } 
 
         /**
-         * RegionNoList.
+         * <p>The list of regions.</p>
          */
         public Builder regionNoList(java.util.List<String> regionNoList) {
             this.regionNoList = regionNoList;
@@ -75,7 +75,10 @@ public class DescribeVpcFirewallAssetRegionListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00933CCB-65A4-5E51-B180-3D154281****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

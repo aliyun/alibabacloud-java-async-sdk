@@ -175,11 +175,12 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         } 
 
         /**
-         * <p>The direction of the internet traffic.</p>
-         * <p>Valid values:</p>
+         * <p>The direction of the Internet traffic. Valid values:</p>
          * <ul>
-         * <li><strong>in</strong>: inbound traffic</li>
-         * <li><strong>out</strong>: outbound traffic</li>
+         * <li><p><strong>in</strong>: inbound</p>
+         * </li>
+         * <li><p><strong>out</strong>: outbound</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,7 +193,7 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end of the time range to query. This value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,10 +206,12 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The language of the content in the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -221,7 +224,7 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The source code.</p>
+         * <p>The source tracking code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,7 +237,7 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the access source.</p>
+         * <p>The source IP address of the visitor.</p>
          * 
          * <strong>example:</strong>
          * <p>101.80.171.196</p>
@@ -246,7 +249,7 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The private IP address of the source.</p>
+         * <p>The source private IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>10.100.134.60</p>
@@ -258,7 +261,7 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The public IP address of the source.</p>
+         * <p>The source public IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>47.112.210.136</p>
@@ -270,7 +273,7 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start of the time range to query. This value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,10 +286,12 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The type of the traffic that is captured. Valid values:</p>
+         * <p>The type of traffic to query. Valid values:</p>
          * <ul>
-         * <li><strong>max</strong> (default): peak traffic</li>
-         * <li><strong>avg</strong>: average traffic</li>
+         * <li><p><strong>max</strong> (default): peak traffic</p>
+         * </li>
+         * <li><p><strong>avg</strong>: average traffic</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
