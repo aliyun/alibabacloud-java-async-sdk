@@ -80,7 +80,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of catalogs.</p>
+         * <p>The list of catalogs.</p>
          */
         public Builder catalogs(java.util.List<Catalog> catalogs) {
             this.catalogs = catalogs;
@@ -88,7 +88,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token to retrieve the next page of results. If this parameter is null, all results have been returned.</p>
+         * <p>The pagination token used to retrieve the next page of results. A null value indicates that the current query has reached the last page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>E8ABEB1C3DB893D16576269017992F57</p>
@@ -99,7 +99,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of subscription computing resources.</p>
+         * <p>The list of subscription compute resources.</p>
          */
         public Builder prepayResource(java.util.List<PrepayResource> prepayResource) {
             this.prepayResource = prepayResource;

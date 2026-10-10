@@ -87,7 +87,7 @@ public class ListCatalogsRequest extends Request {
         } 
 
         /**
-         * <p>The pattern of the catalog name.</p>
+         * <p>The catalog name pattern.</p>
          * 
          * <strong>example:</strong>
          * <p>mi</p>
@@ -99,7 +99,7 @@ public class ListCatalogsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to return in a single request.</p>
+         * <p>The maximum number of records to retrieve at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -111,7 +111,7 @@ public class ListCatalogsRequest extends Request {
         }
 
         /**
-         * <p>The token to retrieve the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+         * <p>The pagination token used to retrieve the next page of results. If the response does not include a token, pass an empty string (&quot;&quot;) or an empty character (\&quot;\&quot;).</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>

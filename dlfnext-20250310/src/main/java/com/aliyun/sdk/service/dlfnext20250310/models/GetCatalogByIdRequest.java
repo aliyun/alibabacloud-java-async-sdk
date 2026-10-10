@@ -60,7 +60,7 @@ public class GetCatalogByIdRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the catalog.</p>
+         * <p>The data catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -236,7 +236,7 @@ public class Partition extends TeaModel {
         } 
 
         /**
-         * <p>The time when the partition was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1747120676378</p>
@@ -247,7 +247,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * <p>The creator of the partition.</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::[accountId]:root</p>
@@ -258,7 +258,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the process is complete.</p>
+         * <p>Indicates whether the tagging is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -291,7 +291,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * <p>The time when the latest file was created.</p>
+         * <p>The creation time of the latest file.</p>
          * 
          * <strong>example:</strong>
          * <p>1741701564261</p>
@@ -302,7 +302,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * options.
+         * <p>The extension options.</p>
          */
         public Builder options(java.util.Map<String, String> options) {
             this.options = options;
@@ -332,7 +332,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * <p>The status of the storage class conversion.</p>
+         * <p>The storage type conversion status.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
@@ -343,7 +343,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * <p>The storage class conversion time.</p>
+         * <p>The storage type conversion time.</p>
          * 
          * <strong>example:</strong>
          * <p>1758189669915</p>
@@ -354,7 +354,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * <p>The storage class.</p>
+         * <p>The storage type.</p>
          * 
          * <strong>example:</strong>
          * <p>STANDARD</p>
@@ -376,7 +376,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * <p>The time when the partition was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1744970111419</p>
@@ -387,7 +387,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * <p>The user who last updated the partition.</p>
+         * <p>The updater.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::[accountId]:root</p>

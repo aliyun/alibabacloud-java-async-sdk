@@ -60,7 +60,7 @@ public class GetCatalogRequest extends Request {
         } 
 
         /**
-         * <p>The name of the catalog.</p>
+         * <p>The name of the data catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

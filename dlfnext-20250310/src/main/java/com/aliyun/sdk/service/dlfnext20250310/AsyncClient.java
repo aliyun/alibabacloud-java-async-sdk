@@ -479,6 +479,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubscribeResponse> subscribe(SubscribeRequest request);
 
     /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
      * @param request the request parameters of UpdateRole  UpdateRoleRequest
      * @return UpdateRoleResponse
      */

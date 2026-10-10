@@ -90,7 +90,7 @@ public class CreateReceiverRequest extends Request {
          * <p>The comment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Customer A.</p>
+         * <p>客户A。</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("comment", comment);
