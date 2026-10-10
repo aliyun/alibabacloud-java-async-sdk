@@ -89,7 +89,7 @@ public class CreateChatMediaUrlRequest extends Request {
         } 
 
         /**
-         * <p>Cloud Contact Center instance ID.</p>
+         * <p>The Cloud Call Center instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CreateChatMediaUrlRequest extends Request {
         }
 
         /**
-         * <p>Media ID.</p>
+         * <p>media id</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class CreateChatMediaUrlRequest extends Request {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9F766284-F103-4298-8EC5-19F9F9BE5522</p>

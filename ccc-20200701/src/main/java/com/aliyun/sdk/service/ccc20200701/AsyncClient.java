@@ -119,7 +119,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AppendCasesResponse> appendCases(AppendCasesRequest request);
 
     /**
-     * @deprecated OpenAPI AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.  * @description Accounts with RAM permissions can view all RAM users under an Alibaba Cloud account in the RAM console. You can access the RAM console at https\\://ram.console.aliyun.com/users.
+     * @deprecated OpenAPI AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.  * @description Accounts with RAM permissions can query all Resource Access Management (RAM) users managed under the Alibaba Cloud account in the Resource Access Management (RAM) console. RAM console URL: https://ram.console.aliyun.com/users.
      * 
      * @param request the request parameters of AssignUsers  AssignUsersRequest
      * @return AssignUsersResponse
@@ -888,6 +888,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListFlashSmsTemplatesResponse
      */
     CompletableFuture<ListFlashSmsTemplatesResponse> listFlashSmsTemplates(ListFlashSmsTemplatesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>若RAM子账号需要调用该接口，则需具有“管理云呼叫中心(CCC)的权限”（AliyunCCCFullAccess）。</p>
+     * 
+     * @param request the request parameters of ListFunctionMetas  ListFunctionMetasRequest
+     * @return ListFunctionMetasResponse
+     */
+    CompletableFuture<ListFunctionMetasResponse> listFunctionMetas(ListFunctionMetasRequest request);
 
     /**
      * @param request the request parameters of ListGroupChatMessages  ListGroupChatMessagesRequest

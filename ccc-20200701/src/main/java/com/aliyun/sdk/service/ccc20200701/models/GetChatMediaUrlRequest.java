@@ -89,7 +89,7 @@ public class GetChatMediaUrlRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class GetChatMediaUrlRequest extends Request {
         }
 
         /**
-         * <p>Media ID.</p>
+         * <p>media id</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class GetChatMediaUrlRequest extends Request {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8707EB29-BAED-4302-B999-40BA61877437</p>

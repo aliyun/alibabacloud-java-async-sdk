@@ -115,10 +115,10 @@ public class DeleteContactFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the request.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -126,7 +126,7 @@ public class DeleteContactFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>07511949-6DC4-5D0B-8FA8-FF8FA29B4217</p>

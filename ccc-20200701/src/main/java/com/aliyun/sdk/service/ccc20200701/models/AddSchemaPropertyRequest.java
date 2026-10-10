@@ -103,7 +103,7 @@ public class AddSchemaPropertyRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class AddSchemaPropertyRequest extends Request {
         }
 
         /**
-         * <p>Field</p>
+         * <p>The property.</p>
          */
         public Builder property(Property property) {
             String propertyShrink = shrink(property, "Property", "json");
@@ -126,7 +126,7 @@ public class AddSchemaPropertyRequest extends Request {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
@@ -407,7 +407,7 @@ public class AddSchemaPropertyRequest extends Request {
             } 
 
             /**
-             * <p>Is array</p>
+             * <p>Specifies whether the property is an array.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -418,10 +418,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Extension attributes</p>
+             * <p>The extended attributes.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;newName\&quot;:\&quot;小桔充电-demo\&quot;,\&quot;appId\&quot;:\&quot;69FRKB4193W8BYP0\&quot;}</p>
+             * <p>{&quot;newName&quot;:&quot;Xiaoju Charging-demo&quot;,&quot;appId&quot;:&quot;69FRKB4193W8BYP0&quot;}</p>
              */
             public Builder attributes(String attributes) {
                 this.attributes = attributes;
@@ -429,7 +429,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Data type</p>
+             * <p>The data type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -441,7 +441,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Description.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -454,7 +454,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Is disabled</p>
+             * <p>Specifies whether the property is disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -465,7 +465,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Name</p>
+             * <p>The display name.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -476,7 +476,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>List display order</p>
+             * <p>The display order in the list.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -487,7 +487,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Editor type</p>
+             * <p>The editor type.</p>
              * 
              * <strong>example:</strong>
              * <p>textbox</p>
@@ -498,7 +498,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Maximum length</p>
+             * <p>The maximum length.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -509,7 +509,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Maximum numeric value</p>
+             * <p>The maximum numeric value.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -520,7 +520,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Minimum length</p>
+             * <p>The minimum length.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -531,7 +531,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Minimum numeric value</p>
+             * <p>The minimum numeric value.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -542,7 +542,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Name</p>
+             * <p>The display name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -554,7 +554,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Regular expression validation rule</p>
+             * <p>The regular expression validation rule.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -567,10 +567,10 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Regular expression validation error message</p>
+             * <p>The error message for regular expression validation.</p>
              * 
              * <strong>example:</strong>
-             * <p>格式错误</p>
+             * <p>Invalid format</p>
              */
             public Builder patternErrorMessage(String patternErrorMessage) {
                 this.patternErrorMessage = patternErrorMessage;
@@ -578,7 +578,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Is read-only</p>
+             * <p>Specifies whether the property is read-only.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -589,7 +589,7 @@ public class AddSchemaPropertyRequest extends Request {
             }
 
             /**
-             * <p>Is required</p>
+             * <p>Specifies whether the property is required.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

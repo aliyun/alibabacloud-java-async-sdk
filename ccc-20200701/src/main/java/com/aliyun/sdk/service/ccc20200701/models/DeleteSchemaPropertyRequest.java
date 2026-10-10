@@ -117,7 +117,7 @@ public class DeleteSchemaPropertyRequest extends Request {
         }
 
         /**
-         * <p>The field name.</p>
+         * <p>The property name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class DeleteSchemaPropertyRequest extends Request {
         }
 
         /**
-         * <p>The schema ID.</p>
+         * <p>schema id</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -114,7 +114,7 @@ public class DeleteSchemaRequest extends Request {
         }
 
         /**
-         * <p>The schema ID.</p>
+         * <p>schema id</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

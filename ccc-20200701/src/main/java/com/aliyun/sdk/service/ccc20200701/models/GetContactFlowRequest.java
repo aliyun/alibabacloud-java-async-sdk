@@ -103,7 +103,7 @@ public class GetContactFlowRequest extends Request {
         }
 
         /**
-         * <p>The draft ID. This is the ID of the editable draft version for the current contact flow.</p>
+         * <p>The draft ID, which is the ID of the editable draft version corresponding to the current contact flow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

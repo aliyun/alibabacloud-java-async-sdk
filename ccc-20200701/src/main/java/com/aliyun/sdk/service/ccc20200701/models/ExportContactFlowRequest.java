@@ -115,7 +115,7 @@ public class ExportContactFlowRequest extends Request {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>AF9834D8-6D09-4A1B-BADB-B019D9D444C8</p>

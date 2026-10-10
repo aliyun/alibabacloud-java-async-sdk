@@ -161,6 +161,9 @@ public class ListConfigItemsResponseBody extends TeaModel {
 
         /**
          * <p>The list of dynamic response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ParameterName&quot;]</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;

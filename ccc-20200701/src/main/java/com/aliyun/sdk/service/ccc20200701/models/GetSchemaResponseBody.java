@@ -130,7 +130,7 @@ public class GetSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -168,7 +168,7 @@ public class GetSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>19D09CCC-F298-4124-849A-AFA217819011</p>
@@ -302,7 +302,7 @@ public class GetSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the schema was created.</p>
+             * <p>The creation time. Format: YYYY-MM-DD HH:mm:ss.S.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-07-14 10:48:43.0</p>
@@ -313,7 +313,7 @@ public class GetSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the schema is deleted.</p>
+             * <p>Indicates whether the data is deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -327,7 +327,7 @@ public class GetSchemaResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>客户profile</p>
+             * <p>Customer profile</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -335,7 +335,7 @@ public class GetSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the schema.</p>
+             * <p>schema id</p>
              * 
              * <strong>example:</strong>
              * <p>profile</p>
@@ -346,7 +346,7 @@ public class GetSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>5e0964fd-951c-4e45-b518-d09d4d2db8ca</p>
@@ -365,7 +365,7 @@ public class GetSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the schema was last modified.</p>
+             * <p>The last modification time. Format: YYYY-MM-DD HH:mm:ss.S.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-07-14 10:48:43.0</p>

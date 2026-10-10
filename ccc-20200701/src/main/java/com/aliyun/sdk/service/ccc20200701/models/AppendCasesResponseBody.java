@@ -117,7 +117,7 @@ public class AppendCasesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of processing results for appending outbound call cases.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -139,7 +139,7 @@ public class AppendCasesResponseBody extends TeaModel {
          * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -229,7 +229,7 @@ public class AppendCasesResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomVariables.
+             * <p>The custom variables of the contact, represented as a JSON string.</p>
              */
             public Builder customVariables(String customVariables) {
                 this.customVariables = customVariables;
@@ -237,7 +237,7 @@ public class AppendCasesResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * <p>The phone number of the contact.</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -245,7 +245,7 @@ public class AppendCasesResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceId.
+             * <p>The unique identifier of the contact in the customer\&quot;s business system.</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;

@@ -317,7 +317,7 @@ public class DataPropertiesValue extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>姓名</p>
+         * <p>Name</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -358,7 +358,7 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * <p>The regular expression that is used for validation.</p>
+         * <p>The regular expression validation rule.</p>
          * 
          * <strong>example:</strong>
          * <p>^</p>
@@ -369,10 +369,10 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * <p>The error message that is returned if the value does not match the regular expression.</p>
+         * <p>The error message for regular expression validation.</p>
          * 
          * <strong>example:</strong>
-         * <p>不是有效的email地址</p>
+         * <p>Not a valid email address</p>
          */
         public Builder patternErrorMessage(String patternErrorMessage) {
             this.patternErrorMessage = patternErrorMessage;
@@ -402,7 +402,7 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * <p>The minimum value.</p>
+         * <p>The minimum numeric value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -413,7 +413,7 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * <p>The maximum value.</p>
+         * <p>The maximum numeric value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -479,7 +479,7 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * <p>The type of the editor.</p>
+         * <p>The editor type.</p>
          * 
          * <strong>example:</strong>
          * <p>textbox</p>
@@ -490,7 +490,7 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * <p>The extended properties.</p>
+         * <p>The extended attributes.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -501,7 +501,7 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * <p>The display order.</p>
+         * <p>The display order in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -512,7 +512,7 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * <p>The time when the field was created.</p>
+         * <p>The creation time. Format: YYYY-MM-DD HH:mm:ss.S.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-07-14 10:48:43.0</p>
@@ -523,7 +523,7 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * <p>The time when the field was last updated.</p>
+         * <p>The update time. Format: YYYY-MM-DD HH:mm:ss.S.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-07-14 10:48:43.0</p>
@@ -534,7 +534,7 @@ public class DataPropertiesValue extends TeaModel {
         }
 
         /**
-         * <p>Creator</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
          * <p>tom</p>

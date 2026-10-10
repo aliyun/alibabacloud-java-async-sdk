@@ -139,7 +139,7 @@ public class DeleteSchemaPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about error parameters.</p>
+         * <p>The error parameter information.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;

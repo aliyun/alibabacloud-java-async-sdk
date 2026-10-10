@@ -198,6 +198,9 @@ public class ListContactFlowsRequest extends Request {
 
         /**
          * <p>A keyword to search for in the names or descriptions of IVR flows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认流程</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);

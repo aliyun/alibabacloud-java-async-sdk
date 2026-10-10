@@ -89,7 +89,7 @@ public class GetDocumentUploadParametersRequest extends Request {
         } 
 
         /**
-         * <p>File name.</p>
+         * <p>The file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class GetDocumentUploadParametersRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class GetDocumentUploadParametersRequest extends Request {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>24BE19E8-BF7D-4992-A35E-15EBA874F2E5</p>

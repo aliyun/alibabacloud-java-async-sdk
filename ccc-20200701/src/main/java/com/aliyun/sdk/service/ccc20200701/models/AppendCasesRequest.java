@@ -89,7 +89,7 @@ public class AppendCasesRequest extends Request {
         } 
 
         /**
-         * <p>The predictive campaign ID.</p>
+         * <p>The predictive outbound campaign ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class AppendCasesRequest extends Request {
         }
 
         /**
-         * <p>The list of cases to be added.</p>
+         * <p>The list of outbound call cases in the request body.</p>
          */
         public Builder body(java.util.List<AppendCasesRequestBody> body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -236,7 +236,7 @@ public class AppendCasesRequest extends Request {
             } 
 
             /**
-             * <p>The agent ID. If you specify this parameter, the system routes the call to the specified agent. If you leave this parameter empty, the system routes the call to an idle agent in the skill group.</p>
+             * <p>The agent ID of the specified agent to which the call is transferred. If this field is not empty, the system transfers the call to the specified agent. If this field is empty, the system assigns the call to an idle agent in the skill group.</p>
              * 
              * <strong>example:</strong>
              * <p>agent@ccc-test</p>
@@ -247,7 +247,7 @@ public class AppendCasesRequest extends Request {
             }
 
             /**
-             * <p>The caller number. If you specify this parameter, the system preferentially uses the specified number to initiate a call. If you leave this parameter empty, the system automatically selects a number to initiate a call.</p>
+             * <p>The caller number. If this field is not empty, the outbound call system preferentially uses the provided number as the caller to initiate the call. If this field is empty, the system automatically selects a caller number.</p>
              * 
              * <strong>example:</strong>
              * <p>01012345678</p>
@@ -258,12 +258,12 @@ public class AppendCasesRequest extends Request {
             }
 
             /**
-             * <p>Custom variables in the format of a JSON object. The object can contain up to 10 properties, and the name and value of each property are custom.</p>
+             * <p>The custom variables defined by the customer. The value is a JSON object that contains up to 10 properties. The name and value of each property are defined by the customer.</p>
              * 
              * <strong>example:</strong>
              * <p>{
              *       &quot;name&quot;: &quot;customer&quot;,
-             *       &quot;客户标签&quot;: &quot;tag&quot;
+             *       &quot;Customer tag&quot;: &quot;tag&quot;
              * }</p>
              */
             public Builder customVariables(String customVariables) {
@@ -272,7 +272,7 @@ public class AppendCasesRequest extends Request {
             }
 
             /**
-             * <p>The masked callee number. If this parameter is not empty, the callee number will be masked. You can define the masking rule and specify the masked callee number. In some cases, you can only view the masked callee number instead of the real one.</p>
+             * <p>The masked callee number. If this field is not empty, the callee number is masked based on custom rules defined by the customer. You only need to enter the masked callee number. If a masked callee number is used, the masked number is displayed in certain scenarios, and the actual callee number cannot be viewed.</p>
              * 
              * <strong>example:</strong>
              * <p>071*****801</p>
@@ -294,7 +294,7 @@ public class AppendCasesRequest extends Request {
             }
 
             /**
-             * <p>The business ID, which is a custom ID from your business system, used for integration purposes.</p>
+             * <p>The business ID, which is the identifier in the customer\&quot;s business system and is used for integration scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>01</p>

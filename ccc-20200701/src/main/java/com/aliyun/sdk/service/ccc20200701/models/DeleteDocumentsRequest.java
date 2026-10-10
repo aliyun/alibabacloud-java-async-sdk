@@ -103,7 +103,7 @@ public class DeleteDocumentsRequest extends Request {
         } 
 
         /**
-         * <p>A list of document IDs.</p>
+         * <p>The list of document IDs.</p>
          */
         public Builder documentIds(java.util.List<String> documentIds) {
             String documentIdsShrink = shrink(documentIds, "DocumentIds", "json");
@@ -138,7 +138,7 @@ public class DeleteDocumentsRequest extends Request {
         }
 
         /**
-         * <p>The schema ID.</p>
+         * <p>schema id</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

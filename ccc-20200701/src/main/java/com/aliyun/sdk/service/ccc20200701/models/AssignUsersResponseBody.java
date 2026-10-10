@@ -130,7 +130,7 @@ public class AssignUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data, which is the same as the workflow ID.</p>
+         * <p>The data. The content is the same as the workflow ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1ca2b084-6f0a-454b-9851-29768a9a5832</p>
@@ -155,7 +155,7 @@ public class AssignUsersResponseBody extends TeaModel {
          * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;

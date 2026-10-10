@@ -104,7 +104,7 @@ public class DisableSchemaPropertyRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class DisableSchemaPropertyRequest extends Request {
         }
 
         /**
-         * <p>Field name</p>
+         * <p>The name of the field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class DisableSchemaPropertyRequest extends Request {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2263B273-AC1B-44EB-BA98-87F2322C6780</p>
@@ -142,7 +142,7 @@ public class DisableSchemaPropertyRequest extends Request {
         }
 
         /**
-         * <p>Schema ID</p>
+         * <p>schema id</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

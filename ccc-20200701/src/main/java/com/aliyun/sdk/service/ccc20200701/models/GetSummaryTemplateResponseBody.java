@@ -152,7 +152,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
          * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -495,7 +495,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended properties.</p>
+             * <p>The extended attributes.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -506,7 +506,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the field was created.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1717664210000</p>
@@ -517,7 +517,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user who created the field.</p>
+             * <p>The creator.</p>
              * 
              * <strong>example:</strong>
              * <p>cretor-xxx@ccc-test</p>
@@ -539,7 +539,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the field.</p>
+             * <p>The field description.</p>
              * 
              * <strong>example:</strong>
              * <p>Description-xxxx</p>
@@ -583,7 +583,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the editor.</p>
+             * <p>The editor type.</p>
              * 
              * <strong>example:</strong>
              * <p>textbox</p>
@@ -605,7 +605,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum value of the number.</p>
+             * <p>The maximum numeric value.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -627,7 +627,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum value of the number.</p>
+             * <p>The minimum numeric value.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -638,7 +638,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the field.</p>
+             * <p>The field name.</p>
              * 
              * <strong>example:</strong>
              * <p>Name-A</p>
@@ -649,7 +649,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validation rule that is specified by a regular expression.</p>
+             * <p>The regular expression validation rule.</p>
              * 
              * <strong>example:</strong>
              * <p>^</p>
@@ -660,10 +660,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message that is returned when the regular expression fails to pass the validation.</p>
+             * <p>The error message for regular expression validation.</p>
              * 
              * <strong>example:</strong>
-             * <p>不是有效的email地址</p>
+             * <p>Not a valid email address</p>
              */
             public Builder patternErrorMessage(String patternErrorMessage) {
                 this.patternErrorMessage = patternErrorMessage;
@@ -704,7 +704,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the field was last updated.</p>
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1717664210000</p>
@@ -850,7 +850,7 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user who edited the template.</p>
+             * <p>The template editor.</p>
              * 
              * <strong>example:</strong>
              * <p>editor-xxx@ccc-test</p>
@@ -872,10 +872,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the template.</p>
+             * <p>The template name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试模板</p>
+             * <p>Test template</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -891,12 +891,10 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status code.</p>
+             * <p>The status code. Valid values:</p>
              * <ul>
-             * <li><p>Enabled: The template is enabled.</p>
-             * </li>
-             * <li><p>Disabled: The template is disabled.</p>
-             * </li>
+             * <li>Enabled: Enabled.</li>
+             * <li>Disabled: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

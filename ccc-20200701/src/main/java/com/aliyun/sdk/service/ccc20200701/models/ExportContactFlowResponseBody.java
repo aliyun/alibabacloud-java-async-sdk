@@ -155,7 +155,7 @@ public class ExportContactFlowResponseBody extends TeaModel {
          * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -171,7 +171,7 @@ public class ExportContactFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>DE803553-8AA9-4B9D-9E4E-A82BC69EDCEE</p>

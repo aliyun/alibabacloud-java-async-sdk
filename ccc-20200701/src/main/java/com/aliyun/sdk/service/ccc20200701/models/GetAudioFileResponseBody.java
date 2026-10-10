@@ -106,7 +106,7 @@ public class GetAudioFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -117,7 +117,7 @@ public class GetAudioFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Audio file data.</p>
+         * <p>The audio file data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetAudioFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -136,10 +136,10 @@ public class GetAudioFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -147,7 +147,7 @@ public class GetAudioFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EEE26562-D921-5CB2-AE49-E4C45A42D432</p>
@@ -281,7 +281,7 @@ public class GetAudioFileResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Audio file name.</p>
+             * <p>The name of the audio file.</p>
              * 
              * <strong>example:</strong>
              * <p>test-file.wav</p>
@@ -292,7 +292,7 @@ public class GetAudioFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Audio resource ID, the UUID of the audio file.</p>
+             * <p>The audio resource ID, which is the unique identifier of the audio file.</p>
              * 
              * <strong>example:</strong>
              * <p>c1a06b46-302a-4c6e-928b-a43c0df485cf</p>
@@ -303,7 +303,7 @@ public class GetAudioFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation Time of the audio resource.</p>
+             * <p>The time when the audio resource was created. The format is YYYY-MM-DD HH:mm:ss.S.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-07-14 10:48:43.0</p>
@@ -314,7 +314,7 @@ public class GetAudioFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance ID.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ccc-test</p>
@@ -325,10 +325,10 @@ public class GetAudioFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Display name of the audio.</p>
+             * <p>The display name of the audio file.</p>
              * 
              * <strong>example:</strong>
-             * <p>欢迎语</p>
+             * <p>Welcome message</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -336,7 +336,7 @@ public class GetAudioFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Key of the audio resource file in OSS.</p>
+             * <p>The key of the audio resource file in OSS.</p>
              * 
              * <strong>example:</strong>
              * <p>ccc-test/test-file.wav</p>
@@ -347,7 +347,7 @@ public class GetAudioFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last Updated At of the audio resource.</p>
+             * <p>The time when the audio resource was last modified. The format is YYYY-MM-DD HH:mm:ss.S.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-07-14 10:48:43.0</p>

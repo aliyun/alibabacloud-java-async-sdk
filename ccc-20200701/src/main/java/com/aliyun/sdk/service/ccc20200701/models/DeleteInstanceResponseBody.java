@@ -130,7 +130,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the delete task.</p>
+         * <p>The returned result, which is the ID of the deletion task.</p>
          * 
          * <strong>example:</strong>
          * <p>b7feb007-994a-497f-8934-2f0c6f89867c</p>
@@ -155,7 +155,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
          * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;

@@ -89,7 +89,7 @@ public class DeleteContactFlowRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the contact flow.</p>
+         * <p>The contact flow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DeleteContactFlowRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Specifies whether the contact flow is force deleted.</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -111,7 +111,7 @@ public class DeleteContactFlowRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

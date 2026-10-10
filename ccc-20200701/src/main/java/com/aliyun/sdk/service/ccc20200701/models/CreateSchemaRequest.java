@@ -130,7 +130,7 @@ public class CreateSchemaRequest extends Request {
         }
 
         /**
-         * <p>The schema ID.</p>
+         * <p>schema id</p>
          * 
          * <strong>example:</strong>
          * <p>profile</p>
@@ -155,7 +155,7 @@ public class CreateSchemaRequest extends Request {
         }
 
         /**
-         * <p>The list of fields.</p>
+         * <p>The list of properties.</p>
          */
         public Builder properties(java.util.List<Properties> properties) {
             String propertiesShrink = shrink(properties, "Properties", "json");
@@ -433,7 +433,7 @@ public class CreateSchemaRequest extends Request {
             } 
 
             /**
-             * <p>Indicates whether the field is an array.</p>
+             * <p>Specifies whether the field is an array.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -444,7 +444,7 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * <p>The extended properties.</p>
+             * <p>The extended attributes.</p>
              * 
              * <strong>example:</strong>
              * <p>{\&quot;Clusters\&quot;: {\&quot;Description\&quot;: \&quot;The list of clusters.\&quot;}, \&quot;ClusterIds\&quot;: {\&quot;Description\&quot;: \&quot;The list of cluster IDs.\&quot;}}</p>
@@ -467,7 +467,7 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * <p>The description of the version.</p>
+             * <p>The version description.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -480,7 +480,7 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the field is disabled.</p>
+             * <p>Specifies whether the field is disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -491,10 +491,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * <p>The display name for agents.</p>
+             * <p>The display name of the agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>显示名称</p>
+             * <p>Display name</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -535,7 +535,7 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * <p>The maximum value of the number.</p>
+             * <p>The maximum numeric value.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -557,7 +557,7 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * <p>The minimum value of the number.</p>
+             * <p>The minimum numeric value.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -580,7 +580,7 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * <p>The regular expression that is used for validation.</p>
+             * <p>The regular expression validation rule.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -593,10 +593,10 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * <p>The error message that is returned when the regular expression fails to match.</p>
+             * <p>The error message for regular expression validation.</p>
              * 
              * <strong>example:</strong>
-             * <p>错误的格式</p>
+             * <p>Invalid format</p>
              */
             public Builder patternErrorMessage(String patternErrorMessage) {
                 this.patternErrorMessage = patternErrorMessage;
@@ -604,7 +604,7 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the field is read-only.</p>
+             * <p>Specifies whether the field is read-only.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -615,7 +615,7 @@ public class CreateSchemaRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the field is required.</p>
+             * <p>Specifies whether the field is required.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
