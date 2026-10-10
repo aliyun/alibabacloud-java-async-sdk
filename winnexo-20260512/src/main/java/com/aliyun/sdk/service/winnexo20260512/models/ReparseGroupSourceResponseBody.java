@@ -132,7 +132,7 @@ public class ReparseGroupSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码；成功为200</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class ReparseGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -154,10 +154,10 @@ public class ReparseGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>操作后的资料名称，沿用已有名称维护规则</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>项目资料</p>
+         * <p>ProjectResource</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -165,7 +165,7 @@ public class ReparseGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -176,7 +176,7 @@ public class ReparseGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资料 ID；替换、编辑、重新解析均保持该 ID</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>source_example</p>
@@ -187,7 +187,7 @@ public class ReparseGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资料类型</p>
+         * <p>The data source type.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -198,7 +198,7 @@ public class ReparseGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前资料状态；RUNNING 表示处理中，异步受理不代表解析完成</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>

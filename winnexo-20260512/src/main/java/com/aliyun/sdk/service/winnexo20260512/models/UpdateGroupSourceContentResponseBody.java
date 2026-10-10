@@ -132,7 +132,7 @@ public class UpdateGroupSourceContentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码；成功为200</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class UpdateGroupSourceContentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -154,10 +154,10 @@ public class UpdateGroupSourceContentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>操作后的资料名称，沿用已有名称维护规则</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
-         * <p>项目资料</p>
+         * <p>Project resource</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -165,7 +165,7 @@ public class UpdateGroupSourceContentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C474BFC7-7B11-5D92-971E-74AA82EC495B</p>
@@ -176,7 +176,7 @@ public class UpdateGroupSourceContentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资料 ID；替换、编辑、重新解析均保持该 ID</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>source_example</p>
@@ -187,7 +187,7 @@ public class UpdateGroupSourceContentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资料类型</p>
+         * <p>The data source type.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -198,7 +198,7 @@ public class UpdateGroupSourceContentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前资料状态；RUNNING 表示处理中，异步受理不代表解析完成</p>
+         * <p>The task running status.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>

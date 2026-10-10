@@ -223,7 +223,7 @@ public class GetGroupSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -234,7 +234,7 @@ public class GetGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资料描述</p>
+         * <p>The pipeline description.</p>
          * 
          * <strong>example:</strong>
          * <p>recorder function</p>
@@ -245,7 +245,7 @@ public class GetGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间，ISO8601格式</p>
+         * <p>The time when the resource was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-26T10:00:00+08:00</p>
@@ -256,7 +256,7 @@ public class GetGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>修改时间，ISO8601格式</p>
+         * <p>The time when the resource was last modified, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-20T14:00:00+08:00</p>
@@ -267,7 +267,7 @@ public class GetGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次授权读取的协作空间ID</p>
+         * <p>The project group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleGroupId</p>
@@ -278,7 +278,7 @@ public class GetGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -289,10 +289,10 @@ public class GetGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资料名称</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -300,7 +300,7 @@ public class GetGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -311,7 +311,7 @@ public class GetGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资料实际范围；引用资料保留 PERSONAL 或 TENANT</p>
+         * <p>The permission scope.</p>
          * 
          * <strong>example:</strong>
          * <p>GROUP</p>
@@ -322,7 +322,7 @@ public class GetGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资料ID</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>
@@ -333,7 +333,11 @@ public class GetGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>知识归属类型，沿用 Source 分类</p>
+         * <p>The knowledge base ownership type. Valid values:</p>
+         * <ul>
+         * <li>aliding_kb_doc: DingTalk knowledge base document.</li>
+         * <li>normal: Common knowledge.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -344,10 +348,10 @@ public class GetGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资料标签JSON字符串列表</p>
+         * <p>The resource tags. This parameter is optional. The value is a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;重点&quot;,&quot;文档&quot;]</p>
+         * <p>[&quot;Important&quot;,&quot;Document&quot;]</p>
          */
         public Builder sourceTags(String sourceTags) {
             this.sourceTags = sourceTags;
@@ -355,7 +359,12 @@ public class GetGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资料类型，例如 TEXT、FILE、ONLINE_DOC、FEISHU</p>
+         * <p>The type of the resource source. Valid values:</p>
+         * <ul>
+         * <li>ExportTaskId: The resource export ID.</li>
+         * <li>TaskId: The module execution task ID.</li>
+         * <li>StatePath: The OSS path where the resource state is stored.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -366,7 +375,7 @@ public class GetGroupSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前资料状态，例如 READY、RUNNING、FAILED</p>
+         * <p>The resource status. The initial status during the creation process is typically PENDING. If the on_create operation fails, the status is FAILED.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>

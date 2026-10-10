@@ -171,7 +171,7 @@ public class ReplaceGroupSourceFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码；成功为200</p>
+         * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -182,7 +182,7 @@ public class ReplaceGroupSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>替换后的文件 OSS 地址</p>
+         * <p>The OSS persistent storage path of the replacement file.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://example/new.txt</p>
@@ -193,7 +193,7 @@ public class ReplaceGroupSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>替换后的文件访问 URL</p>
+         * <p>The OSS persistent storage path of the replacement file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/new.txt">https://example.com/new.txt</a></p>
@@ -204,7 +204,7 @@ public class ReplaceGroupSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>替换后的文件记录 ID</p>
+         * <p>The file record ID of the replacement file.</p>
          * 
          * <strong>example:</strong>
          * <p>file_example</p>
@@ -215,7 +215,7 @@ public class ReplaceGroupSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>The current zone list is illegal.</p>
@@ -226,10 +226,10 @@ public class ReplaceGroupSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>操作后的资料名称，沿用已有名称维护规则</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
-         * <p>项目资料</p>
+         * <p>Project resources</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -237,7 +237,7 @@ public class ReplaceGroupSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E68654BD-F7BA-5837-8686-5645D739A47C</p>
@@ -248,7 +248,7 @@ public class ReplaceGroupSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资料 ID；替换、编辑、重新解析均保持该 ID</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>source_example</p>
@@ -259,7 +259,7 @@ public class ReplaceGroupSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资料类型</p>
+         * <p>The data source type. The value is fixed as FILE.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -270,7 +270,11 @@ public class ReplaceGroupSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前资料状态；RUNNING 表示处理中，异步受理不代表解析完成</p>
+         * <p>The data source status. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Online.</li>
+         * <li><strong>0</strong>: Offline.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>example</p>

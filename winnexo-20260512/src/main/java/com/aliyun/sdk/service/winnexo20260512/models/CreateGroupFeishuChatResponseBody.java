@@ -184,7 +184,7 @@ public class CreateGroupFeishuChatResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>飞书群聊ID</p>
+         * <p>The DingTalk group chat session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cidxxxxxxxx</p>
@@ -195,7 +195,7 @@ public class CreateGroupFeishuChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>业务状态码</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -206,7 +206,7 @@ public class CreateGroupFeishuChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>解析并绑定的真实目录ID</p>
+         * <p>The folder ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -217,7 +217,7 @@ public class CreateGroupFeishuChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间，ISO8601格式</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-26T10:00:00+08:00</p>
@@ -228,7 +228,7 @@ public class CreateGroupFeishuChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>协作空间ID</p>
+         * <p>The project group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleGroupId</p>
@@ -239,7 +239,7 @@ public class CreateGroupFeishuChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述</p>
+         * <p>The error details.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -250,7 +250,7 @@ public class CreateGroupFeishuChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Provider处理后的实际资料名称</p>
+         * <p>The skill name.</p>
          * 
          * <strong>example:</strong>
          * <p>oklabs_tongyici</p>
@@ -261,7 +261,7 @@ public class CreateGroupFeishuChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -272,7 +272,7 @@ public class CreateGroupFeishuChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资料范围，固定GROUP</p>
+         * <p>The permission scope.</p>
          * 
          * <strong>example:</strong>
          * <p>PERSONAL</p>
@@ -283,7 +283,7 @@ public class CreateGroupFeishuChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>新建资料ID</p>
+         * <p>The original project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>
@@ -294,7 +294,12 @@ public class CreateGroupFeishuChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>实际资料状态；RUNNING表示处理中，FAILED表示创建处理失败</p>
+         * <p>The signing status. Valid values:</p>
+         * <ul>
+         * <li>CREATED: Created but not signed.</li>
+         * <li>SUCCESS: Signed successfully.</li>
+         * <li>STOP: Terminated.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PENDING</p>

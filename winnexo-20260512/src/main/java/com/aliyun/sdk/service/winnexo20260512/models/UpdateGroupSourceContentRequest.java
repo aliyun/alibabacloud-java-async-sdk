@@ -118,11 +118,11 @@ public class UpdateGroupSourceContentRequest extends Request {
         } 
 
         /**
-         * <p>更新后的完整正文，可为空字符串；TEXT 存储时去首尾空白；支持 TEXT/本地 txt、md FILE，已有 skip_parse 资料沿用免解析与本地文件扩展名规则</p>
+         * <p>The returned content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>更新后的正文</p>
+         * <p>Updated body content</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -131,7 +131,7 @@ public class UpdateGroupSourceContentRequest extends Request {
         }
 
         /**
-         * <p>是否等待解析完成；默认 false 异步受理，true 同步等待，网关超时 300000ms</p>
+         * <p>Specifies whether to force synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -143,7 +143,7 @@ public class UpdateGroupSourceContentRequest extends Request {
         }
 
         /**
-         * <p>资料所属协作空间 ID</p>
+         * <p>The project group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class UpdateGroupSourceContentRequest extends Request {
         }
 
         /**
-         * <p>当前空间物理 GROUP 资料 ID；引用资料只读</p>
+         * <p>The original project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +169,7 @@ public class UpdateGroupSourceContentRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

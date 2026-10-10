@@ -119,7 +119,7 @@ public class MoveGroupResourceRequest extends Request {
         } 
 
         /**
-         * <p>协作空间 ID</p>
+         * <p>The collaboration space ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class MoveGroupResourceRequest extends Request {
         }
 
         /**
-         * <p>资料当前所在的空间物理目录真实 ID，不支持 root 哨兵</p>
+         * <p>The real ID of the physical directory in the space where the resource currently resides. The root sentinel is not supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class MoveGroupResourceRequest extends Request {
         }
 
         /**
-         * <p>待移动的物理 GROUP 资料 ID；引用资料只读</p>
+         * <p>The physical GROUP resource ID to be moved. Referenced resources are read-only.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class MoveGroupResourceRequest extends Request {
         }
 
         /**
-         * <p>同一空间目标物理目录真实 ID，必须与源目录不同</p>
+         * <p>The real ID of the target physical directory in the same space. This value must be different from the source directory ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class MoveGroupResourceRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
