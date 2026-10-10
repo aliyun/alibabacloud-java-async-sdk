@@ -119,7 +119,10 @@ public class ModelRouterCreateSubscriptionResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The subscription information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(SubscriptionDTO data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class ModelRouterCreateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The fault encoding for the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class ModelRouterCreateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class ModelRouterCreateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class ModelRouterCreateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class ModelRouterCreateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

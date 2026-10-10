@@ -93,7 +93,10 @@ public class MiguSourceDownloadDTO extends TeaModel {
         } 
 
         /**
-         * downloadUrl.
+         * <p>The OSS pre-signed download URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bucket.oss-cn-beijing.aliyuncs.com/pipeline/source/xxx.mp4?Expires=1700000000&Signature=xxx">https://bucket.oss-cn-beijing.aliyuncs.com/pipeline/source/xxx.mp4?Expires=1700000000&amp;Signature=xxx</a></p>
          */
         public Builder downloadUrl(String downloadUrl) {
             this.downloadUrl = downloadUrl;
@@ -101,7 +104,10 @@ public class MiguSourceDownloadDTO extends TeaModel {
         }
 
         /**
-         * expiresAt.
+         * <p>The expiration time of the download URL, in RFC 3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-28T12:00:00Z</p>
          */
         public Builder expiresAt(String expiresAt) {
             this.expiresAt = expiresAt;
@@ -109,7 +115,10 @@ public class MiguSourceDownloadDTO extends TeaModel {
         }
 
         /**
-         * method.
+         * <p>The download request method. The value is fixed to GET.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         public Builder method(String method) {
             this.method = method;
@@ -117,7 +126,10 @@ public class MiguSourceDownloadDTO extends TeaModel {
         }
 
         /**
-         * sourceId.
+         * <p>The unique identifier of the source file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3f2a1b9c8d7e4f60a1b2c3d4e5f6a7b8</p>
          */
         public Builder sourceId(String sourceId) {
             this.sourceId = sourceId;

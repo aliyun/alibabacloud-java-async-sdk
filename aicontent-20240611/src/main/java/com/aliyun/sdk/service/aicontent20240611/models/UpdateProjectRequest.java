@@ -73,7 +73,10 @@ public class UpdateProjectRequest extends Request {
         } 
 
         /**
-         * projectId.
+         * <p>The ID of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("projectId", projectId);
@@ -82,7 +85,10 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * projectName.
+         * <p>The new name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyProject</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("projectName", projectName);

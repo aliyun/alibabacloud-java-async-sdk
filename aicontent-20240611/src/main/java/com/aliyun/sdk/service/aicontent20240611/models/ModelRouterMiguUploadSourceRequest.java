@@ -75,6 +75,7 @@ public class ModelRouterMiguUploadSourceRequest extends Request {
         } 
 
         /**
+         * <p>The source file type. Valid values: VIDEO, IMAGE, AUDIO, and TEXT.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ModelRouterMiguUploadSourceRequest extends Request {
         }
 
         /**
+         * <p>The business service name, such as kling, vidu, or wonder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

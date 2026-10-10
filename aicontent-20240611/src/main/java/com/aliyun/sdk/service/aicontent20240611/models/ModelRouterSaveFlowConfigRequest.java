@@ -102,6 +102,7 @@ public class ModelRouterSaveFlowConfigRequest extends Request {
         } 
 
         /**
+         * <p>The model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ModelRouterSaveFlowConfigRequest extends Request {
         }
 
         /**
-         * rpm.
+         * <p>The maximum number of requests per minute (RPM).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder rpm(Integer rpm) {
             this.putBodyParameter("rpm", rpm);
@@ -123,7 +127,10 @@ public class ModelRouterSaveFlowConfigRequest extends Request {
         }
 
         /**
-         * smoothFlowEnabled.
+         * <p>Specifies whether to enable smooth flow control.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder smoothFlowEnabled(Boolean smoothFlowEnabled) {
             this.putBodyParameter("smoothFlowEnabled", smoothFlowEnabled);
@@ -132,7 +139,10 @@ public class ModelRouterSaveFlowConfigRequest extends Request {
         }
 
         /**
-         * tpm.
+         * <p>The maximum number of tokens per minute (TPM).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder tpm(Integer tpm) {
             this.putBodyParameter("tpm", tpm);

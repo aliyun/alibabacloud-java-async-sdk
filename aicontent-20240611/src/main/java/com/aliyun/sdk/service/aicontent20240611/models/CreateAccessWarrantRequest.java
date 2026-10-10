@@ -129,7 +129,10 @@ public class CreateAccessWarrantRequest extends Request {
         } 
 
         /**
-         * appId.
+         * <p>The merchant\&quot;s application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a123</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("appId", appId);
@@ -138,7 +141,10 @@ public class CreateAccessWarrantRequest extends Request {
         }
 
         /**
-         * requestSign.
+         * <p>The signature for the request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e32fac43df0b0b0be32fac43df0b0b0b</p>
          */
         public Builder requestSign(String requestSign) {
             this.putBodyParameter("requestSign", requestSign);
@@ -147,7 +153,10 @@ public class CreateAccessWarrantRequest extends Request {
         }
 
         /**
-         * timestamp.
+         * <p>The 10-digit request timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1701000000</p>
          */
         public Builder timestamp(String timestamp) {
             this.putBodyParameter("timestamp", timestamp);
@@ -156,7 +165,10 @@ public class CreateAccessWarrantRequest extends Request {
         }
 
         /**
-         * userClientIp.
+         * <p>The public IP address of the client device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110.25.23.12</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putBodyParameter("userClientIp", userClientIp);
@@ -165,7 +177,10 @@ public class CreateAccessWarrantRequest extends Request {
         }
 
         /**
-         * userId.
+         * <p>The merchant\&quot;s user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sn123</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("userId", userId);
@@ -174,7 +189,10 @@ public class CreateAccessWarrantRequest extends Request {
         }
 
         /**
-         * warrantAvailable.
+         * <p>The duration, in seconds, for which the access warrant is valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7200</p>
          */
         public Builder warrantAvailable(Integer warrantAvailable) {
             this.putBodyParameter("warrantAvailable", warrantAvailable);

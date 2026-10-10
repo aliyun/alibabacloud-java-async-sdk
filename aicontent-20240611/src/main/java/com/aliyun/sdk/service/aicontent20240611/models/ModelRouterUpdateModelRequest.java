@@ -213,7 +213,10 @@ public class ModelRouterUpdateModelRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -222,7 +225,7 @@ public class ModelRouterUpdateModelRequest extends Request {
         }
 
         /**
-         * <p>API Key</p>
+         * <p>The API key.</p>
          * 
          * <strong>example:</strong>
          * <p>sk-xxxx</p>
@@ -234,7 +237,7 @@ public class ModelRouterUpdateModelRequest extends Request {
         }
 
         /**
-         * <p>Base URL</p>
+         * <p>The base URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></p>
@@ -246,7 +249,10 @@ public class ModelRouterUpdateModelRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The model description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通义千问大模型</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -255,7 +261,10 @@ public class ModelRouterUpdateModelRequest extends Request {
         }
 
         /**
-         * maxInputLength.
+         * <p>The maximum input length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         public Builder maxInputLength(String maxInputLength) {
             this.putBodyParameter("maxInputLength", maxInputLength);
@@ -264,7 +273,10 @@ public class ModelRouterUpdateModelRequest extends Request {
         }
 
         /**
-         * maxOutputLength.
+         * <p>The maximum output length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder maxOutputLength(String maxOutputLength) {
             this.putBodyParameter("maxOutputLength", maxOutputLength);
@@ -273,7 +285,10 @@ public class ModelRouterUpdateModelRequest extends Request {
         }
 
         /**
-         * modelId.
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-turbo</p>
          */
         public Builder modelId(String modelId) {
             this.putBodyParameter("modelId", modelId);
@@ -282,7 +297,10 @@ public class ModelRouterUpdateModelRequest extends Request {
         }
 
         /**
-         * modelType.
+         * <p>The model type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chat</p>
          */
         public Builder modelType(String modelType) {
             this.putBodyParameter("modelType", modelType);
@@ -291,7 +309,10 @@ public class ModelRouterUpdateModelRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通义千问</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -300,7 +321,10 @@ public class ModelRouterUpdateModelRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The model status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
@@ -309,7 +333,10 @@ public class ModelRouterUpdateModelRequest extends Request {
         }
 
         /**
-         * symbol.
+         * <p>The provider symbol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba</p>
          */
         public Builder symbol(String symbol) {
             this.putBodyParameter("symbol", symbol);
@@ -318,7 +345,10 @@ public class ModelRouterUpdateModelRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>Comma-separated tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chat,NLP</p>
          */
         public Builder tags(String tags) {
             this.putBodyParameter("tags", tags);

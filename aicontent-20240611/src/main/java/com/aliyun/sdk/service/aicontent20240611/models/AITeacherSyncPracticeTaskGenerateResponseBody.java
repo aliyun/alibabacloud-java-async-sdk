@@ -119,7 +119,7 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object that contains the generated content.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique request ID, used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
             } 
 
             /**
-             * assistant.
+             * <p>The AI assistant\&quot;s question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Why might some people think dog walking is a great job?</p>
              */
             public Builder assistant(String assistant) {
                 this.assistant = assistant;
@@ -233,7 +251,10 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
             }
 
             /**
-             * user.
+             * <p>The expected user answer to the assistant\&quot;s question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>They think it\&quot;s great because they won\&quot;t be stuck in an office.</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -300,7 +321,7 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
             } 
 
             /**
-             * taskContent.
+             * <p>An array of Q\&amp;A pairs representing the dialogue task.</p>
              */
             public Builder taskContent(java.util.List<TaskContent> taskContent) {
                 this.taskContent = taskContent;
@@ -308,7 +329,10 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
             }
 
             /**
-             * taskType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>textbook_question_answering</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

@@ -115,7 +115,10 @@ public class ModelRouterQueryModelGroupUsersRequest extends Request {
         } 
 
         /**
-         * groupId.
+         * <p>The unique identifier of the group, prefixed with mg_.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mg_a1b2c3d4e5f6g7h8i9j0</p>
          */
         public Builder groupId(String groupId) {
             this.putPathParameter("groupId", groupId);
@@ -124,7 +127,10 @@ public class ModelRouterQueryModelGroupUsersRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -133,7 +139,10 @@ public class ModelRouterQueryModelGroupUsersRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>An unused parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxx-xxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -142,7 +151,10 @@ public class ModelRouterQueryModelGroupUsersRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -151,7 +163,10 @@ public class ModelRouterQueryModelGroupUsersRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

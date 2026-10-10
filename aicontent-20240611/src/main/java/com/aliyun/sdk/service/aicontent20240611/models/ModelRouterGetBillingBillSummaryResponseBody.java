@@ -145,7 +145,10 @@ public class ModelRouterGetBillingBillSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(BillingBillSummaryRespDTO data) {
             this.data = data;
@@ -153,7 +156,10 @@ public class ModelRouterGetBillingBillSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error message code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -161,7 +167,10 @@ public class ModelRouterGetBillingBillSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -169,7 +178,10 @@ public class ModelRouterGetBillingBillSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -177,7 +189,10 @@ public class ModelRouterGetBillingBillSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -185,7 +200,10 @@ public class ModelRouterGetBillingBillSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxx-xxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -193,7 +211,10 @@ public class ModelRouterGetBillingBillSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +222,10 @@ public class ModelRouterGetBillingBillSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

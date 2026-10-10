@@ -93,7 +93,10 @@ public class CostQueryTrendDTO extends TeaModel {
         } 
 
         /**
-         * defaultMetric.
+         * <p>The default metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>total_amount</p>
          */
         public Builder defaultMetric(String defaultMetric) {
             this.defaultMetric = defaultMetric;
@@ -101,7 +104,10 @@ public class CostQueryTrendDTO extends TeaModel {
         }
 
         /**
-         * granularity.
+         * <p>The granularity of the data. Valid values are <code>hourly</code> and <code>daily</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hourly</p>
          */
         public Builder granularity(String granularity) {
             this.granularity = granularity;
@@ -109,7 +115,7 @@ public class CostQueryTrendDTO extends TeaModel {
         }
 
         /**
-         * metrics.
+         * <p>A list of metric definitions.</p>
          */
         public Builder metrics(java.util.List<MetricDefRespDTO> metrics) {
             this.metrics = metrics;
@@ -117,7 +123,7 @@ public class CostQueryTrendDTO extends TeaModel {
         }
 
         /**
-         * points.
+         * <p>A list of data points for the trend.</p>
          */
         public Builder points(java.util.List<TrendPointDTO> points) {
             this.points = points;

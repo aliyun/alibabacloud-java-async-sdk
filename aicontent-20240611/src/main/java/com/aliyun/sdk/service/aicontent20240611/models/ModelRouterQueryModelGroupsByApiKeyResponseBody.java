@@ -119,7 +119,7 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error message code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -259,7 +274,10 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * clientId.
+             * <p>The department ID to which the key belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder clientId(Long clientId) {
                 this.clientId = clientId;
@@ -267,7 +285,10 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * groups.
+             * <p>The list of bound model groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder groups(java.util.List<ModelGroupDTO> groups) {
                 this.groups = groups;
@@ -275,7 +296,10 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * standaloneModelList.
+             * <p>The list of individually authorized model IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[200]</p>
              */
             public Builder standaloneModelList(java.util.List<Long> standaloneModelList) {
                 this.standaloneModelList = standaloneModelList;

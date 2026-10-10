@@ -119,7 +119,10 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object that contains the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +269,10 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * analysis.
+             * <p>The error analysis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>主语 &quot;I&quot; 对应的动词应该是 &quot;am&quot; 而不是 &quot;is&quot;。</p>
              */
             public Builder analysis(String analysis) {
                 this.analysis = analysis;
@@ -259,7 +280,10 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
             }
 
             /**
-             * correction.
+             * <p>The corrected sentence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I am good.</p>
              */
             public Builder correction(String correction) {
                 this.correction = correction;
@@ -267,7 +291,10 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
             }
 
             /**
-             * correctionStatus.
+             * <p>The result of the grammar check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Has_Error</p>
              */
             public Builder correctionStatus(String correctionStatus) {
                 this.correctionStatus = correctionStatus;
@@ -275,7 +302,10 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
             }
 
             /**
-             * errorReason.
+             * <p>The error reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>暂无返回</p>
              */
             public Builder errorReason(String errorReason) {
                 this.errorReason = errorReason;

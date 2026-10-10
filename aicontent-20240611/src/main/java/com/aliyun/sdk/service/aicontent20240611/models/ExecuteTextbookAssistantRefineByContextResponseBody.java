@@ -119,7 +119,7 @@ public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaMode
         } 
 
         /**
-         * data.
+         * <p>The returned data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaMode
         }
 
         /**
-         * errCode.
+         * <p>The error code returned when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaMode
         }
 
         /**
-         * errMessage.
+         * <p>The error message returned when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errMessage(Integer errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaMode
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,7 @@ public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaMode
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6F73C114-A76E-51AD-99E3-BC7B941B69E0</p>
@@ -162,7 +171,10 @@ public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaMode
         }
 
         /**
-         * success.
+         * <p>A value of <code>true</code> indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -215,7 +227,10 @@ public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaMode
             } 
 
             /**
-             * result.
+             * <p>The refined sentence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Good evening! From the book, how does Mike Black introduce himself?</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -269,7 +284,7 @@ public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaMode
             } 
 
             /**
-             * result.
+             * <p>The result data.</p>
              */
             public Builder result(Result result) {
                 this.result = result;

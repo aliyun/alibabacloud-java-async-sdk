@@ -148,10 +148,11 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
         } 
 
         /**
+         * <p>The background context for the dialogue.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>In this dialogue, you will be playing the role of Lily, a young girl. I will be Jane, Lily&quot;s mother. We are in the kitchen, where I am preparing dinner. I am asking you about your food preferences, specifically if you like meat, fish, and milk. You like meat and milk, but you don&quot;t like fish because of its smell. I explain to you the nutritional benefits of these foods and suggest alternatives for the ones you don&quot;t like. Finally, I invite you to start eating.</p>
+         * <p>In this dialogue, you will be playing the role of Lily, a young girl. I will be Jane, Lily\&quot;s mother. We are in the kitchen, where I am preparing dinner. I am asking you about your food preferences, specifically if you like meat, fish, and milk. You like meat and milk, but you don\&quot;t like fish because of its smell. I explain to you the nutritional benefits of these foods and suggest alternatives for the ones you don\&quot;t like. Finally, I invite you to start eating.</p>
          */
         public Builder background(String background) {
             this.putBodyParameter("background", background);
@@ -160,6 +161,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
         }
 
         /**
+         * <p>An array of dialogue tasks.</p>
          * <p>This parameter is required.</p>
          */
         public Builder dialogueTasks(java.util.List<DialogueTasks> dialogueTasks) {
@@ -169,7 +171,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
         }
 
         /**
-         * records.
+         * <p>An array of dialogue records.</p>
          */
         public Builder records(java.util.List<Records> records) {
             this.putBodyParameter("records", records);
@@ -178,6 +180,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
         }
 
         /**
+         * <p>Role information for the participants.</p>
          * <p>This parameter is required.</p>
          */
         public Builder roleInfo(RoleInfo roleInfo) {
@@ -187,7 +190,10 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
         }
 
         /**
-         * startSentence.
+         * <p>The opening sentence of the dialogue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello Lily, could you please come to the kitchen for a moment?</p>
          */
         public Builder startSentence(String startSentence) {
             this.putBodyParameter("startSentence", startSentence);
@@ -196,6 +202,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
         }
 
         /**
+         * <p>The topic of the conversation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,6 +215,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
         }
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -308,6 +316,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
             } 
 
             /**
+             * <p>The dialogue content from the assistant.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -319,7 +328,10 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
             }
 
             /**
-             * assistantTranslate.
+             * <p>The translation of the assistant content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>为什么有些人认为遛狗是份好差事?</p>
              */
             public Builder assistantTranslate(String assistantTranslate) {
                 this.assistantTranslate = assistantTranslate;
@@ -327,6 +339,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
             }
 
             /**
+             * <p>The sequence number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -338,10 +351,11 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
             }
 
             /**
+             * <p>The dialogue content from the user.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>They think it&quot;s great because they won&quot;t be stuck in an office.</p>
+             * <p>They think it\&quot;s great because they won\&quot;t be stuck in an office.</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -450,6 +464,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
             } 
 
             /**
+             * <p>The dialogue content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -461,7 +476,10 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
             }
 
             /**
-             * isOffTopicControl.
+             * <p>Controls the conversation flow based on whether the user\&quot;s response is off-topic. This value is determined by previous turns. If a user provides more than two consecutive off-topic responses, the system sets this parameter to <code>true</code> to switch tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>跑题：true, 不跑题：false</p>
              */
             public Builder isOffTopicControl(Boolean isOffTopicControl) {
                 this.isOffTopicControl = isOffTopicControl;
@@ -469,7 +487,10 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
             }
 
             /**
-             * isOnTopic.
+             * <p>Indicates whether the message is on-topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>扣题：true, 不扣题：false</p>
              */
             public Builder isOnTopic(Boolean isOnTopic) {
                 this.isOnTopic = isOnTopic;
@@ -477,6 +498,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
             }
 
             /**
+             * <p>The sequence number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -488,10 +510,11 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
             }
 
             /**
+             * <p>The role of the message author. Valid values are <code>assistant</code> for the AI and <code>user</code> for the user.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>老师：assistant；学生：user</p>
+             * <p>AI：assistant；用户：user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -560,6 +583,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
             } 
 
             /**
+             * <p>The assistant name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -571,6 +595,7 @@ public class ExecuteAITeacherExpansionDialogueTranslateRequest extends Request {
             }
 
             /**
+             * <p>The user name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

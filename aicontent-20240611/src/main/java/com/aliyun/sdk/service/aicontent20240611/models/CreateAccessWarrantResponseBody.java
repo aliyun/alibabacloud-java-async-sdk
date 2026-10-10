@@ -119,7 +119,10 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +295,10 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessToken.
+             * <p>The access token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder accessToken(String accessToken) {
                 this.accessToken = accessToken;
@@ -285,7 +306,10 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
             }
 
             /**
-             * AccessWarrantId.
+             * <p>The access warrant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ex2xxxxxxxx</p>
              */
             public Builder accessWarrantId(String accessWarrantId) {
                 this.accessWarrantId = accessWarrantId;
@@ -293,7 +317,10 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationAccessId.
+             * <p>The merchant\&quot;s application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder applicationAccessId(String applicationAccessId) {
                 this.applicationAccessId = applicationAccessId;
@@ -301,7 +328,10 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time of the access warrant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672531200</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -309,7 +339,10 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time of the access warrant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672531200</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -317,7 +350,10 @@ public class CreateAccessWarrantResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The merchant\&quot;s user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

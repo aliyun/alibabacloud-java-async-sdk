@@ -119,7 +119,7 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B_USER_NOT_FOUND_EXCEPTION</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户不存在</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,7 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0A5E9849-A2F0-551D-A7D8-1A8118557BAB</p>
@@ -162,7 +171,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +240,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * labelId.
+             * <p>The label ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1323</p>
              */
             public Builder labelId(String labelId) {
                 this.labelId = labelId;
@@ -236,7 +251,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * labelName.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>身边事物环境</p>
              */
             public Builder labelName(String labelName) {
                 this.labelName = labelName;
@@ -303,7 +321,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * labelId.
+             * <p>The label ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1329</p>
              */
             public Builder labelId(String labelId) {
                 this.labelId = labelId;
@@ -311,7 +332,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * labelName.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>自我介绍</p>
              */
             public Builder labelName(String labelName) {
                 this.labelName = labelName;
@@ -404,7 +428,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * children.
+             * <p>Child nodes for backward compatibility. This property is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>可能存在的子元素，兼容数据使用，不一定存在</p>
              */
             public Builder children(Object children) {
                 this.children = children;
@@ -412,7 +439,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * directoryId.
+             * <p>The directory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>05758807ed8e11eebe6e0c42a106bb02</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -420,7 +450,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * directoryName.
+             * <p>The directory name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>section 2</p>
              */
             public Builder directoryName(String directoryName) {
                 this.directoryName = directoryName;
@@ -428,7 +461,7 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * topic.
+             * <p>The topic.</p>
              */
             public Builder topic(java.util.List<SectionTopic> topic) {
                 this.topic = topic;
@@ -495,7 +528,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * labelId.
+             * <p>The label ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1326</p>
              */
             public Builder labelId(String labelId) {
                 this.labelId = labelId;
@@ -503,7 +539,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * labelName.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>自我介绍</p>
              */
             public Builder labelName(String labelName) {
                 this.labelName = labelName;
@@ -596,7 +635,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * directoryId.
+             * <p>The directory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>05758807ed8e11eebe6e0c42a106bb02</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -604,7 +646,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * directoryName.
+             * <p>The directory name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unit 2</p>
              */
             public Builder directoryName(String directoryName) {
                 this.directoryName = directoryName;
@@ -612,7 +657,7 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * section.
+             * <p>The section.</p>
              */
             public Builder section(java.util.List<Section> section) {
                 this.section = section;
@@ -620,7 +665,7 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * topic.
+             * <p>The topic.</p>
              */
             public Builder topic(java.util.List<UnitTopic> topic) {
                 this.topic = topic;
@@ -713,7 +758,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * directoryId.
+             * <p>The directory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>05758807ed8e11eebe6e0c42a106bb02</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -721,7 +769,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * directoryName.
+             * <p>The directory name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2 Jobs</p>
              */
             public Builder directoryName(String directoryName) {
                 this.directoryName = directoryName;
@@ -729,7 +780,7 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * topic.
+             * <p>The topic.</p>
              */
             public Builder topic(java.util.List<Topic> topic) {
                 this.topic = topic;
@@ -737,7 +788,7 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * unit.
+             * <p>The unit.</p>
              */
             public Builder unit(java.util.List<Unit> unit) {
                 this.unit = unit;
@@ -895,7 +946,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * bookId.
+             * <p>The book ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55857</p>
              */
             public Builder bookId(String bookId) {
                 this.bookId = bookId;
@@ -903,7 +957,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * bookVolume.
+             * <p>The book volume. <code>0</code> indicates a single-volume edition, <code>1</code> indicates Volume 1, and <code>2</code> indicates Volume 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bookVolume(String bookVolume) {
                 this.bookVolume = bookVolume;
@@ -911,7 +968,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * edition.
+             * <p>The edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2010-1(2)</p>
              */
             public Builder edition(String edition) {
                 this.edition = edition;
@@ -919,7 +979,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * grade.
+             * <p>The grade. Valid values: 1–9.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder grade(String grade) {
                 this.grade = grade;
@@ -927,7 +990,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * impression.
+             * <p>The impression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-1(10)</p>
              */
             public Builder impression(String impression) {
                 this.impression = impression;
@@ -935,7 +1001,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * isbn.
+             * <p>The International Standard Book Number (ISBN).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9787544413695</p>
              */
             public Builder isbn(String isbn) {
                 this.isbn = isbn;
@@ -943,7 +1012,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * publisher.
+             * <p>The publisher.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>人民教育出版社</p>
              */
             public Builder publisher(String publisher) {
                 this.publisher = publisher;
@@ -951,7 +1023,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * subject.
+             * <p>The subject.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENGLISH</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -959,7 +1034,10 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>人教版</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1026,7 +1104,7 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * directoryTree.
+             * <p>The directory tree.</p>
              */
             public Builder directoryTree(java.util.List<DirectoryTree> directoryTree) {
                 this.directoryTree = directoryTree;
@@ -1034,7 +1112,7 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * editionInfo.
+             * <p>The edition details.</p>
              */
             public Builder editionInfo(EditionInfo editionInfo) {
                 this.editionInfo = editionInfo;

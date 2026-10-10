@@ -80,7 +80,10 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageResponseBody extends Te
         } 
 
         /**
-         * content.
+         * <p>The content associated with the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>how</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -88,7 +91,10 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageResponseBody extends Te
         }
 
         /**
-         * event.
+         * <p>The event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder event(String event) {
             this.event = event;
@@ -96,7 +102,10 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageResponseBody extends Te
         }
 
         /**
-         * requestId.
+         * <p>The request ID. This ID is returned with every response and is useful for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -185,7 +185,10 @@ public class ModelRouterQueryConversationListRequest extends Request {
         } 
 
         /**
-         * groupBy.
+         * <p>The grouping field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourceId</p>
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("groupBy", groupBy);
@@ -194,7 +197,10 @@ public class ModelRouterQueryConversationListRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>A keyword to filter the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -203,7 +209,10 @@ public class ModelRouterQueryConversationListRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -212,7 +221,10 @@ public class ModelRouterQueryConversationListRequest extends Request {
         }
 
         /**
-         * needTotalCount.
+         * <p>Specifies whether to return the total count of items. Set to <code>true</code> to return the total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needTotalCount(Boolean needTotalCount) {
             this.putQueryParameter("needTotalCount", needTotalCount);
@@ -221,7 +233,10 @@ public class ModelRouterQueryConversationListRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page of results. To retrieve the first page, do not specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -230,7 +245,10 @@ public class ModelRouterQueryConversationListRequest extends Request {
         }
 
         /**
-         * orderBy.
+         * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourceId</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("orderBy", orderBy);
@@ -239,7 +257,10 @@ public class ModelRouterQueryConversationListRequest extends Request {
         }
 
         /**
-         * orderDirection.
+         * <p>The sort order. Valid values are <code>ASC</code> (ascending) and <code>DESC</code> (descending).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder orderDirection(String orderDirection) {
             this.putQueryParameter("orderDirection", orderDirection);
@@ -248,7 +269,10 @@ public class ModelRouterQueryConversationListRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -257,7 +281,10 @@ public class ModelRouterQueryConversationListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of items to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -266,7 +293,10 @@ public class ModelRouterQueryConversationListRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Filters the results by status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("status", status);

@@ -59,7 +59,10 @@ public class ModelRouterCreateApiKeyRequest extends Request {
         } 
 
         /**
-         * clientId.
+         * <p>The client ID. A value of null indicates the default client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putBodyParameter("clientId", clientId);

@@ -119,7 +119,10 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
         } 
 
         /**
-         * data.
+         * <p>The object that contains the refinement result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
         }
 
         /**
-         * errCode.
+         * <p>The error code. Returned only when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
         }
 
         /**
-         * errMessage.
+         * <p>The error message. Returned only when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +230,10 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
             } 
 
             /**
-             * result.
+             * <p>The refinement result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Yes, I\&quot;ll be right there.</p>
              */
             public Builder result(String result) {
                 this.result = result;

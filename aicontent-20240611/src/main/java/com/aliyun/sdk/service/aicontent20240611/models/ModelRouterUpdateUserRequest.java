@@ -87,7 +87,10 @@ public class ModelRouterUpdateUserRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -96,7 +99,10 @@ public class ModelRouterUpdateUserRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -105,7 +111,10 @@ public class ModelRouterUpdateUserRequest extends Request {
         }
 
         /**
-         * phone.
+         * <p>The phone number of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13800000000</p>
          */
         public Builder phone(String phone) {
             this.putBodyParameter("phone", phone);

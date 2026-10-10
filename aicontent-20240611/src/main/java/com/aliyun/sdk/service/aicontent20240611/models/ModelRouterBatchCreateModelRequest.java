@@ -104,6 +104,7 @@ public class ModelRouterBatchCreateModelRequest extends Request {
         } 
 
         /**
+         * <p>The API key. This parameter is required. The key is shared by the same provider and reused by all models.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +117,10 @@ public class ModelRouterBatchCreateModelRequest extends Request {
         }
 
         /**
-         * baseUrl.
+         * <p>The base URL. This parameter is optional. Specify this parameter when you use a custom gateway address. If you do not specify this parameter, the default address of the provider is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
          */
         public Builder baseUrl(String baseUrl) {
             this.putBodyParameter("baseUrl", baseUrl);
@@ -125,6 +129,7 @@ public class ModelRouterBatchCreateModelRequest extends Request {
         }
 
         /**
+         * <p>The list of models to create in batches. This parameter is required. At least one item must be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder models(java.util.List<BatchCreateModelItemDTO> models) {
@@ -134,6 +139,7 @@ public class ModelRouterBatchCreateModelRequest extends Request {
         }
 
         /**
+         * <p>The provider symbol. This parameter is required. All models items share the same provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

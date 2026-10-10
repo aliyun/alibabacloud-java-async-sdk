@@ -119,7 +119,7 @@ public class ListTextbookAssistantArticlesResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -127,7 +127,16 @@ public class ListTextbookAssistantArticlesResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * <ul>
+         * <li><p>A value of 0 indicates success.</p>
+         * </li>
+         * <li><p>A value greater than 0 indicates a specific error.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +144,10 @@ public class ListTextbookAssistantArticlesResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +155,10 @@ public class ListTextbookAssistantArticlesResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +166,7 @@ public class ListTextbookAssistantArticlesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>70412360-4272-571A-827D-84C2C07C450F</p>
@@ -162,7 +177,16 @@ public class ListTextbookAssistantArticlesResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The call succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The call failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -215,7 +239,10 @@ public class ListTextbookAssistantArticlesResponseBody extends TeaModel {
             } 
 
             /**
-             * articleId.
+             * <p>The article ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0c05700d4d9411efbe6e0c42a106bb02</p>
              */
             public Builder articleId(String articleId) {
                 this.articleId = articleId;

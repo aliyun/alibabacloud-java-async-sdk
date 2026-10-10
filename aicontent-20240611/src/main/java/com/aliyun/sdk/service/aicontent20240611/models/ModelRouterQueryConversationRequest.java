@@ -59,7 +59,10 @@ public class ModelRouterQueryConversationRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The conversation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);

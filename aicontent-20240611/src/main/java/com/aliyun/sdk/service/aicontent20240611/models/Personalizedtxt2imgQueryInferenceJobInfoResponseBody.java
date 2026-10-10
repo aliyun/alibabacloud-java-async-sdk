@@ -119,7 +119,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
         } 
 
         /**
-         * data.
+         * <p>The object that contains the query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
         }
 
         /**
-         * errCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
         }
 
         /**
-         * errMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +308,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             } 
 
             /**
-             * createTime.
+             * <p>The time when the inference job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-25T12:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -298,7 +319,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             }
 
             /**
-             * id.
+             * <p>The ID of the inference job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3220</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -306,7 +330,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             }
 
             /**
-             * jobStatus.
+             * <p>The status of the inference job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -314,7 +341,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             }
 
             /**
-             * jobTrainProgress.
+             * <p>The progress of the inference job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder jobTrainProgress(Double jobTrainProgress) {
                 this.jobTrainProgress = jobTrainProgress;
@@ -322,7 +352,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             }
 
             /**
-             * modelId.
+             * <p>The ID of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>modelId-xxxx-xxxx-xxxx</p>
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -330,7 +363,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             }
 
             /**
-             * promptId.
+             * <p>The ID of the prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>promptId-xxxx-xxxx-xxxx</p>
              */
             public Builder promptId(String promptId) {
                 this.promptId = promptId;
@@ -338,7 +374,10 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             }
 
             /**
-             * resultImageUrl.
+             * <p>A list of URLs for the generated images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0000.png</p>
              */
             public Builder resultImageUrl(java.util.List<String> resultImageUrl) {
                 this.resultImageUrl = resultImageUrl;

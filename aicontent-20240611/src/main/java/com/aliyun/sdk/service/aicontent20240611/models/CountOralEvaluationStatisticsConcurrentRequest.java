@@ -59,7 +59,7 @@ public class CountOralEvaluationStatisticsConcurrentRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(OralEvaluationStatisticsConcurrentCountRequest body) {
             this.putBodyParameter("body", body);

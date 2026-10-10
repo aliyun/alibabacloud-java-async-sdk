@@ -119,7 +119,7 @@ public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The subscription information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The fault error message encoding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,7 @@ public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
             } 
 
             /**
-             * list.
+             * <p>The list of subscription information.</p>
              */
             public Builder list(java.util.List<SubscriptionDTO> list) {
                 this.list = list;
@@ -246,7 +261,10 @@ public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * maxResults.
+             * <p>The maximum number of results per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -254,7 +272,10 @@ public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * nextToken.
+             * <p>The pagination token. Do not specify this parameter for the first query. For subsequent queries, specify the value returned from the previous query. Set to &quot;&quot; when no more data is available. Set to &quot;5&quot; when there is a next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5&quot; or &quot;&quot;</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

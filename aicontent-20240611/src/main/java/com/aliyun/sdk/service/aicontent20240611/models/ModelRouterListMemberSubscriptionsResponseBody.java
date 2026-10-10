@@ -119,7 +119,10 @@ public class ModelRouterListMemberSubscriptionsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class ModelRouterListMemberSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The fault information code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class ModelRouterListMemberSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class ModelRouterListMemberSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class ModelRouterListMemberSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class ModelRouterListMemberSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +230,10 @@ public class ModelRouterListMemberSubscriptionsResponseBody extends TeaModel {
             } 
 
             /**
-             * list.
+             * <p>The response data list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder list(java.util.List<SubscriptionDTO> list) {
                 this.list = list;

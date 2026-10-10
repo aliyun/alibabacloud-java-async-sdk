@@ -201,7 +201,10 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         } 
 
         /**
-         * apiKeyId.
+         * <p>Optional. Filters results by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder apiKeyId(Long apiKeyId) {
             this.putQueryParameter("apiKeyId", apiKeyId);
@@ -210,7 +213,10 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * clientId.
+         * <p>Filters results by department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putQueryParameter("clientId", clientId);
@@ -219,7 +225,10 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * clientIds.
+         * <p>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with clientId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder clientIds(String clientIds) {
             this.putQueryParameter("clientIds", clientIds);
@@ -228,6 +237,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
+         * <p>The end time, in UNIX timestamp (seconds).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +250,10 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * granularity.
+         * <p>Automatically aggregated. No input required. Granularity: hourly/daily. Default value: hourly.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hourly</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("granularity", granularity);
@@ -249,7 +262,10 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -258,7 +274,10 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * memberUserIds.
+         * <p>Optional. Filters results by members (member IDs, separated by commas). If not specified, the department and all its members are included. If an empty value is passed, only the department is included without members.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001,30002</p>
          */
         public Builder memberUserIds(String memberUserIds) {
             this.putQueryParameter("memberUserIds", memberUserIds);
@@ -267,7 +286,10 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * modelTypes.
+         * <p>The model types, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LLM,VL</p>
          */
         public Builder modelTypes(String modelTypes) {
             this.putQueryParameter("modelTypes", modelTypes);
@@ -288,7 +310,10 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
-         * search.
+         * <p>Fuzzy search by model name or code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen</p>
          */
         public Builder search(String search) {
             this.putQueryParameter("search", search);
@@ -297,6 +322,7 @@ public class ModelRouterQueryCostModelListRequest extends Request {
         }
 
         /**
+         * <p>The start time, in UNIX timestamp (seconds).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

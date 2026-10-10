@@ -59,7 +59,7 @@ public class CountOralEvaluationStatisticsErrorRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The request body for retrieving error statistics for the oral evaluation service.</p>
          */
         public Builder body(OralEvaluationStatisticsErrorCountRequest body) {
             this.putBodyParameter("body", body);

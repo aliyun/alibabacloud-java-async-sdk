@@ -157,7 +157,10 @@ public class ModelRouterCreateClientRequest extends Request {
         } 
 
         /**
-         * address.
+         * <p>The company address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder address(String address) {
             this.putBodyParameter("address", address);
@@ -166,7 +169,10 @@ public class ModelRouterCreateClientRequest extends Request {
         }
 
         /**
-         * allowedModelGroupConfig.
+         * <p>The allowed model group configuration in JSON string format: {&quot;model_ids&quot;:[101],&quot;group_ids&quot;:[&quot;mg_xxx&quot;]}. If both this field and allowedModels are specified, this field takes precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;model_ids&quot;:[101],&quot;group_ids&quot;:[&quot;mg_xxx&quot;]}</p>
          */
         public Builder allowedModelGroupConfig(String allowedModelGroupConfig) {
             this.putBodyParameter("allowedModelGroupConfig", allowedModelGroupConfig);
@@ -175,7 +181,10 @@ public class ModelRouterCreateClientRequest extends Request {
         }
 
         /**
-         * allowedModels.
+         * <p>The list of allowed model IDs, separated by commas. An empty value indicates all models are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder allowedModels(String allowedModels) {
             this.putBodyParameter("allowedModels", allowedModels);
@@ -184,7 +193,10 @@ public class ModelRouterCreateClientRequest extends Request {
         }
 
         /**
-         * contact.
+         * <p>The contact information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13800138000</p>
          */
         public Builder contact(String contact) {
             this.putBodyParameter("contact", contact);
@@ -193,7 +205,10 @@ public class ModelRouterCreateClientRequest extends Request {
         }
 
         /**
-         * discount.
+         * <p>The discount coefficient. A value of 1.0 indicates no discount, and 0.8 indicates a 20% discount. Default value: 1.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder discount(Double discount) {
             this.putBodyParameter("discount", discount);
@@ -202,7 +217,10 @@ public class ModelRouterCreateClientRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The customer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyCustomer</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -211,7 +229,10 @@ public class ModelRouterCreateClientRequest extends Request {
         }
 
         /**
-         * parentId.
+         * <p>The ID of the parent department. If not specified, a top-level department is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>292090</p>
          */
         public Builder parentId(Long parentId) {
             this.putBodyParameter("parentId", parentId);
@@ -220,7 +241,10 @@ public class ModelRouterCreateClientRequest extends Request {
         }
 
         /**
-         * remark.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Remarks</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);

@@ -187,7 +187,10 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
         } 
 
         /**
-         * apiKeyId.
+         * <p>Optional. Filters by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder apiKeyId(Long apiKeyId) {
             this.putQueryParameter("apiKeyId", apiKeyId);
@@ -196,7 +199,10 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
         }
 
         /**
-         * clientId.
+         * <p>The department ID used to filter results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putQueryParameter("clientId", clientId);
@@ -205,7 +211,10 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
         }
 
         /**
-         * clientIds.
+         * <p>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with clientId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder clientIds(String clientIds) {
             this.putQueryParameter("clientIds", clientIds);
@@ -214,6 +223,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
         }
 
         /**
+         * <p>The end time, as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +236,15 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
         }
 
         /**
-         * granularity.
+         * <p>The time granularity. Valid values:</p>
+         * <ul>
+         * <li>hourly</li>
+         * <li>daily</li>
+         * </ul>
+         * <p>Default value: hourly.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hourly</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("granularity", granularity);
@@ -235,7 +253,10 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -244,7 +265,10 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
         }
 
         /**
-         * memberUserIds.
+         * <p>Optional. Filters by member IDs, separated by commas. If not specified, data for the department and all its members is returned. If an empty value is specified, only department data without members is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001,30002</p>
          */
         public Builder memberUserIds(String memberUserIds) {
             this.putQueryParameter("memberUserIds", memberUserIds);
@@ -253,7 +277,10 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
         }
 
         /**
-         * modelTypes.
+         * <p>The model types, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LLM,VL</p>
          */
         public Builder modelTypes(String modelTypes) {
             this.putQueryParameter("modelTypes", modelTypes);
@@ -274,6 +301,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
         }
 
         /**
+         * <p>The start time, as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

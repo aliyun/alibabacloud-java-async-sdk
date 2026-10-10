@@ -119,7 +119,10 @@ public class UpdateProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class UpdateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class UpdateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class UpdateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class UpdateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class UpdateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +243,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * applicationAccessId.
+             * <p>The application identifier, also known as the AppKey.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder applicationAccessId(String applicationAccessId) {
                 this.applicationAccessId = applicationAccessId;
@@ -233,7 +254,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * applicationAccessSecret.
+             * <p>The application secret. This is returned only for requests from the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyAppSecret</p>
              */
             public Builder applicationAccessSecret(String applicationAccessSecret) {
                 this.applicationAccessSecret = applicationAccessSecret;
@@ -313,7 +337,7 @@ public class UpdateProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationAccessIds.
+             * <p>The application access credentials.</p>
              */
             public Builder applicationAccessIds(java.util.List<ApplicationAccessIds> applicationAccessIds) {
                 this.applicationAccessIds = applicationAccessIds;
@@ -321,7 +345,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The internal ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4498</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -329,7 +356,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1889</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -474,7 +504,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-01T13:40:53Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -482,7 +515,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * DemoUrl.
+             * <p>The demo URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://demo.com/demo">http://demo.com/demo</a></p>
              */
             public Builder demoUrl(String demoUrl) {
                 this.demoUrl = demoUrl;
@@ -490,7 +526,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * DeployMode.
+             * <p>The deployment mode. Valid values: client-side or server-side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>服务端</p>
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -498,7 +537,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * DevelopLanguage.
+             * <p>The development language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHP</p>
              */
             public Builder developLanguage(String developLanguage) {
                 this.developLanguage = developLanguage;
@@ -506,7 +548,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * DocUrl.
+             * <p>The documentation URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://demo.com/doc">http://demo.com/doc</a></p>
              */
             public Builder docUrl(String docUrl) {
                 this.docUrl = docUrl;
@@ -514,7 +559,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * SdkName.
+             * <p>The SDK name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHP服务端SDK</p>
              */
             public Builder sdkName(String sdkName) {
                 this.sdkName = sdkName;
@@ -522,7 +570,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * SdkUrl.
+             * <p>The SDK URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://demo.com/sdk.zip">http://demo.com/sdk.zip</a></p>
              */
             public Builder sdkUrl(String sdkUrl) {
                 this.sdkUrl = sdkUrl;
@@ -530,7 +581,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * SdkVersion.
+             * <p>The SDK version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.13.0</p>
              */
             public Builder sdkVersion(String sdkVersion) {
                 this.sdkVersion = sdkVersion;
@@ -649,7 +703,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-10T02:07:16Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -657,7 +714,7 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectApps.
+             * <p>The list of project applications.</p>
              */
             public Builder projectApps(java.util.List<ProjectApps> projectApps) {
                 this.projectApps = projectApps;
@@ -665,7 +722,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56160</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -673,7 +733,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyProject</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -681,7 +744,7 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectSDK.
+             * <p>The project SDK.</p>
              */
             public Builder projectSDK(java.util.List<ProjectSDK> projectSDK) {
                 this.projectSDK = projectSDK;
@@ -689,7 +752,10 @@ public class UpdateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectType.
+             * <p>The project type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebApplication</p>
              */
             public Builder projectType(String projectType) {
                 this.projectType = projectType;

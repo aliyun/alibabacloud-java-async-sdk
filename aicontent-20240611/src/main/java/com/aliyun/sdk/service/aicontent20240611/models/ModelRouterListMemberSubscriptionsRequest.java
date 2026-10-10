@@ -73,7 +73,10 @@ public class ModelRouterListMemberSubscriptionsRequest extends Request {
         } 
 
         /**
-         * clientId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putPathParameter("clientId", clientId);
@@ -82,7 +85,10 @@ public class ModelRouterListMemberSubscriptionsRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The member ID within the organization. This is not an Alibaba Cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);

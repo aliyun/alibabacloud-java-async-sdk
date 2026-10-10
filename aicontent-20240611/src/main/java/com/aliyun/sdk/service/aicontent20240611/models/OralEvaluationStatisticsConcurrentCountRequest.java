@@ -110,7 +110,10 @@ public class OralEvaluationStatisticsConcurrentCountRequest extends Request {
         } 
 
         /**
-         * applicationAccessId.
+         * <p>appId,appkey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a0007g7</p>
          */
         public Builder applicationAccessId(String applicationAccessId) {
             this.applicationAccessId = applicationAccessId;
@@ -118,7 +121,10 @@ public class OralEvaluationStatisticsConcurrentCountRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>End Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-29 14:22:48</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -126,7 +132,10 @@ public class OralEvaluationStatisticsConcurrentCountRequest extends Request {
         }
 
         /**
-         * granularity.
+         * <p>Query granularity (hour, Day, month)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAY</p>
          */
         public Builder granularity(String granularity) {
             this.granularity = granularity;
@@ -134,7 +143,10 @@ public class OralEvaluationStatisticsConcurrentCountRequest extends Request {
         }
 
         /**
-         * projectId.
+         * <p>project ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -142,7 +154,10 @@ public class OralEvaluationStatisticsConcurrentCountRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>Start Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-29 05:00:01</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

@@ -197,7 +197,10 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
         } 
 
         /**
-         * data.
+         * <p>Data object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(java.util.List<PaidResourceDTO> data) {
             this.data = data;
@@ -205,7 +208,10 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
         }
 
         /**
-         * errCode.
+         * <p>Error message encoding</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -213,7 +219,10 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
         }
 
         /**
-         * errMessage.
+         * <p>error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -221,7 +230,10 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -251,7 +263,10 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
         }
 
         /**
-         * pageIndex.
+         * <p>Page index</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.pageIndex = pageIndex;
@@ -259,7 +274,10 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
         }
 
         /**
-         * pageSize.
+         * <p>Number of items per page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -267,7 +285,10 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -286,7 +307,10 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -294,7 +318,10 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
         }
 
         /**
-         * totalCount.
+         * <p>Total quantity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

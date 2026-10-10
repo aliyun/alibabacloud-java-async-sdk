@@ -119,7 +119,7 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,7 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0bc1e96d17091734639835114e12c8</p>
@@ -162,7 +171,10 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +253,10 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * analysis.
+             * <p>The error analysis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>主语 \&quot;I\&quot; 后应跟动词 \&quot;am\&quot; 而不是 \&quot;are\&quot;。</p>
              */
             public Builder analysis(String analysis) {
                 this.analysis = analysis;
@@ -249,7 +264,10 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
             }
 
             /**
-             * correction.
+             * <p>The corrected sentence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I am you.</p>
              */
             public Builder correction(String correction) {
                 this.correction = correction;
@@ -257,7 +275,10 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
             }
 
             /**
-             * correctionStatus.
+             * <p>The grammar check result. Valid values: <code>Has_Error</code> (an error was found), <code>No_Error</code> (no errors were found), and <code>Invalid_Sentence</code> (the sentence could not be parsed).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Has_Error</p>
              */
             public Builder correctionStatus(String correctionStatus) {
                 this.correctionStatus = correctionStatus;
@@ -311,7 +332,7 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * result.
+             * <p>The result data.</p>
              */
             public Builder result(Result result) {
                 this.result = result;

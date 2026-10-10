@@ -106,7 +106,10 @@ public class UsageBreakdownRespDTO extends TeaModel {
         } 
 
         /**
-         * granularity.
+         * <p>Aggregation granularity: hourly or daily</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hourly</p>
          */
         public Builder granularity(String granularity) {
             this.granularity = granularity;
@@ -114,7 +117,10 @@ public class UsageBreakdownRespDTO extends TeaModel {
         }
 
         /**
-         * page.
+         * <p>Current page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -122,7 +128,10 @@ public class UsageBreakdownRespDTO extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Number of entries per page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +139,10 @@ public class UsageBreakdownRespDTO extends TeaModel {
         }
 
         /**
-         * rows.
+         * <p>List of detailed data entries</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder rows(java.util.List<UsageBreakdownRowDTO> rows) {
             this.rows = rows;
@@ -138,7 +150,10 @@ public class UsageBreakdownRespDTO extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>Total number of entries</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Long total) {
             this.total = total;

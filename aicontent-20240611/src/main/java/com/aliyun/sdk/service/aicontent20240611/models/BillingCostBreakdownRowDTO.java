@@ -291,7 +291,10 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * billingType.
+         * <p>Billing type; currently fixed as total_amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>total_amount</p>
          */
         public Builder billingType(String billingType) {
             this.billingType = billingType;
@@ -299,7 +302,10 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * clientId.
+         * <p>Department ID; 0 indicates no associated department</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
@@ -307,7 +313,10 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * clientName.
+         * <p>Department name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>研发部</p>
          */
         public Builder clientName(String clientName) {
             this.clientName = clientName;
@@ -339,7 +348,10 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * modelCode.
+         * <p>Model identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
          */
         public Builder modelCode(String modelCode) {
             this.modelCode = modelCode;
@@ -347,7 +359,10 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * modelId.
+         * <p>Model ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder modelId(Long modelId) {
             this.modelId = modelId;
@@ -355,7 +370,10 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * modelName.
+         * <p>Model name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通义千问-Plus</p>
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
@@ -371,7 +389,10 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * modelType.
+         * <p>Statistics category</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm</p>
          */
         public Builder modelType(String modelType) {
             this.modelType = modelType;
@@ -387,7 +408,10 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * payableAmount.
+         * <p>Payable amount, rounded to 8 decimal places</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.00012800</p>
          */
         public Builder payableAmount(Float payableAmount) {
             this.payableAmount = payableAmount;
@@ -395,7 +419,10 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * summaryTime.
+         * <p>Statistics time point, Unix timestamp (seconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
         public Builder summaryTime(Long summaryTime) {
             this.summaryTime = summaryTime;

@@ -145,7 +145,10 @@ public class ConversationDTO extends TeaModel {
         } 
 
         /**
-         * chatData.
+         * <p>A JSON-formatted string that represents the complete state of the conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder chatData(String chatData) {
             this.chatData = chatData;
@@ -153,7 +156,10 @@ public class ConversationDTO extends TeaModel {
         }
 
         /**
-         * deleteTag.
+         * <p>The status of the conversation, where 0 means enabled and any non-zero value means disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder deleteTag(Integer deleteTag) {
             this.deleteTag = deleteTag;
@@ -161,7 +167,10 @@ public class ConversationDTO extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The creation time of the conversation, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -169,7 +178,10 @@ public class ConversationDTO extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The modification time of the conversation, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -177,7 +189,10 @@ public class ConversationDTO extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The ID of the conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -185,7 +200,10 @@ public class ConversationDTO extends TeaModel {
         }
 
         /**
-         * messageCount.
+         * <p>The total number of messages in the conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder messageCount(Integer messageCount) {
             this.messageCount = messageCount;
@@ -193,7 +211,10 @@ public class ConversationDTO extends TeaModel {
         }
 
         /**
-         * modelIds.
+         * <p>A JSON-formatted string that contains an array of model IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2,3]</p>
          */
         public Builder modelIds(String modelIds) {
             this.modelIds = modelIds;
@@ -201,7 +222,10 @@ public class ConversationDTO extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The title of the conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我的对话</p>
          */
         public Builder title(String title) {
             this.title = title;

@@ -75,6 +75,7 @@ public class ModelRouterBatchBindModelGroupRequest extends Request {
         } 
 
         /**
+         * <p>The authorization configuration (JSON string). Internal key names use a fixed underscore style: {&quot;model_ids&quot;:[...],&quot;group_ids&quot;:[&quot;mg_xxx&quot;]}</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ModelRouterBatchBindModelGroupRequest extends Request {
         }
 
         /**
+         * <p>The array of department IDs. You can specify 1 to 50 IDs. If more than 50, call this operation in batches.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

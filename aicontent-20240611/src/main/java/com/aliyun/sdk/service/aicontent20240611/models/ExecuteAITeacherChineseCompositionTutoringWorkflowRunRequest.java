@@ -163,7 +163,13 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         } 
 
         /**
-         * essayOutline.
+         * <p>The essay outline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>题目： 春天的色彩
+         * 开头： 开门见山，点明主题。
+         * 中间： 分段描写春天的不同色彩。
+         * 结尾： 总结全文，抒发情感。</p>
          */
         public Builder essayOutline(String essayOutline) {
             this.putBodyParameter("essayOutline", essayOutline);
@@ -172,7 +178,11 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
+         * <p>The essay requirements.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>生动形象，字数不得少于100字</p>
          */
         public Builder essayRequirements(String essayRequirements) {
             this.putBodyParameter("essayRequirements", essayRequirements);
@@ -181,7 +191,11 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
+         * <p>The essay topic.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>春天的景色</p>
          */
         public Builder essayTopic(String essayTopic) {
             this.putBodyParameter("essayTopic", essayTopic);
@@ -190,6 +204,9 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
+         * <p>The essay type.</p>
+         * <p>outline: An outline.</p>
+         * <p>essay: A full essay.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +219,10 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
-         * essayWordCount.
+         * <p>The target word count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder essayWordCount(Long essayWordCount) {
             this.putBodyParameter("essayWordCount", essayWordCount);
@@ -211,6 +231,7 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
+         * <p>The student\&quot;s grade level.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,6 +244,7 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
+         * <p>The response mode.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,6 +257,7 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

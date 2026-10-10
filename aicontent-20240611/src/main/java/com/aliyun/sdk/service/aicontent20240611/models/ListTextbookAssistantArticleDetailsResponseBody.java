@@ -119,7 +119,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>An array of article detail objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
@@ -162,7 +171,16 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates if the API call succeeded.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Success</p>
+         * </li>
+         * <li><p><strong>false</strong>: Failure</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +259,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * answer.
+             * <p>The answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I\&quot;m Mike Black</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -249,7 +270,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * question.
+             * <p>The question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>From the book, how does Mike Black introduce himself?</p>
              */
             public Builder question(String question) {
                 this.question = question;
@@ -257,7 +281,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * questionTranslate.
+             * <p>The translated question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>根据文章，迈克·布莱克是如何介绍自己的？</p>
              */
             public Builder questionTranslate(String questionTranslate) {
                 this.questionTranslate = questionTranslate;
@@ -350,7 +377,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * scene.
+             * <p>The scene description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>In the park, you introduce yourself to John and ask his name.</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -358,7 +388,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * sceneId.
+             * <p>The scene ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>38cddd70509911efbe6e0c42a106bb02</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -366,7 +399,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * sceneImageList.
+             * <p>A list of image URLs for the scene.</p>
              */
             public Builder sceneImageList(java.util.List<String> sceneImageList) {
                 this.sceneImageList = sceneImageList;
@@ -374,7 +407,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * sceneTranslate.
+             * <p>The translated scene description.</p>
              */
             public Builder sceneTranslate(String sceneTranslate) {
                 this.sceneTranslate = sceneTranslate;
@@ -454,7 +487,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * sentenceAnalysis.
+             * <p>The sentence analysis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>主语 + be动词（am/is/are） + 姓名.</p>
              */
             public Builder sentenceAnalysis(String sentenceAnalysis) {
                 this.sentenceAnalysis = sentenceAnalysis;
@@ -462,7 +498,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * sentenceId.
+             * <p>The sentence ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4de677d2509811efbe6e0c42a106bb02</p>
              */
             public Builder sentenceId(String sentenceId) {
                 this.sentenceId = sentenceId;
@@ -470,7 +509,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * sentenceText.
+             * <p>The sentence text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I\&quot;m Mike Black</p>
              */
             public Builder sentenceText(String sentenceText) {
                 this.sentenceText = sentenceText;
@@ -550,7 +592,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * themeImageList.
+             * <p>A list of image URLs for the theme.</p>
              */
             public Builder themeImageList(java.util.List<String> themeImageList) {
                 this.themeImageList = themeImageList;
@@ -558,7 +600,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * themeName.
+             * <p>The theme name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>自我认知与提升</p>
              */
             public Builder themeName(String themeName) {
                 this.themeName = themeName;
@@ -566,7 +611,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * themeTranslate.
+             * <p>The translated theme name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Self-awareness, self-management, self-improvement</p>
              */
             public Builder themeTranslate(String themeTranslate) {
                 this.themeTranslate = themeTranslate;
@@ -646,7 +694,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * topicImageList.
+             * <p>A list of image URLs for the topic.</p>
              */
             public Builder topicImageList(java.util.List<String> topicImageList) {
                 this.topicImageList = topicImageList;
@@ -654,7 +702,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * topicName.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>打招呼与自我介绍</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -662,7 +713,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * topicTranslate.
+             * <p>The translated topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Greetings and self-introduction</p>
              */
             public Builder topicTranslate(String topicTranslate) {
                 this.topicTranslate = topicTranslate;
@@ -742,7 +796,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * wordAnalysis.
+             * <p>The word analysis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>令人愉快的；友好的</p>
              */
             public Builder wordAnalysis(String wordAnalysis) {
                 this.wordAnalysis = wordAnalysis;
@@ -750,7 +807,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * wordId.
+             * <p>The word ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a94df134ed8c11eebe6e0c42a106bb02</p>
              */
             public Builder wordId(String wordId) {
                 this.wordId = wordId;
@@ -758,7 +818,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * wordText.
+             * <p>The word text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nice</p>
              */
             public Builder wordText(String wordText) {
                 this.wordText = wordText;
@@ -903,7 +966,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * articleId.
+             * <p>The article ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0c05700d4d9411efbe6e0c42a106bb02</p>
              */
             public Builder articleId(String articleId) {
                 this.articleId = articleId;
@@ -911,7 +977,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * questionList.
+             * <p>A list of Q\&amp;A objects.</p>
              */
             public Builder questionList(java.util.List<QuestionList> questionList) {
                 this.questionList = questionList;
@@ -919,7 +985,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * sceneList.
+             * <p>A list of scene objects.</p>
              */
             public Builder sceneList(java.util.List<SceneList> sceneList) {
                 this.sceneList = sceneList;
@@ -927,7 +993,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * sentenceList.
+             * <p>A list of sentence objects.</p>
              */
             public Builder sentenceList(java.util.List<SentenceList> sentenceList) {
                 this.sentenceList = sentenceList;
@@ -935,7 +1001,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * target.
+             * <p>The learning objectives.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.能够在自我介绍时运用句型“What\&quot;s your name? My name is/I‘m...”进行询问及回答。\n2.能够和新朋友运用句型“Nice to meet you(too).”进行问候。</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -943,7 +1012,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * theme.
+             * <p>The theme object.</p>
              */
             public Builder theme(Theme theme) {
                 this.theme = theme;
@@ -951,7 +1020,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * topic.
+             * <p>The topic object.</p>
              */
             public Builder topic(Topic topic) {
                 this.topic = topic;
@@ -959,7 +1028,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * wordList.
+             * <p>A list of word objects.</p>
              */
             public Builder wordList(java.util.List<WordList> wordList) {
                 this.wordList = wordList;

@@ -119,7 +119,10 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +243,10 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
             } 
 
             /**
-             * applicationAccessId.
+             * <p>The application access ID (appkey).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder applicationAccessId(String applicationAccessId) {
                 this.applicationAccessId = applicationAccessId;
@@ -233,7 +254,10 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * applicationAccessSecret.
+             * <p>The application access secret. This parameter is returned only for requests from the Alibaba Cloud console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyAppSecret</p>
              */
             public Builder applicationAccessSecret(String applicationAccessSecret) {
                 this.applicationAccessSecret = applicationAccessSecret;

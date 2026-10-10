@@ -67,7 +67,10 @@ public class DepartmentRoleCmd extends TeaModel {
         } 
 
         /**
-         * clientId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
@@ -75,7 +78,10 @@ public class DepartmentRoleCmd extends TeaModel {
         }
 
         /**
-         * roleCode.
+         * <p>The role code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>member</p>
          */
         public Builder roleCode(String roleCode) {
             this.roleCode = roleCode;

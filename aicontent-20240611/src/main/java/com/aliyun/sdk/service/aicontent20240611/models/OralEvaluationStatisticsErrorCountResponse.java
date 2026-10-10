@@ -81,7 +81,7 @@ public class OralEvaluationStatisticsErrorCountResponse extends Response {
         } 
 
         /**
-         * ProjectData.
+         * <p>Contains the statistical data aggregated by project.</p>
          */
         @Override
         public Builder projectData(ProjectData projectData) {
@@ -90,7 +90,11 @@ public class OralEvaluationStatisticsErrorCountResponse extends Response {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @Override
         public Builder projectId(String projectId) {
@@ -160,7 +164,11 @@ public class OralEvaluationStatisticsErrorCountResponse extends Response {
             } 
 
             /**
+             * <p>The count for the statistical item.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>230</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -168,7 +176,11 @@ public class OralEvaluationStatisticsErrorCountResponse extends Response {
             }
 
             /**
+             * <p>The name of the statistical item, which defines the display granularity.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -248,7 +260,7 @@ public class OralEvaluationStatisticsErrorCountResponse extends Response {
             } 
 
             /**
-             * Data.
+             * <p>A list of statistical items.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -256,7 +268,10 @@ public class OralEvaluationStatisticsErrorCountResponse extends Response {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51000</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -264,7 +279,10 @@ public class OralEvaluationStatisticsErrorCountResponse extends Response {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>start the core unsuccessfull.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -332,7 +350,7 @@ public class OralEvaluationStatisticsErrorCountResponse extends Response {
             } 
 
             /**
-             * Data.
+             * <p>A list of datasets.</p>
              */
             public Builder data(java.util.List<ApplicationDataData> data) {
                 this.data = data;
@@ -340,7 +358,11 @@ public class OralEvaluationStatisticsErrorCountResponse extends Response {
             }
 
             /**
+             * <p>The App ID or App Key.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t000797</p>
              */
             public Builder applicationAccessId(String applicationAccessId) {
                 this.applicationAccessId = applicationAccessId;
@@ -408,7 +430,7 @@ public class OralEvaluationStatisticsErrorCountResponse extends Response {
             } 
 
             /**
-             * ApplicationData.
+             * <p>A list of statistical data objects for the application.</p>
              */
             public Builder applicationData(java.util.List<ApplicationData> applicationData) {
                 this.applicationData = applicationData;
@@ -416,7 +438,11 @@ public class OralEvaluationStatisticsErrorCountResponse extends Response {
             }
 
             /**
+             * <p>The internal ID of the application.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder applicationInternalId(String applicationInternalId) {
                 this.applicationInternalId = applicationInternalId;

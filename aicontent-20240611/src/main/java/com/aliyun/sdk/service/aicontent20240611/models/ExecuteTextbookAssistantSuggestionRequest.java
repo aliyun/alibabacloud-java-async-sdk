@@ -105,6 +105,7 @@ public class ExecuteTextbookAssistantSuggestionRequest extends Request {
         } 
 
         /**
+         * <p>The unique identifier for the AI teacher\&quot;s message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class ExecuteTextbookAssistantSuggestionRequest extends Request {
         }
 
         /**
+         * <p>The authorization token for the API call. To obtain this token, call the operation that generates authorization tokens for the AI teacher feature.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class ExecuteTextbookAssistantSuggestionRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier for the current chat.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class ExecuteTextbookAssistantSuggestionRequest extends Request {
         }
 
         /**
+         * <p>The practice scenario. Valid values are <code>SYNC</code> for synchronous practice and <code>EXPAND</code> for extended practice.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

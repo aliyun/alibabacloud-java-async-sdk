@@ -129,7 +129,10 @@ public class ModelRouterGetMemberBalanceLogsRequest extends Request {
         } 
 
         /**
-         * clientId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putPathParameter("clientId", clientId);
@@ -138,7 +141,10 @@ public class ModelRouterGetMemberBalanceLogsRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The member ID within the organization (not the Alibaba Cloud account ID).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -147,7 +153,10 @@ public class ModelRouterGetMemberBalanceLogsRequest extends Request {
         }
 
         /**
-         * changeType.
+         * <p>The change type filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>recharge</p>
          */
         public Builder changeType(String changeType) {
             this.putQueryParameter("changeType", changeType);
@@ -156,7 +165,10 @@ public class ModelRouterGetMemberBalanceLogsRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -165,7 +177,10 @@ public class ModelRouterGetMemberBalanceLogsRequest extends Request {
         }
 
         /**
-         * size.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -174,7 +189,10 @@ public class ModelRouterGetMemberBalanceLogsRequest extends Request {
         }
 
         /**
-         * skipTotal.
+         * <p>Specifies whether to skip the total count calculation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder skipTotal(Boolean skipTotal) {
             this.putQueryParameter("skipTotal", skipTotal);

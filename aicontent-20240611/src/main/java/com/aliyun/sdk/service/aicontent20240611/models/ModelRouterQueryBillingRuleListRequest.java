@@ -171,7 +171,10 @@ public class ModelRouterQueryBillingRuleListRequest extends Request {
         } 
 
         /**
-         * activeOnly.
+         * <p>Return only currently effective rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder activeOnly(Boolean activeOnly) {
             this.putQueryParameter("activeOnly", activeOnly);
@@ -192,7 +195,10 @@ public class ModelRouterQueryBillingRuleListRequest extends Request {
         }
 
         /**
-         * modelCode.
+         * <p>Filter by model identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
          */
         public Builder modelCode(String modelCode) {
             this.putQueryParameter("modelCode", modelCode);
@@ -201,7 +207,10 @@ public class ModelRouterQueryBillingRuleListRequest extends Request {
         }
 
         /**
-         * modelId.
+         * <p>Filter by model ID (required).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder modelId(Integer modelId) {
             this.putQueryParameter("modelId", modelId);
@@ -210,7 +219,10 @@ public class ModelRouterQueryBillingRuleListRequest extends Request {
         }
 
         /**
-         * modelType.
+         * <p>Filter by model type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chat</p>
          */
         public Builder modelType(String modelType) {
             this.putQueryParameter("modelType", modelType);
@@ -231,7 +243,10 @@ public class ModelRouterQueryBillingRuleListRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>Page number. Default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -240,7 +255,10 @@ public class ModelRouterQueryBillingRuleListRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * <p>Page number (takes precedence).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -249,7 +267,10 @@ public class ModelRouterQueryBillingRuleListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Number of items per page. Default is 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

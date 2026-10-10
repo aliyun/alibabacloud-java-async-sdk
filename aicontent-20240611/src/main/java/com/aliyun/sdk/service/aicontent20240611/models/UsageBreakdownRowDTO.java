@@ -197,7 +197,10 @@ public class UsageBreakdownRowDTO extends TeaModel {
         } 
 
         /**
-         * apiKeyId.
+         * <p>The API key ID. A value of 0 indicates that historical data is not broken down by API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder apiKeyId(Long apiKeyId) {
             this.apiKeyId = apiKeyId;
@@ -205,7 +208,10 @@ public class UsageBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * apiKeyName.
+         * <p>The API key name, corresponding to api_key_id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default key</p>
          */
         public Builder apiKeyName(String apiKeyName) {
             this.apiKeyName = apiKeyName;
@@ -213,7 +219,10 @@ public class UsageBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * clientId.
+         * <p>The department ID. A value of 0 indicates no affiliated department.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
@@ -221,7 +230,10 @@ public class UsageBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * clientName.
+         * <p>The department name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D Department</p>
          */
         public Builder clientName(String clientName) {
             this.clientName = clientName;
@@ -229,7 +241,10 @@ public class UsageBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * memberUserId.
+         * <p>The member ID for a member row. The value is 0 for a department row.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001</p>
          */
         public Builder memberUserId(Long memberUserId) {
             this.memberUserId = memberUserId;
@@ -237,7 +252,10 @@ public class UsageBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * memberUserName.
+         * <p>The member name for a member row. The value is empty for a department row.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Smith</p>
          */
         public Builder memberUserName(String memberUserName) {
             this.memberUserName = memberUserName;
@@ -245,7 +263,10 @@ public class UsageBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * metrics.
+         * <p>The usage metric array. Only entries with non-zero values are included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;: &quot;total_calls&quot;, &quot;value&quot;: 100}]</p>
          */
         public Builder metrics(java.util.List<MetricKVPairDTO> metrics) {
             this.metrics = metrics;
@@ -253,7 +274,10 @@ public class UsageBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * modelCode.
+         * <p>The model identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
          */
         public Builder modelCode(String modelCode) {
             this.modelCode = modelCode;
@@ -261,7 +285,10 @@ public class UsageBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * modelId.
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder modelId(Long modelId) {
             this.modelId = modelId;
@@ -269,7 +296,10 @@ public class UsageBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * modelName.
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen-Plus</p>
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
@@ -277,7 +307,10 @@ public class UsageBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * modelType.
+         * <p>The statistical dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm</p>
          */
         public Builder modelType(String modelType) {
             this.modelType = modelType;
@@ -285,7 +318,10 @@ public class UsageBreakdownRowDTO extends TeaModel {
         }
 
         /**
-         * summaryTime.
+         * <p>The statistical time point, in UNIX timestamp (seconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
         public Builder summaryTime(Long summaryTime) {
             this.summaryTime = summaryTime;

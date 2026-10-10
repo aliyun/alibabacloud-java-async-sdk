@@ -145,7 +145,7 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -153,7 +153,10 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The fault code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -161,7 +164,10 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -169,7 +175,10 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -177,7 +186,10 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -196,7 +208,10 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +219,10 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -296,7 +314,7 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * list.
+             * <p>The list of balance change logs.</p>
              */
             public Builder list(java.util.List<ClientBalanceLogDTO> list) {
                 this.list = list;
@@ -304,7 +322,10 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * page.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -312,7 +333,10 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -320,7 +344,10 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

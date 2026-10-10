@@ -157,7 +157,10 @@ public class ModelRouterListBalanceOrdersRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -166,7 +169,10 @@ public class ModelRouterListBalanceOrdersRequest extends Request {
         }
 
         /**
-         * balanceType.
+         * <p>The balance type filter. Valid values: permanent, monthly. If this parameter is left empty, all types are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>permanent</p>
          */
         public Builder balanceType(String balanceType) {
             this.putQueryParameter("balanceType", balanceType);
@@ -175,7 +181,10 @@ public class ModelRouterListBalanceOrdersRequest extends Request {
         }
 
         /**
-         * direction.
+         * <p>The direction filter. Valid values: in (income), out (expenditure). If this parameter is left empty, all directions are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("direction", direction);
@@ -184,7 +193,10 @@ public class ModelRouterListBalanceOrdersRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -193,7 +205,10 @@ public class ModelRouterListBalanceOrdersRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxx-xxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -202,7 +217,10 @@ public class ModelRouterListBalanceOrdersRequest extends Request {
         }
 
         /**
-         * orderType.
+         * <p>The change type filter. Valid values: recharge, periodic_recharge, manual_deduct, transfer_out, transfer_in, return_out, return_in, write_off, monthly_expire, and deficit_writeoff. If this parameter is left empty, all types are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>recharge</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("orderType", orderType);
@@ -211,7 +229,10 @@ public class ModelRouterListBalanceOrdersRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -220,7 +241,10 @@ public class ModelRouterListBalanceOrdersRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

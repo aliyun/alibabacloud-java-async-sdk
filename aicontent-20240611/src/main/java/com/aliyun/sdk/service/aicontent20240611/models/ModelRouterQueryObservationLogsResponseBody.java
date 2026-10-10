@@ -145,7 +145,10 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -153,7 +156,10 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The fault code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -161,7 +167,10 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -169,7 +178,10 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -199,7 +211,10 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -207,7 +222,10 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -325,7 +343,7 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * list.
+             * <p>The list of log data.</p>
              */
             public Builder list(java.util.List<RequestLogDTO> list) {
                 this.list = list;
@@ -336,7 +354,7 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
              * <p>maxResults</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>1</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -344,10 +362,10 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>nextToken</p>
+             * <p>The token for the next query.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxx-xxx-xxxxx</p>
+             * <p>0</p>
              */
             public Builder nextToken(Integer nextToken) {
                 this.nextToken = nextToken;
@@ -355,7 +373,10 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * page.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -363,7 +384,10 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries returned per page. Default value: 10. Maximum value: 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -371,7 +395,10 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

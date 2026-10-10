@@ -144,6 +144,7 @@ public class ListTextbookAssistantBooksRequest extends Request {
         } 
 
         /**
+         * <p>The authorization token for the API call. You can obtain this token by calling the authorization API for the AI textbook assistant feature.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +157,10 @@ public class ListTextbookAssistantBooksRequest extends Request {
         }
 
         /**
-         * bookId.
+         * <p>The book ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231698</p>
          */
         public Builder bookId(String bookId) {
             this.putBodyParameter("bookId", bookId);
@@ -165,7 +169,10 @@ public class ListTextbookAssistantBooksRequest extends Request {
         }
 
         /**
-         * grade.
+         * <p>The grade level. The value is a string from &quot;1&quot; to &quot;9&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder grade(String grade) {
             this.putBodyParameter("grade", grade);
@@ -174,7 +181,10 @@ public class ListTextbookAssistantBooksRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return per page. The value cannot exceed 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(String maxResults) {
             this.putBodyParameter("maxResults", maxResults);
@@ -183,7 +193,10 @@ public class ListTextbookAssistantBooksRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(String page) {
             this.putBodyParameter("page", page);
@@ -192,7 +205,10 @@ public class ListTextbookAssistantBooksRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The textbook version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>人教版</p>
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);
@@ -201,7 +217,10 @@ public class ListTextbookAssistantBooksRequest extends Request {
         }
 
         /**
-         * volume.
+         * <p>The volume. Valid values: 0 (all-in-one volume), 1 (first volume), and 2 (second volume).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder volume(String volume) {
             this.putBodyParameter("volume", volume);

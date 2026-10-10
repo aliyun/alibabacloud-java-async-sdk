@@ -131,7 +131,10 @@ public class PersonalizedTextToImageAddInferenceJobRequest extends Request {
         } 
 
         /**
-         * imageNumber.
+         * <p>The number of images to generate. Note: The maximum is 10 images per request in the test environment. If the value exceeds 10, it is treated as 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder imageNumber(Integer imageNumber) {
             this.putBodyParameter("imageNumber", imageNumber);
@@ -140,6 +143,7 @@ public class PersonalizedTextToImageAddInferenceJobRequest extends Request {
         }
 
         /**
+         * <p>An array containing one or more image URLs. For example, <code>[&quot;url_1&quot;, &quot;url_2&quot;, ...]</code>.</p>
          * <p>This parameter is required.</p>
          */
         public Builder imageUrl(java.util.List<String> imageUrl) {
@@ -149,6 +153,7 @@ public class PersonalizedTextToImageAddInferenceJobRequest extends Request {
         }
 
         /**
+         * <p>The English prompt for image generation. Use the placeholder for the subject. For example, change &quot;a man in the snow&quot; to &quot;a in the snow&quot;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +166,10 @@ public class PersonalizedTextToImageAddInferenceJobRequest extends Request {
         }
 
         /**
-         * seed.
+         * <p>A random seed to ensure reproducible image generation. The value must be within <code>[-1, 2147483647]</code>. If the value is outside this range or omitted, the system automatically generates a seed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder seed(Long seed) {
             this.putBodyParameter("seed", seed);
@@ -170,7 +178,13 @@ public class PersonalizedTextToImageAddInferenceJobRequest extends Request {
         }
 
         /**
-         * strength.
+         * <p>Determines the influence of the reference image.
+         * Valid values: <code>0.3</code>, <code>0.4</code>, <code>0.5</code>, <code>0.6</code>, <code>0.7</code>, and <code>0.8</code>.
+         * A lower value decreases the influence of the reference image and increases the influence of the text prompt.
+         * The default is <code>0.5</code>, and you typically do not need to change this value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder strength(Double strength) {
             this.putBodyParameter("strength", strength);
@@ -179,7 +193,10 @@ public class PersonalizedTextToImageAddInferenceJobRequest extends Request {
         }
 
         /**
-         * trainSteps.
+         * <p>The number of training steps for the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         public Builder trainSteps(Integer trainSteps) {
             this.putBodyParameter("trainSteps", trainSteps);

@@ -115,7 +115,10 @@ public class ModelRouterCreateSubscriptionRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -124,7 +127,14 @@ public class ModelRouterCreateSubscriptionRequest extends Request {
         }
 
         /**
-         * balanceType.
+         * <p>The balance pool to which the recharge is applied. Valid values:</p>
+         * <ul>
+         * <li>permanent: the permanent balance pool.</li>
+         * <li>monthly: the monthly balance pool.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>permanent</p>
          */
         public Builder balanceType(String balanceType) {
             this.putBodyParameter("balanceType", balanceType);
@@ -133,7 +143,10 @@ public class ModelRouterCreateSubscriptionRequest extends Request {
         }
 
         /**
-         * effectiveTime.
+         * <p>The effective period, in UNIX timestamp (seconds). Range: from 00:00 of today to 00:00 of the first day of the next month (Asia/Shanghai).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719792000</p>
          */
         public Builder effectiveTime(Long effectiveTime) {
             this.putBodyParameter("effectiveTime", effectiveTime);
@@ -142,7 +155,10 @@ public class ModelRouterCreateSubscriptionRequest extends Request {
         }
 
         /**
-         * idempotencyKey.
+         * <p>The idempotency key. UUID v4 format without hyphens is recommended. This prevents duplicate subscription creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400e29b41d4a716446655440000</p>
          */
         public Builder idempotencyKey(String idempotencyKey) {
             this.putBodyParameter("idempotencyKey", idempotencyKey);
@@ -151,7 +167,10 @@ public class ModelRouterCreateSubscriptionRequest extends Request {
         }
 
         /**
-         * subscriptionAmount.
+         * <p>The subscription recharge amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         public Builder subscriptionAmount(Double subscriptionAmount) {
             this.putBodyParameter("subscriptionAmount", subscriptionAmount);

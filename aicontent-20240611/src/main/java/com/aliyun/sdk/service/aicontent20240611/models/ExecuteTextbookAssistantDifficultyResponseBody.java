@@ -119,7 +119,7 @@ public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data returned on a successful request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,7 @@ public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0D7D382F-9475-572E-BE83-DDFBF5C5EB24</p>
@@ -162,7 +171,10 @@ public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -215,7 +227,10 @@ public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
             } 
 
             /**
-             * result.
+             * <p>The dialogue content after the difficulty adjustment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Let\&quot;s look at the text again. Mike says, \&quot;I\&quot;m Mike Black.\&quot; Can you try saying it like Mike?</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -269,7 +284,7 @@ public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
             } 
 
             /**
-             * result.
+             * <p>A container for the result data.</p>
              */
             public Builder result(Result result) {
                 this.result = result;

@@ -143,7 +143,10 @@ public class ModelRouterCreateMemberBalanceTransactionRequest extends Request {
         } 
 
         /**
-         * clientId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putPathParameter("clientId", clientId);
@@ -152,7 +155,10 @@ public class ModelRouterCreateMemberBalanceTransactionRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The member identifier (member ID within the organization, not an Alibaba Cloud account ID).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -161,7 +167,10 @@ public class ModelRouterCreateMemberBalanceTransactionRequest extends Request {
         }
 
         /**
-         * amount.
+         * <p>The transaction amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         public Builder amount(Double amount) {
             this.putBodyParameter("amount", amount);
@@ -170,7 +179,15 @@ public class ModelRouterCreateMemberBalanceTransactionRequest extends Request {
         }
 
         /**
-         * balanceType.
+         * <p>The balance type. Valid values:</p>
+         * <ul>
+         * <li>permanent</li>
+         * <li>monthly</li>
+         * </ul>
+         * <p>Default value: permanent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>permanent</p>
          */
         public Builder balanceType(String balanceType) {
             this.putBodyParameter("balanceType", balanceType);
@@ -179,7 +196,10 @@ public class ModelRouterCreateMemberBalanceTransactionRequest extends Request {
         }
 
         /**
-         * idempotencyKey.
+         * <p>The idempotency key. UUID v4 format is recommended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400-e29b-41d4-a716-446655440000</p>
          */
         public Builder idempotencyKey(String idempotencyKey) {
             this.putBodyParameter("idempotencyKey", idempotencyKey);
@@ -188,7 +208,10 @@ public class ModelRouterCreateMemberBalanceTransactionRequest extends Request {
         }
 
         /**
-         * remark.
+         * <p>The remark for the transaction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Recharge</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
@@ -197,7 +220,10 @@ public class ModelRouterCreateMemberBalanceTransactionRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The transaction type. Valid values: recharge, deduct, and transfer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>recharge</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

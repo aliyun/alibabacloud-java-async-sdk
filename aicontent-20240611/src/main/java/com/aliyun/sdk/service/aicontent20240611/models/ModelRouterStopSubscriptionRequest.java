@@ -73,7 +73,10 @@ public class ModelRouterStopSubscriptionRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -82,7 +85,10 @@ public class ModelRouterStopSubscriptionRequest extends Request {
         }
 
         /**
-         * balanceType.
+         * <p>The type of subscription balance to stop (permanent/monthly).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>permanent</p>
          */
         public Builder balanceType(String balanceType) {
             this.putBodyParameter("balanceType", balanceType);

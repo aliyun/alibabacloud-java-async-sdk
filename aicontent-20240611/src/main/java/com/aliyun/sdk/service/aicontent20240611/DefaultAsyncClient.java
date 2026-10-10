@@ -750,6 +750,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Binds model groups to departments in batches.</p>
+     * 
      * @param request the request parameters of ModelRouterBatchBindModelGroup  ModelRouterBatchBindModelGroupRequest
      * @return ModelRouterBatchBindModelGroupResponse
      */
@@ -816,6 +819,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterBatchDisableMemberApiKeysResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterBatchRenewMemberApiKeys  ModelRouterBatchRenewMemberApiKeysRequest
+     * @return ModelRouterBatchRenewMemberApiKeysResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterBatchRenewMemberApiKeysResponse> modelRouterBatchRenewMemberApiKeys(ModelRouterBatchRenewMemberApiKeysRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterBatchRenewMemberApiKeys").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/clients/{id}/member-apikeys/renew").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterBatchRenewMemberApiKeysResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterBatchRenewMemberApiKeysResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1135,6 +1156,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a manual model group.</p>
+     * 
      * @param request the request parameters of ModelRouterCreateModelGroup  ModelRouterCreateModelGroupRequest
      * @return ModelRouterCreateModelGroupResponse
      */
@@ -1171,6 +1195,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a user.</p>
+     * 
      * @param request the request parameters of ModelRouterCreateUser  ModelRouterCreateUserRequest
      * @return ModelRouterCreateUserResponse
      */
@@ -1261,6 +1288,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a manual group.</p>
+     * 
      * @param request the request parameters of ModelRouterDeleteModelGroup  ModelRouterDeleteModelGroupRequest
      * @return ModelRouterDeleteModelGroupResponse
      */
@@ -1315,6 +1345,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries user role assignments.</p>
+     * 
      * @param request the request parameters of ModelRouterGetBillingBillSummary  ModelRouterGetBillingBillSummaryRequest
      * @return ModelRouterGetBillingBillSummaryResponse
      */
@@ -1441,6 +1474,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the role assignments of a user.</p>
+     * 
      * @param request the request parameters of ModelRouterGetUserRoles  ModelRouterGetUserRolesRequest
      * @return ModelRouterGetUserRolesResponse
      */
@@ -1459,6 +1495,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is deprecated. Do not use it.</p>
+     * 
      * @param request the request parameters of ModelRouterListBalanceOrders  ModelRouterListBalanceOrdersRequest
      * @return ModelRouterListBalanceOrdersResponse
      */
@@ -1531,6 +1570,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is deprecated. Do not use it.</p>
+     * 
      * @param request the request parameters of ModelRouterListSubscriptions  ModelRouterListSubscriptionsRequest
      * @return ModelRouterListSubscriptionsResponse
      */
@@ -1549,6 +1591,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a user.</p>
+     * 
      * @param request the request parameters of ModelRouterMiguDownloadSource  ModelRouterMiguDownloadSourceRequest
      * @return ModelRouterMiguDownloadSourceResponse
      */
@@ -1567,6 +1612,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates a user.</p>
+     * 
      * @param request the request parameters of ModelRouterMiguUploadSource  ModelRouterMiguUploadSourceRequest
      * @return ModelRouterMiguUploadSourceResponse
      */
@@ -1621,6 +1669,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the user list.</p>
+     * 
      * @param request the request parameters of ModelRouterQueryBillingCostBreakdown  ModelRouterQueryBillingCostBreakdownRequest
      * @return ModelRouterQueryBillingCostBreakdownResponse
      */
@@ -1639,6 +1690,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the user list.</p>
+     * 
      * @param request the request parameters of ModelRouterQueryBillingDetails  ModelRouterQueryBillingDetailsRequest
      * @return ModelRouterQueryBillingDetailsResponse
      */
@@ -1855,6 +1909,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a model group.</p>
+     * 
      * @param request the request parameters of ModelRouterQueryModelGroup  ModelRouterQueryModelGroupRequest
      * @return ModelRouterQueryModelGroupResponse
      */
@@ -1873,6 +1930,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the departments bound to a model group by paging.</p>
+     * 
      * @param request the request parameters of ModelRouterQueryModelGroupClients  ModelRouterQueryModelGroupClientsRequest
      * @return ModelRouterQueryModelGroupClientsResponse
      */
@@ -1891,6 +1951,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of model groups by paging.</p>
+     * 
      * @param request the request parameters of ModelRouterQueryModelGroupList  ModelRouterQueryModelGroupListRequest
      * @return ModelRouterQueryModelGroupListResponse
      */
@@ -1909,6 +1972,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries models within a group with pagination.</p>
+     * 
      * @param request the request parameters of ModelRouterQueryModelGroupModels  ModelRouterQueryModelGroupModelsRequest
      * @return ModelRouterQueryModelGroupModelsResponse
      */
@@ -1927,6 +1993,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the users attached to a model group by paging.</p>
+     * 
      * @param request the request parameters of ModelRouterQueryModelGroupUsers  ModelRouterQueryModelGroupUsersRequest
      * @return ModelRouterQueryModelGroupUsersResponse
      */
@@ -1945,6 +2014,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the bound groups and models by API key.</p>
+     * 
      * @param request the request parameters of ModelRouterQueryModelGroupsByApiKey  ModelRouterQueryModelGroupsByApiKeyRequest
      * @return ModelRouterQueryModelGroupsByApiKeyResponse
      */
@@ -2017,6 +2089,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries a list of users.</p>
+     * 
      * @param request the request parameters of ModelRouterQueryObservationCharts  ModelRouterQueryObservationChartsRequest
      * @return ModelRouterQueryObservationChartsResponse
      */
@@ -2089,6 +2164,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of users.</p>
+     * 
      * @param request the request parameters of ModelRouterQueryUserList  ModelRouterQueryUserListRequest
      * @return ModelRouterQueryUserListResponse
      */
@@ -2101,6 +2179,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterQueryUserListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterRenewApiKey  ModelRouterRenewApiKeyRequest
+     * @return ModelRouterRenewApiKeyResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterRenewApiKeyResponse> modelRouterRenewApiKey(ModelRouterRenewApiKeyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterRenewApiKey").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/modelRouter/open/apikeys/{id}/renew").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterRenewApiKeyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterRenewApiKeyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2179,6 +2275,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Sets user roles or changes the department to which a user belongs.</p>
+     * 
      * @param request the request parameters of ModelRouterSetUserRoles  ModelRouterSetUserRolesRequest
      * @return ModelRouterSetUserRolesResponse
      */
@@ -2341,6 +2440,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Edits a manual group.</p>
+     * 
      * @param request the request parameters of ModelRouterUpdateModelGroup  ModelRouterUpdateModelGroupRequest
      * @return ModelRouterUpdateModelGroupResponse
      */
@@ -2359,6 +2461,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates user information.</p>
+     * 
      * @param request the request parameters of ModelRouterUpdateUser  ModelRouterUpdateUserRequest
      * @return ModelRouterUpdateUserResponse
      */

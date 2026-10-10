@@ -158,7 +158,10 @@ public class SubscriptionDTO extends TeaModel {
         } 
 
         /**
-         * balanceType.
+         * <p>The balance type (permanent/monthly).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>permanent</p>
          */
         public Builder balanceType(String balanceType) {
             this.balanceType = balanceType;
@@ -166,7 +169,10 @@ public class SubscriptionDTO extends TeaModel {
         }
 
         /**
-         * clientId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
@@ -174,7 +180,10 @@ public class SubscriptionDTO extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-15T10:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -182,7 +191,10 @@ public class SubscriptionDTO extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The subscription ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -190,7 +202,14 @@ public class SubscriptionDTO extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The subscription status. Valid values:</p>
+         * <ul>
+         * <li>active: The subscription is active.</li>
+         * <li>stopped: The subscription is stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -198,7 +217,10 @@ public class SubscriptionDTO extends TeaModel {
         }
 
         /**
-         * stopTime.
+         * <p>The stop time. This value is empty if the subscription has not been stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-01T00:00:00Z</p>
          */
         public Builder stopTime(String stopTime) {
             this.stopTime = stopTime;
@@ -206,7 +228,10 @@ public class SubscriptionDTO extends TeaModel {
         }
 
         /**
-         * subscriptionAmount.
+         * <p>The subscription recharge amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         public Builder subscriptionAmount(Double subscriptionAmount) {
             this.subscriptionAmount = subscriptionAmount;
@@ -214,7 +239,10 @@ public class SubscriptionDTO extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-15T10:00:00Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -222,7 +250,10 @@ public class SubscriptionDTO extends TeaModel {
         }
 
         /**
-         * validFrom.
+         * <p>The effective period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-01T00:00:00Z</p>
          */
         public Builder validFrom(String validFrom) {
             this.validFrom = validFrom;

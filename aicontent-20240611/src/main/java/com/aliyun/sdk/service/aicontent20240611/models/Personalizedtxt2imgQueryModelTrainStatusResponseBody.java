@@ -119,7 +119,10 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
         } 
 
         /**
-         * data.
+         * <p>The returned data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
         }
 
         /**
-         * errCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
         }
 
         /**
-         * errMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +230,10 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
             } 
 
             /**
-             * modelTrainStatus.
+             * <p>The model training status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder modelTrainStatus(String modelTrainStatus) {
                 this.modelTrainStatus = modelTrainStatus;

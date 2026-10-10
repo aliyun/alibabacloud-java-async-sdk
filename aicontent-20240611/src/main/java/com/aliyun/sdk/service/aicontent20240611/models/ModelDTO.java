@@ -301,7 +301,10 @@ public class ModelDTO extends TeaModel {
         } 
 
         /**
-         * apiKeyPreview.
+         * <p>A masked preview of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-xxx****xxx</p>
          */
         public Builder apiKeyPreview(String apiKeyPreview) {
             this.apiKeyPreview = apiKeyPreview;
@@ -309,7 +312,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * baseUrl.
+         * <p>The base URL for API requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></p>
          */
         public Builder baseUrl(String baseUrl) {
             this.baseUrl = baseUrl;
@@ -317,7 +323,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * deleteTag.
+         * <p>Indicates the model\&quot;s status. A value of 0 means enabled, and a non-zero value means disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder deleteTag(Integer deleteTag) {
             this.deleteTag = deleteTag;
@@ -325,7 +334,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The model description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通义千问大模型</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -341,7 +353,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The time when the model was created, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -349,7 +364,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The time when the model was last updated, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -365,7 +383,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The unique ID of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -381,7 +402,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * isCustom.
+         * <p>Indicates whether the model is custom.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isCustom(Boolean isCustom) {
             this.isCustom = isCustom;
@@ -389,7 +413,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * maxInputLength.
+         * <p>The maximum input length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         public Builder maxInputLength(String maxInputLength) {
             this.maxInputLength = maxInputLength;
@@ -397,7 +424,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * maxOutputLength.
+         * <p>The maximum output length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder maxOutputLength(String maxOutputLength) {
             this.maxOutputLength = maxOutputLength;
@@ -405,7 +435,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * modelCode.
+         * <p>The model code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-turbo</p>
          */
         public Builder modelCode(String modelCode) {
             this.modelCode = modelCode;
@@ -413,7 +446,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * modelType.
+         * <p>The model type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chat</p>
          */
         public Builder modelType(String modelType) {
             this.modelType = modelType;
@@ -421,7 +457,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通义千问</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -429,7 +468,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * symbol.
+         * <p>The vendor symbol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba</p>
          */
         public Builder symbol(String symbol) {
             this.symbol = symbol;
@@ -437,7 +479,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * tagNames.
+         * <p>The display names for the tags, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>对话,自然语言处理</p>
          */
         public Builder tagNames(String tagNames) {
             this.tagNames = tagNames;
@@ -445,7 +490,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>A comma-separated list of model tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chat,NLP</p>
          */
         public Builder tags(String tags) {
             this.tags = tags;
@@ -453,7 +501,10 @@ public class ModelDTO extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder version(Integer version) {
             this.version = version;

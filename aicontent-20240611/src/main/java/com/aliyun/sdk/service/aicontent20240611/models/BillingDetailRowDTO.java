@@ -353,7 +353,10 @@ public class BillingDetailRowDTO extends TeaModel {
         } 
 
         /**
-         * amount.
+         * <p>The actual payment amount (after discount), rounded to 8 decimal places.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.00012800</p>
          */
         public Builder amount(Double amount) {
             this.amount = amount;
@@ -361,7 +364,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * apiKeyId.
+         * <p>API Key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder apiKeyId(Long apiKeyId) {
             this.apiKeyId = apiKeyId;
@@ -369,7 +375,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * apiKeyName.
+         * <p>The API key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default Key</p>
          */
         public Builder apiKeyName(String apiKeyName) {
             this.apiKeyName = apiKeyName;
@@ -377,7 +386,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * cacheCreationTokens.
+         * <p>The number of cache creation tokens (explicit cache writes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cacheCreationTokens(Double cacheCreationTokens) {
             this.cacheCreationTokens = cacheCreationTokens;
@@ -385,7 +397,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * cachedTokens.
+         * <p>The number of tokens that hit the cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>256</p>
          */
         public Builder cachedTokens(Double cachedTokens) {
             this.cachedTokens = cachedTokens;
@@ -393,7 +408,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * clientId.
+         * <p>The department ID. A value of 0 indicates that no department is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
@@ -401,7 +419,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * clientName.
+         * <p>The department name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D Department</p>
          */
         public Builder clientName(String clientName) {
             this.clientName = clientName;
@@ -409,7 +430,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * discount.
+         * <p>The discount coefficient. A value of 1.0 indicates no discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder discount(Double discount) {
             this.discount = discount;
@@ -417,7 +441,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * inputTokens.
+         * <p>The number of input tokens, including cached tokens and cache creation tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder inputTokens(Double inputTokens) {
             this.inputTokens = inputTokens;
@@ -425,7 +452,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * memberUserId.
+         * <p>The member user ID for a member row. The value is 0 for a department row.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001</p>
          */
         public Builder memberUserId(Long memberUserId) {
             this.memberUserId = memberUserId;
@@ -433,7 +463,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * memberUserName.
+         * <p>The member name for a member row. The value is empty for a department row.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John</p>
          */
         public Builder memberUserName(String memberUserName) {
             this.memberUserName = memberUserName;
@@ -441,7 +474,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * metrics.
+         * <p>The JSON of other metering field mapping, such as video duration and image count. Fields with a value of 0 are not included in the output.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metrics(String metrics) {
             this.metrics = metrics;
@@ -449,7 +485,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * modelCode.
+         * <p>The model identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
          */
         public Builder modelCode(String modelCode) {
             this.modelCode = modelCode;
@@ -457,7 +496,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * modelId.
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder modelId(Long modelId) {
             this.modelId = modelId;
@@ -465,7 +507,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * modelName.
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen-Plus</p>
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
@@ -473,7 +518,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * modelSymbol.
+         * <p>The model symbol (provider identifier).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen</p>
          */
         public Builder modelSymbol(String modelSymbol) {
             this.modelSymbol = modelSymbol;
@@ -481,7 +529,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * modelType.
+         * <p>The model type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chat</p>
          */
         public Builder modelType(String modelType) {
             this.modelType = modelType;
@@ -489,7 +540,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * modelVersion.
+         * <p>The model version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder modelVersion(Integer modelVersion) {
             this.modelVersion = modelVersion;
@@ -497,7 +551,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * outputTokens.
+         * <p>The number of output tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512</p>
          */
         public Builder outputTokens(Double outputTokens) {
             this.outputTokens = outputTokens;
@@ -505,7 +562,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * reasoningTokens.
+         * <p>The number of reasoning tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder reasoningTokens(Double reasoningTokens) {
             this.reasoningTokens = reasoningTokens;
@@ -513,7 +573,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatcmpl-abc123def456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -521,7 +584,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * requestTime.
+         * <p>The request time as a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
         public Builder requestTime(Long requestTime) {
             this.requestTime = requestTime;
@@ -529,7 +595,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * totalTokens.
+         * <p>The total number of tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1536</p>
          */
         public Builder totalTokens(Double totalTokens) {
             this.totalTokens = totalTokens;
@@ -537,7 +606,10 @@ public class BillingDetailRowDTO extends TeaModel {
         }
 
         /**
-         * usageDetail.
+         * <p>The raw JSON of the usage details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;input_tokens&quot;: 1024, &quot;output_tokens&quot;: 512}</p>
          */
         public Builder usageDetail(String usageDetail) {
             this.usageDetail = usageDetail;

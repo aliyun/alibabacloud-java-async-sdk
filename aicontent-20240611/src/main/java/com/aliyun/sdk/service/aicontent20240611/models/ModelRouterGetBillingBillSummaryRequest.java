@@ -187,7 +187,10 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
         } 
 
         /**
-         * apiKeyId.
+         * <p>The API Key ID used to filter results. This parameter is optional and linked with the department. You must specify clientId first.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder apiKeyId(Long apiKeyId) {
             this.putQueryParameter("apiKeyId", apiKeyId);
@@ -196,7 +199,10 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
         }
 
         /**
-         * clientId.
+         * <p>The department ID used to filter results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putQueryParameter("clientId", clientId);
@@ -205,7 +211,10 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
         }
 
         /**
-         * clientIds.
+         * <p>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with clientId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder clientIds(String clientIds) {
             this.putQueryParameter("clientIds", clientIds);
@@ -214,6 +223,7 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
         }
 
         /**
+         * <p>The end time, in UNIX timestamp (seconds).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +236,10 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -235,7 +248,10 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
         }
 
         /**
-         * memberUserIds.
+         * <p>The member IDs used to filter results, separated by commas. This parameter is optional. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001,30002</p>
          */
         public Builder memberUserIds(String memberUserIds) {
             this.putQueryParameter("memberUserIds", memberUserIds);
@@ -244,7 +260,10 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
         }
 
         /**
-         * modelId.
+         * <p>The model ID. This parameter is optional and used to filter by model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder modelId(Long modelId) {
             this.putQueryParameter("modelId", modelId);
@@ -253,7 +272,10 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
         }
 
         /**
-         * modelTypes.
+         * <p>The model types, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chat,ChatMultimodal</p>
          */
         public Builder modelTypes(String modelTypes) {
             this.putQueryParameter("modelTypes", modelTypes);
@@ -274,6 +296,7 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
         }
 
         /**
+         * <p>The start time, in UNIX timestamp (seconds).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

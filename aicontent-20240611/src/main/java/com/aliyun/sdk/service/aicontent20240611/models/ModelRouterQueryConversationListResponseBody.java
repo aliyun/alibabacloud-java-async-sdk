@@ -119,7 +119,10 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request succeeded. A value of <code>true</code> indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +295,7 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
             } 
 
             /**
-             * list.
+             * <p>A list of conversation objects.</p>
              */
             public Builder list(java.util.List<ConversationDTO> list) {
                 this.list = list;
@@ -285,7 +303,10 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
             }
 
             /**
-             * maxResult.
+             * <p>The number of entries per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResult(String maxResult) {
                 this.maxResult = maxResult;
@@ -293,7 +314,10 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
             }
 
             /**
-             * nextToken.
+             * <p>The token to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -301,7 +325,10 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
             }
 
             /**
-             * page.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -309,7 +336,10 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of conversations on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -317,7 +347,10 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total number of conversations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

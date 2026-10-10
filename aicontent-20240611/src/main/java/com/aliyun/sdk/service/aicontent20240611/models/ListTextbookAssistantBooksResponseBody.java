@@ -119,7 +119,7 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object in the response.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B_USER_NOT_FOUND_EXCEPTION</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户不存在</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,7 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B695B377-7029-5805-9DE2-1AAE06C1BF6B</p>
@@ -162,7 +171,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -358,7 +370,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             } 
 
             /**
-             * author.
+             * <p>The author.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>吴欣</p>
              */
             public Builder author(String author) {
                 this.author = author;
@@ -366,7 +381,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             }
 
             /**
-             * bookId.
+             * <p>The book ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231698</p>
              */
             public Builder bookId(String bookId) {
                 this.bookId = bookId;
@@ -374,7 +392,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             }
 
             /**
-             * bookName.
+             * <p>The book name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>K12英语-人教版PEP三起-三年级上册</p>
              */
             public Builder bookName(String bookName) {
                 this.bookName = bookName;
@@ -382,7 +403,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             }
 
             /**
-             * coverImage.
+             * <p>The cover image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder coverImage(String coverImage) {
                 this.coverImage = coverImage;
@@ -390,7 +414,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             }
 
             /**
-             * edition.
+             * <p>The edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-7（1）</p>
              */
             public Builder edition(String edition) {
                 this.edition = edition;
@@ -398,7 +425,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             }
 
             /**
-             * grade.
+             * <p>The grade. Valid values are strings from <code>&quot;1&quot;</code> to <code>&quot;9&quot;</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder grade(String grade) {
                 this.grade = grade;
@@ -406,7 +436,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             }
 
             /**
-             * impression.
+             * <p>The impression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-7（1）</p>
              */
             public Builder impression(String impression) {
                 this.impression = impression;
@@ -414,7 +447,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             }
 
             /**
-             * isbn.
+             * <p>The International Standard Book Number (ISBN).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9787107382505</p>
              */
             public Builder isbn(String isbn) {
                 this.isbn = isbn;
@@ -422,7 +458,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             }
 
             /**
-             * publisher.
+             * <p>The publisher.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>人民教育出版社</p>
              */
             public Builder publisher(String publisher) {
                 this.publisher = publisher;
@@ -430,7 +469,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             }
 
             /**
-             * subject.
+             * <p>The subject.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENGLISH</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -438,7 +480,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The textbook version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>人教版</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -446,7 +491,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             }
 
             /**
-             * volume.
+             * <p>The volume. Valid values: <code>&quot;0&quot;</code> (all-in-one), <code>&quot;1&quot;</code> (first semester), and <code>&quot;2&quot;</code> (second semester).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder volume(String volume) {
                 this.volume = volume;
@@ -526,7 +574,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             } 
 
             /**
-             * currentPage.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -534,7 +585,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             }
 
             /**
-             * maxResults.
+             * <p>The maximum number of items per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -542,7 +596,10 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -609,7 +666,7 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             } 
 
             /**
-             * bookList.
+             * <p>A list of book objects.</p>
              */
             public Builder bookList(java.util.List<BookList> bookList) {
                 this.bookList = bookList;
@@ -617,7 +674,7 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
             }
 
             /**
-             * paginationData.
+             * <p>The pagination data.</p>
              */
             public Builder paginationData(PaginationData paginationData) {
                 this.paginationData = paginationData;

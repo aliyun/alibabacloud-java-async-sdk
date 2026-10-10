@@ -157,7 +157,10 @@ public class ModelRouterQueryObservationChartsRequest extends Request {
         } 
 
         /**
-         * apiKeyId.
+         * <p>The API key ID used to filter results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder apiKeyId(Long apiKeyId) {
             this.putQueryParameter("apiKeyId", apiKeyId);
@@ -166,7 +169,10 @@ public class ModelRouterQueryObservationChartsRequest extends Request {
         }
 
         /**
-         * clientId.
+         * <p>The client ID used to filter results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putQueryParameter("clientId", clientId);
@@ -175,7 +181,10 @@ public class ModelRouterQueryObservationChartsRequest extends Request {
         }
 
         /**
-         * clientIds.
+         * <p>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with clientId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder clientIds(String clientIds) {
             this.putQueryParameter("clientIds", clientIds);
@@ -184,7 +193,10 @@ public class ModelRouterQueryObservationChartsRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>The custom end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-02T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -193,7 +205,10 @@ public class ModelRouterQueryObservationChartsRequest extends Request {
         }
 
         /**
-         * memberUserIds.
+         * <p>Optional. Filters by member IDs, separated by commas. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001,30002</p>
          */
         public Builder memberUserIds(String memberUserIds) {
             this.putQueryParameter("memberUserIds", memberUserIds);
@@ -202,7 +217,10 @@ public class ModelRouterQueryObservationChartsRequest extends Request {
         }
 
         /**
-         * modelId.
+         * <p>The model ID used to filter results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder modelId(Long modelId) {
             this.putQueryParameter("modelId", modelId);
@@ -211,7 +229,10 @@ public class ModelRouterQueryObservationChartsRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>The custom start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -220,7 +241,10 @@ public class ModelRouterQueryObservationChartsRequest extends Request {
         }
 
         /**
-         * timeRange.
+         * <p>The time range. Valid values: 1h, 6h, 24h, 7d, 30d.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24h</p>
          */
         public Builder timeRange(String timeRange) {
             this.putQueryParameter("timeRange", timeRange);

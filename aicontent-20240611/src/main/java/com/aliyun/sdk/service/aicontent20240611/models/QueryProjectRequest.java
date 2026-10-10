@@ -59,7 +59,10 @@ public class QueryProjectRequest extends Request {
         } 
 
         /**
-         * projectId.
+         * <p>The ID of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("projectId", projectId);

@@ -80,7 +80,10 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunResponseBody e
         } 
 
         /**
-         * content.
+         * <p>The content of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hi</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -88,7 +91,10 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunResponseBody e
         }
 
         /**
-         * event.
+         * <p>The event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder event(String event) {
             this.event = event;
@@ -96,7 +102,10 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunResponseBody e
         }
 
         /**
-         * requestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

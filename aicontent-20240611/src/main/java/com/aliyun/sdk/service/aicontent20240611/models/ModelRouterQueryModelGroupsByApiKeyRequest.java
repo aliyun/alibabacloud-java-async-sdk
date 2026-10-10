@@ -59,7 +59,10 @@ public class ModelRouterQueryModelGroupsByApiKeyRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The numeric ID of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>501</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);

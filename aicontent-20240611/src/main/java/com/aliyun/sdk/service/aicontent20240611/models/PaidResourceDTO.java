@@ -171,7 +171,10 @@ public class PaidResourceDTO extends TeaModel {
         } 
 
         /**
-         * effectiveTime.
+         * <p>The time the resource becomes effective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-09-01 00:00:00</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.effectiveTime = effectiveTime;
@@ -179,7 +182,10 @@ public class PaidResourceDTO extends TeaModel {
         }
 
         /**
-         * expireTime.
+         * <p>The time the resource expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-09-10 00:00:00</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -187,7 +193,10 @@ public class PaidResourceDTO extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>airec-cn-fou41hse8001</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -195,7 +204,10 @@ public class PaidResourceDTO extends TeaModel {
         }
 
         /**
-         * quantity.
+         * <p>The total quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder quantity(Integer quantity) {
             this.quantity = quantity;
@@ -203,7 +215,10 @@ public class PaidResourceDTO extends TeaModel {
         }
 
         /**
-         * remainQuantity.
+         * <p>The remaining quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder remainQuantity(Integer remainQuantity) {
             this.remainQuantity = remainQuantity;
@@ -211,7 +226,10 @@ public class PaidResourceDTO extends TeaModel {
         }
 
         /**
-         * resourceCatalogCode.
+         * <p>The code of the resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI_ORAL</p>
          */
         public Builder resourceCatalogCode(String resourceCatalogCode) {
             this.resourceCatalogCode = resourceCatalogCode;
@@ -219,7 +237,10 @@ public class PaidResourceDTO extends TeaModel {
         }
 
         /**
-         * resourceCatalogName.
+         * <p>The name of the resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>口语评测</p>
          */
         public Builder resourceCatalogName(String resourceCatalogName) {
             this.resourceCatalogName = resourceCatalogName;
@@ -227,7 +248,10 @@ public class PaidResourceDTO extends TeaModel {
         }
 
         /**
-         * resourcePackageCode.
+         * <p>The code of the resource package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE_PAID_RECOURSE_PACKAGE</p>
          */
         public Builder resourcePackageCode(String resourcePackageCode) {
             this.resourcePackageCode = resourcePackageCode;
@@ -235,7 +259,10 @@ public class PaidResourceDTO extends TeaModel {
         }
 
         /**
-         * resourcePackageName.
+         * <p>The name of the resource package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>智能批改-资源包</p>
          */
         public Builder resourcePackageName(String resourcePackageName) {
             this.resourcePackageName = resourcePackageName;
@@ -243,7 +270,10 @@ public class PaidResourceDTO extends TeaModel {
         }
 
         /**
-         * resourceStatus.
+         * <p>The status of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder resourceStatus(String resourceStatus) {
             this.resourceStatus = resourceStatus;

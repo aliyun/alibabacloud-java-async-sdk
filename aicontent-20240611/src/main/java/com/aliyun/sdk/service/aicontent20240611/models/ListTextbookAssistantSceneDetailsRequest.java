@@ -73,7 +73,10 @@ public class ListTextbookAssistantSceneDetailsRequest extends Request {
         } 
 
         /**
-         * authToken.
+         * <p>The API authorization token. You can obtain the token by calling the operation that generates the token for the English Textbook-style AI Teacher feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tc_e6dc70c890866f4028ca685b6fa29874</p>
          */
         public Builder authToken(String authToken) {
             this.putBodyParameter("authToken", authToken);
@@ -82,7 +85,7 @@ public class ListTextbookAssistantSceneDetailsRequest extends Request {
         }
 
         /**
-         * sceneIdList.
+         * <p>A list of scene IDs.</p>
          */
         public Builder sceneIdList(java.util.List<String> sceneIdList) {
             this.putBodyParameter("sceneIdList", sceneIdList);

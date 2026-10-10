@@ -145,7 +145,7 @@ public class ModelRouterQueryModelGroupUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -153,7 +153,10 @@ public class ModelRouterQueryModelGroupUsersResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The fault code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B_USER_NOT_FOUND_EXCEPTION</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -161,7 +164,10 @@ public class ModelRouterQueryModelGroupUsersResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -169,7 +175,10 @@ public class ModelRouterQueryModelGroupUsersResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -177,7 +186,10 @@ public class ModelRouterQueryModelGroupUsersResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -196,7 +208,10 @@ public class ModelRouterQueryModelGroupUsersResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +219,10 @@ public class ModelRouterQueryModelGroupUsersResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -296,7 +314,7 @@ public class ModelRouterQueryModelGroupUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * list.
+             * <p>The bound users.</p>
              */
             public Builder list(java.util.List<ModelGroupUserDTO> list) {
                 this.list = list;
@@ -304,7 +322,10 @@ public class ModelRouterQueryModelGroupUsersResponseBody extends TeaModel {
             }
 
             /**
-             * page.
+             * <p>The requested page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -312,7 +333,10 @@ public class ModelRouterQueryModelGroupUsersResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -320,7 +344,10 @@ public class ModelRouterQueryModelGroupUsersResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

@@ -119,7 +119,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
         } 
 
         /**
-         * data.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
         }
 
         /**
-         * errCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
         }
 
         /**
-         * errMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +269,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
             } 
 
             /**
-             * FreeConcurrencyCount.
+             * <p>The free trial concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder freeConcurrencyCount(Integer freeConcurrencyCount) {
                 this.freeConcurrencyCount = freeConcurrencyCount;
@@ -259,7 +280,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
             }
 
             /**
-             * FreeCount.
+             * <p>The free trial calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder freeCount(Integer freeCount) {
                 this.freeCount = freeCount;
@@ -267,7 +291,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
             }
 
             /**
-             * ServiceCode.
+             * <p>The service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online_ai_algorithm_personalized_text_to_image_call_count</p>
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -275,7 +302,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
             }
 
             /**
-             * ServiceName.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AI算法模型-个性化文生图-在线按量调用</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

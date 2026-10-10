@@ -119,7 +119,7 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
         }
 
         /**
-         * success.
+         * <p>Indicates if the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
             } 
 
             /**
-             * assistant.
+             * <p>The name of the AI teacher.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alex</p>
              */
             public Builder assistant(String assistant) {
                 this.assistant = assistant;
@@ -233,7 +251,10 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
             }
 
             /**
-             * user.
+             * <p>The name of the student.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Jamie</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -300,7 +321,10 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
             } 
 
             /**
-             * assistant.
+             * <p>The AI teacher\&quot;s question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Why might some people think dog walking is a great job?</p>
              */
             public Builder assistant(String assistant) {
                 this.assistant = assistant;
@@ -308,7 +332,10 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
             }
 
             /**
-             * user.
+             * <p>The student\&quot;s answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>They think it\&quot;s great because they won\&quot;t be stuck in an office.</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -414,7 +441,10 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
             } 
 
             /**
-             * backgroundDescription.
+             * <p>The background of the conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>In a career counseling session, we are going to discuss our dream jobs and the responsibilities associated with them. Alex, who dreams of becoming a professional travel blogger, will share the tasks and skills required for this role, while Jamie, aspiring to be a wildlife photographer, will outline the responsibilities and challenges of capturing nature\&quot;s moments. Both will explore how their interests align with the practical aspects of their chosen careers, discussing the potential for travel, creativity, and the impact of their work on society and the environment.</p>
              */
             public Builder backgroundDescription(String backgroundDescription) {
                 this.backgroundDescription = backgroundDescription;
@@ -422,7 +452,7 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
             }
 
             /**
-             * roleSet.
+             * <p>The role settings.</p>
              */
             public Builder roleSet(RoleSet roleSet) {
                 this.roleSet = roleSet;
@@ -430,7 +460,10 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
             }
 
             /**
-             * startSentence.
+             * <p>The opening sentence of the conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hey Jamie, do you know what a travel blogger does?</p>
              */
             public Builder startSentence(String startSentence) {
                 this.startSentence = startSentence;
@@ -438,7 +471,7 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
             }
 
             /**
-             * taskContent.
+             * <p>A list of Q\&amp;A pairs.</p>
              */
             public Builder taskContent(java.util.List<TaskContent> taskContent) {
                 this.taskContent = taskContent;
@@ -446,7 +479,10 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
             }
 
             /**
-             * taskType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>textbook_dialogue</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

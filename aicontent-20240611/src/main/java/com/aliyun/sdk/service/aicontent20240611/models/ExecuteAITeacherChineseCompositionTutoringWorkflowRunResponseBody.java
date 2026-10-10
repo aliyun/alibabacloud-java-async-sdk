@@ -80,7 +80,10 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunResponseBody e
         } 
 
         /**
-         * content.
+         * <p>The content associated with the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>春天里常见的景</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -88,7 +91,10 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunResponseBody e
         }
 
         /**
-         * event.
+         * <p>The event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder event(String event) {
             this.event = event;
@@ -96,7 +102,10 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunResponseBody e
         }
 
         /**
-         * requestId.
+         * <p>The unique ID for the request. This ID is useful for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

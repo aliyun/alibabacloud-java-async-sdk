@@ -171,7 +171,10 @@ public class ModelRouterUpdateClientRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The customer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -180,7 +183,10 @@ public class ModelRouterUpdateClientRequest extends Request {
         }
 
         /**
-         * address.
+         * <p>The company address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder address(String address) {
             this.putBodyParameter("address", address);
@@ -189,7 +195,10 @@ public class ModelRouterUpdateClientRequest extends Request {
         }
 
         /**
-         * allowedModelGroupConfig.
+         * <p>The allowed model group configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;model_ids&quot;:[101],&quot;group_ids&quot;:[&quot;mg_xxx&quot;]}</p>
          */
         public Builder allowedModelGroupConfig(String allowedModelGroupConfig) {
             this.putBodyParameter("allowedModelGroupConfig", allowedModelGroupConfig);
@@ -198,7 +207,10 @@ public class ModelRouterUpdateClientRequest extends Request {
         }
 
         /**
-         * allowedModels.
+         * <p>The list of allowed model IDs, separated by commas. An empty value indicates all models are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder allowedModels(String allowedModels) {
             this.putBodyParameter("allowedModels", allowedModels);
@@ -207,7 +219,10 @@ public class ModelRouterUpdateClientRequest extends Request {
         }
 
         /**
-         * contact.
+         * <p>The contact information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13800138000</p>
          */
         public Builder contact(String contact) {
             this.putBodyParameter("contact", contact);
@@ -216,7 +231,10 @@ public class ModelRouterUpdateClientRequest extends Request {
         }
 
         /**
-         * discount.
+         * <p>The discount coefficient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder discount(Double discount) {
             this.putBodyParameter("discount", discount);
@@ -225,7 +243,10 @@ public class ModelRouterUpdateClientRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The customer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyCustomer</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -234,7 +255,10 @@ public class ModelRouterUpdateClientRequest extends Request {
         }
 
         /**
-         * remark.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Remarks</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
@@ -243,7 +267,10 @@ public class ModelRouterUpdateClientRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);

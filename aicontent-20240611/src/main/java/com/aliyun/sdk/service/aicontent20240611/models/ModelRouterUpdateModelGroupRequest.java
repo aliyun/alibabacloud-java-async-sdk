@@ -89,7 +89,10 @@ public class ModelRouterUpdateModelGroupRequest extends Request {
         } 
 
         /**
-         * groupId.
+         * <p>The unique identifier of the group (with the mg_ prefix).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mg_a1b2c3d4e5f6g7h8i9j0</p>
          */
         public Builder groupId(String groupId) {
             this.putPathParameter("groupId", groupId);
@@ -98,6 +101,7 @@ public class ModelRouterUpdateModelGroupRequest extends Request {
         }
 
         /**
+         * <p>The full member array. An empty array clears all members.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,10 +114,11 @@ public class ModelRouterUpdateModelGroupRequest extends Request {
         }
 
         /**
+         * <p>The group name. This parameter performs a full overwrite. Pass the current name even if you do not want to rename the group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>专业版套餐</p>
+         * <p>Professional Plan</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

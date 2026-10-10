@@ -119,7 +119,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
         } 
 
         /**
-         * data.
+         * <p>An array of service objects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(java.util.List<AliyunConsoleServiceInfoDTO> data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

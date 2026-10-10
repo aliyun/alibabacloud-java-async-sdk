@@ -105,6 +105,7 @@ public class ExecuteTextbookAssistantRetryConversationRequest extends Request {
         } 
 
         /**
+         * <p>The AI assistant\&quot;s message ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class ExecuteTextbookAssistantRetryConversationRequest extends Request {
         }
 
         /**
+         * <p>The authorization token. You can obtain this token from the API that provides authorization for the textbook AI assistant feature.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class ExecuteTextbookAssistantRetryConversationRequest extends Request {
         }
 
         /**
+         * <p>The conversation ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class ExecuteTextbookAssistantRetryConversationRequest extends Request {
         }
 
         /**
+         * <p>Specifies the scenario. Valid values: <code>SYNC</code> for synchronized practice and <code>EXPAND</code> for expansion practice.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

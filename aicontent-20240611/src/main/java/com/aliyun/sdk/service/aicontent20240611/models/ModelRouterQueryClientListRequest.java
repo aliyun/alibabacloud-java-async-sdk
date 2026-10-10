@@ -199,7 +199,10 @@ public class ModelRouterQueryClientListRequest extends Request {
         } 
 
         /**
-         * groupBy.
+         * <p>The field to group the results by.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourceId</p>
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("groupBy", groupBy);
@@ -208,7 +211,10 @@ public class ModelRouterQueryClientListRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -217,7 +223,10 @@ public class ModelRouterQueryClientListRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -226,7 +235,10 @@ public class ModelRouterQueryClientListRequest extends Request {
         }
 
         /**
-         * needTotalCount.
+         * <p>Specifies whether to return the total count of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needTotalCount(Boolean needTotalCount) {
             this.putQueryParameter("needTotalCount", needTotalCount);
@@ -235,7 +247,10 @@ public class ModelRouterQueryClientListRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page of results. Set this to the nextToken value from the previous response. Omit for the first page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -244,7 +259,10 @@ public class ModelRouterQueryClientListRequest extends Request {
         }
 
         /**
-         * orderBy.
+         * <p>The field to sort the results by.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourceId</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("orderBy", orderBy);
@@ -253,7 +271,10 @@ public class ModelRouterQueryClientListRequest extends Request {
         }
 
         /**
-         * orderDirection.
+         * <p>The sort direction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder orderDirection(String orderDirection) {
             this.putQueryParameter("orderDirection", orderDirection);
@@ -262,7 +283,10 @@ public class ModelRouterQueryClientListRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * <p>The page number of the results to return. The first page is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -271,7 +295,10 @@ public class ModelRouterQueryClientListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -289,7 +316,10 @@ public class ModelRouterQueryClientListRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Filters the results by status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("status", status);

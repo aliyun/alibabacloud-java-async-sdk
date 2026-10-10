@@ -199,7 +199,10 @@ public class ModelRouterQueryModelListRequest extends Request {
         } 
 
         /**
-         * groupBy.
+         * <p>The field to use for grouping the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourceId</p>
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("groupBy", groupBy);
@@ -208,7 +211,10 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The keyword for a fuzzy search on model information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -217,7 +223,10 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -235,7 +244,10 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * needTotalCount.
+         * <p>Specifies whether to include the total count of matching models in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needTotalCount(Boolean needTotalCount) {
             this.putQueryParameter("needTotalCount", needTotalCount);
@@ -244,7 +256,10 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for retrieving the next page of results. If this parameter is not specified, the first page is retrieved. To retrieve a subsequent page, set this to the <code>nextToken</code> value from the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -253,7 +268,10 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * orderBy.
+         * <p>The field to use for sorting the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourceId</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("orderBy", orderBy);
@@ -262,7 +280,10 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * orderDirection.
+         * <p>The sort order. Valid values include <code>ASC</code> for ascending order and <code>DESC</code> for descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder orderDirection(String orderDirection) {
             this.putQueryParameter("orderDirection", orderDirection);
@@ -271,7 +292,10 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * <p>The page number to retrieve. Pages are numbered starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -280,7 +304,10 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of models to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -289,7 +316,10 @@ public class ModelRouterQueryModelListRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The model status to use as a filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("status", status);

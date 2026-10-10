@@ -119,7 +119,10 @@ public class AliyunConsoleServiceInfoDTO extends TeaModel {
         } 
 
         /**
-         * buyUrl.
+         * <p>The URL to activate the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com/product/ai-algorithm">https://www.aliyun.com/product/ai-algorithm</a></p>
          */
         public Builder buyUrl(String buyUrl) {
             this.buyUrl = buyUrl;
@@ -127,7 +130,10 @@ public class AliyunConsoleServiceInfoDTO extends TeaModel {
         }
 
         /**
-         * documentUrl.
+         * <p>The URL of the service documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com/product/ai-algorithm">https://www.aliyun.com/product/ai-algorithm</a></p>
          */
         public Builder documentUrl(String documentUrl) {
             this.documentUrl = documentUrl;
@@ -135,7 +141,10 @@ public class AliyunConsoleServiceInfoDTO extends TeaModel {
         }
 
         /**
-         * freeConcurrencyCount.
+         * <p>The maximum number of concurrent requests allowed for the free trial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder freeConcurrencyCount(Integer freeConcurrencyCount) {
             this.freeConcurrencyCount = freeConcurrencyCount;
@@ -143,7 +152,10 @@ public class AliyunConsoleServiceInfoDTO extends TeaModel {
         }
 
         /**
-         * freeCount.
+         * <p>The number of free API calls available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder freeCount(Integer freeCount) {
             this.freeCount = freeCount;
@@ -151,7 +163,10 @@ public class AliyunConsoleServiceInfoDTO extends TeaModel {
         }
 
         /**
-         * serviceCode.
+         * <p>The unique code for the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online_ai_algorithm_personalized_text_to_image_call_count</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.serviceCode = serviceCode;
@@ -159,7 +174,10 @@ public class AliyunConsoleServiceInfoDTO extends TeaModel {
         }
 
         /**
-         * serviceName.
+         * <p>The display name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI算法模型-个性化文生图-在线按量调用</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;

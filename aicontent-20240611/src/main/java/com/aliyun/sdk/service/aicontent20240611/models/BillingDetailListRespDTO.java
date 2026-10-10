@@ -106,7 +106,10 @@ public class BillingDetailListRespDTO extends TeaModel {
         } 
 
         /**
-         * columns.
+         * <p>The column definitions, which are dynamically generated based on the model types that appear in the query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder columns(java.util.List<MetricDefRespDTO> columns) {
             this.columns = columns;
@@ -114,7 +117,10 @@ public class BillingDetailListRespDTO extends TeaModel {
         }
 
         /**
-         * page.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -122,7 +128,10 @@ public class BillingDetailListRespDTO extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +139,10 @@ public class BillingDetailListRespDTO extends TeaModel {
         }
 
         /**
-         * rows.
+         * <p>The list of bill details data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder rows(java.util.List<BillingDetailRowDTO> rows) {
             this.rows = rows;
@@ -138,7 +150,10 @@ public class BillingDetailListRespDTO extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Long total) {
             this.total = total;

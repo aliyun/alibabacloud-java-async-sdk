@@ -82,6 +82,7 @@ public class OralEvaluationStatisticsCallsCountResponse extends Response {
         } 
 
         /**
+         * <p>The project statistics.</p>
          * <p>This parameter is required.</p>
          */
         @Override
@@ -91,7 +92,11 @@ public class OralEvaluationStatisticsCallsCountResponse extends Response {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @Override
         public Builder projectId(String projectId) {
@@ -161,7 +166,11 @@ public class OralEvaluationStatisticsCallsCountResponse extends Response {
             } 
 
             /**
+             * <p>The corresponding count.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -169,7 +178,11 @@ public class OralEvaluationStatisticsCallsCountResponse extends Response {
             }
 
             /**
+             * <p>The name of the statistic.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -237,7 +250,7 @@ public class OralEvaluationStatisticsCallsCountResponse extends Response {
             } 
 
             /**
-             * Data.
+             * <p>A list of data objects.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -245,7 +258,11 @@ public class OralEvaluationStatisticsCallsCountResponse extends Response {
             }
 
             /**
+             * <p>The appkey.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a0007g7</p>
              */
             public Builder applicationAccessId(String applicationAccessId) {
                 this.applicationAccessId = applicationAccessId;
@@ -313,7 +330,7 @@ public class OralEvaluationStatisticsCallsCountResponse extends Response {
             } 
 
             /**
-             * ApplicationData.
+             * <p>A list of application data objects.</p>
              */
             public Builder applicationData(java.util.List<ApplicationData> applicationData) {
                 this.applicationData = applicationData;
@@ -321,7 +338,11 @@ public class OralEvaluationStatisticsCallsCountResponse extends Response {
             }
 
             /**
+             * <p>The internal application ID.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder applicationInternalId(String applicationInternalId) {
                 this.applicationInternalId = applicationInternalId;

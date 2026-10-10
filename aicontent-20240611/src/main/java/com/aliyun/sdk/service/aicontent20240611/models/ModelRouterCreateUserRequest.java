@@ -103,7 +103,10 @@ public class ModelRouterCreateUserRequest extends Request {
         } 
 
         /**
-         * departmentRoles.
+         * <p>The department roles to assign to the user during creation. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder departmentRoles(java.util.List<DepartmentRoleCmd> departmentRoles) {
             this.putBodyParameter("departmentRoles", departmentRoles);
@@ -112,6 +115,7 @@ public class ModelRouterCreateUserRequest extends Request {
         }
 
         /**
+         * <p>The logon name. This parameter is required. The logon name can be the same as the phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,10 +128,11 @@ public class ModelRouterCreateUserRequest extends Request {
         }
 
         /**
+         * <p>The name. This parameter is required. The value must be 2 to 20 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -136,7 +141,10 @@ public class ModelRouterCreateUserRequest extends Request {
         }
 
         /**
-         * phone.
+         * <p>The phone number. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13800000000</p>
          */
         public Builder phone(String phone) {
             this.putBodyParameter("phone", phone);

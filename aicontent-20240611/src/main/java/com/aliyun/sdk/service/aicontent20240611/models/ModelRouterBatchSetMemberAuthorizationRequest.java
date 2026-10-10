@@ -88,7 +88,10 @@ public class ModelRouterBatchSetMemberAuthorizationRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -97,7 +100,10 @@ public class ModelRouterBatchSetMemberAuthorizationRequest extends Request {
         }
 
         /**
-         * allowedModelGroupConfig.
+         * <p>The authorization configuration. This parameter is a required JSON string and uses overwrite mode. Format: {&quot;model_ids&quot;:[...],&quot;group_ids&quot;:[&quot;mg_xxx&quot;]}. Internal key names use a fixed underscore style and are not converted to the camelCase convention of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;model_ids&quot;:[],&quot;group_ids&quot;:[&quot;mg_qwen_19&quot;]}</p>
          */
         public Builder allowedModelGroupConfig(String allowedModelGroupConfig) {
             this.putBodyParameter("allowedModelGroupConfig", allowedModelGroupConfig);
@@ -106,7 +112,10 @@ public class ModelRouterBatchSetMemberAuthorizationRequest extends Request {
         }
 
         /**
-         * userIdList.
+         * <p>The list of user IDs. This parameter is required. You can specify 1 to 50 user IDs. If more than 50 user IDs are required, call this operation in batches. All specified users must be direct members of the department.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[30001,30002,30003]</p>
          */
         public Builder userIdList(java.util.List<Long> userIdList) {
             this.putBodyParameter("userIdList", userIdList);

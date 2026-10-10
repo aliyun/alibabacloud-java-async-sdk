@@ -119,7 +119,10 @@ public class ModelRouterMiguDownloadSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(MiguSourceDownloadDTO data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class ModelRouterMiguDownloadSourceResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The business error code. This value is passed through as-is from the console and is not mapped to platform standard error codes. Valid values: ERROR_PARAMETERS: Missing or invalid parameters. ERROR_NOT_FOUND: The source file does not exist or does not belong to the current account. ERROR_SOURCE_TRANSFERRING: The source file is being transferred. ERROR_SOURCE_EXPIRED: The source file has expired. ERROR_SERVER_INTERNAL: Internal error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR_NOT_FOUND</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class ModelRouterMiguDownloadSourceResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class ModelRouterMiguDownloadSourceResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The business status code. Valid values: 0: Success. 400/403/404/409/410/500: Business error. Refer to errCode for details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class ModelRouterMiguDownloadSourceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class ModelRouterMiguDownloadSourceResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

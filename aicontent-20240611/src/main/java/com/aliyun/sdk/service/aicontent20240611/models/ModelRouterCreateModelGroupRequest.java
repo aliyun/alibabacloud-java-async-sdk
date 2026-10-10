@@ -75,6 +75,7 @@ public class ModelRouterCreateModelGroupRequest extends Request {
         } 
 
         /**
+         * <p>The array of model IDs. At least one element is required. Each element must be the numeric model ID, not the model identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,10 +88,11 @@ public class ModelRouterCreateModelGroupRequest extends Request {
         }
 
         /**
+         * <p>The group name. The name must be 1 to 50 characters in length and must be unique within the tenant (case-insensitive).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>专业版套餐</p>
+         * <p>Professional Plan</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

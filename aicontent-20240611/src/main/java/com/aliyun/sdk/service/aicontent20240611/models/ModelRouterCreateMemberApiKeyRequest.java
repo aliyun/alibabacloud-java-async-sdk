@@ -101,7 +101,10 @@ public class ModelRouterCreateMemberApiKeyRequest extends Request {
         } 
 
         /**
-         * clientId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putPathParameter("clientId", clientId);
@@ -110,7 +113,10 @@ public class ModelRouterCreateMemberApiKeyRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The member ID within the organization. This is not an Alibaba Cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -119,7 +125,10 @@ public class ModelRouterCreateMemberApiKeyRequest extends Request {
         }
 
         /**
-         * expireAt.
+         * <p>The expiration time in the format of yyyy-MM-dd HH:mm:ss. This parameter is optional. If not specified, the key is permanently valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2027-07-31 00:00:00</p>
          */
         public Builder expireAt(String expireAt) {
             this.putBodyParameter("expireAt", expireAt);
@@ -128,7 +137,10 @@ public class ModelRouterCreateMemberApiKeyRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the API key. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

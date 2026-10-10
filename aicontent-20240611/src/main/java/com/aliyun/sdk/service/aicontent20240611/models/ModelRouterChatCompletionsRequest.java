@@ -59,7 +59,22 @@ public class ModelRouterChatCompletionsRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The chat request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;stream&quot;: true,
+         *     &quot;messages&quot;: [
+         *       {
+         *         &quot;role&quot;: &quot;user&quot;,
+         *         &quot;content&quot;: &quot;1+1&quot;
+         *       }
+         *     ],
+         *     &quot;model_id&quot;: 15,
+         *     &quot;stream_options&quot;: {
+         *       &quot;include_usage&quot;: true
+         *     }
+         *   }</p>
          */
         public Builder body(Object body) {
             this.putBodyParameter("body", body);

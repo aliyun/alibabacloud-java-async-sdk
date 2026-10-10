@@ -93,7 +93,10 @@ public class MetricDefRespDTO extends TeaModel {
         } 
 
         /**
-         * key.
+         * <p>Metric key name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>total_calls</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -101,7 +104,10 @@ public class MetricDefRespDTO extends TeaModel {
         }
 
         /**
-         * label.
+         * <p>Metric display name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>调用次数</p>
          */
         public Builder label(String label) {
             this.label = label;
@@ -109,7 +115,10 @@ public class MetricDefRespDTO extends TeaModel {
         }
 
         /**
-         * sortable.
+         * <p>Is sortable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sortable(Boolean sortable) {
             this.sortable = sortable;
@@ -117,7 +126,10 @@ public class MetricDefRespDTO extends TeaModel {
         }
 
         /**
-         * unit.
+         * <p>Metric unit</p>
+         * 
+         * <strong>example:</strong>
+         * <p>次</p>
          */
         public Builder unit(String unit) {
             this.unit = unit;

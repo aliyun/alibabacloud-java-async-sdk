@@ -87,7 +87,10 @@ public class ModelRouterQueryClientDiscountLogsRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The client ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -96,7 +99,10 @@ public class ModelRouterQueryClientDiscountLogsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -105,7 +111,7 @@ public class ModelRouterQueryClientDiscountLogsRequest extends Request {
         }
 
         /**
-         * <p>nextToken</p>
+         * <p>The token to retrieve the next page of results. Omit this parameter to get the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx-xxx-xxxxx</p>

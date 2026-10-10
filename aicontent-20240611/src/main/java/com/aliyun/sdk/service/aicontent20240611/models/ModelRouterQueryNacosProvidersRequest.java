@@ -157,7 +157,10 @@ public class ModelRouterQueryNacosProvidersRequest extends Request {
         } 
 
         /**
-         * groupBy.
+         * <p>The field by which to group the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourceId</p>
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("groupBy", groupBy);
@@ -166,7 +169,10 @@ public class ModelRouterQueryNacosProvidersRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -175,7 +181,10 @@ public class ModelRouterQueryNacosProvidersRequest extends Request {
         }
 
         /**
-         * needTotalCount.
+         * <p>Specifies whether the total count is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needTotalCount(Boolean needTotalCount) {
             this.putQueryParameter("needTotalCount", needTotalCount);
@@ -184,7 +193,10 @@ public class ModelRouterQueryNacosProvidersRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token used for paginated queries. Specify this parameter to retrieve the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -193,7 +205,10 @@ public class ModelRouterQueryNacosProvidersRequest extends Request {
         }
 
         /**
-         * orderBy.
+         * <p>The field by which to sort the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourceId</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("orderBy", orderBy);
@@ -202,7 +217,10 @@ public class ModelRouterQueryNacosProvidersRequest extends Request {
         }
 
         /**
-         * orderDirection.
+         * <p>The sort direction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder orderDirection(String orderDirection) {
             this.putQueryParameter("orderDirection", orderDirection);
@@ -211,7 +229,10 @@ public class ModelRouterQueryNacosProvidersRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -220,7 +241,10 @@ public class ModelRouterQueryNacosProvidersRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

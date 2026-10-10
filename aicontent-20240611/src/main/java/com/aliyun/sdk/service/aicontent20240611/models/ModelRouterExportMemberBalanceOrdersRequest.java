@@ -101,7 +101,10 @@ public class ModelRouterExportMemberBalanceOrdersRequest extends Request {
         } 
 
         /**
-         * clientId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putPathParameter("clientId", clientId);
@@ -110,7 +113,10 @@ public class ModelRouterExportMemberBalanceOrdersRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The member identifier (member ID within the organization, not the Alibaba Cloud account ID).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -119,7 +125,10 @@ public class ModelRouterExportMemberBalanceOrdersRequest extends Request {
         }
 
         /**
-         * balanceType.
+         * <p>The balance type filter. Valid values: permanent and monthly.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>permanent</p>
          */
         public Builder balanceType(String balanceType) {
             this.putQueryParameter("balanceType", balanceType);
@@ -128,7 +137,10 @@ public class ModelRouterExportMemberBalanceOrdersRequest extends Request {
         }
 
         /**
-         * direction.
+         * <p>The change direction filter. Valid values: in and out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("direction", direction);

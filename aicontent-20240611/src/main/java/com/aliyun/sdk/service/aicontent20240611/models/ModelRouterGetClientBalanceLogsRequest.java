@@ -129,7 +129,10 @@ public class ModelRouterGetClientBalanceLogsRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -138,7 +141,10 @@ public class ModelRouterGetClientBalanceLogsRequest extends Request {
         }
 
         /**
-         * changeType.
+         * <p>The change type filter. Valid values: auto_deduct, deduct, recharge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>recharge</p>
          */
         public Builder changeType(String changeType) {
             this.putQueryParameter("changeType", changeType);
@@ -147,7 +153,10 @@ public class ModelRouterGetClientBalanceLogsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -156,7 +165,10 @@ public class ModelRouterGetClientBalanceLogsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -165,7 +177,10 @@ public class ModelRouterGetClientBalanceLogsRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -174,7 +189,10 @@ public class ModelRouterGetClientBalanceLogsRequest extends Request {
         }
 
         /**
-         * size.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

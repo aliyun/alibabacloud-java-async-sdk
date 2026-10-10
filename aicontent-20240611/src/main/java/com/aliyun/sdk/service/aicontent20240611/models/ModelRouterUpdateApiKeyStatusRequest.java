@@ -85,7 +85,14 @@ public class ModelRouterUpdateApiKeyStatusRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The status of the API key. Valid values:</p>
+         * <ul>
+         * <li>active: The API key is valid.</li>
+         * <li>disabled: The API key is invalid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);

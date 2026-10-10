@@ -145,7 +145,10 @@ public class ClientBalanceLogDTO extends TeaModel {
         } 
 
         /**
-         * balanceAfter.
+         * <p>The new balance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         public Builder balanceAfter(Double balanceAfter) {
             this.balanceAfter = balanceAfter;
@@ -153,7 +156,10 @@ public class ClientBalanceLogDTO extends TeaModel {
         }
 
         /**
-         * balanceBefore.
+         * <p>The previous balance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90.00</p>
          */
         public Builder balanceBefore(Double balanceBefore) {
             this.balanceBefore = balanceBefore;
@@ -161,7 +167,10 @@ public class ClientBalanceLogDTO extends TeaModel {
         }
 
         /**
-         * changeAmount.
+         * <p>The change amount. A positive value represents a recharge, and a negative value represents a deduction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.00</p>
          */
         public Builder changeAmount(Double changeAmount) {
             this.changeAmount = changeAmount;
@@ -169,7 +178,10 @@ public class ClientBalanceLogDTO extends TeaModel {
         }
 
         /**
-         * changeType.
+         * <p>The type of change. Possible values are <code>auto_deduct</code>, <code>deduct</code>, or <code>recharge</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>recharge</p>
          */
         public Builder changeType(String changeType) {
             this.changeType = changeType;
@@ -177,7 +189,10 @@ public class ClientBalanceLogDTO extends TeaModel {
         }
 
         /**
-         * clientId.
+         * <p>The client ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
@@ -185,7 +200,10 @@ public class ClientBalanceLogDTO extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The creation time in ISO 8601 UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -193,7 +211,10 @@ public class ClientBalanceLogDTO extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The unique record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -201,7 +222,10 @@ public class ClientBalanceLogDTO extends TeaModel {
         }
 
         /**
-         * remark.
+         * <p>Notes about the balance change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>充值</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;

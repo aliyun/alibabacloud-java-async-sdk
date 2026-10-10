@@ -74,7 +74,7 @@ public class ListTextbookAssistantArticleDetailsRequest extends Request {
         } 
 
         /**
-         * articleIdList.
+         * <p>A list of article IDs to retrieve.</p>
          */
         public Builder articleIdList(java.util.List<String> articleIdList) {
             this.putBodyParameter("articleIdList", articleIdList);
@@ -83,6 +83,7 @@ public class ListTextbookAssistantArticleDetailsRequest extends Request {
         }
 
         /**
+         * <p>The authorization token obtained from the &quot;Get Authorization Token for the English Textbook-Style AI Teacher&quot; API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

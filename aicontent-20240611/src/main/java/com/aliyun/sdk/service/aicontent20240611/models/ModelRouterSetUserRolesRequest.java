@@ -73,7 +73,10 @@ public class ModelRouterSetUserRolesRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -82,7 +85,10 @@ public class ModelRouterSetUserRolesRequest extends Request {
         }
 
         /**
-         * departmentRoles.
+         * <p>The department role list (required, full overwrite).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;clientId&quot;:1001,&quot;roleCode&quot;:&quot;member&quot;},{&quot;clientId&quot;:1002,&quot;roleCode&quot;:&quot;member&quot;}]</p>
          */
         public Builder departmentRoles(java.util.List<DepartmentRoleCmd> departmentRoles) {
             this.putBodyParameter("departmentRoles", departmentRoles);

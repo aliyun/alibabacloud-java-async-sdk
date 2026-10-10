@@ -104,6 +104,7 @@ public class Personalizedtxt2imgAddModelTrainJobRequest extends Request {
         } 
 
         /**
+         * <p>A list of one or more image URLs for training. For example: [&quot;url_1&quot;, &quot;url_2&quot;, ...]</p>
          * <p>This parameter is required.</p>
          */
         public Builder imageUrl(java.util.List<String> imageUrl) {
@@ -113,6 +114,7 @@ public class Personalizedtxt2imgAddModelTrainJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the model training job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +127,7 @@ public class Personalizedtxt2imgAddModelTrainJobRequest extends Request {
         }
 
         /**
+         * <p>A single word that defines the object type in the training images, such as &quot;girl&quot;, &quot;person&quot;, &quot;man&quot;, &quot;boy&quot;, or &quot;dog&quot;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +140,10 @@ public class Personalizedtxt2imgAddModelTrainJobRequest extends Request {
         }
 
         /**
-         * trainSteps.
+         * <p>The number of training steps for the model training job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         public Builder trainSteps(Integer trainSteps) {
             this.putBodyParameter("trainSteps", trainSteps);

@@ -162,7 +162,10 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
         } 
 
         /**
-         * chatId.
+         * <p>The unique ID for the chat session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6788e0b475a4631ffc626722</p>
          */
         public Builder chatId(String chatId) {
             this.putBodyParameter("chatId", chatId);
@@ -171,6 +174,7 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
         }
 
         /**
+         * <p>The user\&quot;s chat message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +187,10 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
         }
 
         /**
-         * grade.
+         * <p>The grade level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder grade(Long grade) {
             this.putBodyParameter("grade", grade);
@@ -192,7 +199,10 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
         }
 
         /**
-         * questionId.
+         * <p>A unique identifier for the question.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxx</p>
          */
         public Builder questionId(String questionId) {
             this.putBodyParameter("questionId", questionId);
@@ -201,6 +211,7 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
         }
 
         /**
+         * <p>The user\&quot;s question.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,6 +224,7 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
         }
 
         /**
+         * <p>The response mode. Set this to <code>streaming</code> to receive the response as a stream of events.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,6 +237,7 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
         }
 
         /**
+         * <p>The user\&quot;s answer to the question.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,6 +250,7 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
         }
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

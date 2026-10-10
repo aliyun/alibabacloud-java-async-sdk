@@ -145,7 +145,7 @@ public class CostModelDetailRespDTO extends TeaModel {
         } 
 
         /**
-         * columns.
+         * <p>List of column definitions</p>
          */
         public Builder columns(java.util.List<MetricDefRespDTO> columns) {
             this.columns = columns;
@@ -153,7 +153,10 @@ public class CostModelDetailRespDTO extends TeaModel {
         }
 
         /**
-         * granularity.
+         * <p>Current granularity: daily/hourly</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hourly</p>
          */
         public Builder granularity(String granularity) {
             this.granularity = granularity;
@@ -161,7 +164,10 @@ public class CostModelDetailRespDTO extends TeaModel {
         }
 
         /**
-         * modelId.
+         * <p>Model ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder modelId(Long modelId) {
             this.modelId = modelId;
@@ -169,7 +175,10 @@ public class CostModelDetailRespDTO extends TeaModel {
         }
 
         /**
-         * modelName.
+         * <p>Model name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通义千问-Plus</p>
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
@@ -177,7 +186,10 @@ public class CostModelDetailRespDTO extends TeaModel {
         }
 
         /**
-         * page.
+         * <p>Current page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -185,7 +197,10 @@ public class CostModelDetailRespDTO extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>Number of entries per page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -193,7 +208,7 @@ public class CostModelDetailRespDTO extends TeaModel {
         }
 
         /**
-         * rows.
+         * <p>List of data rows</p>
          */
         public Builder rows(java.util.List<CostModelDetailRowDTO> rows) {
             this.rows = rows;
@@ -201,7 +216,10 @@ public class CostModelDetailRespDTO extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>Total number of entries</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Integer total) {
             this.total = total;

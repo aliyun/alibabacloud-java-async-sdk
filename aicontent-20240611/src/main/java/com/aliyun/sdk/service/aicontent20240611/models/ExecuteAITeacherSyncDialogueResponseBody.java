@@ -119,7 +119,10 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +269,10 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
             } 
 
             /**
-             * englishResult.
+             * <p>The English response from the AI teacher.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Thanks, Lily. Do you like meat, Lily?</p>
              */
             public Builder englishResult(String englishResult) {
                 this.englishResult = englishResult;
@@ -259,7 +280,10 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * isFinish.
+             * <p>Indicates whether the dialogue is finished.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isFinish(Boolean isFinish) {
                 this.isFinish = isFinish;
@@ -267,7 +291,10 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * isOnTopic.
+             * <p>Indicates whether the user\&quot;s response is on topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isOnTopic(Boolean isOnTopic) {
                 this.isOnTopic = isOnTopic;
@@ -275,7 +302,10 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * questionIndex.
+             * <p>The index of the current question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder questionIndex(Integer questionIndex) {
                 this.questionIndex = questionIndex;

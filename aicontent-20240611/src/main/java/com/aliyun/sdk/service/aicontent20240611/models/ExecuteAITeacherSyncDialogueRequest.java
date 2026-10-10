@@ -103,6 +103,7 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
         } 
 
         /**
+         * <p>An array of dialogue task objects.</p>
          * <p>This parameter is required.</p>
          */
         public Builder dialogueTasks(java.util.List<DialogueTasks> dialogueTasks) {
@@ -112,7 +113,10 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
         }
 
         /**
-         * languageCode.
+         * <p>The language and dialect of the dialogue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en-gb</p>
          */
         public Builder languageCode(String languageCode) {
             this.putBodyParameter("languageCode", languageCode);
@@ -121,7 +125,7 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
         }
 
         /**
-         * records.
+         * <p>An array of dialogue record objects.</p>
          */
         public Builder records(java.util.List<Records> records) {
             this.putBodyParameter("records", records);
@@ -130,6 +134,7 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
         }
 
         /**
+         * <p>A unique identifier for the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +235,7 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
             } 
 
             /**
+             * <p>The assistant\&quot;s dialogue content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -241,7 +247,10 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
             }
 
             /**
-             * assistantTranslate.
+             * <p>The translation of the assistant\&quot;s dialogue content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>为什么有些人认为遛狗是份好差事?</p>
              */
             public Builder assistantTranslate(String assistantTranslate) {
                 this.assistantTranslate = assistantTranslate;
@@ -249,6 +258,7 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
             }
 
             /**
+             * <p>The sequence number of the task.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -260,10 +270,11 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
             }
 
             /**
+             * <p>The user\&quot;s dialogue content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>They think it&quot;s great because they won&quot;t be stuck in an office.</p>
+             * <p>They think it\&quot;s great because they won\&quot;t be stuck in an office.</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -372,6 +383,7 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
             } 
 
             /**
+             * <p>The message content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -383,7 +395,10 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
             }
 
             /**
-             * isOffTopicControl.
+             * <p>Indicates whether the user\&quot;s response is off-topic, acting as a flow control mechanism. This value is based on how the user\&quot;s previous response aligned with the dialogue task. If the user goes off-topic more than twice, the system sets this parameter to <code>true</code> to trigger a task switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>跑题：true, 不跑题：false</p>
              */
             public Builder isOffTopicControl(Boolean isOffTopicControl) {
                 this.isOffTopicControl = isOffTopicControl;
@@ -391,7 +406,10 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
             }
 
             /**
-             * isOnTopic.
+             * <p>Indicates whether the response is on-topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>扣题：true, 不扣题：false</p>
              */
             public Builder isOnTopic(Boolean isOnTopic) {
                 this.isOnTopic = isOnTopic;
@@ -399,6 +417,7 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
             }
 
             /**
+             * <p>The sequence number of the message.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -410,10 +429,11 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
             }
 
             /**
+             * <p>The role of the message author.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>老师：assistant；学生：user</p>
+             * <p>AI：assistant；用户：user</p>
              */
             public Builder role(String role) {
                 this.role = role;

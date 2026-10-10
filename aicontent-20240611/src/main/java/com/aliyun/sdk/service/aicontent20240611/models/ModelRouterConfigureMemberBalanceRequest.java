@@ -115,7 +115,10 @@ public class ModelRouterConfigureMemberBalanceRequest extends Request {
         } 
 
         /**
-         * clientId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putPathParameter("clientId", clientId);
@@ -124,7 +127,10 @@ public class ModelRouterConfigureMemberBalanceRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The member identifier (member ID within the organization, not an Alibaba Cloud account ID).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -133,7 +139,15 @@ public class ModelRouterConfigureMemberBalanceRequest extends Request {
         }
 
         /**
-         * balanceType.
+         * <p>The balance type. Valid values:</p>
+         * <ul>
+         * <li>amount: monetary amount.</li>
+         * <li>tokens: token count.</li>
+         * </ul>
+         * <p>This parameter is required when balance throttling is enabled for the first time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amount</p>
          */
         public Builder balanceType(String balanceType) {
             this.putBodyParameter("balanceType", balanceType);
@@ -142,7 +156,10 @@ public class ModelRouterConfigureMemberBalanceRequest extends Request {
         }
 
         /**
-         * enableBalance.
+         * <p>Specifies whether to enable balance throttling. Once enabled, it cannot be disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableBalance(Boolean enableBalance) {
             this.putBodyParameter("enableBalance", enableBalance);
@@ -151,7 +168,10 @@ public class ModelRouterConfigureMemberBalanceRequest extends Request {
         }
 
         /**
-         * initialBalance.
+         * <p>The initial balance. This parameter takes effect only when balance throttling is enabled for the first time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder initialBalance(Double initialBalance) {
             this.putBodyParameter("initialBalance", initialBalance);

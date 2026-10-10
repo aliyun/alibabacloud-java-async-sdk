@@ -119,7 +119,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +308,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time of the inference job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-25T12:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -298,7 +319,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The inference job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3220</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -306,7 +330,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * jobStatus.
+             * <p>The status of the inference job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -314,7 +341,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * jobTrainProgress.
+             * <p>The progress of the inference job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder jobTrainProgress(Double jobTrainProgress) {
                 this.jobTrainProgress = jobTrainProgress;
@@ -322,7 +352,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * modelId.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>modelId-xxxx-xxxx-xxxx</p>
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -330,7 +363,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * promptId.
+             * <p>The prompt ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>promptId-xxxx-xxxx-xxxx</p>
              */
             public Builder promptId(String promptId) {
                 this.promptId = promptId;
@@ -338,7 +374,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * resultImageUrl.
+             * <p>A list of URLs for the resulting images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0000.png</p>
              */
             public Builder resultImageUrl(java.util.List<String> resultImageUrl) {
                 this.resultImageUrl = resultImageUrl;
@@ -509,7 +548,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time of the model training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-25T12:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -517,7 +559,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The model training job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>456</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -525,7 +570,7 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * imageUrl.
+             * <p>A list of image URLs for model training.</p>
              */
             public Builder imageUrl(java.util.List<String> imageUrl) {
                 this.imageUrl = imageUrl;
@@ -533,7 +578,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * inferenceImageCount.
+             * <p>The total number of images generated by this model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder inferenceImageCount(Integer inferenceImageCount) {
                 this.inferenceImageCount = inferenceImageCount;
@@ -541,7 +589,7 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * inferenceJobList.
+             * <p>A list of inference jobs.</p>
              */
             public Builder inferenceJobList(java.util.List<InferenceJobList> inferenceJobList) {
                 this.inferenceJobList = inferenceJobList;
@@ -549,7 +597,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * jobStatus.
+             * <p>The status of the model training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TRAINING</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -557,7 +608,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * jobTrainProgress.
+             * <p>The progress of the model training job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder jobTrainProgress(Double jobTrainProgress) {
                 this.jobTrainProgress = jobTrainProgress;
@@ -565,7 +619,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * modelId.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>modelId-xxxx-xxxx-xxxx</p>
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -573,7 +630,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The model training job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>可爱熊猫模型训练任务</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -581,7 +641,10 @@ public class Personalizedtxt2imgAddModelTrainJobResponseBody extends TeaModel {
             }
 
             /**
-             * objectType.
+             * <p>The training subject.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>panda</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;

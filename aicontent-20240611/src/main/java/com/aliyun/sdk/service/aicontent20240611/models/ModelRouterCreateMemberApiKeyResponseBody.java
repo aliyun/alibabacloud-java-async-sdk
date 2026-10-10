@@ -119,7 +119,10 @@ public class ModelRouterCreateMemberApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;apiKeyId&quot;: 502, &quot;apiKey&quot;: &quot;sk-xxxxxxxxxxxxxxxx&quot; }</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class ModelRouterCreateMemberApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The fault message code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class ModelRouterCreateMemberApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class ModelRouterCreateMemberApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class ModelRouterCreateMemberApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class ModelRouterCreateMemberApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +243,10 @@ public class ModelRouterCreateMemberApiKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * apiKey.
+             * <p>The full API key in plaintext. This value is returned only once during creation. Store it securely.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-xxxxxxxxxxxxxxxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -233,7 +254,10 @@ public class ModelRouterCreateMemberApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * apiKeyId.
+             * <p>The API key ID. You can use this ID to query the bound groups by API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>502</p>
              */
             public Builder apiKeyId(Long apiKeyId) {
                 this.apiKeyId = apiKeyId;

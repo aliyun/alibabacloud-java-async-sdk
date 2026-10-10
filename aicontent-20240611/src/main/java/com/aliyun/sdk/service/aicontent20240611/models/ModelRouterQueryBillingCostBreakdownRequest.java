@@ -230,7 +230,10 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
         } 
 
         /**
-         * apiKeyId.
+         * <p>Optional. Filters results by API Key ID. This parameter is linked with the department, and clientId must be specified first.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder apiKeyId(Long apiKeyId) {
             this.putQueryParameter("apiKeyId", apiKeyId);
@@ -239,7 +242,10 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
         }
 
         /**
-         * clientId.
+         * <p>Optional. Filters results by department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder clientId(Long clientId) {
             this.putQueryParameter("clientId", clientId);
@@ -248,7 +254,10 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
         }
 
         /**
-         * clientIds.
+         * <p>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with client_id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder clientIds(String clientIds) {
             this.putQueryParameter("clientIds", clientIds);
@@ -257,6 +266,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
         }
 
         /**
+         * <p>The query end time, in UNIX timestamp (seconds).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,6 +279,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
         }
 
         /**
+         * <p>The aggregation granularity. Valid values: hourly and daily.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -281,7 +292,10 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -290,7 +304,10 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
         }
 
         /**
-         * memberUserIds.
+         * <p>Optional. Filters results by member IDs, separated by commas. If not specified, the department and all its members are included. If an empty value is passed, only the department is included without members.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001,30002</p>
          */
         public Builder memberUserIds(String memberUserIds) {
             this.putQueryParameter("memberUserIds", memberUserIds);
@@ -299,7 +316,10 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
         }
 
         /**
-         * modelId.
+         * <p>Optional. Filters results by model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder modelId(Long modelId) {
             this.putQueryParameter("modelId", modelId);
@@ -308,7 +328,10 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
         }
 
         /**
-         * modelTypes.
+         * <p>Optional. Filters results by model type. Separate multiple values with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chat</p>
          */
         public Builder modelTypes(String modelTypes) {
             this.putQueryParameter("modelTypes", modelTypes);
@@ -317,7 +340,10 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxx-xxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -326,7 +352,10 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -335,7 +364,10 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -344,6 +376,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends Request {
         }
 
         /**
+         * <p>The query start time, in UNIX timestamp (seconds).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -59,7 +59,10 @@ public class ModelRouterDeleteUserRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The user ID within the organization. This is not an Alibaba Cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);

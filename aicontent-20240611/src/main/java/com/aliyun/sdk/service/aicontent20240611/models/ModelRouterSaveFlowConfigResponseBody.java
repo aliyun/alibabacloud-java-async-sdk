@@ -119,7 +119,7 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +305,10 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * gmtCreate.
+             * <p>The creation time of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-27T18:28:57.987356+08:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -298,7 +316,10 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>The last modification time of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-27T18:28:57.987356+08:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -306,7 +327,10 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The ID of the flow control configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -314,7 +338,10 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
             }
 
             /**
-             * modelId.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>607</p>
              */
             public Builder modelId(Integer modelId) {
                 this.modelId = modelId;
@@ -322,7 +349,10 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
             }
 
             /**
-             * rpm.
+             * <p>The configured RPM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rpm(Integer rpm) {
                 this.rpm = rpm;
@@ -330,7 +360,10 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
             }
 
             /**
-             * smoothFlowEnabled.
+             * <p>Indicates whether smooth flow control is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder smoothFlowEnabled(Boolean smoothFlowEnabled) {
                 this.smoothFlowEnabled = smoothFlowEnabled;
@@ -338,7 +371,10 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
             }
 
             /**
-             * tpm.
+             * <p>The configured TPM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder tpm(Integer tpm) {
                 this.tpm = tpm;

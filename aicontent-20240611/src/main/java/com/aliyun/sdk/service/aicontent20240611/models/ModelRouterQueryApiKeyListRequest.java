@@ -227,7 +227,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         } 
 
         /**
-         * clientId.
+         * <p>The client ID used to filter the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putQueryParameter("clientId", clientId);
@@ -236,7 +239,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         }
 
         /**
-         * groupBy.
+         * <p>The field by which to group the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourceId</p>
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("groupBy", groupBy);
@@ -245,7 +251,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         }
 
         /**
-         * includeMemberKeys.
+         * <p>Optional. If set to true, the keys of members under the department are also included when filtering by department.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeMemberKeys(Boolean includeMemberKeys) {
             this.putQueryParameter("includeMemberKeys", includeMemberKeys);
@@ -254,7 +263,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -263,7 +275,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -272,7 +287,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         }
 
         /**
-         * memberUserIds.
+         * <p>Optional. Filters by member IDs. Separate multiple member IDs with commas. If this parameter is not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001,30002</p>
          */
         public Builder memberUserIds(String memberUserIds) {
             this.putQueryParameter("memberUserIds", memberUserIds);
@@ -281,7 +299,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         }
 
         /**
-         * needTotalCount.
+         * <p>Specifies whether to return the total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needTotalCount(Boolean needTotalCount) {
             this.putQueryParameter("needTotalCount", needTotalCount);
@@ -290,7 +311,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. An empty value indicates that no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -299,7 +323,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         }
 
         /**
-         * orderBy.
+         * <p>The field by which to sort the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourceId</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("orderBy", orderBy);
@@ -308,7 +335,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         }
 
         /**
-         * orderDirection.
+         * <p>The sort direction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder orderDirection(String orderDirection) {
             this.putQueryParameter("orderDirection", orderDirection);
@@ -317,7 +347,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -326,7 +359,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -335,7 +371,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The status used to filter the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("status", status);

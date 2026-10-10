@@ -132,7 +132,10 @@ public class ClientBalanceDTO extends TeaModel {
         } 
 
         /**
-         * balance.
+         * <p>The current balance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         public Builder balance(Double balance) {
             this.balance = balance;
@@ -140,7 +143,10 @@ public class ClientBalanceDTO extends TeaModel {
         }
 
         /**
-         * balanceType.
+         * <p>The balance type. Valid values are <code>amount</code> or <code>tokens</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amount</p>
          */
         public Builder balanceType(String balanceType) {
             this.balanceType = balanceType;
@@ -148,7 +154,10 @@ public class ClientBalanceDTO extends TeaModel {
         }
 
         /**
-         * clientId.
+         * <p>The ID of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.clientId = clientId;
@@ -156,7 +165,10 @@ public class ClientBalanceDTO extends TeaModel {
         }
 
         /**
-         * enableBalance.
+         * <p>Indicates whether balance-based rate limiting is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableBalance(Boolean enableBalance) {
             this.enableBalance = enableBalance;
@@ -164,7 +176,10 @@ public class ClientBalanceDTO extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The creation timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -172,7 +187,10 @@ public class ClientBalanceDTO extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The last modification timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -180,7 +198,10 @@ public class ClientBalanceDTO extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The unique ID of the balance record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;

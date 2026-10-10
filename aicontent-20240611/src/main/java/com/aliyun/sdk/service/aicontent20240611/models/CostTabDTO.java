@@ -80,7 +80,10 @@ public class CostTabDTO extends TeaModel {
         } 
 
         /**
-         * key.
+         * <p>Tab UUID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -88,7 +91,10 @@ public class CostTabDTO extends TeaModel {
         }
 
         /**
-         * label.
+         * <p>Tab display name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>全部</p>
          */
         public Builder label(String label) {
             this.label = label;
@@ -96,7 +102,7 @@ public class CostTabDTO extends TeaModel {
         }
 
         /**
-         * modelTypes.
+         * <p>List of associated model types</p>
          */
         public Builder modelTypes(java.util.List<String> modelTypes) {
             this.modelTypes = modelTypes;

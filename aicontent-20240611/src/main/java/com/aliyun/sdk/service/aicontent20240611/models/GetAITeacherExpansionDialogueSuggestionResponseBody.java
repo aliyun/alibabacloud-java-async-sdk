@@ -119,7 +119,10 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
         } 
 
         /**
-         * data.
+         * <p>A container for the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +243,10 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
             } 
 
             /**
-             * chineseResult.
+             * <p>The Chinese translation of the suggested response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>谢谢莉莉.你喜欢吃肉吗，莉莉？</p>
              */
             public Builder chineseResult(String chineseResult) {
                 this.chineseResult = chineseResult;
@@ -233,7 +254,10 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
             }
 
             /**
-             * englishResult.
+             * <p>The suggested response in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Thanks, Lily. Do you like meat, Lily?</p>
              */
             public Builder englishResult(String englishResult) {
                 this.englishResult = englishResult;

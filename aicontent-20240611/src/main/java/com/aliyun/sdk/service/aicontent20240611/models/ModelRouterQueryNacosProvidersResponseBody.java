@@ -119,7 +119,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The fault message code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +230,7 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * async.
+             * <p>The asynchronous call identifier.</p>
              */
             public Builder async(Boolean async) {
                 this.async = async;
@@ -331,7 +349,7 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * extensions.
+             * <p>The extension configuration parameters of the model, stored as key-value pairs for additional model behavior configuration.</p>
              */
             public Builder extensions(Extensions extensions) {
                 this.extensions = extensions;
@@ -339,7 +357,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * identifier.
+             * <p>The model identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca90f359956e94367470c38676</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -347,7 +368,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * inOut.
+             * <p>The input type and output type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder inOut(String inOut) {
                 this.inOut = inOut;
@@ -355,7 +379,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * inputToken.
+             * <p>The input token limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32K</p>
              */
             public Builder inputToken(String inputToken) {
                 this.inputToken = inputToken;
@@ -363,7 +390,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * outputToken.
+             * <p>The output token limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8K</p>
              */
             public Builder outputToken(String outputToken) {
                 this.outputToken = outputToken;
@@ -371,7 +401,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The feature type or capability category of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chat</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -464,7 +497,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * baseUrl.
+             * <p>The base URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></p>
              */
             public Builder baseUrl(String baseUrl) {
                 this.baseUrl = baseUrl;
@@ -472,7 +508,7 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * models.
+             * <p>The list of models.</p>
              */
             public Builder models(java.util.List<Models> models) {
                 this.models = models;
@@ -480,7 +516,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The provider name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>通义千问</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -488,7 +527,10 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * symbol.
+             * <p>The provider identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen</p>
              */
             public Builder symbol(String symbol) {
                 this.symbol = symbol;

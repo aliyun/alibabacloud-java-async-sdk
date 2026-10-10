@@ -59,7 +59,10 @@ public class ModelRouterSearchClientTreeRequest extends Request {
         } 
 
         /**
-         * keyword.
+         * <p>The search keyword, which can be a department name, username, or phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D Department</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);

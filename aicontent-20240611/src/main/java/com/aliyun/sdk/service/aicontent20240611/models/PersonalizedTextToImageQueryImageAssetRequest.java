@@ -74,7 +74,10 @@ public class PersonalizedTextToImageQueryImageAssetRequest extends Request {
         } 
 
         /**
-         * encodeFormat.
+         * <p>The image encoding format. For example, specify <code>base64</code> to receive the image data as a Base64-encoded string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base64</p>
          */
         public Builder encodeFormat(String encodeFormat) {
             this.putQueryParameter("encodeFormat", encodeFormat);
@@ -83,6 +86,7 @@ public class PersonalizedTextToImageQueryImageAssetRequest extends Request {
         }
 
         /**
+         * <p>The image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

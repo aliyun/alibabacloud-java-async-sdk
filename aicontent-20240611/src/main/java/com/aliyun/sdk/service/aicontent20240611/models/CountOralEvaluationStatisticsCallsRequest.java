@@ -59,7 +59,7 @@ public class CountOralEvaluationStatisticsCallsRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(OralEvaluationStatisticsCallsCountRequest body) {
             this.putBodyParameter("body", body);

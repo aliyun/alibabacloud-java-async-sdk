@@ -101,7 +101,10 @@ public class ModelRouterQueryUserListRequest extends Request {
         } 
 
         /**
-         * keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -110,7 +113,10 @@ public class ModelRouterQueryUserListRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -119,7 +125,10 @@ public class ModelRouterQueryUserListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -128,7 +137,10 @@ public class ModelRouterQueryUserListRequest extends Request {
         }
 
         /**
-         * phone.
+         * <p>Specifies the phone number for exact matching (not fuzzy). When specified together with keyword, the two conditions are combined with AND, meaning both must be satisfied. If not specified, no filtering by phone number is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13800000000</p>
          */
         public Builder phone(String phone) {
             this.putQueryParameter("phone", phone);

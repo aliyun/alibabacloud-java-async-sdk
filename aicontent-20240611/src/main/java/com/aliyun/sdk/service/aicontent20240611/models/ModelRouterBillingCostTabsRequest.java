@@ -73,7 +73,10 @@ public class ModelRouterBillingCostTabsRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);

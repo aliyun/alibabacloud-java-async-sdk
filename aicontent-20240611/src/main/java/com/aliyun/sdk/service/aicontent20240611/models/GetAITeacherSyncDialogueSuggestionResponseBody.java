@@ -119,7 +119,10 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The object that contains the result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code returned when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message returned when the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>A unique identifier for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +243,10 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
             } 
 
             /**
-             * chineseResult.
+             * <p>The assistant\&quot;s suggestion in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>谢谢莉莉.你喜欢吃肉吗，莉莉？</p>
              */
             public Builder chineseResult(String chineseResult) {
                 this.chineseResult = chineseResult;
@@ -233,7 +254,10 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
             }
 
             /**
-             * englishResult.
+             * <p>The assistant\&quot;s suggestion in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Thanks, Lily. Do you like meat, Lily?</p>
              */
             public Builder englishResult(String englishResult) {
                 this.englishResult = englishResult;

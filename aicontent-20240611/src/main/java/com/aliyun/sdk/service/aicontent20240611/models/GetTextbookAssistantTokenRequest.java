@@ -75,6 +75,7 @@ public class GetTextbookAssistantTokenRequest extends Request {
         } 
 
         /**
+         * <p>The device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetTextbookAssistantTokenRequest extends Request {
         }
 
         /**
+         * <p>The device model.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

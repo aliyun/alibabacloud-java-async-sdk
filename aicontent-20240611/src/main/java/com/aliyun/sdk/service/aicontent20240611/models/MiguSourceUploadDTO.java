@@ -93,7 +93,10 @@ public class MiguSourceUploadDTO extends TeaModel {
         } 
 
         /**
-         * expiresAt.
+         * <p>The expiration time of the upload URL in RFC 3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-28T12:00:00Z</p>
          */
         public Builder expiresAt(String expiresAt) {
             this.expiresAt = expiresAt;
@@ -101,7 +104,10 @@ public class MiguSourceUploadDTO extends TeaModel {
         }
 
         /**
-         * fileType.
+         * <p>The type of the source file (uppercase). Valid values: VIDEO, IMAGE, AUDIO, and TEXT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIDEO</p>
          */
         public Builder fileType(String fileType) {
             this.fileType = fileType;
@@ -109,7 +115,10 @@ public class MiguSourceUploadDTO extends TeaModel {
         }
 
         /**
-         * sourceId.
+         * <p>The unique identifier of the source file, used for subsequent generation tasks and downloads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3f2a1b9c8d7e4f60a1b2c3d4e5f6a7b8</p>
          */
         public Builder sourceId(String sourceId) {
             this.sourceId = sourceId;
@@ -117,7 +126,10 @@ public class MiguSourceUploadDTO extends TeaModel {
         }
 
         /**
-         * uploadUrl.
+         * <p>The OSS pre-signed upload URL. Use the PUT method to upload the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bucket.oss-cn-beijing.aliyuncs.com/pipeline/source/xxx.mp4?Expires=1700000000&Signature=xxx">https://bucket.oss-cn-beijing.aliyuncs.com/pipeline/source/xxx.mp4?Expires=1700000000&amp;Signature=xxx</a></p>
          */
         public Builder uploadUrl(String uploadUrl) {
             this.uploadUrl = uploadUrl;

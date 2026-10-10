@@ -93,7 +93,10 @@ public class ModelRowDTO extends TeaModel {
         } 
 
         /**
-         * modelCode.
+         * <p>Model identity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
          */
         public Builder modelCode(String modelCode) {
             this.modelCode = modelCode;
@@ -101,7 +104,10 @@ public class ModelRowDTO extends TeaModel {
         }
 
         /**
-         * modelId.
+         * <p>Model ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder modelId(Long modelId) {
             this.modelId = modelId;
@@ -109,7 +115,10 @@ public class ModelRowDTO extends TeaModel {
         }
 
         /**
-         * modelName.
+         * <p>Model name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通义千问-Plus</p>
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
@@ -117,7 +126,10 @@ public class ModelRowDTO extends TeaModel {
         }
 
         /**
-         * values.
+         * <p>Metric value mapping, where the key is the metric name and the value is the numeric value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;total_calls\&quot;:21,\&quot;video_duration\&quot;:210,\&quot;total_amount\&quot;:126,\&quot;image_count\&quot;:0}&quot;</p>
          */
         public Builder values(String values) {
             this.values = values;

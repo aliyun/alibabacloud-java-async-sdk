@@ -105,6 +105,7 @@ public class ExecuteTextbookAssistantRefineByContextRequest extends Request {
         } 
 
         /**
+         * <p>The authorization token for the API call. You can obtain this token by calling the authorization API for the &quot;English Textbook AI Teacher&quot; feature.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class ExecuteTextbookAssistantRefineByContextRequest extends Request {
         }
 
         /**
+         * <p>The conversation ID for the current turn.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class ExecuteTextbookAssistantRefineByContextRequest extends Request {
         }
 
         /**
+         * <p>Specifies the scenario. Valid values are <code>SYNC</code> for synchronous practice and <code>EXPAND</code> for expansion practice.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class ExecuteTextbookAssistantRefineByContextRequest extends Request {
         }
 
         /**
+         * <p>The ID of the user\&quot;s message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

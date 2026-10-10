@@ -119,7 +119,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>A unique identifier for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +295,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
             } 
 
             /**
-             * chineseResult.
+             * <p>The AI teacher\&quot;s response in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder chineseResult(String chineseResult) {
                 this.chineseResult = chineseResult;
@@ -285,7 +306,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * englishResult.
+             * <p>The AI teacher\&quot;s response in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder englishResult(String englishResult) {
                 this.englishResult = englishResult;
@@ -293,7 +317,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * isFinish.
+             * <p>Indicates whether the dialogue is finished.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isFinish(Boolean isFinish) {
                 this.isFinish = isFinish;
@@ -301,7 +328,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * isOffTopicControl.
+             * <p>Indicates whether the response is off-topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isOffTopicControl(Boolean isOffTopicControl) {
                 this.isOffTopicControl = isOffTopicControl;
@@ -309,7 +339,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * isOnTopic.
+             * <p>Indicates whether the response is on-topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isOnTopic(Boolean isOnTopic) {
                 this.isOnTopic = isOnTopic;
@@ -317,7 +350,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * questionIndex.
+             * <p>The index of the current question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder questionIndex(Integer questionIndex) {
                 this.questionIndex = questionIndex;

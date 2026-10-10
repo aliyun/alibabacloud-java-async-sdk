@@ -129,7 +129,10 @@ public class ModelRouterCreateBalanceTransactionRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -138,7 +141,10 @@ public class ModelRouterCreateBalanceTransactionRequest extends Request {
         }
 
         /**
-         * amount.
+         * <p>The transaction amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         public Builder amount(Double amount) {
             this.putBodyParameter("amount", amount);
@@ -147,7 +153,10 @@ public class ModelRouterCreateBalanceTransactionRequest extends Request {
         }
 
         /**
-         * balanceType.
+         * <p>The target balance pool type. If not specified, the default value is permanent. Valid values: permanent: permanent balance pool (the balance never expires). monthly: monthly balance pool (the balance is automatically cleared at the beginning of each month).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amount</p>
          */
         public Builder balanceType(String balanceType) {
             this.putBodyParameter("balanceType", balanceType);
@@ -156,7 +165,10 @@ public class ModelRouterCreateBalanceTransactionRequest extends Request {
         }
 
         /**
-         * idempotencyKey.
+         * <p>The idempotency key. UUID v4 format is recommended. The maximum length is 32 characters. Duplicate submissions with the same key are not executed more than once.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400e29b41d4a716446655440000</p>
          */
         public Builder idempotencyKey(String idempotencyKey) {
             this.putBodyParameter("idempotencyKey", idempotencyKey);
@@ -165,7 +177,10 @@ public class ModelRouterCreateBalanceTransactionRequest extends Request {
         }
 
         /**
-         * remark.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Recharge</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
@@ -174,7 +189,10 @@ public class ModelRouterCreateBalanceTransactionRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The transaction type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>recharge</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

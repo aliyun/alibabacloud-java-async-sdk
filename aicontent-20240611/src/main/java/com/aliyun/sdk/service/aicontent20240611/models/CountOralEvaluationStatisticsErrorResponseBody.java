@@ -119,7 +119,10 @@ public class CountOralEvaluationStatisticsErrorResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>An array containing the error statistics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(java.util.List<OralEvaluationStatisticsErrorCountResponse> data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class CountOralEvaluationStatisticsErrorResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code returned if the request fails. This parameter is returned only when <code>success</code> is <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class CountOralEvaluationStatisticsErrorResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message returned if the request fails. This parameter is returned only when <code>success</code> is <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class CountOralEvaluationStatisticsErrorResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class CountOralEvaluationStatisticsErrorResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class CountOralEvaluationStatisticsErrorResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p><code>true</code> if the request succeeded; <code>false</code> otherwise.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

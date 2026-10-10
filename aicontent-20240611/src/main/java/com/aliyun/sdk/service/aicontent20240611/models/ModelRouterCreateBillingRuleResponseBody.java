@@ -119,7 +119,7 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The fault code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -381,7 +396,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * billingType.
+             * <p>The billing type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>token_tiered</p>
              */
             public Builder billingType(String billingType) {
                 this.billingType = billingType;
@@ -389,7 +407,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
             }
 
             /**
-             * deleteTag.
+             * <p>The deletion tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deleteTag(Integer deleteTag) {
                 this.deleteTag = deleteTag;
@@ -397,7 +418,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
             }
 
             /**
-             * effectiveTime.
+             * <p>The effective period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01T00:00:00Z</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -405,7 +429,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
             }
 
             /**
-             * expireTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01T00:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -413,7 +440,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01T00:00:00Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -421,7 +451,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01T00:00:00Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -429,7 +462,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -437,7 +473,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
             }
 
             /**
-             * modelCode.
+             * <p>The model code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder modelCode(String modelCode) {
                 this.modelCode = modelCode;
@@ -445,7 +484,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
             }
 
             /**
-             * modelId.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder modelId(Long modelId) {
                 this.modelId = modelId;
@@ -453,7 +495,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
             }
 
             /**
-             * modelName.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen-Plus</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -461,7 +506,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
             }
 
             /**
-             * modelType.
+             * <p>The model type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat</p>
              */
             public Builder modelType(String modelType) {
                 this.modelType = modelType;
@@ -469,7 +517,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
             }
 
             /**
-             * pricingConfig.
+             * <p>The pricing configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder pricingConfig(Object pricingConfig) {
                 this.pricingConfig = pricingConfig;
@@ -477,7 +528,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
             }
 
             /**
-             * symbol.
+             * <p>The vendor identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba</p>
              */
             public Builder symbol(String symbol) {
                 this.symbol = symbol;
@@ -485,7 +539,10 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

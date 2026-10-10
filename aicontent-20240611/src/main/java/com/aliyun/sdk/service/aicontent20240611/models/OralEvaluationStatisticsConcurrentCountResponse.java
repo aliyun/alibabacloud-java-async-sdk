@@ -82,6 +82,7 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends Response {
         } 
 
         /**
+         * <p>Statistical data for the project.</p>
          * <p>This parameter is required.</p>
          */
         @Override
@@ -91,7 +92,11 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends Response {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @Override
         public Builder projectId(String projectId) {
@@ -161,6 +166,7 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends Response {
             } 
 
             /**
+             * <p>The count of the item.</p>
              * <p>This parameter is required.</p>
              */
             public Builder count(Integer count) {
@@ -169,7 +175,11 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends Response {
             }
 
             /**
+             * <p>The name of the statistical item.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -237,7 +247,7 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends Response {
             } 
 
             /**
-             * Data.
+             * <p>A list of data nodes.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -245,7 +255,11 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends Response {
             }
 
             /**
+             * <p>The app key.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a0007g7</p>
              */
             public Builder applicationAccessId(String applicationAccessId) {
                 this.applicationAccessId = applicationAccessId;
@@ -313,7 +327,7 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends Response {
             } 
 
             /**
-             * ApplicationData.
+             * <p>A list of application data.</p>
              */
             public Builder applicationData(java.util.List<ApplicationData> applicationData) {
                 this.applicationData = applicationData;
@@ -321,7 +335,11 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends Response {
             }
 
             /**
+             * <p>The internal application ID.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder applicationInternalId(String applicationInternalId) {
                 this.applicationInternalId = applicationInternalId;

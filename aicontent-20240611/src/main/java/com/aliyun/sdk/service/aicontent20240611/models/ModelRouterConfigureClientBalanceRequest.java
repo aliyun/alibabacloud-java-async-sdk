@@ -101,7 +101,10 @@ public class ModelRouterConfigureClientBalanceRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -110,7 +113,15 @@ public class ModelRouterConfigureClientBalanceRequest extends Request {
         }
 
         /**
-         * balanceType.
+         * <p>The balance type. Valid values:</p>
+         * <ul>
+         * <li>amount: monetary amount.</li>
+         * <li>tokens: token count.</li>
+         * </ul>
+         * <p>This parameter is required when you enable balance throttling for the first time. Once set, it cannot be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amount</p>
          */
         public Builder balanceType(String balanceType) {
             this.putBodyParameter("balanceType", balanceType);
@@ -119,7 +130,10 @@ public class ModelRouterConfigureClientBalanceRequest extends Request {
         }
 
         /**
-         * enableBalance.
+         * <p>Specifies whether to enable balance-based throttling. Once enabled, balance throttling cannot be disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableBalance(Boolean enableBalance) {
             this.putBodyParameter("enableBalance", enableBalance);
@@ -128,7 +142,10 @@ public class ModelRouterConfigureClientBalanceRequest extends Request {
         }
 
         /**
-         * initialBalance.
+         * <p>The initial balance. This parameter takes effect only when balance throttling is enabled for the first time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         public Builder initialBalance(Double initialBalance) {
             this.putBodyParameter("initialBalance", initialBalance);

@@ -145,7 +145,7 @@ public class ModelRouterQueryModelGroupModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -153,7 +153,10 @@ public class ModelRouterQueryModelGroupModelsResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error message code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -161,7 +164,10 @@ public class ModelRouterQueryModelGroupModelsResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -169,7 +175,10 @@ public class ModelRouterQueryModelGroupModelsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -177,7 +186,10 @@ public class ModelRouterQueryModelGroupModelsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -185,7 +197,10 @@ public class ModelRouterQueryModelGroupModelsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>This field is not used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxx-xxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -193,7 +208,10 @@ public class ModelRouterQueryModelGroupModelsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +219,10 @@ public class ModelRouterQueryModelGroupModelsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -293,7 +314,7 @@ public class ModelRouterQueryModelGroupModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * list.
+             * <p>The elements.</p>
              */
             public Builder list(java.util.List<ModelGroupModelDTO> list) {
                 this.list = list;
@@ -301,7 +322,10 @@ public class ModelRouterQueryModelGroupModelsResponseBody extends TeaModel {
             }
 
             /**
-             * page.
+             * <p>The requested page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -309,7 +333,10 @@ public class ModelRouterQueryModelGroupModelsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -317,7 +344,10 @@ public class ModelRouterQueryModelGroupModelsResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

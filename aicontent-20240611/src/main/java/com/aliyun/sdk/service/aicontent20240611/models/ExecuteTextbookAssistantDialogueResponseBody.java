@@ -119,7 +119,7 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBFA232A-1176-50E6-95AE-50F7A62A28AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -251,7 +266,10 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
             } 
 
             /**
-             * chineseResult.
+             * <p>The Textbook Assistant\&quot;s reply in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>让我们再看一遍课文。迈克说: “我是迈克·布莱克。”你能试着像迈克那样说吗？</p>
              */
             public Builder chineseResult(String chineseResult) {
                 this.chineseResult = chineseResult;
@@ -259,7 +277,10 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * englishResult.
+             * <p>The Textbook Assistant\&quot;s reply in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Let\&quot;s look at the text again. Mike says, \&quot;I\&quot;m Mike Black.\&quot; Can you try saying it like Mike?</p>
              */
             public Builder englishResult(String englishResult) {
                 this.englishResult = englishResult;
@@ -267,7 +288,10 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * isFinish.
+             * <p>Indicates whether the dialogue is finished.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isFinish(Boolean isFinish) {
                 this.isFinish = isFinish;
@@ -275,7 +299,10 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * isTaskCompleted.
+             * <p>Indicates whether the task is completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isTaskCompleted(Boolean isTaskCompleted) {
                 this.isTaskCompleted = isTaskCompleted;
@@ -368,7 +395,10 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
             } 
 
             /**
-             * assistant.
+             * <p>The ID of the Textbook Assistant\&quot;s message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6788f4935bdfc807f077a984</p>
              */
             public Builder assistant(String assistant) {
                 this.assistant = assistant;
@@ -376,7 +406,10 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * chatId.
+             * <p>The chat ID for this turn.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6788e0b475a4631ffc626722</p>
              */
             public Builder chatId(String chatId) {
                 this.chatId = chatId;
@@ -384,7 +417,7 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * result.
+             * <p>The returned data.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -392,7 +425,10 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
             }
 
             /**
-             * user.
+             * <p>The ID of the user\&quot;s reply.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6788f4905bdfc807f077a982</p>
              */
             public Builder user(String user) {
                 this.user = user;

@@ -119,7 +119,7 @@ public class GetTextbookAssistantTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class GetTextbookAssistantTokenResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class GetTextbookAssistantTokenResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class GetTextbookAssistantTokenResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,7 @@ public class GetTextbookAssistantTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0A5E9849-A2F0-551D-A7D8-1A8118557BAB</p>
@@ -162,7 +171,16 @@ public class GetTextbookAssistantTokenResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The API call succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The API call failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +246,10 @@ public class GetTextbookAssistantTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * authToken.
+             * <p>The authorization token. Use this token to make API calls to the English textbook-style AI teacher service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tc_197bf5bb81889cc79eb51ae9b8c0cea3</p>
              */
             public Builder authToken(String authToken) {
                 this.authToken = authToken;
@@ -236,7 +257,10 @@ public class GetTextbookAssistantTokenResponseBody extends TeaModel {
             }
 
             /**
-             * expire.
+             * <p>The expiration time of the authorization token, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5400</p>
              */
             public Builder expire(Integer expire) {
                 this.expire = expire;

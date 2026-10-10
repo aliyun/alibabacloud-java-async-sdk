@@ -216,7 +216,10 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
         } 
 
         /**
-         * apiKeyId.
+         * <p>Optional. Filters by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder apiKeyId(Long apiKeyId) {
             this.putQueryParameter("apiKeyId", apiKeyId);
@@ -225,7 +228,10 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
         }
 
         /**
-         * clientId.
+         * <p>The department ID used to filter results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putQueryParameter("clientId", clientId);
@@ -234,7 +240,10 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
         }
 
         /**
-         * clientIds.
+         * <p>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with clientId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder clientIds(String clientIds) {
             this.putQueryParameter("clientIds", clientIds);
@@ -243,6 +252,7 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
         }
 
         /**
+         * <p>The end time, in UNIX timestamp (seconds).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +277,10 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
         }
 
         /**
-         * memberUserIds.
+         * <p>Optional. Filters by member IDs, separated by commas. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001,30002</p>
          */
         public Builder memberUserIds(String memberUserIds) {
             this.putQueryParameter("memberUserIds", memberUserIds);
@@ -276,6 +289,7 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
         }
 
         /**
+         * <p>The model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,7 +314,10 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -309,7 +326,10 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * <p>The page number. This parameter takes priority over the page parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -318,7 +338,10 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -327,6 +350,7 @@ public class ModelRouterQueryCostModelDetailRequest extends Request {
         }
 
         /**
+         * <p>The start time, in UNIX timestamp (seconds).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

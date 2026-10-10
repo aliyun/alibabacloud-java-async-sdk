@@ -119,7 +119,7 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,7 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2F2ABF4B-A4F6-5EC7-B287-7EF5B156F1ED</p>
@@ -162,7 +171,10 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +240,10 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
             } 
 
             /**
-             * chineseResult.
+             * <p>The Chinese translation of the AI assistant\&quot;s reply.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>根据文章，迈克·布莱克是如何介绍自己的？</p>
              */
             public Builder chineseResult(String chineseResult) {
                 this.chineseResult = chineseResult;
@@ -236,7 +251,10 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
             }
 
             /**
-             * englishResult.
+             * <p>The AI assistant\&quot;s reply in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Good evening! From the book, how does Mike Black introduce himself?</p>
              */
             public Builder englishResult(String englishResult) {
                 this.englishResult = englishResult;
@@ -329,7 +347,10 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
             } 
 
             /**
-             * assistant.
+             * <p>The ID of the AI assistant\&quot;s reply.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6788e0b4b54c5268c1b78638</p>
              */
             public Builder assistant(String assistant) {
                 this.assistant = assistant;
@@ -337,7 +358,10 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
             }
 
             /**
-             * chatId.
+             * <p>The conversation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6788e0b475a4631ffc626722</p>
              */
             public Builder chatId(String chatId) {
                 this.chatId = chatId;
@@ -345,7 +369,7 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
             }
 
             /**
-             * result.
+             * <p>Contains the result data.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -353,7 +377,10 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
             }
 
             /**
-             * user.
+             * <p>The ID of the user\&quot;s reply.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6788e0b45bdfc807f077a5a1</p>
              */
             public Builder user(String user) {
                 this.user = user;

@@ -163,7 +163,13 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
         } 
 
         /**
-         * essayOutline.
+         * <p>The essay outline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Title: The Importance of Reading
+         * I. Introduction
+         * II. Body
+         * III. Conclusion</p>
          */
         public Builder essayOutline(String essayOutline) {
             this.putBodyParameter("essayOutline", essayOutline);
@@ -172,6 +178,7 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
+         * <p>The essay requirements.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +191,7 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
+         * <p>The essay topic.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,6 +204,9 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
+         * <p>The essay type. Valid values:</p>
+         * <p><code>outline</code>: an outline</p>
+         * <p>essay: essay</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +219,10 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
-         * essayWordCount.
+         * <p>The required word count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder essayWordCount(Long essayWordCount) {
             this.putBodyParameter("essayWordCount", essayWordCount);
@@ -217,6 +231,7 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
+         * <p>The student\&quot;s grade level.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +244,7 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
+         * <p>The response mode. For example, set this value to <code>streaming</code> to receive server-sent events.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +257,7 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -59,7 +59,10 @@ public class ModelRouterDeleteApiKeyRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);

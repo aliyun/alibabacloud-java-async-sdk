@@ -129,7 +129,10 @@ public class ModelRouterQueryModelGroupListRequest extends Request {
         } 
 
         /**
-         * keyword.
+         * <p>The keyword for fuzzy match by group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Professional</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -138,7 +141,10 @@ public class ModelRouterQueryModelGroupListRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -147,7 +153,10 @@ public class ModelRouterQueryModelGroupListRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>An unused parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxx-xxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -156,7 +165,10 @@ public class ModelRouterQueryModelGroupListRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -165,7 +177,10 @@ public class ModelRouterQueryModelGroupListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -174,7 +189,10 @@ public class ModelRouterQueryModelGroupListRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The group type filter. Valid values: system, manual, and all. Default value: all.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

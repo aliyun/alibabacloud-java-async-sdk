@@ -87,7 +87,10 @@ public class ModelRouterCreateConversationRequest extends Request {
         } 
 
         /**
-         * chatData.
+         * <p>The conversation data in JSON format, containing message records for each model. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;stream&quot;:true,&quot;messages&quot;:[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;1+1&quot;}],&quot;model&quot;:&quot;qwen/qwen-max/r0&quot;,&quot;stream_options&quot;:{&quot;include_usage&quot;:true}}</p>
          */
         public Builder chatData(String chatData) {
             this.putBodyParameter("chatData", chatData);
@@ -96,7 +99,10 @@ public class ModelRouterCreateConversationRequest extends Request {
         }
 
         /**
-         * modelIds.
+         * <p>The list of model IDs, specified as a JSON array string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder modelIds(String modelIds) {
             this.putBodyParameter("modelIds", modelIds);
@@ -105,7 +111,10 @@ public class ModelRouterCreateConversationRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>The conversation title. If not specified, the title is automatically extracted from the first user message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);

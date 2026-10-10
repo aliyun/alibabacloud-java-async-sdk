@@ -119,7 +119,7 @@ public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data returned by the API.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,7 @@ public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9EB79C1E-36C2-5777-BED6-C23A98DF0637</p>
@@ -162,7 +171,10 @@ public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -215,7 +227,10 @@ public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
             } 
 
             /**
-             * result.
+             * <p>The translated text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>根据文章，迈克·布莱克是如何介绍自己的？</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -269,7 +284,7 @@ public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
             } 
 
             /**
-             * result.
+             * <p>The result object.</p>
              */
             public Builder result(Result result) {
                 this.result = result;

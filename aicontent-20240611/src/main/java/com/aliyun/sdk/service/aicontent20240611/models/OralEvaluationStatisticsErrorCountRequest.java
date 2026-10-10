@@ -123,7 +123,10 @@ public class OralEvaluationStatisticsErrorCountRequest extends Request {
         } 
 
         /**
-         * applicationAccessId.
+         * <p>appId,appkey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a0007g7</p>
          */
         public Builder applicationAccessId(String applicationAccessId) {
             this.applicationAccessId = applicationAccessId;
@@ -131,7 +134,10 @@ public class OralEvaluationStatisticsErrorCountRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>End time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-22 06:24:53</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -139,7 +145,7 @@ public class OralEvaluationStatisticsErrorCountRequest extends Request {
         }
 
         /**
-         * errorCode.
+         * <p>List of error codes</p>
          */
         public Builder errorCode(java.util.List<String> errorCode) {
             this.errorCode = errorCode;
@@ -147,7 +153,10 @@ public class OralEvaluationStatisticsErrorCountRequest extends Request {
         }
 
         /**
-         * granularity.
+         * <p>Query granularity (Hour, Day, Month)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAY</p>
          */
         public Builder granularity(String granularity) {
             this.granularity = granularity;
@@ -155,7 +164,10 @@ public class OralEvaluationStatisticsErrorCountRequest extends Request {
         }
 
         /**
-         * projectId.
+         * <p>Project ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -163,7 +175,10 @@ public class OralEvaluationStatisticsErrorCountRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>Start time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-27 09:32:00</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

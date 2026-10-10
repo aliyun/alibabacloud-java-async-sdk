@@ -145,7 +145,7 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The list of discount modification logs.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -153,7 +153,10 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -161,7 +164,10 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -169,7 +175,10 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -177,7 +186,7 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>maxResults</p>
+         * <p>The maximum number of results returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -188,7 +197,7 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>nextToken</p>
+         * <p>The token to use in a subsequent request to retrieve the next page of results. If this parameter is not returned, all results have been retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx-xxx-xxxxx</p>
@@ -199,7 +208,10 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -207,7 +219,10 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates if the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -364,7 +379,10 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * clientId.
+             * <p>The client ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder clientId(Long clientId) {
                 this.clientId = clientId;
@@ -372,7 +390,10 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
             }
 
             /**
-             * deleteTag.
+             * <p>A flag that indicates whether the record is deleted. A value of 0 means the record is active.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deleteTag(Long deleteTag) {
                 this.deleteTag = deleteTag;
@@ -380,7 +401,10 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
             }
 
             /**
-             * discount.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder discount(Float discount) {
                 this.discount = discount;
@@ -388,7 +412,10 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
             }
 
             /**
-             * effectiveTime.
+             * <p>The time when the discount took effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-01 00:00:00</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -396,7 +423,10 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
             }
 
             /**
-             * expireTime.
+             * <p>The time when the discount expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-10 00:00:00</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -404,7 +434,10 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>The time when the record was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01T00:00:00Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -412,7 +445,10 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>The time when the record was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01T00:00:00Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -420,7 +456,10 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -428,7 +467,10 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
             }
 
             /**
-             * remark.
+             * <p>The remark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>备注</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;

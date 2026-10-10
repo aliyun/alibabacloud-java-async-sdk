@@ -201,7 +201,10 @@ public class ModelRouterQueryBillingDetailsRequest extends Request {
         } 
 
         /**
-         * apiKeyId.
+         * <p>Optional. Filters results by API Key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder apiKeyId(Long apiKeyId) {
             this.putQueryParameter("apiKeyId", apiKeyId);
@@ -210,7 +213,10 @@ public class ModelRouterQueryBillingDetailsRequest extends Request {
         }
 
         /**
-         * clientId.
+         * <p>Optional. Filters results by department ID (single value).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putQueryParameter("clientId", clientId);
@@ -219,7 +225,10 @@ public class ModelRouterQueryBillingDetailsRequest extends Request {
         }
 
         /**
-         * clientIds.
+         * <p>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with clientId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder clientIds(String clientIds) {
             this.putQueryParameter("clientIds", clientIds);
@@ -228,6 +237,7 @@ public class ModelRouterQueryBillingDetailsRequest extends Request {
         }
 
         /**
+         * <p>The query end time, in UNIX timestamp (seconds).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +250,10 @@ public class ModelRouterQueryBillingDetailsRequest extends Request {
         }
 
         /**
-         * modelCodes.
+         * <p>Optional. Filters results by model code. Separate multiple values with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus,qwen-max</p>
          */
         public Builder modelCodes(String modelCodes) {
             this.putQueryParameter("modelCodes", modelCodes);
@@ -249,7 +262,10 @@ public class ModelRouterQueryBillingDetailsRequest extends Request {
         }
 
         /**
-         * modelId.
+         * <p>Optional. Filters results by model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder modelId(Long modelId) {
             this.putQueryParameter("modelId", modelId);
@@ -258,7 +274,10 @@ public class ModelRouterQueryBillingDetailsRequest extends Request {
         }
 
         /**
-         * modelTypes.
+         * <p>Optional. Filters results by model type. Separate multiple values with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chat</p>
          */
         public Builder modelTypes(String modelTypes) {
             this.putQueryParameter("modelTypes", modelTypes);
@@ -267,7 +286,10 @@ public class ModelRouterQueryBillingDetailsRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -276,7 +298,10 @@ public class ModelRouterQueryBillingDetailsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -285,7 +310,10 @@ public class ModelRouterQueryBillingDetailsRequest extends Request {
         }
 
         /**
-         * requestId.
+         * <p>Optional. Filters results by exact match of the request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatcmpl-abc123def456</p>
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("requestId", requestId);
@@ -294,6 +322,7 @@ public class ModelRouterQueryBillingDetailsRequest extends Request {
         }
 
         /**
+         * <p>The query start time, in UNIX timestamp (seconds).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

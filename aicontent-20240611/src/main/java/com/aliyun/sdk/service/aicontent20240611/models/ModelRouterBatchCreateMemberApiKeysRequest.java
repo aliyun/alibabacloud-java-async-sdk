@@ -101,7 +101,10 @@ public class ModelRouterBatchCreateMemberApiKeysRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -110,7 +113,10 @@ public class ModelRouterBatchCreateMemberApiKeysRequest extends Request {
         }
 
         /**
-         * expireAt.
+         * <p>The expiration time in RFC 3339 format. This parameter is optional. If not specified, the key is permanently valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2027-01-01T00:00:00Z</p>
          */
         public Builder expireAt(String expireAt) {
             this.putBodyParameter("expireAt", expireAt);
@@ -119,7 +125,10 @@ public class ModelRouterBatchCreateMemberApiKeysRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The key name. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -128,7 +137,10 @@ public class ModelRouterBatchCreateMemberApiKeysRequest extends Request {
         }
 
         /**
-         * userIds.
+         * <p>The list of member user IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder userIds(java.util.List<Long> userIds) {
             this.putBodyParameter("userIds", userIds);

@@ -93,7 +93,7 @@ public class CostQueryModelsDTO extends TeaModel {
         } 
 
         /**
-         * columns.
+         * <p>List of column definitions</p>
          */
         public Builder columns(java.util.List<MetricDefRespDTO> columns) {
             this.columns = columns;
@@ -101,7 +101,10 @@ public class CostQueryModelsDTO extends TeaModel {
         }
 
         /**
-         * idField.
+         * <p>Field Name of ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model_id</p>
          */
         public Builder idField(String idField) {
             this.idField = idField;
@@ -109,7 +112,10 @@ public class CostQueryModelsDTO extends TeaModel {
         }
 
         /**
-         * nameField.
+         * <p>Field Name of Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model_name</p>
          */
         public Builder nameField(String nameField) {
             this.nameField = nameField;
@@ -117,7 +123,7 @@ public class CostQueryModelsDTO extends TeaModel {
         }
 
         /**
-         * rows.
+         * <p>List of model data rows</p>
          */
         public Builder rows(java.util.List<ModelRowDTO> rows) {
             this.rows = rows;

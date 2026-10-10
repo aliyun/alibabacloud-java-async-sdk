@@ -119,7 +119,10 @@ public class ModelRouterBatchCreateModelResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class ModelRouterBatchCreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The fault code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class ModelRouterBatchCreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class ModelRouterBatchCreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class ModelRouterBatchCreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class ModelRouterBatchCreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +269,10 @@ public class ModelRouterBatchCreateModelResponseBody extends TeaModel {
             } 
 
             /**
-             * created.
+             * <p>The list of models that were successfully created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder created(java.util.List<ModelDTO> created) {
                 this.created = created;
@@ -259,7 +280,10 @@ public class ModelRouterBatchCreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * failCount.
+             * <p>The number of models that failed or were skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -267,7 +291,10 @@ public class ModelRouterBatchCreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * failures.
+             * <p>The list of models that failed or were skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder failures(java.util.List<BatchModelErrorDTO> failures) {
                 this.failures = failures;
@@ -275,7 +302,10 @@ public class ModelRouterBatchCreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * successCount.
+             * <p>The number of models that were successfully created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;

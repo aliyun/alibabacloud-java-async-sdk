@@ -115,7 +115,10 @@ public class ModelRouterUpdateConversationRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The conversation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -124,7 +127,10 @@ public class ModelRouterUpdateConversationRequest extends Request {
         }
 
         /**
-         * chatData.
+         * <p>A JSON string that contains the message history for each model in the conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;messages&quot;:[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;你好&quot;}]}</p>
          */
         public Builder chatData(String chatData) {
             this.putBodyParameter("chatData", chatData);
@@ -133,7 +139,10 @@ public class ModelRouterUpdateConversationRequest extends Request {
         }
 
         /**
-         * messageCount.
+         * <p>The number of messages in the conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder messageCount(Integer messageCount) {
             this.putBodyParameter("messageCount", messageCount);
@@ -142,7 +151,10 @@ public class ModelRouterUpdateConversationRequest extends Request {
         }
 
         /**
-         * modelIds.
+         * <p>A JSON-formatted string that represents an array of model IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2,3]</p>
          */
         public Builder modelIds(String modelIds) {
             this.putBodyParameter("modelIds", modelIds);
@@ -151,7 +163,10 @@ public class ModelRouterUpdateConversationRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>The new conversation title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我的对话</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);

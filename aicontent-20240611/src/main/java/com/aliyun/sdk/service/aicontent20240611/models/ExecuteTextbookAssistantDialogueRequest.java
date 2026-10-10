@@ -105,7 +105,11 @@ public class ExecuteTextbookAssistantDialogueRequest extends Request {
         } 
 
         /**
+         * <p>The authorization token required to call the API. To get this token, use the Textbook Assistant authorization API.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6788e0b475a4631ffc626722</p>
          */
         public Builder authToken(String authToken) {
             this.putBodyParameter("authToken", authToken);
@@ -114,7 +118,11 @@ public class ExecuteTextbookAssistantDialogueRequest extends Request {
         }
 
         /**
+         * <p>The chat ID for this turn.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6788e0b475a4631ffc626722</p>
          */
         public Builder chatId(String chatId) {
             this.putBodyParameter("chatId", chatId);
@@ -123,7 +131,11 @@ public class ExecuteTextbookAssistantDialogueRequest extends Request {
         }
 
         /**
+         * <p>The scenario. Valid values: SYNC for synchronous practice and EXPAND for extended practice.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYNC</p>
          */
         public Builder scenario(String scenario) {
             this.putBodyParameter("scenario", scenario);
@@ -132,7 +144,11 @@ public class ExecuteTextbookAssistantDialogueRequest extends Request {
         }
 
         /**
+         * <p>The user\&quot;s message content.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello</p>
          */
         public Builder userMessage(String userMessage) {
             this.putBodyParameter("userMessage", userMessage);

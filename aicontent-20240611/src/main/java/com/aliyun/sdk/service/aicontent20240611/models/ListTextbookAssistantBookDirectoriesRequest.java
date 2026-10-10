@@ -90,6 +90,7 @@ public class ListTextbookAssistantBookDirectoriesRequest extends Request {
         } 
 
         /**
+         * <p>The API authorization token. You can obtain this token from the authorization API for the AI English teacher feature.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class ListTextbookAssistantBookDirectoriesRequest extends Request {
         }
 
         /**
+         * <p>The book ID. You can obtain this ID from the API for retrieving English textbooks.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class ListTextbookAssistantBookDirectoriesRequest extends Request {
         }
 
         /**
+         * <p>The exercise scenario.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,10 @@ public class ModelRouterMiguUploadSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(MiguSourceUploadDTO data) {
             this.data = data;
@@ -127,7 +130,14 @@ public class ModelRouterMiguUploadSourceResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The business error code. The console passes through the original value without mapping to standard platform error codes. Valid values:</p>
+         * <ul>
+         * <li>ERROR_PARAMETERS: Missing or invalid parameters.</li>
+         * <li>ERROR_SERVER_INTERNAL: Internal error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR_PARAMETERS</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +145,10 @@ public class ModelRouterMiguUploadSourceResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown error</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +156,14 @@ public class ModelRouterMiguUploadSourceResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The business status code. Valid values:</p>
+         * <ul>
+         * <li>0: Success.</li>
+         * <li>400/403/500: Business error. For details, see errCode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +171,10 @@ public class ModelRouterMiguUploadSourceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +182,10 @@ public class ModelRouterMiguUploadSourceResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

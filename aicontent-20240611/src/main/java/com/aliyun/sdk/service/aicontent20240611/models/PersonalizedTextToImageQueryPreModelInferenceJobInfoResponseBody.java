@@ -119,7 +119,10 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         } 
 
         /**
-         * data.
+         * <p>The response data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_ERROR</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未知错误</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +308,10 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
             } 
 
             /**
-             * createTime.
+             * <p>The creation time of the inference job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-25T12:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -298,7 +319,10 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
             }
 
             /**
-             * id.
+             * <p>The inference job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3220</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -306,7 +330,10 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
             }
 
             /**
-             * jobStatus.
+             * <p>The job status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -314,7 +341,10 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
             }
 
             /**
-             * jobTrainProgress.
+             * <p>The job progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder jobTrainProgress(Double jobTrainProgress) {
                 this.jobTrainProgress = jobTrainProgress;
@@ -322,7 +352,10 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
             }
 
             /**
-             * modelId.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>modelId-xxxx-xxxx-xxxx</p>
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -330,7 +363,7 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
             }
 
             /**
-             * <p>promptId</p>
+             * <p>The ID of the prompt used for the job.</p>
              * 
              * <strong>example:</strong>
              * <p>promptId-xxxx-xxxx-xxxx</p>
@@ -341,7 +374,10 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
             }
 
             /**
-             * resultImageUrl.
+             * <p>A list of resource IDs for the generated images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0000.png</p>
              */
             public Builder resultImageUrl(java.util.List<String> resultImageUrl) {
                 this.resultImageUrl = resultImageUrl;

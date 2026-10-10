@@ -237,7 +237,10 @@ public class ModelRouterCreateModelRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The model description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通义千问大模型</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -246,7 +249,10 @@ public class ModelRouterCreateModelRequest extends Request {
         }
 
         /**
-         * extensions.
+         * <p>The extension configuration parameters of the model, stored as a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extensions(String extensions) {
             this.putBodyParameter("extensions", extensions);
@@ -255,7 +261,10 @@ public class ModelRouterCreateModelRequest extends Request {
         }
 
         /**
-         * inOut.
+         * <p>The input and output data types supported by the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder inOut(String inOut) {
             this.putBodyParameter("inOut", inOut);
@@ -264,7 +273,10 @@ public class ModelRouterCreateModelRequest extends Request {
         }
 
         /**
-         * maxInputLength.
+         * <p>The maximum input length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32K</p>
          */
         public Builder maxInputLength(String maxInputLength) {
             this.putBodyParameter("maxInputLength", maxInputLength);
@@ -273,7 +285,10 @@ public class ModelRouterCreateModelRequest extends Request {
         }
 
         /**
-         * maxOutputLength.
+         * <p>The maximum output length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8K</p>
          */
         public Builder maxOutputLength(String maxOutputLength) {
             this.putBodyParameter("maxOutputLength", maxOutputLength);
@@ -282,7 +297,10 @@ public class ModelRouterCreateModelRequest extends Request {
         }
 
         /**
-         * modelId.
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-turbo</p>
          */
         public Builder modelId(String modelId) {
             this.putBodyParameter("modelId", modelId);
@@ -291,7 +309,10 @@ public class ModelRouterCreateModelRequest extends Request {
         }
 
         /**
-         * modelType.
+         * <p>The model type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chat</p>
          */
         public Builder modelType(String modelType) {
             this.putBodyParameter("modelType", modelType);
@@ -300,7 +321,10 @@ public class ModelRouterCreateModelRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通义千问</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -309,7 +333,10 @@ public class ModelRouterCreateModelRequest extends Request {
         }
 
         /**
-         * symbol.
+         * <p>The vendor symbol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba</p>
          */
         public Builder symbol(String symbol) {
             this.putBodyParameter("symbol", symbol);
@@ -318,7 +345,10 @@ public class ModelRouterCreateModelRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The tags, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TXT_GEN,DEEP_THINK</p>
          */
         public Builder tags(String tags) {
             this.putBodyParameter("tags", tags);

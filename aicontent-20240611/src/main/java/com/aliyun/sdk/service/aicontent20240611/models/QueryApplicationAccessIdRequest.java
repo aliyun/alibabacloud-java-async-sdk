@@ -59,7 +59,10 @@ public class QueryApplicationAccessIdRequest extends Request {
         } 
 
         /**
-         * applicationAccessId.
+         * <p>The application access ID (appkey).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder applicationAccessId(String applicationAccessId) {
             this.putQueryParameter("applicationAccessId", applicationAccessId);

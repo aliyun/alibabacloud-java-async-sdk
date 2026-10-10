@@ -115,7 +115,10 @@ public class ModelRouterListSubscriptionsRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -124,7 +127,10 @@ public class ModelRouterListSubscriptionsRequest extends Request {
         }
 
         /**
-         * balanceType.
+         * <p>Filters by balance type (permanent/monthly).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>permanent</p>
          */
         public Builder balanceType(String balanceType) {
             this.putQueryParameter("balanceType", balanceType);
@@ -133,7 +139,10 @@ public class ModelRouterListSubscriptionsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -142,7 +151,10 @@ public class ModelRouterListSubscriptionsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Do not specify this parameter for the first query. For subsequent queries, specify the value returned from the previous query. Set to &quot;&quot; when no more data is available. Set to &quot;5&quot; when there is a next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;5&quot; or &quot;&quot;</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -151,7 +163,10 @@ public class ModelRouterListSubscriptionsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Filters by status (active/stopped).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

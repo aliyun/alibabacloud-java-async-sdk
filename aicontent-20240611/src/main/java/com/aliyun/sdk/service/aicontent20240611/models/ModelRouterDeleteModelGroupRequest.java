@@ -59,7 +59,10 @@ public class ModelRouterDeleteModelGroupRequest extends Request {
         } 
 
         /**
-         * groupId.
+         * <p>The unique identifier of the group (with the mg_ prefix).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mg_a1b2c3d4e5f6g7h8i9j0</p>
          */
         public Builder groupId(String groupId) {
             this.putPathParameter("groupId", groupId);

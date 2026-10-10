@@ -60,6 +60,7 @@ public class Personalizedtxt2imgQueryModelTrainStatusRequest extends Request {
         } 
 
         /**
+         * <p>The model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

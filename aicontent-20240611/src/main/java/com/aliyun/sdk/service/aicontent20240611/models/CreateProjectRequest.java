@@ -73,7 +73,10 @@ public class CreateProjectRequest extends Request {
         } 
 
         /**
-         * projectName.
+         * <p>Project name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyProject</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("projectName", projectName);
@@ -82,7 +85,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * projectType.
+         * <p>Project type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online_oral_evaluation_post_paid_call_count</p>
          */
         public Builder projectType(String projectType) {
             this.putBodyParameter("projectType", projectType);

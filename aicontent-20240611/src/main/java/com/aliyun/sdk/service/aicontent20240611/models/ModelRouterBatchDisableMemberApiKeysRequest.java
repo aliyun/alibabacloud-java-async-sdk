@@ -73,7 +73,10 @@ public class ModelRouterBatchDisableMemberApiKeysRequest extends Request {
         } 
 
         /**
-         * id.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -82,7 +85,10 @@ public class ModelRouterBatchDisableMemberApiKeysRequest extends Request {
         }
 
         /**
-         * userIds.
+         * <p>The list of member user IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder userIds(java.util.List<Long> userIds) {
             this.putBodyParameter("userIds", userIds);

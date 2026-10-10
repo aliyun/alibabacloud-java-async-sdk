@@ -161,6 +161,7 @@ public class AITeacherSyncPracticeTaskGenerateRequest extends Request {
         } 
 
         /**
+         * <p>The grade.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +174,7 @@ public class AITeacherSyncPracticeTaskGenerateRequest extends Request {
         }
 
         /**
-         * keySentences.
+         * <p>A list of key sentences.</p>
          */
         public Builder keySentences(java.util.List<String> keySentences) {
             this.putBodyParameter("keySentences", keySentences);
@@ -182,7 +183,7 @@ public class AITeacherSyncPracticeTaskGenerateRequest extends Request {
         }
 
         /**
-         * keyWords.
+         * <p>A list of keywords.</p>
          */
         public Builder keyWords(java.util.List<String> keyWords) {
             this.putBodyParameter("keyWords", keyWords);
@@ -191,7 +192,10 @@ public class AITeacherSyncPracticeTaskGenerateRequest extends Request {
         }
 
         /**
-         * learningObject.
+         * <p>The learning objective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Understanding unique professions such as dog walkers, hotel test sleepers, and food tasters, including their job responsibilities and the benefits or challenges associated with each role.</p>
          */
         public Builder learningObject(String learningObject) {
             this.putBodyParameter("learningObject", learningObject);
@@ -200,10 +204,11 @@ public class AITeacherSyncPracticeTaskGenerateRequest extends Request {
         }
 
         /**
+         * <p>The source text for generating questions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Dog walker Dog walking, as a profession, originated in the US. Some may think that it&quot;s a perfect job, because dog walkers won&quot;t be imprisoned in an office. But it&quot;s actually manual labour. At their busiest, dog walkers may have more than ten dogs to take care of in a day. Hotel test sleeper A hotel test sleeper, as the name suggests, has to write expert reviews about the facilities, locations, prices, dining and other services of hotels, in order to provide evaluations and guides for travelers. Hotel test sleepers don&quot;t need to punch in for work and they get about ten thousand yuan as income every month. What a comfortable job! Food taster In ancient times, a food taster was a person who tasted foods (or drinks) to be served to someone else, to confirm that it was safe to eat. But now, those working as food tasters just get to taste various new foods and drinks aimed at specific regions across the world. They then give their opinions on these products to the companies and suggest improvements.</p>
+         * <p>Dog walker Dog walking, as a profession, originated in the US. Some may think that it\&quot;s a perfect job, because dog walkers won\&quot;t be imprisoned in an office. But it\&quot;s actually manual labour. At their busiest, dog walkers may have more than ten dogs to take care of in a day. Hotel test sleeper A hotel test sleeper, as the name suggests, has to write expert reviews about the facilities, locations, prices, dining and other services of hotels, in order to provide evaluations and guides for travelers. Hotel test sleepers don\&quot;t need to punch in for work and they get about ten thousand yuan as income every month. What a comfortable job! Food taster In ancient times, a food taster was a person who tasted foods (or drinks) to be served to someone else, to confirm that it was safe to eat. But now, those working as food tasters just get to taste various new foods and drinks aimed at specific regions across the world. They then give their opinions on these products to the companies and suggest improvements.</p>
          */
         public Builder textContent(String textContent) {
             this.putBodyParameter("textContent", textContent);
@@ -212,7 +217,10 @@ public class AITeacherSyncPracticeTaskGenerateRequest extends Request {
         }
 
         /**
-         * textbook.
+         * <p>The textbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>英语（基础模块）修订版</p>
          */
         public Builder textbook(String textbook) {
             this.putBodyParameter("textbook", textbook);
@@ -221,6 +229,7 @@ public class AITeacherSyncPracticeTaskGenerateRequest extends Request {
         }
 
         /**
+         * <p>The dialogue topic.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,6 +242,7 @@ public class AITeacherSyncPracticeTaskGenerateRequest extends Request {
         }
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

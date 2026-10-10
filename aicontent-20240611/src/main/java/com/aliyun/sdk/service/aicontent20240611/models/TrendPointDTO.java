@@ -67,7 +67,10 @@ public class TrendPointDTO extends TeaModel {
         } 
 
         /**
-         * timestamp.
+         * <p>UNIX timestamp (Unix seconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
         public Builder timestamp(Long timestamp) {
             this.timestamp = timestamp;
@@ -75,7 +78,10 @@ public class TrendPointDTO extends TeaModel {
         }
 
         /**
-         * values.
+         * <p>Metric value mapping, where the key is the metric name and the value is the numeric value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;total_calls\&quot;:0,\&quot;video_duration\&quot;:0,\&quot;total_amount\&quot;:0,\&quot;model_count\&quot;:0,\&quot;image_count\&quot;:0}&quot;</p>
          */
         public Builder values(String values) {
             this.values = values;

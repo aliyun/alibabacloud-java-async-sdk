@@ -115,7 +115,10 @@ public class ModelRouterGetMemberApiKeysRequest extends Request {
         } 
 
         /**
-         * clientId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientId(Long clientId) {
             this.putPathParameter("clientId", clientId);
@@ -124,7 +127,10 @@ public class ModelRouterGetMemberApiKeysRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The member ID within the organization (not the Alibaba Cloud account ID).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -133,7 +139,10 @@ public class ModelRouterGetMemberApiKeysRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -142,7 +151,10 @@ public class ModelRouterGetMemberApiKeysRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -151,7 +163,10 @@ public class ModelRouterGetMemberApiKeysRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

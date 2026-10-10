@@ -60,6 +60,7 @@ public class ModelRouterMiguDownloadSourceRequest extends Request {
         } 
 
         /**
+         * <p>The unique identifier of the source file. This is the sourceId returned by the upload operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
