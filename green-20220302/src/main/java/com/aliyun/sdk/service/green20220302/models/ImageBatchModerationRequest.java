@@ -73,16 +73,12 @@ public class ImageBatchModerationRequest extends Request {
         } 
 
         /**
-         * <p>The detection services supported by Image Moderation Pro. Separate multiple services with commas. Valid values:</p>
+         * <p>The detection types supported by Image Moderation Enhanced Edition. Separate multiple values with commas. Valid values:</p>
          * <ul>
-         * <li><p>baselineCheck: General baseline check</p>
-         * </li>
-         * <li><p>baselineCheck_pro: General baseline check (Professional Edition)</p>
-         * </li>
-         * <li><p>tonalityImprove: Content administration check</p>
-         * </li>
-         * <li><p>aigcCheck: AIGC image check</p>
-         * </li>
+         * <li>baselineCheck: general baseline check</li>
+         * <li>baselineCheck_pro: general baseline check professional edition</li>
+         * <li>tonalityImprove: content governance detection</li>
+         * <li>aigcCheck: AIGC image detection</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,7 +91,7 @@ public class ImageBatchModerationRequest extends Request {
         }
 
         /**
-         * <p>The parameters for the content to moderate.</p>
+         * <p>The parameter set for the content moderation object.</p>
          * 
          * <strong>example:</strong>
          * <p>{
