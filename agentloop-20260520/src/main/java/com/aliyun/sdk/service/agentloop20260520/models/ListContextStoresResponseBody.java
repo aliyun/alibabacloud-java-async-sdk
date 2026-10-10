@@ -191,8 +191,14 @@ public class ListContextStoresResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("serviceNames")
         private java.util.List<String> serviceNames;
 
+        @com.aliyun.core.annotation.NameInMap("sourceType")
+        private String sourceType;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("storageMode")
+        private String storageMode;
 
         @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
@@ -205,7 +211,9 @@ public class ListContextStoresResponseBody extends TeaModel {
             this.description = builder.description;
             this.regionId = builder.regionId;
             this.serviceNames = builder.serviceNames;
+            this.sourceType = builder.sourceType;
             this.status = builder.status;
+            this.storageMode = builder.storageMode;
             this.updateTime = builder.updateTime;
         }
 
@@ -267,10 +275,24 @@ public class ListContextStoresResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return storageMode
+         */
+        public String getStorageMode() {
+            return this.storageMode;
         }
 
         /**
@@ -288,7 +310,9 @@ public class ListContextStoresResponseBody extends TeaModel {
             private String description; 
             private String regionId; 
             private java.util.List<String> serviceNames; 
+            private String sourceType; 
             private String status; 
+            private String storageMode; 
             private String updateTime; 
 
             private Builder() {
@@ -302,7 +326,9 @@ public class ListContextStoresResponseBody extends TeaModel {
                 this.description = model.description;
                 this.regionId = model.regionId;
                 this.serviceNames = model.serviceNames;
+                this.sourceType = model.sourceType;
                 this.status = model.status;
+                this.storageMode = model.storageMode;
                 this.updateTime = model.updateTime;
             } 
 
@@ -385,6 +411,14 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
+             * sourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
              * <p>The status of the context store. Valid values: ACTIVE, INITIALIZING, and FAILED.</p>
              * 
              * <strong>example:</strong>
@@ -392,6 +426,14 @@ public class ListContextStoresResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * storageMode.
+             */
+            public Builder storageMode(String storageMode) {
+                this.storageMode = storageMode;
                 return this;
             }
 

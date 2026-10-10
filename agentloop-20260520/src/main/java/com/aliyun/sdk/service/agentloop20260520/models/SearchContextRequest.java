@@ -36,6 +36,10 @@ public class SearchContextRequest extends Request {
     private Boolean formatted;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("includeInactive")
+    private Boolean includeInactive;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("limit")
     private Integer limit;
 
@@ -49,6 +53,10 @@ public class SearchContextRequest extends Request {
     private String retrievalOption;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scope")
+    private Scope scope;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("threshold")
     private Double threshold;
 
@@ -58,9 +66,11 @@ public class SearchContextRequest extends Request {
         this.contextStoreName = builder.contextStoreName;
         this.filter = builder.filter;
         this.formatted = builder.formatted;
+        this.includeInactive = builder.includeInactive;
         this.limit = builder.limit;
         this.query = builder.query;
         this.retrievalOption = builder.retrievalOption;
+        this.scope = builder.scope;
         this.threshold = builder.threshold;
     }
 
@@ -106,6 +116,13 @@ public class SearchContextRequest extends Request {
     }
 
     /**
+     * @return includeInactive
+     */
+    public Boolean getIncludeInactive() {
+        return this.includeInactive;
+    }
+
+    /**
      * @return limit
      */
     public Integer getLimit() {
@@ -127,6 +144,13 @@ public class SearchContextRequest extends Request {
     }
 
     /**
+     * @return scope
+     */
+    public Scope getScope() {
+        return this.scope;
+    }
+
+    /**
      * @return threshold
      */
     public Double getThreshold() {
@@ -138,9 +162,11 @@ public class SearchContextRequest extends Request {
         private String contextStoreName; 
         private java.util.Map<String, ?> filter; 
         private Boolean formatted; 
+        private Boolean includeInactive; 
         private Integer limit; 
         private String query; 
         private String retrievalOption; 
+        private Scope scope; 
         private Double threshold; 
 
         private Builder() {
@@ -153,9 +179,11 @@ public class SearchContextRequest extends Request {
             this.contextStoreName = request.contextStoreName;
             this.filter = request.filter;
             this.formatted = request.formatted;
+            this.includeInactive = request.includeInactive;
             this.limit = request.limit;
             this.query = request.query;
             this.retrievalOption = request.retrievalOption;
+            this.scope = request.scope;
             this.threshold = request.threshold;
         } 
 
@@ -210,6 +238,15 @@ public class SearchContextRequest extends Request {
         }
 
         /**
+         * includeInactive.
+         */
+        public Builder includeInactive(Boolean includeInactive) {
+            this.putBodyParameter("includeInactive", includeInactive);
+            this.includeInactive = includeInactive;
+            return this;
+        }
+
+        /**
          * <p>The maximum number of returned results (similarity Top-N).</p>
          * 
          * <strong>example:</strong>
@@ -247,6 +284,15 @@ public class SearchContextRequest extends Request {
         }
 
         /**
+         * scope.
+         */
+        public Builder scope(Scope scope) {
+            this.putBodyParameter("scope", scope);
+            this.scope = scope;
+            return this;
+        }
+
+        /**
          * <p>The similarity threshold. Results with a similarity score lower than this value are filtered out. Valid values: 0 to 1.</p>
          * 
          * <strong>example:</strong>
@@ -265,4 +311,121 @@ public class SearchContextRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchContextRequest} extends {@link TeaModel}
+     *
+     * <p>SearchContextRequest</p>
+     */
+    public static class Scope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("agentId")
+        private String agentId;
+
+        @com.aliyun.core.annotation.NameInMap("appId")
+        private String appId;
+
+        @com.aliyun.core.annotation.NameInMap("runId")
+        private String runId;
+
+        @com.aliyun.core.annotation.NameInMap("userId")
+        private String userId;
+
+        private Scope(Builder builder) {
+            this.agentId = builder.agentId;
+            this.appId = builder.appId;
+            this.runId = builder.runId;
+            this.userId = builder.userId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Scope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return agentId
+         */
+        public String getAgentId() {
+            return this.agentId;
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
+        }
+
+        /**
+         * @return runId
+         */
+        public String getRunId() {
+            return this.runId;
+        }
+
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public static final class Builder {
+            private String agentId; 
+            private String appId; 
+            private String runId; 
+            private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scope model) {
+                this.agentId = model.agentId;
+                this.appId = model.appId;
+                this.runId = model.runId;
+                this.userId = model.userId;
+            } 
+
+            /**
+             * agentId.
+             */
+            public Builder agentId(String agentId) {
+                this.agentId = agentId;
+                return this;
+            }
+
+            /**
+             * appId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
+
+            /**
+             * runId.
+             */
+            public Builder runId(String runId) {
+                this.runId = runId;
+                return this;
+            }
+
+            /**
+             * userId.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
+                return this;
+            }
+
+            public Scope build() {
+                return new Scope(this);
+            } 
+
+        } 
+
+    }
 }

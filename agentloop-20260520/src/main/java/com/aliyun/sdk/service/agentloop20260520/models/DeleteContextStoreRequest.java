@@ -27,10 +27,15 @@ public class DeleteContextStoreRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 2)
     private String contextStoreName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("deleteOutputDataset")
+    private Boolean deleteOutputDataset;
+
     private DeleteContextStoreRequest(Builder builder) {
         super(builder);
         this.agentSpace = builder.agentSpace;
         this.contextStoreName = builder.contextStoreName;
+        this.deleteOutputDataset = builder.deleteOutputDataset;
     }
 
     public static Builder builder() {
@@ -60,9 +65,17 @@ public class DeleteContextStoreRequest extends Request {
         return this.contextStoreName;
     }
 
+    /**
+     * @return deleteOutputDataset
+     */
+    public Boolean getDeleteOutputDataset() {
+        return this.deleteOutputDataset;
+    }
+
     public static final class Builder extends Request.Builder<DeleteContextStoreRequest, Builder> {
         private String agentSpace; 
         private String contextStoreName; 
+        private Boolean deleteOutputDataset; 
 
         private Builder() {
             super();
@@ -72,10 +85,11 @@ public class DeleteContextStoreRequest extends Request {
             super(request);
             this.agentSpace = request.agentSpace;
             this.contextStoreName = request.contextStoreName;
+            this.deleteOutputDataset = request.deleteOutputDataset;
         } 
 
         /**
-         * <p>The AgentSpace name, which is 2 to 64 characters in length.</p>
+         * <p>The name of the AgentSpace. The length must be 2 to 64 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +102,7 @@ public class DeleteContextStoreRequest extends Request {
         }
 
         /**
-         * <p>The name of the context store to delete, which is 2 to 64 characters in length.</p>
+         * <p>The name of the context store to be deleted. The length must be 2 to 64 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -97,6 +111,18 @@ public class DeleteContextStoreRequest extends Request {
         public Builder contextStoreName(String contextStoreName) {
             this.putPathParameter("contextStoreName", contextStoreName);
             this.contextStoreName = contextStoreName;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to simultaneously delete the memory output dataset (memory type). Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder deleteOutputDataset(Boolean deleteOutputDataset) {
+            this.putQueryParameter("deleteOutputDataset", deleteOutputDataset);
+            this.deleteOutputDataset = deleteOutputDataset;
             return this;
         }
 

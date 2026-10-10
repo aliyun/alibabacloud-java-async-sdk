@@ -20,8 +20,12 @@ public class UpdateContextStoreResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("strategyVersion")
+    private Integer strategyVersion;
+
     private UpdateContextStoreResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.strategyVersion = builder.strategyVersion;
     }
 
     public static Builder builder() {
@@ -43,14 +47,23 @@ public class UpdateContextStoreResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return strategyVersion
+     */
+    public Integer getStrategyVersion() {
+        return this.strategyVersion;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private Integer strategyVersion; 
 
         private Builder() {
         } 
 
         private Builder(UpdateContextStoreResponseBody model) {
             this.requestId = model.requestId;
+            this.strategyVersion = model.strategyVersion;
         } 
 
         /**
@@ -61,6 +74,17 @@ public class UpdateContextStoreResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>The effective strategy version number after the update for the memory type. If the strategy remains unchanged, the version number is the same as before the update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        public Builder strategyVersion(Integer strategyVersion) {
+            this.strategyVersion = strategyVersion;
             return this;
         }
 

@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchContextResponseBody</p>
  */
 public class SearchContextResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("auditStatus")
+    private String auditStatus;
+
+    @com.aliyun.core.annotation.NameInMap("recallEventId")
+    private String recallEventId;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
@@ -24,6 +30,8 @@ public class SearchContextResponseBody extends TeaModel {
     private java.util.List<java.util.Map<String, ?>> results;
 
     private SearchContextResponseBody(Builder builder) {
+        this.auditStatus = builder.auditStatus;
+        this.recallEventId = builder.recallEventId;
         this.requestId = builder.requestId;
         this.results = builder.results;
     }
@@ -41,6 +49,20 @@ public class SearchContextResponseBody extends TeaModel {
     }
 
     /**
+     * @return auditStatus
+     */
+    public String getAuditStatus() {
+        return this.auditStatus;
+    }
+
+    /**
+     * @return recallEventId
+     */
+    public String getRecallEventId() {
+        return this.recallEventId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -55,6 +77,8 @@ public class SearchContextResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String auditStatus; 
+        private String recallEventId; 
         private String requestId; 
         private java.util.List<java.util.Map<String, ?>> results; 
 
@@ -62,9 +86,27 @@ public class SearchContextResponseBody extends TeaModel {
         } 
 
         private Builder(SearchContextResponseBody model) {
+            this.auditStatus = model.auditStatus;
+            this.recallEventId = model.recallEventId;
             this.requestId = model.requestId;
             this.results = model.results;
         } 
+
+        /**
+         * auditStatus.
+         */
+        public Builder auditStatus(String auditStatus) {
+            this.auditStatus = auditStatus;
+            return this;
+        }
+
+        /**
+         * recallEventId.
+         */
+        public Builder recallEventId(String recallEventId) {
+            this.recallEventId = recallEventId;
+            return this;
+        }
 
         /**
          * <p>The request ID. You can use this ID to locate and troubleshoot issues.</p>

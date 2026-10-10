@@ -38,6 +38,10 @@ public class ListContextStoresRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sourceType")
+    private String sourceType;
+
     private ListContextStoresRequest(Builder builder) {
         super(builder);
         this.agentSpace = builder.agentSpace;
@@ -45,6 +49,7 @@ public class ListContextStoresRequest extends Request {
         this.contextType = builder.contextType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.sourceType = builder.sourceType;
     }
 
     public static Builder builder() {
@@ -95,12 +100,20 @@ public class ListContextStoresRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return sourceType
+     */
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
     public static final class Builder extends Request.Builder<ListContextStoresRequest, Builder> {
         private String agentSpace; 
         private String contextStoreName; 
         private String contextType; 
         private Integer maxResults; 
         private String nextToken; 
+        private String sourceType; 
 
         private Builder() {
             super();
@@ -113,6 +126,7 @@ public class ListContextStoresRequest extends Request {
             this.contextType = request.contextType;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.sourceType = request.sourceType;
         } 
 
         /**
@@ -173,6 +187,15 @@ public class ListContextStoresRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * sourceType.
+         */
+        public Builder sourceType(String sourceType) {
+            this.putQueryParameter("sourceType", sourceType);
+            this.sourceType = sourceType;
             return this;
         }
 
