@@ -180,7 +180,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of users.</p>
+         * <p>The user list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -188,7 +188,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records per page that takes effect for this query.</p>
+         * <p>The maximum number of records per page that takes effect in the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -199,7 +199,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request fails.</p>
+         * <p>The response message. If the request fails, an error description is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -210,7 +210,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page. This value is empty if no more pages are available.</p>
+         * <p>The cursor for the next page. If no next page exists, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>dXNlci1vZmZzZXQ6MTA</p>
@@ -232,7 +232,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -240,7 +240,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of users that match the query conditions.</p>
+         * <p>The total number of users that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>
@@ -437,7 +437,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication method of the user. A value of password indicates local password authentication in the workspace. Values of dingtalk and feishu indicate that the user is synchronized and authenticated by the corresponding external identity provider.</p>
+             * <p>The authentication method of the user. A value of password indicates that the user is authenticated by using the local password of the workspace. A value of dingtalk or feishu indicates that the user is synchronized and authenticated by the corresponding external identity provider.</p>
              * 
              * <strong>example:</strong>
              * <p>password</p>
@@ -448,7 +448,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC, formatted in RFC 3339.</p>
+             * <p>The creation time. The time is displayed in UTC and follows the RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -459,10 +459,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the user. The value is 1 to 32 characters in length.</p>
+             * <p>The display name of the user. The name must be 1 to 32 characters in length.</p>
              * 
              * <strong>example:</strong>
-             * <p>John Smith</p>
+             * <p>Zhang San</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -470,7 +470,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email address of the user. The value can be up to 256 characters in length.</p>
+             * <p>The email address of the user. The email address can be up to 256 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:user-01@example.com">user-01@example.com</a></p>
@@ -481,7 +481,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username. The value must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The value is 1 to 32 characters in length.</p>
+             * <p>The username. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or a digit, and must be 1 to 32 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>user-01</p>
@@ -492,7 +492,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks of the user. The value can be up to 1024 characters in length.</p>
+             * <p>The note of the user. The note can be up to 1,024 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>Agent operations team member</p>
@@ -514,7 +514,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user status. Valid values: Creating, Active, Updating, Deleting, Failed, DeleteFailed.</p>
+             * <p>The status of the user. Valid values: Creating, Active, Updating, Deleting, Failed, and DeleteFailed.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -525,7 +525,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+             * <p>The time of the last modification. The time is displayed in UTC and follows the RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
