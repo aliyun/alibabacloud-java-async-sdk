@@ -80,7 +80,7 @@ public class AuthorizationResourceInfo extends TeaModel {
         } 
 
         /**
-         * <p>Environment ID.</p>
+         * <p>The environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cq7l5s5lhtgi6qasrdc0</p>
@@ -91,7 +91,7 @@ public class AuthorizationResourceInfo extends TeaModel {
         }
 
         /**
-         * <p>Parent resource ID.</p>
+         * <p>The parent resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cujbijem1hkr4voden8g</p>
@@ -102,7 +102,7 @@ public class AuthorizationResourceInfo extends TeaModel {
         }
 
         /**
-         * <p>Resource ID.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hr-d0mnu16m1hkgujnkgrcg</p>

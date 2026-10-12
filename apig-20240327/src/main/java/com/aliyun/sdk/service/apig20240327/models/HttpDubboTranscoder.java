@@ -216,13 +216,7 @@ public class HttpDubboTranscoder extends TeaModel {
             }
 
             /**
-             * <p>The input parameter location. Valid values:</p>
-             * <ul>
-             * <li>ALL_QUERY_PARAMETER: Request parameter.</li>
-             * <li>ALL_HEADER: Request header.</li>
-             * <li>ALL_PATH: URI of the request.</li>
-             * <li>ALL_BODY: Request body.</li>
-             * </ul>
+             * <p>The input parameter location. Valid values: ALL_QUERY_PARAMETER: request parameter. ALL_HEADER: request header. ALL_PATH: URI of the request. ALL_BODY: request body.</p>
              * 
              * <strong>example:</strong>
              * <p>ALL_QUERY_PARAMETER</p>
@@ -396,12 +390,7 @@ public class HttpDubboTranscoder extends TeaModel {
             }
 
             /**
-             * <p>The header pass-through type. Valid values:</p>
-             * <ul>
-             * <li>PASS_ALL: Pass through all headers.</li>
-             * <li>PASS_NOT: Do not pass through headers.</li>
-             * <li>PASS_ASSIGN: Pass through specified headers.</li>
-             * </ul>
+             * <p>The header pass-through type. Valid values: PASS_ALL: passes through all headers. PASS_NOT: does not pass through headers. PASS_ASSIGN: passes through specified parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>PASS_NOT</p>

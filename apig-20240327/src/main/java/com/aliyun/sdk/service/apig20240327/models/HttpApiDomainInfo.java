@@ -103,11 +103,6 @@ public class HttpApiDomainInfo extends TeaModel {
 
         /**
          * <p>The protocol.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>HTTPS</li>
-         * <li>HTTP</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>

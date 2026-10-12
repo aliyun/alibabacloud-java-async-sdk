@@ -87,7 +87,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The resource IDs. A maximum of 50 subkeys are supported.</p>
+         * <p>The resource IDs. You can specify up to 50 subkeys.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putBodyParameter("resourceId", resourceId);
@@ -96,7 +96,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource type used for the tagging operation. Set this to Gateway.</p>
+         * <p>The resource type used for the tagging operation. Set this parameter to Gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gateway</p>

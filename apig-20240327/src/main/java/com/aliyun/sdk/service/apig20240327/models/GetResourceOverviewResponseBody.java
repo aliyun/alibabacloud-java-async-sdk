@@ -203,7 +203,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of APIs.</p>
+             * <p>The number of APIs.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -284,7 +284,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of gateway instances.</p>
+             * <p>The number of gateway instances.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

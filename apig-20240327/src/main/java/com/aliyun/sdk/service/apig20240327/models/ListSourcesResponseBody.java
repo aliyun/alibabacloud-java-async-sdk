@@ -93,7 +93,7 @@ public class ListSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -179,7 +179,7 @@ public class ListSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cluster ID.</p>
+             * <p>The container service cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c09212180612a42adbed6a940d01d***</p>
@@ -262,7 +262,7 @@ public class ListSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint of the Nacos instance.</p>
+             * <p>The access address of the Nacos instance.</p>
              * 
              * <strong>example:</strong>
              * <p>mse-3353***-nacos-ans.mse.aliyuncs.com:8848</p>
@@ -273,7 +273,7 @@ public class ListSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The registry ID.</p>
+             * <p>The NACOS registry cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mse-3353***</p>
@@ -445,7 +445,10 @@ public class ListSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * associationReason.
+             * <p>The reason for the association status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Association completed</p>
              */
             public Builder associationReason(String associationReason) {
                 this.associationReason = associationReason;
@@ -453,7 +456,10 @@ public class ListSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * associationStatus.
+             * <p>The association status of the source</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ASSOCIATED</p>
              */
             public Builder associationStatus(String associationStatus) {
                 this.associationStatus = associationStatus;
@@ -472,7 +478,7 @@ public class ListSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source information when the source type is K8S.</p>
+             * <p>The container service source information.</p>
              */
             public Builder k8sSourceInfo(K8sSourceInfo k8sSourceInfo) {
                 this.k8sSourceInfo = k8sSourceInfo;
@@ -480,7 +486,7 @@ public class ListSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source information when the source type is MSE_NACOS.</p>
+             * <p>The MSE Nacos source information.</p>
              */
             public Builder nacosSourceInfo(NacosSourceInfo nacosSourceInfo) {
                 this.nacosSourceInfo = nacosSourceInfo;
@@ -488,7 +494,7 @@ public class ListSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source name. If the source type is K8S, the name is the container cluster name. If the source type is MSE_NACOS, the name is the Nacos instance name.</p>
+             * <p>The source name. If the source type is container service, the name is the container service cluster name. If the source type is MSE Nacos, the name is the Nacos instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>itemcenter-dev-cluster</p>
@@ -499,7 +505,10 @@ public class ListSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-xxxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -622,7 +631,7 @@ public class ListSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -644,7 +653,7 @@ public class ListSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

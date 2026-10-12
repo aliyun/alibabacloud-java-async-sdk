@@ -133,7 +133,7 @@ public class UpdatePolicyRequest extends Request {
          * <p>The description of the policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一条网关超时策略</p>
+         * <p>This is a gateway timeout policy</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -142,7 +142,7 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * <p>The Policy Name.</p>
+         * <p>The policy name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

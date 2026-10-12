@@ -120,7 +120,7 @@ public class HiMarketAgentConfig extends TeaModel {
             } 
 
             /**
-             * <p>The list of agent protocols.</p>
+             * <p>The agent protocol list.</p>
              */
             public Builder agentProtocols(java.util.List<String> agentProtocols) {
                 this.agentProtocols = agentProtocols;
@@ -128,7 +128,7 @@ public class HiMarketAgentConfig extends TeaModel {
             }
 
             /**
-             * <p>The list of agent API routing configurations.</p>
+             * <p>The agent API routing configuration list.</p>
              */
             public Builder routes(java.util.List<HiMarketHttpRoute> routes) {
                 this.routes = routes;

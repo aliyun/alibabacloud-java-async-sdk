@@ -262,10 +262,10 @@ public class PluginClassInfo extends TeaModel {
         } 
 
         /**
-         * <p>The plugin class alias.</p>
+         * <p>The alias of the plugin class.</p>
          * 
          * <strong>example:</strong>
-         * <p>AI安全护栏</p>
+         * <p>AI Safety Guardrail</p>
          */
         public Builder alias(String alias) {
             this.alias = alias;
@@ -284,10 +284,10 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * <p>The plugin class description.</p>
+         * <p>The description of the plugin class.</p>
          * 
          * <strong>example:</strong>
-         * <p>AI请求内容安全检测插件</p>
+         * <p>AI request content security detection plugin</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -350,7 +350,7 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * <p>The plugin class name.</p>
+         * <p>The name of the plugin class.</p>
          * 
          * <strong>example:</strong>
          * <p>ai-security-guard</p>
@@ -419,7 +419,7 @@ public class PluginClassInfo extends TeaModel {
          * <p>The version description.</p>
          * 
          * <strong>example:</strong>
-         * <p>初始版本</p>
+         * <p>Initial version</p>
          */
         public Builder versionDescription(String versionDescription) {
             this.versionDescription = versionDescription;
@@ -438,7 +438,7 @@ public class PluginClassInfo extends TeaModel {
         }
 
         /**
-         * <p>The Wasm file download URL.</p>
+         * <p>The download URL of the Wasm file.</p>
          * 
          * <strong>example:</strong>
          * <p>https://...</p>

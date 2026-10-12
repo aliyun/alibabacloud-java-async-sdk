@@ -59,7 +59,10 @@ public class DeletePluginClassRequest extends Request {
         } 
 
         /**
-         * pluginClassId.
+         * <p>The plugin class ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pls-a1b2c3d4e5f6</p>
          */
         public Builder pluginClassId(String pluginClassId) {
             this.putPathParameter("pluginClassId", pluginClassId);

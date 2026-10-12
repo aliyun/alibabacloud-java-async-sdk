@@ -73,7 +73,10 @@ public class ListK8sClusterSourcesRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cpv4sqdl****</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -82,7 +85,10 @@ public class ListK8sClusterSourcesRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * <p>The VPC ID used to query clusters within the specified VPC. If this parameter is not specified, the VPC of the gateway is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("vpcId", vpcId);

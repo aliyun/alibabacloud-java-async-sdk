@@ -80,7 +80,7 @@ public class AiStatisticsConfig extends TeaModel {
         } 
 
         /**
-         * <p><strong>[Deprecated]</strong> Specifies whether to record request content (controls whether question-related attributes are generated). This parameter is deprecated in the new version.</p>
+         * <p><strong>[Deprecated]</strong> Specifies whether to log request content (controls whether question-related attributes are generated). This parameter is deprecated in the new version.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -91,7 +91,7 @@ public class AiStatisticsConfig extends TeaModel {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> Specifies whether to record response content (controls whether answer-related attributes are generated). This parameter is deprecated in the new version.</p>
+         * <p><strong>[Deprecated]</strong> Specifies whether to log response content (controls whether answer-related attributes are generated). This parameter is deprecated in the new version.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -168,14 +168,14 @@ public class AiStatisticsConfig extends TeaModel {
             } 
 
             /**
-             * <p>The AI request log field configuration groups for the API path, passed in as a Map. The Map keys are fixed to basic and custom, and the values are arrays of log field configurations for the corresponding groups. basic indicates basic log fields, and custom indicates custom log fields. For the current API path, fieldPaths represents the complete desired state of field configurations and does not support incremental appending or diff merging.</p>
-             * <p>If pathFieldConfigs is not passed, is null, or is an empty array, the existing log field configurations are not updated. If a non-empty array is passed, the system performs a desired state replacement based on the complete set of Paths in the request, and historical Path configurations not included in the request are deleted.</p>
-             * <p>For example, to add a custom field test to the /v1/chat/completions API path on top of existing configurations, the caller must use a &quot;read-merge-write back in full&quot; approach:</p>
+             * <p>The log field configuration groups for the AI request log corresponding to the API path. Pass this parameter as a map. The valid keys of the map are fixed as basic and custom. The values are arrays of log field configurations for the corresponding group. basic indicates basic log fields, and custom indicates custom log fields. For the current API path, fieldPaths represents the complete desired state of the field configuration and does not support incremental appending or diff merging.</p>
+             * <p>If pathFieldConfigs is not passed, is set to null, or is an empty array, the existing log field configurations are not updated. If a non-empty array is passed, the system performs a full desired state replacement based on the complete set of paths in the request. Historical path configurations that are not included are deleted.</p>
+             * <p>For example, to add a custom field test to the /v1/chat/completions API path on top of the existing configuration, the caller must use a read-merge-write-back approach:</p>
              * <ol>
-             * <li>Read all current Path configurations.</li>
+             * <li>Read all current path configurations.</li>
              * <li>Retain the complete basic array and custom array for the target API path /v1/chat/completions.</li>
              * <li>Append test to the current custom array.</li>
-             * <li>Keep configurations for other API paths unchanged.</li>
+             * <li>Retain the configurations of other API paths as-is.</li>
              * <li>Submit the merged complete pathFieldConfigs.</li>
              * </ol>
              */

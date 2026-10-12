@@ -202,7 +202,7 @@ public class ListPluginClassesRequest extends Request {
          * <p>The plug-in alias. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>OAuth2 认证</p>
+         * <p>OAuth2 Authentication</p>
          */
         public Builder aliasLike(String aliasLike) {
             this.putQueryParameter("aliasLike", aliasLike);

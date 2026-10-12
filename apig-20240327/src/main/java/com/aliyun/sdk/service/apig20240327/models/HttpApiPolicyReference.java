@@ -67,7 +67,7 @@ public class HttpApiPolicyReference extends TeaModel {
         } 
 
         /**
-         * <p>The policy attachment ID.</p>
+         * <p>The policy mount ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-3c8ayyy</p>

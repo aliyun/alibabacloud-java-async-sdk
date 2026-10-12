@@ -93,7 +93,10 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4AFA893B-A75B-5002-AACF-84CABE06197A</p>
@@ -238,7 +244,10 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * organizationId.
+             * <p>The Codeup organization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>664f1e2xxxx</p>
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;
@@ -246,7 +255,10 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * pipelineRunId.
+             * <p>The ID of the most recent pipeline run. This parameter is not returned if the plugin has never been built.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>987654</p>
              */
             public Builder pipelineRunId(String pipelineRunId) {
                 this.pipelineRunId = pipelineRunId;
@@ -254,7 +266,10 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * repoId.
+             * <p>The Codeup repository ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -262,7 +277,10 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * repoName.
+             * <p>The repository name (the English ID of the plugin).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-custom-plugin</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -270,7 +288,10 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * wasmUrl.
+             * <p>The OSS download URL of the compiled WASM build output. This parameter is returned only when the pipeline status is SUCCESS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://apigw-console-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/%7Buid%7D/plugin/plugin_1756262400.wasm">https://apigw-console-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/{uid}/plugin/plugin_1756262400.wasm</a></p>
              */
             public Builder wasmUrl(String wasmUrl) {
                 this.wasmUrl = wasmUrl;
@@ -278,7 +299,10 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plw-xxxxxxxx</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

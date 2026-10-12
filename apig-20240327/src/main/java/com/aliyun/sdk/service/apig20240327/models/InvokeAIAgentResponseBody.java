@@ -93,7 +93,10 @@ public class InvokeAIAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class InvokeAIAgentResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class InvokeAIAgentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +205,10 @@ public class InvokeAIAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * body.
+             * <p>The response body of the debug result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;choices&quot;:[{&quot;delta&quot;:{&quot;content&quot;:&quot;Analysis result...&quot;}}]}</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -207,7 +216,7 @@ public class InvokeAIAgentResponseBody extends TeaModel {
             }
 
             /**
-             * headers.
+             * <p>The response headers, such as Content-Type: text/event-stream.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -215,7 +224,10 @@ public class InvokeAIAgentResponseBody extends TeaModel {
             }
 
             /**
-             * httpCode.
+             * <p>The HTTP status code of the debug result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder httpCode(Integer httpCode) {
                 this.httpCode = httpCode;

@@ -59,7 +59,10 @@ public class ListPluginWorkspaceRequest extends Request {
         } 
 
         /**
-         * gatewayType.
+         * <p>The gateway type used to filter workspaces. Default value: API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("gatewayType", gatewayType);

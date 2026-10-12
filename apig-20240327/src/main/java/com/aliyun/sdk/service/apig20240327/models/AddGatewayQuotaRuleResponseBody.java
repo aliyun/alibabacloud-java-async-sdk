@@ -115,7 +115,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message content.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

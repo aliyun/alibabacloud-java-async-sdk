@@ -279,7 +279,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable forced HTTPS redirect when the protocol type is set to HTTPS. This parameter is required when the protocol is HTTPS.</p>
+         * <p>Specifies whether to enable forced HTTPS redirect when the HTTPS protocol type is set. When the protocol is HTTPS, forceHttps is required.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -314,8 +314,8 @@ public class UpdateDomainRequest extends Request {
         /**
          * <p>The protocol type supported by the domain name.</p>
          * <ul>
-         * <li>HTTP: Only HTTP is supported.</li>
-         * <li>HTTPS: Only HTTPS is supported.</li>
+         * <li>HTTP: Only the HTTP protocol is supported.</li>
+         * <li>HTTPS: Only the HTTPS protocol is supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -206,7 +206,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol type corresponding to the path.</p>
+             * <p>The protocol type of the path.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAICompatible</p>
@@ -335,7 +335,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing type. Currently, fixed is returned.</p>
+             * <p>The billing type. The current value is fixed.</p>
              * 
              * <strong>example:</strong>
              * <p>fixed</p>
@@ -750,7 +750,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the model card. Currently, user is returned.</p>
+             * <p>The source of the model card. The current value is user.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>
@@ -761,7 +761,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time of the model card, in the format of yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The last update time of the model card, in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-14 18:30:00</p>

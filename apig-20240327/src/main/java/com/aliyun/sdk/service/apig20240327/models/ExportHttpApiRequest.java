@@ -115,7 +115,7 @@ public class ExportHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to export the plug-in configuration.</p>
+         * <p>Specifies whether to export plug-in configurations.</p>
          */
         public Builder extensionConfig(ExtensionConfig extensionConfig) {
             this.putBodyParameter("extensionConfig", extensionConfig);
@@ -243,7 +243,7 @@ public class ExportHttpApiRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to export the consumer authorization configuration for operations or routes.</p>
+             * <p>Specifies whether to export consumer authorization configurations for operations or routes.</p>
              */
             public Builder withAuthConfig(Boolean withAuthConfig) {
                 this.withAuthConfig = withAuthConfig;
@@ -251,7 +251,7 @@ public class ExportHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to export the authorized consumers.</p>
+             * <p>Specifies whether to export authorized consumers.</p>
              */
             public Builder withAuthConsumer(Boolean withAuthConsumer) {
                 this.withAuthConsumer = withAuthConsumer;
@@ -259,7 +259,7 @@ public class ExportHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to export the plug-in configuration.</p>
+             * <p>Specifies whether to export plug-in configurations.</p>
              */
             public Builder withPlugin(Boolean withPlugin) {
                 this.withPlugin = withPlugin;
@@ -267,7 +267,7 @@ public class ExportHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to export the policy configuration.</p>
+             * <p>Specifies whether to export policy configurations.</p>
              */
             public Builder withPolicy(Boolean withPolicy) {
                 this.withPolicy = withPolicy;
@@ -275,7 +275,7 @@ public class ExportHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to export the backend service.</p>
+             * <p>Specifies whether to export backend services.</p>
              */
             public Builder withService(Boolean withService) {
                 this.withService = withService;

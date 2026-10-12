@@ -73,7 +73,10 @@ public class CreateHttpApiVersionRequest extends Request {
         } 
 
         /**
-         * httpApiId.
+         * <p>The ID of the HTTP API to which the route belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-xxx</p>
          */
         public Builder httpApiId(String httpApiId) {
             this.putPathParameter("httpApiId", httpApiId);
@@ -82,7 +85,7 @@ public class CreateHttpApiVersionRequest extends Request {
         }
 
         /**
-         * versionConfig.
+         * <p>The API versioning configuration.</p>
          */
         public Builder versionConfig(HttpApiVersionConfig versionConfig) {
             this.putBodyParameter("versionConfig", versionConfig);

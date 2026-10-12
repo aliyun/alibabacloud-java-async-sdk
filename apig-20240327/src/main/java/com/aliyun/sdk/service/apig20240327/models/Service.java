@@ -405,7 +405,7 @@ public class Service extends TeaModel {
         } 
 
         /**
-         * <p>The address information, including IP addresses or domain name lists.</p>
+         * <p>The address information, which is a list of IP addresses or domain names.</p>
          */
         public Builder addresses(java.util.List<String> addresses) {
             this.addresses = addresses;
@@ -552,7 +552,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * <p>The configuration for removing abnormal instances.</p>
+         * <p>The outlier detection configuration for removing abnormal instances.</p>
          */
         public Builder outlierDetection(OutlierDetection outlierDetection) {
             this.outlierDetection = outlierDetection;
@@ -661,7 +661,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * <p>The time when the service was created.</p>
+         * <p>The time when the service was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1725868548440</p>

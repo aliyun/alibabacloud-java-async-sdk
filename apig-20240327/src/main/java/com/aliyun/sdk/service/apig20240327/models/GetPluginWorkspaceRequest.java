@@ -59,7 +59,10 @@ public class GetPluginWorkspaceRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID. This parameter is included in the request path and must be provided when you invoke this operation. If this parameter is omitted, a valid request URL cannot be constructed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plw-xxxxxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);

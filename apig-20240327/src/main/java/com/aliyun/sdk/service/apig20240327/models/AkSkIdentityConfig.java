@@ -93,7 +93,7 @@ public class AkSkIdentityConfig extends TeaModel {
         } 
 
         /**
-         * <p>Access Key</p>
+         * <p>The AK configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -104,7 +104,7 @@ public class AkSkIdentityConfig extends TeaModel {
         }
 
         /**
-         * <p>Generation mode</p>
+         * <p>The generation mode.</p>
          * 
          * <strong>example:</strong>
          * <p>System</p>
@@ -115,7 +115,7 @@ public class AkSkIdentityConfig extends TeaModel {
         }
 
         /**
-         * <p>Secret Key</p>
+         * <p>The SK configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -126,7 +126,7 @@ public class AkSkIdentityConfig extends TeaModel {
         }
 
         /**
-         * <p>Identity authentication type</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>Jwt</p>

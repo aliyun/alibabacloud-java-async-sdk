@@ -67,7 +67,7 @@ public class HttpApiApiInfoDeployCntMapValue extends TeaModel {
         } 
 
         /**
-         * <p>The number of deployed API operations.</p>
+         * <p>The number of published API operations.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -78,7 +78,10 @@ public class HttpApiApiInfoDeployCntMapValue extends TeaModel {
         }
 
         /**
-         * cnt.
+         * <p>The total number of API operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder cnt(Long cnt) {
             this.cnt = cnt;

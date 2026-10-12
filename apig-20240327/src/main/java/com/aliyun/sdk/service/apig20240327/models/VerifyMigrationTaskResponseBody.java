@@ -93,7 +93,10 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +205,10 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The namespaced name of the incompatible Ingress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default/my-ingress</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -207,7 +216,10 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * rule.
+             * <p>The summary of the incompatible rule, in the format of request URI → destination service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/api/v1/pets -&gt; pet-service</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -215,7 +227,7 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * unSupportedAnnotations.
+             * <p>The list of unsupported annotations on the Ingress.</p>
              */
             public Builder unSupportedAnnotations(java.util.List<String> unSupportedAnnotations) {
                 this.unSupportedAnnotations = unSupportedAnnotations;
@@ -308,7 +320,10 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * isSupported.
+             * <p>Indicates whether all routes are compatible and can be migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSupported(Boolean isSupported) {
                 this.isSupported = isSupported;
@@ -316,7 +331,10 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The description of the check result, such as the failure reason or incompatibility summary. This value is from the Istio validation Reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all routes supported</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -324,7 +342,10 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * success.
+             * <p>Indicates whether the check is successful, which means whether the Istiod query link is working properly.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -332,7 +353,7 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * unSupportedRouteRules.
+             * <p>The list of incompatible routes.</p>
              */
             public Builder unSupportedRouteRules(java.util.List<UnSupportedRouteRules> unSupportedRouteRules) {
                 this.unSupportedRouteRules = unSupportedRouteRules;

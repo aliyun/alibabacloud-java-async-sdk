@@ -160,7 +160,7 @@ public class ListEnvironmentsRequest extends Request {
          * <p>The environment alias. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         public Builder aliasLike(String aliasLike) {
             this.putQueryParameter("aliasLike", aliasLike);

@@ -117,6 +117,7 @@ public class BatchExportHttpApisRequest extends Request {
         } 
 
         /**
+         * <p>The list of API IDs to export.</p>
          * <p>This parameter is required.</p>
          */
         public Builder apiIds(java.util.List<String> apiIds) {
@@ -126,6 +127,7 @@ public class BatchExportHttpApisRequest extends Request {
         }
 
         /**
+         * <p>The API type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +140,7 @@ public class BatchExportHttpApisRequest extends Request {
         }
 
         /**
-         * extensionConfig.
+         * <p>The export extension configuration. When this configuration is specified for a REST API, gatewayId is required. This configuration is required for batch export of HTTP APIs.</p>
          */
         public Builder extensionConfig(ExtensionConfig extensionConfig) {
             this.putBodyParameter("extensionConfig", extensionConfig);
@@ -147,7 +149,10 @@ public class BatchExportHttpApisRequest extends Request {
         }
 
         /**
-         * format.
+         * <p>The export format. Valid values: json and yaml. Default value: yaml.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yaml</p>
          */
         public Builder format(String format) {
             this.putBodyParameter("format", format);
@@ -156,7 +161,10 @@ public class BatchExportHttpApisRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The gateway instance ID. This parameter is required when extensionConfig is specified for a REST API. This parameter is required for batch export of HTTP APIs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putBodyParameter("gatewayId", gatewayId);
@@ -263,7 +271,10 @@ public class BatchExportHttpApisRequest extends Request {
             } 
 
             /**
-             * withAuthConfig.
+             * <p>Specifies whether to export the consumer authorization configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder withAuthConfig(Boolean withAuthConfig) {
                 this.withAuthConfig = withAuthConfig;
@@ -271,7 +282,10 @@ public class BatchExportHttpApisRequest extends Request {
             }
 
             /**
-             * withAuthConsumer.
+             * <p>Specifies whether to export the authorized consumers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder withAuthConsumer(Boolean withAuthConsumer) {
                 this.withAuthConsumer = withAuthConsumer;
@@ -279,7 +293,10 @@ public class BatchExportHttpApisRequest extends Request {
             }
 
             /**
-             * withPlugin.
+             * <p>Specifies whether to export the plugin configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder withPlugin(Boolean withPlugin) {
                 this.withPlugin = withPlugin;
@@ -287,7 +304,10 @@ public class BatchExportHttpApisRequest extends Request {
             }
 
             /**
-             * withPolicy.
+             * <p>Specifies whether to export the policy configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder withPolicy(Boolean withPolicy) {
                 this.withPolicy = withPolicy;
@@ -295,7 +315,10 @@ public class BatchExportHttpApisRequest extends Request {
             }
 
             /**
-             * withService.
+             * <p>Specifies whether to export the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder withService(Boolean withService) {
                 this.withService = withService;

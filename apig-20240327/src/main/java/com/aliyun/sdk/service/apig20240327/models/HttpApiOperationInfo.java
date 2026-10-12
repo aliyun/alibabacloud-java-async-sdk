@@ -210,7 +210,7 @@ public class HttpApiOperationInfo extends TeaModel {
         } 
 
         /**
-         * <p>The authentication configurations of the operation.</p>
+         * <p>The authentication configuration.</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.authConfig = authConfig;
@@ -229,7 +229,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The backend service deployment information of the operation.</p>
+         * <p>The backend service deployment information for the API operation.</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.deployConfigs = deployConfigs;
@@ -237,10 +237,10 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The operation description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>A example operation.</p>
+         * <p>Retrieve user information</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -248,7 +248,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable authentication.</p>
+         * <p>Indicates whether authentication is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -259,19 +259,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The HTTP method of the operation.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>TRACE</li>
-         * <li>HEAD</li>
-         * <li>DELETE</li>
-         * <li>POST</li>
-         * <li>GET</li>
-         * <li>CONNECT</li>
-         * <li>OPTIONS</li>
-         * <li>PUT</li>
-         * <li>PATCH</li>
-         * </ul>
+         * <p>The HTTP method of the API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>GET</p>
@@ -282,7 +270,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The mocked parameters of the operation.</p>
+         * <p>The mock parameter settings for the API operation.</p>
          */
         public Builder mock(HttpApiMockContract mock) {
             this.mock = mock;
@@ -290,7 +278,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The operation name.</p>
+         * <p>The name of the API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>GetUserInfo</p>
@@ -301,7 +289,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The operation ID.</p>
+         * <p>The ID of the API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>op-xxx</p>
@@ -312,7 +300,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The operation path.</p>
+         * <p>The path of the API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>/user/123</p>
@@ -323,7 +311,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The request parameters of the operation.</p>
+         * <p>The request parameter definition of the API operation.</p>
          */
         public Builder request(HttpApiRequestContract request) {
             this.request = request;
@@ -331,7 +319,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The response parameters of the operation.</p>
+         * <p>The response parameter definition of the API operation.</p>
          */
         public Builder response(HttpApiResponseContract response) {
             this.response = response;
@@ -339,7 +327,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The operation publishing status on the instance.</p>
+         * <p>The publish status of the API operation on the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>Deployed</p>

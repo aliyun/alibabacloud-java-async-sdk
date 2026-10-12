@@ -340,7 +340,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * <p>The expiration mode. Currently only LongTerm is supported.</p>
+             * <p>The expiration mode. Currently, only LongTerm is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>LongTerm</p>
@@ -373,7 +373,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * <p>The resource identifier. Serves as a unique identifier for space reuse by non-standard code sources.</p>
+             * <p>The resource identifier, which serves as a unique identifier for space reuse by non-standard code sources.</p>
              */
             public Builder resourceIdentifier(ResourceIdentifier resourceIdentifier) {
                 this.resourceIdentifier = resourceIdentifier;

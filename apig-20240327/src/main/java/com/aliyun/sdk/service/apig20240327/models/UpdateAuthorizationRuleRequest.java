@@ -73,7 +73,10 @@ public class UpdateAuthorizationRuleRequest extends Request {
         } 
 
         /**
-         * consumerAuthorizationRuleId.
+         * <p>The ID of the authorization rule. This parameter is required. The rule must belong to the current user. The rule is filtered and updated by user and rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>car-xxxx</p>
          */
         public Builder consumerAuthorizationRuleId(String consumerAuthorizationRuleId) {
             this.putPathParameter("consumerAuthorizationRuleId", consumerAuthorizationRuleId);
@@ -82,7 +85,7 @@ public class UpdateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * resources.
+         * <p>The new list of authorized resources. In MCP Tool scenarios, this is a set of tool names. An empty array returns ErrInvalidParameterWithEmpty.</p>
          */
         public Builder resources(java.util.List<String> resources) {
             this.putBodyParameter("resources", resources);

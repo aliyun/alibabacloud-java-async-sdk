@@ -93,7 +93,10 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7D513911-206E-5E93-9C9E-71D63C0D68E7</p>
@@ -186,7 +192,10 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The service name. After you select a Server Load Balancer (SLB) instance, the frontend populates this value into the serviceName field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx-ingress-lb</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +203,10 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * slbId.
+             * <p>The ID of the load balancing instance associated with the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-xxxx / nlb-xxxx</p>
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -261,7 +273,10 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * namespace.
+             * <p>The Kubernetes namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -269,7 +284,7 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * services.
+             * <p>The list of migratable services in the namespace.</p>
              */
             public Builder services(java.util.List<Services> services) {
                 this.services = services;
@@ -323,7 +338,7 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * namespacedServices.
+             * <p>The list of services grouped by namespace.</p>
              */
             public Builder namespacedServices(java.util.List<NamespacedServices> namespacedServices) {
                 this.namespacedServices = namespacedServices;

@@ -153,7 +153,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The KMS key configuration.</p>
+         * <p>The KMS key configuration information.</p>
          */
         public Builder kmsConfig(KMSConfig kmsConfig) {
             this.putBodyParameter("kmsConfig", kmsConfig);
@@ -186,7 +186,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The source of the key.</p>
+         * <p>The key source.</p>
          * 
          * <strong>example:</strong>
          * <p>KMS</p>

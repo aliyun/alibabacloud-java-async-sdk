@@ -221,7 +221,7 @@ public class BatchAddConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of consumer IDs successfully added to the consumer group.</p>
+             * <p>The list of consumer IDs that were successfully added to the consumer group.</p>
              */
             public Builder successConsumerIds(java.util.List<String> successConsumerIds) {
                 this.successConsumerIds = successConsumerIds;

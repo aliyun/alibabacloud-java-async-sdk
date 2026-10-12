@@ -87,7 +87,7 @@ public class DetachAndDeletePolicyRequest extends Request {
         }
 
         /**
-         * <p>The policy association ID.</p>
+         * <p>The policy attachment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pr-cq7l5s5lhtgi6qasrdc0</p>

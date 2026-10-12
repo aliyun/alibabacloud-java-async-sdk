@@ -229,7 +229,7 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * <p>The creation time, in ms.</p>
+         * <p>The creation time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1726649310593</p>
@@ -254,7 +254,7 @@ public class HttpRoute extends TeaModel {
          * <p>The route description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Product center staging route</p>
+         * <p>Pre-release route for the product center</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -286,7 +286,7 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * <p>The route matching rule.</p>
+         * <p>The route matching rules.</p>
          */
         public Builder match(HttpRouteMatch match) {
             this.match = match;
@@ -324,7 +324,7 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * <p>The update time, in ms.</p>
+         * <p>The update time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1726819895636</p>
@@ -511,7 +511,7 @@ public class HttpRoute extends TeaModel {
             } 
 
             /**
-             * <p>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</p>
+             * <p>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, Unknown.</p>
              * 
              * <strong>example:</strong>
              * <p>MultiTenantServerless</p>
@@ -774,7 +774,7 @@ public class HttpRoute extends TeaModel {
              * <p>The environment name alias.</p>
              * 
              * <strong>example:</strong>
-             * <p>Product center staging environment</p>
+             * <p>Pre-release environment for the product center</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -812,7 +812,7 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * <p>The list of default second-level domain names of the environment.</p>
+             * <p>The list of default subdomain names for the environment.</p>
              */
             public Builder subDomains(java.util.List<SubDomains> subDomains) {
                 this.subDomains = subDomains;

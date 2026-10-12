@@ -59,7 +59,10 @@ public class VerifyMigrationTaskRequest extends Request {
         } 
 
         /**
-         * taskId.
+         * <p>The migration task ID. This is a path parameter and is required. The task must belong to the current user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mt-xxxx</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);

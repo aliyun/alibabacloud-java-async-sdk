@@ -87,7 +87,10 @@ public class UpdateRiskNotificationRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -96,7 +99,10 @@ public class UpdateRiskNotificationRequest extends Request {
         }
 
         /**
-         * isMute.
+         * <p>Specifies whether to mute notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isMute(Boolean isMute) {
             this.putBodyParameter("isMute", isMute);
@@ -105,7 +111,11 @@ public class UpdateRiskNotificationRequest extends Request {
         }
 
         /**
-         * riskCode.
+         * <p>The risk item code. This parameter is required.</p>
+         * <p>The value is a numeric string (for example, 60010010002 or 50010010009). Call GetRiskNotification to query the code of the current risk item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60010010002</p>
          */
         public Builder riskCode(String riskCode) {
             this.putBodyParameter("riskCode", riskCode);

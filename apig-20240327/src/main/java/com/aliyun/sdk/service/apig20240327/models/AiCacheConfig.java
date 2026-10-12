@@ -438,7 +438,7 @@ public class AiCacheConfig extends TeaModel {
             } 
 
             /**
-             * <p>The API key of the vector database.</p>
+             * <p>The vector database API key.</p>
              * 
              * <strong>example:</strong>
              * <p>sk-xxx</p>
@@ -460,7 +460,7 @@ public class AiCacheConfig extends TeaModel {
             }
 
             /**
-             * <p>The service address of the vector database.</p>
+             * <p>The vector database service address.</p>
              * 
              * <strong>example:</strong>
              * <p>vdb-xxx.dashvector.aliyuncs.com</p>

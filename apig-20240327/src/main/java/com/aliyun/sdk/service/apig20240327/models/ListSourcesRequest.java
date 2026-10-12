@@ -115,7 +115,7 @@ public class ListSourcesRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl****</p>
@@ -127,7 +127,7 @@ public class ListSourcesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -151,7 +151,10 @@ public class ListSourcesRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID used to filter results. This parameter is also used for RAM authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -160,12 +163,7 @@ public class ListSourcesRequest extends Request {
         }
 
         /**
-         * <p>The type by which you want to query sources.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>K8S</li>
-         * <li>MSE_NACOS</li>
-         * </ul>
+         * <p>The source type used to filter the query results.</p>
          * 
          * <strong>example:</strong>
          * <p>MSE_NACOS</p>

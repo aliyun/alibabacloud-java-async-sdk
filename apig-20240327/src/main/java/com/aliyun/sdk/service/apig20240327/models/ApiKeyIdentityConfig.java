@@ -101,7 +101,7 @@ public class ApiKeyIdentityConfig extends TeaModel {
         }
 
         /**
-         * <p>The complete set of API key credential sources. The set contains one to three items. Multiple sources are applicable only to the AI gateway Header mode. Query String and non-AI gateway allow only a single source. If submitted together with apikeySource, the latter must be consistent with the compatible projection.</p>
+         * <p>The complete set of API key credential sources. The set contains one to three items. Multiple sources are applicable only to the AI gateway Header mode. Query String and non-AI gateway scenarios allow only a single source. If submitted together with apikeySource, the latter must be consistent with the compatible projection.</p>
          */
         public Builder apikeySources(java.util.List<ApikeySources> apikeySources) {
             this.apikeySources = apikeySources;

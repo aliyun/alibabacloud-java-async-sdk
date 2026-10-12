@@ -227,7 +227,10 @@ public class ListGlobalPoliciesRequest extends Request {
         } 
 
         /**
-         * attachResourceType.
+         * <p>The attached resource type to filter by. This parameter takes effect only when globalPolicyType is set to BlackOrWhite. If this parameter is not specified, Gateway, Domain, and Route resources are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Gateway</p>
          */
         public Builder attachResourceType(String attachResourceType) {
             this.putQueryParameter("attachResourceType", attachResourceType);
@@ -236,7 +239,10 @@ public class ListGlobalPoliciesRequest extends Request {
         }
 
         /**
-         * className.
+         * <p>The policy class name. Separate multiple values with commas (server-side strings.Split).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JWTAuth,OIDCAuth,ExternalZAuth</p>
          */
         public Builder className(String className) {
             this.putQueryParameter("className", className);
@@ -245,7 +251,10 @@ public class ListGlobalPoliciesRequest extends Request {
         }
 
         /**
-         * enable.
+         * <p>The enabling status to filter by.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("enable", enable);
@@ -254,7 +263,10 @@ public class ListGlobalPoliciesRequest extends Request {
         }
 
         /**
-         * environmentId.
+         * <p>The environment ID to filter by.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("environmentId", environmentId);
@@ -263,7 +275,10 @@ public class ListGlobalPoliciesRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The gateway ID to filter by (attachment dimension).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
@@ -272,7 +287,10 @@ public class ListGlobalPoliciesRequest extends Request {
         }
 
         /**
-         * globalPolicyType.
+         * <p>The global policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GlobalAuth</p>
          */
         public Builder globalPolicyType(String globalPolicyType) {
             this.putQueryParameter("globalPolicyType", globalPolicyType);
@@ -281,7 +299,10 @@ public class ListGlobalPoliciesRequest extends Request {
         }
 
         /**
-         * ipAccessControlContent.
+         * <p>The IP content to filter by. A LIKE match is performed on the config field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.3.4</p>
          */
         public Builder ipAccessControlContent(String ipAccessControlContent) {
             this.putQueryParameter("ipAccessControlContent", ipAccessControlContent);
@@ -290,7 +311,10 @@ public class ListGlobalPoliciesRequest extends Request {
         }
 
         /**
-         * ipAccessControlProtocolLayer.
+         * <p>The protocol layer to filter by. L4 queries config entries that contain L4. L7 queries config entries that do not contain L4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>L7</p>
          */
         public Builder ipAccessControlProtocolLayer(String ipAccessControlProtocolLayer) {
             this.putQueryParameter("ipAccessControlProtocolLayer", ipAccessControlProtocolLayer);
@@ -299,7 +323,10 @@ public class ListGlobalPoliciesRequest extends Request {
         }
 
         /**
-         * ipAccessControlResourceName.
+         * <p>The resource name to filter by. A LIKE match is performed on the config field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-route</p>
          */
         public Builder ipAccessControlResourceName(String ipAccessControlResourceName) {
             this.putQueryParameter("ipAccessControlResourceName", ipAccessControlResourceName);
@@ -308,7 +335,10 @@ public class ListGlobalPoliciesRequest extends Request {
         }
 
         /**
-         * ipAccessControlType.
+         * <p>The IP access control type to filter by. A LIKE match is performed on the config field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>White / Black</p>
          */
         public Builder ipAccessControlType(String ipAccessControlType) {
             this.putQueryParameter("ipAccessControlType", ipAccessControlType);
@@ -317,7 +347,10 @@ public class ListGlobalPoliciesRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The exact policy name to filter by.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-jwt-auth</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -326,7 +359,10 @@ public class ListGlobalPoliciesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -335,7 +371,10 @@ public class ListGlobalPoliciesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

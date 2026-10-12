@@ -318,10 +318,10 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The synced MCP server ID.</p>
+             * <p>The ID of the synced MCP server.</p>
              * 
              * <strong>example:</strong>
-             * <p>The synced MCP server ID</p>
+             * <p>The ID of the synced MCP server</p>
              */
             public Builder importMcpServerId(String importMcpServerId) {
                 this.importMcpServerId = importMcpServerId;
@@ -657,7 +657,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of assembled sources. This parameter is required when type is AssemblyMCP.</p>
+             * <p>The list of assembly sources. This parameter is required when type is AssemblyMCP.</p>
              */
             public Builder assembledSources(java.util.List<AssembledSources> assembledSources) {
                 this.assembledSources = assembledSources;
@@ -673,13 +673,13 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation source type. Valid values:</p>
+             * <p>The creation source type.</p>
              * <ul>
-             * <li>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP.</li>
-             * <li>ApiGatewayMcpHosting: gateway-managed MCP direct proxy.</li>
-             * <li>ApiGatewayAssembly: gateway MCP assembly.</li>
-             * <li>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP.</li>
-             * <li>NacosMcpHosting: gateway-managed Nacos-synced MCP direct proxy.</li>
+             * <li>ApiGatewayHttpToMCP: Gateway-managed HTTP-to-MCP.</li>
+             * <li>ApiGatewayMcpHosting: Gateway-managed MCP direct proxy.</li>
+             * <li>ApiGatewayAssembly: Gateway MCP assembly.</li>
+             * <li>NacosHttpToMCP: Gateway-managed Nacos-synced HTTP-to-MCP.</li>
+             * <li>NacosMcpHosting: Gateway-managed Nacos-synced MCP direct proxy.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -951,7 +951,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP server list information.</p>
+             * <p>The list of MCP servers.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

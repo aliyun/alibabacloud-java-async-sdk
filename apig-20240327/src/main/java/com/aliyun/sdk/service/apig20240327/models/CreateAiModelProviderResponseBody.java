@@ -674,7 +674,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model credits consumption configuration.</p>
+             * <p>The credits consumption configuration of the model.</p>
              */
             public Builder credit(Credit credit) {
                 this.credit = credit;
@@ -682,7 +682,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model capability features.</p>
+             * <p>The capability features of the model.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;stream&quot;:true,&quot;tools&quot;:true}</p>
@@ -693,7 +693,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gateway instance ID to which the model card belongs.</p>
+             * <p>The instance ID of the gateway to which the model card belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>gw-ucbx3s2m****</p>
@@ -734,7 +734,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model provider identifier to which the model card belongs.</p>
+             * <p>The identifier of the model provider to which the model card belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>openai</p>
@@ -988,7 +988,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model provider identifier.</p>
+             * <p>The identifier of the model provider.</p>
              * 
              * <strong>example:</strong>
              * <p>openai</p>
@@ -999,7 +999,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The provider source type.</p>
+             * <p>The source type of the provider.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>

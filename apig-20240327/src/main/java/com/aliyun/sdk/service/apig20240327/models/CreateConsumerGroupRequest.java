@@ -116,7 +116,7 @@ public class CreateConsumerGroupRequest extends Request {
          * <p>The consumer group description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Used for grouping online API consumers.</p>
+         * <p>Group for online API callers</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);

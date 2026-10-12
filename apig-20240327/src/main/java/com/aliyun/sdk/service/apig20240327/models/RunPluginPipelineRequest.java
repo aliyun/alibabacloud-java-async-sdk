@@ -59,7 +59,10 @@ public class RunPluginPipelineRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID. The system queries the t_plugin_workspace table based on the current user and workspaceId. If no record is found, the ErrRecordNotFound error is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plw-xxxxxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);

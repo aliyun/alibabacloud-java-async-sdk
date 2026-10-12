@@ -247,7 +247,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. This parameter is allowed only when gatewayType is AI and gatewayEdition is MultiTenantServerless.</p>
+         * <p>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. This parameter can be specified only when gatewayType is set to AI and gatewayEdition is set to MultiTenantServerless.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -259,7 +259,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The gateway type. This parameter must be explicitly set to AI for AI Serverless or multi-tenant gateways.</p>
+         * <p>The gateway type. This parameter must be explicitly set to AI for AI Serverless or multi-tenant editions.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -280,7 +280,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The gateway name. This parameter is required for all gateway editions.</p>
+         * <p>The gateway name. This parameter is required for all editions.</p>
          * 
          * <strong>example:</strong>
          * <p>test-ceshi</p>
@@ -292,7 +292,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The network access configuration. This parameter is required. If not provided, the service returns InvalidParameter.IsEmpty (400).</p>
+         * <p>The network access configuration. This parameter is required. If this parameter is not specified, the service returns an InvalidParameter.IsEmpty (400) error.</p>
          */
         public Builder networkAccessConfig(NetworkAccessConfig networkAccessConfig) {
             this.putBodyParameter("networkAccessConfig", networkAccessConfig);
@@ -334,7 +334,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID. This parameter is required for all gateway editions.</p>
+         * <p>The virtual private cloud (VPC) ID. This parameter is required for all editions.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-zm0x16tomfiat1mk9f6rs</p>
@@ -346,7 +346,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * <p>The zone configuration. This parameter is required for all gateway editions.</p>
+         * <p>The zone configuration. This parameter is required for all editions.</p>
          */
         public Builder zoneConfig(ZoneConfig zoneConfig) {
             this.putBodyParameter("zoneConfig", zoneConfig);
@@ -401,7 +401,7 @@ public class CreateGatewayRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable log collection.</p>
+             * <p>Specifies whether to enable SLS log collection.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

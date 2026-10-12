@@ -269,7 +269,7 @@ public class ListHttpApiRoutesRequest extends Request {
         } 
 
         /**
-         * <p>The HTTP API ID. This is a path parameter and is required. If not provided, the request URL cannot be constructed. You can obtain valid values from versionedHttpApis[].httpApiId returned by ListHttpApis. This parameter must point to an HTTP API of type Http, HttpIngress, or WebSocket. The Rest type does not support route operations.</p>
+         * <p>The HTTP API ID. This is a path parameter and is actually required. The request URL cannot be constructed if this parameter is not provided. You can obtain valid values from versionedHttpApis[].httpApiId returned by ListHttpApis. This parameter must point to an HTTP API of the Http, HttpIngress, or WebSocket type. The Rest type does not support route operations.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cr68g1dlhtgm31f***</p>
@@ -281,7 +281,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The backend service name. You can use this name to filter routes.</p>
+         * <p>The backend service name. You can use this parameter to filter routes.</p>
          * 
          * <strong>example:</strong>
          * <p>test-svc</p>
@@ -293,7 +293,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Filters the API list by a specific consumer authorization rule ID. The response includes only authorized APIs.</p>
+         * <p>Filters the API list by a specific consumer authorization rule ID. The API list in the response contains only authorized APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>cas-xxx</p>
@@ -341,7 +341,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether this is a deployment scenario.</p>
+         * <p>Specifies whether the request is for a deployment scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -377,7 +377,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Fuzzy match by route name.</p>
+         * <p>Performs a fuzzy match by route name.</p>
          * 
          * <strong>example:</strong>
          * <p>item</p>
@@ -389,7 +389,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The page number, starting from 1. Default value: 1.</p>
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -401,7 +401,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The page size. Valid range: 1 to 100. Default value: 10.</p>
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -413,7 +413,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Fuzzy match by route path.</p>
+         * <p>Performs a fuzzy match by route path.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1</p>
@@ -437,7 +437,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Includes the authorization rule list of the specified consumer ID for each route in the response.</p>
+         * <p>Includes the authorization rule list of the specified consumer ID in each route in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxx</p>
@@ -449,7 +449,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Includes the plug-in attachment information of the specified plug-in ID for each route in the response.</p>
+         * <p>Includes the mount information of the specified plug-in ID in each route in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-xxx</p>

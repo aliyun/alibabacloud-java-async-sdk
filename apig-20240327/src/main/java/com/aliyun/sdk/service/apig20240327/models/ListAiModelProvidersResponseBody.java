@@ -332,7 +332,7 @@ public class ListAiModelProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing type. Currently only fixed is supported.</p>
+             * <p>The billing type. Only fixed is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>fixed</p>
@@ -474,7 +474,7 @@ public class ListAiModelProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of input modalities supported by the model. The list contains up to 16 items, and each item must not be empty.</p>
+             * <p>The list of input modalities supported by the model. The list contains up to 16 entries, and each entry cannot be empty.</p>
              */
             public Builder supportedInputModalities(java.util.List<String> supportedInputModalities) {
                 this.supportedInputModalities = supportedInputModalities;
@@ -482,7 +482,7 @@ public class ListAiModelProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of output modalities supported by the model. The list contains up to 16 items, and each item must not be empty.</p>
+             * <p>The list of output modalities supported by the model. The list contains up to 16 entries, and each entry cannot be empty.</p>
              */
             public Builder supportedOutputModalities(java.util.List<String> supportedOutputModalities) {
                 this.supportedOutputModalities = supportedOutputModalities;
@@ -666,7 +666,7 @@ public class ListAiModelProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of invocation paths supported by the model. Each item contains both path and type.</p>
+             * <p>The list of invocation paths supported by the model. Each entry contains both path and type.</p>
              */
             public Builder availablePaths(java.util.List<AvailablePaths> availablePaths) {
                 this.availablePaths = availablePaths;
@@ -682,7 +682,7 @@ public class ListAiModelProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model capability switches. Keys are model capability names supported by API Gateway, and values are Boolean values.</p>
+             * <p>The model capability switches. The key is the name of a model capability supported by API Gateway, and the value is a Boolean value.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true}</p>
@@ -767,7 +767,7 @@ public class ListAiModelProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time of the model card, in the format of yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The most recent update time of the model card, in the format of yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-14 18:30:00</p>
@@ -928,7 +928,7 @@ public class ListAiModelProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of AI service summaries currently bound to the model provider.</p>
+             * <p>The list of AI service summaries that are currently bound to the model provider.</p>
              */
             public Builder boundServices(java.util.List<ServiceInfo> boundServices) {
                 this.boundServices = boundServices;
@@ -939,7 +939,7 @@ public class ListAiModelProvidersResponseBody extends TeaModel {
              * <p>The display name of the model provider. The value can be up to 128 characters in length.</p>
              * 
              * <strong>example:</strong>
-             * <p>Qwen Cloud / Alibaba Cloud Bailian.</p>
+             * <p>千问云 / 阿里云百炼</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -958,7 +958,7 @@ public class ListAiModelProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of model cards currently associated with the model provider.</p>
+             * <p>The list of model cards that are currently associated with the model provider.</p>
              */
             public Builder modelCards(java.util.List<ModelCards> modelCards) {
                 this.modelCards = modelCards;
@@ -988,7 +988,7 @@ public class ListAiModelProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stable model provider identifier. The value can be up to 128 characters in length.</p>
+             * <p>The stable identifier of the model provider. The value can be up to 128 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen</p>
@@ -1010,7 +1010,7 @@ public class ListAiModelProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time of the model provider, in the format of yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The most recent update time of the model provider, in the format of yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-14 18:30:00</p>
@@ -1136,7 +1136,7 @@ public class ListAiModelProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of model providers that match the conditions.</p>
+             * <p>The total number of model providers that match the query conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

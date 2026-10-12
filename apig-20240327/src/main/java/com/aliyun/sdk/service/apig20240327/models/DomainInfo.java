@@ -236,7 +236,7 @@ public class DomainInfo extends TeaModel {
         } 
 
         /**
-         * <p>The certificate identity from SSL Certificates Service.</p>
+         * <p>The certificate identity in SSL Certificates Service.</p>
          * 
          * <strong>example:</strong>
          * <p>235556-cn-hangzhou</p>

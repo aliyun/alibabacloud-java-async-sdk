@@ -125,7 +125,7 @@ public class AiTokenRateLimitConfig extends TeaModel {
         }
 
         /**
-         * <p>The running status of the plugin.</p>
+         * <p>The running status of the plug-in.</p>
          */
         public Builder pluginStatus(AiPluginStatus pluginStatus) {
             this.pluginStatus = pluginStatus;

@@ -67,7 +67,7 @@ public class ListGatewayErrorAccessLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The list of log entries. Each entry is a mapping from field names to field values.</p>
          */
         public Builder data(java.util.List<java.util.Map<String, String>> data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class ListGatewayErrorAccessLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C9BF49BD-3037-5006-B379-656ECBA6F56C</p>

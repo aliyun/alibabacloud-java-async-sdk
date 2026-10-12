@@ -93,7 +93,10 @@ public class GetRiskNotificationResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetRiskNotificationResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The risk detection result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetRiskNotificationResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +205,10 @@ public class GetRiskNotificationResponseBody extends TeaModel {
             } 
 
             /**
-             * gatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -207,7 +216,10 @@ public class GetRiskNotificationResponseBody extends TeaModel {
             }
 
             /**
-             * isMute.
+             * <p>Indicates whether the notification for the risk item is muted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isMute(Boolean isMute) {
                 this.isMute = isMute;
@@ -215,7 +227,10 @@ public class GetRiskNotificationResponseBody extends TeaModel {
             }
 
             /**
-             * riskCode.
+             * <p>The code of the risk item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GW_VERSION_EXPIRED</p>
              */
             public Builder riskCode(String riskCode) {
                 this.riskCode = riskCode;

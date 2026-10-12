@@ -299,7 +299,7 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * <p>The certificate ID.</p>
+         * <p>The unique certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -310,7 +310,7 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * <p>The certificate ID.</p>
+         * <p>The certificate identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>cert-123</p>
@@ -332,7 +332,7 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * <p>The name.</p>
+         * <p>The common name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -354,7 +354,7 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * <p>The certificate matching the domain name.</p>
+         * <p>The certificate matched to the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -420,7 +420,7 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * <p>The md5 value.</p>
+         * <p>The MD5 value.</p>
          * 
          * <strong>example:</strong>
          * <p>A1B2C3D4E5F67890ABCDEF1234567890</p>
@@ -431,7 +431,7 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * <p>The time when the certificate expires.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890000</p>
@@ -442,7 +442,7 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * <p>The time when the certificate starts to take effect.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890000</p>
@@ -475,7 +475,7 @@ public class SslCertMetaInfo extends TeaModel {
         }
 
         /**
-         * <p>The sha2 value.</p>
+         * <p>The SHA-2 value.</p>
          * 
          * <strong>example:</strong>
          * <p>A1B2C3D4E5F67890ABCDEF1234567890ABCDEF1234567890ABCDEF1234567890</p>

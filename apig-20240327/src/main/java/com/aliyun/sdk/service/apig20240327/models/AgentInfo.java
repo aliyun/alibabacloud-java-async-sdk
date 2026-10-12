@@ -197,7 +197,7 @@ public class AgentInfo extends TeaModel {
         } 
 
         /**
-         * <p>The associated resource information for the Agent access capability. Returns null if the Agent access capability is not configured.</p>
+         * <p>The associated resource information for the agent access capability. If the agent access capability is not configured, null is always returned.</p>
          */
         public Builder agentAccess(AgentAccess agentAccess) {
             this.agentAccess = agentAccess;
@@ -205,7 +205,7 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * <p>Agent ID。</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-1</p>
@@ -216,7 +216,7 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * <p>The Agent type. DashScope (Bailian) allows only Agent access. Dify allows both Agent access and model access. ClaudeCode allows only model access. Custom allows both Agent access and model access.</p>
+         * <p>The type of the agent. DashScope allows only agent access. Dify allows agent access and model access. ClaudeCode allows only model access. Custom allows agent access and model access.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>
@@ -227,7 +227,7 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * <p>The list of capabilities that the current Agent type allows to be configured. This field does not indicate that the capabilities are already configured. To determine whether a capability is configured, check whether agentAccess or modelAccess is null.</p>
+         * <p>The list of capabilities that the current agent type is allowed to configure. This field does not indicate that the capabilities are already configured. To check whether a capability is configured, determine whether agentAccess or modelAccess is null.</p>
          */
         public Builder allowedCapabilities(java.util.List<String> allowedCapabilities) {
             this.allowedCapabilities = allowedCapabilities;
@@ -235,7 +235,7 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * <p>The Agent creation time, in Unix millisecond timestamp.</p>
+         * <p>The time when the agent was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1755129600000</p>
@@ -246,7 +246,7 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * <p>The Agent description.</p>
+         * <p>The description of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>custom agent</p>
@@ -257,7 +257,7 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * <p>The gateway ID to which the Agent belongs. When reading the associated API deployment configuration, select the configuration whose gatewayId matches this value.</p>
+         * <p>The ID of the gateway to which the agent belongs. When reading the associated API deployment configuration, select the configuration whose gatewayId matches this value.</p>
          * 
          * <strong>example:</strong>
          * <p>gateway-1</p>
@@ -268,7 +268,7 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * <p>The associated resource information for the model access capability. Returns null if the model access capability is not configured.</p>
+         * <p>The associated resource information for the model access capability. If the model access capability is not configured, null is always returned.</p>
          */
         public Builder modelAccess(ModelAccess modelAccess) {
             this.modelAccess = modelAccess;
@@ -276,7 +276,7 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * <p>The Agent name.</p>
+         * <p>The name of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent</p>
@@ -287,7 +287,7 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * <p>The resource group ID in which the Agent is saved.</p>
+         * <p>The ID of the resource group where the agent is saved.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-1</p>
@@ -298,7 +298,7 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * <p>The Agent status. An Agent that is successfully created and queryable always returns Ready. Internal creation or compensation states are not returned externally.</p>
+         * <p>The status of the agent. In the current phase, agents that are successfully created and can be queried always return Ready. Internal creation or compensation statuses are not returned externally.</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -309,7 +309,7 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * <p>The Agent last update time, in Unix millisecond timestamp.</p>
+         * <p>The time when the agent was last updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1755129600000</p>
@@ -365,7 +365,7 @@ public class AgentInfo extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP API ID associated with the Agent access capability. The frontend uses this ID to call existing HTTP API, route, consumer authorization, policy, and plugin query interfaces.</p>
+             * <p>The ID of the HTTP API associated with the agent access capability. The frontend uses this ID to call existing HTTP API, route, consumer authorization, policy, and plugin query operations.</p>
              * 
              * <strong>example:</strong>
              * <p>{ &quot;httpApiId&quot;: &quot;api-abc123&quot; }</p>
@@ -435,7 +435,7 @@ public class AgentInfo extends TeaModel {
             } 
 
             /**
-             * <p>The list of consumer identity bindings maintained by the Agent domain. The Model API ID and the consumer IDs in this list together identify the Agent identity and take effect on all routes of the Model API. Consumer details and their Model API authorization details can be obtained through existing Consumer API and consumer authorization query interfaces.</p>
+             * <p>The list of consumer identity bindings maintained by the agent domain. The Model API ID and the consumer IDs in the list jointly identify the agent and take effect for all routes of the Model API. You can obtain consumer details and their Model API authorization details by calling existing Consumer API and consumer authorization query operations.</p>
              */
             public Builder consumerIds(java.util.List<String> consumerIds) {
                 this.consumerIds = consumerIds;
@@ -443,7 +443,7 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * <p>The Model API ID associated with the model access capability. Model Access does not distinguish routes. The frontend uses this ID to query the Model API basic information and all routes.</p>
+             * <p>The ID of the Model API associated with the model access capability. Model access does not distinguish between routes. The frontend uses this ID to query the basic information and all routes of the Model API.</p>
              * 
              * <strong>example:</strong>
              * <p>{ &quot;modelApiId&quot;: &quot;model-api-1&quot; }</p>

@@ -73,7 +73,10 @@ public class UpdateGatewayMaintenancePeriodRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -82,7 +85,7 @@ public class UpdateGatewayMaintenancePeriodRequest extends Request {
         }
 
         /**
-         * maintenancePeriod.
+         * <p>The O&amp;M window.</p>
          */
         public Builder maintenancePeriod(MaintenancePeriod maintenancePeriod) {
             this.putBodyParameter("maintenancePeriod", maintenancePeriod);
@@ -150,7 +153,10 @@ public class UpdateGatewayMaintenancePeriodRequest extends Request {
             } 
 
             /**
-             * endTime.
+             * <p>The O&amp;M end time (HH:mm).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -158,7 +164,10 @@ public class UpdateGatewayMaintenancePeriodRequest extends Request {
             }
 
             /**
-             * startTime.
+             * <p>The O&amp;M start time (HH:mm).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

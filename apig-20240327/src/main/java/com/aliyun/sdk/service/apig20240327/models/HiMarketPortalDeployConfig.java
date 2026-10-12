@@ -115,7 +115,7 @@ public class HiMarketPortalDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The SAE (Serverless App Engine) deployment configuration.</p>
+         * <p>The Serverless App Engine (SAE) deployment configuration.</p>
          */
         public Builder saeConfig(SaeConfig saeConfig) {
             this.saeConfig = saeConfig;
@@ -303,7 +303,7 @@ public class HiMarketPortalDeployConfig extends TeaModel {
             }
 
             /**
-             * <p>The region ID of SAE.</p>
+             * <p>The region ID where SAE is deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>

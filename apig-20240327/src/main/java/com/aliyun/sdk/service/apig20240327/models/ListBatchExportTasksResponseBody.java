@@ -119,7 +119,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records returned in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -143,7 +149,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next query. This value is empty when no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token-xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -159,7 +171,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE534E1D-FCE4-5930-B784-E055EC1AEE6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -303,7 +318,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The task creation time. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-26T10:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -311,7 +329,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * errorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>some apis failed</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -319,7 +340,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway instance ID associated with the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -327,7 +351,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * processedCount.
+             * <p>The number of processed items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder processedCount(Integer processedCount) {
                 this.processedCount = processedCount;
@@ -335,7 +362,17 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>Pending: The task is pending.</li>
+             * <li>Running: The task is running.</li>
+             * <li>Success: All items succeeded.</li>
+             * <li>PartialSuccess: Some items succeeded.</li>
+             * <li>Failed: All items failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -343,7 +380,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-xxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -351,7 +391,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * taskType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BatchExport</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -359,7 +402,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -452,7 +498,7 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The list of tasks, returned in reverse chronological order with the most recent tasks first.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -460,7 +506,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -468,7 +517,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -476,7 +528,10 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>The total number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

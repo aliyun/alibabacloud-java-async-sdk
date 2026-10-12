@@ -207,7 +207,7 @@ public class UpdateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * <p>The configuration information. A JSON string.</p>
+         * <p>The configuration information. The value is a JSON string.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class UpdateAndAttachPolicyRequest extends Request {
          * <p>The policy description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a policy description.</p>
+         * <p>This is a policy description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);

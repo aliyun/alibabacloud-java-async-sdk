@@ -102,7 +102,7 @@ public class HiMarketPortalSettingConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable username-password authentication (built-in authentication).</p>
+         * <p>Specifies whether to enable username and password authentication (built-in authentication).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

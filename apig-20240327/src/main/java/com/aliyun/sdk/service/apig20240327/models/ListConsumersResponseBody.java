@@ -257,7 +257,7 @@ public class ListConsumersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The consumer ID.</p>
+             * <p>The API consumer ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-csheiftlhtgmp0j0hp4g</p>
@@ -293,7 +293,7 @@ public class ListConsumersResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试消费者</p>
+             * <p>Test consumer</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -301,7 +301,7 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the consumer is enabled.</p>
+             * <p>Indicates whether the API consumer is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -312,7 +312,7 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer name.</p>
+             * <p>The API consumer name.</p>
              * 
              * <strong>example:</strong>
              * <p>user-service</p>
@@ -419,7 +419,7 @@ public class ListConsumersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of consumers.</p>
+             * <p>The list of API consumer information.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

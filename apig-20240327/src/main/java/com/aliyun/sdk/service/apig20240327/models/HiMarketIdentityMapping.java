@@ -80,7 +80,7 @@ public class HiMarketIdentityMapping extends TeaModel {
         } 
 
         /**
-         * <p>The identity field name that corresponds to the mailbox.</p>
+         * <p>The name of the identity field that corresponds to the email address.</p>
          * 
          * <strong>example:</strong>
          * <p>email</p>
@@ -91,7 +91,7 @@ public class HiMarketIdentityMapping extends TeaModel {
         }
 
         /**
-         * <p>The identity field name that corresponds to the user ID.</p>
+         * <p>The name of the identity field that corresponds to the user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sub</p>
@@ -102,7 +102,7 @@ public class HiMarketIdentityMapping extends TeaModel {
         }
 
         /**
-         * <p>The identity field name that corresponds to the username.</p>
+         * <p>The name of the identity field that corresponds to the username.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>

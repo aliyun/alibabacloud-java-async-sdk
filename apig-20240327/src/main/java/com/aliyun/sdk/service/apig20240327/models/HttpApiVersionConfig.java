@@ -106,7 +106,7 @@ public class HttpApiVersionConfig extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether versioning control is enabled.</p>
+         * <p>Specifies whether versioning control is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -117,7 +117,7 @@ public class HttpApiVersionConfig extends TeaModel {
         }
 
         /**
-         * <p>The key in the specified header parameter when the header-based versioning scheme is used.</p>
+         * <p>The key in the specified header parameter when the header versioning scheme is used.</p>
          * 
          * <strong>example:</strong>
          * <p>my-version</p>
@@ -128,7 +128,7 @@ public class HttpApiVersionConfig extends TeaModel {
         }
 
         /**
-         * <p>The key in the specified query parameter when the query parameter-based versioning scheme is used.</p>
+         * <p>The key in the specified query parameter when the query versioning scheme is used.</p>
          * 
          * <strong>example:</strong>
          * <p>myVersion</p>

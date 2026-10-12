@@ -59,7 +59,7 @@ public class DeleteSecretRequest extends Request {
         } 
 
         /**
-         * <p>The key ID.</p>
+         * <p>The secret ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sec-d5e6shmm1hkoxxxxxxxxx</p>

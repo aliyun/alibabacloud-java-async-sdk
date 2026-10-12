@@ -86,8 +86,8 @@ public class GetTraceConfigRequest extends Request {
 
         /**
          * <p>The language type. Valid values:
-         * zh: Chinese
-         * en: English</p>
+         * zh: Chinese.
+         * en: English.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>

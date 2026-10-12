@@ -101,7 +101,10 @@ public class BatchUpdateHttpApiOperationRequest extends Request {
         } 
 
         /**
-         * httpApiId.
+         * <p>The ID of the HTTP API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-xxxx</p>
          */
         public Builder httpApiId(String httpApiId) {
             this.putPathParameter("httpApiId", httpApiId);
@@ -110,7 +113,7 @@ public class BatchUpdateHttpApiOperationRequest extends Request {
         }
 
         /**
-         * authConfig.
+         * <p>The authentication configuration. This parameter is required when enableAuth is set to true.</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.putBodyParameter("authConfig", authConfig);
@@ -119,7 +122,10 @@ public class BatchUpdateHttpApiOperationRequest extends Request {
         }
 
         /**
-         * enableAuth.
+         * <p>Specifies whether to enable consumer authentication. If set to true, a valid authConfig must be provided. If set to false, authConfig is not validated and the existing configuration remains unchanged.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuth(Boolean enableAuth) {
             this.putBodyParameter("enableAuth", enableAuth);
@@ -128,7 +134,7 @@ public class BatchUpdateHttpApiOperationRequest extends Request {
         }
 
         /**
-         * operationIds.
+         * <p>The list of operation IDs to update in batches. This parameter cannot be empty.</p>
          */
         public Builder operationIds(java.util.List<String> operationIds) {
             this.putBodyParameter("operationIds", operationIds);
@@ -196,7 +202,10 @@ public class BatchUpdateHttpApiOperationRequest extends Request {
             } 
 
             /**
-             * authMode.
+             * <p>The authentication mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder authMode(String authMode) {
                 this.authMode = authMode;
@@ -204,7 +213,10 @@ public class BatchUpdateHttpApiOperationRequest extends Request {
             }
 
             /**
-             * authType.
+             * <p>The authentication type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Jwt</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;

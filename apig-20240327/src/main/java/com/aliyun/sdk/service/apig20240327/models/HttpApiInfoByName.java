@@ -106,7 +106,10 @@ public class HttpApiInfoByName extends TeaModel {
         } 
 
         /**
-         * GatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -125,7 +128,7 @@ public class HttpApiInfoByName extends TeaModel {
         }
 
         /**
-         * <p>The API type.</p>
+         * <p>The type of the HTTP API.</p>
          * 
          * <strong>example:</strong>
          * <p>Http</p>
@@ -136,7 +139,7 @@ public class HttpApiInfoByName extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable versioning.</p>
+         * <p>Indicates whether version management is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -147,7 +150,7 @@ public class HttpApiInfoByName extends TeaModel {
         }
 
         /**
-         * <p>The information about the versioned API.</p>
+         * <p>The versioned API version information.</p>
          */
         public Builder versionedHttpApis(java.util.List<HttpApiApiInfo> versionedHttpApis) {
             this.versionedHttpApis = versionedHttpApis;

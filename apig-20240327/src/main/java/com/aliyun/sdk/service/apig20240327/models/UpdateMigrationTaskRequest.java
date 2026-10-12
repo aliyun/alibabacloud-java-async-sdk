@@ -171,7 +171,10 @@ public class UpdateMigrationTaskRequest extends Request {
         } 
 
         /**
-         * taskId.
+         * <p>The task ID (path parameter). The task must belong to the current user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mt-xxxx</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);
@@ -180,7 +183,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * clusterNamespace.
+         * <p>The namespace of the source cluster (for SLB traffic switching).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder clusterNamespace(String clusterNamespace) {
             this.putBodyParameter("clusterNamespace", clusterNamespace);
@@ -189,7 +195,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The task description. For DNS-based Engine updates, only this field is modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Migration test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -198,7 +207,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * serviceName.
+         * <p>The SLB service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx-ingress-lb</p>
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("serviceName", serviceName);
@@ -207,7 +219,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * slbId.
+         * <p>The SLB instance ID. Required when the task is in the Initial state with SLB traffic switching. The type is determined by the prefix (lb- or nlb-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1xxxx</p>
          */
         public Builder slbId(String slbId) {
             this.putBodyParameter("slbId", slbId);
@@ -216,7 +231,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * switchType.
+         * <p>The traffic switching method. Required when advancing from the Initial state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLB</p>
          */
         public Builder switchType(String switchType) {
             this.putBodyParameter("switchType", switchType);
@@ -225,7 +243,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * target.
+         * <p>Required. The update target. Determines whether to advance the task status or perform an engine operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Task</p>
          */
         public Builder target(String target) {
             this.putBodyParameter("target", target);
@@ -234,7 +255,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * virtualServices.
+         * <p>The list of backend server group bindings.</p>
          */
         public Builder virtualServices(java.util.List<VirtualServices> virtualServices) {
             this.putBodyParameter("virtualServices", virtualServices);
@@ -243,7 +264,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * weight.
+         * <p>The traffic switching weight for the legacy flow. Valid values: 0 to 100. Takes effect when the target is set to Engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder weight(Integer weight) {
             this.putBodyParameter("weight", weight);
@@ -337,7 +361,10 @@ public class UpdateMigrationTaskRequest extends Request {
             } 
 
             /**
-             * port.
+             * <p>The port. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -345,7 +372,10 @@ public class UpdateMigrationTaskRequest extends Request {
             }
 
             /**
-             * protocol.
+             * <p>The protocol. Required for CLB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -353,7 +383,10 @@ public class UpdateMigrationTaskRequest extends Request {
             }
 
             /**
-             * virtualServiceGroupId.
+             * <p>CLB VServerGroupId / NLB ServerGroupId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsp-xxxx</p>
              */
             public Builder virtualServiceGroupId(String virtualServiceGroupId) {
                 this.virtualServiceGroupId = virtualServiceGroupId;
@@ -361,7 +394,10 @@ public class UpdateMigrationTaskRequest extends Request {
             }
 
             /**
-             * virtualServiceGroupName.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80-tcp</p>
              */
             public Builder virtualServiceGroupName(String virtualServiceGroupName) {
                 this.virtualServiceGroupName = virtualServiceGroupName;

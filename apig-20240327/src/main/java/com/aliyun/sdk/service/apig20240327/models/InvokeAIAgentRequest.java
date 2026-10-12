@@ -116,6 +116,7 @@ public class InvokeAIAgentRequest extends Request {
         } 
 
         /**
+         * <p>The agent name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,7 @@ public class InvokeAIAgentRequest extends Request {
         }
 
         /**
-         * bizParams.
+         * <p>The business parameters. Each agent performs custom validation on these parameters, such as the SLS context passed for log diagnostics.</p>
          */
         public Builder bizParams(java.util.Map<String, String> bizParams) {
             this.putBodyParameter("bizParams", bizParams);
@@ -137,7 +138,7 @@ public class InvokeAIAgentRequest extends Request {
         }
 
         /**
-         * history.
+         * <p>The conversation history. Each element contains role (user/assistant) and content. The role and content fields in each element cannot be empty.</p>
          */
         public Builder history(java.util.List<History> history) {
             this.putBodyParameter("history", history);
@@ -146,7 +147,10 @@ public class InvokeAIAgentRequest extends Request {
         }
 
         /**
-         * outputLanguage.
+         * <p>The output language. When set to en, fallback error messages are displayed in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh / en</p>
          */
         public Builder outputLanguage(String outputLanguage) {
             this.putBodyParameter("outputLanguage", outputLanguage);
@@ -155,7 +159,10 @@ public class InvokeAIAgentRequest extends Request {
         }
 
         /**
-         * prompt.
+         * <p>The user input for the current turn. If left empty, a default prompt is used based on the scenario, such as &quot;Start&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Help me diagnose this error log</p>
          */
         public Builder prompt(String prompt) {
             this.putBodyParameter("prompt", prompt);
@@ -223,7 +230,10 @@ public class InvokeAIAgentRequest extends Request {
             } 
 
             /**
-             * content.
+             * <p>The content of the message. The returned data is in rich text format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Previous question</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -231,7 +241,10 @@ public class InvokeAIAgentRequest extends Request {
             }
 
             /**
-             * role.
+             * <p>The role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;

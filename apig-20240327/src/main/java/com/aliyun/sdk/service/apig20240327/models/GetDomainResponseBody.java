@@ -764,7 +764,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable forced HTTPS redirect when the protocol type is set to HTTPS.</p>
+             * <p>Specifies whether to enable forced HTTPS redirect when the HTTPS protocol type is configured.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -786,7 +786,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificate issue authority.</p>
+             * <p>The certification authority.</p>
              * 
              * <strong>example:</strong>
              * <p>Alibaba</p>
@@ -841,10 +841,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol type supported by the domain name. Valid values:</p>
+             * <p>The protocol type supported by the domain name.</p>
              * <ul>
-             * <li>HTTP: only HTTP is supported.</li>
-             * <li>HTTPS: only HTTPS is supported.</li>
+             * <li>HTTP: Only the HTTP protocol is supported.</li>
+             * <li>HTTPS: Only the HTTPS protocol is supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>

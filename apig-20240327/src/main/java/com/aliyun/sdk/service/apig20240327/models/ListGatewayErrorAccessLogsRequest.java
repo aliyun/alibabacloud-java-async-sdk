@@ -160,6 +160,7 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
         } 
 
         /**
+         * <p>The gateway ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +173,10 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
         }
 
         /**
-         * authority.
+         * <p>The domain name filter. This parameter performs an exact match against the authority field in Simple Log Service (SLS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api.example.com</p>
          */
         public Builder authority(String authority) {
             this.putQueryParameter("authority", authority);
@@ -181,6 +185,7 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
         }
 
         /**
+         * <p>The end of the query window, in UNIX seconds. The value cannot be later than the current time, and the time span cannot exceed 24 hours.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +198,10 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
         }
 
         /**
-         * gatewayRequestId.
+         * <p>The gateway request ID (x-acs-request-id) for exact match filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5D4xxxx</p>
          */
         public Builder gatewayRequestId(String gatewayRequestId) {
             this.putQueryParameter("gatewayRequestId", gatewayRequestId);
@@ -202,7 +210,10 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
         }
 
         /**
-         * path.
+         * <p>The request path filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/api/v1/pets</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("path", path);
@@ -211,7 +222,10 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
         }
 
         /**
-         * responseCode.
+         * <p>The HTTP error code. Only three-digit numbers in the 400–599 range are accepted. This parameter is required. If you do not specify this parameter, the API returns InvalidParameter.WithDetail (400).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>502</p>
          */
         public Builder responseCode(String responseCode) {
             this.putQueryParameter("responseCode", responseCode);
@@ -220,7 +234,10 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
         }
 
         /**
-         * routeName.
+         * <p>The route name filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-route</p>
          */
         public Builder routeName(String routeName) {
             this.putQueryParameter("routeName", routeName);
@@ -229,6 +246,7 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
         }
 
         /**
+         * <p>The start of the query window, in UNIX seconds. The value must be no earlier than 24 hours before the current time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

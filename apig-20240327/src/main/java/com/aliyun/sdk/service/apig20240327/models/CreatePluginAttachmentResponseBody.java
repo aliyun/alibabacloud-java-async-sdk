@@ -179,7 +179,7 @@ public class CreatePluginAttachmentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The plug-in mount ID.</p>
+             * <p>The plug-in attachment ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pa-cvs7jpmm1hkgihaqv4a0</p>

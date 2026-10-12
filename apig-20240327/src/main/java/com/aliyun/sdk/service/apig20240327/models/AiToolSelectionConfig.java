@@ -93,7 +93,7 @@ public class AiToolSelectionConfig extends TeaModel {
         } 
 
         /**
-         * <p>The enable conditions configuration. Controls when the overall feature is triggered.</p>
+         * <p>The enable condition configuration that controls when the overall feature is triggered.</p>
          */
         public Builder enableConditions(EnableConditions enableConditions) {
             this.enableConditions = enableConditions;
@@ -109,7 +109,7 @@ public class AiToolSelectionConfig extends TeaModel {
         }
 
         /**
-         * <p>The query rewrite configuration. Rewrites user queries before tool reranking to improve matching precision.</p>
+         * <p>The query rewrite configuration that rewrites user queries before tool reranking to improve matching precision.</p>
          */
         public Builder queryRewriting(QueryRewriting queryRewriting) {
             this.queryRewriting = queryRewriting;
@@ -117,7 +117,7 @@ public class AiToolSelectionConfig extends TeaModel {
         }
 
         /**
-         * <p>The tool reranking configuration. Uses a model to rank and filter candidate tools.</p>
+         * <p>The tool reranking configuration that uses a model to sort and filter candidate tools.</p>
          */
         public Builder toolReranking(ToolReranking toolReranking) {
             this.toolReranking = toolReranking;
@@ -429,7 +429,7 @@ public class AiToolSelectionConfig extends TeaModel {
              * <p>The custom prompt content.</p>
              * 
              * <strong>example:</strong>
-             * <p>请将以下用户问题改写为...</p>
+             * <p>Rewrite the following user question as..</p>
              */
             public Builder customPrompt(String customPrompt) {
                 this.customPrompt = customPrompt;
@@ -494,7 +494,7 @@ public class AiToolSelectionConfig extends TeaModel {
             } 
 
             /**
-             * <p>The number of conversation turns after which rewriting is triggered.</p>
+             * <p>The conversation turn threshold. Rewriting is triggered when the number of conversation turns exceeds this value.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -637,7 +637,7 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether query rewrite is enabled.</p>
+             * <p>Indicates whether query rewrite is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -659,7 +659,7 @@ public class AiToolSelectionConfig extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of output tokens for rewriting.</p>
+             * <p>The maximum number of output tokens for the rewriting result.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>

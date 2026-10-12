@@ -289,7 +289,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
              * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>Missing response definition</p>
+             * <p>The response definition is missing</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;

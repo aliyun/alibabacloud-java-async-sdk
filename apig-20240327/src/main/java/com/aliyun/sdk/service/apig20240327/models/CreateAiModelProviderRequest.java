@@ -144,7 +144,7 @@ public class CreateAiModelProviderRequest extends Request {
         }
 
         /**
-         * <p>The model provider identifier.</p>
+         * <p>The identifier of the model provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

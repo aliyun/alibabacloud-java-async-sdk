@@ -241,7 +241,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the policy is enabled.</p>
+         * <p>Indicates whether the feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -252,7 +252,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * <p>The read-only compatible reference. GetHttpApi returns policyId/policyAttachmentId for ModelAPI AiTokenRateLimit. This must be stripped before write path persistence and is not used as a bind/unbind instruction.</p>
+         * <p>The read-only compatible reference. GetHttpApi returns the policyId and policyAttachmentId for ModelAPI AiTokenRateLimit. This field must be stripped before write-path persistence and is not used as a bind or unbind instruction.</p>
          */
         public Builder policyReference(HttpApiPolicyReference policyReference) {
             this.policyReference = policyReference;

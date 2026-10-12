@@ -60,6 +60,7 @@ public class GetBatchImportTaskRequest extends Request {
         } 
 
         /**
+         * <p>The task ID. Call BatchImportHttpApis to create a batch import task first, and obtain the value of this parameter from the taskId field in the response. Pass an empty string to list all existing batch import tasks.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

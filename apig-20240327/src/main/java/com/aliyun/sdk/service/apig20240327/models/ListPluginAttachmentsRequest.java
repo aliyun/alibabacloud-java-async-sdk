@@ -183,7 +183,7 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The plug-in mount point type. Not enabled yet.</p>
+         * <p>The plug-in mount point type. This parameter is not yet enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>GatewayRoute</p>
@@ -195,7 +195,7 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The mount point types. Separate multiple values with commas.</p>
+         * <p>The mount point types. Separate multiple types with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>GatewayRoute</p>
@@ -243,7 +243,7 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -267,7 +267,7 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the parent resource mount.</p>
+         * <p>Specifies whether to return parent resource mounts.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

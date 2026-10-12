@@ -275,7 +275,7 @@ public class HttpApiApiInfo extends TeaModel {
         } 
 
         /**
-         * <p>The list of agent protocols.</p>
+         * <p>The list of Agent protocols.</p>
          */
         public Builder agentProtocols(java.util.List<String> agentProtocols) {
             this.agentProtocols = agentProtocols;
@@ -310,7 +310,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * <p>The API operation deployment status.</p>
+         * <p>The API operation publish status.</p>
          */
         public Builder deployCntMap(java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap) {
             this.deployCntMap = deployCntMap;
@@ -337,7 +337,10 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * enableAuth.
+         * <p>Indicates whether authentication is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuth(Boolean enableAuth) {
             this.enableAuth = enableAuth;
@@ -514,7 +517,10 @@ public class HttpApiApiInfo extends TeaModel {
             } 
 
             /**
-             * gatewayEdition.
+             * <p>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MultiTenantServerless</p>
              */
             public Builder gatewayEdition(String gatewayEdition) {
                 this.gatewayEdition = gatewayEdition;
@@ -1069,7 +1075,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The deployment scenario.</p>
+             * <p>The publish scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>SingleService</p>
@@ -1091,7 +1097,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The domain name information published by the user.</p>
+             * <p>The custom domain information published by the user.</p>
              */
             public Builder customDomains(java.util.List<HttpApiDomainInfo> customDomains) {
                 this.customDomains = customDomains;
@@ -1099,7 +1105,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The deployment status of the API in the current environment.</p>
+             * <p>The publish status of the API in the current environment.</p>
              * 
              * <strong>example:</strong>
              * <p>Deployed</p>
@@ -1389,7 +1395,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The monitored Ingress Class.</p>
+             * <p>The Ingress Class to listen on.</p>
              * 
              * <strong>example:</strong>
              * <p>mse</p>
@@ -1408,7 +1414,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to update the address in Ingress Status.</p>
+             * <p>Specifies whether to update the address in the Ingress Status.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1430,7 +1436,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The monitored namespace.</p>
+             * <p>The namespace to listen on.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>

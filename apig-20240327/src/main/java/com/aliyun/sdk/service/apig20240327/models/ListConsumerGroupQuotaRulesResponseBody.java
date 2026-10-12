@@ -93,7 +93,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;totalSize&quot;:100}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +115,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -300,7 +312,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * gatewayId.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-123456</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -308,7 +323,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayName.
+             * <p>The name of the gateway. Falls back to the gateway ID if the name is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod-gateway</p>
              */
             public Builder gatewayName(String gatewayName) {
                 this.gatewayName = gatewayName;
@@ -316,7 +334,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * periodMultiplier.
+             * <p>The period multiplier, which specifies the number of days before the quota resets. A positive integer is returned for custom periods. This field is not returned for calendar-based periods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder periodMultiplier(Long periodMultiplier) {
                 this.periodMultiplier = periodMultiplier;
@@ -324,7 +345,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * periodType.
+             * <p>The period type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>week</p>
              */
             public Builder periodType(String periodType) {
                 this.periodType = periodType;
@@ -332,7 +356,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * quotaDimension.
+             * <p>The quota dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>token</p>
              */
             public Builder quotaDimension(String quotaDimension) {
                 this.quotaDimension = quotaDimension;
@@ -340,7 +367,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * quotaLimit.
+             * <p>The quota limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder quotaLimit(Long quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -348,7 +378,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule-001</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -356,7 +389,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ruleName.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daily-token-limit</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -364,7 +400,14 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ruleStatus.
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li>enabled</li>
+             * <li>disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -372,7 +415,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * timezone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UTC+8</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -380,7 +426,14 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * windowAlignment.
+             * <p>The window alignment type. Valid values:</p>
+             * <ul>
+             * <li>calendar: calendar-based period.</li>
+             * <li>epoch: custom period.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>calendar</p>
              */
             public Builder windowAlignment(String windowAlignment) {
                 this.windowAlignment = windowAlignment;
@@ -473,7 +526,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The list of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;ruleId&quot;:&quot;rule-001&quot;}]</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -481,7 +537,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -489,7 +548,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The current page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -497,7 +559,10 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

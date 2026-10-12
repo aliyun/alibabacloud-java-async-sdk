@@ -157,7 +157,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         } 
 
         /**
-         * <p>The gateway ID.</p>
+         * <p>The ID of the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-123456</p>
@@ -169,7 +169,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * <p>The rule ID.</p>
+         * <p>The ID of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>qr-d8j7fpmm1hks65kxxxxx</p>
@@ -181,7 +181,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the subject (consumer or consumer group).</p>
+         * <p>The ID of the subject, which is a consumer or a consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-d8kkaium1xxxxxxxxxxx</p>
@@ -193,7 +193,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * <p>The end time for querying consumption record details. Specify a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates startTime based on the rule cycle.</p>
+         * <p>The end time for querying detailed consumption records. The time is a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates the start time based on the rule period.</p>
          * 
          * <strong>example:</strong>
          * <p>1788425220</p>
@@ -217,7 +217,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * <p>The page number of the detailed consumption (request) records of the subject within the cycle.</p>
+         * <p>The page number of the detailed consumption (request) records for the consumer subject within the period.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,7 +229,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for the detailed consumption (request) records of the subject within the cycle. Maximum value: 10.</p>
+         * <p>The number of entries per page for the detailed consumption (request) records of the consumer subject within the period. Maximum value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -241,7 +241,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * <p>The start time for querying consumption record details. Specify a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates endTime based on the rule cycle.</p>
+         * <p>The start time for querying detailed consumption records. The time is a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates the end time based on the rule period.</p>
          * 
          * <strong>example:</strong>
          * <p>1788338820</p>

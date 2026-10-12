@@ -101,7 +101,10 @@ public class ListInstallableGatewaysRequest extends Request {
         } 
 
         /**
-         * pluginClassId.
+         * <p>The plugin class ID. This is a path parameter and cannot be empty. The plugin class must exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxxx</p>
          */
         public Builder pluginClassId(String pluginClassId) {
             this.putPathParameter("pluginClassId", pluginClassId);
@@ -110,7 +113,10 @@ public class ListInstallableGatewaysRequest extends Request {
         }
 
         /**
-         * gatewayType.
+         * <p>The gateway type used for filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("gatewayType", gatewayType);
@@ -119,7 +125,10 @@ public class ListInstallableGatewaysRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -128,7 +137,10 @@ public class ListInstallableGatewaysRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

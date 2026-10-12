@@ -59,7 +59,7 @@ public class GetSecretValueRequest extends Request {
         } 
 
         /**
-         * <p>The key name.</p>
+         * <p>The secret name.</p>
          * 
          * <strong>example:</strong>
          * <p>my_secret</p>

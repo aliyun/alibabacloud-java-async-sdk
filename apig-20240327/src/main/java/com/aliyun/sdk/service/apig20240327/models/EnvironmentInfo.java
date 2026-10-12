@@ -171,10 +171,10 @@ public class EnvironmentInfo extends TeaModel {
         } 
 
         /**
-         * <p>The environment alias.</p>
+         * <p>The alias.</p>
          * 
          * <strong>example:</strong>
-         * <p>test-env</p>
+         * <p>Test environment</p>
          */
         public Builder alias(String alias) {
             this.alias = alias;
@@ -193,7 +193,7 @@ public class EnvironmentInfo extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the environment is the default environment.</p>
+         * <p>Indicates whether the environment is the default environment.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -204,10 +204,10 @@ public class EnvironmentInfo extends TeaModel {
         }
 
         /**
-         * <p>The environment descriptiont.</p>
+         * <p>The environment description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a test environment.</p>
+         * <p>This is the test environment for the xx project of xxx</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -226,7 +226,7 @@ public class EnvironmentInfo extends TeaModel {
         }
 
         /**
-         * <p>The instance information.</p>
+         * <p>The gateway information.</p>
          */
         public Builder gatewayInfo(GatewayInfo gatewayInfo) {
             this.gatewayInfo = gatewayInfo;
@@ -256,7 +256,7 @@ public class EnvironmentInfo extends TeaModel {
         }
 
         /**
-         * <p>The subdomains.</p>
+         * <p>The subdomain list.</p>
          */
         public Builder subDomainInfos(java.util.List<SubDomainInfo> subDomainInfos) {
             this.subDomainInfos = subDomainInfos;

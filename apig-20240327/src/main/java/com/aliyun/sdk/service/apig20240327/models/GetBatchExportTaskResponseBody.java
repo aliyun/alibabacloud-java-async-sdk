@@ -93,7 +93,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE534E1D-FCE4-5930-B784-E055EC1AEE6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -196,7 +205,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * apiId.
+             * <p>API ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-xxx</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -204,7 +216,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * apiName.
+             * <p>The API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>petstore</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -212,7 +227,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * errorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api definition is invalid</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -292,7 +310,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * apiId.
+             * <p>API ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-xxx</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -300,7 +321,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * apiName.
+             * <p>The API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>petstore</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -308,7 +332,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * errorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api definition is invalid</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -414,7 +441,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * apiType.
+             * <p>The API type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Http</p>
              */
             public Builder apiType(String apiType) {
                 this.apiType = apiType;
@@ -422,7 +452,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * failureItems.
+             * <p>The list of APIs that failed to be processed.</p>
              */
             public Builder failureItems(java.util.List<FailureItems> failureItems) {
                 this.failureItems = failureItems;
@@ -430,7 +460,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -438,7 +471,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * specContentBase64.
+             * <p>The Base64-encoded ZIP file content. After the frontend decodes the content, it can directly trigger a browser download.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UEsDBBQAAAA...</p>
              */
             public Builder specContentBase64(String specContentBase64) {
                 this.specContentBase64 = specContentBase64;
@@ -446,7 +482,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * successItems.
+             * <p>The list of APIs that were processed successfully.</p>
              */
             public Builder successItems(java.util.List<SuccessItems> successItems) {
                 this.successItems = successItems;
@@ -591,7 +627,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The time when the task was created. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-15T10:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -599,7 +638,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * errorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>some apis export failed</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -607,7 +649,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * processedCount.
+             * <p>The number of processed items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder processedCount(Integer processedCount) {
                 this.processedCount = processedCount;
@@ -615,7 +660,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * result.
+             * <p>The task result details.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -623,7 +668,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The task status. Valid values: Pending, Running, Success, PartialSuccess, and Failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -631,7 +679,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>async-task-xxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -639,7 +690,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BatchExport</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -647,7 +701,10 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

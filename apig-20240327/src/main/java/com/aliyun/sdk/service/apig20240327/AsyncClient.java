@@ -31,10 +31,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview that contains conflictHash.</li>
+     * <li>The response returns a conflict preview that contains the conflictHash value.</li>
      * </ul>
      * </li>
-     * <li>Step 2: Submit the rule after confirmation.</li>
+     * <li>Step 2: Submit the request after confirmation.</li>
      * <li><ul>
      * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
      * </ul>
@@ -100,9 +100,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     /**
+     * @param request the request parameters of CheckCommodityStatus  CheckCommodityStatusRequest
+     * @return CheckCommodityStatusResponse
+     */
+    CompletableFuture<CheckCommodityStatusResponse> checkCommodityStatus(CheckCommodityStatusRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference an existing model provider in the gateway.
-     * The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1000 model cards can be created per gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If not specified, type defaults to fixed and all cost values default to 0. Each item in availablePaths must include both path and type.</p>
+     * <p>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference a model provider that already exists in the gateway.
+     * The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1,000 model cards can be created for a single gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If this parameter is not specified, type defaults to fixed and all cost values default to 0. Each entry in availablePaths must include both path and type.</p>
      * 
      * @param request the request parameters of CreateAiModelCard  CreateAiModelCardRequest
      * @return CreateAiModelCardResponse
@@ -122,6 +128,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAndAttachPolicyResponse> createAndAttachPolicy(CreateAndAttachPolicyRequest request);
 
     /**
+     * @param request the request parameters of CreateChatSession  CreateChatSessionRequest
+     * @return CreateChatSessionResponse
+     */
+    CompletableFuture<CreateChatSessionResponse> createChatSession(CreateChatSessionRequest request);
+
+    /**
      * @param request the request parameters of CreateConsumer  CreateConsumerRequest
      * @return CreateConsumerResponse
      */
@@ -135,12 +147,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites: Before creating consumer authorization rules, prepare resources according to the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
+     * <p>Prerequisites: Before creating consumer authorization rules, prepare resources in the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
      * Gateway instance (CreateGateway → gatewayId, gw- prefix)
-     * Environment (A default environment is automatically created with the gateway. You can also use CreateEnvironment → environmentId, env- prefix, which requires the gatewayId from step 1)
+     * Environment (A default environment is automatically created with the gateway. You can also call CreateEnvironment → environmentId, env- prefix. The gatewayId from step 1 must be associated.)
      * HTTP API (CreateHttpApi → httpApiId, api- prefix)
-     * Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belongs to the API in step 3. Then publish to the environment in step 2 by using DeployHttpApi. Unpublished routes cannot be authorized)
-     * Consumer (CreateConsumer → consumerId, cs- prefix. Or consumer group consumerGroupId, csg- prefix. Use either consumerId or consumerGroupId)</p>
+     * Route and publish (CreateHttpApiRoute → routeId, hr- prefix, which belongs to the API in step 3. Then call DeployHttpApi to publish the route to the environment in step 2. Unpublished routes cannot be authorized.)
+     * Consumer (CreateConsumer → consumerId, cs- prefix; or consumer group consumerGroupId, csg- prefix. Specify either consumerId or consumerGroupId.)</p>
      * 
      * @param request the request parameters of CreateConsumerAuthorizationRules  CreateConsumerAuthorizationRulesRequest
      * @return CreateConsumerAuthorizationRulesResponse
@@ -152,6 +164,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateConsumerGroupResponse
      */
     CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request);
+
+    /**
+     * @param request the request parameters of CreateDeveloper  CreateDeveloperRequest
+     * @return CreateDeveloperResponse
+     */
+    CompletableFuture<CreateDeveloperResponse> createDeveloper(CreateDeveloperRequest request);
 
     /**
      * @param request the request parameters of CreateDomain  CreateDomainRequest
@@ -192,7 +210,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>接口支持创建多个服务。</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of CreateHttpApiVersion  CreateHttpApiVersionRequest
      * @return CreateHttpApiVersionResponse
@@ -242,6 +260,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePolicyAttachmentResponse> createPolicyAttachment(CreatePolicyAttachmentRequest request);
 
     /**
+     * @param request the request parameters of CreateProductCategory  CreateProductCategoryRequest
+     * @return CreateProductCategoryResponse
+     */
+    CompletableFuture<CreateProductCategoryResponse> createProductCategory(CreateProductCategoryRequest request);
+
+    /**
+     * @param request the request parameters of CreateProductRef  CreateProductRefRequest
+     * @return CreateProductRefResponse
+     */
+    CompletableFuture<CreateProductRefResponse> createProductRef(CreateProductRefRequest request);
+
+    /**
      * @param request the request parameters of CreateRiskCheckTask  CreateRiskCheckTaskRequest
      * @return CreateRiskCheckTaskResponse
      */
@@ -269,6 +299,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceVersionResponse> createServiceVersion(CreateServiceVersionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before creating a source, prepare the required dependency resources. For the K8S type, an existing ACK container service cluster is required. You can invoke ListK8sClusterSources to query active clusters. For the MSE_NACOS type, an existing MSE Nacos instance is required. You can invoke ListMseNacosSources to query active instances.</p>
+     * 
      * @param request the request parameters of CreateSource  CreateSourceRequest
      * @return CreateSourceResponse
      */
@@ -325,7 +358,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a quota rule based on an API consumer or consumer group from an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</p>
+     * <p>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</p>
      * 
      * @param request the request parameters of DeleteGatewayQuotaRule  DeleteGatewayQuotaRuleRequest
      * @return DeleteGatewayQuotaRuleResponse
@@ -393,6 +426,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePolicyAttachmentResponse> deletePolicyAttachment(DeletePolicyAttachmentRequest request);
 
     /**
+     * @param request the request parameters of DeletePortal  DeletePortalRequest
+     * @return DeletePortalResponse
+     */
+    CompletableFuture<DeletePortalResponse> deletePortal(DeletePortalRequest request);
+
+    /**
+     * @param request the request parameters of DeleteProduct  DeleteProductRequest
+     * @return DeleteProductResponse
+     */
+    CompletableFuture<DeleteProductResponse> deleteProduct(DeleteProductRequest request);
+
+    /**
+     * @param request the request parameters of DeleteProductCategory  DeleteProductCategoryRequest
+     * @return DeleteProductCategoryResponse
+     */
+    CompletableFuture<DeleteProductCategoryResponse> deleteProductCategory(DeleteProductCategoryRequest request);
+
+    /**
+     * @param request the request parameters of DeleteProductRef  DeleteProductRefRequest
+     * @return DeleteProductRefResponse
+     */
+    CompletableFuture<DeleteProductRefResponse> deleteProductRef(DeleteProductRefRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The operation supports creating multiple services.</p>
      * 
@@ -420,6 +477,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSourceResponse> deleteSource(DeleteSourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before deployment, the following prerequisites must be met in order: (1) A gateway has been created. (2) An HTTP API has been created and associated with a gateway (belongGatewayId). (3) A route has been created and associated with an environment (environmentId). (4) The route has been associated with the default subdomain of the environment. Associating only a custom Dedicated domain name is not sufficient to trigger deployment. Call UpdateHttpApiRoute first to add the default subdomain of the environment to the route.</p>
+     * 
      * @param request the request parameters of DeployHttpApi  DeployHttpApiRequest
      * @return DeployHttpApiResponse
      */
@@ -427,7 +487,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before deployment, the MCP server must have domainIds configured through CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</p>
+     * <p>Before deployment, ensure that domainIds have been configured for the MCP server by calling CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</p>
      * 
      * @param request the request parameters of DeployMcpServer  DeployMcpServerRequest
      * @return DeployMcpServerResponse
@@ -463,6 +523,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAiModelProviderResponse
      */
     CompletableFuture<GetAiModelProviderResponse> getAiModelProvider(GetAiModelProviderRequest request);
+
+    /**
+     * @param request the request parameters of GetApiPathFieldConfig  GetApiPathFieldConfigRequest
+     * @return GetApiPathFieldConfigResponse
+     */
+    CompletableFuture<GetApiPathFieldConfigResponse> getApiPathFieldConfig(GetApiPathFieldConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetApiPathFieldTemplate  GetApiPathFieldTemplateRequest
+     * @return GetApiPathFieldTemplateResponse
+     */
+    CompletableFuture<GetApiPathFieldTemplateResponse> getApiPathFieldTemplate(GetApiPathFieldTemplateRequest request);
 
     /**
      * @param request the request parameters of GetBatchExportTask  GetBatchExportTaskRequest
@@ -501,6 +573,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDashboardResponse> getDashboard(GetDashboardRequest request);
 
     /**
+     * @param request the request parameters of GetDeveloper  GetDeveloperRequest
+     * @return GetDeveloperResponse
+     */
+    CompletableFuture<GetDeveloperResponse> getDeveloper(GetDeveloperRequest request);
+
+    /**
      * @param request the request parameters of GetDomain  GetDomainRequest
      * @return GetDomainResponse
      */
@@ -536,8 +614,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.
-     * Before you begin: Before calling this operation, make sure that Simple Log Service log delivery is enabled for the target gateway by calling UpdateGatewayFeature (name=log-config, value={&quot;enable&quot;:true}). Otherwise, the error CloudProductInactive.LogDeliveryNotEnabled is returned.</p>
+     * <p>This operation retrieves the usage details of a consumer subject under a quota rule. Note that this operation applies only to AI gateways whose version is later than 2.1.19.
+     * Before you begin: Before calling this operation, ensure that the Simple Log Service (SLS) log delivery feature is enabled for the target gateway by using UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</p>
      * 
      * @param request the request parameters of GetGatewayQuotaRuleSubjectUsage  GetGatewayQuotaRuleSubjectUsageRequest
      * @return GetGatewayQuotaRuleSubjectUsageResponse
@@ -546,12 +624,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>查询指定 API 网关或 AI 网关的九项资源配额用量、有效上限及统计范围。接口只读，成功响应包含全部九项；自定义插件配额暂不展示数值。该结果是各来源独立读取的当前观测，不保证新增资源一定成功。</p>
+     * <p>Queries the usage, effective limits, and statistical scopes of nine resource quota items for a specified API gateway or AI gateway. This operation is read-only. A successful response contains all nine items. Custom plugin quotas do not display numerical values. The result represents the current observation read independently from each source and does not guarantee that new resources can be created successfully.</p>
      * 
      * @param request the request parameters of GetGatewayResourceQuotaUsage  GetGatewayResourceQuotaUsageRequest
      * @return GetGatewayResourceQuotaUsageResponse
      */
     CompletableFuture<GetGatewayResourceQuotaUsageResponse> getGatewayResourceQuotaUsage(GetGatewayResourceQuotaUsageRequest request);
+
+    /**
+     * @param request the request parameters of GetHiMarketConsumer  GetHiMarketConsumerRequest
+     * @return GetHiMarketConsumerResponse
+     */
+    CompletableFuture<GetHiMarketConsumerResponse> getHiMarketConsumer(GetHiMarketConsumerRequest request);
+
+    /**
+     * @param request the request parameters of GetHiMarketConsumerCredential  GetHiMarketConsumerCredentialRequest
+     * @return GetHiMarketConsumerCredentialResponse
+     */
+    CompletableFuture<GetHiMarketConsumerCredentialResponse> getHiMarketConsumerCredential(GetHiMarketConsumerCredentialRequest request);
 
     /**
      * @param request the request parameters of GetHttpApi  GetHttpApiRequest
@@ -573,7 +663,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports creating multiple services.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of GetMcpServer  GetMcpServerRequest
      * @return GetMcpServerResponse
@@ -722,7 +812,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>查询指定消费者组直接绑定的配额规则，不展开组内消费者个人绑定的规则；无直接绑定关系时返回空列表。</p>
+     * <p>Queries the quota rules directly bound to a specified consumer group. Rules individually bound to consumers within the group are not included. An empty list is returned if no rules are directly bound.</p>
      * 
      * @param request the request parameters of ListConsumerGroupQuotaRules  ListConsumerGroupQuotaRulesRequest
      * @return ListConsumerGroupQuotaRulesResponse
@@ -924,7 +1014,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports creating multiple services.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of ListSecretReferences  ListSecretReferencesRequest
      * @return ListSecretReferencesResponse
@@ -1009,11 +1099,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response contains a conflict preview with a conflictHash value.</li>
+     * <li>The response contains a conflict preview with conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Confirm and submit the request.</li>
+     * <li>Submit the request after confirmation.</li>
      * </ol>
      * </li>
      * <li><ul>
@@ -1112,7 +1202,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API has been replaced by UpdateAuthorizationRule. The new operation path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When calling the new operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</p>
+     * <p>This API operation is replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</p>
      * 
      * @param request the request parameters of UpdateConsumerAuthorizationRule  UpdateConsumerAuthorizationRuleRequest
      * @return UpdateConsumerAuthorizationRuleResponse
@@ -1127,7 +1217,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type allow you to update the listener Ingress configuration.</p>
+     * <p>Only sources of the <strong>Container Service</strong> type can update the listener Ingress configuration.</p>
      * 
      * @param request the request parameters of UpdateDomain  UpdateDomainRequest
      * @return UpdateDomainResponse
@@ -1160,6 +1250,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateGatewayLoadBalancerResponse> updateGatewayLoadBalancer(UpdateGatewayLoadBalancerRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the O&amp;M time window of a gateway. This feature is supported only by specific gateway types. If the current gateway does not support modifying the O&amp;M time window, the API returns 409 Conflict.GatewayNotSupportAutoMaintenance.</p>
+     * 
      * @param request the request parameters of UpdateGatewayMaintenancePeriod  UpdateGatewayMaintenancePeriodRequest
      * @return UpdateGatewayMaintenancePeriodResponse
      */
@@ -1176,7 +1269,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>Edits a quota rule on a gateway. This operation takes effect only on AI gateways running version 2.1.21 or later. Editing a rule preserves the historical usage of consumer subjects bound to the rule.</p>
      * <blockquote>
-     * <p> Recommended call sequence:</p>
+     * <p> Recommended call logic:</p>
      * <ul>
      * <li>Step 1: Perform a dry run to check for rule conflicts.</li>
      * <li><ul>
@@ -1187,13 +1280,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <li>The response contains a conflict preview with a conflictHash value.</li>
      * </ul>
      * </li>
-     * <li>Step 2: Confirm and submit the changes.</li>
+     * <li>Step 2: Confirm and submit the request.</li>
      * <li><ul>
-     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
+     * <li>No conflict: Set dryRun to false and overwrite to false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
+     * <li>Conflict exists and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
      * </ul>
      * </li>
      * </ul>
@@ -1233,7 +1326,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the Ingress listener configuration.</p>
+     * <p>Only sources of the <strong>Container Service</strong> type can update the Ingress listener configuration.</p>
      * 
      * @param request the request parameters of UpdateMcpServer  UpdateMcpServerRequest
      * @return UpdateMcpServerResponse
@@ -1272,7 +1365,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>container service</strong> type allow you to update the configuration for listening to Ingress.</p>
+     * <p>Only sources of the <strong>container service</strong> type allow you to update the listener Ingress configuration.</p>
      * 
      * @param request the request parameters of UpdateSecret  UpdateSecretRequest
      * @return UpdateSecretResponse

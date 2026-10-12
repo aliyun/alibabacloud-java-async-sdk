@@ -213,7 +213,7 @@ public class BatchRemoveConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of consumer IDs skipped because they are not in the consumer group.</p>
+             * <p>The list of consumer IDs that were skipped because they are not in the consumer group.</p>
              */
             public Builder skippedConsumerIds(java.util.List<String> skippedConsumerIds) {
                 this.skippedConsumerIds = skippedConsumerIds;
@@ -221,7 +221,7 @@ public class BatchRemoveConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of consumer IDs successfully removed from the consumer group.</p>
+             * <p>The list of consumer IDs that were successfully removed from the consumer group.</p>
              */
             public Builder successConsumerIds(java.util.List<String> successConsumerIds) {
                 this.successConsumerIds = successConsumerIds;

@@ -60,6 +60,7 @@ public class GetBatchExportTaskRequest extends Request {
         } 
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

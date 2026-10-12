@@ -101,7 +101,10 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -110,7 +113,7 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
         }
 
         /**
-         * loadBalancerDTO.
+         * <p>The load balancer operation DTO.</p>
          */
         public Builder loadBalancerDTO(LoadBalancerDTO loadBalancerDTO) {
             this.putBodyParameter("loadBalancerDTO", loadBalancerDTO);
@@ -119,7 +122,10 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
         }
 
         /**
-         * option.
+         * <p>The operation type. If this parameter is left empty or not specified, only the listening ports are updated (only the ports field is used).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Add</p>
          */
         public Builder option(String option) {
             this.putBodyParameter("option", option);
@@ -128,7 +134,7 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
         }
 
         /**
-         * ports.
+         * <p>The port list.</p>
          */
         public Builder ports(java.util.List<Ports> ports) {
             this.putBodyParameter("ports", ports);
@@ -222,7 +228,10 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
             } 
 
             /**
-             * port.
+             * <p>The port number. Valid values: 1 to 65535. An error is returned if an invalid value is specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -230,7 +239,10 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
             }
 
             /**
-             * protocol.
+             * <p>The protocol. This parameter is required for CLB. If this parameter is not specified for CLB, the error message &quot;protocol is missing for CLB&quot; is returned. No backend enumeration validation is performed. Valid values: tcp, udp, http, https, and tls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -238,7 +250,10 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
             }
 
             /**
-             * virtualServiceGroupId.
+             * <p>The CLB VServerGroupId or NLB ServerGroupId. This parameter is required. If a duplicate group ID is specified, an error is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsp-xxxx</p>
              */
             public Builder virtualServiceGroupId(String virtualServiceGroupId) {
                 this.virtualServiceGroupId = virtualServiceGroupId;
@@ -246,7 +261,10 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
             }
 
             /**
-             * virtualServiceGroupName.
+             * <p>The group name. This parameter is required. If this parameter is not specified, the error message &quot;virtual service parameter is missing&quot; is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80-tcp</p>
              */
             public Builder virtualServiceGroupName(String virtualServiceGroupName) {
                 this.virtualServiceGroupName = virtualServiceGroupName;
@@ -352,7 +370,10 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
             } 
 
             /**
-             * loadBalancerId.
+             * <p>The load balancer instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-bp1xxxx</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -360,7 +381,10 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
             }
 
             /**
-             * loadBalancerType.
+             * <p>The load balancer type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLB</p>
              */
             public Builder loadBalancerType(String loadBalancerType) {
                 this.loadBalancerType = loadBalancerType;
@@ -368,7 +392,10 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
             }
 
             /**
-             * networkType.
+             * <p>The network type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internet</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -376,7 +403,10 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
             }
 
             /**
-             * serviceWeight.
+             * <p>The service weight. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder serviceWeight(Long serviceWeight) {
                 this.serviceWeight = serviceWeight;
@@ -384,7 +414,7 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
             }
 
             /**
-             * virtualServiceList.
+             * <p>The backend server group bindings.</p>
              */
             public Builder virtualServiceList(java.util.List<VirtualServiceList> virtualServiceList) {
                 this.virtualServiceList = virtualServiceList;
@@ -451,7 +481,10 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
             } 
 
             /**
-             * port.
+             * <p>The listening port. Valid values: 0 to 65535. A maximum of 50 custom ports can be configured in the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -459,7 +492,10 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
             }
 
             /**
-             * protocol.
+             * <p>The protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -526,7 +562,7 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
             } 
 
             /**
-             * gatewayLoadBalancerPorts.
+             * <p>The listening ports.</p>
              */
             public Builder gatewayLoadBalancerPorts(java.util.List<GatewayLoadBalancerPorts> gatewayLoadBalancerPorts) {
                 this.gatewayLoadBalancerPorts = gatewayLoadBalancerPorts;
@@ -534,7 +570,10 @@ public class UpdateGatewayLoadBalancerRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The load balancer type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NLB</p>
              */
             public Builder type(String type) {
                 this.type = type;

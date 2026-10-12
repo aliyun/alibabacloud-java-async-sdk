@@ -59,7 +59,10 @@ public class GetGatewayElasticPolicyRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>The gateway ID. The gateway must exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);

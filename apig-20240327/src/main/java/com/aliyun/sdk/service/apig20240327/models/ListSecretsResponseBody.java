@@ -324,7 +324,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource count that references the current key.</p>
+             * <p>The resource count of resources that reference the current key.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

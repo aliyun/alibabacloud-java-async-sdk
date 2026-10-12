@@ -311,7 +311,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subject type. Valid values: consumer or consumer_group.</p>
+             * <p>The subject type. Valid values: consumer and consumer_group.</p>
              * 
              * <strong>example:</strong>
              * <p>consumer</p>
@@ -644,7 +644,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule subject type. Valid values: consumer or consumer_group.</p>
+             * <p>The rule subject type. Valid values: consumer and consumer_group.</p>
              * 
              * <strong>example:</strong>
              * <p>consumer_group</p>
@@ -655,7 +655,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The general subject list bound to this rule. Returned only when withSubjects is set to true.</p>
+             * <p>The list of general subjects bound to this rule. Returned only when withSubjects is set to true.</p>
              */
             public Builder subjects(java.util.List<Subjects> subjects) {
                 this.subjects = subjects;

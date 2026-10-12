@@ -93,7 +93,10 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FCA83-0416-588D-9763-2474980495F1</p>
@@ -186,7 +192,10 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * repositoryId.
+             * <p>The Codeup repository ID (numeric string).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678</p>
              */
             public Builder repositoryId(String repositoryId) {
                 this.repositoryId = repositoryId;
@@ -194,7 +203,10 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * repositoryName.
+             * <p>The repository name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-custom-plugin</p>
              */
             public Builder repositoryName(String repositoryName) {
                 this.repositoryName = repositoryName;
@@ -274,7 +286,10 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * organizationId.
+             * <p>The Codeup organization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>664f1e2xxxx</p>
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;
@@ -282,7 +297,10 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * organizationName.
+             * <p>The organization name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-org</p>
              */
             public Builder organizationName(String organizationName) {
                 this.organizationName = organizationName;
@@ -290,7 +308,7 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * repositories.
+             * <p>The list of repositories under the organization.</p>
              */
             public Builder repositories(java.util.List<Repositories> repositories) {
                 this.repositories = repositories;

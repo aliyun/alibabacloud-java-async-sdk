@@ -116,6 +116,7 @@ public class ListConsumerGroupQuotaRulesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the consumer group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ListConsumerGroupQuotaRulesRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The ID of the gateway. This parameter is optional. If specified, the results are filtered by the exact gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-123456</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
@@ -137,7 +141,10 @@ public class ListConsumerGroupQuotaRulesRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The keyword for the rule name. This parameter is optional. If specified, the results are filtered by fuzzy match on the rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>daily</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -146,7 +153,10 @@ public class ListConsumerGroupQuotaRulesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -155,7 +165,10 @@ public class ListConsumerGroupQuotaRulesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10. Valid values: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

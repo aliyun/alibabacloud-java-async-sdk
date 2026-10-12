@@ -390,7 +390,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
              * <p>The environment alias.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试环境</p>
+             * <p>Test environment</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -423,7 +423,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
              * <p>The environment description.</p>
              * 
              * <strong>example:</strong>
-             * <p>这是xxx的xx项目测试环境</p>
+             * <p>This is the test environment for the xx project of xxx</p>
              */
             public Builder description(String description) {
                 this.description = description;

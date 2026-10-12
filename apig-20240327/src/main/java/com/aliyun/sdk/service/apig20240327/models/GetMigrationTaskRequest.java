@@ -59,7 +59,10 @@ public class GetMigrationTaskRequest extends Request {
         } 
 
         /**
-         * taskId.
+         * <p>The migration task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mt-xxxxxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);

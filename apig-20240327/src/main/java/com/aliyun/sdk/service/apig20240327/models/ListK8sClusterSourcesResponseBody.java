@@ -93,7 +93,10 @@ public class ListK8sClusterSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListK8sClusterSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListK8sClusterSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class ListK8sClusterSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>043360DA-ED3B-5386-9B7A-D94DECF99A30</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,10 @@ public class ListK8sClusterSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * clusterId.
+             * <p>The container service cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c4a21b3560fad4ec***</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -191,7 +203,10 @@ public class ListK8sClusterSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The container service cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>itemcenter-dev-cluster</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -245,7 +260,7 @@ public class ListK8sClusterSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The list of Kubernetes clusters that can be added.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

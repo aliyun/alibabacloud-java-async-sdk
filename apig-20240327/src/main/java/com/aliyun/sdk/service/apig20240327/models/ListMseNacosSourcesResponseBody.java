@@ -93,7 +93,7 @@ public class ListMseNacosSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListMseNacosSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListMseNacosSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -206,7 +206,7 @@ public class ListMseNacosSourcesResponseBody extends TeaModel {
              * <p>The Nacos instance name.</p>
              * 
              * <strong>example:</strong>
-             * <p>商品中心Nacos注册中心</p>
+             * <p>Product Center Nacos Registry</p>
              */
             public Builder name(String name) {
                 this.name = name;

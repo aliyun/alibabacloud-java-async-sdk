@@ -108,7 +108,7 @@ public class AgentAccessConfig extends TeaModel {
         } 
 
         /**
-         * <p>Specifies whether to enable AI request logging. Default value if omitted: true.</p>
+         * <p>Specifies whether to enable AI request logging. If this parameter is not specified, the server uses true by default.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -119,7 +119,7 @@ public class AgentAccessConfig extends TeaModel {
         }
 
         /**
-         * <p>The consumer authorization configuration for Agent access. If omitted, consumer authorization is not enabled.</p>
+         * <p>The consumer authorization configuration for Agent access. If this parameter is not specified, consumer authorization is not enabled.</p>
          */
         public Builder authorization(Authorization authorization) {
             this.authorization = authorization;
@@ -148,7 +148,7 @@ public class AgentAccessConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to remove the base path when forwarding requests to the backend. Default value if omitted: false.</p>
+         * <p>Specifies whether to remove the base path when forwarding requests to the backend. If this parameter is not specified, the server uses false by default.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -242,7 +242,7 @@ public class AgentAccessConfig extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable consumer authorization. If set to true, authType must be specified and at least one principal must be provided. If set to false, no principals can be specified.</p>
+             * <p>Specifies whether to enable consumer authorization. If this parameter is set to true, you must specify authType and at least one authorization principal. If this parameter is set to false, you cannot specify authorization principals.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -254,7 +254,7 @@ public class AgentAccessConfig extends TeaModel {
             }
 
             /**
-             * <p>The list of consumers or consumer groups that are granted Agent access permissions. At least one principal must be specified when enabled is set to true.</p>
+             * <p>The list of consumers or consumer groups that are granted Agent access permissions. At least one authorization principal must be specified when enabled is set to true.</p>
              */
             public Builder principals(java.util.List<AgentAuthorizationPrincipal> principals) {
                 this.principals = principals;

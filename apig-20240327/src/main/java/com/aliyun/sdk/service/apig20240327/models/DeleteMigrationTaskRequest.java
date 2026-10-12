@@ -59,7 +59,10 @@ public class DeleteMigrationTaskRequest extends Request {
         } 
 
         /**
-         * taskId.
+         * <p>The ID of the data migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mt-xxxxxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);

@@ -136,7 +136,7 @@ public class SyncMCPServersRequest extends Request {
         }
 
         /**
-         * <p>The list of Nacos MCP Servers to sync. If the list contains MCP Servers that have already been synced, include the mcpServerId.</p>
+         * <p>The list of Nacos MCP servers to sync. If the list contains MCP servers that have already been synced, include the mcpServerId.</p>
          */
         public Builder nacosMcpServers(java.util.List<NacosMcpServers> nacosMcpServers) {
             this.putBodyParameter("nacosMcpServers", nacosMcpServers);
@@ -267,7 +267,7 @@ public class SyncMCPServersRequest extends Request {
             } 
 
             /**
-             * <p>The exposed URI path. This parameter is required when protocol is SSE or StreamableHTTP and type is RealMCP.</p>
+             * <p>The exposed URI path. This parameter is required when protocol is set to SSE or StreamableHTTP and type is set to RealMCP.</p>
              * 
              * <strong>example:</strong>
              * <p>/sse</p>
@@ -300,7 +300,7 @@ public class SyncMCPServersRequest extends Request {
             }
 
             /**
-             * <p>The MCP Server name.</p>
+             * <p>The MCP server name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

@@ -67,7 +67,7 @@ public class KMSConfig extends TeaModel {
         } 
 
         /**
-         * <p>The KMS instance ID</p>
+         * <p>The KMS instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>kst-xxxxxxxx</p>
@@ -78,7 +78,7 @@ public class KMSConfig extends TeaModel {
         }
 
         /**
-         * <p>The KMS key ID</p>
+         * <p>The KMS key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>key-xxxxxxxx</p>

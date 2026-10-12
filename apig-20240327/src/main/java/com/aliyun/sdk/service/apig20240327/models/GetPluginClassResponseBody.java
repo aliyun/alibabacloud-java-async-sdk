@@ -323,7 +323,7 @@ public class GetPluginClassResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Wasm plug-in programming language.</p>
+             * <p>The programming language of the Wasm plug-in.</p>
              * 
              * <strong>example:</strong>
              * <p>TinyGo</p>

@@ -119,7 +119,10 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The risk detection results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -143,7 +149,10 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. This parameter is empty if no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token-xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -254,7 +266,7 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The list of risk detection results.</p>
              */
             public Builder items(java.util.List<RiskCheckResults> items) {
                 this.items = items;
@@ -262,7 +274,10 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -270,7 +285,10 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -278,7 +296,10 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

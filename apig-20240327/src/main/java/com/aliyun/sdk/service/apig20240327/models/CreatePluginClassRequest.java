@@ -192,7 +192,7 @@ public class CreatePluginClassRequest extends Request {
         } 
 
         /**
-         * <p>The alias of the plugin class. This parameter is required. If this parameter is not specified, the service returns InvalidParameter.WithValue.</p>
+         * <p>The alias of the plugin class. This parameter is required. If this parameter is not specified, the service returns an InvalidParameter.WithValue error.</p>
          * 
          * <strong>example:</strong>
          * <p>My Wasm Plugin</p>
@@ -217,7 +217,7 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
-         * <p>The execution priority of the plugin. This parameter is required when executeStage is specified. The default value 0 is invalid. Set this parameter to 200.</p>
+         * <p>The execution priority of the plugin. This parameter is required when executeStage is specified. The default value 0 is invalid. We recommend that you set this parameter to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -255,7 +255,7 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
-         * <p>The minimum gateway version supported by the plugin.</p>
+         * <p>The minimum gateway version that the plugin is compatible with.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.0</p>

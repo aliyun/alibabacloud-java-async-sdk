@@ -60,7 +60,7 @@ public class GetGatewayResourceQuotaUsageRequest extends Request {
         } 
 
         /**
-         * <p>目标网关的唯一标识，通过请求路径 gatewayId 传入。可调用 ListGateways 查询；请将示例替换为当前地域内有权限访问的实际网关ID。</p>
+         * <p>The gateway ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

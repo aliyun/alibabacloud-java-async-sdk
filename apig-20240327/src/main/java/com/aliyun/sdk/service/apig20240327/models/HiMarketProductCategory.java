@@ -107,7 +107,7 @@ public class HiMarketProductCategory extends TeaModel {
          * <p>The categorization description.</p>
          * 
          * <strong>example:</strong>
-         * <p>AI网关相关产品分类</p>
+         * <p>Categorization for AI Gateway related products</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -126,7 +126,7 @@ public class HiMarketProductCategory extends TeaModel {
          * <p>The categorization name.</p>
          * 
          * <strong>example:</strong>
-         * <p>AI网关</p>
+         * <p>AI Gateway</p>
          */
         public Builder name(String name) {
             this.name = name;

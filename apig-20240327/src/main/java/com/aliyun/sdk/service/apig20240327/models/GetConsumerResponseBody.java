@@ -240,7 +240,7 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the API consumer joined the consumer group, in Unix milliseconds timestamp.</p>
+             * <p>The time when the API consumer joined the consumer group. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1715769600000</p>
@@ -438,7 +438,7 @@ public class GetConsumerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AK/SK identity authentication configuration.</p>
+             * <p>The AccessKey ID and AccessKey Secret identity authentication configurations.</p>
              */
             public Builder akSkIdentityConfigs(java.util.List<AkSkIdentityConfig> akSkIdentityConfigs) {
                 this.akSkIdentityConfigs = akSkIdentityConfigs;

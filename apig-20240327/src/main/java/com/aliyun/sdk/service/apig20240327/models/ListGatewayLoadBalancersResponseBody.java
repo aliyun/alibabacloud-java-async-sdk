@@ -93,7 +93,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C7C7C3EB-00B6-509A-B6A3-5462EE759047</p>
@@ -277,7 +283,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             } 
 
             /**
-             * allocationId.
+             * <p>The Elastic IP Address (EIP) allocation ID that corresponds to the public address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-bp1xxxx</p>
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -285,7 +294,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * eniId.
+             * <p>The ID of the elastic network interface (ENI).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp1xxxx</p>
              */
             public Builder eniId(String eniId) {
                 this.eniId = eniId;
@@ -293,7 +305,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * ipv4LocalAddresses.
+             * <p>The list of private IPv4 addresses.</p>
              */
             public Builder ipv4LocalAddresses(java.util.List<String> ipv4LocalAddresses) {
                 this.ipv4LocalAddresses = ipv4LocalAddresses;
@@ -301,7 +313,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * ipv6Address.
+             * <p>The public IPv6 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2408:xxxx</p>
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -309,7 +324,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * ipv6LocalAddresses.
+             * <p>The list of private IPv6 addresses.</p>
              */
             public Builder ipv6LocalAddresses(java.util.List<String> ipv6LocalAddresses) {
                 this.ipv6LocalAddresses = ipv6LocalAddresses;
@@ -317,7 +332,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * privateIPv4Address.
+             * <p>The private IPv4 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.x.x</p>
              */
             public Builder privateIPv4Address(String privateIPv4Address) {
                 this.privateIPv4Address = privateIPv4Address;
@@ -325,7 +343,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * privateIPv4HcStatus.
+             * <p>The health check status of the private IPv4 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Healthy</p>
              */
             public Builder privateIPv4HcStatus(String privateIPv4HcStatus) {
                 this.privateIPv4HcStatus = privateIPv4HcStatus;
@@ -333,7 +354,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * privateIPv6HcStatus.
+             * <p>The health check status of the private IPv6 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Healthy</p>
              */
             public Builder privateIPv6HcStatus(String privateIPv6HcStatus) {
                 this.privateIPv6HcStatus = privateIPv6HcStatus;
@@ -341,7 +365,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * publicIPv4Address.
+             * <p>The public IPv4 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.x.x.x</p>
              */
             public Builder publicIPv4Address(String publicIPv4Address) {
                 this.publicIPv4Address = publicIPv4Address;
@@ -434,7 +461,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             } 
 
             /**
-             * loadBalancerAddresses.
+             * <p>The list of load balancer addresses in the zone.</p>
              */
             public Builder loadBalancerAddresses(java.util.List<LoadBalancerAddresses> loadBalancerAddresses) {
                 this.loadBalancerAddresses = loadBalancerAddresses;
@@ -442,7 +469,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The zone status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -450,7 +480,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * vSwitchId.
+             * <p>The vSwitch ID that corresponds to the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1xxxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -458,7 +491,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -525,7 +561,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             } 
 
             /**
-             * port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -533,7 +572,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The port protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -600,7 +642,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             } 
 
             /**
-             * port.
+             * <p>The listener port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -608,7 +653,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The listener protocol. No backend enumeration validation is performed. The actual values are returned from SLB or NLB OpenAPI. Common values include tcp, udp, http, https, and tls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -688,7 +736,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             } 
 
             /**
-             * listeners.
+             * <p>The list of associated listeners.</p>
              */
             public Builder listeners(java.util.List<Listeners> listeners) {
                 this.listeners = listeners;
@@ -696,7 +744,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * virtualServiceGroupId.
+             * <p>The virtual server group ID. For CLB, this is the VServerGroupId. For NLB, this is the ServerGroupId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsp-xxxx</p>
              */
             public Builder virtualServiceGroupId(String virtualServiceGroupId) {
                 this.virtualServiceGroupId = virtualServiceGroupId;
@@ -704,7 +755,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * virtualServiceGroupName.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80-tcp</p>
              */
             public Builder virtualServiceGroupName(String virtualServiceGroupName) {
                 this.virtualServiceGroupName = virtualServiceGroupName;
@@ -979,7 +1033,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             } 
 
             /**
-             * defaultGatewayIngress.
+             * <p>Indicates whether this is the default ingress of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultGatewayIngress(Boolean defaultGatewayIngress) {
                 this.defaultGatewayIngress = defaultGatewayIngress;
@@ -987,7 +1044,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * editEnable.
+             * <p>Indicates whether the load balancer can be edited. This parameter serves as an edit switch for load balancers that are being migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder editEnable(Boolean editEnable) {
                 this.editEnable = editEnable;
@@ -995,7 +1055,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -1003,7 +1066,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerAddress.
+             * <p>The load balancer address (IP address or domain name).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.x.x.x</p>
              */
             public Builder loadBalancerAddress(String loadBalancerAddress) {
                 this.loadBalancerAddress = loadBalancerAddress;
@@ -1011,7 +1077,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerAddressIpVersion.
+             * <p>The IP version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder loadBalancerAddressIpVersion(String loadBalancerAddressIpVersion) {
                 this.loadBalancerAddressIpVersion = loadBalancerAddressIpVersion;
@@ -1019,7 +1088,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerAddressType.
+             * <p>The address type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internet</p>
              */
             public Builder loadBalancerAddressType(String loadBalancerAddressType) {
                 this.loadBalancerAddressType = loadBalancerAddressType;
@@ -1027,7 +1099,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerAvailableStatus.
+             * <p>The load balancer availability status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder loadBalancerAvailableStatus(String loadBalancerAvailableStatus) {
                 this.loadBalancerAvailableStatus = loadBalancerAvailableStatus;
@@ -1035,7 +1110,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerId.
+             * <p>The load balancer instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-bp1xxxx / nlb-xxxx</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -1043,7 +1121,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerMode.
+             * <p>The binding mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Managed</p>
              */
             public Builder loadBalancerMode(String loadBalancerMode) {
                 this.loadBalancerMode = loadBalancerMode;
@@ -1051,7 +1132,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerName.
+             * <p>The load balancer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-nlb</p>
              */
             public Builder loadBalancerName(String loadBalancerName) {
                 this.loadBalancerName = loadBalancerName;
@@ -1059,7 +1143,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerSpec.
+             * <p>The load balancer specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slb.s2.small</p>
              */
             public Builder loadBalancerSpec(String loadBalancerSpec) {
                 this.loadBalancerSpec = loadBalancerSpec;
@@ -1067,7 +1154,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerStatus.
+             * <p>The association status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ready</p>
              */
             public Builder loadBalancerStatus(String loadBalancerStatus) {
                 this.loadBalancerStatus = loadBalancerStatus;
@@ -1075,7 +1165,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerType.
+             * <p>The load balancer type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NLB</p>
              */
             public Builder loadBalancerType(String loadBalancerType) {
                 this.loadBalancerType = loadBalancerType;
@@ -1083,7 +1176,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerZoneMappings.
+             * <p>The zone mappings.</p>
              */
             public Builder loadBalancerZoneMappings(java.util.List<LoadBalancerZoneMappings> loadBalancerZoneMappings) {
                 this.loadBalancerZoneMappings = loadBalancerZoneMappings;
@@ -1091,7 +1184,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * ports.
+             * <p>The list of listener ports.</p>
              */
             public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
@@ -1099,7 +1192,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * serviceWeight.
+             * <p>The gateway service weight, which ranges from 0 to 100. This parameter is used in migration and traffic shifting scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder serviceWeight(Long serviceWeight) {
                 this.serviceWeight = serviceWeight;
@@ -1107,7 +1203,12 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * vServerGroupMetaInfo.
+             * <p>The VServerGroup metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder vServerGroupMetaInfo(String vServerGroupMetaInfo) {
                 this.vServerGroupMetaInfo = vServerGroupMetaInfo;
@@ -1115,7 +1216,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * virtualServerGroupList.
+             * <p>The list of virtual server groups.</p>
              */
             public Builder virtualServerGroupList(java.util.List<VirtualServerGroupList> virtualServerGroupList) {
                 this.virtualServerGroupList = virtualServerGroupList;
@@ -1169,7 +1270,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The instances.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

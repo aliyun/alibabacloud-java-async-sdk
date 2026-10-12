@@ -146,7 +146,7 @@ public class CreateAiModelCardRequest extends Request {
         } 
 
         /**
-         * <p>The list of API paths supported by the model. Each item must include both path and type.</p>
+         * <p>The list of API paths supported by the model. Each entry must include both path and type.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;path&quot;:&quot;/v1/chat/completions&quot;,&quot;type&quot;:&quot;OpenAICompatible&quot;}]</p>
@@ -158,7 +158,7 @@ public class CreateAiModelCardRequest extends Request {
         }
 
         /**
-         * <p>The credit billing information of the model. Currently, only the fixed type is supported. The cost unit is Credits per million tokens. If not specified, all cost values default to 0.</p>
+         * <p>The credit billing information of the model. Currently, only the fixed type is supported, and the cost unit is Credits per million tokens. If this parameter is not specified, all cost values default to 0.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;fixed&quot;,&quot;inputCost&quot;:1.5,&quot;outputCost&quot;:3,&quot;cacheCost&quot;:0.5}</p>
@@ -170,7 +170,7 @@ public class CreateAiModelCardRequest extends Request {
         }
 
         /**
-         * <p>The model capability switches. Keys must be model capability names supported by API Gateway, and values must be Boolean.</p>
+         * <p>The model capability switches. Keys must be model capability names supported by API Gateway, and values must be Boolean values.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true,&quot;promptCaching&quot;:false}</p>
@@ -220,7 +220,7 @@ public class CreateAiModelCardRequest extends Request {
         }
 
         /**
-         * <p>The model provider identifier. The value must reference an existing model provider in the target AI gateway instance. The value can be up to 128 characters in length.</p>
+         * <p>The model provider identifier. The value must reference a model provider that already exists in the target AI gateway instance. The value can be up to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -292,7 +292,7 @@ public class CreateAiModelCardRequest extends Request {
             } 
 
             /**
-             * <p>The model invocation path. The value can be up to 2048 characters in length.</p>
+             * <p>The model invocation path. The value can be up to 2,048 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>/v1/chat/completions</p>
@@ -303,7 +303,7 @@ public class CreateAiModelCardRequest extends Request {
             }
 
             /**
-             * <p>The protocol type corresponding to the path. The value can be up to 64 characters in length.</p>
+             * <p>The protocol type of the path. The value can be up to 64 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAICompatible</p>
@@ -399,7 +399,7 @@ public class CreateAiModelCardRequest extends Request {
             } 
 
             /**
-             * <p>The cache hit token cost, in Credits per million tokens. The value must be greater than or equal to 0. If not specified, the value defaults to 0.</p>
+             * <p>The cache hit token cost, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -410,7 +410,7 @@ public class CreateAiModelCardRequest extends Request {
             }
 
             /**
-             * <p>The input token cost, in Credits per million tokens. The value must be greater than or equal to 0. If not specified, the value defaults to 0.</p>
+             * <p>The input token cost, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1.5</p>
@@ -421,7 +421,7 @@ public class CreateAiModelCardRequest extends Request {
             }
 
             /**
-             * <p>The output token cost, in Credits per million tokens. The value must be greater than or equal to 0. If not specified, the value defaults to 0.</p>
+             * <p>The output token cost, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -432,7 +432,7 @@ public class CreateAiModelCardRequest extends Request {
             }
 
             /**
-             * <p>The billing type. Currently, only fixed is supported. If not specified, the value defaults to fixed.</p>
+             * <p>The billing type. Currently, only fixed is supported. If this parameter is not specified, the default value is fixed.</p>
              * 
              * <strong>example:</strong>
              * <p>fixed</p>
@@ -574,7 +574,7 @@ public class CreateAiModelCardRequest extends Request {
             }
 
             /**
-             * <p>The list of input modalities supported by the model. The list can contain up to 16 items, and each item must not be empty.</p>
+             * <p>The list of input modalities supported by the model. The list can contain up to 16 entries, and each entry must not be empty.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;text&quot;,&quot;image&quot;]</p>
@@ -585,7 +585,7 @@ public class CreateAiModelCardRequest extends Request {
             }
 
             /**
-             * <p>The list of output modalities supported by the model. The list can contain up to 16 items, and each item must not be empty.</p>
+             * <p>The list of output modalities supported by the model. The list can contain up to 16 entries, and each entry must not be empty.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;text&quot;]</p>

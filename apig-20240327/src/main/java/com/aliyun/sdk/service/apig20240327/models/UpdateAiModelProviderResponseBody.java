@@ -203,7 +203,7 @@ public class UpdateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol type corresponding to the path. The value can be up to 64 characters in length.</p>
+             * <p>The protocol type of the path. The value can be up to 64 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAICompatible</p>
@@ -299,7 +299,7 @@ public class UpdateAiModelProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cost of cache-hit tokens, in Credits per million tokens.</p>
+             * <p>The cost of cache-hit tokens. Unit: Credits per million tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -310,7 +310,7 @@ public class UpdateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost of input tokens, in Credits per million tokens.</p>
+             * <p>The cost of input tokens. Unit: Credits per million tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>1.5</p>
@@ -321,7 +321,7 @@ public class UpdateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost of output tokens, in Credits per million tokens.</p>
+             * <p>The cost of output tokens. Unit: Credits per million tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -734,7 +734,7 @@ public class UpdateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model provider identifier.</p>
+             * <p>The identifier of the model provider.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen</p>
@@ -745,7 +745,7 @@ public class UpdateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the model card. Instance-level model cards return user.</p>
+             * <p>The source of the model card. user is returned for instance-level model cards.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>
@@ -767,7 +767,7 @@ public class UpdateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time of the model card, in the format of yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The last update time of the model card. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-14 18:30:00</p>
@@ -939,7 +939,7 @@ public class UpdateAiModelProviderResponseBody extends TeaModel {
              * <p>The display name of the model provider. The name can be up to 128 characters in length.</p>
              * 
              * <strong>example:</strong>
-             * <p>Qwen Cloud / Alibaba Cloud Bailian.</p>
+             * <p>Qwen Cloud / Alibaba Cloud Bailian</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -1010,7 +1010,7 @@ public class UpdateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time of the model provider, in the format of yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The last update time of the model provider. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-14 18:30:00</p>

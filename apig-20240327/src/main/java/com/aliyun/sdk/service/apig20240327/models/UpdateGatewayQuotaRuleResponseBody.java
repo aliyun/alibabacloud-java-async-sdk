@@ -260,7 +260,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The period type of the existing conflicting rule on the consumer subject. Valid values: day (daily), week (weekly), month (monthly).</p>
+             * <p>The period type of the existing conflicting rule on the consumer subject. Valid values: day (daily), week (weekly), and month (monthly).</p>
              * 
              * <strong>example:</strong>
              * <p>week</p>
@@ -271,7 +271,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the existing conflicting rule on the consumer subject. Valid values: calendar (calendar period) and epoch (custom period).</p>
+             * <p>The type of the existing conflicting rule on the consumer subject. A value of calendar indicates a calendar-period rule. A value of epoch indicates a custom-period rule.</p>
              * 
              * <strong>example:</strong>
              * <p>calendar</p>
@@ -543,7 +543,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether this is a dry run.</p>
+             * <p>Indicates whether the request is a dry run.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

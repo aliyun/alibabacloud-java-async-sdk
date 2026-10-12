@@ -187,7 +187,7 @@ public class HiMarketModelFeature extends TeaModel {
         }
 
         /**
-         * <p>The temperature parameter that controls the randomness of generation.</p>
+         * <p>The temperature parameter that controls the randomness of the generated output.</p>
          * 
          * <strong>example:</strong>
          * <p>0.7</p>

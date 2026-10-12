@@ -159,7 +159,7 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>The custom configuration. Required when provider is set to custom.</p>
+         * <p>The custom configuration. This parameter is required when provider is set to custom.</p>
          */
         public Builder customConfig(CustomConfig customConfig) {
             this.customConfig = customConfig;
@@ -167,7 +167,7 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>The DashScope service configuration. Required when provider is set to qwen. The appCredentials parameter cannot be empty, and each entry must have non-empty appId and apiKey values.</p>
+         * <p>The DashScope service configuration. This parameter is required when provider is set to qwen. The appCredentials parameter cannot be empty, and each entry must have non-empty appId and apiKey values.</p>
          */
         public Builder dashScopeConfig(DashScopeConfig dashScopeConfig) {
             this.dashScopeConfig = dashScopeConfig;
@@ -175,7 +175,7 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>The Dify service configuration. Required when provider is set to dify. The botType and apiKey parameters cannot be empty.</p>
+         * <p>The Dify service configuration. This parameter is required when provider is set to dify. The botType and apiKey parameters cannot be empty.</p>
          */
         public Builder difyConfig(DifyConfig difyConfig) {
             this.difyConfig = difyConfig;

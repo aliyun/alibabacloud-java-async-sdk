@@ -73,7 +73,7 @@ public class ListGatewayAuthorizableSecurityGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq2avtllh****</p>
@@ -85,7 +85,7 @@ public class ListGatewayAuthorizableSecurityGroupsRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>Queries only the security groups associated with a Container Service cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>c4a21b3560fad4ec299f3e63f4***</p>

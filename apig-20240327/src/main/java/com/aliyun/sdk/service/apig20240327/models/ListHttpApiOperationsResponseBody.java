@@ -104,7 +104,7 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The API operation list.</p>
+         * <p>The list of API operations.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -218,7 +218,7 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API operation list.</p>
+             * <p>The list of API operations.</p>
              */
             public Builder items(java.util.List<HttpApiOperationInfo> items) {
                 this.items = items;
@@ -248,7 +248,7 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

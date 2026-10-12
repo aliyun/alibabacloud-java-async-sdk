@@ -119,7 +119,7 @@ public class HiMarketProductPublicationDetail extends TeaModel {
         } 
 
         /**
-         * <p>The portal ID.</p>
+         * <p>Portal ID</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxx</p>
@@ -133,7 +133,7 @@ public class HiMarketProductPublicationDetail extends TeaModel {
          * <p>The portal name.</p>
          * 
          * <strong>example:</strong>
-         * <p>开发者门户</p>
+         * <p>Developer Portal</p>
          */
         public Builder portalName(String portalName) {
             this.portalName = portalName;
@@ -155,7 +155,7 @@ public class HiMarketProductPublicationDetail extends TeaModel {
          * <p>The product name.</p>
          * 
          * <strong>example:</strong>
-         * <p>AI网关API</p>
+         * <p>AI Gateway API</p>
          */
         public Builder productName(String productName) {
             this.productName = productName;
@@ -174,7 +174,7 @@ public class HiMarketProductPublicationDetail extends TeaModel {
         }
 
         /**
-         * <p>The product publish ID.</p>
+         * <p>The product publication ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pub-xxx</p>

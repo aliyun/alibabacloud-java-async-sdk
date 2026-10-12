@@ -143,7 +143,10 @@ public class ListGatewayLoadBalancersRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>The gateway ID. This parameter is used for RAM resource authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -152,7 +155,10 @@ public class ListGatewayLoadBalancersRequest extends Request {
         }
 
         /**
-         * all.
+         * <p>Specifies whether to return all instances in the selectable list mode. This parameter affects pagination and filtering behavior.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("all", all);
@@ -161,7 +167,10 @@ public class ListGatewayLoadBalancersRequest extends Request {
         }
 
         /**
-         * loadBalancerId.
+         * <p>The load balancer instance ID. Specify this parameter to query details of a specific load balancer in the selectable list mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-xxxx</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("loadBalancerId", loadBalancerId);
@@ -170,7 +179,10 @@ public class ListGatewayLoadBalancersRequest extends Request {
         }
 
         /**
-         * network.
+         * <p>The network type used to filter results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internet</p>
          */
         public Builder network(String network) {
             this.putQueryParameter("network", network);
@@ -179,7 +191,15 @@ public class ListGatewayLoadBalancersRequest extends Request {
         }
 
         /**
-         * related.
+         * <p>The mode switch. Valid values:</p>
+         * <ul>
+         * <li>true: Returns the list of load balancers that are already associated with the gateway by reading database relationships.</li>
+         * <li>false (default): Returns the selectable list by calling SLB or NLB OpenAPI to filter bindable instances.</li>
+         * </ul>
+         * <p>Use related=true to retrieve the list of associated load balancers. The default mode (related=false) calls SLB or NLB OpenAPI to filter bindable instances, which may return a 500 error in common scenarios due to backend data issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder related(Boolean related) {
             this.putQueryParameter("related", related);
@@ -188,7 +208,10 @@ public class ListGatewayLoadBalancersRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The load balancer type used to filter results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NLB</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);
@@ -197,7 +220,10 @@ public class ListGatewayLoadBalancersRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * <p>The VPC ID used to filter instances within the specified VPC in the selectable list mode. This parameter is required when type is set to NLB and related is not set to true. Otherwise, the API returns a 500 error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("vpcId", vpcId);

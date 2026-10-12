@@ -122,7 +122,7 @@ public class CreateEnvironmentRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试环境</p>
+         * <p>Test environment</p>
          */
         public Builder alias(String alias) {
             this.putBodyParameter("alias", alias);
@@ -131,10 +131,10 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * <p>The description of the environment. You can specify information such as the purpose and owner of the environment.</p>
+         * <p>The description of the environment. You can specify information such as the purpose of the environment and the owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是xxx的xx项目测试环境</p>
+         * <p>This is the test environment for the xx project of xxx</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);

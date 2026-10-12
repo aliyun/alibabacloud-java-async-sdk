@@ -158,7 +158,10 @@ public class CreateMigrationTaskRequest extends Request {
         } 
 
         /**
-         * clusterId.
+         * <p>The ID of the source ACK cluster. The value must be the same as the cluster specified in the IngressInfo of the API. Note: This parameter is actually required. If this parameter is not specified, the API returns 400 InvalidParameter.IsEmpty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-xxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("clusterId", clusterId);
@@ -167,7 +170,10 @@ public class CreateMigrationTaskRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the task. The description is stored only when the task is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>migration from Nginx</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -176,7 +182,10 @@ public class CreateMigrationTaskRequest extends Request {
         }
 
         /**
-         * environmentId.
+         * <p>The ID of the destination environment. The value must be the same as the Ingress import environment of the API. Note: This parameter is actually required. If this parameter is not specified, the API returns 400 InvalidParameter.IsEmpty. You can call ListEnvironments to query existing environment IDs. CreateEnvironment has been deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putBodyParameter("environmentId", environmentId);
@@ -185,7 +194,10 @@ public class CreateMigrationTaskRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The ID of the destination gateway to which traffic is migrated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putBodyParameter("gatewayId", gatewayId);
@@ -194,7 +206,10 @@ public class CreateMigrationTaskRequest extends Request {
         }
 
         /**
-         * httpApiId.
+         * <p>The HTTP API ID. The API must have been imported as an Ingress type (HttpIngress) API. Note: This parameter is actually required. If this parameter is not specified, the API returns 400 InvalidParameter.IsEmpty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-xxxx</p>
          */
         public Builder httpApiId(String httpApiId) {
             this.putBodyParameter("httpApiId", httpApiId);
@@ -203,7 +218,10 @@ public class CreateMigrationTaskRequest extends Request {
         }
 
         /**
-         * ingressClass.
+         * <p>The Ingress class. If specified, the value must be the same as the API import configuration. Otherwise, an ingress class conflict error is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
          */
         public Builder ingressClass(String ingressClass) {
             this.putBodyParameter("ingressClass", ingressClass);
@@ -212,7 +230,11 @@ public class CreateMigrationTaskRequest extends Request {
         }
 
         /**
-         * migrationType.
+         * <p>The migration type.
+         * [_single.params.body.props.migrationType.enum.Nginx Ingress]Nginx Ingress migration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nginx Ingress</p>
          */
         public Builder migrationType(String migrationType) {
             this.putBodyParameter("migrationType", migrationType);
@@ -221,7 +243,10 @@ public class CreateMigrationTaskRequest extends Request {
         }
 
         /**
-         * watchNamespace.
+         * <p>The watched namespace. If specified, the value must be the same as the API import configuration. Otherwise, a watchNamespace conflict error is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder watchNamespace(String watchNamespace) {
             this.putBodyParameter("watchNamespace", watchNamespace);

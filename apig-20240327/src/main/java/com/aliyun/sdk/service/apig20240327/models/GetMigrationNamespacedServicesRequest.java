@@ -59,7 +59,10 @@ public class GetMigrationNamespacedServicesRequest extends Request {
         } 
 
         /**
-         * taskId.
+         * <p>The migration task ID. This parameter is a URL path parameter. Although the required field is set to false in the document metadata, you must provide a valid migration task ID when calling this operation. You can call ListMigrationTasks to obtain the migration task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mt-xxxxxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);

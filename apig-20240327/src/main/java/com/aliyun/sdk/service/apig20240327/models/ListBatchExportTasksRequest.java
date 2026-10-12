@@ -157,7 +157,10 @@ public class ListBatchExportTasksRequest extends Request {
         } 
 
         /**
-         * endTime.
+         * <p>The end of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-26T11:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -166,7 +169,10 @@ public class ListBatchExportTasksRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The gateway instance ID. If specified, only tasks under this gateway are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
@@ -175,7 +181,10 @@ public class ListBatchExportTasksRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of tasks to return in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -184,7 +193,10 @@ public class ListBatchExportTasksRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The paging token that indicates the start position of the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token-xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -193,7 +205,10 @@ public class ListBatchExportTasksRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -202,7 +217,10 @@ public class ListBatchExportTasksRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -211,7 +229,10 @@ public class ListBatchExportTasksRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>The start of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-26T10:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -220,7 +241,10 @@ public class ListBatchExportTasksRequest extends Request {
         }
 
         /**
-         * statuses.
+         * <p>The list of task statuses. Separate multiple statuses with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pending,Running</p>
          */
         public Builder statuses(String statuses) {
             this.putQueryParameter("statuses", statuses);

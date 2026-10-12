@@ -197,12 +197,10 @@ public class AiServiceConfig extends TeaModel {
         } 
 
         /**
-         * <p>API key generation mode.</p>
+         * <p>The generation mode of the API key.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>Custom</p>
          */
         public Builder apiKeyGenerateMode(String apiKeyGenerateMode) {
             this.apiKeyGenerateMode = apiKeyGenerateMode;
@@ -210,7 +208,7 @@ public class AiServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>The service endpoint.</p>
+         * <p>The service address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://dashscope.aliyun.com">https://dashscope.aliyun.com</a></p>
@@ -221,7 +219,7 @@ public class AiServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>The API keys.</p>
+         * <p>The list of API keys.</p>
          */
         public Builder apiKeys(java.util.List<String> apiKeys) {
             this.apiKeys = apiKeys;
@@ -229,7 +227,7 @@ public class AiServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>Bedrock service configuration.</p>
+         * <p>The configuration specific to the Bedrock service.</p>
          */
         public Builder bedrockServiceConfig(BedrockServiceConfig bedrockServiceConfig) {
             this.bedrockServiceConfig = bedrockServiceConfig;
@@ -237,7 +235,7 @@ public class AiServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>Supported compatible protocols.</p>
+         * <p>The list of compatible protocols supported by the service.</p>
          */
         public Builder compatibleProtocols(java.util.List<String> compatibleProtocols) {
             this.compatibleProtocols = compatibleProtocols;
@@ -245,10 +243,10 @@ public class AiServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>Default model name.</p>
+         * <p>The name of the default model.</p>
          * 
          * <strong>example:</strong>
-         * <p>qwen-turbo</p>
+         * <p>gpt-4</p>
          */
         public Builder defaultModelName(String defaultModelName) {
             this.defaultModelName = defaultModelName;
@@ -256,7 +254,7 @@ public class AiServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable health check.</p>
+         * <p>Indicates whether health check is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -267,10 +265,10 @@ public class AiServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>Enable outlier detection.</p>
+         * <p>Indicates whether outlier detection is enabled.</p>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true</p>
          */
         public Builder enableOutlierDetection(Boolean enableOutlierDetection) {
             this.enableOutlierDetection = enableOutlierDetection;
@@ -278,7 +276,7 @@ public class AiServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>PAI-EAS service configuration settings.</p>
+         * <p>The configuration specific to the PAI-EAS service.</p>
          */
         public Builder paiEASServiceConfig(PaiEASServiceConfig paiEASServiceConfig) {
             this.paiEASServiceConfig = paiEASServiceConfig;
@@ -286,7 +284,7 @@ public class AiServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>The LLM protocols.</p>
+         * <p>The list of model protocols.</p>
          */
         public Builder protocols(java.util.List<String> protocols) {
             this.protocols = protocols;
@@ -294,10 +292,30 @@ public class AiServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>The Large Language Model (LLM) provider.</p>
+         * <p>The large language model provider.</p>
          * 
          * <strong>example:</strong>
-         * <p>qwen</p>
+         * <p>qwen
+         * moonshot
+         * baichuan
+         * yi
+         * zhipuai
+         * 360ai
+         * hunyuan
+         * stepfun
+         * spark
+         * openai
+         * claude
+         * anthropic
+         * doubao
+         * minimax
+         * gemini
+         * azure
+         * deepseek
+         * custom
+         * pai-eas
+         * bedrock
+         * vertex</p>
          */
         public Builder provider(String provider) {
             this.provider = provider;
@@ -305,7 +323,7 @@ public class AiServiceConfig extends TeaModel {
         }
 
         /**
-         * <p>Vertex AI service configuration.</p>
+         * <p>The configuration of the Vertex AI service.</p>
          */
         public Builder vertexServiceConfig(VertexServiceConfig vertexServiceConfig) {
             this.vertexServiceConfig = vertexServiceConfig;
@@ -384,7 +402,7 @@ public class AiServiceConfig extends TeaModel {
             } 
 
             /**
-             * <p>AWS-AccessKey</p>
+             * <p>The AWS access key.</p>
              * 
              * <strong>example:</strong>
              * <p>AKIAIOSFODNN7EXAMPLE</p>
@@ -395,10 +413,10 @@ public class AiServiceConfig extends TeaModel {
             }
 
             /**
-             * <p>AWS-Region</p>
+             * <p>The AWS region.</p>
              * 
              * <strong>example:</strong>
-             * <p>us-west-2</p>
+             * <p>us-east-1</p>
              */
             public Builder awsRegion(String awsRegion) {
                 this.awsRegion = awsRegion;
@@ -406,7 +424,7 @@ public class AiServiceConfig extends TeaModel {
             }
 
             /**
-             * <p>AWS-SecretKey</p>
+             * <p>The AWS secret key.</p>
              * 
              * <strong>example:</strong>
              * <p>wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</p>
@@ -502,7 +520,7 @@ public class AiServiceConfig extends TeaModel {
             } 
 
             /**
-             * <p>Type of endpoint.</p>
+             * <p>The connection type: private network (vpc) or public network (public).</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;public&quot;，&quot;private&quot;</p>
@@ -513,10 +531,10 @@ public class AiServiceConfig extends TeaModel {
             }
 
             /**
-             * <p>Service identifier.</p>
+             * <p>The service ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>svc-d33onfmm1hkn5duhuqjg</p>
+             * <p>svc-cvaeb0um1hkqp79k72v0</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -524,10 +542,10 @@ public class AiServiceConfig extends TeaModel {
             }
 
             /**
-             * <p>Name of the service.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
-             * <p>service-hello</p>
+             * <p>auto-ai-service</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -535,10 +553,10 @@ public class AiServiceConfig extends TeaModel {
             }
 
             /**
-             * <p>Workspace identifier.</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>plw-d5g7qsem1hkmih54g210</p>
+             * <p>cb89d4de30042df4459442589664e00d</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -657,7 +675,7 @@ public class AiServiceConfig extends TeaModel {
             } 
 
             /**
-             * <p>Gemini safety settings.</p>
+             * <p>The safety filtering level settings for the Gemini model.</p>
              */
             public Builder geminiSafetySetting(java.util.Map<String, String> geminiSafetySetting) {
                 this.geminiSafetySetting = geminiSafetySetting;
@@ -665,10 +683,10 @@ public class AiServiceConfig extends TeaModel {
             }
 
             /**
-             * <p>Vertex AI authentication key.</p>
+             * <p>The authentication key for Vertex AI.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;type\&quot;:\&quot;service_account\&quot;,\&quot;project_id\&quot;:\&quot;xxx\&quot;,\&quot;private_key\&quot;:\&quot;-----BEGIN PRIVATE KEY-----\&quot;,\&quot;client_email\&quot;:\&quot;<a href="mailto:xxx@xxx.iam.gserviceaccount.com">xxx@xxx.iam.gserviceaccount.com</a>\&quot;,\&quot;token_uri\&quot;:\&quot;<a href="https://oauth2.googleapis.com/token%5C%5C%22%7D">https://oauth2.googleapis.com/token\\&quot;}</a></p>
+             * <p>{\&quot;type\&quot;:\&quot;service_account\&quot;,\&quot;project_id\&quot;:\&quot;my-project\&quot;,\&quot;private_key\&quot;:\&quot;-----BEGIN PRIVATE KEY-----...\&quot;,\&quot;client_email\&quot;:\&quot;<a href="mailto:xxx@xxx.iam.gserviceaccount.com">xxx@xxx.iam.gserviceaccount.com</a>\&quot;,\&quot;token_uri\&quot;:\&quot;<a href="https://oauth2.googleapis.com/token%5C%5C%22%7D">https://oauth2.googleapis.com/token\\&quot;}</a></p>
              */
             public Builder vertexAuthKey(String vertexAuthKey) {
                 this.vertexAuthKey = vertexAuthKey;
@@ -676,10 +694,10 @@ public class AiServiceConfig extends TeaModel {
             }
 
             /**
-             * <p>Vertex AI auth service name.</p>
+             * <p>The service name of the authentication service used by Vertex AI.</p>
              * 
              * <strong>example:</strong>
-             * <p>custom-vertex-auth</p>
+             * <p>google-oauth2</p>
              */
             public Builder vertexAuthServiceName(String vertexAuthServiceName) {
                 this.vertexAuthServiceName = vertexAuthServiceName;
@@ -687,10 +705,10 @@ public class AiServiceConfig extends TeaModel {
             }
 
             /**
-             * <p>Vertex AI project ID.</p>
+             * <p>The Google Cloud project ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>my-gcp-project-123</p>
+             * <p>my-project</p>
              */
             public Builder vertexProjectId(String vertexProjectId) {
                 this.vertexProjectId = vertexProjectId;
@@ -698,7 +716,7 @@ public class AiServiceConfig extends TeaModel {
             }
 
             /**
-             * <p>Vertex AI region.</p>
+             * <p>The Google Cloud region where the Vertex AI service is located.</p>
              * 
              * <strong>example:</strong>
              * <p>us-central1</p>
@@ -709,7 +727,7 @@ public class AiServiceConfig extends TeaModel {
             }
 
             /**
-             * <p>Vertex token refresh lead time.</p>
+             * <p>The number of seconds before the access token expires to refresh it in advance.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>

@@ -88,7 +88,7 @@ public class HiMarketApiKeyConfig extends TeaModel {
         }
 
         /**
-         * <p>The name of the location from which the API key is extracted.</p>
+         * <p>The name of the location from which the API key is fetched.</p>
          * 
          * <strong>example:</strong>
          * <p>Apikey</p>

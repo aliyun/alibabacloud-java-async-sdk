@@ -199,10 +199,10 @@ public class AiNetworkSearchConfig extends TeaModel {
         }
 
         /**
-         * <p>The format template for reference content. The template must contain at least one %s placeholder.</p>
+         * <p>The format template for reference content. Must contain at least one %s placeholder.</p>
          * 
          * <strong>example:</strong>
-         * <p>参考来源:\n%s</p>
+         * <p>Reference source:\n%s</p>
          */
         public Builder referenceFormat(String referenceFormat) {
             this.referenceFormat = referenceFormat;
@@ -342,7 +342,7 @@ public class AiNetworkSearchConfig extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to enable search query rewriting.</p>
+             * <p>Specifies whether to enable search term rewriting.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -353,7 +353,7 @@ public class AiNetworkSearchConfig extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of search queries after rewriting.</p>
+             * <p>The maximum number of search terms after rewriting.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -375,7 +375,7 @@ public class AiNetworkSearchConfig extends TeaModel {
             }
 
             /**
-             * <p>The ID of the rewriting service.</p>
+             * <p>The rewriting service ID.</p>
              * 
              * <strong>example:</strong>
              * <p>svc-xxx</p>

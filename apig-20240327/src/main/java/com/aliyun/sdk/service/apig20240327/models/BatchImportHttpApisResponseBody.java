@@ -93,7 +93,10 @@ public class BatchImportHttpApisResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class BatchImportHttpApisResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class BatchImportHttpApisResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class BatchImportHttpApisResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE534E1D-FCE4-5930-B784-E055EC1AEE6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +179,10 @@ public class BatchImportHttpApisResponseBody extends TeaModel {
             } 
 
             /**
-             * taskId.
+             * <p>The asynchronous task ID. You can call the GetBatchImportTask operation to query the task progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>async-task-xxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

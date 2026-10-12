@@ -492,7 +492,7 @@ public class JwtIdentityConfig extends TeaModel {
             }
 
             /**
-             * <p>The location where the JWT is stored.</p>
+             * <p>The position where the JWT is stored.</p>
              * 
              * <strong>example:</strong>
              * <p>HEADER</p>

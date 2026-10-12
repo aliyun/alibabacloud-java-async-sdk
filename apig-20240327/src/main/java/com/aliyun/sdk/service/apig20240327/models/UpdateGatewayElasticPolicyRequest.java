@@ -73,7 +73,10 @@ public class UpdateGatewayElasticPolicyRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>The gateway ID. This parameter is used for RAM authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -82,7 +85,7 @@ public class UpdateGatewayElasticPolicyRequest extends Request {
         }
 
         /**
-         * elasticPolicy.
+         * <p>The elastic policy object.</p>
          */
         public Builder elasticPolicy(ElasticPolicy elasticPolicy) {
             this.putBodyParameter("elasticPolicy", elasticPolicy);
@@ -150,7 +153,10 @@ public class UpdateGatewayElasticPolicyRequest extends Request {
             } 
 
             /**
-             * endTime.
+             * <p>The O&amp;M end time in the HH:mm format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -158,7 +164,10 @@ public class UpdateGatewayElasticPolicyRequest extends Request {
             }
 
             /**
-             * startTime.
+             * <p>The O&amp;M start time in the HH:mm format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -238,7 +247,10 @@ public class UpdateGatewayElasticPolicyRequest extends Request {
             } 
 
             /**
-             * endTime.
+             * <p>The O&amp;M end time in the HH:mm format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>06:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -246,7 +258,10 @@ public class UpdateGatewayElasticPolicyRequest extends Request {
             }
 
             /**
-             * startTime.
+             * <p>The O&amp;M start time in the HH:mm format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -254,7 +269,10 @@ public class UpdateGatewayElasticPolicyRequest extends Request {
             }
 
             /**
-             * units.
+             * <p>The number of replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder units(Integer units) {
                 this.units = units;
@@ -373,7 +391,10 @@ public class UpdateGatewayElasticPolicyRequest extends Request {
             } 
 
             /**
-             * elasticEnabled.
+             * <p>Specifies whether to enable the elastic policy. A value of false indicates that the elastic policy is disabled. When the elastic policy is disabled, other fields are not validated and the system directly proceeds with the disabling process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder elasticEnabled(Boolean elasticEnabled) {
                 this.elasticEnabled = elasticEnabled;
@@ -381,7 +402,10 @@ public class UpdateGatewayElasticPolicyRequest extends Request {
             }
 
             /**
-             * elasticType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CronHPA</p>
              */
             public Builder elasticType(String elasticType) {
                 this.elasticType = elasticType;
@@ -389,7 +413,7 @@ public class UpdateGatewayElasticPolicyRequest extends Request {
             }
 
             /**
-             * enableScaleTimePolicyList.
+             * <p>The time periods during which AutoHPA is allowed to scale out, specified by startTime and endTime.</p>
              */
             public Builder enableScaleTimePolicyList(java.util.List<EnableScaleTimePolicyList> enableScaleTimePolicyList) {
                 this.enableScaleTimePolicyList = enableScaleTimePolicyList;
@@ -397,7 +421,10 @@ public class UpdateGatewayElasticPolicyRequest extends Request {
             }
 
             /**
-             * loadWarningThreshold.
+             * <p>Specifies whether to enable the AutoHPA load alert threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder loadWarningThreshold(Boolean loadWarningThreshold) {
                 this.loadWarningThreshold = loadWarningThreshold;
@@ -405,7 +432,10 @@ public class UpdateGatewayElasticPolicyRequest extends Request {
             }
 
             /**
-             * maxUnits.
+             * <p>The maximum number of replicas. This parameter is required for AutoHPA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxUnits(Integer maxUnits) {
                 this.maxUnits = maxUnits;
@@ -413,7 +443,7 @@ public class UpdateGatewayElasticPolicyRequest extends Request {
             }
 
             /**
-             * timePolicyList.
+             * <p>The list of scheduled policies.</p>
              */
             public Builder timePolicyList(java.util.List<TimePolicyList> timePolicyList) {
                 this.timePolicyList = timePolicyList;

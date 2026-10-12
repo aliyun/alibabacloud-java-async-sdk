@@ -179,7 +179,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum body collection size per request in bytes. This value is returned based on the managed form of the gateway deployment cluster. Only the log-request-response feature returns this field.</p>
+             * <p>The maximum body collection size per request, in bytes. This value is returned based on the managed form of the gateway deployment cluster. Only the log-request-response feature returns this field.</p>
              * 
              * <strong>example:</strong>
              * <p>5120</p>
@@ -249,7 +249,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key used to pass the parameter.</p>
+             * <p>The pass parameter key.</p>
              * 
              * <strong>example:</strong>
              * <p>KEEP_UNCHANGED</p>
@@ -513,7 +513,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
              * <p>The parameter description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Applies to request and response phases. Enabling gzip compresses request responses, which reduces gateway traffic but increases gateway CPU consumption</p>
+             * <p>Applies to the request and response phases. Enabling gzip compresses request responses, which reduces gateway traffic but increases gateway CPU consumption</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -534,8 +534,8 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             /**
              * <p>The parameter group. Valid values:</p>
              * <ul>
-             * <li>Telemetry: observability-related parameter.</li>
-             * <li>Engine: engine-related parameter.</li>
+             * <li>Telemetry: An observability parameter.</li>
+             * <li>Engine: An engine parameter.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -549,10 +549,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             /**
              * <p>The input type of the parameter. Valid values:</p>
              * <ul>
-             * <li>Trigger: toggle.</li>
-             * <li>Input: text input.</li>
-             * <li>SingleSelect: single-select.</li>
-             * <li>MultiSelect: multi-select.</li>
+             * <li>Trigger: Toggle.</li>
+             * <li>Input: Text input.</li>
+             * <li>SingleSelect: Single-select.</li>
+             * <li>MultiSelect: Multi-select.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -752,7 +752,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The runtime constraints calculated based on the current gateway form. Only returned for certain features.</p>
+             * <p>The runtime constraints calculated based on the current gateway form. Only returned for specific features.</p>
              */
             public Builder constraints(Constraints constraints) {
                 this.constraints = constraints;

@@ -195,7 +195,7 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The keyword for full match search. Case-insensitive.</p>
+         * <p>The keyword for full match search. The search is case-insensitive.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>

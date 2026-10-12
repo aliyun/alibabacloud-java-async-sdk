@@ -93,7 +93,10 @@ public class CreateRiskCheckTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateRiskCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateRiskCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +179,10 @@ public class CreateRiskCheckTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * taskId.
+             * <p>The risk detection task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rct-xxxxxxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

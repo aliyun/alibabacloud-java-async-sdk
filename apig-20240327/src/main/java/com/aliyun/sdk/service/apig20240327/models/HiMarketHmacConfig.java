@@ -54,7 +54,7 @@ public class HiMarketHmacConfig extends TeaModel {
         } 
 
         /**
-         * <p>The list of credentials.</p>
+         * <p>The credential list.</p>
          */
         public Builder credentials(java.util.List<Credentials> credentials) {
             this.credentials = credentials;

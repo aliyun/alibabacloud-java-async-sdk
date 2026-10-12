@@ -93,7 +93,10 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -212,7 +218,10 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
             } 
 
             /**
-             * port.
+             * <p>The port. When an NLB instance is associated, two placeholder entries with ports 80 and 443 are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -220,7 +229,10 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The protocol. When an NLB instance is associated, HTTP and HTTPS are returned as placeholders. For CLB, the value is deserialized from the stored vServerGroupMetaInfo.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -228,7 +240,10 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * virtualServiceGroupId.
+             * <p>The VServerGroup or ServerGroup ID. When an NLB instance is associated, this field is an empty string placeholder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsp-xxxx</p>
              */
             public Builder virtualServiceGroupId(String virtualServiceGroupId) {
                 this.virtualServiceGroupId = virtualServiceGroupId;
@@ -236,7 +251,10 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * virtualServiceGroupName.
+             * <p>The group name. When an NLB instance is associated, this field is an empty string placeholder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80-tcp</p>
              */
             public Builder virtualServiceGroupName(String virtualServiceGroupName) {
                 this.virtualServiceGroupName = virtualServiceGroupName;
@@ -407,7 +425,10 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
             } 
 
             /**
-             * editEnable.
+             * <p>Indicates whether the load balancer can be edited. This serves as the edit toggle for a load balancer that is being migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder editEnable(Boolean editEnable) {
                 this.editEnable = editEnable;
@@ -415,7 +436,10 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerAddress.
+             * <p>The load balancer address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.x.x.x</p>
              */
             public Builder loadBalancerAddress(String loadBalancerAddress) {
                 this.loadBalancerAddress = loadBalancerAddress;
@@ -423,7 +447,10 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerId.
+             * <p>The load balancer instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-bp1xxxx</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -431,7 +458,10 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerName.
+             * <p>The load balancer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-clb</p>
              */
             public Builder loadBalancerName(String loadBalancerName) {
                 this.loadBalancerName = loadBalancerName;
@@ -439,7 +469,10 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerType.
+             * <p>The load balancer type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLB</p>
              */
             public Builder loadBalancerType(String loadBalancerType) {
                 this.loadBalancerType = loadBalancerType;
@@ -447,7 +480,10 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * networkType.
+             * <p>The network type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internet</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -455,7 +491,7 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * ports.
+             * <p>The port information.</p>
              */
             public Builder ports(java.util.List<Integer> ports) {
                 this.ports = ports;
@@ -463,7 +499,10 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * serviceWeight.
+             * <p>The gateway service weight for traffic shifting during migration. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder serviceWeight(Long serviceWeight) {
                 this.serviceWeight = serviceWeight;
@@ -471,7 +510,10 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * statusDescription.
+             * <p>The status description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Status description</p>
              */
             public Builder statusDescription(String statusDescription) {
                 this.statusDescription = statusDescription;
@@ -479,7 +521,7 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * virtualServiceList.
+             * <p>The backend server group bindings.</p>
              */
             public Builder virtualServiceList(java.util.List<VirtualServiceList> virtualServiceList) {
                 this.virtualServiceList = virtualServiceList;

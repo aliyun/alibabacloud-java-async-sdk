@@ -241,7 +241,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The list of assembled sources. This parameter is required when type is AssemblyMCP.</p>
+         * <p>The list of assembled sources. This parameter is required when type is set to AssemblyMCP.</p>
          */
         public Builder assembledSources(java.util.List<AssembledSources> assembledSources) {
             this.putBodyParameter("assembledSources", assembledSources);
@@ -250,7 +250,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The backend service configuration of the route.</p>
+         * <p>The backend service configuration of the route. This parameter is conditionally required. If this parameter is not specified, the API returns InvalidParameter.WithValue(400).</p>
          */
         public Builder backendConfig(BackendConfig backendConfig) {
             this.putBodyParameter("backendConfig", backendConfig);
@@ -261,11 +261,11 @@ public class UpdateMcpServerRequest extends Request {
         /**
          * <p>The creation source type. Valid values:</p>
          * <ul>
-         * <li>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.</li>
-         * <li>ApiGatewayProxyMcpHosting: gateway-managed MCP direct proxy.</li>
-         * <li>ApiGatewayAssembly: gateway MCP assembly.</li>
-         * <li>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.</li>
-         * <li>NacosMcpHosting: gateway-managed Nacos-synced MCP direct proxy.</li>
+         * <li>ApiGatewayHttpToMCP: Gateway-managed HTTP-to-MCP conversion.</li>
+         * <li>ApiGatewayProxyMcpHosting: Gateway-managed MCP direct proxy.</li>
+         * <li>ApiGatewayAssembly: Gateway MCP assembly.</li>
+         * <li>NacosHttpToMCP: Gateway-managed Nacos-synced HTTP-to-MCP conversion.</li>
+         * <li>NacosMcpHosting: Gateway-managed Nacos-synced MCP direct proxy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -281,7 +281,7 @@ public class UpdateMcpServerRequest extends Request {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Product center service routing</p>
+         * <p>商品中心服务路由</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -290,7 +290,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The domain name IDs.</p>
+         * <p>The domain name ID.</p>
          */
         public Builder domainIds(java.util.List<String> domainIds) {
             this.putBodyParameter("domainIds", domainIds);
@@ -299,7 +299,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The exposed URI path. This parameter is required when protocol is SSE or StreamableHTTP and type is RealMCP.</p>
+         * <p>The exposed URI path. This parameter is required when protocol is set to SSE or StreamableHTTP and type is set to RealMCP.</p>
          * 
          * <strong>example:</strong>
          * <p>/sse</p>
@@ -311,7 +311,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The list of canary release MCP server routing configurations.</p>
+         * <p>The list of canary release MCP server route configurations.</p>
          */
         public Builder grayMcpServerConfigs(java.util.List<GrayMcpServerConfigs> grayMcpServerConfigs) {
             this.putBodyParameter("grayMcpServerConfigs", grayMcpServerConfigs);
@@ -320,7 +320,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The route match rules.</p>
+         * <p>The route match rule. This parameter is conditionally required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty(400).</p>
          */
         public Builder match(HttpRouteMatch match) {
             this.putBodyParameter("match", match);
@@ -369,11 +369,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The MCP server type filter. Valid values:</p>
-         * <ul>
-         * <li>RealMCP</li>
-         * <li>AssemblyMCP</li>
-         * </ul>
+         * <p>The MCP server type filter. Valid values: RealMCP, AssemblyMCP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -597,11 +593,11 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The service protocol. Valid values:</p>
+             * <p>The Terms of Service. Valid values:</p>
              * <ul>
-             * <li>TCP</li>
-             * <li>HTTP</li>
-             * <li>DUBBO</li>
+             * <li>TCP.</li>
+             * <li>HTTP.</li>
+             * <li>DUBBO.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -833,7 +829,7 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The service protocol.</p>
+             * <p>The Terms of Service.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -1035,7 +1031,7 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The route match rules.</p>
+             * <p>The route match rule.</p>
              */
             public Builder match(HttpRouteMatch match) {
                 this.match = match;

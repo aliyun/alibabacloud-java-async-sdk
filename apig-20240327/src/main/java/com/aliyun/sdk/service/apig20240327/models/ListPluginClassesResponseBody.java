@@ -312,7 +312,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
              * <p>The plug-in alias.</p>
              * 
              * <strong>example:</strong>
-             * <p>OAuth2 认证</p>
+             * <p>OAuth2 Authentication</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -323,7 +323,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
              * <p>The plug-in description.</p>
              * 
              * <strong>example:</strong>
-             * <p>基于 OAuth2 实现身份认证和鉴权。</p>
+             * <p>Implements identity authentication and authorization based on OAuth2</p>
              */
             public Builder description(String description) {
                 this.description = description;

@@ -93,7 +93,10 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -251,7 +257,10 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * engineVersion.
+             * <p>The database engine version of the gateway DPI engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.1.10</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -259,7 +268,10 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -267,7 +279,10 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayPhase.
+             * <p>The gateway status. The value is passed through from the GatewayPhase enumeration, such as Running or Creating.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder gatewayPhase(String gatewayPhase) {
                 this.gatewayPhase = gatewayPhase;
@@ -275,7 +290,10 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * installable.
+             * <p>Indicates whether the plugin can be installed on the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder installable(Boolean installable) {
                 this.installable = installable;
@@ -283,7 +301,10 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * installableFalseReasonType.
+             * <p>The reason why the plugin cannot be installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VERSION_NOT_MATCH</p>
              */
             public Builder installableFalseReasonType(String installableFalseReasonType) {
                 this.installableFalseReasonType = installableFalseReasonType;
@@ -291,7 +312,10 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * installedPluginVersion.
+             * <p>The version number of another version of the same plugin class that is already installed on the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder installedPluginVersion(String installedPluginVersion) {
                 this.installedPluginVersion = installedPluginVersion;
@@ -299,7 +323,10 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The gateway name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-gateway</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -392,7 +419,7 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The list of gateways.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -400,7 +427,10 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(String pageNumber) {
                 this.pageNumber = pageNumber;
@@ -408,7 +438,10 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -416,7 +449,10 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43</p>
              */
             public Builder totalSize(String totalSize) {
                 this.totalSize = totalSize;

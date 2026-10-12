@@ -93,7 +93,7 @@ public class ListGatewayAuthorizableSecurityGroupsResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListGatewayAuthorizableSecurityGroupsResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListGatewayAuthorizableSecurityGroupsResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The response message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -221,7 +221,7 @@ public class ListGatewayAuthorizableSecurityGroupsResponseBody extends TeaModel 
              * <p>The security group name.</p>
              * 
              * <strong>example:</strong>
-             * <p>商品中心集群安全组。</p>
+             * <p>Product Center Cluster Security Group</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -240,10 +240,10 @@ public class ListGatewayAuthorizableSecurityGroupsResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The type of the security group. Valid values:</p>
+             * <p>The security group type. Valid values:</p>
              * <ul>
-             * <li>Normal: general security group</li>
-             * <li>Enterprise: enterprise security group</li>
+             * <li>Normal: Custom security group.</li>
+             * <li>Enterprise: Advanced security group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class ListGatewayAuthorizableSecurityGroupsResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf61resqa9am***</p>
@@ -312,7 +312,7 @@ public class ListGatewayAuthorizableSecurityGroupsResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The security groups.</p>
+             * <p>The list of security groups.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

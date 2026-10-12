@@ -269,7 +269,7 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
              * <p>The consumer description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Online API caller.</p>
+             * <p>Online API caller</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -288,7 +288,7 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the consumer joined the consumer group, in Unix millisecond timestamp.</p>
+             * <p>The time when the consumer joined the consumer group. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1715769600000</p>

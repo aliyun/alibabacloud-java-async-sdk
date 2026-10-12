@@ -115,7 +115,7 @@ public class ListConsumerQuotaRulesRequest extends Request {
         } 
 
         /**
-         * <p>The consumer ID.</p>
+         * <p>The consumer ID. This is a path parameter and is effectively required. If not provided, the SDK cannot construct the request URI. You can obtain this value by calling the ListConsumers API to query existing consumers, or by calling the CreateConsumer API to create a new consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-d8kkaium1hks607xxxxx</p>
@@ -139,7 +139,7 @@ public class ListConsumerQuotaRulesRequest extends Request {
         }
 
         /**
-         * <p>The rule name keyword, used for fuzzy match.</p>
+         * <p>The keyword for the rule name, used for fuzzy match.</p>
          * 
          * <strong>example:</strong>
          * <p>daily</p>

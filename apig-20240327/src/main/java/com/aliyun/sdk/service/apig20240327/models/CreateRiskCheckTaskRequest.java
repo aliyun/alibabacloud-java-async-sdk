@@ -59,7 +59,10 @@ public class CreateRiskCheckTaskRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>The ID of the target gateway. The gateway must exist and be in the Running state. Otherwise, the ErrGatewayIsNotRunning error is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);

@@ -75,6 +75,7 @@ public class GetRiskNotificationRequest extends Request {
         } 
 
         /**
+         * <p>The gateway ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetRiskNotificationRequest extends Request {
         }
 
         /**
+         * <p>The code of the risk item, such as the code for version risk or capacity risk.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

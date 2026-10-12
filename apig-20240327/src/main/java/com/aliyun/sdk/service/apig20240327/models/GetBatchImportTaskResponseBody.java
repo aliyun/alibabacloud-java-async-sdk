@@ -93,7 +93,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE534E1D-FCE4-5930-B784-E055EC1AEE6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +231,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * enable.
+             * <p>Indicates whether versioning is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -230,7 +242,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * headerName.
+             * <p>The key in the specified header parameter when the header versioning scheme is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-version</p>
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;
@@ -238,7 +253,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * queryName.
+             * <p>The key in the specified query parameter when the query versioning scheme is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myVersion</p>
              */
             public Builder queryName(String queryName) {
                 this.queryName = queryName;
@@ -246,7 +264,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * scheme.
+             * <p>The versioning scheme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query</p>
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
@@ -254,7 +275,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -373,7 +397,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * basePath.
+             * <p>The base path of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/v1</p>
              */
             public Builder basePath(String basePath) {
                 this.basePath = basePath;
@@ -381,7 +408,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -389,7 +419,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * httpApiId.
+             * <p>The ID of the HTTP API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-xxx</p>
              */
             public Builder httpApiId(String httpApiId) {
                 this.httpApiId = httpApiId;
@@ -397,7 +430,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>petstore</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -405,7 +441,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The API type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rest</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -413,7 +452,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * versionInfo.
+             * <p>The API versioning information.</p>
              */
             public Builder versionInfo(VersionInfo versionInfo) {
                 this.versionInfo = versionInfo;
@@ -480,7 +519,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * errorMessage.
+             * <p>The reason why the dry run failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>invalid schema</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -488,7 +530,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the data structure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pet</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -568,7 +613,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * errorMessage.
+             * <p>The reason why the dry run failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unsupported operation</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -576,7 +624,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * method.
+             * <p>The HTTP method of the REST API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -584,7 +635,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * path.
+             * <p>The path of the REST API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/pets/{petId}</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -651,7 +705,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * errorMessage.
+             * <p>The reason why the dry run failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>domain not found</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -659,7 +716,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>route-pets</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -726,7 +786,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * action.
+             * <p>The action type to be performed after the dry run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -734,7 +797,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the data structure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pet</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -827,7 +893,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * action.
+             * <p>The action type to be performed after the dry run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -835,7 +904,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * method.
+             * <p>The HTTP method of the REST API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -843,7 +915,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the REST API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>getPetById</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -851,7 +926,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * path.
+             * <p>The path of the REST API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/pets/{petId}</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -918,7 +996,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * action.
+             * <p>The action type to be performed after the dry run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -926,7 +1007,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>route-pets</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1084,7 +1168,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * errorMessages.
+             * <p>The list of dry run error messages.</p>
              */
             public Builder errorMessages(java.util.List<String> errorMessages) {
                 this.errorMessages = errorMessages;
@@ -1092,7 +1176,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * existHttpApiInfo.
+             * <p>The basic information about the existing HTTP API matched during import.</p>
              */
             public Builder existHttpApiInfo(ExistHttpApiInfo existHttpApiInfo) {
                 this.existHttpApiInfo = existHttpApiInfo;
@@ -1100,7 +1184,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * failureComponents.
+             * <p>The list of data structures that failed the dry run.</p>
              */
             public Builder failureComponents(java.util.List<FailureComponents> failureComponents) {
                 this.failureComponents = failureComponents;
@@ -1108,7 +1192,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * failureOperations.
+             * <p>The list of REST API operations that failed the dry run.</p>
              */
             public Builder failureOperations(java.util.List<FailureOperations> failureOperations) {
                 this.failureOperations = failureOperations;
@@ -1116,7 +1200,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * failureRoutes.
+             * <p>The list of routes that failed the dry run.</p>
              */
             public Builder failureRoutes(java.util.List<FailureRoutes> failureRoutes) {
                 this.failureRoutes = failureRoutes;
@@ -1124,7 +1208,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * successComponents.
+             * <p>The list of data structures that passed the dry run.</p>
              */
             public Builder successComponents(java.util.List<SuccessComponents> successComponents) {
                 this.successComponents = successComponents;
@@ -1132,7 +1216,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * successOperations.
+             * <p>The list of REST API operations that passed the dry run.</p>
              */
             public Builder successOperations(java.util.List<SuccessOperations> successOperations) {
                 this.successOperations = successOperations;
@@ -1140,7 +1224,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * successRoutes.
+             * <p>The list of routes that passed the dry run.</p>
              */
             public Builder successRoutes(java.util.List<SuccessRoutes> successRoutes) {
                 this.successRoutes = successRoutes;
@@ -1148,7 +1232,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * warningMessages.
+             * <p>The list of dry run warning messages.</p>
              */
             public Builder warningMessages(java.util.List<String> warningMessages) {
                 this.warningMessages = warningMessages;
@@ -1241,7 +1325,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * apiName.
+             * <p>The API name. The value unknown is returned if the name cannot be identified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>petstore</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -1249,7 +1336,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * dryRunInfo.
+             * <p>The dry run details, including the operations, routes, components, and error or warning messages planned for creation or update in this file.</p>
              */
             public Builder dryRunInfo(DryRunInfo dryRunInfo) {
                 this.dryRunInfo = dryRunInfo;
@@ -1257,7 +1344,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * error.
+             * <p>The dry run error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unsupported oas version</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -1265,7 +1355,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * fileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>petstore.yaml</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -1358,7 +1451,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * apiId.
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-xxx</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -1366,7 +1462,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * apiName.
+             * <p>The API name. The value unknown is returned if the name cannot be identified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>petstore</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -1374,7 +1473,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * errorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>invalid oas format</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1382,7 +1484,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * fileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>petstore.yaml</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -1462,7 +1567,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * bucketName.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-bucket</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -1470,7 +1578,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * objectKey.
+             * <p>The object key of the specification file in the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imports/batch.zip</p>
              */
             public Builder objectKey(String objectKey) {
                 this.objectKey = objectKey;
@@ -1478,7 +1589,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1636,7 +1750,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * allowUpdate.
+             * <p>Specifies whether to allow overwriting existing APIs.</p>
              */
             public Builder allowUpdate(Boolean allowUpdate) {
                 this.allowUpdate = allowUpdate;
@@ -1644,7 +1758,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * apiType.
+             * <p>The API type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Http</p>
              */
             public Builder apiType(String apiType) {
                 this.apiType = apiType;
@@ -1652,7 +1769,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * dryRun.
+             * <p>Specifies whether the request is in dry run mode. This parameter is fixed to false in the formal import request body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dryRun(Boolean dryRun) {
                 this.dryRun = dryRun;
@@ -1660,7 +1780,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -1668,7 +1791,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-xxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1676,7 +1802,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * specFileUrl.
+             * <p>The download URL of the OAS ZIP file, which is consistent with the dry run request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oss-cn-hangzhou.aliyuncs.com/my-bucket/imports/batch.zip">https://oss-cn-hangzhou.aliyuncs.com/my-bucket/imports/batch.zip</a></p>
              */
             public Builder specFileUrl(String specFileUrl) {
                 this.specFileUrl = specFileUrl;
@@ -1684,7 +1813,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * specOssConfig.
+             * <p>The OSS configuration of the OAS file, which is consistent with the dry run request.</p>
              */
             public Builder specOssConfig(SpecOssConfig specOssConfig) {
                 this.specOssConfig = specOssConfig;
@@ -1692,7 +1821,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * strategy.
+             * <p>The conflict merge strategy used during import.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExistFirst</p>
              */
             public Builder strategy(String strategy) {
                 this.strategy = strategy;
@@ -1700,7 +1832,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * withGatewayExtension.
+             * <p>Specifies whether to import with gateway extension configurations.</p>
              */
             public Builder withGatewayExtension(Boolean withGatewayExtension) {
                 this.withGatewayExtension = withGatewayExtension;
@@ -1793,7 +1925,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * apiId.
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-xxx</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -1801,7 +1936,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * apiName.
+             * <p>The API name. The value unknown is returned if the name cannot be identified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>petstore</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -1809,7 +1947,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * errorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>invalid oas format</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1817,7 +1958,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * fileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>petstore.yaml</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -1949,7 +2093,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * apiType.
+             * <p>The API type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Http</p>
              */
             public Builder apiType(String apiType) {
                 this.apiType = apiType;
@@ -1957,7 +2104,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * dryRun.
+             * <p>Indicates whether the task is in dry run mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dryRun(Boolean dryRun) {
                 this.dryRun = dryRun;
@@ -1965,7 +2115,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * dryRunResults.
+             * <p>The list of dry run results.</p>
              */
             public Builder dryRunResults(java.util.List<DryRunResults> dryRunResults) {
                 this.dryRunResults = dryRunResults;
@@ -1973,7 +2123,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * failureItems.
+             * <p>The list of APIs that failed to be processed.</p>
              */
             public Builder failureItems(java.util.List<FailureItems> failureItems) {
                 this.failureItems = failureItems;
@@ -1981,7 +2131,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -1989,7 +2142,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * importRequest.
+             * <p>The formal import request body. This field is returned only for dry run tasks and can be resubmitted as the request body of BatchImportHttpApis. The dryRun parameter is fixed to false. Temporary specFileUrl values are still subject to URL expiration constraints.</p>
              */
             public Builder importRequest(ImportRequest importRequest) {
                 this.importRequest = importRequest;
@@ -1997,7 +2150,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * successItems.
+             * <p>The list of successfully processed APIs.</p>
              */
             public Builder successItems(java.util.List<SuccessItems> successItems) {
                 this.successItems = successItems;
@@ -2142,7 +2295,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The time when the task was created. The time is in UTC and follows the RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-15T10:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -2150,7 +2306,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * errorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>some apis import failed</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -2158,7 +2317,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * processedCount.
+             * <p>The number of processed items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder processedCount(Integer processedCount) {
                 this.processedCount = processedCount;
@@ -2166,7 +2328,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * result.
+             * <p>The task result details.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -2174,7 +2336,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The task status. Valid values: Pending, Running, Success, PartialSuccess, and Failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2182,7 +2347,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>async-task-xxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -2190,7 +2358,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BatchImport</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -2198,7 +2369,10 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
