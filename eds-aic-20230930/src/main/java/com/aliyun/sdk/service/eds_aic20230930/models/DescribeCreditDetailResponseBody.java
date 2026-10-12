@@ -67,7 +67,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response object.</p>
+         * <p>The returned data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -339,7 +339,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The agent type. This field is populated only when querying by a single agent type.</p>
+             * <p>The agent type. This field is populated only when you query by a single agent type.</p>
              * 
              * <strong>example:</strong>
              * <p>cloudphone_enterprise</p>
@@ -372,7 +372,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the change occurred.</p>
+             * <p>The time when the change occurred. The time is in UTC and follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-30T08:14:02Z</p>
@@ -405,7 +405,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model inference duration, in milliseconds.</p>
+             * <p>The model inference duration in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -515,7 +515,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The response time of the first token, in milliseconds.</p>
+             * <p>The first token response time, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -656,7 +656,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number for pagination. Default value: 1.</p>
+             * <p>The page number. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -678,7 +678,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of detail records.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

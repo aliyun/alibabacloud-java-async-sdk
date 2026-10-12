@@ -101,7 +101,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The position from which the current call starts reading. An empty value indicates that all data has been read.</p>
+         * <p>The token that indicates the read position returned by the current call. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kmma/xxE9WtwL/ADvZ****</p>
@@ -192,7 +192,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application management policy ID.</p>
+             * <p>The ID of the application control rule.</p>
              * 
              * <strong>example:</strong>
              * <p>amp-dgiavcvibfdds****</p>
@@ -203,10 +203,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application management rule.</p>
+             * <p>The name of the application control rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>AppGroup1</p>
+             * <p>Application group 1</p>
              */
             public Builder appManagePolicyName(String appManagePolicyName) {
                 this.appManagePolicyName = appManagePolicyName;
@@ -474,7 +474,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>DPI。</p>
+             * <p>The DPI.</p>
              * 
              * <strong>example:</strong>
              * <p>240</p>
@@ -496,7 +496,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the resolution is locked.</p>
+             * <p>Specifies whether the resolution is locked.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -507,7 +507,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The height of the resolution. Unit: pixels.</p>
+             * <p>The resolution height. Unit: pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>1280</p>
@@ -518,7 +518,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The width of the resolution. Unit: pixels.</p>
+             * <p>The resolution width. Unit: pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>720</p>
@@ -1424,7 +1424,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance group name.</p>
+             * <p>The name of the instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>AndroidInstanceGroupName</p>
@@ -1446,7 +1446,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance name.</p>
+             * <p>The name of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -1490,7 +1490,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application management rule information. This corresponds to the blacklists and whitelists management of application management rules in the console.</p>
+             * <p>The application control rule information. This corresponds to the blacklists and whitelists management of application control rules in the console.</p>
              */
             public Builder appManagePolicy(AppManagePolicy appManagePolicy) {
                 this.appManagePolicy = appManagePolicy;
@@ -1509,7 +1509,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the bandwidth package.</p>
+             * <p>The ID of the bandwidth plan.</p>
              * 
              * <strong>example:</strong>
              * <p>np-0q6ixs7vpxcizp***</p>
@@ -1531,7 +1531,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bound user.</p>
+             * <p>The user to whom the instance is bound.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1561,7 +1561,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order source.</p>
+             * <p>The order source. Valid values:</p>
+             * <ul>
+             * <li>CLOUDPHONE (AI cloud phone)</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CLOUDPHONE</p>
@@ -1572,7 +1575,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing type of the instance.</p>
+             * <p>The billing method of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>PrePaid</p>
@@ -1621,7 +1624,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error reason for instance data backup failure or restoration failure.</p>
+             * <p>The error cause for data backup or restoration failures of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>FilePathNotFound</p>
@@ -1698,11 +1701,11 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network status.</p>
+             * <p>The network status. Valid values:</p>
              * <ul>
-             * <li><p>INIT: Being created.</p>
+             * <li><p>INIT: Creating.</p>
              * </li>
-             * <li><p>UPDATING: Being updated.</p>
+             * <li><p>UPDATING: Updating.</p>
              * </li>
              * <li><p>AVAILABLE: Available.</p>
              * </li>
@@ -1776,7 +1779,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network ID. This corresponds to the network selected during creation in the console (basic shared network or advanced shared network).</p>
+             * <p>The network ID. This corresponds to the network selected during creation in the console, such as the basic shared network or the advanced shared network.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shenzhen+dir-211620****</p>
@@ -1787,7 +1790,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the plan associated with the AI cloud phone.</p>
+             * <p>The ID of the package for the AI cloud phone.</p>
              * 
              * <strong>example:</strong>
              * <p>cmag-bp1bpyt7sfeleukh****</p>
@@ -1809,7 +1812,8 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>&lt;props=&quot;china&quot;&gt;The independent device storage information of the cloud phone matrix instance.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;The independent device storage information of the cloud phone matrix instance.
+             * &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available.</p>
              */
             public Builder phoneDataInfo(PhoneDataInfo phoneDataInfo) {
                 this.phoneDataInfo = phoneDataInfo;
@@ -1852,7 +1856,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the public network rate limiting rule. This applies only to premium bandwidth.</p>
+             * <p>The ID of the public network throttling rule. This rule applies only to premium bandwidth.</p>
              * 
              * <strong>example:</strong>
              * <p>qos-5605u0gelk200****</p>
@@ -1863,7 +1867,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of instance data backup or restoration.</p>
+             * <p>The progress of data backup and restoration for the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1896,7 +1900,8 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>&lt;props=&quot;china&quot;&gt;The matrix status.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;The matrix status.
+             * &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -1907,7 +1912,8 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>&lt;props=&quot;china&quot;&gt;The cloud phone matrix specification.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;The specifications of the cloud phone matrix.
+             * &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available.</p>
              * 
              * <strong>example:</strong>
              * <p>cpm.gx7.10xlarge</p>
@@ -1929,7 +1935,8 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>&lt;props=&quot;china&quot;&gt;The streaming mode of the instance in the cloud phone matrix.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;The streaming mode of the instance in the cloud phone matrix.
+             * &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1970,7 +1977,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID in the VPC.</p>
+             * <p>The vSwitch ID in the virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-2zepmau2hsbhos42****</p>
@@ -1981,7 +1988,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID of the instance.</p>
+             * <p>The ID of the zone to which the instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-h</p>

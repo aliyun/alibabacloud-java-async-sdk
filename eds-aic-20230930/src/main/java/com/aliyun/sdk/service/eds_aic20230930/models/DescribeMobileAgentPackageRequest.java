@@ -147,7 +147,7 @@ public class DescribeMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * <p>The package specification.</p>
+         * <p>The package specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>advanced</p>

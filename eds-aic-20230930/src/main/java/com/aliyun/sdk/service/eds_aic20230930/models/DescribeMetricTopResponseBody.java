@@ -93,7 +93,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -104,7 +104,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance monitoring data.</p>
+         * <p>The list of instance monitoring results.</p>
          */
         public Builder metricTotalModel(java.util.List<MetricTotalModel> metricTotalModel) {
             this.metricTotalModel = metricTotalModel;
@@ -112,7 +112,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token to retrieve the next page of results. If the results are not fully returned in a single query, this parameter is not empty. You can use this token in a subsequent query to retrieve the next page of results.</p>
+         * <p>The token for the next query. If a single query does not return all results, the returned NextToken is not empty. You can use the returned NextToken in subsequent queries to continue the query.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -259,7 +259,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             /**
              * <p>The average value. Unit: %.</p>
              * <blockquote>
-             * <p>The unit is bps when the metric is \<code>instance_in_traffic\\</code> or \<code>instance_out_traffic\\</code>.</p>
+             * <p>If the monitoring metric is instance_in_traffic or instance_out_traffic, the unit is bps.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -284,7 +284,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             /**
              * <p>The maximum value. Unit: %.</p>
              * <blockquote>
-             * <p>The unit is bps when the metric is \<code>instance_in_traffic\\</code> or \<code>instance_out_traffic\\</code>.</p>
+             * <p>If the monitoring metric is instance_in_traffic or instance_out_traffic, the unit is bps.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -298,7 +298,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             /**
              * <p>The minimum value.</p>
              * <blockquote>
-             * <p>The unit is bps when the metric is \<code>instance_in_traffic\\</code> or \<code>instance_out_traffic\\</code>.</p>
+             * <p>If the monitoring metric is instance_in_traffic or instance_out_traffic, the unit is bps.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -321,9 +321,9 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The properties.</p>
+             * <p>The property information.</p>
              * <blockquote>
-             * <p>A JSON string that contains the extension properties.</p>
+             * <p>The extended property information string in JSON format is returned.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the data point. Unit: milliseconds.</p>
+             * <p>The statistical timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1548777660000</p>
@@ -405,7 +405,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The monitoring data points.</p>
+             * <p>The monitoring statistical data points.</p>
              */
             public Builder dataPoints(java.util.List<DataPoints> dataPoints) {
                 this.dataPoints = dataPoints;
@@ -413,7 +413,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the metric.</p>
+             * <p>The name of the monitoring metric.</p>
              * 
              * <strong>example:</strong>
              * <p>instance_in_traffic</p>
@@ -496,8 +496,8 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>For instance-level monitoring, this is the cloud phone instance ID.
-             * &lt;props=&quot;china&quot;&gt;For matrix-level monitoring, this is the matrix ID.</p>
+             * <p>For instance-level monitoring, the cloud phone instance ID is returned. 
+             * &lt;props=&quot;china&quot;&gt;For matrix-level monitoring, the matrix ID is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-fkuit0cmyru4p****</p>
@@ -519,7 +519,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monitoring data of metrics.</p>
+             * <p>The list of metric monitoring results.</p>
              */
             public Builder metricModelList(java.util.List<MetricModelList> metricModelList) {
                 this.metricModelList = metricModelList;

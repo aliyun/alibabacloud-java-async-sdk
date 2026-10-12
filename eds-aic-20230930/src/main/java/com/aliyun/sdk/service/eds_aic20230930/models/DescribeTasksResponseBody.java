@@ -93,7 +93,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The objects that are returned.</p>
+         * <p>The list of returned result objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token that specifies the starting position for reading. If this parameter is left empty, the reading starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -112,7 +112,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B8ED2BA9-0C6A-5643-818F-B5D60A64****</p>
@@ -123,7 +123,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -474,7 +474,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of failed subtasks.</p>
+             * <p>The total number of failed child tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -485,7 +485,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the task.</p>
+             * <p>The end time of the task. The time is displayed in UTC and follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-10-11T08:53:32Z</p>
@@ -496,7 +496,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud phone instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-uto81vfd8t8z****</p>
@@ -507,7 +507,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cloud phone instance.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>defaultInstanceName</p>
@@ -518,7 +518,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the cloud phone instance.</p>
+             * <p>The instance status.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -529,7 +529,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the command execution.</p>
+             * <p>The command execution ID.</p>
              * 
              * <strong>example:</strong>
              * <p>B8ED2BA9-0C6A-5643-818F-B5D60A64****</p>
@@ -540,7 +540,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the task.</p>
+             * <p>The task level.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -562,7 +562,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters of the task.</p>
+             * <p>The task parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>param</p>
@@ -573,7 +573,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parent task.</p>
+             * <p>The parent task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>t-41oan3tza16vs****</p>
@@ -584,7 +584,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -595,7 +595,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-25nt4kk9whhok****</p>
@@ -606,7 +606,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution result of the task.</p>
+             * <p>The task execution result.</p>
              * 
              * <strong>example:</strong>
              * <p>{\&quot;Success\&quot;: True}</p>
@@ -617,7 +617,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of the subtasks that are running.</p>
+             * <p>The total number of running child tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -628,7 +628,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the task.</p>
+             * <p>The start time of the task. The time is displayed in UTC and follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-10-11T08:53:32Z</p>
@@ -639,7 +639,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of successfully executed subtasks.</p>
+             * <p>The total number of successful child tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>98</p>
@@ -650,7 +650,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>t-bp67acfmxazb4p****</p>
@@ -661,7 +661,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the task.</p>
+             * <p>The task status.</p>
              * 
              * <strong>example:</strong>
              * <p>Processing</p>
@@ -672,7 +672,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the task.</p>
+             * <p>The task type.</p>
              * 
              * <strong>example:</strong>
              * <p>StartInstance</p>
@@ -683,7 +683,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of subtasks of the current batch task.</p>
+             * <p>The total number of child tasks for the current batch task.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

@@ -93,7 +93,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the instance groups.</p>
+         * <p>The details of the instance group.</p>
          */
         public Builder instanceGroupModel(java.util.List<InstanceGroupModel> instanceGroupModel) {
             this.instanceGroupModel = instanceGroupModel;
@@ -101,7 +101,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that indicates the position up to which data has been read in the current call. An empty value indicates that all data has been read.</p>
+         * <p>The token that indicates the read position returned by the current call. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -203,7 +203,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the public network bandwidth limit rule (applies only to premium bandwidth).</p>
+             * <p>The ID of the Internet bandwidth throttling rule (applies only to premium bandwidth).</p>
              * 
              * <strong>example:</strong>
              * <p>qos-3kh93uu0vdbka****</p>
@@ -273,7 +273,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The public network bandwidth limit rule bound to the instance.</p>
+             * <p>The Internet bandwidth throttling rules bound to the instances.</p>
              */
             public Builder instanceQosRule(java.util.List<InstanceQosRule> instanceQosRule) {
                 this.instanceQosRule = instanceQosRule;
@@ -281,7 +281,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of public network bandwidth limit rules for the instance group.</p>
+             * <p>The total number of Internet bandwidth throttling rules for the instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -351,7 +351,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The disk size (unit: GB).</p>
+             * <p>The disk size. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>
@@ -1031,7 +1031,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             /**
              * <p>The number of available instances.</p>
              * <blockquote>
-             * <p>Available means the instance status is not &quot;being deleted&quot; or &quot;deleted&quot;.</p>
+             * <p>Available indicates that the instance status is neither Deleting nor Deleted.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1043,7 +1043,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the bandwidth package.</p>
+             * <p>The ID of the bandwidth plan.</p>
              * 
              * <strong>example:</strong>
              * <p>np-0q6ixs7vpxciz****</p>
@@ -1054,15 +1054,15 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the bandwidth package.
+             * <p>The status of the bandwidth plan.
              * Valid values:</p>
              * <ul>
-             * <li>Creating: being created.</li>
-             * <li>Releasing: being released.</li>
-             * <li>InUse: in use.</li>
-             * <li>Failed: failed.</li>
-             * <li>Expired: expired.</li>
-             * <li>Available: unbound and being billed.</li>
+             * <li>Creating: creating</li>
+             * <li>Releasing: releasing</li>
+             * <li>InUse: in use</li>
+             * <li>Failed: failed</li>
+             * <li>Expired: expired</li>
+             * <li>Available: available and unbound, billing in progress</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1074,7 +1074,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the bandwidth package.</p>
+             * <p>The type of the bandwidth plan.</p>
              * 
              * <strong>example:</strong>
              * <p>cbwp_ecd</p>
@@ -1085,7 +1085,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public network bandwidth limit rules for the instance group.</p>
+             * <p>The Internet bandwidth throttling rules for the instance group.</p>
              */
             public Builder bindQosRules(BindQosRules bindQosRules) {
                 this.bindQosRules = bindQosRules;
@@ -1093,7 +1093,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Channel.
+             * <p>The order source. CLOUDPHONE indicates AI Cloud Phone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOUDPHONE</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -1132,7 +1135,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p>This parameter is not publicly available.</p>
+             * <p>This parameter is not available for public use.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1144,7 +1147,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the creation failure.</p>
+             * <p>The cause of the creation failure.</p>
              * 
              * <strong>example:</strong>
              * <p>InternalError</p>
@@ -1213,7 +1216,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
              * <p>The list of installed applications.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;抖音&quot;,&quot;淘宝&quot;</p>
+             * <p>&quot;Douyin&quot;,&quot;Taobao&quot;</p>
              */
             public Builder installedAppList(String installedAppList) {
                 this.installedAppList = installedAppList;
@@ -1221,7 +1224,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance group ID.</p>
+             * <p>The ID of the instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>ag-h67a2cs0zprfdh****</p>
@@ -1232,10 +1235,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance group name.</p>
+             * <p>The name of the instance group.</p>
              * 
              * <strong>example:</strong>
-             * <p>Cloud phoneA</p>
+             * <p>Cloud Phone A</p>
              */
             public Builder instanceGroupName(String instanceGroupName) {
                 this.instanceGroupName = instanceGroupName;
@@ -1265,7 +1268,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance group status.</p>
+             * <p>The status of the instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -1277,7 +1280,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p>This parameter is not publicly available.</p>
+             * <p>This parameter is not available for public use.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1302,7 +1305,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             /**
              * <p>The network type of the instance.</p>
              * <blockquote>
-             * <p>This field is returned only for instance groups with standard networking.</p>
+             * <p>Currently, this field is returned only for instance groups in the standard network.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1336,7 +1339,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PackageId.
+             * <p>The ID of the plan package for the AI Cloud Phone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmag-bp1bpyt7sfeleukh****</p>
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -1344,7 +1350,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy ID.</p>
+             * <p>The ID of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>pg-c6n38xucps8kl****</p>
@@ -1377,7 +1383,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The height of the resolution.</p>
+             * <p>The resolution height.</p>
              * 
              * <strong>example:</strong>
              * <p>1280</p>
@@ -1388,7 +1394,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The width of the resolution.</p>
+             * <p>The resolution width.</p>
              * 
              * <strong>example:</strong>
              * <p>720</p>

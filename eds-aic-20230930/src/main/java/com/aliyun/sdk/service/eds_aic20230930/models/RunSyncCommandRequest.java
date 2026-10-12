@@ -102,7 +102,7 @@ public class RunSyncCommandRequest extends Request {
         } 
 
         /**
-         * <p>The content of the command to execute.</p>
+         * <p>The content of the command.</p>
          * 
          * <strong>example:</strong>
          * <p>ls</p>
@@ -114,7 +114,7 @@ public class RunSyncCommandRequest extends Request {
         }
 
         /**
-         * <p>The encoding of the command content. If you provide a value that is not a valid option, the system uses the default value, <code>PlainText</code>.</p>
+         * <p>The encoding method of the script content. If the specified value is not within the valid values, the default value <code>PlainText</code> is used.</p>
          * 
          * <strong>example:</strong>
          * <p>PlainText</p>
@@ -126,7 +126,7 @@ public class RunSyncCommandRequest extends Request {
         }
 
         /**
-         * <p>An array of Cloud Phone instance IDs. You can specify up to 50 instances in a single request.</p>
+         * <p>The list of cloud phone instance IDs. A single request supports up to 50 instances.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -135,7 +135,7 @@ public class RunSyncCommandRequest extends Request {
         }
 
         /**
-         * <p>The timeout for command execution, in milliseconds. Valid range: 500 to 3000. Default: 1000.</p>
+         * <p>The wait time in milliseconds. Valid values: 500 to 3000. Default value: 1000.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>

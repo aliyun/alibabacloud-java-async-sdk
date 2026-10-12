@@ -158,9 +158,8 @@ public class DescribeMetricTopRequest extends Request {
         } 
 
         /**
-         * <p>For instance-level monitoring, specify a list of cloud phone instance IDs.</p>
-         * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <p>For matrix-level monitoring, specify a list of matrix IDs.</p>
+         * <p>For instance-level monitoring, specify a list of cloud phone instance IDs.
+         * &lt;props=&quot;china&quot;&gt;For matrix-level monitoring, specify a list of matrix IDs.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putBodyParameter("AndroidInstanceIds", androidInstanceIds);
@@ -169,7 +168,7 @@ public class DescribeMetricTopRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query.</p>
+         * <p>The end time of the query for the monitoring metric. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-31 11:00:00</p>
@@ -190,9 +189,9 @@ public class DescribeMetricTopRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. This parameter is used for paged queries.</p>
+         * <p>The number of entries to return on each page for the monitoring data. This parameter is used for paging in a paged query.</p>
          * <blockquote>
-         * <p>The maximum value is 100 when the metric is \<code>instance_in_traffic\\</code> or \<code>instance_out_traffic\\</code>.</p>
+         * <p>If the monitoring metric is instance_in_traffic or instance_out_traffic, the maximum value is 100.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -205,7 +204,7 @@ public class DescribeMetricTopRequest extends Request {
         }
 
         /**
-         * <p>The list of metrics.</p>
+         * <p>The list of monitoring metrics.</p>
          * <p>This parameter is required.</p>
          */
         public Builder metricNames(java.util.List<String> metricNames) {
@@ -215,7 +214,7 @@ public class DescribeMetricTopRequest extends Request {
         }
 
         /**
-         * <p>The token that marks the start of the next page of results. If you leave this parameter empty, the query starts from the beginning.</p>
+         * <p>The token that marks the position from which to start reading. If this parameter is left empty, the query starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -240,7 +239,7 @@ public class DescribeMetricTopRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query.</p>
+         * <p>The start time of the query for the monitoring metric. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-31 10:00:00</p>

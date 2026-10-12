@@ -151,7 +151,7 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * PaidCallBackUrl.
+         * <p>The redirect URL for the payment success page.</p>
          */
         public Builder paidCallBackUrl(String paidCallBackUrl) {
             this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
@@ -160,7 +160,7 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The promotion ID.</p>
+         * <p>The ID of the promotion.</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);

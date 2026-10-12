@@ -184,7 +184,7 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method. A value of PrePaid indicates subscription. A value of PostPaid indicates pay-as-you-go.</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -205,7 +205,7 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 100.</p>
+         * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -217,7 +217,7 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * <p>The position from which to start the query. Leave this parameter empty to query from the beginning.</p>
+         * <p>The token that specifies the position from which the query starts. If you leave this parameter empty, the query starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -229,7 +229,7 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * <p>The purchase mode of the cloud phone.</p>
+         * <p>The purchase mode for cloud phones.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance</p>
@@ -241,7 +241,7 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * <p>A list of specification IDs.</p>
+         * <p>The list of specification IDs.</p>
          */
         public Builder specIds(java.util.List<String> specIds) {
             this.putQueryParameter("SpecIds", specIds);

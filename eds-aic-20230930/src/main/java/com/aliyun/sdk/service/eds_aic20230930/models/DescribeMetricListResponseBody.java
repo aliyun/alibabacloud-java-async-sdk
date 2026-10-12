@@ -93,7 +93,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -104,7 +104,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance monitoring data.</p>
+         * <p>The list of instance monitoring results.</p>
          */
         public Builder metricTotalModel(java.util.List<MetricTotalModel> metricTotalModel) {
             this.metricTotalModel = metricTotalModel;
@@ -112,7 +112,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query. If not all results are returned, this parameter is not empty. Use the returned token to query the next page.</p>
+         * <p>The token for the next query. If a query does not return all results, the returned NextToken is not empty. You can use the returned NextToken in subsequent queries to retrieve the remaining results.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -123,7 +123,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
@@ -246,7 +246,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
             /**
              * <p>The average value. Unit: %.</p>
              * <blockquote>
-             * <p>The unit is bps when the metric is \<code>bandwidth_package_usage_out\\</code> or \<code>bandwidth_package_usage_in\\</code>.</p>
+             * <p>If the metric is bandwidth_package_usage_out or bandwidth_package_usage_in, the unit is bps.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -271,7 +271,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
             /**
              * <p>The maximum value. Unit: %.</p>
              * <blockquote>
-             * <p>The unit is bps when the metric is \<code>bandwidth_package_usage_out\\</code> or \<code>bandwidth_package_usage_in\\</code>.</p>
+             * <p>If the metric is bandwidth_package_usage_out or bandwidth_package_usage_in, the unit is bps.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
             /**
              * <p>The minimum value. Unit: %.</p>
              * <blockquote>
-             * <p>The unit is bps when the metric is \<code>bandwidth_package_usage_out\\</code> or \<code>bandwidth_package_usage_in\\</code>.</p>
+             * <p>If the metric is bandwidth_package_usage_out or bandwidth_package_usage_in, the unit is bps.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -297,7 +297,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the statistics. Unit: milliseconds.</p>
+             * <p>The statistical timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1548777660000</p>
@@ -310,7 +310,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
             /**
              * <p>The data value. Unit: %.</p>
              * <blockquote>
-             * <p>The unit is bps when the metric is \<code>bandwidth_package_usage_out\\</code> or \<code>bandwidth_package_usage_in\\</code>.</p>
+             * <p>If the metric is bandwidth_package_usage_out or bandwidth_package_usage_in, the unit is bps.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -394,7 +394,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A list of monitoring data points.</p>
+             * <p>The list of monitoring statistics data points.</p>
              */
             public Builder dataPoints(java.util.List<DataPoints> dataPoints) {
                 this.dataPoints = dataPoints;
@@ -413,7 +413,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process name.</p>
+             * <p>The name of the process.</p>
              * 
              * <strong>example:</strong>
              * <p>Required</p>
@@ -496,7 +496,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>For instance-level monitoring, the Cloud Phone instance ID is returned.
+             * <p>For instance-level monitoring, the cloud phone instance ID is returned. 
              * &lt;props=&quot;china&quot;&gt;For matrix-level monitoring, the matrix ID is returned.</p>
              * 
              * <strong>example:</strong>
@@ -519,7 +519,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monitoring data for metrics.</p>
+             * <p>The list of metric monitoring results.</p>
              */
             public Builder metricModelList(java.util.List<MetricModelList> metricModelList) {
                 this.metricModelList = metricModelList;

@@ -185,7 +185,7 @@ public class RunAgentTaskRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the Mobile node.</p>
+         * <p>The ID of the region where the Mobile node resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -197,7 +197,7 @@ public class RunAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>The list of Mobile node IDs. A maximum of 100 nodes are supported per request.</p>
+         * <p>The list of Mobile node IDs. A single request supports up to 100 nodes.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -206,10 +206,10 @@ public class RunAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of execution steps for the task. This prevents infinite loops. Valid values: 30 to 1000. Default value: 1000.</p>
+         * <p>The maximum number of execution steps for the task to prevent infinite loops. Valid values: 50 to 1000. Default value: 50.</p>
          * 
          * <strong>example:</strong>
-         * <p>30</p>
+         * <p>50</p>
          */
         public Builder maxSteps(Integer maxSteps) {
             this.putQueryParameter("MaxSteps", maxSteps);
@@ -218,7 +218,7 @@ public class RunAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>The runtime configuration that carries the runtime parameters (skills) for this task.</p>
+         * <p>The runtime configuration that contains the runtime parameters such as skills for the current task.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Skills&quot;:[&quot;sk-abc&quot;,&quot;sk-def&quot;]}</p>
@@ -231,7 +231,7 @@ public class RunAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to write the task artifacts to the user\&quot;s OSS bucket.</p>
+         * <p>Specifies whether to save the task artifacts to your OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -243,7 +243,7 @@ public class RunAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>The scheduling plan ID. When specified, the execution record is associated with the corresponding scheduled node, which facilitates aggregate query by scheduling dimension through aggregation.</p>
+         * <p>The ID of the scheduling plan. When specified, the execute record is associated with the corresponding scheduled node, which facilitates aggregate query by scheduling aggregation dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>sch-260625-pbj2****</p>
@@ -255,7 +255,7 @@ public class RunAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>An array of target objects. Each element contains an InstanceId and a SessionId.</p>
+         * <p>The list of targets. Each element is an object that contains an InstanceId and a SessionId.</p>
          */
         public Builder targets(java.util.List<Targets> targets) {
             this.putQueryParameter("Targets", targets);
@@ -264,7 +264,7 @@ public class RunAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>The task configuration ID. This parameter is used to trigger a task with the specified configuration.</p>
+         * <p>The ID of the task configuration. This parameter is used to trigger a task with the specified configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>tsk-260625-49be****</p>
@@ -276,7 +276,7 @@ public class RunAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>The task timeout period, in seconds. Valid values: 300 to 3600. Default value: 3600.</p>
+         * <p>The timeout period of the task in seconds. Valid values: 300 to 3600. Default value: 3600.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -288,10 +288,10 @@ public class RunAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>The user instruction in natural language. The Agent performs operations based on this instruction.</p>
+         * <p>The user prompt in natural language. The agent performs operations based on this prompt.</p>
          * 
          * <strong>example:</strong>
-         * <p>Go to App Store and download DingTalk</p>
+         * <p>Download DingTalk from the app store</p>
          */
         public Builder userPrompt(String userPrompt) {
             this.putQueryParameter("UserPrompt", userPrompt);
@@ -346,7 +346,7 @@ public class RunAgentTaskRequest extends Request {
             } 
 
             /**
-             * <p>The list of skill IDs. A maximum of 10 skill IDs are supported. Only the first skill is passed through during command delivery. All skills are stored in task_skill_relation for reverse lookup.</p>
+             * <p>The list of skill IDs. You can specify up to 10 skill IDs. Only the first skill ID is passed through when the command is delivered. All skill IDs are stored in the task_skill_relation table for reverse lookup.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;sk-abc&quot;,&quot;sk-def&quot;]</p>
@@ -416,7 +416,7 @@ public class RunAgentTaskRequest extends Request {
             } 
 
             /**
-             * <p>The Mobile node ID, such as acp-xxx.</p>
+             * <p>The ID of the Mobile node, such as acp-xxx.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-5hh4a31emkt6u****</p>
@@ -427,7 +427,7 @@ public class RunAgentTaskRequest extends Request {
             }
 
             /**
-             * <p>The session ID. Tasks with the same session ID share context, such as ses-260702-21b****.</p>
+             * <p>The session ID. Tasks with the same session ID share the context, such as ses-260702-21b****.</p>
              * 
              * <strong>example:</strong>
              * <p>ses-260702-21bh****。</p>

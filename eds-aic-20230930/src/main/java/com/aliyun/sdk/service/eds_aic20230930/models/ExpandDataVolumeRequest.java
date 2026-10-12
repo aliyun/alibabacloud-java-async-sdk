@@ -143,7 +143,7 @@ public class ExpandDataVolumeRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable automatic payment. The default value is false.</p>
+         * <p>Specifies whether to enable automatic payment. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -167,7 +167,7 @@ public class ExpandDataVolumeRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud phone matrices.</p>
+         * <p>The list of cloud phone matrix IDs.</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putQueryParameter("NodeIds", nodeIds);
@@ -176,7 +176,7 @@ public class ExpandDataVolumeRequest extends Request {
         }
 
         /**
-         * PaidCallBackUrl.
+         * <p>The redirect URL for the payment success page.</p>
          */
         public Builder paidCallBackUrl(String paidCallBackUrl) {
             this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
@@ -185,7 +185,7 @@ public class ExpandDataVolumeRequest extends Request {
         }
 
         /**
-         * <p>The size of the instance storage. Unit: GiB.</p>
+         * <p>The size of the device storage for the instance. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

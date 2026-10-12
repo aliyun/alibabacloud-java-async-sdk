@@ -376,7 +376,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -388,7 +388,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The application management policy ID.</p>
+         * <p>The ID of the application control rule.</p>
          * 
          * <strong>example:</strong>
          * <p>amp-shigvudbyeuib****</p>
@@ -400,7 +400,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The user ID assigned to the instance, which is the China Wuying convenience account ID.</p>
+         * <p>The ID of the user assigned to the instance, which is the Wuying convenience user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -412,7 +412,8 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;The region ID. You can call <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> to query the list of regions that support purchasing cloud phones of different editions (Instance Edition or Matrix Edition).</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> operation to query the list of regions where different versions of cloud phones (instance edition and matrix edition) are available for purchase.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> operation to query the list of regions where cloud phones are available for purchase.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -424,7 +425,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The billing type.</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -436,7 +437,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance group ID.</p>
+         * <p>The ID of the instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>ag-25nt4kk9whjh****</p>
@@ -457,7 +458,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance group name.</p>
+         * <p>The name of the instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -481,7 +482,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bound key pair.</p>
+         * <p>The ID of the associated key pair.</p>
          * 
          * <strong>example:</strong>
          * <p>kp-5hh431emkpuoi****</p>
@@ -493,7 +494,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</p>
+         * <p>The maximum number of entries per page for paging. Valid values: 1 to 100. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -505,7 +506,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that indicates the position from which to start reading. Leave this parameter empty to read from the beginning.</p>
+         * <p>The token that specifies the starting position for the next query. An empty value indicates that the query starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
@@ -517,7 +518,8 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;The matrix ID.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The matrix ID.
+         * &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available.</p>
          * 
          * <strong>example:</strong>
          * <p>node_id</p>
@@ -529,7 +531,8 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;The name of the matrix.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The name of the matrix.
+         * &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available.</p>
          * 
          * <strong>example:</strong>
          * <p>node_name</p>
@@ -541,7 +544,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The cloud phone network IDs.</p>
+         * <p>The ID of the cloud phone network.</p>
          */
         public Builder officeSiteIds(java.util.List<String> officeSiteIds) {
             this.putQueryParameter("OfficeSiteIds", officeSiteIds);
@@ -562,7 +565,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the public network rate limiting rule groups. These are rate limiting rules for instances in the basic shared network.</p>
+         * <p>The ID of the public network throttling rule group. This specifies the throttling rules for instances in the basic shared network.</p>
          */
         public Builder qosRuleIds(java.util.List<String> qosRuleIds) {
             this.putQueryParameter("QosRuleIds", qosRuleIds);
@@ -571,7 +574,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The sales mode.</p>
+         * <p>The sale mode.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance</p>
@@ -584,6 +587,9 @@ public class DescribeAndroidInstancesRequest extends Request {
 
         /**
          * <p>The sort key used when querying resources.</p>
+         * <p>This parameter must be used together with SortType. Valid values: CreationTime and ExpiredTime.</p>
+         * <p>If you set this parameter to CreationTime, the resources are sorted by creation time. If you set this parameter to ExpiredTime, the resources are sorted by expiration time.</p>
+         * <p>By default, resources are sorted in descending order of creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>CreationTime</p>
@@ -595,7 +601,11 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Default value: descending order. Valid values:</p>
+         * <p>The sort order. Default value: DESC. Valid values:</p>
+         * <ul>
+         * <li>ASC: ascending order</li>
+         * <li>DESC: descending order</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ASC</p>

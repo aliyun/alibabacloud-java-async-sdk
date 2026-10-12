@@ -121,7 +121,7 @@ public class DescribeBucketsResponseBody extends TeaModel {
         /**
          * <p>The error code.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the call fails.</p>
+         * <p>This parameter is returned only when an error occurs during the API call.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class DescribeBucketsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return status code of the request.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -174,7 +174,7 @@ public class DescribeBucketsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the request.</p>
+         * <p>The request result.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -246,7 +246,7 @@ public class DescribeBucketsResponseBody extends TeaModel {
              * <p>The name of the bucket owner.</p>
              * 
              * <strong>example:</strong>
-             * <p>佳钰</p>
+             * <p>Jiayu</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -415,7 +415,7 @@ public class DescribeBucketsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the bucket.</p>
+             * <p>The bucket name.</p>
              * 
              * <strong>example:</strong>
              * <p>tf-testacceu-central-1ensbucketlifecycle44222</p>
@@ -426,13 +426,13 @@ public class DescribeBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Entity Tag (ETag) is created when an object is generated. It is used to identify the content of an object.</p>
+             * <p>The ETag (Entity Tag) is created when an object is generated and is used to identify the content of the object.</p>
              * <ul>
-             * <li><p>For an object created by a PutObject request, the ETag value is the MD5 hash of the object content.</p>
+             * <li><p>For an object created by a PutObject request, the ETag is the MD5 hash of the object content.</p>
              * </li>
-             * <li><p>For an object created by other methods, the ETag value is a unique value generated based on specific calculation rules. It is not the MD5 hash of the object content.</p>
+             * <li><p>For an object created by other methods, the ETag is a unique value generated based on specific calculation rules, but it is not the MD5 hash of the object content.</p>
              * </li>
-             * <li><p>The ETag value can be used to check if the object content has changed. Do not use the ETag value as the MD5 hash to verify the data integrity of the object.</p>
+             * <li><p>You can use the ETag to check whether the object content has changed. Do not use the ETag as the MD5 hash to verify the data integrity of the object content.</p>
              * </li>
              * </ul>
              * 
@@ -467,7 +467,7 @@ public class DescribeBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the bucket owner.</p>
+             * <p>The bucket owner information.</p>
              */
             public Builder owner(Owner owner) {
                 this.owner = owner;
@@ -475,12 +475,10 @@ public class DescribeBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about database recovery if the database type is MSSQL. The value is a JSON string that contains the following parameters:</p>
+             * <p>The database restoration information when the restored database type is MSSQL. The value is a JSON string that contains the following fields:</p>
              * <ul>
-             * <li><p><strong>name</strong>: The name of the database.</p>
-             * </li>
-             * <li><p><strong>files</strong>: The path of the database file.</p>
-             * </li>
+             * <li><strong>name</strong>: The database name.</li>
+             * <li><strong>files</strong>: The database file path.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -492,7 +490,7 @@ public class DescribeBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the file. Unit: KB.</p>
+             * <p>The file size. Unit: KB.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>
@@ -505,16 +503,11 @@ public class DescribeBucketsResponseBody extends TeaModel {
             /**
              * <p>The storage class of the bucket. Valid values:</p>
              * <ul>
-             * <li><p>Standard (default): Standard</p>
-             * </li>
-             * <li><p>IA: Infrequent Access</p>
-             * </li>
-             * <li><p>Archive: Archive Storage</p>
-             * </li>
-             * <li><p>ColdArchive: Cold Archive</p>
-             * </li>
-             * <li><p>DeepColdArchive: Deep Cold Archive</p>
-             * </li>
+             * <li>Standard: Standard storage (default).</li>
+             * <li>IA: Infrequent Access.</li>
+             * <li>Archive: Archive.</li>
+             * <li>ColdArchive: Cold Archive.</li>
+             * <li>DeepColdArchive: Deep Cold Archive.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -526,7 +519,7 @@ public class DescribeBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the trigger method.</p>
+             * <p>The trigger type.</p>
              * 
              * <strong>example:</strong>
              * <p>InstanceGroup</p>
@@ -661,7 +654,7 @@ public class DescribeBucketsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the bucket.</p>
+             * <p>The bucket name.</p>
              * 
              * <strong>example:</strong>
              * <p>zydctest</p>
@@ -672,7 +665,7 @@ public class DescribeBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public endpoint that is used to access the bucket.</p>
+             * <p>The public endpoint used to access the bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-hangzhou.aliyuncs.com</p>
@@ -683,7 +676,7 @@ public class DescribeBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the bucket was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-15 17:33:59</p>
@@ -694,7 +687,7 @@ public class DescribeBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal endpoint that is used by a same-region ECS instance to access the bucket.</p>
+             * <p>The internal endpoint used by ECS instances in the same region to access the bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
@@ -705,7 +698,7 @@ public class DescribeBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage path, such as a path in Hadoop Distributed File System (HDFS) or OSS.</p>
+             * <p>The storage path, such as HDFS or OSS.</p>
              * 
              * <strong>example:</strong>
              * <p>center</p>
@@ -716,7 +709,7 @@ public class DescribeBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the objects in the bucket.</p>
+             * <p>The information about objects in the bucket.</p>
              */
             public Builder ossObjectList(java.util.List<OssObjectList> ossObjectList) {
                 this.ossObjectList = ossObjectList;

@@ -254,7 +254,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The instance name. Fuzzy match is supported.</p>
+         * <p>The name of the instance. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-34pqe4r0kd9kn****</p>
@@ -266,7 +266,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a full device backup.</p>
+         * <p>Specifies whether the backup is a full-device backup.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -278,7 +278,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The backup file ID.</p>
+         * <p>The ID of the backup file.</p>
          * 
          * <strong>example:</strong>
          * <p>bf-dxrh5jrv0zpb8****</p>
@@ -290,7 +290,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The backup file name. Fuzzy match is supported.</p>
+         * <p>The name of the backup file. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -314,7 +314,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>Queries backup files created before the specified time.</p>
+         * <p>The end time to query backup files. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-20 10:00:00</p>
@@ -338,7 +338,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The instance group ID.</p>
+         * <p>The ID of the instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>ag-fxdx91jsfyiy3****</p>
@@ -350,7 +350,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The maximum number of entries per page for a paging query. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -362,7 +362,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that indicates the position from which to start reading. Leave this parameter empty to start reading from the beginning.</p>
+         * <p>The token that specifies the position from which the query starts. If this parameter is left empty, the query starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -374,7 +374,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * SaleMode.
+         * <p>The sales mode. Valid values: Instance (cloud phone instance mode) and Node (cloud phone matrix mode).</p>
          */
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);
@@ -383,7 +383,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>Queries backup files created after the specified time.</p>
+         * <p>The start time to query backup files. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-23 10:00:00</p>

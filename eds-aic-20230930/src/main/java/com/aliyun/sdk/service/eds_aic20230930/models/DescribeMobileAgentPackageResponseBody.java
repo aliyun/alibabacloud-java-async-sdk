@@ -117,7 +117,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The message returned by the API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Success.</p>
@@ -128,7 +128,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of package information.</p>
+         * <p>The list of packages.</p>
          */
         public Builder packageList(java.util.List<PackageList> packageList) {
             this.packageList = packageList;
@@ -216,7 +216,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The label key.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -227,7 +227,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label value.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>
@@ -414,7 +414,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The expiration time.</p>
+             * <p>The expiration time. The time format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-30 00:00:00</p>
@@ -455,7 +455,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The package specification.</p>
+             * <p>The package specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>advanced</p>
@@ -501,7 +501,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The labels.</p>
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -509,7 +509,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of credits that have been used.</p>
+             * <p>The number of used credits.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>

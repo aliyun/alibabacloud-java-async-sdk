@@ -119,7 +119,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The credit booster package information.</p>
+         * <p>The information about the credit boost packages.</p>
          */
         public Builder creditsPackageInfos(java.util.List<CreditsPackageInfos> creditsPackageInfos) {
             this.creditsPackageInfos = creditsPackageInfos;
@@ -138,7 +138,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC****</p>
@@ -318,7 +318,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of available credits in the current credit booster package.</p>
+             * <p>The number of available credits in the current credit boost package.</p>
              * 
              * <strong>example:</strong>
              * <p>70</p>
@@ -337,7 +337,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the credit booster package.</p>
+             * <p>The ID of the credit boost package.</p>
              * 
              * <strong>example:</strong>
              * <p>crp-xagydbhfkah****</p>
@@ -348,7 +348,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the credit booster package.</p>
+             * <p>The status of the credit boost package.</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>
@@ -359,7 +359,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective period of the credit booster package.</p>
+             * <p>The effective period of the credit boost package. The time format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-30 00:00:00</p>
@@ -370,7 +370,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of consumed credits in the current credit booster package.</p>
+             * <p>The number of consumed credits in the current credit boost package.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -381,7 +381,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the credit booster package.</p>
+             * <p>The expiration time of the credit boost package. The time format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-30 00:00:00</p>
@@ -392,7 +392,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of credits in the current credit booster package.</p>
+             * <p>The total number of credits in the current credit boost package.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

@@ -109,7 +109,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
          * <p>The API status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>For example, &quot;200&quot; indicates success.</p>
+         * <p>For example, &quot;200&quot; indicates success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -266,7 +266,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS pre-signed download URL.</p>
+             * <p>The presigned OSS download URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://bucket.oss-cn-hangzhou.aliyuncs.com/">https://bucket.oss-cn-hangzhou.aliyuncs.com/</a>...</p>
@@ -551,10 +551,13 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             /**
              * <p>The source of the digest. Valid values:</p>
              * <ul>
-             * <li>PROMPT_AUTO: auto-generated.</li>
-             * <li>RESULT_AUTO: result refinement.</li>
-             * <li>USER: user-edited.</li>
+             * <li>PROMPT_AUTO: Automatically generated.</li>
+             * <li>RESULT_AUTO: Refined from the result.</li>
+             * <li>USER: Edited by the user.</li>
              * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PROMPT_AUTO</p>
              */
             public Builder digestSource(String digestSource) {
                 this.digestSource = digestSource;
@@ -562,7 +565,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Mobile node ID.</p>
+             * <p>The ID of the mobile node.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-anzzuho371azi44xr</p>
@@ -592,7 +595,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of steps executed.</p>
+             * <p>The number of executed steps.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -603,7 +606,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task digest text, up to 25 characters.</p>
+             * <p>The task digest text, with a maximum of 25 characters.</p>
              */
             public Builder taskDigest(String taskDigest) {
                 this.taskDigest = taskDigest;
@@ -611,7 +614,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task duration. This field is returned only when CurrentStatus is FAILED or COMPLETED.</p>
+             * <p>The time consumed by the task. This field is returned only when CurrentStatus is FAILED or COMPLETED.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -622,7 +625,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID, which is globally unique.</p>
+             * <p>The globally unique task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>t-imr0fufqd7cle****</p>
@@ -633,10 +636,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task result in the desired state. This field is returned only when CurrentStatus is COMPLETED or FAILED.</p>
+             * <p>The node task result (desired state). This field is returned only when CurrentStatus is COMPLETED or FAILED.</p>
              * 
              * <strong>example:</strong>
-             * <p>Download DingTalk succeeded.</p>
+             * <p>DingTalk downloaded successfully</p>
              */
             public Builder taskResult(String taskResult) {
                 this.taskResult = taskResult;
@@ -644,10 +647,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user instruction in natural language. The Agent performs operations based on this instruction.</p>
+             * <p>The user instruction in natural language based on which the agent performs operations.</p>
              * 
              * <strong>example:</strong>
-             * <p>Download DingTalk from App Store</p>
+             * <p>Download DingTalk from the app store</p>
              */
             public Builder userPrompt(String userPrompt) {
                 this.userPrompt = userPrompt;

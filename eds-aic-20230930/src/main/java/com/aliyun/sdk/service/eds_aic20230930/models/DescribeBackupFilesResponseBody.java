@@ -114,7 +114,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned in this call.</p>
+         * <p>The maximum number of entries returned in this query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that indicates the position up to which data has been read in the current call. An empty value indicates that all data has been read.</p>
+         * <p>The token that specifies the position from which the next query starts. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -136,7 +136,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. If you encounter an issue, provide this request ID for troubleshooting.</p>
+         * <p>The unique ID of the request. If you encounter any issues, provide this request ID to the technical support team for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
@@ -474,7 +474,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance name.</p>
+             * <p>The name of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Test cloud phone</p>
@@ -485,7 +485,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to perform a full device backup.</p>
+             * <p>Specifies whether the backup is a full-device backup.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -496,7 +496,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup file ID.</p>
+             * <p>The ID of the backup file.</p>
              * 
              * <strong>example:</strong>
              * <p>bf-b0qbg3pbpjkn7****</p>
@@ -507,7 +507,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup file name.</p>
+             * <p>The name of the backup file.</p>
              * 
              * <strong>example:</strong>
              * <p>a-58ftsoo90p0qa****.ab</p>
@@ -518,7 +518,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory where the backup file is stored.</p>
+             * <p>The directory where the backup file is saved.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://cloudphone-saved-bucket-cn-shanghai/backup/aic-58ftsoo90p0qa****.ab</p>
@@ -529,7 +529,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Channel.
+             * <p>The order source. A value of CLOUDPHONE indicates AI cloud phone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOUDPHONE</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -540,7 +543,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
              * <p>The description of the backup file.</p>
              * 
              * <strong>example:</strong>
-             * <p>Backup file for /data/media directory.</p>
+             * <p>This is a backup file for the /data/media directory</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -581,7 +584,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-15 17:33:59</p>
@@ -614,7 +617,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of backed-up application package names.</p>
+             * <p>The list of package names of the backed-up applications.</p>
              */
             public Builder sourceAppInfoList(java.util.List<String> sourceAppInfoList) {
                 this.sourceAppInfoList = sourceAppInfoList;
@@ -622,7 +625,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of source backup file directories.</p>
+             * <p>The list of directories of the source backup files.</p>
              */
             public Builder sourceFilePathList(java.util.List<String> sourceFilePathList) {
                 this.sourceFilePathList = sourceFilePathList;
@@ -630,7 +633,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup file status.</p>
+             * <p>The status of the backup file.</p>
              * 
              * <strong>example:</strong>
              * <p>AVAILABLE</p>
@@ -641,7 +644,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SystemVersion.
+             * <p>The Android system version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Android 11</p>
              */
             public Builder systemVersion(String systemVersion) {
                 this.systemVersion = systemVersion;
@@ -649,7 +655,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID.</p>
+             * <p>The ID of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>t-bp67acfmxazb4p****</p>

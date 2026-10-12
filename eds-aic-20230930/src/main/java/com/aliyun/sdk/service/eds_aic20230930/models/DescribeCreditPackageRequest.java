@@ -73,7 +73,7 @@ public class DescribeCreditPackageRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the credit booster package.</p>
+         * <p>The ID of the credit boost package.</p>
          * 
          * <strong>example:</strong>
          * <p>crp-xagydbhfkah****</p>
@@ -85,7 +85,7 @@ public class DescribeCreditPackageRequest extends Request {
         }
 
         /**
-         * <p>The status of the credit booster package.</p>
+         * <p>The status of the credit boost package.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>

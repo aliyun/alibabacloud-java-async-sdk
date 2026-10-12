@@ -59,7 +59,7 @@ public class DescribeBucketsRequest extends Request {
         } 
 
         /**
-         * <p>The type of the OSS file.</p>
+         * <p>The OSS file type.</p>
          * <blockquote>
          * <p>This parameter is not yet available.</p>
          * </blockquote>

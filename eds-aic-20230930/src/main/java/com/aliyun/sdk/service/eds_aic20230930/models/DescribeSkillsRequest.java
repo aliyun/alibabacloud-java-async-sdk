@@ -155,8 +155,7 @@ public class DescribeSkillsRequest extends Request {
         }
 
         /**
-         * <p>The language type. The skill description is returned in this language.</p>
-         * <p>Valid values:</p>
+         * <p>The language type. The skill description is returned in the specified language. Valid values:</p>
          * <ul>
          * <li>en: English.</li>
          * <li>zh-CN: Chinese.</li>

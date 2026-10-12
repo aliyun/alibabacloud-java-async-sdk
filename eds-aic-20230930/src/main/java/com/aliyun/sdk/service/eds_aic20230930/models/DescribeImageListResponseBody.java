@@ -101,7 +101,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that is used to start the next query. An empty value indicates that all data has been returned.</p>
+         * <p>The position from which the current call returns the read data. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -455,7 +455,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
+             * <p>The Alibaba Cloud account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>117819727354****</p>
@@ -477,7 +477,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-02-01 10:56:36</p>
@@ -488,7 +488,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was last modified.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-02-01 10:56:36</p>
@@ -499,7 +499,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array of tag objects.</p>
+             * <p>The array of tag objects.</p>
              */
             public Builder imageBizTags(java.util.List<ImageBizTags> imageBizTags) {
                 this.imageBizTags = imageBizTags;
@@ -529,7 +529,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image distribution information by region. The key is the region and the value is the distribution information.</p>
+             * <p>The image distribution region information. The key is the region and the value is the distribution information.</p>
              */
             public Builder imageRegionDistributeMap(java.util.Map<String, DataImageRegionDistributeMapValue> imageRegionDistributeMap) {
                 this.imageRegionDistributeMap = imageRegionDistributeMap;
@@ -578,7 +578,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was published.</p>
+             * <p>The release time. The time format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-25 10:06:45</p>

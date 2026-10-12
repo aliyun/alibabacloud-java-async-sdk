@@ -256,7 +256,7 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * <p>The number of cloud phone instances. Call the <a href="https://help.aliyun.com/document_detail/2807299.html">DescribeSpec</a> operation to query the maximum and minimum instance count limits.</p>
+         * <p>The number of cloud phone instances. You can call <a href="https://help.aliyun.com/document_detail/2807299.html">DescribeSpec</a> to query the maximum and minimum instance count limits.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -268,7 +268,7 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * <p>The device storage size. Valid values: 10 GiB to 4000 GiB. If this parameter is left empty, the current size is retained.</p>
+         * <p>The device storage size. Valid range: 10 GiB to 4000 GiB. If this parameter is left empty, the original size is retained.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -280,7 +280,7 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * <p>The promotion ID.</p>
+         * <p>The promotional activity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>50003308011****</p>
@@ -292,7 +292,7 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * ShareDataVolume.
+         * <p>The shared storage size. Unit: GiB.</p>
          */
         public Builder shareDataVolume(Integer shareDataVolume) {
             this.putQueryParameter("ShareDataVolume", shareDataVolume);

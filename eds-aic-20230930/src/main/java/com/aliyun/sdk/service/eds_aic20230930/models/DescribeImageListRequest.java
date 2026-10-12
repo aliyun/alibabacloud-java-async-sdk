@@ -187,7 +187,7 @@ public class DescribeImageListRequest extends Request {
         } 
 
         /**
-         * <p>An array of tag objects.</p>
+         * <p>The array of tag objects.</p>
          */
         public Builder imageBizTags(java.util.List<ImageBizTags> imageBizTags) {
             this.putQueryParameter("ImageBizTags", imageBizTags);
@@ -221,7 +221,7 @@ public class DescribeImageListRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not yet available for public use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -259,7 +259,7 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page for a paged query. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -271,7 +271,7 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * <p>The token that specifies the position from which to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+         * <p>The position from which the read operation starts. An empty value indicates that the read operation starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
@@ -295,7 +295,7 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * SystemType.
+         * <p>The operating system type.</p>
          */
         public Builder systemType(String systemType) {
             this.putQueryParameter("SystemType", systemType);
