@@ -90,7 +90,7 @@ public class ModifyVirtualBridgeStatusRequest extends Request {
         } 
 
         /**
-         * <p>The virtual bridge ID.</p>
+         * <p>The ID of the virtual bridge.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class ModifyVirtualBridgeStatusRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by Elastic Desktop Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class ModifyVirtualBridgeStatusRequest extends Request {
         }
 
         /**
-         * <p>The virtual bridge status.</p>
+         * <p>The status of the virtual bridge.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

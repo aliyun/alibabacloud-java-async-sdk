@@ -75,7 +75,7 @@ public class DeleteVirtualBridgeRequest extends Request {
         } 
 
         /**
-         * <p>The virtual bridge ID.</p>
+         * <p>The ID of the virtual bridge.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteVirtualBridgeRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

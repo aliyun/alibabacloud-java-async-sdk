@@ -87,7 +87,13 @@ public class GetAggregatedDesktopsRequest extends Request {
         } 
 
         /**
-         * <p>The aggregation factor.</p>
+         * <p>The aggregation factor. Valid values:</p>
+         * <ul>
+         * <li>directory_id: office network ID</li>
+         * <li>region: region</li>
+         * <li>policy_group_id: cloud desktop policy ID</li>
+         * <li>status: cloud desktop status</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>STATUS</p>

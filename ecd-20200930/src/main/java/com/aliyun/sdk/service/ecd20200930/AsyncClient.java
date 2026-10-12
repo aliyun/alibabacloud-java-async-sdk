@@ -595,7 +595,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device the next time they log on to a Cloud Desktop.</p>
+     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding Active Directory (AD) user must bind a new MFA device when logging on to a cloud desktop.</p>
      * 
      * @param request the request parameters of CreateVirtualBridge  CreateVirtualBridgeRequest
      * @return CreateVirtualBridgeResponse
@@ -820,7 +820,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to Cloud Desktop.</p>
+     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting and disabling the MFA device. The corresponding Active Directory (AD) user must bind a new MFA device when logging on to a Cloud Desktop.</p>
      * 
      * @param request the request parameters of DeleteVirtualBridge  DeleteVirtualBridgeRequest
      * @return DeleteVirtualBridgeResponse
@@ -919,6 +919,22 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeConfigGroupResponse
      */
     CompletableFuture<DescribeConfigGroupResponse> describeConfigGroup(DescribeConfigGroupRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries console messages and their configurations under the current Alibaba Cloud account. You can filter messages by message ID, business channel, message type, client type, message level, title or body keyword, and target audience. Returns the list of messages on the current page and the total number of messages that match the query conditions.</p>
+     * <ul>
+     * <li>When multiple filter conditions are provided, all conditions are applied together to limit the query results.</li>
+     * <li>Uses PageNum and PageSize for pagination. The default value of PageNum is 1, and the default and maximum values of PageSize are both 200.</li>
+     * <li>When querying by a specified convenience user, the results include messages targeted at all convenience users, the user themselves, and the organization to which the user belongs. When querying by a specified AD user, the results also include messages targeted at all AD users, the user themselves, and the AD organization to which the user belongs.</li>
+     * <li>Query results may include messages in the initializing, pushing, published, expired, deleting, and failed states. The Published state does not indicate that all target terminals have successfully received the message.</li>
+     * <li>Image download URLs are temporary links. If a link expires, you can query again to obtain a new one.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeConsoleMessages  DescribeConsoleMessagesRequest
+     * @return DescribeConsoleMessagesResponse
+     */
+    CompletableFuture<DescribeConsoleMessagesResponse> describeConsoleMessages(DescribeConsoleMessagesRequest request);
 
     /**
      * @param request the request parameters of DescribeCustomizedListHeaders  DescribeCustomizedListHeadersRequest
@@ -1652,7 +1668,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</p>
+     * <p>After an MFA device is locked, its status changes to LOCKED. The corresponding Active Directory (AD) account cannot log on to the Wuying terminal because it cannot authenticate the MFA device. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</p>
      * 
      * @param request the request parameters of ListVirtualBridges  ListVirtualBridgesRequest
      * @return ListVirtualBridgesResponse
@@ -2062,7 +2078,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to a cloud desktop.</p>
+     * <p>Deleting an MFA device means unbinding the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to a Cloud Desktop.</p>
      * 
      * @param request the request parameters of ModifyVirtualBridgeLevel  ModifyVirtualBridgeLevelRequest
      * @return ModifyVirtualBridgeLevelResponse
@@ -2071,7 +2087,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only custom images in the active (Available) state can be modified.</p>
+     * <p>Only custom images in the Available state can be modified.</p>
      * 
      * @param request the request parameters of ModifyVirtualBridgeStatus  ModifyVirtualBridgeStatusRequest
      * @return ModifyVirtualBridgeStatusResponse
@@ -2248,7 +2264,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</p>
+     * <p>After being locked, the status of the MFA device changes to Locked (LOCKED). The corresponding AD account cannot log on to the Wuying terminal because it cannot authenticate the MFA device. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock it.</p>
      * 
      * @param request the request parameters of RenewVirtualBridge  RenewVirtualBridgeRequest
      * @return RenewVirtualBridgeResponse
@@ -2302,6 +2318,21 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RunCommandResponse
      */
     CompletableFuture<RunCommandResponse> runCommand(RunCommandRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This operation sends a created management message. The message body, client type, recipients, and business type all use the saved configurations. Each call processes only one MessageId.</p>
+     * <ul>
+     * <li>The message must belong to the current Alibaba Cloud account. Messages in the Init, Pushing, Expired, Deleting, or Failed state cannot be sent. Only messages in the Published state can be sent.</li>
+     * <li>Before the request is accepted, the system checks the number of Pushing messages of the same message type under the current account. If there are 5 or more such messages, the request is rejected. The count is not split by business channel.</li>
+     * <li>Regular notifications and wallpaper messages are pushed through asynchronous tasks. For the OPERATIONAL type, only the publish status is updated. Messages configured for scheduled sending retain their original schedules and are not immediately triggered by this operation.</li>
+     * <li>A Success value of true indicates that the request is accepted, but it does not mean that all recipients have received the message. Published indicates that the message is published or the server-side push processing is complete, and it is not a delivery confirmation for each individual target.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SendConsoleMessage  SendConsoleMessageRequest
+     * @return SendConsoleMessageResponse
+     */
+    CompletableFuture<SendConsoleMessageResponse> sendConsoleMessage(SendConsoleMessageRequest request);
 
     /**
      * <b>description</b> :
