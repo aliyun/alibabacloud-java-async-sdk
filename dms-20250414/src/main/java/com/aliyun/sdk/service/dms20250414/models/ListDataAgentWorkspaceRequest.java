@@ -188,7 +188,10 @@ public class ListDataAgentWorkspaceRequest extends Request {
         } 
 
         /**
-         * Creator.
+         * <p>The ID of the creator used to search for workspaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>186xxx9947</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -209,7 +212,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The maximum number of results per page.</p>
          * 
          * <strong>example:</strong>
          * <p>no use</p>
@@ -221,7 +224,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>no use</p>
@@ -245,7 +248,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The name of the field by which to sort.</p>
+         * <p>The sort field name.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateTime</p>
@@ -270,7 +273,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +286,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>workspaceTest</p>
@@ -295,7 +298,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The type of workspace to query.</p>
+         * <p>The workspace type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

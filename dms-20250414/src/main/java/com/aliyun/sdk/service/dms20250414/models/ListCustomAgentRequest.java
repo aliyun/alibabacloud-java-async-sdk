@@ -141,7 +141,7 @@ public class ListCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. Default value: 20.</p>
+         * <p>The number of entries per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -153,7 +153,7 @@ public class ListCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query all custom agents in the published state. Default value: false.</p>
+         * <p>Specifies whether to query all published custom agents. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -165,10 +165,10 @@ public class ListCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. Supports fuzzy search by custom agent name and description.</p>
+         * <p>The search keyword. Fuzzy search is supported for custom agent names and descriptions.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestAgent</p>
+         * <p>Test Agent</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);

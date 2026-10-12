@@ -647,6 +647,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeCustomAgentMonitorMetrics  DescribeCustomAgentMonitorMetricsRequest
+     * @return DescribeCustomAgentMonitorMetricsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCustomAgentMonitorMetricsResponse> describeCustomAgentMonitorMetrics(DescribeCustomAgentMonitorMetricsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCustomAgentMonitorMetrics").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCustomAgentMonitorMetricsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCustomAgentMonitorMetricsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeDataAgentMetrics  DescribeDataAgentMetricsRequest
      * @return DescribeDataAgentMetricsResponse
      */
@@ -1258,6 +1276,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListCustomAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListCustomAgentMonitorSessions  ListCustomAgentMonitorSessionsRequest
+     * @return ListCustomAgentMonitorSessionsResponse
+     */
+    @Override
+    public CompletableFuture<ListCustomAgentMonitorSessionsResponse> listCustomAgentMonitorSessions(ListCustomAgentMonitorSessionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCustomAgentMonitorSessions").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCustomAgentMonitorSessionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCustomAgentMonitorSessionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

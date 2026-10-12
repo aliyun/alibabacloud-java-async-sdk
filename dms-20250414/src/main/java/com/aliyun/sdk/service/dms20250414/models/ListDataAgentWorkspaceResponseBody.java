@@ -151,7 +151,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Specified parameter is not valid.</p>
@@ -162,7 +162,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The maximum number of results per page.</p>
          * 
          * <strong>example:</strong>
          * <p>nu use</p>
@@ -173,7 +173,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>no use</p>
@@ -420,7 +420,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the workspace, in milliseconds (UNIX timestamp).</p>
+             * <p>The time when the workspace was created. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1765960516000</p>
@@ -442,7 +442,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The name of the workspace creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -472,7 +475,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent modification time of the workspace, in milliseconds (UNIX timestamp).</p>
+             * <p>The time when the workspace was last modified. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1765961516000</p>
@@ -483,7 +486,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role name of the user in the workspace.</p>
+             * <p>The name of the user\&quot;s role in the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>
@@ -494,7 +497,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * RunningSessionCount.
+             * <p>The number of running sessions in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder runningSessionCount(Integer runningSessionCount) {
                 this.runningSessionCount = runningSessionCount;
@@ -502,7 +508,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of members in the workspace.</p>
+             * <p>The total number of members in the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -513,7 +519,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSessionCount.
+             * <p>The total number of sessions in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalSessionCount(Integer totalSessionCount) {
                 this.totalSessionCount = totalSessionCount;

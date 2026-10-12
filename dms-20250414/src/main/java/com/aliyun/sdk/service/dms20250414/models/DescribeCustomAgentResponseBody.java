@@ -125,7 +125,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Specified parameter Tid is not valid.</p>
@@ -147,10 +147,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.                                 </li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: The request is successful.                                 </li>
+         * <li><strong>false</strong>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -397,7 +397,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * ForbiddenAppendDataSource.
+             * <p>Specifies whether to prohibit appending data sources during a session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder forbiddenAppendDataSource(Boolean forbiddenAppendDataSource) {
                 this.forbiddenAppendDataSource = forbiddenAppendDataSource;
@@ -405,7 +408,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to disable user inquiries during the process.</p>
+             * <p>Specifies whether to prohibit user inquiries during the process.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -438,7 +441,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to skip the web report rendering confirmation.</p>
+             * <p>Specifies whether to skip the confirmation for generating a web report.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -521,7 +524,14 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessType.
+             * <p>The access type. Valid values:</p>
+             * <ul>
+             * <li>mcp: Accessed through MCP.</li>
+             * <li>dms_kb: Accessed through DMS knowledge base.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp</p>
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -529,7 +539,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * KbUuid.
+             * <p>The knowledge base ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kb-HZ-6anhdzx7hddf9*******obx</p>
              */
             public Builder kbUuid(String kbUuid) {
                 this.kbUuid = kbUuid;
@@ -537,7 +550,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * McpServerId.
+             * <p>The MCP server ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nhdpt9adf6ac**********ca</p>
              */
             public Builder mcpServerId(String mcpServerId) {
                 this.mcpServerId = mcpServerId;
@@ -734,7 +750,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cron expression for timed scheduling.</p>
+             * <p>The cron expression for time-based scheduling.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 0 ? * 1-7</p>
@@ -748,7 +764,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
              * <p>The query for the scheduled task.</p>
              * 
              * <strong>example:</strong>
-             * <p>Analyze this data and provide a brief report</p>
+             * <p>Analyze the data and provide the report</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -1229,7 +1245,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud primary account ID.</p>
+             * <p>The primary Alibaba Cloud account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>16738266********</p>
@@ -1301,7 +1317,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
              *   &quot;personal&quot; : {
              *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
              *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
-             *     &quot;Database&quot; : &quot;TestTable</strong></strong></strong>.xlsx&quot;,
+             *     &quot;Database&quot; : &quot;test-table</strong></strong></strong>.xlsx&quot;,
              *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
              *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
              *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -1314,7 +1330,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultAgent.
+             * <p>Indicates whether the agent is displayed by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder defaultAgent(Integer defaultAgent) {
                 this.defaultAgent = defaultAgent;
@@ -1325,7 +1344,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
              * <p>The description of the custom agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>Agent test description</p>
+             * <p>Description for the test agent</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1374,15 +1393,13 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instruction.</p>
+             * <p>The instructions.</p>
              * 
              * <strong>example:</strong>
-             * <p>Analysis framework:</p>
-             * <ol>
-             * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) by day, week, and month dimensions, and analyze trends and year-over-year/month-over-month fluctuations;</li>
-             * <li>Segment by new/existing customers, channels, and regions to identify growth sources and weaknesses;</li>
-             * <li>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to locate drop-off points;</li>
-             * </ol>
+             * <p>Analytical framework:</p>
+             * <p>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis to analyze trends and identify year-over-year and month-over-month fluctuations.
+             * Segment by new vs. returning customers, channels, and regions to identify growth drivers and areas of weakness.
+             * Conduct funnel analysis based on user behavior paths (browse → add to cart → purchase) to pinpoint stages where user drop-off occurs.</p>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;
@@ -1390,7 +1407,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether a scheduled task is configured.</p>
+             * <p>Indicates whether a scheduled task is configured.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1405,12 +1422,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
              * 
              * <strong>example:</strong>
              * <p>Core metric definitions:</p>
-             * <ol>
-             * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders;</li>
-             * <li>Order volume is the number of valid orders placed per day;</li>
-             * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app;</li>
-             * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency;</li>
-             * </ol>
+             * <p>GMV (Gross Merchandise Volume) refers to the total sum of order amounts, including both paid and unpaid orders.
+             * Order volume refers to the number of valid orders placed per day.
+             * UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.
+             * Conversion rate = paid orders / UV, reflecting the efficiency of traffic conversion.</p>
              */
             public Builder knowledge(String knowledge) {
                 this.knowledge = knowledge;
@@ -1418,7 +1433,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeConfigList.
+             * <p>The external knowledge bases.</p>
              */
             public Builder knowledgeConfigList(java.util.List<KnowledgeConfigList> knowledgeConfigList) {
                 this.knowledgeConfigList = knowledgeConfigList;
@@ -1459,7 +1474,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
              * <p>The name of the custom agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>Agent test name</p>
+             * <p>Test agent name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1511,7 +1526,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The publish time.</p>
+             * <p>The release time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-11T14:04:32.000+00:00</p>
@@ -1544,7 +1559,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
              * <p>The text report format.</p>
              * 
              * <strong>example:</strong>
-             * <p>The text report requires all numbers to be converted from Arabic numerals to Chinese numerals</p>
+             * <p>The text report requires that all numbers be written in Chinese numerals rather than Arabic numerals.</p>
              */
             public Builder textReportConfig(String textReportConfig) {
                 this.textReportConfig = textReportConfig;
@@ -1552,7 +1567,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * UserSpecifiedSkillList.
+             * <p>The list of user-specified skills.</p>
              */
             public Builder userSpecifiedSkillList(java.util.List<String> userSpecifiedSkillList) {
                 this.userSpecifiedSkillList = userSpecifiedSkillList;
@@ -1563,7 +1578,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
              * <p>The web report format.</p>
              * 
              * <strong>example:</strong>
-             * <p>The web report requires all numbers to be converted from Arabic numerals to Chinese numerals</p>
+             * <p>The web report requires that all numbers be written in Chinese numerals rather than Arabic numerals.</p>
              */
             public Builder webReportConfig(String webReportConfig) {
                 this.webReportConfig = webReportConfig;
@@ -1571,7 +1586,17 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * WebReportTheme.
+             * <p>The web report theme. Valid values:</p>
+             * <ul>
+             * <li>default: Default.</li>
+             * <li>journal: Journal.</li>
+             * <li>legacy: Classic.</li>
+             * <li>neobrutalism: Stylized.</li>
+             * <li>infographic: Infographic.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder webReportTheme(String webReportTheme) {
                 this.webReportTheme = webReportTheme;
