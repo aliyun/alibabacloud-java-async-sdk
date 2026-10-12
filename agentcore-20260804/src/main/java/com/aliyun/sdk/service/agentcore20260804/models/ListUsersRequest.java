@@ -23,6 +23,10 @@ public class ListUsersRequest extends Request {
     private String workspaceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("email")
+    private String email;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
@@ -41,6 +45,7 @@ public class ListUsersRequest extends Request {
     private ListUsersRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
+        this.email = builder.email;
         this.maxResults = builder.maxResults;
         this.name = builder.name;
         this.nameLike = builder.nameLike;
@@ -65,6 +70,13 @@ public class ListUsersRequest extends Request {
      */
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    /**
+     * @return email
+     */
+    public String getEmail() {
+        return this.email;
     }
 
     /**
@@ -97,6 +109,7 @@ public class ListUsersRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListUsersRequest, Builder> {
         private String workspaceId; 
+        private String email; 
         private Integer maxResults; 
         private String name; 
         private String nameLike; 
@@ -109,6 +122,7 @@ public class ListUsersRequest extends Request {
         private Builder(ListUsersRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
+            this.email = request.email;
             this.maxResults = request.maxResults;
             this.name = request.name;
             this.nameLike = request.nameLike;
@@ -129,6 +143,18 @@ public class ListUsersRequest extends Request {
         }
 
         /**
+         * <p>The filter condition for exact match on the email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:xxx@xxx.com">xxx@xxx.com</a></p>
+         */
+        public Builder email(String email) {
+            this.putQueryParameter("email", email);
+            this.email = email;
+            return this;
+        }
+
+        /**
          * <p>The maximum number of records to return per page. Valid values: 1 to 100. If this parameter is not specified, 10 records are returned by default.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +167,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The filter condition for exact match on the username.</p>
+         * <p>The filter condition for exact match on the user name.</p>
          * 
          * <strong>example:</strong>
          * <p>user-01</p>
@@ -153,7 +179,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The filter condition for fuzzy match on the username. The value can be up to 128 characters in length.</p>
+         * <p>The filter condition for fuzzy match on the user name. The value can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>

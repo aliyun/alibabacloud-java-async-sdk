@@ -119,7 +119,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS when the request succeeds.</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value is 200 when the request succeeds.</p>
+         * <p>The HTTP status code. 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -171,7 +171,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -184,6 +184,215 @@ public class GetExternalAgentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetExternalAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExternalAgentResponseBody</p>
+     */
+    public static class VersionSelector extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private VersionSelector(Builder builder) {
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VersionSelector create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VersionSelector model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The type of the version selector. Valid values: LABEL (selects by tag) and VERSION (selects by specific version).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LABEL</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The value of the selector. If the type is LABEL, the value is a tag name such as latest. If the type is VERSION, the value is a specific version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>latest</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VersionSelector build() {
+                return new VersionSelector(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetExternalAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExternalAgentResponseBody</p>
+     */
+    public static class ConfiguredSkills extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("sourceType")
+        private String sourceType;
+
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
+        @com.aliyun.core.annotation.NameInMap("versionSelector")
+        private VersionSelector versionSelector;
+
+        private ConfiguredSkills(Builder builder) {
+            this.name = builder.name;
+            this.sourceType = builder.sourceType;
+            this.version = builder.version;
+            this.versionSelector = builder.versionSelector;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfiguredSkills create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        /**
+         * @return versionSelector
+         */
+        public VersionSelector getVersionSelector() {
+            return this.versionSelector;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String sourceType; 
+            private String version; 
+            private VersionSelector versionSelector; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfiguredSkills model) {
+                this.name = model.name;
+                this.sourceType = model.sourceType;
+                this.version = model.version;
+                this.versionSelector = model.versionSelector;
+            } 
+
+            /**
+             * <p>The name of the skill in the Workspace AI Registry.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>web-search</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The source type of the skill. Valid values: REFERENCE (references the AI Registry) and STATIC (statically provided with the package).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REFERENCE</p>
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * <p>The legacy compatibility field. Use sourceType and versionSelector for new requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            /**
+             * <p>The referenced version selector. If omitted, the default value is LABEL/latest. Only LABEL/latest is supported in the current phase.</p>
+             */
+            public Builder versionSelector(VersionSelector versionSelector) {
+                this.versionSelector = versionSelector;
+                return this;
+            }
+
+            public ConfiguredSkills build() {
+                return new ConfiguredSkills(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link GetExternalAgentResponseBody} extends {@link TeaModel}
@@ -276,12 +485,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The heartbeat status. ONLINE indicates that the most recent heartbeat has not exceeded the configured timeout threshold. STALE indicates that the heartbeat has timed out. UNKNOWN indicates that the heartbeat is missing or has an invalid format. Valid values:</p>
-             * <ul>
-             * <li>ONLINE: Online.</li>
-             * <li>STALE: Heartbeat expired.</li>
-             * <li>UNKNOWN: Unknown.</li>
-             * </ul>
+             * <p>The heartbeat status. ONLINE indicates that the most recent heartbeat did not exceed the configured timeout threshold. STALE indicates that the heartbeat has timed out. UNKNOWN indicates that the heartbeat is missing or the format is invalid. Valid values: ONLINE (online), STALE (heartbeat expired), and UNKNOWN (unknown).</p>
              * 
              * <strong>example:</strong>
              * <p>ONLINE</p>
@@ -292,7 +496,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent active time of the external agent in RFC 3339 format.</p>
+             * <p>The last active time of the external agent in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01T00:00:00Z</p>
@@ -303,7 +507,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent heartbeat time of the external agent in RFC 3339 format.</p>
+             * <p>The last heartbeat time of the external agent in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01T00:00:00Z</p>
@@ -460,7 +664,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the quota is enabled. This parameter is not returned if no quota is configured.</p>
+             * <p>Specifies whether the quota is enabled. This field is not returned if no quota is configured.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -471,7 +675,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota limit type. Currently, only token is supported.</p>
+             * <p>The quota limit type. Only token is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>token</p>
@@ -482,7 +686,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the quota has been exceeded in the current cycle. This is a read-only field returned by the backend.</p>
+             * <p>Specifies whether the quota is exceeded in the current period. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -493,7 +697,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota statistical period. day indicates daily and month indicates monthly.</p>
+             * <p>The quota statistical period. Valid values: day (daily) and month (monthly).</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>
@@ -504,7 +708,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gateway quota rule status. This is a read-only field returned by the backend.</p>
+             * <p>The gateway quota rule status. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>
@@ -515,7 +719,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of tokens that can be consumed within a single cycle.</p>
+             * <p>The maximum number of tokens allowed to be consumed in a single period.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -526,7 +730,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tokens consumed in the current cycle. This is a read-only field returned by the backend.</p>
+             * <p>The number of tokens consumed in the current period. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -620,7 +824,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upstream model name.</p>
+             * <p>The name of the upstream model.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-max</p>
@@ -631,7 +835,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model token quota configuration and the quota usage status in the current cycle. This parameter is empty if no quota is configured.</p>
+             * <p>The model token quota configuration and usage status for the current period. This field is empty if no quota is configured.</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -651,17 +855,117 @@ public class GetExternalAgentResponseBody extends TeaModel {
      *
      * <p>GetExternalAgentResponseBody</p>
      */
+    public static class SkillsVersionSelector extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private SkillsVersionSelector(Builder builder) {
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SkillsVersionSelector create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkillsVersionSelector model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The type of the version selector. Valid values: LABEL (selects by tag) and VERSION (selects by specific version).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LABEL</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The value of the selector. If the type is LABEL, the value is a tag name such as latest. If the type is VERSION, the value is a specific version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>latest</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SkillsVersionSelector build() {
+                return new SkillsVersionSelector(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetExternalAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExternalAgentResponseBody</p>
+     */
     public static class Skills extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("appliedVersion")
+        private String appliedVersion;
+
+        @com.aliyun.core.annotation.NameInMap("fromTemplate")
+        private Boolean fromTemplate;
+
         @com.aliyun.core.annotation.NameInMap("name")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("resolvedVersion")
+        private String resolvedVersion;
+
+        @com.aliyun.core.annotation.NameInMap("sourceType")
+        private String sourceType;
 
         @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
+        @com.aliyun.core.annotation.NameInMap("versionSelector")
+        private SkillsVersionSelector versionSelector;
+
         private Skills(Builder builder) {
+            this.appliedVersion = builder.appliedVersion;
+            this.fromTemplate = builder.fromTemplate;
             this.name = builder.name;
+            this.resolvedVersion = builder.resolvedVersion;
+            this.sourceType = builder.sourceType;
             this.version = builder.version;
+            this.versionSelector = builder.versionSelector;
         }
 
         public static Builder builder() {
@@ -673,10 +977,38 @@ public class GetExternalAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return appliedVersion
+         */
+        public String getAppliedVersion() {
+            return this.appliedVersion;
+        }
+
+        /**
+         * @return fromTemplate
+         */
+        public Boolean getFromTemplate() {
+            return this.fromTemplate;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return resolvedVersion
+         */
+        public String getResolvedVersion() {
+            return this.resolvedVersion;
+        }
+
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
         }
 
         /**
@@ -686,27 +1018,87 @@ public class GetExternalAgentResponseBody extends TeaModel {
             return this.version;
         }
 
+        /**
+         * @return versionSelector
+         */
+        public SkillsVersionSelector getVersionSelector() {
+            return this.versionSelector;
+        }
+
         public static final class Builder {
+            private String appliedVersion; 
+            private Boolean fromTemplate; 
             private String name; 
+            private String resolvedVersion; 
+            private String sourceType; 
             private String version; 
+            private SkillsVersionSelector versionSelector; 
 
             private Builder() {
             } 
 
             private Builder(Skills model) {
+                this.appliedVersion = model.appliedVersion;
+                this.fromTemplate = model.fromTemplate;
                 this.name = model.name;
+                this.resolvedVersion = model.resolvedVersion;
+                this.sourceType = model.sourceType;
                 this.version = model.version;
+                this.versionSelector = model.versionSelector;
             } 
 
             /**
-             * <p>The skill name.</p>
-             * <p>This parameter is required.</p>
+             * <p>The effective version at runtime. This field is read-only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
+             */
+            public Builder appliedVersion(String appliedVersion) {
+                this.appliedVersion = appliedVersion;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether the skill is from a fixed template. This field is read-only. Template items cannot be removed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder fromTemplate(Boolean fromTemplate) {
+                this.fromTemplate = fromTemplate;
+                return this;
+            }
+
+            /**
+             * <p>The name of the skill.</p>
              * 
              * <strong>example:</strong>
              * <p>code-analysis</p>
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The current target version. This field is read-only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
+             */
+            public Builder resolvedVersion(String resolvedVersion) {
+                this.resolvedVersion = resolvedVersion;
+                return this;
+            }
+
+            /**
+             * <p>The source type of the skill. Valid values: REFERENCE (references the AI Registry) and STATIC (statically provided with the package).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REFERENCE</p>
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
                 return this;
             }
 
@@ -718,6 +1110,14 @@ public class GetExternalAgentResponseBody extends TeaModel {
              */
             public Builder version(String version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * <p>The referenced version selector. If omitted, the default value is LABEL/latest.</p>
+             */
+            public Builder versionSelector(SkillsVersionSelector versionSelector) {
+                this.versionSelector = versionSelector;
                 return this;
             }
 
@@ -934,10 +1334,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tool type. Valid values:</p>
-             * <ul>
-             * <li>MCP: MCP tool.</li>
-             * </ul>
+             * <p>The tool type. Valid values: MCP.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -964,6 +1361,9 @@ public class GetExternalAgentResponseBody extends TeaModel {
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agentId")
         private String agentId;
+
+        @com.aliyun.core.annotation.NameInMap("configuredSkills")
+        private java.util.List<ConfiguredSkills> configuredSkills;
 
         @com.aliyun.core.annotation.NameInMap("createMode")
         private String createMode;
@@ -1024,6 +1424,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.agentId = builder.agentId;
+            this.configuredSkills = builder.configuredSkills;
             this.createMode = builder.createMode;
             this.createdAt = builder.createdAt;
             this.deployType = builder.deployType;
@@ -1058,6 +1459,13 @@ public class GetExternalAgentResponseBody extends TeaModel {
          */
         public String getAgentId() {
             return this.agentId;
+        }
+
+        /**
+         * @return configuredSkills
+         */
+        public java.util.List<ConfiguredSkills> getConfiguredSkills() {
+            return this.configuredSkills;
         }
 
         /**
@@ -1195,6 +1603,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
 
         public static final class Builder {
             private String agentId; 
+            private java.util.List<ConfiguredSkills> configuredSkills; 
             private String createMode; 
             private String createdAt; 
             private String deployType; 
@@ -1220,6 +1629,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.agentId = model.agentId;
+                this.configuredSkills = model.configuredSkills;
                 this.createMode = model.createMode;
                 this.createdAt = model.createdAt;
                 this.deployType = model.deployType;
@@ -1249,6 +1659,14 @@ public class GetExternalAgentResponseBody extends TeaModel {
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
+                return this;
+            }
+
+            /**
+             * <p>Includes only the skills added or overridden by the user, excluding inherited items from templates. The resource model reads this field to preserve update semantics. Creation and update operations still use the skills in the request.</p>
+             */
+            public Builder configuredSkills(java.util.List<ConfiguredSkills> configuredSkills) {
+                this.configuredSkills = configuredSkills;
                 return this;
             }
 
@@ -1289,7 +1707,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
              * <p>The description of the external agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>A code review agent running in the user environment</p>
+             * <p>Code review agent running in the user environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1297,7 +1715,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime status information reported by the external agent.</p>
+             * <p>The running status information reported by the external agent.</p>
              */
             public Builder externalAgentStatus(ExternalAgentStatus externalAgentStatus) {
                 this.externalAgentStatus = externalAgentStatus;
@@ -1305,7 +1723,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The agent instruction that guides the behavior of the agent.</p>
+             * <p>The agent instruction used to guide the behavior of the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>You are a code review assistant</p>
@@ -1327,15 +1745,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processing status of the latest specification version. Valid values:</p>
-             * <ul>
-             * <li>pending: Pending.</li>
-             * <li>processing: Processing.</li>
-             * <li>waiting_retry: Waiting for retry.</li>
-             * <li>succeeded: Succeeded.</li>
-             * <li>failed: Failed.</li>
-             * <li>superseded: Superseded by a newer version.</li>
-             * </ul>
+             * <p>The processing status of the latest specification version. Valid values: pending (pending), processing (processing), waiting_retry (waiting for retry), succeeded (succeeded), failed (failed), and superseded (superseded by a new version).</p>
              * 
              * <strong>example:</strong>
              * <p>pending</p>
@@ -1346,7 +1756,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model configuration. This parameter is available only when modelSource is set to PLATFORM.</p>
+             * <p>The model configuration. This field is available only when modelSource is set to PLATFORM.</p>
              */
             public Builder model(Model model) {
                 this.model = model;
@@ -1354,11 +1764,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model configuration source. PLATFORM indicates that the model configuration is parsed and distributed by the platform. RUNTIME indicates that the model is managed by the external runtime, and the model parameter cannot be specified at the same time. Valid values:</p>
-             * <ul>
-             * <li>PLATFORM: Platform model.</li>
-             * <li>RUNTIME: Runtime model.</li>
-             * </ul>
+             * <p>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model itself, and the model field cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</p>
              * 
              * <strong>example:</strong>
              * <p>PLATFORM</p>
@@ -1410,15 +1816,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the external agent. Valid values:</p>
-             * <ul>
-             * <li>Creating: Being created.</li>
-             * <li>Running: Running.</li>
-             * <li>Failed: Failed.</li>
-             * <li>Updating: Being updated.</li>
-             * <li>Deleting: Being deleted.</li>
-             * <li>Deleted: Deleted.</li>
-             * </ul>
+             * <p>The status of the external agent. Valid values: Creating (creating), Running (running), Failed (failed), Updating (updating), Deleting (deleting), and Deleted (deleted).</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>

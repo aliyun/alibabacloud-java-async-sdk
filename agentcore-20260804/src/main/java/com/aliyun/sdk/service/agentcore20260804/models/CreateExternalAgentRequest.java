@@ -111,7 +111,7 @@ public class CreateExternalAgentRequest extends Request {
         }
 
         /**
-         * <p>The reserved idempotency token. The backend does not provide idempotency guarantee in the current phase.</p>
+         * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current phase.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-1</p>
@@ -208,7 +208,7 @@ public class CreateExternalAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable token quota. Defaults to true if not specified. Set to false to disable and delete existing quota rules.</p>
+             * <p>Specifies whether to enable the token quota. Default value: true. If you set this parameter to false, the quota is disabled and existing quota rules are deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -219,7 +219,7 @@ public class CreateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The quota limit type. Required by backend validation when quota is enabled. Fixed value: token.</p>
+             * <p>The quota limit type. This parameter is required when the quota is enabled. Fixed value: token.</p>
              * 
              * <strong>example:</strong>
              * <p>token</p>
@@ -230,7 +230,11 @@ public class CreateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The quota statistical period. Required by backend validation when quota is enabled. Valid values: day (daily) and month (monthly).</p>
+             * <p>The statistical period of the quota. This parameter is required when the quota is enabled. Valid values:</p>
+             * <ul>
+             * <li>day: Daily.</li>
+             * <li>month: Monthly.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>day</p>
@@ -241,7 +245,7 @@ public class CreateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of tokens that can be consumed within a single period. Required by backend validation when quota is enabled. The value must be greater than 0.</p>
+             * <p>The maximum number of tokens that can be consumed in a single period. This parameter is required when the quota is enabled and must be greater than 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -350,7 +354,7 @@ public class CreateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The model token quota configuration. If not specified, no quota is configured.</p>
+             * <p>The model token quota configuration. If this parameter is not specified, no quota is configured.</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -370,17 +374,110 @@ public class CreateExternalAgentRequest extends Request {
      *
      * <p>CreateExternalAgentRequest</p>
      */
+    public static class VersionSelector extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private VersionSelector(Builder builder) {
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VersionSelector create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VersionSelector model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The type of the version selector. Valid values:</p>
+             * <ul>
+             * <li>LABEL: By label.</li>
+             * <li>VERSION: By specific version.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LABEL</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The value of the selector. If the type is LABEL, this value is the label name, such as latest. If the type is VERSION, this value is the specific version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>latest</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VersionSelector build() {
+                return new VersionSelector(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateExternalAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateExternalAgentRequest</p>
+     */
     public static class Skills extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("sourceType")
+        private String sourceType;
+
         @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
+        @com.aliyun.core.annotation.NameInMap("versionSelector")
+        private VersionSelector versionSelector;
+
         private Skills(Builder builder) {
             this.name = builder.name;
+            this.sourceType = builder.sourceType;
             this.version = builder.version;
+            this.versionSelector = builder.versionSelector;
         }
 
         public static Builder builder() {
@@ -399,22 +496,40 @@ public class CreateExternalAgentRequest extends Request {
         }
 
         /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
             return this.version;
         }
 
+        /**
+         * @return versionSelector
+         */
+        public VersionSelector getVersionSelector() {
+            return this.versionSelector;
+        }
+
         public static final class Builder {
             private String name; 
+            private String sourceType; 
             private String version; 
+            private VersionSelector versionSelector; 
 
             private Builder() {
             } 
 
             private Builder(Skills model) {
                 this.name = model.name;
+                this.sourceType = model.sourceType;
                 this.version = model.version;
+                this.versionSelector = model.versionSelector;
             } 
 
             /**
@@ -430,6 +545,21 @@ public class CreateExternalAgentRequest extends Request {
             }
 
             /**
+             * <p>The source type of the skill. Valid values:</p>
+             * <ul>
+             * <li>REFERENCE: References the AI Registry.</li>
+             * <li>STATIC: Statically provided with the package.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>REFERENCE</p>
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
              * <p>The skill version.</p>
              * 
              * <strong>example:</strong>
@@ -437,6 +567,14 @@ public class CreateExternalAgentRequest extends Request {
              */
             public Builder version(String version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * <p>The referenced version selector. If omitted, the default value is LABEL/latest. Currently, only LABEL/latest is supported.</p>
+             */
+            public Builder versionSelector(VersionSelector versionSelector) {
+                this.versionSelector = versionSelector;
                 return this;
             }
 
@@ -502,7 +640,7 @@ public class CreateExternalAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the template in AI Registry.</p>
+             * <p>The name of the template in the AI Registry.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -514,7 +652,7 @@ public class CreateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The version of the template in AI Registry.</p>
+             * <p>The version of the template in the AI Registry.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -809,7 +947,7 @@ public class CreateExternalAgentRequest extends Request {
              * <p>The description of the external agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>A code review agent running in the user environment</p>
+             * <p>Code review agent running in the user environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -817,7 +955,7 @@ public class CreateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The agent instruction that guides the behavior of the agent.</p>
+             * <p>The instructions that guide the behavior of the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>You are a code review assistant</p>
@@ -828,7 +966,7 @@ public class CreateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The model configuration. Available only when modelSource is set to PLATFORM.</p>
+             * <p>The model configuration. This parameter is available only when modelSource is set to PLATFORM.</p>
              */
             public Builder model(Model model) {
                 this.model = model;
@@ -836,10 +974,10 @@ public class CreateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The model configuration source. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model independently, and the model parameter cannot be specified at the same time. Valid values:</p>
+             * <p>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model, and the model parameter cannot be passed at the same time. Valid values:</p>
              * <ul>
-             * <li>PLATFORM: platform model.</li>
-             * <li>RUNTIME: runtime model.</li>
+             * <li>PLATFORM: Platform model.</li>
+             * <li>RUNTIME: Runtime model.</li>
              * </ul>
              * 
              * <strong>example:</strong>
