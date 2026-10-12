@@ -210,7 +210,10 @@ public class Experiment extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility of the experiment. PRIVATE indicates that the experiment is visible only to the creator and their Alibaba Cloud account. PUBLIC indicates that the experiment is visible to all users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -218,7 +221,10 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * ArtifactUri.
+         * <p>The default artifact output path for tasks associated with the experiment. Currently, only OSS paths are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket.oss-cn-hangzhou.aliyuncs.com/test</p>
          */
         public Builder artifactUri(String artifactUri) {
             this.artifactUri = artifactUri;
@@ -226,7 +232,10 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * ExperimentId.
+         * <p>The experiment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-1zpfthdx******</p>
          */
         public Builder experimentId(String experimentId) {
             this.experimentId = experimentId;
@@ -234,7 +243,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the experiment was created.</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -242,7 +251,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the experiment was last modified.</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -250,7 +259,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The list of labels for the experiment.</p>
          */
         public Builder labels(java.util.List<ExperimentLabel> labels) {
             this.labels = labels;
@@ -258,7 +267,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * LatestRun.
+         * <p>LatestRun</p>
          */
         public Builder latestRun(Run latestRun) {
             this.latestRun = latestRun;
@@ -266,7 +275,10 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the experiment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -274,7 +286,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>The Alibaba Cloud account ID of the experiment owner.</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -282,7 +294,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -290,7 +302,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * TensorboardLogUri.
+         * <p>The default OSS storage path for TensorBoard logs of each trial in the experiment.</p>
          */
         public Builder tensorboardLogUri(String tensorboardLogUri) {
             this.tensorboardLogUri = tensorboardLogUri;
@@ -298,7 +310,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID of the experiment creator.</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -306,7 +318,10 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the experiment belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1517**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

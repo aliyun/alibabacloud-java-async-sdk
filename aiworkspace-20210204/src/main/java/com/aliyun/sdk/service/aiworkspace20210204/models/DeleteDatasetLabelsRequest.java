@@ -73,7 +73,7 @@ public class DeleteDatasetLabelsRequest extends Request {
         } 
 
         /**
-         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
+         * <p>The ID of the dataset. For more information about how to obtain the ID of a dataset, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>d-rbvg5****jhc9ks92</p>
@@ -85,7 +85,7 @@ public class DeleteDatasetLabelsRequest extends Request {
         }
 
         /**
-         * <p>The tag key. You can call <a href="https://help.aliyun.com/document_detail/457218.html">GetDataset</a> to obtain the tag key. Multiple tag keys are separated by commas (,).</p>
+         * <p>The keys of the labels. For more information about how to query the keys of labels, see <a href="https://help.aliyun.com/document_detail/457218.html">GetDataset</a>. Separate multiple keys with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>key1,key2</p>

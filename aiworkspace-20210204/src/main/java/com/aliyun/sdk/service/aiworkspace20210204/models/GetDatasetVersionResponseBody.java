@@ -291,7 +291,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of data records.</p>
+         * <p>The data count.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -302,7 +302,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The size of the dataset.</p>
+         * <p>The dataset size.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -313,8 +313,16 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the data source.</p>
+         * <p>The data source type. Valid values:</p>
+         * <ul>
+         * <li>NAS: File Storage NAS.</li>
+         * <li>CPFS: Cloud Parallel File Storage.</li>
+         * <li>OSS: Object Storage Service (OSS).</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
@@ -322,7 +330,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The primary ID of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>d-dkdbnnap0g7b6su4yg</p>
@@ -333,7 +341,10 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * DatasetTaskRamRole.
+         * <p>DatasetTaskRamRole</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1234567890123456:role/role-name</p>
          */
         public Builder datasetTaskRamRole(String datasetTaskRamRole) {
             this.datasetTaskRamRole = datasetTaskRamRole;
@@ -342,6 +353,9 @@ public class GetDatasetVersionResponseBody extends TeaModel {
 
         /**
          * <p>The version description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description of the dataset version.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -349,7 +363,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.sssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-13T10:22:05.694Z</p>
@@ -360,7 +374,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The last modification time.</p>
+         * <p>The last modification time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.sssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-13T10:22:05.694Z</p>
@@ -371,12 +385,31 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dataset configurations to be imported to a storage, such as Object Storage Service (OSS), File Storage NAS (NAS), or Cloud Parallel File Storage (CPFS).</p>
-         * <p><strong>OSS</strong></p>
-         * <p>{ &quot;region&quot;: &quot;${region}&quot;,// The region ID. $bucket = $options[&quot;bucket&quot;]; // The bucket name. &quot;path&quot;: &quot;${path}&quot; // The file path. }</p>
-         * <p><strong>NAS</strong></p>
-         * <p><strong>CPFS</strong></p>
-         * <p><strong>CPFS for Lingjun</strong></p>
+         * <p>The storage import configuration of the dataset. OSS, NAS, and CPFS are supported.</p>
+         * <details>
+         * <summary>OSS</summary>
+         * {
+         * "region": "${region}",// The region ID
+         * "bucket": "${bucket}",// The bucket name
+         * "path": "${path}" // The file path
+         * }
+         * </details>
+         * 
+         * <details>
+         * <summary>NAS</summary>
+         * 
+         * </details>
+         * 
+         * <details>
+         * <summary>CPFS</summary>
+         * Block content
+         * </details>
+         * 
+         * 
+         * <details>
+         * <summary>AI CPFS</summary>
+         * Block content
+         * </details>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -401,10 +434,10 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The access permission on the dataset when the dataset is mounted. Valid values:</p>
+         * <p>The permissions when the dataset is mounted. Valid values:</p>
          * <ul>
-         * <li>RO: read-only permissions</li>
-         * <li>RW: read and write permissions</li>
+         * <li>RO: Read-only mount.</li>
+         * <li>RW: Read/write mount.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -429,7 +462,11 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The property of the dataset.</p>
+         * <p>The property of the dataset. Valid values:</p>
+         * <ul>
+         * <li>DIRECTORY: Directory.</li>
+         * <li>FILE: File.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -452,7 +489,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the source dataset.</p>
+         * <p>The source ID of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>d-rbvg5wzljzjhc9ks92</p>
@@ -463,7 +500,12 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the data source.</p>
+         * <p>The source type. Valid values:</p>
+         * <ul>
+         * <li>ENHANCE: Data augmentation.</li>
+         * <li>ADDVERSION: Added version.</li>
+         * <li>CLEANING: Data cleaning.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>USER</p>
@@ -474,7 +516,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The sample URI of the dataset.</p>
+         * <p>The URI configuration example.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -486,7 +528,10 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * UserMetricsEndpoints.
+         * <p>The list of user metric collection endpoints.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Port&quot;:0,&quot;Path&quot;:&quot;&quot;}]</p>
          */
         public Builder userMetricsEndpoints(java.util.List<UserMetricsEndpoint> userMetricsEndpoints) {
             this.userMetricsEndpoints = userMetricsEndpoints;
@@ -494,7 +539,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version name of the dataset.</p>
+         * <p>The dataset version.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

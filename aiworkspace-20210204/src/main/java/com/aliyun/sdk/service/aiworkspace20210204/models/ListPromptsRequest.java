@@ -130,7 +130,7 @@ public class ListPromptsRequest extends Request {
         } 
 
         /**
-         * <p>The type of the prompt template framework.</p>
+         * <p>The prompt template framework type.</p>
          * 
          * <strong>example:</strong>
          * <p>ICIO</p>
@@ -142,7 +142,7 @@ public class ListPromptsRequest extends Request {
         }
 
         /**
-         * <p>The order of specific fields of results in a paged query (ascending or descending). Default value: ASC.</p>
+         * <p>The sorting order for the specified field during paging. Default value: ASC.</p>
          * <ul>
          * <li>ASC: ascending order.</li>
          * <li>DESC: descending order.</li>
@@ -170,7 +170,7 @@ public class ListPromptsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20.</p>
+         * <p>The page size. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -184,8 +184,8 @@ public class ListPromptsRequest extends Request {
         /**
          * <p>The field used for sorting. Valid values:</p>
          * <ul>
-         * <li>Name: the name of the run.</li>
-         * <li>GmtCreateTime: the time when the run is created.</li>
+         * <li>Name: the run name.</li>
+         * <li>GmtCreateTime (default): the run creation time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class ListPromptsRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

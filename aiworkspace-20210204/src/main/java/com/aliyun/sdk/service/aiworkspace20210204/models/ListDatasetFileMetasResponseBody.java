@@ -146,7 +146,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The metadata records of the dataset files.</p>
+         * <p>The list of dataset file metadata details.</p>
          */
         public Builder datasetFileMetas(java.util.List<DatasetFileMeta> datasetFileMetas) {
             this.datasetFileMetas = datasetFileMetas;
@@ -165,7 +165,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dataset version.</p>
+         * <p>The dataset version name.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -176,7 +176,10 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results returned per request when using NextToken-based pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -184,7 +187,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. If the number of results exceeds the maximum number of entries allowed per page, a pagination token is returned. This token can be used as an input parameter to obtain the next page of results. If all results are obtained, no token is returned.</p>
+         * <p>The pagination token. If the number of results that match the query conditions exceeds the page size, this pagination token is returned. To retrieve the next page of data, pass the returned token value as a request parameter until no token value is returned, which indicates that all data has been retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>90******-f5c5-4cd4-927e-1f45e1cb8b62_1729644433000</p>
@@ -195,7 +198,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The current page size.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

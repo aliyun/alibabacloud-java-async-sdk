@@ -255,7 +255,7 @@ public class ListRunsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the experiment that the run belongs.</p>
+         * <p>The ID of the experiment to which the run belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>exp-1zpfthdx******</p>
@@ -267,7 +267,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard in UTC. Format: YYYY-MM-DDTHH:mm:ss.sssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-30T12:51:33.028Z</p>
@@ -279,10 +279,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The label. Exact match is supported. Valid values:</p>
+         * <p>The labels of the task for exact match. Supported formats:</p>
          * <ul>
-         * <li>Single-label query: Set the value to is_evaluation.</li>
-         * <li>Multi-label query (not recommended in non-special scenarios and may have performance issues): Set the value to is_evaluation:true,LLM_evaluation:true. Multiple labels are separated with commas (,), indicating that the key-value pairs of multiple labels must be matched at the same time.</li>
+         * <li>Single-label query: &quot;is_evaluation:true&quot;</li>
+         * <li>Multi-label scenario (not recommended except in special cases due to potential performance issues): &quot;is_evaluation:true,LLM_evaluation:true&quot; separated by commas (,), indicating that multiple label key-value pairs must all match.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -295,7 +295,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries in the request. Default value: 10.</p>
+         * <p>The maximum number of results to return. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -319,10 +319,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy.</p>
+         * <p>The sorting order for the specified field in a paging query. Used together with SortBy. Valid values:</p>
          * <ul>
-         * <li>ASC</li>
-         * <li>DESC (default)</li>
+         * <li>ASC: Ascending order.</li>
+         * <li>DESC (default): Descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The strings by which the results are sorted. The following parameters can be used to sort the results: GmtCreateTime and Name. The sorting order can be ASC (default) and DESC. Separate multiple strings with commas (,).</p>
+         * <p>A comma-separated list of sorting strings. Supported fields: GmtCreateTime and Name. Supported sorting orders: DESC and ASC. Default: ASC. Separate multiple fields with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>GmtCreateTime DESC,Name ASC</p>
@@ -347,7 +347,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be greater than 0. Default value: 1.</p>
+         * <p>The page number. Valid values: greater than 0. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -359,7 +359,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -371,7 +371,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token, which starts from 0. Default value: 0.</p>
+         * <p>The pagination token. Starts from 0. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -385,8 +385,8 @@ public class ListRunsRequest extends Request {
         /**
          * <p>The field used for sorting. Valid values:</p>
          * <ul>
-         * <li>Name: the name of the run.</li>
-         * <li>GmtCreateTime: the time when the run is created.</li>
+         * <li>Name: The run name.</li>
+         * <li>GmtCreateTime (default): The run creation time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -399,7 +399,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workload associated with the run.</p>
+         * <p>The ID of the PAI workload associated with the run.</p>
          * 
          * <strong>example:</strong>
          * <p>job-rbvg5wzlj****</p>
@@ -411,7 +411,7 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The type of the workload associated with the run.</p>
+         * <p>The type of the PAI workload associated with the run.</p>
          * 
          * <strong>example:</strong>
          * <p>TrainingService</p>
@@ -423,10 +423,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to show detailed information, including Metrics, Params, and Labels. Valid values:</p>
+         * <p>Specifies whether to display detailed information, including Metrics, Params, and Labels. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
+         * <li>true: Detailed information is displayed.</li>
+         * <li>false (default): Detailed information is not displayed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -439,13 +439,13 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace to which the experiment belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The ID of the workspace where the experiment resides. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <blockquote>
-         * <p> If you do not specify a workspace ID, the system returns the runs of the default workspace.</p>
+         * <p>If you do not specify a workspace ID, the system returns the run list of the default workspace.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>22840</p>
+         * <p>228**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

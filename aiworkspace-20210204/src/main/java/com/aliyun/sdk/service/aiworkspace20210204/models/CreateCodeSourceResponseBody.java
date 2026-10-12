@@ -67,7 +67,7 @@ public class CreateCodeSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the created code build.</p>
+         * <p>The ID of the created code configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>code-20********</p>

@@ -67,7 +67,10 @@ public class DatasetFileMetasStat extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The count after aggregation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -75,7 +78,10 @@ public class DatasetFileMetasStat extends TeaModel {
         }
 
         /**
-         * Key.
+         * <p>The metadata property content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cat</p>
          */
         public Builder key(String key) {
             this.key = key;

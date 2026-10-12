@@ -80,7 +80,7 @@ public class ListDatasetJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The jobs in the dataset.</p>
+         * <p>The list of dataset tasks.</p>
          */
         public Builder datasetJobs(java.util.List<DatasetJob> datasetJobs) {
             this.datasetJobs = datasetJobs;
@@ -99,7 +99,10 @@ public class ListDatasetJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of jobs.</p>
+         * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

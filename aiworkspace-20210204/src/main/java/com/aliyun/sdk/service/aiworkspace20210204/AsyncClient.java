@@ -21,7 +21,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation can be called only by the internal system and cannot be called by external users.</p>
+     * <p>This API is for internal system calls only.</p>
      * 
      * @param request the request parameters of AcceptDataworksEvent  AcceptDataworksEventRequest
      * @return AcceptDataworksEventResponse
@@ -90,10 +90,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>When you call this operation, note the following:</p>
      * <ul>
-     * <li>The tag key and value are not empty strings and cannot exceed 128 characters in length.</li>
-     * <li>The tag key cannot start with any of the following strings: &quot;aliyun&quot;, &quot;acs&quot;, &quot;http://&quot;, and &quot;https://&quot;.</li>
+     * <li>The key and value of a label must be a non-empty string with a maximum length of 128 characters.</li>
+     * <li>A label key cannot start with aliyun, acs, http\://, or https\://.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDatasetLabels  CreateDatasetLabelsRequest
@@ -102,6 +102,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDatasetLabelsResponse> createDatasetLabels(CreateDatasetLabelsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates a dataset version.</p>
+     * 
      * @param request the request parameters of CreateDatasetVersion  CreateDatasetVersionRequest
      * @return CreateDatasetVersionResponse
      */
@@ -120,6 +123,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateExperimentResponse> createExperiment(CreateExperimentRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * 
      * @param request the request parameters of CreateImageBuild  CreateImageBuildRequest
      * @return CreateImageBuildResponse
      */
@@ -162,6 +168,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateProductOrdersResponse> createProductOrders(CreateProductOrdersRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description.</h2>
+     * 
      * @param request the request parameters of CreatePrompt  CreatePromptRequest
      * @return CreatePromptResponse
      */
@@ -294,6 +303,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteModelVersionLabelsResponse> deleteModelVersionLabels(DeleteModelVersionLabelsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>When calling this operation, note the following:</p>
+     * <ul>
+     * <li>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</li>
+     * <li>Tag keys cannot start with aliyun, acs, http://, or https://.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeletePrompt  DeletePromptRequest
      * @return DeletePromptResponse
      */
@@ -384,6 +400,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDatasetJobConfigResponse> getDatasetJobConfig(GetDatasetJobConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified dataset version.</p>
+     * 
      * @param request the request parameters of GetDatasetVersion  GetDatasetVersionRequest
      * @return GetDatasetVersionResponse
      */
@@ -613,7 +632,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can use the option parameter to specify query options, so as to obtain different information about the workspaces.</p>
+     * <p>Use the Option parameter to specify different query options and retrieve different workspace-related information.</p>
      * 
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -729,6 +748,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDatasetJobConfigResponse> updateDatasetJobConfig(UpdateDatasetJobConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Updates the information of a specified dataset version.</p>
+     * 
      * @param request the request parameters of UpdateDatasetVersion  UpdateDatasetVersionRequest
      * @return UpdateDatasetVersionResponse
      */
@@ -759,6 +781,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateModelVersionResponse> updateModelVersion(UpdateModelVersionRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description.</h2>
+     * 
      * @param request the request parameters of UpdatePrompt  UpdatePromptRequest
      * @return UpdatePromptResponse
      */

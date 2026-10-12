@@ -95,6 +95,7 @@ public class RunMetric extends TeaModel {
         } 
 
         /**
+         * <p>The metric name.</p>
          * <p>This parameter is required.</p>
          */
         public Builder key(String key) {
@@ -103,7 +104,7 @@ public class RunMetric extends TeaModel {
         }
 
         /**
-         * Step.
+         * <p>The step when the metric was recorded.</p>
          */
         public Builder step(Long step) {
             this.step = step;
@@ -111,7 +112,7 @@ public class RunMetric extends TeaModel {
         }
 
         /**
-         * Timestamp.
+         * <p>The timestamp when the metric was recorded.</p>
          */
         public Builder timestamp(Long timestamp) {
             this.timestamp = timestamp;
@@ -119,6 +120,7 @@ public class RunMetric extends TeaModel {
         }
 
         /**
+         * <p>The metric value.</p>
          * <p>This parameter is required.</p>
          */
         public Builder value(Float value) {

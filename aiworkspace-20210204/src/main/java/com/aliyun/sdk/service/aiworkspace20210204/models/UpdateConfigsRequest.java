@@ -87,7 +87,7 @@ public class UpdateConfigsRequest extends Request {
         }
 
         /**
-         * <p>The list of workspace configurations to update or add.</p>
+         * <p>The list of workspace configurations to update or create.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.putBodyParameter("Configs", configs);
@@ -155,7 +155,7 @@ public class UpdateConfigsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -166,7 +166,7 @@ public class UpdateConfigsRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The value of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>
@@ -262,14 +262,14 @@ public class UpdateConfigsRequest extends Request {
             } 
 
             /**
-             * <p>The category of the configuration item. Supported categories:</p>
+             * <p>The category of the configuration item. Valid values:</p>
              * <ul>
-             * <li>CommonResourceConfig</li>
-             * <li>DLCAutoRecycle</li>
-             * <li>DLCPriorityConfig</li>
-             * <li>DSWPriorityConfig</li>
-             * <li>QuotaMaximumDuration</li>
-             * <li>CommonTagConfig</li>
+             * <li>CommonResourceConfig: general resource configuration.</li>
+             * <li>DLCAutoRecycle: DLC automatic reclamation.</li>
+             * <li>DLCPriorityConfig: DLC priority settings.</li>
+             * <li>DSWPriorityConfig: DSW priority settings.</li>
+             * <li>QuotaMaximumDuration: the maximum running duration of DLC jobs in the quota.</li>
+             * <li>CommonTagConfig: tag settings.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -281,13 +281,13 @@ public class UpdateConfigsRequest extends Request {
             }
 
             /**
-             * <p>The key of the configuration item. Supported keys:</p>
+             * <p>The key of the configuration item. Valid values:</p>
              * <ul>
-             * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
-             * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
-             * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
-             * <li>quotaMaximumDuration: Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
-             * <li>predefinedTags: The predefined tags of the workspace. All created resources must have tags.</li>
+             * <li>tempStoragePath: the temporary storage path. This ConfigKey is valid only when CategoryName is set to CommonResourceConfig.</li>
+             * <li>isAutoRecycle: the automatic reclamation configuration. This ConfigKey is valid only when CategoryName is set to DLCAutoRecycle.</li>
+             * <li>priorityConfig: the priority configuration. This ConfigKey is valid only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
+             * <li>quotaMaximumDuration: the maximum running duration of DLC jobs in the quota. This ConfigKey is valid only when CategoryName is set to QuotaMaximumDuration.</li>
+             * <li>predefinedTags: the preset tags for the workspace. Resources that are created must include these tags.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -299,9 +299,9 @@ public class UpdateConfigsRequest extends Request {
             }
 
             /**
-             * <p>The value of the configuration item.</p>
+             * <p>The configuration value.</p>
              * <ul>
-             * <li>When ConfigKey is predefinedTags, the ConfigValue follows this format: [{&quot;Type&quot;:&quot;Tag&quot;,&quot;Key&quot;:&quot;Key1&quot;,&quot;Value&quot;:&quot;{&quot;Products&quot;:&quot;DLC,DSW,EAS&quot;,&quot;Values&quot;:&quot;value1,value2,value3&quot;}&quot;}]. &quot;Products&quot; indicates the products that use the predefined tags.</li>
+             * <li>If ConfigKey is set to predefinedTags, the ConfigValue format is [{&quot;Type&quot;:&quot;Tag&quot;,&quot;Key&quot;:&quot;Key1&quot;,&quot;Value&quot;:&quot;{\&quot;Products\&quot;:\&quot;DLC,DSW,EAS\&quot;,\&quot;Values\&quot;:\&quot;value1,value2,value3\&quot;}&quot;}]. Products specifies which products use the preset tags.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -313,7 +313,7 @@ public class UpdateConfigsRequest extends Request {
             }
 
             /**
-             * <p>The tags of the configuration item.</p>
+             * <p>The list of labels for the configuration item.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;

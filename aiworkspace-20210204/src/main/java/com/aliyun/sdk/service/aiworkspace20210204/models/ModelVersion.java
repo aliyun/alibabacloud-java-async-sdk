@@ -314,7 +314,15 @@ public class ModelVersion extends TeaModel {
         } 
 
         /**
-         * ApprovalStatus.
+         * <p>The approval status. Valid values:</p>
+         * <ul>
+         * <li>Pending: pending.</li>
+         * <li>Approved: approved for going live.</li>
+         * <li>Rejected: not approved for going live.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Approved</p>
          */
         public Builder approvalStatus(String approvalStatus) {
             this.approvalStatus = approvalStatus;
@@ -322,7 +330,10 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * CompressionSpec.
+         * <p>The compression configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder compressionSpec(java.util.Map<String, ?> compressionSpec) {
             this.compressionSpec = compressionSpec;
@@ -330,7 +341,10 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * DistillationSpec.
+         * <p>The distillation configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder distillationSpec(java.util.Map<String, ?> distillationSpec) {
             this.distillationSpec = distillationSpec;
@@ -338,7 +352,10 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * EvaluationSpec.
+         * <p>The evaluation configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder evaluationSpec(java.util.Map<String, ?> evaluationSpec) {
             this.evaluationSpec = evaluationSpec;
@@ -346,7 +363,13 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * ExtraInfo.
+         * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;CoverUris&quot;: [&quot;<a href="https://e***u.oss-cn-hangzhou.aliyuncs.com/st****017.preview.png%22%5D">https://e***u.oss-cn-hangzhou.aliyuncs.com/st****017.preview.png&quot;]</a>,
+         *     &quot;TrainedWords&quot;: [&quot;albedo_overlord&quot;]
+         * }</p>
          */
         public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
             this.extraInfo = extraInfo;
@@ -354,7 +377,22 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * FormatType.
+         * <p>The model format.</p>
+         * <ul>
+         * <li>OfflineModel</li>
+         * <li>SavedModel</li>
+         * <li>Keras H5</li>
+         * <li>Frozen Pb</li>
+         * <li>Caffe Prototxt</li>
+         * <li>TorchScript</li>
+         * <li>XGBoost</li>
+         * <li>PMML</li>
+         * <li>AlinkModel</li>
+         * <li>ONNX</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SavedModel</p>
          */
         public Builder formatType(String formatType) {
             this.formatType = formatType;
@@ -362,7 +400,19 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * FrameworkType.
+         * <p>The model framework.</p>
+         * <ul>
+         * <li>Pytorch</li>
+         * <li>XGBoost</li>
+         * <li>Keras</li>
+         * <li>Caffe</li>
+         * <li>Alink</li>
+         * <li>Xflow</li>
+         * <li>TensorFlow</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TensorFlow</p>
          */
         public Builder frameworkType(String frameworkType) {
             this.frameworkType = frameworkType;
@@ -370,7 +420,10 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The UTC time of model creation, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -378,7 +431,10 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The UTC time when the model was last updated, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -386,7 +442,13 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * InferenceSpec.
+         * <p>Describes how to apply the model to downstream inference applications, such as specifying the EAS processor or container. Example:
+         * <code>{     &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot;
+         * }</p>
          */
         public Builder inferenceSpec(java.util.Map<String, ?> inferenceSpec) {
             this.inferenceSpec = inferenceSpec;
@@ -394,7 +456,7 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The label list.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -402,7 +464,26 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * Metrics.
+         * <p>The model metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;Results&quot;: [{
+         *     &quot;Dataset&quot;: {
+         *       &quot;DatasetId&quot;: &quot;d-sdkjanksaklerhfd&quot;
+         *     },
+         *     &quot;Metrics&quot;: {
+         *       &quot;cer&quot;: 0.175
+         *     }
+         *   }, {
+         *     &quot;Dataset&quot;: {
+         *       &quot;Uri&quot;: &quot;oss://xxxx/&quot;
+         *     },
+         *     &quot;Metrics&quot;: {
+         *       &quot;cer&quot;: 0.172
+         *     }
+         *   }]
+         * }</p>
          */
         public Builder metrics(java.util.Map<String, ?> metrics) {
             this.metrics = metrics;
@@ -410,7 +491,10 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * Options.
+         * <p>The extended fields. JsonString type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder options(String options) {
             this.options = options;
@@ -418,7 +502,10 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>The Alibaba Cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155770209******</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -426,7 +513,19 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * SourceId.
+         * <p>The source ID.</p>
+         * <ul>
+         * <li><p>If the source type is Custom, this field has no restrictions.</p>
+         * </li>
+         * <li><p>If the source type is PAIFlow or TrainingService, the format is:</p>
+         * </li>
+         * </ul>
+         * <pre><code>region=&lt;region_id&gt;,workspaceId=&lt;workspace_id&gt;,kind=&lt;kind&gt;,id=&lt;id&gt;
+         * </code></pre>
+         * <p>region is the Alibaba Cloud region ID. workspaceId is the workspace ID. kind specifies the type. Valid values: PipelineRun (PAI workflow) and ServiceJob (training service). id is the unique identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region=cn-shanghai,workspaceId=13**,kind=PipelineRun,id=run-sakdb****jdf</p>
          */
         public Builder sourceId(String sourceId) {
             this.sourceId = sourceId;
@@ -434,7 +533,15 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * SourceType.
+         * <p>The model source type. Default value: Custom.</p>
+         * <ul>
+         * <li>Custom: custom.</li>
+         * <li>PAIFlow: PAI workflow.</li>
+         * <li>TrainingService: PAI training service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PAIFlow</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -442,7 +549,10 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * TrainingSpec.
+         * <p>The training configuration. Used for fine-tuning and incremental training.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder trainingSpec(java.util.Map<String, ?> trainingSpec) {
             this.trainingSpec = trainingSpec;
@@ -450,7 +560,10 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * Uri.
+         * <p>The model version URI, which specifies the model storage location. This can be an HTTP(S) address of the model, such as <code>https://myweb.com/mymodel.tar.gz</code>. If the model is stored in OSS, the format is <code>oss://&lt;bucket&gt;.&lt;endpoint&gt;/object</code>. You can query the endpoint in the OSS console. Example: <code>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</p>
          */
         public Builder uri(String uri) {
             this.uri = uri;
@@ -458,7 +571,10 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155770209******</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -466,7 +582,10 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * VersionDescription.
+         * <p>The model version description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sentiment analysis</p>
          */
         public Builder versionDescription(String versionDescription) {
             this.versionDescription = versionDescription;
@@ -474,7 +593,12 @@ public class ModelVersion extends TeaModel {
         }
 
         /**
-         * VersionName.
+         * <p>The model version, unique within the model. If not specified, the first version defaults to <code>0.1.0</code>, and subsequent versions increment the minor version number by 1. For example, the second version defaults to <code>0.2.0</code>.</p>
+         * <p>The version number consists of a major version number, a minor version number, and a stage version number, separated by <code>.</code>. The major and minor version numbers are numeric. The stage version number starts with a digit, followed by <code>_</code> and letters. Examples: 1.1.0 or 2.3.4_beta.</p>
+         * <p>Regular expression reference: <code>&quot;^\\d+\\.\\d+\\.\\d+(_\\w+)?$&quot;</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1.0</p>
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;
@@ -540,7 +664,10 @@ public class ModelVersion extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The key of the label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -548,7 +675,10 @@ public class ModelVersion extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

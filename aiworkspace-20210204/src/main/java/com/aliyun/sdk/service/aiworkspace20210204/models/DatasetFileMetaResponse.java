@@ -97,7 +97,11 @@ public class DatasetFileMetaResponse extends Response {
         } 
 
         /**
+         * <p>The metadata ID of the dataset file.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07914c9534586e4e7aa6e9dbca5009082df*******8a0d857b33296c59bf6</p>
          */
         @Override
         public Builder datasetFileMetaId(String datasetFileMetaId) {
@@ -106,7 +110,11 @@ public class DatasetFileMetaResponse extends Response {
         }
 
         /**
+         * <p>The description of the reason why the metadata operation failed.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not Found</p>
          */
         @Override
         public Builder result(String result) {
@@ -115,7 +123,10 @@ public class DatasetFileMetaResponse extends Response {
         }
 
         /**
-         * Uri.
+         * <p>The file URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://l*****-test/dataset/1653421.jpg</p>
          */
         @Override
         public Builder uri(String uri) {

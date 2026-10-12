@@ -236,7 +236,10 @@ public class CodeSourceItem extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility of the code configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -244,7 +247,14 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * CloneType.
+         * <p>The clone mode. Valid values:</p>
+         * <ul>
+         * <li>0: Create a subdirectory.</li>
+         * <li>1: Tile to the current directory.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cloneType(Integer cloneType) {
             this.cloneType = cloneType;
@@ -252,7 +262,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * CodeBranch.
+         * <p>The code branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder codeBranch(String codeBranch) {
             this.codeBranch = codeBranch;
@@ -260,7 +273,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * CodeCommit.
+         * <p>The code commit ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44da10**********</p>
          */
         public Builder codeCommit(String codeCommit) {
             this.codeCommit = codeCommit;
@@ -268,7 +284,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * CodeRepo.
+         * <p>The address of the code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://code.aliyun.com/">https://code.aliyun.com/</a>****</p>
          */
         public Builder codeRepo(String codeRepo) {
             this.codeRepo = codeRepo;
@@ -276,7 +295,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * CodeRepoAccessToken.
+         * <p>The token used to access code in the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder codeRepoAccessToken(String codeRepoAccessToken) {
             this.codeRepoAccessToken = codeRepoAccessToken;
@@ -284,7 +306,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * CodeRepoUserName.
+         * <p>The username used to access code in the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder codeRepoUserName(String codeRepoUserName) {
             this.codeRepoUserName = codeRepoUserName;
@@ -292,7 +317,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * CodeSourceId.
+         * <p>The code configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code-202**********</p>
          */
         public Builder codeSourceId(String codeSourceId) {
             this.codeSourceId = codeSourceId;
@@ -300,7 +328,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The detailed description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code source of dlc examples</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -308,7 +339,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>The name of the code source configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyCodeSourceName1</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -316,7 +350,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-18T12:52:15Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -324,7 +361,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * GmtModifyTime.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-18T12:52:15Z</p>
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -332,7 +372,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * MountPath.
+         * <p>The local mount path of the code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/code/</p>
          */
         public Builder mountPath(String mountPath) {
             this.mountPath = mountPath;
@@ -340,7 +383,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1157290171663117</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -348,7 +394,10 @@ public class CodeSourceItem extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

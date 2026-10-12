@@ -67,7 +67,10 @@ public class LabelInfo extends TeaModel {
         } 
 
         /**
-         * Key.
+         * <p>Key of Label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -75,7 +78,10 @@ public class LabelInfo extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>Value of Label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         public Builder value(String value) {
             this.value = value;

@@ -93,7 +93,7 @@ public class CreateDatasetFileMetasResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The metadata that failed to be created.</p>
+         * <p>The list of file metadata entries that failed to be created.</p>
          */
         public Builder failedDetails(java.util.List<DatasetFileMetaResponse> failedDetails) {
             this.failedDetails = failedDetails;
@@ -112,12 +112,7 @@ public class CreateDatasetFileMetasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the metadata records of all dataset files were created. The value true indicates that the metadata records of all dataset files are created. If the value is false, view the failure details specified by FailedDetails.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>The status of the batch metadata creation result. A value of true indicates that all entries are created. If the value is false, check FailedDetails.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -128,7 +123,7 @@ public class CreateDatasetFileMetasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The metadata that is created.</p>
+         * <p>The list of file metadata entries that were created.</p>
          */
         public Builder succeedDetails(java.util.List<DatasetFileMetaResponse> succeedDetails) {
             this.succeedDetails = succeedDetails;

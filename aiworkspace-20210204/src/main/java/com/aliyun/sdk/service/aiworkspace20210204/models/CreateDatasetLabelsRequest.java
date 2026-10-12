@@ -73,7 +73,7 @@ public class CreateDatasetLabelsRequest extends Request {
         } 
 
         /**
-         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
+         * <p>The dataset ID. For more information about how to obtain a dataset ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>d-lfd60v0p****ujtsdx</p>
@@ -85,7 +85,7 @@ public class CreateDatasetLabelsRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of labels.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);

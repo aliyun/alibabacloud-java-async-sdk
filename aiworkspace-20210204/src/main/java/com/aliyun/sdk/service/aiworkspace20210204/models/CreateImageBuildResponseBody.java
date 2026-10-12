@@ -67,7 +67,7 @@ public class CreateImageBuildResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>The image build ID.</p>
          * 
          * <strong>example:</strong>
          * <p>build-****ks92</p>
@@ -78,7 +78,10 @@ public class CreateImageBuildResponseBody extends TeaModel {
         }
 
         /**
-         * ImageBuildJobId.
+         * <p>The build task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-****ks92</p>
          */
         public Builder imageBuildJobId(String imageBuildJobId) {
             this.imageBuildJobId = imageBuildJobId;

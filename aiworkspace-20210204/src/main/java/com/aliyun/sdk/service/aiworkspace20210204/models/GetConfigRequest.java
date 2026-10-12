@@ -115,14 +115,14 @@ public class GetConfigRequest extends Request {
         }
 
         /**
-         * <p>The category of the configuration item. Valid values:</p>
+         * <p>The category of the configuration item. The following categories are supported:</p>
          * <ul>
-         * <li>CommonResourceConfig</li>
-         * <li>DLCAutoRecycle</li>
-         * <li>DLCPriorityConfig</li>
-         * <li>DSWPriorityConfig</li>
-         * <li>QuotaMaximumDuration</li>
-         * <li>CommonTagConfig</li>
+         * <li>CommonResourceConfig: common resource configuration</li>
+         * <li>DLCAutoRecycle: DLC automatic reclamation</li>
+         * <li>DLCPriorityConfig: DLC priority settings</li>
+         * <li>DSWPriorityConfig: DSW priority settings</li>
+         * <li>QuotaMaximumDuration: maximum runtime duration configuration for DLC jobs in a quota</li>
+         * <li>CommonTagConfig: tag settings</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,13 +135,13 @@ public class GetConfigRequest extends Request {
         }
 
         /**
-         * <p>The key of the configuration item. Valid values:</p>
+         * <p>The key of the configuration item. The following keys are supported:</p>
          * <ul>
-         * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
-         * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
-         * <li>priorityConfig: Priority configuration. This key can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
-         * <li>quotaMaximumDuration: Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
-         * <li>predefinedTags: Predefined tags of the workspace. Created resources must include tags.</li>
+         * <li>tempStoragePath: the temporary storage path. This key is valid only when CategoryName is set to CommonResourceConfig.</li>
+         * <li>isAutoRecycle: the automatic reclamation configuration. This key is valid only when CategoryName is set to DLCAutoRecycle.</li>
+         * <li>priorityConfig: the priority configuration. This key is valid only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
+         * <li>quotaMaximumDuration: the maximum runtime duration configuration for DLC jobs in a quota. This key is valid only when CategoryName is set to QuotaMaximumDuration.</li>
+         * <li>predefinedTags: the preset tags for the workspace. Resources created in the workspace must include these tags.</li>
          * </ul>
          * 
          * <strong>example:</strong>

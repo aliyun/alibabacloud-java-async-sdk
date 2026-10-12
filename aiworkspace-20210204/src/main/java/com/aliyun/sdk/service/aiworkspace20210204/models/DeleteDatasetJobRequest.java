@@ -75,7 +75,7 @@ public class DeleteDatasetJobRequest extends Request {
         } 
 
         /**
-         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
+         * <p>The ID of the dataset. For more information about how to obtain the dataset ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteDatasetJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the dataset job.</p>
+         * <p>Dataset task ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

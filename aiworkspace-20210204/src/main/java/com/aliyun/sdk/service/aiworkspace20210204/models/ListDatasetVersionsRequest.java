@@ -188,7 +188,7 @@ public class ListDatasetVersionsRequest extends Request {
         } 
 
         /**
-         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
+         * <p>The dataset ID. For information about how to obtain the dataset ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
-         * <p>The dataset tag keys, which are used to filter datasets. Datasets whose tag keys or tag values contain a specified string are filtered.</p>
+         * <p>The dataset label used to filter the dataset list. Datasets whose label key or value contains the specified string are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>key1,key2</p>
@@ -213,7 +213,7 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
-         * <p>The dataset tag values, which are used to filter datasets. Datasets whose tag keys or tag values contain a specified string are filtered.</p>
+         * <p>The dataset label used to filter the dataset list. Datasets whose label key or value contains the specified string are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>value1,value2</p>
@@ -225,9 +225,9 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
-         * <p>The order in which the entries are sorted by the specific field on the returned page. Default value: ASC. Valid values:</p>
+         * <p>The order in which entries are sorted by the specified field in a paged query. Default value: ASC.</p>
          * <ul>
-         * <li>ASC: ascending order</li>
+         * <li>ASC: ascending order.</li>
          * <li>DESC: descending order.</li>
          * </ul>
          * 
@@ -241,7 +241,7 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the dataset list. Minimum value: 1. Default value: 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,7 +254,7 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>The number of entries per page for a paged query. Default value: 10.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,10 +267,10 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
-         * <p>The dataset properties. Valid values:</p>
+         * <p>The dataset property. Valid values:</p>
          * <ul>
-         * <li>DIRECTORY</li>
-         * <li>FILE</li>
+         * <li>DIRECTORY: folder.</li>
+         * <li>FILE: file.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,17 +283,22 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
-         * <p>The field used to sort the results in queries by page. Default value: GmtCreateTime.
-         * Valid values:</p>
+         * <p>The field by which entries are sorted in a paged query. Default value: GmtCreateTime. Valid values:</p>
          * <ul>
-         * <li>SourceType</li>
-         * <li>DataSourceType</li>
-         * <li>DataSize</li>
-         * <li>DataCount</li>
-         * <li>Property</li>
-         * <li>GmtCreateTime: The results are sorted by creation time. This is the default value.</li>
-         * <li>GmtModifiedTime: The results are sorted by modification time.</li>
-         * <li>DatasetId</li>
+         * <li><p>GmtCreateTime (default): sort by creation time.</p>
+         * </li>
+         * <li><p>GmtModifiedTime: sort by modification time.</p>
+         * </li>
+         * <li><p>SourceType</p>
+         * </li>
+         * <li><p>DataSourceType</p>
+         * </li>
+         * <li><p>Property</p>
+         * </li>
+         * <li><p>DataSize</p>
+         * </li>
+         * <li><p>DataCount</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,9 +313,9 @@ public class ListDatasetVersionsRequest extends Request {
         /**
          * <p>The data source ID.</p>
          * <ul>
-         * <li>If SourceType is set to USER, the value of SourceId is a custom string.</li>
-         * <li>If SourceType is set to ITAG, the value of SourceId is the ID of the labeling job of iTAG.</li>
-         * <li>If SourceType is set to PAI_PUBLIC_DATASET, SourceId is empty by default.</li>
+         * <li>If SourceTypes is set to USER, SourceId can be customized.</li>
+         * <li>If SourceTypes is set to ITAG, which indicates a dataset generated from iTAG labeling results, SourceId is the iTAG task ID.</li>
+         * <li>If SourceTypes is set to PAI_PUBLIC_DATASET, which indicates a dataset created from a PAI public dataset, SourceId is empty by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,9 +330,9 @@ public class ListDatasetVersionsRequest extends Request {
         /**
          * <p>The source type. Valid values:</p>
          * <ul>
-         * <li>PAI-PUBLIC-DATASET: a public dataset of Platform for AI (PAI).</li>
-         * <li>ITAG: a dataset generated from a labeling job of iTAG.</li>
-         * <li>USER: a dataset registered by a user.</li>
+         * <li>PAI-PUBLIC-DATASET: PAI public dataset.</li>
+         * <li>ITAG: dataset generated from iTAG labeling results.</li>
+         * <li>USER: dataset registered by a user.</li>
          * </ul>
          * 
          * <strong>example:</strong>

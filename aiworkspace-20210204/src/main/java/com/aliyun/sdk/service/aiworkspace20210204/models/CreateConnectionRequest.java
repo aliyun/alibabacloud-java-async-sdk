@@ -173,11 +173,7 @@ public class CreateConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The accessibility of the workspace. Valid values:</p>
-         * <ul>
-         * <li>PRIVATE: The workspace is accessible only to you and the administrator of the workspace. This is the default value.</li>
-         * <li>PUBLIC: The workspace is accessible to all users in the workspace.</li>
-         * </ul>
+         * <p>The visibility of the workspace. The default value is <code>PRIVATE</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
@@ -189,7 +185,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The connection configurations, in key-value pairs. The key varies based on the connection type. For more information, see the supplementary notes below the request parameters.</p>
+         * <p>Configuration properties for the connection, provided as key-value pairs. The required keys depend on the connection type. For details, see the supplementary parameter information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder configs(java.util.Map<String, String> configs) {
@@ -199,7 +195,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The connection name.</p>
+         * <p>The name of the connection.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,18 +208,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The connection type. Valid values:</p>
-         * <ul>
-         * <li>DashScopeConnection: Alibaba Cloud Model Studio connection</li>
-         * <li>OpenLLMConnection: open source model connection</li>
-         * <li>MilvusConnection: Milvus connection</li>
-         * <li>OpenSearchConnection: OpenSearch connection</li>
-         * <li>LindormConnection: Lindorm connection</li>
-         * <li>ElasticsearchConnection: Elasticsearch connection</li>
-         * <li>HologresConnection: Hologres connection</li>
-         * <li>RDSConnection: RDS connection</li>
-         * <li>CustomConnection: custom connection</li>
-         * </ul>
+         * <p>The type of the connection.</p>
          * 
          * <strong>example:</strong>
          * <p>DashScopeConnection</p>
@@ -235,7 +220,10 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The connection description.</p>
+         * <p>The description of the connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open-source LLM service connection.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -244,7 +232,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The models, which apply to model service connections.</p>
+         * <p>A list of models. This parameter applies to model service connections.</p>
          */
         public Builder models(java.util.List<Models> models) {
             this.putBodyParameter("Models", models);
@@ -253,7 +241,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The instance resource information of the connection, which applies to database connections.</p>
+         * <p>Resource metadata for the connection. This parameter is typically used for database connection types.</p>
          */
         public Builder resourceMeta(ResourceMeta resourceMeta) {
             this.putBodyParameter("ResourceMeta", resourceMeta);
@@ -262,7 +250,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The configuration to be encrypted. Examples: the database logon account and password and the key of the model service.</p>
+         * <p>Sensitive connection properties that require encryption, such as database credentials or an API key for a model service.</p>
          */
         public Builder secrets(java.util.Map<String, String> secrets) {
             this.putBodyParameter("Secrets", secrets);
@@ -271,7 +259,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The ID of the workspace. To get this ID, call the <a href="https://help.aliyun.com/document_detail/449124.html"><code>ListWorkspaces</code></a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>123**45</p>
@@ -421,6 +409,9 @@ public class CreateConnectionRequest extends Request {
 
             /**
              * <p>The display name of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Language model</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -428,7 +419,10 @@ public class CreateConnectionRequest extends Request {
             }
 
             /**
-             * MaxModelLength.
+             * <p>The context length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4096</p>
              */
             public Builder maxModelLength(Long maxModelLength) {
                 this.maxModelLength = maxModelLength;
@@ -436,7 +430,7 @@ public class CreateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The model identifier.</p>
+             * <p>The model identifier. This value corresponds to the <code>model</code> parameter in an OpenAI API request.</p>
              * 
              * <strong>example:</strong>
              * <p>model_001</p>
@@ -447,12 +441,7 @@ public class CreateConnectionRequest extends Request {
             }
 
             /**
-             * <p>The model type. Valid values:</p>
-             * <ul>
-             * <li>LLM</li>
-             * <li>Embedding</li>
-             * <li>ReRank</li>
-             * </ul>
+             * <p>The model type.</p>
              * 
              * <strong>example:</strong>
              * <p>LLM</p>
@@ -463,7 +452,10 @@ public class CreateConnectionRequest extends Request {
             }
 
             /**
-             * SupportReasoning.
+             * <p>Specifies whether the model supports deep reasoning and can output the reasoning process as <code>reasoning_content</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportReasoning(Boolean supportReasoning) {
                 this.supportReasoning = supportReasoning;
@@ -471,7 +463,10 @@ public class CreateConnectionRequest extends Request {
             }
 
             /**
-             * SupportResponseSchema.
+             * <p>Specifies whether the model supports structured output in the OpenAI API\&quot;s JSON Schema format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportResponseSchema(Boolean supportResponseSchema) {
                 this.supportResponseSchema = supportResponseSchema;
@@ -479,7 +474,10 @@ public class CreateConnectionRequest extends Request {
             }
 
             /**
-             * SupportVision.
+             * <p>Specifies whether the model supports visual understanding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder supportVision(Boolean supportVision) {
                 this.supportVision = supportVision;
@@ -487,11 +485,7 @@ public class CreateConnectionRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether a tool can be called by using ToolCall. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
+             * <p>Specifies whether the model supports tool calling.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -574,7 +568,10 @@ public class CreateConnectionRequest extends Request {
             } 
 
             /**
-             * Extra.
+             * <p>Additional configuration information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vpcId&quot;:&quot;vpc-xxxx&quot;}</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -594,6 +591,9 @@ public class CreateConnectionRequest extends Request {
 
             /**
              * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test instance.</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

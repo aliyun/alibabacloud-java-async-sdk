@@ -81,7 +81,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
          * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234</p>
+         * <p>12**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

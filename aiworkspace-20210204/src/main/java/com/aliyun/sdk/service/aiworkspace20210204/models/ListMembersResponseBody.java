@@ -80,7 +80,7 @@ public class ListMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The members.</p>
+         * <p>The list of members.</p>
          */
         public Builder members(java.util.List<Members> members) {
             this.members = members;
@@ -99,7 +99,7 @@ public class ListMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of members that meet the filter conditions.</p>
+         * <p>The total number of members that meet the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -246,7 +246,10 @@ public class ListMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>The account name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testAccount</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -254,7 +257,15 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * AccountType.
+             * <p>The account type of the member. Valid values:</p>
+             * <ul>
+             * <li>1: Alibaba Cloud account.</li>
+             * <li>5: RAM user.</li>
+             * <li>6: RAM role.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -273,7 +284,7 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the user is created, in UTC. The time follows the ISO 8601 standard.</p>
+             * <p>The creation time in UTC. The time follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-21T17:12:35.232Z</p>

@@ -208,7 +208,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the job is started.</p>
+         * <p>The time when the job was started, in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-15T07:06:42Z</p>
@@ -220,6 +220,9 @@ public class GetDatasetJobResponseBody extends TeaModel {
 
         /**
          * <p>The job description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a job description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -238,7 +241,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the job ends.</p>
+         * <p>The time when the job ended, in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-16T02:03:23Z</p>
@@ -249,13 +252,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The action that is performed on the job.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>SemanticIndex: semantic indexing</li>
-         * <li>IntelligentTag: smart labeling</li>
-         * <li>FileMetaExport: metadata export</li>
-         * </ul>
+         * <p>The job action.</p>
          * 
          * <strong>example:</strong>
          * <p>SemanticIndex</p>
@@ -267,10 +264,6 @@ public class GetDatasetJobResponseBody extends TeaModel {
 
         /**
          * <p>The job mode.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>Full: full data mode.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Full</p>
@@ -284,7 +277,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
          * <p>The job details.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;modelId&quot;:&quot;xxx&quot;}</p>
+         * <p>{\&quot;modelId\&quot;:\&quot;xxx\&quot;}</p>
          */
         public Builder jobSpec(String jobSpec) {
             this.jobSpec = jobSpec;
@@ -292,7 +285,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job logs.</p>
+         * <p>The list of task logs.</p>
          */
         public Builder logs(java.util.List<String> logs) {
             this.logs = logs;
@@ -311,17 +304,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job state.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Succeeded</li>
-         * <li>Failed</li>
-         * <li>Running</li>
-         * <li>Pending</li>
-         * <li>PartialFailed</li>
-         * <li>Deleting</li>
-         * <li>ManuallyStop</li>
-         * </ul>
+         * <p>The job status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -332,7 +315,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of job files.</p>
+         * <p>The total number of files in the job.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>

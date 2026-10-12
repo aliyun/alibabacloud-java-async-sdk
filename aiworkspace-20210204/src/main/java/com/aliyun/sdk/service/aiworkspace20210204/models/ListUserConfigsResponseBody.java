@@ -80,7 +80,7 @@ public class ListUserConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configurations list.</p>
+         * <p>The list of configurations.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -99,7 +99,7 @@ public class ListUserConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of items returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -194,7 +194,7 @@ public class ListUserConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category. Currently, only DataPrivacyConfig is supported.</p>
+             * <p>The category. Only DataPrivacyConfig is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>DataPrivacyConfig</p>
@@ -205,7 +205,7 @@ public class ListUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the configuration item.</p>
+             * <p>The configuration key.</p>
              * 
              * <strong>example:</strong>
              * <p>customizePAIAssumedRole</p>
@@ -216,7 +216,7 @@ public class ListUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the configuration item.</p>
+             * <p>The configuration value.</p>
              * 
              * <strong>example:</strong>
              * <p>role</p>
@@ -227,7 +227,7 @@ public class ListUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope. Currently, subUser and owner are supported.</p>
+             * <p>The scope. Supported values are subUser and owner.</p>
              * 
              * <strong>example:</strong>
              * <p>subUser</p>

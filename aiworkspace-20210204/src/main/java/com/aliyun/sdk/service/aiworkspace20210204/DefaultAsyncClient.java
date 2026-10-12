@@ -71,27 +71,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("eu-west-1-oxs", "aiworkspace.aliyuncs.com"),
             new TeaPair("me-east-1", "aiworkspace.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "aiworkspace.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "aiworkspace.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "aiworkspace.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "aiworkspace.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "aiworkspace.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "aiworkspace.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "aiworkspace.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "aiworkspace.cn-guangzhou.aliyuncs.com	"),
-            new TeaPair("cn-beijing", "aiworkspace.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "aiworkspace.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "aiworkspace.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "aiworkspace.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "aiworkspace.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "aiworkspace.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "aiworkspace.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "aiworkspace.eu-central-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "aiworkspace.na-south-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "aiworkspace.us-east-1.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "aiworkspace.us-southeast-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "aiworkspace.us-west-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "aiworkspace.ap-south-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "aiworkspace.cn-shanghai-finance-1.aliyuncs.com")
+            new TeaPair("cn-guangzhou", "aiworkspace.cn-guangzhou.aliyuncs.com	")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -103,7 +83,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation can be called only by the internal system and cannot be called by external users.</p>
+     * <p>This API is for internal system calls only.</p>
      * 
      * @param request the request parameters of AcceptDataworksEvent  AcceptDataworksEventRequest
      * @return AcceptDataworksEventResponse
@@ -304,10 +284,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>When you call this operation, note the following:</p>
      * <ul>
-     * <li>The tag key and value are not empty strings and cannot exceed 128 characters in length.</li>
-     * <li>The tag key cannot start with any of the following strings: &quot;aliyun&quot;, &quot;acs&quot;, &quot;http://&quot;, and &quot;https://&quot;.</li>
+     * <li>The key and value of a label must be a non-empty string with a maximum length of 128 characters.</li>
+     * <li>A label key cannot start with aliyun, acs, http\://, or https\://.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDatasetLabels  CreateDatasetLabelsRequest
@@ -328,6 +308,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a dataset version.</p>
+     * 
      * @param request the request parameters of CreateDatasetVersion  CreateDatasetVersionRequest
      * @return CreateDatasetVersionResponse
      */
@@ -382,6 +365,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * 
      * @param request the request parameters of CreateImageBuild  CreateImageBuildRequest
      * @return CreateImageBuildResponse
      */
@@ -508,6 +494,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description.</h2>
+     * 
      * @param request the request parameters of CreatePrompt  CreatePromptRequest
      * @return CreatePromptResponse
      */
@@ -904,6 +893,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When calling this operation, note the following:</p>
+     * <ul>
+     * <li>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</li>
+     * <li>Tag keys cannot start with aliyun, acs, http://, or https://.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeletePrompt  DeletePromptRequest
      * @return DeletePromptResponse
      */
@@ -1174,6 +1170,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified dataset version.</p>
+     * 
      * @param request the request parameters of GetDatasetVersion  GetDatasetVersionRequest
      * @return GetDatasetVersionResponse
      */
@@ -1859,7 +1858,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can use the option parameter to specify query options, so as to obtain different information about the workspaces.</p>
+     * <p>Use the Option parameter to specify different query options and retrieve different workspace-related information.</p>
      * 
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -2203,6 +2202,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the information of a specified dataset version.</p>
+     * 
      * @param request the request parameters of UpdateDatasetVersion  UpdateDatasetVersionRequest
      * @return UpdateDatasetVersionResponse
      */
@@ -2293,6 +2295,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description.</h2>
+     * 
      * @param request the request parameters of UpdatePrompt  UpdatePromptRequest
      * @return UpdatePromptResponse
      */

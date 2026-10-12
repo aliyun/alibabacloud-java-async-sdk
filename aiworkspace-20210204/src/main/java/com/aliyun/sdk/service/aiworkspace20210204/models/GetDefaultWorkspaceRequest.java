@@ -59,10 +59,12 @@ public class GetDefaultWorkspaceRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to show the details of the default workspace. The details include the conditions of the workspace in different phases. Valid values:</p>
+         * <p>Specifies whether to return detailed information about the default workspace. The detailed information includes the Conditions list. Valid values:</p>
          * <ul>
-         * <li>false (default)</li>
-         * <li>true</li>
+         * <li><p>false (default): Detailed information is not returned.</p>
+         * </li>
+         * <li><p>true: Detailed information is returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

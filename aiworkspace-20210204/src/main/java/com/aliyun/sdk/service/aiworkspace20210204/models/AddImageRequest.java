@@ -201,10 +201,10 @@ public class AddImageRequest extends Request {
         } 
 
         /**
-         * <p>The accessibility of the image. Valid values:</p>
+         * <p>The visibility of the image. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: The image is accessible to all members in the workspace.</li>
-         * <li>PRIVATE: The image is accessible only to the image creator.</li>
+         * <li>PUBLIC: All members in the current workspace can access the image.</li>
+         * <li>PRIVATE: Only the creator can access the image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,10 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * <p>The image description.</p>
+         * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NLP model compression training image</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -226,7 +229,7 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * <p>The image ID. If you do not specify this parameter, the system automatically generates an image ID. The image ID must start with image- followed by 18 characters in letters or digits.</p>
+         * <p>The image ID. If you do not specify this parameter, the system automatically generates one. The format is image- followed by 18 uppercase or lowercase letters or digits.</p>
          * 
          * <strong>example:</strong>
          * <p>image-k83*****cv</p>
@@ -238,7 +241,7 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * <p>The URL of the image, which can be repeated. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImage</a> to view the image URL.</p>
+         * <p>The image URI, which can be duplicated. For information about how to view the image URI, see <a href="https://help.aliyun.com/document_detail/449118.html">ListImage</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +254,9 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * <p>The image tag, which is an array. Each element in the array contains a key-value pair. Alibaba Cloud images have the system.official=true tag. You can add the following keys to an image:</p>
+         * <p>The image labels. This is an array in which each item contains a key field and a value field.
+         * Official images have the following label: system.official=true
+         * The following keys are supported:</p>
          * <ul>
          * <li>system.chipType</li>
          * <li>system.dsw.cudaVersion</li>
@@ -280,11 +285,11 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * <p>The image name. The name must meet the following requirements:</p>
+         * <p>The image name. Naming rules:</p>
          * <ul>
          * <li>The name must be 1 to 50 characters in length.</li>
-         * <li>The name can contain lowercase letters, digits, and hyphens (-). The name must start with a lowercase letter.</li>
-         * <li>The name must be unique in a workspace.</li>
+         * <li>The name can contain lowercase letters, digits, and hyphens (-), and must start with a letter.</li>
+         * <li>The name must be unique within the same workspace.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -298,7 +303,7 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * <p>The size of the image. Unit: GB.</p>
+         * <p>The image size, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -310,7 +315,10 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * <p>The image source ID. If the image source type is Build, the source ID corresponds to the image build ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>build-****ks92</p>
          */
         public Builder sourceId(String sourceId) {
             this.putBodyParameter("SourceId", sourceId);
@@ -319,7 +327,14 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The image source type. Valid values:</p>
+         * <ul>
+         * <li>Import: import.</li>
+         * <li>Build: generate.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Build</p>
          */
         public Builder sourceType(String sourceType) {
             this.putBodyParameter("SourceType", sourceType);
@@ -328,7 +343,7 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The user ID (UID) of the image creator.</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("UserId", userId);
@@ -337,7 +352,7 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The ID of the workspace to which the image belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>15******45</p>
@@ -408,7 +423,7 @@ public class AddImageRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>system.chipType</p>
@@ -419,7 +434,7 @@ public class AddImageRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>GPU</p>

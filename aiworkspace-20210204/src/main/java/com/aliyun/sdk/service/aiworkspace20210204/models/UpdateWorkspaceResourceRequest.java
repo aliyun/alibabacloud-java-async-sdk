@@ -158,7 +158,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The workspace ID. For information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the resource is the default resource. This parameter can only be set to true and cannot be set to false.</p>
+         * <p>Specifies whether to set the resource as the default resource for the workspace. Currently, only <code>true</code> is a valid value.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -195,7 +195,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * <p>The resource tags. If you specify multiple tags, only resources that meet all the specified tag-based filter conditions are returned.</p>
+         * <p>An array of tags. The update affects only resources that have all of the specified tags.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
@@ -204,7 +204,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * <p>**This field is no longer used and will be removed. Use the ResourceType field.</p>
+         * <p><strong>This parameter is deprecated. Use <code>ResourceType</code> instead.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
@@ -216,8 +216,8 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * <p>The resource IDs.</p>
-         * <p>You cannot leave both GroupName and ResourceIds empty. If you specify both the parameters, the value of GroupName of each resource ID in the dataset must be the same.</p>
+         * <p>An array of resource IDs.</p>
+         * <p>You cannot leave both <code>GroupName</code> and <code>ResourceIds</code> empty. If you specify both parameters, the group name must be the same for all specified resource IDs.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putBodyParameter("ResourceIds", resourceIds);
@@ -226,13 +226,24 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * <p>The resource type. Valid values:</p>
+         * <p>The resource type. Valid values are:</p>
          * <ul>
-         * <li>MaxCompute</li>
-         * <li>ECS</li>
-         * <li>Lingjun</li>
-         * <li>ACS</li>
-         * <li>FLINK</li>
+         * <li><p>MaxCompute: MaxCompute resources.</p>
+         * </li>
+         * <li><p>ECS: General-purpose computing resources.</p>
+         * </li>
+         * <li><p>Lingjun: Lingjun intelligent computing resources.</p>
+         * </li>
+         * <li><p>ACS: ACS computing resources.</p>
+         * </li>
+         * <li><p>Flink: Flink resources.</p>
+         * </li>
+         * <li><p>SelfManagedAckPro: Resources for self-managed ACK Pro clusters.</p>
+         * </li>
+         * <li><p>SelfManagedAckLingjun: Resources for self-managed ACK Lingjun clusters.</p>
+         * </li>
+         * <li><p>SelfManagedASI: Resources for self-managed clusters on third-party clouds.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,7 +256,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * <p>The specification of the resource.</p>
+         * <p>The specifications of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -318,7 +329,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>system.******</p>
@@ -329,7 +340,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>

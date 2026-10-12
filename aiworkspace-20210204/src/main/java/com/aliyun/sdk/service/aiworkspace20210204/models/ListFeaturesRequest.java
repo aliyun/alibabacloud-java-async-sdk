@@ -59,7 +59,10 @@ public class ListFeaturesRequest extends Request {
         } 
 
         /**
-         * Names.
+         * <p>Feature names, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PaiConsole:IntegrateWithWorkspace</p>
          */
         public Builder names(String names) {
             this.putQueryParameter("Names", names);

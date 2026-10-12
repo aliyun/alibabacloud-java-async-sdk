@@ -186,7 +186,7 @@ public class UpdateCodeSourceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the code build. You can call CreateCodeSource, GetCodeSource, or ListCodeSources to obtain the ID of the code build.</p>
+         * <p>The ID of the code source configuration. You can obtain the ID by calling the CreateCodeSource, GetCodeSource, or ListCodeSources operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,14 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * CloneType.
+         * <p>The clone mode. Valid values:</p>
+         * <ul>
+         * <li>0 (default): creates a new subdirectory.</li>
+         * <li>1: tiles to the current directory.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cloneType(Integer cloneType) {
             this.putBodyParameter("CloneType", cloneType);
@@ -208,7 +215,7 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * <p>The name of the code branch.</p>
+         * <p>The branch name of the code.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -220,7 +227,7 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * <p>The code commit ID.</p>
+         * <p>The commit ID of the code.</p>
          * 
          * <strong>example:</strong>
          * <p>3a6*****</p>
@@ -232,7 +239,7 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * <p>The address of the code repository.</p>
+         * <p>The URL of the code repository.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://code.aliyun.com/">https://code.aliyun.com/</a>******</p>
@@ -244,7 +251,7 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * <p>The access token corresponding to the username.</p>
+         * <p>The access token associated with the username.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -256,7 +263,7 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * <p>The username used to access the code repository.</p>
+         * <p>The username used to access the access code repository.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-user</p>
@@ -268,7 +275,10 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * <p>The description of the code build.</p>
+         * <p>The description of the code source configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用于XX的训练代码</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -277,7 +287,7 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * <p>The name of the code build.</p>
+         * <p>The name of the code source configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>MyCodeSource1</p>

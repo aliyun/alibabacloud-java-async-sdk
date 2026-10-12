@@ -54,7 +54,7 @@ public class UpdateDefaultWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>17915******4216</p>

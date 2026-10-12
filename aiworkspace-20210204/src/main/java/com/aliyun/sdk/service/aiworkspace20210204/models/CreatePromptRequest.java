@@ -131,10 +131,10 @@ public class CreatePromptRequest extends Request {
         } 
 
         /**
-         * <p>The visibility of the prompt in the workspace. Valid values:</p>
+         * <p>The workspace visibility. Valid values:</p>
          * <ul>
-         * <li>PRIVATE (default): Visible only to you and the administrator of the workspace.</li>
-         * <li>PUBLIC: Visible to all users in the workspace.</li>
+         * <li>PRIVATE (default): Visible only to you and administrators in this workspace.</li>
+         * <li>PUBLIC: Visible to everyone in this workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,10 @@ public class CreatePromptRequest extends Request {
         }
 
         /**
-         * <p>The description of the prompt.</p>
+         * <p>The prompt description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a prompt for information extraction in autonomous driving highway scenarios, focusing on extracting lane and weather information</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -156,7 +159,16 @@ public class CreatePromptRequest extends Request {
         }
 
         /**
-         * <p>The content of the prompt framework.</p>
+         * <p>The prompt framework content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;context&quot;:&quot;You are an experienced driver with ten years of driving experience. Please analyze and make judgments about the following image scenarios.&quot;,
+         *   &quot;inputData&quot;:&quot;{
+         *     \&quot;Reflective strips\&quot;: \&quot;Usually yellow or yellow-black alternating, attached to permanent protruding obstacles such as wall corners to remind drivers to avoid them.\&quot;,
+         *     \&quot;Ground lock\&quot;: \&quot;Also called a parking space lock. When raised, it prevents the parking space from being occupied. When a ground lock is present, you must indicate whether it is in the raised or lowered state.\&quot;,
+         *   }&quot;
+         * }</p>
          */
         public Builder frameworkContent(String frameworkContent) {
             this.putBodyParameter("FrameworkContent", frameworkContent);
@@ -166,13 +178,6 @@ public class CreatePromptRequest extends Request {
 
         /**
          * <p>The prompt optimization template.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ICIO</li>
-         * <li>CRISPE</li>
-         * <li>RASCEF</li>
-         * <li>RAW</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ICIO</p>
@@ -184,8 +189,11 @@ public class CreatePromptRequest extends Request {
         }
 
         /**
-         * <p>The name of the prompt.</p>
+         * <p>The prompt name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Autonomous driving highway information extraction</p>
          */
         public Builder promptName(String promptName) {
             this.putBodyParameter("PromptName", promptName);
@@ -194,7 +202,7 @@ public class CreatePromptRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The workspace ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -88,7 +88,7 @@ public class GetMemberRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class GetMemberRequest extends Request {
         }
 
         /**
-         * <p>The member ID. You must specify only one of the following parameters: UserId and MemberId.</p>
+         * <p>The member UID. You must specify either UserId or MemberId. You cannot specify both at the same time.</p>
          * 
          * <strong>example:</strong>
          * <p>145883-21513926******88039</p>
@@ -113,7 +113,8 @@ public class GetMemberRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You can call <a href="https://help.aliyun.com/document_detail/449133.html">ListWorkspaceUsers</a> to obtain the ID of the Alibaba Cloud account. You must specify only one of the following parameters: UserId and MemberId.</p>
+         * <p>The user UID. For information about how to view the user UID, see <a href="https://help.aliyun.com/document_detail/449133.html">ListWorkspaceUsers</a>.
+         * You must specify either UserId or MemberId. You cannot specify both at the same time.</p>
          * 
          * <strong>example:</strong>
          * <p>21513926******88039</p>

@@ -80,7 +80,7 @@ public class ListModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The models.</p>
+         * <p>The list of models.</p>
          */
         public Builder models(java.util.List<Model> models) {
             this.models = models;

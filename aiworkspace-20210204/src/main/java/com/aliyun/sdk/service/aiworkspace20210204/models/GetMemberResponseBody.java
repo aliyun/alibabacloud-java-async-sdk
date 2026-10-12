@@ -145,7 +145,10 @@ public class GetMemberResponseBody extends TeaModel {
         } 
 
         /**
-         * AccountType.
+         * <p>The account type of the member. Valid values: 1: primary account. 5: sub-account. 6: role account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder accountType(String accountType) {
             this.accountType = accountType;
@@ -164,7 +167,7 @@ public class GetMemberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the workspace is created, in UTC. The time follows the ISO 8601 standard.</p>
+         * <p>The creation time in UTC, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>

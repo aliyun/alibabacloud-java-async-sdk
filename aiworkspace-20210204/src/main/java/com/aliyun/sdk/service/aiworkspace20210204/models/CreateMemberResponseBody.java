@@ -67,7 +67,7 @@ public class CreateMemberResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned members.</p>
+         * <p>The list of members.</p>
          */
         public Builder members(java.util.List<Members> members) {
             this.members = members;

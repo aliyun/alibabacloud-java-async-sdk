@@ -93,7 +93,7 @@ public class ListRunsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination token that is used to retrieve the next page. You do not need to specify this parameter for the first request. You must specify the pagination token in the result of the previous query. If the pagination token is 0, no next page exists. You can obtain the pagination token that is used to retrieve the next page in the value of the <strong>NextPageToken</strong> field.</p>
+         * <p>The pagination token. Pass an empty value for the first page query. The query result returns the token for the next page. A token value of 0 indicates that all data has been retrieved. You can obtain the token for the next page from the NextPageToken field in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -104,7 +104,7 @@ public class ListRunsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The runs.</p>
+         * <p>The list of runs.</p>
          */
         public Builder runs(java.util.List<Run> runs) {
             this.runs = runs;
@@ -112,7 +112,7 @@ public class ListRunsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned. By default, this parameter is not returned.</p>
+         * <p>The total number of records that match the request conditions. This is an optional parameter and may not be returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

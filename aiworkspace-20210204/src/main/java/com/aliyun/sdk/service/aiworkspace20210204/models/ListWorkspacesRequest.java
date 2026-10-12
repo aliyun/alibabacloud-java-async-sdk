@@ -227,7 +227,7 @@ public class ListWorkspacesRequest extends Request {
         } 
 
         /**
-         * <p>The list of returned fields of workspace details. Used to limit the fields in the returned results. Separate multiple fields with commas (,). Currently, only Id is supported, which is the workspace ID.</p>
+         * <p>The list of fields to return in the workspace details. Use this parameter to limit the workspace properties included in the response. Separate multiple properties with commas (,). Currently, only Id (workspace ID) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Id</p>
@@ -239,7 +239,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The modules, separated by commas (,). Default value: PAI.</p>
+         * <p>The comma-separated module list. Default value: PAI.</p>
          * 
          * <strong>example:</strong>
          * <p>PAI</p>
@@ -253,8 +253,8 @@ public class ListWorkspacesRequest extends Request {
         /**
          * <p>The query options. Valid values:</p>
          * <ul>
-         * <li>GetWorkspaces (default): Obtains a list of Workspaces.</li>
-         * <li>GetResourceLimits: Obtains a list of ResourceLimits.</li>
+         * <li>GetWorkspaces (default): retrieves the workspace list and returns Workspaces.</li>
+         * <li>GetResourceLimits: retrieves resource limits and returns ResourceLimits.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -267,9 +267,9 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The order of results (ascending or descending). Valid values:</p>
+         * <p>The sort order applied to the specified sort field in a paged query. Valid values:</p>
          * <ul>
-         * <li>ASC: ascending order. This is the default value.</li>
+         * <li>ASC (default): ascending order.</li>
          * <li>DESC: descending order.</li>
          * </ul>
          * 
@@ -283,7 +283,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the workspace list. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the workspace list. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -295,7 +295,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * <p>The number of entries per page for a paged query. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -307,7 +307,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. To obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * <p>The resource group ID. For information about how to view the resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmwp7rky****</p>
@@ -319,10 +319,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>Specifies how to sort the results. Default value: GmtCreateTime. Valid values:</p>
+         * <p>The sort field for a paged query. Default value: GmtCreateTime. Valid values:</p>
          * <ul>
-         * <li>GmtCreateTime: Sort by the time when created.</li>
-         * <li>GmtModifiedTime: Sort by the time when modified.</li>
+         * <li>GmtCreateTime (default): sorts by creation time.</li>
+         * <li>GmtModifiedTime: sorts by modification time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -337,12 +337,12 @@ public class ListWorkspacesRequest extends Request {
         /**
          * <p>The workspace status. Valid values:</p>
          * <ul>
-         * <li>ENABLED</li>
-         * <li>INITIALIZING</li>
-         * <li>FAILURE</li>
-         * <li>DISABLED</li>
-         * <li>FROZEN</li>
-         * <li>UPDATING</li>
+         * <li>ENABLED: normal.</li>
+         * <li>INITIALIZING: initializing.</li>
+         * <li>FAILURE: failed.</li>
+         * <li>DISABLED: manually disabled.</li>
+         * <li>FROZEN: frozen due to overdue payment.</li>
+         * <li>UPDATING: updating.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -355,7 +355,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17*****1743</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -366,8 +369,8 @@ public class ListWorkspacesRequest extends Request {
         /**
          * <p>Specifies whether to display workspace details. Valid values:</p>
          * <ul>
-         * <li>false (default)</li>
-         * <li>true</li>
+         * <li>false (default): does not display details.</li>
+         * <li>true: displays details.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -380,7 +383,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The workspace IDs. Separate multiple IDs by commas (,).</p>
+         * <p>The list of workspace IDs. Separate multiple workspace IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>123,234</p>
@@ -392,7 +395,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The workspace name.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>

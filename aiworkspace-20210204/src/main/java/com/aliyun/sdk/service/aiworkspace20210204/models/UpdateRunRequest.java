@@ -102,7 +102,7 @@ public class UpdateRunRequest extends Request {
         } 
 
         /**
-         * <p>The run ID.</p>
+         * <p>The ID of the run.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class UpdateRunRequest extends Request {
         }
 
         /**
-         * <p>The labels.</p>
+         * <p>A list of labels.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
@@ -124,11 +124,14 @@ public class UpdateRunRequest extends Request {
         }
 
         /**
-         * <p>The run name. The name must meet the following requirements:</p>
+         * <p>The name of the run. The naming conventions are as follows:</p>
          * <ul>
-         * <li>The name must start with a letter.</li>
-         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
-         * <li>The name must be 1 to 63 characters in length.</li>
+         * <li><p>Must start with a lowercase or uppercase letter.</p>
+         * </li>
+         * <li><p>Can contain lowercase letters, uppercase letters, digits, underscores (_), and hyphens (-).</p>
+         * </li>
+         * <li><p>The length must be 1 to 63 characters.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,7 +144,7 @@ public class UpdateRunRequest extends Request {
         }
 
         /**
-         * <p>The parameters.</p>
+         * <p>A list of parameters.</p>
          */
         public Builder params(java.util.List<RunParam> params) {
             this.putBodyParameter("Params", params);

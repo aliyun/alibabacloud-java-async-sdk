@@ -197,7 +197,7 @@ public class Trial extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>Accessibility</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -205,7 +205,10 @@ public class Trial extends TeaModel {
         }
 
         /**
-         * ExperimentId.
+         * <p>ExperimentId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-1zpfthdx******</p>
          */
         public Builder experimentId(String experimentId) {
             this.experimentId = experimentId;
@@ -213,7 +216,7 @@ public class Trial extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>GmtCreateTime</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -221,7 +224,7 @@ public class Trial extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>GmtModifiedTime</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -229,7 +232,7 @@ public class Trial extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>Labels</p>
          */
         public Builder labels(java.util.List<java.util.Map<String, ?>> labels) {
             this.labels = labels;
@@ -237,7 +240,7 @@ public class Trial extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -245,7 +248,7 @@ public class Trial extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>OwnerId</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -253,7 +256,7 @@ public class Trial extends TeaModel {
         }
 
         /**
-         * SourceId.
+         * <p>SourceId</p>
          */
         public Builder sourceId(String sourceId) {
             this.sourceId = sourceId;
@@ -261,7 +264,7 @@ public class Trial extends TeaModel {
         }
 
         /**
-         * SourceType.
+         * <p>SourceType</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -269,7 +272,10 @@ public class Trial extends TeaModel {
         }
 
         /**
-         * TrialId.
+         * <p>TrialId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trl-v0fw9a0sd8f9af</p>
          */
         public Builder trialId(String trialId) {
             this.trialId = trialId;
@@ -277,7 +283,7 @@ public class Trial extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>UserId</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -285,7 +291,7 @@ public class Trial extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>WorkspaceId</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

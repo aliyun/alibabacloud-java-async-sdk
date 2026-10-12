@@ -118,7 +118,7 @@ public class GetDatasetFileMetasStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
+         * <p>The dataset ID. For more information about how to obtain a dataset ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,14 +131,21 @@ public class GetDatasetFileMetasStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Aggregates statistics based on the specified metadata field. The value is not case-sensitive. If not specified, the total number of dataset file metadata will be returned, instead of aggregation lists. Valid values:</p>
+         * <p>The metadata field used for statistical aggregation. The value is not case-sensitive. If you do not specify this parameter, the total number of file metadata entries in the dataset is returned, and the aggregation list is not returned.
+         * Valid values:</p>
          * <ul>
-         * <li>filedir: the directory path of the file</li>
-         * <li>file_type: the file type</li>
-         * <li>tags.user: user-defined tag</li>
-         * <li>tags.user-delete-ai-tags: algorithm tags deleted by the user</li>
-         * <li>tags.ai: algorithm tags (aggregated by all tagging tasks)</li>
-         * <li>tags.all: algorithm tags and user-defined tags (excluding alogorithm tags deleted by the user)</li>
+         * <li><p>filedir: The directory path of the file.</p>
+         * </li>
+         * <li><p>filetype: The file type.</p>
+         * </li>
+         * <li><p>tags.user: Custom user tags.</p>
+         * </li>
+         * <li><p>tags.user-delete-ai-tags: Algorithm tags deleted by the user.</p>
+         * </li>
+         * <li><p>tags.ai: Algorithm tags that are aggregated from all labeling tasks.</p>
+         * </li>
+         * <li><p>tags.all: A combination of algorithm tags and custom user tags, excluding any algorithm tags deleted by the user.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,7 +158,7 @@ public class GetDatasetFileMetasStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The dataset version.</p>
+         * <p>The name of the dataset version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +171,7 @@ public class GetDatasetFileMetasStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results to be returned from a single query when the NextToken parameter is used in the query. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The maximum number of results to return for each query that uses the NextToken parameter. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -176,7 +183,7 @@ public class GetDatasetFileMetasStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The workspace ID. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

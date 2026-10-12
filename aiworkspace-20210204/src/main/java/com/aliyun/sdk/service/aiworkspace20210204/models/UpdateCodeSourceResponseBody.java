@@ -67,7 +67,7 @@ public class UpdateCodeSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the code build.</p>
+         * <p>The ID of the code source configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>code-20********</p>
@@ -78,7 +78,7 @@ public class UpdateCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>40325405-579C-4D82****</p>

@@ -132,10 +132,16 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configuration content. Configuration format for MultimodalIntelligentTag:</p>
-         * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
-         * <p>MultimodalSemanticIndex</p>
-         * <p>{ &quot;defaultModelId&quot;: &quot;xxx&quot; &quot;defaultModelVersion&quot;:&quot;1.0.0&quot; }</p>
+         * <p>The configuration content.</p>
+         * <p>The configuration format for MultimodalIntelligentTag is as follows:</p>
+         * <p>{
+         *   &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot;
+         * }</p>
+         * <p>The configuration format for MultimodalSemanticIndex is as follows:</p>
+         * <p>{
+         *   &quot;defaultModelId&quot;: &quot;xxx&quot;
+         *   &quot;defaultModelVersion&quot;:&quot;1.0.0&quot;
+         * }</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
@@ -148,8 +154,10 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
         /**
          * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li>MultimodalIntelligentTag</li>
-         * <li>MultimodalSemanticIndex</li>
+         * <li><p>MultimodalIntelligentTag</p>
+         * </li>
+         * <li><p>MultimodalSemanticIndex</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,7 +169,7 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the configuration is created.</p>
+         * <p>The creation time in the ISO 8601 standard in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16T01:44:10Z</p>
@@ -183,7 +191,7 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the configuration is modified.</p>
+         * <p>The modification time of the configuration in the ISO 8601 standard in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-26T02:17:18Z</p>

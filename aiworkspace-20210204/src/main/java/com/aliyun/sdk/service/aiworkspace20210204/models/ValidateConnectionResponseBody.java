@@ -106,7 +106,10 @@ public class ValidateConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ValidateConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Details.
+         * <p>The details of the validation result.</p>
          */
         public Builder details(java.util.Map<String, String> details) {
             this.details = details;
@@ -122,7 +125,10 @@ public class ValidateConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>A description of the validation result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection is reachable.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ValidateConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,16 @@ public class ValidateConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The validation status.</p>
+         * <ul>
+         * <li><p>success: The validation is successful.</p>
+         * </li>
+         * <li><p>failed: The validation failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;

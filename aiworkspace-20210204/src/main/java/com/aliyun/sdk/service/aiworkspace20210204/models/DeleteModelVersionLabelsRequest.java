@@ -89,7 +89,7 @@ public class DeleteModelVersionLabelsRequest extends Request {
         } 
 
         /**
-         * <p>The model ID. You can call <a href="https://help.aliyun.com/document_detail/461944.html">ListModels</a> to obtain the model ID.</p>
+         * <p>The ID of the model. For more information about how to obtain the model ID, see <a href="https://help.aliyun.com/document_detail/461944.html">ListModels</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DeleteModelVersionLabelsRequest extends Request {
         }
 
         /**
-         * <p>The version of the model.</p>
+         * <p>The model version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class DeleteModelVersionLabelsRequest extends Request {
         }
 
         /**
-         * <p>The key of the tag to be deleted. Separate multiple tag keys with commas (,).</p>
+         * <p>The keys of the labels that you want to delete. Separate multiple keys with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>key1,key2</p>

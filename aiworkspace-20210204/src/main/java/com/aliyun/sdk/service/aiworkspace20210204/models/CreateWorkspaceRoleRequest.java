@@ -116,6 +116,7 @@ public class CreateWorkspaceRoleRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,7 @@ public class CreateWorkspaceRoleRequest extends Request {
         }
 
         /**
-         * ModulePermissions.
+         * <p>(Required) The role permission configurations.</p>
          */
         public Builder modulePermissions(java.util.List<ModulePermissions> modulePermissions) {
             this.putBodyParameter("ModulePermissions", modulePermissions);
@@ -137,7 +138,10 @@ public class CreateWorkspaceRoleRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>(Required) The custom role name. The name must be unique within the same workspace. The name can contain letters, digits, underscores (_), and hyphens (-), and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev-test</p>
          */
         public Builder roleName(String roleName) {
             this.putBodyParameter("RoleName", roleName);
@@ -146,7 +150,10 @@ public class CreateWorkspaceRoleRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The role type. Valid values: custom: custom role. Only custom roles are supported. This is the default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder roleType(String roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -155,7 +162,10 @@ public class CreateWorkspaceRoleRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21513926******88039</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("UserId", userId);
@@ -223,7 +233,18 @@ public class CreateWorkspaceRoleRequest extends Request {
             } 
 
             /**
-             * Accessibility.
+             * <p>The access type. Valid values are:</p>
+             * <ul>
+             * <li><p>PUBLIC: All members in the current workspace can perform this action.</p>
+             * </li>
+             * <li><p>PRIVATE: Only the creator can perform this action.</p>
+             * </li>
+             * <li><p>ANY: Both the creator and non-creators can perform this action.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder accessibility(String accessibility) {
                 this.accessibility = accessibility;
@@ -231,7 +252,16 @@ public class CreateWorkspaceRoleRequest extends Request {
             }
 
             /**
-             * EntityAccessType.
+             * <p>The entity access type. This parameter is ignored if <code>Accessibility</code> is set to <code>PUBLIC</code>. If <code>Accessibility</code> is set to <code>PRIVATE</code>, the value of this parameter determines the permissions. Valid values are:</p>
+             * <ul>
+             * <li><p>CREATOR: Only the creator can perform this action.</p>
+             * </li>
+             * <li><p>ANY: Both the creator and non-creators can perform this action.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATOR</p>
              */
             public Builder entityAccessType(String entityAccessType) {
                 this.entityAccessType = entityAccessType;
@@ -298,7 +328,7 @@ public class CreateWorkspaceRoleRequest extends Request {
             } 
 
             /**
-             * PermissionCodes.
+             * <p>A list of permissions.</p>
              */
             public Builder permissionCodes(java.util.List<String> permissionCodes) {
                 this.permissionCodes = permissionCodes;
@@ -306,7 +336,7 @@ public class CreateWorkspaceRoleRequest extends Request {
             }
 
             /**
-             * PermissionRules.
+             * <p>A list of permission rules.</p>
              */
             public Builder permissionRules(java.util.List<PermissionRules> permissionRules) {
                 this.permissionRules = permissionRules;
@@ -386,7 +416,38 @@ public class CreateWorkspaceRoleRequest extends Request {
             } 
 
             /**
-             * ModuleName.
+             * <p>The module name. Valid values are:</p>
+             * <ul>
+             * <li><p>PaiDesigner: PAI-Designer</p>
+             * </li>
+             * <li><p>Paiflow: workflow</p>
+             * </li>
+             * <li><p>DSW: PAI-DSW</p>
+             * </li>
+             * <li><p>DLC: PAI-DLC</p>
+             * </li>
+             * <li><p>Dataset: dataset</p>
+             * </li>
+             * <li><p>Model: model</p>
+             * </li>
+             * <li><p>Image: image</p>
+             * </li>
+             * <li><p>CodeSource: code source</p>
+             * </li>
+             * <li><p>PaiWorkspace@@Workspace: Basic workspace information</p>
+             * </li>
+             * <li><p>PaiWorkspace@@MemberRole: workspace member management</p>
+             * </li>
+             * <li><p>PaiWorkspace@@Resource: workspace computing resource management</p>
+             * </li>
+             * <li><p>PaiWorkspace@@Config: workspace configuration center</p>
+             * </li>
+             * <li><p>ArtLab: ArtLab</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PaiDesigner</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -394,7 +455,22 @@ public class CreateWorkspaceRoleRequest extends Request {
             }
 
             /**
-             * PermissionType.
+             * <p>The permission type. Valid values are:</p>
+             * <ul>
+             * <li><p>ReadOnly: read-only access.</p>
+             * </li>
+             * <li><p>ReadWrite: Allows users to edit and run.</p>
+             * </li>
+             * <li><p>FullAccess: full control.</p>
+             * </li>
+             * <li><p>NoPrivilege: no permissions.</p>
+             * </li>
+             * <li><p>CustomPermissions: custom permissions.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadOnly</p>
              */
             public Builder permissionType(String permissionType) {
                 this.permissionType = permissionType;
@@ -402,7 +478,7 @@ public class CreateWorkspaceRoleRequest extends Request {
             }
 
             /**
-             * Permissions.
+             * <p>The permissions. This parameter is required and applies only when <code>PermissionType</code> is set to <code>CustomPermissions</code>.</p>
              */
             public Builder permissions(java.util.List<Permissions> permissions) {
                 this.permissions = permissions;

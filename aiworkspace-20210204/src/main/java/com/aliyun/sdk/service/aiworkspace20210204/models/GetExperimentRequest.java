@@ -73,7 +73,7 @@ public class GetExperimentRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the experiment.</p>
+         * <p>The experiment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exp-1zpfthdx******</p>
@@ -85,12 +85,7 @@ public class GetExperimentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to obtain the latest run information associated with the experiment</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether to retrieve the latest run information for the experiment.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

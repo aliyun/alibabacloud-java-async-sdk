@@ -55,6 +55,9 @@ public class UpdateDatasetVersionResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D7B2E70-F770-505B-A672-09F1D8F2EC1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

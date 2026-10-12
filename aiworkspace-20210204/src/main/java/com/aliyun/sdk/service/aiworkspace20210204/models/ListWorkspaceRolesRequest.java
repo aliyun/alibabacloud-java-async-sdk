@@ -186,6 +186,7 @@ public class ListWorkspaceRolesRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID. Call the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation to get it.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +199,16 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order for the specified sort field. Valid values:</p>
+         * <ul>
+         * <li><p><code>ASC</code> (default): Ascending order.</p>
+         * </li>
+         * <li><p><code>DESC</code>: Descending order.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -207,7 +217,10 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,7 +229,10 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The default value is 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,7 +241,10 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * RoleIds.
+         * <p>A comma-separated list of role IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role-dhg*******</p>
          */
         public Builder roleIds(String roleIds) {
             this.putQueryParameter("RoleIds", roleIds);
@@ -234,7 +253,10 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>The role name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev-test</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
@@ -243,7 +265,13 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The role type.</p>
+         * <ul>
+         * <li><code>custom</code>: A custom role.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);
@@ -252,7 +280,16 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field for paginated queries. Valid values:</p>
+         * <ul>
+         * <li><p><code>GmtCreateTime</code> (default): Sorts by creation time.</p>
+         * </li>
+         * <li><p><code>GmtModifiedTime</code>: Sorts by modification time.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -261,7 +298,22 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li><p><code>Creating</code></p>
+         * </li>
+         * <li><p><code>Updating</code></p>
+         * </li>
+         * <li><p><code>Deleting</code></p>
+         * </li>
+         * <li><p><code>Succeeded</code>: A terminal state.</p>
+         * </li>
+         * <li><p><code>Failed</code>: A terminal state.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -270,7 +322,10 @@ public class ListWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * VerboseFields.
+         * <p>A comma-separated list of fields to return. Currently, only <code>ModulePermissions</code> is supported, which returns the permission configuration of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ModulePermissions</p>
          */
         public Builder verboseFields(String verboseFields) {
             this.putQueryParameter("VerboseFields", verboseFields);

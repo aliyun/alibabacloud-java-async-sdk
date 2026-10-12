@@ -54,7 +54,10 @@ public class DeleteWorkspaceRolesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A519F77D-28A0-52F5-AB82-5********8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

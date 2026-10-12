@@ -69,6 +69,7 @@ public class RunParam extends TeaModel {
         } 
 
         /**
+         * <p>The run parameter\&quot;s key.</p>
          * <p>This parameter is required.</p>
          */
         public Builder key(String key) {
@@ -77,6 +78,7 @@ public class RunParam extends TeaModel {
         }
 
         /**
+         * <p>The run parameter\&quot;s value.</p>
          * <p>This parameter is required.</p>
          */
         public Builder value(String value) {

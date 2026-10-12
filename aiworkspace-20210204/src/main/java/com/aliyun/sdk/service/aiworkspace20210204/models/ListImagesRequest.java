@@ -213,10 +213,10 @@ public class ListImagesRequest extends Request {
         } 
 
         /**
-         * <p>The visibility of the image. This parameter is valid only for custom images.</p>
+         * <p>The visibility of the image. Currently only takes effect for custom images.</p>
          * <ul>
-         * <li>PUBLIC: The image is visible to all users.</li>
-         * <li>PRIVATE: The image is visible only to you and the administrator of the workspace.</li>
+         * <li>PUBLIC: Public.</li>
+         * <li>PRIVATE: Private.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,7 +229,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * ImageUri.
+         * <p>The image URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-hangzhou.aliyuncs.com/pai-compression/nlp:gpu</p>
          */
         public Builder imageUri(String imageUri) {
             this.putQueryParameter("ImageUri", imageUri);
@@ -238,7 +241,9 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>The tag filter conditions. Multiple conditions are separated by commas (,). The format of a single condition filter is <code>key=value</code>. The following keys are supported:</p>
+         * <p>The label filter conditions. Separate multiple conditions with commas (,).
+         * The format of a single filter condition is <code>Key=Value</code>.
+         * Valid values of Key:</p>
          * <ul>
          * <li>system.chipType</li>
          * <li>system.dsw.cudaVersion</li>
@@ -282,7 +287,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * Options.
+         * <p>The options. Currently supports ExactMatchName for exact match search on Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExactMatchName</p>
          */
         public Builder options(String options) {
             this.putQueryParameter("Options", options);
@@ -291,10 +299,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy. Default value: ASC. Valid values:</p>
+         * <p>The sort order for the specified sort field in a paged query. Used together with SortBy. Default value: ASC.</p>
          * <ul>
-         * <li>ASC: ascending order</li>
-         * <li>DESC: descending order.</li>
+         * <li>ASC: Ascending order.</li>
+         * <li>DESC: Descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -307,7 +315,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the image list. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -319,7 +327,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20.</p>
+         * <p>The number of entries per page for a paged query. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -331,7 +339,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>The image name and description that are used for fuzzy search.</p>
+         * <p>Fuzzy searches by image name and description.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -343,7 +351,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting. The GmtCreateTime field is used.</p>
+         * <p>The sort field for a paged query. Currently, the GmtCreateTime field is used for sorting.</p>
          * 
          * <strong>example:</strong>
          * <p>GmtCreateTime</p>
@@ -355,10 +363,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display non-essential information, which contains tags. Valid values:</p>
+         * <p>Specifies whether to display non-essential information. Non-essential information currently includes Labels. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Includes non-essential information.</li>
+         * <li>false: Does not include non-essential information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -371,7 +379,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>20******55</p>

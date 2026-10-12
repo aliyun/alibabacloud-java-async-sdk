@@ -80,7 +80,7 @@ public class ListProductsResponseBody extends TeaModel {
         } 
 
         /**
-         * Products.
+         * <p>The list of products.</p>
          */
         public Builder products(java.util.List<Products> products) {
             this.products = products;
@@ -88,7 +88,10 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1e195c5116124202371861018d5bde</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * Services.
+         * <p>The list of services.</p>
          */
         public Builder services(java.util.List<Services> services) {
             this.services = services;
@@ -201,7 +204,7 @@ public class ListProductsResponseBody extends TeaModel {
             } 
 
             /**
-             * HasPermissionToPurchase.
+             * <p>Indicates whether the user has permission to purchase the product.</p>
              */
             public Builder hasPermissionToPurchase(Boolean hasPermissionToPurchase) {
                 this.hasPermissionToPurchase = hasPermissionToPurchase;
@@ -209,7 +212,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * IsPurchased.
+             * <p>Indicates whether the product is purchased.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPurchased(Boolean isPurchased) {
                 this.isPurchased = isPurchased;
@@ -217,7 +223,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataWorks_isolate</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -233,7 +242,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * PurchaseUrl.
+             * <p>The purchase URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://common-buy.aliy">https://common-buy.aliy</a></p>
              */
             public Builder purchaseUrl(String purchaseUrl) {
                 this.purchaseUrl = purchaseUrl;
@@ -313,7 +325,10 @@ public class ListProductsResponseBody extends TeaModel {
             } 
 
             /**
-             * IsOpen.
+             * <p>Indicates whether the service is activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isOpen(Boolean isOpen) {
                 this.isOpen = isOpen;
@@ -321,7 +336,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * OpenUrl.
+             * <p>The activation URL.</p>
              */
             public Builder openUrl(String openUrl) {
                 this.openUrl = openUrl;
@@ -329,7 +344,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCode.
+             * <p>The service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;

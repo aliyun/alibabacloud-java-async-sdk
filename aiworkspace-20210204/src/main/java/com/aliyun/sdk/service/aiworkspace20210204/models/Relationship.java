@@ -93,7 +93,7 @@ public class Relationship extends TeaModel {
         } 
 
         /**
-         * Attributes.
+         * <p>Attributes</p>
          */
         public Builder attributes(java.util.Map<String, ?> attributes) {
             this.attributes = attributes;
@@ -101,7 +101,7 @@ public class Relationship extends TeaModel {
         }
 
         /**
-         * DataChannel.
+         * <p>The data channel to which the lineage relationship belongs.</p>
          */
         public Builder dataChannel(String dataChannel) {
             this.dataChannel = dataChannel;
@@ -109,7 +109,7 @@ public class Relationship extends TeaModel {
         }
 
         /**
-         * RelationshipGuid.
+         * <p>The globally unique identifier of the lineage relationship.</p>
          */
         public Builder relationshipGuid(String relationshipGuid) {
             this.relationshipGuid = relationshipGuid;
@@ -117,7 +117,7 @@ public class Relationship extends TeaModel {
         }
 
         /**
-         * RelationshipType.
+         * <p>The type of the lineage relationship.</p>
          */
         public Builder relationshipType(String relationshipType) {
             this.relationshipType = relationshipType;

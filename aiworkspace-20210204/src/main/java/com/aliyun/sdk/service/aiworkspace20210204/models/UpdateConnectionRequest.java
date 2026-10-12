@@ -116,7 +116,7 @@ public class UpdateConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The connection ID. You can call <a href="url">ListConnections</a> to obtain the connection ID.</p>
+         * <p>The connection ID. For information about how to obtain a connection ID, see <a href="url">ListConnections</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The connection configuration. The connection configuration is in the key-value format. The keys configured for different connection types are different. For more information, see the supplementary description of the request parameters in CreateConnection.</p>
+         * <p>The configuration of the connection, specified as key-value pairs. The keys in the Configs parameter vary based on the connection type. For more information, see the request parameters in the CreateConnection topic.</p>
          */
         public Builder configs(java.util.Map<String, String> configs) {
             this.putBodyParameter("Configs", configs);
@@ -138,7 +138,10 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The connection description.</p>
+         * <p>The description of the connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Connection for data labeling.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -147,7 +150,7 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The models.</p>
+         * <p>A list of model information.</p>
          */
         public Builder models(java.util.List<Models> models) {
             this.putBodyParameter("Models", models);
@@ -156,7 +159,7 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * <p>The key-value configuration to be encrypted, such as the database logon password and the key for model connection.</p>
+         * <p>Key-value pairs that require encryption, such as database logon passwords and keys for model connections.</p>
          */
         public Builder secrets(java.util.Map<String, String> secrets) {
             this.putBodyParameter("Secrets", secrets);
@@ -274,9 +277,12 @@ public class UpdateConnectionRequest extends Request {
             /**
              * <p>The model type. Valid values:</p>
              * <ul>
-             * <li>LLM</li>
-             * <li>Embedding</li>
-             * <li>ReRank</li>
+             * <li><p>LLM</p>
+             * </li>
+             * <li><p>Embedding</p>
+             * </li>
+             * <li><p>ReRank</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -290,8 +296,10 @@ public class UpdateConnectionRequest extends Request {
             /**
              * <p>Indicates whether tool calling is supported. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: Tool calling is supported.</p>
+             * </li>
+             * <li><p>false: Tool calling is not supported.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -44,6 +44,10 @@ public class CreateDatasetVersionRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImportInfo")
     private String importInfo;
 
@@ -85,6 +89,7 @@ public class CreateDatasetVersionRequest extends Request {
         this.dataSourceType = builder.dataSourceType;
         this.datasetTaskRamRole = builder.datasetTaskRamRole;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
         this.importInfo = builder.importInfo;
         this.labels = builder.labels;
         this.options = builder.options;
@@ -151,6 +156,13 @@ public class CreateDatasetVersionRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return importInfo
      */
     public String getImportInfo() {
@@ -213,6 +225,7 @@ public class CreateDatasetVersionRequest extends Request {
         private String dataSourceType; 
         private String datasetTaskRamRole; 
         private String description; 
+        private Boolean dryRun; 
         private String importInfo; 
         private java.util.List<Label> labels; 
         private String options; 
@@ -234,6 +247,7 @@ public class CreateDatasetVersionRequest extends Request {
             this.dataSourceType = request.dataSourceType;
             this.datasetTaskRamRole = request.datasetTaskRamRole;
             this.description = request.description;
+            this.dryRun = request.dryRun;
             this.importInfo = request.importInfo;
             this.labels = request.labels;
             this.options = request.options;
@@ -245,7 +259,7 @@ public class CreateDatasetVersionRequest extends Request {
         } 
 
         /**
-         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
+         * <p>The dataset ID. For more information about how to obtain the dataset ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,7 +272,7 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * <p>The number of dataset files.</p>
+         * <p>The number of files in the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -270,7 +284,7 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * <p>The size of the dataset file. Unit: bytes.</p>
+         * <p>The size of the space occupied by the dataset files. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>19000</p>
@@ -282,13 +296,16 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * <p>The type of the data source. Separate multiple types with commas (,). Valid values:</p>
+         * <p>The data source type. Separate multiple values with commas. Valid values:</p>
          * <ul>
-         * <li>NAS: File Storage NAS (NAS).</li>
-         * <li>OSS: Object Storage Service (OSS).</li>
-         * <li>CPFS</li>
+         * <li><p>NAS: Alibaba Cloud File Storage NAS.</p>
+         * </li>
+         * <li><p>OSS: Alibaba Cloud Object Storage Service (OSS).</p>
+         * </li>
+         * <li><p>CPFS</p>
+         * </li>
          * </ul>
-         * <p>Note: The DataSourceType value of a dataset version must be the same as that of the dataset. When you create a dataset version, the system checks whether the values are the same.</p>
+         * <p>Note: The DataSourceType of the version must be the same as the DataSourceType of the dataset. The system validates this when you create the version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +318,10 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * DatasetTaskRamRole.
+         * <p>UserMetricsEndpoints</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1234567890123456:role/role-name</p>
          */
         public Builder datasetTaskRamRole(String datasetTaskRamRole) {
             this.putBodyParameter("DatasetTaskRamRole", datasetTaskRamRole);
@@ -310,7 +330,10 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * <p>The description of the dataset. Descriptions are used to differentiate datasets.</p>
+         * <p>The custom description of the dataset version. You can use this description to distinguish between different dataset versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description of the dataset version.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -319,15 +342,57 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * <p>The dataset storage import configurations, such as OSS, NAS, and CPFS.</p>
-         * <p><strong>OSS</strong></p>
-         * <p>{<br>&quot;region&quot;: &quot;${region}&quot;,// The region ID<br>&quot;bucket&quot;: &quot;${bucket}&quot;,//The bucket name<br>&quot;path&quot;: &quot;${path}&quot; // The file path<br>}\</p>
-         * <p><strong>NAS</strong></p>
-         * <p>{<br>&quot;region&quot;: &quot;${region}&quot;,// The region ID<br>&quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID<br>&quot;path&quot;: &quot;${path}&quot;, // The file system path<br>&quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system<br>}\</p>
-         * <p><strong>CPFS</strong></p>
-         * <p>{<br>&quot;region&quot;: &quot;${region}&quot;,// The region ID<br>&quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID<br>&quot;protocolServiceId&quot;:&quot;${protocol_service_id}&quot;, // The file system protocol service<br>&quot;exportId&quot;: &quot;${export_id}&quot;, // The file system export directory<br>&quot;path&quot;: &quot;${path}&quot;, // The file system path<br>}\</p>
-         * <p><strong>CPFS for Lingjun</strong></p>
-         * <p>{<br>&quot;region&quot;: &quot;${region}&quot;,// The region ID<br>&quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID<br>&quot;path&quot;: &quot;${path}&quot;, // The ile system path<br>&quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system, CPFS for Lingjun only<br>&quot;isVpcMount&quot;: boolean, // Whether the mount point is a VPC mount point, CPFS for Lingjun only<br>}\</p>
+         * <p>Specifies whether to perform only a dry run without actually creating the dataset version.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putBodyParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The storage import configuration of the dataset. OSS, NAS, and CPFS are supported.</p>
+         * <details>
+         * <summary>OSS</summary>
+         * {<BR>
+         *   "region": "${region}",// The region ID.<BR>
+         *   "bucket": "${bucket}",// The bucket name.<BR>
+         *   "path": "${path}" // The file path.<BR>
+         * }<BR>
+         * </details>
+         * 
+         * <details>
+         * <summary>NAS</summary>
+         * {<BR>
+         *   "region": "${region}",// The region ID.<BR>
+         *   "fileSystemId": "${file_system_id}", // The file system ID.<BR>
+         *   "path": "${path}", // The file system path.<BR>
+         *   "mountTarget": "${mount_target}" // The mount target of the file system.<BR>
+         * }<BR>
+         * </details>
+         * 
+         * 
+         * <details>
+         * <summary>CPFS</summary>
+         * {<BR>
+         *   "region": "${region}",// The region ID.<BR>
+         *   "fileSystemId": "${file_system_id}", // The file system ID.<BR>
+         *   "protocolServiceId":"${protocol_service_id}", // The protocol service of the file system.<BR>
+         *   "exportId": "${export_id}", // The export directory of the file system.<BR>
+         *   "path": "${path}",  // The file system path.<BR>
+         * }<BR>
+         * </details>
+         * 
+         * <details>
+         * <summary>CPFS for AI computing</summary>
+         * {<BR>
+         *   "region": "${region}",// The region ID.<BR>
+         *   "fileSystemId": "${file_system_id}", // The file system ID.<BR>
+         *   "path": "${path}",  // The file system path.<BR>
+         *   "mountTarget": "${mount_target}" // The mount target of the file system. This parameter is specific to the AI computing edition.<BR>
+         *   "isVpcMount": boolean, // Specifies whether the mount target is a VPC mount target. This parameter is specific to the AI computing edition.<BR>
+         * }<BR>
+         * </details>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -345,7 +410,7 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * <p>The tags of the dataset version.</p>
+         * <p>The list of labels for the dataset version.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
@@ -354,7 +419,7 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * <p>The extended field, which is of the JsonString type. When you use the dataset in Deep Learning Containers (DLC), you can use the mountPath field to specify the default mount path of the dataset.</p>
+         * <p>The extended field. The value is a JSON string. When DLC uses the dataset, you can configure the mountPath field to specify the default mount path for the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -370,8 +435,8 @@ public class CreateDatasetVersionRequest extends Request {
         /**
          * <p>The property of the dataset. Valid values:</p>
          * <ul>
-         * <li>FILE</li>
-         * <li>DIRECTORY</li>
+         * <li>FILE: file</li>
+         * <li>DIRECTORY: directory</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -385,11 +450,11 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data source.</p>
+         * <p>The source ID.</p>
          * <ul>
-         * <li>If SourceType is set to USER, the value of SourceId can be a custom string.</li>
-         * <li>If SourceType is set to ITAG, the value of SourceId is the ID of the labeling job of iTAG.</li>
-         * <li>If SourceType is set to PAI_PUBLIC_DATASET, SourceId is empty by default.</li>
+         * <li>If SourceType is set to USER, you can specify a custom SourceId.</li>
+         * <li>If SourceType is set to ITAG, the dataset is generated from the labeling results of the iTAG module, and SourceId is the task ID in iTAG.</li>
+         * <li>If SourceType is set to PAI_PUBLIC_DATASET, the dataset is created from a PAI public dataset, and SourceId is empty by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -402,17 +467,11 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * <p>The type of the data source. Default value: USER. Valid values:</p>
+         * <p>The source type. Default value: USER. Valid values:</p>
          * <ul>
-         * <li>PAI-PUBLIC-DATASET: a public dataset of Platform for AI (PAI).</li>
-         * <li>ITAG: a dataset generated from a labeling job of iTAG.</li>
-         * <li>USER: a dataset registered by a user.</li>
-         * </ul>
-         * <p>For each job type:</p>
-         * <ul>
-         * <li>PAI_PUBLIC_DATASET: PAI_PUBLIC_DATASET.</li>
-         * <li>ITAG: ITAG.</li>
-         * <li>USER: USER.</li>
+         * <li>PAI-PUBLIC-DATASET: PAI public dataset.</li>
+         * <li>ITAG: dataset generated from the labeling results of the iTAG module.</li>
+         * <li>USER: user-registered dataset.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -425,10 +484,14 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * <p>Example format:</p>
+         * <p>The URI. Configuration examples:</p>
          * <ul>
-         * <li>Value format when DataSourceType is set to OSS: <code>oss://bucket.endpoint/object</code>.</li>
-         * <li>Value formats when DataSourceType is set to NAS: General-purpose NAS: <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>. CPFS 1.0: <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>. CPFS 2.0: <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>. You can distinguish CPFS 1.0 and CPFS 2.0 file systems based on the format of the file system ID: The ID for CPFS 1.0 is in the cpfs-&lt;8-bit ASCII characters&gt; format. The ID for CPFS 2.0 is in the cpfs-&lt;16-bit ASCII characters&gt; format.</li>
+         * <li>If the data source type is OSS: <code>oss://bucket.endpoint/object</code></li>
+         * <li>If the data source type is NAS:
+         * For general-purpose NAS, the format is <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>.
+         * For CPFS 1.0, the format is <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>.
+         * For CPFS 2.0, the format is <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>.
+         * CPFS 1.0 and CPFS 2.0 are distinguished by the format of the fsid: the format for CPFS 1.0 is cpfs-&lt;8 ASCII characters&gt;, and the format for CPFS 2.0 is cpfs-&lt;16 ASCII characters&gt;.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -442,7 +505,7 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * UserMetricsEndpoints.
+         * <p>The list of user metric collection endpoints.</p>
          */
         public Builder userMetricsEndpoints(java.util.List<UserMetricsEndpoint> userMetricsEndpoints) {
             this.putBodyParameter("UserMetricsEndpoints", userMetricsEndpoints);

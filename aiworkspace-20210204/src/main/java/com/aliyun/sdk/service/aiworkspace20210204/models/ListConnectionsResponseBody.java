@@ -106,7 +106,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The connection list.</p>
+         * <p>List of connections.</p>
          */
         public Builder connections(java.util.List<Connection> connections) {
             this.connections = connections;
@@ -114,7 +114,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>Maximum number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that indicates the start position from which to retrieve data on the next page.</p>
+         * <p>Token for retrieving the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -136,7 +136,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID. Used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>B2C51F93-1C07-5477-9705-5FDB****F19F</p>
@@ -147,7 +147,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of connections that meet the filter conditions.</p>
+         * <p>Total number of connections that match the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>27</p>

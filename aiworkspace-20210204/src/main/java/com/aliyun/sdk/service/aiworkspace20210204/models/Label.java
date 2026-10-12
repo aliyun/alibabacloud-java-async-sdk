@@ -67,7 +67,10 @@ public class Label extends TeaModel {
         } 
 
         /**
-         * Key.
+         * <p>The label key. The value can be up to 128 bytes in length and cannot contain equal signs (=) and commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -75,7 +78,10 @@ public class Label extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The label value. The value can be up to 128 bytes in length and cannot contain equal signs (=) and commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder value(String value) {
             this.value = value;

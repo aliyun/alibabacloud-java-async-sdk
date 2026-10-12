@@ -59,7 +59,7 @@ public class SetUserConfigsRequest extends Request {
         } 
 
         /**
-         * <p>The configurations list.</p>
+         * <p>The list of configurations.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.putBodyParameter("Configs", configs);
@@ -157,7 +157,7 @@ public class SetUserConfigsRequest extends Request {
             } 
 
             /**
-             * <p>The category. Only DataPrivacyConfig is supported.</p>
+             * <p>The classification. Only DataPrivacyConfig is supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -169,7 +169,7 @@ public class SetUserConfigsRequest extends Request {
             }
 
             /**
-             * <p>The key of the configuration item.</p>
+             * <p>The configuration key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -181,7 +181,7 @@ public class SetUserConfigsRequest extends Request {
             }
 
             /**
-             * <p>The value of the configuration item.</p>
+             * <p>The configuration value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -80,7 +80,7 @@ public class ListConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configuration items.</p>
+         * <p>The list of configuration items.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -99,7 +99,7 @@ public class ListConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of items returned.</p>
+         * <p>The total number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -168,7 +168,7 @@ public class ListConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -179,7 +179,7 @@ public class ListConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>
@@ -301,7 +301,10 @@ public class ListConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID, which is globally unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wc-95******o36ylr</p>
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -309,13 +312,13 @@ public class ListConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the configuration item. Supported keys:</p>
+             * <p>The key of the configuration item. The following keys are supported:</p>
              * <ul>
-             * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
-             * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
-             * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
-             * <li>quotaMaximumDuration: Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
-             * <li>predefinedTags: The predefined tags of the workspace. All created resources must have tags</li>
+             * <li>tempStoragePath: the temporary storage path. This ConfigKey can be used only when CategoryName is set to CommonResourceConfig.</li>
+             * <li>isAutoRecycle: the automatic recycling configuration. This ConfigKey can be used only when CategoryName is set to DLCAutoRecycle.</li>
+             * <li>priorityConfig: the priority configuration. This ConfigKey can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
+             * <li>quotaMaximumDuration: the maximum runtime duration configuration for DLC jobs in a quota. This ConfigKey can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+             * <li>predefinedTags: the preset tags for the workspace. Resources that are created must include these tags.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -327,7 +330,7 @@ public class ListConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the configuration item.</p>
+             * <p>The configuration value.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://***</p>
@@ -338,7 +341,10 @@ public class ListConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The UTC time when the configuration item was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-12T07:59:41.000Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -346,7 +352,10 @@ public class ListConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The UTC time when the configuration item was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-28T03:44:10.000Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -354,7 +363,7 @@ public class ListConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the configuration item.</p>
+             * <p>The list of labels for the configuration item.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;

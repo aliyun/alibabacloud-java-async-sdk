@@ -262,7 +262,10 @@ public class DatasetFileMeta extends TeaModel {
         } 
 
         /**
-         * ContentType.
+         * <p>The MIME type of the file. The value contains the type and subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/jpeg</p>
          */
         public Builder contentType(String contentType) {
             this.contentType = contentType;
@@ -270,7 +273,10 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
-         * DataSize.
+         * <p>The file size, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120000</p>
          */
         public Builder dataSize(Long dataSize) {
             this.dataSize = dataSize;
@@ -278,7 +284,10 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
-         * DatasetFileMetaId.
+         * <p>The dataset file metadata ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07914c9534586e4e7aa6e9dbca5009082df******fd8a0d857b33296c59bf6</p>
          */
         public Builder datasetFileMetaId(String datasetFileMetaId) {
             this.datasetFileMetaId = datasetFileMetaId;
@@ -286,7 +295,10 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
-         * DownloadUrl.
+         * <p>The download URL of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test-bucket.oss-cn-shanghai.aliyuncs.com/dataset/cat.png?Expires=171280****&OSSAccessKeyId=LTAI************&Signature=****jZcXOn7FHMCT1DLE22NuNjs%3D">https://test-bucket.oss-cn-shanghai.aliyuncs.com/dataset/cat.png?Expires=171280****&amp;OSSAccessKeyId=LTAI************&amp;Signature=****jZcXOn7FHMCT1DLE22NuNjs%3D</a></p>
          */
         public Builder downloadUrl(String downloadUrl) {
             this.downloadUrl = downloadUrl;
@@ -294,6 +306,7 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
+         * <p>The file creation time. The value is a UTC timestamp in ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +318,10 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
-         * FileFingerPrint.
+         * <p>The file fingerprint value. This parameter is used to determine the uniqueness of the file content. The value changes when the file content is modified. The ETag is used for OSS files, and the MD5 value is used for NAS files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D41D8CD98F*****E9800998ECF8</p>
          */
         public Builder fileFingerPrint(String fileFingerPrint) {
             this.fileFingerPrint = fileFingerPrint;
@@ -313,7 +329,10 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
-         * FileName.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cat.png</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -321,7 +340,10 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
-         * FileType.
+         * <p>The file type. The value is the same as the MIME type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder fileType(String fileType) {
             this.fileType = fileType;
@@ -329,10 +351,11 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
+         * <p>The last modification time of the file. The value is a UTC timestamp in ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-12T14:36:01.000Z</p>
+         * <p>2025-01-12T14:36:01Z</p>
          */
         public Builder fileUpdateTime(String fileUpdateTime) {
             this.fileUpdateTime = fileUpdateTime;
@@ -340,7 +363,10 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
-         * MetaAttributes.
+         * <p>The specific metadata of the file. For example, image width and height, or video bitrate and resolution. Search is not supported for this field. The value is in JSON string format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;ImageHeight&quot;: 400,     &quot;ImageWidth&quot;: 800 }</p>
          */
         public Builder metaAttributes(String metaAttributes) {
             this.metaAttributes = metaAttributes;
@@ -348,7 +374,10 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
-         * Score.
+         * <p>The similarity score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.6</p>
          */
         public Builder score(Float score) {
             this.score = score;
@@ -356,7 +385,10 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
-         * SemanticIndexJobId.
+         * <p>The task ID of the last semantic index build.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsjob-klfwtjto****scvt3</p>
          */
         public Builder semanticIndexJobId(String semanticIndexJobId) {
             this.semanticIndexJobId = semanticIndexJobId;
@@ -364,6 +396,7 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
+         * <p>The last update time of the semantic index. The value is a UTC timestamp in ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -375,7 +408,14 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The current status of the metadata. Valid values:</p>
+         * <ul>
+         * <li>ACTIVE: active.</li>
+         * <li>DELETED: deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -383,7 +423,38 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The collection of labels for the metadata, in JSON string format. The following label groups are included:</p>
+         * <ul>
+         * <li>Algorithm label group:<ul>
+         * <li>ai: the list of label names aggregated from all algorithm labeling tasks for a single metadata entry.</li>
+         * </ul>
+         * </li>
+         * <li>User-defined label group:<ul>
+         * <li>user: the list of label names manually added by the user for a single metadata entry.</li>
+         * <li>user-delete-ai-tags: the list of label names in the algorithm label group that the user wants to delete for a single metadata entry.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;ai&quot;:
+         *     [
+         *         &quot;Lane line&quot;,
+         *         &quot;Water horse&quot;,
+         *         &quot;Sunny day&quot;
+         *     ],
+         *     &quot;user&quot;:
+         *     [
+         *         &quot;Everett&quot;,
+         *         &quot;Intelligent driving Dataset 1&quot;,
+         *         &quot;Cloudy day&quot;
+         *     ],
+         *     &quot;user-delete-ai-tags&quot;:
+         *     [
+         *         &quot;Sunny day&quot;
+         *     ]
+         * }</p>
          */
         public Builder tags(String tags) {
             this.tags = tags;
@@ -391,7 +462,10 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
-         * ThumbnailUrl.
+         * <p>The thumbnail URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test-bucket.oss-cn-shanghai.aliyuncs.com/dataset/cat.png?Expires=171280****&OSSAccessKeyId=LTAI************&Signature=****jZcXOn7FHMCT1DLE22NuNjs%3D">https://test-bucket.oss-cn-shanghai.aliyuncs.com/dataset/cat.png?Expires=171280****&amp;OSSAccessKeyId=LTAI************&amp;Signature=****jZcXOn7FHMCT1DLE22NuNjs%3D</a></p>
          */
         public Builder thumbnailUrl(String thumbnailUrl) {
             this.thumbnailUrl = thumbnailUrl;
@@ -399,7 +473,18 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
-         * Uri.
+         * <p>The unique URI of the file. This parameter is used to record the unique path of the file. File paths in OSS and NAS are supported.</p>
+         * <details>
+         * <summary>OSS</summary>
+         * oss://${bucket}/${path}
+         * </details>
+         * <details>
+         * <summary>NAS</summary>
+         * nas://${fileSystemId}/${path}
+         * </details>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/dataset/cat.png</p>
          */
         public Builder uri(String uri) {
             this.uri = uri;

@@ -132,15 +132,21 @@ public class CreateDatasetJobConfigRequest extends Request {
         }
 
         /**
-         * <p>The configuration content. Format:</p>
+         * <p>The configuration content.
+         * The format is as follows:</p>
          * <ul>
          * <li>MultimodalIntelligentTag</li>
          * </ul>
-         * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
+         * <p>{
+         * &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot;
+         * }</p>
          * <ul>
          * <li>MultimodalSemanticIndex</li>
          * </ul>
-         * <p>{ &quot;defaultModelId&quot;: &quot;xxx&quot; &quot;defaultModelVersion&quot;:&quot;1.0.0&quot; }</p>
+         * <p>{
+         * &quot;defaultModelId&quot;: &quot;xxx&quot;,
+         * &quot;defaultModelVersion&quot;:&quot;1.0.0&quot;
+         * }</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,11 +160,6 @@ public class CreateDatasetJobConfigRequest extends Request {
 
         /**
          * <p>The configuration type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>MultimodalIntelligentTag</li>
-         * <li>MultimodalSemanticIndex</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +172,10 @@ public class CreateDatasetJobConfigRequest extends Request {
         }
 
         /**
-         * DatasetVersion.
+         * <p>The name of the dataset version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder datasetVersion(String datasetVersion) {
             this.putBodyParameter("DatasetVersion", datasetVersion);

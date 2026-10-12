@@ -75,7 +75,7 @@ public class DeleteRunLabelRequest extends Request {
         } 
 
         /**
-         * <p>The run ID.</p>
+         * <p>The ID of the run.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteRunLabelRequest extends Request {
         }
 
         /**
-         * <p>The key of the run tag to be deleted.</p>
+         * <p>The key of the run label to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

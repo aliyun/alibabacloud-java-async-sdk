@@ -117,7 +117,7 @@ public class UpdateDatasetJobConfigRequest extends Request {
         } 
 
         /**
-         * <p>The dataset ID.</p>
+         * <p>The ID of the dataset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class UpdateDatasetJobConfigRequest extends Request {
         }
 
         /**
-         * <p>The configuration ID.</p>
+         * <p>The ID of the configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,15 +143,21 @@ public class UpdateDatasetJobConfigRequest extends Request {
         }
 
         /**
-         * <p>The configuration content. Formats:</p>
+         * <p>The configuration content.
+         * The format is as follows:</p>
          * <ul>
          * <li>MultimodalIntelligentTag</li>
          * </ul>
-         * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
+         * <p>{
+         * &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot;
+         * }</p>
          * <ul>
          * <li>MultimodalSemanticIndex</li>
          * </ul>
-         * <p>{ &quot;defaultModelId&quot;: &quot;xxx&quot; &quot;defaultModelVersion&quot;:&quot;1.0.0&quot; }</p>
+         * <p>{
+         * &quot;defaultModelId&quot;: &quot;xxx&quot;,
+         * &quot;defaultModelVersion&quot;:&quot;1.0.0&quot;
+         * }</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
@@ -165,8 +171,10 @@ public class UpdateDatasetJobConfigRequest extends Request {
         /**
          * <p>The configuration type.</p>
          * <ul>
-         * <li>MultimodalIntelligentTag</li>
-         * <li>MultimodalSemanticIndex</li>
+         * <li><p>MultimodalIntelligentTag</p>
+         * </li>
+         * <li><p>MultimodalSemanticIndex</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,7 +187,7 @@ public class UpdateDatasetJobConfigRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>167497</p>

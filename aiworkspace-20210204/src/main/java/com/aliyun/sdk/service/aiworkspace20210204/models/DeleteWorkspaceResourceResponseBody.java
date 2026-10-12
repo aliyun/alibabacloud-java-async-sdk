@@ -78,7 +78,7 @@ public class DeleteWorkspaceResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource IDs.</p>
+         * <p>The affected resource IDs.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.resourceIds = resourceIds;

@@ -74,7 +74,7 @@ public class GetConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The connection ID. You can call <a href="url">ListConnections</a> to obtain the connection ID.</p>
+         * <p>The connection ID. For more information about how to obtain a connection ID, see <a href="url">ListConnections</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,10 +87,12 @@ public class GetConnectionRequest extends Request {
         }
 
         /**
-         * <p>The encryption settings. Valid values:</p>
+         * <p>The encryption setting. Valid values:</p>
          * <ul>
-         * <li>PlainText</li>
-         * <li>Secret</li>
+         * <li><p>PlainText: The value is in plaintext.</p>
+         * </li>
+         * <li><p>Secret: The value is in ciphertext.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

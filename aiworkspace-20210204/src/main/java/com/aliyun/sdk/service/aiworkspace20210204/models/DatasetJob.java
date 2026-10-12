@@ -223,7 +223,10 @@ public class DatasetJob extends TeaModel {
         } 
 
         /**
-         * CompletedFileCount.
+         * <p>The number of completed files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>990</p>
          */
         public Builder completedFileCount(Long completedFileCount) {
             this.completedFileCount = completedFileCount;
@@ -231,7 +234,10 @@ public class DatasetJob extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The job creation time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-20T04:05:59Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -239,7 +245,10 @@ public class DatasetJob extends TeaModel {
         }
 
         /**
-         * DatasetJobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsjob-9jx1*****uj9e</p>
          */
         public Builder datasetJobId(String datasetJobId) {
             this.datasetJobId = datasetJobId;
@@ -247,7 +256,10 @@ public class DatasetJob extends TeaModel {
         }
 
         /**
-         * DatasetVersion.
+         * <p>The dataset version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder datasetVersion(String datasetVersion) {
             this.datasetVersion = datasetVersion;
@@ -255,7 +267,10 @@ public class DatasetJob extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The job description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a job description of a dataset.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -263,7 +278,10 @@ public class DatasetJob extends TeaModel {
         }
 
         /**
-         * FailedFileCount.
+         * <p>The number of failed files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder failedFileCount(Long failedFileCount) {
             this.failedFileCount = failedFileCount;
@@ -271,7 +289,10 @@ public class DatasetJob extends TeaModel {
         }
 
         /**
-         * FinishTime.
+         * <p>The job finish time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-20T06:03:48Z</p>
          */
         public Builder finishTime(String finishTime) {
             this.finishTime = finishTime;
@@ -279,7 +300,10 @@ public class DatasetJob extends TeaModel {
         }
 
         /**
-         * JobAction.
+         * <p>The job action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SemanticIndex</p>
          */
         public Builder jobAction(String jobAction) {
             this.jobAction = jobAction;
@@ -287,7 +311,14 @@ public class DatasetJob extends TeaModel {
         }
 
         /**
-         * JobMode.
+         * <p>The job mode.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Full</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Full</p>
          */
         public Builder jobMode(String jobMode) {
             this.jobMode = jobMode;
@@ -295,7 +326,10 @@ public class DatasetJob extends TeaModel {
         }
 
         /**
-         * JobSpec.
+         * <p>The job details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;modelId\&quot;:\&quot;xxx\&quot;}</p>
          */
         public Builder jobSpec(String jobSpec) {
             this.jobSpec = jobSpec;
@@ -303,7 +337,7 @@ public class DatasetJob extends TeaModel {
         }
 
         /**
-         * Logs.
+         * <p>The job logs.</p>
          */
         public Builder logs(java.util.List<String> logs) {
             this.logs = logs;
@@ -311,7 +345,10 @@ public class DatasetJob extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The job status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -319,7 +356,10 @@ public class DatasetJob extends TeaModel {
         }
 
         /**
-         * TotalFileCount.
+         * <p>The number of job files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalFileCount(Long totalFileCount) {
             this.totalFileCount = totalFileCount;
@@ -327,7 +367,10 @@ public class DatasetJob extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145883</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

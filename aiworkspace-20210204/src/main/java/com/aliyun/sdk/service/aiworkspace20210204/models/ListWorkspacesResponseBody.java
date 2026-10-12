@@ -104,15 +104,15 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type and quantity of resources that can be activated in a workspace. This list is returned when the Option is set to GetResourceLimits. Valid values:</p>
+         * <p>The types and quantity limits of resources that a user can activate within a workspace. This list is returned when Option is set to GetResourceLimits. Currently supported resource types:</p>
          * <ul>
-         * <li>MaxCompute_share: pay-as-you-go MaxCompute</li>
-         * <li>MaxCompute_isolate: subscription MaxCompute</li>
-         * <li>DLC_share: pay-as-you-go DLC</li>
-         * <li>PAI_Isolate: subscription PAI</li>
-         * <li>PAI_share: pay-as-you-go PAI</li>
-         * <li>DataWorks_isolate: subscription DataWorks</li>
-         * <li>DataWorks_share: pay-as-you-go DataWorks</li>
+         * <li>MaxCompute_share: MaxCompute pay-as-you-go.</li>
+         * <li>MaxCompute_isolate: MaxCompute subscription.</li>
+         * <li>DLC_share: DLC pay-as-you-go.</li>
+         * <li>PAI_isolate: PAI subscription.</li>
+         * <li>PAI_share: PAI pay-as-you-go.</li>
+         * <li>DataWorks_isolate: DataWorks subscription.</li>
+         * <li>DataWorks_share: DataWorks pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of workspaces that meet the query conditions.</p>
+         * <p>The total number of workspaces that match the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -348,7 +348,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The names of the administrator accounts.</p>
+             * <p>The list of administrator account names.</p>
              */
             public Builder adminNames(java.util.List<String> adminNames) {
                 this.adminNames = adminNames;
@@ -367,7 +367,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the workspace.</p>
+             * <p>The workspace description.</p>
              * 
              * <strong>example:</strong>
              * <p>workspace description example</p>
@@ -378,7 +378,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The workspace display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace-example</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -386,7 +389,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment types of the workspace.</p>
+             * <p>The list of environments included in the workspace.</p>
              */
             public Builder envTypes(java.util.List<String> envTypes) {
                 this.envTypes = envTypes;
@@ -394,7 +397,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>the additional information. Only contains TenantId.</p>
+             * <p>The extended information. Currently includes TenantId, which represents the tenant ID.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;TenantId&quot;: &quot;4286******98&quot;}</p>
@@ -405,7 +408,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the workspace was created. The time (UTC+0) follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ss.SSSZ format.</p>
+             * <p>The time when the workspace was created. The time follows the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mm:ss.SSSZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-21T17:12:35.232Z</p>
@@ -416,7 +419,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the workspace was modified. The time (UTC+0) follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ss.SSSZ format.</p>
+             * <p>The time when the workspace was last modified. The time follows the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mmZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-21T17:12:35.232Z</p>
@@ -427,7 +430,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the workspace is the default workspace.</p>
+             * <p>Indicates whether this is the default workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -438,7 +441,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the workspace.</p>
+             * <p>The workspace status.</p>
              * 
              * <strong>example:</strong>
              * <p>ENABLED</p>
@@ -460,7 +463,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workspace.</p>
+             * <p>The workspace name.</p>
              * 
              * <strong>example:</strong>
              * <p>workspace-example</p>

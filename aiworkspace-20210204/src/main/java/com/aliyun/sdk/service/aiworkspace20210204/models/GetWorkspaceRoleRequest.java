@@ -74,6 +74,7 @@ public class GetWorkspaceRoleRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetWorkspaceRoleRequest extends Request {
         }
 
         /**
-         * RoleId.
+         * <p>The custom role ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role-sw******2tij</p>
          */
         public Builder roleId(String roleId) {
             this.putPathParameter("RoleId", roleId);

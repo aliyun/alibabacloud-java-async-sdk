@@ -60,7 +60,7 @@ public class GetCodeSourceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the code source. You can call <a href="https://help.aliyun.com/document_detail/459922.html">ListCodeSources</a> to query the code source ID.</p>
+         * <p>The code source configuration ID. To obtain the code source configuration ID, call <a href="https://help.aliyun.com/document_detail/459922.html">ListCodeSources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

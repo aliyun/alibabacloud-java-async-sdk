@@ -74,7 +74,7 @@ public class GetImageRequest extends Request {
         } 
 
         /**
-         * <p>The image ID. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image ID.</p>
+         * <p>The image ID. For information about how to obtain the image ID, see <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,10 +87,11 @@ public class GetImageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display non-essential information, which contains tags. Valid values:</p>
+         * <p>Specifies whether to display optional information. Optional information currently includes Labels.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>false (default)</li>
-         * <li>true</li>
+         * <li>false (default): Optional information is not displayed.</li>
+         * <li>true: Optional information is displayed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -74,7 +74,7 @@ public class GetWorkspaceRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The workspace ID. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,10 +87,12 @@ public class GetWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display supplementary information such as the workspace owner. Valid values:</p>
+         * <p>Specifies whether to return additional information, such as the workspace owner. Valid values:</p>
          * <ul>
-         * <li>false (default)</li>
-         * <li>true</li>
+         * <li><p>false (default): Does not return additional information.</p>
+         * </li>
+         * <li><p>true: Returns additional information.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

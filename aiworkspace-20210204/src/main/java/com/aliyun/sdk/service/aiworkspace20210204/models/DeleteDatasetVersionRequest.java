@@ -75,7 +75,7 @@ public class DeleteDatasetVersionRequest extends Request {
         } 
 
         /**
-         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
+         * <p>The dataset ID. For more information, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteDatasetVersionRequest extends Request {
         }
 
         /**
-         * <p>The dataset version name. The version number must be later than v1. Version v1 can only be deleted when the dataset is deleted.</p>
+         * <p>The dataset version. The version must be later than v1. Version v1 is deleted when the dataset is deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

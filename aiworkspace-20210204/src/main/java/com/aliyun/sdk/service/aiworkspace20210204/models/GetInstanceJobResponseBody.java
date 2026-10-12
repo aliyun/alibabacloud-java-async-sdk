@@ -132,7 +132,10 @@ public class GetInstanceJobResponseBody extends TeaModel {
         } 
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time in UTC, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -140,7 +143,10 @@ public class GetInstanceJobResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. For example, if a job creates a custom role, this parameter returns the corresponding role ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong><strong>12qb3</strong></strong></em></p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -148,7 +154,10 @@ public class GetInstanceJobResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceJobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateWorkspaceCustomRole-role-<em><strong>abc</strong></em>****</p>
          */
         public Builder instanceJobId(String instanceJobId) {
             this.instanceJobId = instanceJobId;
@@ -156,7 +165,10 @@ public class GetInstanceJobResponseBody extends TeaModel {
         }
 
         /**
-         * ReasonMessage.
+         * <p>A message providing details about the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-example</p>
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -164,7 +176,10 @@ public class GetInstanceJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1e195c5116124202371861018d5bde</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +187,22 @@ public class GetInstanceJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the job. Valid values:</p>
+         * <ul>
+         * <li><p>Creating: The job is being created.</p>
+         * </li>
+         * <li><p>Updating: The job is being updated.</p>
+         * </li>
+         * <li><p>Deleting: The job is being deleted.</p>
+         * </li>
+         * <li><p>Successful: The job completed successfully (a final state).</p>
+         * </li>
+         * <li><p>Failed: The job failed (a final state).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -180,7 +210,18 @@ public class GetInstanceJobResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The job type. Valid values:</p>
+         * <ul>
+         * <li><p>CreateWorkspaceCustomRole</p>
+         * </li>
+         * <li><p>UpdateWorkspaceCustomRole</p>
+         * </li>
+         * <li><p>DeleteWorkspaceCustomRole</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateWorkspaceCustomRole</p>
          */
         public Builder type(String type) {
             this.type = type;

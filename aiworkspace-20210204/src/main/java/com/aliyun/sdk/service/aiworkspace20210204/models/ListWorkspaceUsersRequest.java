@@ -87,7 +87,7 @@ public class ListWorkspaceUsersRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -99,7 +99,10 @@ public class ListWorkspaceUsersRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1611******3000</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -108,7 +111,7 @@ public class ListWorkspaceUsersRequest extends Request {
         }
 
         /**
-         * <p>The display names of users who can be added to the workspace as members.</p>
+         * <p>The display name of the user who can be added as a workspace member.</p>
          * 
          * <strong>example:</strong>
          * <p>doctest****</p>

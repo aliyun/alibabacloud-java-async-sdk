@@ -102,7 +102,7 @@ public class ListModelVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The model versions.</p>
+         * <p>The list of model versions.</p>
          */
         public Builder versions(java.util.List<ModelVersion> versions) {
             this.versions = versions;

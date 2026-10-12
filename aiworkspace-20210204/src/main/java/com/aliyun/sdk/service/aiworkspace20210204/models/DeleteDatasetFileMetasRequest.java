@@ -103,7 +103,7 @@ public class DeleteDatasetFileMetasRequest extends Request {
         } 
 
         /**
-         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
+         * <p>The ID of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DeleteDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The metadata ID of the dataset file.</p>
+         * <p>The ID of the dataset file metadata.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class DeleteDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The dataset version.</p>
+         * <p>The name of the dataset version.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -141,7 +141,7 @@ public class DeleteDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace to which the dataset belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The ID of the workspace where the dataset is located. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>132602</p>

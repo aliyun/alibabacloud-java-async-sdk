@@ -80,7 +80,7 @@ public class LineageRelation extends TeaModel {
         } 
 
         /**
-         * DestEntityQualifiedName.
+         * <p>The unique qualified name of the destination data lineage entity.</p>
          */
         public Builder destEntityQualifiedName(String destEntityQualifiedName) {
             this.destEntityQualifiedName = destEntityQualifiedName;
@@ -88,7 +88,7 @@ public class LineageRelation extends TeaModel {
         }
 
         /**
-         * RelationshipGuid.
+         * <p>The globally unique identifier of the data lineage relationship.</p>
          */
         public Builder relationshipGuid(String relationshipGuid) {
             this.relationshipGuid = relationshipGuid;
@@ -96,7 +96,7 @@ public class LineageRelation extends TeaModel {
         }
 
         /**
-         * SrcEntityQualifiedName.
+         * <p>The unique qualified name of the source data lineage entity.</p>
          */
         public Builder srcEntityQualifiedName(String srcEntityQualifiedName) {
             this.srcEntityQualifiedName = srcEntityQualifiedName;

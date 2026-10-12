@@ -87,7 +87,10 @@ public class ListProductsRequest extends Request {
         } 
 
         /**
-         * ProductCodes.
+         * <p>The product codes, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAI_isolate</p>
          */
         public Builder productCodes(String productCodes) {
             this.putQueryParameter("ProductCodes", productCodes);
@@ -96,7 +99,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * ServiceCodes.
+         * <p>The service codes, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder serviceCodes(String serviceCodes) {
             this.putQueryParameter("ServiceCodes", serviceCodes);

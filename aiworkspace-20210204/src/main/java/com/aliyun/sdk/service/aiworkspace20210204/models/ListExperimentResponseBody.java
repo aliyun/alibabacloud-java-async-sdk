@@ -101,7 +101,7 @@ public class ListExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next page. Save this token and include it in the next request to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -112,7 +112,7 @@ public class ListExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

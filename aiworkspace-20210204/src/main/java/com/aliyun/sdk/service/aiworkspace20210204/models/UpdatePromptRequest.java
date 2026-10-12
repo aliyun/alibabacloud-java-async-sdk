@@ -117,7 +117,7 @@ public class UpdatePromptRequest extends Request {
         } 
 
         /**
-         * <p>The prompt ID.</p>
+         * <p>The unique identifier of the prompt.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +131,9 @@ public class UpdatePromptRequest extends Request {
 
         /**
          * <p>The description of the prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an information extraction prompt for autonomous driving highway scenarios, focusing on extracting lane and weather information</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -139,7 +142,16 @@ public class UpdatePromptRequest extends Request {
         }
 
         /**
-         * <p>The content of the prompt.</p>
+         * <p>The prompt content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;context&quot;:&quot;You are an experienced driver with ten years of driving experience. Please analyze and make judgments about the following image scenarios.&quot;,
+         *   &quot;inputData&quot;:&quot;{
+         *     \&quot;Reflective strips\&quot;: \&quot;Usually yellow, or yellow-black alternating, attached to permanent protruding obstacles such as wall corners to remind drivers to avoid them.\&quot;,
+         *     \&quot;Ground lock\&quot;: \&quot;Also known as a parking space lock. When raised, it prevents the parking space from being occupied. When a ground lock is present, you must indicate whether it is in the raised or lowered state.\&quot;,
+         *   }&quot;
+         * }</p>
          */
         public Builder frameworkContent(String frameworkContent) {
             this.putBodyParameter("FrameworkContent", frameworkContent);
@@ -148,7 +160,7 @@ public class UpdatePromptRequest extends Request {
         }
 
         /**
-         * <p>The prompt template type.</p>
+         * <p>The framework type of the prompt template.</p>
          * 
          * <strong>example:</strong>
          * <p>ICIO</p>
@@ -160,7 +172,7 @@ public class UpdatePromptRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The workspace ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

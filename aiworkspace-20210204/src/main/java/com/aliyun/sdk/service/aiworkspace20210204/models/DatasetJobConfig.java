@@ -132,7 +132,10 @@ public class DatasetJobConfig extends TeaModel {
         } 
 
         /**
-         * Config.
+         * <p>The content of the dataset job configuration, in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -140,7 +143,10 @@ public class DatasetJobConfig extends TeaModel {
         }
 
         /**
-         * ConfigType.
+         * <p>The type of the dataset job configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MultimodalIntelligentTag</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -148,7 +154,10 @@ public class DatasetJobConfig extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time of the dataset job configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-14T01:37:37Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -156,7 +165,10 @@ public class DatasetJobConfig extends TeaModel {
         }
 
         /**
-         * DatasetJobConfigId.
+         * <p>The unique ID for the dataset job configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dscfg-xxxxxxxxxxxx</p>
          */
         public Builder datasetJobConfigId(String datasetJobConfigId) {
             this.datasetJobConfigId = datasetJobConfigId;
@@ -172,7 +184,10 @@ public class DatasetJobConfig extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The last modification time of the dataset job configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-11T02:18:54Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -180,7 +195,10 @@ public class DatasetJobConfig extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234*34</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

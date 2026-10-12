@@ -80,7 +80,7 @@ public class ListImageLabelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The image tags.</p>
+         * <p>The list of image labels.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -99,7 +99,7 @@ public class ListImageLabelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of the images that meet the filter conditions.</p>
+         * <p>The total number of image labels that meet the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -168,7 +168,7 @@ public class ListImageLabelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>system.chipType</p>
@@ -179,7 +179,7 @@ public class ListImageLabelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>GPU</p>

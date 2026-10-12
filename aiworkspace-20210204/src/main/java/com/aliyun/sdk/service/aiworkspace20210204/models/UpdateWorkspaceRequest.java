@@ -88,7 +88,7 @@ public class UpdateWorkspaceRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The ID of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,10 +101,10 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The workspace description.</p>
+         * <p>The description of the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>Description</p>
+         * <p>This is an example workspace.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -113,11 +113,14 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The display name of the workspace.</p>
+         * <p>The display name of the workspace. The name must meet the following requirements:</p>
          * <ul>
-         * <li>The name must be 3 to 23 characters in length, and can contain letters, underscores (_), and digits.</li>
-         * <li>The name must start with a letter.</li>
-         * <li>The name must be unique in the current region.</li>
+         * <li><p>The name must be 3 to 23 characters in length and can contain letters, underscores (_), and digits.</p>
+         * </li>
+         * <li><p>The name must start with a letter.</p>
+         * </li>
+         * <li><p>The name must be unique within the current region.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

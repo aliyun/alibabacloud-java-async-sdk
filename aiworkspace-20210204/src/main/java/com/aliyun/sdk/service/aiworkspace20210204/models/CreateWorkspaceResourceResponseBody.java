@@ -91,7 +91,7 @@ public class CreateWorkspaceResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resources.</p>
+         * <p>A list of resources.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;

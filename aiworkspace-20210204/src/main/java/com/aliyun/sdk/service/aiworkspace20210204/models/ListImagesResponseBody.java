@@ -80,7 +80,7 @@ public class ListImagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The images.</p>
+         * <p>The image list.</p>
          */
         public Builder images(java.util.List<Images> images) {
             this.images = images;
@@ -99,7 +99,7 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned images.</p>
+         * <p>The total number of images returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -168,7 +168,7 @@ public class ListImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>system.chipType</p>
@@ -179,7 +179,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>GPU</p>
@@ -405,10 +405,10 @@ public class ListImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The accessibility of the image. Valid values:</p>
+             * <p>The visibility of the image. Valid values:</p>
              * <ul>
-             * <li>PUBLIC: All members can access the image.</li>
-             * <li>PRIVATE: Only the creator can access the image.</li>
+             * <li>PUBLIC: All members of the current workspace can operate on the image.</li>
+             * <li>PRIVATE: Only the creator can operate on the image.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -431,7 +431,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image is created, in UTC. The time follows the ISO 8601 standard.</p>
+             * <p>The creation time in UTC, in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-21T17:12:35.232Z</p>
@@ -442,7 +442,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image is modified, in UTC. The time follows the ISO 8601 standard.</p>
+             * <p>The modification time in UTC, in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-21T17:12:35.232Z</p>
@@ -464,7 +464,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image address, which includes the version number.</p>
+             * <p>The image URI, including the version number.</p>
              */
             public Builder imageUri(String imageUri) {
                 this.imageUri = imageUri;
@@ -472,7 +472,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image tags.</p>
+             * <p>The image label list.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -491,10 +491,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
+             * <p>The UID of the Alibaba Cloud account of the creator.</p>
              * 
              * <strong>example:</strong>
-             * <p>15577******82932</p>
+             * <p>155**********904</p>
              */
             public Builder parentUserId(String parentUserId) {
                 this.parentUserId = parentUserId;
@@ -502,7 +502,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image size. Unit: GB.</p>
+             * <p>The image size, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -513,7 +513,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像来源 ID</p>
+             * <p>The image source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>build-****ks92</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -521,7 +524,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像来源类型</p>
+             * <p>The image source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Build</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -529,10 +535,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The UID of the Alibaba Cloud account of the creator.</p>
              * 
              * <strong>example:</strong>
-             * <p>15577******82932</p>
+             * <p>155**********904</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

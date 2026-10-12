@@ -91,7 +91,7 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of users who meet the filter conditions.</p>
+         * <p>The number of users that match the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -102,7 +102,7 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The users.</p>
+         * <p>The list of users.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;

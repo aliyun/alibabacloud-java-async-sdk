@@ -106,7 +106,7 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The dataset versions.</p>
+         * <p>The list of dataset versions.</p>
          */
         public Builder datasetVersions(java.util.List<DatasetVersion> datasetVersions) {
             this.datasetVersions = datasetVersions;
@@ -114,7 +114,7 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The current page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0648C5BB-68D0-54D2-92A5-607135B8806B</p>
@@ -147,7 +147,7 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of dataset versions that meet the filter conditions.</p>
+         * <p>The resource count that matches the conditional filter criteria.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

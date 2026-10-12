@@ -106,7 +106,10 @@ public class Collection extends TeaModel {
         } 
 
         /**
-         * CollectionName.
+         * <p>The name of the collection. The name must be globally unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI4D</p>
          */
         public Builder collectionName(String collectionName) {
             this.collectionName = collectionName;
@@ -114,7 +117,10 @@ public class Collection extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -122,7 +128,10 @@ public class Collection extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The last update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -130,7 +139,10 @@ public class Collection extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155770209******</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -138,7 +150,10 @@ public class Collection extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the user that created the collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155770209******</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

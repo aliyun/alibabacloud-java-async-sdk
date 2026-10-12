@@ -80,7 +80,7 @@ public class Relation extends TeaModel {
         } 
 
         /**
-         * ErrMsg.
+         * <p>ErrMsg</p>
          */
         public Builder errMsg(String errMsg) {
             this.errMsg = errMsg;
@@ -88,7 +88,7 @@ public class Relation extends TeaModel {
         }
 
         /**
-         * LineageRelation.
+         * <p>LineageRelation</p>
          */
         public Builder lineageRelation(LineageRelation lineageRelation) {
             this.lineageRelation = lineageRelation;
@@ -96,7 +96,7 @@ public class Relation extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Result</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

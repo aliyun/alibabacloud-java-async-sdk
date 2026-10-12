@@ -236,7 +236,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The names of the administrator accounts.</p>
+         * <p>The list of administrator account names.</p>
          */
         public Builder adminNames(java.util.List<String> adminNames) {
             this.adminNames = adminNames;
@@ -244,7 +244,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the user who creates the workspace.</p>
+         * <p>The ID of the user who created the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>1157******94123</p>
@@ -277,10 +277,12 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The environment information of the workspace.</p>
+         * <p>The environments that the workspace contains. Valid values:</p>
          * <ul>
-         * <li>Workspaces in basic mode can run only in the production environment.</li>
-         * <li>Workspaces in standard mode can run in both the development and production environments.</li>
+         * <li><p>A workspace in basic mode has only the production environment (prod).</p>
+         * </li>
+         * <li><p>A workspace in standard mode has both the development environment (dev) and the production environment (prod).</p>
+         * </li>
          * </ul>
          */
         public Builder envTypes(java.util.List<String> envTypes) {
@@ -289,7 +291,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information, which only contains the TenantId field.</p>
+         * <p>Additional information. This parameter currently contains the tenant ID (TenantId).</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;TenantId&quot;: &quot;4286******98&quot;}</p>
@@ -300,7 +302,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the workspace is created, in UTC. The time follows the ISO 8601 standard.</p>
+         * <p>The time when the workspace was created. The time is in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>
@@ -311,7 +313,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the workspace is modified, in UTC. The time follows the ISO 8601 standard.</p>
+         * <p>The time when the workspace was last modified. The time is in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>
@@ -324,8 +326,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the workspace is the default workspace. Valid values:</p>
          * <ul>
-         * <li>false</li>
-         * <li>true</li>
+         * <li><p>false: The workspace is not the default workspace.</p>
+         * </li>
+         * <li><p>true: The workspace is the default workspace.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -337,7 +341,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the workspace owner. This parameter is valid only when Verbose is set to true.</p>
+         * <p>The information about the workspace owner. This parameter is returned only when Verbose is set to true.</p>
          */
         public Builder owner(Owner owner) {
             this.owner = owner;
@@ -367,14 +371,20 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The workspace state. Valid values:</p>
+         * <p>The status of the workspace. Valid values:</p>
          * <ul>
-         * <li>ENABLED</li>
-         * <li>INITIALIZING</li>
-         * <li>FAILURE:</li>
-         * <li>DISABLED</li>
-         * <li>FROZEN</li>
-         * <li>UPDATING</li>
+         * <li><p>ENABLED: The workspace is running as normal.</p>
+         * </li>
+         * <li><p>INITIALIZING: The workspace is being initialized.</p>
+         * </li>
+         * <li><p>FAILURE: The workspace failed to be created.</p>
+         * </li>
+         * <li><p>DISABLED: The workspace is manually disabled.</p>
+         * </li>
+         * <li><p>FROZEN: The workspace is frozen due to an overdue payment.</p>
+         * </li>
+         * <li><p>UPDATING: The workspace is being updated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -397,7 +407,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The workspace name.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-example</p>
@@ -514,7 +524,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The user UID.</p>
              * 
              * <strong>example:</strong>
              * <p>1157******94123</p>

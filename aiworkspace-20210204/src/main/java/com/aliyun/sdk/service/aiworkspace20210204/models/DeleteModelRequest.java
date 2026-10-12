@@ -60,7 +60,7 @@ public class DeleteModelRequest extends Request {
         } 
 
         /**
-         * <p>The model ID. You can call <a href="https://help.aliyun.com/document_detail/461944.html">ListModels</a> to obtain the model ID.</p>
+         * <p>The ID of the model. For more information, see <a href="https://help.aliyun.com/document_detail/461944.html">ListModels</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

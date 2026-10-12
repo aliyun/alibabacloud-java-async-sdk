@@ -106,7 +106,10 @@ public class TrialLabel extends TeaModel {
         } 
 
         /**
-         * GmtCreateTime.
+         * <p>Create time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-27T03:30:04Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -114,7 +117,10 @@ public class TrialLabel extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>Modified time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-27T03:30:04Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -122,7 +128,10 @@ public class TrialLabel extends TeaModel {
         }
 
         /**
-         * Key.
+         * <p>Key of Trial Label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -130,7 +139,10 @@ public class TrialLabel extends TeaModel {
         }
 
         /**
-         * TrialId.
+         * <p>Trial ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trl-v0fw9a0sd8f9af</p>
          */
         public Builder trialId(String trialId) {
             this.trialId = trialId;
@@ -138,7 +150,10 @@ public class TrialLabel extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>Value of Trial Label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         public Builder value(String value) {
             this.value = value;

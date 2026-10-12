@@ -54,7 +54,7 @@ public class RemoveImageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>5A14FA81-DD4E-******-6343FE44B941</p>

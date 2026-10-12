@@ -93,7 +93,7 @@ public class LineageEntity extends TeaModel {
         } 
 
         /**
-         * Attributes.
+         * <p>Attributes</p>
          */
         public Builder attributes(java.util.Map<String, ?> attributes) {
             this.attributes = attributes;
@@ -101,7 +101,7 @@ public class LineageEntity extends TeaModel {
         }
 
         /**
-         * EntityType.
+         * <p>The type of the data lineage entity.</p>
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
@@ -109,7 +109,7 @@ public class LineageEntity extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the data lineage entity.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -117,7 +117,7 @@ public class LineageEntity extends TeaModel {
         }
 
         /**
-         * QualifiedName.
+         * <p>The unique qualified name of the data lineage entity.</p>
          */
         public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = qualifiedName;

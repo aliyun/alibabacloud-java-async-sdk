@@ -117,7 +117,10 @@ public class CreateProductOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned for the purchase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -125,7 +128,7 @@ public class CreateProductOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The purchase order ID.</p>
+         * <p>The ID of the purchase order.</p>
          * 
          * <strong>example:</strong>
          * <p>210292536260646</p>
@@ -136,7 +139,7 @@ public class CreateProductOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * ProductIds.
+         * <p>The list of IDs of the successfully purchased products.</p>
          */
         public Builder productIds(java.util.List<String> productIds) {
             this.productIds = productIds;

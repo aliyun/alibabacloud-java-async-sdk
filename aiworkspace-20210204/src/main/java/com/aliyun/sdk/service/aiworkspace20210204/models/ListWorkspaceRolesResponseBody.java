@@ -80,7 +80,10 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A519F77D-28A0-52F5-AB82-5********8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Roles.
+         * <p>The list of custom roles.</p>
          */
         public Builder roles(java.util.List<Roles> roles) {
             this.roles = roles;
@@ -96,7 +99,10 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total count of matching entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -162,7 +168,18 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * Accessibility.
+             * <p>The access type. Valid values are:</p>
+             * <ul>
+             * <li><p>PUBLIC: All members in the current workspace can perform this action.</p>
+             * </li>
+             * <li><p>PRIVATE: Only the creator can perform this action.</p>
+             * </li>
+             * <li><p>ANY: Both the creator and non-creators can perform this action.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder accessibility(String accessibility) {
                 this.accessibility = accessibility;
@@ -170,7 +187,16 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             }
 
             /**
-             * EntityAccessType.
+             * <p>The entity access type. This parameter is ignored if <code>Accessibility</code> is set to <code>PUBLIC</code>. If <code>Accessibility</code> is set to <code>PRIVATE</code>, the value of this parameter determines the permissions. Valid values are:</p>
+             * <ul>
+             * <li><p>CREATOR: Only the creator can perform this action.</p>
+             * </li>
+             * <li><p>ANY: Both the creator and non-creators can perform this action.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATOR</p>
              */
             public Builder entityAccessType(String entityAccessType) {
                 this.entityAccessType = entityAccessType;
@@ -237,7 +263,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * PermissionCodes.
+             * <p>A list of permissions.</p>
              */
             public Builder permissionCodes(java.util.List<String> permissionCodes) {
                 this.permissionCodes = permissionCodes;
@@ -245,7 +271,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             }
 
             /**
-             * PermissionRules.
+             * <p>A list of permission rules.</p>
              */
             public Builder permissionRules(java.util.List<PermissionRules> permissionRules) {
                 this.permissionRules = permissionRules;
@@ -325,7 +351,38 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * ModuleName.
+             * <p>The module name. Valid values are:</p>
+             * <ul>
+             * <li><p>PaiDesigner: PAI-Designer</p>
+             * </li>
+             * <li><p>Paiflow: workflow</p>
+             * </li>
+             * <li><p>DSW: PAI-DSW</p>
+             * </li>
+             * <li><p>DLC: PAI-DLC</p>
+             * </li>
+             * <li><p>Dataset: dataset</p>
+             * </li>
+             * <li><p>Model: model</p>
+             * </li>
+             * <li><p>Image: image</p>
+             * </li>
+             * <li><p>CodeSource: code source</p>
+             * </li>
+             * <li><p>PaiWorkspace@@Workspace: Basic workspace information</p>
+             * </li>
+             * <li><p>PaiWorkspace@@MemberRole: workspace member management</p>
+             * </li>
+             * <li><p>PaiWorkspace@@Resource: workspace computing resource management</p>
+             * </li>
+             * <li><p>PaiWorkspace@@Config: workspace configuration center</p>
+             * </li>
+             * <li><p>ArtLab: ArtLab</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PaiDesigner</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -333,7 +390,22 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             }
 
             /**
-             * PermissionType.
+             * <p>The permission type. Valid values are:</p>
+             * <ul>
+             * <li><p>ReadOnly: read-only access.</p>
+             * </li>
+             * <li><p>ReadWrite: Allows users to edit and run.</p>
+             * </li>
+             * <li><p>FullAccess: full control.</p>
+             * </li>
+             * <li><p>NoPrivilege: no permissions.</p>
+             * </li>
+             * <li><p>CustomPermissions: custom permissions.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadOnly</p>
              */
             public Builder permissionType(String permissionType) {
                 this.permissionType = permissionType;
@@ -341,7 +413,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Permissions.
+             * <p>The permissions. This parameter is required and applies only when <code>PermissionType</code> is set to <code>CustomPermissions</code>.</p>
              */
             public Builder permissions(java.util.List<Permissions> permissions) {
                 this.permissions = permissions;
@@ -460,7 +532,10 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * Creator.
+             * <p>The Alibaba Cloud account UID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2680******4103</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -468,7 +543,10 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The creation time, in UTC and ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-14T07:40:01.000Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -476,7 +554,10 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The modification time, in UTC and ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-15T02:29:52Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -484,7 +565,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             }
 
             /**
-             * ModulePermissions.
+             * <p>The permission configuration of the role.</p>
              */
             public Builder modulePermissions(java.util.List<ModulePermissions> modulePermissions) {
                 this.modulePermissions = modulePermissions;
@@ -492,7 +573,10 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>The ID of the custom role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>role-dhg*******</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -500,7 +584,10 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev-test</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

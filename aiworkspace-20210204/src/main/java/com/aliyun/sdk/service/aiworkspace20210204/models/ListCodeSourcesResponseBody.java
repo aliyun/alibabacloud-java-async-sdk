@@ -80,7 +80,7 @@ public class ListCodeSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The code sources.</p>
+         * <p>The list of code source configurations.</p>
          */
         public Builder codeSources(java.util.List<CodeSourceItem> codeSources) {
             this.codeSources = codeSources;
@@ -99,7 +99,7 @@ public class ListCodeSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of code sources that meet the filter conditions.</p>
+         * <p>The total number of code source configurations that match the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

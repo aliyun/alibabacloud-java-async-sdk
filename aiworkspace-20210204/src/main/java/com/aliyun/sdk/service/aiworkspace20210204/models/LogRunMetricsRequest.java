@@ -74,7 +74,7 @@ public class LogRunMetricsRequest extends Request {
         } 
 
         /**
-         * <p>The run ID.</p>
+         * <p>The ID of the run.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class LogRunMetricsRequest extends Request {
         }
 
         /**
-         * <p>The metrics.</p>
+         * <p>The list of metrics.</p>
          */
         public Builder metrics(java.util.List<RunMetric> metrics) {
             this.putBodyParameter("Metrics", metrics);

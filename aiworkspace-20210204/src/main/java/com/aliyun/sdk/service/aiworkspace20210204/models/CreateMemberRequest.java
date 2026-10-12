@@ -75,7 +75,7 @@ public class CreateMemberRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The ID of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class CreateMemberRequest extends Request {
         }
 
         /**
-         * <p>The members.</p>
+         * <p>The list of members.</p>
          * <p>This parameter is required.</p>
          */
         public Builder members(java.util.List<Members> members) {
@@ -168,11 +168,11 @@ public class CreateMemberRequest extends Request {
             }
 
             /**
-             * <p>The member IDs. Multiple member IDs are separated by commas (,). You can call <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a> to obtain the member IDs.</p>
+             * <p>The member IDs. Use commas (,) to separate multiple IDs. For more information, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>21513926******88039</p>
+             * <p>145883-21513926<strong><strong><strong>88039,145883-2769726</strong></strong></strong>87513</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

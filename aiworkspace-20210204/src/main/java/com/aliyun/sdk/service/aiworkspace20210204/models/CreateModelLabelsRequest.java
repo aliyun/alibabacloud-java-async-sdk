@@ -74,7 +74,7 @@ public class CreateModelLabelsRequest extends Request {
         } 
 
         /**
-         * <p>The model ID. You can call <a href="https://help.aliyun.com/document_detail/461944.html">ListModels</a> to obtain the model ID.</p>
+         * <p>The model ID. For more information, see <a href="https://help.aliyun.com/document_detail/461944.html">ListModels</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class CreateModelLabelsRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of labels.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);

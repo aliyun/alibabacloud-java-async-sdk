@@ -236,7 +236,10 @@ public class Run extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility of the run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -244,7 +247,10 @@ public class Run extends TeaModel {
         }
 
         /**
-         * ExperimentId.
+         * <p>The ID of the experiment associated with the run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-1zpfthdx******</p>
          */
         public Builder experimentId(String experimentId) {
             this.experimentId = experimentId;
@@ -252,7 +258,10 @@ public class Run extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the run was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -260,7 +269,10 @@ public class Run extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the run was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -268,7 +280,7 @@ public class Run extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The list of labels for the run.</p>
          */
         public Builder labels(java.util.List<RunLabel> labels) {
             this.labels = labels;
@@ -276,7 +288,7 @@ public class Run extends TeaModel {
         }
 
         /**
-         * Metrics.
+         * <p>The list of metrics for the run.</p>
          */
         public Builder metrics(java.util.List<RunMetric> metrics) {
             this.metrics = metrics;
@@ -284,7 +296,10 @@ public class Run extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testrun</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -292,7 +307,10 @@ public class Run extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>The ID of the owner\&quot;s root account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>163104*****3440</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -300,7 +318,7 @@ public class Run extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of hyperparameters for the run.</p>
          */
         public Builder params(java.util.List<RunParam> params) {
             this.params = params;
@@ -308,7 +326,10 @@ public class Run extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -316,7 +337,10 @@ public class Run extends TeaModel {
         }
 
         /**
-         * RunId.
+         * <p>The unique ID of the run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run-1qJhzJ2YXgX****</p>
          */
         public Builder runId(String runId) {
             this.runId = runId;
@@ -324,7 +348,10 @@ public class Run extends TeaModel {
         }
 
         /**
-         * SourceId.
+         * <p>The ID of the source PAI workload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>train9s0afvjkf</p>
          */
         public Builder sourceId(String sourceId) {
             this.sourceId = sourceId;
@@ -332,7 +359,10 @@ public class Run extends TeaModel {
         }
 
         /**
-         * SourceType.
+         * <p>The type of the source PAI workload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TrainingService</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -340,7 +370,7 @@ public class Run extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the owner.</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -348,7 +378,10 @@ public class Run extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the run belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145883</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

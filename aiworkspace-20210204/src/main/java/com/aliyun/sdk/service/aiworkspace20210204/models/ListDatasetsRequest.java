@@ -297,7 +297,14 @@ public class ListDatasetsRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility of the dataset.</p>
+         * <ul>
+         * <li>PUBLIC: public.</li>
+         * <li>PRIVATE: private.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putQueryParameter("Accessibility", accessibility);
@@ -306,10 +313,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The storage types of the data source. Multiple data source types are separated by commas (,). Valid values:</p>
+         * <p>The data source types. Separate multiple values with commas (,). Valid values:</p>
          * <ul>
-         * <li>NAS: File Storage NAS (NAS).</li>
-         * <li>OSS: Object Storage Service (OSS).</li>
+         * <li>NAS: Alibaba Cloud Network Attached Storage (NAS).</li>
+         * <li>OSS: Alibaba Cloud Object Storage Service (OSS).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,13 +329,13 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The dataset types. Multiple dataset types are separated by commas (,). Valid values:</p>
+         * <p>The data types of the dataset. Separate multiple values with commas (,). Valid values:</p>
          * <ul>
-         * <li>Video: video</li>
-         * <li>COMMON: common</li>
-         * <li>TEXT: text</li>
-         * <li>PIC: picture</li>
-         * <li>AUDIO: audio</li>
+         * <li>VIDEO: video.</li>
+         * <li>COMMON: common.</li>
+         * <li>TEXT: text.</li>
+         * <li>PIC: image.</li>
+         * <li>AUDIO: audio.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -341,7 +348,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * DatasetIds.
+         * <p>The dataset IDs. You can specify multiple dataset IDs separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-rcdg3wxxxxxhc5jk87</p>
          */
         public Builder datasetIds(String datasetIds) {
             this.putQueryParameter("DatasetIds", datasetIds);
@@ -350,7 +360,15 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * Edition.
+         * <p>The dataset edition. Valid values:</p>
+         * <ul>
+         * <li>BASIC: Basic Edition. Does not support dataset file metadata management.</li>
+         * <li>ADVANCED: Advanced Edition. Supported only for OSS type. Each version supports up to 1 million file metadata entries.</li>
+         * <li>LOGICAL: Logical Edition. Supported only for OSS type. Each version supports up to 1 million file metadata entries. Applicable to most scenarios and requires the use of the SDK.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BASIC</p>
          */
         public Builder edition(String edition) {
             this.putQueryParameter("Edition", edition);
@@ -359,7 +377,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The dataset tag, which is used to filter datasets. Datasets whose tag key or tag value contains a specified string are filtered.</p>
+         * <p>The dataset label used to filter the dataset list. Datasets whose label key or value contains the specified string are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -371,7 +389,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The dataset name. Fuzzy search based on the dataset name is supported.</p>
+         * <p>The dataset name. Fuzzy match is supported based on the dataset name.</p>
          * 
          * <strong>example:</strong>
          * <p>myName</p>
@@ -383,10 +401,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The order of specific fields of the entries on the returned page. Valid values: ASC and DESC. Default value: ASC.</p>
+         * <p>The sorting order for the specified sort field in paging queries. Default value: ASC.</p>
          * <ul>
-         * <li>ASC: The entries are sorted in ascending order.</li>
-         * <li>DESC: The entries are sorted in descending order.</li>
+         * <li>ASC: ascending order.</li>
+         * <li>DESC: descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -399,7 +417,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the dataset list. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -411,7 +429,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>The number of entries per page settings for paging queries. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -423,10 +441,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The dataset properties. Multiple properties are separated by commas (,). Valid values:</p>
+         * <p>The dataset properties. Separate multiple values with commas (,). Valid values:</p>
          * <ul>
-         * <li>DIRECTORY</li>
-         * <li>FILE</li>
+         * <li>DIRECTORY: folder.</li>
+         * <li>FILE: file.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -439,7 +457,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The dataset provider. If the value pai is returned, the dataset is a public dataset provided by PAI.</p>
+         * <p>The dataset provider. A value of &quot;pai&quot; indicates that the dataset is a PAI platform public dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>pai</p>
@@ -451,7 +469,15 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * ShareScope.
+         * <p>The sharing filter for datasets:</p>
+         * <ul>
+         * <li>TO_ME: returns only datasets shared with you.</li>
+         * <li>BY_ME: returns only datasets you shared with others, with sharing configuration details displayed.</li>
+         * <li>If this parameter is not set or is set to empty: returns all datasets in the current workspace, including TO_ME.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BY_ME</p>
          */
         public Builder shareScope(String shareScope) {
             this.putQueryParameter("ShareScope", shareScope);
@@ -460,7 +486,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting.</p>
+         * <p>The field by which to sort the results.</p>
          * 
          * <strong>example:</strong>
          * <p>GmtCreateTime</p>
@@ -472,7 +498,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the iTAG labeled dataset that is used as the source dataset.</p>
+         * <p>The source dataset ID of the iTAG annotation set.</p>
          * 
          * <strong>example:</strong>
          * <p>d-rcdg3wxxxxxhc5jk87</p>
@@ -486,9 +512,9 @@ public class ListDatasetsRequest extends Request {
         /**
          * <p>The data source ID.</p>
          * <ul>
-         * <li>If SourceType is set to USER, the value of SourceId is a custom string.</li>
-         * <li>If SourceType is set to ITAG, the value of SourceId is the ID of the labeling job of iTAG.</li>
-         * <li>If SourceType is set to PAI_PUBLIC_DATASET, SourceId is empty by default.</li>
+         * <li>If SourceTypes is set to USER, you can customize the SourceId value.</li>
+         * <li>If SourceTypes is set to ITAG, which indicates a dataset generated from iTAG annotation results, SourceId is the iTAG task ID.</li>
+         * <li>If SourceTypes is set to PAI_PUBLIC_DATASET, which indicates a dataset created from a PAI public dataset, SourceId is empty by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -501,12 +527,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The source types. Multiple source types are separated by commas (,). Valid values:</p>
-         * <ul>
-         * <li>PAI-PUBLIC-DATASET: a public dataset of Platform for AI (PAI).</li>
-         * <li>ITAG: a dataset generated from a labeling job of iTAG.</li>
-         * <li>USER: a dataset registered by a user.</li>
-         * </ul>
+         * <p>The source types. Separate multiple values with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>USER,ITAG</p>
@@ -518,7 +539,8 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace to which the dataset belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID. If you do not specify this parameter, the default workspace is used. If the default workspace does not exist, an error is reported.</p>
+         * <p>The ID of the workspace where the dataset resides. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.
+         * If you do not specify this parameter, the default workspace is used. If the default workspace does not exist, an error is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>324**</p>

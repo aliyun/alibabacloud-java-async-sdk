@@ -60,7 +60,7 @@ public class DeleteCodeSourceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the code source to be deleted. You can call <a href="https://help.aliyun.com/document_detail/459922.html">ListCodeSources</a> to query the code source ID.</p>
+         * <p>The ID of the code source configuration to delete. For more information, see <a href="https://help.aliyun.com/document_detail/459922.html">ListCodeSources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -249,11 +249,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The visibility of the code source. Valid values:</p>
-         * <ul>
-         * <li>PRIVATE: Visible only to you and the administrator of the workspace.</li>
-         * <li>PUBLIC: Visible to all members in the workspace.</li>
-         * </ul>
+         * <p>The visibility of the code source configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
@@ -264,7 +260,14 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * CloneType.
+         * <p>The clone mode. Valid values:</p>
+         * <ul>
+         * <li>0: Create a new subdirectory.</li>
+         * <li>1: Tile to the current directory.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cloneType(Integer cloneType) {
             this.cloneType = cloneType;
@@ -294,7 +297,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The address of the code repository.</p>
+         * <p>The code repository URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://code.aliyun.com/pai-dlc/examples.git">https://code.aliyun.com/pai-dlc/examples.git</a></p>
@@ -305,7 +308,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token used to access the code repository.</p>
+         * <p>The access code repository token.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -327,7 +330,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the code source.</p>
+         * <p>The code source configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>code-202**********</p>
@@ -338,7 +341,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the code source.</p>
+         * <p>The detailed description of the code source configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>This is my data source 1.</p>
@@ -349,7 +352,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the code source.</p>
+         * <p>The code source configuration name.</p>
          * 
          * <strong>example:</strong>
          * <p>MyCodeSource1</p>
@@ -360,7 +363,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the code source was created, in the ISO8601 format.</p>
+         * <p>The creation time of the code source configuration. The time is in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-12T23:36:01.123Z</p>
@@ -371,7 +374,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the code source was modified, in the ISO8601 format.</p>
+         * <p>The modification time of the code source configuration. The time is in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-12T23:36:01.123Z</p>
@@ -382,7 +385,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The local mount path of the code.</p>
+         * <p>The local mount directory of the code.</p>
          * 
          * <strong>example:</strong>
          * <p>/root/code</p>
@@ -404,7 +407,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the creator.</p>
+         * <p>The creator ID of the code source configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>1722********</p>

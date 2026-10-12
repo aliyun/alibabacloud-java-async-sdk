@@ -159,6 +159,7 @@ public class UpdateDatasetVersionRequest extends Request {
         } 
 
         /**
+         * <p>The dataset ID. For information about how to obtain the dataset ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +172,7 @@ public class UpdateDatasetVersionRequest extends Request {
         }
 
         /**
+         * <p>The dataset version name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +185,10 @@ public class UpdateDatasetVersionRequest extends Request {
         }
 
         /**
-         * DataCount.
+         * <p>The number of dataset files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder dataCount(Long dataCount) {
             this.putBodyParameter("DataCount", dataCount);
@@ -192,7 +197,10 @@ public class UpdateDatasetVersionRequest extends Request {
         }
 
         /**
-         * DataSize.
+         * <p>The size of the space occupied by dataset files. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder dataSize(Long dataSize) {
             this.putBodyParameter("DataSize", dataSize);
@@ -201,7 +209,10 @@ public class UpdateDatasetVersionRequest extends Request {
         }
 
         /**
-         * DatasetTaskRamRole.
+         * <p>DatasetTaskRamRole</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1234567890123456:role/role-name</p>
          */
         public Builder datasetTaskRamRole(String datasetTaskRamRole) {
             this.putBodyParameter("DatasetTaskRamRole", datasetTaskRamRole);
@@ -210,7 +221,10 @@ public class UpdateDatasetVersionRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The custom description of the dataset, which is used to distinguish different datasets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description of a dataset version.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -219,7 +233,13 @@ public class UpdateDatasetVersionRequest extends Request {
         }
 
         /**
-         * Options.
+         * <p>The extended field in JsonString format.
+         * When Deep Learning Containers (DLC) uses the dataset, you can specify the default mount path of the dataset by configuring the mountPath field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;mountPath&quot;: &quot;/mnt/data/&quot;
+         * }</p>
          */
         public Builder options(String options) {
             this.putBodyParameter("Options", options);
@@ -228,7 +248,7 @@ public class UpdateDatasetVersionRequest extends Request {
         }
 
         /**
-         * UserMetricsEndpoints.
+         * <p>The list of user metric collection endpoints.</p>
          */
         public Builder userMetricsEndpoints(java.util.List<UserMetricsEndpoint> userMetricsEndpoints) {
             this.putBodyParameter("UserMetricsEndpoints", userMetricsEndpoints);

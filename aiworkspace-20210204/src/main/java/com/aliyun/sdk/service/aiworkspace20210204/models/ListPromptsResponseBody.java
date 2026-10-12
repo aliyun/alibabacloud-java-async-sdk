@@ -99,7 +99,7 @@ public class ListPromptsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned. By default, this parameter is not returned.</p>
+         * <p>The total number of entries returned under the current request conditions. This parameter is optional and may not be returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>

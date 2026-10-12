@@ -53,6 +53,10 @@ public class CreateDatasetRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Edition")
     private String edition;
 
@@ -141,6 +145,7 @@ public class CreateDatasetRequest extends Request {
         this.dataType = builder.dataType;
         this.datasetTaskRamRole = builder.datasetTaskRamRole;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
         this.edition = builder.edition;
         this.importInfo = builder.importInfo;
         this.labels = builder.labels;
@@ -229,6 +234,13 @@ public class CreateDatasetRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -373,6 +385,7 @@ public class CreateDatasetRequest extends Request {
         private String dataType; 
         private String datasetTaskRamRole; 
         private String description; 
+        private Boolean dryRun; 
         private String edition; 
         private String importInfo; 
         private java.util.List<Label> labels; 
@@ -407,6 +420,7 @@ public class CreateDatasetRequest extends Request {
             this.dataType = request.dataType;
             this.datasetTaskRamRole = request.datasetTaskRamRole;
             this.description = request.description;
+            this.dryRun = request.dryRun;
             this.edition = request.edition;
             this.importInfo = request.importInfo;
             this.labels = request.labels;
@@ -429,10 +443,11 @@ public class CreateDatasetRequest extends Request {
         } 
 
         /**
-         * <p>The workspace accessibility. Valid values:</p>
+         * <p>The workspace visibility. Valid values:</p>
          * <ul>
-         * <li>PRIVATE: The workspace is accessible only to you and the administrator of the workspace. This is the default value.</li>
-         * <li>PUBLIC: The workspace is accessible to all users.</li>
+         * <li>PRIVATE: Visible only to the creator and administrators in the workspace. This is the default value.</li>
+         * <li>PUBLIC: Visible to all users in the workspace.</li>
+         * <li>ROLE_PUBLIC: Visible to specified workspace roles. For the role list, refer to AccessibleRoleIdList. The dataset owner and administrators always have visibility regardless of the specified roles.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -445,7 +460,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * AccessibleRoleIdList.
+         * <p>Takes effect only when Accessibility is set to ROLE_PUBLIC. The list of workspace role names that have visibility to the dataset. Role IDs starting with PAI are basic role IDs, and those starting with role- are custom role IDs.</p>
          */
         public Builder accessibleRoleIdList(java.util.List<String> accessibleRoleIdList) {
             this.putBodyParameter("AccessibleRoleIdList", accessibleRoleIdList);
@@ -454,7 +469,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The number of dataset files.</p>
+         * <p>The number of files in the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -466,7 +481,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The size of the dataset file. Unit: bytes.</p>
+         * <p>The storage space occupied by the dataset files. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -480,8 +495,13 @@ public class CreateDatasetRequest extends Request {
         /**
          * <p>The data source type. Valid values:</p>
          * <ul>
-         * <li>OSS: Object Storage Service (OSS).</li>
-         * <li>NAS: File Storage NAS (NAS).</li>
+         * <li>OSS: Alibaba Cloud Object Storage Service (OSS).</li>
+         * <li>NAS: Alibaba Cloud File Storage NAS (General-purpose).</li>
+         * <li>EXTREMENAS: Alibaba Cloud File Storage NAS (Extreme).</li>
+         * <li>CPFS: Alibaba Cloud Cloud Paralleled File System (CPFS) (General-purpose).</li>
+         * <li>BMCPFS: Alibaba Cloud Cloud Paralleled File System (CPFS) (AI-optimized). </li>
+         * <li>MAXCOMPUTE: Alibaba Cloud MaxCompute.</li>
+         * <li>URL: A public HTTP or HTTPS URL.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -495,13 +515,13 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The type of the dataset. Default value: COMMON. Valid values:</p>
+         * <p>The data type of the dataset. Default value: COMMON. Valid values:</p>
          * <ul>
-         * <li>COMMON: common</li>
-         * <li>PIC: picture</li>
-         * <li>TEXT: text</li>
-         * <li>Video: video</li>
-         * <li>AUDIO: audio</li>
+         * <li>COMMON: Common data.</li>
+         * <li>PIC: Image data.</li>
+         * <li>TEXT: Text data.</li>
+         * <li>VIDEO: Video data.</li>
+         * <li>AUDIO: Audio data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -514,7 +534,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetTaskRamRole.
+         * <p>DatasetTaskRamRole</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1234567890123456:role/role-name</p>
          */
         public Builder datasetTaskRamRole(String datasetTaskRamRole) {
             this.putBodyParameter("DatasetTaskRamRole", datasetTaskRamRole);
@@ -523,7 +546,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The description of the dataset. Descriptions are used to differentiate datasets.</p>
+         * <p>The custom description of the dataset, which is used to distinguish it from other datasets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description of the dataset.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -532,7 +558,24 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * Edition.
+         * <p>Specifies whether to perform only a dry run without actually creating the dataset.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putBodyParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The dataset edition. Default value: BASIC. Valid values:</p>
+         * <ul>
+         * <li>BASIC: Basic edition. Does not support file metadata management for the dataset.</li>
+         * <li>ADVANCED: Advanced edition. Only OSS datasets are supported. Each version supports metadata management for up to 1 million files.</li>
+         * <li>LOGICAL: Logical edition. Only OSS datasets are supported. Each version supports metadata management for up to 3 million files.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ADVANCED</p>
          */
         public Builder edition(String edition) {
             this.putBodyParameter("Edition", edition);
@@ -541,15 +584,47 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The dataset configurations to be imported to a storage, such as OSS, NAS, or Cloud Parallel File Storage (CPFS).</p>
-         * <p><strong>OSS</strong></p>
-         * <p>{<br>&quot;region&quot;: &quot;${region}&quot;,// The region ID.<br>&quot;bucket&quot;: &quot;${bucket}&quot;,//The bucket name.<br>&quot;path&quot;: &quot;${path}&quot; // The file path.<br>}\</p>
-         * <p><strong>NAS</strong></p>
-         * <p>{<br>&quot;region&quot;: &quot;${region}&quot;,// The region ID.<br>&quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.<br>&quot;path&quot;: &quot;${path}&quot;, // The file system path.<br>&quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system.<br>}\</p>
-         * <p><strong>CPFS</strong></p>
-         * <p>{<br>&quot;region&quot;: &quot;${region}&quot;,// The region ID.<br>&quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.<br>&quot;protocolServiceId&quot;:&quot;${protocol_service_id}&quot;, // The file system protocol service.<br>&quot;exportId&quot;: &quot;${export_id}&quot;, // The file system export directory.<br>&quot;path&quot;: &quot;${path}&quot;, // The file system path.<br>}\</p>
-         * <p><strong>CPFS for Lingjun</strong></p>
-         * <p>{<br>&quot;region&quot;: &quot;${region}&quot;,// The region ID.<br>&quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.<br>&quot;path&quot;: &quot;${path}&quot;, // The file system path.<br>&quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system, CPFS for Lingjun only.<br>&quot;isVpcMount&quot;: boolean, // Whether the mount point is a virtual private cloud (VPC) mount point, CPFS for Lingjun only.<br>}\</p>
+         * <p>The storage import configuration of the dataset. OSS, NAS, and CPFS are supported.</p>
+         * <details>
+         * <summary>OSS</summary>
+         * {<BR>
+         * "region": "${region}",// The region ID.<BR>
+         * "bucket": "${bucket}",// The bucket name.<BR>
+         * "path": "${path}" // The file path.<BR>
+         * }<BR>
+         * </details>
+         * 
+         * <details>
+         * <summary>NAS</summary>
+         * {<BR>
+         * "region": "${region}",// The region ID.<BR>
+         * "fileSystemId": "${file_system_id}", // The file system ID.<BR>
+         * "path": "${path}", // The file system path.<BR>
+         * "mountTarget": "${mount_target}" // The mount target of the file system.<BR>
+         * }<BR>
+         * </details>
+         * 
+         * <details>
+         * <summary>CPFS</summary>
+         * {<BR>
+         * "region": "${region}",// The region ID.<BR>
+         * "fileSystemId": "${file_system_id}", // The file system ID.<BR>
+         * "protocolServiceId":"${protocol_service_id}", // The protocol service of the file system.<BR>
+         * "exportId": "${export_id}", // The export directory of the file system.<BR>
+         * "path": "${path}", // The file system path.<BR>
+         * }<BR>
+         * </details>
+         * 
+         * <details>
+         * <summary>AI-optimized CPFS</summary>
+         * {<BR>
+         * "region": "${region}",// The region ID.<BR>
+         * "fileSystemId": "${file_system_id}", // The file system ID.<BR>
+         * "path": "${path}", // The file system path.<BR>
+         * "mountTarget": "${mount_target}", // The mount target of the file system. Specific to the AI-optimized edition.<BR>
+         * "isVpcMount": boolean, // Specifies whether the mount target is a VPC mount target. Specific to the AI-optimized edition.<BR>
+         * }<BR>
+         * </details>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -567,7 +642,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of labels.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
@@ -576,11 +651,11 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The list of role names in the workspace that have read and write permissions on the mounted database. The names start with PAI are basic role names and the names start with role- are custom role names. If the list contains asterisks (*), all roles have read and write permissions.</p>
+         * <p>The list of workspace role names that have read and write permissions when the dataset is mounted. Role IDs starting with PAI are basic role IDs, and those starting with role- are custom role IDs. If the list contains an asterisk (*), all roles have read and write permissions.</p>
          * <ul>
-         * <li>If you set the value to [&quot;PAI.AlgoOperator&quot;, &quot;role-hiuwpd01ncrokkgp21&quot;], the account of the specified role is granted the read and write permissions.</li>
-         * <li>If you set the value to [&quot;*&quot;], all accounts are granted the read and write permissions.</li>
-         * <li>If you set the value to [], only the creator of the dataset has the read and write permissions.</li>
+         * <li>Specified roles: [&quot;PAI.AlgoOperator&quot;, &quot;role-hiuwpd01ncrokkgp21&quot;]</li>
+         * <li>All roles: [&quot;*&quot;]</li>
+         * <li>Dataset creator only: []</li>
          * </ul>
          */
         public Builder mountAccessReadWriteRoleIdList(java.util.List<String> mountAccessReadWriteRoleIdList) {
@@ -590,9 +665,9 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The dataset name. The name must meet the following requirements:</p>
+         * <p>The name of the dataset. The naming rules are as follows:</p>
          * <ul>
-         * <li>The name must start with a letter, digit, or Chinese character.</li>
+         * <li>The name must start with a lowercase letter, an uppercase letter, a digit, or a Chinese character.</li>
          * <li>The name can contain underscores (_) and hyphens (-).</li>
          * <li>The name must be 1 to 127 characters in length.</li>
          * </ul>
@@ -608,7 +683,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The extended field, which is a JSON string. When you use the dataset in Deep Learning Containers (DLC), you can configure the mountPath field to specify the default mount path of the dataset.</p>
+         * <p>The extended fields in JSON string format. When DLC uses the dataset, you can configure the mountPath field to specify the default mount path of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -624,8 +699,8 @@ public class CreateDatasetRequest extends Request {
         /**
          * <p>The property of the dataset. Valid values:</p>
          * <ul>
-         * <li>FILE</li>
-         * <li>DIRECTORY</li>
+         * <li>FILE: File.</li>
+         * <li>DIRECTORY: Directory.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -639,7 +714,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The dataset provider. The value cannot be set to pai.</p>
+         * <p>The provider of the dataset. You cannot set this parameter to pai.</p>
          * 
          * <strong>example:</strong>
          * <p>Github</p>
@@ -651,10 +726,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The source type of the dataset. Valid values:</p>
+         * <p>The data source type of the dataset. Valid values:</p>
          * <ul>
-         * <li>Ecs (default)</li>
-         * <li>Lingjun</li>
+         * <li>Ecs: Elastic Compute Service (ECS). This is the default value.</li>
+         * <li>Lingjun: Lingjun.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -667,7 +742,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source dataset for the labeled dataset.</p>
+         * <p>The ID of the source dataset from which the labeled dataset is generated.</p>
          * 
          * <strong>example:</strong>
          * <p>d-bvfasdfxxxxj8o411</p>
@@ -679,7 +754,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The version of the source dataset for the labeled dataset.</p>
+         * <p>The version of the source dataset from which the labeled dataset is generated.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -691,11 +766,11 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The data source ID.</p>
+         * <p>The ID of the data source.</p>
          * <ul>
-         * <li>If SourceType is set to USER, the value of SourceId is a custom string.</li>
-         * <li>If SourceType is set to ITAG, the value of SourceId is the ID of the labeling job of iTAG.</li>
-         * <li>If SourceType is set to PAI_PUBLIC_DATASET, SourceId is empty by default.</li>
+         * <li>When SourceType is set to USER, SourceId can be customized.</li>
+         * <li>When SourceType is set to ITAG, which indicates that the dataset is generated from the labeling results of the iTAG module, SourceId is the iTAG task ID.</li>
+         * <li>When SourceType is set to PAI_PUBLIC_DATASET, which indicates that the dataset is created from a PAI public dataset, SourceId is empty by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -708,13 +783,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The type of the data source. Default value: USER.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PAI_PUBLIC_DATASET: a public dataset of PAI.</li>
-         * <li>ITAG: a dataset generated from a labeling job of iTAG.</li>
-         * <li>USER: a dataset registered by a user.</li>
-         * </ul>
+         * <p>The data source type. Default value: USER.</p>
          * 
          * <strong>example:</strong>
          * <p>USER</p>
@@ -726,10 +795,14 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The URI of the data source.</p>
+         * <p>The URI configuration examples are as follows:</p>
          * <ul>
-         * <li>Value format if DataSourceType is set to OSS: <code>oss://bucket.endpoint/object</code>.</li>
-         * <li>Value formats if DataSourceType is set to NAS: General-purpose NAS: <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>. CPFS 1.0: <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>. CPFS 2.0: <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>. You can distinguish CPFS 1.0 and CPFS 2.0 file systems based on the format of the file system ID: The ID for CPFS 1.0 is in the cpfs-&lt;8-bit ASCII characters&gt; format. The ID for CPFS 2.0 is in the cpfs-&lt;16-bit ASCII characters&gt; format.</li>
+         * <li>If the data source type is OSS: <code>oss://bucket.endpoint/object</code></li>
+         * <li>If the data source type is NAS:
+         * For general-purpose NAS, the format is <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>.
+         * For CPFS 1.0, the format is <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>.
+         * For CPFS 2.0, the format is <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>.
+         * CPFS 1.0 and CPFS 2.0 are distinguished by the format of the fsid: the format for CPFS 1.0 is cpfs-&lt;8 ASCII characters&gt;, and the format for CPFS 2.0 is cpfs-&lt;16 ASCII characters&gt;.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -743,7 +816,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the dataset belongs. The workspace owner and administrator have permissions to create datasets for specified members in the workspace.</p>
+         * <p>The Alibaba Cloud account ID of the dataset owner. The workspace owner and administrators have the permissions to create datasets for specified workspace members.</p>
          * 
          * <strong>example:</strong>
          * <p>2485765****023475</p>
@@ -755,7 +828,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * UserMetricsEndpoints.
+         * <p>UserMetricsEndpoints</p>
          */
         public Builder userMetricsEndpoints(java.util.List<UserMetricsEndpoint> userMetricsEndpoints) {
             this.putBodyParameter("UserMetricsEndpoints", userMetricsEndpoints);
@@ -764,10 +837,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The description of the dataset of the initial version.</p>
+         * <p>The description of the initial version of the dataset.</p>
          * 
          * <strong>example:</strong>
-         * <p>The initial version</p>
+         * <p>This is a description of the first dataset version.</p>
          */
         public Builder versionDescription(String versionDescription) {
             this.putBodyParameter("VersionDescription", versionDescription);
@@ -776,7 +849,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The list of tags to be added to the dataset of the initial version.</p>
+         * <p>The list of labels for the initial version.</p>
          */
         public Builder versionLabels(java.util.List<Label> versionLabels) {
             this.putBodyParameter("VersionLabels", versionLabels);
@@ -785,7 +858,8 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace to which the dataset belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID. If you do not specify this parameter, the default workspace is used. If the default workspace does not exist, an error is reported.</p>
+         * <p>The ID of the workspace to which the dataset belongs. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.
+         * If you do not configure this parameter, the default workspace is used. If the default workspace does not exist, an error is reported.</p>
          * 
          * <strong>example:</strong>
          * <p>478**</p>

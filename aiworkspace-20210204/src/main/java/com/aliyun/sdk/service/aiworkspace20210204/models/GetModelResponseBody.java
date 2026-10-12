@@ -327,10 +327,10 @@ public class GetModelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The visibility of the workspace.</p>
+         * <p>The workspace visibility. Valid values:</p>
          * <ul>
-         * <li>PRIVATE: The workspace is visible only to you and the administrator of the workspace.</li>
-         * <li>PUBLIC: The workspace is visible to all users.</li>
+         * <li>PRIVATE: Visible only to you and administrators in this workspace.</li>
+         * <li>PUBLIC: Visible to all users in this workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -342,7 +342,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The domain. This parameter specifies the domain for which the model is developed. Valid values: nlp and cv. nlp indicates natural language processing and cv indicates computer vision.</p>
+         * <p>The domain. Describes the domain to which the problem solved by the model belongs, such as nlp (natural language processing) and cv (computer vision).</p>
          * 
          * <strong>example:</strong>
          * <p>cv</p>
@@ -353,7 +353,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Other information about the model.</p>
+         * <p>The extra information of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -372,7 +372,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the model is created, in UTC. The time follows the ISO 8601 standard.</p>
+         * <p>The UTC time of model creation, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-30T12:51:33.028Z</p>
@@ -383,7 +383,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * GmtLatestVersionModifiedTime.
+         * <p>The time when the latest version was modified, in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.sssZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
          */
         public Builder gmtLatestVersionModifiedTime(String gmtLatestVersionModifiedTime) {
             this.gmtLatestVersionModifiedTime = gmtLatestVersionModifiedTime;
@@ -391,7 +394,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the model is last modified, in UTC. The time follows the ISO 8601 standard.</p>
+         * <p>The time when the model was last modified, in UTC. The time follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-30T12:51:33.028Z</p>
@@ -402,7 +405,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The model tags.</p>
+         * <p>The list of model labels.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
@@ -419,6 +422,9 @@ public class GetModelResponseBody extends TeaModel {
 
         /**
          * <p>The model description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>General sentiment analysis</p>
          */
         public Builder modelDescription(String modelDescription) {
             this.modelDescription = modelDescription;
@@ -426,7 +432,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The documentation of the model.</p>
+         * <p>The model document.</p>
          * 
          * <strong>example:</strong>
          * <p>https://***.md</p>
@@ -449,6 +455,9 @@ public class GetModelResponseBody extends TeaModel {
 
         /**
          * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sentiment Analysis</p>
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
@@ -467,7 +476,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The sequence number of the model.</p>
+         * <p>The ordinal number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -478,7 +487,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The source of the model. The community or organization to which the model belongs, such as ModelScope or HuggingFace.</p>
+         * <p>The model origin. Describes the community or organization to which the source model belongs, such as ModelScope and HuggingFace.</p>
          * 
          * <strong>example:</strong>
          * <p>ModelScope</p>
@@ -489,7 +498,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890******</p>
@@ -500,7 +509,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * ParameterSize.
+         * <p>The number of parameters, in millions (M).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder parameterSize(Long parameterSize) {
             this.parameterSize = parameterSize;
@@ -530,7 +542,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task of the model. This parameter describes specific issues that the model solves, such as text-classification.</p>
+         * <p>The task. Describes the specific problem that the model solves, such as text-classification (text categorization).</p>
          * 
          * <strong>example:</strong>
          * <p>text-classification</p>

@@ -106,7 +106,10 @@ public class ExperimentLabel extends TeaModel {
         } 
 
         /**
-         * ExperimentId.
+         * <p>ExperimentId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-890waerw09a0f</p>
          */
         public Builder experimentId(String experimentId) {
             this.experimentId = experimentId;
@@ -114,7 +117,10 @@ public class ExperimentLabel extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>Create time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-27T03:30:04Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -122,7 +128,10 @@ public class ExperimentLabel extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>Modified time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-27T03:30:04Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -130,7 +139,10 @@ public class ExperimentLabel extends TeaModel {
         }
 
         /**
-         * Key.
+         * <p>Key of Experiment Label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -138,7 +150,10 @@ public class ExperimentLabel extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>Value of Experiment Label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         public Builder value(String value) {
             this.value = value;

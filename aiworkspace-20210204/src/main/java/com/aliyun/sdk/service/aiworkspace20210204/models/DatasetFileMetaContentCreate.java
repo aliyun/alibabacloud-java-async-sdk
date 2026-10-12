@@ -189,7 +189,10 @@ public class DatasetFileMetaContentCreate extends TeaModel {
         } 
 
         /**
-         * Comment.
+         * <p>The file comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The first image file in the dataset.</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -197,7 +200,11 @@ public class DatasetFileMetaContentCreate extends TeaModel {
         }
 
         /**
+         * <p>The MIME type of the file. Contains Type and SubType.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/jpeg</p>
          */
         public Builder contentType(String contentType) {
             this.contentType = contentType;
@@ -205,7 +212,10 @@ public class DatasetFileMetaContentCreate extends TeaModel {
         }
 
         /**
-         * DataSize.
+         * <p>The file size in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder dataSize(Long dataSize) {
             this.dataSize = dataSize;
@@ -213,10 +223,11 @@ public class DatasetFileMetaContentCreate extends TeaModel {
         }
 
         /**
+         * <p>The file creation time in ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-12T14:36:01.000Z</p>
+         * <p>2025-01-12T14:36:01Z</p>
          */
         public Builder fileCreateTime(String fileCreateTime) {
             this.fileCreateTime = fileCreateTime;
@@ -224,7 +235,11 @@ public class DatasetFileMetaContentCreate extends TeaModel {
         }
 
         /**
+         * <p>The file fingerprint value. Used to determine the uniqueness of file content. This value changes when the file content is modified. OSS files use ETag, and NAS files use MD5 values.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D41D8CD98F*****E9800998ECF8</p>
          */
         public Builder fileFingerPrint(String fileFingerPrint) {
             this.fileFingerPrint = fileFingerPrint;
@@ -232,7 +247,10 @@ public class DatasetFileMetaContentCreate extends TeaModel {
         }
 
         /**
-         * FileName.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00001.jpeg</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -240,7 +258,11 @@ public class DatasetFileMetaContentCreate extends TeaModel {
         }
 
         /**
+         * <p>The file type. Same as MIME Type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder fileType(String fileType) {
             this.fileType = fileType;
@@ -248,11 +270,12 @@ public class DatasetFileMetaContentCreate extends TeaModel {
         }
 
         /**
+         * <p>The last modification time of the file in ISO 8601 format.</p>
          * <p>This parameter is required.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-12T14:36:01.000Z</p>
+         * <p>2025-01-12T14:36:01Z</p>
          */
         public Builder fileUpdateTime(String fileUpdateTime) {
             this.fileUpdateTime = fileUpdateTime;
@@ -260,7 +283,13 @@ public class DatasetFileMetaContentCreate extends TeaModel {
         }
 
         /**
-         * MetaAttributes.
+         * <p>The specific metadata of the file, not searchable. In JSON string format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;ImageHeight&quot;: 1080,
+         *     &quot;ImageWidth&quot;: 1920
+         * }</p>
          */
         public Builder metaAttributes(String metaAttributes) {
             this.metaAttributes = metaAttributes;
@@ -268,7 +297,24 @@ public class DatasetFileMetaContentCreate extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>User manual tagging: (add indicates adding tags to the tag group). In JSON string format.
+         * The operable tag groups are:</p>
+         * <ul>
+         * <li>user: The list of tag names manually added by the user for a single metadata entry.</li>
+         * </ul>
+         * <pre><code>{
+         *     &quot;user&quot;:{
+         *         &quot;add&quot;:[&quot;lane_line&quot;,&quot;sunny&quot;]
+         *     }
+         * }
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;user&quot;:{
+         *         &quot;add&quot;:[&quot;Lane line&quot;,&quot;Sunny day&quot;]
+         *     }
+         * }</p>
          */
         public Builder tags(String tags) {
             this.tags = tags;
@@ -276,7 +322,21 @@ public class DatasetFileMetaContentCreate extends TeaModel {
         }
 
         /**
+         * <p>The unique URI of the file. Used to record the unique file path. Supports file paths in OSS and NAS.</p>
+         * <details>
+         * <summary>OSS</summary>
+         * oss://${bucket}/${path}
+         * </details>
+         * <details>
+         * <summary>NAS</summary>
+         * nas://${fileSystemId}/${path}
+         * </details>
+         * 
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://*****-test/dataset/1653421.jpg
+         * nas://0e25d***dff/dataset/1653421.jpg</p>
          */
         public Builder uri(String uri) {
             this.uri = uri;

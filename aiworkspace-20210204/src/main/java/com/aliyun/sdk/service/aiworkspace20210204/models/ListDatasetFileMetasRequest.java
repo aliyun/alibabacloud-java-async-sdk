@@ -456,7 +456,7 @@ public class ListDatasetFileMetasRequest extends Request {
         } 
 
         /**
-         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
+         * <p>The dataset ID. For information about how to obtain the dataset ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -469,7 +469,7 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * DatasetFileMetaIds.
+         * <p>The list of metadata IDs to query.</p>
          */
         public Builder datasetFileMetaIds(java.util.List<String> datasetFileMetaIds) {
             String datasetFileMetaIdsShrink = shrink(datasetFileMetaIds, "DatasetFileMetaIds", "simple");
@@ -479,7 +479,7 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The dataset version.</p>
+         * <p>The dataset version name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -492,11 +492,11 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The update time range to query. The end time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</p>
+         * <p>The start time of the file update time range for the query. The value is a UTC timestamp in ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-01-12T14:36:01Z</p>
+         * <p>2025-01-12T14:36:01.000Z</p>
          */
         public Builder endFileUpdateTime(String endFileUpdateTime) {
             this.putQueryParameter("EndFileUpdateTime", endFileUpdateTime);
@@ -505,6 +505,7 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
+         * <p>The end time of the tag last update time range for the query. The value is a UTC timestamp in ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -517,7 +518,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per request when using NextToken-based pagination. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -528,7 +532,7 @@ public class ListDatasetFileMetasRequest extends Request {
         /**
          * <p>The pagination token.</p>
          * <blockquote>
-         * <p> If you do not configure this parameter, the data on the first page is returned. A return value other than Null of this parameter indicates that not all entries have been returned. You can use this value as an input parameter to obtain entries on the next page. The value Null indicates that all query results have been returned.</p>
+         * <p>If this parameter is not specified, the first page of data is returned. If a value is returned for this parameter, more pages are available. Pass the returned NextToken value as a request parameter to retrieve the next page, until no NextToken value is returned, which indicates that all data has been retrieved.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -541,10 +545,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy. Default value: ASC.</p>
+         * <p>The sorting order for the specified sorting field in paging queries. Used together with SortBy. Default value: DESC. Valid values:</p>
          * <ul>
-         * <li>ASC</li>
-         * <li>DESC</li>
+         * <li>ASC: ascending order.</li>
+         * <li>DESC: descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -557,7 +561,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 1000.</p>
+         * <p>The number of entries per page. If MaxResults is also specified, MaxResults takes precedence.</p>
+         * <blockquote>
+         * <p>This parameter will be offline soon. Use NextToken and MaxResults to perform paging query operations.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -569,7 +576,7 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * QueryContentTypeIncludeAny.
+         * <p>The search condition for &quot;include any of the following content types&quot;. You can select multiple content types, and the query results need to match only one of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</p>
          */
         public Builder queryContentTypeIncludeAny(java.util.List<String> queryContentTypeIncludeAny) {
             String queryContentTypeIncludeAnyShrink = shrink(queryContentTypeIncludeAny, "QueryContentTypeIncludeAny", "simple");
@@ -579,7 +586,12 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * QueryExpression.
+         * <p>The query statement (DSL) is a realm-specific language for expressing complex retrieve conditions. It supports grouping, Boolean logic (AND/OR/NOT), range comparisons (&gt;, &gt;=, &lt;, &lt;=), property existence checks (HAS/NOT HAS), token match (:), and exact match (=), which are suitable for advanced retrieve scenarios.
+         * This parameter is typically used for complex advanced retrieve conditional statements.
+         * <notice>To avoid conflicts, after setting this query statement, do not use it together with other query parameters.</notice></p>
+         * 
+         * <strong>example:</strong>
+         * <p>(FileUpdateTime &gt; \&quot;2025-02-28T00:00:00Z\&quot; AND FileUpdateTime &lt; \&quot;2025-05-30T09:27:29Z\&quot;) AND FileDir:\&quot;blue_car\&quot; AND NOT FileName=&quot;toyota.jpg&quot; AND (( Tags.all=\&quot;lane line\&quot; AND Tags.all=\&quot;barrier gate\&quot;) OR NOT Tags.user=\&quot;rainy days\&quot; ) AND HAS SemanticIndexJobId AND Content:\&quot;a fallen water horse\&quot; AND TopK=100 AND SignMode=\&quot;PUBLIC\&quot;</p>
          */
         public Builder queryExpression(String queryExpression) {
             this.putQueryParameter("QueryExpression", queryExpression);
@@ -588,7 +600,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * QueryFileDir.
+         * <p>The file directory search condition. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cars/20250221/</p>
          */
         public Builder queryFileDir(String queryFileDir) {
             this.putQueryParameter("QueryFileDir", queryFileDir);
@@ -597,7 +612,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * QueryFileName.
+         * <p>The file name search condition. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>car</p>
          */
         public Builder queryFileName(String queryFileName) {
             this.putQueryParameter("QueryFileName", queryFileName);
@@ -606,7 +624,7 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * QueryFileTypeIncludeAny.
+         * <p>The search condition for &quot;include any of the following file types&quot;. You can select multiple file types, and the query results need to match only one of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</p>
          */
         public Builder queryFileTypeIncludeAny(java.util.List<String> queryFileTypeIncludeAny) {
             String queryFileTypeIncludeAnyShrink = shrink(queryFileTypeIncludeAny, "QueryFileTypeIncludeAny", "simple");
@@ -616,7 +634,16 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * QueryImage.
+         * <p>The image information for image-to-image search.</p>
+         * <ul>
+         * <li>An OSS URL with public network access is supported. Format: oss://{bucket_name}/{object_path}, where bucket_name is the bucket name and object_path is the file path in the bucket.<blockquote>
+         * <p>This parameter takes effect only when QueryType is set to VECTOR or MIX.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-xxx-oss/car/0001.png</p>
          */
         public Builder queryImage(String queryImage) {
             this.putQueryParameter("QueryImage", queryImage);
@@ -625,7 +652,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * QueryTagsExclude.
+         * <p>The search condition for &quot;exclude the following tags&quot;. You can select multiple tags, and the query results must not contain any of them. If this parameter is empty, this condition is not applied.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when QueryType is set to TAG or MIX.</p>
+         * </blockquote>
          */
         public Builder queryTagsExclude(java.util.List<String> queryTagsExclude) {
             String queryTagsExcludeShrink = shrink(queryTagsExclude, "QueryTagsExclude", "simple");
@@ -635,7 +665,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * QueryTagsIncludeAll.
+         * <p>The search condition for &quot;include all of the following tags&quot;. You can select multiple tags, and the query results must match all of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when QueryType is set to TAG or MIX. When QueryType is set to TAG, the value of QueryText is added to this condition.</p>
+         * </blockquote>
          */
         public Builder queryTagsIncludeAll(java.util.List<String> queryTagsIncludeAll) {
             String queryTagsIncludeAllShrink = shrink(queryTagsIncludeAll, "QueryTagsIncludeAll", "simple");
@@ -645,7 +678,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * QueryTagsIncludeAny.
+         * <p>The search condition for &quot;include any of the following tags&quot;. You can select multiple tags, and the query results need to match only one of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when QueryType is set to TAG or MIX.</p>
+         * </blockquote>
          */
         public Builder queryTagsIncludeAny(java.util.List<String> queryTagsIncludeAny) {
             String queryTagsIncludeAnyShrink = shrink(queryTagsIncludeAny, "QueryTagsIncludeAny", "simple");
@@ -655,7 +691,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The text content to be queried.</p>
+         * <p>The text content to search for.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A fallen water</p>
          */
         public Builder queryText(String queryText) {
             this.putQueryParameter("QueryText", queryText);
@@ -664,14 +703,15 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The retrieval type.</p>
+         * <p>The retrieve type. Valid values:</p>
          * <ul>
-         * <li>TAG (default)</li>
-         * <li>VECTOR</li>
+         * <li>MIX: hybrid retrieve (default).</li>
+         * <li>TAG: label-only retrieve.</li>
+         * <li>VECTOR: AISearch-only retrieve.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>TAG</p>
+         * <p>MIX</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -680,7 +720,16 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * QueryVideo.
+         * <p>The video file information for video-based search.</p>
+         * <ul>
+         * <li>A video OSS URL with public network access is supported. Format: oss://{bucket_name}/{object_path}, where bucket_name is the bucket name and object_path is the file path in the bucket.<blockquote>
+         * <p>This parameter takes effect only when QueryType is set to VECTOR or MIX.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-xxx-oss/car/0001.mp4</p>
          */
         public Builder queryVideo(String queryVideo) {
             this.putQueryParameter("QueryVideo", queryVideo);
@@ -689,7 +738,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The similarity score. Only dataset files whose similarity score is greater than the value of ScoreThreshold are returned. This parameter is valid only when QueryType is set to VECTOR.</p>
+         * <p>The similarity score threshold. Only results with a score greater than ScoreThreshold are returned.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when QueryType is set to VECTOR or MIX.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>0.6</p>
@@ -701,10 +753,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The field used to sort the results. Default value: GmtCreateTime. Valid values:</p>
+         * <p>The sorting field for paging queries. By default, results are sorted by retrieve relevance in descending order. Other valid values:</p>
          * <ul>
-         * <li>FileCreateTime (default): The results are sorted by the time when the file is created.</li>
-         * <li>FileUpdateTime: The results are sorted by the time when the file is last modified.</li>
+         * <li>FileCreateTime: sorting by file creation time.</li>
+         * <li>FileUpdateTime: sorting by file last modified time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -717,11 +769,11 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The update time range to query. The start time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</p>
+         * <p>The end time of the file update time range for the query. The value is a UTC timestamp in ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-01-12T14:36:01Z</p>
+         * <p>2025-01-12T14:36:01.000Z</p>
          */
         public Builder startFileUpdateTime(String startFileUpdateTime) {
             this.putQueryParameter("StartFileUpdateTime", startFileUpdateTime);
@@ -730,6 +782,7 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
+         * <p>The start time of the tag last update time range for the query. The value is a UTC timestamp in ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -742,7 +795,15 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The metadata status to query. Valid values:</p>
+         * <ul>
+         * <li>ACTIVE: queries only non-deleted data (default).</li>
+         * <li>ALL: queries all data.</li>
+         * <li>DELETED: queries only logically deleted data.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -751,7 +812,18 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * ThumbnailMode.
+         * <p>The thumbnail mode for images. Currently, only OSS files support thumbnails:</p>
+         * <ul>
+         * <li>Proportional scaling: p_{percentage}, where percentage specifies the desired scaling ratio. Valid values: [1, 100]. Example: p_50 uses 50% of the original file size as the thumbnail.</li>
+         * <li>Fixed width with adaptive height: w_{width}, where width specifies the desired image width. Valid values: [1, 16384]. Example: w_200 fixes the image width to 200 pixels and adaptively scales the height.</li>
+         * <li>Fixed height with adaptive width: h_{height}, where height specifies the desired image height. Valid values: [1, 16384]. Example: h_100 fixes the image height to 100 pixels and adaptively scales the width.</li>
+         * <li>Fixed dimensions with padding: m_pad,w_{width},h_{height},color_{RGB}. m_pad scales the image to the largest size that fits within the specified width and height rectangle. RGB specifies the fill color for blank areas. If this parameter is not specified, white is used by default. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example:</li>
+         * <li>Fixed dimensions with center cropping: m_fill,w_{width},h_{height}. m_fill proportionally scales the image to the smallest size that extends beyond the specified width and height rectangle, and center-crops the excess. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example: m_fill,w_100,h_100 fixes both the width and height to 100 pixels with center cropping.</li>
+         * <li>Forced dimensions: m_fixed,w_{width},h_{height}. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example: m_fixed,w_100,h_100 forces both the width and height to 100 pixels.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>w_100</p>
          */
         public Builder thumbnailMode(String thumbnailMode) {
             this.putQueryParameter("ThumbnailMode", thumbnailMode);
@@ -760,7 +832,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The number of search results to return. A maximum of Top K search results can be returned. This parameter is valid only when QueryType is set to VECTOR.</p>
+         * <p>The maximum number of results to return. Only the top K results are returned.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when QueryType is set to VECTOR or MIX.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -772,7 +847,7 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace to which the dataset belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The workspace ID of the dataset. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

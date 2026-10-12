@@ -88,7 +88,7 @@ public class DeleteUserConfigRequest extends Request {
         } 
 
         /**
-         * <p>The category. Currently, only DataPrivacyConfig is supported.</p>
+         * <p>The classification. Only DataPrivacyConfig is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class DeleteUserConfigRequest extends Request {
         }
 
         /**
-         * <p>The configuration item keys. Currently, only customizePAIAssumedRole.</p>
+         * <p>The configuration key. Only customizePAIAssumedRole is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>tempStoragePath</p>

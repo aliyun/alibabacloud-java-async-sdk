@@ -74,6 +74,7 @@ public class DeleteWorkspaceRolesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace. You can call the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class DeleteWorkspaceRolesRequest extends Request {
         }
 
         /**
-         * RoleIds.
+         * <p>The IDs of the roles to delete.</p>
          */
         public Builder roleIds(java.util.List<String> roleIds) {
             this.putBodyParameter("RoleIds", roleIds);

@@ -262,7 +262,10 @@ public class DatasetVersion extends TeaModel {
         } 
 
         /**
-         * DataCount.
+         * <p>DataCount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder dataCount(Long dataCount) {
             this.dataCount = dataCount;
@@ -270,7 +273,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * DataSize.
+         * <p>DataSize</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder dataSize(Long dataSize) {
             this.dataSize = dataSize;
@@ -278,7 +284,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * DataSourceType.
+         * <p>DataSourceType</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
@@ -286,7 +295,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * DatasetTaskRamRole.
+         * <p>DatasetTaskRamRole</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1234567890123456:role/role-name</p>
          */
         public Builder datasetTaskRamRole(String datasetTaskRamRole) {
             this.datasetTaskRamRole = datasetTaskRamRole;
@@ -294,7 +306,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base model v1</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -302,7 +317,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>create time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -310,7 +328,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>modify time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -318,7 +339,16 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * ImportInfo.
+         * <p>ImportInfo</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;region&quot;: &quot;cn-wulanchabu&quot;,
+         *     &quot;fileSystemId&quot;: &quot;bmcpfs-xxxxxxxxxxx&quot;,
+         *     &quot;path&quot;: &quot;/mnt&quot;,
+         *     &quot;mountTarget&quot;: &quot;cpfs-xxxxxxxxxxxx-vpc-gacs9f.cn-wulanchabu.cpfs.aliyuncs.com&quot;,
+         *     &quot;isVpcMount&quot;: true
+         * }</p>
          */
         public Builder importInfo(String importInfo) {
             this.importInfo = importInfo;
@@ -326,7 +356,7 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>Labels</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
@@ -334,7 +364,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * MountAccess.
+         * <p>MountAccess</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RO</p>
          */
         public Builder mountAccess(String mountAccess) {
             this.mountAccess = mountAccess;
@@ -342,7 +375,12 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * Options.
+         * <p>Options</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;mountPath&quot;: &quot;/mnt/data/&quot;
+         * }</p>
          */
         public Builder options(String options) {
             this.options = options;
@@ -350,7 +388,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * Property.
+         * <p>property</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE</p>
          */
         public Builder property(String property) {
             this.property = property;
@@ -358,7 +399,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * SourceId.
+         * <p>SourceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-65mrsr5fub4u74lej3</p>
          */
         public Builder sourceId(String sourceId) {
             this.sourceId = sourceId;
@@ -366,7 +410,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * SourceType.
+         * <p>SourceType</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -374,7 +421,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * Uri.
+         * <p>Uri</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS://xxx</p>
          */
         public Builder uri(String uri) {
             this.uri = uri;
@@ -382,7 +432,7 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * UserMetricsEndpoints.
+         * <p>UserMetricsEndpoints</p>
          */
         public Builder userMetricsEndpoints(java.util.List<UserMetricsEndpoint> userMetricsEndpoints) {
             this.userMetricsEndpoints = userMetricsEndpoints;
@@ -390,7 +440,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * VersionName.
+         * <p>version name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;

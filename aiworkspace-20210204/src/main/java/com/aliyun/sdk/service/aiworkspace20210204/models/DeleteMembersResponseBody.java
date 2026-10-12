@@ -80,7 +80,7 @@ public class DeleteMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>100600017</p>
@@ -91,7 +91,7 @@ public class DeleteMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>Owner not allowed to delete</p>

@@ -172,7 +172,7 @@ public class UpdateDatasetRequest extends Request {
         } 
 
         /**
-         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
+         * <p>The dataset ID. For information about how to obtain the dataset ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,18 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * Accessibility.
+         * <p>The visibility of the dataset in the workspace. Valid values:</p>
+         * <ul>
+         * <li><p><code>PRIVATE</code> (default): The dataset is visible only to its owner and administrators.</p>
+         * </li>
+         * <li><p><code>PUBLIC</code>: The dataset is visible to all users in the workspace.</p>
+         * </li>
+         * <li><p><code>ROLE_PUBLIC</code>: The dataset is visible to users in specific workspace roles. You must specify the roles in the <code>AccessibleRoleIdList</code> parameter. The dataset owner and administrators can always view the dataset.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -194,7 +205,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * AccessibleRoleIdList.
+         * <p>This parameter takes effect only when <code>Accessibility</code> is set to <code>ROLE_PUBLIC</code>. It specifies the list of workspace roles that can view the dataset. Role IDs that start with <code>PAI</code> are basic role IDs, and role IDs that start with <code>role-</code> are custom role IDs.</p>
          */
         public Builder accessibleRoleIdList(java.util.List<String> accessibleRoleIdList) {
             this.putBodyParameter("AccessibleRoleIdList", accessibleRoleIdList);
@@ -204,6 +215,9 @@ public class UpdateDatasetRequest extends Request {
 
         /**
          * <p>The description of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description of the dataset.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -212,7 +226,10 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * Edition.
+         * <p>The dataset edition. You can upgrade a dataset from <code>BASIC</code> to <code>ADVANCED</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADVANCED</p>
          */
         public Builder edition(String edition) {
             this.putBodyParameter("Edition", edition);
@@ -221,11 +238,14 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The list of role names in the workspace that have read and write permissions on the mounted database. The names starting with PAI are basic role names, and the names starting with role- are custom role names. If the list contains asterisks (*), all roles have read and write permissions.</p>
+         * <p>A list of workspace roles that have read and write permissions on the mounted dataset. Role IDs that start with <code>PAI</code> are basic role IDs, and role IDs that start with <code>role-</code> are custom role IDs. If the list contains an asterisk (<code>*</code>), all roles are granted read and write permissions.</p>
          * <ul>
-         * <li>If you set the value to [&quot;PAI.AlgoOperator&quot;, &quot;role-hiuwpd01ncrokkgp21&quot;], the account of the specified role is granted the read and write permissions.</li>
-         * <li>If you set the value to [&quot;*&quot;], all accounts are granted the read and write permissions.</li>
-         * <li>If you set the value to [], only the creator of the dataset has the read and write permissions.</li>
+         * <li><p>To specify roles: [&quot;PAI.AlgoOperator&quot;, &quot;role-hiuwpd01ncrokkgp21&quot;]</p>
+         * </li>
+         * <li><p>To specify all roles: [&quot;\*&quot;]</p>
+         * </li>
+         * <li><p>To specify only the dataset creator: []</p>
+         * </li>
          * </ul>
          */
         public Builder mountAccessReadWriteRoleIdList(java.util.List<String> mountAccessReadWriteRoleIdList) {
@@ -235,7 +255,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The dataset name. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset name.</p>
+         * <p>The dataset name. For information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>myName</p>
@@ -247,7 +267,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The extended field, which is a JSON string. When you use the dataset in Deep Learning Containers (DLC), you can set mountPath to specify the default mount path of the dataset.</p>
+         * <p>An extended field in a JSON string format. When you use the dataset with Data Lake Compute (DLC), you can configure the <code>mountPath</code> field to specify the default mount path.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -261,7 +281,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * SharingConfig.
+         * <p>The sharing configuration of the dataset.</p>
          */
         public Builder sharingConfig(SharingConfig sharingConfig) {
             this.putBodyParameter("SharingConfig", sharingConfig);
@@ -316,7 +336,7 @@ public class UpdateDatasetRequest extends Request {
             } 
 
             /**
-             * SharedTo.
+             * <p>The sharing relationships of the dataset.</p>
              */
             public Builder sharedTo(java.util.List<DatasetShareRelationship> sharedTo) {
                 this.sharedTo = sharedTo;

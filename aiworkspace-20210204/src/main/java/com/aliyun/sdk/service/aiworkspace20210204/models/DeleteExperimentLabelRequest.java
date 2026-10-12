@@ -75,7 +75,7 @@ public class DeleteExperimentLabelRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the experiment.</p>
+         * <p>The experiment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteExperimentLabelRequest extends Request {
         }
 
         /**
-         * <p>The key of the experiment tag to be deleted.</p>
+         * <p>The key of the experiment label to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -80,7 +80,7 @@ public class GetPermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The permission name, which is unique in a region. For more information about permissions, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>.</p>
+         * <p>The name of the permission, which is unique within the same region. For more information about permissions, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PaiDLC:ListJobs</p>
@@ -91,7 +91,7 @@ public class GetPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The permission rules.</p>
+         * <p>The list of permission rules.</p>
          */
         public Builder permissionRules(java.util.List<PermissionRules> permissionRules) {
             this.permissionRules = permissionRules;
@@ -168,11 +168,11 @@ public class GetPermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The accessibility. Valid values:</p>
+             * <p>The access type. Valid values:</p>
              * <ul>
-             * <li>PUBLIC: All members can access the workspace.</li>
-             * <li>PRIVATE: Only the creator can access the workspace.</li>
-             * <li>ANY: All users can access the workspace.</li>
+             * <li>PUBLIC: All members in the current workspace can perform operations.</li>
+             * <li>PRIVATE: Only the creator can perform operations.</li>
+             * <li>ANY: Both the creator and non-creators can perform operations.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -184,10 +184,12 @@ public class GetPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access type. If you set Accessibility to PUBLIC, all users can access the workspace. This parameter is invalid. If you set Accessibility to PRIVATE, the value of this parameter can be:</p>
+             * <p>The access type.
+             * When Accessibility is set to PUBLIC, all users can perform operations and this value does not take effect.
+             * When Accessibility is set to PRIVATE, EntityAccessType supports the following values:</p>
              * <ul>
-             * <li>PRIVATE: Only the creator can access the workspace.</li>
-             * <li>ANY: All users can access the workspace.</li>
+             * <li>CREATOR: Only the creator can perform operations.</li>
+             * <li>ANY: Both the creator and non-creators can perform operations.</li>
              * </ul>
              * 
              * <strong>example:</strong>

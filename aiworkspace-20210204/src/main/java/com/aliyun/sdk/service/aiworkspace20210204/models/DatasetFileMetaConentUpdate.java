@@ -211,7 +211,10 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         } 
 
         /**
-         * Comment.
+         * <p>The file comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The first image file in the dataset.</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -219,7 +222,10 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         }
 
         /**
-         * ContentType.
+         * <p>The MIME type of the file. It includes a type and a subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/jpeg</p>
          */
         public Builder contentType(String contentType) {
             this.contentType = contentType;
@@ -227,7 +233,10 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         }
 
         /**
-         * DataSize.
+         * <p>The file size in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder dataSize(Long dataSize) {
             this.dataSize = dataSize;
@@ -235,7 +244,11 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         }
 
         /**
+         * <p>The ID of the dataset file metadata.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07914c9534586e4e7aa6e9dbca5009082df******fd8a0d857b33296c59bf6</p>
          */
         public Builder datasetFileMetaId(String datasetFileMetaId) {
             this.datasetFileMetaId = datasetFileMetaId;
@@ -243,10 +256,11 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         }
 
         /**
+         * <p>The time when the file was created, in ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-12T14:36:01.000Z</p>
+         * <p>2025-01-12T14:36:01Z</p>
          */
         public Builder fileCreateTime(String fileCreateTime) {
             this.fileCreateTime = fileCreateTime;
@@ -254,7 +268,10 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         }
 
         /**
-         * FileFingerPrint.
+         * <p>The file fingerprint information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>124FB71******7BE45608CDEA4DE54B3</p>
          */
         public Builder fileFingerPrint(String fileFingerPrint) {
             this.fileFingerPrint = fileFingerPrint;
@@ -262,7 +279,10 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         }
 
         /**
-         * FileName.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00001.jpeg</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -270,7 +290,10 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         }
 
         /**
-         * FileType.
+         * <p>The file type. This is the primary type from the Multipurpose Internet Mail Extensions (MIME) type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder fileType(String fileType) {
             this.fileType = fileType;
@@ -278,10 +301,11 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         }
 
         /**
+         * <p>The time when the file was last modified, in ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-12T14:36:01.000Z</p>
+         * <p>2025-01-12T14:36:01Z</p>
          */
         public Builder fileUpdateTime(String fileUpdateTime) {
             this.fileUpdateTime = fileUpdateTime;
@@ -289,7 +313,17 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         }
 
         /**
-         * MetaAttributes.
+         * <p>Specific file metadata, such as the width and height of an image, and the bitrate and resolution of a video. Retrieval based on this metadata is not yet supported. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;Image&quot;:
+         *     {
+         *         &quot;Width&quot;: 1920,
+         *         &quot;Height&quot;: 1080,
+         *         &quot;Channel&quot;: 3
+         *     }
+         * }</p>
          */
         public Builder metaAttributes(String metaAttributes) {
             this.metaAttributes = metaAttributes;
@@ -297,7 +331,10 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         }
 
         /**
-         * SemanticIndexJobId.
+         * <p>The ID of the job that builds the semantic index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsjob-klfwt*****l0escvt3</p>
          */
         public Builder semanticIndexJobId(String semanticIndexJobId) {
             this.semanticIndexJobId = semanticIndexJobId;
@@ -305,6 +342,7 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         }
 
         /**
+         * <p>The time when the semantic index was built.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -316,7 +354,38 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The tag groups to update.</p>
+         * <ul>
+         * <li>Update tags using an algorithm. Set a valid TagJobId.</li>
+         * </ul>
+         * <pre><code>{
+         *    &quot;ai&quot;:[&quot;lane line&quot;, &quot;water barrier&quot;, &quot;sunny day&quot;]
+         * }
+         * </code></pre>
+         * <ul>
+         * <li><p>Manual tagging: Use add or remove to add or delete tags within a tag group. The modifiable tag groups are:</p>
+         * <ul>
+         * <li><p>user: A list of tag names to add to or delete from a single metadata entry.</p>
+         * </li>
+         * <li><p>user-delete-ai-tags: A list of tag names to delete from the algorithm-generated tag group for a single metadata entry.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <pre><code>{
+         *     &quot;user&quot;:{
+         *         &quot;add&quot;:[&quot;lane line&quot;,&quot;sunny day&quot;],
+         *         &quot;remove&quot;:[&quot;water barrier&quot;]
+         *     },
+         *     &quot;user-delete-ai-tags&quot;:{
+         *         &quot;add&quot;: [&quot;ground shade&quot;],
+         *         &quot;remove&quot;: []
+         *     }
+         * }
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ai&quot;:[&quot;cat&quot;], &quot;user&quot;:[&quot;black&quot;]}</p>
          */
         public Builder tags(String tags) {
             this.tags = tags;

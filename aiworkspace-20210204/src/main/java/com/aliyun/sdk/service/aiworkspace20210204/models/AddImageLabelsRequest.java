@@ -75,7 +75,7 @@ public class AddImageLabelsRequest extends Request {
         } 
 
         /**
-         * <p>The image ID. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image ID.</p>
+         * <p>The ID of the image. For more information, see <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class AddImageLabelsRequest extends Request {
         }
 
         /**
-         * <p>The list of image tags.</p>
+         * <p>A list of image labels.</p>
          * <p>This parameter is required.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
@@ -157,26 +157,44 @@ public class AddImageLabelsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. The following keys can be added:</p>
+             * <p>The key of the label. The following keys are supported:</p>
              * <ul>
-             * <li>system.chipType</li>
-             * <li>system.dsw.cudaVersion</li>
-             * <li>system.dsw.fromImageId</li>
-             * <li>system.dsw.fromInstanceId</li>
-             * <li>system.dsw.id</li>
-             * <li>system.dsw.os</li>
-             * <li>system.dsw.osVersion</li>
-             * <li>system.dsw.resourceType</li>
-             * <li>system.dsw.rootImageId</li>
-             * <li>system.dsw.stage</li>
-             * <li>system.dsw.tag</li>
-             * <li>system.dsw.type</li>
-             * <li>system.framework</li>
-             * <li>system.origin</li>
-             * <li>system.pythonVersion</li>
-             * <li>system.source</li>
-             * <li>system.supported.dlc</li>
-             * <li>system.supported.dsw</li>
+             * <li><p>system.chipType</p>
+             * </li>
+             * <li><p>system.dsw\.cudaVersion</p>
+             * </li>
+             * <li><p>system.dsw\.fromImageId</p>
+             * </li>
+             * <li><p>system.dsw\.fromInstanceId</p>
+             * </li>
+             * <li><p>system.dsw\.id</p>
+             * </li>
+             * <li><p>system.dsw\.os</p>
+             * </li>
+             * <li><p>system.dsw\.osVersion</p>
+             * </li>
+             * <li><p>system.dsw\.resourceType</p>
+             * </li>
+             * <li><p>system.dsw\.rootImageId</p>
+             * </li>
+             * <li><p>system.dsw\.stage</p>
+             * </li>
+             * <li><p>system.dsw\.tag</p>
+             * </li>
+             * <li><p>system.dsw\.type</p>
+             * </li>
+             * <li><p>system.framework</p>
+             * </li>
+             * <li><p>system.origin</p>
+             * </li>
+             * <li><p>system.pythonVersion</p>
+             * </li>
+             * <li><p>system.source</p>
+             * </li>
+             * <li><p>system.supported.dlc</p>
+             * </li>
+             * <li><p>system.supported.dsw</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -188,7 +206,7 @@ public class AddImageLabelsRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>GPU</p>

@@ -299,7 +299,7 @@ public class CreateModelVersionRequest extends Request {
         } 
 
         /**
-         * <p>The model ID. You can call <a href="https://help.aliyun.com/document_detail/461944.html">ListModels</a> to obtain the model ID.</p>
+         * <p>The model ID. For more information about how to obtain the model ID, see <a href="https://help.aliyun.com/document_detail/461944.html">ListModels</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -314,9 +314,12 @@ public class CreateModelVersionRequest extends Request {
         /**
          * <p>The approval status. Valid values:</p>
          * <ul>
-         * <li>Pending</li>
-         * <li>Approved</li>
-         * <li>Rejected</li>
+         * <li><p>Pending: The version is pending approval.</p>
+         * </li>
+         * <li><p>Approved: The version is approved for deployment.</p>
+         * </li>
+         * <li><p>Rejected: The version is rejected for deployment.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,7 +332,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The compression configuration.</p>
+         * <p>The compression configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -341,7 +344,10 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * DistillationSpec.
+         * <p>The distillation configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder distillationSpec(java.util.Map<String, ?> distillationSpec) {
             this.putBodyParameter("DistillationSpec", distillationSpec);
@@ -350,7 +356,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The evaluation configuration.</p>
+         * <p>The evaluation configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -362,7 +368,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The additional information.</p>
+         * <p>Other information.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -377,18 +383,28 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The model format. Valid values:</p>
+         * <p>The format of the model. Valid values:</p>
          * <ul>
-         * <li>OfflineModel</li>
-         * <li>SavedModel</li>
-         * <li>Keras H5</li>
-         * <li>Frozen Pb</li>
-         * <li>Caffe Prototxt</li>
-         * <li>TorchScript</li>
-         * <li>XGBoost</li>
-         * <li>PMML</li>
-         * <li>AlinkModel</li>
-         * <li>ONNX</li>
+         * <li><p>OfflineModel</p>
+         * </li>
+         * <li><p>SavedModel</p>
+         * </li>
+         * <li><p>Keras H5</p>
+         * </li>
+         * <li><p>Frozen Pb</p>
+         * </li>
+         * <li><p>Caffe Prototxt</p>
+         * </li>
+         * <li><p>TorchScript</p>
+         * </li>
+         * <li><p>XGBoost</p>
+         * </li>
+         * <li><p>PMML</p>
+         * </li>
+         * <li><p>AlinkModel</p>
+         * </li>
+         * <li><p>ONNX</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -401,15 +417,22 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The model framework. Valid values:</p>
+         * <p>The framework of the model. Valid values:</p>
          * <ul>
-         * <li>Pytorch</li>
-         * <li>XGBoost</li>
-         * <li>Keras</li>
-         * <li>Caffe</li>
-         * <li>Alink</li>
-         * <li>Xflow</li>
-         * <li>TensorFlow</li>
+         * <li><p>Pytorch</p>
+         * </li>
+         * <li><p>XGBoost</p>
+         * </li>
+         * <li><p>Keras</p>
+         * </li>
+         * <li><p>Caffe</p>
+         * </li>
+         * <li><p>Alink</p>
+         * </li>
+         * <li><p>Xflow</p>
+         * </li>
+         * <li><p>TensorFlow</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -422,7 +445,8 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>Describes how to apply to downstream inference services. For example, describe the processor and container of EAS. Example: <code>{ &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</code></p>
+         * <p>The configurations for downstream inference services, such as the processor and container for Elastic Algorithm Service (EAS). Example:
+         * <code>{ &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</code></p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -436,7 +460,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The labels.</p>
+         * <p>The list of labels.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
@@ -445,7 +469,8 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The metrics for the model. The length after serialization is limited to 8,192.</p>
+         * <p>The model metrics.
+         * The serialized data cannot exceed 8,192 bytes in length.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -473,7 +498,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The extended field. This is a JSON string.</p>
+         * <p>The extended fields. This parameter is a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -485,21 +510,25 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the model source.</p>
+         * <p>The source ID.</p>
          * <ul>
-         * <li>If SourceType is set to Custom, this parameter is not limited.</li>
-         * <li>If SourceType is set to PAIFlow or TrainingService, the ID of the model source is in the following format:</li>
+         * <li><p>If SourceType is set to Custom, this parameter has no format restrictions.</p>
+         * </li>
+         * <li><p>If SourceType is PAIFlow or TrainingService, the value must be in the following format:</p>
+         * </li>
          * </ul>
-         * <!---->
-         * 
          * <pre><code>region=&lt;region_id&gt;,workspaceId=&lt;workspace_id&gt;,kind=&lt;kind&gt;,id=&lt;id&gt;
          * </code></pre>
-         * <p>Take note of the following parameters:</p>
+         * <p>The fields are described as follows:</p>
          * <ul>
-         * <li>region indicates the region ID.</li>
-         * <li>workspaceId indicates the workspace ID.</li>
-         * <li>kind indicates the type. Valid values: PipelineRun (PAIFlow) and ServiceJob (training service).</li>
-         * <li>id indicates the unique identifier.</li>
+         * <li><p>region: The ID of the Alibaba Cloud region.</p>
+         * </li>
+         * <li><p>workspaceId: The ID of the workspace.</p>
+         * </li>
+         * <li><p>kind: The type. Valid values: PipelineRun (PAI pipeline) and ServiceJob (training service).</p>
+         * </li>
+         * <li><p>id: The unique identifier.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -512,11 +541,14 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The type of the model source. Valid values:</p>
+         * <p>The source type of the model. Valid values:</p>
          * <ul>
-         * <li>Custom (default)</li>
-         * <li>PAIFlow</li>
-         * <li>TrainingService: the Platform for AI (PAI) training service.</li>
+         * <li><p>Custom (default): The model is custom.</p>
+         * </li>
+         * <li><p>PAIFlow: The model is from a PAI pipeline.</p>
+         * </li>
+         * <li><p>TrainingService: The model is from a PAI training service.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -529,7 +561,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The training configurations, which is used for fine-tuning and incremental training.</p>
+         * <p>The training configurations. These configurations are used for fine-tuning and incremental training.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -541,10 +573,12 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The URI of the model version, which is the location where the model is stored. Valid values:</p>
+         * <p>The URI of the model version, which is the storage location of the model. The following types of model URIs are supported:</p>
          * <ul>
-         * <li>The HTTP(S) address of the model. Example: <code>https://myweb.com/mymodel.tar.gz</code>.</li>
-         * <li>The OSS path of the model, in the format of <code>oss://&lt;bucket&gt;.&lt;endpoint&gt;/object</code>. For information about endpoints, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>. Example: <code>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</code>.</li>
+         * <li><p>An HTTP or HTTPS URL of the model. Example: <code>https://myweb.com/mymodel.tar.gz</code>.</p>
+         * </li>
+         * <li><p>If the model is stored in Object Storage Service (OSS), the URI must be in the <code>oss://&lt;bucket&gt;.&lt;endpoint&gt;/object</code> format. For more information about endpoints, see <a href="https://help.aliyun.com/document_detail/31837.html">Endpoints</a>. Example: <code>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</code>.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -558,7 +592,10 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The version description.</p>
+         * <p>The description of the model version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sentiment analysis.</p>
          */
         public Builder versionDescription(String versionDescription) {
             this.putBodyParameter("VersionDescription", versionDescription);
@@ -567,7 +604,8 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The model version, which is unique for each model. If you leave this parameter empty, the first version is <strong>0.1.0</strong> by default. After that, the minor version number is increased by 1 in sequence. For example, the second version number is <strong>0.2.0</strong>. A version number consists of a major version number, a minor version number, and a stage version number, separated by periods (.). The major version number and minor version number are numeric. The stage version number begins with a digit and can include numbers, underscores, and letters. For example, the version number is 1.1.0 or 2.3.4_beta.</p>
+         * <p>The model version. The version must be unique within the model. If you do not specify this parameter, the first version defaults to <strong>0.1.0</strong>. The minor version number is then incremented by 1 for each subsequent version. For example, the second version defaults to <strong>0.2.0</strong>.
+         * A version number consists of a major version, a minor version, and a patch version, separated by periods (.). The major and minor versions are numbers. The patch version can start with a number and contain underscores (_) and letters. Examples: 1.1.0 and 2.3.4_beta.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1.0</p>

@@ -75,7 +75,7 @@ public class GetModelVersionRequest extends Request {
         } 
 
         /**
-         * <p>The model ID. You can call <a href="https://help.aliyun.com/document_detail/461944.html">ListModels</a> to obtain the model ID.</p>
+         * <p>The model ID. For more information about how to obtain the model ID, see <a href="https://help.aliyun.com/document_detail/461944.html">ListModels</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

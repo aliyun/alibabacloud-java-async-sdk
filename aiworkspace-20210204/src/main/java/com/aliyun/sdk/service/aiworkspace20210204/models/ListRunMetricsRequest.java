@@ -116,7 +116,7 @@ public class ListRunMetricsRequest extends Request {
         }
 
         /**
-         * <p>The metric key of the run.</p>
+         * <p>The key of the metric for the run.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ListRunMetricsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries in the request. Default value: 10.</p>
+         * <p>The maximum number of results to return. The default value is 10.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -141,7 +141,7 @@ public class ListRunMetricsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token, which starts from 0. Default value: 0.</p>
+         * <p>The paging token. The token starts from 0. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

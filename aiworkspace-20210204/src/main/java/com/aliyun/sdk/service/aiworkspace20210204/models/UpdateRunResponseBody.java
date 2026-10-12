@@ -54,7 +54,7 @@ public class UpdateRunResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>ADF6D849-*****-7E7030F0CE53</p>

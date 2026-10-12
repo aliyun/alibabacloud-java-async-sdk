@@ -130,7 +130,7 @@ public class ListMembersRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The workspace ID. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * <p>The page number of the workspace list. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the workspace list. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +167,7 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20.</p>
+         * <p>The paging Settings for the number of entries per page in a paged query. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -179,15 +179,16 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * <p>The roles that are used to filter members. Multiple roles are separated by commas (,). Valid values:</p>
+         * <p>Filters members by role. Separate multiple roles with commas (,).
+         * Valid values:</p>
          * <ul>
-         * <li>PAI.AlgoDeveloper: algorithm developer</li>
-         * <li>PAI.AlgoOperator: algorithm O&amp;M engineer</li>
-         * <li>PAI.LabelManager: labeling administrator</li>
-         * <li>PAI.MaxComputeDeveloper: MaxCompute developer</li>
-         * <li>PAI.WorkspaceAdmin: administrator</li>
-         * <li>PAI.WorkspaceGuest: guest</li>
-         * <li>PAI.WorkspaceOwner: owner</li>
+         * <li>PAI.AlgoDeveloper: Algorithm developer.</li>
+         * <li>PAI.AlgoOperator: Algorithm O&amp;M.</li>
+         * <li>PAI.LabelManager: Labeling administrator.</li>
+         * <li>PAI.MaxComputeDeveloper: MaxCompute developer.</li>
+         * <li>PAI.WorkspaceAdmin: Administrator.</li>
+         * <li>PAI.WorkspaceGuest: Guest.</li>
+         * <li>PAI.WorkspaceOwner: Owner.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,7 +201,10 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the user to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2788******129</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

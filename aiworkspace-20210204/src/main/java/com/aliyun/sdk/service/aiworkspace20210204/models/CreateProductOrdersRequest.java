@@ -73,10 +73,10 @@ public class CreateProductOrdersRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to automatically pay for the provided products.</p>
+         * <p>Specifies whether automatic payment is applied to all products specified in the Products parameter. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: automatic payment</li>
+         * <li>false: no automatic payment</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class CreateProductOrdersRequest extends Request {
         }
 
         /**
-         * <p>The list of products to be purchased. Separate them with commas (,).</p>
+         * <p>The list of products to purchase, separated by commas.</p>
          */
         public Builder products(java.util.List<Products> products) {
             this.putBodyParameter("Products", products);
@@ -170,7 +170,7 @@ public class CreateProductOrdersRequest extends Request {
             } 
 
             /**
-             * <p>The property code.</p>
+             * <p>The code of the instance property.</p>
              * 
              * <strong>example:</strong>
              * <p>commodity_type</p>
@@ -181,7 +181,10 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * <p>The property name.</p>
+             * <p>The name of the instance property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Object Storage Service (OSS)</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -189,7 +192,7 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * <p>The property value.</p>
+             * <p>The value of the instance property.</p>
              * 
              * <strong>example:</strong>
              * <p>oss</p>
@@ -324,10 +327,10 @@ public class CreateProductOrdersRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to automatically renew the product.</p>
+             * <p>Specifies whether to enable auto-renewal. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Auto-renewal is enabled.</li>
+             * <li>false: Auto-renewal is disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -339,7 +342,7 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * <p>The billing method. Only POSTPAY is supported.</p>
+             * <p>The billing method. Currently, only POSTPAY is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>POSTPAY</p>
@@ -350,7 +353,7 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * <p>The purchase duration. You can use this parameter together with pricingCycle. Only 1 is supported.</p>
+             * <p>The purchase duration. This parameter is used together with PricingCycle. Currently, only 1 is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -361,13 +364,53 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * <p>The properties of the instance.</p>
+             * <p>The list of instance property information.</p>
              * <ul>
-             * <li>DataWorks_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-shanghai&quot; } ]</li>
-             * <li>OSS_share: [ { &quot;Code&quot;: &quot;commodity_type&quot;, &quot;Value&quot;: &quot;oss&quot;, &quot;Name&quot;: &quot;Object Storage Service&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot;, &quot;Name&quot;: &quot;1 Hour&quot; } ]</li>
+             * <li>DataWorks_share:
+             * [ {
+             * &quot;Code&quot;: &quot;region&quot;,
+             * &quot;Value&quot;: &quot;cn-shanghai&quot;
+             * }
+             * ]</li>
+             * <li>OSS_share:
+             * [ {
+             * &quot;Code&quot;: &quot;commodity_type&quot;,
+             * &quot;Value&quot;: &quot;oss&quot;,
+             * &quot;Name&quot;: &quot;Object Storage Service (OSS)&quot;
+             * },
+             * {
+             * &quot;Code&quot;: &quot;ord_time&quot;,
+             * &quot;Value&quot;: &quot;1:Hour&quot;,
+             * &quot;Name&quot;: &quot;1 hour&quot;
+             * }
+             * ]</li>
              * <li>PAI_share: None</li>
-             * <li>China bid MaxCompute_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-hangzhou&quot; }, { &quot;Code&quot;: &quot;odps_specification_type&quot;, &quot;Value&quot;: &quot;OdpsStandard&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot; } ]</li>
-             * <li>International bid MaxCompute_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-hangzhou&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot; } ]</li>
+             * <li>MaxCompute_share for the Chinese site:
+             * [
+             * {
+             * &quot;Code&quot;: &quot;region&quot;,
+             * &quot;Value&quot;: &quot;cn-hangzhou&quot;
+             * },
+             * {
+             * &quot;Code&quot;: &quot;odps_specification_type&quot;,
+             * &quot;Value&quot;: &quot;OdpsStandard&quot;
+             * },
+             * {
+             * &quot;Code&quot;: &quot;ord_time&quot;,
+             * &quot;Value&quot;: &quot;1:Hour&quot;
+             * }
+             * ]</li>
+             * <li>MaxCompute_share for the international site:
+             * [
+             * {
+             * &quot;Code&quot;: &quot;region&quot;,
+             * &quot;Value&quot;: &quot;cn-hangzhou&quot;
+             * },
+             * {
+             * &quot;Code&quot;: &quot;ord_time&quot;,
+             * &quot;Value&quot;: &quot;1:Hour&quot;
+             * }
+             * ]</li>
              * </ul>
              */
             public Builder instanceProperties(java.util.List<InstanceProperties> instanceProperties) {
@@ -376,7 +419,7 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * <p>The type of the order. Only BUY is supported.</p>
+             * <p>The order type. Currently, only BUY is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>BUY</p>
@@ -387,10 +430,10 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * <p>The billing cycle. Valid values:</p>
+             * <p>The pricing unit. Valid values:</p>
              * <ul>
-             * <li>Month: The price is calculated every month. DataWorks_share only supports Month.</li>
-             * <li>Hour: The price is calculated every hour. OSS_share and MaxCompute_share only support Hour.</li>
+             * <li>Month: Monthly pricing. Only DataWorks_share supports this value.</li>
+             * <li>Hour: Hourly pricing. Only OSS_share and MaxCompute_share support this value.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -404,10 +447,10 @@ public class CreateProductOrdersRequest extends Request {
             /**
              * <p>The product code. Valid values:</p>
              * <ul>
-             * <li>DataWorks_share: pay-as-you-go DataWorks</li>
-             * <li>MaxCompute_share: pay-as-you-go MaxCompute</li>
-             * <li>PAI_share: pay-as-you-go PAI.</li>
-             * <li>OSS_share: pay-as-you-go OSS</li>
+             * <li>DataWorks_share: Pay-as-you-go DataWorks.</li>
+             * <li>MaxCompute_share: Pay-as-you-go MaxCompute.</li>
+             * <li>PAI_share: Pay-as-you-go PAI.</li>
+             * <li>OSS_share: Pay-as-you-go OSS.</li>
              * </ul>
              * 
              * <strong>example:</strong>

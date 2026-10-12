@@ -186,7 +186,7 @@ public class ListDatasetJobsRequest extends Request {
         } 
 
         /**
-         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
+         * <p>The dataset version ID. For information about how to obtain the dataset ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class ListDatasetJobsRequest extends Request {
         }
 
         /**
-         * <p>The action to be performed on the job.</p>
+         * <p>The task action.</p>
          * 
          * <strong>example:</strong>
          * <p>SemanticIndex</p>
@@ -223,7 +223,14 @@ public class ListDatasetJobsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sorting order for the specified sorting field in a paged query. Used together with SortBy. Default value: DESC. Valid values:</p>
+         * <ul>
+         * <li>ASC: ascending order.</li>
+         * <li>DESC: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -232,7 +239,7 @@ public class ListDatasetJobsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -244,7 +251,7 @@ public class ListDatasetJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -256,7 +263,10 @@ public class ListDatasetJobsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field. By default, results are sorted by creation time in descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -265,7 +275,10 @@ public class ListDatasetJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -274,7 +287,7 @@ public class ListDatasetJobsRequest extends Request {
         }
 
         /**
-         * WithLogs.
+         * <p>Specifies whether to return task logs.</p>
          */
         public Builder withLogs(Boolean withLogs) {
             this.putQueryParameter("WithLogs", withLogs);
@@ -283,7 +296,7 @@ public class ListDatasetJobsRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>

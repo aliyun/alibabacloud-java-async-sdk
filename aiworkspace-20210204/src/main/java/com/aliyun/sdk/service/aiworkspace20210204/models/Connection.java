@@ -210,7 +210,16 @@ public class Connection extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>The workspace visibility. Valid values:</p>
+         * <ul>
+         * <li><p>PRIVATE (default): The connection is visible only to you and administrators in the workspace.</p>
+         * </li>
+         * <li><p>PUBLIC: The connection is visible to all users in the workspace.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -218,7 +227,7 @@ public class Connection extends TeaModel {
         }
 
         /**
-         * Configs.
+         * <p>The connection configurations.</p>
          */
         public Builder configs(java.util.Map<String, String> configs) {
             this.configs = configs;
@@ -226,7 +235,10 @@ public class Connection extends TeaModel {
         }
 
         /**
-         * ConnectionId.
+         * <p>The connection ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conn-pai9m***mi47</p>
          */
         public Builder connectionId(String connectionId) {
             this.connectionId = connectionId;
@@ -234,7 +246,10 @@ public class Connection extends TeaModel {
         }
 
         /**
-         * ConnectionName.
+         * <p>The name of the connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lindorm-connection</p>
          */
         public Builder connectionName(String connectionName) {
             this.connectionName = connectionName;
@@ -242,7 +257,30 @@ public class Connection extends TeaModel {
         }
 
         /**
-         * ConnectionType.
+         * <p>The connection type. Valid values:</p>
+         * <ul>
+         * <li><p>DashScopeConnection: A service connection to Alibaba Cloud Model Studio.</p>
+         * </li>
+         * <li><p>OpenLLMConnection: An open source model connection.</p>
+         * </li>
+         * <li><p>MilvusConnection: A Milvus connection.</p>
+         * </li>
+         * <li><p>OpenSearchConnection: An OpenSearch connection.</p>
+         * </li>
+         * <li><p>LindormConnection: A Lindorm connection.</p>
+         * </li>
+         * <li><p>ElasticsearchConnection: An Elasticsearch connection.</p>
+         * </li>
+         * <li><p>HologresConnection: A Hologres connection.</p>
+         * </li>
+         * <li><p>RDSConnection: An RDS connection.</p>
+         * </li>
+         * <li><p>CustomConnection: A custom connection.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ElasticsearchConnection</p>
          */
         public Builder connectionType(String connectionType) {
             this.connectionType = connectionType;
@@ -250,7 +288,10 @@ public class Connection extends TeaModel {
         }
 
         /**
-         * Creator.
+         * <p>The creator of the connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20925961****557803</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -258,7 +299,10 @@ public class Connection extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The connection description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description of a database connection.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -266,7 +310,10 @@ public class Connection extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the connection was created. The time is in UTC and follows the ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-07T07:54:56Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -274,7 +321,10 @@ public class Connection extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the connection was last modified. The time is in UTC and follows the ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-07T07:54:56Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -282,7 +332,7 @@ public class Connection extends TeaModel {
         }
 
         /**
-         * Models.
+         * <p>The model list.</p>
          */
         public Builder models(java.util.List<Models> models) {
             this.models = models;
@@ -290,7 +340,7 @@ public class Connection extends TeaModel {
         }
 
         /**
-         * ResourceMeta.
+         * <p>The resource information for the connection. This usually applies to database connection configurations.</p>
          */
         public Builder resourceMeta(ResourceMeta resourceMeta) {
             this.resourceMeta = resourceMeta;
@@ -298,7 +348,7 @@ public class Connection extends TeaModel {
         }
 
         /**
-         * Secrets.
+         * <p>The key-value configurations to encrypt, such as database logon passwords and model connection keys.</p>
          */
         public Builder secrets(java.util.Map<String, String> secrets) {
             this.secrets = secrets;
@@ -306,7 +356,10 @@ public class Connection extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>228**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -398,7 +451,10 @@ public class Connection extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The model\&quot;s display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BGE model deploy.</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -406,7 +462,10 @@ public class Connection extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model_001</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -414,7 +473,18 @@ public class Connection extends TeaModel {
             }
 
             /**
-             * ModelType.
+             * <p>The model type. Valid values:</p>
+             * <ul>
+             * <li><p>LLM (large language model)</p>
+             * </li>
+             * <li><p>Embedding (Embedding model)</p>
+             * </li>
+             * <li><p>ReRank (ReRank model)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LLM</p>
              */
             public Builder modelType(String modelType) {
                 this.modelType = modelType;
@@ -422,7 +492,16 @@ public class Connection extends TeaModel {
             }
 
             /**
-             * ToolCall.
+             * <p>Indicates whether tool calling is supported. Valid values:</p>
+             * <ul>
+             * <li><p>true: Supported</p>
+             * </li>
+             * <li><p>false: Not supported</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder toolCall(Boolean toolCall) {
                 this.toolCall = toolCall;
@@ -502,7 +581,10 @@ public class Connection extends TeaModel {
             } 
 
             /**
-             * Extra.
+             * <p>Extra configuration information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vpcId&quot;:&quot;vpc-xxxx&quot;}</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -510,7 +592,10 @@ public class Connection extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ld-2vc1***v1zaqgzol</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -518,7 +603,10 @@ public class Connection extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lindorm-xxxxxxx</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

@@ -262,7 +262,10 @@ public class DatasetFileMetaContentGet extends TeaModel {
         } 
 
         /**
-         * Comment.
+         * <p>The file comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The first image file in the dataset.</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -270,7 +273,10 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
-         * ContentType.
+         * <p>The MIME type of the file, which includes the type and subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/png</p>
          */
         public Builder contentType(String contentType) {
             this.contentType = contentType;
@@ -278,7 +284,10 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
-         * DataSize.
+         * <p>The file size in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder dataSize(Long dataSize) {
             this.dataSize = dataSize;
@@ -286,7 +295,10 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
-         * DatasetFileMetaId.
+         * <p>The ID of the dataset file metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07914c9534586e4e7aa6e9dbca5009082df******fd8a0d857b33296c59bf6</p>
          */
         public Builder datasetFileMetaId(String datasetFileMetaId) {
             this.datasetFileMetaId = datasetFileMetaId;
@@ -294,10 +306,11 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
+         * <p>The creation time of the file in ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-12T14:36:01.000Z</p>
+         * <p>2025-01-12T14:36:01Z</p>
          */
         public Builder fileCreateTime(String fileCreateTime) {
             this.fileCreateTime = fileCreateTime;
@@ -305,7 +318,10 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
-         * FileDir.
+         * <p>The directory path of the OSS, NAS, or CPFS file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>icp_certificate_card/icp/1577179298694813/1716429710367</p>
          */
         public Builder fileDir(String fileDir) {
             this.fileDir = fileDir;
@@ -313,7 +329,10 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
-         * FileFingerPrint.
+         * <p>The fingerprint of the file. This value is used to determine the uniqueness of the file content and changes when the file content is modified. The ETag is used for OSS files, and the MD5 value is used for NAS files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D41D8CD98F*****E9800998ECF8</p>
          */
         public Builder fileFingerPrint(String fileFingerPrint) {
             this.fileFingerPrint = fileFingerPrint;
@@ -321,7 +340,10 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
-         * FileName.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00001.jpeg</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -329,7 +351,10 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
-         * FileType.
+         * <p>The file type. This is the same as the MIME type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder fileType(String fileType) {
             this.fileType = fileType;
@@ -337,10 +362,11 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
+         * <p>The last modification time of the file in ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-12T14:36:01.000Z</p>
+         * <p>2025-01-12T14:36:01Z</p>
          */
         public Builder fileUpdateTime(String fileUpdateTime) {
             this.fileUpdateTime = fileUpdateTime;
@@ -348,7 +374,13 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
-         * MetaAttributes.
+         * <p>The specific metadata of the file in JSON string format. This metadata does not support search capabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;ImageHeight&quot;: 1080,
+         *     &quot;ImageWidth&quot;: 1920
+         * }</p>
          */
         public Builder metaAttributes(String metaAttributes) {
             this.metaAttributes = metaAttributes;
@@ -356,7 +388,10 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
-         * SemanticIndexJobId.
+         * <p>The task ID for building the semantic index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsjob-klfwtjtov*****scvt3</p>
          */
         public Builder semanticIndexJobId(String semanticIndexJobId) {
             this.semanticIndexJobId = semanticIndexJobId;
@@ -364,6 +399,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
+         * <p>The time when the semantic index was built.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -375,7 +411,10 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the file metadata. ACTIVE indicates that the metadata is valid, and DELETED indicates that the metadata is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -383,6 +422,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
+         * <p>The last modification time of the tags in ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -394,7 +434,38 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The collection of tags for this metadata, including:</p>
+         * <ul>
+         * <li>Algorithm tag groups:<ul>
+         * <li>ai: A list of tag names summarized from all algorithm tagging tasks for a single metadata entry.</li>
+         * </ul>
+         * </li>
+         * <li>User-defined tag groups:<ul>
+         * <li>user: A list of tag names added by the user for a single metadata entry.</li>
+         * <li>user-delete-ai-tags: A list of tag names to be deleted by the user from the algorithm tag group for a single metadata entry.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;ai&quot;:
+         *     [
+         *         &quot;Lane line&quot;,
+         *         &quot;Water horse&quot;,
+         *         &quot;Sunny day&quot;
+         *     ],
+         *     &quot;user&quot;:
+         *     [
+         *         &quot;Everett&quot;,
+         *         &quot;Intelligent driving Dataset 1&quot;,
+         *         &quot;Cloudy day&quot;
+         *     ],
+         *     &quot;user-delete-ai-tags&quot;:
+         *     [
+         *         &quot;Sunny day&quot;
+         *     ]
+         * }</p>
          */
         public Builder tags(String tags) {
             this.tags = tags;
@@ -402,7 +473,19 @@ public class DatasetFileMetaContentGet extends TeaModel {
         }
 
         /**
-         * Uri.
+         * <p>The unique URI of the file. This URI records the unique path of the file. File paths in OSS and NAS are supported.</p>
+         * <details>
+         * <summary>OSS</summary>
+         * oss://${bucket}/${path}
+         * </details>
+         * <details>
+         * <summary>NAS</summary>
+         * nas://${fileSystemId}/${path}
+         * </details>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://*****-test/dataset/1653421.jpg
+         * nas://0e25d***dff/dataset/1653421.jpg</p>
          */
         public Builder uri(String uri) {
             this.uri = uri;

@@ -75,7 +75,7 @@ public class DeletePromptRequest extends Request {
         } 
 
         /**
-         * <p>The prompt ID.</p>
+         * <p>The unique identifier of the prompt.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

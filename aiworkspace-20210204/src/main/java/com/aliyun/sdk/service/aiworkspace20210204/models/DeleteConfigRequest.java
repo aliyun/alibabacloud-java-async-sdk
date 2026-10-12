@@ -116,13 +116,18 @@ public class DeleteConfigRequest extends Request {
         }
 
         /**
-         * <p>The key of the configuration item. Valid values:</p>
+         * <p>The key of the configuration item. The following keys are supported:</p>
          * <ul>
-         * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
-         * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
-         * <li>priorityConfig: Priority configuration. This key can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
-         * <li>quotaMaximumDuration: Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
-         * <li>predefinedTags: Predefined tags of the workspace. Created resources must include tags.</li>
+         * <li><p>tempStoragePath: The temporary storage path. This key is valid only when CategoryName is CommonResourceConfig.</p>
+         * </li>
+         * <li><p>isAutoRecycle: The automatic release configuration. This key is valid only when CategoryName is DLCAutoRecycle.</p>
+         * </li>
+         * <li><p>priorityConfig: The priority configuration. This key is valid only when CategoryName is DLCPriorityConfig or DSWPriorityConfig.</p>
+         * </li>
+         * <li><p>quotaMaximumDuration: The maximum runtime configuration of a DLC task for a quota. This key is valid only when CategoryName is QuotaMaximumDuration.</p>
+         * </li>
+         * <li><p>predefinedTags: The predefined tags for the workspace. Resources that you create must have these tags.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -136,13 +141,18 @@ public class DeleteConfigRequest extends Request {
         }
 
         /**
-         * <p>The category of the configuration item. Valid values:</p>
+         * <p>The classification of the configuration item. The following classifications are supported:</p>
          * <ul>
-         * <li>CommonResourceConfig</li>
-         * <li>DLCAutoRecycle - DLCPriorityConfig</li>
-         * <li>DSWPriorityConfig</li>
-         * <li>QuotaMaximumDuration</li>
-         * <li>CommonTagConfig</li>
+         * <li><p>DLCAutoRecycle: The DLC automatic release configuration.</p>
+         * </li>
+         * <li><p>DLCPriorityConfig: The DLC priority settings.</p>
+         * </li>
+         * <li><p>DSWPriorityConfig: The DSW priority settings.</p>
+         * </li>
+         * <li><p>QuotaMaximumDuration: The maximum runtime configuration of a DLC task for a quota.</p>
+         * </li>
+         * <li><p>CommonTagConfig: The tag settings.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,7 +165,7 @@ public class DeleteConfigRequest extends Request {
         }
 
         /**
-         * <p>The filter conditions. Separate multiple conditions with commas (,). The conditions have an AND relationship.</p>
+         * <p>The filter conditions. Separate multiple conditions with commas. The conditions are combined with a logical AND.</p>
          * 
          * <strong>example:</strong>
          * <p>key1=value;key2=value2</p>
