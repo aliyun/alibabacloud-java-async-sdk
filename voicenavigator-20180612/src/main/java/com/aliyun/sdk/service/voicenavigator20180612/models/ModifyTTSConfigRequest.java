@@ -242,7 +242,10 @@ public class ModifyTTSConfigRequest extends Request {
         } 
 
         /**
-         * AliCustomizedVoice.
+         * <p>The personalized custom voice ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc458bba-5a25-4cbc-b5c2</p>
          */
         public Builder aliCustomizedVoice(String aliCustomizedVoice) {
             this.putQueryParameter("AliCustomizedVoice", aliCustomizedVoice);
@@ -251,7 +254,10 @@ public class ModifyTTSConfigRequest extends Request {
         }
 
         /**
-         * AppKey.
+         * <p>The AppKey of the third-party voice configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b358afc</p>
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -269,7 +275,10 @@ public class ModifyTTSConfigRequest extends Request {
         }
 
         /**
-         * Engine.
+         * <p>The TTS engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bailian</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -278,7 +287,10 @@ public class ModifyTTSConfigRequest extends Request {
         }
 
         /**
-         * EngineXunfei.
+         * <p>The iFLYTEK engine parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Voice\&quot;:\&quot;aisjinger\&quot;}</p>
          */
         public Builder engineXunfei(String engineXunfei) {
             this.putQueryParameter("EngineXunfei", engineXunfei);
@@ -296,10 +308,11 @@ public class ModifyTTSConfigRequest extends Request {
         }
 
         /**
+         * <p>The scenario ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>12f407b22cbe4890ac595f09985848d5</p>
+         * <p>8a9bdaa895a748528a15b50c281e6474</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -308,7 +321,10 @@ public class ModifyTTSConfigRequest extends Request {
         }
 
         /**
-         * NlsServiceType.
+         * <p>The TTS service invoke type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Managed</p>
          */
         public Builder nlsServiceType(String nlsServiceType) {
             this.putQueryParameter("NlsServiceType", nlsServiceType);
@@ -317,7 +333,10 @@ public class ModifyTTSConfigRequest extends Request {
         }
 
         /**
-         * PitchRate.
+         * <p>The pitch rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pitchRate(String pitchRate) {
             this.putQueryParameter("PitchRate", pitchRate);
@@ -326,7 +345,10 @@ public class ModifyTTSConfigRequest extends Request {
         }
 
         /**
-         * SpeechRate.
+         * <p>The speech rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder speechRate(String speechRate) {
             this.putQueryParameter("SpeechRate", speechRate);
@@ -335,7 +357,10 @@ public class ModifyTTSConfigRequest extends Request {
         }
 
         /**
-         * TtsOverrides.
+         * <p>The TTS error correction dictionary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;pronunciation\&quot;:\&quot;huanqian\&quot;,\&quot;word\&quot;:\&quot;huaiqian\&quot;}]</p>
          */
         public Builder ttsOverrides(String ttsOverrides) {
             this.putQueryParameter("TtsOverrides", ttsOverrides);
@@ -344,7 +369,10 @@ public class ModifyTTSConfigRequest extends Request {
         }
 
         /**
-         * TtsOverridesUuid.
+         * <p>The TTS error correction dictionary ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94001ae8-72fd-4f93-84dc-e58e2b20363b</p>
          */
         public Builder ttsOverridesUuid(String ttsOverridesUuid) {
             this.putQueryParameter("TtsOverridesUuid", ttsOverridesUuid);
@@ -353,7 +381,10 @@ public class ModifyTTSConfigRequest extends Request {
         }
 
         /**
-         * Voice.
+         * <p>The voice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aixia</p>
          */
         public Builder voice(String voice) {
             this.putQueryParameter("Voice", voice);
@@ -362,7 +393,10 @@ public class ModifyTTSConfigRequest extends Request {
         }
 
         /**
-         * Volume.
+         * <p>The volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder volume(String volume) {
             this.putQueryParameter("Volume", volume);

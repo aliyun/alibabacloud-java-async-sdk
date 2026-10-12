@@ -103,6 +103,7 @@ public class SilenceTimeoutRequest extends Request {
         } 
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class SilenceTimeoutRequest extends Request {
         }
 
         /**
-         * InitialContext.
+         * <p>The session information context.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder initialContext(String initialContext) {
             this.putQueryParameter("InitialContext", initialContext);
@@ -124,6 +128,7 @@ public class SilenceTimeoutRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class SilenceTimeoutRequest extends Request {
         }
 
         /**
-         * InstanceOwnerId.
+         * <p>The ID of the instance owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231639035307976</p>
          */
         public Builder instanceOwnerId(Long instanceOwnerId) {
             this.putQueryParameter("InstanceOwnerId", instanceOwnerId);

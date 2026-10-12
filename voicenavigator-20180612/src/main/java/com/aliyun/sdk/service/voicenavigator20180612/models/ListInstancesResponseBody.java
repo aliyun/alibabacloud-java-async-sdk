@@ -106,7 +106,7 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Instances.
+         * <p>The array of instances.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -114,7 +114,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8AED3C8-F57B-5D71-9A34-4A170287533F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -347,7 +359,7 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicableOperations.
+             * <p>The list of applicable operations for the instance.</p>
              */
             public Builder applicableOperations(java.util.List<String> applicableOperations) {
                 this.applicableOperations = applicableOperations;
@@ -355,7 +367,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Concurrency.
+             * <p>The concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder concurrency(Long concurrency) {
                 this.concurrency = concurrency;
@@ -363,7 +378,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1658202465000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -371,7 +389,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试的实例</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -379,7 +400,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc437bba-5a25-4bbc-b4c2-f268864bebb5</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -387,7 +411,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582266750353</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -395,7 +422,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUserName.
+             * <p>The operator who performed the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder modifyUserName(String modifyUserName) {
                 this.modifyUserName = modifyUserName;
@@ -403,7 +433,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试实例</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -411,7 +444,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NluServiceParamsJson.
+             * <p>The large language model service parameters in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;agentId&quot;:&quot;1213503&quot;,&quot;isCCCAgent&quot;:&quot;true&quot;,&quot;agentKey&quot;:&quot;107e04a7519243eb83c9b549ea3b6829_p_ccc_public&quot;}</p>
              */
             public Builder nluServiceParamsJson(String nluServiceParamsJson) {
                 this.nluServiceParamsJson = nluServiceParamsJson;
@@ -419,7 +455,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Numbers.
+             * <p>The list of inbound numbers.</p>
              */
             public Builder numbers(java.util.List<String> numbers) {
                 this.numbers = numbers;
@@ -427,7 +463,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Published</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -435,7 +474,13 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UnionInstanceId.
+             * <p>The instance ID.</p>
+             * <blockquote>
+             * <p>When UnionSource is set to CCC, UnionInstanceId is set to the instance ID of Cloud Call Center.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>zhyl</p>
              */
             public Builder unionInstanceId(String unionInstanceId) {
                 this.unionInstanceId = unionInstanceId;
@@ -443,7 +488,13 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UnionSource.
+             * <p>The source.</p>
+             * <ul>
+             * <li>CCC: Cloud Call Center.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CCC</p>
              */
             public Builder unionSource(String unionSource) {
                 this.unionSource = unionSource;

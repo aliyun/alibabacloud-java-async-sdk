@@ -118,7 +118,10 @@ public class ExportStatisticalDataRequest extends Request {
         } 
 
         /**
-         * BeginTimeLeftRange.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582266750353</p>
          */
         public Builder beginTimeLeftRange(Long beginTimeLeftRange) {
             this.putQueryParameter("BeginTimeLeftRange", beginTimeLeftRange);
@@ -127,7 +130,10 @@ public class ExportStatisticalDataRequest extends Request {
         }
 
         /**
-         * BeginTimeRightRange.
+         * <p>The end time used as a filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582266750353</p>
          */
         public Builder beginTimeRightRange(Long beginTimeRightRange) {
             this.putQueryParameter("BeginTimeRightRange", beginTimeRightRange);
@@ -136,6 +142,7 @@ public class ExportStatisticalDataRequest extends Request {
         }
 
         /**
+         * <p>The export type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +155,7 @@ public class ExportStatisticalDataRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +168,7 @@ public class ExportStatisticalDataRequest extends Request {
         }
 
         /**
+         * <p>The time unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

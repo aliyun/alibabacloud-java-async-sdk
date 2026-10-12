@@ -134,6 +134,7 @@ public class ModifyUnrecognizingConfigRequest extends Request {
         } 
 
         /**
+         * <p>The rejection action.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +147,10 @@ public class ModifyUnrecognizingConfigRequest extends Request {
         }
 
         /**
-         * FinalActionParams.
+         * <p>The action parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder finalActionParams(String finalActionParams) {
             this.putQueryParameter("FinalActionParams", finalActionParams);
@@ -155,7 +159,11 @@ public class ModifyUnrecognizingConfigRequest extends Request {
         }
 
         /**
+         * <p>The final rejection prompt.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Goodbye</p>
          */
         public Builder finalPrompt(String finalPrompt) {
             this.putQueryParameter("FinalPrompt", finalPrompt);
@@ -164,6 +172,7 @@ public class ModifyUnrecognizingConfigRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +185,11 @@ public class ModifyUnrecognizingConfigRequest extends Request {
         }
 
         /**
+         * <p>The rejection prompt.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I don\&quot;t understand what you mean, please say it again</p>
          */
         public Builder prompt(String prompt) {
             this.putQueryParameter("Prompt", prompt);
@@ -185,6 +198,7 @@ public class ModifyUnrecognizingConfigRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of rejections.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,10 @@ public class DebugCollectedNumberResponseBody extends TeaModel {
         } 
 
         /**
-         * Action.
+         * <p>The action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Broadcast</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -114,7 +117,10 @@ public class DebugCollectedNumberResponseBody extends TeaModel {
         }
 
         /**
-         * ActionParams.
+         * <p>The action parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder actionParams(String actionParams) {
             this.actionParams = actionParams;
@@ -122,7 +128,10 @@ public class DebugCollectedNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Interruptible.
+         * <p>Indicates whether the IVR announcement can be interrupted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder interruptible(Boolean interruptible) {
             this.interruptible = interruptible;
@@ -130,7 +139,10 @@ public class DebugCollectedNumberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abb4aa26-3a8e-43dd-82f8-0c3898c9c67f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DebugCollectedNumberResponseBody extends TeaModel {
         }
 
         /**
-         * TextResponse.
+         * <p>The text content of the announcement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello, welcome to the intelligent assistant</p>
          */
         public Builder textResponse(String textResponse) {
             this.textResponse = textResponse;

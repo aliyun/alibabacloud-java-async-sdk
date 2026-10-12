@@ -73,7 +73,15 @@ public class GetAsrConfigRequest extends Request {
         } 
 
         /**
-         * ConfigLevel.
+         * <p>The policy level. Valid values:</p>
+         * <ul>
+         * <li>0: system.</li>
+         * <li>1: tenant.</li>
+         * <li>2: instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder configLevel(Integer configLevel) {
             this.putQueryParameter("ConfigLevel", configLevel);
@@ -82,7 +90,10 @@ public class GetAsrConfigRequest extends Request {
         }
 
         /**
-         * EntryId.
+         * <p>The entity ID corresponding to config_level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
          */
         public Builder entryId(String entryId) {
             this.putQueryParameter("EntryId", entryId);

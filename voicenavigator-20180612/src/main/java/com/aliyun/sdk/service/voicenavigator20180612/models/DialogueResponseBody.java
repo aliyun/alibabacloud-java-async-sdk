@@ -106,7 +106,10 @@ public class DialogueResponseBody extends TeaModel {
         } 
 
         /**
-         * Action.
+         * <p>The action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Broadcast</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -114,7 +117,10 @@ public class DialogueResponseBody extends TeaModel {
         }
 
         /**
-         * ActionParams.
+         * <p>The action parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;duration\&quot;:2420,\&quot;endTime\&quot;:1651717326805,\&quot;hangUpDirection\&quot;:\&quot;client\&quot;,\&quot;hasLastPlaybackCompleted\&quot;:true,\&quot;startTime\&quot;:1651717324385}</p>
          */
         public Builder actionParams(String actionParams) {
             this.actionParams = actionParams;
@@ -122,7 +128,10 @@ public class DialogueResponseBody extends TeaModel {
         }
 
         /**
-         * Interruptible.
+         * <p>Indicates whether the IVR broadcast can be interrupted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder interruptible(Boolean interruptible) {
             this.interruptible = interruptible;
@@ -130,7 +139,10 @@ public class DialogueResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DB8BA95-4513-54B9-9C67-A28909CFB4AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DialogueResponseBody extends TeaModel {
         }
 
         /**
-         * TextResponse.
+         * <p>The broadcast text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您好，欢迎致电智能助手</p>
          */
         public Builder textResponse(String textResponse) {
             this.textResponse = textResponse;

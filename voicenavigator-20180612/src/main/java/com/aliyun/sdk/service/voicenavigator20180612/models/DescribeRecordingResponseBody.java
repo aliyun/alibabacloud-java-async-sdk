@@ -93,7 +93,10 @@ public class DescribeRecordingResponseBody extends TeaModel {
         } 
 
         /**
-         * FileName.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019080913202222.wav</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -101,7 +104,10 @@ public class DescribeRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * FilePath.
+         * <p>The file download URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>url</p>
          */
         public Builder filePath(String filePath) {
             this.filePath = filePath;
@@ -109,7 +115,10 @@ public class DescribeRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

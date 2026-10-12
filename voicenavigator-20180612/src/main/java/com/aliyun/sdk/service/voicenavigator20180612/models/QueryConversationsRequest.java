@@ -132,7 +132,10 @@ public class QueryConversationsRequest extends Request {
         } 
 
         /**
-         * BeginTimeLeftRange.
+         * <p>The start of the time range to query. This value is a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582183381000</p>
          */
         public Builder beginTimeLeftRange(Long beginTimeLeftRange) {
             this.putQueryParameter("BeginTimeLeftRange", beginTimeLeftRange);
@@ -141,7 +144,10 @@ public class QueryConversationsRequest extends Request {
         }
 
         /**
-         * BeginTimeRightRange.
+         * <p>The end of the time range to query. This value is a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582356181000</p>
          */
         public Builder beginTimeRightRange(Long beginTimeRightRange) {
             this.putQueryParameter("BeginTimeRightRange", beginTimeRightRange);
@@ -150,7 +156,10 @@ public class QueryConversationsRequest extends Request {
         }
 
         /**
-         * CallingNumber.
+         * <p>The calling number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02811111111</p>
          */
         public Builder callingNumber(String callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -159,6 +168,7 @@ public class QueryConversationsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +181,7 @@ public class QueryConversationsRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,6 +194,7 @@ public class QueryConversationsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

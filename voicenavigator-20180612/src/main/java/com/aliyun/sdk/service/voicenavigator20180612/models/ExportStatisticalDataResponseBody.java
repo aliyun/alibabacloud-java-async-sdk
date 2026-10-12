@@ -67,7 +67,10 @@ public class ExportStatisticalDataResponseBody extends TeaModel {
         } 
 
         /**
-         * ExportTaskId.
+         * <p>The asynchronous export task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6be5a9f1-406e-424e-a17b-b6fb86ee3cc9</p>
          */
         public Builder exportTaskId(String exportTaskId) {
             this.exportTaskId = exportTaskId;
@@ -75,7 +78,10 @@ public class ExportStatisticalDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c62e6789-28a8-41db-941e-171a01d3b3b9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

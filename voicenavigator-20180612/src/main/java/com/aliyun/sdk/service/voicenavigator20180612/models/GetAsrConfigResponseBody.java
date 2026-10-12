@@ -119,7 +119,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetAsrConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not Found</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -143,7 +149,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -329,7 +344,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AppKey.
+             * <p>The engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>your-app-key</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -337,7 +355,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AsrAcousticModelId.
+             * <p>The ASR acoustic model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
              */
             public Builder asrAcousticModelId(String asrAcousticModelId) {
                 this.asrAcousticModelId = asrAcousticModelId;
@@ -345,7 +366,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AsrClassVocabularyId.
+             * <p>The ASR hotword ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
              */
             public Builder asrClassVocabularyId(String asrClassVocabularyId) {
                 this.asrClassVocabularyId = asrClassVocabularyId;
@@ -353,7 +377,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AsrCustomizationId.
+             * <p>The ASR dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
              */
             public Builder asrCustomizationId(String asrCustomizationId) {
                 this.asrCustomizationId = asrCustomizationId;
@@ -369,7 +396,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AsrOverridesUuid.
+             * <p>The ASR correction dictionary ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>94001ae8-72fd-4f93-84dc-e58e2b20363b</p>
              */
             public Builder asrOverridesUuid(String asrOverridesUuid) {
                 this.asrOverridesUuid = asrOverridesUuid;
@@ -377,7 +407,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AsrVocabularyId.
+             * <p>The hotword ID. You can view the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
              */
             public Builder asrVocabularyId(String asrVocabularyId) {
                 this.asrVocabularyId = asrVocabularyId;
@@ -385,7 +418,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * <p>The speech engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ali</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -393,7 +429,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EngineXufei.
+             * <p>The iFLYTEK engine parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EngineXufei</p>
              */
             public Builder engineXufei(String engineXufei) {
                 this.engineXufei = engineXufei;
@@ -401,7 +440,10 @@ public class GetAsrConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NlsServiceType.
+             * <p>NluServiceType</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Authorized</p>
              */
             public Builder nlsServiceType(String nlsServiceType) {
                 this.nlsServiceType = nlsServiceType;

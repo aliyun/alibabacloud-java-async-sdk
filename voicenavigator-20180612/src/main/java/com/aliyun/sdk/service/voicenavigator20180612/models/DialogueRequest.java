@@ -160,7 +160,10 @@ public class DialogueRequest extends Request {
         } 
 
         /**
-         * AdditionalContext.
+         * <p>The session context.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder additionalContext(String additionalContext) {
             this.putQueryParameter("AdditionalContext", additionalContext);
@@ -169,7 +172,10 @@ public class DialogueRequest extends Request {
         }
 
         /**
-         * CalledNumber.
+         * <p>The called number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10086</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -178,7 +184,10 @@ public class DialogueRequest extends Request {
         }
 
         /**
-         * CallingNumber.
+         * <p>The calling number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18851708605</p>
          */
         public Builder callingNumber(String callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -187,6 +196,7 @@ public class DialogueRequest extends Request {
         }
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,6 +218,7 @@ public class DialogueRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +231,10 @@ public class DialogueRequest extends Request {
         }
 
         /**
-         * InstanceOwnerId.
+         * <p>The Alibaba Cloud account ID of the instance owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1426738157626835</p>
          */
         public Builder instanceOwnerId(Long instanceOwnerId) {
             this.putQueryParameter("InstanceOwnerId", instanceOwnerId);
@@ -229,7 +243,11 @@ public class DialogueRequest extends Request {
         }
 
         /**
+         * <p>The user utterance.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>行吧，那我就不打扰您了，再见。</p>
          */
         public Builder utterance(String utterance) {
             this.putQueryParameter("Utterance", utterance);

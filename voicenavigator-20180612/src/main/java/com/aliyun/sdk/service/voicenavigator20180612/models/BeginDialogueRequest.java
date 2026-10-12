@@ -132,7 +132,10 @@ public class BeginDialogueRequest extends Request {
         } 
 
         /**
-         * CalledNumber.
+         * <p>The called number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10086</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -141,6 +144,7 @@ public class BeginDialogueRequest extends Request {
         }
 
         /**
+         * <p>The calling number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +157,7 @@ public class BeginDialogueRequest extends Request {
         }
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +170,10 @@ public class BeginDialogueRequest extends Request {
         }
 
         /**
-         * InitialContext.
+         * <p>The session context.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;channelId\&quot;:\&quot;fe2559d3-5fc9-4fa5-8314-32b9f762791d\&quot;}</p>
          */
         public Builder initialContext(String initialContext) {
             this.putQueryParameter("InitialContext", initialContext);
@@ -174,6 +182,7 @@ public class BeginDialogueRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +195,10 @@ public class BeginDialogueRequest extends Request {
         }
 
         /**
-         * InstanceOwnerId.
+         * <p>The instance owner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231639035307976</p>
          */
         public Builder instanceOwnerId(Long instanceOwnerId) {
             this.putQueryParameter("InstanceOwnerId", instanceOwnerId);

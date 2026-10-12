@@ -74,6 +74,7 @@ public class DescribeTTSConfigRequest extends Request {
         } 
 
         /**
+         * <p>The scenario ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DescribeTTSConfigRequest extends Request {
         }
 
         /**
-         * InstanceOwnerId.
+         * <p>The ID of the instance owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1971226538081821</p>
          */
         public Builder instanceOwnerId(Long instanceOwnerId) {
             this.putQueryParameter("InstanceOwnerId", instanceOwnerId);

@@ -130,7 +130,10 @@ public class AssociateChatbotInstanceRequest extends Request {
         } 
 
         /**
-         * ChatbotInstanceId.
+         * <p>The ID of the Chatbot instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-720edd02b66a</p>
          */
         public Builder chatbotInstanceId(String chatbotInstanceId) {
             this.putQueryParameter("ChatbotInstanceId", chatbotInstanceId);
@@ -139,7 +142,10 @@ public class AssociateChatbotInstanceRequest extends Request {
         }
 
         /**
-         * ChatbotName.
+         * <p>The name of the Chatbot instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客服机器人</p>
          */
         public Builder chatbotName(String chatbotName) {
             this.putQueryParameter("ChatbotName", chatbotName);
@@ -148,6 +154,7 @@ public class AssociateChatbotInstanceRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the navigation instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

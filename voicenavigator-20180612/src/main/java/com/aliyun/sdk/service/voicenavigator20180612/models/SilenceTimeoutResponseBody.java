@@ -106,7 +106,10 @@ public class SilenceTimeoutResponseBody extends TeaModel {
         } 
 
         /**
-         * Action.
+         * <p>The action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TransferToAgent</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -114,7 +117,10 @@ public class SilenceTimeoutResponseBody extends TeaModel {
         }
 
         /**
-         * ActionParams.
+         * <p>The action parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;skillGroupId&quot;: &quot;ABC&quot;}</p>
          */
         public Builder actionParams(String actionParams) {
             this.actionParams = actionParams;
@@ -122,7 +128,10 @@ public class SilenceTimeoutResponseBody extends TeaModel {
         }
 
         /**
-         * Interruptible.
+         * <p>Indicates whether the action can be interrupted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder interruptible(Boolean interruptible) {
             this.interruptible = interruptible;
@@ -130,7 +139,10 @@ public class SilenceTimeoutResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class SilenceTimeoutResponseBody extends TeaModel {
         }
 
         /**
-         * TextResponse.
+         * <p>The text response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Transferring you to a human agent</p>
          */
         public Builder textResponse(String textResponse) {
             this.textResponse = textResponse;

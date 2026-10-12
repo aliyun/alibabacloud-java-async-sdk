@@ -104,7 +104,10 @@ public class DebugDialogueRequest extends Request {
         } 
 
         /**
-         * AdditionalContext.
+         * <p>The conversation context.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder additionalContext(String additionalContext) {
             this.putQueryParameter("AdditionalContext", additionalContext);
@@ -113,6 +116,7 @@ public class DebugDialogueRequest extends Request {
         }
 
         /**
+         * <p>The user utterance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +129,7 @@ public class DebugDialogueRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +142,11 @@ public class DebugDialogueRequest extends Request {
         }
 
         /**
+         * <p>The user utterance.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>是的</p>
          */
         public Builder utterance(String utterance) {
             this.putQueryParameter("Utterance", utterance);

@@ -106,7 +106,7 @@ public class ListConversationsResponseBody extends TeaModel {
         } 
 
         /**
-         * Conversations.
+         * <p>The list of sessions.</p>
          */
         public Builder conversations(java.util.List<Conversations> conversations) {
             this.conversations = conversations;
@@ -114,7 +114,10 @@ public class ListConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2c26e67-5984-4935-984e-bcee52971993</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -200,6 +212,9 @@ public class ListConversationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
+        @com.aliyun.core.annotation.NameInMap("Voice")
+        private String voice;
+
         private Conversations(Builder builder) {
             this.abTestName = builder.abTestName;
             this.calledNumber = builder.calledNumber;
@@ -215,6 +230,7 @@ public class ListConversationsResponseBody extends TeaModel {
             this.sandBox = builder.sandBox;
             this.skillGroup = builder.skillGroup;
             this.startTime = builder.startTime;
+            this.voice = builder.voice;
         }
 
         public static Builder builder() {
@@ -323,6 +339,13 @@ public class ListConversationsResponseBody extends TeaModel {
             return this.startTime;
         }
 
+        /**
+         * @return voice
+         */
+        public String getVoice() {
+            return this.voice;
+        }
+
         public static final class Builder {
             private String abTestName; 
             private String calledNumber; 
@@ -338,6 +361,7 @@ public class ListConversationsResponseBody extends TeaModel {
             private Boolean sandBox; 
             private String skillGroup; 
             private Long startTime; 
+            private String voice; 
 
             private Builder() {
             } 
@@ -357,6 +381,7 @@ public class ListConversationsResponseBody extends TeaModel {
                 this.sandBox = model.sandBox;
                 this.skillGroup = model.skillGroup;
                 this.startTime = model.startTime;
+                this.voice = model.voice;
             } 
 
             /**
@@ -368,7 +393,10 @@ public class ListConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * CalledNumber.
+             * <p>The called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12356</p>
              */
             public Builder calledNumber(String calledNumber) {
                 this.calledNumber = calledNumber;
@@ -376,7 +404,10 @@ public class ListConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * CallingNumber.
+             * <p>The calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>135815884***</p>
              */
             public Builder callingNumber(String callingNumber) {
                 this.callingNumber = callingNumber;
@@ -384,7 +415,10 @@ public class ListConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>82b2eaae-ce5c-45f8-8231-f15b6b27e55c</p>
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
@@ -408,7 +442,23 @@ public class ListConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * EndReason.
+             * <p>The reason for ending the session. Valid values:</p>
+             * <ol>
+             * <li>Normal completion.</li>
+             * <li>Hangup by the bot after unrecognized input.</li>
+             * <li>Hangup due to silence timeout.</li>
+             * <li>Hangup by the user after unrecognized input.</li>
+             * <li>Hangup by the user without a reason.</li>
+             * <li>Transfer to a human agent due to matched intent.</li>
+             * <li>Transfer to a human agent after unrecognized input.</li>
+             * <li>No interaction from the user.</li>
+             * <li>Interruption due to a system exception.</li>
+             * <li>Transfer to IVR due to matched intent.</li>
+             * <li>Transfer to IVR after unrecognized input.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder endReason(Integer endReason) {
                 this.endReason = endReason;
@@ -416,7 +466,10 @@ public class ListConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582266750353</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -424,7 +477,10 @@ public class ListConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * HasLastPlaybackCompleted.
+             * <p>Specifies whether the last prompt was fully played before the session ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasLastPlaybackCompleted(Boolean hasLastPlaybackCompleted) {
                 this.hasLastPlaybackCompleted = hasLastPlaybackCompleted;
@@ -432,7 +488,10 @@ public class ListConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * HasToAgent.
+             * <p>Specifies whether the session was transferred to a human agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasToAgent(Boolean hasToAgent) {
                 this.hasToAgent = hasToAgent;
@@ -440,7 +499,10 @@ public class ListConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * Rounds.
+             * <p>The number of conversation rounds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder rounds(Integer rounds) {
                 this.rounds = rounds;
@@ -448,7 +510,10 @@ public class ListConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * SandBox.
+             * <p>Specifies whether the sandbox mode is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sandBox(Boolean sandBox) {
                 this.sandBox = sandBox;
@@ -456,7 +521,10 @@ public class ListConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroup.
+             * <p>The skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skg-123</p>
              */
             public Builder skillGroup(String skillGroup) {
                 this.skillGroup = skillGroup;
@@ -464,10 +532,24 @@ public class ListConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1641625694286</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * <p>The text-to-speech (TTS) voice used for the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cosyvoice-v3-flash:longanyang</p>
+             */
+            public Builder voice(String voice) {
+                this.voice = voice;
                 return this;
             }
 

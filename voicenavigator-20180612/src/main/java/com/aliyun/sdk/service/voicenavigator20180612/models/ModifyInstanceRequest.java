@@ -103,6 +103,7 @@ public class ModifyInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The maximum number of concurrent conversations for the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -124,6 +128,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

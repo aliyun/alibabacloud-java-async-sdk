@@ -213,7 +213,10 @@ public class ModifyAsrConfigRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>The AppKey of the engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>your_app_key</p>
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -222,7 +225,10 @@ public class ModifyAsrConfigRequest extends Request {
         }
 
         /**
-         * AsrAcousticModelId.
+         * <p>The ASR acoustic model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
          */
         public Builder asrAcousticModelId(String asrAcousticModelId) {
             this.putQueryParameter("AsrAcousticModelId", asrAcousticModelId);
@@ -231,7 +237,10 @@ public class ModifyAsrConfigRequest extends Request {
         }
 
         /**
-         * AsrClassVocabularyId.
+         * <p>The ASR hotword ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
          */
         public Builder asrClassVocabularyId(String asrClassVocabularyId) {
             this.putQueryParameter("AsrClassVocabularyId", asrClassVocabularyId);
@@ -240,7 +249,10 @@ public class ModifyAsrConfigRequest extends Request {
         }
 
         /**
-         * AsrCustomizationId.
+         * <p>The dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
          */
         public Builder asrCustomizationId(String asrCustomizationId) {
             this.putQueryParameter("AsrCustomizationId", asrCustomizationId);
@@ -258,7 +270,10 @@ public class ModifyAsrConfigRequest extends Request {
         }
 
         /**
-         * AsrOverridesUuid.
+         * <p>The ASR error correction dictionary ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94001ae8-72fd-4f93-84dc-e58e2b20363b</p>
          */
         public Builder asrOverridesUuid(String asrOverridesUuid) {
             this.putQueryParameter("AsrOverridesUuid", asrOverridesUuid);
@@ -267,7 +282,10 @@ public class ModifyAsrConfigRequest extends Request {
         }
 
         /**
-         * AsrVocabularyId.
+         * <p>The hotword ID. You can view the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
          */
         public Builder asrVocabularyId(String asrVocabularyId) {
             this.putQueryParameter("AsrVocabularyId", asrVocabularyId);
@@ -276,7 +294,15 @@ public class ModifyAsrConfigRequest extends Request {
         }
 
         /**
-         * ConfigLevel.
+         * <p>The policy level. Valid values:</p>
+         * <ul>
+         * <li>0: system.</li>
+         * <li>1: tenant.</li>
+         * <li>2: instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder configLevel(Integer configLevel) {
             this.putQueryParameter("ConfigLevel", configLevel);
@@ -285,7 +311,10 @@ public class ModifyAsrConfigRequest extends Request {
         }
 
         /**
-         * Engine.
+         * <p>The TTS engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -294,7 +323,10 @@ public class ModifyAsrConfigRequest extends Request {
         }
 
         /**
-         * EngineXunfei.
+         * <p>The iFLYTEK ASR configuration parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Uuid&quot;:&quot;b06c4ed3-a5e3-4c55-92b7-c2d2a88ca37f&quot;}</p>
          */
         public Builder engineXunfei(String engineXunfei) {
             this.putQueryParameter("EngineXunfei", engineXunfei);
@@ -303,7 +335,10 @@ public class ModifyAsrConfigRequest extends Request {
         }
 
         /**
-         * EntryId.
+         * <p>The entity ID corresponding to config_level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
          */
         public Builder entryId(String entryId) {
             this.putQueryParameter("EntryId", entryId);
@@ -312,7 +347,10 @@ public class ModifyAsrConfigRequest extends Request {
         }
 
         /**
-         * NlsServiceType.
+         * <p>NluServiceType</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Speech Recognition</p>
          */
         public Builder nlsServiceType(String nlsServiceType) {
             this.putQueryParameter("NlsServiceType", nlsServiceType);

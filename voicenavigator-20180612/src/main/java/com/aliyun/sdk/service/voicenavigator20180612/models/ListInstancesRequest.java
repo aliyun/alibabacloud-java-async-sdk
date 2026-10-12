@@ -173,7 +173,10 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
-         * InstanceIdListJsonString.
+         * <p>The list of digital employee scenario IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;e4bebxxxxxxxxxxx&quot;]</p>
          */
         public Builder instanceIdListJsonString(String instanceIdListJsonString) {
             this.putQueryParameter("InstanceIdListJsonString", instanceIdListJsonString);
@@ -182,7 +185,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The scenario name used as a filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -191,7 +197,28 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * NluServiceTypeListJsonString.
+         * <p>The NLU type used to filter by dialog capability source. If this parameter is not specified, all types are selected.</p>
+         * <ul>
+         * <li><p>MANAGED: managed (deprecated).</p>
+         * </li>
+         * <li><p>AUTHORIZED: authorized. In the public cloud, this refers to Chatbot service.</p>
+         * </li>
+         * <li><p>PROVIDED: private. Configured by specifying the AccessKey ID, AccessKey Secret, and chatEndpoint in the O&amp;M console.</p>
+         * </li>
+         * <li><p>CCC_AUTHORIZED: uses a Chatbot authorized by Cloud Call Center.</p>
+         * </li>
+         * <li><p>CCC_FUNCTION: uses Alibaba Cloud Function Compute.</p>
+         * </li>
+         * <li><p>SSE_FUNCTION: uses a streaming function service. Function Compute that supports SSE, used to connect to third-party large language model chatbots.</p>
+         * </li>
+         * <li><p>PROMPTS: connects to Qwen foundation models.</p>
+         * </li>
+         * <li><p>LOCAL: private cloud, local Chatbot.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;CCC_AUTHORIZED&quot;]</p>
          */
         public Builder nluServiceTypeListJsonString(String nluServiceTypeListJsonString) {
             this.putQueryParameter("NluServiceTypeListJsonString", nluServiceTypeListJsonString);
@@ -200,7 +227,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Number.
+         * <p>The inbound number used as a filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>021xxxxxxx</p>
          */
         public Builder number(String number) {
             this.putQueryParameter("Number", number);
@@ -209,6 +239,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,6 +252,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +265,14 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The scenario status used as a filter condition. If this parameter is not specified, all statuses are selected.</p>
+         * <ul>
+         * <li>DISABLED: offline.</li>
+         * <li>PUBLISHED: published.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLISHED</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -242,7 +281,13 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * UnionInstanceId.
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>When UnionSource is set to CCC, set UnionInstanceId to the instance ID of Cloud Call Center.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>zhyl</p>
          */
         public Builder unionInstanceId(String unionInstanceId) {
             this.putQueryParameter("UnionInstanceId", unionInstanceId);
@@ -251,7 +296,13 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * UnionSource.
+         * <p>The source.</p>
+         * <ul>
+         * <li>CCC: Cloud Call Center.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CCC</p>
          */
         public Builder unionSource(String unionSource) {
             this.putQueryParameter("UnionSource", unionSource);

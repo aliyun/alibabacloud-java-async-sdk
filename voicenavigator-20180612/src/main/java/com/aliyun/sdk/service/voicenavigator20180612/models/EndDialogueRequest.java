@@ -103,6 +103,7 @@ public class EndDialogueRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the conversation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class EndDialogueRequest extends Request {
         }
 
         /**
-         * HangUpParams.
+         * <p>The hang-up parameters, in a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;duration\&quot;:40,\&quot;endTime\&quot;:1645082505345,\&quot;hangUpDirection\&quot;:\&quot;ivr\&quot;,\&quot;hasLastPlaybackCompleted\&quot;:true,\&quot;startTime\&quot;:1645082505305}</p>
          */
         public Builder hangUpParams(String hangUpParams) {
             this.putQueryParameter("HangUpParams", hangUpParams);
@@ -124,6 +128,7 @@ public class EndDialogueRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class EndDialogueRequest extends Request {
         }
 
         /**
-         * InstanceOwnerId.
+         * <p>The ID of the instance owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1399572315967217</p>
          */
         public Builder instanceOwnerId(Long instanceOwnerId) {
             this.putQueryParameter("InstanceOwnerId", instanceOwnerId);

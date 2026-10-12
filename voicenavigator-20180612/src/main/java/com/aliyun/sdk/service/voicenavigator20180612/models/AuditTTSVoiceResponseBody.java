@@ -67,7 +67,10 @@ public class AuditTTSVoiceResponseBody extends TeaModel {
         } 
 
         /**
-         * AuditionUrl.
+         * <p>The audition URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://voicenavigator-cn-shanghai.oss-cn-shanghai.aliyuncs.com/exported_files/2020-02-20/ttsConfig-1582188148528-abd8e407de0a49b381bb591bd91fc073.wav?Expires=1582188208&OSSAccessKeyId=LTAIppQY*******&Signature=FaBassElzqGEB0H2TvTKPJsOJHs%3D">http://voicenavigator-cn-shanghai.oss-cn-shanghai.aliyuncs.com/exported_files/2020-02-20/ttsConfig-1582188148528-abd8e407de0a49b381bb591bd91fc073.wav?Expires=1582188208&amp;OSSAccessKeyId=LTAIppQY*******&amp;Signature=FaBassElzqGEB0H2TvTKPJsOJHs%3D</a></p>
          */
         public Builder auditionUrl(String auditionUrl) {
             this.auditionUrl = auditionUrl;
@@ -75,7 +78,10 @@ public class AuditTTSVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

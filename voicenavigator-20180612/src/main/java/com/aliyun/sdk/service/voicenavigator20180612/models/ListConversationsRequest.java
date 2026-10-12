@@ -230,7 +230,7 @@ public class ListConversationsRequest extends Request {
         } 
 
         /**
-         * AbTestId.
+         * <p>The AB test ID.</p>
          */
         public Builder abTestId(String abTestId) {
             this.putQueryParameter("AbTestId", abTestId);
@@ -239,7 +239,10 @@ public class ListConversationsRequest extends Request {
         }
 
         /**
-         * BeginTimeLeftRange.
+         * <p>The lower bound of the start time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638288000000</p>
          */
         public Builder beginTimeLeftRange(Long beginTimeLeftRange) {
             this.putQueryParameter("BeginTimeLeftRange", beginTimeLeftRange);
@@ -248,7 +251,10 @@ public class ListConversationsRequest extends Request {
         }
 
         /**
-         * BeginTimeRightRange.
+         * <p>The upper bound of the start time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637547875311</p>
          */
         public Builder beginTimeRightRange(Long beginTimeRightRange) {
             this.putQueryParameter("BeginTimeRightRange", beginTimeRightRange);
@@ -257,7 +263,10 @@ public class ListConversationsRequest extends Request {
         }
 
         /**
-         * CallingNumber.
+         * <p>The calling number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138106*****</p>
          */
         public Builder callingNumber(String callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -275,6 +284,7 @@ public class ListConversationsRequest extends Request {
         }
 
         /**
+         * <p>The instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -287,7 +297,10 @@ public class ListConversationsRequest extends Request {
         }
 
         /**
-         * IsSandBox.
+         * <p>Specifies whether the sandbox mode is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isSandBox(String isSandBox) {
             this.putQueryParameter("IsSandBox", isSandBox);
@@ -296,6 +309,7 @@ public class ListConversationsRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -308,6 +322,7 @@ public class ListConversationsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +335,10 @@ public class ListConversationsRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>The query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13788914724</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -329,7 +347,10 @@ public class ListConversationsRequest extends Request {
         }
 
         /**
-         * Result.
+         * <p>The result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder result(Long result) {
             this.putQueryParameter("Result", result);
@@ -338,7 +359,10 @@ public class ListConversationsRequest extends Request {
         }
 
         /**
-         * RoundsLeftRange.
+         * <p>The lower bound of the conversation rounds range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roundsLeftRange(Integer roundsLeftRange) {
             this.putQueryParameter("RoundsLeftRange", roundsLeftRange);
@@ -347,7 +371,10 @@ public class ListConversationsRequest extends Request {
         }
 
         /**
-         * RoundsRightRange.
+         * <p>The upper bound of the conversation rounds range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder roundsRightRange(Integer roundsRightRange) {
             this.putQueryParameter("RoundsRightRange", roundsRightRange);

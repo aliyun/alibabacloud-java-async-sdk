@@ -210,7 +210,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * AbilityType.
+         * <p>The instance ability type.<br>
+         * DEFAULT: full abilities.<br>
+         * VOICE_ONLY: only voice abilities, without dialog intervention.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VOICE_ONLY</p>
          */
         public Builder abilityType(String abilityType) {
             this.abilityType = abilityType;
@@ -218,7 +223,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ApplicableOperations.
+         * <p>The list of applicable operations.</p>
          */
         public Builder applicableOperations(java.util.List<String> applicableOperations) {
             this.applicableOperations = applicableOperations;
@@ -226,7 +231,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Concurrency.
+         * <p>The instance concurrency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder concurrency(Long concurrency) {
             this.concurrency = concurrency;
@@ -234,7 +242,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>导航测试实例描述信息</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -242,7 +253,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd6fc91bc13445c2af7f2e3e31418520</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -250,7 +264,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683216000000</p>
          */
         public Builder modifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
@@ -258,7 +275,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyUserName.
+         * <p>The user who last updated the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2508711*******</p>
          */
         public Builder modifyUserName(String modifyUserName) {
             this.modifyUserName = modifyUserName;
@@ -266,7 +286,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>导航测试实例</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -282,7 +305,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>790B5EA3-D251-1666-B1E0-4D1F4B33A592</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -290,7 +316,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Published</p>
          */
         public Builder status(String status) {
             this.status = status;

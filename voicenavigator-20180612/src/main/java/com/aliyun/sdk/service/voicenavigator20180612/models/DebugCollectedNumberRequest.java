@@ -89,6 +89,7 @@ public class DebugCollectedNumberRequest extends Request {
         } 
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DebugCollectedNumberRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DebugCollectedNumberRequest extends Request {
         }
 
         /**
-         * Number.
+         * <p>The collected digit input.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder number(String number) {
             this.putQueryParameter("Number", number);

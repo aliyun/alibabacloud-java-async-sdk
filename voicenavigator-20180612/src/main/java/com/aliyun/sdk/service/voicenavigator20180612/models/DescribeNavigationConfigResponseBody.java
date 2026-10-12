@@ -93,7 +93,7 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * GreetingConfig.
+         * <p>The greeting configuration.</p>
          */
         public Builder greetingConfig(GreetingConfig greetingConfig) {
             this.greetingConfig = greetingConfig;
@@ -101,7 +101,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,7 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SilenceTimeoutConfig.
+         * <p>The silence timeout configuration.</p>
          */
         public Builder silenceTimeoutConfig(SilenceTimeoutConfig silenceTimeoutConfig) {
             this.silenceTimeoutConfig = silenceTimeoutConfig;
@@ -117,7 +120,7 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UnrecognizingConfig.
+         * <p>The configuration for handling unrecognized input.</p>
          */
         public Builder unrecognizingConfig(UnrecognizingConfig unrecognizingConfig) {
             this.unrecognizingConfig = unrecognizingConfig;
@@ -196,7 +199,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * GreetingWords.
+             * <p>The greeting message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>您好，欢迎致电智能导航</p>
              */
             public Builder greetingWords(String greetingWords) {
                 this.greetingWords = greetingWords;
@@ -204,7 +210,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IntentTrigger.
+             * <p>The intent trigger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好</p>
              */
             public Builder intentTrigger(String intentTrigger) {
                 this.intentTrigger = intentTrigger;
@@ -212,7 +221,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The source of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chatbotIntent</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -357,7 +369,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * FinalAction.
+             * <p>The action to perform after the final silence prompt is played. Valid values: <code>TransferToAgent</code>, <code>TransferToIVR</code>, <code>RedirectToPage</code>, or <code>HangUp</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HangUp</p>
              */
             public Builder finalAction(String finalAction) {
                 this.finalAction = finalAction;
@@ -365,7 +380,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * FinalActionParams.
+             * <p>Parameters for the final action, such as a redirection target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder finalActionParams(String finalActionParams) {
                 this.finalActionParams = finalActionParams;
@@ -373,7 +391,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * FinalPrompt.
+             * <p>The prompt that is played when the silence timeout threshold is reached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>抱歉，听不到您说话，请您稍后致电</p>
              */
             public Builder finalPrompt(String finalPrompt) {
                 this.finalPrompt = finalPrompt;
@@ -392,7 +413,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Prompt.
+             * <p>The prompt that is played when a silence timeout occurs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>抱歉，我没听到您说话</p>
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -400,7 +424,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The source of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chatbotIntent</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -408,7 +435,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The maximum number of silence timeouts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder threshold(Integer threshold) {
                 this.threshold = threshold;
@@ -416,7 +446,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>The duration of the silence timeout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -522,7 +555,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * FinalAction.
+             * <p>The action to take when the number of unrecognized inputs reaches the threshold. Valid values: <code>TransferToAgent</code>, <code>TransferToIVR</code>, <code>RedirectToPage</code>, or <code>HangUp</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TransferToAgent</p>
              */
             public Builder finalAction(String finalAction) {
                 this.finalAction = finalAction;
@@ -530,7 +566,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * FinalActionParams.
+             * <p>Parameters for the final action, such as a redirection target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ \&quot;skillGroupId\&quot;: \&quot;fallbackSkillGroup\&quot; }</p>
              */
             public Builder finalActionParams(String finalActionParams) {
                 this.finalActionParams = finalActionParams;
@@ -538,7 +577,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * FinalPrompt.
+             * <p>The prompt that is played when the unrecognized input threshold is reached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>抱歉，我暂时无法处理您的问题，即将为您转接人工</p>
              */
             public Builder finalPrompt(String finalPrompt) {
                 this.finalPrompt = finalPrompt;
@@ -546,7 +588,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Prompt.
+             * <p>The prompt that is played when user input is not recognized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>抱歉，我无法理解您的意思</p>
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -554,7 +599,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The maximum number of times the user\&quot;s input is not recognized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder threshold(Integer threshold) {
                 this.threshold = threshold;

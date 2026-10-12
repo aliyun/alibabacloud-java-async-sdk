@@ -103,7 +103,10 @@ public class DescribeStatisticalDataRequest extends Request {
         } 
 
         /**
-         * BeginTimeLeftRange.
+         * <p>The left boundary of the start time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582283640000</p>
          */
         public Builder beginTimeLeftRange(Long beginTimeLeftRange) {
             this.putQueryParameter("BeginTimeLeftRange", beginTimeLeftRange);
@@ -112,7 +115,10 @@ public class DescribeStatisticalDataRequest extends Request {
         }
 
         /**
-         * BeginTimeRightRange.
+         * <p>The right boundary of the start time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582298040000</p>
          */
         public Builder beginTimeRightRange(Long beginTimeRightRange) {
             this.putQueryParameter("BeginTimeRightRange", beginTimeRightRange);
@@ -121,6 +127,7 @@ public class DescribeStatisticalDataRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +140,7 @@ public class DescribeStatisticalDataRequest extends Request {
         }
 
         /**
+         * <p>The date unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

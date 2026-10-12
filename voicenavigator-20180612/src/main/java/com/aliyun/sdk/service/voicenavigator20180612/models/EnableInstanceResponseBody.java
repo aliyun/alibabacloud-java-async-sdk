@@ -67,7 +67,10 @@ public class EnableInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3a530dc0-7cfa-48f6-9539-bf9001e77b16</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class EnableInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The result status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(String status) {
             this.status = status;

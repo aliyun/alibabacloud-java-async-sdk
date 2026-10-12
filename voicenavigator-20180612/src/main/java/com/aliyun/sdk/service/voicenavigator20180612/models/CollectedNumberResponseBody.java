@@ -106,7 +106,10 @@ public class CollectedNumberResponseBody extends TeaModel {
         } 
 
         /**
-         * Action.
+         * <p>The action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Broadcast</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -114,7 +117,10 @@ public class CollectedNumberResponseBody extends TeaModel {
         }
 
         /**
-         * ActionParams.
+         * <p>The action parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;duration\&quot;:31340,\&quot;endTime\&quot;:1638243934786,\&quot;hangUpDirection\&quot;:\&quot;ivr\&quot;,\&quot;startTime\&quot;:1638243903446}</p>
          */
         public Builder actionParams(String actionParams) {
             this.actionParams = actionParams;
@@ -122,7 +128,10 @@ public class CollectedNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Interruptible.
+         * <p>Indicates whether the IVR announcement can be interrupted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder interruptible(Boolean interruptible) {
             this.interruptible = interruptible;
@@ -130,7 +139,10 @@ public class CollectedNumberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>da37319b-6c83-4268-9f19-814aed62e401</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class CollectedNumberResponseBody extends TeaModel {
         }
 
         /**
-         * TextResponse.
+         * <p>The announcement text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The collected digits are 123</p>
          */
         public Builder textResponse(String textResponse) {
             this.textResponse = textResponse;

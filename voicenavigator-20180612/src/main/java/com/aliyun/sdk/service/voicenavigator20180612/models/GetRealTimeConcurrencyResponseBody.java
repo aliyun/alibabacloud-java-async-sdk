@@ -93,7 +93,10 @@ public class GetRealTimeConcurrencyResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxConcurrency.
+         * <p>The maximum concurrency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder maxConcurrency(Long maxConcurrency) {
             this.maxConcurrency = maxConcurrency;
@@ -101,7 +104,10 @@ public class GetRealTimeConcurrencyResponseBody extends TeaModel {
         }
 
         /**
-         * RealTimeConcurrency.
+         * <p>The real-time concurrency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder realTimeConcurrency(Long realTimeConcurrency) {
             this.realTimeConcurrency = realTimeConcurrency;
@@ -109,7 +115,10 @@ public class GetRealTimeConcurrencyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6E61E1A-D2DC-5ACF-AED4-A115B6691F98</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class GetRealTimeConcurrencyResponseBody extends TeaModel {
         }
 
         /**
-         * Timestamp.
+         * <p>The timestamp of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1661584255029</p>
          */
         public Builder timestamp(Long timestamp) {
             this.timestamp = timestamp;

@@ -67,7 +67,10 @@ public class DescribeConversationContextResponseBody extends TeaModel {
         } 
 
         /**
-         * ConversationContext.
+         * <p>The session context data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{         &quot;CallingNumber&quot;: &quot;135815***&quot;,         &quot;AdditionalContext&quot;: &quot;&quot;,         &quot;ConversationId&quot;: &quot;361c8a53-0e29-42f3-8aa7-c7752d010399&quot;     }</p>
          */
         public Builder conversationContext(String conversationContext) {
             this.conversationContext = conversationContext;
@@ -75,7 +78,10 @@ public class DescribeConversationContextResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b19af5ce5314ac08108d1b33fe20e15</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -223,7 +223,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * AliCustomizedVoice.
+         * <p>The personalized custom voice ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc458bba-5a25-4cbc-b5c2</p>
          */
         public Builder aliCustomizedVoice(String aliCustomizedVoice) {
             this.aliCustomizedVoice = aliCustomizedVoice;
@@ -231,7 +234,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * AppKey.
+         * <p>The AppKey of the third-party voice configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b358afc</p>
          */
         public Builder appKey(String appKey) {
             this.appKey = appKey;
@@ -247,7 +253,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * <p>The TTS engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bailian</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -255,7 +264,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EngineXunfei.
+         * <p>The iFLYTEK engine parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Voice\&quot;:\&quot;aisjinger\&quot;}</p>
          */
         public Builder engineXunfei(String engineXunfei) {
             this.engineXunfei = engineXunfei;
@@ -271,7 +283,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * NlsServiceType.
+         * <p>The TTS service invoke type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Managed</p>
          */
         public Builder nlsServiceType(String nlsServiceType) {
             this.nlsServiceType = nlsServiceType;
@@ -279,7 +294,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PitchRate.
+         * <p>The pitch rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pitchRate(Integer pitchRate) {
             this.pitchRate = pitchRate;
@@ -287,7 +305,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F132DDBA-66C4-5BD3-BF7E-9642FE877158</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -295,7 +316,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SpeechRate.
+         * <p>The speech rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-150</p>
          */
         public Builder speechRate(Integer speechRate) {
             this.speechRate = speechRate;
@@ -303,7 +327,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TtsOverrides.
+         * <p>The TTS correction dictionary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;pronunciation\&quot;:\&quot;huanqian\&quot;,\&quot;word\&quot;:\&quot;huaiqian\&quot;}]</p>
          */
         public Builder ttsOverrides(String ttsOverrides) {
             this.ttsOverrides = ttsOverrides;
@@ -311,7 +338,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TtsOverridesUuid.
+         * <p>The TTS correction dictionary ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94001ae8-72fd-4f93-84dc-e58e2b20363b</p>
          */
         public Builder ttsOverridesUuid(String ttsOverridesUuid) {
             this.ttsOverridesUuid = ttsOverridesUuid;
@@ -319,7 +349,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Voice.
+         * <p>The voice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aixia</p>
          */
         public Builder voice(String voice) {
             this.voice = voice;
@@ -327,7 +360,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Volume.
+         * <p>The volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder volume(Integer volume) {
             this.volume = volume;

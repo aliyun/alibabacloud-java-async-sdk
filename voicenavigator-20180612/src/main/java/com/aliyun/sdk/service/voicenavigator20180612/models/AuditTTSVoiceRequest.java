@@ -218,7 +218,10 @@ public class AuditTTSVoiceRequest extends Request {
         } 
 
         /**
-         * AccessKey.
+         * <p>The AccessKey ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b4331******a4640ce1f88e27ac8df0</p>
          */
         public Builder accessKey(String accessKey) {
             this.putQueryParameter("AccessKey", accessKey);
@@ -227,7 +230,10 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
-         * AppKey.
+         * <p>The AppKey of the third-party voice configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be******</p>
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -236,7 +242,10 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
-         * Engine.
+         * <p>The TTS engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -245,7 +254,10 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
-         * ExtParams.
+         * <p>The extended parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extParams(String extParams) {
             this.putQueryParameter("ExtParams", extParams);
@@ -254,6 +266,7 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
+         * <p>The navigation instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,7 +297,10 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
-         * SecretKey.
+         * <p>The AccessKey secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZDc3********DAzM2E0YjM5NTFkMDQ1</p>
          */
         public Builder secretKey(String secretKey) {
             this.putQueryParameter("SecretKey", secretKey);
@@ -293,6 +309,7 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
+         * <p>The speech rate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +322,11 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
+         * <p>The audition text.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
@@ -314,6 +335,7 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
+         * <p>The voice.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -326,6 +348,7 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
+         * <p>The volume.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

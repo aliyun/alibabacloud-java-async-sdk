@@ -145,7 +145,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         } 
 
         /**
-         * ConversationTotalNum.
+         * <p>The total number of sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder conversationTotalNum(Long conversationTotalNum) {
             this.conversationTotalNum = conversationTotalNum;
@@ -153,7 +156,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +167,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         }
 
         /**
-         * ResolvedQuestionTotalNum.
+         * <p>The total number of resolved questions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder resolvedQuestionTotalNum(Long resolvedQuestionTotalNum) {
             this.resolvedQuestionTotalNum = resolvedQuestionTotalNum;
@@ -169,7 +178,7 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         }
 
         /**
-         * StatisticalDataReports.
+         * <p>The array of statistics grouped by time dimension.</p>
          */
         public Builder statisticalDataReports(java.util.List<StatisticalDataReports> statisticalDataReports) {
             this.statisticalDataReports = statisticalDataReports;
@@ -177,7 +186,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         }
 
         /**
-         * TotalDialoguePassRate.
+         * <p>The total multi-turn session pass rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80.00%</p>
          */
         public Builder totalDialoguePassRate(String totalDialoguePassRate) {
             this.totalDialoguePassRate = totalDialoguePassRate;
@@ -185,7 +197,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         }
 
         /**
-         * TotalKnowledgeHitRate.
+         * <p>The total knowledge base hit rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80.00%</p>
          */
         public Builder totalKnowledgeHitRate(String totalKnowledgeHitRate) {
             this.totalKnowledgeHitRate = totalKnowledgeHitRate;
@@ -193,7 +208,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         }
 
         /**
-         * TotalResolutionRate.
+         * <p>The total resolution rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80.00%</p>
          */
         public Builder totalResolutionRate(String totalResolutionRate) {
             this.totalResolutionRate = totalResolutionRate;
@@ -201,7 +219,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         }
 
         /**
-         * TotalValidAnswerRate.
+         * <p>The total valid answer rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80.00%</p>
          */
         public Builder totalValidAnswerRate(String totalValidAnswerRate) {
             this.totalValidAnswerRate = totalValidAnswerRate;
@@ -332,7 +353,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
             } 
 
             /**
-             * DialoguePassRate.
+             * <p>The multi-turn session pass rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80.00%</p>
              */
             public Builder dialoguePassRate(String dialoguePassRate) {
                 this.dialoguePassRate = dialoguePassRate;
@@ -340,7 +364,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeHitRate.
+             * <p>The knowledge base hit rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80.00%</p>
              */
             public Builder knowledgeHitRate(String knowledgeHitRate) {
                 this.knowledgeHitRate = knowledgeHitRate;
@@ -348,7 +375,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionRate.
+             * <p>The resolution rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80.00%</p>
              */
             public Builder resolutionRate(String resolutionRate) {
                 this.resolutionRate = resolutionRate;
@@ -356,7 +386,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
             }
 
             /**
-             * ResolvedQuestionNum.
+             * <p>The number of resolved questions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder resolvedQuestionNum(Integer resolvedQuestionNum) {
                 this.resolvedQuestionNum = resolvedQuestionNum;
@@ -364,7 +397,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
             }
 
             /**
-             * StatisticalDate.
+             * <p>The statistical date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19:00:00</p>
              */
             public Builder statisticalDate(String statisticalDate) {
                 this.statisticalDate = statisticalDate;
@@ -372,7 +408,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
             }
 
             /**
-             * TotalConversationNum.
+             * <p>The total number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalConversationNum(Integer totalConversationNum) {
                 this.totalConversationNum = totalConversationNum;
@@ -380,7 +419,10 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
             }
 
             /**
-             * ValidAnswerRate.
+             * <p>The valid answer rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80.0</p>
              */
             public Builder validAnswerRate(String validAnswerRate) {
                 this.validAnswerRate = validAnswerRate;

@@ -106,7 +106,7 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Bots.
+         * <p>The list of instances.</p>
          */
         public Builder bots(java.util.List<Bots> bots) {
             this.bots = bots;
@@ -114,7 +114,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>da37319b-6c83-4268-9f19-814aed62e401</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -269,7 +281,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Avatar.
+             * <p>The icon of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dss0.ali.com/70cFuHS.jpg">https://dss0.ali.com/70cFuHS.jpg</a></p>
              */
             public Builder avatar(String avatar) {
                 this.avatar = avatar;
@@ -277,7 +292,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582266750353</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -285,7 +303,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -301,7 +322,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LanguageCode.
+             * <p>The language code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh-cn</p>
              */
             public Builder languageCode(String languageCode) {
                 this.languageCode = languageCode;
@@ -309,7 +333,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试机器人</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -317,7 +344,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TimeZone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UTC+8</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;

@@ -126,6 +126,7 @@ public class CollectedNumberRequest extends Request {
         }
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +139,7 @@ public class CollectedNumberRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +152,10 @@ public class CollectedNumberRequest extends Request {
         }
 
         /**
-         * InstanceOwnerId.
+         * <p>The instance owner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1426738157626835</p>
          */
         public Builder instanceOwnerId(Long instanceOwnerId) {
             this.putQueryParameter("InstanceOwnerId", instanceOwnerId);
@@ -159,7 +164,10 @@ public class CollectedNumberRequest extends Request {
         }
 
         /**
-         * Number.
+         * <p>The phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1500060224</p>
          */
         public Builder number(String number) {
             this.putQueryParameter("Number", number);

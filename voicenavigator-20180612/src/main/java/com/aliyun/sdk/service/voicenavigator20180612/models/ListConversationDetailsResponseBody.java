@@ -67,7 +67,7 @@ public class ListConversationDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * ConversationDetails.
+         * <p>The list of conversation details.</p>
          */
         public Builder conversationDetails(java.util.List<ConversationDetails> conversationDetails) {
             this.conversationDetails = conversationDetails;
@@ -75,7 +75,10 @@ public class ListConversationDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class ListConversationDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action performed during the turn.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dialogue</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -214,7 +220,10 @@ public class ListConversationDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ActionParams.
+             * <p>The action parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder actionParams(String actionParams) {
                 this.actionParams = actionParams;
@@ -222,7 +231,10 @@ public class ListConversationDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationId.
+             * <p>The conversation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
@@ -230,7 +242,10 @@ public class ListConversationDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582266750353</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -238,7 +253,10 @@ public class ListConversationDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SequenceId.
+             * <p>The sequence ID of the conversational turn.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
              */
             public Builder sequenceId(String sequenceId) {
                 this.sequenceId = sequenceId;
@@ -246,7 +264,10 @@ public class ListConversationDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Speaker.
+             * <p>The speaker. Valid values: <code>customer</code> and <code>chatbot</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chatbot</p>
              */
             public Builder speaker(String speaker) {
                 this.speaker = speaker;
@@ -254,7 +275,10 @@ public class ListConversationDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Utterance.
+             * <p>The speaker\&quot;s utterance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好</p>
              */
             public Builder utterance(String utterance) {
                 this.utterance = utterance;

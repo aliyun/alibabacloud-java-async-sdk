@@ -132,7 +132,10 @@ public class DebugBeginDialogueRequest extends Request {
         } 
 
         /**
-         * CalledNumber.
+         * <p>The called number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10086</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -141,6 +144,7 @@ public class DebugBeginDialogueRequest extends Request {
         }
 
         /**
+         * <p>The calling number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +157,7 @@ public class DebugBeginDialogueRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the conversation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +170,10 @@ public class DebugBeginDialogueRequest extends Request {
         }
 
         /**
-         * InitialContext.
+         * <p>The initial context of the conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder initialContext(String initialContext) {
             this.putQueryParameter("InitialContext", initialContext);
@@ -174,6 +182,7 @@ public class DebugBeginDialogueRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

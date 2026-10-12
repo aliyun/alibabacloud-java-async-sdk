@@ -106,7 +106,7 @@ public class QueryConversationsResponseBody extends TeaModel {
         } 
 
         /**
-         * Conversations.
+         * <p>The conversation list.</p>
          */
         public Builder conversations(java.util.List<Conversations> conversations) {
             this.conversations = conversations;
@@ -114,7 +114,10 @@ public class QueryConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class QueryConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class QueryConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class QueryConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total count of conversation records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -282,7 +294,10 @@ public class QueryConversationsResponseBody extends TeaModel {
             } 
 
             /**
-             * BeginTime.
+             * <p>The start time. This value is a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582183381000</p>
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -290,7 +305,10 @@ public class QueryConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * CallingNumber.
+             * <p>The calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02811111111</p>
              */
             public Builder callingNumber(String callingNumber) {
                 this.callingNumber = callingNumber;
@@ -298,7 +316,10 @@ public class QueryConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationId.
+             * <p>The conversation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
@@ -306,7 +327,10 @@ public class QueryConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveAnswerCount.
+             * <p>The effective answer count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder effectiveAnswerCount(Integer effectiveAnswerCount) {
                 this.effectiveAnswerCount = effectiveAnswerCount;
@@ -314,7 +338,10 @@ public class QueryConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. This value is a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582183481000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -322,7 +349,10 @@ public class QueryConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>The ID of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAA</p>
              */
             public Builder skillGroupId(String skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -330,7 +360,10 @@ public class QueryConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * TransferredToAgent.
+             * <p>Whether the conversation was transferred to an agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder transferredToAgent(Boolean transferredToAgent) {
                 this.transferredToAgent = transferredToAgent;
@@ -338,7 +371,10 @@ public class QueryConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * UserUtteranceCount.
+             * <p>The user utterance count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder userUtteranceCount(Integer userUtteranceCount) {
                 this.userUtteranceCount = userUtteranceCount;

@@ -80,7 +80,10 @@ public class DescribeExportProgressResponseBody extends TeaModel {
         } 
 
         /**
-         * FileHttpUrl.
+         * <p>The file URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://ssml-test.oss-cn-shanghai.aliyuncs.com/key">http://ssml-test.oss-cn-shanghai.aliyuncs.com/key</a></p>
          */
         public Builder fileHttpUrl(String fileHttpUrl) {
             this.fileHttpUrl = fileHttpUrl;
@@ -88,7 +91,10 @@ public class DescribeExportProgressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b19af5ce5314ac08108d1b33fe20e15</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class DescribeExportProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
          */
         public Builder status(String status) {
             this.status = status;

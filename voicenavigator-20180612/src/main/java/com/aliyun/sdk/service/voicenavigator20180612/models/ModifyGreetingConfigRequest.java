@@ -104,7 +104,11 @@ public class ModifyGreetingConfigRequest extends Request {
         } 
 
         /**
+         * <p>The greeting message.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好，欢迎使用智能导航。</p>
          */
         public Builder greetingWords(String greetingWords) {
             this.putQueryParameter("GreetingWords", greetingWords);
@@ -113,6 +117,7 @@ public class ModifyGreetingConfigRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +130,10 @@ public class ModifyGreetingConfigRequest extends Request {
         }
 
         /**
-         * IntentTrigger.
+         * <p>The trigger intent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>开始</p>
          */
         public Builder intentTrigger(String intentTrigger) {
             this.putQueryParameter("IntentTrigger", intentTrigger);
@@ -134,6 +142,7 @@ public class ModifyGreetingConfigRequest extends Request {
         }
 
         /**
+         * <p>The type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

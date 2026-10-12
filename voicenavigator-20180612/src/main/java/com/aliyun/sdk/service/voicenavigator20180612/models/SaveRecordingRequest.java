@@ -178,6 +178,7 @@ public class SaveRecordingRequest extends Request {
         } 
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +191,7 @@ public class SaveRecordingRequest extends Request {
         }
 
         /**
+         * <p>The duration of the recording.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +204,7 @@ public class SaveRecordingRequest extends Request {
         }
 
         /**
+         * <p>The file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,6 +217,7 @@ public class SaveRecordingRequest extends Request {
         }
 
         /**
+         * <p>The file path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,6 +230,7 @@ public class SaveRecordingRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +243,10 @@ public class SaveRecordingRequest extends Request {
         }
 
         /**
-         * InstanceOwnerId.
+         * <p>The ID of the account to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1971226538081821</p>
          */
         public Builder instanceOwnerId(Long instanceOwnerId) {
             this.putQueryParameter("InstanceOwnerId", instanceOwnerId);
@@ -247,6 +255,7 @@ public class SaveRecordingRequest extends Request {
         }
 
         /**
+         * <p>The start time of the recording.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,6 +268,7 @@ public class SaveRecordingRequest extends Request {
         }
 
         /**
+         * <p>The type of the recording file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

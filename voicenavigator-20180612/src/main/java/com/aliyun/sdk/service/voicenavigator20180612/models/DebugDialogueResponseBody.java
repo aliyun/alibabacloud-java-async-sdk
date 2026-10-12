@@ -106,7 +106,10 @@ public class DebugDialogueResponseBody extends TeaModel {
         } 
 
         /**
-         * Action.
+         * <p>The action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Broadcast</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -114,7 +117,10 @@ public class DebugDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * ActionParams.
+         * <p>The action parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder actionParams(String actionParams) {
             this.actionParams = actionParams;
@@ -122,7 +128,10 @@ public class DebugDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * Interruptible.
+         * <p>Indicates whether the IVR broadcast can be interrupted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder interruptible(Boolean interruptible) {
             this.interruptible = interruptible;
@@ -130,7 +139,10 @@ public class DebugDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d74d6290-7cbe-4436-b5d7-014ebb0f4060</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DebugDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * TextResponse.
+         * <p>The broadcast content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80d11be3-faad-4101-b4b0-59dbea28aaf0</p>
          */
         public Builder textResponse(String textResponse) {
             this.textResponse = textResponse;

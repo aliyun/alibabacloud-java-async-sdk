@@ -178,6 +178,7 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         } 
 
         /**
+         * <p>Action After Prompt</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +191,10 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         }
 
         /**
-         * FinalActionParams.
+         * <p>Parameters for the post-prompt action, specified in a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder finalActionParams(String finalActionParams) {
             this.putQueryParameter("FinalActionParams", finalActionParams);
@@ -199,7 +203,11 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         }
 
         /**
+         * <p>The prompt that plays after the silence timeout threshold is reached.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>再见</p>
          */
         public Builder finalPrompt(String finalPrompt) {
             this.putQueryParameter("FinalPrompt", finalPrompt);
@@ -208,6 +216,7 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +229,10 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         }
 
         /**
-         * IntentTrigger.
+         * <p>The intent trigger for the silence timeout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Timeout</p>
          */
         public Builder intentTrigger(String intentTrigger) {
             this.putQueryParameter("IntentTrigger", intentTrigger);
@@ -229,7 +241,11 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         }
 
         /**
+         * <p>The prompt that plays when the system detects no user input during the specified timeout period.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>不好意思，听不见您说什么</p>
          */
         public Builder prompt(String prompt) {
             this.putQueryParameter("Prompt", prompt);
@@ -238,6 +254,7 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         }
 
         /**
+         * <p>The type of source that triggers the action.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,6 +267,7 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of times the system plays the silence timeout prompt before it performs the post-prompt action.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,6 +280,7 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         }
 
         /**
+         * <p>The duration of the silence timeout, in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
