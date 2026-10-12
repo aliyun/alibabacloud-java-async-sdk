@@ -80,7 +80,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID, which is used for locating logs and troubleshooting.</p>
+         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -91,7 +91,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The order information of the created common resource group.</p>
+         * <p>The order information of the general-purpose resource group.</p>
          */
         public Builder resourceGroupOrder(ResourceGroupOrder resourceGroupOrder) {
             this.resourceGroupOrder = resourceGroupOrder;
@@ -99,7 +99,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -181,7 +181,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The unique identifier of the created common resource group.</p>
+             * <p>The unique identifier of the general-purpose resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
@@ -192,7 +192,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order ID of the created common resource group.</p>
+             * <p>The ID of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>2391982058XXXXX</p>
@@ -203,7 +203,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order instance ID of the created common resource group.</p>
+             * <p>The instance ID of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>c442b330-3b10-4584-959e-736e4edXXXXX</p>

@@ -141,7 +141,7 @@ public class UnTagDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The data asset IDs.</p>
+         * <p>The unique IDs of the data assets.</p>
          * <p>This parameter is required.</p>
          */
         public Builder dataAssetIds(java.util.List<String> dataAssetIds) {
@@ -152,7 +152,11 @@ public class UnTagDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The type of the data asset. Valid values: ACS::DataWorks::Table (data table) and ACS::DataWorks::Task (scheduled task).</p>
+         * <p>The type of the data asset. Valid values:</p>
+         * <ul>
+         * <li>Data table (ACS::DataWorks::Table)</li>
+         * <li>Scheduled task (ACS::DataWorks::Task)</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +169,7 @@ public class UnTagDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
+         * <p>The workspace environment to which the data asset belongs. Valid values:</p>
          * <ul>
          * <li><p>Dev: development environment</p>
          * </li>
@@ -183,7 +187,7 @@ public class UnTagDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -195,7 +199,7 @@ public class UnTagDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The tags that you want to remove.</p>
+         * <p>The tags to disassociate.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {

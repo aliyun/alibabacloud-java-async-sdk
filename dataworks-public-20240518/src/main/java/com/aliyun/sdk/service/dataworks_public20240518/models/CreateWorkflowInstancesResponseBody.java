@@ -67,7 +67,7 @@ public class CreateWorkflowInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The operation ID. You can use this value to call the GetCreateWorkflowInstancesResult operation to query the result of the creation operation.</p>
+         * <p>The operation ID. You can use this field to query the result of the creation operation by calling the GetCreateWorkflowInstancesResult API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>e15ad21c-b0e9-4792-8f55-b037xxxxxxxx</p>
@@ -78,7 +78,7 @@ public class CreateWorkflowInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * <p>The ID of the request. You can use this ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>

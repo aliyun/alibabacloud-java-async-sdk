@@ -150,7 +150,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * <p>The alert rule ID.</p>
+         * <p>The ID of the alert rule.</p>
          * 
          * <strong>example:</strong>
          * <p>105412</p>
@@ -172,7 +172,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * <p>The project ID.</p>
+         * <p>The ID of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -184,7 +184,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * <p>The monitoring target of the data quality monitoring alert rule.</p>
+         * <p>The target of the data quality monitoring alert rule.</p>
          */
         public Builder target(Target target) {
             String targetShrink = shrink(target, "Target", "json");
@@ -267,7 +267,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
-             * <p>The additional configuration required for the alert recipient. When ReceiverType is set to DingdingUrl, you can set <code>{&quot;atAll&quot;:true}</code> to @ all members.</p>
+             * <p>The additional configuration required for the alert recipient. When ReceiverType is set to DingdingUrl, you can set <code>{&quot;atAll&quot;:true}</code> to mention all members.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;atAll&quot;:true}</p>
@@ -278,7 +278,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             }
 
             /**
-             * <p>The alerting accept object type. Valid values:</p>
+             * <p>The type of the alert recipient.</p>
              * <ul>
              * <li>AliUid</li>
              * <li>WebhookUrl</li>
@@ -300,7 +300,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             }
 
             /**
-             * <p>The values of the alert recipients.</p>
+             * <p>The value of the alert recipient.</p>
              */
             public Builder receiverValues(java.util.List<String> receiverValues) {
                 this.receiverValues = receiverValues;
@@ -368,7 +368,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
-             * <p>The list of notification channels. You can set both Email and Sms at the same time. In other cases, only one channel can be specified.</p>
+             * <p>The list of notification channels. You can configure both Email and Sms simultaneously. For other cases, only one channel can be configured.</p>
              * <p>This parameter is required.</p>
              */
             public Builder channels(java.util.List<String> channels) {
@@ -444,7 +444,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
-             * <p>The list of monitoring target IDs. Currently, only one ID can be specified.</p>
+             * <p>The list of monitored target IDs. Currently, only one ID is supported.</p>
              */
             public Builder ids(java.util.List<Long> ids) {
                 this.ids = ids;

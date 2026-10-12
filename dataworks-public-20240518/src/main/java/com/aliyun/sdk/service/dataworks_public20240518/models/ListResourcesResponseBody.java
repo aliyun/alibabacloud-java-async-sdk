@@ -75,7 +75,7 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of this request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>99EBE7CF-69C0-5089-BE3E-79563C31XXXX</p>
@@ -295,9 +295,9 @@ public class ListResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The script ID.</p>
+             * <p>The ID of the script.</p>
              * <blockquote>
-             * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage. The parameter is still returned in the type defined in the SDK</strong>. Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</p>
+             * <p>Notice: Before SDK 8.0.0, this field is of the Long type. In SDK 8.0.0 and later, this field is of the String type. <strong>This change does not affect the normal use of the SDK, and the parameter is still returned based on the type defined in the SDK</strong>. Only when you upgrade the SDK across version 8.0.0, the type change may cause project compilation failures. In this case, you must manually correct the data type.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -551,7 +551,7 @@ public class ListResourcesResponseBody extends TeaModel {
             /**
              * <p>The unique identifier of the file resource.</p>
              * <blockquote>
-             * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage. The parameter is still returned in the type defined in the SDK</strong>. Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</p>
+             * <p>Notice: Before SDK 8.0.0, this field is of the Long type. In SDK 8.0.0 and later, this field is of the String type. <strong>This change does not affect the normal use of the SDK, and the parameter is still returned based on the type defined in the SDK</strong>. Only when you upgrade the SDK across version 8.0.0, the type change may cause project compilation failures. In this case, you must manually correct the data type.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -615,7 +615,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source path of the file resource. This field is empty when the type is Local.</p>
+             * <p>The source path of the file resource. This parameter is empty when the type is local.</p>
              * 
              * <strong>example:</strong>
              * <p>XXX/unknown/ide/1/XXX/20240820200851_963a9da676de44ef8d06a6576a8c4d6a.py</p>
@@ -626,11 +626,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source storage type of the file resource.</p>
-             * <p>Valid values:</p>
+             * <p>The source storage type of the file resource. Valid values:</p>
              * <ul>
-             * <li>Local: local storage.</li>
-             * <li>Oss: Object Storage Service.</li>
+             * <li>Local: local storage</li>
+             * <li>Oss: Object Storage Service (OSS)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -642,7 +641,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target storage path of the file resource.</p>
+             * <p>The destination storage path of the file resource.</p>
              * 
              * <strong>example:</strong>
              * <p>XXX/unknown/ide/1/XXX/20240820200851_963a9da676de44ef8d06a6576a8c4d6a.py</p>
@@ -653,12 +652,11 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target storage type of the file resource.</p>
-             * <p>Valid values:</p>
+             * <p>The destination storage type of the file resource. Valid values:</p>
              * <ul>
-             * <li>Gateway: gateway.</li>
-             * <li>Oss: Object Storage Service.</li>
-             * <li>Hdfs: HDFS file storage system.</li>
+             * <li>Gateway: gateway</li>
+             * <li>Oss: Object Storage Service (OSS)</li>
+             * <li>Hdfs: Hadoop Distributed File System (HDFS)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -670,8 +668,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource file type.</p>
-             * <p>Valid values:</p>
+             * <p>The type of the resource. Valid values:</p>
              * <ul>
              * <li>Python</li>
              * <li>Jar</li>
@@ -773,7 +770,7 @@ public class ListResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number of the request, used for pagination.</p>
+             * <p>The number of the page to return.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -795,7 +792,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of resources returned by the query.</p>
+             * <p>The resources returned by the query.</p>
              */
             public Builder resources(java.util.List<Resources> resources) {
                 this.resources = resources;
@@ -803,7 +800,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries that meet the filter conditions.</p>
+             * <p>The total number of entries that meet the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>131</p>

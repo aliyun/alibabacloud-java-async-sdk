@@ -67,7 +67,7 @@ public class UpdateDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>102E8E24-0387-531D-8A75-1C0AE7DD03E5</p>
@@ -78,12 +78,10 @@ public class UpdateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the data source has been modified:</p>
+         * <p>Indicates whether the data source was updated. Valid values:</p>
          * <ul>
-         * <li><p>true: Yes</p>
-         * </li>
-         * <li><p>false: no</p>
-         * </li>
+         * <li>true: yes.</li>
+         * <li>false: no.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class CreateDataQualityAlertRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the custom monitoring rule returned after the rule is created.</p>
+         * <p>The ID of the custom monitoring rule that is created.</p>
          * 
          * <strong>example:</strong>
          * <p>1010543619</p>

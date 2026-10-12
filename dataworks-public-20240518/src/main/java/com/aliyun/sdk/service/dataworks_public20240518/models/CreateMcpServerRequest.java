@@ -125,7 +125,7 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The connection configuration of the MCP Server.</p>
+         * <p>The connection configuration of the MCP server.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -140,7 +140,7 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The name of the MCP Server. The name must be unique at the tenant level. It must start with a lowercase letter and can contain only <code>a-z</code>, <code>0-9</code>, <code>_</code>, and <code>-</code>.</p>
+         * <p>The name of the MCP server. It must be unique at the tenant level. It must start with a lowercase letter and can contain only lowercase letters (<code>a-z</code>), digits (<code>0-9</code>), underscores (<code>_</code>), and hyphens (<code>-</code>).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The visibility scope. The corresponding field is used based on the Visibility value.</p>
+         * <p>The visibility scope. Specify the corresponding fields based on the value of Visibility.</p>
          */
         public Builder visibilityScope(VisibilityScope visibilityScope) {
             String visibilityScopeShrink = shrink(visibilityScope, "VisibilityScope", "json");
@@ -247,7 +247,7 @@ public class CreateMcpServerRequest extends Request {
             } 
 
             /**
-             * <p>The custom request headers (key-value pairs). Reserved headers cannot be overwritten.</p>
+             * <p>The custom request headers in key-value pairs. Reserved headers cannot be overwritten.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -269,7 +269,7 @@ public class CreateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The service URL of the MCP Server. The URL must start with <code>https://</code>.</p>
+             * <p>The service URL of the MCP server. It must start with <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/mcp/sse">https://example.com/mcp/sse</a></p>
@@ -339,7 +339,7 @@ public class CreateMcpServerRequest extends Request {
             } 
 
             /**
-             * <p>The IDs of the projects in which the MCP Server is visible. This parameter takes effect when Visibility is set to <code>PROJECT</code>.</p>
+             * <p>The list of visible project IDs. This parameter takes effect when Visibility is set to <code>PROJECT</code>.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -347,7 +347,7 @@ public class CreateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the users to whom the MCP Server is visible. This parameter takes effect when Visibility is set to <code>USER</code>.</p>
+             * <p>The list of visible user IDs. This parameter takes effect when Visibility is set to <code>USER</code>.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;

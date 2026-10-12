@@ -110,7 +110,7 @@ public class GetImageRequest extends Request {
         }
 
         /**
-         * <p>The image version. If this parameter is not specified, the latest version is returned.</p>
+         * <p>The image version. If you do not specify this parameter, the latest version is retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

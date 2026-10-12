@@ -75,7 +75,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
@@ -201,7 +201,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The machine on which the instance runs.</p>
+             * <p>The gateway machine.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai.1.2</p>
@@ -212,7 +212,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique run ID.</p>
+             * <p>The unique ID of the run.</p>
              * 
              * <strong>example:</strong>
              * <p>T3_123</p>
@@ -295,7 +295,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The compute unit (CU) consumption configured for the node.</p>
+             * <p>The number of compute units (CUs) consumed during task execution.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -306,7 +306,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image ID configured for the node.</p>
+             * <p>The ID of the image configured for task execution.</p>
              * 
              * <strong>example:</strong>
              * <p>i-xxxxxx</p>
@@ -317,7 +317,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the schedule resource group configured for the node.</p>
+             * <p>The identifier of the schedule resource group configured for task execution.</p>
              * 
              * <strong>example:</strong>
              * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -853,8 +853,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business date.</p>
-             * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
+             * <p>The business date. The value is a 13-digit timestamp, such as <code>1710239005403</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1710239005403</p>
@@ -865,8 +864,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
-             * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
+             * <p>The creation time. The value is a 13-digit timestamp, such as <code>1710239005403</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1710239005403</p>
@@ -907,8 +905,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance finished running.</p>
-             * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
+             * <p>The completion time. The value is a 13-digit timestamp, such as <code>1710239005403</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1710239005403</p>
@@ -930,8 +927,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
-             * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
+             * <p>The update time. The value is a 13-digit timestamp, such as <code>1710239005403</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1710239005403</p>
@@ -953,7 +949,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the most recent operation on the instance.</p>
+             * <p>The type of the latest operation performed on the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>TriggerDqc</p>
@@ -964,7 +960,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ID of the node owner.</p>
+             * <p>The account ID of the task owner.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -975,7 +971,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period number. Indicates which scheduling cycle of the day the instance belongs to.</p>
+             * <p>The cycle number. This indicates the cycle round of the task instance on the current day.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -986,7 +982,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The run priority of the node. Minimum value: 1. Maximum value: 8. A larger value indicates a higher priority. Default value: 1.</p>
+             * <p>The running priority of the task. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -999,8 +995,8 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             /**
              * <p>The project environment. Valid values:</p>
              * <ul>
-             * <li>Prod: production.</li>
-             * <li>Dev: development.</li>
+             * <li>Prod: production</li>
+             * <li>Dev: development</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1023,11 +1019,11 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rerun configuration for the node. Valid values:</p>
+             * <p>The rerun configuration for the task. Valid values:</p>
              * <ul>
-             * <li>AllDenied: rerun is not allowed regardless of success or failure.</li>
-             * <li>FailureAllowed: rerun is allowed only upon failure.</li>
-             * <li>AllAllowed: rerun is allowed regardless of success or failure.</li>
+             * <li>AllDenied: Reruns are not allowed regardless of success or failure.</li>
+             * <li>FailureAllowed: Reruns are allowed only after failures.</li>
+             * <li>AllAllowed: Reruns are allowed after both successes and failures.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1039,7 +1035,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current run number, starting from 1 by default.</p>
+             * <p>The current run number. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1077,8 +1073,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance started running.</p>
-             * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
+             * <p>The start time. The value is a 13-digit timestamp, such as <code>1710239005403</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1710239005403</p>
@@ -1089,17 +1084,17 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The run status of the instance. Valid values:</p>
+             * <p>The running status of the instance. Valid values:</p>
              * <ul>
-             * <li>NotRun: not run.</li>
-             * <li>Running: running.</li>
-             * <li>WaitTime: waiting for the TriggerTime to arrive.</li>
-             * <li>CheckingCondition: checking branch conditions.</li>
-             * <li>WaitResource: waiting for resources.</li>
-             * <li>Failure: execution failed.</li>
-             * <li>Success: execution succeeded.</li>
-             * <li>Checking: submitted for data quality check.</li>
-             * <li>WaitTrigger: waiting for an external trigger. Trigger-based nodes enter this status after the waiting period.</li>
+             * <li>NotRun: Not run.</li>
+             * <li>Running: Running.</li>
+             * <li>WaitTime: Waiting for the trigger time.</li>
+             * <li>CheckingCondition: Checking branch conditions.</li>
+             * <li>WaitResource: Waiting for resources.</li>
+             * <li>Failure: Failed.</li>
+             * <li>Success: Successful.</li>
+             * <li>Checking: Submitted for data quality check.</li>
+             * <li>WaitTrigger: Waiting for an external trigger. Trigger-based nodes change to this status after the waiting time.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1111,7 +1106,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the corresponding node.</p>
+             * <p>The ID of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -1122,7 +1117,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the corresponding node.</p>
+             * <p>The name of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>SQL node</p>
@@ -1133,7 +1128,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the corresponding node.</p>
+             * <p>The type of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>ODPS_SQL</p>
@@ -1144,8 +1139,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period for node execution, in seconds.</p>
-             * <p>Note: The scheduling system rounds the configured value to whole hours.</p>
+             * <p>The timeout period for task execution, in seconds. Note: The scheduling system rounds the configured value to the whole hours.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -1156,11 +1150,11 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The run mode at the time of triggering. This parameter takes effect when TriggerType is set to Scheduler. Valid values:</p>
+             * <p>The running mode when the node is triggered. This parameter takes effect only when TriggerType is set to Scheduler. Valid values:</p>
              * <ul>
-             * <li>Pause: paused.</li>
-             * <li>Skip: dry run.</li>
-             * <li>Normal: normal run.</li>
+             * <li>Pause: The node is paused.</li>
+             * <li>Skip: The node performs a dry run.</li>
+             * <li>Normal: The node runs normally.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1172,8 +1166,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled trigger time.</p>
-             * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
+             * <p>The scheduled trigger time. The value is a 13-digit timestamp, such as <code>1710239005403</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1710239005403</p>
@@ -1186,8 +1179,8 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             /**
              * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li>Scheduler: triggered by a scheduling cycle.</li>
-             * <li>Manual: manually triggered.</li>
+             * <li>Scheduler: Triggered by a scheduling cycle.</li>
+             * <li>Manual: Triggered manually.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1199,7 +1192,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unified workflow instance ID. All instances within the same business date under a single trigger share the same value for this field.</p>
+             * <p>The unified workflow instance ID. This value is the same for all task instances within a specific business date under a single trigger.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -1210,7 +1203,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance entered the waiting-for-resource state.</p>
+             * <p>The time when the instance starts waiting for resources.</p>
              * 
              * <strong>example:</strong>
              * <p>1710239005403</p>
@@ -1221,8 +1214,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance entered the waiting-for-scheduled-time state.</p>
-             * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
+             * <p>The time when the instance starts waiting for the scheduled trigger time. The value is a 13-digit timestamp, such as <code>1710239005403</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1710239005403</p>
@@ -1233,7 +1225,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workflow to which the instance belongs.</p>
+             * <p>The ID of the associated workflow.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -1244,7 +1236,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workflow instance to which the instance belongs.</p>
+             * <p>The ID of the associated workflow instance.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -1255,14 +1247,14 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the workflow instance to which the instance belongs. Valid values:</p>
+             * <p>The type of the workflow instance to which the task instance belongs. Valid values:</p>
              * <ul>
-             * <li>SmokeTest: smoke test.</li>
-             * <li>SupplementData: data backfill.</li>
-             * <li>Manual: manually triggered.</li>
-             * <li>ManualWorkflow: manual workflow.</li>
-             * <li>Normal: periodic scheduling.</li>
-             * <li>ManualFlow: manually executed business flow.</li>
+             * <li>SmokeTest: Smoke test.</li>
+             * <li>SupplementData: Data backfill.</li>
+             * <li>Manual: Manual execution.</li>
+             * <li>ManualWorkflow: Manual workflow.</li>
+             * <li>Normal: Scheduled cycle.</li>
+             * <li>ManualFlow: Manually executed business flow.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1274,7 +1266,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workflow to which the instance belongs.</p>
+             * <p>The name of the workflow to which the task instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>Test workflow</p>
@@ -1400,7 +1392,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

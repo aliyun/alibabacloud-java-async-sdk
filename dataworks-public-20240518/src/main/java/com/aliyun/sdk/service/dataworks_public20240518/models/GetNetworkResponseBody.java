@@ -80,7 +80,7 @@ public class GetNetworkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the network resource.</p>
+         * <p>The details of the network resource.</p>
          */
         public Builder network(Network network) {
             this.network = network;
@@ -88,7 +88,7 @@ public class GetNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -257,7 +257,7 @@ public class GetNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who creates the network resource.</p>
+             * <p>The ID of the user who created the network resource.</p>
              * 
              * <strong>example:</strong>
              * <p>11075500042XXXXX</p>
@@ -268,7 +268,7 @@ public class GetNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network ID.</p>
+             * <p>The ID of the network resource.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -279,7 +279,7 @@ public class GetNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the serverless resource group.</p>
+             * <p>The ID of the resource group to which the network resource belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
@@ -290,7 +290,7 @@ public class GetNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The security group ID of the network resource.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-2ze13vamugr7jenXXXXX</p>
@@ -301,18 +301,13 @@ public class GetNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the network resource. Valid values:</p>
+             * <p>The current status of the network resource. Valid values:</p>
              * <ul>
-             * <li><p>Pending: The network resource is waiting to be created.</p>
-             * </li>
-             * <li><p>Creating: The network resource is being created.</p>
-             * </li>
-             * <li><p>Running: The network resource is running as expected.</p>
-             * </li>
-             * <li><p>Deleting: The network resource is being deleted.</p>
-             * </li>
-             * <li><p>Deleted: The network resource is deleted.</p>
-             * </li>
+             * <li>Pending: The resource is pending.</li>
+             * <li>Creating: The resource is being created.</li>
+             * <li>Running: The resource is running.</li>
+             * <li>Deleting: The resource is being deleted.</li>
+             * <li>Deleted: The resource is deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -324,7 +319,7 @@ public class GetNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>The VPC ID of the network resource.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-m2et4f3oc8msfbccXXXXX</p>
@@ -335,7 +330,7 @@ public class GetNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VSwitch ID.</p>
+             * <p>The vSwitch ID of the network resource.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-uf8usrhs7hjd9amsXXXXX</p>

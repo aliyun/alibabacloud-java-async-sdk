@@ -67,7 +67,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The paging information.</p>
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -222,7 +222,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the user who created the agent.</p>
+             * <p><strong>The creator ID.</strong></p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -233,10 +233,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A description of the custom agent.</p>
+             * <p><strong>The description.</strong></p>
              * 
              * <strong>example:</strong>
-             * <p>Data analysis assistant</p>
+             * <p>Data analytics assistant</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -244,10 +244,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the custom agent.</p>
+             * <p><strong>The display name.</strong></p>
              * 
              * <strong>example:</strong>
-             * <p>My assistant</p>
+             * <p>My Assistant</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -255,7 +255,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the agent was created, provided in milliseconds since the Unix epoch.</p>
+             * <p><strong>The creation time (UNIX timestamp in milliseconds).</strong></p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the agent was last modified, provided in milliseconds since the Unix epoch.</p>
+             * <p><strong>The last modification time (UNIX timestamp in milliseconds).</strong></p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -279,7 +279,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who last modified the agent.</p>
+             * <p><strong>The last modifier ID.</strong></p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -290,7 +290,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the custom agent.</p>
+             * <p><strong>The agent name.</strong></p>
              * 
              * <strong>example:</strong>
              * <p>my-agent</p>
@@ -301,7 +301,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The visibility level of the custom agent.</p>
+             * <p><strong>The visibility level.</strong></p>
              * 
              * <strong>example:</strong>
              * <p>TENANT</p>
@@ -416,7 +416,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token to retrieve the next page of results. This parameter is empty when there are no more results to return.</p>
+             * <p>The token for the next page. An empty value indicates that the last page is reached.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -427,7 +427,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries that meet the filter criteria.</p>
+             * <p>The total number of entries that meet the query conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

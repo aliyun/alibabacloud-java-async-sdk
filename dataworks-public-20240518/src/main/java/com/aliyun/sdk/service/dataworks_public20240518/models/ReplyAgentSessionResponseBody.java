@@ -67,7 +67,7 @@ public class ReplyAgentSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The JSON-RPC response. Returns Result on success or Error on protocol errors.</p>
+         * <p>The JSON-RPC response. Returns Result on success and Error on protocol errors.</p>
          */
         public Builder jsonRpcResponse(JsonRpcResponse jsonRpcResponse) {
             this.jsonRpcResponse = jsonRpcResponse;
@@ -75,7 +75,7 @@ public class ReplyAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID for this call, which can be used for troubleshooting.</p>
+         * <p>The request ID for the current call, which can be used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>request-001</p>
@@ -260,7 +260,7 @@ public class ReplyAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the daemon accepted the reply. A value of true indicates that the daemon accepted the reply. A value of false indicates that the reply was not accepted. Possible reasons include an unknown request, an already processed request, an expired request, or a nonexistent session. You cannot determine the specific reason from this value.</p>
+             * <p>Indicates whether the daemon accepts the current reply. A value of true indicates that the reply is accepted. A value of false indicates that the reply is not accepted, which may be because the request is unknown, already processed, expired, or the session does not exist. The specific cause cannot be distinguished based on this value.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -369,7 +369,7 @@ public class ReplyAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The JSON-RPC fault information. For example, DAEMON_PERMISSION_UNAVAILABLE is returned when the daemon reply feature is not enabled.</p>
+             * <p>The JSON-RPC fault message. For example, DAEMON_PERMISSION_UNAVAILABLE is returned when the daemon reply feature is not enabled.</p>
              */
             public Builder error(Error error) {
                 this.error = error;
@@ -377,7 +377,7 @@ public class ReplyAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The JSON-RPC correlation ID for this reply request.</p>
+             * <p>The JSON-RPC correlation ID for the current reply request.</p>
              * 
              * <strong>example:</strong>
              * <p>reply-rpc-001</p>
@@ -399,7 +399,7 @@ public class ReplyAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reply processing result. This only indicates whether the reply was accepted, not whether the original task has completed.</p>
+             * <p>The reply processing result. It only indicates whether the current reply is accepted, and does not indicate that the original task execution is completed.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -407,7 +407,7 @@ public class ReplyAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The response time. This is a UNIX timestamp, in milliseconds.</p>
+             * <p>The response time. It is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1789549200000</p>

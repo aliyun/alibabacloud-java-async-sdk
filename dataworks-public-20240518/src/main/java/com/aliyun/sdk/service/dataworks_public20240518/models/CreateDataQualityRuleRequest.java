@@ -221,7 +221,7 @@ public class CreateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The description of the rule. The maximum length is 500 characters.</p>
+         * <p>The description of the rule. The description can be up to 500 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a odps _sql task</p>
@@ -233,7 +233,7 @@ public class CreateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the data quality rule.</p>
+         * <p>Specifies whether the quality rule is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -245,7 +245,7 @@ public class CreateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The list of issue handlers for the data quality rule check.</p>
+         * <p>The list of handlers for quality rule check issues.</p>
          */
         public Builder errorHandlers(java.util.List<ErrorHandlers> errorHandlers) {
             String errorHandlersShrink = shrink(errorHandlers, "ErrorHandlers", "json");
@@ -291,7 +291,7 @@ public class CreateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The severity of the rule for the business (corresponding to the strong/weak rule on the page). Valid values:</p>
+         * <p>The severity level of the rule for business operations, which corresponds to strong and weak rules on the page. Valid values:</p>
          * <ul>
          * <li>Normal</li>
          * <li>High</li>
@@ -317,7 +317,7 @@ public class CreateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the rule template that the rule references.</p>
+         * <p>The unique identifier of the rule template referenced by the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM:table:table_count:fixed</p>
@@ -402,13 +402,13 @@ public class CreateDataQualityRuleRequest extends Request {
 
             /**
              * <p>The threshold expression.</p>
-             * <p>For a fluctuation-type rule, you must use an expression to represent the fluctuation threshold. Examples:</p>
+             * <p>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
              * <ul>
-             * <li>Fluctuation rises above 0.01: $checkValue &gt; 0.01 </li>
-             * <li>Fluctuation drops below -0.01: $checkValue &lt; -0.01 </li>
-             * <li>Absolute value of the fluctuation: abs($checkValue) &gt; 0.01</li>
+             * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+             * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+             * <li>Absolute value of the fluctuation rate: abs($checkValue) &gt; 0.01</li>
              * </ul>
-             * <p>For a fixed-value type rule, you can also use an expression to configure the threshold. If both are configured at the same time, the expression takes precedence over Operator and Value.</p>
+             * <p>You can also use an expression to configure the threshold for fixed value rules. If both are configured, the expression takes precedence over Operator and Value.</p>
              * 
              * <strong>example:</strong>
              * <p>$checkValue &gt; 0.05</p>
@@ -419,7 +419,7 @@ public class CreateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The comparison operator:</p>
+             * <p>The comparison operator. Valid values:</p>
              * <ul>
              * <li>\&gt;</li>
              * <li>\&gt;=</li>
@@ -523,13 +523,13 @@ public class CreateDataQualityRuleRequest extends Request {
 
             /**
              * <p>The threshold expression.</p>
-             * <p>For a fluctuation-type rule, you must use an expression to represent the fluctuation threshold. Examples:</p>
+             * <p>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
              * <ul>
-             * <li>Fluctuation rises above 0.01: $checkValue &gt; 0.01 </li>
-             * <li>Fluctuation drops below -0.01: $checkValue &lt; -0.01 </li>
-             * <li>Absolute value of the fluctuation: abs($checkValue) &gt; 0.01</li>
+             * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+             * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+             * <li>Absolute value of the fluctuation rate: abs($checkValue) &gt; 0.01</li>
              * </ul>
-             * <p>For a fixed-value type rule, you can also use an expression to configure the threshold. If both are configured at the same time, the expression takes precedence over Operator and Value.</p>
+             * <p>You can also use an expression to configure the threshold for fixed value rules. If both are configured, the expression takes precedence over Operator and Value.</p>
              * 
              * <strong>example:</strong>
              * <p>$checkValue &lt;= 0.01</p>
@@ -540,7 +540,7 @@ public class CreateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The comparison operator:</p>
+             * <p>The comparison operator. Valid values:</p>
              * <ul>
              * <li>\&gt;</li>
              * <li>\&gt;=</li>
@@ -644,13 +644,13 @@ public class CreateDataQualityRuleRequest extends Request {
 
             /**
              * <p>The threshold expression.</p>
-             * <p>For a fluctuation-type rule, you must use an expression to represent the fluctuation threshold. Examples:</p>
+             * <p>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
              * <ul>
-             * <li>Fluctuation rises above 0.01: $checkValue &gt; 0.01 </li>
-             * <li>Fluctuation drops below -0.01: $checkValue &lt; -0.01 </li>
-             * <li>Absolute value of the fluctuation: abs($checkValue) &gt; 0.01</li>
+             * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+             * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+             * <li>Absolute value of the fluctuation rate: abs($checkValue) &gt; 0.01</li>
              * </ul>
-             * <p>For a fixed-value type rule, you can also use an expression to configure the threshold. If both are configured at the same time, the expression takes precedence over Operator and Value.</p>
+             * <p>You can also use an expression to configure the threshold for fixed value rules. If both are configured, the expression takes precedence over Operator and Value.</p>
              * 
              * <strong>example:</strong>
              * <p>$checkValue &gt; 0.01</p>
@@ -661,7 +661,7 @@ public class CreateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The comparison operator:</p>
+             * <p>The comparison operator. Valid values:</p>
              * <ul>
              * <li>\&gt;</li>
              * <li>\&gt;=</li>
@@ -764,7 +764,7 @@ public class CreateDataQualityRuleRequest extends Request {
             } 
 
             /**
-             * <p>The threshold settings for a critical warning.</p>
+             * <p>The threshold settings for critical warnings.</p>
              */
             public Builder critical(Critical critical) {
                 this.critical = critical;
@@ -780,7 +780,7 @@ public class CreateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The threshold settings for a normal warning.</p>
+             * <p>The threshold settings for common warnings.</p>
              */
             public Builder warned(Warned warned) {
                 this.warned = warned;
@@ -860,7 +860,7 @@ public class CreateDataQualityRuleRequest extends Request {
             } 
 
             /**
-             * <p>Some types of thresholds require querying for reference samples and then summarizing the values of the reference samples to derive the threshold to be compared. An expression is used here to represent the query method for the reference samples.</p>
+             * <p>For some types of thresholds, reference samples must be queried, and the values of the reference samples are aggregated to obtain the threshold for comparison. This parameter specifies an expression that represents the query method for the reference samples.</p>
              * 
              * <strong>example:</strong>
              * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -879,7 +879,7 @@ public class CreateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The threshold calculation method. You do not need to specify this parameter when a template is used.</p>
+             * <p>The threshold calculation method. This parameter is not required when a template is used. Valid values:</p>
              * <ul>
              * <li>Fixed</li>
              * <li>Fluctation</li>
@@ -957,7 +957,7 @@ public class CreateDataQualityRuleRequest extends Request {
             } 
 
             /**
-             * <p>For a custom SQL rule, you must specify an SQL statement to filter problematic data.</p>
+             * <p>If the rule is a custom SQL rule, you must specify an SQL statement to filter the problematic data.</p>
              * 
              * <strong>example:</strong>
              * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
@@ -968,7 +968,7 @@ public class CreateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The handler type:</p>
+             * <p>The handler type. Valid values:</p>
              * <ul>
              * <li>SaveErrorData</li>
              * </ul>
@@ -1068,23 +1068,23 @@ public class CreateDataQualityRuleRequest extends Request {
             } 
 
             /**
-             * <p>The name of the metric to be sampled. You do not need to specify this parameter when a template is used.</p>
+             * <p>The name of the sampling metric. This parameter is not required when a template is used. Valid values:</p>
              * <ul>
              * <li>Count: the number of rows in the table.</li>
-             * <li>Min: the minimum value of the column.</li>
-             * <li>Max: the maximum value of the column.</li>
-             * <li>Avg: the average value of the column.</li>
-             * <li>DistinctCount: the number of distinct values of the column.</li>
-             * <li>DistinctPercent: the ratio of the number of distinct values of the column to the number of data rows.</li>
-             * <li>DuplicatedCount: the number of duplicate values of the column.</li>
-             * <li>DuplicatedPercent: the ratio of the number of duplicate values of the column to the number of data rows.</li>
+             * <li>Min: the minimum value of the field.</li>
+             * <li>Max: the maximum value of the field.</li>
+             * <li>Avg: the average value of the field.</li>
+             * <li>DistinctCount: the number of unique values in the field.</li>
+             * <li>DistinctPercent: the ratio of the number of unique values in the field to the total number of rows.</li>
+             * <li>DuplicatedCount: the number of duplicate values in the field.</li>
+             * <li>DuplicatedPercent: the ratio of the number of duplicate values in the field to the total number of rows.</li>
              * <li>TableSize: the size of the table.</li>
-             * <li>NullValueCount: the number of rows in which the column is null.</li>
-             * <li>NullValuePercent: the ratio of rows in which the column is null.</li>
-             * <li>GroupCount: the values aggregated by column value and the corresponding number of data rows for each value.</li>
-             * <li>CountNotIn: the number of rows whose enum values do not match.</li>
-             * <li>CountDistinctNotIn: the number of distinct values that do not match the enum values.</li>
-             * <li>UserDefinedSql: collects samples by using a custom SQL statement.</li>
+             * <li>NullValueCount: the number of rows where the field is null.</li>
+             * <li>NullValuePercent: the ratio of rows where the field is null.</li>
+             * <li>GroupCount: the number of rows corresponding to each value after aggregation by field value.</li>
+             * <li>CountNotIn: the number of rows that do not match the enumerated values.</li>
+             * <li>CountDistinctNotIn: the number of unique values that do not match the enumerated values.</li>
+             * <li>UserDefinedSql: sample collection by using custom SQL statements.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1096,7 +1096,7 @@ public class CreateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The parameters required during sample collection.</p>
+             * <p>The parameters required for sample collection.</p>
              * 
              * <strong>example:</strong>
              * <p>{ &quot;Columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] , &quot;SQL&quot;: &quot;select count(1) from table;&quot;}</p>
@@ -1107,7 +1107,7 @@ public class CreateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The condition used to perform a secondary filter on the irrelevant data during sampling. The maximum length is 16777215 characters.</p>
+             * <p>The conditions used to filter out unneeded data during sampling. The conditions can be up to 16,777,215 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>id IS NULL</p>
@@ -1118,7 +1118,7 @@ public class CreateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The runtime parameter setting statements to be inserted and executed before the sampling statement is executed. The maximum length is 1000 characters. Only MaxCompute is supported.</p>
+             * <p>The runtime parameter setting statements that are inserted and executed before the sampling statements are executed. The statements can be up to 1,000 characters in length. Only MaxCompute is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>SET odps.sql.udf.timeout=600s; 
@@ -1216,7 +1216,7 @@ public class CreateDataQualityRuleRequest extends Request {
             } 
 
             /**
-             * <p>For a table-type dataset, the type of database to which the table belongs.</p>
+             * <p>The type of the database to which the table belongs. This parameter is required when the dataset is of the table type. Valid values:</p>
              * <ul>
              * <li>maxcompute</li>
              * <li>emr</li>
@@ -1247,7 +1247,7 @@ public class CreateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The unique ID of the table in Data Map on which the rule operates.</p>
+             * <p>The unique ID of the table to which the rule applies in Data Map.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1259,7 +1259,7 @@ public class CreateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The type of the monitored object.</p>
+             * <p>The monitored object type. Valid values:</p>
              * <ul>
              * <li>Table</li>
              * </ul>

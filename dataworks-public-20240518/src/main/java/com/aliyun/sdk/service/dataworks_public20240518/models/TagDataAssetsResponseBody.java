@@ -67,7 +67,7 @@ public class TagDataAssetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0bc1ec92159376</p>
@@ -78,7 +78,11 @@ public class TagDataAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: true (successful) and false (failed).</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -67,7 +67,7 @@ public class UpdateMcpServerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The MCP Server details.</p>
+         * <p>The details of the MCP server.</p>
          */
         public Builder mcpServer(McpServer mcpServer) {
             this.mcpServer = mcpServer;
@@ -158,7 +158,7 @@ public class UpdateMcpServerResponseBody extends TeaModel {
 
             /**
              * <p>The creation time.</p>
-             * <p>The value is a 13-digit number, for example, <code>1780555634000</code>.</p>
+             * <p>The value is a 13-digit number, such as <code>1780555634000</code>.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class UpdateMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time, in millisecond-level timestamp.</p>
+             * <p><strong>The last modification time as a millisecond timestamp.</strong></p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class UpdateMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP Server name.</p>
+             * <p><strong>The name of the MCP server.</strong></p>
              * 
              * <strong>example:</strong>
              * <p>my-mcp-server</p>

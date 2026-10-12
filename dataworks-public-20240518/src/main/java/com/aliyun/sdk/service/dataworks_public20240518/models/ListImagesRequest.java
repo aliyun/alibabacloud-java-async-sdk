@@ -250,12 +250,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>The accessibility:</p>
+         * <p>The accessibility of the image. Valid values:</p>
          * <ul>
-         * <li><p>Public: Visible to all members.</p>
-         * </li>
-         * <li><p>Private: Visible only to the creator.</p>
-         * </li>
+         * <li>Public: The image is visible to all users.</li>
+         * <li>Private: The image is visible only to the creator.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +266,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>The image name, used for fuzzy search.</p>
+         * <p>The image name used for fuzzy match.</p>
          * 
          * <strong>example:</strong>
          * <p>image</p>
@@ -301,7 +299,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -323,7 +321,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>The list of image provider types.</p>
+         * <p>The list of image reference data types.</p>
          */
         public Builder providerTypes(java.util.List<String> providerTypes) {
             String providerTypesShrink = shrink(providerTypes, "ProviderTypes", "json");
@@ -333,7 +331,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to search all images.</p>
+         * <p>Specifies whether to search for all images.</p>
          */
         public Builder searchAll(Boolean searchAll) {
             this.putQueryParameter("SearchAll", searchAll);
@@ -342,13 +340,11 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>The list of sort fields. You can sort by scheduled time, start time, and other fields. The format is &quot;SortField+SortOrder(Desc/Asc)&quot;, where Asc is the default and can be omitted. Valid values of sort fields:</p>
+         * <p>The list of sort fields. Fields such as scheduled time and start time are supported. The format is &quot;sort field + sort order (Desc/Asc)&quot;. Asc can be omitted. Valid values for sort fields:</p>
          * <ul>
-         * <li><p>CreateTime (Desc/Asc): The creation time.</p>
-         * </li>
-         * <li><p>Name (Desc/Asc): The image name.
-         * Default value: CreateTime Asc.</p>
-         * </li>
+         * <li>CreateTime (Desc/Asc): creation time.</li>
+         * <li>Name (Desc/Asc): image name.
+         * Default value: CreateTime Asc.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -361,7 +357,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * <p>The list of image publish stages to query.</p>
+         * <p>The list of image publishing stages to query.</p>
          */
         public Builder stages(java.util.List<String> stages) {
             String stagesShrink = shrink(stages, "Stages", "json");

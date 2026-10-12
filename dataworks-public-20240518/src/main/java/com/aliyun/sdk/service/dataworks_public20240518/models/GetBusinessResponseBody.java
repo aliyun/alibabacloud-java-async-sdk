@@ -119,7 +119,7 @@ public class GetBusinessResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the business process.</p>
+         * <p>The details of the business flow.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use this ID to troubleshoot issues.</p>
+         * <p>The request ID. You can use the ID to troubleshoot issues when an error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>
@@ -296,7 +296,7 @@ public class GetBusinessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the business process.</p>
+             * <p>The ID of the business flow.</p>
              * 
              * <strong>example:</strong>
              * <p>1000001</p>
@@ -307,7 +307,7 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the business process. The name must be unique within the same workspace.</p>
+             * <p>The name of the business flow. The name must be unique within the same workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>The first business process</p>
@@ -318,7 +318,7 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the business process.</p>
+             * <p>The description of the business flow.</p>
              * 
              * <strong>example:</strong>
              * <p>This is my first business process.</p>
@@ -329,7 +329,7 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud user ID of the business process owner.</p>
+             * <p>The Alibaba Cloud user ID of the business flow owner.</p>
              * 
              * <strong>example:</strong>
              * <p>20000****</p>
@@ -340,7 +340,7 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the DataWorks workspace to which the business process belongs.</p>
+             * <p>The ID of the DataWorks workspace to which the business flow belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -351,7 +351,7 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The functional module to which the business process belongs. Valid values: NORMAL (Data Studio) and MANUAL_BIZ (manual business process).</p>
+             * <p>The functional module to which the business flow belongs. Valid values: NORMAL (Data Studio) and MANUAL_BIZ (Manual business flow).</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>

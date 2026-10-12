@@ -155,7 +155,7 @@ public class TagDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable lineage-based automatic backtracking.</p>
+         * <p>Specifies whether to enable automatic data lineage backtracking.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -167,7 +167,7 @@ public class TagDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The data asset IDs.</p>
+         * <p>The list of unique IDs of the data assets. You can call the ListDataAssets operation to query the IDs of data assets to which tags can be attached.</p>
          * <p>This parameter is required.</p>
          */
         public Builder dataAssetIds(java.util.List<String> dataAssetIds) {
@@ -178,7 +178,11 @@ public class TagDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The type of the data asset. Valid values: ACS::DataWorks::Table (data table) and ACS::DataWorks::Task (scheduled task).</p>
+         * <p>The data asset type. Valid values:</p>
+         * <ul>
+         * <li>DataWorks table (ACS::DataWorks::Table)</li>
+         * <li>DataWorks scheduled task (ACS::DataWorks::Task)</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,12 +195,10 @@ public class TagDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
+         * <p>The workspace environment to which the data asset belongs. Valid values:</p>
          * <ul>
-         * <li><p>Dev: development environment</p>
-         * </li>
-         * <li><p>Prod: production environment</p>
-         * </li>
+         * <li>Dev (development environment)</li>
+         * <li>Prod (production environment)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,7 +211,7 @@ public class TagDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -221,7 +223,7 @@ public class TagDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The tags that you want to add to data assets.</p>
+         * <p>The list of data asset tags to attach.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {

@@ -67,7 +67,7 @@ public class ListParametersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The response data.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -144,12 +144,10 @@ public class ListParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The environment type. Valid values:</p>
+             * <p>The project environment. Valid values:</p>
              * <ul>
-             * <li><p><code>Prod</code>: production environment</p>
-             * </li>
-             * <li><p><code>Dev</code>: development environment</p>
-             * </li>
+             * <li>Prod: production environment.</li>
+             * <li>Dev: development environment.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -374,7 +372,8 @@ public class ListParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the parameter was created. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The creation time.</p>
+             * <p>The value is a 13-digit number, such as <code>1640000000000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1640000000000</p>
@@ -385,7 +384,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID of the creator.</p>
+             * <p>The user who created the parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789</p>
@@ -396,10 +395,10 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter description.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>This is a test parameter.</p>
+             * <p>This is a test parameter</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -418,7 +417,8 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the parameter was last modified. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The modification time.</p>
+             * <p>The value is a 13-digit number, such as <code>1640000000000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1640000000000</p>
@@ -429,7 +429,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID of the user who last modified the parameter.</p>
+             * <p>The user who last modified the parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789</p>
@@ -451,7 +451,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID of the owner.</p>
+             * <p>The owner.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789</p>
@@ -473,7 +473,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment-specific values for the parameter.</p>
+             * <p>The parameter value configuration.</p>
              */
             public Builder properties(java.util.List<Properties> properties) {
                 this.properties = properties;
@@ -481,7 +481,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter scope.</p>
+             * <p>The scope of the parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>Project</p>
@@ -494,12 +494,9 @@ public class ListParametersResponseBody extends TeaModel {
             /**
              * <p>The parameter type. Valid values:</p>
              * <ul>
-             * <li><p><code>PlainConstant</code>: a plaintext constant</p>
-             * </li>
-             * <li><p><code>SecretConstant</code>: an encrypted constant</p>
-             * </li>
-             * <li><p><code>Variable</code>: a variable</p>
-             * </li>
+             * <li>PlainConstant: plaintext constant.</li>
+             * <li>SecretConstant: ciphertext constant.</li>
+             * <li>Variable: variable.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -618,7 +615,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of entries returned per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -629,7 +626,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of parameters.</p>
+             * <p>The list of parameters.</p>
              */
             public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
@@ -637,7 +634,7 @@ public class ListParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of parameters.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

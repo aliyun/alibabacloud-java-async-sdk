@@ -139,7 +139,7 @@ public class ListTaskOperationLogsRequest extends Request {
         }
 
         /**
-         * <p>The date of the operation, accurate to the day. Default value: the current day. You can query operation logs from the past 31 days. The value is a timestamp.</p>
+         * <p>The operation date, accurate to the day. Default value: the current day. Only operation logs from the past 31 days can be queried. The value is a timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -151,7 +151,7 @@ public class ListTaskOperationLogsRequest extends Request {
         }
 
         /**
-         * <p>The node ID.</p>
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,8 +190,8 @@ public class ListTaskOperationLogsRequest extends Request {
         /**
          * <p>The project environment. Valid values:</p>
          * <ul>
-         * <li>Prod: production</li>
-         * <li>Dev: development</li>
+         * <li>Prod: production.</li>
+         * <li>Dev: development.</li>
          * </ul>
          * 
          * <strong>example:</strong>

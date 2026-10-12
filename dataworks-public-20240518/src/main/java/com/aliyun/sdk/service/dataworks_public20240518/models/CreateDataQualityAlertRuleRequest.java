@@ -128,7 +128,7 @@ public class CreateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * <p>The alert condition of the data quality monitoring alert rule.</p>
+         * <p>The alert condition for the data quality monitoring alert rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class CreateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * <p>The monitored target of the data quality monitoring alert rule.</p>
+         * <p>The target of the data quality monitoring alert rule.</p>
          * <p>This parameter is required.</p>
          */
         public Builder target(Target target) {
@@ -249,7 +249,7 @@ public class CreateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
-             * <p>The additional configuration required for the alert recipient. When ReceiverType is set to DingdingUrl, you can set <code>{&quot;atAll&quot;:true}</code> to @ all members.</p>
+             * <p>The additional configuration required for the alert recipient. When ReceiverType is set to DingdingUrl, you can set <code>{&quot;atAll&quot;:true}</code> to mention all members.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;atAll&quot;:true}</p>
@@ -260,7 +260,7 @@ public class CreateDataQualityAlertRuleRequest extends Request {
             }
 
             /**
-             * <p>The alert recipient type.</p>
+             * <p>The type of the alert recipient.</p>
              * <ul>
              * <li>AliUid</li>
              * <li>WebhookUrl</li>
@@ -351,7 +351,7 @@ public class CreateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
-             * <p>The list of channels. You can set both <code>Email</code> and <code>Sms</code> at the same time. In other cases, only one channel can be set.</p>
+             * <p>The list of channels. You can specify both <code>Email</code> and <code>Sms</code> at the same time. For other types, you can specify only one channel.</p>
              * <p>This parameter is required.</p>
              */
             public Builder channels(java.util.List<String> channels) {
@@ -430,7 +430,7 @@ public class CreateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
-             * <p>The list of monitored target IDs. Currently, only one ID can be specified.</p>
+             * <p>The list of monitored target IDs. Currently, only one ID is supported.</p>
              * <p>This parameter is required.</p>
              */
             public Builder ids(java.util.List<Long> ids) {

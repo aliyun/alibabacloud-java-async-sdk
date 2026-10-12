@@ -67,7 +67,7 @@ public class GetCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the certificate.</p>
+         * <p>The certificate details.</p>
          */
         public Builder certificate(Certificate certificate) {
             this.certificate = certificate;
@@ -75,7 +75,7 @@ public class GetCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. Use this ID to locate logs and troubleshoot issues.</p>
+         * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>
@@ -209,7 +209,7 @@ public class GetCertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the file was created. This is a UNIX timestamp in milliseconds.</p>
+             * <p>The time when the certificate file was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1730217600000</p>
@@ -242,7 +242,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file size in bytes.</p>
+             * <p>The size of the file in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>77549</p>
@@ -253,7 +253,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the certificate file.</p>
+             * <p>The ID of the certificate file, which is the unique identifier of the certificate file.</p>
              * 
              * <strong>example:</strong>
              * <p>676303114031776</p>
@@ -264,7 +264,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file name.</p>
+             * <p>The name of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>ca1.crt</p>

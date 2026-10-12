@@ -124,7 +124,7 @@ public class ListCustomAgentsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on a single page.</p>
+         * <p>The maximum number of entries to return for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -136,7 +136,7 @@ public class ListCustomAgentsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Omit this parameter for the first request. For subsequent requests, use the <code>NextToken</code> value from the previous response to retrieve the next page.</p>
+         * <p>The pagination token. Do not specify this parameter for the first query. For subsequent queries, specify the <code>NextToken</code> value returned from the previous query to retrieve the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -148,7 +148,7 @@ public class ListCustomAgentsRequest extends Request {
         }
 
         /**
-         * <p>The search keyword for a fuzzy match by agent name.</p>
+         * <p>The search keyword used to perform a fuzzy match on agent names.</p>
          * 
          * <strong>example:</strong>
          * <p>analysis</p>
@@ -160,7 +160,7 @@ public class ListCustomAgentsRequest extends Request {
         }
 
         /**
-         * <p>Filters the results by visibility level. You can specify multiple levels.</p>
+         * <p>The visibility levels used to filter results. You can specify multiple values.</p>
          * 
          * <strong>example:</strong>
          * <ul>

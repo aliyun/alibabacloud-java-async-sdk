@@ -270,10 +270,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The image visibility. Valid values:</p>
+         * <p>The visibility of the image. Valid values:</p>
          * <ul>
-         * <li>Public: visible to all users.</li>
-         * <li>Private: visible only to the creator.</li>
+         * <li>Public: The image is visible to all users.</li>
+         * <li>Private: The image is visible only to the creator.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID associated with the ACR instance. This parameter is required when referencing an ACR image.</p>
+         * <p>The ID of the virtual private cloud (VPC) associated with the ACR instance. This parameter is required if you reference an ACR image.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>
@@ -298,7 +298,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The ACR instance ID. This parameter is required when referencing an ACR image.</p>
+         * <p>The ACR instance ID. This parameter is required if you reference an ACR image.</p>
          * 
          * <strong>example:</strong>
          * <p>acr_instance_id</p>
@@ -310,7 +310,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The image build configuration.</p>
+         * <p>The build configuration of the image.</p>
          */
         public Builder buildConfig(BuildConfig buildConfig) {
             String buildConfigShrink = shrink(buildConfig, "BuildConfig", "json");
@@ -320,7 +320,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The client idempotency token.</p>
+         * <p>The client token that is used to ensure idempotence.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,7 +333,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The image description, up to 128 characters.</p>
+         * <p>The description of the image. The description can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>create by xxxx</p>
@@ -345,7 +345,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to synchronize the image to MaxCompute. Specify this parameter when referencing an ACR image. Default value: false.</p>
+         * <p>Specifies whether to synchronize the image to MaxCompute. Specify this parameter when you reference an ACR image. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -357,7 +357,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The image URI. This parameter is required when referencing an ACR image.</p>
+         * <p>The URI of the image. This parameter is required if you reference an ACR image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-beijing.cr.aliyuncs.com/namespace/image:0.1.0</p>
@@ -369,7 +369,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The image name, which can contain lowercase letters, digits, and underscores (_), up to 128 characters.</p>
+         * <p>The name of the image. The name can contain lowercase letters, digits, and underscores (_), and can be up to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -382,7 +382,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The image namespace. Set this parameter to DataWorks Default when referencing a DataWorks official image.</p>
+         * <p>The namespace of the image. If you reference a DataWorks official image, set this parameter to DataWorks Default.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -395,7 +395,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The image ID from the image provider. This parameter is required when referencing a DataWorks official image.</p>
+         * <p>The ID of the image provided by the image provider. This parameter is required if you reference a DataWorks official image.</p>
          * 
          * <strong>example:</strong>
          * <p>System_shell_20251201</p>
@@ -407,7 +407,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The image reference type. Valid values:</p>
+         * <p>The reference data type of the image. Valid values:</p>
          * <ul>
          * <li>ACR: ACR image repository.</li>
          * <li>DataWorks: DataWorks official image.</li>
@@ -424,7 +424,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The image repository name. Set this parameter to DataWorks Default when referencing a DataWorks official image.</p>
+         * <p>The name of the image repository. If you reference a DataWorks official image, set this parameter to DataWorks Default.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -437,7 +437,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * <p>The image sub-purpose.</p>
+         * <p>The sub-purpose of the image.</p>
          * <p>This parameter is required.</p>
          */
         public Builder supported(Supported supported) {
@@ -507,7 +507,7 @@ public class CreateImageRequest extends Request {
             } 
 
             /**
-             * <p>The script content. If the content consists of package names, separate them with commas (,).</p>
+             * <p>The content of the script. If the content is a list of installation package names, separate the names with commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>requests</p>
@@ -518,7 +518,7 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * <p>The script type.</p>
+             * <p>The type of the script.</p>
              * 
              * <strong>example:</strong>
              * <p>Python3</p>
@@ -599,7 +599,7 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * <p>The list of pre-installation scripts.</p>
+             * <p>The list of pre-installation execution scripts.</p>
              */
             public Builder packageInstallationScripts(java.util.List<PackageInstallationScripts> packageInstallationScripts) {
                 this.packageInstallationScripts = packageInstallationScripts;
@@ -666,7 +666,7 @@ public class CreateImageRequest extends Request {
             } 
 
             /**
-             * <p>The image sub-module. Valid values:</p>
+             * <p>The sub-module of the image. Valid values:</p>
              * <ul>
              * <li>Scheduler: Data Studio.</li>
              * </ul>
@@ -680,7 +680,7 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * <p>The list of supported node types.</p>
+             * <p>The list of task types supported by the image.</p>
              */
             public Builder taskTypes(java.util.List<String> taskTypes) {
                 this.taskTypes = taskTypes;

@@ -67,10 +67,10 @@ public class DeleteDataSourceSharedRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
-         * <p>64B-587A-8CED-969E1973887FXXX-TT</p>
+         * <p>64B-587A-8CED-969E1973887F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +78,11 @@ public class DeleteDataSourceSharedRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the sharing rule was deleted. Valid values:
-         * -true: The sharing rule was deleted.
-         * -false: The sharing rule failed to be deleted.</p>
+         * <p>Indicates whether the data source sharing rule was deleted. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

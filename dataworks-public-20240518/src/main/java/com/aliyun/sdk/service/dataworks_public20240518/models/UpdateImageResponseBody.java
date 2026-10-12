@@ -80,7 +80,7 @@ public class UpdateImageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result of the API request.</p>
+         * <p>The API request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -102,7 +102,7 @@ public class UpdateImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

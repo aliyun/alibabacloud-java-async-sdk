@@ -141,7 +141,7 @@ public class UpdateComputeResourceRequest extends Request {
         }
 
         /**
-         * <p>The specific connection configuration of the computing resource, including the connection address, access identity, and environment information. The environment type (EnvType) of the computing resource is a member attribute of this object, including DEV (development environment) and PROD (production environment). The value is not case-sensitive.</p>
+         * <p>The specific connection configuration information of the compute resource, including the endpoint, access identity, and environment context. The EnvType property of the compute resource environment is a member attribute of this object. Valid values include DEV (development environment) and PROD (production environment). The value is case-insensitive.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class UpdateComputeResourceRequest extends Request {
         }
 
         /**
-         * <p>The category of the computing resource to be added. Different types have different subtypes and corresponding parameter schema constraints. Examples: InstanceMode (instance mode) and UrlMode (connection string mode).</p>
+         * <p>The category of the added compute resource. Different types have different subtypes, which correspond to different parameter schema constraints. Examples: InstanceMode for instance mode and UrlMode for connection string mode.</p>
          * 
          * <strong>example:</strong>
          * <p>InstanceMode</p>
@@ -174,10 +174,10 @@ public class UpdateComputeResourceRequest extends Request {
         }
 
         /**
-         * <p>The description of the computing resource. The maximum length is 3000 characters.</p>
+         * <p>The description of the compute resource. The description can be up to 3,000 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>Table level description</p>
+         * <p>Hierarchical description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -186,7 +186,7 @@ public class UpdateComputeResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the computing resource.</p>
+         * <p>The compute resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -239,8 +239,8 @@ public class UpdateImageRequest extends Request {
         /**
          * <p>The image visibility. Valid values:</p>
          * <ul>
-         * <li>Public: visible to all users.</li>
-         * <li>Private: visible only to the creator.</li>
+         * <li>Public: Visible to all users.</li>
+         * <li>Private: Visible only to the creator.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID associated with the ACR instance. This parameter is required when referencing an ACR image.</p>
+         * <p>The ID of the VPC associated with the ACR instance. This parameter is required when you reference an ACR image.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>
@@ -265,7 +265,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * <p>The Container Registry (ACR) instance ID. This parameter is required when referencing an ACR image.</p>
+         * <p>The ID of the Container Registry (ACR) instance. This parameter is required when you reference an ACR image.</p>
          * 
          * <strong>example:</strong>
          * <p>acr_instance_id</p>
@@ -312,7 +312,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * <p>The image URI. This parameter is required when referencing an ACR image.</p>
+         * <p>The image URI. This parameter is required when you reference an ACR image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-beijing.cr.aliyuncs.com/namespace/image:0.1.0</p>
@@ -336,7 +336,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * <p>The image namespace. Set this parameter to DataWorks Default when referencing a DataWorks official image.</p>
+         * <p>The image namespace. If you reference an official DataWorks image, set this parameter to DataWorks Default.</p>
          * 
          * <strong>example:</strong>
          * <p>namespace_name</p>
@@ -348,7 +348,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * <p>The provider image ID. This parameter is required when referencing a DataWorks official image.</p>
+         * <p>The ID of the image provided by the provider. This parameter is required when you reference an official DataWorks image.</p>
          * 
          * <strong>example:</strong>
          * <p>System_shell_20251201</p>
@@ -360,7 +360,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * <p>The image repository name. Set this parameter to DataWorks Default when referencing a DataWorks official image.</p>
+         * <p>The image repository name. If you reference an official DataWorks image, set this parameter to DataWorks Default.</p>
          * 
          * <strong>example:</strong>
          * <p>repo_name</p>
@@ -441,7 +441,7 @@ public class UpdateImageRequest extends Request {
             } 
 
             /**
-             * <p>The script content. If the content consists of package names, separate them with commas (,).</p>
+             * <p>The script content. If the content specifies package names, separate them with commas.</p>
              * 
              * <strong>example:</strong>
              * <p>requests</p>
@@ -614,7 +614,7 @@ public class UpdateImageRequest extends Request {
             }
 
             /**
-             * <p>The list of node types supported by the image.</p>
+             * <p>The list of task types supported by the image.</p>
              */
             public Builder taskTypes(java.util.List<String> taskTypes) {
                 this.taskTypes = taskTypes;

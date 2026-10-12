@@ -171,10 +171,10 @@ public class CreateParameterRequest extends Request {
         }
 
         /**
-         * <p>The description of the parameter.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一个测试参数</p>
+         * <p>This is a test parameter</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -183,7 +183,7 @@ public class CreateParameterRequest extends Request {
         }
 
         /**
-         * <p>The parameter name. It must be unique within the workspace, be prefixed with <code>workspace.</code>, and not exceed 255 characters. The part of the name after the prefix must start with a letter and can contain only letters, digits, and underscores (_).</p>
+         * <p>The name of the parameter. It must be unique within the workspace. It must start with &quot;workspace.&quot;. The subsequent content must start with a letter and can contain only letters, underscores, and digits. The total length of the name cannot exceed 255 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class CreateParameterRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. This parameter is required when <code>Scope</code> is set to <code>Project</code>.</p>
+         * <p>The workspace ID. This parameter is required when Scope is set to Project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class CreateParameterRequest extends Request {
         }
 
         /**
-         * <p>The value configurations for the parameter. A configuration for the production environment is required. If you provide duplicate configurations for an environment, only the first one is used.</p>
+         * <p>The parameter value configurations. This parameter is required for the production environment. If duplicate environment configurations exist in the array, the subsequent configurations do not take effect.</p>
          * <p>This parameter is required.</p>
          */
         public Builder properties(java.util.List<Properties> properties) {
@@ -233,7 +233,7 @@ public class CreateParameterRequest extends Request {
         }
 
         /**
-         * <p>The scope of the parameter. The default value is <code>Project</code>. No other values are currently supported.</p>
+         * <p>The scope of the parameter. Default value: Project. Other types are currently not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Project</p>
@@ -245,14 +245,11 @@ public class CreateParameterRequest extends Request {
         }
 
         /**
-         * <p>The type of the parameter.</p>
+         * <p>The type. Valid values:</p>
          * <ul>
-         * <li><p><code>PlainConstant</code>: plaintext constant.</p>
-         * </li>
-         * <li><p><code>SecretConstant</code>: secret constant.</p>
-         * </li>
-         * <li><p><code>Variable</code>: variable.</p>
-         * </li>
+         * <li>PlainConstant: plaintext constant.</li>
+         * <li>SecretConstant: ciphertext constant.</li>
+         * <li>Variable: variable.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -325,12 +322,10 @@ public class CreateParameterRequest extends Request {
             } 
 
             /**
-             * <p>The environment.</p>
+             * <p>The project environment. Valid values:</p>
              * <ul>
-             * <li><p><code>Prod</code>: production environment</p>
-             * </li>
-             * <li><p><code>Dev</code>: development environment</p>
-             * </li>
+             * <li>Prod: production.</li>
+             * <li>Dev: development.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -342,7 +337,7 @@ public class CreateParameterRequest extends Request {
             }
 
             /**
-             * <p>The value of the parameter. The value can contain Chinese characters, letters, digits, and the following special characters: /, :, ., [, ], ,, \, \&quot;, &quot;, _, =, ?, space, carriage return, line feed, +, -, \*, %, &amp;, @, !, $, #, {, and }.</p>
+             * <p>The parameter value. Only Chinese characters, letters, digits, and specific special characters are allowed, such as /, :, ., [, ], ,, \, \&quot;, &quot;, _, =, ?, space, carriage return, line feed, +, -, *, %, &amp;, @, !, $, #, {, and }.</p>
              * 
              * <strong>example:</strong>
              * <p>value123</p>

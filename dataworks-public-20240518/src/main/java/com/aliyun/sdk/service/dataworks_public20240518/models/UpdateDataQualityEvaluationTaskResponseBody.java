@@ -67,7 +67,7 @@ public class UpdateDataQualityEvaluationTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID. Used to locate logs and troubleshoot issues.</p>
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
@@ -78,7 +78,7 @@ public class UpdateDataQualityEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

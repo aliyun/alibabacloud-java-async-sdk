@@ -111,7 +111,7 @@ public class GetImageTestResultRequest extends Request {
         }
 
         /**
-         * <p>The test process ID.</p>
+         * <p>The ID of the test process.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

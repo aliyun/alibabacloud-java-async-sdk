@@ -139,7 +139,7 @@ public class UpdateUdfFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID for this request. Use this ID for troubleshooting if an error occurs.</p>
+         * <p>The unique ID of the request. You can use the ID to troubleshoot issues when an error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>
@@ -150,12 +150,10 @@ public class UpdateUdfFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded. Valid values:</p>
+         * <p>Specifies whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

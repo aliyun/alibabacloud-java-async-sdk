@@ -75,7 +75,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>8C3ED0C5-ABAB-55E1-854B-DAC02B11XXXX</p>
@@ -131,7 +131,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Command</p>
+             * <p>The command.</p>
              * 
              * <strong>example:</strong>
              * <p>WORKFLOW</p>
@@ -216,7 +216,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             /**
              * <p>The ID of the script.</p>
              * <blockquote>
-             * <p>This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures due to the type change may occur only when upgrading the SDK across version 8.0.0, in which case users need to manually correct the data type.</p>
+             * <p>Notice: Before SDK version 8.0.0, this field is of the Long type. In SDK version 8.0.0 and later, this field is of the String type. <strong>This change does not affect the normal use of the SDK. The parameter is still returned based on the type defined in the SDK</strong>. However, if you upgrade the SDK across version 8.0.0, the type change may cause project compilation failures. In this case, you must manually correct the data type.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The script path.</p>
+             * <p>The path of the script.</p>
              * 
              * <strong>example:</strong>
              * <p>XX/OpenAPI_test/workflow_test/OpenAPI_test_workflow_Demo</p>
@@ -239,7 +239,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Runtime</p>
+             * <p>The runtime.</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -409,7 +409,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description</p>
+             * <p>The description of the workflow.</p>
              * 
              * <strong>example:</strong>
              * <p>Workflow description</p>
@@ -422,7 +422,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             /**
              * <p>The unique identifier of the workflow.</p>
              * <blockquote>
-             * <p>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * <p>Notice: Before SDK version 8.0.0, this field is of the Long type. In SDK version 8.0.0 and later, this field is of the String type. <strong>This change does not affect the normal use of the SDK. The parameter is still returned based on the type defined in the SDK</strong>. However, if you upgrade the SDK across version 8.0.0, the type change may cause project compilation failures. In this case, you must manually correct the data type.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -456,7 +456,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Owner</p>
+             * <p>The owner of the workflow.</p>
              * 
              * <strong>example:</strong>
              * <p>110755000425XXXX</p>
@@ -487,13 +487,10 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the workflow.</p>
-             * <p>Valid values:</p>
+             * <p>The type of the workflow. Valid values:</p>
              * <ul>
-             * <li><p>CycleWorkflow</p>
-             * </li>
-             * <li><p>ManualWorkflow</p>
-             * </li>
+             * <li>CycleWorkflow</li>
+             * <li>ManualWorkflow</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -590,7 +587,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number.</p>
+             * <p>The number of the page to return.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -601,7 +598,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of entries returned on each page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -612,7 +609,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries that meet the conditions.</p>
+             * <p>The total number of entries that meet the specified conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>227</p>
@@ -623,7 +620,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workflows.</p>
+             * <p>The list of queried workflows.</p>
              */
             public Builder workflowDefinitions(java.util.List<WorkflowDefinitions> workflowDefinitions) {
                 this.workflowDefinitions = workflowDefinitions;

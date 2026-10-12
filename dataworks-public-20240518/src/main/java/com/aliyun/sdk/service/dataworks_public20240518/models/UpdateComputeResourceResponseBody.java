@@ -67,7 +67,7 @@ public class UpdateComputeResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</p>
@@ -78,12 +78,10 @@ public class UpdateComputeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the computing resource was modified successfully:</p>
+         * <p>Specifies whether the compute resource is updated:</p>
          * <ul>
-         * <li><p>true: Yes</p>
-         * </li>
-         * <li><p>false: No</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>

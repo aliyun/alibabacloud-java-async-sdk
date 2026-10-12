@@ -226,7 +226,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>List of data quality rules associated with the data quality monitoring.</p>
+         * <p>The list of data quality rules associated with data quality monitoring.</p>
          */
         public Builder dataQualityRules(java.util.List<DataQualityRules> dataQualityRules) {
             String dataQualityRulesShrink = shrink(dataQualityRules, "DataQualityRules", "json");
@@ -236,7 +236,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>Data source ID. You can call <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> to obtain the data source ID.</p>
+         * <p>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to obtain the data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>358750</p>
@@ -248,7 +248,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>Description of the quality monitoring task</p>
+         * <p>The description of the quality monitoring task.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAPI data quality monitoring test.</p>
@@ -260,7 +260,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>Callback settings</p>
+         * <p>The hook settings.</p>
          */
         public Builder hooks(java.util.List<Hooks> hooks) {
             String hooksShrink = shrink(hooks, "Hooks", "json");
@@ -270,7 +270,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>Data quality monitoring ID.</p>
+         * <p>The ID of the data quality monitoring task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +283,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>Name of the quality monitoring task</p>
+         * <p>The name of the quality monitoring task.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAPI data quality monitoring test.</p>
@@ -295,7 +295,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>Notification subscription configuration</p>
+         * <p>The notification subscription configuration.</p>
          */
         public Builder notifications(Notifications notifications) {
             String notificationsShrink = shrink(notifications, "Notifications", "json");
@@ -305,7 +305,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>Workspace ID</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,10 +318,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>Extended configuration. A JSON-formatted string. Takes effect only for EMR-type data quality monitoring.</p>
+         * <p>The extension configuration. This parameter is a character string in JSON format and takes effect only for EMR data quality monitoring.</p>
          * <ul>
-         * <li>queue: The YARN queue used when executing EMR data quality validation. Defaults to the queue configured for the current project.</li>
-         * <li>sqlEngine: The SQL engine used when executing EMR data validation.<ul>
+         * <li>queue: the YARN queue used when you execute EMR data validation. Default value: the queue configured for the current project.</li>
+         * <li>sqlEngine: the SQL DPI engine used when you execute EMR data validation. Valid values:<ul>
          * <li>HIVE_SQL</li>
          * <li>SPARK_SQL</li>
          * </ul>
@@ -338,7 +338,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>Data quality monitoring object</p>
+         * <p>The monitored object for data quality monitoring.</p>
          */
         public Builder target(Target target) {
             String targetShrink = shrink(target, "Target", "json");
@@ -348,7 +348,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>Trigger configuration of the data quality validation task</p>
+         * <p>The trigger configuration of the data quality check task.</p>
          */
         public Builder trigger(Trigger trigger) {
             String triggerShrink = shrink(trigger, "Trigger", "json");
@@ -430,14 +430,14 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>Threshold expression.</p>
-             * <p>Fluctuation-type rules must use an expression to represent the fluctuation threshold. For example:</p>
+             * <p>The threshold expression. </p>
+             * <p>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
              * <ul>
-             * <li>Fluctuation rises above 0.01: $checkValue &gt; 0.01</li>
-             * <li>A decrease in the fluctuation rate of more than 0.01: $checkValue &lt; -0.01</li>
-             * <li>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</li>
+             * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+             * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+             * <li>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</li>
              * </ul>
-             * <p>Fixed-value-type rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
+             * <p>Fixed value rules can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</p>
              * 
              * <strong>example:</strong>
              * <p>$checkValue &gt; 0.01</p>
@@ -448,7 +448,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Comparison operator</p>
+             * <p>The comparison operator. Valid values:</p>
              * <ul>
              * <li>\&gt;</li>
              * <li>\&gt;=</li>
@@ -468,7 +468,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Threshold value.</p>
+             * <p>The threshold value.</p>
              * 
              * <strong>example:</strong>
              * <p>0.01</p>
@@ -551,14 +551,14 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>Threshold expression.</p>
-             * <p>Fluctuation-type rules must use an expression to represent the fluctuation threshold. For example:</p>
+             * <p>The threshold expression. </p>
+             * <p>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
              * <ul>
-             * <li>Fluctuation rises above 0.01: $checkValue &gt; 0.01</li>
-             * <li>A decrease in the fluctuation rate of more than 0.01: $checkValue &lt; -0.01</li>
-             * <li>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</li>
+             * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+             * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+             * <li>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</li>
              * </ul>
-             * <p>Fixed-value-type rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
+             * <p>Fixed value rules can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</p>
              * 
              * <strong>example:</strong>
              * <p>$checkValue &gt; 0.01</p>
@@ -569,7 +569,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Comparison operator</p>
+             * <p>The comparison operator. Valid values:</p>
              * <ul>
              * <li>\&gt;</li>
              * <li>\&gt;=</li>
@@ -588,7 +588,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Threshold value</p>
+             * <p>The threshold value.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -671,14 +671,14 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>Threshold expression.</p>
-             * <p>Fluctuation-type rules must use an expression to represent the fluctuation threshold. For example:</p>
+             * <p>The threshold expression. </p>
+             * <p>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
              * <ul>
-             * <li>Fluctuation rises above 0.01: $checkValue &gt; 0.01</li>
-             * <li>A decrease in the fluctuation rate of more than 0.01: $checkValue &lt; -0.01</li>
-             * <li>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</li>
+             * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+             * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+             * <li>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</li>
              * </ul>
-             * <p>Fixed-value-type rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
+             * <p>Fixed value rules can also use expressions to configure thresholds. If both are configured, the expression takes precedence over Operator and Value.</p>
              * 
              * <strong>example:</strong>
              * <p>$checkValue &gt; 0.01</p>
@@ -689,7 +689,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Comparison operator</p>
+             * <p>The comparison operator. Valid values:</p>
              * <ul>
              * <li>\&gt;</li>
              * <li>\&gt;=</li>
@@ -709,7 +709,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Threshold value</p>
+             * <p>The threshold value.</p>
              * 
              * <strong>example:</strong>
              * <p>0.001</p>
@@ -792,7 +792,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>Threshold settings for critical warnings</p>
+             * <p>The threshold settings for critical warnings.</p>
              */
             public Builder critical(Critical critical) {
                 this.critical = critical;
@@ -800,7 +800,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Expected threshold settings</p>
+             * <p>The expected threshold settings.</p>
              */
             public Builder expected(Expected expected) {
                 this.expected = expected;
@@ -808,7 +808,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Threshold settings for normal warnings</p>
+             * <p>The threshold settings for normal warnings.</p>
              */
             public Builder warned(Warned warned) {
                 this.warned = warned;
@@ -888,7 +888,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>Some threshold types require querying reference samples and then aggregating their values to derive the comparison threshold. An expression is used here to indicate how the reference samples are queried.</p>
+             * <p>The expression used to specify the query method for reference samples. Some threshold types require querying reference samples and aggregating their values to derive the comparison threshold.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;bizdate&quot;: [&quot;-1&quot;]}</p>
@@ -899,7 +899,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Validation threshold settings.</p>
+             * <p>The check threshold settings.</p>
              */
             public Builder thresholds(Thresholds thresholds) {
                 this.thresholds = thresholds;
@@ -907,13 +907,13 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Threshold calculation method</p>
+             * <p>The threshold calculation method. Valid values:</p>
              * <ul>
-             * <li>Fluctation: Fluctuation range validation</li>
-             * <li>Auto: Intelligent threshold validation</li>
-             * <li>FluctationDiscreate: Discrete value fluctuation range validation</li>
-             * <li>Average: Mean fluctuation range validation</li>
-             * <li>Fixed: Fixed value validation</li>
+             * <li>Fluctation: fluctuation range check</li>
+             * <li>Auto: intelligent threshold check</li>
+             * <li>FluctationDiscreate: discrete value fluctuation range check</li>
+             * <li>Average: average fluctuation range check</li>
+             * <li>Fixed: fixed value check</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -984,7 +984,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>For custom SQL rules, the user must specify the SQL to filter problematic data.</p>
+             * <p>The SQL statement used to filter error data. This parameter is required if the rule is a custom SQL rule.</p>
              * 
              * <strong>example:</strong>
              * <p>SELECT * FROM ods_d_openapi_log WHERE status = \&quot;Error\&quot;</p>
@@ -995,9 +995,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Handler type:</p>
+             * <p>The handler type. Valid values:</p>
              * <ul>
-             * <li>SaveErrorData: Retain problematic data</li>
+             * <li>SaveErrorData: retain error data</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1095,23 +1095,23 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>Name of the sampling metric</p>
+             * <p>The name of the sampled metric. Valid values:</p>
              * <ul>
-             * <li>Count: Number of rows in the table</li>
-             * <li>Min: Minimum value of the field</li>
-             * <li>Max: Maximum value of the field</li>
-             * <li>Avg: Average value of the field</li>
-             * <li>DistinctCount: Number of distinct values of the field</li>
-             * <li>DistinctPercent: Ratio of the number of distinct field values to the total number of rows</li>
-             * <li>DuplicatedCount: Number of duplicate values of the field</li>
-             * <li>DuplicatedPercent: Ratio of the number of duplicate field values to the total number of rows</li>
-             * <li>TableSize: Size of the table</li>
-             * <li>NullValueCount: Number of rows where the field is null</li>
-             * <li>NullValuePercent: Proportion of rows where the field is null</li>
-             * <li>GroupCount: After aggregating by field value, each value and its corresponding number of rows</li>
-             * <li>CountNotIn: Number of rows whose enum values do not match</li>
-             * <li>CountDistinctNotIn: Number of distinct values whose enum values do not match</li>
-             * <li>UserDefinedSql: Sample collection via custom SQL</li>
+             * <li>Count: the number of rows in the table</li>
+             * <li>Min: the minimum value of the field</li>
+             * <li>Max: the maximum value of the field</li>
+             * <li>Avg: the average value of the field</li>
+             * <li>DistinctCount: the number of unique values in the field</li>
+             * <li>DistinctPercent: the ratio of the number of unique values in the field to the total number of rows</li>
+             * <li>DuplicatedCount: the number of duplicate values in the field</li>
+             * <li>DuplicatedPercent: the ratio of the number of duplicate values in the field to the total number of rows</li>
+             * <li>TableSize: the size of the table</li>
+             * <li>NullValueCount: the number of rows where the field is null</li>
+             * <li>NullValuePercent: the proportion of rows where the field is null</li>
+             * <li>GroupCount: the number of rows corresponding to each value after aggregation by field value</li>
+             * <li>CountNotIn: the number of rows that do not match the enumerated values</li>
+             * <li>CountDistinctNotIn: the number of unique values that do not match the enumerated values</li>
+             * <li>UserDefinedSql: sample collection by using custom SQL statements</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1123,7 +1123,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Parameters required for sample collection</p>
+             * <p>The parameters required for sample collection.</p>
              * 
              * <strong>example:</strong>
              * <p>{ &quot;Columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] , &quot;SQL&quot;: &quot;select count(1) from table;&quot;}</p>
@@ -1134,7 +1134,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Conditions for further filtering of data not of concern during sampling. Maximum 16777215 characters.</p>
+             * <p>The conditions used to filter out unneeded data during sampling. The maximum length is 16,777,215 characters.</p>
              * 
              * <strong>example:</strong>
              * <p>status != \&quot;Succeeded\&quot;</p>
@@ -1145,7 +1145,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Runtime parameter setting statements to be inserted and executed before the actual sampling statement. Maximum 1000 characters. Currently only MaxCompute is supported.</p>
+             * <p>The runtime parameter setting statements inserted before the execution of sampling statements. The maximum length is 1,000 characters. Only MaxCompute is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.sql.type.system.odps2=True,odps.sql.hive.compatible=True</p>
@@ -1308,7 +1308,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>Sample validation settings</p>
+             * <p>The sample check settings.</p>
              */
             public Builder checkingConfig(CheckingConfig checkingConfig) {
                 this.checkingConfig = checkingConfig;
@@ -1316,7 +1316,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Description of the data quality rule.</p>
+             * <p>The description of the data quality rule.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAPI test rules</p>
@@ -1327,7 +1327,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Whether the data quality rule is enabled.</p>
+             * <p>Specifies whether the data quality rule is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1338,7 +1338,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Quality rule validation issue handler</p>
+             * <p>The error handlers for quality rule check issues.</p>
              */
             public Builder errorHandlers(java.util.List<ErrorHandlers> errorHandlers) {
                 this.errorHandlers = errorHandlers;
@@ -1346,7 +1346,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>ID of the validation rule. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the rule ID.</p>
+             * <p>The ID of the check rule. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1022171560</p>
@@ -1357,7 +1357,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Name of the data quality rule.</p>
+             * <p>The name of the data quality rule.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAPI test rules</p>
@@ -1368,7 +1368,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Parameters required for sample collection</p>
+             * <p>The parameters required for sample collection.</p>
              */
             public Builder samplingConfig(SamplingConfig samplingConfig) {
                 this.samplingConfig = samplingConfig;
@@ -1376,7 +1376,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Severity level of the rule for the business (corresponds to strong/weak rules on the page). Optional enum values:</p>
+             * <p>The severity level of the rule for the business, which corresponds to the strong and weak rules on the page. Valid values:</p>
              * <ul>
              * <li>Normal</li>
              * <li>High</li>
@@ -1391,7 +1391,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Unique identifier of the rule template referenced by the rule.</p>
+             * <p>The unique identifier of the rule template referenced by the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM:field:null_value:fixed:0</p>
@@ -1461,10 +1461,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>Hook trigger condition. When this condition is met, the hook action is triggered. Currently, only two types of condition expressions are supported:</p>
+             * <p>The Cause of the hook. When this Cause is met, the hook action is triggered. Currently, only the following two types of conditional expressions are supported:</p>
              * <ul>
-             * <li>Specify a single group of rule severity type and rule validation status, such as <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code>. This means the condition is met when any executed rule with severity High has a validation result of Critical.</li>
-             * <li>Specify multiple groups of rule severity type and rule validation status, such as <code>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code>. This means the condition is met when any executed rule satisfies one of the following: severity High with validation result Critical, severity Normal with validation result Critical, or severity Normal with validation result Error. The severity enum in the condition expression is consistent with the severity enum in DataQualityRule, and the status enum is consistent with the status in DataQualityResult.</li>
+             * <li>Specify only one group of rule severity levels and rule check statuses, such as <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code>. This indicates that if the check result of a rule you execute with the severity of High is Critical, the condition is met.</li>
+             * <li>Specify multiple groups of rule severity levels and rule check statuses, such as <code>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code>. This indicates that if the check result of a rule you execute with the severity of High is Critical, the check result of a rule you execute with the severity of Normal is Critical, or the check result of a rule you execute with the severity of Normal is Error, the condition is met. The enum values of severity in the conditional expression are consistent with those in DataQualityRule, and the enum values of status are consistent with those in DataQualityResult.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1476,9 +1476,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Hook actions executed after data quality validation completes.</p>
+             * <p>The hook action executed after the data quality check is completed. Valid values:</p>
              * <ul>
-             * <li>BlockTaskInstance: Block the scheduling task.</li>
+             * <li>BlockTaskInstance: blocks the scheduled task</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1536,7 +1536,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>Notification method</p>
+             * <p>The notification methods.</p>
              */
             public Builder channels(java.util.List<String> channels) {
                 this.channels = channels;
@@ -1616,9 +1616,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>Additional parameter settings when sending alerts. JSON format. The supported keys are as follows:</p>
+             * <p>The additional parameter settings when an alert is sent. This parameter is in JSON format. Supported keys:</p>
              * <ul>
-             * <li>atAll: Whether to @all members in the group when sending DingTalk alerts. Takes effect when ReceiverType is DingdingUrl.</li>
+             * <li>atAll: specifies whether to @all in the group when sending a DingTalk alert. This key takes effect only when ReceiverType is set to DingdingUrl.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1630,7 +1630,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Alert recipient type</p>
+             * <p>The alert recipient type.</p>
              * 
              * <strong>example:</strong>
              * <p>DingdingUrl</p>
@@ -1641,7 +1641,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Alert recipients</p>
+             * <p>The alert recipients.</p>
              */
             public Builder receiverValues(java.util.List<String> receiverValues) {
                 this.receiverValues = receiverValues;
@@ -1708,7 +1708,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>Notification method</p>
+             * <p>The notification methods.</p>
              */
             public Builder notificationChannels(java.util.List<NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
@@ -1716,7 +1716,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Alert recipient settings</p>
+             * <p>The alert recipient settings.</p>
              */
             public Builder notificationReceivers(java.util.List<NotificationReceivers> notificationReceivers) {
                 this.notificationReceivers = notificationReceivers;
@@ -1783,10 +1783,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>Notification trigger condition. When this condition is met, a message notification is triggered. Currently, only two types of condition expressions are supported:</p>
+             * <p>The Cause of the notification. When this Cause is met, a message notification is triggered. Currently, only the following two types of conditional expressions are supported:</p>
              * <ul>
-             * <li>Specify a single group of rule severity type and rule validation status, such as <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code>. This means the condition is met when any executed rule with severity High has a validation result of Critical.</li>
-             * <li>Specify multiple groups of rule severity type and rule validation status, such as <code>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code>. This means the condition is met when any executed rule satisfies one of the following: severity High with validation result Critical, severity Normal with validation result Critical, or severity Normal with validation result Error. The severity enum in the condition expression is consistent with the severity enum in DataQualityRule, and the status enum is consistent with the status in DataQualityResult.</li>
+             * <li>Specify only one group of rule severity levels and rule check statuses, such as <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code>. This indicates that if the check result of a rule you execute with the severity of High is Critical, the condition is met.</li>
+             * <li>Specify multiple groups of rule severity levels and rule check statuses, such as <code>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code>. This indicates that if the check result of a rule you execute with the severity of High is Critical, the check result of a rule you execute with the severity of Normal is Critical, or the check result of a rule you execute with the severity of Normal is Error, the condition is met. The enum values of severity in the conditional expression are consistent with those in DataQualityRule, and the enum values of status are consistent with those in DataQualityResult.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1798,7 +1798,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Notification settings</p>
+             * <p>The notification settings.</p>
              */
             public Builder notifications(java.util.List<NotificationsNotifications> notifications) {
                 this.notifications = notifications;
@@ -1879,7 +1879,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>Database type to which the table belongs</p>
+             * <p>The database type of the table. Valid values:</p>
              * <ul>
              * <li>maxcompute</li>
              * <li>hologres</li>
@@ -1899,7 +1899,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Partition settings of the partitioned table</p>
+             * <p>The partition settings of the partitioned table.</p>
              * 
              * <strong>example:</strong>
              * <p>dt=$[yyyymmdd-1]</p>
@@ -1910,7 +1910,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Unique ID of the table in Data Map</p>
+             * <p>The unique ID of the table in DataWorks Data Map.</p>
              * 
              * <strong>example:</strong>
              * <p>odsp.openapi.ods_d_openapi_log</p>
@@ -1980,7 +1980,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             } 
 
             /**
-             * <p>List of scheduling task IDs. Valid when Type is ByScheduledTaskInstance.</p>
+             * <p>The list of scheduled task IDs. This parameter takes effect only when Type is set to ByScheduledTaskInstance.</p>
              */
             public Builder taskIds(java.util.List<Long> taskIds) {
                 this.taskIds = taskIds;
@@ -1988,10 +1988,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Trigger type of the quality monitoring task.</p>
+             * <p>The trigger type of the quality monitoring task. Valid values:</p>
              * <ul>
-             * <li>ByScheduledTaskInstance: Triggered by an associated scheduling task.</li>
-             * <li>ByManual: Triggered manually.</li>
+             * <li>ByScheduledTaskInstance: triggered by an associated scheduled task</li>
+             * <li>ByManual: manually triggered</li>
              * </ul>
              * 
              * <strong>example:</strong>

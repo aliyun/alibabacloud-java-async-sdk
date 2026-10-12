@@ -212,7 +212,7 @@ public class UpdateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The sample verification settings.</p>
+         * <p>The sample check settings.</p>
          */
         public Builder checkingConfig(CheckingConfig checkingConfig) {
             String checkingConfigShrink = shrink(checkingConfig, "CheckingConfig", "json");
@@ -222,7 +222,7 @@ public class UpdateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule description. The maximum length is 500 characters.</p>
+         * <p>The description of the rule. It can be up to 500 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a odps _sql task</p>
@@ -246,7 +246,7 @@ public class UpdateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The list of issue handlers for data quality rule verification.</p>
+         * <p>The list of error handlers for quality rule check issues.</p>
          */
         public Builder errorHandlers(java.util.List<ErrorHandlers> errorHandlers) {
             String errorHandlersShrink = shrink(errorHandlers, "ErrorHandlers", "json");
@@ -256,7 +256,7 @@ public class UpdateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule ID.</p>
+         * <p>The ID of the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,10 +269,10 @@ public class UpdateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule name. The name can be a combination of digits, English letters, Chinese characters, and half-width or full-width punctuation. The maximum length is 255 characters.</p>
+         * <p>The name of the rule. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. It can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>The table cannot be empty</p>
+         * <p>Table cannot be empty</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -281,7 +281,7 @@ public class UpdateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Settings page to obtain the workspace ID.</p>
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Configuration page to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -304,7 +304,7 @@ public class UpdateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The severity level of the rule for the business (corresponding to strong/weak rules on the page). Valid values:</p>
+         * <p>The severity level of the rule for the business, which corresponds to the strong or weak rule on the page. Valid values:</p>
          * <ul>
          * <li>Normal</li>
          * <li>High</li>
@@ -404,14 +404,13 @@ public class UpdateDataQualityRuleRequest extends Request {
             } 
 
             /**
-             * <p>The threshold expression.</p>
-             * <p>Fluctuation-type rules must use an expression to represent the fluctuation threshold. Examples:</p>
+             * <p>The threshold expression. For fluctuation rules, you must use an expression to specify the fluctuation threshold. Examples:</p>
              * <ul>
-             * <li>Upward fluctuation greater than 0.01: $checkValue &gt; 0.01</li>
-             * <li>Downward fluctuation greater than 0.01: $checkValue &lt; -0.01</li>
-             * <li>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</li>
+             * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+             * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+             * <li>Absolute value of the fluctuation rate: abs($checkValue) &gt; 0.01
+             * For fixed value rules, you can also use an expression to configure the threshold. If both are configured, the expression takes precedence over the Operator and Value parameters.</li>
              * </ul>
-             * <p>Fixed-value rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
              * 
              * <strong>example:</strong>
              * <p>$checkValue &gt; 0.05</p>
@@ -422,12 +421,12 @@ public class UpdateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The comparison operator.</p>
+             * <p>The comparison operator. Valid values:</p>
              * <ul>
              * <li>\&gt;</li>
              * <li>\&gt;=</li>
-             * <li>&lt;</li>
-             * <li>&lt;=</li>
+             * <li>\&lt;</li>
+             * <li>\&lt;=</li>
              * <li>!=</li>
              * <li>=</li>
              * </ul>
@@ -525,14 +524,13 @@ public class UpdateDataQualityRuleRequest extends Request {
             } 
 
             /**
-             * <p>The threshold expression.</p>
-             * <p>Fluctuation-type rules must use an expression to represent the fluctuation threshold. Examples:</p>
+             * <p>The threshold expression. For fluctuation rules, you must use an expression to specify the fluctuation threshold. Examples:</p>
              * <ul>
-             * <li>Upward fluctuation greater than 0.01: $checkValue &gt; 0.01</li>
-             * <li>Downward fluctuation greater than 0.01: $checkValue &lt; -0.01</li>
-             * <li>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</li>
+             * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+             * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+             * <li>Absolute value of the fluctuation rate: abs($checkValue) &gt; 0.01
+             * For fixed value rules, you can also use an expression to configure the threshold. If both are configured, the expression takes precedence over the Operator and Value parameters.</li>
              * </ul>
-             * <p>Fixed-value rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
              * 
              * <strong>example:</strong>
              * <p>$checkValue &lt;= 0.01</p>
@@ -543,7 +541,7 @@ public class UpdateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The comparison operator.</p>
+             * <p>The comparison operator. Valid values:</p>
              * <ul>
              * <li>\&gt;</li>
              * <li>\&gt;=</li>
@@ -646,14 +644,13 @@ public class UpdateDataQualityRuleRequest extends Request {
             } 
 
             /**
-             * <p>The threshold expression.</p>
-             * <p>Fluctuation-type rules must use an expression to represent the fluctuation threshold. Examples:</p>
+             * <p>The threshold expression. For fluctuation rules, you must use an expression to specify the fluctuation threshold. Examples:</p>
              * <ul>
-             * <li>Upward fluctuation greater than 0.01: $checkValue &gt; 0.01</li>
-             * <li>Downward fluctuation greater than 0.01: $checkValue &lt; -0.01</li>
-             * <li>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</li>
+             * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+             * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+             * <li>Absolute value of the fluctuation rate: abs($checkValue) &gt; 0.01
+             * For fixed value rules, you can also use an expression to configure the threshold. If both are configured, the expression takes precedence over the Operator and Value parameters.</li>
              * </ul>
-             * <p>Fixed-value rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
              * 
              * <strong>example:</strong>
              * <p>$checkValue &gt; 0.01</p>
@@ -664,12 +661,12 @@ public class UpdateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The comparison operator.</p>
+             * <p>The comparison operator. Valid values:</p>
              * <ul>
              * <li>\&gt;</li>
              * <li>\&gt;=</li>
-             * <li>&lt;</li>
-             * <li>&lt;=</li>
+             * <li>\&lt;</li>
+             * <li>\&lt;=</li>
              * <li>!=</li>
              * <li>=</li>
              * </ul>
@@ -783,7 +780,7 @@ public class UpdateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The threshold settings for normal warnings.</p>
+             * <p>The threshold settings for common warnings.</p>
              */
             public Builder warned(Warned warned) {
                 this.warned = warned;
@@ -863,7 +860,7 @@ public class UpdateDataQualityRuleRequest extends Request {
             } 
 
             /**
-             * <p>Some types of thresholds require querying reference samples and then aggregating the values of those reference samples to derive the threshold used for comparison. An expression is used here to indicate how the reference samples are queried.</p>
+             * <p>For some types of thresholds, reference samples must be queried, and the values of the reference samples are aggregated to obtain the threshold for comparison. This parameter uses an expression to specify the query method for the reference samples.</p>
              * 
              * <strong>example:</strong>
              * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -882,7 +879,7 @@ public class UpdateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The threshold calculation method. This parameter is not required when a template is used.</p>
+             * <p>The threshold calculation method. This parameter is optional when a template is used. Valid values:</p>
              * <ul>
              * <li>Fixed</li>
              * <li>Fluctation</li>
@@ -960,7 +957,7 @@ public class UpdateDataQualityRuleRequest extends Request {
             } 
 
             /**
-             * <p>For a custom SQL rule, you must specify the SQL used to filter problematic data.</p>
+             * <p>If the rule is a custom SQL rule, you must specify an SQL statement to filter the error data.</p>
              * 
              * <strong>example:</strong>
              * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
@@ -971,7 +968,7 @@ public class UpdateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The handler type.</p>
+             * <p>The type of the error handler. Valid values:</p>
              * <ul>
              * <li>SaveErrorData</li>
              * </ul>
@@ -1071,23 +1068,23 @@ public class UpdateDataQualityRuleRequest extends Request {
             } 
 
             /**
-             * <p>The name of the metric to sample. This parameter is not required when a template is used.</p>
+             * <p>The name of the sampling metric. This parameter is optional when a template is used. Valid values:</p>
              * <ul>
-             * <li>Count: the number of rows in the table.</li>
-             * <li>Min: the minimum value of the column.</li>
-             * <li>Max: the maximum value of the column.</li>
-             * <li>Avg: the average value of the column.</li>
-             * <li>DistinctCount: the number of distinct values in the column.</li>
-             * <li>DistinctPercent: the ratio of the number of distinct values in the column to the total number of rows.</li>
-             * <li>DuplicatedCount: the number of duplicate values in the column.</li>
-             * <li>DuplicatedPercent: the ratio of the number of duplicate values in the column to the total number of rows.</li>
-             * <li>TableSize: the size of the table.</li>
-             * <li>NullValueCount: the number of rows in which the column is null.</li>
-             * <li>NullValuePercent: the percentage of rows in which the column is null.</li>
-             * <li>GroupCount: the number of data rows for each value after aggregation by column value.</li>
-             * <li>CountNotIn: the number of rows that do not match the enumerated values.</li>
-             * <li>CountDistinctNotIn: the number of distinct values that do not match the enumerated values.</li>
-             * <li>UserDefinedSql: sample collection by using custom SQL.</li>
+             * <li>Count: number of rows in the table</li>
+             * <li>Min: minimum value of the field</li>
+             * <li>Max: maximum value of the field</li>
+             * <li>Avg: average value of the field</li>
+             * <li>DistinctCount: number of unique values in the field</li>
+             * <li>DistinctPercent: ratio of the number of unique values in the field to the number of data rows</li>
+             * <li>DuplicatedCount: number of duplicate values in the field</li>
+             * <li>DuplicatedPercent: ratio of the number of duplicate values in the field to the number of data rows</li>
+             * <li>TableSize: size of the table</li>
+             * <li>NullValueCount: number of rows where the field is null</li>
+             * <li>NullValuePercent: ratio of rows where the field is null</li>
+             * <li>GroupCount: number of data rows corresponding to each value after aggregation by field value</li>
+             * <li>CountNotIn: number of rows that do not match the enumerated values</li>
+             * <li>CountDistinctNotIn: number of unique values that do not match the enumerated values</li>
+             * <li>UserDefinedSql: sample collection by using custom SQL statements</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1110,7 +1107,7 @@ public class UpdateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The condition used to apply secondary filtering on data that is not of interest during sampling. The maximum length is 16,777,215 characters.</p>
+             * <p>The condition used to filter out unneeded data during sampling. It can be up to 16,777,215 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>id IS NULL</p>
@@ -1121,7 +1118,7 @@ public class UpdateDataQualityRuleRequest extends Request {
             }
 
             /**
-             * <p>The runtime parameter setting statements to be inserted and executed before the actual sampling statements. The maximum length is 1,000 characters. Only MaxCompute is supported.</p>
+             * <p>The runtime parameter setting statements that are inserted and executed before the sampling statements are executed. It can be up to 1,000 characters in length. Only MaxCompute is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>SET odps.sql.udf.timeout=600s; 

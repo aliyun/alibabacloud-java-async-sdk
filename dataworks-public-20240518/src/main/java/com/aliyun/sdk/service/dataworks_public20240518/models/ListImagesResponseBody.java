@@ -80,7 +80,7 @@ public class ListImagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The paginated list.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -88,7 +88,7 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * <p>The ID of the request, which is used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -99,7 +99,7 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -168,7 +168,7 @@ public class ListImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The script content. If the content specifies package names, separate them with commas (,).</p>
+             * <p>The script content. If the content consists of installation package names, separate the names with commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>requests</p>
@@ -260,7 +260,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of pre-installation scripts.</p>
+             * <p>The list of pre-installation execution scripts.</p>
              */
             public Builder packageInstallationScripts(java.util.List<PackageInstallationScripts> packageInstallationScripts) {
                 this.packageInstallationScripts = packageInstallationScripts;
@@ -327,9 +327,9 @@ public class ListImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The supported module:</p>
+             * <p>The supported module. Valid values:</p>
              * <ul>
-             * <li>Scheduler: Scheduling.</li>
+             * <li>Scheduler: the scheduling module.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -733,12 +733,10 @@ public class ListImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The accessibility:</p>
+             * <p>The accessibility of the image. Valid values:</p>
              * <ul>
-             * <li><p>Public: Visible to all members.</p>
-             * </li>
-             * <li><p>Private: Visible only to the creator.</p>
-             * </li>
+             * <li>Public: The image is visible to all users.</li>
+             * <li>Private: The image is visible only to the creator.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -750,7 +748,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID associated with the ACR instance.</p>
+             * <p>The ID of the VPC associated with the ACR instance.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-xxx</p>
@@ -791,7 +789,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time, represented as a 64-bit timestamp.</p>
+             * <p>The creation time. This value is a 64-bit timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1727055811000</p>
@@ -824,7 +822,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether synchronization with MaxCompute is enabled.</p>
+             * <p>Indicates whether MaxCompute synchronization is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -890,7 +888,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time, represented as a 64-bit timestamp.</p>
+             * <p>The last modification time. This value is a 64-bit timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1727055811000</p>
@@ -934,7 +932,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the image is an official image.</p>
+             * <p>Specifies whether the image is an official image.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -945,7 +943,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image ID assigned by the provider.</p>
+             * <p>The image ID of the image provider.</p>
              * 
              * <strong>example:</strong>
              * <p>acr_image_id</p>
@@ -956,12 +954,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image provider type:</p>
+             * <p>The image reference data type. Valid values:</p>
              * <ul>
-             * <li><p>ACR: ACR image repository.</p>
-             * </li>
-             * <li><p>DataWorks: DataWorks official image.</p>
-             * </li>
+             * <li>ACR: ACR image repository.</li>
+             * <li>DataWorks: DataWorks official image.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -973,34 +969,21 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The publish stage:</p>
+             * <p>The publishing status. Valid values:</p>
              * <ul>
-             * <li><p>Untest: Not tested.</p>
-             * </li>
-             * <li><p>Testing: Being tested.</p>
-             * </li>
-             * <li><p>TestFailed: Test failed.</p>
-             * </li>
-             * <li><p>Unpublished: Not published.</p>
-             * </li>
-             * <li><p>Publishing: Being published.</p>
-             * </li>
-             * <li><p>Published: Published.</p>
-             * </li>
-             * <li><p>PublishFailed: Publish failed.</p>
-             * </li>
-             * <li><p>Building: Being built.</p>
-             * </li>
-             * <li><p>BuildSuccess: Build succeeded.</p>
-             * </li>
-             * <li><p>BuildFailed: Build failed.</p>
-             * </li>
-             * <li><p>Accelerating: Being accelerated.</p>
-             * </li>
-             * <li><p>AccelerateSuccess: Acceleration succeeded.</p>
-             * </li>
-             * <li><p>AccelerateFailed: Acceleration failed.</p>
-             * </li>
+             * <li>Untest: Not tested.</li>
+             * <li>Testing: Testing.</li>
+             * <li>TestFailed: Test failed.</li>
+             * <li>Unpublished: Unpublished.</li>
+             * <li>Publishing: Publishing.</li>
+             * <li>Published: Published.</li>
+             * <li>PublishFailed: Publish failed.</li>
+             * <li>Building: Building.</li>
+             * <li>BuildSuccess: Build succeeded.</li>
+             * <li>BuildFailed: Build failed.</li>
+             * <li>Accelerating: Accelerating.</li>
+             * <li>AccelerateSuccess: Acceleration succeeded.</li>
+             * <li>AccelerateFailed: Acceleration failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1034,16 +1017,12 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image status:</p>
+             * <p>The image status. Valid values:</p>
              * <ul>
-             * <li><p>Disabled: The image is disabled.</p>
-             * </li>
-             * <li><p>Expired: The image has expired.</p>
-             * </li>
-             * <li><p>Available: The image is available.</p>
-             * </li>
-             * <li><p>ReadOnly: The image is read-only.</p>
-             * </li>
+             * <li>Disabled: The image is disabled.</li>
+             * <li>Expired: The image has expired.</li>
+             * <li>Available: The image is available.</li>
+             * <li>ReadOnly: The image is read-only.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1159,7 +1138,7 @@ public class ListImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of image details.</p>
+             * <p>The list of retrieved image details.</p>
              */
             public Builder imageList(java.util.List<ImageList> imageList) {
                 this.imageList = imageList;
@@ -1178,7 +1157,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1189,7 +1168,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total number of data entries.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

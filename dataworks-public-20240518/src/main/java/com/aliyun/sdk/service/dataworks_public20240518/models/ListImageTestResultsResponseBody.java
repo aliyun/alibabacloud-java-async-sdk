@@ -252,7 +252,7 @@ public class ListImageTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation time, represented as a 64-bit timestamp.</p>
+             * <p>The operation time, which is a 64-bit timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1727055811000</p>
@@ -274,7 +274,7 @@ public class ListImageTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The publish stage of the image.</p>
+             * <p>The image publishing stage.</p>
              * 
              * <strong>example:</strong>
              * <p>UNPUBLISHED</p>

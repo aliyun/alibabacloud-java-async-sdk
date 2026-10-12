@@ -223,7 +223,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The list of child Agents that can be called by this Agent.</p>
+         * <p>The list of child agents that can be called by this agent.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -238,7 +238,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The description of the Agent.</p>
+         * <p>The description of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>Data analytics assistant</p>
@@ -250,10 +250,10 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The display name of the Agent.</p>
+         * <p>The display name of the agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>MyAssistant</p>
+         * <p>My Assistant</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -262,7 +262,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The extended metadata (key-value pairs).</p>
+         * <p>The extended metadata in key-value pairs.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -290,7 +290,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The Agent name, which must be unique within the current account.</p>
+         * <p>The name of the agent. The name must be unique within the current account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -321,7 +321,7 @@ public class CreateAgentRequest extends Request {
          * <p>The system prompt.</p>
          * 
          * <strong>example:</strong>
-         * <p>You are a data analytics assistant.</p>
+         * <p>You are a data analytics assistant</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.putBodyParameter("SystemPrompt", systemPrompt);
@@ -347,7 +347,7 @@ public class CreateAgentRequest extends Request {
         /**
          * <p>The visibility level.<br>
          * <code>TENANT</code>: Visible within the account.<br>
-         * <code>PROJECT</code>: Visible to a specified project.<br>
+         * <code>PROJECT</code>: Visible to specified projects.<br>
          * <code>USER</code>: Visible to specified users.</p>
          * 
          * <strong>example:</strong>
@@ -360,7 +360,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The visibility scope. The corresponding field is determined by the Visibility parameter.</p>
+         * <p>The visibility scope. The corresponding field is used based on the visibility level.</p>
          */
         public Builder visibilityScope(VisibilityScope visibilityScope) {
             String visibilityScopeShrink = shrink(visibilityScope, "VisibilityScope", "json");
@@ -416,7 +416,7 @@ public class CreateAgentRequest extends Request {
             } 
 
             /**
-             * <p>The Agent name.</p>
+             * <p>The name of the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-1</p>
@@ -473,7 +473,7 @@ public class CreateAgentRequest extends Request {
             } 
 
             /**
-             * <p>The skill name.</p>
+             * <p>The name of the skill.</p>
              * 
              * <strong>example:</strong>
              * <p>skill-1</p>
@@ -530,7 +530,7 @@ public class CreateAgentRequest extends Request {
             } 
 
             /**
-             * <p>The McpServer name.</p>
+             * <p>The name of the McpServer.</p>
              * 
              * <strong>example:</strong>
              * <p>server-1</p>
@@ -600,7 +600,7 @@ public class CreateAgentRequest extends Request {
             } 
 
             /**
-             * <p>The list of project IDs to which the Agent is visible. This parameter takes effect only when Visibility is set to <code>PROJECT</code>.</p>
+             * <p>The list of visible project IDs. This parameter takes effect when Visibility is set to <code>PROJECT</code>.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -608,7 +608,7 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * <p>The list of user IDs to which the Agent is visible. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
+             * <p>The list of visible user IDs. This parameter takes effect when Visibility is set to <code>USER</code>.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;

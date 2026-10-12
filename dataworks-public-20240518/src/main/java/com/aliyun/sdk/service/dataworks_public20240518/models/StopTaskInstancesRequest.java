@@ -96,7 +96,7 @@ public class StopTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The remarks.</p>
+         * <p>The comment.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a comment</p>
@@ -108,7 +108,7 @@ public class StopTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The list of instance IDs.</p>
+         * <p>The list of task instance IDs.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");

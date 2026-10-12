@@ -80,7 +80,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request, which is used to locate logs and troubleshoot issues.</p>
+         * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -91,7 +91,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed information of the resource group.</p>
+         * <p>The resource group details.</p>
          */
         public Builder resourceGroup(ResourceGroup resourceGroup) {
             this.resourceGroup = resourceGroup;
@@ -99,7 +99,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -505,7 +505,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time, represented as a 64-bit timestamp.</p>
+             * <p>The creation time, which is a 64-bit timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1727055811000</p>
@@ -527,7 +527,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the default VPC bound to the resource group.</p>
+             * <p>The ID of the default VPC associated with the general resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-m2et4f3oc8msfbccXXXXX</p>
@@ -538,7 +538,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the default vSwitch bound to the resource group.</p>
+             * <p>The ID of the default vSwitch associated with the general resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-uf8usrhs7hjd9amsXXXXX</p>
@@ -597,7 +597,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks of the resource group.</p>
+             * <p>The remarks for the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>Create a common resource group for common tasks</p>
@@ -610,7 +610,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             /**
              * <p>The type of the resource group. Valid values:</p>
              * <ul>
-             * <li>CommonV2: new-version general-purpose resource group.</li>
+             * <li>CommonV2: general resource group V2.</li>
              * <li>ExclusiveDataIntegration: exclusive data integration resource group.</li>
              * <li>ExclusiveScheduler: exclusive scheduling resource group.</li>
              * <li>ExclusiveDataService: exclusive data service resource group.</li>
@@ -625,7 +625,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the resource group.</p>
+             * <p>The resource group specification.</p>
              */
             public Builder spec(Spec spec) {
                 this.spec = spec;
@@ -633,17 +633,17 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the resource group. Valid values:</p>
+             * <p>The status of the queried resource group. Valid values:</p>
              * <ul>
-             * <li>Normal: normal (running/in service).</li>
+             * <li>Normal: normal (running or in service).</li>
              * <li>Stop: frozen (expired).</li>
-             * <li>Deleted: deleted (released/destroyed).</li>
-             * <li>Creating: being created.</li>
+             * <li>Deleted: deleted (released or destroyed).</li>
+             * <li>Creating: creating.</li>
              * <li>CreateFailed: creation failed.</li>
-             * <li>Updating: being updated (scaling out/scaling in/specification change in progress).</li>
-             * <li>UpdateFailed: update failed (scale-out failed/upgrade failed).</li>
-             * <li>Deleting: being deleted (being released/being destroyed).</li>
-             * <li>DeleteFailed: deletion failed (release failed/destruction failed).</li>
+             * <li>Updating: updating (scaling in, scaling out, or changing specifications).</li>
+             * <li>UpdateFailed: update failed (scale-in failed or upgrade failed).</li>
+             * <li>Deleting: deleting (releasing or destroying).</li>
+             * <li>DeleteFailed: deletion failed (release failed or destruction failed).</li>
              * <li>Timeout: operation timed out.</li>
              * <li>Freezed: frozen.</li>
              * <li>Starting: starting.</li>

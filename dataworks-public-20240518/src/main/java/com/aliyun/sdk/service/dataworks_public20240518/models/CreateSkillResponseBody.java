@@ -78,9 +78,7 @@ public class CreateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The skill details.</p>
          */
         public Builder skill(Skill skill) {
             this.skill = skill;
@@ -146,7 +144,7 @@ public class CreateSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of visible project IDs.</p>
+             * <p>The IDs of the visible projects.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -154,7 +152,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of visible user IDs. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
+             * <p>The IDs of the visible users. This field is returned only when Visibility is set to USER.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
@@ -312,7 +310,7 @@ public class CreateSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The SKILL.md body content.</p>
+             * <p>The content of the SKILL.md file.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -325,7 +323,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator ID.</p>
+             * <p>The ID of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -336,10 +334,10 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Skill description.</p>
+             * <p>The skill description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Data analytics skill.</p>
+             * <p>Data analytics skill</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -347,7 +345,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time, in millisecond-level UNIX timestamp.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -359,7 +357,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time, in millisecond-level UNIX timestamp.</p>
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -371,7 +369,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who last modified the Skill.</p>
+             * <p>The ID of the last modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -382,7 +380,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Skill name.</p>
+             * <p>The skill name.</p>
              * 
              * <strong>example:</strong>
              * <p>my-skill</p>

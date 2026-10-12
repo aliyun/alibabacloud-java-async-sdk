@@ -67,7 +67,7 @@ public class CreateAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the created Agent.</p>
+         * <p>The details of the created agent.</p>
          */
         public Builder agent(Agent agent) {
             this.agent = agent;
@@ -157,7 +157,7 @@ public class CreateAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time, in millisecond-precision UNIX timestamp.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -169,7 +169,7 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time, in millisecond-precision UNIX timestamp.</p>
+             * <p>The last modification time. The value is a UNIX timestamp in milliseconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -181,7 +181,7 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Agent name.</p>
+             * <p>The name of the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent</p>

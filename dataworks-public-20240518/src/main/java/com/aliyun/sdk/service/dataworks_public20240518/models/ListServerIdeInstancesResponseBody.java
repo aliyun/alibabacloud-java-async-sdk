@@ -93,7 +93,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of records returned in this response.</p>
+         * <p>The maximum number of entries returned in the current response.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -229,7 +229,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ID of the delegated user.</p>
+             * <p>The account ID of the proxied user.</p>
              * 
              * <strong>example:</strong>
              * <p>20933221576142****</p>
@@ -253,9 +253,9 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             /**
              * <p>The user type. Valid values:</p>
              * <ul>
-             * <li>customer: Alibaba Cloud account.</li>
-             * <li>sub: RAM user.</li>
-             * <li>AssumedRoleUser: RAM role.</li>
+             * <li>customer: Alibaba Cloud account</li>
+             * <li>sub: RAM user</li>
+             * <li>AssumedRoleUser: RAM role</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -365,7 +365,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud account ID of the entity that owns the role to be assumed.</p>
+             * <p>The Alibaba Cloud account ID of the entity to which the assumed role belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789012****</p>
@@ -400,8 +400,8 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             /**
              * <p>The role assumption type. Valid values:</p>
              * <ul>
-             * <li>service: assumed by a service.</li>
-             * <li>user: assumed by a user.</li>
+             * <li>service: assumed by a service</li>
+             * <li>user: assumed by a user</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -413,7 +413,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the delegated user.</p>
+             * <p>The information about the proxied user.</p>
              */
             public Builder userInfo(UserInfo userInfo) {
                 this.userInfo = userInfo;
@@ -504,7 +504,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of roles in the credential configuration.</p>
+             * <p>The roles in the credential configuration.</p>
              */
             public Builder roles(java.util.List<Roles> roles) {
                 this.roles = roles;
@@ -514,8 +514,8 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             /**
              * <p>The credential configuration type. Valid values:</p>
              * <ul>
-             * <li>Role: single role assumption.</li>
-             * <li>RoleChain: role chain assumption.</li>
+             * <li>Role: single role assumption</li>
+             * <li>RoleChain: role chain assumption</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -610,7 +610,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of credential configurations.</p>
+             * <p>The credential configurations.</p>
              */
             public Builder configs(java.util.List<Configs> configs) {
                 this.configs = configs;
@@ -618,7 +618,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether credential injection is enabled.</p>
+             * <p>Specifies whether credential injection is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -737,7 +737,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The custom mount properties of the dataset. The content is passed as mount options.</p>
+             * <p>The custom mount attributes of the dataset. The content is passed as mount options.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;fs.oss.download.thread.concurrency&quot;:&quot;10&quot;}</p>
@@ -770,7 +770,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the dataset is mounted in read-only mode.</p>
+             * <p>Specifies whether the dataset is mounted in read-only mode.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -778,7 +778,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URI of the storage service directory for direct mounting.</p>
+             * <p>The URI of the storage service directory used for direct mounting.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://example-bucket/data/</p>
@@ -958,7 +958,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the target container.</p>
+             * <p>The name of the destination container.</p>
              * 
              * <strong>example:</strong>
              * <p>dsw-notebook</p>
@@ -980,7 +980,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the port forwarding configuration is enabled.</p>
+             * <p>Specifies whether the port forwarding configuration is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -999,7 +999,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target port in the instance container.</p>
+             * <p>The destination port in the instance container.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -1447,7 +1447,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential injection configuration of the instance. After this feature is enabled, you can use the default RAM role chain or specify a custom RAM role.</p>
+             * <p>The credential injection configuration of the instance. After this feature is enabled, you can use the default Resource Access Management (RAM) role chain or specify a custom RAM role.</p>
              */
             public Builder credentialConfig(CredentialConfig credentialConfig) {
                 this.credentialConfig = credentialConfig;
@@ -1455,7 +1455,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CUs used by the instance.</p>
+             * <p>The number of compute units (CUs) used by the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1466,7 +1466,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of datasets mounted to the instance.</p>
+             * <p>The datasets mounted to the instance.</p>
              */
             public Builder datasets(java.util.List<Datasets> datasets) {
                 this.datasets = datasets;
@@ -1496,7 +1496,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image name.</p>
+             * <p>The name of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>serveride_notebook</p>
@@ -1507,7 +1507,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image URL.</p>
+             * <p>The URL of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>registry.cn-hangzhou.aliyuncs.com/example/serveride:latest</p>
@@ -1518,7 +1518,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The personal development environment instance ID.</p>
+             * <p>The ID of the personal development environment instance.</p>
              * 
              * <strong>example:</strong>
              * <p>699573</p>
@@ -1529,7 +1529,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The personal development environment instance name.</p>
+             * <p>The name of the personal development environment instance.</p>
              * 
              * <strong>example:</strong>
              * <p>notebook_dev</p>
@@ -1540,7 +1540,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ID of the user who owns the instance.</p>
+             * <p>The account ID of the user that owns the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>20933221576142****</p>
@@ -1562,7 +1562,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DataWorks workspace name.</p>
+             * <p>The name of the DataWorks workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>example_project</p>
@@ -1584,7 +1584,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group name.</p>
+             * <p>The name of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>serverless_group</p>
@@ -1617,7 +1617,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC configuration used by the instance.</p>
+             * <p>The virtual private cloud (VPC) configuration used by the instance.</p>
              */
             public Builder userVpc(UserVpc userVpc) {
                 this.userVpc = userVpc;
@@ -1729,7 +1729,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of records per page.</p>
+             * <p>The number of entries returned on the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1740,7 +1740,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records that match the filter conditions.</p>
+             * <p>The total number of entries that meet the query conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

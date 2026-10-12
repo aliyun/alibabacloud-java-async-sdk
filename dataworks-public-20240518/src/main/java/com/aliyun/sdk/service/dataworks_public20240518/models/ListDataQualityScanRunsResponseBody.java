@@ -264,7 +264,8 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The start time of the data quality scan run.</p>
+             * <p>The start time of the data quality monitoring run.</p>
+             * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1710239005403</p>
@@ -275,7 +276,8 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the data quality scan run.</p>
+             * <p>The end time of the data quality monitoring run.</p>
+             * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1710239005403</p>
@@ -286,7 +288,7 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data quality scan run.</p>
+             * <p>The ID of the data quality monitoring run record.</p>
              * 
              * <strong>example:</strong>
              * <p>3155</p>
@@ -297,7 +299,7 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters used for the run.</p>
+             * <p>The parameter settings used during the actual run.</p>
              */
             public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
@@ -305,18 +307,13 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the data quality scan run. Valid values:</p>
+             * <p>The current run status. Valid values:</p>
              * <ul>
-             * <li><p>Pass</p>
-             * </li>
-             * <li><p>Running</p>
-             * </li>
-             * <li><p>Error</p>
-             * </li>
-             * <li><p>Warn</p>
-             * </li>
-             * <li><p>Fail</p>
-             * </li>
+             * <li>Pass</li>
+             * <li>Running</li>
+             * <li>Error</li>
+             * <li>Warn</li>
+             * <li>Fail</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -413,7 +410,7 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of data quality scan runs.</p>
+             * <p>The list of data quality monitoring run records.</p>
              */
             public Builder dataQualityScanRuns(java.util.List<DataQualityScanRuns> dataQualityScanRuns) {
                 this.dataQualityScanRuns = dataQualityScanRuns;
@@ -421,7 +418,7 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number. The default value is 1.</p>
+             * <p>The page number. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -432,7 +429,7 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page. The default value is 10.</p>
+             * <p>The number of entries per page. Default value: 10.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

@@ -141,14 +141,12 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The connection configurations of the data source, including the connection address, access identity, and environment information. The envType parameter specifies the environment in which the data source is used. Valid values of the envType parameter:</p>
+         * <p>The specific connection configuration of the data source, including the endpoint, access identity, and environment context. The EnvType property of the data source environment is a member attribute of this object. Valid values:</p>
          * <ul>
-         * <li><p>Dev: development environment</p>
-         * </li>
-         * <li><p>Prod: production environment</p>
-         * </li>
+         * <li>Dev: development environment.</li>
+         * <li>Prod: production environment.</li>
          * </ul>
-         * <p>The parameters that you need to configure for the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection information (ConnectionProperties)</a>.</p>
+         * <p>Different types of data sources have different attribute specifications in different configuration patterns (ConnectionPropertiesMode). For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Connection properties</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,12 +167,10 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The mode in which the data source is added. The mode varies based on the data source type. Valid values:</p>
+         * <p>The category used to add the data source. Different types have different subtypes and corresponding parameter constraints. Examples:</p>
          * <ul>
-         * <li><p>InstanceMode: instance mode</p>
-         * </li>
-         * <li><p>UrlMode: connection string mode</p>
-         * </li>
+         * <li>InstanceMode: instance mode.</li>
+         * <li>UrlMode: connection string mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +183,7 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The description of the data source. The description cannot exceed 3,000 characters in length.</p>
+         * <p>The description of the data source. The description can be up to 3,000 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -199,7 +195,7 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The data source ID.</p>
+         * <p>The unique identifier of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +208,7 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the DataWorks workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

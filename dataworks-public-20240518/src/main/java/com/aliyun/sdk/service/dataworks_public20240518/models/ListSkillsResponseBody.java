@@ -207,10 +207,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p><strong>The Skill description.</strong></p>
+             * <p><strong>The skill description.</strong></p>
              * 
              * <strong>example:</strong>
-             * <p>Data analysis skill</p>
+             * <p>Data analytics skill</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -219,6 +219,7 @@ public class ListSkillsResponseBody extends TeaModel {
 
             /**
              * <p>The creation time.</p>
+             * <p>The format is a 13-digit number, such as <code>1780555634000</code>.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -230,7 +231,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p><strong>The modifier ID.</strong></p>
+             * <p><strong>The ID of the last modifier.</strong></p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -241,7 +242,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p><strong>The Skill name.</strong></p>
+             * <p><strong>The skill name.</strong></p>
              * 
              * <strong>example:</strong>
              * <p>my-skill</p>
@@ -348,7 +349,7 @@ public class ListSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum number of results returned in this response.</p>
+             * <p>The maximum number of entries returned in this request.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -359,7 +360,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token for the next page of results. This parameter is null or empty if all results have been returned.</p>
+             * <p>The token for the next page. An empty value indicates that the last page has been reached.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -370,7 +371,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of Skills.</p>
+             * <p>The list of skills.</p>
              */
             public Builder skills(java.util.List<Skills> skills) {
                 this.skills = skills;
@@ -378,7 +379,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of results that match the query.</p>
+             * <p>The total number of matching entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

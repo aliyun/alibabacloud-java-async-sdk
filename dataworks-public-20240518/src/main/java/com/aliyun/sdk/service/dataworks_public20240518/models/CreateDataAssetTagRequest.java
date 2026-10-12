@@ -140,7 +140,7 @@ public class CreateDataAssetTagRequest extends Request {
         }
 
         /**
-         * <p>The label description.</p>
+         * <p>The tag description.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a description</p>
@@ -152,7 +152,7 @@ public class CreateDataAssetTagRequest extends Request {
         }
 
         /**
-         * <p>The label key.</p>
+         * <p>The tag key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class CreateDataAssetTagRequest extends Request {
         }
 
         /**
-         * <p>The list of label administrators.</p>
+         * <p>The list of tag administrators.</p>
          */
         public Builder managers(java.util.List<String> managers) {
             String managersShrink = shrink(managers, "Managers", "json");
@@ -175,7 +175,7 @@ public class CreateDataAssetTagRequest extends Request {
         }
 
         /**
-         * <p>The label value type. Valid values:</p>
+         * <p>The tag value type. Valid values:</p>
          * <ul>
          * <li>Boolean</li>
          * <li>Int</li>
@@ -193,7 +193,7 @@ public class CreateDataAssetTagRequest extends Request {
         }
 
         /**
-         * <p>The list of label values.</p>
+         * <p>The list of tag values.</p>
          */
         public Builder values(java.util.List<String> values) {
             String valuesShrink = shrink(values, "Values", "json");

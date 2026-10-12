@@ -263,7 +263,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether auto-renewal is enabled.</p>
+         * <p>Specifies whether to enable auto-renewal.</p>
          */
         public Builder autoRenewEnabled(Boolean autoRenewEnabled) {
             this.putBodyParameter("AutoRenewEnabled", autoRenewEnabled);
@@ -272,7 +272,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The client idempotency token that is used to ensure the idempotence of the create resource group operation.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the common resource group. The name must start with a letter and can contain letters, digits, and underscores (_), up to 128 characters.</p>
+         * <p>The name of the general-purpose resource group. It must start with a letter and can contain letters, digits, and underscores (_). It can be up to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -298,7 +298,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The payment duration.</p>
+         * <p>The billing duration.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -310,11 +310,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The unit of the payment duration. Valid values:</p>
-         * <ul>
-         * <li>Month: monthly subscription.</li>
-         * <li>Year: yearly subscription.</li>
-         * </ul>
+         * <p>The unit of the billing duration. Month indicates months, and Year indicates years.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -326,11 +322,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The payment type of the resource group. Valid values:</p>
-         * <ul>
-         * <li>PrePaid: subscription.</li>
-         * <li>PostPaid: pay-as-you-go.</li>
-         * </ul>
+         * <p>The billing method of the resource group. PrePaid indicates subscription, and PostPaid indicates pay-as-you-go.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -343,7 +335,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The remarks for the common resource group. The remarks can contain letters, Chinese characters, digits, and underscores (_), up to 128 characters.</p>
+         * <p>The remark of the general-purpose resource group. It can contain letters, Chinese characters, digits, and underscores (_). It can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Create a serverless resource group for common tasks</p>
@@ -355,7 +347,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The resource group specification, in CUs. This parameter is required when the payment type is PrePaid.</p>
+         * <p>The specifications of the resource group. Unit: CU. This parameter is required when the billing method of the resource group is PrePaid.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -367,7 +359,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC to associate by default.</p>
+         * <p>The ID of the default VPC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -380,7 +372,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch to associate by default.</p>
+         * <p>The ID of the default vSwitch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -452,7 +444,7 @@ public class CreateResourceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -463,7 +455,7 @@ public class CreateResourceGroupRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>

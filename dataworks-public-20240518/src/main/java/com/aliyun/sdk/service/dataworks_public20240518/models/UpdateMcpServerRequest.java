@@ -153,7 +153,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The new custom request headers (key-value pairs).</p>
+         * <p>The new custom request headers in key-value pairs.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -166,7 +166,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The name of the MCP Server to update.</p>
+         * <p>The name of the MCP server to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The new visibility scope. Provide the corresponding field based on the Visibility setting.</p>
+         * <p>The new visibility scope. Specify the corresponding fields based on the <code>Visibility</code> value.</p>
          */
         public Builder visibilityScope(VisibilityScope visibilityScope) {
             String visibilityScopeShrink = shrink(visibilityScope, "VisibilityScope", "json");
@@ -284,7 +284,7 @@ public class UpdateMcpServerRequest extends Request {
             } 
 
             /**
-             * <p>The list of visible project IDs. This parameter takes effect only when Visibility is set to <code>PROJECT</code>.</p>
+             * <p>The list of visible project IDs. This field takes effect when <code>Visibility</code> is set to <code>PROJECT</code>.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -292,7 +292,7 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The list of visible user IDs. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
+             * <p>The list of visible user IDs. This field takes effect when <code>Visibility</code> is set to <code>USER</code>.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
