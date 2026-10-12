@@ -136,7 +136,7 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
@@ -149,8 +149,8 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -311,7 +311,7 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The payment method.</p>
+             * <p>The billing method.</p>
              * 
              * <strong>example:</strong>
              * <p>prepay</p>
@@ -322,7 +322,7 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud Managed Services instance ID.</p>
+             * <p>The instance ID of Alibaba Cloud Managed Services.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-2zelo5v5u0678jx04</p>
@@ -333,7 +333,7 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether DAS Economy Edition is enabled.</p>
+             * <p>Indicates whether the DAS Economy Edition is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -344,7 +344,7 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Alibaba Cloud Managed Services feature is enabled (including DAS Economy Edition).</p>
+             * <p>Indicates whether the Alibaba Cloud Managed Services feature (including DAS Economy Edition) is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -374,7 +374,7 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order ID.</p>
+             * <p>The ID of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>285412912420536</p>
@@ -385,7 +385,7 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time.</p>
+             * <p>The start time of Alibaba Cloud Managed Services. The format is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1672531200000</p>
@@ -396,16 +396,16 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status. Valid values:</p>
+             * <p>The status of the task. Valid values:</p>
              * <ul>
-             * <li><strong>INIT</strong>: Pending scheduling.</li>
+             * <li><strong>INIT</strong>: Pending.</li>
              * <li><strong>RUNNING</strong>: Running.</li>
              * <li><strong>FAILED</strong>: Failed.</li>
              * <li><strong>CANCELED</strong>: Canceled.</li>
              * <li><strong>COMPLETED</strong>: Completed.</li>
              * </ul>
              * <blockquote>
-             * <p>When the task is in the <strong>COMPLETED</strong> state, you can view the task result.</p>
+             * <p>When the task is in the <strong>COMPLETED</strong> state, you can view the task results.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

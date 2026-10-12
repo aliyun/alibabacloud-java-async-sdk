@@ -22,6 +22,10 @@ public class ChatRequest extends Request {
     private String agentId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardedProps")
+    private String forwardedProps;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
@@ -40,6 +44,7 @@ public class ChatRequest extends Request {
     private ChatRequest(Builder builder) {
         super(builder);
         this.agentId = builder.agentId;
+        this.forwardedProps = builder.forwardedProps;
         this.message = builder.message;
         this.resume = builder.resume;
         this.sessionId = builder.sessionId;
@@ -64,6 +69,13 @@ public class ChatRequest extends Request {
      */
     public String getAgentId() {
         return this.agentId;
+    }
+
+    /**
+     * @return forwardedProps
+     */
+    public String getForwardedProps() {
+        return this.forwardedProps;
     }
 
     /**
@@ -96,6 +108,7 @@ public class ChatRequest extends Request {
 
     public static final class Builder extends Request.Builder<ChatRequest, Builder> {
         private String agentId; 
+        private String forwardedProps; 
         private String message; 
         private String resume; 
         private String sessionId; 
@@ -108,6 +121,7 @@ public class ChatRequest extends Request {
         private Builder(ChatRequest request) {
             super(request);
             this.agentId = request.agentId;
+            this.forwardedProps = request.forwardedProps;
             this.message = request.message;
             this.resume = request.resume;
             this.sessionId = request.sessionId;
@@ -115,7 +129,7 @@ public class ChatRequest extends Request {
         } 
 
         /**
-         * <p>The agent ID used for the service. This parameter is optional. You can specify an agent generated after DAS Agent is enabled or an agent that you manually created. If this parameter is not specified, the default agent is used.</p>
+         * <p>Optional. The agent ID used for the service. You can specify the agent generated after enabling the DAS Agent or a manually created agent. If not specified, the default agent is used.</p>
          * 
          * <strong>example:</strong>
          * <p>ag-472T0DxtmjIxxxxx</p>
@@ -123,6 +137,18 @@ public class ChatRequest extends Request {
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
             this.agentId = agentId;
+            return this;
+        }
+
+        /**
+         * <p>The forwarded properties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;enableInteractiveTools&quot;:true}</p>
+         */
+        public Builder forwardedProps(String forwardedProps) {
+            this.putQueryParameter("ForwardedProps", forwardedProps);
+            this.forwardedProps = forwardedProps;
             return this;
         }
 
@@ -151,7 +177,7 @@ public class ChatRequest extends Request {
         }
 
         /**
-         * <p>The session ID in UUID string format. This parameter is optional. If this parameter is not specified, a new session is created by default. To maintain context across conversations, use the same session ID.</p>
+         * <p>Optional. The session ID, which is a UUID string. If not specified, a new session is created by default. The same session ID must be maintained for contextual conversations.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>

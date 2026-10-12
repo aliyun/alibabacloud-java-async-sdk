@@ -118,9 +118,9 @@ public class GetDeadlockHistogramRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. The format is a UNIX timestamp in milliseconds.</p>
+         * <p>The end time of the query. The format is a UNIX timestamp in milliseconds.</p>
          * <blockquote>
-         * <p>Notice: The value is of the Long type. Precision loss may occur during the serialization/deserialization procedure. The value must not be greater than 9007199254740991.</notice></p>
+         * <p>Notice: This field is of the Long type. Precision loss may occur during serialization or deserialization. Ensure that the value does not exceed 9007199254740991.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -149,7 +149,7 @@ public class GetDeadlockHistogramRequest extends Request {
         /**
          * <p>The node ID.</p>
          * <blockquote>
-         * <p>For PolarDB for MySQL instances, you must specify the node ID.</p>
+         * <p>For a PolarDB for MySQL instance, you must specify the node ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -162,12 +162,12 @@ public class GetDeadlockHistogramRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The format is a UNIX timestamp in milliseconds.</p>
+         * <p>The start time of the query. The format is a UNIX timestamp in milliseconds.</p>
          * <blockquote>
-         * <p>The start time can be at most 7 days earlier than the end time.</p>
+         * <p>The start time cannot be more than 7 days earlier than the end time.</p>
          * </blockquote>
          * <blockquote>
-         * <p>Notice: The value is of the Long type. Precision loss may occur during the serialization/deserialization procedure. The value must not be greater than 9007199254740991.</notice></p>
+         * <p>Notice: This field is of the Long type. Precision loss may occur during serialization or deserialization. Ensure that the value does not exceed 9007199254740991.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

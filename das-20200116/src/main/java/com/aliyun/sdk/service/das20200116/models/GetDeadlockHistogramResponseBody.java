@@ -150,9 +150,9 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>true</strong>: The request was successful.</li>
          * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
@@ -301,7 +301,7 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the analysis task range.</p>
+             * <p>The end time of the analysis task range. The time is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1729998000000</p>
@@ -345,7 +345,7 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the analysis task range.</p>
+             * <p>The start time of the analysis task range. The time is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1729994400000</p>
@@ -358,8 +358,8 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
             /**
              * <p>The task status. Valid values:</p>
              * <ul>
-             * <li><strong>SUCCESS</strong>: The analysis is successful.</li>
-             * <li><strong>FAILED</strong>: The analysis failed or encountered an exception.</li>
+             * <li><strong>SUCCESS</strong>: The analysis was successful.</li>
+             * <li><strong>FAILED</strong>: The analysis is abnormal or failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -371,7 +371,7 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The full deadlock analysis task ID.</p>
+             * <p>The ID of the full deadlock analysis task.</p>
              * 
              * <strong>example:</strong>
              * <p>B6D17591-B48B-4D31-9CD6-1321B394****</p>
