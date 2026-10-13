@@ -106,7 +106,10 @@ public class AgenticTableColumn extends TeaModel {
         } 
 
         /**
-         * <p>The name of the column.</p>
+         * <p>The column name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder columnName(String columnName) {
             this.columnName = columnName;
@@ -114,7 +117,10 @@ public class AgenticTableColumn extends TeaModel {
         }
 
         /**
-         * <p>The data type of the column.</p>
+         * <p>The column type, which is the native type definition of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bigint</p>
          */
         public Builder columnType(String columnType) {
             this.columnType = columnType;
@@ -122,7 +128,10 @@ public class AgenticTableColumn extends TeaModel {
         }
 
         /**
-         * <p>The description of the column.</p>
+         * <p>The column description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary key ID</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -130,7 +139,7 @@ public class AgenticTableColumn extends TeaModel {
         }
 
         /**
-         * <p>Engine-specific metadata for the column.</p>
+         * <p>The engine metadata of the column.</p>
          */
         public Builder engineMeta(AgenticTableColumnEngineMeta engineMeta) {
             this.engineMeta = engineMeta;
@@ -138,7 +147,10 @@ public class AgenticTableColumn extends TeaModel {
         }
 
         /**
-         * <p>The 1-based ordinal position of the column within the table.</p>
+         * <p>The position of the column in the table, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder position(Integer position) {
             this.position = position;

@@ -468,7 +468,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Lists accuracy test configuration items that meet the specified conditions.</p>
+     * <p>Lists the accuracy test configuration items that meet the specified conditions.</p>
      * 
      * @param request the request parameters of ListDataAgentAccuracyTestInstances  ListDataAgentAccuracyTestInstancesRequest
      * @return ListDataAgentAccuracyTestInstancesResponse

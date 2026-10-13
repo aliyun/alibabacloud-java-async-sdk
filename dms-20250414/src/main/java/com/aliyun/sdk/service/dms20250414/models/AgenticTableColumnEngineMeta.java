@@ -171,7 +171,10 @@ public class AgenticTableColumnEngineMeta extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the column uses auto-increment.</p>
+         * <p>Specifies whether the field is auto-incremented.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoIncrement(Boolean autoIncrement) {
             this.autoIncrement = autoIncrement;
@@ -179,7 +182,10 @@ public class AgenticTableColumnEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>The data length of the column. This parameter typically applies to string and binary data types.</p>
+         * <p>The defined length of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder dataLength(Long dataLength) {
             this.dataLength = dataLength;
@@ -187,7 +193,10 @@ public class AgenticTableColumnEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>The data precision of the column, which is the total number of digits in a numeric type.</p>
+         * <p>The precision of the numeric field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder dataPrecision(Integer dataPrecision) {
             this.dataPrecision = dataPrecision;
@@ -195,7 +204,10 @@ public class AgenticTableColumnEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>The data scale of the column, which is the number of digits to the right of the decimal point in a numeric type.</p>
+         * <p>The scale of the numeric field, which is the number of decimal places.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder dataScale(Integer dataScale) {
             this.dataScale = dataScale;
@@ -203,7 +215,10 @@ public class AgenticTableColumnEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>The default value of the column.</p>
+         * <p>The default value of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder defaultValue(String defaultValue) {
             this.defaultValue = defaultValue;
@@ -211,7 +226,10 @@ public class AgenticTableColumnEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>The character encoding of the column.</p>
+         * <p>The character set of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8mb4</p>
          */
         public Builder encoding(String encoding) {
             this.encoding = encoding;
@@ -219,7 +237,10 @@ public class AgenticTableColumnEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>Engine-specific attributes or flags for the column.</p>
+         * <p>The additional information of the field, such as auto_increment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto_increment</p>
          */
         public Builder extra(String extra) {
             this.extra = extra;
@@ -227,7 +248,10 @@ public class AgenticTableColumnEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the column is a generated column.</p>
+         * <p>Specifies whether the field is a generated column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder generationColumn(Boolean generationColumn) {
             this.generationColumn = generationColumn;
@@ -235,7 +259,10 @@ public class AgenticTableColumnEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>The expression used to generate the column\&quot;s value. Applies only if <code>GenerationColumn</code> is <code>true</code>.</p>
+         * <p>The calculation expression of the generated column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>price * quantity</p>
          */
         public Builder generationExpression(String generationExpression) {
             this.generationExpression = generationExpression;
@@ -243,7 +270,10 @@ public class AgenticTableColumnEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the column is nullable.</p>
+         * <p>Specifies whether the field allows null values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder nullable(Boolean nullable) {
             this.nullable = nullable;

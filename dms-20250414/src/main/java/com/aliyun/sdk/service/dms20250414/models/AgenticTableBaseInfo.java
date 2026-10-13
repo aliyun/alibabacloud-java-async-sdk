@@ -145,7 +145,15 @@ public class AgenticTableBaseInfo extends TeaModel {
         } 
 
         /**
-         * CatalogType.
+         * <p>The type of the catalog to which the table belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>JDBC</strong>: relational database catalog</li>
+         * <li><strong>DataLake</strong>: data lake catalog</li>
+         * <li><strong>Dataset</strong>: knowledge base catalog</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>JDBC</p>
          */
         public Builder catalogType(String catalogType) {
             this.catalogType = catalogType;
@@ -153,7 +161,10 @@ public class AgenticTableBaseInfo extends TeaModel {
         }
 
         /**
-         * DatabaseQualifiedName.
+         * <p>The fully qualified name of the database to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_db</p>
          */
         public Builder databaseQualifiedName(String databaseQualifiedName) {
             this.databaseQualifiedName = databaseQualifiedName;
@@ -161,7 +172,10 @@ public class AgenticTableBaseInfo extends TeaModel {
         }
 
         /**
-         * DatabaseUuid.
+         * <p>The UUID of the database to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>md-HZ-fp9K7r***</p>
          */
         public Builder databaseUuid(String databaseUuid) {
             this.databaseUuid = databaseUuid;
@@ -169,7 +183,10 @@ public class AgenticTableBaseInfo extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Order table</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -177,7 +194,7 @@ public class AgenticTableBaseInfo extends TeaModel {
         }
 
         /**
-         * EngineMeta.
+         * <p>The engine metadata of the table.</p>
          */
         public Builder engineMeta(AgenticTableEngineMeta engineMeta) {
             this.engineMeta = engineMeta;
@@ -185,7 +202,10 @@ public class AgenticTableBaseInfo extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>orders</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -193,7 +213,10 @@ public class AgenticTableBaseInfo extends TeaModel {
         }
 
         /**
-         * QualifiedName.
+         * <p>The fully qualified name of the table. You can use this name as the TableQualifiedName parameter for GetAgenticTableColumn and GetAgenticTableIndex. For SQL Server, the format is schema name.table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>orders</p>
          */
         public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = qualifiedName;
@@ -201,7 +224,16 @@ public class AgenticTableBaseInfo extends TeaModel {
         }
 
         /**
-         * TableType.
+         * <p>The table type. Valid values:</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: regular table</li>
+         * <li><strong>VIEW</strong>: view</li>
+         * <li><strong>FOREIGN</strong>: foreign table</li>
+         * <li><strong>SYNONYM</strong>: synonym, supported only for Oracle data sources</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder tableType(String tableType) {
             this.tableType = tableType;

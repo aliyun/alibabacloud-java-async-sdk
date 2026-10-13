@@ -184,7 +184,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response struct.</p>
+         * <p>The response data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -214,7 +214,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned per page. You can use this parameter together with NextToken to implement paging.</p>
+         * <p>The maximum number of results to return per request. You can use this parameter with NextToken to paginate results.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -225,7 +225,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>zCXS*****</p>
@@ -269,7 +269,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -280,7 +280,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operation timestamp.</p>
+         * <p>The timestamp of the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1768270172</p>
@@ -323,8 +323,14 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
+        private String datasetId;
+
         @com.aliyun.core.annotation.NameInMap("Datasource")
         private String datasource;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
 
         @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
@@ -357,7 +363,9 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             this.accuracyTestInsId = builder.accuracyTestInsId;
             this.agentId = builder.agentId;
             this.creator = builder.creator;
+            this.datasetId = builder.datasetId;
             this.datasource = builder.datasource;
+            this.description = builder.description;
             this.fileId = builder.fileId;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -399,10 +407,24 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return datasetId
+         */
+        public String getDatasetId() {
+            return this.datasetId;
+        }
+
+        /**
          * @return datasource
          */
         public String getDatasource() {
             return this.datasource;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -472,7 +494,9 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             private String accuracyTestInsId; 
             private String agentId; 
             private String creator; 
+            private String datasetId; 
             private String datasource; 
+            private String description; 
             private String fileId; 
             private String gmtCreate; 
             private String gmtModified; 
@@ -490,7 +514,9 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
                 this.accuracyTestInsId = model.accuracyTestInsId;
                 this.agentId = model.agentId;
                 this.creator = model.creator;
+                this.datasetId = model.datasetId;
                 this.datasource = model.datasource;
+                this.description = model.description;
                 this.fileId = model.fileId;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
@@ -536,6 +562,17 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The ID of the test dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-sdg***jkh</p>
+             */
+            public Builder datasetId(String datasetId) {
+                this.datasetId = datasetId;
+                return this;
+            }
+
+            /**
              * <p>The data source.</p>
              * 
              * <strong>example:</strong>
@@ -543,6 +580,17 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
              */
             public Builder datasource(String datasource) {
                 this.datasource = datasource;
+                return this;
+            }
+
+            /**
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
@@ -569,7 +617,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-30T07:31:09.000+00:00</p>
@@ -616,7 +664,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
              * <p>The custom agent name.</p>
              * 
              * <strong>example:</strong>
-             * <p>AgentTestName</p>
+             * <p>Agent test name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -624,7 +672,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether sessions are displayed after analysis. This feature is not supported.</p>
+             * <p>Specifies whether the session is displayed after analysis. This feature is currently not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -635,7 +683,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace ID.</p>
+             * <p>The ID of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>8wfig6l33n4f4xxxxxxxxxx</p>

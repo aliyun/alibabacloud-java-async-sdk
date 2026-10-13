@@ -248,7 +248,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The sort field name.</p>
+         * <p>The name of the field to sort by.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateTime</p>
@@ -260,7 +260,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The starting page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -298,7 +298,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The workspace type.</p>
+         * <p>The workspace type to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

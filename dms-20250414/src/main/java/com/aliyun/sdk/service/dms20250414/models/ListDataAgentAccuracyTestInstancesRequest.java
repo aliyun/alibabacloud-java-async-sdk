@@ -141,7 +141,7 @@ public class ListDataAgentAccuracyTestInstancesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The maximum number of results to return.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -153,7 +153,7 @@ public class ListDataAgentAccuracyTestInstancesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>Nes****</p>
@@ -189,7 +189,7 @@ public class ListDataAgentAccuracyTestInstancesRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>8wfig6l33n4f4xxxxxxxxxx</p>

@@ -17,8 +17,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AgenticResourceOwner</p>
  */
 public class AgenticResourceOwner extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CatalogAlias")
+    private String catalogAlias;
+
+    @com.aliyun.core.annotation.NameInMap("CatalogDataSourceType")
+    private String catalogDataSourceType;
+
+    @com.aliyun.core.annotation.NameInMap("CatalogEnvType")
+    private String catalogEnvType;
+
+    @com.aliyun.core.annotation.NameInMap("CatalogHost")
+    private String catalogHost;
+
+    @com.aliyun.core.annotation.NameInMap("CatalogPort")
+    private String catalogPort;
+
     @com.aliyun.core.annotation.NameInMap("CatalogUuid")
     private String catalogUuid;
+
+    @com.aliyun.core.annotation.NameInMap("DataSourceUuid")
+    private String dataSourceUuid;
 
     @com.aliyun.core.annotation.NameInMap("DatabaseQualifiedName")
     private String databaseQualifiedName;
@@ -42,7 +60,13 @@ public class AgenticResourceOwner extends TeaModel {
     private String resourceType;
 
     private AgenticResourceOwner(Builder builder) {
+        this.catalogAlias = builder.catalogAlias;
+        this.catalogDataSourceType = builder.catalogDataSourceType;
+        this.catalogEnvType = builder.catalogEnvType;
+        this.catalogHost = builder.catalogHost;
+        this.catalogPort = builder.catalogPort;
         this.catalogUuid = builder.catalogUuid;
+        this.dataSourceUuid = builder.dataSourceUuid;
         this.databaseQualifiedName = builder.databaseQualifiedName;
         this.databaseUuid = builder.databaseUuid;
         this.grantBy = builder.grantBy;
@@ -65,10 +89,52 @@ public class AgenticResourceOwner extends TeaModel {
     }
 
     /**
+     * @return catalogAlias
+     */
+    public String getCatalogAlias() {
+        return this.catalogAlias;
+    }
+
+    /**
+     * @return catalogDataSourceType
+     */
+    public String getCatalogDataSourceType() {
+        return this.catalogDataSourceType;
+    }
+
+    /**
+     * @return catalogEnvType
+     */
+    public String getCatalogEnvType() {
+        return this.catalogEnvType;
+    }
+
+    /**
+     * @return catalogHost
+     */
+    public String getCatalogHost() {
+        return this.catalogHost;
+    }
+
+    /**
+     * @return catalogPort
+     */
+    public String getCatalogPort() {
+        return this.catalogPort;
+    }
+
+    /**
      * @return catalogUuid
      */
     public String getCatalogUuid() {
         return this.catalogUuid;
+    }
+
+    /**
+     * @return dataSourceUuid
+     */
+    public String getDataSourceUuid() {
+        return this.dataSourceUuid;
     }
 
     /**
@@ -121,7 +187,13 @@ public class AgenticResourceOwner extends TeaModel {
     }
 
     public static final class Builder {
+        private String catalogAlias; 
+        private String catalogDataSourceType; 
+        private String catalogEnvType; 
+        private String catalogHost; 
+        private String catalogPort; 
         private String catalogUuid; 
+        private String dataSourceUuid; 
         private String databaseQualifiedName; 
         private String databaseUuid; 
         private String grantBy; 
@@ -134,7 +206,13 @@ public class AgenticResourceOwner extends TeaModel {
         } 
 
         private Builder(AgenticResourceOwner model) {
+            this.catalogAlias = model.catalogAlias;
+            this.catalogDataSourceType = model.catalogDataSourceType;
+            this.catalogEnvType = model.catalogEnvType;
+            this.catalogHost = model.catalogHost;
+            this.catalogPort = model.catalogPort;
             this.catalogUuid = model.catalogUuid;
+            this.dataSourceUuid = model.dataSourceUuid;
             this.databaseQualifiedName = model.databaseQualifiedName;
             this.databaseUuid = model.databaseUuid;
             this.grantBy = model.grantBy;
@@ -145,7 +223,62 @@ public class AgenticResourceOwner extends TeaModel {
         } 
 
         /**
-         * <p>The UUID of the Catalog to which the resource belongs.</p>
+         * <p>The instance alias. This display property comes from the catalog to which the resource belongs and is used only for frontend display to align with the data permission list. It is populated only in the My Assets or Managed Resources query scenarios and is null in other scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Production database</p>
+         */
+        public Builder catalogAlias(String catalogAlias) {
+            this.catalogAlias = catalogAlias;
+            return this;
+        }
+
+        /**
+         * <p>The instance data source type, used only for frontend display. It is populated only in the My Assets or Managed Resources query scenarios and is null in other scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MYSQL</p>
+         */
+        public Builder catalogDataSourceType(String catalogDataSourceType) {
+            this.catalogDataSourceType = catalogDataSourceType;
+            return this;
+        }
+
+        /**
+         * <p>The instance environment type, used only for frontend display. It is populated only in the My Assets or Managed Resources query scenarios and is null in other scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
+         */
+        public Builder catalogEnvType(String catalogEnvType) {
+            this.catalogEnvType = catalogEnvType;
+            return this;
+        }
+
+        /**
+         * <p>The instance host, used only for frontend display. Built-in sample data sources are masked as ******. It is populated only in the My Assets or Managed Resources query scenarios and is null in other scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-xxxxxxxx.mysql.rds.aliyuncs.com</p>
+         */
+        public Builder catalogHost(String catalogHost) {
+            this.catalogHost = catalogHost;
+            return this;
+        }
+
+        /**
+         * <p>The instance port, used only for frontend display. Built-in sample data sources are masked as ******. It is populated only in the My Assets or Managed Resources query scenarios and is null in other scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
+         */
+        public Builder catalogPort(String catalogPort) {
+            this.catalogPort = catalogPort;
+            return this;
+        }
+
+        /**
+         * <p>The UUID of the catalog to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>mc-HZ-5d9fbt8wW4AnGZNddXg4f</p>
@@ -156,7 +289,18 @@ public class AgenticResourceOwner extends TeaModel {
         }
 
         /**
-         * <p>The qualified name of the database. This field has a value only when ResourceType is DATABASE and the downstream backfills the value. This field is provided for direct display on the frontend. For MySQL, this is the database name itself. For PostgreSQL or SQL Server, this is in the format of DatabaseName.SchemaName.</p>
+         * <p>The UUID of the instance data source to which the resource belongs. It is used only for frontend display and instance locating. Non-sensitive connection information is not masked. It is populated only in the My Assets or Managed Resources query scenarios and is null in other scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsc-HZ-3f2b9a7c1d</p>
+         */
+        public Builder dataSourceUuid(String dataSourceUuid) {
+            this.dataSourceUuid = dataSourceUuid;
+            return this;
+        }
+
+        /**
+         * <p>The fully qualified name of the database. It has a value only when ResourceType is DATABASE and is populated by the downstream service, which facilitates direct frontend display. For MySQL, it is the database name itself. For PostgreSQL or SQL Server, it is in the format of DatabaseName.SchemaName.</p>
          * 
          * <strong>example:</strong>
          * <p>finance.public</p>
@@ -167,7 +311,7 @@ public class AgenticResourceOwner extends TeaModel {
         }
 
         /**
-         * <p>The UUID of the database. This field has a value only when ResourceType is DATABASE.</p>
+         * <p>The UUID of the database. It has a value only when ResourceType is DATABASE.</p>
          * 
          * <strong>example:</strong>
          * <p>md-HZ-vXR1ezNGjiDjiV13Gos1N</p>
@@ -178,7 +322,7 @@ public class AgenticResourceOwner extends TeaModel {
         }
 
         /**
-         * <p>The principal ID of the operator who registered this ownership relationship. In the &quot;My Assets&quot; scenario, the downstream does not return this field, and the value is null.</p>
+         * <p>The principal ID of the operator who registered the ownership relationship. The downstream service does not return this field in the My Assets query scenario, and the value is null.</p>
          * 
          * <strong>example:</strong>
          * <p>usr_6ieggks7zuy6gpfdmgzsjdso</p>
@@ -189,12 +333,7 @@ public class AgenticResourceOwner extends TeaModel {
         }
 
         /**
-         * <p>The source channel of the ownership. Valid values:</p>
-         * <ul>
-         * <li>CONSOLE: Manually registered in the console.</li>
-         * <li>Other values: Written by the system built-in ownership mechanism.</li>
-         * </ul>
-         * <p>In the &quot;My Assets&quot; scenario, the downstream does not return this field, and the value is null.</p>
+         * <p>The source channel of the ownership. CONSOLE indicates manual registration in the console. Other values indicate that the ownership is written by the built-in system. The downstream service does not return this field in the My Assets query scenario, and the value is null.</p>
          * 
          * <strong>example:</strong>
          * <p>CONSOLE</p>
@@ -205,7 +344,7 @@ public class AgenticResourceOwner extends TeaModel {
         }
 
         /**
-         * <p>The Owner principal ID. This is a gateway internal principal ID with the usr_ or agt_ prefix, not an Alibaba Cloud UID.</p>
+         * <p>The principal ID of the owner. This is the internal principal ID of the gateway with a usr_ or agt_ prefix, not the Alibaba Cloud UID.</p>
          * 
          * <strong>example:</strong>
          * <p>usr_wlwp5a7uruanebg5bbdqqf5n</p>
@@ -216,10 +355,10 @@ public class AgenticResourceOwner extends TeaModel {
         }
 
         /**
-         * <p>The Owner principal type. Valid values:</p>
+         * <p>The principal type of the owner. Valid values:</p>
          * <ul>
          * <li>USER: Human user.</li>
-         * <li>AGENT: Managed Agent.</li>
+         * <li>AGENT: Managed agent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,8 +372,8 @@ public class AgenticResourceOwner extends TeaModel {
         /**
          * <p>The ownership level. Valid values:</p>
          * <ul>
-         * <li>INSTANCE: Instance-level ownership. The coordinate contains only CatalogUuid.</li>
-         * <li>DATABASE: Database-level ownership. The coordinate contains CatalogUuid + DatabaseUuid.</li>
+         * <li>INSTANCE: Instance-level ownership. The coordinate includes only CatalogUuid.</li>
+         * <li>DATABASE: Database-level ownership. The coordinate includes CatalogUuid and DatabaseUuid.</li>
          * </ul>
          * 
          * <strong>example:</strong>
