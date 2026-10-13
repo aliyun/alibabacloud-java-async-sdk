@@ -138,7 +138,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The workspace key. If this parameter is not specified, the default workspace is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -147,7 +150,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Introduction.
+         * <p>The description of the chatbot. The description can be up to 50 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A sample chatbot for the mobile app</p>
          */
         public Builder introduction(String introduction) {
             this.putQueryParameter("Introduction", introduction);
@@ -156,7 +162,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * LanguageCode.
+         * <p>The language of the chatbot service, such as zh-cn or en-us. Default value: the default language of the workspace. Valid values: the languages supported by the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-cn</p>
          */
         public Builder languageCode(String languageCode) {
             this.putQueryParameter("LanguageCode", languageCode);
@@ -165,7 +174,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the chatbot. The name can be up to 50 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleChatbot</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -174,7 +186,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * RobotType.
+         * <p>The type of the chatbot. Default value: scenario_im.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scenario_im</p>
          */
         public Builder robotType(String robotType) {
             this.putQueryParameter("RobotType", robotType);

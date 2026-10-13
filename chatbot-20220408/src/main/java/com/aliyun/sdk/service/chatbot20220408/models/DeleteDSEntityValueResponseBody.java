@@ -67,7 +67,10 @@ public class DeleteDSEntityValueResponseBody extends TeaModel {
         } 
 
         /**
-         * EntityValueId.
+         * <p>The entity member ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3453453452</p>
          */
         public Builder entityValueId(Long entityValueId) {
             this.entityValueId = entityValueId;
@@ -75,7 +78,10 @@ public class DeleteDSEntityValueResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfdf2t3rfvb45y</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

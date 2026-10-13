@@ -155,7 +155,10 @@ public class UpdateSolutionRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The workspace key. If this parameter is not specified, the default workspace is accessed. You can obtain the key from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -164,7 +167,11 @@ public class UpdateSolutionRequest extends Request {
         }
 
         /**
+         * <p>The answer content.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Updated answer content</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -173,7 +180,14 @@ public class UpdateSolutionRequest extends Request {
         }
 
         /**
-         * ContentType.
+         * <p>The answer type. Valid values:</p>
+         * <ul>
+         * <li>0: plain text</li>
+         * <li>1: rich text</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder contentType(Integer contentType) {
             this.putBodyParameter("ContentType", contentType);
@@ -182,6 +196,7 @@ public class UpdateSolutionRequest extends Request {
         }
 
         /**
+         * <p>The list of perspective codes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder perspectiveCodes(java.util.List<String> perspectiveCodes) {
@@ -191,6 +206,7 @@ public class UpdateSolutionRequest extends Request {
         }
 
         /**
+         * <p>The answer ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +219,7 @@ public class UpdateSolutionRequest extends Request {
         }
 
         /**
-         * TagIdList.
+         * <p>The list of tag IDs.</p>
          */
         public Builder tagIdList(java.util.List<Long> tagIdList) {
             String tagIdListShrink = shrink(tagIdList, "TagIdList", "json");

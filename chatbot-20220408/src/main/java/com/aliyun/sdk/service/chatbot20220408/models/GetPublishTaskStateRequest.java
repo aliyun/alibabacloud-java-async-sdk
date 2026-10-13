@@ -96,7 +96,10 @@ public class GetPublishTaskStateRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The key of the business space. If this parameter is not specified, the default business space is accessed. Obtain the key value from the business management page of the primary account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -105,7 +108,10 @@ public class GetPublishTaskStateRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the publish task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8521</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

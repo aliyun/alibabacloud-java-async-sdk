@@ -67,7 +67,10 @@ public class DeletePerspectiveResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC384CE1-8D42-1900-84E1-F33F990F2B5E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class DeletePerspectiveResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result of deleting the perspective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

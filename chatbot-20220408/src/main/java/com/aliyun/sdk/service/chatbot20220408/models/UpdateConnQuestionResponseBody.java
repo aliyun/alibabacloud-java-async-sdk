@@ -54,7 +54,10 @@ public class UpdateConnQuestionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>004EB5C0-9DEB-53BF-A57A-0407A6D6B3C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

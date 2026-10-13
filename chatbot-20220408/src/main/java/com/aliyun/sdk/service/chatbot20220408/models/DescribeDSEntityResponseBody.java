@@ -184,7 +184,10 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -192,7 +195,10 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * CreateUserId.
+         * <p>The ID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123231</p>
          */
         public Builder createUserId(String createUserId) {
             this.createUserId = createUserId;
@@ -200,7 +206,10 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * CreateUserName.
+         * <p>The name of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder createUserName(String createUserName) {
             this.createUserName = createUserName;
@@ -208,7 +217,10 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * EntityId.
+         * <p>The entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder entityId(Long entityId) {
             this.entityId = entityId;
@@ -216,7 +228,10 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * EntityName.
+         * <p>The entity name. Only Chinese characters, uppercase and lowercase letters, digits, and underscores are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BookType</p>
          */
         public Builder entityName(String entityName) {
             this.entityName = entityName;
@@ -224,7 +239,10 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * EntityType.
+         * <p>The entity type. Valid values: synonyms (synonym) and regex (regular expression).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>synonyms</p>
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
@@ -232,7 +250,10 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The modification time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -240,7 +261,10 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyUserId.
+         * <p>The unique identifier of the modifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123231</p>
          */
         public Builder modifyUserId(String modifyUserId) {
             this.modifyUserId = modifyUserId;
@@ -248,7 +272,10 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyUserName.
+         * <p>The name of the modifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder modifyUserName(String modifyUserName) {
             this.modifyUserName = modifyUserName;
@@ -256,7 +283,10 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad23234dsf234fga</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +294,10 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * SysEntityCode.
+         * <p>The system entity code, such as sys.date. This parameter is empty for user entities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sys.date</p>
          */
         public Builder sysEntityCode(String sysEntityCode) {
             this.sysEntityCode = sysEntityCode;

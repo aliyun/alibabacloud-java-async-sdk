@@ -169,7 +169,10 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If not specified, the default business space is accessed. Obtain the key value from the business management page of the primary account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -178,6 +181,7 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
+         * <p>The entity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +194,10 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
-         * EntityValueId.
+         * <p>The entity member ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234</p>
          */
         public Builder entityValueId(Long entityValueId) {
             this.putBodyParameter("EntityValueId", entityValueId);
@@ -199,6 +206,7 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
+         * <p>The chatbot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +219,10 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The search keyword for the entity member name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Book</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -220,7 +231,10 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -229,7 +243,10 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

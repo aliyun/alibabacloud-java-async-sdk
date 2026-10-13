@@ -67,7 +67,10 @@ public class CreateIntentResponseBody extends TeaModel {
         } 
 
         /**
-         * IntentId.
+         * <p>The intent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43546474</p>
          */
         public Builder intentId(Long intentId) {
             this.intentId = intentId;
@@ -75,7 +78,10 @@ public class CreateIntentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>df56gjh5et34g3g3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

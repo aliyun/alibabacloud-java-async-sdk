@@ -80,7 +80,10 @@ public class ListTongyiChatHistorysResponseBody extends TeaModel {
         } 
 
         /**
-         * CostTime.
+         * <p>The time consumed by the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116</p>
          */
         public Builder costTime(String costTime) {
             this.costTime = costTime;
@@ -88,7 +91,7 @@ public class ListTongyiChatHistorysResponseBody extends TeaModel {
         }
 
         /**
-         * Datas.
+         * <p>The data details.</p>
          */
         public Builder datas(java.util.List<java.util.Map<String, ?>> datas) {
             this.datas = datas;
@@ -96,7 +99,10 @@ public class ListTongyiChatHistorysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0DDFC4C-D66D-4787-9AE4-4D757481EDEE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -67,10 +67,7 @@ public class DeleteTagGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxxXxxxxx</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -67,7 +67,10 @@ public class ListSimQuestionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15CD94CC-CBEB-4189-806C-A132D1F45D51</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListSimQuestionResponseBody extends TeaModel {
         }
 
         /**
-         * SimQuestions.
+         * <p>The list of similar questions.</p>
          */
         public Builder simQuestions(java.util.List<SimQuestions> simQuestions) {
             this.simQuestions = simQuestions;
@@ -167,7 +170,10 @@ public class ListSimQuestionResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-30T02:08:33Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -175,7 +181,10 @@ public class ListSimQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-13T03:49:28Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -183,7 +192,10 @@ public class ListSimQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * SimQuestionId.
+             * <p>The similar question ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001979424</p>
              */
             public Builder simQuestionId(Long simQuestionId) {
                 this.simQuestionId = simQuestionId;
@@ -191,7 +203,10 @@ public class ListSimQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the similar question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Similar question</p>
              */
             public Builder title(String title) {
                 this.title = title;

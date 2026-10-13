@@ -111,7 +111,10 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If this parameter is not set, the default business space is accessed. You can obtain the key value on the business management page of the main account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -120,6 +123,7 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
+         * <p>The chatbot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +136,7 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
-         * IntentDefinition.
+         * <p>The intent definition struct.</p>
          */
         public Builder intentDefinition(IntentDefinition intentDefinition) {
             String intentDefinitionShrink = shrink(intentDefinition, "IntentDefinition", "json");
@@ -256,7 +260,10 @@ public class CreateIntentRequest extends Request {
             } 
 
             /**
-             * Array.
+             * <p>Specifies whether the slot is an array.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder array(Boolean array) {
                 this.array = array;
@@ -264,7 +271,10 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
-             * Encrypt.
+             * <p>Specifies whether the slot value is masked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encrypt(Boolean encrypt) {
                 this.encrypt = encrypt;
@@ -272,7 +282,10 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
-             * Interactive.
+             * <p>Specifies whether the slot is interactive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder interactive(Boolean interactive) {
                 this.interactive = interactive;
@@ -280,7 +293,11 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
+             * <p>The slot name.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Weather</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -288,6 +305,7 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
+             * <p>The slot ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -299,7 +317,11 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
+             * <p>The name of the associated entity.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Weather</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -380,7 +402,10 @@ public class CreateIntentRequest extends Request {
             } 
 
             /**
-             * AliasName.
+             * <p>The intent alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CheckWeatherIntent</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -388,7 +413,11 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
+             * <p>The intent name.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CheckWeatherIntent</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -396,7 +425,7 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
-             * SlotInfos.
+             * <p>The slot information.</p>
              */
             public Builder slotInfos(java.util.List<SlotInfos> slotInfos) {
                 this.slotInfos = slotInfos;

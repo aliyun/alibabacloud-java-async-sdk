@@ -140,7 +140,10 @@ public class CreateCategoryRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -149,7 +152,10 @@ public class CreateCategoryRequest extends Request {
         }
 
         /**
-         * BizCode.
+         * <p>The business code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bizcode123</p>
          */
         public Builder bizCode(String bizCode) {
             this.putBodyParameter("BizCode", bizCode);
@@ -158,7 +164,15 @@ public class CreateCategoryRequest extends Request {
         }
 
         /**
-         * KnowledgeType.
+         * <p>The knowledge type. Valid values:</p>
+         * <ul>
+         * <li>1: FAQ category.</li>
+         * <li>3: Document category.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder knowledgeType(Integer knowledgeType) {
             this.putBodyParameter("KnowledgeType", knowledgeType);
@@ -167,7 +181,11 @@ public class CreateCategoryRequest extends Request {
         }
 
         /**
+         * <p>The category name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -176,7 +194,10 @@ public class CreateCategoryRequest extends Request {
         }
 
         /**
-         * ParentCategoryId.
+         * <p>The parent category ID. Default value: -1, which indicates the root directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder parentCategoryId(Long parentCategoryId) {
             this.putBodyParameter("ParentCategoryId", parentCategoryId);

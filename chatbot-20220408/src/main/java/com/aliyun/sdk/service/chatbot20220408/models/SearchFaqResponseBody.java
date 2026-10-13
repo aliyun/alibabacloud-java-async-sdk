@@ -106,7 +106,7 @@ public class SearchFaqResponseBody extends TeaModel {
         } 
 
         /**
-         * FaqHits.
+         * <p>The knowledge search results.</p>
          */
         public Builder faqHits(java.util.List<FaqHits> faqHits) {
             this.faqHits = faqHits;
@@ -114,7 +114,10 @@ public class SearchFaqResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class SearchFaqResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class SearchFaqResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E45491D5-7E0A-42C6-9B21-91D1066B1475</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class SearchFaqResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1075</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -347,7 +359,10 @@ public class SearchFaqResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryId.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000055639</p>
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -355,7 +370,10 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-02T03:09:30Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -363,7 +381,10 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserId.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18453</p>
              */
             public Builder createUserId(Long createUserId) {
                 this.createUserId = createUserId;
@@ -371,7 +392,10 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserName.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test01</p>
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -379,7 +403,15 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * EffectStatus.
+             * <p>The effective status of the knowledge, calculated based on StartDate and EndDate. Valid values:</p>
+             * <ul>
+             * <li>20: Active.</li>
+             * <li>21: Expired.</li>
+             * <li>22: Pending.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder effectStatus(Integer effectStatus) {
                 this.effectStatus = effectStatus;
@@ -387,7 +419,7 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * HitSimilarTitles.
+             * <p>The list of hit similar questions.</p>
              */
             public Builder hitSimilarTitles(java.util.List<String> hitSimilarTitles) {
                 this.hitSimilarTitles = hitSimilarTitles;
@@ -395,7 +427,7 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * HitSolutions.
+             * <p>The list of hit solutions.</p>
              */
             public Builder hitSolutions(java.util.List<String> hitSolutions) {
                 this.hitSolutions = hitSolutions;
@@ -403,7 +435,10 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeId.
+             * <p>The knowledge ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30002145804</p>
              */
             public Builder knowledgeId(Long knowledgeId) {
                 this.knowledgeId = knowledgeId;
@@ -411,7 +446,10 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-02T03:09:30Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -419,7 +457,10 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUserId.
+             * <p>The ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18453</p>
              */
             public Builder modifyUserId(Long modifyUserId) {
                 this.modifyUserId = modifyUserId;
@@ -427,7 +468,10 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUserName.
+             * <p>The name of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test01</p>
              */
             public Builder modifyUserName(String modifyUserName) {
                 this.modifyUserName = modifyUserName;
@@ -435,7 +479,16 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The knowledge status. Valid values:</p>
+             * <ul>
+             * <li>-1: deleted and unpublished.</li>
+             * <li>1: unpublished.</li>
+             * <li>2: published.</li>
+             * <li>3: updated and unpublished.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -443,7 +496,10 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test title</p>
              */
             public Builder title(String title) {
                 this.title = title;

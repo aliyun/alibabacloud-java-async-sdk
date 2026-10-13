@@ -242,7 +242,10 @@ public class UpdateDocRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the primary account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -251,7 +254,10 @@ public class UpdateDocRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>The document category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231001028593</p>
          */
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -260,7 +266,24 @@ public class UpdateDocRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>The document parsing/chunking configuration.
+         * Configuration item: Splitter
+         * KEY: Splitter
+         * Valid values: paragraphSplitter - hierarchy recognition (default)
+         * Valid values: treeSplitter - rule-based hierarchy</p>
+         * <p>Configuration item: Document chunk size
+         * KEY: ChunkSize
+         * VALUE: Default 500. Range: [200,800]</p>
+         * <p>Configuration item: Rule-based hierarchy
+         * KEY: TreePatterns
+         * VALUE: Default []</p>
+         * <p>Configuration item: Document title source
+         * KEY: TitleSource
+         * Valid values: ocrTitle - OCR-recognized title (default)
+         * Valid values: docName - document name as title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Splitter&quot;:&quot;treeSplitter&quot;,&quot;ChunkSize&quot;:500,&quot;TreePatterns&quot;:[&quot;^# .<em>&quot;,&quot;^## .</em>&quot;,&quot;^### .<em>&quot;,&quot;^#### .</em>&quot;],&quot;TitleSource&quot;:&quot;&quot;}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -269,7 +292,10 @@ public class UpdateDocRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>The document content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Document content</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -288,7 +314,10 @@ public class UpdateDocRequest extends Request {
         }
 
         /**
-         * DocName.
+         * <p>The document name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Document QA Module Feature Description</p>
          */
         public Builder docName(String docName) {
             this.putQueryParameter("DocName", docName);
@@ -297,7 +326,10 @@ public class UpdateDocRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end of the effective period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-11T23:59:59Z</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -306,6 +338,7 @@ public class UpdateDocRequest extends Request {
         }
 
         /**
+         * <p>The document ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,7 +351,10 @@ public class UpdateDocRequest extends Request {
         }
 
         /**
-         * Meta.
+         * <p>The document metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;:&quot;xxx&quot;}</p>
          */
         public Builder meta(String meta) {
             this.putQueryParameter("Meta", meta);
@@ -327,7 +363,10 @@ public class UpdateDocRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start of the effective period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-25T16:28:36Z</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -336,7 +375,7 @@ public class UpdateDocRequest extends Request {
         }
 
         /**
-         * TagIds.
+         * <p>The list of tag IDs. If this parameter is left empty, the tag bindings are removed.</p>
          */
         public Builder tagIds(java.util.List<Long> tagIds) {
             String tagIdsShrink = shrink(tagIds, "TagIds", "json");
@@ -346,7 +385,10 @@ public class UpdateDocRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The document title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Document QA Feature Description</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

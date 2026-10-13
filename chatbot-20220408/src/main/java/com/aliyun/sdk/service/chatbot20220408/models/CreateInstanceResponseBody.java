@@ -67,7 +67,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>The unique identifier of the chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-mp90s2lrk00050</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -75,7 +78,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F2E2C40D-AB09-45A1-B5C5-EB9F5C4E4E4A</p>

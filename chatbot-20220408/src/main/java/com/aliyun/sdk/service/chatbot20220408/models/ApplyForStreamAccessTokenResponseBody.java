@@ -93,7 +93,10 @@ public class ApplyForStreamAccessTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessToken.
+         * <p>The request token of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63ba97b4f18a4a04f715c81e8e643938</p>
          */
         public Builder accessToken(String accessToken) {
             this.accessToken = accessToken;
@@ -101,7 +104,10 @@ public class ApplyForStreamAccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * ChannelId.
+         * <p>The channel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc9e88c0-4f41-4f1d-a1a9-91a72d2aa27d</p>
          */
         public Builder channelId(String channelId) {
             this.channelId = channelId;
@@ -120,7 +126,10 @@ public class ApplyForStreamAccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * StreamSecret.
+         * <p>The secret key of the business space, which is used to sign streaming requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc9e88c0-4f41-4f1d-a1a9-91a72d2aa27d</p>
          */
         public Builder streamSecret(String streamSecret) {
             this.streamSecret = streamSecret;

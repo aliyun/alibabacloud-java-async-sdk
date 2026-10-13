@@ -54,7 +54,10 @@ public class DeleteCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B3E0DE3-DC57-5BFE-88D4-ADD8ED024F55</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -106,7 +106,7 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * AnswerInfo.
+         * <p>The answer information corresponding to the conversation.</p>
          */
         public Builder answerInfo(AnswerInfo answerInfo) {
             this.answerInfo = answerInfo;
@@ -114,7 +114,10 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
         }
 
         /**
-         * MessageId.
+         * <p>The ID of the response message for the current session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2828708A-2C7A-1BAE-B810-87DB9DA9C661</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -122,7 +125,10 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Pipeline.
+         * <p>The information about the entire Q&amp;A process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>For examples, see the child elements</p>
          */
         public Builder pipeline(java.util.List<Pipeline> pipeline) {
             this.pipeline = pipeline;
@@ -141,7 +147,10 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SessionId.
+         * <p>The ID of the session to which the current response message belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19856284-0ba1-4da3-9a5a-05db2bdf296e</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -259,7 +268,10 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * ContentType.
+             * <p>The type of the referenced text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PLAIN_TEXT/RICH_TEXT</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -267,7 +279,10 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DataSource.
+             * <p>The source of the referenced knowledge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FLOW/DOC/FAQ/FAQ_DIRECT</p>
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
@@ -275,7 +290,10 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the referenced knowledge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>611926</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -283,7 +301,10 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Number.
+             * <p>The number that corresponds one-to-one with the ReferNumber in AnswerInfo.MessageBody.DirectMessageBody.SentenceList.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -291,7 +312,61 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceExt.
+             * <p>The extension information specific to the knowledge type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *             &quot;CollectedParams&quot;: {
+             *               &quot;ReturnMaster&quot;: &quot;true&quot;
+             *             },
+             *             &quot;Edges&quot;: [],
+             *             &quot;Nodes&quot;: [
+             *               {
+             *                 &quot;InvokedApis&quot;: [
+             *                   {
+             *                     &quot;ApiName&quot;: &quot;intentionRepeatCallQry&quot;
+             *                   }
+             *                 ],
+             *                 &quot;OptionalParams&quot;: [
+             *                   &quot;mobile&quot;,
+             *                   &quot;intention&quot;
+             *                 ],
+             *                 &quot;Id&quot;: &quot;22874cb7-c253-4832-a38d-7113b15ef7fc&quot;,
+             *                 &quot;RequiredParams&quot;: [],
+             *                 &quot;Name&quot;: &quot;Check for repeated contacts&quot;
+             *               },
+             *               {
+             *                 &quot;InvokedApis&quot;: [
+             *                   {
+             *                     &quot;ApiName&quot;: &quot;complaintAllChannelLatest&quot;
+             *                   }
+             *                 ],
+             *                 &quot;OptionalParams&quot;: [
+             *                   &quot;mobile&quot;,
+             *                   &quot;billCode&quot;
+             *                 ],
+             *                 &quot;Id&quot;: &quot;071b082e-ce76-47f9-8b8d-f29e0dd1015c&quot;,
+             *                 &quot;RequiredParams&quot;: [],
+             *                 &quot;Name&quot;: &quot;Query ticket information&quot;
+             *               },
+             *               {
+             *                 &quot;Id&quot;: &quot;db02f361-61ee-4e30-bda0-2fd62cf4ca46&quot;,
+             *                 &quot;Name&quot;: &quot;Logical judgment_35a6&quot;
+             *               },
+             *               {
+             *                 &quot;OptionalParams&quot;: [],
+             *                 &quot;Id&quot;: &quot;97f68b60-2973-4d10-8e42-1cbfcbb15cf6&quot;,
+             *                 &quot;RequiredParams&quot;: [
+             *                   &quot;returnMaster&quot;
+             *                 ],
+             *                 &quot;Name&quot;: &quot;Whether to return to the main flow&quot;
+             *               },
+             *               {
+             *                 &quot;Id&quot;: &quot;8167e4ec-a589-42de-97c2-271672b26ffe&quot;,
+             *                 &quot;Name&quot;: &quot;Return to the main flow&quot;
+             *               }
+             *             ]
+             *           }</p>
              */
             public Builder referenceExt(Object referenceExt) {
                 this.referenceExt = referenceExt;
@@ -299,7 +374,10 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the referenced knowledge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Is it possible to make the payment when the contract entity and the paying entity are different?</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -353,7 +431,7 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * ItemList.
+             * <p>The list of referenced knowledge entries.</p>
              */
             public Builder itemList(java.util.List<ItemList> itemList) {
                 this.itemList = itemList;
@@ -362,6 +440,87 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
 
             public AnswerReferenceInfo build() {
                 return new AnswerReferenceInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link TongyiChatDebugInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>TongyiChatDebugInfoResponseBody</p>
+     */
+    public static class RtDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SentenceRtList")
+        private Object sentenceRtList;
+
+        @com.aliyun.core.annotation.NameInMap("TransitionRtList")
+        private Object transitionRtList;
+
+        private RtDetail(Builder builder) {
+            this.sentenceRtList = builder.sentenceRtList;
+            this.transitionRtList = builder.transitionRtList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RtDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sentenceRtList
+         */
+        public Object getSentenceRtList() {
+            return this.sentenceRtList;
+        }
+
+        /**
+         * @return transitionRtList
+         */
+        public Object getTransitionRtList() {
+            return this.transitionRtList;
+        }
+
+        public static final class Builder {
+            private Object sentenceRtList; 
+            private Object transitionRtList; 
+
+            private Builder() {
+            } 
+
+            private Builder(RtDetail model) {
+                this.sentenceRtList = model.sentenceRtList;
+                this.transitionRtList = model.transitionRtList;
+            } 
+
+            /**
+             * <p>The list of RTs for each segment from the time the user question is received on the text side to the sequential generation of the formal answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[200, 256, 300, 430]</p>
+             */
+            public Builder sentenceRtList(Object sentenceRtList) {
+                this.sentenceRtList = sentenceRtList;
+                return this;
+            }
+
+            /**
+             * <p>The list of RTs for each segment from the time the user question is received on the text side to the sequential generation of the transition phrases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[130]</p>
+             */
+            public Builder transitionRtList(Object transitionRtList) {
+                this.transitionRtList = transitionRtList;
+                return this;
+            }
+
+            public RtDetail build() {
+                return new RtDetail(this);
             } 
 
         } 
@@ -420,7 +579,10 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The formal answer entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The weather is sunny today</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -428,7 +590,10 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ReferNumber.
+             * <p>The number that corresponds one-to-one with the Number in AnswerReferenceInfo.ItemList for generating this answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder referNumber(Integer referNumber) {
                 this.referNumber = referNumber;
@@ -452,6 +617,12 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
+        @com.aliyun.core.annotation.NameInMap("HitSystemAskConfig")
+        private String hitSystemAskConfig;
+
+        @com.aliyun.core.annotation.NameInMap("RtDetail")
+        private RtDetail rtDetail;
+
         @com.aliyun.core.annotation.NameInMap("TransitionList")
         private java.util.List<String> transitionList;
 
@@ -463,6 +634,8 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
 
         private DirectMessageBody(Builder builder) {
             this.contentType = builder.contentType;
+            this.hitSystemAskConfig = builder.hitSystemAskConfig;
+            this.rtDetail = builder.rtDetail;
             this.transitionList = builder.transitionList;
             this.relatedQuestionList = builder.relatedQuestionList;
             this.sentenceList = builder.sentenceList;
@@ -481,6 +654,20 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
          */
         public String getContentType() {
             return this.contentType;
+        }
+
+        /**
+         * @return hitSystemAskConfig
+         */
+        public String getHitSystemAskConfig() {
+            return this.hitSystemAskConfig;
+        }
+
+        /**
+         * @return rtDetail
+         */
+        public RtDetail getRtDetail() {
+            return this.rtDetail;
         }
 
         /**
@@ -506,6 +693,8 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String contentType; 
+            private String hitSystemAskConfig; 
+            private RtDetail rtDetail; 
             private java.util.List<String> transitionList; 
             private java.util.List<String> relatedQuestionList; 
             private java.util.List<SentenceList> sentenceList; 
@@ -515,13 +704,18 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
 
             private Builder(DirectMessageBody model) {
                 this.contentType = model.contentType;
+                this.hitSystemAskConfig = model.hitSystemAskConfig;
+                this.rtDetail = model.rtDetail;
                 this.transitionList = model.transitionList;
                 this.relatedQuestionList = model.relatedQuestionList;
                 this.sentenceList = model.sentenceList;
             } 
 
             /**
-             * ContentType.
+             * <p>The answer type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RICH_TEXT/PLAIN_TEXT</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -529,7 +723,26 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TransitionList.
+             * <p>The matched system Q&amp;A policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SENSITIVE_WORD/NO_ANSWER/COMMANDS</p>
+             */
+            public Builder hitSystemAskConfig(String hitSystemAskConfig) {
+                this.hitSystemAskConfig = hitSystemAskConfig;
+                return this;
+            }
+
+            /**
+             * <p>The response time (RT) debugging information for the current Q&amp;A.</p>
+             */
+            public Builder rtDetail(RtDetail rtDetail) {
+                this.rtDetail = rtDetail;
+                return this;
+            }
+
+            /**
+             * <p>The list of transition phrases.</p>
              */
             public Builder transitionList(java.util.List<String> transitionList) {
                 this.transitionList = transitionList;
@@ -537,7 +750,7 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             }
 
             /**
-             * relatedQuestionList.
+             * <p>The list of similar questions.</p>
              */
             public Builder relatedQuestionList(java.util.List<String> relatedQuestionList) {
                 this.relatedQuestionList = relatedQuestionList;
@@ -545,7 +758,7 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             }
 
             /**
-             * sentenceList.
+             * <p>The list of formal answers.</p>
              */
             public Builder sentenceList(java.util.List<SentenceList> sentenceList) {
                 this.sentenceList = sentenceList;
@@ -612,7 +825,12 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Commands.
+             * <p>The command parameters, such as the skill group for the transfer-to-agent command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *         &quot;SysToAgent&quot;: &quot;{\&quot;skillGroup\&quot;:\&quot;\&quot;,\&quot;ext\&quot;:\&quot;\&quot;,\&quot;toAgentReason\&quot;:\&quot;HitKeywords\&quot;}&quot;
+             *       }</p>
              */
             public Builder commands(Object commands) {
                 this.commands = commands;
@@ -620,7 +838,7 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DirectMessageBody.
+             * <p>The message body that contains the Q&amp;A results, including the answer, text type, recommended questions, and matched system type.</p>
              */
             public Builder directMessageBody(DirectMessageBody directMessageBody) {
                 this.directMessageBody = directMessageBody;
@@ -687,7 +905,7 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AnswerReferenceInfo.
+             * <p>The referenced knowledge information of the matched answer.</p>
              */
             public Builder answerReferenceInfo(AnswerReferenceInfo answerReferenceInfo) {
                 this.answerReferenceInfo = answerReferenceInfo;
@@ -695,7 +913,7 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MessageBody.
+             * <p>The message body.</p>
              */
             public Builder messageBody(MessageBody messageBody) {
                 this.messageBody = messageBody;
@@ -788,7 +1006,11 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Input.
+             * <p>The debugging input information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User question: Transfer to agent
+             * Rule hits: [transfer] agent [customer service|service|representative]</p>
              */
             public Builder input(Object input) {
                 this.input = input;
@@ -796,7 +1018,16 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The policy name. Valid values:</p>
+             * <ul>
+             * <li>High-frequency Q&amp;A direct output</li>
+             * <li>Keyword-based transfer to agent</li>
+             * <li>Global sensitive words</li>
+             * </ul>
+             * <p>This field is available only when NodeType is system_strategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Keyword-based transfer to agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -804,7 +1035,16 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li><strong>system_strategy</strong>: system policy.</li>
+             * <li><strong>rewrite_query</strong>: retrieved question.</li>
+             * <li><strong>invoke_llm</strong>: LLM invocation.</li>
+             * <li><strong>invoke_tools</strong>: tool calling.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>system_strategy</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -812,7 +1052,11 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The output information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>commands:{&quot;sysToAgent&quot;:&quot;{\&quot;skillGroup\&quot;:\&quot;\&quot;,\&quot;ext\&quot;:\&quot;\&quot;,\&quot;toAgentReason\&quot;:\&quot;HitKeywords\&quot;}&quot;}
+             * response:Transferring you to a human agent</p>
              */
             public Builder output(Object output) {
                 this.output = output;

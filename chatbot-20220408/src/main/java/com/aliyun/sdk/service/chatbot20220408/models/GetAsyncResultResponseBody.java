@@ -80,7 +80,10 @@ public class GetAsyncResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The execution result data of the customer service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;message&quot;:&quot;Execution completed&quot;}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -88,7 +91,10 @@ public class GetAsyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F79E7305-5314-5069-A701-9591AD051902</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,30 @@ public class GetAsyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The execution status.</p>
+         * <table>
+         * <thead>
+         * <tr>
+         * <th>Value</th>
+         * <th>Description</th>
+         * </tr>
+         * </thead>
+         * <tbody><tr>
+         * <td>Success</td>
+         * <td>The task is executed.</td>
+         * </tr>
+         * <tr>
+         * <td>Runninig</td>
+         * <td>The task is being executed.</td>
+         * </tr>
+         * <tr>
+         * <td>Fail</td>
+         * <td>The task failed to be executed.</td>
+         * </tr>
+         * </tbody></table>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;

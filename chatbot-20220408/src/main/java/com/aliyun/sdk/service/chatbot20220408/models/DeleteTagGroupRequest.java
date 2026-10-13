@@ -88,10 +88,7 @@ public class DeleteTagGroupRequest extends Request {
         } 
 
         /**
-         * <p>AgentKey</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx</p>
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);

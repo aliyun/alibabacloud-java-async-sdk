@@ -110,7 +110,10 @@ public class UpdatePerspectiveRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -119,7 +122,10 @@ public class UpdatePerspectiveRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The perspective name. The name can be up to 50 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Client perspective</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -128,7 +134,10 @@ public class UpdatePerspectiveRequest extends Request {
         }
 
         /**
-         * PerspectiveId.
+         * <p>The perspective ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3001</p>
          */
         public Builder perspectiveId(String perspectiveId) {
             this.putQueryParameter("PerspectiveId", perspectiveId);

@@ -67,7 +67,10 @@ public class DeleteIntentResponseBody extends TeaModel {
         } 
 
         /**
-         * IntentId.
+         * <p>The intent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder intentId(Long intentId) {
             this.intentId = intentId;
@@ -75,7 +78,10 @@ public class DeleteIntentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3464dfg3qwr34tf34</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

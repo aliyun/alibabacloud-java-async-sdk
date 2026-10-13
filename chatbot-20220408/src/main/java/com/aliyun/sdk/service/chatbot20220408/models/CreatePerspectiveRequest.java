@@ -110,7 +110,10 @@ public class CreatePerspectiveRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The key of the business space. If this parameter is not specified, the default business space is accessed. You can obtain the key from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -119,7 +122,10 @@ public class CreatePerspectiveRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the perspective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A mobile perspective for the shopping app</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -128,7 +134,10 @@ public class CreatePerspectiveRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the perspective. The name can be up to 50 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mobile perspective</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

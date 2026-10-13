@@ -67,7 +67,7 @@ public class ListConnQuestionResponseBody extends TeaModel {
         } 
 
         /**
-         * Outlines.
+         * <p>The list of associated questions.</p>
          */
         public Builder outlines(java.util.List<Outlines> outlines) {
             this.outlines = outlines;
@@ -75,7 +75,10 @@ public class ListConnQuestionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92B81548-42B9-4B34-924B-4E778AEB412B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class ListConnQuestionResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnQuestionId.
+             * <p>The associated knowledge ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001979424</p>
              */
             public Builder connQuestionId(Long connQuestionId) {
                 this.connQuestionId = connQuestionId;
@@ -188,7 +194,10 @@ public class ListConnQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-25T02:47:18Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -196,7 +205,10 @@ public class ListConnQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-26T10:18:15Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -204,7 +216,10 @@ public class ListConnQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * OutlineId.
+             * <p>The association ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>797</p>
              */
             public Builder outlineId(Long outlineId) {
                 this.outlineId = outlineId;
@@ -212,7 +227,10 @@ public class ListConnQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the associated knowledge item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Associated question</p>
              */
             public Builder title(String title) {
                 this.title = title;

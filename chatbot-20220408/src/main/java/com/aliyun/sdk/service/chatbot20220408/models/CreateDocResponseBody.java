@@ -67,7 +67,10 @@ public class CreateDocResponseBody extends TeaModel {
         } 
 
         /**
-         * KnowledgeId.
+         * <p>The knowledge ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001905617</p>
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.knowledgeId = knowledgeId;
@@ -75,7 +78,10 @@ public class CreateDocResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07B270A4-61D8-57F6-A609-A3C216CFB872</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

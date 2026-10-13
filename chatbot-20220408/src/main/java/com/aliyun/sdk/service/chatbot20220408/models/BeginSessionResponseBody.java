@@ -106,7 +106,10 @@ public class BeginSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * AsrMaxEndSilence.
+         * <p>The Automatic Speech Recognition (ASR) end-of-speech detection time. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>700</p>
          */
         public Builder asrMaxEndSilence(Integer asrMaxEndSilence) {
             this.asrMaxEndSilence = asrMaxEndSilence;
@@ -114,7 +117,10 @@ public class BeginSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Interruptible.
+         * <p>Indicates whether the voice broadcast can be interrupted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder interruptible(Boolean interruptible) {
             this.interruptible = interruptible;
@@ -122,7 +128,10 @@ public class BeginSessionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>149C7528-C104-1B50-A4F9-0C5907A8AD9D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class BeginSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>静默超时时间</p>
+         * <p>The silence timeout period. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -141,7 +150,10 @@ public class BeginSessionResponseBody extends TeaModel {
         }
 
         /**
-         * WelcomeMessage.
+         * <p>The welcome message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The intelligent chatbot is at your service. How can I help you?</p>
          */
         public Builder welcomeMessage(String welcomeMessage) {
             this.welcomeMessage = welcomeMessage;

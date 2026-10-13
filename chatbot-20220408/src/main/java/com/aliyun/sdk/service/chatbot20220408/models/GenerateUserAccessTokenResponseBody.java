@@ -106,7 +106,10 @@ public class GenerateUserAccessTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GenerateUserAccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The token value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DDEXEDAFWAGASDFWAEFFAWEFAWFWEAFWAFWAEF</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GenerateUserAccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter.Invalid</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +150,10 @@ public class GenerateUserAccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

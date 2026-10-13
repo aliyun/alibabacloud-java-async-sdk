@@ -80,7 +80,7 @@ public class ListSaasInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of SaaS integration entries.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -99,7 +99,10 @@ public class ListSaasInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SaasToken.
+         * <p>The SaaS integration token issued by Chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06614fdb-c72f-436e-8003-dfe8a2854a15</p>
          */
         public Builder saasToken(String saasToken) {
             this.saasToken = saasToken;
@@ -204,7 +207,10 @@ public class ListSaasInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The unique identifier of the SaaS atomic page. This identifier can be used to associate and query related information about the atomic page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GLOBAL_SERVICE</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -212,7 +218,10 @@ public class ListSaasInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnName.
+             * <p>The English name of the atomic page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GLOBAL SERVICE</p>
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -220,7 +229,10 @@ public class ListSaasInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The Chinese name of the atomic page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>全局服务</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -228,7 +240,10 @@ public class ListSaasInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceUrl.
+             * <p>The iframe-embedded SaaS page URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://pre-alime4service.console.aliyun.com/?productCode=p_beebot_public&switchAgent=1204001&saasCode=Robot&saasToken=06614fdb-c72f-436e-8003-dfe8a2854a15&saasName=123#/robot">https://pre-alime4service.console.aliyun.com/?productCode=p_beebot_public&amp;switchAgent=1204001&amp;saasCode=Robot&amp;saasToken=06614fdb-c72f-436e-8003-dfe8a2854a15&amp;saasName=123#/robot</a></p>
              */
             public Builder serviceUrl(String serviceUrl) {
                 this.serviceUrl = serviceUrl;
@@ -236,7 +251,10 @@ public class ListSaasInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the atomic page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://alime.console.aliyun.com/?productCode=p_beebot_public&switchAgent=1204001&saasCode=Robot&saasToken=06614fdb-c72f-436e-8003-dfe8a2854a15&saasName=123#/robot">https://alime.console.aliyun.com/?productCode=p_beebot_public&amp;switchAgent=1204001&amp;saasCode=Robot&amp;saasToken=06614fdb-c72f-436e-8003-dfe8a2854a15&amp;saasName=123#/robot</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

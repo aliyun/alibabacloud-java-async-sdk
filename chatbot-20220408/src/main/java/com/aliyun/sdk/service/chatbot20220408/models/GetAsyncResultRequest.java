@@ -97,7 +97,10 @@ public class GetAsyncResultRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The workspace key. If not specified, the default workspace is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -106,7 +109,11 @@ public class GetAsyncResultRequest extends Request {
         }
 
         /**
+         * <p>The task ID of the asynchronous service.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Obtain TASK_ID from the Chat operation</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

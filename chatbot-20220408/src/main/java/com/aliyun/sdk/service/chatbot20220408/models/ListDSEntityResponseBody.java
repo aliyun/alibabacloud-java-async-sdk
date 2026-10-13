@@ -106,7 +106,7 @@ public class ListDSEntityResponseBody extends TeaModel {
         } 
 
         /**
-         * Entities.
+         * <p>The list of entities.</p>
          */
         public Builder entities(java.util.List<Entities> entities) {
             this.entities = entities;
@@ -114,7 +114,10 @@ public class ListDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga4h345defgwet2sdf223</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -308,7 +320,10 @@ public class ListDSEntityResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-12T16:00:01Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -316,7 +331,10 @@ public class ListDSEntityResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserId.
+             * <p>The ID of the user who created the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123231</p>
              */
             public Builder createUserId(String createUserId) {
                 this.createUserId = createUserId;
@@ -324,7 +342,10 @@ public class ListDSEntityResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserName.
+             * <p>The name of the user who created the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -332,7 +353,10 @@ public class ListDSEntityResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * <p>The entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234564567445</p>
              */
             public Builder entityId(Long entityId) {
                 this.entityId = entityId;
@@ -340,7 +364,10 @@ public class ListDSEntityResponseBody extends TeaModel {
             }
 
             /**
-             * EntityName.
+             * <p>The entity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BookEntity</p>
              */
             public Builder entityName(String entityName) {
                 this.entityName = entityName;
@@ -348,7 +375,10 @@ public class ListDSEntityResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * <p>The entity type (synonyms | regex | system).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>synonyms</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -356,7 +386,10 @@ public class ListDSEntityResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-12T16:00:01Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -364,7 +397,10 @@ public class ListDSEntityResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUserId.
+             * <p>The ID of the user who last modified the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123231</p>
              */
             public Builder modifyUserId(String modifyUserId) {
                 this.modifyUserId = modifyUserId;
@@ -372,7 +408,10 @@ public class ListDSEntityResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUserName.
+             * <p>The name of the user who last modified the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder modifyUserName(String modifyUserName) {
                 this.modifyUserName = modifyUserName;
@@ -380,7 +419,10 @@ public class ListDSEntityResponseBody extends TeaModel {
             }
 
             /**
-             * SysEntityCode.
+             * <p>The system entity code, such as sys.date. This parameter is empty for user entities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sys_date</p>
              */
             public Builder sysEntityCode(String sysEntityCode) {
                 this.sysEntityCode = sysEntityCode;

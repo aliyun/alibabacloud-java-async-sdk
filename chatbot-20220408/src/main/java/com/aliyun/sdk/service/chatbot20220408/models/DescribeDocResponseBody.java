@@ -366,7 +366,10 @@ public class DescribeDocResponseBody extends TeaModel {
         } 
 
         /**
-         * BizCode.
+         * <p>The business code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bizcode123</p>
          */
         public Builder bizCode(String bizCode) {
             this.bizCode = bizCode;
@@ -374,7 +377,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * CategoryId.
+         * <p>The category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000049006</p>
          */
         public Builder categoryId(Long categoryId) {
             this.categoryId = categoryId;
@@ -382,7 +388,14 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * Config.
+         * <p>The document parsing and chunking configuration items:</p>
+         * <p>Chunker KEY: Splitter. Valid values: paragraphSplitter - hierarchy recognition (default). treeSplitter - rule-based hierarchy.</p>
+         * <p>Document chunk size KEY: ChunkSize. VALUE: default 500. Range: [200, 800].</p>
+         * <p>Rule-based hierarchy KEY: TreePatterns. VALUE: default [].</p>
+         * <p>Document title source KEY: TitleSource. Valid values: ocrTitle - OCR-recognized title (default). docName - document name as title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Splitter&quot;:&quot;treeSplitter&quot;,&quot;ChunkSize&quot;:500,&quot;TreePatterns&quot;:[&quot;^# .<em>&quot;,&quot;^## .</em>&quot;,&quot;^### .<em>&quot;,&quot;^#### .</em>&quot;],&quot;TitleSource&quot;:&quot;docName&quot;}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -390,7 +403,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-12T06:30:17Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -398,7 +414,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * CreateUserId.
+         * <p>The ID of the user who created the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111111111</p>
          */
         public Builder createUserId(Long createUserId) {
             this.createUserId = createUserId;
@@ -406,7 +425,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * CreateUserName.
+         * <p>The name of the user who created the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jane</p>
          */
         public Builder createUserName(String createUserName) {
             this.createUserName = createUserName;
@@ -414,7 +436,7 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * DocInfo.
+         * <p>The document details.</p>
          */
         public Builder docInfo(DocInfo docInfo) {
             this.docInfo = docInfo;
@@ -430,7 +452,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * DocName.
+         * <p>The document name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Document name</p>
          */
         public Builder docName(String docName) {
             this.docName = docName;
@@ -438,7 +463,7 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * DocTags.
+         * <p>The list of tag details.</p>
          */
         public Builder docTags(java.util.List<DocTags> docTags) {
             this.docTags = docTags;
@@ -446,7 +471,15 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * EffectStatus.
+         * <p>The effective status, which is calculated based on StartDate and EndDate. Valid values:</p>
+         * <ul>
+         * <li>20: Effective.</li>
+         * <li>21: Expired.</li>
+         * <li>22: Pending effective.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder effectStatus(Integer effectStatus) {
             this.effectStatus = effectStatus;
@@ -454,7 +487,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * EndDate.
+         * <p>The expiration time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-27T06:08:54Z</p>
          */
         public Builder endDate(String endDate) {
             this.endDate = endDate;
@@ -462,7 +498,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * KnowledgeId.
+         * <p>The knowledge ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001979424</p>
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.knowledgeId = knowledgeId;
@@ -470,7 +509,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * Meta.
+         * <p>The metadata associated with the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;:&quot;xxx&quot;}</p>
          */
         public Builder meta(String meta) {
             this.meta = meta;
@@ -478,7 +520,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-25T08:56:55Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -486,7 +531,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyUserId.
+         * <p>The ID of the user who last modified the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2222222222</p>
          */
         public Builder modifyUserId(Long modifyUserId) {
             this.modifyUserId = modifyUserId;
@@ -494,7 +542,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyUserName.
+         * <p>The name of the user who last modified the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John</p>
          */
         public Builder modifyUserName(String modifyUserName) {
             this.modifyUserName = modifyUserName;
@@ -502,7 +553,14 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * ProcessCanRetry.
+         * <p>Indicates whether the task can be retried. Valid values:</p>
+         * <ul>
+         * <li>true: The task can be retried.</li>
+         * <li>false: The task cannot be retried.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder processCanRetry(Boolean processCanRetry) {
             this.processCanRetry = processCanRetry;
@@ -510,7 +568,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * ProcessMessage.
+         * <p>The task processing message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Task processed successfully</p>
          */
         public Builder processMessage(String processMessage) {
             this.processMessage = processMessage;
@@ -518,7 +579,17 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * ProcessStatus.
+         * <p>The task processing status. Valid values:</p>
+         * <ul>
+         * <li>-1: Queued.</li>
+         * <li>0: Succeeded.</li>
+         * <li>1: Parsing.</li>
+         * <li>2: Processing.</li>
+         * <li>3: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder processStatus(Integer processStatus) {
             this.processStatus = processStatus;
@@ -537,7 +608,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * StartDate.
+         * <p>The effective period (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1979-12-31T16:00:00Z</p>
          */
         public Builder startDate(String startDate) {
             this.startDate = startDate;
@@ -545,7 +619,15 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The editing status. Valid values:</p>
+         * <ul>
+         * <li>1: Unpublished.</li>
+         * <li>2: Published.</li>
+         * <li>3: Updated but not published.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -553,7 +635,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * Title.
+         * <p>The document title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test title</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -561,7 +646,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * <p>The OSS URL where the document is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://doc2bot-bucket-cloud.oss-cn-shanghai.aliyuncs.com/doc2bot/input/%E6%96%87%E6%A1%A3%E9%97%AE%E7%AD%94%E8%AF%B4%E6%98%8E%E4%B9%A6_V1.pdf">https://doc2bot-bucket-cloud.oss-cn-shanghai.aliyuncs.com/doc2bot/input/文档问答说明书_V1.pdf</a></p>
          */
         public Builder url(String url) {
             this.url = url;
@@ -653,7 +741,10 @@ public class DescribeDocResponseBody extends TeaModel {
             } 
 
             /**
-             * ParaLevel.
+             * <p>The paragraph level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder paraLevel(Integer paraLevel) {
                 this.paraLevel = paraLevel;
@@ -661,7 +752,10 @@ public class DescribeDocResponseBody extends TeaModel {
             }
 
             /**
-             * ParaNo.
+             * <p>The paragraph sequence number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder paraNo(Integer paraNo) {
                 this.paraNo = paraNo;
@@ -669,7 +763,10 @@ public class DescribeDocResponseBody extends TeaModel {
             }
 
             /**
-             * ParaText.
+             * <p>The paragraph content (plain text, OCR content for images, or Markdown representation for tables).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Content</p>
              */
             public Builder paraText(String paraText) {
                 this.paraText = paraText;
@@ -677,7 +774,15 @@ public class DescribeDocResponseBody extends TeaModel {
             }
 
             /**
-             * ParaType.
+             * <p>The paragraph content type. Valid values:</p>
+             * <ul>
+             * <li>text: Text.</li>
+             * <li>figure: Image.</li>
+             * <li>table: Table.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder paraType(String paraType) {
                 this.paraType = paraType;
@@ -731,7 +836,7 @@ public class DescribeDocResponseBody extends TeaModel {
             } 
 
             /**
-             * DocParas.
+             * <p>The document paragraph information.</p>
              */
             public Builder docParas(java.util.List<DocParas> docParas) {
                 this.docParas = docParas;
@@ -915,7 +1020,7 @@ public class DescribeDocResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessViewName.
+             * <p>The tag name.</p>
              */
             public Builder businessViewName(String businessViewName) {
                 this.businessViewName = businessViewName;
@@ -1029,7 +1134,10 @@ public class DescribeDocResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultTag.
+             * <p>Indicates whether this is the default &quot;all tags&quot; label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder defaultTag(Boolean defaultTag) {
                 this.defaultTag = defaultTag;
@@ -1037,7 +1145,10 @@ public class DescribeDocResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The tag group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3610</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -1045,7 +1156,10 @@ public class DescribeDocResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The tag group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Article</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1053,7 +1167,10 @@ public class DescribeDocResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1201</p>
              */
             public Builder tagId(Long tagId) {
                 this.tagId = tagId;
@@ -1061,7 +1178,10 @@ public class DescribeDocResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Novel</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;

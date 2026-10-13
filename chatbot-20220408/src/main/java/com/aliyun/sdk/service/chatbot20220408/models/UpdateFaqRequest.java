@@ -169,7 +169,10 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The workspace key. If not specified, the default workspace is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -178,6 +181,7 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
+         * <p>The category ID of the knowledge entry.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +194,10 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2030-12-31T16:00:00Z</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -199,6 +206,7 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
+         * <p>The knowledge ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +219,10 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The effective period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-27T05:18:20Z</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);
@@ -220,7 +231,7 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
-         * TagIdList.
+         * <p>The list of tag IDs.</p>
          */
         public Builder tagIdList(java.util.List<Long> tagIdList) {
             String tagIdListShrink = shrink(tagIdList, "TagIdList", "json");
@@ -230,7 +241,11 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
+         * <p>The title of the knowledge entry.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test title</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

@@ -67,7 +67,7 @@ public class QueryPerspectivesResponseBody extends TeaModel {
         } 
 
         /**
-         * Perspectives.
+         * <p>The list of perspectives.</p>
          */
         public Builder perspectives(java.util.List<Perspectives> perspectives) {
             this.perspectives = perspectives;
@@ -75,7 +75,10 @@ public class QueryPerspectivesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F285D735-D580-18A8-B97F-B2E72B00F101</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-12T06:30:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -214,7 +220,10 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-29T03:38:54Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -222,7 +231,10 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The perspective name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mobile perspective</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -230,7 +242,10 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             }
 
             /**
-             * PerspectiveCode.
+             * <p>The perspective code, which is used for the Q&amp;A API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FZJBY3raWr</p>
              */
             public Builder perspectiveCode(String perspectiveCode) {
                 this.perspectiveCode = perspectiveCode;
@@ -238,7 +253,10 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             }
 
             /**
-             * PerspectiveId.
+             * <p>The perspective ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3001</p>
              */
             public Builder perspectiveId(String perspectiveId) {
                 this.perspectiveId = perspectiveId;
@@ -246,7 +264,10 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             }
 
             /**
-             * SelfDefine.
+             * <p>Indicates whether the perspective is custom-defined.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selfDefine(Boolean selfDefine) {
                 this.selfDefine = selfDefine;
@@ -254,7 +275,14 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The data status. Valid values:</p>
+             * <ul>
+             * <li>3: Enabled.</li>
+             * <li>1: Not enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

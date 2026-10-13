@@ -88,10 +88,7 @@ public class CreateTagGroupRequest extends Request {
         } 
 
         /**
-         * <p>AgentKey</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxxxx</p>
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);

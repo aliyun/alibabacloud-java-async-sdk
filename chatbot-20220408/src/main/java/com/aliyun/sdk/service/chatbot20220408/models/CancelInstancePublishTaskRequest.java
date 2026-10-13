@@ -110,7 +110,10 @@ public class CancelInstancePublishTaskRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The key of the business space. If not specified, the default business space is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -119,7 +122,10 @@ public class CancelInstancePublishTaskRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8521</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -128,7 +134,10 @@ public class CancelInstancePublishTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The unique identifier of the chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-mp90s2lrk00050</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

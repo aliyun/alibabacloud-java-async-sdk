@@ -38,6 +38,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BeginSessionResponse> beginSession(BeginSessionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Only new version chatbots are supported. Only data within the last 90 days can be queried.</p>
+     * 
      * @param request the request parameters of CancelChat  CancelChatRequest
      * @return CancelChatResponse
      */
@@ -320,6 +323,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FeedbackResponse> feedback(FeedbackRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For security reasons, the generated token is valid only for the first use within the expiration period. If the same user logs on from multiple browsers, call this operation multiple times.</p>
+     * 
      * @param request the request parameters of GenerateUserAccessToken  GenerateUserAccessTokenRequest
      * @return GenerateUserAccessTokenResponse
      */
@@ -332,12 +338,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAgentInfoResponse> getAgentInfo(GetAgentInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the result of an asynchronous service execution.</p>
+     * 
      * @param request the request parameters of GetAsyncResult  GetAsyncResultRequest
      * @return GetAsyncResultResponse
      */
     CompletableFuture<GetAsyncResultResponse> getAsyncResult(GetAsyncResultRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Only data from T-1 (excluding the current day) can be queried.</p>
+     * 
      * @param request the request parameters of GetBotSessionData  GetBotSessionDataRequest
      * @return GetBotSessionDataResponse
      */
@@ -458,6 +470,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTongyiChatHistorysResponse> listTongyiChatHistorys(ListTongyiChatHistorysRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Only conversation records from the last 2 hours can be queried.</p>
+     * 
      * @param request the request parameters of ListTongyiConversationLogs  ListTongyiConversationLogsRequest
      * @return ListTongyiConversationLogsResponse
      */
@@ -500,6 +515,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchFaqResponse> searchFaq(SearchFaqRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Supports only new-version chatbots. You can query only data generated within the last 90 days.</p>
+     * 
      * @param request the request parameters of TongyiChatDebugInfo  TongyiChatDebugInfoRequest
      * @return TongyiChatDebugInfoResponse
      */

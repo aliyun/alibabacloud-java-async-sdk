@@ -145,7 +145,7 @@ public class CancelPublishTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * BizTypeList.
+         * <p>The list of business types.</p>
          */
         public Builder bizTypeList(java.util.List<String> bizTypeList) {
             this.bizTypeList = bizTypeList;
@@ -153,7 +153,10 @@ public class CancelPublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The UTC time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-12T06:30:17Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -161,7 +164,10 @@ public class CancelPublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Error.
+         * <p>The task failure information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An error occurred while checking whether the module to be published is idle, faq</p>
          */
         public Builder error(String error) {
             this.error = error;
@@ -169,7 +175,10 @@ public class CancelPublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The publish task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8522</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -177,7 +186,10 @@ public class CancelPublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The UTC time when the task was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-12T06:30:33Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -185,7 +197,10 @@ public class CancelPublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CBF0581-EAE7-1DC4-95C6-A089656A1E2D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class CancelPublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Response.
+         * <p>The publish task ID. This is a redundant field. Use the publish task ID instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8522</p>
          */
         public Builder response(String response) {
             this.response = response;
@@ -201,7 +219,17 @@ public class CancelPublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status.
+         * Valid values:</p>
+         * <ul>
+         * <li>FE_RUNNING: Publishing in progress.</li>
+         * <li>FE_SUCCESS: Published successfully.</li>
+         * <li>FE_FAILED: Publishing failed.</li>
+         * <li>FE_ABORTED: Publishing canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FE_ABORTED</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -184,7 +184,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         } 
 
         /**
-         * AliasName.
+         * <p>The intent alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CheckWeatherIntent</p>
          */
         public Builder aliasName(String aliasName) {
             this.aliasName = aliasName;
@@ -192,7 +195,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -200,7 +206,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * CreateUserId.
+         * <p>The unique identifier of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123231</p>
          */
         public Builder createUserId(String createUserId) {
             this.createUserId = createUserId;
@@ -208,7 +217,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * CreateUserName.
+         * <p>The name of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder createUserName(String createUserName) {
             this.createUserName = createUserName;
@@ -216,7 +228,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * IntentId.
+         * <p>The intent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84243341</p>
          */
         public Builder intentId(Long intentId) {
             this.intentId = intentId;
@@ -224,7 +239,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * IntentName.
+         * <p>The intent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CheckWeatherIntent</p>
          */
         public Builder intentName(String intentName) {
             this.intentName = intentName;
@@ -232,7 +250,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The modification time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -240,7 +261,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyUserId.
+         * <p>The unique identifier of the user who last modified the intent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123231</p>
          */
         public Builder modifyUserId(String modifyUserId) {
             this.modifyUserId = modifyUserId;
@@ -248,7 +272,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyUserName.
+         * <p>The name of the user who last modified the intent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder modifyUserName(String modifyUserName) {
             this.modifyUserName = modifyUserName;
@@ -256,7 +283,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a22afaf2adfasf2gr345fga45ada</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +294,7 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * SlotInfos.
+         * <p>The slot information associated with the intent.</p>
          */
         public Builder slotInfos(java.util.List<SlotInfos> slotInfos) {
             this.slotInfos = slotInfos;
@@ -382,7 +412,10 @@ public class DescribeIntentResponseBody extends TeaModel {
             } 
 
             /**
-             * Array.
+             * <p>Indicates whether the slot is an array.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder array(Boolean array) {
                 this.array = array;
@@ -390,7 +423,10 @@ public class DescribeIntentResponseBody extends TeaModel {
             }
 
             /**
-             * Encrypt.
+             * <p>Indicates whether the slot is sensitive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encrypt(Boolean encrypt) {
                 this.encrypt = encrypt;
@@ -398,7 +434,10 @@ public class DescribeIntentResponseBody extends TeaModel {
             }
 
             /**
-             * Interactive.
+             * <p>Indicates whether interactive slot filling is enabled. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder interactive(Boolean interactive) {
                 this.interactive = interactive;
@@ -406,7 +445,10 @@ public class DescribeIntentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The slot name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Weather</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -414,7 +456,10 @@ public class DescribeIntentResponseBody extends TeaModel {
             }
 
             /**
-             * SlotId.
+             * <p>The unique identifier of the slot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aa4d2a343a3ad4afad</p>
              */
             public Builder slotId(String slotId) {
                 this.slotId = slotId;
@@ -422,7 +467,10 @@ public class DescribeIntentResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The slot tagging result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Weather</p>
              */
             public Builder value(String value) {
                 this.value = value;

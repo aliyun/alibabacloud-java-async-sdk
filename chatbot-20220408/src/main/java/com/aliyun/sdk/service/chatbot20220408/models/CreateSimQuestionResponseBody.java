@@ -67,7 +67,10 @@ public class CreateSimQuestionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16AC1B3C-66E0-438B-BB7C-71B692407B67</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateSimQuestionResponseBody extends TeaModel {
         }
 
         /**
-         * SimQuestionId.
+         * <p>The similar question ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000002788</p>
          */
         public Builder simQuestionId(Long simQuestionId) {
             this.simQuestionId = simQuestionId;

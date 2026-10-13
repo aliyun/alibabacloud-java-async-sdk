@@ -106,7 +106,7 @@ public class ListDSEntityValueResponseBody extends TeaModel {
         } 
 
         /**
-         * EntityValues.
+         * <p>The entity list.</p>
          */
         public Builder entityValues(java.util.List<EntityValues> entityValues) {
             this.entityValues = entityValues;
@@ -114,7 +114,10 @@ public class ListDSEntityValueResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListDSEntityValueResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListDSEntityValueResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n3fg34gbfj8adf2gj923</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListDSEntityValueResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -256,7 +268,10 @@ public class ListDSEntityValueResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The entity member name (entity value or regular expression).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Book type</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -264,7 +279,10 @@ public class ListDSEntityValueResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-12T16:00:01Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -272,7 +290,10 @@ public class ListDSEntityValueResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * <p>The entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34313785463</p>
              */
             public Builder entityId(Long entityId) {
                 this.entityId = entityId;
@@ -280,7 +301,10 @@ public class ListDSEntityValueResponseBody extends TeaModel {
             }
 
             /**
-             * EntityValueId.
+             * <p>The entity member ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3467858234534534532</p>
              */
             public Builder entityValueId(Long entityValueId) {
                 this.entityValueId = entityValueId;
@@ -288,7 +312,10 @@ public class ListDSEntityValueResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-12T16:00:01Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -296,7 +323,7 @@ public class ListDSEntityValueResponseBody extends TeaModel {
             }
 
             /**
-             * Synonyms.
+             * <p>The synonym list.</p>
              */
             public Builder synonyms(java.util.List<String> synonyms) {
                 this.synonyms = synonyms;

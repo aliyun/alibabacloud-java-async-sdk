@@ -67,7 +67,7 @@ public class ListCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Categories.
+         * <p>The list of categories.</p>
          */
         public Builder categories(java.util.List<Categories> categories) {
             this.categories = categories;
@@ -75,7 +75,10 @@ public class ListCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C5F8186-2D22-433E-9545-606D344F30B5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class ListCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * BizCode.
+             * <p>The business code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bizcode123</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -188,7 +194,10 @@ public class ListCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryId.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231001028593</p>
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -196,7 +205,10 @@ public class ListCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CategoryName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -204,7 +216,10 @@ public class ListCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCategoryId.
+             * <p>The parent category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parentCategoryId(Long parentCategoryId) {
                 this.parentCategoryId = parentCategoryId;
@@ -212,7 +227,14 @@ public class ListCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The category status. Valid values:</p>
+             * <ul>
+             * <li>-1: Deleted but not published.</li>
+             * <li>0: Normal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

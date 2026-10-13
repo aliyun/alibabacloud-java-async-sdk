@@ -67,7 +67,10 @@ public class DeleteDocResponseBody extends TeaModel {
         } 
 
         /**
-         * KnowledgeId.
+         * <p>The knowledge ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30002406051</p>
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.knowledgeId = knowledgeId;
@@ -75,7 +78,10 @@ public class DeleteDocResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DFB71B34-4188-4EA2-9988-EF3014E75910</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -106,7 +106,10 @@ public class ChatResponseBody extends TeaModel {
         } 
 
         /**
-         * MessageId.
+         * <p>The ID of the response message in the current session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2315C4B-A872-5DEE-9DAD-D73B194A4AEC</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -114,7 +117,7 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * Messages.
+         * <p>The list of messages.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
             this.messages = messages;
@@ -122,7 +125,7 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * QuerySegList.
+         * <p>The tokenization results of the query, which may be empty.</p>
          */
         public Builder querySegList(java.util.List<String> querySegList) {
             this.querySegList = querySegList;
@@ -130,7 +133,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2315C4B-A872-5DEE-9DAD-D73B194A4AEC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +144,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * SessionId.
+         * <p>The ID of the current session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a6f216a0685c4c8baa0e8beb6d5ec6db</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -204,7 +213,10 @@ public class ChatResponseBody extends TeaModel {
             } 
 
             /**
-             * KnowledgeId.
+             * <p>The ID of the related knowledge entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>735899</p>
              */
             public Builder knowledgeId(String knowledgeId) {
                 this.knowledgeId = knowledgeId;
@@ -212,7 +224,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the related knowledge entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>公积金查询</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -383,7 +398,11 @@ public class ChatResponseBody extends TeaModel {
             } 
 
             /**
-             * AnswerSource.
+             * <p>Distinguishes the answer type.
+             * KnowledgeBase: knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KnowledgeBase</p>
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -391,7 +410,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * <p>The knowledge category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>公积金</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -399,7 +421,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The content of the hit question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>公积金提取，请在首页搜索公积金提取，提交办事的表单</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -407,7 +432,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * ContentType.
+             * <p>The indicator of whether the answer is plain text or rich text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PLAIN_TEXT</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -415,7 +443,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * HitStatement.
+             * <p>The hit statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>公积金</p>
              */
             public Builder hitStatement(String hitStatement) {
                 this.hitStatement = hitStatement;
@@ -423,7 +454,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the hit question in the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>735898</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -431,7 +465,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedKnowledges.
+             * <p>The list of related knowledge entries.</p>
              */
             public Builder relatedKnowledges(java.util.List<RelatedKnowledges> relatedKnowledges) {
                 this.relatedKnowledges = relatedKnowledges;
@@ -439,7 +473,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.998</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -447,7 +484,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p>The summary of the hit question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>公积金提取</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -455,7 +495,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the hit question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>公积金提取</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -548,7 +591,10 @@ public class ChatResponseBody extends TeaModel {
             } 
 
             /**
-             * AnswerSource.
+             * <p>The identifier of the clarification source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KNOWLEDGE</p>
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -556,7 +602,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeId.
+             * <p>The knowledge ID for clarification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4548</p>
              */
             public Builder knowledgeId(String knowledgeId) {
                 this.knowledgeId = knowledgeId;
@@ -564,7 +613,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The score of the recommended content. This field has a value when AnswerSource is KNOWLEDGE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.46</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -572,7 +624,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The clarification content, which can be an entity from knowledge graph Q&amp;A, a knowledge title from knowledge-based Q&amp;A, or a column value from table-based Q&amp;A.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test plain text</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -665,7 +720,10 @@ public class ChatResponseBody extends TeaModel {
             } 
 
             /**
-             * Hit.
+             * <p>Indicates whether the slot is hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hit(Boolean hit) {
                 this.hit = hit;
@@ -673,7 +731,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CheckWeatherIntent.city</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -681,7 +742,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Origin.
+             * <p>The original value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -689,7 +753,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The specific value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -951,7 +1018,10 @@ public class ChatResponseBody extends TeaModel {
             } 
 
             /**
-             * AnswerSource.
+             * <p>Distinguishes the answer type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BotFramework</p>
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -959,7 +1029,11 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * ArticleTitle.
+             * <p>When AnswerSource is MACHINE_READ, this field returns the title of the hit article.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ICP Filing 11
+             * [responses.200.schema.properties.Messages.items.properties.AnswerSource.enumValueTitles. INTENT_FAQ_CLARIFY]FAQ and dialog flow mixed clarification</p>
              */
             public Builder articleTitle(String articleTitle) {
                 this.articleTitle = articleTitle;
@@ -967,7 +1041,12 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Commands.
+             * <p>The instruction parameters, such as the skill group for a transfer-to-agent instruction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;sysToAgent&quot;: &quot;{\&quot;skillGroup\&quot;:\&quot;12\&quot;}&quot;
+             * }</p>
              */
             public Builder commands(java.util.Map<String, ?> commands) {
                 this.commands = commands;
@@ -975,7 +1054,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The content of the text message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Which location do you want to check the weather for?</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -983,7 +1065,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * ContentType.
+             * <p>The indicator of whether the answer is plain text or rich text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PLAIN_TEXT</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -991,7 +1076,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * DialogName.
+             * <p>When AnswerSource is BotFramework, this field returns the dialog flow unit name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample_CheckWeather</p>
              */
             public Builder dialogName(String dialogName) {
                 this.dialogName = dialogName;
@@ -999,7 +1087,24 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Ext.
+             * <p>The pass-through parameters returned in this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;MATCHED_INTENT_SOURCE&quot;: &quot;&quot;,
+             *     &quot;INTENT_ID&quot;: 724414,
+             *     &quot;IntentName&quot;: &quot;CheckWeatherIntent&quot;,
+             *     &quot;INTENT_DETAIL&quot;: &quot;[I want|I need to] check the weather&quot;,
+             *     &quot;LGF_EXPRESSION&quot;: &quot;[I want|I need to] check the weather&quot;,
+             *     &quot;IS_SESSION_FINISHED&quot;: false,
+             *     &quot;DsScore&quot;: 100.0,
+             *     &quot;DIALOG_ID&quot;: &quot;299034&quot;,
+             *     &quot;FINISH_LABEL&quot;: false,
+             *     &quot;MODULE_START&quot;: false,
+             *     &quot;INTENT_NAME&quot;: &quot;CheckWeatherIntent&quot;,
+             *     &quot;INTENT_SOURCE&quot;: &quot;Lgf&quot;,
+             *     &quot;DIALOG_NAME&quot;: &quot;Sample_CheckWeather&quot;
+             * }</p>
              */
             public Builder ext(java.util.Map<String, ?> ext) {
                 this.ext = ext;
@@ -1007,7 +1112,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalFlags.
+             * <p>The pass-through parameters returned when AnswerSource is BotFramework.</p>
              */
             public Builder externalFlags(java.util.Map<String, ?> externalFlags) {
                 this.externalFlags = externalFlags;
@@ -1015,7 +1120,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * HitStatement.
+             * <p>The hit statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CheckWeather</p>
              */
             public Builder hitStatement(String hitStatement) {
                 this.hitStatement = hitStatement;
@@ -1023,7 +1131,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * IntentName.
+             * <p>When AnswerSource is BotFramework, this field returns the intent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CheckWeatherIntent</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -1031,7 +1142,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * MetaData.
+             * <p>The metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[[{&quot;columnName&quot;:&quot;Name&quot;,&quot;stringValue&quot;:&quot;Wang Shanshan&quot;}]]</p>
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -1039,7 +1153,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID returned when AnswerSource is BotFramework.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1410-c7a72a78.__city</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -1047,7 +1164,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>When AnswerSource is BotFramework, this field returns the node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample_CheckWeather.CheckWeatherSlotFilling.__city</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -1055,7 +1175,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseType.
+             * <p>When AnswerSource is BotFramework and ResponseType is SSML, this field indicates that a dialog flow interactive slot filling is hit. Otherwise, this field does not exist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SSML</p>
              */
             public Builder responseType(String responseType) {
                 this.responseType = responseType;
@@ -1063,7 +1186,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -1071,7 +1197,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Slots.
+             * <p>When AnswerSource is BotFramework, this field returns the list of named entities.</p>
              */
             public Builder slots(java.util.List<Slots> slots) {
                 this.slots = slots;
@@ -1079,7 +1205,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * UserDefinedChatTitle.
+             * <p>The title of the custom chitchat topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Greeting</p>
              */
             public Builder userDefinedChatTitle(String userDefinedChatTitle) {
                 this.userDefinedChatTitle = userDefinedChatTitle;
@@ -1211,7 +1340,11 @@ public class ChatResponseBody extends TeaModel {
             } 
 
             /**
-             * AnswerSource.
+             * <p>The source of the recommended answer when AnswerType is Recommend.
+             * [_single.resp.200.props.Messages.items.AnswerSource.enum. INTENT_FAQ_CLARIFY]mixed clarification from FAQ and dialog flow</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KNOWLEDGE</p>
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -1219,7 +1352,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * AnswerType.
+             * <p>The type of this message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Text</p>
              */
             public Builder answerType(String answerType) {
                 this.answerType = answerType;
@@ -1227,7 +1363,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Knowledge.
+             * <p>When AnswerType is Knowledge, this field contains the Knowledge object returned by the chatbot.</p>
              */
             public Builder knowledge(Knowledge knowledge) {
                 this.knowledge = knowledge;
@@ -1235,7 +1371,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Recommends.
+             * <p>The list of recommendations returned by the bot when AnswerType is Recommend.</p>
              */
             public Builder recommends(java.util.List<Recommends> recommends) {
                 this.recommends = recommends;
@@ -1243,7 +1379,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * <p>When AnswerType is Text, this field contains the Text object returned by the chatbot.</p>
              */
             public Builder text(Text text) {
                 this.text = text;
@@ -1251,7 +1387,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The counter-question title in online scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Which insurance age range are you inquiring about?</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1259,7 +1398,10 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceTitle.
+             * <p>The clarification content in voice scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Are you asking about provident fund inquiry or provident fund withdrawal?</p>
              */
             public Builder voiceTitle(String voiceTitle) {
                 this.voiceTitle = voiceTitle;

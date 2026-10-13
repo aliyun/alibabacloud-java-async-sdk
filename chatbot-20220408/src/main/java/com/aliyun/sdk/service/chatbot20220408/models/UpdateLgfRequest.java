@@ -127,7 +127,10 @@ public class UpdateLgfRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -136,6 +139,7 @@ public class UpdateLgfRequest extends Request {
         }
 
         /**
+         * <p>The chatbot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +152,7 @@ public class UpdateLgfRequest extends Request {
         }
 
         /**
+         * <p>The LGF information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder lgfDefinition(LgfDefinition lgfDefinition) {
@@ -232,6 +237,7 @@ public class UpdateLgfRequest extends Request {
             } 
 
             /**
+             * <p>The intent ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -243,7 +249,11 @@ public class UpdateLgfRequest extends Request {
             }
 
             /**
+             * <p>The LGF configuration.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.{0,10}[天气]</p>
              */
             public Builder ruleText(String ruleText) {
                 this.ruleText = ruleText;

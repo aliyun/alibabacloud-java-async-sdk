@@ -80,7 +80,10 @@ public class NluResponseBody extends TeaModel {
         } 
 
         /**
-         * MessageId.
+         * <p>The ID of the NLU response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2828708A-2C7A-1BAE-B810-87DB9DA9C661</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -88,7 +91,7 @@ public class NluResponseBody extends TeaModel {
         }
 
         /**
-         * Messages.
+         * <p>The list of messages.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
             this.messages = messages;
@@ -96,7 +99,10 @@ public class NluResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A6357C1B-1D79-1382-B259-BD9E80751B42</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +168,10 @@ public class NluResponseBody extends TeaModel {
             } 
 
             /**
-             * StandardWord.
+             * <p>The standard word.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>天气</p>
              */
             public Builder standardWord(String standardWord) {
                 this.standardWord = standardWord;
@@ -170,7 +179,10 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * Word.
+             * <p>The synonym.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>天气</p>
              */
             public Builder word(String word) {
                 this.word = word;
@@ -237,7 +249,10 @@ public class NluResponseBody extends TeaModel {
             } 
 
             /**
-             * StandardWord.
+             * <p>The standard word.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>天气</p>
              */
             public Builder standardWord(String standardWord) {
                 this.standardWord = standardWord;
@@ -245,7 +260,10 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * Word.
+             * <p>The synonym.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>天气</p>
              */
             public Builder word(String word) {
                 this.word = word;
@@ -312,7 +330,7 @@ public class NluResponseBody extends TeaModel {
             } 
 
             /**
-             * GlobalDictList.
+             * <p>The list of global nouns.</p>
              */
             public Builder globalDictList(java.util.List<GlobalDictList> globalDictList) {
                 this.globalDictList = globalDictList;
@@ -320,7 +338,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalSensitiveWordList.
+             * <p>The list of global sensitive words.</p>
              */
             public Builder globalSensitiveWordList(java.util.List<GlobalSensitiveWordList> globalSensitiveWordList) {
                 this.globalSensitiveWordList = globalSensitiveWordList;
@@ -413,7 +431,10 @@ public class NluResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The entity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@城市</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -421,7 +442,10 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * Origin.
+             * <p>The original word of the entity (entity member).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京</p>
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -429,7 +453,10 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The entity type. Currently, only the text type is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -437,7 +464,10 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The synonym of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>首都</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -530,7 +560,10 @@ public class NluResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The entity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@城市</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -538,7 +571,10 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * Origin.
+             * <p>The original word of the entity (entity member).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京</p>
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -546,7 +582,10 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The entity type. Currently, only the text type is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -554,7 +593,10 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The synonym of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>首都</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -673,7 +715,10 @@ public class NluResponseBody extends TeaModel {
             } 
 
             /**
-             * IntentId.
+             * <p>The intent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>724387</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -681,7 +726,10 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * MatchDetail.
+             * <p>The match details (matching process).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>classifierType=Fewshot,from=Fewshot,content=[I want to check the weather in Beijing, Help me check the weather in Beijing, How is the weather in Beijing, Is it raining in Beijing today, What is the temperature in Beijing today]</p>
              */
             public Builder matchDetail(String matchDetail) {
                 this.matchDetail = matchDetail;
@@ -689,7 +737,17 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * MatchType.
+             * <p>The match type. Valid values:</p>
+             * <ul>
+             * <li>Similarity: The query matches the intent through intent utterance similarity.</li>
+             * <li>Lgf: The query matches the intent through LGF.</li>
+             * <li>Classify: The query matches the intent through model training.</li>
+             * <li>FewShotLearning: The query matches the intent through the built-in few-shot model.</li>
+             * <li>BuildIn: The query matches a built-in system intent.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FewShotLearning</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -697,7 +755,10 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The intent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CheckWeatherIntent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -705,7 +766,10 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.995</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -713,7 +777,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * SlotList.
+             * <p>The list of slots for the matched intent.</p>
              */
             public Builder slotList(java.util.List<SlotList> slotList) {
                 this.slotList = slotList;
@@ -780,7 +844,7 @@ public class NluResponseBody extends TeaModel {
             } 
 
             /**
-             * EntityList.
+             * <p>The list of entities.</p>
              */
             public Builder entityList(java.util.List<EntityList> entityList) {
                 this.entityList = entityList;
@@ -788,7 +852,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * IntentList.
+             * <p>The list of intents.</p>
              */
             public Builder intentList(java.util.List<IntentList> intentList) {
                 this.intentList = intentList;
@@ -855,7 +919,7 @@ public class NluResponseBody extends TeaModel {
             } 
 
             /**
-             * DialogHubNluInfo.
+             * <p>The NLU information from the dialog central controller.</p>
              */
             public Builder dialogHubNluInfo(DialogHubNluInfo dialogHubNluInfo) {
                 this.dialogHubNluInfo = dialogHubNluInfo;
@@ -863,7 +927,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * DsNluInfo.
+             * <p>The NLU information from the dialog flow.</p>
              */
             public Builder dsNluInfo(DsNluInfo dsNluInfo) {
                 this.dsNluInfo = dsNluInfo;

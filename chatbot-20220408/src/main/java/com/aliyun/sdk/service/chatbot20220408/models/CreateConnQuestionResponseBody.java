@@ -67,7 +67,10 @@ public class CreateConnQuestionResponseBody extends TeaModel {
         } 
 
         /**
-         * OutlineId.
+         * <p>The association ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000002123</p>
          */
         public Builder outlineId(Long outlineId) {
             this.outlineId = outlineId;
@@ -75,7 +78,10 @@ public class CreateConnQuestionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C191B48B-9268-4FB1-A3C2-5143B4A91D0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

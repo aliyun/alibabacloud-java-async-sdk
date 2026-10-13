@@ -124,7 +124,15 @@ public class LinkInstanceCategoryRequest extends Request {
         }
 
         /**
-         * AbilityType.
+         * <p>The capability type of the category. Valid values:</p>
+         * <ul>
+         * <li>FAQ: Frequently asked questions.</li>
+         * <li>MRC: Document-based machine reading comprehension.</li>
+         * </ul>
+         * <p>Default value: FAQ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAQ,MRC</p>
          */
         public Builder abilityType(String abilityType) {
             this.putQueryParameter("AbilityType", abilityType);
@@ -133,7 +141,10 @@ public class LinkInstanceCategoryRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -142,7 +153,10 @@ public class LinkInstanceCategoryRequest extends Request {
         }
 
         /**
-         * CategoryIds.
+         * <p>The array of FAQ category IDs to associate with the chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;30000065789\&quot;]</p>
          */
         public Builder categoryIds(String categoryIds) {
             this.putBodyParameter("CategoryIds", categoryIds);
@@ -151,7 +165,10 @@ public class LinkInstanceCategoryRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The unique identifier of the chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-mp90s2lrk00050</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

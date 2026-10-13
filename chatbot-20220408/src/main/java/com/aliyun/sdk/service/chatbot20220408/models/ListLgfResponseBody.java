@@ -106,7 +106,7 @@ public class ListLgfResponseBody extends TeaModel {
         } 
 
         /**
-         * Lgfs.
+         * <p>The list of LGF configurations.</p>
          */
         public Builder lgfs(java.util.List<Lgfs> lgfs) {
             this.lgfs = lgfs;
@@ -114,7 +114,10 @@ public class ListLgfResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListLgfResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListLgfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34fg57h2gh5783</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListLgfResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -243,7 +255,10 @@ public class ListLgfResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-12T16:00:01Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -251,7 +266,10 @@ public class ListLgfResponseBody extends TeaModel {
             }
 
             /**
-             * IntentId.
+             * <p>The intent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256756734345</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -270,7 +288,10 @@ public class ListLgfResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-12T16:00:01Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -278,7 +299,10 @@ public class ListLgfResponseBody extends TeaModel {
             }
 
             /**
-             * RuleText.
+             * <p>The LGF rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.{0,5}北京天气</p>
              */
             public Builder ruleText(String ruleText) {
                 this.ruleText = ruleText;

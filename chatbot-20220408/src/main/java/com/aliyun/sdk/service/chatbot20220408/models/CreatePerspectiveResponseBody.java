@@ -67,7 +67,10 @@ public class CreatePerspectiveResponseBody extends TeaModel {
         } 
 
         /**
-         * PerspectiveId.
+         * <p>The perspective ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3001</p>
          */
         public Builder perspectiveId(String perspectiveId) {
             this.perspectiveId = perspectiveId;
@@ -75,7 +78,10 @@ public class CreatePerspectiveResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F285D735-D580-18A8-B97F-B2E72B00F101</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

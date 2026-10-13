@@ -111,7 +111,10 @@ public class CreateLgfRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -120,6 +123,7 @@ public class CreateLgfRequest extends Request {
         }
 
         /**
+         * <p>The robot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +136,7 @@ public class CreateLgfRequest extends Request {
         }
 
         /**
-         * LgfDefinition.
+         * <p>The LGF definition information.</p>
          */
         public Builder lgfDefinition(LgfDefinition lgfDefinition) {
             String lgfDefinitionShrink = shrink(lgfDefinition, "LgfDefinition", "json");
@@ -203,6 +207,7 @@ public class CreateLgfRequest extends Request {
             } 
 
             /**
+             * <p>The intent ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -214,7 +219,11 @@ public class CreateLgfRequest extends Request {
             }
 
             /**
+             * <p>The LGF configuration.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.{0,10}北京天气</p>
              */
             public Builder ruleText(String ruleText) {
                 this.ruleText = ruleText;

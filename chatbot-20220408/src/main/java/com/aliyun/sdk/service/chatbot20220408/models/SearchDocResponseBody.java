@@ -106,7 +106,7 @@ public class SearchDocResponseBody extends TeaModel {
         } 
 
         /**
-         * DocHits.
+         * <p>The list of documents.</p>
          */
         public Builder docHits(java.util.List<DocHits> docHits) {
             this.docHits = docHits;
@@ -114,7 +114,10 @@ public class SearchDocResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class SearchDocResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -141,7 +147,10 @@ public class SearchDocResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>141</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -246,7 +255,10 @@ public class SearchDocResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultTag.
+             * <p>Indicates whether this is the default label that represents all labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder defaultTag(Boolean defaultTag) {
                 this.defaultTag = defaultTag;
@@ -254,7 +266,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The label group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3610</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -262,7 +277,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The label group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Article</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -270,7 +288,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The label ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1201</p>
              */
             public Builder tagId(Long tagId) {
                 this.tagId = tagId;
@@ -278,7 +299,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Novel</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -592,7 +616,10 @@ public class SearchDocResponseBody extends TeaModel {
             } 
 
             /**
-             * BizCode.
+             * <p>The business code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn_dytns</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -600,7 +627,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryId.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000135654</p>
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -608,7 +638,30 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The document parsing and chunking configuration.</p>
+             * <p>Configuration item: Splitter
+             * KEY: Splitter
+             * Valid values:</p>
+             * <ul>
+             * <li>paragraphSplitter: hierarchy recognition (default)</li>
+             * <li>treeSplitter: rule-based hierarchy</li>
+             * </ul>
+             * <p>Configuration item: Document chunk size
+             * KEY: ChunkSize
+             * VALUE: Default value: 500. Value range: [200, 800].</p>
+             * <p>Configuration item: Rule-based hierarchy
+             * KEY: TreePatterns
+             * VALUE: Default value: [].</p>
+             * <p>Configuration item: Document title source
+             * KEY: TitleSource
+             * Valid values:</p>
+             * <ul>
+             * <li>ocrTitle: OCR-recognized title (default)</li>
+             * <li>docName: document name as title</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Splitter&quot;:&quot;treeSplitter&quot;,&quot;ChunkSize&quot;:500,&quot;TreePatterns&quot;:[&quot;^# .<em>&quot;,&quot;^## .</em>&quot;,&quot;^### .<em>&quot;,&quot;^#### .</em>&quot;],&quot;TitleSource&quot;:&quot;docName&quot;}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -616,7 +669,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-22T03:53:41Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -624,7 +680,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserId.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111111</p>
              */
             public Builder createUserId(Long createUserId) {
                 this.createUserId = createUserId;
@@ -632,7 +691,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserName.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John</p>
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -640,7 +702,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * DocName.
+             * <p>The document name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DocumentName</p>
              */
             public Builder docName(String docName) {
                 this.docName = docName;
@@ -648,7 +713,7 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * DocTags.
+             * <p>The list of label details.</p>
              */
             public Builder docTags(java.util.List<DocTags> docTags) {
                 this.docTags = docTags;
@@ -656,7 +721,15 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * EffectStatus.
+             * <p>The knowledge effective status, calculated based on StartDate and EndDate. Valid values:</p>
+             * <ul>
+             * <li>20: effective</li>
+             * <li>21: expired</li>
+             * <li>22: pending effective</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder effectStatus(Integer effectStatus) {
                 this.effectStatus = effectStatus;
@@ -664,7 +737,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * EndDate.
+             * <p>The expiration time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2099-12-31T16:00:00Z</p>
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -672,7 +748,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeId.
+             * <p>The knowledge ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30002692007</p>
              */
             public Builder knowledgeId(Long knowledgeId) {
                 this.knowledgeId = knowledgeId;
@@ -680,7 +759,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * Meta.
+             * <p>The metadata associated with the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;code&quot;:&quot;xxx&quot;}</p>
              */
             public Builder meta(String meta) {
                 this.meta = meta;
@@ -688,7 +770,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-25T02:27:42Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -696,7 +781,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUserId.
+             * <p>The ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222222222</p>
              */
             public Builder modifyUserId(Long modifyUserId) {
                 this.modifyUserId = modifyUserId;
@@ -704,7 +792,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUserName.
+             * <p>The name of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Jane</p>
              */
             public Builder modifyUserName(String modifyUserName) {
                 this.modifyUserName = modifyUserName;
@@ -712,7 +803,14 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessCanRetry.
+             * <p>Indicates whether the task can be retried. Valid values:</p>
+             * <ul>
+             * <li>true: The task can be retried.</li>
+             * <li>false: The task cannot be retried.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder processCanRetry(Boolean processCanRetry) {
                 this.processCanRetry = processCanRetry;
@@ -720,7 +818,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessMessage.
+             * <p>The task processing message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task processing succeeded</p>
              */
             public Builder processMessage(String processMessage) {
                 this.processMessage = processMessage;
@@ -728,7 +829,17 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessStatus.
+             * <p>The task processing status. Valid values:</p>
+             * <ul>
+             * <li>-1: queued</li>
+             * <li>0: succeeded</li>
+             * <li>1: parsing</li>
+             * <li>2: processing</li>
+             * <li>3: processing failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder processStatus(Integer processStatus) {
                 this.processStatus = processStatus;
@@ -736,7 +847,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * StartDate.
+             * <p>The effective period in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-28T11:40:18Z</p>
              */
             public Builder startDate(String startDate) {
                 this.startDate = startDate;
@@ -744,7 +858,15 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The editing status. Valid values:</p>
+             * <ul>
+             * <li>1: unpublished</li>
+             * <li>2: published</li>
+             * <li>3: updated but not published</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -752,7 +874,10 @@ public class SearchDocResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The OSS URL where the document is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://doc2bot-bucket-cloud.oss-cn-shanghai.aliyuncs.com/doc2bot/input/%E6%96%87%E6%A1%A3%E9%97%AE%E7%AD%94%E8%AF%B4%E6%98%8E%E4%B9%A6_V1.pdf">https://doc2bot-bucket-cloud.oss-cn-shanghai.aliyuncs.com/doc2bot/input/文档问答说明书_V1.pdf</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

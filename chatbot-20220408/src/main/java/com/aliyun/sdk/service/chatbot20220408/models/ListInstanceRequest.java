@@ -152,7 +152,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -161,7 +164,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Performs a fuzzy match by chatbot name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pre-sales Customer Service</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -170,7 +176,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number for pagination. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -179,7 +188,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -188,7 +200,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * RobotType.
+         * <p>Filters chatbots by type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scenario_im</p>
          */
         public Builder robotType(String robotType) {
             this.putQueryParameter("RobotType", robotType);

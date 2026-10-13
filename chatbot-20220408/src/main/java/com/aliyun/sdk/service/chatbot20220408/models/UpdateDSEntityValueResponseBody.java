@@ -67,7 +67,10 @@ public class UpdateDSEntityValueResponseBody extends TeaModel {
         } 
 
         /**
-         * EntityValueId.
+         * <p>The entity member ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2342377423</p>
          */
         public Builder entityValueId(Long entityValueId) {
             this.entityValueId = entityValueId;
@@ -75,7 +78,10 @@ public class UpdateDSEntityValueResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sDag3g43wesf2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

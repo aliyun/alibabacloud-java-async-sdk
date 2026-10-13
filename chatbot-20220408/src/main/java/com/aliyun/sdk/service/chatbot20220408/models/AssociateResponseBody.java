@@ -93,7 +93,7 @@ public class AssociateResponseBody extends TeaModel {
         } 
 
         /**
-         * Associate.
+         * <p>The list of associated suggestions.</p>
          */
         public Builder associate(java.util.List<Associate> associate) {
             this.associate = associate;
@@ -101,7 +101,10 @@ public class AssociateResponseBody extends TeaModel {
         }
 
         /**
-         * MessageId.
+         * <p>The ID of the response message in the current session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ADF0EBD-7C50-1922-A28B-43215B47CC1A</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -109,7 +112,10 @@ public class AssociateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C20F0D4-9721-178A-8236-3BF990634962</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class AssociateResponseBody extends TeaModel {
         }
 
         /**
-         * SessionId.
+         * <p>The ID of the current session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1531ded6b3df4afca4be63943f708bb7</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -183,7 +192,10 @@ public class AssociateResponseBody extends TeaModel {
             } 
 
             /**
-             * Meta.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder meta(String meta) {
                 this.meta = meta;
@@ -191,7 +203,10 @@ public class AssociateResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the associated question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Housing fund withdrawal policy</p>
              */
             public Builder title(String title) {
                 this.title = title;

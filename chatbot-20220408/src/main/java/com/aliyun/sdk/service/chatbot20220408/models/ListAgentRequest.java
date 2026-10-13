@@ -101,7 +101,10 @@ public class ListAgentRequest extends Request {
         } 
 
         /**
-         * AgentName.
+         * <p>The business space name. You can use this parameter to search by name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BusinessSpace_001</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -110,7 +113,10 @@ public class ListAgentRequest extends Request {
         }
 
         /**
-         * GoodsCodes.
+         * <p>The commodity code. You can use this parameter to filter by commodity code and query instance information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>G_cloudBeeBot_public</p>
          */
         public Builder goodsCodes(String goodsCodes) {
             this.putQueryParameter("GoodsCodes", goodsCodes);
@@ -119,7 +125,10 @@ public class ListAgentRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -128,7 +137,10 @@ public class ListAgentRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page in the response. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

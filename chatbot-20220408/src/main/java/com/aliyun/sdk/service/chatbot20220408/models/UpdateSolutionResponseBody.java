@@ -54,7 +54,10 @@ public class UpdateSolutionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B8F098D-A338-54DD-B19C-24BBBCBD8498</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

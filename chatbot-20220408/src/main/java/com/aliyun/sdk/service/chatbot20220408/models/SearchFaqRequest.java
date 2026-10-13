@@ -306,7 +306,10 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -315,7 +318,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * CategoryIds.
+         * <p>The unique identifier of the category.</p>
          */
         public Builder categoryIds(java.util.List<Long> categoryIds) {
             String categoryIdsShrink = shrink(categoryIds, "CategoryIds", "json");
@@ -325,7 +328,10 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * CreateTimeBegin.
+         * <p>The start of the creation time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-02T03:09:30Z</p>
          */
         public Builder createTimeBegin(String createTimeBegin) {
             this.putBodyParameter("CreateTimeBegin", createTimeBegin);
@@ -334,7 +340,10 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * CreateTimeEnd.
+         * <p>The end of the creation time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-02T03:09:30Z</p>
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putBodyParameter("CreateTimeEnd", createTimeEnd);
@@ -343,7 +352,10 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * CreateUserName.
+         * <p>The name of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder createUserName(String createUserName) {
             this.putBodyParameter("CreateUserName", createUserName);
@@ -352,7 +364,10 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * EndTimeBegin.
+         * <p>The start of the expiration time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-02T03:09:30Z</p>
          */
         public Builder endTimeBegin(String endTimeBegin) {
             this.putBodyParameter("EndTimeBegin", endTimeBegin);
@@ -361,7 +376,10 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * EndTimeEnd.
+         * <p>The end of the expiration time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-02T03:09:30Z</p>
          */
         public Builder endTimeEnd(String endTimeEnd) {
             this.putBodyParameter("EndTimeEnd", endTimeEnd);
@@ -370,7 +388,10 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Search title</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -379,7 +400,10 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * ModifyTimeBegin.
+         * <p>The start of the modification time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-02T03:09:30Z</p>
          */
         public Builder modifyTimeBegin(String modifyTimeBegin) {
             this.putBodyParameter("ModifyTimeBegin", modifyTimeBegin);
@@ -388,7 +412,10 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * ModifyTimeEnd.
+         * <p>The end of the modification time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-02T03:09:30Z</p>
          */
         public Builder modifyTimeEnd(String modifyTimeEnd) {
             this.putBodyParameter("ModifyTimeEnd", modifyTimeEnd);
@@ -397,7 +424,10 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * ModifyUserName.
+         * <p>The name of the modifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder modifyUserName(String modifyUserName) {
             this.putBodyParameter("ModifyUserName", modifyUserName);
@@ -406,7 +436,10 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -415,7 +448,10 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -424,7 +460,15 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * SearchScope.
+         * <p>The search scope. Valid values:</p>
+         * <ul>
+         * <li>1: Search titles and similar questions.</li>
+         * <li>2: Search answers.</li>
+         * <li>3: Search all.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder searchScope(Integer searchScope) {
             this.putBodyParameter("SearchScope", searchScope);
@@ -433,7 +477,10 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * StartTimeBegin.
+         * <p>The start of the effective time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-02T03:09:30Z</p>
          */
         public Builder startTimeBegin(String startTimeBegin) {
             this.putBodyParameter("StartTimeBegin", startTimeBegin);
@@ -442,7 +489,10 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * StartTimeEnd.
+         * <p>The end of the effective time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-03T03:09:30Z</p>
          */
         public Builder startTimeEnd(String startTimeEnd) {
             this.putBodyParameter("StartTimeEnd", startTimeEnd);
@@ -451,7 +501,16 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The knowledge status. Valid values:</p>
+         * <ul>
+         * <li>-1: deleted and unpublished.</li>
+         * <li>1: unpublished.</li>
+         * <li>2: published.</li>
+         * <li>3: updated and unpublished.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);

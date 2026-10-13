@@ -67,7 +67,10 @@ public class ListSolutionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5B29DB5E-251D-5A73-84B5-A12DF795F231</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListSolutionResponseBody extends TeaModel {
         }
 
         /**
-         * Solutions.
+         * <p>The list of answers.</p>
          */
         public Builder solutions(java.util.List<Solutions> solutions) {
             this.solutions = solutions;
@@ -219,7 +222,10 @@ public class ListSolutionResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The answer content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Answer content</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -227,7 +233,14 @@ public class ListSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * ContentType.
+             * <p>The answer type. Valid values:</p>
+             * <ul>
+             * <li>0: plain text.</li>
+             * <li>1: rich text.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder contentType(Integer contentType) {
                 this.contentType = contentType;
@@ -235,7 +248,10 @@ public class ListSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-29T03:55:04Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -243,7 +259,10 @@ public class ListSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-29T06:23:53Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -251,7 +270,7 @@ public class ListSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * PerspectiveCodes.
+             * <p>The list of perspective codes.</p>
              */
             public Builder perspectiveCodes(java.util.List<String> perspectiveCodes) {
                 this.perspectiveCodes = perspectiveCodes;
@@ -259,7 +278,10 @@ public class ListSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * PlainText.
+             * <p>The plain text content of the answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Answer content</p>
              */
             public Builder plainText(String plainText) {
                 this.plainText = plainText;
@@ -267,7 +289,10 @@ public class ListSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * SolutionId.
+             * <p>The answer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>496</p>
              */
             public Builder solutionId(Long solutionId) {
                 this.solutionId = solutionId;
@@ -275,7 +300,7 @@ public class ListSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * TagIdList.
+             * <p>The list of label IDs.</p>
              */
             public Builder tagIdList(java.util.List<Long> tagIdList) {
                 this.tagIdList = tagIdList;

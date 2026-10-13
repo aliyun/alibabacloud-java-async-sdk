@@ -112,7 +112,10 @@ public class CreateSimQuestionRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If not specified, the default business space is accessed. You can obtain the key value from the business management page of the main account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -121,6 +124,7 @@ public class CreateSimQuestionRequest extends Request {
         }
 
         /**
+         * <p>The knowledge ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +137,11 @@ public class CreateSimQuestionRequest extends Request {
         }
 
         /**
+         * <p>The title of the similar question. The maximum length is 120 characters.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test similar question title</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

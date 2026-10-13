@@ -106,7 +106,10 @@ public class ListUserSayResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListUserSayResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class ListUserSayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs1fg4512v43572v23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListUserSayResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class ListUserSayResponseBody extends TeaModel {
         }
 
         /**
-         * UserSays.
+         * <p>The list of utterances.</p>
          */
         public Builder userSays(java.util.List<UserSays> userSays) {
             this.userSays = userSays;
@@ -217,7 +229,10 @@ public class ListUserSayResponseBody extends TeaModel {
             } 
 
             /**
-             * EndIndex.
+             * <p>The end index of the slot in the intent utterance (exclusive).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder endIndex(Integer endIndex) {
                 this.endIndex = endIndex;
@@ -225,7 +240,10 @@ public class ListUserSayResponseBody extends TeaModel {
             }
 
             /**
-             * SlotId.
+             * <p>The intent slot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3456sdfg3tu</p>
              */
             public Builder slotId(String slotId) {
                 this.slotId = slotId;
@@ -233,7 +251,10 @@ public class ListUserSayResponseBody extends TeaModel {
             }
 
             /**
-             * StartIndex.
+             * <p>The start index of the slot in the intent utterance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder startIndex(Integer startIndex) {
                 this.startIndex = startIndex;
@@ -352,7 +373,10 @@ public class ListUserSayResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The utterance content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Have you taken a COVID test</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -360,7 +384,10 @@ public class ListUserSayResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the utterance was created, in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-12T16:00:01Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -368,7 +395,10 @@ public class ListUserSayResponseBody extends TeaModel {
             }
 
             /**
-             * IntentId.
+             * <p>The intent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>235564564</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -376,7 +406,10 @@ public class ListUserSayResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the utterance was last modified, in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-12T16:00:01Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -384,7 +417,7 @@ public class ListUserSayResponseBody extends TeaModel {
             }
 
             /**
-             * SlotInfos.
+             * <p>The associated slot information.</p>
              */
             public Builder slotInfos(java.util.List<SlotInfos> slotInfos) {
                 this.slotInfos = slotInfos;
@@ -392,7 +425,10 @@ public class ListUserSayResponseBody extends TeaModel {
             }
 
             /**
-             * UserSayId.
+             * <p>The utterance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3453452138</p>
              */
             public Builder userSayId(Long userSayId) {
                 this.userSayId = userSayId;

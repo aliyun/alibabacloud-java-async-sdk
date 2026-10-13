@@ -111,7 +111,10 @@ public class ListCategoryRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The key of the business space. If not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -120,7 +123,15 @@ public class ListCategoryRequest extends Request {
         }
 
         /**
-         * KnowledgeType.
+         * <p>The knowledge type. Valid values:</p>
+         * <ul>
+         * <li>1: FAQ category.</li>
+         * <li>3: Document category.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder knowledgeType(Integer knowledgeType) {
             this.putBodyParameter("KnowledgeType", knowledgeType);
@@ -129,7 +140,10 @@ public class ListCategoryRequest extends Request {
         }
 
         /**
-         * ParentCategoryId.
+         * <p>The ID of the parent category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder parentCategoryId(Long parentCategoryId) {
             this.putBodyParameter("ParentCategoryId", parentCategoryId);

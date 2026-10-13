@@ -249,7 +249,10 @@ public class DescribeFaqResponseBody extends TeaModel {
         } 
 
         /**
-         * CategoryId.
+         * <p>The category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000055617</p>
          */
         public Builder categoryId(Long categoryId) {
             this.categoryId = categoryId;
@@ -257,7 +260,10 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-30T03:03:37Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -265,7 +271,10 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * CreateUserName.
+         * <p>The user who created the knowledge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder createUserName(String createUserName) {
             this.createUserName = createUserName;
@@ -273,7 +282,15 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * EffectStatus.
+         * <p>The knowledge effective status, calculated based on StartDate and EndDate. Valid values:</p>
+         * <ul>
+         * <li>20: effective.</li>
+         * <li>21: expired.</li>
+         * <li>22: pending.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder effectStatus(Integer effectStatus) {
             this.effectStatus = effectStatus;
@@ -281,7 +298,10 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * EndDate.
+         * <p>The expiration time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-27T06:08:54Z</p>
          */
         public Builder endDate(String endDate) {
             this.endDate = endDate;
@@ -289,7 +309,10 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * KnowledgeId.
+         * <p>The knowledge ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001979424</p>
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.knowledgeId = knowledgeId;
@@ -297,7 +320,10 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The modification time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-02T06:35:50Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -305,7 +331,10 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyUserName.
+         * <p>The user who last modified the knowledge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder modifyUserName(String modifyUserName) {
             this.modifyUserName = modifyUserName;
@@ -313,7 +342,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * Outlines.
+         * <p>The list of related questions.</p>
          */
         public Builder outlines(java.util.List<Outlines> outlines) {
             this.outlines = outlines;
@@ -321,7 +350,10 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8AD9FA10-7780-5E12-B701-13C928524F32</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -329,7 +361,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * SimQuestions.
+         * <p>The list of similar questions.</p>
          */
         public Builder simQuestions(java.util.List<SimQuestions> simQuestions) {
             this.simQuestions = simQuestions;
@@ -337,7 +369,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * Solutions.
+         * <p>The list of solutions.</p>
          */
         public Builder solutions(java.util.List<Solutions> solutions) {
             this.solutions = solutions;
@@ -345,7 +377,10 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * StartDate.
+         * <p>The effective period in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-27T07:04:39Z</p>
          */
         public Builder startDate(String startDate) {
             this.startDate = startDate;
@@ -353,7 +388,16 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The knowledge status. Valid values:</p>
+         * <ul>
+         * <li>-1: deleted but not published.</li>
+         * <li>1: not published.</li>
+         * <li>2: published.</li>
+         * <li>3: updated but not published.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -361,7 +405,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * TagIdList.
+         * <p>The list of label IDs.</p>
          */
         public Builder tagIdList(java.util.List<Long> tagIdList) {
             this.tagIdList = tagIdList;
@@ -369,7 +413,10 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * Title.
+         * <p>The title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test title</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -474,7 +521,10 @@ public class DescribeFaqResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnQuestionId.
+             * <p>The related knowledge ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000098002</p>
              */
             public Builder connQuestionId(Long connQuestionId) {
                 this.connQuestionId = connQuestionId;
@@ -482,7 +532,10 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-26T10:24:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -490,7 +543,10 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-26T18:12:02Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -498,7 +554,10 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * OutlineId.
+             * <p>The relation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>797</p>
              */
             public Builder outlineId(Long outlineId) {
                 this.outlineId = outlineId;
@@ -506,7 +565,10 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The related knowledge title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test related question title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -599,7 +661,10 @@ public class DescribeFaqResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-26T10:24:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -607,7 +672,10 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-29T03:55:07Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -615,7 +683,10 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * SimQuestionId.
+             * <p>The similar question ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000000581</p>
              */
             public Builder simQuestionId(Long simQuestionId) {
                 this.simQuestionId = simQuestionId;
@@ -623,7 +694,10 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The similar question title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test similar question title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -768,7 +842,10 @@ public class DescribeFaqResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The solution content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test solution content</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -776,7 +853,14 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * ContentType.
+             * <p>The solution type. Valid values:</p>
+             * <ul>
+             * <li>0: plain text.</li>
+             * <li>1: rich text.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder contentType(Integer contentType) {
                 this.contentType = contentType;
@@ -784,7 +868,10 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-26T10:24:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -792,7 +879,10 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-29T07:07:13Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -800,7 +890,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * PerspectiveCodes.
+             * <p>The list of perspective codes.</p>
              */
             public Builder perspectiveCodes(java.util.List<String> perspectiveCodes) {
                 this.perspectiveCodes = perspectiveCodes;
@@ -808,7 +898,10 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * PlainText.
+             * <p>The plain text content of the solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test solution content</p>
              */
             public Builder plainText(String plainText) {
                 this.plainText = plainText;
@@ -816,7 +909,10 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * SolutionId.
+             * <p>The solution ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000003071</p>
              */
             public Builder solutionId(Long solutionId) {
                 this.solutionId = solutionId;
@@ -824,7 +920,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * TagIdList.
+             * <p>The list of label IDs.</p>
              */
             public Builder tagIdList(java.util.List<Long> tagIdList) {
                 this.tagIdList = tagIdList;

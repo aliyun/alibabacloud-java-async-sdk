@@ -122,10 +122,7 @@ public class ListTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxxXxxxxx</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -338,10 +335,7 @@ public class ListTagGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>7562321</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;

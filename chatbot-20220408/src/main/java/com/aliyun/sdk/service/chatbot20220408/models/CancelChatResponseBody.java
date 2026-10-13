@@ -67,7 +67,7 @@ public class CancelChatResponseBody extends TeaModel {
         } 
 
         /**
-         * CancelResult.
+         * <p>The result of calling this operation.</p>
          */
         public Builder cancelResult(Boolean cancelResult) {
             this.cancelResult = cancelResult;
@@ -75,7 +75,10 @@ public class CancelChatResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E3E5C779-A630-45AC-B0F2-A4506A4212F1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -60,6 +60,7 @@ public class ListSaasPermissionGroupInfosRequest extends Request {
         } 
 
         /**
+         * <p>The business workspace key. If this parameter is not specified, the default business workspace is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -154,7 +154,10 @@ public class ListUserSayRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -163,7 +166,10 @@ public class ListUserSayRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>The keyword used to filter user utterances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Have you taken a COVID test</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -172,6 +178,7 @@ public class ListUserSayRequest extends Request {
         }
 
         /**
+         * <p>The chatbot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +191,7 @@ public class ListUserSayRequest extends Request {
         }
 
         /**
+         * <p>The intent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +204,10 @@ public class ListUserSayRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -205,7 +216,10 @@ public class ListUserSayRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

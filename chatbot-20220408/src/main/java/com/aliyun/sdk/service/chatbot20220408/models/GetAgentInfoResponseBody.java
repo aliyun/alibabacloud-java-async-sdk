@@ -93,7 +93,7 @@ public class GetAgentInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The business space data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class GetAgentInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter.Invalid</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +123,10 @@ public class GetAgentInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -186,7 +192,10 @@ public class GetAgentInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentKey.
+             * <p>The signature of the business space, used to specify the business space when calling PaaS API operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4e7400028e6f4a7393ed3acf6a7b8927_p_beebot_public</p>
              */
             public Builder agentKey(String agentKey) {
                 this.agentKey = agentKey;
@@ -194,7 +203,10 @@ public class GetAgentInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>The name of the business space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BusinessSpace_881</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;

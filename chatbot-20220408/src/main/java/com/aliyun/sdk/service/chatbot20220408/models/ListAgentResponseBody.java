@@ -106,7 +106,7 @@ public class ListAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of business spaces.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListAgentResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListAgentResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page in the response. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -141,7 +147,10 @@ public class ListAgentResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -233,7 +242,10 @@ public class ListAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>The business space ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>881</p>
              */
             public Builder agentId(Long agentId) {
                 this.agentId = agentId;
@@ -241,7 +253,10 @@ public class ListAgentResponseBody extends TeaModel {
             }
 
             /**
-             * AgentKey.
+             * <p>The business space signature, which is used to specify the business space when calling PaaS API operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4e7400028e6f4a7393ed3acf6a7b8927_p_beebot_public</p>
              */
             public Builder agentKey(String agentKey) {
                 this.agentKey = agentKey;
@@ -249,7 +264,10 @@ public class ListAgentResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>The business space name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BusinessSpace_881</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -257,7 +275,7 @@ public class ListAgentResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceInfos.
+             * <p>The commodity instance information.</p>
              */
             public Builder instanceInfos(java.util.Map<String, ?> instanceInfos) {
                 this.instanceInfos = instanceInfos;

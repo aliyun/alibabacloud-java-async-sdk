@@ -156,7 +156,10 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If this parameter is not set, the default business space is accessed. Obtain the key value from the business management page of the main account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -165,7 +168,11 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
+         * <p>When the entity type is synonyms, this parameter specifies the normalized value of the entity. When the entity type is regex, this parameter specifies the regular expression text.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Book type</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -174,6 +181,7 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
+         * <p>The entity ID. This parameter can be left empty when you modify an entity member.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +194,7 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
+         * <p>The entity member ID. This parameter is left empty when you create an entity member.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +207,7 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
+         * <p>The chatbot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +220,7 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
-         * Synonyms.
+         * <p>The list of synonyms.</p>
          */
         public Builder synonyms(java.util.List<String> synonyms) {
             String synonymsShrink = shrink(synonyms, "Synonyms", "json");

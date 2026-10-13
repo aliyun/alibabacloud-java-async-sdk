@@ -110,7 +110,10 @@ public class NluRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If not specified, the default business space is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -119,7 +122,10 @@ public class NluRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The unique identifier of the chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-mp90s2lrk00050</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -128,7 +134,10 @@ public class NluRequest extends Request {
         }
 
         /**
-         * Utterance.
+         * <p>The user utterance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>How is the weather in Beijing</p>
          */
         public Builder utterance(String utterance) {
             this.putQueryParameter("Utterance", utterance);

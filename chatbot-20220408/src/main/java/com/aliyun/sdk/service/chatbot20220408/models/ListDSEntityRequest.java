@@ -153,7 +153,10 @@ public class ListDSEntityRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the primary account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -162,7 +165,12 @@ public class ListDSEntityRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * <p>If left empty, all custom entities are returned (default).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>synonyms
+         * regex
+         * system</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -171,6 +179,7 @@ public class ListDSEntityRequest extends Request {
         }
 
         /**
+         * <p>The chatbot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +192,10 @@ public class ListDSEntityRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The filter keyword. Uses contains matching. Scope: entity name (future expansion: entity members, synonyms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>entity</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -192,7 +204,10 @@ public class ListDSEntityRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -201,7 +216,10 @@ public class ListDSEntityRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

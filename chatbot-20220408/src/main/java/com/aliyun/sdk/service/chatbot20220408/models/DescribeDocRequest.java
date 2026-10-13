@@ -111,7 +111,10 @@ public class DescribeDocRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the primary account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -120,6 +123,7 @@ public class DescribeDocRequest extends Request {
         }
 
         /**
+         * <p>The knowledge ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +136,14 @@ public class DescribeDocRequest extends Request {
         }
 
         /**
-         * ShowDetail.
+         * <p>Specifies whether to display detailed paragraph information of the document. Valid values:</p>
+         * <ul>
+         * <li>true: Display.</li>
+         * <li>false: Ignore (default).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showDetail(Boolean showDetail) {
             this.putQueryParameter("ShowDetail", showDetail);

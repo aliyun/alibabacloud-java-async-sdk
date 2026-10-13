@@ -80,7 +80,15 @@ public class FeedbackResponseBody extends TeaModel {
         } 
 
         /**
-         * Feedback.
+         * <p>The feedback type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>good: Like.</li>
+         * <li>bad: Dislike.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>good</p>
          */
         public Builder feedback(String feedback) {
             this.feedback = feedback;
@@ -88,7 +96,10 @@ public class FeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * MessageId.
+         * <p>The ID that uniquely identifies a single message in a session window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ca40988-4f99-47ad-ac96-9060d0f81db9</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -96,7 +107,10 @@ public class FeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4e5eea71-f326-450c-8849-49515473ef64</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

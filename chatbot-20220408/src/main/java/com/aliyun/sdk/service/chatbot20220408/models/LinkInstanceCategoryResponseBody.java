@@ -54,7 +54,10 @@ public class LinkInstanceCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D8C96601-E645-1BD7-99F3-04EADAB84E29</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -129,7 +129,10 @@ public class CancelChatRequest extends Request {
         } 
 
         /**
-         * AgentKey.
+         * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putBodyParameter("AgentKey", agentKey);
@@ -138,7 +141,10 @@ public class CancelChatRequest extends Request {
         }
 
         /**
-         * Answer.
+         * <p>The answer content.</p>
+         * 
+         * <strong>example:</strong>
+         * <This answer was inter>
          */
         public Builder answer(String answer) {
             this.putBodyParameter("Answer", answer);
@@ -147,7 +153,10 @@ public class CancelChatRequest extends Request {
         }
 
         /**
-         * ChatId.
+         * <p>The ID that identifies a single conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7105a351-b2e7-4c9e-8437-c43a043c0a4e</p>
          */
         public Builder chatId(String chatId) {
             this.putBodyParameter("ChatId", chatId);
@@ -156,7 +165,10 @@ public class CancelChatRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The chatbot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -165,7 +177,10 @@ public class CancelChatRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID, which is used to identify a visitor\&quot;s session and maintain context information. For a new visitor, you do not need to specify this parameter when calling the Chat operation for the first time. The chatbot starts a session and returns the SessionId in the response of the Chat operation. For subsequent conversation turns of the visitor, pass the SessionId of the current session when calling the Chat operation so that the chatbot can continue the conversation based on the SessionId. Maximum length: 64 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1187530338311ebade7cf3eaeb3668a</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
@@ -174,7 +189,10 @@ public class CancelChatRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The interruption type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Canceled</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

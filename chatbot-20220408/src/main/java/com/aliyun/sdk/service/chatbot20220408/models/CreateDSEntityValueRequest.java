@@ -141,7 +141,10 @@ public class CreateDSEntityValueRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The key of the workspace. If this parameter is not specified, the default workspace is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -150,10 +153,11 @@ public class CreateDSEntityValueRequest extends Request {
         }
 
         /**
+         * <p>The entity value or regular expression.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ada</p>
+         * <p>BookType</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -162,6 +166,7 @@ public class CreateDSEntityValueRequest extends Request {
         }
 
         /**
+         * <p>The entity ID. This parameter can be left empty when you modify an entity member.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +179,7 @@ public class CreateDSEntityValueRequest extends Request {
         }
 
         /**
+         * <p>The chatbot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +192,7 @@ public class CreateDSEntityValueRequest extends Request {
         }
 
         /**
-         * Synonyms.
+         * <p>The synonym list.</p>
          */
         public Builder synonyms(java.util.List<String> synonyms) {
             String synonymsShrink = shrink(synonyms, "Synonyms", "json");

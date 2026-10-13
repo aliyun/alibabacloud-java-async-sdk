@@ -78,7 +78,10 @@ public class DeleteLgfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dgw2342424qw42</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

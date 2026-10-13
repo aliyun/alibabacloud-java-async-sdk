@@ -67,7 +67,10 @@ public class UpdateLgfResponseBody extends TeaModel {
         } 
 
         /**
-         * LgfId.
+         * <p>The unique identifier of the LGF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2342556223532</p>
          */
         public Builder lgfId(Long lgfId) {
             this.lgfId = lgfId;
@@ -75,7 +78,10 @@ public class UpdateLgfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>289dfa131adf23wqe2r</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

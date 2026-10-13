@@ -80,7 +80,10 @@ public class GetBotSessionDataResponseBody extends TeaModel {
         } 
 
         /**
-         * CostTime.
+         * <p>The time consumed by the API call, in milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116</p>
          */
         public Builder costTime(String costTime) {
             this.costTime = costTime;
@@ -88,7 +91,7 @@ public class GetBotSessionDataResponseBody extends TeaModel {
         }
 
         /**
-         * Datas.
+         * <p>The data details.</p>
          */
         public Builder datas(java.util.List<java.util.Map<String, ?>> datas) {
             this.datas = datas;
@@ -96,7 +99,10 @@ public class GetBotSessionDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15CD94CC-CBEB-4189-806C-A132D1F45D51</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

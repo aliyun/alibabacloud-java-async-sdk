@@ -115,10 +115,7 @@ public class ListTagGroupRequest extends Request {
         } 
 
         /**
-         * <p>AgentKey</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxxx</p>
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);

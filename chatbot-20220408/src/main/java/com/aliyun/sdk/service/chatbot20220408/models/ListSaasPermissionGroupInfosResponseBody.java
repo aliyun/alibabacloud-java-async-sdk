@@ -67,7 +67,7 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of permissions for each SaaS integration page.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -157,7 +157,10 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * PgCode.
+             * <p>The code of the SaaS permission group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FAQ</p>
              */
             public Builder pgCode(String pgCode) {
                 this.pgCode = pgCode;
@@ -165,7 +168,10 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
             }
 
             /**
-             * PgEnName.
+             * <p>The English name of the SaaS permission group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FAQ</p>
              */
             public Builder pgEnName(String pgEnName) {
                 this.pgEnName = pgEnName;
@@ -173,7 +179,10 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
             }
 
             /**
-             * PgName.
+             * <p>The Chinese name of the SaaS permission group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FAQ管理</p>
              */
             public Builder pgName(String pgName) {
                 this.pgName = pgName;
@@ -266,7 +275,10 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * EnName.
+             * <p>The English name of the atomic page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Release Center</p>
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -274,7 +286,10 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The Chinese name of the atomic page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>发布中心</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -282,7 +297,7 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
             }
 
             /**
-             * PgInfos.
+             * <p>The list of SaaS permission groups.</p>
              */
             public Builder pgInfos(java.util.List<PgInfos> pgInfos) {
                 this.pgInfos = pgInfos;
@@ -290,7 +305,10 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
             }
 
             /**
-             * SaasCode.
+             * <p>The unique identifier of the SaaS atomic page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FAQ</p>
              */
             public Builder saasCode(String saasCode) {
                 this.saasCode = saasCode;

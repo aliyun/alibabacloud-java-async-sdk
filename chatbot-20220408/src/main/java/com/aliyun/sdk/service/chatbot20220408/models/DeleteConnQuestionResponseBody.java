@@ -54,7 +54,10 @@ public class DeleteConnQuestionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC323352-3AD7-59A1-9088-A64470BAFC9D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -54,7 +54,10 @@ public class UpdateSimQuestionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DFB71B34-4188-4EA2-9988-EF3014E75910</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -335,7 +335,10 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If not specified, the default business space is accessed. You can obtain the key value from the business management page of the primary account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -344,7 +347,7 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * CategoryIds.
+         * <p>The list of category IDs.</p>
          */
         public Builder categoryIds(java.util.List<Long> categoryIds) {
             String categoryIdsShrink = shrink(categoryIds, "CategoryIds", "json");
@@ -354,7 +357,10 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * CreateTimeBegin.
+         * <p>The start of the creation time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-02T03:09:30Z</p>
          */
         public Builder createTimeBegin(String createTimeBegin) {
             this.putQueryParameter("CreateTimeBegin", createTimeBegin);
@@ -363,7 +369,10 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * CreateTimeEnd.
+         * <p>The end of the creation time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-02T03:09:30Z</p>
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -372,7 +381,10 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * CreateUserName.
+         * <p>The name of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John</p>
          */
         public Builder createUserName(String createUserName) {
             this.putQueryParameter("CreateUserName", createUserName);
@@ -381,7 +393,10 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * EndTimeBegin.
+         * <p>The start of the expiration time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-02T03:09:30Z</p>
          */
         public Builder endTimeBegin(String endTimeBegin) {
             this.putQueryParameter("EndTimeBegin", endTimeBegin);
@@ -390,7 +405,10 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * EndTimeEnd.
+         * <p>The end of the expiration time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-02T03:09:30Z</p>
          */
         public Builder endTimeEnd(String endTimeEnd) {
             this.putQueryParameter("EndTimeEnd", endTimeEnd);
@@ -399,7 +417,10 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SearchKeyword</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -408,7 +429,10 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * ModifyTimeBegin.
+         * <p>The start of the modification time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-02T03:09:30Z</p>
          */
         public Builder modifyTimeBegin(String modifyTimeBegin) {
             this.putQueryParameter("ModifyTimeBegin", modifyTimeBegin);
@@ -417,7 +441,10 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * ModifyTimeEnd.
+         * <p>The end of the modification time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-02T03:09:30Z</p>
          */
         public Builder modifyTimeEnd(String modifyTimeEnd) {
             this.putQueryParameter("ModifyTimeEnd", modifyTimeEnd);
@@ -426,7 +453,10 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * ModifyUserName.
+         * <p>The name of the modifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jane</p>
          */
         public Builder modifyUserName(String modifyUserName) {
             this.putQueryParameter("ModifyUserName", modifyUserName);
@@ -435,7 +465,10 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -444,7 +477,10 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -453,7 +489,17 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * ProcessStatus.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>-1: queued</li>
+         * <li>0: succeeded</li>
+         * <li>1: parsing</li>
+         * <li>2: processing</li>
+         * <li>3: processing failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder processStatus(Integer processStatus) {
             this.putQueryParameter("ProcessStatus", processStatus);
@@ -462,7 +508,14 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * SearchScope.
+         * <p>The search scope. Valid values: </p>
+         * <ul>
+         * <li>1: search by title</li>
+         * <li>2: search by content</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder searchScope(Integer searchScope) {
             this.putQueryParameter("SearchScope", searchScope);
@@ -471,7 +524,10 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * StartTimeBegin.
+         * <p>The start of the effective time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-02T03:09:30Z</p>
          */
         public Builder startTimeBegin(String startTimeBegin) {
             this.putQueryParameter("StartTimeBegin", startTimeBegin);
@@ -480,7 +536,10 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * StartTimeEnd.
+         * <p>The end of the effective time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-03T03:09:30Z</p>
          */
         public Builder startTimeEnd(String startTimeEnd) {
             this.putQueryParameter("StartTimeEnd", startTimeEnd);
@@ -489,7 +548,15 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The editing status. Valid values:</p>
+         * <ul>
+         * <li>1: unpublished</li>
+         * <li>2: published</li>
+         * <li>3: updated but not published</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -498,7 +565,7 @@ public class SearchDocRequest extends Request {
         }
 
         /**
-         * TagIds.
+         * <p>The list of label IDs. When multiple labels are specified, the union logic is used for filtering.</p>
          */
         public Builder tagIds(java.util.List<Long> tagIds) {
             String tagIdsShrink = shrink(tagIds, "TagIds", "json");

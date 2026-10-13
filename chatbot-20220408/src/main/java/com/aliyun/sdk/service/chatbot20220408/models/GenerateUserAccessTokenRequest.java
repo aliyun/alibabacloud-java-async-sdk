@@ -169,7 +169,10 @@ public class GenerateUserAccessTokenRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The key of the business space. If you do not specify this parameter, the default business space is accessed. You can obtain the key value on the business management page of the primary account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -187,7 +190,10 @@ public class GenerateUserAccessTokenRequest extends Request {
         }
 
         /**
-         * ExpireTime.
+         * <p>Reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder expireTime(Integer expireTime) {
             this.putBodyParameter("ExpireTime", expireTime);
@@ -196,7 +202,27 @@ public class GenerateUserAccessTokenRequest extends Request {
         }
 
         /**
-         * ExtraInfo.
+         * <p>The additional information in JSON string format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;xx&quot;: 123,
+         *     &quot;yy&quot;: 22332,
+         *     &quot;customerNameCard&quot;: [
+         *         {
+         *             &quot;key&quot;: &quot;Name&quot;,
+         *             &quot;value&quot;: &quot;John&quot;
+         *         },
+         *         {
+         *             &quot;key&quot;: &quot;Level&quot;,
+         *             &quot;value&quot;: &quot;v2&quot;
+         *         },
+         *         {
+         *             &quot;key&quot;: &quot;Contact&quot;,
+         *             &quot;value&quot;: &quot;123&quot;
+         *         }
+         *     ]
+         * }</p>
          */
         public Builder extraInfo(String extraInfo) {
             this.putBodyParameter("ExtraInfo", extraInfo);
@@ -205,6 +231,7 @@ public class GenerateUserAccessTokenRequest extends Request {
         }
 
         /**
+         * <p>The external user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,10 +244,11 @@ public class GenerateUserAccessTokenRequest extends Request {
         }
 
         /**
+         * <p>The nickname of the visitor.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John</p>
          */
         public Builder nick(String nick) {
             this.putBodyParameter("Nick", nick);

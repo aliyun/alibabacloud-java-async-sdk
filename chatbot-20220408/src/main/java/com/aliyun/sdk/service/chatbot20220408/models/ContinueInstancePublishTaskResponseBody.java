@@ -171,7 +171,7 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * BizTypeList.
+         * <p>The list of business types.</p>
          */
         public Builder bizTypeList(java.util.List<String> bizTypeList) {
             this.bizTypeList = bizTypeList;
@@ -179,7 +179,10 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The UTC time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-12T06:30:17Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -187,7 +190,10 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Error.
+         * <p>The job failure information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An error occurred while checking whether the module to be published is idle, faq</p>
          */
         public Builder error(String error) {
             this.error = error;
@@ -195,7 +201,10 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Errors.
+         * <p>The fault information for each sub-publish module. The key is the sub-publish module and the value is the fault information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder errors(java.util.Map<String, ?> errors) {
             this.errors = errors;
@@ -203,7 +212,10 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8522</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -211,7 +223,10 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The UTC time when the task was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-12T06:30:33Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -219,7 +234,10 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CBF0581-EAE7-1DC4-95C6-A089656A1E2D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +245,10 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Response.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8522</p>
          */
         public Builder response(String response) {
             this.response = response;
@@ -235,7 +256,10 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE_RUNNING</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -243,7 +267,14 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Warnings.
+         * <p>The warning information for each sub-publish module. The key is the sub-publish module and the value is the warning information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;category_bind_faq&quot;: [
+         *         &quot;The following categories have not been published to the production environment: Project Delivery Information Summary&quot;
+         *     ]
+         * }</p>
          */
         public Builder warnings(java.util.Map<String, ?> warnings) {
             this.warnings = warnings;

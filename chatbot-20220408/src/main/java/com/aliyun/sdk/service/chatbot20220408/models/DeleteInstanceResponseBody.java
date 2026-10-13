@@ -158,7 +158,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * BizTypeList.
+         * <p>The list of business types.</p>
          */
         public Builder bizTypeList(java.util.List<String> bizTypeList) {
             this.bizTypeList = bizTypeList;
@@ -166,7 +166,10 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The UTC time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-11T09:26:14Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -174,7 +177,10 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateUserId.
+         * <p>The ID of the task creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9052</p>
          */
         public Builder createUserId(Long createUserId) {
             this.createUserId = createUserId;
@@ -182,7 +188,10 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateUserName.
+         * <p>The name of the task creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xuqiang_test</p>
          */
         public Builder createUserName(String createUserName) {
             this.createUserName = createUserName;
@@ -190,7 +199,10 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Error.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An error occurred while checking whether the module to be published is idle, faq</p>
          */
         public Builder error(String error) {
             this.error = error;
@@ -198,7 +210,10 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8521</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -206,7 +221,10 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CBF0581-EAE7-1DC4-95C6-A089656A1E2D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,10 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Response.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8521</p>
          */
         public Builder response(Long response) {
             this.response = response;
@@ -222,7 +243,10 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status. You can call the GetInstancePublishTaskState operation to learn more about the status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE_RUNNING</p>
          */
         public Builder status(String status) {
             this.status = status;

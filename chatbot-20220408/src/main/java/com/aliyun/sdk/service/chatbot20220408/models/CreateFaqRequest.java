@@ -182,7 +182,10 @@ public class CreateFaqRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The key of the business space. If this parameter is not set, the default business space is accessed. You can obtain the key value from the business management page of the main account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -191,6 +194,7 @@ public class CreateFaqRequest extends Request {
         }
 
         /**
+         * <p>The category ID of the knowledge entry.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +207,10 @@ public class CreateFaqRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2030-12-31T16:00:00Z</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -212,7 +219,10 @@ public class CreateFaqRequest extends Request {
         }
 
         /**
-         * SolutionContent.
+         * <p>The default answer content. This parameter is required if the fallback perspective is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test answer</p>
          */
         public Builder solutionContent(String solutionContent) {
             this.putBodyParameter("SolutionContent", solutionContent);
@@ -221,7 +231,14 @@ public class CreateFaqRequest extends Request {
         }
 
         /**
-         * SolutionType.
+         * <p>The type of the default answer. Valid values:</p>
+         * <ul>
+         * <li>0: plain text.</li>
+         * <li>1: rich text.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder solutionType(Integer solutionType) {
             this.putBodyParameter("SolutionType", solutionType);
@@ -230,7 +247,10 @@ public class CreateFaqRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The effective period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-25T16:28:36Z</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);
@@ -239,7 +259,7 @@ public class CreateFaqRequest extends Request {
         }
 
         /**
-         * TagIdList.
+         * <p>The list of label IDs.</p>
          */
         public Builder tagIdList(java.util.List<Long> tagIdList) {
             String tagIdListShrink = shrink(tagIdList, "TagIdList", "json");
@@ -249,7 +269,11 @@ public class CreateFaqRequest extends Request {
         }
 
         /**
+         * <p>The title of the knowledge entry. Maximum length: 120 characters.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test title</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

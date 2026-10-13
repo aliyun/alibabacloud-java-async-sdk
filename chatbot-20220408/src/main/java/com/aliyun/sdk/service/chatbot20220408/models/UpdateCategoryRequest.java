@@ -126,7 +126,10 @@ public class UpdateCategoryRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If this parameter is not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -135,7 +138,10 @@ public class UpdateCategoryRequest extends Request {
         }
 
         /**
-         * BizCode.
+         * <p>The business code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bizcode123</p>
          */
         public Builder bizCode(String bizCode) {
             this.putBodyParameter("BizCode", bizCode);
@@ -144,6 +150,7 @@ public class UpdateCategoryRequest extends Request {
         }
 
         /**
+         * <p>The category ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +163,11 @@ public class UpdateCategoryRequest extends Request {
         }
 
         /**
+         * <p>The category name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Category name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

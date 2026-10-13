@@ -54,7 +54,10 @@ public class DeleteSimQuestionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6419BA93-D111-5225-8998-13E63E6D3940</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

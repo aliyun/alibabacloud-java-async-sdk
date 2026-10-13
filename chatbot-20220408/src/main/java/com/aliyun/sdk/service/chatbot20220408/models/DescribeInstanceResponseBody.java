@@ -184,7 +184,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Avatar.
+         * <p>The URL of the chatbot avatar.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/alimefe/meebot/robot/0.0.5/img/xxx-90-97.png</p>
          */
         public Builder avatar(String avatar) {
             this.avatar = avatar;
@@ -192,7 +195,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Categories.
+         * <p>The list of categories.</p>
          */
         public Builder categories(java.util.List<Categories> categories) {
             this.categories = categories;
@@ -200,7 +203,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The UTC time when the chatbot was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-12T16:00:01Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -208,7 +214,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EditStatus.
+         * <p>The status of the chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLISHED</p>
          */
         public Builder editStatus(String editStatus) {
             this.editStatus = editStatus;
@@ -216,7 +225,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The unique identifier of the chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-mp90s2lrk00050</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -224,7 +236,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Introduction.
+         * <p>The remarks of the chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A chatbot for consumer Q&amp;A</p>
          */
         public Builder introduction(String introduction) {
             this.introduction = introduction;
@@ -232,7 +247,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * LanguageCode.
+         * <p>The language of the chatbot service, such as zh-cn or en-us.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-cn</p>
          */
         public Builder languageCode(String languageCode) {
             this.languageCode = languageCode;
@@ -240,7 +258,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Intelligent Customer Service - Bot C</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -248,7 +269,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>907AA5F2-0521-49AB-80AB-1ADEFAB2B901</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +280,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RobotType.
+         * <p>The type of the chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scenario_im</p>
          */
         public Builder robotType(String robotType) {
             this.robotType = robotType;
@@ -264,7 +291,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TimeZone.
+         * <p>The time zone of the chatbot. For more information, see the common time zone codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Chongqing</p>
          */
         public Builder timeZone(String timeZone) {
             this.timeZone = timeZone;
@@ -356,7 +386,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * AbilityType.
+             * <p>The ability type of the category, such as FAQ (frequently asked questions) or MRC (document).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FAQ</p>
              */
             public Builder abilityType(String abilityType) {
                 this.abilityType = abilityType;
@@ -364,7 +397,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryId.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000066832</p>
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -372,7 +408,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pandemic Prevention Policy</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -380,7 +419,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCategoryId.
+             * <p>The parent category ID. A value of -1 indicates the root directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parentCategoryId(Long parentCategoryId) {
                 this.parentCategoryId = parentCategoryId;

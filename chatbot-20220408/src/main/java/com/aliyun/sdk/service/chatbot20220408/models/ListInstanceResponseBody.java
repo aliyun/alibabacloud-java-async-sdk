@@ -106,7 +106,7 @@ public class ListInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Instances.
+         * <p>The list of chatbots.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -114,7 +114,10 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92B81548-42B9-4B34-924B-4E778AEB412B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -269,7 +281,10 @@ public class ListInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Avatar.
+             * <p>The URL of the chatbot avatar.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/alimefe/meebot/robot/0.0.5/img/xxx-90-97.png</p>
              */
             public Builder avatar(String avatar) {
                 this.avatar = avatar;
@@ -277,7 +292,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The UTC time when the chatbot was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-12T16:00:01Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -285,7 +303,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The unique identifier of the chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chatbot-cn-mp90s2lrk00050</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -293,7 +314,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Introduction.
+             * <p>The description of the chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A chatbot for consumer Q&amp;A</p>
              */
             public Builder introduction(String introduction) {
                 this.introduction = introduction;
@@ -301,7 +325,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LanguageCode.
+             * <p>The language of the chatbot service, such as zh-cn or en-us. For more information, see <a href="http://www.lingoes.net/zh/translator/langcode.htm">http://www.lingoes.net/zh/translator/langcode.htm</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh-cn</p>
              */
             public Builder languageCode(String languageCode) {
                 this.languageCode = languageCode;
@@ -309,7 +336,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Intelligent Customer Service - Bot C</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -317,7 +347,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RobotType.
+             * <p>The type of the chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scenario_im</p>
              */
             public Builder robotType(String robotType) {
                 this.robotType = robotType;

@@ -124,7 +124,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -133,7 +136,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The unique identifier of the chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-mp90s2lrk00050</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -142,7 +148,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * Introduction.
+         * <p>The remarks of the chatbot to update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A chatbot for consumer Q&amp;A</p>
          */
         public Builder introduction(String introduction) {
             this.putQueryParameter("Introduction", introduction);
@@ -151,7 +160,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the chatbot to update. The name can be up to 50 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Intelligent-Customer-Service-C</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

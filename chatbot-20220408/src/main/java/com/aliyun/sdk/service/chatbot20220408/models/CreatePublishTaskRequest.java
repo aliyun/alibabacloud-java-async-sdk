@@ -110,7 +110,10 @@ public class CreatePublishTaskRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The workspace key. If not specified, the default workspace is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -119,7 +122,10 @@ public class CreatePublishTaskRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>The publish unit type. To publish a chatbot, use the CreateInstancePublishTask API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>faq</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -128,7 +134,10 @@ public class CreatePublishTaskRequest extends Request {
         }
 
         /**
-         * DataIdList.
+         * <p>Additional publish information. Currently supported: if BizType is faq, this field specifies category IDs, indicating that only knowledge under these categories is published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;8521&quot;]</p>
          */
         public Builder dataIdList(java.util.List<String> dataIdList) {
             String dataIdListShrink = shrink(dataIdList, "DataIdList", "json");

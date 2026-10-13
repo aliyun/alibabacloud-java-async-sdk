@@ -119,7 +119,10 @@ public class ListTongyiChatHistorysRequest extends Request {
         } 
 
         /**
-         * AgentKey.
+         * <p>The key of the business space. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the primary account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -128,6 +131,7 @@ public class ListTongyiChatHistorysRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The time is in the yyyy-MM-dd HH:mm:ss format, such as 2024-04-01 08:00:00.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +144,10 @@ public class ListTongyiChatHistorysRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The number of data entries. Default value: 30. Maximum value: 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -149,6 +156,7 @@ public class ListTongyiChatHistorysRequest extends Request {
         }
 
         /**
+         * <p>The ID of the robot instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +169,7 @@ public class ListTongyiChatHistorysRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The time is in the yyyy-MM-dd HH:mm:ss format, such as 2024-04-01 00:00:00.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

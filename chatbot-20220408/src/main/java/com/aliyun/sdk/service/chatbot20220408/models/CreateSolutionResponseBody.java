@@ -67,7 +67,10 @@ public class CreateSolutionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F55D90C1-31BE-4B2A-AA3F-25EFC36F9419</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateSolutionResponseBody extends TeaModel {
         }
 
         /**
-         * SolutionId.
+         * <p>The answer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001089003</p>
          */
         public Builder solutionId(Long solutionId) {
             this.solutionId = solutionId;

@@ -93,7 +93,10 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * CostTime.
+         * <p>The time consumed by the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         public Builder costTime(String costTime) {
             this.costTime = costTime;
@@ -101,7 +104,7 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Datas.
+         * <p>The data details.</p>
          */
         public Builder datas(java.util.List<java.util.Map<String, ?>> datas) {
             this.datas = datas;
@@ -109,7 +112,10 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28805A7C-D695-548C-A31B-67E52C2C274F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,7 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
         }
 
         /**
-         * SessionFlowDebugInfo.
+         * <p>The session flow debug information.</p>
          */
         public Builder sessionFlowDebugInfo(SessionFlowDebugInfo sessionFlowDebugInfo) {
             this.sessionFlowDebugInfo = sessionFlowDebugInfo;
@@ -183,7 +189,7 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiParams.
+             * <p>The API parameters of the session flow debug information.</p>
              */
             public Builder apiParams(java.util.Map<String, ?> apiParams) {
                 this.apiParams = apiParams;
@@ -191,7 +197,7 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SlotParams.
+             * <p>The slot parameters of the session flow debug information.</p>
              */
             public Builder slotParams(java.util.Map<String, ?> slotParams) {
                 this.slotParams = slotParams;

@@ -126,7 +126,10 @@ public class UpdateUserSayRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -135,6 +138,7 @@ public class UpdateUserSayRequest extends Request {
         }
 
         /**
+         * <p>The robot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +151,7 @@ public class UpdateUserSayRequest extends Request {
         }
 
         /**
-         * UserSayDefinition.
+         * <p>The definition of the user utterance.</p>
          */
         public Builder userSayDefinition(UserSayDefinition userSayDefinition) {
             String userSayDefinitionShrink = shrink(userSayDefinition, "UserSayDefinition", "json");
@@ -157,6 +161,7 @@ public class UpdateUserSayRequest extends Request {
         }
 
         /**
+         * <p>The user utterance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +246,10 @@ public class UpdateUserSayRequest extends Request {
             } 
 
             /**
-             * EndIndex.
+             * <p>The end index of the slot in the intent utterance (exclusive).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder endIndex(Integer endIndex) {
                 this.endIndex = endIndex;
@@ -249,7 +257,10 @@ public class UpdateUserSayRequest extends Request {
             }
 
             /**
-             * SlotId.
+             * <p>The slot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>346ffg3q23dv</p>
              */
             public Builder slotId(String slotId) {
                 this.slotId = slotId;
@@ -257,7 +268,10 @@ public class UpdateUserSayRequest extends Request {
             }
 
             /**
-             * StartIndex.
+             * <p>The start index of the slot in the intent utterance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder startIndex(Integer startIndex) {
                 this.startIndex = startIndex;
@@ -339,7 +353,11 @@ public class UpdateUserSayRequest extends Request {
             } 
 
             /**
+             * <p>The user utterance.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Have you taken a COVID test?</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -347,6 +365,7 @@ public class UpdateUserSayRequest extends Request {
             }
 
             /**
+             * <p>The intent ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -358,7 +377,7 @@ public class UpdateUserSayRequest extends Request {
             }
 
             /**
-             * SlotInfos.
+             * <p>The slot information.</p>
              */
             public Builder slotInfos(java.util.List<SlotInfos> slotInfos) {
                 this.slotInfos = slotInfos;

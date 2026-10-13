@@ -141,7 +141,10 @@ public class UpdateDSEntityRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key. If this parameter is not set, the default business space is accessed. You can obtain the key value from the business management page of the main account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -150,6 +153,7 @@ public class UpdateDSEntityRequest extends Request {
         }
 
         /**
+         * <p>The entity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,10 +166,11 @@ public class UpdateDSEntityRequest extends Request {
         }
 
         /**
+         * <p>The entity name. Only Chinese characters, uppercase and lowercase letters, digits, and underscores are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>实体名称</p>
+         * <p>EntityName</p>
          */
         public Builder entityName(String entityName) {
             this.putQueryParameter("EntityName", entityName);
@@ -174,7 +179,10 @@ public class UpdateDSEntityRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * <p>The entity type. Valid values: synonyms (synonym) and regex (regular expression).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>synonyms</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -183,6 +191,7 @@ public class UpdateDSEntityRequest extends Request {
         }
 
         /**
+         * <p>The chatbot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

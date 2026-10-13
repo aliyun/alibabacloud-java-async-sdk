@@ -67,7 +67,10 @@ public class UpdateUserSayResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2356fg3wf34634vdt23wef2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class UpdateUserSayResponseBody extends TeaModel {
         }
 
         /**
-         * UserSayId.
+         * <p>The utterance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34512323</p>
          */
         public Builder userSayId(Long userSayId) {
             this.userSayId = userSayId;

@@ -106,7 +106,10 @@ public class InitIMConnectResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class InitIMConnectResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The IM connection information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;imDomain&quot;: &quot;im.alimebot.com&quot;,     &quot;appKey&quot;: &quot;WDg2VfNv&quot;,     &quot;token&quot;: &quot;QUM4SndaY3VPMjhkQldDZUNOR0ZaTmZ5R3NBY0FKWHJ4OGc4dERZbEJzcjNIKzFiS1RyTjhXRUpBYmVpQlpsakprNDRFVkdxcy9HWVk2RXZvalU3bHhxRkJlc1NBUXZwdHFKOTE2UTNwamQ4b1U4N3dEbmhyRjc4R2hOQStvMnMrYkV2dlVpSHNvWC96SEVNZWRqMjBuMXdjNklpamJzaDNWYllnUldDZGhJPQ==&quot;   }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class InitIMConnectResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter.Invalid</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +150,10 @@ public class InitIMConnectResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

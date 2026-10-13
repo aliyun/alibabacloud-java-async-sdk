@@ -145,7 +145,10 @@ public class DescribePerspectiveResponseBody extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-27T07:05:37Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -153,7 +156,10 @@ public class DescribePerspectiveResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The modification time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-26T07:05:37Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -161,7 +167,10 @@ public class DescribePerspectiveResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The perspective name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mobile perspective</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -169,7 +178,10 @@ public class DescribePerspectiveResponseBody extends TeaModel {
         }
 
         /**
-         * PerspectiveCode.
+         * <p>The perspective code, which is used for the Q&amp;A API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FZJBY3raWr</p>
          */
         public Builder perspectiveCode(String perspectiveCode) {
             this.perspectiveCode = perspectiveCode;
@@ -177,7 +189,10 @@ public class DescribePerspectiveResponseBody extends TeaModel {
         }
 
         /**
-         * PerspectiveId.
+         * <p>The perspective ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3001</p>
          */
         public Builder perspectiveId(String perspectiveId) {
             this.perspectiveId = perspectiveId;
@@ -185,7 +200,10 @@ public class DescribePerspectiveResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F285D735-D580-18A8-B97F-B2E72B00F101</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +211,10 @@ public class DescribePerspectiveResponseBody extends TeaModel {
         }
 
         /**
-         * SelfDefine.
+         * <p>Indicates whether the perspective is custom-defined.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder selfDefine(Boolean selfDefine) {
             this.selfDefine = selfDefine;
@@ -201,7 +222,14 @@ public class DescribePerspectiveResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The data status. Valid values:</p>
+         * <ul>
+         * <li>3: Enabled.</li>
+         * <li>1: Not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.status = status;
