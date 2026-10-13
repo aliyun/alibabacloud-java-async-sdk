@@ -687,6 +687,68 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <h2>接口说明</h2>
+     * <p>校验一个数据源名称在当前租户下是否已被占用，用于新建数据源或修改数据源名称之前的前置检查。
+     * 同租户内的数据源名称不可重复，名称冲突时新建会直接失败。先调用本接口确认名称可用，可以避免把冲突留到提交新建请求时才暴露。</p>
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>dsName</code> 为待校验的数据源名称，按名称精确匹配当前租户下未删除的数据源，不支持前缀或模糊匹配。</li>
+     * <li>校验范围限定在当前租户，其他租户下的同名数据源不影响结果；已被删除的数据源名称可以重新使用。</li>
+     * </ul>
+     * <h2>返回说明</h2>
+     * <p>返回单值响应，<code>data</code> 为布尔值，表示名称校验结果：<code>true</code>-已存在同名数据源，该名称不可用；<code>false</code>-该名称未被占用，可以用于新建。
+     * 注意 <code>data</code> 的语义与 <code>success</code> 相反方向：<code>success</code> 为 <code>true</code> 且 <code>data</code> 为 <code>true</code> 表示接口调用成功且查到了同名数据源，此时应当更换名称。<code>success</code> 为 <code>false</code> 时结合 <code>errCode</code> 与 <code>errMessage</code> 定位调用失败原因。</p>
+     * 
+     * @param request the request parameters of ExecMetaProfilingSkillJobDisable  ExecMetaProfilingSkillJobDisableRequest
+     * @return ExecMetaProfilingSkillJobDisableResponse
+     */
+    @Override
+    public CompletableFuture<ExecMetaProfilingSkillJobDisableResponse> execMetaProfilingSkillJobDisable(ExecMetaProfilingSkillJobDisableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExecMetaProfilingSkillJobDisable").setMethod(HttpMethod.POST).setPathRegex("/api/v2/meta/skill/profiling/job/disable").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExecMetaProfilingSkillJobDisableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExecMetaProfilingSkillJobDisableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>接口说明</h2>
+     * <p>校验一个数据源名称在当前租户下是否已被占用，用于新建数据源或修改数据源名称之前的前置检查。
+     * 同租户内的数据源名称不可重复，名称冲突时新建会直接失败。先调用本接口确认名称可用，可以避免把冲突留到提交新建请求时才暴露。</p>
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>dsName</code> 为待校验的数据源名称，按名称精确匹配当前租户下未删除的数据源，不支持前缀或模糊匹配。</li>
+     * <li>校验范围限定在当前租户，其他租户下的同名数据源不影响结果；已被删除的数据源名称可以重新使用。</li>
+     * </ul>
+     * <h2>返回说明</h2>
+     * <p>返回单值响应，<code>data</code> 为布尔值，表示名称校验结果：<code>true</code>-已存在同名数据源，该名称不可用；<code>false</code>-该名称未被占用，可以用于新建。
+     * 注意 <code>data</code> 的语义与 <code>success</code> 相反方向：<code>success</code> 为 <code>true</code> 且 <code>data</code> 为 <code>true</code> 表示接口调用成功且查到了同名数据源，此时应当更换名称。<code>success</code> 为 <code>false</code> 时结合 <code>errCode</code> 与 <code>errMessage</code> 定位调用失败原因。</p>
+     * 
+     * @param request the request parameters of ExecMetaProfilingTaskRun  ExecMetaProfilingTaskRunRequest
+     * @return ExecMetaProfilingTaskRunResponse
+     */
+    @Override
+    public CompletableFuture<ExecMetaProfilingTaskRunResponse> execMetaProfilingTaskRun(ExecMetaProfilingTaskRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExecMetaProfilingTaskRun").setMethod(HttpMethod.POST).setPathRegex("/api/v2/meta/profiling/task/runNow").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExecMetaProfilingTaskRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExecMetaProfilingTaskRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>Performs a synchronous conversion of a single SQL script. The parsing and rewriting are completed within a single call, and the SQL text in the target dialect is returned directly. This operation is suitable for manually verifying individual statements or validating conversion results. The conversion processes statements as query statements (DQL). To convert entire scripts or large files in batches, use the asynchronous script conversion task operation to avoid synchronous call timeouts.</p>
      * <h2>Request description</h2>
@@ -1246,6 +1308,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
+     * <p>Queries the overview of a data validation report by validation batch. Returns the number of tables validated, the number of passed tables, the pass rate, statistics by partition and field, and the report generation status. This operation serves as the primary entry point for viewing validation results. For table-level details, call the report instance or column-level result API operation.</p>
+     * <h2>Request description</h2>
+     * <ul>
+     * <li><code>batchId</code>: Required. The ID of the validation job (batch), which is obtained from the return value of the save validation task API operation. Subsequent execution, termination, rerun, and report API operations use this ID to reference the same validation.</li>
+     * </ul>
+     * <h2>Response description</h2>
+     * <p>Returns a single-value response. The <code>data</code> field is the overview object: <code>checkType</code> indicates the validation type (0: data volume comparison, 1: metric comparison, 2: weak content comparison), <code>checkResult</code> indicates the validation result (0: no records, 1: passed, 2: failed), <code>reportStatus</code> indicates the report generation status (0: not generated, 1: generating, 2: generated), and <code>reportGenerateMessage</code> provides the generation prompt message. The statistics section includes the number of validated tables, failed tables, passed tables, skipped tables and partitions, validated partitions, validated rows and passed rows, pass rate (<code>passProcess</code> is a decimal, <code>passProcessExport</code> is a string with a percentage sign), the number of validated and passed fields, as well as the source and destination data source information, associated task ID and time, and template information in metric validation scenarios.</p>
+     * 
+     * @param request the request parameters of GetMetaCompareIncrementDbOverview  GetMetaCompareIncrementDbOverviewRequest
+     * @return GetMetaCompareIncrementDbOverviewResponse
+     */
+    @Override
+    public CompletableFuture<GetMetaCompareIncrementDbOverviewResponse> getMetaCompareIncrementDbOverview(GetMetaCompareIncrementDbOverviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMetaCompareIncrementDbOverview").setMethod(HttpMethod.POST).setPathRegex("/api/v2/meta/profiling/result/databases/overviewOfCompareIncrement").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMetaCompareIncrementDbOverviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMetaCompareIncrementDbOverviewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
      * <p>Retrieves temporary authorization credentials required for direct file uploads to Object Storage Service (OSS). The response includes a temporary AccessKey, security token, access endpoint, bucket, allowed upload directory prefix, upload policy and signature, and expiration time. These credentials enable the client to upload files by using form-based direct upload (PostObject) without storing long-term keys on the client.</p>
      * <h2>Request description</h2>
      * <ul>
@@ -1266,6 +1356,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetMetaOssTempKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMetaProfilingResultDbOverview  GetMetaProfilingResultDbOverviewRequest
+     * @return GetMetaProfilingResultDbOverviewResponse
+     */
+    @Override
+    public CompletableFuture<GetMetaProfilingResultDbOverviewResponse> getMetaProfilingResultDbOverview(GetMetaProfilingResultDbOverviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMetaProfilingResultDbOverview").setMethod(HttpMethod.GET).setPathRegex("/api/v2/meta/profiling/result/databases/overviewOfTaskDimension").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMetaProfilingResultDbOverviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMetaProfilingResultDbOverviewResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1652,6 +1760,78 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListMetaProfilingResultCatalogPage  ListMetaProfilingResultCatalogPageRequest
+     * @return ListMetaProfilingResultCatalogPageResponse
+     */
+    @Override
+    public CompletableFuture<ListMetaProfilingResultCatalogPageResponse> listMetaProfilingResultCatalogPage(ListMetaProfilingResultCatalogPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMetaProfilingResultCatalogPage").setMethod(HttpMethod.POST).setPathRegex("/api/v2/meta/profiling/result/catalogs/pageOfTaskDimension").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMetaProfilingResultCatalogPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMetaProfilingResultCatalogPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMetaProfilingResultTablePage  ListMetaProfilingResultTablePageRequest
+     * @return ListMetaProfilingResultTablePageResponse
+     */
+    @Override
+    public CompletableFuture<ListMetaProfilingResultTablePageResponse> listMetaProfilingResultTablePage(ListMetaProfilingResultTablePageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMetaProfilingResultTablePage").setMethod(HttpMethod.POST).setPathRegex("/api/v2/meta/profiling/result/tables/pageOfTaskDimension").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMetaProfilingResultTablePageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMetaProfilingResultTablePageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMetaProfilingResultUdfPage  ListMetaProfilingResultUdfPageRequest
+     * @return ListMetaProfilingResultUdfPageResponse
+     */
+    @Override
+    public CompletableFuture<ListMetaProfilingResultUdfPageResponse> listMetaProfilingResultUdfPage(ListMetaProfilingResultUdfPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMetaProfilingResultUdfPage").setMethod(HttpMethod.POST).setPathRegex("/api/v2/meta/profiling/result/udf/pageOfTaskDimension").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMetaProfilingResultUdfPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMetaProfilingResultUdfPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMetaProfilingSkillJobPage  ListMetaProfilingSkillJobPageRequest
+     * @return ListMetaProfilingSkillJobPageResponse
+     */
+    @Override
+    public CompletableFuture<ListMetaProfilingSkillJobPageResponse> listMetaProfilingSkillJobPage(ListMetaProfilingSkillJobPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMetaProfilingSkillJobPage").setMethod(HttpMethod.POST).setPathRegex("/api/v2/meta/skill/profiling/job/page").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMetaProfilingSkillJobPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMetaProfilingSkillJobPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h2>Interface Description</h2>
      * <p>This is an internal interface for submitting a workflow transformation task. It submits a workflow transformation based on the source, target data sources, and SQL node type mapping. The interface synchronously returns the acceptance result, and the asynchronous execution result can be queried through GetInnerConvertAsyncResult.</p>
@@ -1774,6 +1954,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SingleSqlDryRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SkillAddMetaProfilingJob  SkillAddMetaProfilingJobRequest
+     * @return SkillAddMetaProfilingJobResponse
+     */
+    @Override
+    public CompletableFuture<SkillAddMetaProfilingJobResponse> skillAddMetaProfilingJob(SkillAddMetaProfilingJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SkillAddMetaProfilingJob").setMethod(HttpMethod.POST).setPathRegex("/api/v2/meta/skill/profiling/job").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SkillAddMetaProfilingJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SkillAddMetaProfilingJobResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
