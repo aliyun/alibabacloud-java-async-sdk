@@ -260,6 +260,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePolicyAttachmentResponse> createPolicyAttachment(CreatePolicyAttachmentRequest request);
 
     /**
+     * @param request the request parameters of CreatePortal  CreatePortalRequest
+     * @return CreatePortalResponse
+     */
+    CompletableFuture<CreatePortalResponse> createPortal(CreatePortalRequest request);
+
+    /**
+     * @param request the request parameters of CreateProduct  CreateProductRequest
+     * @return CreateProductResponse
+     */
+    CompletableFuture<CreateProductResponse> createProduct(CreateProductRequest request);
+
+    /**
      * @param request the request parameters of CreateProductCategory  CreateProductCategoryRequest
      * @return CreateProductCategoryResponse
      */
@@ -713,6 +725,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPolicyAttachmentResponse> getPolicyAttachment(GetPolicyAttachmentRequest request);
 
     /**
+     * @param request the request parameters of GetPortal  GetPortalRequest
+     * @return GetPortalResponse
+     */
+    CompletableFuture<GetPortalResponse> getPortal(GetPortalRequest request);
+
+    /**
+     * @param request the request parameters of GetProduct  GetProductRequest
+     * @return GetProductResponse
+     */
+    CompletableFuture<GetProductResponse> getProduct(GetProductRequest request);
+
+    /**
+     * @param request the request parameters of GetProductCategory  GetProductCategoryRequest
+     * @return GetProductCategoryResponse
+     */
+    CompletableFuture<GetProductCategoryResponse> getProductCategory(GetProductCategoryRequest request);
+
+    /**
+     * @param request the request parameters of GetProductRef  GetProductRefRequest
+     * @return GetProductRefResponse
+     */
+    CompletableFuture<GetProductRefResponse> getProductRef(GetProductRefRequest request);
+
+    /**
      * @param request the request parameters of GetResourceOverview  GetResourceOverviewRequest
      * @return GetResourceOverviewResponse
      */
@@ -761,10 +797,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTraceConfigResponse> getTraceConfig(GetTraceConfigRequest request);
 
     /**
+     * @param request the request parameters of HandleOidcCallback  HandleOidcCallbackRequest
+     * @return HandleOidcCallbackResponse
+     */
+    CompletableFuture<HandleOidcCallbackResponse> handleOidcCallback(HandleOidcCallbackRequest request);
+
+    /**
      * @param request the request parameters of ImportHttpApi  ImportHttpApiRequest
      * @return ImportHttpApiResponse
      */
     CompletableFuture<ImportHttpApiResponse> importHttpApi(ImportHttpApiRequest request);
+
+    /**
+     * @param request the request parameters of InitiateOidcAuth  InitiateOidcAuthRequest
+     * @return InitiateOidcAuthResponse
+     */
+    CompletableFuture<InitiateOidcAuthResponse> initiateOidcAuth(InitiateOidcAuthRequest request);
 
     /**
      * @param request the request parameters of InstallPlugin  InstallPluginRequest
@@ -793,10 +841,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAiModelProvidersResponse> listAiModelProviders(ListAiModelProvidersRequest request);
 
     /**
+     * @param request the request parameters of ListApiPathFieldTemplates  ListApiPathFieldTemplatesRequest
+     * @return ListApiPathFieldTemplatesResponse
+     */
+    CompletableFuture<ListApiPathFieldTemplatesResponse> listApiPathFieldTemplates(ListApiPathFieldTemplatesRequest request);
+
+    /**
      * @param request the request parameters of ListBatchExportTasks  ListBatchExportTasksRequest
      * @return ListBatchExportTasksResponse
      */
     CompletableFuture<ListBatchExportTasksResponse> listBatchExportTasks(ListBatchExportTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListChatSessions  ListChatSessionsRequest
+     * @return ListChatSessionsResponse
+     */
+    CompletableFuture<ListChatSessionsResponse> listChatSessions(ListChatSessionsRequest request);
 
     /**
      * @param request the request parameters of ListConsumerAuthorizationRules  ListConsumerAuthorizationRulesRequest
@@ -836,6 +896,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListConsumersResponse
      */
     CompletableFuture<ListConsumersResponse> listConsumers(ListConsumersRequest request);
+
+    /**
+     * @param request the request parameters of ListDevelopers  ListDevelopersRequest
+     * @return ListDevelopersResponse
+     */
+    CompletableFuture<ListDevelopersResponse> listDevelopers(ListDevelopersRequest request);
 
     /**
      * @param request the request parameters of ListDomains  ListDomainsRequest
@@ -911,6 +977,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGlobalPoliciesResponse> listGlobalPolicies(ListGlobalPoliciesRequest request);
 
     /**
+     * @param request the request parameters of ListHiMarketConsumerSubscriptions  ListHiMarketConsumerSubscriptionsRequest
+     * @return ListHiMarketConsumerSubscriptionsResponse
+     */
+    CompletableFuture<ListHiMarketConsumerSubscriptionsResponse> listHiMarketConsumerSubscriptions(ListHiMarketConsumerSubscriptionsRequest request);
+
+    /**
+     * @param request the request parameters of ListHiMarketConsumers  ListHiMarketConsumersRequest
+     * @return ListHiMarketConsumersResponse
+     */
+    CompletableFuture<ListHiMarketConsumersResponse> listHiMarketConsumers(ListHiMarketConsumersRequest request);
+
+    /**
      * @param request the request parameters of ListHttpApiOperations  ListHttpApiOperationsRequest
      * @return ListHttpApiOperationsResponse
      */
@@ -941,6 +1019,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListK8sClusterSourcesResponse> listK8sClusterSources(ListK8sClusterSourcesRequest request);
 
     /**
+     * @param request the request parameters of ListMcpProductTools  ListMcpProductToolsRequest
+     * @return ListMcpProductToolsResponse
+     */
+    CompletableFuture<ListMcpProductToolsResponse> listMcpProductTools(ListMcpProductToolsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The operation supports creating multiple services.</p>
      * 
@@ -954,6 +1038,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListMigrationTasksResponse
      */
     CompletableFuture<ListMigrationTasksResponse> listMigrationTasks(ListMigrationTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListModelCards  ListModelCardsRequest
+     * @return ListModelCardsResponse
+     */
+    CompletableFuture<ListModelCardsResponse> listModelCards(ListModelCardsRequest request);
 
     /**
      * @param request the request parameters of ListMseNacosSources  ListMseNacosSourcesRequest
@@ -1005,6 +1095,48 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPolicyClassesResponse
      */
     CompletableFuture<ListPolicyClassesResponse> listPolicyClasses(ListPolicyClassesRequest request);
+
+    /**
+     * @param request the request parameters of ListPortalPublications  ListPortalPublicationsRequest
+     * @return ListPortalPublicationsResponse
+     */
+    CompletableFuture<ListPortalPublicationsResponse> listPortalPublications(ListPortalPublicationsRequest request);
+
+    /**
+     * @param request the request parameters of ListPortals  ListPortalsRequest
+     * @return ListPortalsResponse
+     */
+    CompletableFuture<ListPortalsResponse> listPortals(ListPortalsRequest request);
+
+    /**
+     * @param request the request parameters of ListProductCategories  ListProductCategoriesRequest
+     * @return ListProductCategoriesResponse
+     */
+    CompletableFuture<ListProductCategoriesResponse> listProductCategories(ListProductCategoriesRequest request);
+
+    /**
+     * @param request the request parameters of ListProductPublications  ListProductPublicationsRequest
+     * @return ListProductPublicationsResponse
+     */
+    CompletableFuture<ListProductPublicationsResponse> listProductPublications(ListProductPublicationsRequest request);
+
+    /**
+     * @param request the request parameters of ListProductSubscriptions  ListProductSubscriptionsRequest
+     * @return ListProductSubscriptionsResponse
+     */
+    CompletableFuture<ListProductSubscriptionsResponse> listProductSubscriptions(ListProductSubscriptionsRequest request);
+
+    /**
+     * @param request the request parameters of ListProducts  ListProductsRequest
+     * @return ListProductsResponse
+     */
+    CompletableFuture<ListProductsResponse> listProducts(ListProductsRequest request);
+
+    /**
+     * @param request the request parameters of ListPublishableProducts  ListPublishableProductsRequest
+     * @return ListPublishableProductsResponse
+     */
+    CompletableFuture<ListPublishableProductsResponse> listPublishableProducts(ListPublishableProductsRequest request);
 
     /**
      * @param request the request parameters of ListRiskCheckResults  ListRiskCheckResultsRequest
@@ -1065,6 +1197,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListZonesResponse
      */
     CompletableFuture<ListZonesResponse> listZones(ListZonesRequest request);
+
+    /**
+     * @param request the request parameters of LoginDeveloper  LoginDeveloperRequest
+     * @return LoginDeveloperResponse
+     */
+    CompletableFuture<LoginDeveloperResponse> loginDeveloper(LoginDeveloperRequest request);
+
+    /**
+     * @param request the request parameters of LogoutDeveloper  LogoutDeveloperRequest
+     * @return LogoutDeveloperResponse
+     */
+    CompletableFuture<LogoutDeveloperResponse> logoutDeveloper(LogoutDeveloperRequest request);
+
+    /**
+     * @param request the request parameters of PublishProduct  PublishProductRequest
+     * @return PublishProductResponse
+     */
+    CompletableFuture<PublishProductResponse> publishProduct(PublishProductRequest request);
 
     /**
      * @param request the request parameters of QueryConsumerAuthorizationRules  QueryConsumerAuthorizationRulesRequest
@@ -1135,6 +1285,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunPluginPipelineResponse> runPluginPipeline(RunPluginPipelineRequest request);
 
     /**
+     * @param request the request parameters of SubscribeProduct  SubscribeProductRequest
+     * @return SubscribeProductResponse
+     */
+    CompletableFuture<SubscribeProductResponse> subscribeProduct(SubscribeProductRequest request);
+
+    /**
      * @param request the request parameters of SyncMCPServers  SyncMCPServersRequest
      * @return SyncMCPServersResponse
      */
@@ -1163,6 +1319,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UninstallPluginResponse
      */
     CompletableFuture<UninstallPluginResponse> uninstallPlugin(UninstallPluginRequest request);
+
+    /**
+     * @param request the request parameters of UnpublishProduct  UnpublishProductRequest
+     * @return UnpublishProductResponse
+     */
+    CompletableFuture<UnpublishProductResponse> unpublishProduct(UnpublishProductRequest request);
 
     /**
      * @param request the request parameters of UntagResources  UntagResourcesRequest
@@ -1195,6 +1357,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAuthorizationRuleResponse> updateAuthorizationRule(UpdateAuthorizationRuleRequest request);
 
     /**
+     * @param request the request parameters of UpdateCategoryProducts  UpdateCategoryProductsRequest
+     * @return UpdateCategoryProductsResponse
+     */
+    CompletableFuture<UpdateCategoryProductsResponse> updateCategoryProducts(UpdateCategoryProductsRequest request);
+
+    /**
      * @param request the request parameters of UpdateConsumer  UpdateConsumerRequest
      * @return UpdateConsumerResponse
      */
@@ -1214,6 +1382,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateConsumerGroupResponse
      */
     CompletableFuture<UpdateConsumerGroupResponse> updateConsumerGroup(UpdateConsumerGroupRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDeveloperStatus  UpdateDeveloperStatusRequest
+     * @return UpdateDeveloperStatusResponse
+     */
+    CompletableFuture<UpdateDeveloperStatusResponse> updateDeveloperStatus(UpdateDeveloperStatusRequest request);
 
     /**
      * <b>description</b> :
@@ -1356,6 +1530,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdatePolicyResponse
      */
     CompletableFuture<UpdatePolicyResponse> updatePolicy(UpdatePolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePortal  UpdatePortalRequest
+     * @return UpdatePortalResponse
+     */
+    CompletableFuture<UpdatePortalResponse> updatePortal(UpdatePortalRequest request);
+
+    /**
+     * @param request the request parameters of UpdateProduct  UpdateProductRequest
+     * @return UpdateProductResponse
+     */
+    CompletableFuture<UpdateProductResponse> updateProduct(UpdateProductRequest request);
+
+    /**
+     * @param request the request parameters of UpdateProductCategory  UpdateProductCategoryRequest
+     * @return UpdateProductCategoryResponse
+     */
+    CompletableFuture<UpdateProductCategoryResponse> updateProductCategory(UpdateProductCategoryRequest request);
 
     /**
      * @param request the request parameters of UpdateRiskNotification  UpdateRiskNotificationRequest
