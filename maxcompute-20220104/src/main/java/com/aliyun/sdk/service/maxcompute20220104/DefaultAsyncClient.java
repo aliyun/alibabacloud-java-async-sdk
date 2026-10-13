@@ -194,7 +194,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this API, make sure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for dedicated resource groups and elastic reserved computing resources in the Data Transmission Service.</p>
+     * <p>Before calling this operation, ensure that you fully understand the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> of exclusive resource groups and elastic reserved compute resources for the data transfer service.</p>
      * 
      * @param request the request parameters of CreateMmsTimer  CreateMmsTimerRequest
      * @return CreateMmsTimerResponse
@@ -1279,8 +1279,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
-     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for the data transfer service, exclusive resource groups, and elastic reserved computing resources.</p>
+     * <p>Before calling this operation, ensure that you fully understand the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> of exclusive resource groups and elastic reserved compute resources for data transfer.</p>
      * 
      * @param request the request parameters of ListMmsTimerLogs  ListMmsTimerLogsRequest
      * @return ListMmsTimerLogsResponse
@@ -1301,8 +1300,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
-     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive resource groups and elastic reserved computing resources for Data Transmission Service.</p>
+     * <p>Before you call this operation, make sure that you fully understand the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> of exclusive resource groups and elastic reserved compute resources for the data transmission service.</p>
      * 
      * @param request the request parameters of ListMmsTimers  ListMmsTimersRequest
      * @return ListMmsTimersResponse
@@ -1883,7 +1881,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Aggregates storage usage by storage type.</p>
+     * <p>Queries storage usage statistics by storage type.</p>
      * 
      * @param request the request parameters of SumStorageMetricsByType  SumStorageMetricsByTypeRequest
      * @return SumStorageMetricsByTypeResponse

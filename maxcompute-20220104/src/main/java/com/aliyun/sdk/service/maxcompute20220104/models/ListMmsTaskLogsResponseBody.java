@@ -67,7 +67,7 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of logs.</p>
+         * <p>The list of logs.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -220,7 +220,7 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the log was created.</p>
+             * <p>The creation time. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 15:44:00</p>
@@ -253,7 +253,7 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source ID.</p>
+             * <p>The ID of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>2000015</p>
@@ -264,7 +264,7 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The migration task status.</p>
+             * <p>The status of the migration task.</p>
              * 
              * <strong>example:</strong>
              * <p>DATA_DOING</p>
@@ -275,7 +275,7 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The migration task ID.</p>
+             * <p>The ID of the migration task.</p>
              * 
              * <strong>example:</strong>
              * <p>4023</p>

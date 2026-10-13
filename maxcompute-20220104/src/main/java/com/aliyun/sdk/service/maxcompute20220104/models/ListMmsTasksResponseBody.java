@@ -67,7 +67,7 @@ public class ListMmsTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -391,7 +391,7 @@ public class ListMmsTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created.</p>
+             * <p>The task creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-25 04:21:01</p>
@@ -446,7 +446,7 @@ public class ListMmsTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the task.</p>
+             * <p>The end time. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-25 07:21:01</p>
@@ -490,7 +490,7 @@ public class ListMmsTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of retries that have been performed.</p>
+             * <p>The number of retries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -545,7 +545,7 @@ public class ListMmsTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source schema name in a three-level namespace.</p>
+             * <p>The source schema name. This is the schema in the three-level namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -567,7 +567,7 @@ public class ListMmsTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the task.</p>
+             * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-25 06:21:01</p>

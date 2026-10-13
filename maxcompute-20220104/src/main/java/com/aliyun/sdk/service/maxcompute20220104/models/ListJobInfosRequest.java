@@ -355,7 +355,7 @@ public class ListJobInfosRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to sort in ascending or descending order.</p>
+         * <p>Specifies whether to sort the results in ascending order.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -398,7 +398,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The job instance IDs.</p>
+         * <p>The job instance Id.</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putBodyParameter("instanceIdList", instanceIdList);
@@ -407,7 +407,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The job owners.</p>
+         * <p>The list of job owners.</p>
          */
         public Builder jobOwnerList(java.util.List<String> jobOwnerList) {
             this.putBodyParameter("jobOwnerList", jobOwnerList);
@@ -446,7 +446,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The intelligent diagnosis labels.</p>
+         * <p>The intelligent diagnostics tags.</p>
          */
         public Builder sceneTagList(java.util.List<String> sceneTagList) {
             this.putBodyParameter("sceneTagList", sceneTagList);
@@ -464,7 +464,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The fields used for multi-column sorting.</p>
+         * <p>The multi-column sort fields.</p>
          */
         public Builder sortByList(java.util.List<String> sortByList) {
             this.putBodyParameter("sortByList", sortByList);
@@ -473,7 +473,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The sort orders for multi-column sorting.</p>
+         * <p>The multi-column sort orders.</p>
          */
         public Builder sortOrderList(java.util.List<String> sortOrderList) {
             this.putBodyParameter("sortOrderList", sortOrderList);
@@ -522,7 +522,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The column used for sorting.</p>
+         * <p>The sort column.</p>
          * 
          * <strong>example:</strong>
          * <p>cuUsage</p>
@@ -546,7 +546,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

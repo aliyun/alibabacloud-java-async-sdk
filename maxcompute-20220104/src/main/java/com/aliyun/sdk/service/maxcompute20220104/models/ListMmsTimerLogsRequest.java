@@ -101,7 +101,7 @@ public class ListMmsTimerLogsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the data source.</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2000015</p>
@@ -113,7 +113,7 @@ public class ListMmsTimerLogsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scheduled task.</p>
+         * <p>timer id</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

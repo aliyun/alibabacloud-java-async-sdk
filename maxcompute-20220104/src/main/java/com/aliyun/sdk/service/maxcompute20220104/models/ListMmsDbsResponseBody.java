@@ -67,7 +67,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>CF3F9978-260F-5204-94BE-30A4E6B54443</p>
@@ -469,7 +469,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Time created in MMS</p>
+             * <p>The time when the database was created in MMS.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 15:44:42</p>
@@ -480,7 +480,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether deleted</p>
+             * <p>Indicates whether the database has been deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -491,7 +491,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Database description</p>
+             * <p>The description of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>for mms test</p>
@@ -502,7 +502,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MaxCompute schema corresponding to the source database. If the target MaxCompute project does not have a schema layer enabled, this value is null. By default, it is consistent with the source database name.</p>
+             * <p>The MaxCompute schema that corresponds to the source database. If the schema layer is not enabled for the destination MaxCompute project, this value is null. By default, this value is the same as the name of the source database.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -513,7 +513,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Target MaxCompute project name</p>
+             * <p>The name of the destination MaxCompute project.</p>
              * 
              * <strong>example:</strong>
              * <p>mms_test</p>
@@ -524,7 +524,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Other information stored in JSON format</p>
+             * <p>The additional information stored in JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -535,7 +535,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Database ID</p>
+             * <p>The ID of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>1530</p>
@@ -557,7 +557,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Database storage location</p>
+             * <p>The storage location of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>hdfs://master-1-1.c-6fc187819ed6bae0.cn-shanghai.emr.aliyuncs.com:9000/user/hive/warehouse</p>
@@ -568,7 +568,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Database name</p>
+             * <p>The name of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>mms_test</p>
@@ -579,7 +579,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of database data rows</p>
+             * <p>The number of data rows in the database.</p>
              * 
              * <strong>example:</strong>
              * <p>23232</p>
@@ -590,7 +590,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Database owner</p>
+             * <p>The owner of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>System user</p>
@@ -601,7 +601,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of partitions</p>
+             * <p>The number of partitions.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -612,7 +612,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Partitions being migrated</p>
+             * <p>The partitions being migrated.</p>
              * 
              * <strong>example:</strong>
              * <p>400</p>
@@ -623,7 +623,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Partitions migrated</p>
+             * <p>The partitions that have been migrated.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -634,7 +634,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Failed partitions</p>
+             * <p>The partitions that failed to migrate.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -645,7 +645,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Database data size in bytes</p>
+             * <p>The size of the database data, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>2342342</p>
@@ -656,7 +656,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data source ID.</p>
+             * <p>The ID of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>2000015</p>
@@ -667,7 +667,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data source name</p>
+             * <p>The name of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -678,7 +678,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Migration status: INIT, DOING, FAILED, DONE, PART_DONE</p>
+             * <p>The migration status. Valid values: INIT, DOING, FAILED, DONE, and PART_DONE.</p>
              * 
              * <strong>example:</strong>
              * <p>DOING</p>
@@ -689,7 +689,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of tables</p>
+             * <p>The number of tables.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -700,7 +700,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Tables being migrated</p>
+             * <p>The tables being migrated.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -711,7 +711,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Tables migrated</p>
+             * <p>The tables that have been migrated.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -722,7 +722,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Failed tables</p>
+             * <p>The tables that failed to migrate.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -733,7 +733,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Partially migrated tables</p>
+             * <p>The tables that are partially migrated.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -744,7 +744,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Latest data update time</p>
+             * <p>The latest update time of the data. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 15:44:42</p>
@@ -755,7 +755,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether data is updated</p>
+             * <p>Indicates whether the data has been updated.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -851,7 +851,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Database list</p>
+             * <p>The list of databases.</p>
              */
             public Builder objectList(java.util.List<ObjectList> objectList) {
                 this.objectList = objectList;
@@ -859,7 +859,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page number</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -870,7 +870,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page size</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -881,7 +881,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of records.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>13</p>

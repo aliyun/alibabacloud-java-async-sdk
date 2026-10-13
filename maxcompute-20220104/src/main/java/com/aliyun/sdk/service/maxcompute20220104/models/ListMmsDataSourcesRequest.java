@@ -127,7 +127,7 @@ public class ListMmsDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The page number. If pagination is not used, all data sources are returned.</p>
+         * <p>The page number. If this parameter is not specified, all records are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,7 +139,7 @@ public class ListMmsDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. If pagination is not used, all data sources are returned.</p>
+         * <p>The number of entries to return on each page. If this parameter is not specified, all records are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

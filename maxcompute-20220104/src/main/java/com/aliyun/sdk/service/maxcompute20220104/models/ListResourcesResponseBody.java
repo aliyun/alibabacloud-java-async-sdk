@@ -75,7 +75,7 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0bc3b4ae16685836687916212e7850</p>
@@ -261,10 +261,10 @@ public class ListResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The remarks.</p>
+             * <p>The comment.</p>
              * 
              * <strong>example:</strong>
-             * <p>Filr type resource</p>
+             * <p>file type resource</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -272,7 +272,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Base64-encoded 128-bit MD5 hash value of the HTTP request body.</p>
+             * <p>The Base64-encoded 128-bit MD5 hash of the HTTP request body.</p>
              * 
              * <strong>example:</strong>
              * <p>MACiECZtnLiNkNS1v5****=1</p>
@@ -283,7 +283,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was created.</p>
+             * <p>The creation time in ISO 8601 format in the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-01-29T03:34:09Z</p>
@@ -305,7 +305,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was modified.</p>
+             * <p>The last modification time in ISO 8601 format in the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-18T06:15:05Z</p>
@@ -316,7 +316,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user who updated the resource.</p>
+             * <p>The user who last updated the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>ALIYUN$<a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></p>
@@ -372,43 +372,6 @@ public class ListResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The resource type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>file</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>py</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>jar</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>volumefile</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>table</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>file</p>
@@ -491,7 +454,7 @@ public class ListResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates the marker after which the returned list begins.</p>
+             * <p>Specifies the marker after which results are returned in alphabetical order.</p>
              * 
              * <strong>example:</strong>
              * <p>ZmN0X21vbnRoX3Rhb2Jhb19pbmRleCE=</p>
@@ -502,7 +465,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of entries returned per page.</p>
+             * <p>The maximum number of results to return per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

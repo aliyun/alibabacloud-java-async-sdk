@@ -67,7 +67,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response payload.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -251,7 +251,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
              * <p>The description of the configuration.</p>
              * 
              * <strong>example:</strong>
-             * <p>Range partition table migration method</p>
+             * <p>Migration method for range-partitioned tables</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -259,7 +259,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of valid values for the configuration.</p>
+             * <p>The enumerated values of the configuration.</p>
              */
             public Builder enums(java.util.List<String> enums) {
                 this.enums = enums;
@@ -278,7 +278,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique key for the configuration.</p>
+             * <p>The English identifier of the configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>bigquery.range.partition.migrate.type</p>
@@ -289,10 +289,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration name.</p>
+             * <p>The name of the configuration.</p>
              * 
              * <strong>example:</strong>
-             * <p>Range partition table migration method</p>
+             * <p>Migration method for range-partitioned tables</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,7 +300,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A placeholder for the configuration value.</p>
+             * <p>The sample value of the configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>Cluster or Partition</p>
@@ -311,7 +311,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the configuration is required.</p>
+             * <p>Specifies whether the configuration is required.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -322,7 +322,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The required file extension (for example, <code>.keytab</code>) when <code>type</code> is <code>file</code>.</p>
+             * <p>The specific file type when the type is file, such as .keytab.</p>
              * 
              * <strong>example:</strong>
              * <p>.keytab</p>
@@ -333,7 +333,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration type.</p>
+             * <p>The type of the configuration. Valid values: boolean, int, map, string, password, and file.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -344,7 +344,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration value.</p>
+             * <p>The value of the configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>Partition</p>
@@ -726,7 +726,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the agent for the data source instance is online.</p>
+             * <p>Specifies whether the data source instance or the associated agent is started.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -737,7 +737,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of data source configurations.</p>
+             * <p>The configurations related to the data source.</p>
              */
             public Builder config(java.util.List<Config> config) {
                 this.config = config;
@@ -745,7 +745,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time the data source was created.</p>
+             * <p>The time when the data source was created. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 09:29:58</p>
@@ -778,7 +778,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of destination MaxCompute projects.</p>
+             * <p>The list of destination MaxCompute projects.</p>
              */
             public Builder dstProjects(java.util.List<String> dstProjects) {
                 this.dstProjects = dstProjects;
@@ -786,7 +786,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason the data source instance failed to start or stop. This parameter is returned only if the <code>status</code> is <code>START_FAILED</code> or <code>STOP_FAILED</code>.</p>
+             * <p>The reason why the data source instance failed to start or stop when the status is START_FAILED or STOP_FAILED.</p>
              * 
              * <strong>example:</strong>
              * <p>unexpected exception</p>
@@ -797,7 +797,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source ID.</p>
+             * <p>The ID of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>2000015</p>
@@ -808,7 +808,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last metadata synchronization time.</p>
+             * <p>The time when the metadata was last synchronized. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 15:44:17</p>
@@ -819,7 +819,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source name.</p>
+             * <p>The name of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -830,7 +830,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network connection, specified in the <code>VpcId:RegionId</code> format.</p>
+             * <p>The MaxCompute network connectivity ID. Format: &quot;MaxCompute network connectivity ID&quot;:region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2zebqp6uojhdla46677tl:cn-beijing</p>
@@ -852,7 +852,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of partitions currently being migrated.</p>
+             * <p>The number of partitions being migrated.</p>
              * 
              * <strong>example:</strong>
              * <p>2332</p>
@@ -863,7 +863,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successfully migrated partitions.</p>
+             * <p>The number of partitions that have been migrated.</p>
              * 
              * <strong>example:</strong>
              * <p>23</p>
@@ -874,7 +874,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of partitions that failed to migrate.</p>
+             * <p>The number of partitions that failed to be migrated.</p>
              * 
              * <strong>example:</strong>
              * <p>2323</p>
@@ -896,7 +896,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * scanErrMsg.
+             * <p>The cause of the metadata update task failure.</p>
              */
             public Builder scanErrMsg(String scanErrMsg) {
                 this.scanErrMsg = scanErrMsg;
@@ -915,7 +915,12 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * scanStatus.
+             * <p>The status of the metadata update task. Valid values:</p>
+             * <ul>
+             * <li>DOING: The task is running.</li>
+             * <li>DONE: The task succeeded.</li>
+             * <li>FAILED: The task failed.</li>
+             * </ul>
              */
             public Builder scanStatus(String scanStatus) {
                 this.scanStatus = scanStatus;
@@ -923,7 +928,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source status.</p>
+             * <p>The status of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>STARTED</p>
@@ -945,7 +950,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tables currently being migrated.</p>
+             * <p>The number of tables being migrated.</p>
              * 
              * <strong>example:</strong>
              * <p>18</p>
@@ -956,7 +961,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successfully migrated tables.</p>
+             * <p>The number of tables that have been migrated.</p>
              * 
              * <strong>example:</strong>
              * <p>2323</p>
@@ -967,7 +972,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tables that failed to migrate.</p>
+             * <p>The number of tables that failed to be migrated.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -978,7 +983,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of partially migrated tables.</p>
+             * <p>The number of tables that have been partially migrated.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -989,7 +994,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source type.</p>
+             * <p>The type of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>BIGQUERY</p>
@@ -1115,7 +1120,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of data sources.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>

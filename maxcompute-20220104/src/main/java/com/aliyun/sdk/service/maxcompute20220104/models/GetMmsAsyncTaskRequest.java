@@ -75,7 +75,7 @@ public class GetMmsAsyncTaskRequest extends Request {
         } 
 
         /**
-         * <p>The data source ID.</p>
+         * <p>The unique identifier of the MMS data source. This value is obtained from the id field of the object returned by ListMmsDataSources.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetMmsAsyncTaskRequest extends Request {
         }
 
         /**
-         * <p>The asynchronous task ID.</p>
+         * <p>The identifier of the MMS metadata synchronization task. This value is obtained from the scanId field of the object returned by ListMmsDataSources.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

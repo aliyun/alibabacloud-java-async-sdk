@@ -130,7 +130,7 @@ public class ListMmsDbsRequest extends Request {
         } 
 
         /**
-         * <p>Data source ID</p>
+         * <p>The ID of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ListMmsDbsRequest extends Request {
         }
 
         /**
-         * <p>Data source name</p>
+         * <p>The name of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -155,7 +155,7 @@ public class ListMmsDbsRequest extends Request {
         }
 
         /**
-         * <p>Page number</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +167,7 @@ public class ListMmsDbsRequest extends Request {
         }
 
         /**
-         * <p>Number of records per page</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -179,7 +179,7 @@ public class ListMmsDbsRequest extends Request {
         }
 
         /**
-         * <p>Sorting conditions</p>
+         * <p>The sorting conditions.</p>
          */
         public Builder sorter(Sorter sorter) {
             String sorterShrink = shrink(sorter, "sorter", "json");
@@ -189,7 +189,7 @@ public class ListMmsDbsRequest extends Request {
         }
 
         /**
-         * <p>Data source status</p>
+         * <p>The status of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>STARTED</p>
@@ -273,7 +273,7 @@ public class ListMmsDbsRequest extends Request {
             } 
 
             /**
-             * <p>Number of data rows in the database</p>
+             * <p>The number of data rows in the database.</p>
              * 
              * <strong>example:</strong>
              * <p>desc</p>
@@ -284,7 +284,7 @@ public class ListMmsDbsRequest extends Request {
             }
 
             /**
-             * <p>Size of data in the database</p>
+             * <p>The size of data in the database.</p>
              * 
              * <strong>example:</strong>
              * <p>asc</p>
@@ -295,7 +295,7 @@ public class ListMmsDbsRequest extends Request {
             }
 
             /**
-             * <p>Update time</p>
+             * <p>The update time. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 15:44:17</p>

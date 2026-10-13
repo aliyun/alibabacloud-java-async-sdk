@@ -119,7 +119,7 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token for the next page of results. This operation supports only consecutive paging. If the returned value is not empty, more data is available. To get the next page, use the returned value in your next request.</p>
+         * <p>The pagination token. This operation supports only sequential pagination. A non-empty NextToken value indicates that more data is available. Pass the NextToken value as a parameter in the next request to retrieve the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2w6Olxc+cMPjUtUMo/CvPe4IK7f7kIQFrIZjyc</p>
@@ -130,7 +130,7 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that specifies the position from which to start returning results. The results are sorted in alphabetical order.</p>
+         * <p>The marker after which the results are returned in alphabetical order.</p>
          * 
          * <strong>example:</strong>
          * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
@@ -149,7 +149,7 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned on each page.</p>
+         * <p>The maximum number of results returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -168,7 +168,7 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0bc12e6f16677875480593081d2956</p>
@@ -331,12 +331,10 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The billing method.</p>
+             * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li><p>subscription: The subscription billing method.</p>
-             * </li>
-             * <li><p>payasyougo: The pay-as-you-go billing method.</p>
-             * </li>
+             * <li>subscription: subscription quota.</li>
+             * <li>payasyougo: pay-as-you-go quota.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -348,7 +346,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the order.</p>
+             * <p>The order specification.</p>
              * 
              * <strong>example:</strong>
              * <p>OdpsStandard</p>
@@ -359,7 +357,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the order.</p>
+             * <p>The order ID.</p>
              * 
              * <strong>example:</strong>
              * <p>45245678</p>
@@ -429,7 +427,7 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IDs of the resources. This ID is also used in the billing system. You can use this ID to associate the costs of a quota with a tag.</p>
+             * <p>The identifier of the MaxCompute quota object. This identifier also exists in the Alibaba Cloud billing subsystem. You can use this identifier to associate all fees of the quota object with a specific tag.</p>
              */
             public Builder resourceIds(java.util.List<String> resourceIds) {
                 this.resourceIds = resourceIds;
@@ -437,7 +435,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. Valid values: quota and project.</p>
+             * <p>The object type. Only quota and project are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;quota&quot;</p>
@@ -585,7 +583,7 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The quota plan that is currently in effect.</p>
+             * <p>The quota plan that takes effect according to the schedule.</p>
              * 
              * <strong>example:</strong>
              * <p>planA</p>
@@ -596,7 +594,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the current plan took effect.</p>
+             * <p>The time when currPlan is scheduled. The time is in HHmm format. For example, 0800 indicates 08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>0800</p>
@@ -607,7 +605,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next quota plan that is scheduled to take effect.</p>
+             * <p>The quota plan that will take effect according to the schedule.</p>
              * 
              * <strong>example:</strong>
              * <p>planB</p>
@@ -618,7 +616,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the next plan is scheduled to take effect.</p>
+             * <p>The time when next_plan is scheduled. The time is in HHmm format. For example, 0800 indicates 08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>1700</p>
@@ -629,7 +627,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota plan that takes effect immediately. This parameter is returned only when a user triggers an immediate plan that is different from the current plan.</p>
+             * <p>The quota plan that takes effect immediately. This parameter is not empty if the user triggers immediate effect and the plan is different from curr_plan.</p>
              * 
              * <strong>example:</strong>
              * <p>planC</p>
@@ -640,7 +638,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the immediate plan was triggered.</p>
+             * <p>The time when the immediate effect is triggered. The time is in HHmm format. For example, 0800 indicates 08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>1500</p>
@@ -745,12 +743,10 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The billing method.</p>
+             * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li><p>subscription: The subscription billing method.</p>
-             * </li>
-             * <li><p>payasyougo: The pay-as-you-go billing method.</p>
-             * </li>
+             * <li>subscription: indicates a subscription quota.</li>
+             * <li>payasyougo: indicates a pay-as-you-go quota.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -762,7 +758,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the order.</p>
+             * <p>The order specification.</p>
              * 
              * <strong>example:</strong>
              * <p>OdpsStandard</p>
@@ -773,7 +769,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the order.</p>
+             * <p>The order ID.</p>
              * 
              * <strong>example:</strong>
              * <p>45245678</p>
@@ -991,7 +987,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of elastically reserved CUs.</p>
+             * <p>The number of elastic reserved CUs.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -1002,7 +998,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable priority-based scheduling.</p>
+             * <p>Specifies whether priority is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1013,7 +1009,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the resource is exclusive.</p>
+             * <p>Specifies whether the quota is exclusive.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1044,7 +1040,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of guaranteed reserved CUs.</p>
+             * <p>The minimum number of reserved CUs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1075,7 +1071,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upper limit of CUs for a single job.</p>
+             * <p>The CU limit for a single job.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1153,7 +1149,7 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The identifier of the MaxCompute quota object. This identifier also exists in the Alibaba Cloud sales subsystem. It associates the costs of the quota object with a tag.</p>
+             * <p>The identifier of the MaxCompute quota object. This identifier also exists in the Alibaba Cloud billing subsystem. You can use this identifier to associate all fees of the quota object with a specific tag.</p>
              */
             public Builder resourceIds(java.util.List<String> resourceIds) {
                 this.resourceIds = resourceIds;
@@ -1161,7 +1157,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the object. Only \<code>quota\\</code> and \<code>project\\</code> are supported.</p>
+             * <p>The object type. Only quota and project are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;quota&quot;</p>
@@ -1309,7 +1305,7 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The quota plan that is currently in effect.</p>
+             * <p>The quota plan that takes effect according to the schedule.</p>
              * 
              * <strong>example:</strong>
              * <p>planA</p>
@@ -1320,7 +1316,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the current plan took effect.</p>
+             * <p>The time when currPlan is scheduled. The time is in HHmm format. For example, 0800 indicates 08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>0800</p>
@@ -1331,7 +1327,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next quota plan that is scheduled to take effect.</p>
+             * <p>The quota plan that will take effect according to the schedule.</p>
              * 
              * <strong>example:</strong>
              * <p>planB</p>
@@ -1342,7 +1338,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the next plan is scheduled to take effect.</p>
+             * <p>The time when next_plan is scheduled. The time is in HHmm format. For example, 0800 indicates 08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>1700</p>
@@ -1353,7 +1349,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota plan that takes effect immediately. This parameter is returned only if a user triggers an immediate plan that is different from <code>currPlan</code>.</p>
+             * <p>The quota plan that takes effect immediately. This parameter is not empty if the user triggers immediate effect and the plan is different from curr_plan.</p>
              * 
              * <strong>example:</strong>
              * <p>planC</p>
@@ -1364,7 +1360,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the immediate-effect plan was triggered.</p>
+             * <p>The time when the immediate effect is triggered. The time is in HHmm format. For example, 0800 indicates 08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>1500</p>
@@ -1651,7 +1647,7 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The billing information.</p>
+             * <p>The order information.</p>
              */
             public Builder billingPolicy(SubQuotaInfoListBillingPolicy billingPolicy) {
                 this.billingPolicy = billingPolicy;
@@ -1659,7 +1655,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>AT-120N</p>
@@ -1670,7 +1666,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was created.</p>
+             * <p>The time when the resource was created. The time follows the ISO 8601 standard in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-06T02:14:44Z</p>
@@ -1681,7 +1677,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator of the resource. This is the UID of an Alibaba Cloud account.</p>
+             * <p>The UID of the Alibaba Cloud account that created the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>672863518</p>
@@ -1692,7 +1688,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the sub-quota.</p>
+             * <p>The ID of the secondary quota.</p>
              * 
              * <strong>example:</strong>
              * <p>1000048</p>
@@ -1703,7 +1699,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the sub-quota.</p>
+             * <p>The name of the secondary quota.</p>
              * 
              * <strong>example:</strong>
              * <p>subquotaA</p>
@@ -1714,7 +1710,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alias of the sub-quota.</p>
+             * <p>The nickname of the secondary quota.</p>
              * 
              * <strong>example:</strong>
              * <p>subquotaA</p>
@@ -1751,7 +1747,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -1762,7 +1758,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the MaxCompute quota object. This identifier is the same as the one in the Alibaba Cloud bill and is used in tagging scenarios.</p>
+             * <p>The identifier of the MaxCompute quota object. This identifier is consistent with the identifier in Alibaba Cloud billing and is used in tagging scenarios.</p>
              */
             public Builder saleTag(SubQuotaInfoListSaleTag saleTag) {
                 this.saleTag = saleTag;
@@ -1770,7 +1766,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time-based scheduling information.</p>
+             * <p>The time-sharing information.</p>
              */
             public Builder scheduleInfo(SubQuotaInfoListScheduleInfo scheduleInfo) {
                 this.scheduleInfo = scheduleInfo;
@@ -1778,7 +1774,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the quota.</p>
+             * <p>The resource status.</p>
              * 
              * <strong>example:</strong>
              * <p>ON</p>
@@ -1800,7 +1796,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the tenant.</p>
+             * <p>The tenant ID.</p>
              * 
              * <strong>example:</strong>
              * <p>280747109771520</p>
@@ -1811,7 +1807,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the control cluster.</p>
+             * <p>Corresponds to the resourceSystemType field of the control cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>FUXI_ONLINE</p>
@@ -2121,7 +2117,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing information.</p>
+             * <p>The order information.</p>
              */
             public Builder billingPolicy(BillingPolicy billingPolicy) {
                 this.billingPolicy = billingPolicy;
@@ -2129,7 +2125,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>AT-120N</p>
@@ -2140,7 +2136,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the quota was created.</p>
+             * <p>The time when the resource was created. The time follows the ISO 8601 standard in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-06T02:14:44Z</p>
@@ -2151,7 +2147,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the account that created the quota. This ID is an Alibaba Cloud account UID.</p>
+             * <p>The UID of the Alibaba Cloud account that created the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>672863518</p>
@@ -2162,7 +2158,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the quota.</p>
+             * <p>quota id</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2173,7 +2169,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the quota.</p>
+             * <p>The quota name.</p>
              * 
              * <strong>example:</strong>
              * <p>quota_a</p>
@@ -2184,7 +2180,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alias of the quota.</p>
+             * <p>The quota alias.</p>
              * 
              * <strong>example:</strong>
              * <p>quota_nickname</p>
@@ -2195,7 +2191,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota description.</p>
+             * <p>The description of the quota.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;minCU&quot;:10,	
@@ -2221,7 +2217,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -2232,7 +2228,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sales tag of the quota. This tag is the same as the billing identifier and is used for cost allocation.</p>
+             * <p>The identifier of the MaxCompute quota object. This identifier is consistent with the identifier in Alibaba Cloud billing and is used in tagging scenarios.</p>
              */
             public Builder saleTag(SaleTag saleTag) {
                 this.saleTag = saleTag;
@@ -2240,7 +2236,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time-based scheduling information.</p>
+             * <p>The time-sharing information.</p>
              */
             public Builder scheduleInfo(ScheduleInfo scheduleInfo) {
                 this.scheduleInfo = scheduleInfo;
@@ -2248,7 +2244,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the quota.</p>
+             * <p>The resource status.</p>
              * 
              * <strong>example:</strong>
              * <p>ON</p>
@@ -2259,7 +2255,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the sub-quotas.</p>
+             * <p>The secondary quota information.</p>
              */
             public Builder subQuotaInfoList(java.util.List<SubQuotaInfoList> subQuotaInfoList) {
                 this.subQuotaInfoList = subQuotaInfoList;
@@ -2267,7 +2263,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the quota.</p>
+             * <p>The resource tag of the quota.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -2278,7 +2274,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the tenant.</p>
+             * <p>The tenant ID.</p>
              * 
              * <strong>example:</strong>
              * <p>280747109771520</p>
@@ -2289,7 +2285,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the control cluster.</p>
+             * <p>Corresponds to the resourceSystemType field of the control cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>FUXI_ONLINE</p>
@@ -2300,7 +2296,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number.</p>
+             * <p>The version.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2396,7 +2392,7 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The token for the next page of results. If this parameter has a value, more results are available. To get the next page, include this value in the \<code>NextToken\\</code> parameter of the next request.</p>
+             * <p>The pagination token. This operation supports only sequential pagination. A non-empty NextToken value indicates that more data is available. Pass the NextToken value as a parameter in the next request to retrieve the next page.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;abcde&quot;</p>
@@ -2407,7 +2403,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results are returned in alphabetical order, starting from the entry after the marker.</p>
+             * <p>The marker after which the results are returned in alphabetical order.</p>
              * 
              * <strong>example:</strong>
              * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
@@ -2418,7 +2414,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of entries returned per page.</p>
+             * <p>The maximum number of results returned per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2496,7 +2492,7 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>Department</p>
@@ -2507,7 +2503,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2590,12 +2586,10 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The billing method.</p>
+             * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li><p>subscription: The subscription billing method.</p>
-             * </li>
-             * <li><p>payasyougo: The pay-as-you-go billing method.</p>
-             * </li>
+             * <li>subscription: subscription quota.</li>
+             * <li>payasyougo: pay-as-you-go quota.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2607,7 +2601,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the order.</p>
+             * <p>The order specification.</p>
              * 
              * <strong>example:</strong>
              * <p>OdpsStandard</p>
@@ -2618,7 +2612,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the order.</p>
+             * <p>The order ID.</p>
              * 
              * <strong>example:</strong>
              * <p>45245678</p>
@@ -2688,7 +2682,7 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IDs of the resources. This ID is also used in the billing system. You can use this ID to associate the costs of a quota with a tag.</p>
+             * <p>The identifier of the MaxCompute quota object. This identifier also exists in the Alibaba Cloud billing subsystem. You can use this identifier to associate all fees of the quota object with a specific tag.</p>
              */
             public Builder resourceIds(java.util.List<String> resourceIds) {
                 this.resourceIds = resourceIds;
@@ -2696,7 +2690,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. Valid values: quota and project.</p>
+             * <p>The object type. Only quota and project are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;project&quot;</p>
@@ -2844,7 +2838,7 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The quota plan that is currently in effect.</p>
+             * <p>The quota plan that takes effect according to the schedule.</p>
              * 
              * <strong>example:</strong>
              * <p>planA</p>
@@ -2855,7 +2849,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the current plan took effect.</p>
+             * <p>The time when currPlan is scheduled. The time is in HHmm format. For example, 0800 indicates 08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>0800</p>
@@ -2866,7 +2860,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next quota plan that is scheduled to take effect.</p>
+             * <p>The quota plan that will take effect according to the schedule.</p>
              * 
              * <strong>example:</strong>
              * <p>planB</p>
@@ -2877,7 +2871,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the next plan is scheduled to take effect.</p>
+             * <p>The time when next_plan is scheduled. The time is in HHmm format. For example, 0800 indicates 08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>1700</p>
@@ -2888,7 +2882,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota plan that takes effect immediately. This parameter is returned only when a user triggers an immediate plan that is different from the current plan.</p>
+             * <p>The quota plan that takes effect immediately. This parameter is not empty if the user triggers immediate effect and the plan is different from curr_plan.</p>
              * 
              * <strong>example:</strong>
              * <p>planC</p>
@@ -2899,7 +2893,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the immediate plan was triggered.</p>
+             * <p>The time when the immediate effect is triggered. The time is in HHmm format. For example, 0800 indicates 08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>1500</p>
@@ -3004,12 +2998,10 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The billing method.</p>
+             * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li><p>subscription: The subscription billing method.</p>
-             * </li>
-             * <li><p>payasyougo: The pay-as-you-go billing method.</p>
-             * </li>
+             * <li>subscription: subscription quota.</li>
+             * <li>payasyougo: pay-as-you-go quota.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3021,7 +3013,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the order.</p>
+             * <p>The order specification.</p>
              * 
              * <strong>example:</strong>
              * <p>OdpsStandard</p>
@@ -3032,7 +3024,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the order.</p>
+             * <p>The order ID.</p>
              * 
              * <strong>example:</strong>
              * <p>45245678</p>
@@ -3250,7 +3242,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The elastically reserved CUs.</p>
+             * <p>The number of elastic reserved CUs.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -3261,7 +3253,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to enable priority-based scheduling.</p>
+             * <p>Specifies whether priority is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -3272,7 +3264,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the resource is exclusive.</p>
+             * <p>Specifies whether the quota is exclusive.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -3283,7 +3275,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum reserved computing units (CUs).</p>
+             * <p>The upper limit of reserved CUs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -3303,7 +3295,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum reserved CUs.</p>
+             * <p>The minimum number of reserved CUs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -3334,7 +3326,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum CUs for a single job.</p>
+             * <p>The CU limit for a single job.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3412,7 +3404,7 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IDs of the resources. This ID is also used in the billing system. You can use this ID to associate the costs of a quota with a tag.</p>
+             * <p>The identifier of the MaxCompute quota object. This identifier also exists in the Alibaba Cloud billing subsystem. You can use this identifier to associate all fees of the quota object with a specific tag.</p>
              */
             public Builder resourceIds(java.util.List<String> resourceIds) {
                 this.resourceIds = resourceIds;
@@ -3420,7 +3412,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. Valid values: quota and project.</p>
+             * <p>The object type. Only quota and project are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;quota&quot;</p>
@@ -3568,7 +3560,7 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The quota plan that is currently in effect.</p>
+             * <p>The quota plan that takes effect according to the schedule.</p>
              * 
              * <strong>example:</strong>
              * <p>planA</p>
@@ -3579,7 +3571,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the current plan took effect.</p>
+             * <p>The time when currPlan is scheduled. The time is in HHmm format. For example, 0800 indicates 08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>0800</p>
@@ -3590,7 +3582,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next quota plan that is scheduled to take effect.</p>
+             * <p>The quota plan that will take effect according to the schedule.</p>
              * 
              * <strong>example:</strong>
              * <p>planB</p>
@@ -3601,7 +3593,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the next plan is scheduled to take effect.</p>
+             * <p>The time when next_plan is scheduled. The time is in HHmm format. For example, 0800 indicates 08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>1700</p>
@@ -3612,7 +3604,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota plan that takes effect immediately. This parameter is returned only when a user triggers an immediate plan that is different from the current plan.</p>
+             * <p>The quota plan that takes effect immediately. This parameter is not empty if the user triggers immediate effect and the plan is different from curr_plan.</p>
              * 
              * <strong>example:</strong>
              * <p>planC</p>
@@ -3623,7 +3615,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the immediate plan was triggered.</p>
+             * <p>The time when the immediate effect is triggered. The time is in HHmm format. For example, 0800 indicates 08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>1500</p>
@@ -3910,7 +3902,7 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The billing information.</p>
+             * <p>The order information.</p>
              */
             public Builder billingPolicy(QuotaInfoListSubQuotaInfoListBillingPolicy billingPolicy) {
                 this.billingPolicy = billingPolicy;
@@ -3918,7 +3910,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>AT-120N</p>
@@ -3929,7 +3921,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the quota was created.</p>
+             * <p>The time when the resource was created. The time follows the ISO 8601 standard in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-06T02:14:44Z</p>
@@ -3940,7 +3932,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the account that created the quota. This ID is an Alibaba Cloud account UID.</p>
+             * <p>The UID of the Alibaba Cloud account that created the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>672863518</p>
@@ -3951,7 +3943,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the sub-quota.</p>
+             * <p>The ID of the secondary quota.</p>
              * 
              * <strong>example:</strong>
              * <p>1000048</p>
@@ -3962,7 +3954,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the sub-quota.</p>
+             * <p>The name of the secondary quota.</p>
              * 
              * <strong>example:</strong>
              * <p>subquotaA</p>
@@ -3973,7 +3965,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alias of the sub-quota.</p>
+             * <p>The alias of the secondary quota.</p>
              * 
              * <strong>example:</strong>
              * <p>subquotaA</p>
@@ -3984,7 +3976,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota description.</p>
+             * <p>The description of the quota.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;minCU&quot;:10,	
@@ -4010,7 +4002,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -4021,7 +4013,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sales tag of the quota. This tag is the same as the billing identifier and is used for cost allocation.</p>
+             * <p>The identifier of the MaxCompute quota object. This identifier is consistent with the identifier in Alibaba Cloud billing and is used in tagging scenarios.</p>
              */
             public Builder saleTag(QuotaInfoListSubQuotaInfoListSaleTag saleTag) {
                 this.saleTag = saleTag;
@@ -4029,7 +4021,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time-based scheduling information.</p>
+             * <p>The scheduling information.</p>
              */
             public Builder scheduleInfo(QuotaInfoListSubQuotaInfoListScheduleInfo scheduleInfo) {
                 this.scheduleInfo = scheduleInfo;
@@ -4037,7 +4029,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the quota.</p>
+             * <p>The resource status.</p>
              * 
              * <strong>example:</strong>
              * <p>ON</p>
@@ -4048,7 +4040,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the quota.</p>
+             * <p>The resource tag of the quota.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -4059,7 +4051,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the tenant.</p>
+             * <p>The tenant ID.</p>
              * 
              * <strong>example:</strong>
              * <p>280747109771520</p>
@@ -4070,7 +4062,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the control cluster.</p>
+             * <p>Corresponds to the resourceSystemType field of the control cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>FUXI_ONLINE</p>
@@ -4081,7 +4073,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number.</p>
+             * <p>The version.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -4380,7 +4372,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing information.</p>
+             * <p>The order information.</p>
              */
             public Builder billingPolicy(QuotaInfoListBillingPolicy billingPolicy) {
                 this.billingPolicy = billingPolicy;
@@ -4388,7 +4380,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>AT-120N</p>
@@ -4399,7 +4391,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the quota was created.</p>
+             * <p>The time when the resource was created. The time follows the ISO 8601 standard in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-06T02:14:44Z</p>
@@ -4410,7 +4402,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the account that created the quota. This ID is an Alibaba Cloud account UID.</p>
+             * <p>The UID of the Alibaba Cloud account that created the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>672863518</p>
@@ -4421,7 +4413,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the quota.</p>
+             * <p>quota ID</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -4432,7 +4424,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the quota.</p>
+             * <p>The quota name.</p>
              * 
              * <strong>example:</strong>
              * <p>quota_a</p>
@@ -4443,7 +4435,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alias of the quota.</p>
+             * <p>The quota alias.</p>
              * 
              * <strong>example:</strong>
              * <p>quota_nickname</p>
@@ -4454,7 +4446,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters of the quota.</p>
+             * <p>The description of the quota.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;minCU&quot;:10,	
@@ -4480,7 +4472,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -4491,7 +4483,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sales tag of the quota. This tag is the same as the billing identifier and is used for cost allocation.</p>
+             * <p>The identifier of the MaxCompute quota object. This identifier is consistent with the identifier in Alibaba Cloud billing and is used in tagging scenarios.</p>
              */
             public Builder saleTag(QuotaInfoListSaleTag saleTag) {
                 this.saleTag = saleTag;
@@ -4499,7 +4491,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time-based scheduling information.</p>
+             * <p>The scheduling information.</p>
              */
             public Builder scheduleInfo(QuotaInfoListScheduleInfo scheduleInfo) {
                 this.scheduleInfo = scheduleInfo;
@@ -4507,7 +4499,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the quota.</p>
+             * <p>The resource status.</p>
              * 
              * <strong>example:</strong>
              * <p>ON</p>
@@ -4518,7 +4510,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the sub-quotas.</p>
+             * <p>The secondary quota information.</p>
              */
             public Builder subQuotaInfoList(java.util.List<QuotaInfoListSubQuotaInfoList> subQuotaInfoList) {
                 this.subQuotaInfoList = subQuotaInfoList;
@@ -4526,7 +4518,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the quota.</p>
+             * <p>The resource tag of the quota.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -4537,7 +4529,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the tenant.</p>
+             * <p>The tenant ID.</p>
              * 
              * <strong>example:</strong>
              * <p>280747109771520</p>
@@ -4548,7 +4540,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the control cluster.</p>
+             * <p>Corresponds to the resourceSystemType field of the control cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>FUXI_ONLINE</p>
@@ -4559,7 +4551,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number.</p>
+             * <p>The version.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

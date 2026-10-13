@@ -80,7 +80,7 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -90,16 +90,11 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <ul>
-         * <li><p><code>1xx</code>: Informational response - The request has been received and is being processed.</p>
-         * </li>
-         * <li><p><code>2xx</code>: Success - The request was successfully received, understood, and accepted.</p>
-         * </li>
-         * <li><p><code>3xx</code>: Redirection - Further action is needed to complete the request.</p>
-         * </li>
-         * <li><p><code>4xx</code>: Client error - The request contains invalid syntax or cannot be fulfilled.</p>
-         * </li>
-         * <li><p><code>5xx</code>: Server error - The server failed to fulfill a valid request.</p>
-         * </li>
+         * <li>1xx: Informational response. The request has been received and is being processed.</li>
+         * <li>2xx: Success. The request has been successfully received, understood, and accepted by the server.</li>
+         * <li>3xx: Redirection. The request is redirected. Further action is required to complete the request.</li>
+         * <li>4xx: Client error. The request contains invalid parameters, bad syntax, or specific request conditions cannot be fulfilled.</li>
+         * <li>5xx: Server error. The server cannot fulfill the request due to other reasons.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,7 +214,7 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The date of the metric, in <code>yyyyMMdd</code> format.</p>
+             * <p>The statistics date. Format: yyyyMMdd.</p>
              * 
              * <strong>example:</strong>
              * <p>20260410</p>
@@ -230,7 +225,7 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of total daily storage that this storage type accounts for.</p>
+             * <p>The storage usage percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -243,18 +238,12 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
             /**
              * <p>The storage type. Valid values:</p>
              * <ul>
-             * <li><p><code>Storage</code>: standard storage.</p>
-             * </li>
-             * <li><p><code>LowFreqStorage</code>: infrequent access storage.</p>
-             * </li>
-             * <li><p><code>ColdStorage</code>: archive storage.</p>
-             * </li>
-             * <li><p><code>$sum</code>: total storage.</p>
-             * </li>
-             * <li><p><code>RecycleBinStorage</code>: recycle bin storage.</p>
-             * </li>
-             * <li><p><code>DRStorage</code>: multi-AZ storage.</p>
-             * </li>
+             * <li>Storage: standard storage.</li>
+             * <li>LowFreqStorage: infrequent access storage.</li>
+             * <li>ColdStorage: long-term storage.</li>
+             * <li>$sum: total storage.</li>
+             * <li>RecycleBinStorage: backup storage.</li>
+             * <li>DRStorage: multi-AZ storage.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -277,7 +266,7 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage usage for this day.</p>
+             * <p>The storage usage.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -373,7 +362,7 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A list of daily storage usage metrics.</p>
+             * <p>The list of daily storage usage statistics.</p>
              */
             public Builder dailyStorageMetrics(java.util.List<DailyStorageMetrics> dailyStorageMetrics) {
                 this.dailyStorageMetrics = dailyStorageMetrics;
@@ -383,18 +372,12 @@ public class SumStorageMetricsByTypeResponseBody extends TeaModel {
             /**
              * <p>The storage type. Valid values:</p>
              * <ul>
-             * <li><p><code>Storage</code>: standard storage.</p>
-             * </li>
-             * <li><p><code>LowFreqStorage</code>: infrequent access storage.</p>
-             * </li>
-             * <li><p><code>ColdStorage</code>: archive storage.</p>
-             * </li>
-             * <li><p><code>$sum</code>: total storage.</p>
-             * </li>
-             * <li><p><code>RecycleBinStorage</code>: recycle bin storage.</p>
-             * </li>
-             * <li><p><code>DRStorage</code>: multi-AZ storage.</p>
-             * </li>
+             * <li>Storage: standard storage.</li>
+             * <li>LowFreqStorage: infrequent access storage.</li>
+             * <li>ColdStorage: long-term storage.</li>
+             * <li>$sum: total storage.</li>
+             * <li>RecycleBinStorage: backup storage.</li>
+             * <li>DRStorage: multi-AZ storage.</li>
              * </ul>
              * 
              * <strong>example:</strong>

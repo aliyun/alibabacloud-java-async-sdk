@@ -138,16 +138,11 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <ul>
-         * <li><p>1xx: an informational response. The request has been received and is being processed.</p>
-         * </li>
-         * <li><p>2xx: a success response. The request has been successfully received, understood, and accepted by the server.</p>
-         * </li>
-         * <li><p>3xx: a redirection response. The request is redirected. You must take further action to complete the request.</p>
-         * </li>
-         * <li><p>4xx: a client error. The request contains invalid request parameters or syntax, or cannot be fulfilled.</p>
-         * </li>
-         * <li><p>5xx: a server error. The server fails to fulfill the request for other reasons.</p>
-         * </li>
+         * <li>1xx: Informational. The request was received and is being processed.</li>
+         * <li>2xx: Success. The action requested by the client was successfully received, understood, and accepted by the server.</li>
+         * <li>3xx: Redirection. The request was redirected, and further action is required to complete it.</li>
+         * <li>4xx: Client error. The request contains bad syntax, invalid parameters, or cannot be fulfilled.</li>
+         * <li>5xx: Server error. The server failed to fulfill the request.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -384,7 +379,7 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The statistics collection date. The date is accurate to the day. The date must be in the <code>YYYYMMdd</code> format.</p>
+             * <p>The statistical date. Data is collected on a daily basis. Specify the date in the YYYYMMDD format.</p>
              * 
              * <strong>example:</strong>
              * <p>20250528</p>
@@ -395,7 +390,7 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Long Term storage usage.</p>
+             * <p>The long-term storage usage.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -406,7 +401,7 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the Long Term storage usage.</p>
+             * <p>The unit of the long-term storage usage.</p>
              * 
              * <strong>example:</strong>
              * <p>GB</p>
@@ -417,7 +412,7 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IA storage class usage.</p>
+             * <p>The low-frequency storage usage.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -428,7 +423,7 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the IA storage class usage.</p>
+             * <p>The unit of the low-frequency storage usage.</p>
              * 
              * <strong>example:</strong>
              * <p>GB</p>
@@ -450,7 +445,7 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The year-over-year change rate of the total storage usage in the last {$recentDays} days.</p>
+             * <p>The rate of change in the total storage usage compared with {$recentDays} days ago.</p>
              * 
              * <strong>example:</strong>
              * <p>0.011872406445069006</p>
@@ -483,7 +478,7 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Standard storage usage.</p>
+             * <p>The standard storage usage.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -494,7 +489,7 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the Standard storage usage.</p>
+             * <p>The unit of the standard storage usage.</p>
              * 
              * <strong>example:</strong>
              * <p>GB</p>
@@ -636,7 +631,7 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The statistics collection date.</p>
+             * <p>The statistical date. The format is YYYYMMDD.</p>
              * 
              * <strong>example:</strong>
              * <p>20241205</p>
@@ -658,7 +653,7 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries on each page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -677,7 +672,7 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>The total number of returned results.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>

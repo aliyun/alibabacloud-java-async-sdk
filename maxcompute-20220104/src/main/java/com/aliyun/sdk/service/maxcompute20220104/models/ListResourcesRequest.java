@@ -129,7 +129,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * <p>Specifies the marker after which the returned list begins.</p>
+         * <p>Specifies the marker after which results are returned in alphabetical order.</p>
          * 
          * <strong>example:</strong>
          * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
@@ -141,7 +141,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page.</p>
+         * <p>The maximum number of results to return per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

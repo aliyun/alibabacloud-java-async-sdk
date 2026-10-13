@@ -324,7 +324,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The upstream node ID.</p>
+         * <p>The upstream node IDs.</p>
          */
         public Builder extNodeIdList(java.util.List<String> extNodeIdList) {
             this.putBodyParameter("extNodeIdList", extNodeIdList);
@@ -333,9 +333,9 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The start UNIX timestamp.</p>
+         * <p>The start timestamp.</p>
          * <blockquote>
-         * <p>This parameter is invalid. The end timestamp is the point in time for the snapshot that you want to view.</p>
+         * <p>This parameter is invalid. The end timestamp specifies the snapshot time to query.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -348,7 +348,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The job instance ID.</p>
+         * <p>The job instance Id.</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putBodyParameter("instanceIdList", instanceIdList);
@@ -357,7 +357,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The job owner.</p>
+         * <p>The list of job owners.</p>
          */
         public Builder jobOwnerList(java.util.List<String> jobOwnerList) {
             this.putBodyParameter("jobOwnerList", jobOwnerList);
@@ -366,7 +366,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The job priority.</p>
+         * <p>The job priorities.</p>
          */
         public Builder priorityList(java.util.List<Long> priorityList) {
             this.putBodyParameter("priorityList", priorityList);
@@ -375,7 +375,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The project name.</p>
+         * <p>The project names.</p>
          */
         public Builder projectList(java.util.List<String> projectList) {
             this.putBodyParameter("projectList", projectList);
@@ -384,7 +384,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The nickname of the computing quota that the job uses.</p>
+         * <p>The nickname of the compute quota used by the job.</p>
          * 
          * <strong>example:</strong>
          * <p>quota_A</p>
@@ -396,7 +396,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The signature of the SQL job.</p>
+         * <p>The SQL job signatures.</p>
          */
         public Builder signatureList(java.util.List<String> signatureList) {
             this.putBodyParameter("signatureList", signatureList);
@@ -405,7 +405,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The fields for multi-column sorting.</p>
+         * <p>The multi-column sort fields.</p>
          */
         public Builder sortByList(java.util.List<String> sortByList) {
             this.putBodyParameter("sortByList", sortByList);
@@ -414,7 +414,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The sort orders for multi-column sorting.</p>
+         * <p>The multi-column sort orders.</p>
          */
         public Builder sortOrderList(java.util.List<String> sortOrderList) {
             this.putBodyParameter("sortOrderList", sortOrderList);
@@ -423,7 +423,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The job status.</p>
+         * <p>The job statuses.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             this.putBodyParameter("statusList", statusList);
@@ -432,7 +432,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The end UNIX timestamp.</p>
+         * <p>The end timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -445,7 +445,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The job type.</p>
+         * <p>The job types.</p>
          */
         public Builder typeList(java.util.List<String> typeList) {
             this.putBodyParameter("typeList", typeList);
@@ -454,38 +454,23 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The column to sort by. Valid values:</p>
+         * <p>The sort column. Valid values:</p>
          * <ul>
-         * <li><p>submittedAtTime</p>
-         * </li>
-         * <li><p>waitingTime</p>
-         * </li>
-         * <li><p>runningAtTime</p>
-         * </li>
-         * <li><p>runningTime</p>
-         * </li>
-         * <li><p>snapshotTime</p>
-         * </li>
-         * <li><p>totalTime</p>
-         * </li>
-         * <li><p>cpuUsage</p>
-         * </li>
-         * <li><p>memoryUsage</p>
-         * </li>
-         * <li><p>minCpuPct</p>
-         * </li>
-         * <li><p>minMemoryPct</p>
-         * </li>
-         * <li><p>priority</p>
-         * </li>
-         * <li><p>cpuRequest</p>
-         * </li>
-         * <li><p>memoryRequest</p>
-         * </li>
-         * <li><p>cpuUsageToRequestRatio</p>
-         * </li>
-         * <li><p>memoryUsageToRequestRatio</p>
-         * </li>
+         * <li>submittedAtTime</li>
+         * <li>waitingTime</li>
+         * <li>runningAtTime</li>
+         * <li>runningTime</li>
+         * <li>snapshotTime</li>
+         * <li>totalTime</li>
+         * <li>cpuUsage </li>
+         * <li>memoryUsage</li>
+         * <li>minCpuPct</li>
+         * <li>minMemoryPct</li>
+         * <li>priority</li>
+         * <li>cpuRequest</li>
+         * <li>memoryRequest</li>
+         * <li>cpuUsageToRequestRatio</li>
+         * <li>memoryUsageToRequestRatio</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -510,7 +495,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size, which is the maximum number of entries to return per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -534,7 +519,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. To view the tenant ID, log on to the MaxCompute console. In the navigation pane on the left, choose Tenant Management &gt; Tenant Properties.</p>
+         * <p>The tenant ID. You can view the tenant ID by logging on to the MaxCompute console and choosing Tenant Management &gt; Tenant Properties in the left-side navigation pane.</p>
          * 
          * <strong>example:</strong>
          * <p>478403690625249</p>

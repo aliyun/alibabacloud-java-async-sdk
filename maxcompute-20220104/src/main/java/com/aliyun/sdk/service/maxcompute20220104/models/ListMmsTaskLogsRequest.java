@@ -75,7 +75,7 @@ public class ListMmsTaskLogsRequest extends Request {
         } 
 
         /**
-         * <p>The data source ID.</p>
+         * <p>The ID of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class ListMmsTaskLogsRequest extends Request {
         }
 
         /**
-         * <p>The migration task ID.</p>
+         * <p>The ID of the migration task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

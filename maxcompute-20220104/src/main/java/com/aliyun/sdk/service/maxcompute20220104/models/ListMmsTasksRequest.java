@@ -308,7 +308,7 @@ public class ListMmsTasksRequest extends Request {
         }
 
         /**
-         * <p>The partition value. Use this parameter to filter migration tasks that migrated a specific partition value.</p>
+         * <p>The partition value. Filters migration tasks that migrated a specific partition value.</p>
          * 
          * <strong>example:</strong>
          * <p>p1=1/p2=abc</p>
@@ -415,7 +415,7 @@ public class ListMmsTasksRequest extends Request {
             } 
 
             /**
-             * <p>Sorts results by the start time.</p>
+             * <p>Sorts the results by start time.</p>
              * 
              * <strong>example:</strong>
              * <p>desc</p>
@@ -426,7 +426,7 @@ public class ListMmsTasksRequest extends Request {
             }
 
             /**
-             * <p>Sorts results by status.</p>
+             * <p>Sorts the results by status.</p>
              * 
              * <strong>example:</strong>
              * <p>asc</p>

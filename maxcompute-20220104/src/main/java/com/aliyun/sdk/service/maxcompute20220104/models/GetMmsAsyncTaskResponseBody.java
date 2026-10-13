@@ -274,7 +274,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 15:44:00</p>
@@ -285,7 +285,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time, in the format of YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The end time of the execution. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 17:44:17</p>
@@ -307,7 +307,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asynchronous task ID.</p>
+             * <p>The ID of the asynchronous task.</p>
              * 
              * <strong>example:</strong>
              * <p>2523</p>
@@ -329,7 +329,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running progress.</p>
+             * <p>The execution progress.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -340,7 +340,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running result.</p>
+             * <p>The execution result.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -362,7 +362,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source ID.</p>
+             * <p>The ID of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>2000017</p>
@@ -373,7 +373,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time, in the format of YYYY-MM-DD HH:mm:ss.</p>
+             * <p>The start time of the execution. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 15:44:17</p>
@@ -384,7 +384,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asynchronous task status.</p>
+             * <p>The status of the asynchronous task.</p>
              * 
              * <strong>example:</strong>
              * <p>DONE</p>
@@ -395,7 +395,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asynchronous task type.</p>
+             * <p>The type of the asynchronous task.</p>
              * 
              * <strong>example:</strong>
              * <p>TASK_CREATE</p>

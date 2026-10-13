@@ -158,7 +158,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>The token that specifies the position from which to start returning results. The results are sorted in alphabetical order.</p>
+         * <p>The marker after which the results are returned in alphabetical order.</p>
          * 
          * <strong>example:</strong>
          * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
@@ -170,7 +170,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page.</p>
+         * <p>The maximum number of items to return.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -200,7 +200,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>The cost allocation tags that are used to filter quotas. You can create cost allocation tags in the Tag service.</p>
+         * <p>The billing tags used to filter quota objects. Billing tags are created by users for cloud products.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;tag&quot;:&quot;this_is_tag_demo&quot;}</p>

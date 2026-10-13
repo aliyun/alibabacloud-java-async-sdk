@@ -157,7 +157,7 @@ public class ListMmsTimersRequest extends Request {
         }
 
         /**
-         * <p>The timer name.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -217,7 +217,7 @@ public class ListMmsTimersRequest extends Request {
         }
 
         /**
-         * <p>Filters timers by their stopped state.</p>
+         * <p>Specifies whether the job is stopped.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

@@ -91,7 +91,7 @@ public class KillJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+         * <p>Indicates whether the operation was successful. If the value is not empty and is not 200, the operation failed.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -102,7 +102,7 @@ public class KillJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0abb7ede16814560741256732e91b6</p>

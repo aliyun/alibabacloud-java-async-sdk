@@ -285,7 +285,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>A map of source column names to target column names.</p>
+         * <p>The mapping between source and destination column names in the {source column name: destination column name} format.</p>
          */
         public Builder columnMapping(java.util.Map<String, String> columnMapping) {
             this.putBodyParameter("columnMapping", columnMapping);
@@ -294,7 +294,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to migrate table data.</p>
+         * <p>Specifies whether to migrate the table data.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -318,7 +318,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable data verification. If set to <code>true</code>, the system runs a <code>SELECT COUNT(*)</code> query on both the source and target tables and compares the row counts.</p>
+         * <p>Specifies whether to enable verification. Currently, the verification method executes SELECT COUNT on the source and destination to compare the number of rows.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -342,7 +342,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>Other configuration settings.</p>
+         * <p>Other configuration information.</p>
          */
         public Builder others(java.util.Map<String, ?> others) {
             this.putBodyParameter("others", others);
@@ -351,7 +351,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>A map of table names to their corresponding partition filter expressions.</p>
+         * <p>The partition filter expression. Configure the partition filter expression for the specified table.</p>
          */
         public Builder partitionFilters(java.util.Map<String, String> partitionFilters) {
             this.putBodyParameter("partitionFilters", partitionFilters);
@@ -360,7 +360,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>A list of IDs for the table partitions to migrate. This parameter takes effect only when the <code>type</code> parameter is set to <code>Partitions</code>.</p>
+         * <p>The list of partition IDs for the tables to be migrated. Specify this parameter when type is set to Partitions.</p>
          */
         public Builder partitions(java.util.List<Long> partitions) {
             this.putBodyParameter("partitions", partitions);
@@ -369,7 +369,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>The schedule type for the task.</p>
+         * <p>The schedule type of the scheduled task. Valid values: Daily (runs daily) and Hourly (runs hourly).</p>
          * 
          * <strong>example:</strong>
          * <p>Daily</p>
@@ -393,7 +393,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>A blacklist of tables to exclude from the migration. This parameter takes effect only when the <code>type</code> parameter is set to <code>Database</code>.</p>
+         * <p>The list of tables to exclude from migration. Specify this parameter when type is set to Database.</p>
          */
         public Builder tableBlackList(java.util.List<String> tableBlackList) {
             this.putBodyParameter("tableBlackList", tableBlackList);
@@ -402,7 +402,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>A map of source table names to target table names.</p>
+         * <p>The mapping between the source table name and the destination table name.</p>
          */
         public Builder tableMapping(java.util.Map<String, String> tableMapping) {
             this.putBodyParameter("tableMapping", tableMapping);
@@ -411,7 +411,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>A whitelist of tables to migrate. This parameter takes effect only when the <code>type</code> parameter is set to <code>Database</code>. If omitted, all tables in the source database are migrated.</p>
+         * <p>The list of tables to migrate. Specify this parameter when type is set to Database. If this parameter is not specified, all tables in the corresponding database are migrated.</p>
          */
         public Builder tableWhiteList(java.util.List<String> tableWhiteList) {
             this.putBodyParameter("tableWhiteList", tableWhiteList);
@@ -420,7 +420,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>A list of table names to migrate. This parameter takes effect only when the <code>type</code> parameter is set to <code>Tables</code>.</p>
+         * <p>The list of names of the tables to be migrated. Specify this parameter when type is set to Tables.</p>
          */
         public Builder tables(java.util.List<String> tables) {
             this.putBodyParameter("tables", tables);
@@ -429,7 +429,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>The time to run the scheduled task. If <code>scheduleType</code> is set to <code>Daily</code>, the value is the time in <code>HH:MM</code> format. If <code>scheduleType</code> is set to <code>Hourly</code>, the value is the minute of the hour (<code>MM</code>).</p>
+         * <p>The schedule time of the scheduled task. When scheduleType is set to Daily, the value is in the HH:MM format. When scheduleType is set to Hourly, the value is in the MM format.</p>
          * 
          * <strong>example:</strong>
          * <p>12:00</p>

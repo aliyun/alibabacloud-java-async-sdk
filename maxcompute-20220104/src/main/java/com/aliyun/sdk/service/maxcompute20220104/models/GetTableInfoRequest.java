@@ -103,7 +103,7 @@ public class GetTableInfoRequest extends Request {
         } 
 
         /**
-         * <p>The name of the project to which the table or view belongs.</p>
+         * <p>The name of the project to which the table or view to be queried belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class GetTableInfoRequest extends Request {
         }
 
         /**
-         * <p>The name of the table or view that you want to view.</p>
+         * <p>The name of the table or view to be queried.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class GetTableInfoRequest extends Request {
         }
 
         /**
-         * <p>The name of the schema to which the table or view belongs.</p>
+         * <p>The name of the schema to which the table or view to be queried belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -141,16 +141,13 @@ public class GetTableInfoRequest extends Request {
         }
 
         /**
-         * <p>The type of the table or view that you want to view. Valid values:</p>
+         * <p>The type of the table or view to be queried. Valid values:</p>
          * <ul>
-         * <li><p><strong>internal</strong>: internal table</p>
-         * </li>
-         * <li><p><strong>external</strong>: external table</p>
-         * </li>
-         * <li><p><strong>view</strong>: view</p>
-         * </li>
-         * <li><p><strong>materializedView</strong>: <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialize view</a></p>
-         * </li>
+         * <li><strong>internal</strong>: Internal table.</li>
+         * <li><strong>external</strong>: External table.</li>
+         * <li><strong>view</strong>: View.</li>
+         * <li><strong>materializedView</strong>: &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/materialized-view-operations">Materialized view</a>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">Materialized view</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class CreateMmsTimerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class CreateMmsTimerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0be3e0b716671885050924814e3623</p>
@@ -131,7 +131,7 @@ public class CreateMmsTimerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the timer.</p>
+             * <p>timer id</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
