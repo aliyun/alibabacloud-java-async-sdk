@@ -207,7 +207,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The POSIX group ID.</p>
+             * <p>The POSIX user group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -218,7 +218,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The secondary group ID.</p>
+             * <p>The secondary user group ID.</p>
              */
             public Builder posixSecondaryGroupIds(java.util.List<Integer> posixSecondaryGroupIds) {
                 this.posixSecondaryGroupIds = posixSecondaryGroupIds;
@@ -309,7 +309,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The owner group ID.</p>
+             * <p>The file group ID of the owner.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -320,7 +320,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner user ID.</p>
+             * <p>The user ID of the owner.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -771,7 +771,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access point was created. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The time when the access point was created. The time follows the ISO 8601 standard and is displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-03-28T06:32:14Z</p>
@@ -793,7 +793,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access point domain name.</p>
+             * <p>The domain name of the access point.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</p>
@@ -826,7 +826,7 @@ public class ListAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access point was last modified. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The time when the access point was last modified. The time follows the ISO 8601 standard and is displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-24T02:10:23Z</p>
@@ -895,10 +895,10 @@ public class ListAccessPointsResponseBody extends TeaModel {
              * <p>The current access point status.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Active: Available.</li>
-             * <li>Inactive: Unavailable.</li>
-             * <li>Pending: Being created.</li>
-             * <li>Deleting: Being deleted.</li>
+             * <li>Active: The access point is available.</li>
+             * <li>Inactive: The access point is unavailable.</li>
+             * <li>Pending: The access point is being created.</li>
+             * <li>Deleting: The access point is being deleted.</li>
              * </ul>
              * <blockquote>
              * <p>You can mount a file system only when the status is Active.</p>

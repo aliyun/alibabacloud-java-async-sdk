@@ -75,7 +75,7 @@ public class DeleteLogAnalysisRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteLogAnalysisRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

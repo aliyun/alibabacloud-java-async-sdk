@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyLifecyclePolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileSystemId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
@@ -44,6 +48,7 @@ public class ModifyLifecyclePolicyRequest extends Request {
 
     private ModifyLifecyclePolicyRequest(Builder builder) {
         super(builder);
+        this.description = builder.description;
         this.fileSystemId = builder.fileSystemId;
         this.lifecyclePolicyId = builder.lifecyclePolicyId;
         this.lifecyclePolicyName = builder.lifecyclePolicyName;
@@ -63,6 +68,13 @@ public class ModifyLifecyclePolicyRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -108,6 +120,7 @@ public class ModifyLifecyclePolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyLifecyclePolicyRequest, Builder> {
+        private String description; 
         private String fileSystemId; 
         private String lifecyclePolicyId; 
         private String lifecyclePolicyName; 
@@ -121,6 +134,7 @@ public class ModifyLifecyclePolicyRequest extends Request {
 
         private Builder(ModifyLifecyclePolicyRequest request) {
             super(request);
+            this.description = request.description;
             this.fileSystemId = request.fileSystemId;
             this.lifecyclePolicyId = request.lifecyclePolicyId;
             this.lifecyclePolicyName = request.lifecyclePolicyName;
@@ -130,7 +144,19 @@ public class ModifyLifecyclePolicyRequest extends Request {
         } 
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>describe</p>
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,8 +181,8 @@ public class ModifyLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * <p>The Policy Name of the lifecycle management policy.</p>
-         * <p>The name must be 3 to 64 characters in length, must start with an uppercase letter or lowercase letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
+         * <p>The lifecycle management Policy Name.</p>
+         * <p>The name must be 3 to 64 characters in length. It must start with an uppercase letter or a lowercase letter, and can contain letters, digits, underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>lifecyclepolicy_01</p>
@@ -171,12 +197,12 @@ public class ModifyLifecyclePolicyRequest extends Request {
          * <p>The management rule associated with the lifecycle management policy.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>DEFAULT_ATIME_14: files that have not been accessed for 14 days.</li>
-         * <li>DEFAULT_ATIME_30: files that have not been accessed for 30 days.</li>
-         * <li>DEFAULT_ATIME_60: files that have not been accessed for 60 days.</li>
-         * <li>DEFAULT_ATIME_90: files that have not been accessed for 90 days.</li>
-         * <li>DEFAULT_ATIME_180: files that have not been accessed for 180 days. DEFAULT_ATIME_180 is supported only when StorageType is set to Archive.<blockquote>
-         * <p>If an IA storage class policy has already been configured for the directory, the time period specified for the archive policy must be longer than that of the IA storage class policy.</p>
+         * <li>DEFAULT_ATIME_14: Files that have not been accessed for 14 days.</li>
+         * <li>DEFAULT_ATIME_30: Files that have not been accessed for 30 days.</li>
+         * <li>DEFAULT_ATIME_60: Files that have not been accessed for 60 days.</li>
+         * <li>DEFAULT_ATIME_90: Files that have not been accessed for 90 days.</li>
+         * <li>DEFAULT_ATIME_180: Files that have not been accessed for 180 days. DEFAULT_ATIME_180 is supported only when StorageType is set to Archive.<blockquote>
+         * <p>If an IA storage class policy is already configured for the directory, the time threshold for the Archive storage class policy must be longer than that of the IA storage class policy.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -191,8 +217,8 @@ public class ModifyLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * <p>The absolute path of a single directory configured in the lifecycle management policy.</p>
-         * <p>The path must start with a forward slash (/) and must be an existing path in the mount target.</p>
+         * <p>The absolute path of a single directory configured for the lifecycle management policy.</p>
+         * <p>The path must start with a forward slash (/) and must be a valid path in the mount target.</p>
          * 
          * <strong>example:</strong>
          * <p>/pathway/to/folder</p>
@@ -204,7 +230,8 @@ public class ModifyLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * <p>The storage type.</p>
+         * <p>The tiered storage class.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>InfrequentAccess: IA storage class.</li>
          * <li>Archive: Archive storage class.</li>

@@ -94,7 +94,7 @@ public class DescribeRegionsRequest extends Request {
          * <li>all: all types.</li>
          * <li>standard (default): General-purpose NAS.</li>
          * <li>extreme: Extreme NAS.</li>
-         * <li>cpfs: CPFS.</li>
+         * <li>cpfs: Cloud Parallel File Storage (CPFS).</li>
          * </ul>
          * 
          * <strong>example:</strong>

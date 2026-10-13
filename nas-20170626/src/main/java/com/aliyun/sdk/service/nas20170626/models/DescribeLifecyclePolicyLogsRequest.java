@@ -104,7 +104,7 @@ public class DescribeLifecyclePolicyLogsRequest extends Request {
         } 
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class DescribeLifecyclePolicyLogsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the lifecycle management policy.</p>
+         * <p>The ID of the lifecycle policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,8 +143,9 @@ public class DescribeLifecyclePolicyLogsRequest extends Request {
         }
 
         /**
-         * <p>The number of log entries per page.</p>
-         * <p>Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The number of log entries to return on each page.</p>
+         * <p>Valid values: 1 to 100.
+         * Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

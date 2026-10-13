@@ -595,7 +595,7 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of CPFS access point tags.</p>
+             * <p>The list of tags for the CPFS access point.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

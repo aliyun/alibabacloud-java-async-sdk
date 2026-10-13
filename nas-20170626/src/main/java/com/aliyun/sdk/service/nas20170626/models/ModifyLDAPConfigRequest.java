@@ -104,7 +104,7 @@ public class ModifyLDAPConfigRequest extends Request {
         } 
 
         /**
-         * <p>The LDAP entry.</p>
+         * <p>The distinguished name (DN) of the entry to bind to the LDAP directory.</p>
          * 
          * <strong>example:</strong>
          * <p>cn=alibaba,dc=com</p>
@@ -116,7 +116,7 @@ public class ModifyLDAPConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class ModifyLDAPConfigRequest extends Request {
         }
 
         /**
-         * <p>The LDAP service address.</p>
+         * <p>The LDAP server address.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

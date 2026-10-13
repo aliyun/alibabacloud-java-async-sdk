@@ -114,7 +114,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -342,7 +342,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The FileId of the file or directory associated with the task.</p>
+             * <p>The file ID of the file or directory associated with the task.</p>
              * 
              * <strong>example:</strong>
              * <p>04***08</p>
@@ -364,7 +364,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID.</p>
+             * <p>The ID of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>8C****C54</p>
@@ -375,7 +375,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution progress of the task.</p>
+             * <p>The progress of the task.</p>
              * <p>Valid values: 1 to 100.</p>
              * 
              * <strong>example:</strong>

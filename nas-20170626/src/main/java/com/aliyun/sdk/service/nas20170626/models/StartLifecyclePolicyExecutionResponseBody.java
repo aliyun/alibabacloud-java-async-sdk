@@ -78,13 +78,11 @@ public class StartLifecyclePolicyExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>The request status.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>true: The request was successful.</p>
-         * </li>
-         * <li><p>false: The request failed.</p>
-         * </li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

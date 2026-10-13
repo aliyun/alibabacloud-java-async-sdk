@@ -103,7 +103,7 @@ public class DescribeDirQuotasRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class DescribeDirQuotasRequest extends Request {
 
         /**
          * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>Start value (default value): 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -129,7 +129,7 @@ public class DescribeDirQuotasRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>The number of directories on each page. Default value: 10.</p>
          * <p>Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
@@ -142,8 +142,8 @@ public class DescribeDirQuotasRequest extends Request {
         }
 
         /**
-         * <p>The absolute path of a directory.</p>
-         * <p>If you do not specify this parameter, all directories for which quotas are created are returned.</p>
+         * <p>The absolute path of the directory in the file system.</p>
+         * <p>If this parameter is left empty, all directories that have quotas configured in the file system are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>/data/sub1</p>

@@ -88,7 +88,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>If the response is truncated, you can use NextToken to send a subsequent request to retrieve the remaining content from the point of truncation.</p>
+         * <p>The token that is used to retrieve the next page of results when the returned results are truncated. You can use NextToken to initiate another request to retrieve the results after the current truncation point.</p>
          * 
          * <strong>example:</strong>
          * <p>pUJaUwAAAABhdGUyNTk1MQ==</p>
@@ -99,7 +99,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>

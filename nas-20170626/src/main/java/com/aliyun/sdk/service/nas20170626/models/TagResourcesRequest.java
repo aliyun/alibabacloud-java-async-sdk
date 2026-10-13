@@ -90,7 +90,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The resource IDs. Valid values of N: 1 to 50.</p>
+         * <p>The resource IDs. Valid values of array length: 1 to 50.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,12 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource type. Set the value to filesystem.</p>
+         * <p>The resource type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>filesystem: file system.</li>
+         * <li>accesspoint: access point.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +121,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The details about the tags.</p>
+         * <p>The tags. Array length: 1 to 20. If the array contains multiple tag objects, the tag key (Key) must be unique.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -187,14 +192,13 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the resource.</p>
+             * <p>The tag key.</p>
              * <p>Limits:</p>
              * <ul>
-             * <li>The tag key cannot be left empty.</li>
-             * <li>Valid values of N: 1 to 20.</li>
-             * <li>The tag key must be 1 to 128 characters in length.</li>
-             * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
-             * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li>Cannot be empty or an empty string. </li>
+             * <li>Can be up to 128 characters in length.</li>
+             * <li>Cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+             * <li>Cannot contain <code>http://</code> or <code>https://</code>.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -207,13 +211,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the resource.</p>
+             * <p>The tag value.</p>
              * <p>Limits:</p>
              * <ul>
-             * <li>Valid values of N: 1 to 20.</li>
-             * <li>The tag value must be 1 to 128 characters in length.</li>
-             * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
-             * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li>Can be up to 128 characters in length.</li>
+             * <li>Cannot contain <code>http://</code> or <code>https://</code>.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

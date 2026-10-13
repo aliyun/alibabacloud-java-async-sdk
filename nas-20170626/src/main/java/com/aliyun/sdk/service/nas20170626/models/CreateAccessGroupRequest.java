@@ -103,7 +103,7 @@ public class CreateAccessGroupRequest extends Request {
         } 
 
         /**
-         * <p>The name of the permission group.</p>
+         * <p>The permission group name.</p>
          * <p>Limits:</p>
          * <ul>
          * <li>The name must be 3 to 64 characters in length.</li>
@@ -123,7 +123,7 @@ public class CreateAccessGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of the permission group. Set the value to <strong>Vpc</strong>, which indicates VPC.</p>
+         * <p>The type of the permission group. Set the value to <strong>Vpc</strong>, which indicates a virtual private cloud (VPC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class CreateAccessGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of the file system.</p>
+         * <p>The file system type.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>standard (default): General-purpose NAS.</li>

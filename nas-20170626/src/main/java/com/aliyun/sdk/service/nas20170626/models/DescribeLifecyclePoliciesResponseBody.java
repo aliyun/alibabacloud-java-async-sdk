@@ -234,7 +234,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
              * <p>The threshold of the rule.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>When Attribute is set to Atime, the value indicates the number of days since the file was last accessed. Valid values: 1 to 365.</li>
+             * <li>If Attribute is set to Atime, this value indicates the number of days since the file was last accessed. Valid values: 1 to 365.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -611,7 +611,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
 
             /**
              * <p>The time when the lifecycle management policy was created.</p>
-             * <p>The time follows the ISO 8601 standard in the format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+             * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-10-30T10:08:08Z</p>
@@ -730,7 +730,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type. Valid values:</p>
+             * <p>The storage tiering type. Valid values:</p>
              * <ul>
              * <li>InfrequentAccess: IA storage class.</li>
              * <li>Archive: Archive storage class.</li>

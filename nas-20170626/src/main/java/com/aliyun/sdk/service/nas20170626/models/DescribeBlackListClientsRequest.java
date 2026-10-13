@@ -89,7 +89,7 @@ public class DescribeBlackListClientsRequest extends Request {
         } 
 
         /**
-         * <p>The IP address of the client.</p>
+         * <p>The client IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0</p>
@@ -101,7 +101,7 @@ public class DescribeBlackListClientsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class DescribeBlackListClientsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the file system resides.</p>
+         * <p>The region ID of the file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

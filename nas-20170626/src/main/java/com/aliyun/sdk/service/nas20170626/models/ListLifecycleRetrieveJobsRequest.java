@@ -176,7 +176,7 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
          * <p>The storage class. Valid values:</p>
          * <ul>
          * <li>InfrequentAccess: IA storage class.</li>
-         * <li>Archive: Archive storage.<blockquote>
+         * <li>Archive: Archive storage class.<blockquote>
          * <p>If StorageType is not specified, data retrieval tasks of all storage classes are returned.</p>
          * </blockquote>
          * </li>

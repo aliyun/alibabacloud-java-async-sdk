@@ -102,7 +102,7 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
         }
 
         /**
-         * <p>The list of directories or file paths to retrieve. You can specify up to 10 paths.</p>
+         * <p>The list of directories or file paths to retrieve. A maximum of 10 paths are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

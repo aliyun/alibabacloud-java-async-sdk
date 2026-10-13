@@ -115,7 +115,7 @@ public class ListAccessPointsRequest extends Request {
         }
 
         /**
-         * <p>The filter information.</p>
+         * <p>The filter key information.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);

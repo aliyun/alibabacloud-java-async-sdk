@@ -106,7 +106,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried directory quotas.</p>
+         * <p>The collection of quota information for each directory.</p>
          */
         public Builder dirQuotaInfos(java.util.List<DirQuotaInfos> dirQuotaInfos) {
             this.dirQuotaInfos = dirQuotaInfos;
@@ -125,7 +125,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of directories on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -294,7 +294,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum number of files that a user can create in the directory.</p>
+             * <p>The maximum number of files that the user can create in the directory.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -305,7 +305,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of files that a user has created in the directory.</p>
+             * <p>The actual number of files owned by the user in the directory.</p>
              * 
              * <strong>example:</strong>
              * <p>5100</p>
@@ -316,7 +316,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the quota. Valid values: Accounting and Enforcement.</p>
+             * <p>The quota type. Valid values: Accounting (statistical quota) and Enforcement (restrictive quota).</p>
              * 
              * <strong>example:</strong>
              * <p>Accounting</p>
@@ -327,7 +327,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum size of files that a user can create in the directory. Unit: GiB.</p>
+             * <p>The maximum total size of files that the user can store in the directory. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -338,7 +338,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total size of files that a user has created in the directory. Unit: GiB.</p>
+             * <p>The actual total size of files owned by the user in the directory. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>800</p>
@@ -349,7 +349,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total size of files that a user has created in the directory. Unit: bytes.</p>
+             * <p>The actual total size of files owned by the user in the directory. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>858995833870</p>
@@ -360,7 +360,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user that you specify to create a quota for the directory. The value depends on the value of the UserType parameter. Valid values: Uid and Gid.</p>
+             * <p>The UID or GID to be restricted, depending on the value of UserType.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -371,10 +371,10 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of user. Valid values: Uid, Gid, and AllUsers.</p>
+             * <p>The type of the UserId. Valid values: Uid, Gid, and AllUsers.</p>
              * <ul>
-             * <li>If Uid or Gid is returned, a value is returned for UserId.</li>
-             * <li>If AllUsers is returned, UserId is empty.</li>
+             * <li>If the value is Uid or Gid, UserId has a return value.</li>
+             * <li>If the value is AllUsers, UserId is empty.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -482,7 +482,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The absolute path of a directory.</p>
+             * <p>The absolute path of the directory in the file system.</p>
              * 
              * <strong>example:</strong>
              * <p>/data/sub1</p>
@@ -493,7 +493,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the quota created for the directory. Valid values: Initializing and Normal. The Initializing state indicates that the quota is being created. The Normal state indicates that the quota is created.</p>
+             * <p>The statistical status of the directory. The value is Initializing during initialization and Normal when the status is normal.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -504,7 +504,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about quotas for all users.</p>
+             * <p>The collection of quota information for each user.</p>
              */
             public Builder userQuotaInfos(java.util.List<UserQuotaInfos> userQuotaInfos) {
                 this.userQuotaInfos = userQuotaInfos;

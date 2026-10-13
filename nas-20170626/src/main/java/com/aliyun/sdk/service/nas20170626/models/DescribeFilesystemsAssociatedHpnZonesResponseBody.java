@@ -67,7 +67,7 @@ public class DescribeFilesystemsAssociatedHpnZonesResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The list of HpnZones associated with the file system.</p>
+         * <p>The list of HpnZones associated with the file systems.</p>
          */
         public Builder filesystems(java.util.List<Filesystems> filesystems) {
             this.filesystems = filesystems;
@@ -75,7 +75,7 @@ public class DescribeFilesystemsAssociatedHpnZonesResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>

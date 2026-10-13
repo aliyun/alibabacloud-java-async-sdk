@@ -159,7 +159,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The POSIX group ID.</p>
+             * <p>The POSIX user group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -170,7 +170,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The secondary group IDs.</p>
+             * <p>The secondary user group IDs.</p>
              */
             public Builder posixSecondaryGroupIds(java.util.List<Integer> posixSecondaryGroupIds) {
                 this.posixSecondaryGroupIds = posixSecondaryGroupIds;
@@ -261,7 +261,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The file group ID of the owner.</p>
+             * <p>The file group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -272,7 +272,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the owner.</p>
+             * <p>The file owner ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -283,7 +283,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The POSIX permission.</p>
+             * <p>The POSIX permissions.</p>
              * 
              * <strong>example:</strong>
              * <p>0755</p>
@@ -747,7 +747,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access point was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * <p>The time when the access point was created. The time follows the ISO 8601 standard. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-10T10:08:08Z</p>
@@ -802,7 +802,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access point was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * <p>The time when the access point was last modified. The time follows the ISO 8601 standard. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-10T10:08:08Z</p>
@@ -871,10 +871,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
              * <p>The current access point status.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Active: available.</li>
-             * <li>Inactive: unavailable.</li>
-             * <li>Pending: being created.</li>
-             * <li>Deleting: being deleted.</li>
+             * <li>Active: active</li>
+             * <li>Inactive: inactive</li>
+             * <li>Pending: being created</li>
+             * <li>Deleting: being deleted</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -117,7 +117,7 @@ public class ListRecycleBinJobsRequest extends Request {
         } 
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ListRecycleBinJobsRequest extends Request {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>rb-15<strong><strong>ed-r-1625</strong></strong>2441</p>
@@ -142,7 +142,7 @@ public class ListRecycleBinJobsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page in a paged query.</p>
+         * <p>The current page number for paging.</p>
          * <p>Start value (default value): 1.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class ListRecycleBinJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The number of entries per page for paging.</p>
          * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 

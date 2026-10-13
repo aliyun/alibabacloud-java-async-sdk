@@ -360,7 +360,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of files that are successfully retrieved by the data retrieval task.</p>
+             * <p>The number of files successfully retrieved by the data retrieval task.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -391,7 +391,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
              * <p>The storage class. Valid values:</p>
              * <ul>
              * <li>InfrequentAccess: IA storage class.</li>
-             * <li>Archive: Archive storage.</li>
+             * <li>Archive: Archive storage class.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -230,7 +230,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage usage of Infrequent Access (IA) data in the recycle bin. Unit: bytes.</p>
+             * <p>The storage usage of IA storage class data in the recycle bin. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

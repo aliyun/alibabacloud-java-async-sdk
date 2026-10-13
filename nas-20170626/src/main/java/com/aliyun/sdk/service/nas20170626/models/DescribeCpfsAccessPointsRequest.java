@@ -202,7 +202,7 @@ public class DescribeCpfsAccessPointsRequest extends Request {
         }
 
         /**
-         * <p>The list of CPFS access point tags.</p>
+         * <p>The list of tags for the CPFS access point.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);

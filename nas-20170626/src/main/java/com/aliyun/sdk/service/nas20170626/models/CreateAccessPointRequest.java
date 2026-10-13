@@ -305,11 +305,11 @@ public class CreateAccessPointRequest extends Request {
          * <p>Specifies whether to enable the RAM policy.
          * Valid values:</p>
          * <ul>
-         * <li>true: enabled.</li>
-         * <li>false (default): not enabled.</li>
+         * <li>true: Enabled.</li>
+         * <li>false (default): Not enabled.</li>
          * </ul>
          * <blockquote>
-         * <p>After you enable the access point RAM policy, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must grant the corresponding access permissions through authorization and mount the file system through the access point. After you disable the RAM policy, the access point allows anonymous mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure an access point policy</a>.</p>
+         * <p>After you enable the RAM policy for the access point, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must grant authorization for the corresponding access permissions to the accounts and mount the file system through the access point. After you disable the RAM policy, the access point allows anonymous mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure an access point policy</a>.</p>
          * </blockquote>
          * <blockquote>
          * <p>For Agentic file systems, this parameter must be set to true.</p>
@@ -370,7 +370,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The POSIX permission. Default value: &quot;0755&quot;. Limit: The value must be a four-digit octal number that starts with 0.</p>
+         * <p>The POSIX permission. Default value: &quot;0755&quot;. The value must be a four-digit octal number that starts with 0.</p>
          * <p>This parameter takes effect after you specify the OwnerUserId and OwnerGroupId parameters.</p>
          * <blockquote>
          * <p>Not supported for Agentic file systems.</p>
@@ -447,7 +447,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The list of access point tags.</p>
+         * <p>The access point tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);

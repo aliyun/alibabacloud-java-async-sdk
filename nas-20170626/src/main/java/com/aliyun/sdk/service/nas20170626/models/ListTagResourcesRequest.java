@@ -102,10 +102,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -114,8 +114,8 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource.</p>
-         * <p>The ID of the destination resource. Valid values of N: 1 to 50.</p>
+         * <p>The list of resource IDs.</p>
+         * <p>The ID of the target resource. Valid values of N: 1 to 50.</p>
          * 
          * <strong>example:</strong>
          * <p>03e08484f0</p>
@@ -127,10 +127,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Valid values:</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>filesystem</li>
-         * <li>accesspoint</li>
+         * <li>filesystem: file system.</li>
+         * <li>accesspoint: access point.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -144,7 +144,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tags of the reserved instance. The array may contain up to 20 tags. If the array contains multiple tags, each tag key is unique.</p>
+         * <p>The tags. Array length: 1 to 20. If the array contains multiple tag objects, the tag key (Key) must be unique.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -212,13 +212,13 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The key of a tag.</p>
+             * <p>The tag key.</p>
              * <p>Limits:</p>
              * <ul>
-             * <li>The tag key cannot be null or an empty string.</li>
-             * <li>The tag value can be up to 128 characters in length.</li>
-             * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
-             * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li>Cannot be empty or an empty string. </li>
+             * <li>Can be up to 128 characters in length.</li>
+             * <li>Cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+             * <li>Cannot contain <code>http://</code> or <code>https://</code>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -230,11 +230,11 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of a tag.</p>
+             * <p>The tag value.</p>
              * <p>Limits:</p>
              * <ul>
-             * <li>The tag value can be up to 128 characters in length.</li>
-             * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li>Can be up to 128 characters in length.</li>
+             * <li>Cannot contain <code>http://</code> or <code>https://</code>.</li>
              * </ul>
              * 
              * <strong>example:</strong>

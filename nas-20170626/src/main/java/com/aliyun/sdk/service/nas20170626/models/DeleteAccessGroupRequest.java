@@ -74,7 +74,7 @@ public class DeleteAccessGroupRequest extends Request {
         } 
 
         /**
-         * <p>The name of the access group to delete.</p>
+         * <p>The name of the permission group to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class DeleteAccessGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of the file system.</p>
+         * <p>The file system type.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>standard (default): General-purpose NAS</li>

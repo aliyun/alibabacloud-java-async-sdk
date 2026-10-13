@@ -108,7 +108,7 @@ public class DescribeLogAnalysisRequest extends Request {
          * <ul>
          * <li>standard: General-purpose NAS</li>
          * <li>extreme: Extreme NAS</li>
-         * <li>all (default): all types.</li>
+         * <li>all (default): all types</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,9 @@ public class DescribeLogAnalysisRequest extends Request {
         }
 
         /**
-         * <p>The number of file systems on each page in a paging query. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The number of file systems on each page during a paged query.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -118,7 +118,7 @@ public class ModifyAccessPointRequest extends Request {
 
         /**
          * <p>The permission group name.</p>
-         * <p>This parameter is required when the file system is a General-purpose NAS file system.</p>
+         * <p>This parameter is required if the file system is a General-purpose NAS file system.</p>
          * <p>Default permission group: DEFAULT_VPC_GROUP_NAME (the default VPC permission group).</p>
          * <blockquote>
          * <p>Agentic file systems do not support this parameter.</p>
@@ -165,7 +165,7 @@ public class ModifyAccessPointRequest extends Request {
          * <li>false (default): Not enabled.</li>
          * </ul>
          * <blockquote>
-         * <p>After you enable the access point RAM policy, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must grant the corresponding access permissions through authorization and mount and access data through the access point. After you disable the RAM policy, the access point allows anonymity mounting.</p>
+         * <p>After you enable the access point RAM policy, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must perform authorization to grant the corresponding access permissions to the accounts and then mount and access data through the access point. After you disable the RAM policy, the access point allows anonymity mounting.</p>
          * </blockquote>
          * <blockquote>
          * <p>Agentic file systems do not support this parameter.</p>

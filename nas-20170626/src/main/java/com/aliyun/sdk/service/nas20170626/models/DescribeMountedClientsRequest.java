@@ -133,10 +133,10 @@ public class DescribeMountedClientsRequest extends Request {
         } 
 
         /**
-         * <p>The IP address of the client.</p>
+         * <p>The client IP address.</p>
          * <ul>
-         * <li>If you specify an IP address, the operation checks whether the client list includes this IP address. If the client list includes the IP address, the operation returns the IP address. If the client list does not include the IP address, the operation returns an empty list.</li>
-         * <li>If you do not specify an IP address, the operation returns the IP addresses of all clients that have accessed the specified NAS file system within the last minute.</li>
+         * <li>If you specify a client IP address, the operation checks whether the client list contains the specified client IP address. If the list contains the IP address, the IP address is returned. If the list does not contain the IP address, an empty list is returned.</li>
+         * <li>If you do not specify a client IP address, the operation returns all client IP addresses that have used the NAS file system within the last minute.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class DescribeMountedClientsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class DescribeMountedClientsRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the mount target.</p>
+         * <p>The mount target.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,8 +175,8 @@ public class DescribeMountedClientsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the client list.</p>
+         * <p>Start value (default value): 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -188,7 +188,7 @@ public class DescribeMountedClientsRequest extends Request {
         }
 
         /**
-         * <p>The number of IP addresses to return on each page.</p>
+         * <p>The number of client IP addresses on each page in a paged query.</p>
          * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 
