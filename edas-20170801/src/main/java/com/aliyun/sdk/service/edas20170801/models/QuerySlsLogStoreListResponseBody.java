@@ -106,7 +106,7 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -128,7 +128,7 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d6834ee9-5045-*************</p>
@@ -139,7 +139,7 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configurations of Log Service for the application.</p>
+         * <p>The Simple Log Service configuration results.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -147,7 +147,7 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of log sources configured for the application.</p>
+         * <p>The total number of Simple Log Service configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -268,10 +268,10 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the logging service.</p>
+             * <p>The Simple Log Service type.</p>
              * 
              * <strong>example:</strong>
-             * <p>SLS log service</p>
+             * <p>Simple Log Service</p>
              */
             public Builder consumerSide(String consumerSide) {
                 this.consumerSide = consumerSide;
@@ -279,7 +279,7 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the logging service was created.</p>
+             * <p>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-05-18 22:08:46</p>
@@ -290,7 +290,7 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the logging service.</p>
+             * <p>The Simple Log Service link.</p>
              */
             public Builder link(String link) {
                 this.link = link;
@@ -298,7 +298,7 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Logstore.</p>
+             * <p>The Logstore name.</p>
              * 
              * <strong>example:</strong>
              * <p>thisisatestlogstore</p>
@@ -309,7 +309,7 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the project.</p>
+             * <p>The project name.</p>
              * 
              * <strong>example:</strong>
              * <p>k8s-log-c846f28edbd1d4c6aa9d78c0e********</p>
@@ -320,12 +320,10 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of logs. Valid values:</p>
+             * <p>The log source. Valid values:</p>
              * <ul>
-             * <li><p>Standard output: stdout.log</p>
-             * </li>
-             * <li><p>File log: the directory that stores logs</p>
-             * </li>
+             * <li>Standard output: stdout.log.</li>
+             * <li>File log: the collection path.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -161,9 +161,9 @@ public class InsertClusterRequest extends Request {
         /**
          * <p>The type of the cluster. Valid values:</p>
          * <ul>
-         * <li>2: Elastic Compute Service (ECS) cluster</li>
-         * <li>3: self-managed Kubernetes cluster in Enterprise Distributed Application Service (EDAS)</li>
-         * <li>5: Kubernetes cluster</li>
+         * <li>2: ECS cluster.</li>
+         * <li>3: EDAS built-in Kubernetes cluster.</li>
+         * <li>5: Kubernetes cluster.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -177,8 +177,8 @@ public class InsertClusterRequest extends Request {
         }
 
         /**
-         * <p>The provider of Infrastructure as a Service (IaaS) resources that are used in the cluster.</p>
-         * <p>When you use Alibaba Cloud, set the value to <code>ALIYUN</code>. The value is case-sensitive.</p>
+         * <p>The IaaS resource provider.</p>
+         * <p><note>When you select Alibaba Cloud, you must use uppercase Pinyin, such as <code>ALIYUN</code>.</note></p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN</p>
@@ -190,7 +190,7 @@ public class InsertClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the custom namespace. The ID is in the <code>physical region ID:custom namespace identifier</code> format. Example: <code>cn-hangzhou:test</code>.</p>
+         * <p>The region ID of the custom namespace. Format: <code>physical region:custom namespace identifier</code>, such as <code>cn-hangzhou:test</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:td****</p>
@@ -202,10 +202,10 @@ public class InsertClusterRequest extends Request {
         }
 
         /**
-         * <p>The network type of the cluster. Valid values:</p>
+         * <p>The network type. Valid values:</p>
          * <ul>
-         * <li>1: classic network</li>
-         * <li>2: virtual private cloud (VPC)</li>
+         * <li>1: Classic network.</li>
+         * <li>2: VPC.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -219,11 +219,11 @@ public class InsertClusterRequest extends Request {
         }
 
         /**
-         * <p><strong>This parameter is deprecated.</strong> The CPU overcommit ratio supported by a Docker cluster. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> The CPU overselling ratio for Docker clusters. Valid values:</p>
          * <ul>
-         * <li>2: 1:2, which means that resources are overcommitted by 1:2.</li>
-         * <li>4: 1:4, which means that resources are overcommitted by 1:4.</li>
-         * <li>8: 1:8, which means that resources are overcommitted by 1:8.</li>
+         * <li>2: 1:2 ratio.</li>
+         * <li>4: 1:4 ratio.</li>
+         * <li>8: 1:8 ratio.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,7 +236,7 @@ public class InsertClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC. This parameter is required if you set the NetworkMode parameter to 2.</p>
+         * <p>The ID of the VPC. This parameter is required if the network type is set to VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zef6ob8mrlzv8x3q****</p>

@@ -1068,6 +1068,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetMigrateApplication  GetMigrateApplicationRequest
+     * @return GetMigrateApplicationResponse
+     */
+    @Override
+    public CompletableFuture<GetMigrateApplicationResponse> getMigrateApplication(GetMigrateApplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMigrateApplication").setMethod(HttpMethod.GET).setPathRegex("/pop/v5/k8s/migrateK8sApp").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMigrateApplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMigrateApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetPackageStorageCredential  GetPackageStorageCredentialRequest
      * @return GetPackageStorageCredentialResponse
      */
@@ -2074,11 +2092,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p>For application deployment in a container service Kubernetes cluster imported to Enterprise Distributed Application Service (EDAS), use the DeployK8sApplication operation provided by EDAS. For more information, see <a href="https://help.aliyun.com/document_detail/149420.html">DeployK8sApplication</a>.</p>
-     * </blockquote>
-     * 
      * @param request the request parameters of MigrateApplication  MigrateApplicationRequest
      * @return MigrateApplicationResponse
      */

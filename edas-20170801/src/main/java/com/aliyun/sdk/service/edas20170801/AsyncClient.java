@@ -358,6 +358,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetK8sServicesResponse> getK8sServices(GetK8sServicesRequest request);
 
     /**
+     * @param request the request parameters of GetMigrateApplication  GetMigrateApplicationRequest
+     * @return GetMigrateApplicationResponse
+     */
+    CompletableFuture<GetMigrateApplicationResponse> getMigrateApplication(GetMigrateApplicationRequest request);
+
+    /**
      * @param request the request parameters of GetPackageStorageCredential  GetPackageStorageCredentialRequest
      * @return GetPackageStorageCredentialResponse
      */
@@ -716,11 +722,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListVpcResponse> listVpc(ListVpcRequest request);
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p>For application deployment in a container service Kubernetes cluster imported to Enterprise Distributed Application Service (EDAS), use the DeployK8sApplication operation provided by EDAS. For more information, see <a href="https://help.aliyun.com/document_detail/149420.html">DeployK8sApplication</a>.</p>
-     * </blockquote>
-     * 
      * @param request the request parameters of MigrateApplication  MigrateApplicationRequest
      * @return MigrateApplicationResponse
      */

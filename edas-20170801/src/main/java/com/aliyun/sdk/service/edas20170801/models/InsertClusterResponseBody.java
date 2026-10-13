@@ -93,7 +93,7 @@ public class InsertClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the cluster that was created.</p>
+         * <p>The created cluster entity.</p>
          */
         public Builder cluster(Cluster cluster) {
             this.cluster = cluster;
@@ -101,7 +101,7 @@ public class InsertClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -112,7 +112,7 @@ public class InsertClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class InsertClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b197-40ab-9155-****</p>
@@ -270,7 +270,7 @@ public class InsertClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of cluster.</p>
+             * <p>The ID of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>8705ad13-5d86-47fc-b68f-257b59ed****</p>
@@ -294,9 +294,9 @@ public class InsertClusterResponseBody extends TeaModel {
             /**
              * <p>The type of the cluster. Valid values:</p>
              * <ul>
-             * <li>2: ECS cluster</li>
-             * <li>3: self-managed Kubernetes cluster in EDAS</li>
-             * <li>5: Kubernetes cluster</li>
+             * <li>2: ECS cluster.</li>
+             * <li>3: EDAS built-in Kubernetes cluster.</li>
+             * <li>5: Kubernetes cluster.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -308,7 +308,7 @@ public class InsertClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The provider of the IaaS resources that are used in the cluster.</p>
+             * <p>The provider.</p>
              * 
              * <strong>example:</strong>
              * <p>ALIYUN</p>
@@ -319,10 +319,12 @@ public class InsertClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the cluster. Valid values:</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
-             * <li>1: classic network</li>
-             * <li>2\. VPC</li>
+             * <li><p>1: Classic network.</p>
+             * </li>
+             * <li><p>2: VPC.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -334,11 +336,14 @@ public class InsertClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p><strong>This parameter is deprecated.</strong> The CPU overcommit ratio supported by the Docker cluster. Valid values:</p>
+             * <p><strong>[Deprecated]</strong> The CPU overselling ratio for Docker clusters. Valid values:</p>
              * <ul>
-             * <li>2: 1:2, which means that resources are overcommitted by 1:2.</li>
-             * <li>4: 1:4, which means that resources are overcommitted by 1:4.</li>
-             * <li>8: 1:8, which means that resources are overcommitted by 1:8.</li>
+             * <li><p>2: 1:2 ratio.</p>
+             * </li>
+             * <li><p>4: 1:4 ratio.</p>
+             * </li>
+             * <li><p>8: 1:8 ratio.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -350,7 +355,7 @@ public class InsertClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region in which the cluster resides.</p>
+             * <p>The region ID of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
