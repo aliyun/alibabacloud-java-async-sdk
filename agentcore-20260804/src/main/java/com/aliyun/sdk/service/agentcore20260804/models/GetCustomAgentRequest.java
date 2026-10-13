@@ -75,6 +75,7 @@ public class GetCustomAgentRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace to which the custom agent belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetCustomAgentRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the custom agent. You can obtain this value from the response of CreateCustomAgent or ListCustomAgents.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

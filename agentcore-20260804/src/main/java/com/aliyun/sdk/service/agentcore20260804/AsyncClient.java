@@ -20,6 +20,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</p>
+     * 
+     * @param request the request parameters of AddMemories  AddMemoriesRequest
+     * @return AddMemoriesResponse
+     */
+    CompletableFuture<AddMemoriesResponse> addMemories(AddMemoriesRequest request);
+
+    /**
      * @param request the request parameters of BatchDeleteModels  BatchDeleteModelsRequest
      * @return BatchDeleteModelsResponse
      */
@@ -133,6 +142,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateMcpResponse
      */
     CompletableFuture<CreateMcpResponse> createMcp(CreateMcpRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a long-term memory store in a specified workspace.</p>
+     * 
+     * @param request the request parameters of CreateMemoryStore  CreateMemoryStoreRequest
+     * @return CreateMemoryStoreResponse
+     */
+    CompletableFuture<CreateMemoryStoreResponse> createMemoryStore(CreateMemoryStoreRequest request);
 
     /**
      * @param request the request parameters of CreateModel  CreateModelRequest
@@ -262,6 +280,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteMcpResponse
      */
     CompletableFuture<DeleteMcpResponse> deleteMcp(DeleteMcpRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a long-term memory based on the memory ID.</p>
+     * 
+     * @param request the request parameters of DeleteMemory  DeleteMemoryRequest
+     * @return DeleteMemoryResponse
+     */
+    CompletableFuture<DeleteMemoryResponse> deleteMemory(DeleteMemoryRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Asynchronously deletes a MemoryStore and all its long-term memory.</p>
+     * 
+     * @param request the request parameters of DeleteMemoryStore  DeleteMemoryStoreRequest
+     * @return DeleteMemoryStoreResponse
+     */
+    CompletableFuture<DeleteMemoryStoreResponse> deleteMemoryStore(DeleteMemoryStoreRequest request);
 
     /**
      * @param request the request parameters of DeleteModel  DeleteModelRequest
@@ -424,9 +460,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>创建或更新后，可轮询本接口查询最新配置版本的执行结果。latestVersionStatus 与 latestSpecVersion 对应；latestExecutionError 表示该版本的等待或失败原因，retryable 为 true 时可稍后再次查询。
-     * 返回的配置为最新提交的配置，可能尚未生效。请结合 latestVersionStatus、智能体整体状态 status 和运行实例统计 sandboxPhaseCounts 确认部署及运行情况。
-     * 查询不存在、已完成删除或不属于指定工作空间的自定义智能体时，返回资源不存在错误。</p>
+     * <p>After creating or updating a custom agent, you can poll this operation to query the execution results of the latest configuration version. <code>latestVersionStatus</code> corresponds to <code>latestSpecVersion</code>. <code>latestExecutionError</code> indicates the reason for the pending or failed status of this version. If <code>retryable</code> is true, you can query again later.
+     * The returned configuration is the most recently submitted configuration and may not have taken effect. Verify the deployment and running status by checking <code>latestVersionStatus</code>, the overall agent status <code>status</code>, and the running instance statistics <code>sandboxPhaseCounts</code>.
+     * If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
      * 
      * @param request the request parameters of GetCustomAgent  GetCustomAgentRequest
      * @return GetCustomAgentResponse
@@ -481,6 +517,33 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetMcpMarketItemResponse
      */
     CompletableFuture<GetMcpMarketItemResponse> getMcpMarketItem(GetMcpMarketItemRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries a long-term memory by memory ID.</p>
+     * 
+     * @param request the request parameters of GetMemory  GetMemoryRequest
+     * @return GetMemoryResponse
+     */
+    CompletableFuture<GetMemoryResponse> getMemory(GetMemoryRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the public information and current status of a MemoryStore in a specified workspace.</p>
+     * 
+     * @param request the request parameters of GetMemoryStore  GetMemoryStoreRequest
+     * @return GetMemoryStoreResponse
+     */
+    CompletableFuture<GetMemoryStoreResponse> getMemoryStore(GetMemoryStoreRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the task ID returned by the asynchronous AddMemories operation.</p>
+     * 
+     * @param request the request parameters of GetMemoryTask  GetMemoryTaskRequest
+     * @return GetMemoryTaskResponse
+     */
+    CompletableFuture<GetMemoryTaskResponse> getMemoryTask(GetMemoryTaskRequest request);
 
     /**
      * @param request the request parameters of GetModel  GetModelRequest
@@ -726,6 +789,42 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</p>
+     * 
+     * @param request the request parameters of ListMemories  ListMemoriesRequest
+     * @return ListMemoriesResponse
+     */
+    CompletableFuture<ListMemoriesResponse> listMemories(ListMemoriesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</p>
+     * 
+     * @param request the request parameters of ListMemorySessionMessages  ListMemorySessionMessagesRequest
+     * @return ListMemorySessionMessagesResponse
+     */
+    CompletableFuture<ListMemorySessionMessagesResponse> listMemorySessionMessages(ListMemorySessionMessagesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</p>
+     * 
+     * @param request the request parameters of ListMemorySessions  ListMemorySessionsRequest
+     * @return ListMemorySessionsResponse
+     */
+    CompletableFuture<ListMemorySessionsResponse> listMemorySessions(ListMemorySessionsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries MemoryStores in a specified workspace by using paging.</p>
+     * 
+     * @param request the request parameters of ListMemoryStores  ListMemoryStoresRequest
+     * @return ListMemoryStoresResponse
+     */
+    CompletableFuture<ListMemoryStoresResponse> listMemoryStores(ListMemoryStoresRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Queries model connections in a specified AgentCore workspace. Supports filtering by name through <code>Name</code> and selecting exact match or fuzzy match through <code>SearchType</code>. Also supports filtering by model provider type and invoke protocol, and supports paging.</p>
      * 
      * @param request the request parameters of ListModelConnections  ListModelConnectionsRequest
@@ -873,6 +972,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Retrieves long-term memory from a MemoryStore based on semantics queries.</p>
+     * 
+     * @param request the request parameters of SearchMemories  SearchMemoriesRequest
+     * @return SearchMemoriesResponse
+     */
+    CompletableFuture<SearchMemoriesResponse> searchMemories(SearchMemoriesRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</p>
      * 
@@ -989,6 +1097,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMcpTemplateConfigResponse
      */
     CompletableFuture<UpdateMcpTemplateConfigResponse> updateMcpTemplateConfig(UpdateMcpTemplateConfigRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the long-term memory text or metadata based on the memory ID.</p>
+     * 
+     * @param request the request parameters of UpdateMemory  UpdateMemoryRequest
+     * @return UpdateMemoryResponse
+     */
+    CompletableFuture<UpdateMemoryResponse> updateMemory(UpdateMemoryRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a memory store.</p>
+     * 
+     * @param request the request parameters of UpdateMemoryStore  UpdateMemoryStoreRequest
+     * @return UpdateMemoryStoreResponse
+     */
+    CompletableFuture<UpdateMemoryStoreResponse> updateMemoryStore(UpdateMemoryStoreRequest request);
 
     /**
      * <b>description</b> :

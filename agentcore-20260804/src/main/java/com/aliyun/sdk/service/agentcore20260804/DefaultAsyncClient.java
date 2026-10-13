@@ -40,6 +40,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</p>
+     * 
+     * @param request the request parameters of AddMemories  AddMemoriesRequest
+     * @return AddMemoriesResponse
+     */
+    @Override
+    public CompletableFuture<AddMemoriesResponse> addMemories(AddMemoriesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddMemories").setMethod(HttpMethod.POST).setPathRegex("/workspaces/{workspaceId}/memorystores/{memoryStoreName}/memories").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddMemoriesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddMemoriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BatchDeleteModels  BatchDeleteModelsRequest
      * @return BatchDeleteModelsResponse
      */
@@ -305,6 +326,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateMcpResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a long-term memory store in a specified workspace.</p>
+     * 
+     * @param request the request parameters of CreateMemoryStore  CreateMemoryStoreRequest
+     * @return CreateMemoryStoreResponse
+     */
+    @Override
+    public CompletableFuture<CreateMemoryStoreResponse> createMemoryStore(CreateMemoryStoreRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateMemoryStore").setMethod(HttpMethod.POST).setPathRegex("/workspaces/{workspaceId}/memorystores").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMemoryStoreResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMemoryStoreResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -626,6 +668,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteMcpResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a long-term memory based on the memory ID.</p>
+     * 
+     * @param request the request parameters of DeleteMemory  DeleteMemoryRequest
+     * @return DeleteMemoryResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMemoryResponse> deleteMemory(DeleteMemoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteMemory").setMethod(HttpMethod.DELETE).setPathRegex("/workspaces/{workspaceId}/memorystores/{memoryStoreName}/memories/{memoryId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMemoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMemoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Asynchronously deletes a MemoryStore and all its long-term memory.</p>
+     * 
+     * @param request the request parameters of DeleteMemoryStore  DeleteMemoryStoreRequest
+     * @return DeleteMemoryStoreResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMemoryStoreResponse> deleteMemoryStore(DeleteMemoryStoreRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteMemoryStore").setMethod(HttpMethod.DELETE).setPathRegex("/workspaces/{workspaceId}/memorystores/{memoryStoreName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMemoryStoreResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMemoryStoreResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1008,9 +1092,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>创建或更新后，可轮询本接口查询最新配置版本的执行结果。latestVersionStatus 与 latestSpecVersion 对应；latestExecutionError 表示该版本的等待或失败原因，retryable 为 true 时可稍后再次查询。
-     * 返回的配置为最新提交的配置，可能尚未生效。请结合 latestVersionStatus、智能体整体状态 status 和运行实例统计 sandboxPhaseCounts 确认部署及运行情况。
-     * 查询不存在、已完成删除或不属于指定工作空间的自定义智能体时，返回资源不存在错误。</p>
+     * <p>After creating or updating a custom agent, you can poll this operation to query the execution results of the latest configuration version. <code>latestVersionStatus</code> corresponds to <code>latestSpecVersion</code>. <code>latestExecutionError</code> indicates the reason for the pending or failed status of this version. If <code>retryable</code> is true, you can query again later.
+     * The returned configuration is the most recently submitted configuration and may not have taken effect. Verify the deployment and running status by checking <code>latestVersionStatus</code>, the overall agent status <code>status</code>, and the running instance statistics <code>sandboxPhaseCounts</code>.
+     * If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
      * 
      * @param request the request parameters of GetCustomAgent  GetCustomAgentRequest
      * @return GetCustomAgentResponse
@@ -1145,6 +1229,69 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetMcpMarketItemResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries a long-term memory by memory ID.</p>
+     * 
+     * @param request the request parameters of GetMemory  GetMemoryRequest
+     * @return GetMemoryResponse
+     */
+    @Override
+    public CompletableFuture<GetMemoryResponse> getMemory(GetMemoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMemory").setMethod(HttpMethod.GET).setPathRegex("/workspaces/{workspaceId}/memorystores/{memoryStoreName}/memories/{memoryId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMemoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMemoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the public information and current status of a MemoryStore in a specified workspace.</p>
+     * 
+     * @param request the request parameters of GetMemoryStore  GetMemoryStoreRequest
+     * @return GetMemoryStoreResponse
+     */
+    @Override
+    public CompletableFuture<GetMemoryStoreResponse> getMemoryStore(GetMemoryStoreRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMemoryStore").setMethod(HttpMethod.GET).setPathRegex("/workspaces/{workspaceId}/memorystores/{memoryStoreName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMemoryStoreResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMemoryStoreResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the task ID returned by the asynchronous AddMemories operation.</p>
+     * 
+     * @param request the request parameters of GetMemoryTask  GetMemoryTaskRequest
+     * @return GetMemoryTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetMemoryTaskResponse> getMemoryTask(GetMemoryTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMemoryTask").setMethod(HttpMethod.GET).setPathRegex("/workspaces/{workspaceId}/memorystores/{memoryStoreName}/memory-tasks/{taskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMemoryTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMemoryTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1730,6 +1877,90 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</p>
+     * 
+     * @param request the request parameters of ListMemories  ListMemoriesRequest
+     * @return ListMemoriesResponse
+     */
+    @Override
+    public CompletableFuture<ListMemoriesResponse> listMemories(ListMemoriesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMemories").setMethod(HttpMethod.GET).setPathRegex("/workspaces/{workspaceId}/memorystores/{memoryStoreName}/memories").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMemoriesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMemoriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</p>
+     * 
+     * @param request the request parameters of ListMemorySessionMessages  ListMemorySessionMessagesRequest
+     * @return ListMemorySessionMessagesResponse
+     */
+    @Override
+    public CompletableFuture<ListMemorySessionMessagesResponse> listMemorySessionMessages(ListMemorySessionMessagesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMemorySessionMessages").setMethod(HttpMethod.GET).setPathRegex("/workspaces/{workspaceId}/memorystores/{memoryStoreName}/messages").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMemorySessionMessagesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMemorySessionMessagesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</p>
+     * 
+     * @param request the request parameters of ListMemorySessions  ListMemorySessionsRequest
+     * @return ListMemorySessionsResponse
+     */
+    @Override
+    public CompletableFuture<ListMemorySessionsResponse> listMemorySessions(ListMemorySessionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMemorySessions").setMethod(HttpMethod.GET).setPathRegex("/workspaces/{workspaceId}/memorystores/{memoryStoreName}/sessions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMemorySessionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMemorySessionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries MemoryStores in a specified workspace by using paging.</p>
+     * 
+     * @param request the request parameters of ListMemoryStores  ListMemoryStoresRequest
+     * @return ListMemoryStoresResponse
+     */
+    @Override
+    public CompletableFuture<ListMemoryStoresResponse> listMemoryStores(ListMemoryStoresRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMemoryStores").setMethod(HttpMethod.GET).setPathRegex("/workspaces/{workspaceId}/memorystores").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMemoryStoresResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMemoryStoresResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Queries model connections in a specified AgentCore workspace. Supports filtering by name through <code>Name</code> and selecting exact match or fuzzy match through <code>SearchType</code>. Also supports filtering by model provider type and invoke protocol, and supports paging.</p>
      * 
      * @param request the request parameters of ListModelConnections  ListModelConnectionsRequest
@@ -2093,6 +2324,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>Retrieves long-term memory from a MemoryStore based on semantics queries.</p>
+     * 
+     * @param request the request parameters of SearchMemories  SearchMemoriesRequest
+     * @return SearchMemoriesResponse
+     */
+    @Override
+    public CompletableFuture<SearchMemoriesResponse> searchMemories(SearchMemoriesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SearchMemories").setMethod(HttpMethod.POST).setPathRegex("/workspaces/{workspaceId}/memorystores/{memoryStoreName}/memories/search").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchMemoriesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchMemoriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</p>
      * 
@@ -2361,6 +2613,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateMcpTemplateConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the long-term memory text or metadata based on the memory ID.</p>
+     * 
+     * @param request the request parameters of UpdateMemory  UpdateMemoryRequest
+     * @return UpdateMemoryResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMemoryResponse> updateMemory(UpdateMemoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMemory").setMethod(HttpMethod.PUT).setPathRegex("/workspaces/{workspaceId}/memorystores/{memoryStoreName}/memories/{memoryId}").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMemoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMemoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a memory store.</p>
+     * 
+     * @param request the request parameters of UpdateMemoryStore  UpdateMemoryStoreRequest
+     * @return UpdateMemoryStoreResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMemoryStoreResponse> updateMemoryStore(UpdateMemoryStoreRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMemoryStore").setMethod(HttpMethod.PUT).setPathRegex("/workspaces/{workspaceId}/memorystores/{memoryStoreName}").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMemoryStoreResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMemoryStoreResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
