@@ -263,7 +263,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i119982311660892626523</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -271,7 +274,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterName.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard_Cluster</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -279,7 +285,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time. The time is in ISO 8601 format. The Z in the example indicates UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-30T02:00:00.852Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -287,7 +296,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time. The time is in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2125-06-24T16:52:44.318000</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -295,7 +307,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * FileSystemMountEnabled.
+         * <p>Indicates whether file storage mounting is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
             this.fileSystemMountEnabled = fileSystemMountEnabled;
@@ -303,7 +318,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Hostname.
+         * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alywlcb-lingjun-gpu-0025</p>
          */
         public Builder hostname(String hostname) {
             this.hostname = hostname;
@@ -311,7 +329,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * HpnZone.
+         * <p>The cluster number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1</p>
          */
         public Builder hpnZone(String hpnZone) {
             this.hpnZone = hpnZone;
@@ -319,7 +340,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * HyperNodeId.
+         * <p>The hypernode ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e01-cn-zvp2tgykr08</p>
          */
         public Builder hyperNodeId(String hyperNodeId) {
             this.hyperNodeId = hyperNodeId;
@@ -327,7 +351,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * MachineType.
+         * <p>The machine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>efg1.nvga1</p>
          */
         public Builder machineType(String machineType) {
             this.machineType = machineType;
@@ -335,7 +362,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * NodeGroupId.
+         * <p>The node group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-ec3c96ff0aa4c60d</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -343,7 +373,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * NodeGroupName.
+         * <p>The node group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lisan-nodegroup</p>
          */
         public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = nodeGroupName;
@@ -351,7 +384,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Nodes.
+         * <p>The list of nodes.</p>
          */
         public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
@@ -359,7 +392,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * OperatingState.
+         * <p>The hypernode status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Using</p>
          */
         public Builder operatingState(String operatingState) {
             this.operatingState = operatingState;
@@ -367,7 +403,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6058705-1C45-35C9-9461-02504897D4D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -375,7 +414,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxno4vh5****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -383,7 +425,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The node status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operating</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -391,7 +436,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu-c</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -496,7 +544,14 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The packet category. Valid values:</p>
+             * <ul>
+             * <li><strong>DOWNLINK_PACKET</strong>: downlink packet.</li>
+             * <li><strong>UPLINK_PACKET</strong>: uplink packet.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DOWNLINK_PACKET</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -504,7 +559,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * <p>The disk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp1564bcc2306uui4zpk</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -512,7 +570,14 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * PerformanceLevel.
+             * <p>The performance level (PL) of the cloud disk when an ESSD is created as the system cloud disk. Settings:</p>
+             * <ul>
+             * <li>PL0: A maximum of 10,000 random read/write IOPS per standard SSD.</li>
+             * <li>PL1: A maximum of 50,000 random read/write IOPS per standard SSD.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -520,7 +585,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The disk size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -528,7 +596,14 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The disk type. Valid values:</p>
+             * <ul>
+             * <li>system: system cloud disk.</li>
+             * <li>data: data cloud disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -595,7 +670,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * BondName.
+             * <p>The bond interface name of the machine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bond0</p>
              */
             public Builder bondName(String bondName) {
                 this.bondName = bondName;
@@ -603,7 +681,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The IP address of the machine in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.22.2</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -762,7 +843,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * Disks.
+             * <p>The disk information.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -770,7 +851,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>457db5ca-241d-11ed-9fd7-acde48001122</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -778,7 +862,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i190297201669099844192</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -786,7 +873,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alinux3_x86_gu8xf_P_Host_D3_C7E3_550.127_Legacy_N_241230</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -794,7 +884,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Networks.
+             * <p>The network information.</p>
              */
             public Builder networks(Networks networks) {
                 this.networks = networks;
@@ -802,7 +892,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-zvp2tgykr0b</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -810,7 +903,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * OperatingState.
+             * <p>The node status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Using</p>
              */
             public Builder operatingState(String operatingState) {
                 this.operatingState = operatingState;
@@ -818,7 +914,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InProgress</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -826,7 +925,12 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#!/bin/bash
+             * uptime
+             * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttttest.sh</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

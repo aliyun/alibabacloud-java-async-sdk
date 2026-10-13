@@ -82,7 +82,7 @@ public class ListMachineNetworkInfoRequest extends Request {
         }
 
         /**
-         * <p>hpn information of machine</p>
+         * <p>The information about the machine types.</p>
          */
         public Builder machineHpnInfo(java.util.List<MachineHpnInfo> machineHpnInfo) {
             String machineHpnInfoShrink = shrink(machineHpnInfo, "MachineHpnInfo", "json");
@@ -164,7 +164,7 @@ public class ListMachineNetworkInfoRequest extends Request {
             } 
 
             /**
-             * <p>hpn zone infomation</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>C1</p>
@@ -175,7 +175,7 @@ public class ListMachineNetworkInfoRequest extends Request {
             }
 
             /**
-             * <p>The type of machine.</p>
+             * <p>The machine type.</p>
              * 
              * <strong>example:</strong>
              * <p>efg2.C48cNHmcn</p>
@@ -186,7 +186,7 @@ public class ListMachineNetworkInfoRequest extends Request {
             }
 
             /**
-             * <p>The ID of the region in which the application is located.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-heyuan</p>

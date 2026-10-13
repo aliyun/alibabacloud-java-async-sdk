@@ -136,10 +136,10 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
+         * <p>Specifies whether to skip failed nodes. Default value: False.</p>
          * 
          * <strong>example:</strong>
-         * <p>False</p>
+         * <p>false</p>
          */
         public Builder ignoreFailedNodeTasks(Boolean ignoreFailedNodeTasks) {
             this.putBodyParameter("IgnoreFailedNodeTasks", ignoreFailedNodeTasks);
@@ -148,7 +148,7 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * <p>The nodes.</p>
+         * <p>The list of nodes.</p>
          */
         public Builder nodes(java.util.List<Nodes> nodes) {
             String nodesShrink = shrink(nodes, "Nodes", "json");
@@ -158,11 +158,10 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * <p>The user data.</p>
+         * <p>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</p>
          * 
          * <strong>example:</strong>
-         * <p>#!/bin/sh
-         * echo &quot;Hello World. The time is now $(date -R)!&quot; | tee /root/userdata_test.txt</p>
+         * <p>ZWNobyBoZWxsbyBlY3Mh</p>
          */
         public Builder userData(String userData) {
             this.putBodyParameter("UserData", userData);

@@ -93,7 +93,10 @@ public class ListNodeGroupDriftedNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,10 @@ public class ListNodeGroupDriftedNodesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token returned by this call. An empty value indicates that no more pages exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3a6b93229825ac667104463b56790c91</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,7 @@ public class ListNodeGroupDriftedNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Nodes.
+         * <p>The list of nodes that are inconsistent with the node group configuration (paginated).</p>
          */
         public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
@@ -212,7 +218,10 @@ public class ListNodeGroupDriftedNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * ActualValue.
+             * <p>The current value of the node property. Complex types are serialized as JSON strings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>old-role</p>
              */
             public Builder actualValue(String actualValue) {
                 this.actualValue = actualValue;
@@ -220,7 +229,10 @@ public class ListNodeGroupDriftedNodesResponseBody extends TeaModel {
             }
 
             /**
-             * MinRequiredAction.
+             * <p>The minimum action required to apply the TargetValue: Refresh, Reboot, or Reimage. For more information, refer to the MaxDisruptiveAction parameter of the RefreshNodeGroupNodes operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Refresh</p>
              */
             public Builder minRequiredAction(String minRequiredAction) {
                 this.minRequiredAction = minRequiredAction;
@@ -228,7 +240,10 @@ public class ListNodeGroupDriftedNodesResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyPath.
+             * <p>The property path in dot notation (such as a.b.c), compatible with both flat and nested properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RamRoleName</p>
              */
             public Builder propertyPath(String propertyPath) {
                 this.propertyPath = propertyPath;
@@ -236,7 +251,10 @@ public class ListNodeGroupDriftedNodesResponseBody extends TeaModel {
             }
 
             /**
-             * TargetValue.
+             * <p>The target value of the node property. Complex types are serialized as JSON strings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new-role</p>
              */
             public Builder targetValue(String targetValue) {
                 this.targetValue = targetValue;
@@ -303,7 +321,10 @@ public class ListNodeGroupDriftedNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>node-001</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -311,7 +332,7 @@ public class ListNodeGroupDriftedNodesResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyDrifts.
+             * <p>The list of inconsistent properties for this node.</p>
              */
             public Builder propertyDrifts(java.util.List<PropertyDrifts> propertyDrifts) {
                 this.propertyDrifts = propertyDrifts;

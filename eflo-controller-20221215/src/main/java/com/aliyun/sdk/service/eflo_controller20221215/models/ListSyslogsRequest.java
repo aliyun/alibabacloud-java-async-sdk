@@ -155,6 +155,7 @@ public class ListSyslogsRequest extends Request {
         }
 
         /**
+         * <p>The start time. Specify a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +168,10 @@ public class ListSyslogsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page. Include this token when you retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>392e8b4a03ed171433cc39f5b464ec9d</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -176,6 +180,7 @@ public class ListSyslogsRequest extends Request {
         }
 
         /**
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +193,12 @@ public class ListSyslogsRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>The query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder query(String query) {
             this.putBodyParameter("Query", query);
@@ -197,7 +207,10 @@ public class ListSyslogsRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * <p>Specifies whether to query logs in reverse chronological order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putBodyParameter("Reverse", reverse);
@@ -206,6 +219,7 @@ public class ListSyslogsRequest extends Request {
         }
 
         /**
+         * <p>The end time. Specify a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

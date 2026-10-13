@@ -111,7 +111,15 @@ public class RefreshNodeGroupNodesRequest extends Request {
         }
 
         /**
-         * MaxDisruptiveAction.
+         * <p>The maximum disruptive action level allowed for the refresh operation. The system independently evaluates the action level required to refresh each drifted property of a node and performs the refresh within the specified action level constraint. If the action level required for a property exceeds the specified level, that property is skipped. Action levels in increasing order of disruption: Refresh &lt; Reboot &lt; Reimage.</p>
+         * <ul>
+         * <li>Refresh (default): only refreshes the configuration in place without restarting or reimaging. Currently applicable only to the RamRoleName property.</li>
+         * <li>Reboot (not currently supported): allows restarting the node for the configuration to take effect. Supported properties include system cloud disk type and all properties supported by Refresh.</li>
+         * <li>Reimage (not currently supported): allows reimaging the node for the configuration to take effect. Supported properties include image ID and all properties supported by Reboot.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Refresh</p>
          */
         public Builder maxDisruptiveAction(String maxDisruptiveAction) {
             this.putBodyParameter("MaxDisruptiveAction", maxDisruptiveAction);
@@ -120,6 +128,7 @@ public class RefreshNodeGroupNodesRequest extends Request {
         }
 
         /**
+         * <p>The node group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +141,7 @@ public class RefreshNodeGroupNodesRequest extends Request {
         }
 
         /**
-         * NodeIds.
+         * <p>The filter scope for node refresh. If not specified, all nodes in the node group are included. <warning>If the instance type is a hypernode, pass in the TrayNode ID, not the HyperNodeId.</warning></p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             String nodeIdsShrink = shrink(nodeIds, "NodeIds", "json");

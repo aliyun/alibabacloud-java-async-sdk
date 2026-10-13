@@ -166,7 +166,10 @@ public class ListFreeHyperNodesRequest extends Request {
         }
 
         /**
-         * HpnZone.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1</p>
          */
         public Builder hpnZone(String hpnZone) {
             this.putBodyParameter("HpnZone", hpnZone);
@@ -175,7 +178,10 @@ public class ListFreeHyperNodesRequest extends Request {
         }
 
         /**
-         * MachineType.
+         * <p>The machine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>efg1.nvga1</p>
          */
         public Builder machineType(String machineType) {
             this.putBodyParameter("MachineType", machineType);
@@ -184,7 +190,13 @@ public class ListFreeHyperNodesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
+         * <p>Default value:</p>
+         * <p>•If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
+         * <p>•If this parameter is set to a value greater than 100, the default value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -193,7 +205,10 @@ public class ListFreeHyperNodesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the value of NextToken that was returned from the last API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a3f2224a5ec7224116c4f5246120****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -202,7 +217,10 @@ public class ListFreeHyperNodesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzyqdwnfabx6q</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -211,7 +229,7 @@ public class ListFreeHyperNodesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The list of unused node statuses to return.</p>
          */
         public Builder status(java.util.List<String> status) {
             this.putBodyParameter("Status", status);
@@ -220,7 +238,7 @@ public class ListFreeHyperNodesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("Tags", tags);
@@ -289,7 +307,10 @@ public class ListFreeHyperNodesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -297,7 +318,10 @@ public class ListFreeHyperNodesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>129</p>
              */
             public Builder value(String value) {
                 this.value = value;

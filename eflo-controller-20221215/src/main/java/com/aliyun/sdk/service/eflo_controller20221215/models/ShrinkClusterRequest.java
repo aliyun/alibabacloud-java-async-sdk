@@ -122,7 +122,7 @@ public class ShrinkClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
+         * <p>Specifies whether to skip failed nodes. The default value is False.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -134,7 +134,7 @@ public class ShrinkClusterRequest extends Request {
         }
 
         /**
-         * <p>The node groups.</p>
+         * <p>The information about the node groups.</p>
          */
         public Builder nodeGroups(java.util.List<NodeGroups> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
@@ -190,7 +190,10 @@ public class ShrinkClusterRequest extends Request {
             } 
 
             /**
-             * HyperNodeId.
+             * <p>The hyper node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-zvp2tgykr08</p>
              */
             public Builder hyperNodeId(String hyperNodeId) {
                 this.hyperNodeId = hyperNodeId;
@@ -327,7 +330,7 @@ public class ShrinkClusterRequest extends Request {
             } 
 
             /**
-             * HyperNodes.
+             * <p>The list of hyper nodes.</p>
              */
             public Builder hyperNodes(java.util.List<HyperNodes> hyperNodes) {
                 this.hyperNodes = hyperNodes;
@@ -346,7 +349,7 @@ public class ShrinkClusterRequest extends Request {
             }
 
             /**
-             * <p>The nodes.</p>
+             * <p>The list of nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;

@@ -80,7 +80,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance types.</p>
+         * <p>The details of the machine types.</p>
          */
         public Builder machineTypes(java.util.List<MachineTypes> machineTypes) {
             this.machineTypes = machineTypes;
@@ -88,7 +88,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The next token for pagination. Include this value in the request to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>a3f2224a5ec7224116c4f5246120abe4</p>
@@ -99,7 +99,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>F16BA4D8-FF50-53B6-A026-F443FE31006C</p>
@@ -181,7 +181,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * CpuArch.
+             * <p>The CPU architecture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x86_64</p>
              */
             public Builder cpuArch(String cpuArch) {
                 this.cpuArch = cpuArch;
@@ -189,7 +192,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * CpuSockets.
+             * <p>The number of CPU sockets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpuSockets(Integer cpuSockets) {
                 this.cpuSockets = cpuSockets;
@@ -197,7 +203,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * VCpuCores.
+             * <p>The number of vCPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192</p>
              */
             public Builder vCpuCores(Integer vCpuCores) {
                 this.vCpuCores = vCpuCores;
@@ -277,7 +286,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * LocalDiskCount.
+             * <p>The number of disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder localDiskCount(Integer localDiskCount) {
                 this.localDiskCount = localDiskCount;
@@ -285,7 +297,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * LocalDiskSizeInTB.
+             * <p>The capacity per disk, in TB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.84</p>
              */
             public Builder localDiskSizeInTB(Float localDiskSizeInTB) {
                 this.localDiskSizeInTB = localDiskSizeInTB;
@@ -293,7 +308,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * LocalDiskType.
+             * <p>The disk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NVMe SSD</p>
              */
             public Builder localDiskType(String localDiskType) {
                 this.localDiskType = localDiskType;
@@ -360,7 +378,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * FrontendNetworkType.
+             * <p>The frontend network type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder frontendNetworkType(String frontendNetworkType) {
                 this.frontendNetworkType = frontendNetworkType;
@@ -368,7 +389,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * JumboFrameSupported.
+             * <p>Indicates whether jumbo frames are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder jumboFrameSupported(Boolean jumboFrameSupported) {
                 this.jumboFrameSupported = jumboFrameSupported;
@@ -474,7 +498,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * GpuCount.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder gpuCount(Integer gpuCount) {
                 this.gpuCount = gpuCount;
@@ -482,7 +509,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * GpuMemoryInGB.
+             * <p>The GPU memory per card, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>144</p>
              */
             public Builder gpuMemoryInGB(Integer gpuMemoryInGB) {
                 this.gpuMemoryInGB = gpuMemoryInGB;
@@ -490,7 +520,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * GpuName.
+             * <p>The GPU name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>M890P-144G</p>
              */
             public Builder gpuName(String gpuName) {
                 this.gpuName = gpuName;
@@ -498,7 +531,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * GpuVendor.
+             * <p>The GPU vendor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T-HEAD</p>
              */
             public Builder gpuVendor(String gpuVendor) {
                 this.gpuVendor = gpuVendor;
@@ -506,7 +542,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalGpuMemoryInGB.
+             * <p>The total GPU memory, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9216</p>
              */
             public Builder totalGpuMemoryInGB(Integer totalGpuMemoryInGB) {
                 this.totalGpuMemoryInGB = totalGpuMemoryInGB;
@@ -560,7 +599,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * MemorySizeInGB.
+             * <p>The memory size, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder memorySizeInGB(Integer memorySizeInGB) {
                 this.memorySizeInGB = memorySizeInGB;
@@ -587,9 +629,13 @@ public class ListMachineTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackendRdmaNicCount")
         private Integer backendRdmaNicCount;
 
+        @com.aliyun.core.annotation.NameInMap("BackendRdmaSupported")
+        private Boolean backendRdmaSupported;
+
         private RdmaInfoDetail(Builder builder) {
             this.backendRdmaNicBwInGbps = builder.backendRdmaNicBwInGbps;
             this.backendRdmaNicCount = builder.backendRdmaNicCount;
+            this.backendRdmaSupported = builder.backendRdmaSupported;
         }
 
         public static Builder builder() {
@@ -614,9 +660,17 @@ public class ListMachineTypesResponseBody extends TeaModel {
             return this.backendRdmaNicCount;
         }
 
+        /**
+         * @return backendRdmaSupported
+         */
+        public Boolean getBackendRdmaSupported() {
+            return this.backendRdmaSupported;
+        }
+
         public static final class Builder {
             private Integer backendRdmaNicBwInGbps; 
             private Integer backendRdmaNicCount; 
+            private Boolean backendRdmaSupported; 
 
             private Builder() {
             } 
@@ -624,10 +678,14 @@ public class ListMachineTypesResponseBody extends TeaModel {
             private Builder(RdmaInfoDetail model) {
                 this.backendRdmaNicBwInGbps = model.backendRdmaNicBwInGbps;
                 this.backendRdmaNicCount = model.backendRdmaNicCount;
+                this.backendRdmaSupported = model.backendRdmaSupported;
             } 
 
             /**
-             * BackendRdmaNicBwInGbps.
+             * <p>The bandwidth per backend RDMA NIC, in Gbps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder backendRdmaNicBwInGbps(Integer backendRdmaNicBwInGbps) {
                 this.backendRdmaNicBwInGbps = backendRdmaNicBwInGbps;
@@ -635,10 +693,28 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * BackendRdmaNicCount.
+             * <p>The number of backend RDMA NICs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder backendRdmaNicCount(Integer backendRdmaNicCount) {
                 this.backendRdmaNicCount = backendRdmaNicCount;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether backend RDMA is supported. Valid values:</p>
+             * <ul>
+             * <li>true: The current machine type supports backend RDMA.</li>
+             * <li>false: The current machine type does not support backend RDMA.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder backendRdmaSupported(Boolean backendRdmaSupported) {
+                this.backendRdmaSupported = backendRdmaSupported;
                 return this;
             }
 
@@ -906,7 +982,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * CpuInfoDetail.
+             * <p>The structured CPU specifications.</p>
              */
             public Builder cpuInfoDetail(CpuInfoDetail cpuInfoDetail) {
                 this.cpuInfoDetail = cpuInfoDetail;
@@ -925,7 +1001,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskInfoDetail.
+             * <p>The disk information.</p>
              */
             public Builder diskInfoDetail(DiskInfoDetail diskInfoDetail) {
                 this.diskInfoDetail = diskInfoDetail;
@@ -933,7 +1009,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * FrontendNetworkDetail.
+             * <p>The frontend network information.</p>
              */
             public Builder frontendNetworkDetail(FrontendNetworkDetail frontendNetworkDetail) {
                 this.frontendNetworkDetail = frontendNetworkDetail;
@@ -952,7 +1028,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * GpuInfoDetail.
+             * <p>The GPU information.</p>
              */
             public Builder gpuInfoDetail(GpuInfoDetail gpuInfoDetail) {
                 this.gpuInfoDetail = gpuInfoDetail;
@@ -960,7 +1036,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage information.</p>
+             * <p>The memory information.</p>
              * 
              * <strong>example:</strong>
              * <p>32x 64GB DDR4 3200 Memory</p>
@@ -971,7 +1047,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryInfoDetail.
+             * <p>The memory information.</p>
              */
             public Builder memoryInfoDetail(MemoryInfoDetail memoryInfoDetail) {
                 this.memoryInfoDetail = memoryInfoDetail;
@@ -979,7 +1055,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance type.</p>
+             * <p>The name of the machine type.</p>
              * 
              * <strong>example:</strong>
              * <p>efg1.nvga1</p>
@@ -1012,7 +1088,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * RdmaInfoDetail.
+             * <p>The RDMA information.</p>
              */
             public Builder rdmaInfoDetail(RdmaInfoDetail rdmaInfoDetail) {
                 this.rdmaInfoDetail = rdmaInfoDetail;
@@ -1020,7 +1096,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of vCPUs.</p>
+             * <p>The number of CPU cores.</p>
              * 
              * <strong>example:</strong>
              * <p>48</p>
@@ -1031,7 +1107,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access type.</p>
+             * <p>The machine type.</p>
              * 
              * <strong>example:</strong>
              * <p>Public</p>

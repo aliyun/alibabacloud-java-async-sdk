@@ -125,10 +125,10 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> response parameters. Valid values:</p>
+         * <p>The encoding method for the CommandContent and Output fields in the response. Valid values:</p>
          * <ul>
-         * <li>PlainText: returns the original command content and command outputs.</li>
-         * <li>Base64 (default): returns the Base64-encoded command content and command output.</li>
+         * <li>PlainText: Returns the original command content and output.</li>
+         * <li>Base64 (default): Returns the Base64-encoded command content and output.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,10 +141,10 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the command outputs in the response.</p>
+         * <p>Specifies whether to return the command output in the results.</p>
          * <ul>
-         * <li>true: returns the command outputs. When this parameter is set to true, you must specify <code>InvokeId</code>, <code>InstanceId</code>, or both.</li>
-         * <li>false (default)</li>
+         * <li>true: Returns the output. In this case, specify at least the InvokeId or InstanceId parameter.</li>
+         * <li>false (default): Does not return the output.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * <p>The execution ID.</p>
+         * <p>The command execution ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

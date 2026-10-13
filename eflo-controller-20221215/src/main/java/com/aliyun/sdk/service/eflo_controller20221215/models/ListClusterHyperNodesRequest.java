@@ -153,6 +153,7 @@ public class ListClusterHyperNodesRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +166,17 @@ public class ListClusterHyperNodesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
+         * <p>Default value:</p>
+         * <ul>
+         * <li><p>If this parameter is not set or is set to a value less than 20, the default value is 20.</p>
+         * </li>
+         * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -174,7 +185,10 @@ public class ListClusterHyperNodesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>563d42ae0b17572449ec8c97f7f66069</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -183,7 +197,10 @@ public class ListClusterHyperNodesRequest extends Request {
         }
 
         /**
-         * NodeGroupId.
+         * <p>The node group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-ec3c96ff0aa4c60d</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putBodyParameter("NodeGroupId", nodeGroupId);
@@ -192,7 +209,10 @@ public class ListClusterHyperNodesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmywpvugkh7kq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -201,7 +221,7 @@ public class ListClusterHyperNodesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tag information.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -271,7 +291,10 @@ public class ListClusterHyperNodesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -279,7 +302,10 @@ public class ListClusterHyperNodesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_value</p>
              */
             public Builder value(String value) {
                 this.value = value;

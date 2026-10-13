@@ -83,6 +83,7 @@ public class DeleteHyperNodeRequest extends Request {
         }
 
         /**
+         * <p>The hyper node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

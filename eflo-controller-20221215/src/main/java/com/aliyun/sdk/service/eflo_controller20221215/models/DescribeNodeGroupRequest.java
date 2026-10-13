@@ -83,7 +83,11 @@ public class DescribeNodeGroupRequest extends Request {
         }
 
         /**
+         * <p>The node group ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i128903591758597631635</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putBodyParameter("NodeGroupId", nodeGroupId);

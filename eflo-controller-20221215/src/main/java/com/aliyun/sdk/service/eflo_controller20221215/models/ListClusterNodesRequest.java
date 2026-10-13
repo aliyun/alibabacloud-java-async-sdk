@@ -180,7 +180,7 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20.</p>
+         * <p>The number of entries per page in a paged query. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -192,7 +192,7 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</p>
+         * <p>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</p>
@@ -216,7 +216,7 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * OperatingStates.
+         * <p>The list of node states.</p>
          */
         public Builder operatingStates(java.util.List<String> operatingStates) {
             this.putBodyParameter("OperatingStates", operatingStates);
@@ -228,7 +228,7 @@ public class ListClusterNodesRequest extends Request {
          * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-xxkxkllss</p>
+         * <p>rg-ksld39333ss</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -237,7 +237,7 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The tag information.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -307,10 +307,10 @@ public class ListClusterNodesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key for the node.</p>
+             * <p>The key of the node tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>aa_key</p>
+             * <p>my_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -318,10 +318,10 @@ public class ListClusterNodesRequest extends Request {
             }
 
             /**
-             * <p>The tag value for the node.</p>
+             * <p>The value of the node tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>aa_value</p>
+             * <p>my_value</p>
              */
             public Builder value(String value) {
                 this.value = value;

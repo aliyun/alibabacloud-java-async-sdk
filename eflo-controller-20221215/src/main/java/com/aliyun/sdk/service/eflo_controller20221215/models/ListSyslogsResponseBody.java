@@ -80,7 +80,7 @@ public class ListSyslogsResponseBody extends TeaModel {
         } 
 
         /**
-         * Logs.
+         * <p>The paginated list of log objects.</p>
          */
         public Builder logs(java.util.List<Logs> logs) {
             this.logs = logs;
@@ -88,7 +88,10 @@ public class ListSyslogsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The NextToken for the next page. Include this value in the request to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>563d42ae0b17572449ec8c97f7f66069</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -373,7 +376,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i119583961673208491760</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -381,7 +387,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The security domain of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN_PUBLIC</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -389,7 +398,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * Facility.
+             * <p>The Linux syslog standard field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kern</p>
              */
             public Builder facility(String facility) {
                 this.facility = facility;
@@ -397,7 +409,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>The hostname of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>damo-m53kr8kd-0008</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -405,7 +420,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114.55.254.44</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -413,7 +431,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * <p>The syslog content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bond4: failed to get link speed/duplex for eth8</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -421,7 +442,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-9lb36u4s601</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -429,7 +453,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * <p>The Linux syslog standard field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warning</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -437,7 +464,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * Sn.
+             * <p>The unique identifier of the machine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21A401332</p>
              */
             public Builder sn(String sn) {
                 this.sn = sn;
@@ -445,7 +475,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The hostname of the syslog server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>damo-m53kr8kd-0008</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -453,7 +486,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * Syslogtag.
+             * <p>The Linux syslog standard field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kernel</p>
              */
             public Builder syslogtag(String syslogtag) {
                 this.syslogtag = syslogtag;
@@ -461,7 +497,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * TagHostname.
+             * <p>The tag for the hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>damo-m53kr8kd-0008</p>
              */
             public Builder tagHostname(String tagHostname) {
                 this.tagHostname = tagHostname;
@@ -469,7 +508,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * TagPackId.
+             * <p>The tag for the pack ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>D990314D3C25D7E8-1080</p>
              */
             public Builder tagPackId(String tagPackId) {
                 this.tagPackId = tagPackId;
@@ -477,7 +519,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * TagPath.
+             * <p>The tag for the path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/var/log/kern</p>
              */
             public Builder tagPath(String tagPath) {
                 this.tagPath = tagPath;
@@ -485,7 +530,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * TagReceiveTime.
+             * <p>The tag for the receive time. Specify a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687363348</p>
              */
             public Builder tagReceiveTime(String tagReceiveTime) {
                 this.tagReceiveTime = tagReceiveTime;
@@ -493,7 +541,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * TagUserDefinedId.
+             * <p>The tag for the user-defined ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application_b</p>
              */
             public Builder tagUserDefinedId(String tagUserDefinedId) {
                 this.tagUserDefinedId = tagUserDefinedId;
@@ -501,7 +552,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time in UNIX timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687363346</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -509,7 +563,10 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * <p>The topic, which is logserver or log2sls. Both are syslog servers. logserver collects logs over TCP, and log2sls collects logs over UDP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logserver</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;

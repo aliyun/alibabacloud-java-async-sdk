@@ -96,7 +96,7 @@ public class ChangeNodeTypesRequest extends Request {
         }
 
         /**
-         * NodeIds.
+         * <p>A list of node IDs. You can specify a maximum of 10 nodes in a single request.</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             String nodeIdsShrink = shrink(nodeIds, "NodeIds", "json");
@@ -106,7 +106,10 @@ public class ChangeNodeTypesRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * <p>The node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-enhanced</p>
          */
         public Builder nodeType(String nodeType) {
             this.putBodyParameter("NodeType", nodeType);

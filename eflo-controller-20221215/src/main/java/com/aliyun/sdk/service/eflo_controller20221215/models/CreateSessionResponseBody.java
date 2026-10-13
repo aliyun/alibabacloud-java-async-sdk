@@ -120,7 +120,7 @@ public class CreateSessionResponseBody extends TeaModel {
          * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>2A59143F1</p>
+         * <p>2A591****</p>
          */
         public Builder serverSn(String serverSn) {
             this.serverSn = serverSn;
@@ -131,7 +131,7 @@ public class CreateSessionResponseBody extends TeaModel {
          * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>i207023871669364793713</p>
+         * <p>i20702387166936479****</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -142,7 +142,7 @@ public class CreateSessionResponseBody extends TeaModel {
          * <p>The session credential.</p>
          * 
          * <strong>example:</strong>
-         * <p>03f53c719015a9ad4f4f55d66cac2dac161b18e8065ca75a3220b89de389c980</p>
+         * <p>03f53c719015a9ad4f4f55d66cac2dac161b18e8065ca75a3220b89de389****</p>
          */
         public Builder sessionToken(String sessionToken) {
             this.sessionToken = sessionToken;

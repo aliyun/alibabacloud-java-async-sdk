@@ -80,7 +80,7 @@ public class ListClustersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The clusters.</p>
+         * <p>The cluster information.</p>
          */
         public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;
@@ -88,7 +88,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned pagination token which can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>f4f9a292c17072a2</p>
@@ -171,7 +171,7 @@ public class ListClustersResponseBody extends TeaModel {
              * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
-             * <p>aa_key</p>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +182,7 @@ public class ListClustersResponseBody extends TeaModel {
              * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
-             * <p>aa_value</p>
+             * <p>daily</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -434,7 +434,7 @@ public class ListClustersResponseBody extends TeaModel {
              * <p>The cluster description.</p>
              * 
              * <strong>example:</strong>
-             * <p>PPU-cluster2 bz</p>
+             * <p>Test cluster</p>
              */
             public Builder clusterDescription(String clusterDescription) {
                 this.clusterDescription = clusterDescription;
@@ -465,12 +465,6 @@ public class ListClustersResponseBody extends TeaModel {
 
             /**
              * <p>The cluster type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>AckEdgePro</li>
-             * <li>ExclusiveBareCluster</li>
-             * <li>Lite</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>AckEdgePro</p>
@@ -492,7 +486,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP type of the computing network.</p>
+             * <p>The IP version of the computing network.</p>
              * 
              * <strong>example:</strong>
              * <p>IPv4</p>
@@ -503,10 +497,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time is in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
-             * <p>1672134938</p>
+             * <p>2026-01-27T14:54:02.360</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -548,13 +542,6 @@ public class ListClustersResponseBody extends TeaModel {
 
             /**
              * <p>The cluster status.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>running</li>
-             * <li>expanding</li>
-             * <li>shrinking</li>
-             * <li>initializing</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>initializing</p>
@@ -576,7 +563,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The tag information.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -584,7 +571,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job ID.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i156365121663149566024</p>
@@ -595,10 +582,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The update time. The time is in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
-             * <p>1672134968</p>
+             * <p>2026-01-28T20:56:32.585</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -606,7 +593,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-0jlx4hol2bjboafzmffvd</p>

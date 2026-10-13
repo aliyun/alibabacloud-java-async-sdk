@@ -138,7 +138,10 @@ public class ListNodeGroupRefreshTasksRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i118191731740041623425</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -147,7 +150,10 @@ public class ListNodeGroupRefreshTasksRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page for paging. Valid values: 1 to 500. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -156,7 +162,10 @@ public class ListNodeGroupRefreshTasksRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>563d42ae0b17572449ec8c97f7f66069</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -165,7 +174,10 @@ public class ListNodeGroupRefreshTasksRequest extends Request {
         }
 
         /**
-         * NodeGroupId.
+         * <p>The node group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-3525</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putBodyParameter("NodeGroupId", nodeGroupId);
@@ -174,7 +186,13 @@ public class ListNodeGroupRefreshTasksRequest extends Request {
         }
 
         /**
-         * Statuses.
+         * <p>The list of task statuses. Valid values:</p>
+         * <ul>
+         * <li>Pending: The refresh task is created and waiting to be executed.</li>
+         * <li>InProgress: The refresh task is being processed.</li>
+         * <li>Success: The refresh task is executed.</li>
+         * <li>Failed: The refresh task failed.</li>
+         * </ul>
          */
         public Builder statuses(java.util.List<String> statuses) {
             String statusesShrink = shrink(statuses, "Statuses", "json");

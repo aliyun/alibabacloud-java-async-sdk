@@ -82,7 +82,10 @@ public class DescribeNodeTypeRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * <p>The node scaling mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder nodeType(String nodeType) {
             this.putBodyParameter("NodeType", nodeType);

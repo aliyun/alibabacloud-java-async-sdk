@@ -83,7 +83,7 @@ public class DescribeTaskRequest extends Request {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

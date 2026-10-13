@@ -124,7 +124,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20.</p>
+         * <p>The number of entries per page for a paged query. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -136,10 +136,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</p>
+         * <p>The pagination token. Set this parameter to the value of NextToken that is returned from the previous API call.</p>
          * 
          * <strong>example:</strong>
-         * <p>a3f2224a5ec7224116c4f5246120abe4</p>
+         * <p>a3f2224a5ec7224116c4f5246120abe2</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -160,7 +160,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -233,7 +233,7 @@ public class ListClustersRequest extends Request {
              * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
-             * <p>key_aa</p>
+             * <p>my_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -244,7 +244,7 @@ public class ListClustersRequest extends Request {
              * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
-             * <p>value_aa</p>
+             * <p>my_value</p>
              */
             public Builder value(String value) {
                 this.value = value;

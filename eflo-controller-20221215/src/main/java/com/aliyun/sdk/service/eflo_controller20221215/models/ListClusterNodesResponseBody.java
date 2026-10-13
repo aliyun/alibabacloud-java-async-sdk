@@ -80,7 +80,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned pagination token which can be used in the next request to retrieve a new page of results.</p>
+         * <p>The query token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAXW/ZB9TBvH+0ZK0phtCibQgQmu1RbqplAI6Velo2OKR</p>
@@ -91,7 +91,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The nodes.</p>
+         * <p>The list of nodes.</p>
          */
         public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
@@ -194,7 +194,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the network port for the node.</p>
+             * <p>The name of the network interface on the machine.</p>
              * 
              * <strong>example:</strong>
              * <p>bond0</p>
@@ -205,7 +205,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the node in the virtual private cloud (VPC).</p>
+             * <p>The IP address of the machine in the virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.22.2</p>
@@ -216,7 +216,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subnet ID.</p>
+             * <p>The subnet ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>subnet-fwekrvg9</p>
@@ -300,7 +300,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
              * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
-             * <p>aa_key</p>
+             * <p>alarm_xdc</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -311,7 +311,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
              * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
-             * <p>aa_value</p>
+             * <p>true</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -638,10 +638,10 @@ public class ListClusterNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The commodity code.</p>
+             * <p>The commodity code, which is a unique identifier for a specific cloud product or service.</p>
              * 
              * <strong>example:</strong>
-             * <p>bcccluster</p>
+             * <p>bccluster_eflocomputing_public_cn (Lingjun China site subscription), bccluster_eflocomputing_public_intl (Lingjun international site subscription)</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -649,10 +649,10 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time is in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
-             * <p>1642472468000</p>
+             * <p>2026-02-02T11:27:07</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -660,10 +660,10 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the node expires.</p>
+             * <p>The expiration time of the machine. The time is in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
-             * <p>1762185600000</p>
+             * <p>2026-03-03T00:00:00</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -704,7 +704,10 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * HyperNodeId.
+             * <p>The hyper node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-2r42tmj4z02</p>
              */
             public Builder hyperNodeId(String hyperNodeId) {
                 this.hyperNodeId = hyperNodeId;
@@ -726,7 +729,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
              * <p>The image name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alinux3_x86_AMD_R_Host_D3_E3_24.13.00_UEFI_N_250121</p>
+             * <p>Alinux3_x86_gu8xf_P_Host_D3_C7E3_550.127_Legacy_N_241230</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -734,7 +737,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node type.</p>
+             * <p>The machine type.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-wulanchabu-b11</p>
@@ -786,7 +789,10 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -795,22 +801,6 @@ public class ListClusterNodesResponseBody extends TeaModel {
 
             /**
              * <p>The node status.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Extending</li>
-             * <li>UnusedNodeStopped</li>
-             * <li>UnusedNodeStopping</li>
-             * <li>Unused</li>
-             * <li>Using</li>
-             * <li>ReleaseLocking</li>
-             * <li>Operating</li>
-             * <li>Cutting</li>
-             * <li>ClusterNodeStopped</li>
-             * <li>UnusedNodeRecovering</li>
-             * <li>ClusterNodeStopping</li>
-             * <li>ClusterNodeRecovering</li>
-             * <li>Replacing</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Extending</p>
@@ -821,7 +811,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the node.</p>
+             * <p>The serial number (SN) of the machine.</p>
              * 
              * <strong>example:</strong>
              * <p>sn_tOuUk</p>
@@ -832,7 +822,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The tag information.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -840,10 +830,10 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job ID.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>i28ddkdkkdkdd</p>
+             * <p>i-skkdsdl83ksxxs3</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -854,7 +844,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
              * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>vsw-bp1mxqhw8o20tgv3xk47h</p>
+             * <p>vsw-0jlohur7nhbxd1ttyq8p8</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -865,7 +855,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
              * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>vpc-0jltf9vinjz3if3lltdy7</p>
+             * <p>vpc-f8zcet5mwerafyqlrhyoi</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

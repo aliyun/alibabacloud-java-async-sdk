@@ -353,7 +353,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IP type of the computing network.</p>
+         * <p>The IP version of the computing network.</p>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>
@@ -364,7 +364,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-06-08T07:05:11Z</p>
@@ -416,7 +416,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of Jumbo Frames for the elastic network interface (ENI).</p>
+         * <p>The jumbo frame setting for the network interface.</p>
          * 
          * <strong>example:</strong>
          * <p>unsupported</p>
@@ -460,7 +460,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-0jlff84q4o3s58i7fkhy</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -468,7 +471,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i152609221670466904596</p>
@@ -479,7 +482,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-23T06:36:17.000Z</p>
@@ -490,7 +493,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-0jlwrfecgcbflyosvo242</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -498,7 +504,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-0jlkqysom5dmcviymep3f</p>
@@ -579,11 +585,6 @@ public class DescribeClusterResponseBody extends TeaModel {
 
             /**
              * <p>The component type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>ARMS</li>
-             * <li>ACKEdge</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ACKEdge</p>
@@ -640,7 +641,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the CIDR block for the cluster.</p>
+             * <p>The cluster CIDR block ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpd-iqd7xunc</p>

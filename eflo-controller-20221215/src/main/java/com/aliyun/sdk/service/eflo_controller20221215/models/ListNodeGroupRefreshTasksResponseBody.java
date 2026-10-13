@@ -93,7 +93,10 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,10 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. If NextToken is empty, no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>563d42ae0b17572449ec8c97f7f66069</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,7 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * NodeGroupRefreshTasks.
+         * <p>The list of node group refresh tasks.</p>
          */
         public Builder nodeGroupRefreshTasks(java.util.List<NodeGroupRefreshTasks> nodeGroupRefreshTasks) {
             this.nodeGroupRefreshTasks = nodeGroupRefreshTasks;
@@ -277,7 +283,10 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the refresh task in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-20T10:30:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -285,7 +294,10 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FailedCount.
+             * <p>The number of failed nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder failedCount(Long failedCount) {
                 this.failedCount = failedCount;
@@ -293,7 +305,10 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedCount.
+             * <p>The number of finished nodes, including succeeded, failed, and skipped nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder finishedCount(Long finishedCount) {
                 this.finishedCount = finishedCount;
@@ -301,7 +316,10 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDisruptiveAction.
+             * <p>The maximum disruptive action level allowed for the refresh operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Refresh</p>
              */
             public Builder maxDisruptiveAction(String maxDisruptiveAction) {
                 this.maxDisruptiveAction = maxDisruptiveAction;
@@ -309,7 +327,10 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * NodeGroupId.
+             * <p>The node group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ng-3525</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -317,7 +338,10 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * NodeGroupRefreshTaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-159136551662516768776</p>
              */
             public Builder nodeGroupRefreshTaskId(String nodeGroupRefreshTaskId) {
                 this.nodeGroupRefreshTaskId = nodeGroupRefreshTaskId;
@@ -325,7 +349,10 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the refresh task in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-20T10:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -333,7 +360,16 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>Pending: The refresh task is created and waiting to be executed.</li>
+             * <li>InProgress: The refresh task is being processed.</li>
+             * <li>Success: The refresh task is executed.</li>
+             * <li>Failed: The refresh task failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>InProgress</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -341,7 +377,10 @@ public class ListNodeGroupRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNodeCount.
+             * <p>The total number of nodes to be refreshed by the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalNodeCount(Long totalNodeCount) {
                 this.totalNodeCount = totalNodeCount;

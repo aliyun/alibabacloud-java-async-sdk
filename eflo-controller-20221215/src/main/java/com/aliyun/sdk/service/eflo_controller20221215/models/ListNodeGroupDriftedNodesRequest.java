@@ -125,7 +125,10 @@ public class ListNodeGroupDriftedNodesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page in a paging query. Valid values: 1 to 500. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -134,7 +137,10 @@ public class ListNodeGroupDriftedNodesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>563d42ae0b17572449ec8c97f7f66069</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -143,6 +149,7 @@ public class ListNodeGroupDriftedNodesRequest extends Request {
         }
 
         /**
+         * <p>The node group ID. Call ListClusters to obtain the ClusterId, pass the ClusterId to ListNodeGroups, and obtain the value from the NodeGroupId response parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +162,7 @@ public class ListNodeGroupDriftedNodesRequest extends Request {
         }
 
         /**
-         * NodeIds.
+         * <p>Limits the check scope. If not specified, all nodes in the node group are checked. <warning>If the model is a super node, pass the TrayNode ID.</warning></p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             String nodeIdsShrink = shrink(nodeIds, "NodeIds", "json");

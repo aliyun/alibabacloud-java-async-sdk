@@ -136,10 +136,14 @@ public class ListNodeGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>The number of entries per page for a paged query. Maximum value: 100.</p>
          * <p>Default value:</p>
-         * <p>• If you do not configure this parameter or if you set this parameter to a value less than 20, the default value is 20.</p>
-         * <p>• If you set this parameter to a value greater than 100, the default value is 100.</p>
+         * <ul>
+         * <li><p>If the value is not set or is set to less than 20, the default value is 20.</p>
+         * </li>
+         * <li><p>If the value is set to greater than 100, the default value is 100.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -151,7 +155,7 @@ public class ListNodeGroupsRequest extends Request {
         }
 
         /**
-         * <p>The token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The NextToken for the next page. Include this return value when requesting the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>a3f2224a5ec7224116c4f5246120abe4</p>

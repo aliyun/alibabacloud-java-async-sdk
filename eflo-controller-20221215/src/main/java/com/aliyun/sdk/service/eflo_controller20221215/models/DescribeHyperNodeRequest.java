@@ -83,6 +83,7 @@ public class DescribeHyperNodeRequest extends Request {
         }
 
         /**
+         * <p>The hypernode ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -124,11 +124,13 @@ public class ListNetTestResultsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: 100.</p>
+         * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li>If you do not configure this parameter or if you set this parameter to a value less than 20, the default value is 20.</li>
-         * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+         * <li><p>If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
+         * </li>
+         * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,7 @@ public class ListNetTestResultsRequest extends Request {
         }
 
         /**
-         * <p>The type of the network test.</p>
+         * <p>The network test type.</p>
          * 
          * <strong>example:</strong>
          * <p>DelayTest</p>
@@ -153,10 +155,10 @@ public class ListNetTestResultsRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</p>
+         * <p>The pagination token. Set this parameter to the value of NextToken that is returned from the previous API call.</p>
          * 
          * <strong>example:</strong>
-         * <p>3a6b93229825ac667104463b56790c91</p>
+         * <p>3a6b93229825ac667104463b5679****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -168,7 +170,7 @@ public class ListNetTestResultsRequest extends Request {
          * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmxno4vh5muoq</p>
+         * <p>rg-acfmxno4vh5****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

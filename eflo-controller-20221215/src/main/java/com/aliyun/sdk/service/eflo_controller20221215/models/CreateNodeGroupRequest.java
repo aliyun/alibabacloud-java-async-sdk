@@ -112,7 +112,7 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>Cluster ID</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>Node ID.</p>
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodeGroup(NodeGroup nodeGroup) {
@@ -136,10 +136,10 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>Node information</p>
+         * <p>The node information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;NodeUnitId&quot;:&quot;3c2999a8-2b95-4409-93c5-ad3985fc5c9f&quot;,&quot;ResourceGroupId&quot;:&quot;&quot;,&quot;MaxNodes&quot;:0,&quot;NodeUnitName&quot;:&quot;asi_cn-serverless-sale_e01-lingjun-psale&quot;}</p>
+         * <p>{\&quot;NodeUnitId\&quot;:\&quot;3c2999a8-2b95-4409-93c5-ad3985fc5c9f\&quot;,\&quot;ResourceGroupId\&quot;:\&quot;\&quot;,\&quot;MaxNodes\&quot;:0,\&quot;NodeUnitName\&quot;:\&quot;asi_cn-serverless-sale_e01-lingjun-psale\&quot;}</p>
          */
         public Builder nodeUnit(java.util.Map<String, ?> nodeUnit) {
             String nodeUnitShrink = shrink(nodeUnit, "NodeUnit", "json");
@@ -221,9 +221,9 @@ public class CreateNodeGroupRequest extends Request {
             } 
 
             /**
-             * <p>Disk type. Value range:</p>
+             * <p>The cloud disk type. Valid values:</p>
              * <ul>
-             * <li>cloud_essd: ESSD cloud disk.</li>
+             * <li>cloud_essd: Enterprise SSD (ESSD) cloud disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -235,10 +235,10 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>When creating an ESSD cloud disk as a system disk, set the performance level of the cloud disk. Value range:</p>
+             * <p>The performance level (PL) of the ESSD cloud disk used as the system disk. Valid values:</p>
              * <ul>
-             * <li>PL0: Maximum random read/write IOPS per disk 10,000.</li>
-             * <li>PL1: Maximum random read/write IOPS per disk 50,000.</li>
+             * <li>PL0: a maximum of 10,000 random read/write IOPS per cloud disk.</li>
+             * <li>PL1: a maximum of 50,000 random read/write IOPS per cloud disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -250,7 +250,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Unit: GB.</p>
+             * <p>The disk size. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -455,7 +455,7 @@ public class CreateNodeGroupRequest extends Request {
             } 
 
             /**
-             * <p>Availability Zone</p>
+             * <p>The zone.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -467,10 +467,10 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Whether file storage mounting is supported</p>
+             * <p>Specifies whether file storage mounting is supported.</p>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>false</p>
              */
             public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
                 this.fileSystemMountEnabled = fileSystemMountEnabled;
@@ -478,7 +478,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Image ID.</p>
+             * <p>The image ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -490,7 +490,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Key pair name.</p>
+             * <p>The key pair name.</p>
              * 
              * <strong>example:</strong>
              * <p>test-keypair</p>
@@ -501,7 +501,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Password</p>
+             * <p>The logon password.</p>
              * 
              * <strong>example:</strong>
              * <p>test-LoginPassword</p>
@@ -512,7 +512,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Machine type</p>
+             * <p>The machine type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -524,10 +524,10 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Node group description</p>
+             * <p>The node group description.</p>
              * 
              * <strong>example:</strong>
-             * <p>describe for node group</p>
+             * <p>节点分组描述</p>
              */
             public Builder nodeGroupDescription(String nodeGroupDescription) {
                 this.nodeGroupDescription = nodeGroupDescription;
@@ -535,7 +535,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Node group name</p>
+             * <p>The node group name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -547,7 +547,13 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * RamRoleName.
+             * <p>The RAM role name of the node. You can call the RAM API ListRoles to query the RAM roles you have created. The trusted entity of the role must be set to Lingjun AI Computing Service.</p>
+             * <blockquote>
+             * <p>Note: Clearing an existing role is not currently supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>xianwen-test-ram-role</p>
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -555,7 +561,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Details of the node system disk configuration.</p>
+             * <p>The system disk configuration of the node.</p>
              */
             public Builder systemDisk(SystemDisk systemDisk) {
                 this.systemDisk = systemDisk;
@@ -563,12 +569,10 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>User-defined data</p>
+             * <p>A custom executable shell script that must be Base64-encoded. The maximum size of the raw data is 16 KB.</p>
              * 
              * <strong>example:</strong>
-             * <p>#!/bin/bash
-             * uptime
-             * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</p>
+             * <p>ZWNobyBoZWxsbyBlY3Mh</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -576,7 +580,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Whether to enable gpu virtualization or not</p>
+             * <p>Specifies whether GPU virtualization splitting is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

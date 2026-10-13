@@ -30,26 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "eflo-controller";
         this.version = "2022-12-15";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-wulanchabu", "eflo-controller.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "eflo-controller.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "eflo-controller.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "eflo-controller.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "eflo-controller.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "eflo-controller.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "eflo-controller.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "eflo-controller.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "eflo-controller.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "eflo-controller.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "eflo-controller.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "eflo-controller.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "eflo-controller.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "eflo-controller.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "eflo-controller.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("eu-central-1", "eflo-controller.eu-central-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "eflo-controller.me-east-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "eflo-controller.cn-shanghai-finance-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -77,6 +58,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a session, returns the frontend endpoint, and starts an epoch task to track the session status.</p>
+     * 
      * @param request the request parameters of ChangeNodeGroup  ChangeNodeGroupRequest
      * @return ChangeNodeGroupResponse
      */
@@ -131,6 +115,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * @param request the request parameters of CloseSession  CloseSessionRequest
      * @return CloseSessionResponse
      */
@@ -149,6 +136,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Closes a remote session.</p>
+     * 
      * @param request the request parameters of CreateCluster  CreateClusterRequest
      * @return CreateClusterResponse
      */
@@ -185,9 +175,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
-     * 
      * @param request the request parameters of CreateNetTestTask  CreateNetTestTaskRequest
      * @return CreateNetTestTaskResponse
      */
@@ -206,6 +193,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of CreateNodeGroup  CreateNodeGroupRequest
      * @return CreateNodeGroupResponse
      */
@@ -353,6 +343,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Closes a remote session.</p>
+     * 
      * @param request the request parameters of DescribeCluster  DescribeClusterRequest
      * @return DescribeClusterResponse
      */
@@ -371,9 +364,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
-     * 
      * @param request the request parameters of DescribeDiagnosticResult  DescribeDiagnosticResultRequest
      * @return DescribeDiagnosticResultResponse
      */
@@ -392,6 +382,30 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a fault report. After you call ReportNodeStatus to submit a fault report, you can obtain the report ID from the ReportId response parameter. You can also call ListFaultReports to query existing fault reports and obtain the ReportId.</p>
+     * 
+     * @param request the request parameters of DescribeFaultReport  DescribeFaultReportRequest
+     * @return DescribeFaultReportResponse
+     */
+    @Override
+    public CompletableFuture<DescribeFaultReportResponse> describeFaultReport(DescribeFaultReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeFaultReport").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeFaultReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeFaultReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the details of a hypernode.</p>
+     * 
      * @param request the request parameters of DescribeHyperNode  DescribeHyperNodeRequest
      * @return DescribeHyperNodeResponse
      */
@@ -446,6 +460,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a supernode.</p>
+     * 
      * @param request the request parameters of DescribeNode  DescribeNodeRequest
      * @return DescribeNodeResponse
      */
@@ -464,6 +481,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a supernode.</p>
+     * 
      * @param request the request parameters of DescribeNodeGroup  DescribeNodeGroupRequest
      * @return DescribeNodeGroupResponse
      */
@@ -482,6 +502,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The returned results include the following:</p>
+     * <ul>
+     * <li>The processing status of each node with configuration drift.</li>
+     * <li>The processing result, status, and reason for each node.</li>
+     * <li>The refreshed and skipped properties for each node.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeNodeGroupRefreshTask  DescribeNodeGroupRefreshTaskRequest
      * @return DescribeNodeGroupRefreshTaskResponse
      */
@@ -608,6 +636,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Closes a remote session.</p>
+     * 
      * @param request the request parameters of ExtendCluster  ExtendClusterRequest
      * @return ExtendClusterResponse
      */
@@ -698,6 +729,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
+     * 
+     * @param request the request parameters of ListFaultReports  ListFaultReportsRequest
+     * @return ListFaultReportsResponse
+     */
+    @Override
+    public CompletableFuture<ListFaultReportsResponse> listFaultReports(ListFaultReportsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListFaultReports").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListFaultReportsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListFaultReportsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListFreeHyperNodes  ListFreeHyperNodesRequest
      * @return ListFreeHyperNodesResponse
      */
@@ -734,6 +786,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of hyper nodes.</p>
+     * 
      * @param request the request parameters of ListHyperNodes  ListHyperNodesRequest
      * @return ListHyperNodesResponse
      */
@@ -806,9 +861,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
-     * 
      * @param request the request parameters of ListNetTestResults  ListNetTestResultsRequest
      * @return ListNetTestResultsResponse
      */
@@ -827,6 +879,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the drift type, before-and-after values, and the required action level for refreshing each inconsistent property. This is a read-only operation.</p>
+     * 
      * @param request the request parameters of ListNodeGroupDriftedNodes  ListNodeGroupDriftedNodesRequest
      * @return ListNodeGroupDriftedNodesResponse
      */
@@ -845,6 +900,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you do not know which node group has refresh tasks, you can use conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</p>
+     * 
      * @param request the request parameters of ListNodeGroupRefreshTasks  ListNodeGroupRefreshTasksRequest
      * @return ListNodeGroupRefreshTasksResponse
      */
@@ -917,6 +975,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</p>
+     * 
      * @param request the request parameters of ListUserClusterTypes  ListUserClusterTypesRequest
      * @return ListUserClusterTypesResponse
      */
@@ -971,6 +1032,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
+     * Limits:</p>
+     * <ul>
+     * <li>A node group can have only one running node group configuration refresh task at a time.</li>
+     * <li>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
+     * <warning>Currently, only the RamRoleName property is supported for refresh.</warning></li>
+     * </ul>
+     * 
      * @param request the request parameters of RefreshNodeGroupNodes  RefreshNodeGroupNodesRequest
      * @return RefreshNodeGroupNodesResponse
      */
@@ -1007,6 +1077,30 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
+     * 
+     * @param request the request parameters of ReportNodeStatus  ReportNodeStatusRequest
+     * @return ReportNodeStatusResponse
+     */
+    @Override
+    public CompletableFuture<ReportNodeStatusResponse> reportNodeStatus(ReportNodeStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReportNodeStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReportNodeStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReportNodeStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a session, returns a frontend endpoint, and starts a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of ReportNodesStatus  ReportNodesStatusRequest
      * @return ReportNodesStatusResponse
      */
@@ -1097,6 +1191,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Stops an ongoing fault reporting diagnostics process. Before calling this operation, initiate a fault report for the abnormal node by calling ReportNodeStatus, and use the returned ReportId as the ReportId for this operation.</p>
+     * 
+     * @param request the request parameters of StopNodeDiagnostic  StopNodeDiagnosticRequest
+     * @return StopNodeDiagnosticResponse
+     */
+    @Override
+    public CompletableFuture<StopNodeDiagnosticResponse> stopNodeDiagnostic(StopNodeDiagnosticRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopNodeDiagnostic").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopNodeDiagnosticResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopNodeDiagnosticResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StopNodes  StopNodesRequest
      * @return StopNodesResponse
      */
@@ -1151,6 +1266,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of UpdateNodeGroup  UpdateNodeGroupRequest
      * @return UpdateNodeGroupResponse
      */

@@ -132,7 +132,7 @@ public class DescribeVscResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the compute node in which the VSC resides.</p>
+         * <p>The ID of the compute node where the Vsc is located.</p>
          * 
          * <strong>example:</strong>
          * <p>e01-cn-kvw44e6dn04</p>
@@ -143,7 +143,7 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
@@ -154,7 +154,7 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2k3rqlvv6ytq</p>
@@ -165,13 +165,7 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The VSC status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Creating</li>
-         * <li>Normal</li>
-         * <li>Deleting</li>
-         * </ul>
+         * <p>The status of the Vsc.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -182,7 +176,7 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The VSC ID.</p>
+         * <p>VscId</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-001</p>
@@ -193,7 +187,7 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The custom name of the VSC.</p>
+         * <p>The custom name of the Vsc.</p>
          * 
          * <strong>example:</strong>
          * <p>test_name</p>
@@ -204,7 +198,7 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The VSC type.</p>
+         * <p>The type of the Vsc.</p>
          * 
          * <strong>example:</strong>
          * <p>primary</p>

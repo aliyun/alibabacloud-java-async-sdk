@@ -80,7 +80,7 @@ public class ChangeNodeTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * NodeResponse.
+         * <p>The responses for the nodes.</p>
          */
         public Builder nodeResponse(java.util.List<NodeResponse> nodeResponse) {
             this.nodeResponse = nodeResponse;
@@ -88,7 +88,10 @@ public class ChangeNodeTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ChangeNodeTypesResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID. A task ID is returned only if all nodes pass the precheck. If an exception occurs, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i158475611663639202234</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -175,7 +181,10 @@ public class ChangeNodeTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The response code for the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PASSED</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -183,7 +192,10 @@ public class ChangeNodeTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The response message for the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -191,7 +203,10 @@ public class ChangeNodeTypesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The ID of the node included in the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-in-067da4ca9c2</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

@@ -108,7 +108,7 @@ public class ApproveOperationRequest extends Request {
         }
 
         /**
-         * <p>The O&amp;M operation type</p>
+         * <p>The O\&amp;M operation type</p>
          * <p>Valid value:</p>
          * <ul>
          * <li>RepairMachine</li>

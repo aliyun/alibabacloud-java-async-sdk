@@ -375,7 +375,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-30T03:35:53Z</p>
@@ -386,7 +386,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The disks.</p>
+         * <p>The list of disk information.</p>
          */
         public Builder disks(java.util.List<Disks> disks) {
             this.disks = disks;
@@ -394,7 +394,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-06-23T16:00:00Z</p>
@@ -408,7 +408,7 @@ public class DescribeNodeResponseBody extends TeaModel {
          * <p>Indicates whether file storage mounting is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>False</p>
+         * <p>True</p>
          */
         public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
             this.fileSystemMountEnabled = fileSystemMountEnabled;
@@ -438,7 +438,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * HyperNodeId.
+         * <p>The HyperNode ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e01-cn-zvp2tgykr08</p>
          */
         public Builder hyperNodeId(String hyperNodeId) {
             this.hyperNodeId = hyperNodeId;
@@ -468,7 +471,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance type.</p>
+         * <p>The machine type.</p>
          * 
          * <strong>example:</strong>
          * <p>efg1.nvga1</p>
@@ -520,7 +523,16 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * NodeType.
+         * <p>The type of the current node. Valid values:
+         * ● cpfs-enhanced
+         * ● ebs-enhanced
+         * ● standard
+         * ● standby
+         * ● standard-v2
+         * ● standby-v2</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder nodeType(String nodeType) {
             this.nodeType = nodeType;
@@ -529,22 +541,6 @@ public class DescribeNodeResponseBody extends TeaModel {
 
         /**
          * <p>The node status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Extending</li>
-         * <li>UnusedNodeStopped</li>
-         * <li>UnusedNodeStopping</li>
-         * <li>Unused</li>
-         * <li>Using</li>
-         * <li>ReleaseLocking</li>
-         * <li>Operating</li>
-         * <li>Cutting</li>
-         * <li>ClusterNodeStopped</li>
-         * <li>UnusedNodeRecovering</li>
-         * <li>ClusterNodeStopping</li>
-         * <li>ClusterNodeRecovering</li>
-         * <li>Replacing</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Using</p>
@@ -577,7 +573,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * SavingsPlanId.
+         * <p>The savings plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spn-25e985acAWbrwEBK</p>
          */
         public Builder savingsPlanId(String savingsPlanId) {
             this.savingsPlanId = savingsPlanId;
@@ -585,7 +584,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The serial number of the node.</p>
+         * <p>The unique identifier of the machine.</p>
          * 
          * <strong>example:</strong>
          * <p>sag42ckf4jx</p>
@@ -596,7 +595,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The custom script.</p>
+         * <p>The user-defined script.</p>
          * 
          * <strong>example:</strong>
          * <p>#!/bin/bash
@@ -717,9 +716,9 @@ public class DescribeNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The disk type. Valid values:</p>
+             * <p>The disk category. Valid values:</p>
              * <ul>
-             * <li>cloud_essd</li>
+             * <li>cloud_essd: ESSD cloud disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -734,7 +733,7 @@ public class DescribeNodeResponseBody extends TeaModel {
              * <p>The disk ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>d-bp1fi88ryk4yah8a6yos</p>
+             * <p>d-2zeap7wkns2tdmbr11se</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -742,10 +741,10 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance level of the ESSD that is used as the system disk. Valid values:</p>
+             * <p>The performance level (PL) of the ESSD cloud disk when it is used as the system cloud disk. Valid values:</p>
              * <ul>
-             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL0: a maximum of 10,000 random read/write IOPS per disk.</li>
+             * <li>PL1: a maximum of 50,000 random read/write IOPS per disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -770,8 +769,8 @@ public class DescribeNodeResponseBody extends TeaModel {
             /**
              * <p>The disk type. Valid values:</p>
              * <ul>
-             * <li>system: system disk</li>
-             * <li>data: data disk</li>
+             * <li>system: system cloud disk.</li>
+             * <li>data: data cloud disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -894,7 +893,7 @@ public class DescribeNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The port information of the elastic network interface (ENI).</p>
+             * <p>The NIC port information.</p>
              * 
              * <strong>example:</strong>
              * <p>Bond0</p>
@@ -905,7 +904,7 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the node.</p>
+             * <p>The IP address of the machine.</p>
              * 
              * <strong>example:</strong>
              * <p>47.254.235.44</p>
@@ -916,7 +915,10 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1d3dvbh9by7j5rujax</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -924,7 +926,7 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subnet ID.</p>
+             * <p>The cluster subnet ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-uf68v51fldm5egmui5a6k</p>
@@ -935,7 +937,10 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-asjdfklj</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -943,7 +948,7 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster network.</p>
+             * <p>The cluster network ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpd-xcuhjyrj</p>

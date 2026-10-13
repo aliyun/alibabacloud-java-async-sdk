@@ -93,11 +93,13 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: 100.</p>
+         * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li>If you do not configure this parameter or if you set this parameter to a value less than 20, the default value is 20.</li>
-         * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+         * <li><p>If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
+         * </li>
+         * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +111,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The results.</p>
+         * <p>The node list.</p>
          */
         public Builder netTestResults(java.util.List<NetTestResults> netTestResults) {
             this.netTestResults = netTestResults;
@@ -117,10 +119,10 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The NextToken for the next page. Include this value when requesting the next page.</p>
          * 
          * <strong>example:</strong>
-         * <p>3a6b93229825ac667104463b56790c91</p>
+         * <p>3a6b93229825ac667104463b5679****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -210,7 +212,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the node.</p>
+             * <p>The node IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>10.51.16.21</p>
@@ -224,7 +226,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
              * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>e01-cn-wwo3eteze19</p>
+             * <p>e01-cn-wwo3ete****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -232,7 +234,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.xinjiaoyu.com">www.xinjiaoyu.com</a></p>
@@ -339,7 +341,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hosts of the test node.</p>
+             * <p>The hosts of the test nodes.</p>
              */
             public Builder hosts(java.util.List<Hosts> hosts) {
                 this.hosts = hosts;
@@ -358,7 +360,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CommTest type, which can be ACCL or NCCL.</p>
+             * <p>The communication library test category. Valid values: ACCL or NCCL.</p>
              * 
              * <strong>example:</strong>
              * <p>ACCL</p>
@@ -454,7 +456,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bonding of network interface card.</p>
+             * <p>The NIC bond interface.</p>
              * 
              * <strong>example:</strong>
              * <p>bond1</p>
@@ -465,7 +467,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the node.</p>
+             * <p>The node IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>pgm-bp174z988a27wre71o.pg.rds.aliyuncs.com</p>
@@ -479,7 +481,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
              * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>e01-cn-wwo3eteze19</p>
+             * <p>e01-cn-wwo3ete****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -487,7 +489,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>WrF</p>
@@ -544,7 +546,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The hosts.</p>
+             * <p>The resources.</p>
              */
             public Builder hosts(java.util.List<DelayTestHosts> hosts) {
                 this.hosts = hosts;
@@ -637,7 +639,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bonding of network interface card.</p>
+             * <p>The NIC bond interface.</p>
              * 
              * <strong>example:</strong>
              * <p>bond1</p>
@@ -670,7 +672,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>prod-gf-cn.juequling.com</p>
@@ -766,7 +768,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bonding of network interface card.</p>
+             * <p>The NIC bond interface.</p>
              * 
              * <strong>example:</strong>
              * <p>bond1</p>
@@ -777,7 +779,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the node.</p>
+             * <p>The node IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>10.1.168.183</p>
@@ -791,7 +793,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
              * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>e01-cn-wwo3eteze19</p>
+             * <p>e01-cn-wwo3ete****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -799,7 +801,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>prod-gf-cn.juequling.com</p>
@@ -942,7 +944,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running duration of the pipeline job. Unit: seconds.</p>
+             * <p>The duration of the workflow task. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -953,7 +955,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If the protocol is RDMA, can be True or False. If the protocol is TCP, this field is empty.</p>
+             * <p>Specifies whether GPUDirect RDMA is enabled. Valid values: True and False. This parameter is returned only when the protocol is RDMA. This field is empty when the protocol is TCP.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -964,7 +966,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network protocol, which can be RDMA or TCP.</p>
+             * <p>The network protocol. Valid values: RDMA or TCP.</p>
              * 
              * <strong>example:</strong>
              * <p>TCP</p>
@@ -975,7 +977,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If the protocol is TCP, the number of concurrent connections. If the protocol is RDMA, the configured QP value.</p>
+             * <p>The number of concurrent connections for TCP tests, or the QP value for RDMA tests.</p>
              * 
              * <strong>example:</strong>
              * <p>RDMA</p>
@@ -986,7 +988,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If the TrafficModel is Fullmesh, this parameter is empty.</p>
+             * <p>The servers. This field is empty when the traffic model (TrafficModel) is Fullmesh.</p>
              */
             public Builder servers(java.util.List<Servers> servers) {
                 this.servers = servers;
@@ -994,7 +996,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic model, which can be MTON or Fullmesh.</p>
+             * <p>The traffic model. Valid values: MTON or Fullmesh.</p>
              * 
              * <strong>example:</strong>
              * <p>Fullmesh</p>
@@ -1197,7 +1199,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
              * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>i110667211718265012218</p>
+             * <p>i11066721171826501****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -1216,7 +1218,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returned when NetTestType is CommTest.</p>
+             * <p>The communication library test information. This parameter is required when the test type is communication library test.</p>
              */
             public Builder commTest(CommTest commTest) {
                 this.commTest = commTest;
@@ -1224,7 +1226,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-19T02:18:12Z</p>
@@ -1235,7 +1237,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returned when NetTestType is DelayTest.</p>
+             * <p>The latency test information. This parameter is returned when the network test type is latency test.</p>
              */
             public Builder delayTest(DelayTest delayTest) {
                 this.delayTest = delayTest;
@@ -1243,7 +1245,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The finish time.</p>
+             * <p>The completion time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-30T02:07Z</p>
@@ -1254,7 +1256,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the network test.</p>
+             * <p>The network test type.</p>
              * 
              * <strong>example:</strong>
              * <p>NetDiag</p>
@@ -1276,7 +1278,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number.</p>
+             * <p>The test port number.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -1287,7 +1289,10 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the network test task. Valid values:<br>● InProgress<br>● Finished<br>● Failed</p>
+             * <p>The network test task status. Valid values:</br>
+             * ● InProgress: The test is in progress.</br>
+             * ● Finished: The test is complete.</br>
+             * ● Failed: The test failed.</p>
              * 
              * <strong>example:</strong>
              * <p>InProgress</p>
@@ -1309,7 +1314,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returned when NetTestType is TrafficTest.</p>
+             * <p>The traffic test information. This parameter is returned when the network test type is traffic test.</p>
              */
             public Builder trafficTest(TrafficTest trafficTest) {
                 this.trafficTest = trafficTest;

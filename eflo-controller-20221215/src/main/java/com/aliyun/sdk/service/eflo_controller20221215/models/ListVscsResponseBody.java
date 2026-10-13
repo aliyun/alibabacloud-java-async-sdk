@@ -107,7 +107,7 @@ public class ListVscsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>No response is returned. The TotalCount parameter is used.</p>
+         * <p>This parameter is not returned. Use the \<code>TotalCount\\</code> parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -118,7 +118,7 @@ public class ListVscsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token. It can be used in the next request to retrieve a new page of results. If this parameter is empty, no next page exists.</p>
+         * <p>The token to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ListVscsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>03668372-18FF-5959-98D9-6B36A4643C7A</p>
@@ -141,7 +141,7 @@ public class ListVscsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of VSCs.</p>
+         * <p>The total number of entries that match the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -152,7 +152,7 @@ public class ListVscsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The VSCs.</p>
+         * <p>A list of VSCs.</p>
          */
         public Builder vscs(java.util.List<Vscs> vscs) {
             this.vscs = vscs;
@@ -375,7 +375,7 @@ public class ListVscsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfm2zkwhkns57i</p>
@@ -386,13 +386,7 @@ public class ListVscsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VSC status.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Creating</li>
-             * <li>Normal</li>
-             * <li>Deleting</li>
-             * </ul>
+             * <p>The status of the VSC.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -411,7 +405,7 @@ public class ListVscsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VSC ID.</p>
+             * <p>The ID of the VSC.</p>
              * 
              * <strong>example:</strong>
              * <p>vsc-001</p>
@@ -433,7 +427,7 @@ public class ListVscsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VSC type. Valid values: primary and standard.</p>
+             * <p>The type of the VSC. Valid values: \<code>primary\\</code> and \<code>standard\\</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>primary</p>

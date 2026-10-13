@@ -67,7 +67,10 @@ public class RefreshNodeGroupNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * NodeGroupRefreshTaskId.
+         * <p>The task ID. Query the task progress through DescribeNodeGroupRefreshTask. If no node has configuration drift, no task is created and this field returns an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-159136551662516768776</p>
          */
         public Builder nodeGroupRefreshTaskId(String nodeGroupRefreshTaskId) {
             this.nodeGroupRefreshTaskId = nodeGroupRefreshTaskId;

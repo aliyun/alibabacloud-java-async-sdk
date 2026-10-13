@@ -250,7 +250,10 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard_Cluster</p>
          */
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("ClusterName", clusterName);
@@ -259,7 +262,10 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * CommodityCode.
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_machineinstanceba_public_cn</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -268,7 +274,10 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * HpnZone.
+         * <p>The cluster number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1</p>
          */
         public Builder hpnZone(String hpnZone) {
             this.putBodyParameter("HpnZone", hpnZone);
@@ -277,7 +286,10 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * HyperNodeId.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e01-cn-zvp2tgykr08</p>
          */
         public Builder hyperNodeId(String hyperNodeId) {
             this.putBodyParameter("HyperNodeId", hyperNodeId);
@@ -286,7 +298,7 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * HyperNodeIds.
+         * <p>The list of node IDs.</p>
          */
         public Builder hyperNodeIds(java.util.List<String> hyperNodeIds) {
             String hyperNodeIdsShrink = shrink(hyperNodeIds, "HyperNodeIds", "json");
@@ -296,7 +308,10 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * MachineType.
+         * <p>The machine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>efg1.nvga1</p>
          */
         public Builder machineType(String machineType) {
             this.putBodyParameter("MachineType", machineType);
@@ -305,7 +320,17 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
+         * <p>Default value:</p>
+         * <ul>
+         * <li><p>If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
+         * </li>
+         * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -314,7 +339,10 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3a6b93229825ac667104463b56790c91</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -323,7 +351,10 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * NodeGroupName.
+         * <p>The name of the node group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr-default</p>
          */
         public Builder nodeGroupName(String nodeGroupName) {
             this.putBodyParameter("NodeGroupName", nodeGroupName);
@@ -332,7 +363,7 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * OperatingStates.
+         * <p>The node status. If this parameter is not specified, all statuses are returned. Valid values: Extending, UnusedNodeStopped, UnusedNodeStopping, Unused, Using, ReleaseLocking, Operating, Cutting, ClusterNodeStopped, UnusedNodeRecovering, ClusterNodeStopping, ClusterNodeRecovering, and Replacing.</p>
          */
         public Builder operatingStates(java.util.List<String> operatingStates) {
             String operatingStatesShrink = shrink(operatingStates, "OperatingStates", "json");
@@ -342,7 +373,10 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwfm33rlt6zi</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -351,7 +385,7 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tag information.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("Tags", tags);
@@ -360,7 +394,10 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("ZoneId", zoneId);
@@ -428,7 +465,10 @@ public class ListHyperNodesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alarm_xdc</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -436,7 +476,10 @@ public class ListHyperNodesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>129</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -147,7 +147,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
              * <p>The region name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Hang Zhou</p>
+             * <p>Hangzhou</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;

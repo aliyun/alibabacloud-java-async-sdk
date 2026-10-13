@@ -195,7 +195,7 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>Whether file storage mounting is supported</p>
+         * <p>Specifies whether file storage mounting is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -207,7 +207,7 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>The default image ID of the node group. If not set, it will not change.</p>
+         * <p>The default image ID of the node group. If you do not specify this parameter, the image ID remains unchanged.</p>
          * 
          * <strong>example:</strong>
          * <p>i1232142432432</p>
@@ -219,7 +219,7 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>Key pair name.</p>
+         * <p>The name of the key pair.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -231,10 +231,10 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>Login password for machines within the node group</p>
+         * <p>The logon password for the machines in the node group.</p>
          * 
          * <strong>example:</strong>
-         * <p>LoginPassword</p>
+         * <p>Password</p>
          */
         public Builder loginPassword(String loginPassword) {
             this.putBodyParameter("LoginPassword", loginPassword);
@@ -243,7 +243,7 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>Node group name</p>
+         * <p>The name of the node group.</p>
          * 
          * <strong>example:</strong>
          * <p>test-update</p>
@@ -255,7 +255,7 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>Node group ID</p>
+         * <p>The ID of the node group.</p>
          * 
          * <strong>example:</strong>
          * <p>i120021051733814190732</p>
@@ -267,7 +267,10 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * RamRoleName.
+         * <p>The name of the RAM role for the node. You can call the ListRoles API operation of RAM to query the RAM roles that you have created. The trusted entity of the role must be Lingjun AI Computing Service. <warning>Submitting an empty string &quot;&quot; clears the RAM role of the node group.</warning></p>
+         * 
+         * <strong>example:</strong>
+         * <p>xianwen-test-ram-role</p>
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putBodyParameter("RamRoleName", ramRoleName);
@@ -276,7 +279,7 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * SystemDisk.
+         * <p>The system cloud disk configuration.</p>
          */
         public Builder systemDisk(SystemDisk systemDisk) {
             String systemDiskShrink = shrink(systemDisk, "SystemDisk", "json");
@@ -286,12 +289,10 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>User-defined script</p>
+         * <p>The custom executable shell script. It must be Base64-encoded, and the maximum size of the raw data is 16 KB.</p>
          * 
          * <strong>example:</strong>
-         * <p>#!/bin/bash
-         * uptime
-         * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</p>
+         * <p>ZWNobyBoZWxsbyBlY3Mh</p>
          */
         public Builder userData(String userData) {
             this.putBodyParameter("UserData", userData);
@@ -346,7 +347,10 @@ public class UpdateNodeGroupRequest extends Request {
             } 
 
             /**
-             * PerformanceLevel.
+             * <p>The performance level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;

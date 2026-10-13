@@ -93,7 +93,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * HyperNodes.
+         * <p>The list of nodes.</p>
          */
         public Builder hyperNodes(java.util.List<HyperNodes> hyperNodes) {
             this.hyperNodes = hyperNodes;
@@ -101,7 +101,17 @@ public class ListHyperNodesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
+         * <p>Default value:</p>
+         * <ul>
+         * <li><p>If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
+         * </li>
+         * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +119,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The NextToken for the next page. Include this value when requesting the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ed93fda-5e7f-436a-ae5a-bd8e6b04e36b</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -186,7 +199,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alarm_xdc</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -194,7 +210,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>97</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -457,7 +476,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i115226661755786900341</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -465,7 +487,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-ack</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -473,7 +498,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bccluster_eflocomputing_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -481,7 +509,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The time is in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-09T10:41:56.577</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -489,7 +520,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time. The time is in ISO 8601 format. The Z in the example indicates UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-28T16:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -497,7 +531,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alywlcb-lingjun-gpu-0025</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -505,7 +542,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * HpnZone.
+             * <p>The cluster number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A1</p>
              */
             public Builder hpnZone(String hpnZone) {
                 this.hpnZone = hpnZone;
@@ -513,7 +553,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * HyperNodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-2r42tmj4z02</p>
              */
             public Builder hyperNodeId(String hyperNodeId) {
                 this.hyperNodeId = hyperNodeId;
@@ -521,7 +564,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * MachineType.
+             * <p>The machine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>efg2.GN9C.cn8</p>
              */
             public Builder machineType(String machineType) {
                 this.machineType = machineType;
@@ -529,7 +575,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeGroupId.
+             * <p>The node group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i121135081698451727812</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -537,7 +586,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeGroupName.
+             * <p>The node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>l20c-0801</p>
              */
             public Builder nodeGroupName(String nodeGroupName) {
                 this.nodeGroupName = nodeGroupName;
@@ -545,7 +597,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * OperatingState.
+             * <p>The hyper node status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Using</p>
              */
             public Builder operatingState(String operatingState) {
                 this.operatingState = operatingState;
@@ -553,7 +608,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmwfm33rlt6zi</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -561,7 +619,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The node status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Extending</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -569,7 +630,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -577,7 +638,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i153333771756952392398</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -585,7 +649,10 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

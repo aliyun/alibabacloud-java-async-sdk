@@ -210,7 +210,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time of the refresh task in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-20T10:30:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -218,7 +221,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         }
 
         /**
-         * FailedCount.
+         * <p>The number of failed nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder failedCount(Long failedCount) {
             this.failedCount = failedCount;
@@ -226,7 +232,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         }
 
         /**
-         * FinishedCount.
+         * <p>The number of finished nodes, including succeeded, failed, and skipped nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
          */
         public Builder finishedCount(Long finishedCount) {
             this.finishedCount = finishedCount;
@@ -234,7 +243,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         }
 
         /**
-         * MaxDisruptiveAction.
+         * <p>The maximum disruptive action level allowed for the refresh operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Refresh</p>
          */
         public Builder maxDisruptiveAction(String maxDisruptiveAction) {
             this.maxDisruptiveAction = maxDisruptiveAction;
@@ -242,7 +254,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -250,7 +265,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ed93fda-5e7f-436a-ae5a-bd8e6b04e36b</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -258,7 +276,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         }
 
         /**
-         * NodeGroupId.
+         * <p>The node group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-3525</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -266,7 +287,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         }
 
         /**
-         * NodeGroupRefreshTaskId.
+         * <p>The refresh task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-159136551662516768776</p>
          */
         public Builder nodeGroupRefreshTaskId(String nodeGroupRefreshTaskId) {
             this.nodeGroupRefreshTaskId = nodeGroupRefreshTaskId;
@@ -274,7 +298,7 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Nodes.
+         * <p>The list of nodes.</p>
          */
         public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
@@ -293,7 +317,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the refresh task in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-20T10:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -301,7 +328,16 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Pending: the refresh task is created and waiting to be executed.</li>
+         * <li>InProgress: the refresh task is being processed.</li>
+         * <li>Success: the refresh task is executed.</li>
+         * <li>Failed: the refresh task failed to be executed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InProgress</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -309,7 +345,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNodeCount.
+         * <p>The total number of nodes to be refreshed in the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalNodeCount(Long totalNodeCount) {
             this.totalNodeCount = totalNodeCount;
@@ -414,7 +453,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * ActualValue.
+             * <p>The current value of the node property. Complex types are serialized as JSON strings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>old-role</p>
              */
             public Builder actualValue(String actualValue) {
                 this.actualValue = actualValue;
@@ -422,7 +464,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
             }
 
             /**
-             * MinRequiredAction.
+             * <p>The minimum action required to apply the target value: Refresh, Reboot, or Reimage. For more information, see the MaxDisruptiveAction parameter of the RefreshNodeGroupNodes operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Refresh</p>
              */
             public Builder minRequiredAction(String minRequiredAction) {
                 this.minRequiredAction = minRequiredAction;
@@ -430,7 +475,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyPath.
+             * <p>The property path in dot notation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RamRoleName</p>
              */
             public Builder propertyPath(String propertyPath) {
                 this.propertyPath = propertyPath;
@@ -438,7 +486,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Skipped.
+             * <p>Indicates whether the property was skipped because it exceeded the MaxDisruptiveAction constraint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder skipped(Boolean skipped) {
                 this.skipped = skipped;
@@ -446,7 +497,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TargetValue.
+             * <p>The target value of the node property. Complex types are serialized as JSON strings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new-role</p>
              */
             public Builder targetValue(String targetValue) {
                 this.targetValue = targetValue;
@@ -565,7 +619,16 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action level actually performed on the node. If multiple properties are refreshed on the node, the highest required action level is used. Valid values:</p>
+             * <ul>
+             * <li>Refresh: in-place refresh.</li>
+             * <li>Reboot: restart.</li>
+             * <li>Reimage: reimage.
+             * If the entire node is skipped, this value is empty.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Refresh</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -573,7 +636,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NodeInMaintenance</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -581,7 +647,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The node has been confirmed for maintenance and there is no need to confirm the maintenance again. sn: 21B917666,status:ClusterNodeRepairing</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -589,7 +658,10 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>node-001</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -597,7 +669,7 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyDrifts.
+             * <p>The property drift list for the node, including both executed and skipped properties.</p>
              */
             public Builder propertyDrifts(java.util.List<PropertyDrifts> propertyDrifts) {
                 this.propertyDrifts = propertyDrifts;
@@ -605,7 +677,17 @@ public class DescribeNodeGroupRefreshTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The node refresh status. Valid values:</p>
+             * <ul>
+             * <li>Pending: the node is waiting to be refreshed.</li>
+             * <li>InProgress: the node is being refreshed.</li>
+             * <li>Success: the node is refreshed.</li>
+             * <li>Failed: the node failed to be refreshed.</li>
+             * <li>Skipped: all properties to be refreshed on the node exceeded the MaxDisruptiveAction constraint and were skipped.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;

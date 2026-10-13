@@ -110,7 +110,10 @@ public class ChangeNodeGroupRequest extends Request {
         }
 
         /**
-         * IgnoreFailedNodeTasks.
+         * <p>Specifies whether to skip failed nodes. Default value: False.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ignoreFailedNodeTasks(Boolean ignoreFailedNodeTasks) {
             this.putQueryParameter("IgnoreFailedNodeTasks", ignoreFailedNodeTasks);
@@ -119,7 +122,7 @@ public class ChangeNodeGroupRequest extends Request {
         }
 
         /**
-         * Nodes.
+         * <p>The node information.</p>
          */
         public Builder nodes(java.util.List<String> nodes) {
             String nodesShrink = shrink(nodes, "Nodes", "json");
@@ -129,7 +132,10 @@ public class ChangeNodeGroupRequest extends Request {
         }
 
         /**
-         * TargetNodeGroupId.
+         * <p>The ID of the target node group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i234242342342</p>
          */
         public Builder targetNodeGroupId(String targetNodeGroupId) {
             this.putQueryParameter("TargetNodeGroupId", targetNodeGroupId);

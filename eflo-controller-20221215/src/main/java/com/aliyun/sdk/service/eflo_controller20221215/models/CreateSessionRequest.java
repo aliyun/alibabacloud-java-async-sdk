@@ -113,7 +113,7 @@ public class CreateSessionRequest extends Request {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>e01-cn-kvw44e6dn04</p>
+         * <p>e01-cn-kvw44e6****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -125,7 +125,7 @@ public class CreateSessionRequest extends Request {
          * <p>The type of the session corresponding to the session package.</p>
          * 
          * <strong>example:</strong>
-         * <p>Valid values: Sol (default): based on serial port Assistant: based on cloud assistant</p>
+         * <p>Sol</p>
          */
         public Builder sessionType(String sessionType) {
             this.putBodyParameter("SessionType", sessionType);

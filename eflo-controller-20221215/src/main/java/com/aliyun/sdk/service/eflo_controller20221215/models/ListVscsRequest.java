@@ -152,7 +152,7 @@ public class ListVscsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of data entries to return.</p>
+         * <p>The maximum number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -164,7 +164,7 @@ public class ListVscsRequest extends Request {
         }
 
         /**
-         * <p>The token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</p>
+         * <p>The token that marks the position from which to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>563d42ae0b17572449ec8c97f7f66069</p>
@@ -176,7 +176,7 @@ public class ListVscsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the nodes.</p>
+         * <p>The list of node IDs.</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             String nodeIdsShrink = shrink(nodeIds, "NodeIds", "json");
@@ -186,7 +186,7 @@ public class ListVscsRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2xdkc6icwfha</p>
@@ -198,7 +198,7 @@ public class ListVscsRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -207,7 +207,7 @@ public class ListVscsRequest extends Request {
         }
 
         /**
-         * <p>The VSC name.</p>
+         * <p>The name of the VSC.</p>
          * 
          * <strong>example:</strong>
          * <p>test_name</p>

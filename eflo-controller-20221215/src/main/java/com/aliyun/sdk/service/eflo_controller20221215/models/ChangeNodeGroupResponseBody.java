@@ -78,7 +78,10 @@ public class ChangeNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i159136551662516768776</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

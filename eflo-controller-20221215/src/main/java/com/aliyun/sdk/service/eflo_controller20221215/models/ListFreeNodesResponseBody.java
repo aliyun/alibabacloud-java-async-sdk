@@ -80,7 +80,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned pagination token which can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>a3f2224a5ec7224116c4f5246120abe4</p>
@@ -91,7 +91,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The nodes.</p>
+         * <p>The list of nodes.</p>
          */
         public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
@@ -171,7 +171,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
              * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
-             * <p>aa_key</p>
+             * <p>alarm_xdc</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +182,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
              * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
-             * <p>aa_vakye</p>
+             * <p>true</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -390,10 +390,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time is in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
-             * <p>1652321554</p>
+             * <p>2026-02-02T11:27:07</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -401,10 +401,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the node expires.</p>
+             * <p>The expiration time of the machine. The time is in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
-             * <p>1673107200</p>
+             * <p>2026-03-03T00:00:00</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -423,7 +423,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * HyperNodeId.
+             * <p>The hyper node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-zvp2tgykr08</p>
              */
             public Builder hyperNodeId(String hyperNodeId) {
                 this.hyperNodeId = hyperNodeId;
@@ -431,7 +434,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type.</p>
+             * <p>The machine type.</p>
              * 
              * <strong>example:</strong>
              * <p>efg1.nvga1</p>
@@ -456,7 +459,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
              * <p>The node status.</p>
              * 
              * <strong>example:</strong>
-             * <p>Unused</p>
+             * <p>Extending</p>
              */
             public Builder operatingState(String operatingState) {
                 this.operatingState = operatingState;
@@ -475,7 +478,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the node.</p>
+             * <p>The serial number (SN) of the machine.</p>
              * 
              * <strong>example:</strong>
              * <p>sn_pozkHBgicd</p>
@@ -486,7 +489,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
