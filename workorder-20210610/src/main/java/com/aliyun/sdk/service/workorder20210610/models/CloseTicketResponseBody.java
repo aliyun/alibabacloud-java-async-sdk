@@ -106,7 +106,10 @@ public class CloseTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Details about the permission error. An empty string is returned if you have the required permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;AuthAction\&quot;:\&quot;ram:CloseTicket\&quot;,\&quot;AuthPrincipalDisplayName\&quot;:\&quot;2146216584788xxxxx\&quot;,\&quot;AuthPrincipalOwnerId\&quot;:\&quot;1135850448xxxxx\&quot;,\&quot;AuthPrincipalType\&quot;:\&quot;SubUser\&quot;,\&quot;NoPermissionType\&quot;:\&quot;ImplicitDeny\&quot;,\&quot;PolicyType\&quot;:\&quot;AccountLevelIdentityBasedPolicy\&quot;}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,7 @@ public class CloseTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return code of the request result.</p>
+         * <p>The return code of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +128,7 @@ public class CloseTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. If success is set to false, the message is returned.</p>
+         * <p>The error message. The message is returned if \<code>Success\\</code> is \<code>false\\</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -136,7 +139,7 @@ public class CloseTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CA6204AC-6AA9-4CFA-9310-7DFD20C19EBC</p>
@@ -147,7 +150,7 @@ public class CloseTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. A value of true indicates that the call is normal.</p>
+         * <p>Indicates whether the call was successful. A value of \<code>true\\</code> indicates a successful call.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -74,7 +74,7 @@ public class CloseTicketRequest extends Request {
         } 
 
         /**
-         * <p>Work Order Number</p>
+         * <p>The ticket ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class CloseTicketRequest extends Request {
         }
 
         /**
-         * <p>The UID of the Alibaba Cloud account. You can view your UID in the profile picture in the upper-right corner of the DMS console.</p>
+         * <p>The user UID. You can find your UID by clicking the profile picture in the upper-right corner of the DMS console.</p>
          * 
          * <strong>example:</strong>
          * <p>1139477549527134</p>

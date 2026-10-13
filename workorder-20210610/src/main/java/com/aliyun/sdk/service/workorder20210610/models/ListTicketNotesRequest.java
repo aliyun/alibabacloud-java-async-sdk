@@ -74,7 +74,7 @@ public class ListTicketNotesRequest extends Request {
         } 
 
         /**
-         * <p>Work Order Number</p>
+         * <p>The ticket ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class ListTicketNotesRequest extends Request {
         }
 
         /**
-         * <p>UID</p>
+         * <p>The UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1936753548534516</p>

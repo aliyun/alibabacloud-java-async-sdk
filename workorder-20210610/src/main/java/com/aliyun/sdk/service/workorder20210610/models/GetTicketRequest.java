@@ -74,7 +74,7 @@ public class GetTicketRequest extends Request {
         } 
 
         /**
-         * <p>Work Order Number</p>
+         * <p>The ticket ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

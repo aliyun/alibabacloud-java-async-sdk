@@ -119,7 +119,10 @@ public class CreateTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the permission error. An empty string is returned if the permissions are sufficient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;AuthAction\&quot;:\&quot;ram:CreateTicket\&quot;,\&quot;AuthPrincipalDisplayName\&quot;:\&quot;2146216584788xxxxx\&quot;,\&quot;AuthPrincipalOwnerId\&quot;:\&quot;1135850448xxxxx\&quot;,\&quot;AuthPrincipalType\&quot;:\&quot;SubUser\&quot;,\&quot;NoPermissionType\&quot;:\&quot;ImplicitDeny\&quot;,\&quot;PolicyType\&quot;:\&quot;AccountLevelIdentityBasedPolicy\&quot;}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,7 @@ public class CreateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return code of the request result.</p>
+         * <p>The return code of the API request.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -138,7 +141,7 @@ public class CreateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return value is the work order number.</p>
+         * <p>The return value, which is the ticket ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0005PYGCW</p>
@@ -149,7 +152,7 @@ public class CreateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. If success is set to false, the message is returned.</p>
+         * <p>The error message. This parameter is returned when the value of Success is false.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -160,7 +163,7 @@ public class CreateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the API request. The requestID is unique for each call.</p>
+         * <p>The unique ID of the request. Each request has a unique ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0254B7DE-7365-57B4-8E38-14FE927E3FEB</p>
@@ -171,7 +174,7 @@ public class CreateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. A value of true indicates that the call is normal.</p>
+         * <p>Indicates whether the API call was successful. A value of true indicates that the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

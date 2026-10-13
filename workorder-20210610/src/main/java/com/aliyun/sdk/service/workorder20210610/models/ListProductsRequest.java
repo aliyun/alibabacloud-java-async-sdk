@@ -76,7 +76,7 @@ public class ListProductsRequest extends Request {
          * <p>The language that you use, supporting English, Chinese, and Japanese. Valid values: en, zh, and jp, which indicate English, Chinese, and Japanese, respectively.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn</p>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

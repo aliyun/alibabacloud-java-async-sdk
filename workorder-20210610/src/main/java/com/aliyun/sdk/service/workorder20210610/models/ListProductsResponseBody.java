@@ -128,7 +128,7 @@ public class ListProductsResponseBody extends TeaModel {
          * <p>The error message. If success is set to false, the message is returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>Invalid input parameter</p>
          */
         public Builder message(String message) {
             this.message = message;

@@ -38,6 +38,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EvaluateTicketResponse> evaluateTicket(EvaluateTicketRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Attachment upload</p>
+     * <ul>
+     * <li>Use a presigned URL to upload the file. For more information, see the OSS documentation.
+     * After you obtain the temporary upload URL, you can upload the file as follows:</li>
+     * </ul>
+     * </blockquote>
+     * <details>
+     * <summary>
+     * Sample
+     * </summary>
+     * curl -X PUT -H "Content-Type:application/octet-stream" -H "x-oss-meta-author:aliy" -T /home/admin/file.png "https\\://xx.oss-cn-zhangjiakou.aliyuncs.com/xx/xx.png"
+     * </details>
+     * 
      * @param request the request parameters of GetAttachmentUploadUrl  GetAttachmentUploadUrlRequest
      * @return GetAttachmentUploadUrlResponse
      */

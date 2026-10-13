@@ -89,11 +89,11 @@ public class ReopenTicketRequest extends Request {
         } 
 
         /**
-         * <p>Reply content of rework order</p>
+         * <p>The content of the reply to reopen the ticket.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ecs backup fails</p>
+         * <p>The issue has not been resolved yet.</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -102,7 +102,7 @@ public class ReopenTicketRequest extends Request {
         }
 
         /**
-         * <p>Work Order Number</p>
+         * <p>The ticket ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class ReopenTicketRequest extends Request {
         }
 
         /**
-         * <p>UID</p>
+         * <p>The UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1013872004421947</p>
