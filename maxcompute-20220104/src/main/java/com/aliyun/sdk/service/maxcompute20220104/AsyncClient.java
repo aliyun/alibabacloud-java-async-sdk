@@ -176,6 +176,29 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJobResourceUsageResponse> getJobResourceUsage(GetJobResourceUsageRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Generates the offline Logview file for a specified MaxCompute instance and returns a presigned Object Storage Service (OSS) download URL.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Specify the project name by using the project path parameter and the instance ID in the project by using the instance parameter.</li>
+     * <li>Select useVpcEndpoint based on the download environment: If this parameter is not specified or is set to false, the default OSS endpoint is used. If this parameter is set to true, the OSS VPC endpoint configured on the server is used. The download client must have network access to the selected endpoint.</li>
+     * <li>Obtain the URL from the data field in the success response and download the file before the link expires. The link expires 10 minutes after it is generated. If the link expires, call this operation again to obtain a new link.</li>
+     * </ol>
+     * <h2>File and usage instructions</h2>
+     * <ul>
+     * <li>The downloaded file is named logview_detail_{project}_{instance}.txt. The file content is offline Logview data in UTF-8 encoded JSON format. The specific data varies based on the instance task type and available information, and is not guaranteed to include execution results.</li>
+     * <li>Each call rebuilds and uploads the offline Logview data. The same file object path is used for the same project and instance, and a subsequent upload overwrites the previous content.</li>
+     * <li>This operation returns a download URL instead of a file stream upon success. A success response identifies the request by using requestId and returns the download link in the data field. The httpCode, errorCode, and errorMsg fields are common response fields. These fields are not assigned values when this operation is successfully processed, but they are not guaranteed to be omitted from the response.</li>
+     * <li>If useVpcEndpoint is set to true and no OSS VPC endpoint is configured on the server, link generation fails and does not automatically fall back to the default endpoint.</li>
+     * <li>The sample URL in the data field is desensitized and is used only to illustrate the format. It cannot be used for actual downloads.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetLogviewDownloadUrl  GetLogviewDownloadUrlRequest
+     * @return GetLogviewDownloadUrlResponse
+     */
+    CompletableFuture<GetLogviewDownloadUrlResponse> getLogviewDownloadUrl(GetLogviewDownloadUrlRequest request);
+
+    /**
      * @param request the request parameters of GetMmsAsyncTask  GetMmsAsyncTaskRequest
      * @return GetMmsAsyncTaskResponse
      */

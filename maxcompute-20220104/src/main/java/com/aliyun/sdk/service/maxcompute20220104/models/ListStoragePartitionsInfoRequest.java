@@ -327,7 +327,7 @@ public class ListStoragePartitionsInfoRequest extends Request {
         }
 
         /**
-         * <p>The schema to which the table belongs.</p>
+         * <p>The name of the schema.</p>
          * 
          * <strong>example:</strong>
          * <p>schema</p>
