@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DownloadResourceControlEventsResponse> downloadResourceControlEvents(DownloadResourceControlEventsRequest request);
 
     /**
+     * @param request the request parameters of EndPenetrationTest  EndPenetrationTestRequest
+     * @return EndPenetrationTestResponse
+     */
+    CompletableFuture<EndPenetrationTestResponse> endPenetrationTest(EndPenetrationTestRequest request);
+
+    /**
      * @param request the request parameters of GetAlertRecordAnalysisResult  GetAlertRecordAnalysisResultRequest
      * @return GetAlertRecordAnalysisResultResponse
      */
@@ -194,6 +200,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryGuideSubStatusResponse> queryGuideSubStatus(QueryGuideSubStatusRequest request);
 
     /**
+     * @param request the request parameters of QueryPenetrationTestDetail  QueryPenetrationTestDetailRequest
+     * @return QueryPenetrationTestDetailResponse
+     */
+    CompletableFuture<QueryPenetrationTestDetailResponse> queryPenetrationTestDetail(QueryPenetrationTestDetailRequest request);
+
+    /**
+     * @param request the request parameters of QueryPenetrationTestList  QueryPenetrationTestListRequest
+     * @return QueryPenetrationTestListResponse
+     */
+    CompletableFuture<QueryPenetrationTestListResponse> queryPenetrationTestList(QueryPenetrationTestListRequest request);
+
+    /**
      * @param request the request parameters of QueryResourceControlEvents  QueryResourceControlEventsRequest
      * @return QueryResourceControlEventsResponse
      */
@@ -222,6 +240,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitApplyRecordResponse
      */
     CompletableFuture<SubmitApplyRecordResponse> submitApplyRecord(SubmitApplyRecordRequest request);
+
+    /**
+     * @param request the request parameters of SubmitPenetrationTest  SubmitPenetrationTestRequest
+     * @return SubmitPenetrationTestResponse
+     */
+    CompletableFuture<SubmitPenetrationTestResponse> submitPenetrationTest(SubmitPenetrationTestRequest request);
 
     /**
      * @param request the request parameters of UpdatePostPaidBindRel  UpdatePostPaidBindRelRequest
