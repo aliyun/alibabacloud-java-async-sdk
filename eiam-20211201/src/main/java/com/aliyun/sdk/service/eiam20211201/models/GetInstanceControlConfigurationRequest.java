@@ -97,7 +97,10 @@ public class GetInstanceControlConfigurationRequest extends Request {
         }
 
         /**
-         * ElementName.
+         * <p>The name of the instance control item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>representative-value-2026</p>
          */
         public Builder elementName(String elementName) {
             this.putQueryParameter("ElementName", elementName);

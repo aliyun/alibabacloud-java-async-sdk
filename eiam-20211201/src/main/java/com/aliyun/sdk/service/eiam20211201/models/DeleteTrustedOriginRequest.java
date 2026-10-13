@@ -115,7 +115,7 @@ public class DeleteTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>A client token that is used to ensure the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique among different requests. The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The idempotence token.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-example</p>
@@ -127,7 +127,7 @@ public class DeleteTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>The ID of the IDaaS EIAM instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +140,7 @@ public class DeleteTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>The ID of the trusted origin.</p>
+         * <p>The trusted origin ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

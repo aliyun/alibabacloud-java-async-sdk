@@ -106,7 +106,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         } 
 
         /**
-         * <p>The maximum number of results per page.</p>
+         * <p>The number of rows per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         }
 
         /**
-         * <p>A token to retrieve the next page of results.</p>
+         * <p>The pagination token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -128,7 +128,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         }
 
         /**
-         * <p>A list of organizational units.</p>
+         * <p>The list of organizational units.</p>
          */
         public Builder organizationalUnits(java.util.List<OrganizationalUnits> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
@@ -147,7 +147,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         }
 
         /**
-         * <p>The total number of results.</p>
+         * <p>The total number of entries in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -216,7 +216,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
             } 
 
             /**
-             * <p>The scope ID.</p>
+             * <p>The scope permission ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -227,7 +227,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
             }
 
             /**
-             * <p>The scope name.</p>
+             * <p>The scope permission name.</p>
              * 
              * <strong>example:</strong>
              * <p>Read User Info</p>
@@ -332,7 +332,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
             }
 
             /**
-             * <p>A list of scopes.</p>
+             * <p>The list of scope permissions.</p>
              */
             public Builder resourceServerScopes(java.util.List<ResourceServerScopes> resourceServerScopes) {
                 this.resourceServerScopes = resourceServerScopes;

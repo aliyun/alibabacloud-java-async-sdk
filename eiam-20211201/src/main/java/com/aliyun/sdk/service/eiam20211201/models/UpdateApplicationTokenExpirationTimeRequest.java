@@ -154,7 +154,7 @@ public class UpdateApplicationTokenExpirationTimeRequest extends Request {
         }
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. Specify a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

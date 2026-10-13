@@ -243,7 +243,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ApplicationOwner.
+         * <p>The application owner.</p>
          */
         public Builder applicationOwner(ApplicationOwner applicationOwner) {
             this.putQueryParameter("ApplicationOwner", applicationOwner);
@@ -269,7 +269,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The application template ID. This parameter is required when ApplicationSourceType is set to urn:alibaba:idaas:app:source:template.</p>
+         * <p>The application template ID. This parameter is required when the ApplicationSourceType parameter is set to urn:alibaba:idaas:app:source:template.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_ramuser_mjqrsi</p>
@@ -281,7 +281,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * CustomFields.
+         * <p>The list of application extension fields.</p>
          */
         public Builder customFields(java.util.List<CustomFields> customFields) {
             this.putQueryParameter("CustomFields", customFields);
@@ -327,7 +327,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The single sign-on protocol. Valid values:</p>
+         * <p>The single sign-on (SSO) protocol. Valid values:</p>
          * <ul>
          * <li>saml2: SAML 2.0 protocol.</li>
          * <li>oidc: OpenID Connect protocol.</li>
@@ -403,7 +403,7 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * GroupIds.
+             * <p>The list of group IDs.</p>
              */
             public Builder groupIds(java.util.List<String> groupIds) {
                 this.groupIds = groupIds;
@@ -411,7 +411,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * UserIds.
+             * <p>The list of user IDs.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
@@ -479,7 +479,10 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * FieldName.
+             * <p>The identifier of the application extension field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent_type</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -487,7 +490,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * FieldValue.
+             * <p>The value of the application extension field. When FieldName is set to agentType, valid values are bailian, pai, dify, and volcano. When FieldName is set to agentExternalId, enter the relevant value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;

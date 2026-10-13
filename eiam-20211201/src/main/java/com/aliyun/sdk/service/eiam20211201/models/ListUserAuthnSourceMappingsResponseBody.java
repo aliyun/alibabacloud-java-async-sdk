@@ -120,7 +120,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries returned on each page.</p>
+         * <p>The maximum number of rows per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -131,7 +131,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token to retrieve the next page of results.</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -142,7 +142,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token to retrieve the previous page of results.</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxexample</p>
@@ -164,7 +164,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -175,7 +175,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of bindings for third-party account logons.</p>
+         * <p>The list of third-party account login bindings.</p>
          */
         public Builder userAuthnSourceMappings(java.util.List<UserAuthnSourceMappings> userAuthnSourceMappings) {
             this.userAuthnSourceMappings = userAuthnSourceMappings;
@@ -319,7 +319,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication source type.</p>
+             * <p>The authentication source type of the source IdP.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:idaas:authntype:oidc</p>
@@ -330,7 +330,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the binding was created.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1762309642177</p>
@@ -341,7 +341,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Information about the associated third-party account.</p>
+             * <p>The association information of the third-party account.</p>
              * 
              * <strong>example:</strong>
              * <p>{\&quot;userId\&quot;:\&quot;xxxx\&quot;,\&quot;name\&quot;:\&quot;xxx\&quot;,\&quot;bindTime\&quot;:\&quot;1766050298872\&quot;,\&quot;description\&quot;:\&quot;bind request id: reqpre_xxx\&quot;}</p>
@@ -374,7 +374,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the binding was last updated.</p>
+             * <p>The last update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1762309642177</p>
@@ -388,7 +388,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
              * <p>The external ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxxxx</p>
+             * <p>user_123131xxasasa</p>
              */
             public Builder userExternalId(String userExternalId) {
                 this.userExternalId = userExternalId;

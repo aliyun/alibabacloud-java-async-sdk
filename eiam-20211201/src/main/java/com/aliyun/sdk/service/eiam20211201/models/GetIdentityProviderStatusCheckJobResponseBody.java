@@ -67,7 +67,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the IdP status check job.</p>
+         * <p>The IdP status check job information.</p>
          */
         public Builder identityProviderStatusCheckJob(IdentityProviderStatusCheckJob identityProviderStatusCheckJob) {
             this.identityProviderStatusCheckJob = identityProviderStatusCheckJob;
@@ -275,7 +275,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The reason for the error.</p>
+             * <p>The error reason.</p>
              */
             public Builder errorReason(ErrorReason errorReason) {
                 this.errorReason = errorReason;
@@ -453,7 +453,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The result of the check task.</p>
+             * <p>The job check result.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -464,7 +464,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time.</p>
+             * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1763776265757</p>
@@ -475,7 +475,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the IdP.</p>
+             * <p>The identity provider ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idp_ncehkms65fiefobrvwy2blrxxx</p>
@@ -486,7 +486,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the IdP status check job.</p>
+             * <p>The IdP status check job ID.</p>
              * 
              * <strong>example:</strong>
              * <p>async_000036tfu8cgngmakngrr2rk75qgf87pf3rxxx</p>
@@ -508,7 +508,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of the status check subtasks.</p>
+             * <p>The status check sub-item task result information.</p>
              */
             public Builder jobCheckItems(java.util.List<JobCheckItems> jobCheckItems) {
                 this.jobCheckItems = jobCheckItems;
@@ -516,7 +516,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time.</p>
+             * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1763776265757</p>
@@ -527,7 +527,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the check task.</p>
+             * <p>The job check status.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>

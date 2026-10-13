@@ -207,7 +207,7 @@ public class ListCredentialProvidersRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -300,6 +300,10 @@ public class ListCredentialProvidersRequest extends Request {
 
             /**
              * <p>The filter condition name. Valid values:</p>
+             * <ul>
+             * <li>CredentialProviderName: the credential provider name.</li>
+             * <li>CredentialProviderIdentifier: the credential provider identifier.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CredentialProviderName</p>

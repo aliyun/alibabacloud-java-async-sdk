@@ -111,7 +111,7 @@ public class ListConditionalAccessPoliciesForUserRequest extends Request {
         }
 
         /**
-         * <p>The user ID associated with the conditional access policy.</p>
+         * <p>The ID of the user associated with the conditional access policies.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

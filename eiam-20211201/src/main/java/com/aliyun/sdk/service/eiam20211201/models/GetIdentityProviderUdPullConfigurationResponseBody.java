@@ -196,7 +196,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             } 
 
             /**
-             * <p>The group member identifier attribute.</p>
+             * <p>The group member attribute name.</p>
              * 
              * <strong>example:</strong>
              * <p>group</p>
@@ -229,7 +229,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>The organizational unit ObjectClass.</p>
+             * <p>The organization ObjectClass.</p>
              * 
              * <strong>example:</strong>
              * <p>ou,top</p>
@@ -345,7 +345,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>The execution time points. For example, [3, 5] indicates that synchronization runs once between 3:00 and 4:00 and once between 5:00 and 6:00.</p>
+             * <p>The execution time points. For example, [3, 5] indicates that the task runs once between 3:00 and 4:00 and once between 5:00 and 6:00.</p>
              * 
              * <strong>example:</strong>
              * <p>[3,5]</p>
@@ -531,7 +531,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             } 
 
             /**
-             * <p>The list of source nodes for synchronization.</p>
+             * <p>The list of source scope nodes.</p>
              */
             public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
@@ -539,7 +539,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>The target node for synchronization.</p>
+             * <p>The target scope node.</p>
              * 
              * <strong>example:</strong>
              * <p>ou_asjdfhaskfhw213mnsj33sXXX</p>
@@ -702,8 +702,10 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             /**
              * <p>The group synchronization status. Valid values:</p>
              * <ul>
-             * <li>disabled</li>
-             * <li>enabled.</li>
+             * <li><p>disabled: Disabled.</p>
+             * </li>
+             * <li><p>enabled: Enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -728,8 +730,10 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             /**
              * <p>The incremental callback status, which specifies whether to process incremental callback data from the IdP. Valid values:</p>
              * <ul>
-             * <li>disabled</li>
-             * <li>enabled.</li>
+             * <li><p>disabled: Disabled.</p>
+             * </li>
+             * <li><p>enabled: Enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -770,8 +774,10 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             /**
              * <p>The periodic verification status, which specifies whether to periodically verify data differences between IDaaS and the identity provider. Valid values:</p>
              * <ul>
-             * <li>disabled</li>
-             * <li>enabled.</li>
+             * <li><p>disabled: Disabled.</p>
+             * </li>
+             * <li><p>enabled: Enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

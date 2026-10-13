@@ -83,7 +83,7 @@ public class GetApplicationTemplateRequest extends Request {
         }
 
         /**
-         * <p>The application template ID.</p>
+         * <p>The ID of the application template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

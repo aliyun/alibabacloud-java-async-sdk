@@ -794,7 +794,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
              * <p>The AppSecret of the Lark custom application.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>REOQ6Cl55kriOd8NOBeqWYLKpHR4p6fdZxxxx</p>
              */
             public Builder appSecret(String appSecret) {
                 this.appSecret = appSecret;
@@ -975,7 +975,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
              * <p>The AD/LDAP administrator password.</p>
              * 
              * <strong>example:</strong>
-             * <p>XXXX</p>
+             * <p>123456</p>
              */
             public Builder administratorPassword(String administratorPassword) {
                 this.administratorPassword = administratorPassword;
@@ -1476,11 +1476,11 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PKCE algorithm. Valid values:</p>
+             * <p>The PKCE challenge method. Valid values:</p>
              * <ul>
              * <li><p>S256: SHA-256.</p>
              * </li>
-             * <li><p>plain: plaintext.</p>
+             * <li><p>plain: Plaintext.</p>
              * </li>
              * </ul>
              * 
@@ -1574,7 +1574,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The date before which the certificate is not valid.</p>
+             * <p>The date before which the certificate is not yet valid.</p>
              * 
              * <strong>example:</strong>
              * <p>1672531200000</p>
@@ -1864,6 +1864,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
 
             /**
              * <p>Indicates whether the external IdP is required to sign assertions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder wantAssertionsSigned(Boolean wantAssertionsSigned) {
                 this.wantAssertionsSigned = wantAssertionsSigned;
@@ -1871,7 +1874,10 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the external IdP is required to sign the Response.</p>
+             * <p>Indicates whether the external IdP is required to sign responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder wantResponseSigned(Boolean wantResponseSigned) {
                 this.wantResponseSigned = wantResponseSigned;
@@ -2031,9 +2037,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>Indicates whether group synchronization is enabled. Valid values:</p>
              * <ul>
-             * <li><p>disabled: Disabled.</p>
+             * <li><p>disabled</p>
              * </li>
-             * <li><p>enabled: Enabled.</p>
+             * <li><p>enabled</p>
              * </li>
              * </ul>
              * 
@@ -2048,9 +2054,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>The incremental callback status, which indicates whether incremental callback data from the IdP is processed. Valid values:</p>
              * <ul>
-             * <li><p>disabled: Disabled.</p>
+             * <li><p>disabled</p>
              * </li>
-             * <li><p>enabled: Enabled.</p>
+             * <li><p>enabled</p>
              * </li>
              * </ul>
              * 
@@ -2063,7 +2069,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sync scope configuration.</p>
+             * <p>The synchronization scope configuration.</p>
              */
             public Builder udSyncScopeConfig(UdSyncScopeConfig udSyncScopeConfig) {
                 this.udSyncScopeConfig = udSyncScopeConfig;
@@ -2219,7 +2225,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of sync scope configurations.</p>
+             * <p>The list of synchronization scope configurations.</p>
              */
             public Builder udSyncScopeConfigs(java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs) {
                 this.udSyncScopeConfigs = udSyncScopeConfigs;
@@ -2360,7 +2366,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The WeCom contacts secret.</p>
+             * <p>The WeCom contact secret.</p>
              * 
              * <strong>example:</strong>
              * <p>mPLLiWv-_9witxxxEJCpk1xkF5hOgBzpRt4kBkxxxx</p>
@@ -2960,7 +2966,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The synchronization type of the identity provider. Valid values:</p>
+             * <p>The sync type of the identity provider. Valid values:</p>
              * <ul>
              * <li><p>urn:alibaba:idaas:idp:alibaba:dingtalk:pull: Inbound DingTalk.</p>
              * </li>
@@ -3076,7 +3082,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inbound sync configuration.</p>
+             * <p>The inbound synchronization configuration.</p>
              */
             public Builder udPullConfig(UdPullConfig udPullConfig) {
                 this.udPullConfig = udPullConfig;
@@ -3084,11 +3090,11 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the inbound sync feature is supported. Valid values:</p>
+             * <p>Indicates whether the inbound synchronization feature is supported. Valid values:</p>
              * <ul>
-             * <li><p>disabled: Disabled.</p>
+             * <li><p>disabled</p>
              * </li>
-             * <li><p>enabled: Enabled.</p>
+             * <li><p>enabled</p>
              * </li>
              * </ul>
              * 
@@ -3101,7 +3107,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound sync configuration.</p>
+             * <p>The outbound synchronization configuration.</p>
              */
             public Builder udPushConfig(UdPushConfig udPushConfig) {
                 this.udPushConfig = udPushConfig;
@@ -3109,11 +3115,11 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the outbound sync capability is enabled. Valid values:</p>
+             * <p>Indicates whether the outbound synchronization capability is enabled. Valid values:</p>
              * <ul>
-             * <li><p>disabled: Disabled.</p>
+             * <li><p>disabled</p>
              * </li>
-             * <li><p>enabled: Enabled.</p>
+             * <li><p>enabled</p>
              * </li>
              * </ul>
              * 

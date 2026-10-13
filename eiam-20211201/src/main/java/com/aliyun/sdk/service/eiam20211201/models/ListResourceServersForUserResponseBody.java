@@ -106,7 +106,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The number of rows per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -244,8 +244,8 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
             /**
              * <p>Indicates whether direct authorization exists. Valid values:</p>
              * <ul>
-             * <li>true: Direct authorization exists.</li>
-             * <li>false: Direct authorization does not exist.</li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>

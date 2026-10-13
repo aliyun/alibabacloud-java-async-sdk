@@ -303,7 +303,13 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance version.</p>
+             * <p>The instance version. Valid values:</p>
+             * <ul>
+             * <li>EIAM 2~0: EIAM 2.0.</li>
+             * <li>EIAM 1<del>0: EIAM 1.0.
+             * [_single.resp.200.props.Instances.items.InstanceVersion.enum.EIAM 2</del>0]EIAM 2.0
+             * [_single.resp.200.props.Instances.items.InstanceVersion.enum.EIAM 1~0]EIAM 1.0</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>EIAM 2.0</p>
@@ -347,7 +353,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was created.</p>
+             * <p>The time when the instance was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1677810869300</p>

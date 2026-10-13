@@ -621,7 +621,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MFA methods allowed by the conditional access policy.</p>
+             * <p>The MFA types allowed by the conditional access policy.</p>
              */
             public Builder mfaAuthenticationMethods(java.util.List<String> mfaAuthenticationMethods) {
                 this.mfaAuthenticationMethods = mfaAuthenticationMethods;
@@ -864,7 +864,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the conditional access policy.</p>
+             * <p>The conditional access policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>arn:alibaba:idaas:authn:access:policy:system</p>
@@ -883,7 +883,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the policy was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1741857554000</p>
@@ -894,7 +894,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution configuration of the conditional access policy.</p>
+             * <p>The decision configuration of the conditional access policy.</p>
              */
             public Builder decisionConfig(DecisionConfig decisionConfig) {
                 this.decisionConfig = decisionConfig;
@@ -902,7 +902,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution type of the conditional access policy.</p>
+             * <p>The decision type of the conditional access policy.</p>
              * 
              * <strong>example:</strong>
              * <p>enforcement</p>
@@ -913,7 +913,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the conditional access policy.</p>
+             * <p>The conditional access policy description.</p>
              * 
              * <strong>example:</strong>
              * <p>testPolicy</p>
@@ -946,7 +946,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last updated time.</p>
+             * <p>The time when the policy was last updated. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1741857554000</p>

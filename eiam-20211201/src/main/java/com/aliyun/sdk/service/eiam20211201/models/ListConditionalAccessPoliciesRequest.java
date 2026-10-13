@@ -125,7 +125,7 @@ public class ListConditionalAccessPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class ListConditionalAccessPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Number of rows per page in paginated queries.</p>
+         * <p>The number of rows per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -150,7 +150,7 @@ public class ListConditionalAccessPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Next page query token.</p>
+         * <p>The pagination token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -162,7 +162,7 @@ public class ListConditionalAccessPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Previous page query token.</p>
+         * <p>The pagination token for the previous page.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxxxexample</p>

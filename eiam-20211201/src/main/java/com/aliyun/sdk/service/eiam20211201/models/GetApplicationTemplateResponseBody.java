@@ -331,7 +331,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application template ID.</p>
+             * <p>The ID of the application template.</p>
              * 
              * <strong>example:</strong>
              * <p>apt_ramintlrole_ixxxxx</p>
@@ -342,7 +342,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application template name.</p>
+             * <p>The name of the application template.</p>
              * 
              * <strong>example:</strong>
              * <p>Alibaba Cloud</p>
@@ -353,7 +353,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application template was created.</p>
+             * <p>The creation time of the application template. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1730341123000</p>
@@ -364,7 +364,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application template description.</p>
+             * <p>The description of the application template.</p>
              * 
              * <strong>example:</strong>
              * <p>Alibaba Cloud SSO</p>
@@ -397,7 +397,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service code of the Alibaba Cloud service that manages the application template.</p>
+             * <p>The service code of the cloud service that manages the application template.</p>
              * 
              * <strong>example:</strong>
              * <p>bastionhost</p>
@@ -416,7 +416,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The console URL of the Alibaba Cloud service that manages the application template.</p>
+             * <p>The console URL of the cloud service that manages the application template.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/?p=bastion">https://example.com/?p=bastion</a></p>
@@ -427,7 +427,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application template is managed by an Alibaba Cloud service.</p>
+             * <p>Indicates whether the application template is managed by a cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -446,7 +446,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application template was last updated.</p>
+             * <p>The update time of the application template. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1730341124000</p>

@@ -106,7 +106,7 @@ public class ListClientPublicKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of client public keys for the application.</p>
+         * <p>The list of ClientPublicKeys for the application.</p>
          */
         public Builder clientPublicKeys(java.util.List<ClientPublicKeys> clientPublicKeys) {
             this.clientPublicKeys = clientPublicKeys;
@@ -114,7 +114,7 @@ public class ListClientPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListClientPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page of results.</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -147,7 +147,7 @@ public class ListClientPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of entries in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -329,7 +329,7 @@ public class ListClientPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the client public key.</p>
+             * <p>The ID of the application ClientPublicKey.</p>
              * 
              * <strong>example:</strong>
              * <p>KEYEqDnDJhztiEAwSin7MZoxGcihzCAuxxxx</p>
@@ -340,7 +340,7 @@ public class ListClientPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the key was created.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1722006052000</p>
@@ -362,7 +362,7 @@ public class ListClientPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the key was last used.</p>
+             * <p>The last used time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1762006052000</p>
@@ -373,7 +373,7 @@ public class ListClientPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the key is used with priority.</p>
+             * <p>Indicates whether this key is used with priority.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

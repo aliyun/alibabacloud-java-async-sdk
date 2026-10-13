@@ -171,7 +171,7 @@ public class ListUserAuthnSourceMappingsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source identity provider (IdP).</p>
+         * <p>The source identity provider (IdP) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idp_11111</p>
@@ -196,7 +196,7 @@ public class ListUserAuthnSourceMappingsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page.</p>
+         * <p>The maximum number of rows per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -208,7 +208,7 @@ public class ListUserAuthnSourceMappingsRequest extends Request {
         }
 
         /**
-         * <p>The query token.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -220,7 +220,7 @@ public class ListUserAuthnSourceMappingsRequest extends Request {
         }
 
         /**
-         * <p>The token for the previous page of results.</p>
+         * <p>The token used to query the previous page.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxxxexample</p>
@@ -232,10 +232,10 @@ public class ListUserAuthnSourceMappingsRequest extends Request {
         }
 
         /**
-         * <p>The external ID.</p>
+         * <p>The external association ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <p>user_123131xxasasa</p>
          */
         public Builder userExternalId(String userExternalId) {
             this.putQueryParameter("UserExternalId", userExternalId);

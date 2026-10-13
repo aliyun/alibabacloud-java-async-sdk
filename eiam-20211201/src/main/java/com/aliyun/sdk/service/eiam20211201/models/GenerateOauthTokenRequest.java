@@ -210,7 +210,10 @@ public class GenerateOauthTokenRequest extends Request {
         }
 
         /**
-         * GrantType.
+         * <p>The grant type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client_credentials</p>
          */
         public Builder grantType(String grantType) {
             this.putQueryParameter("GrantType", grantType);
@@ -232,7 +235,10 @@ public class GenerateOauthTokenRequest extends Request {
         }
 
         /**
-         * RequestedTokenType.
+         * <p>The requested token type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>urn:ietf:params:oauth:token-type:access_token</p>
          */
         public Builder requestedTokenType(String requestedTokenType) {
             this.putQueryParameter("RequestedTokenType", requestedTokenType);
@@ -241,7 +247,7 @@ public class GenerateOauthTokenRequest extends Request {
         }
 
         /**
-         * <p>The permission scopes.</p>
+         * <p>The permission scope.</p>
          * <p>This parameter is required.</p>
          */
         public Builder scopeValues(java.util.List<String> scopeValues) {
@@ -251,7 +257,10 @@ public class GenerateOauthTokenRequest extends Request {
         }
 
         /**
-         * SubjectToken.
+         * <p>The subject token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subject001</p>
          */
         public Builder subjectToken(String subjectToken) {
             this.putQueryParameter("SubjectToken", subjectToken);
@@ -260,7 +269,10 @@ public class GenerateOauthTokenRequest extends Request {
         }
 
         /**
-         * SubjectTokenType.
+         * <p>The subject token type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>urn:ietf:params:oauth:token-type:access_token</p>
          */
         public Builder subjectTokenType(String subjectTokenType) {
             this.putQueryParameter("SubjectTokenType", subjectTokenType);

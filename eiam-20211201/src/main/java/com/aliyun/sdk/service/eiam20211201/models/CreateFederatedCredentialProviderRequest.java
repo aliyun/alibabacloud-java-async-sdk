@@ -199,7 +199,7 @@ public class CreateFederatedCredentialProviderRequest extends Request {
         }
 
         /**
-         * CloudIdPProviderConfig.
+         * <p>The identity provider configuration.</p>
          */
         public Builder cloudIdPProviderConfig(CloudIdPProviderConfig cloudIdPProviderConfig) {
             this.putQueryParameter("CloudIdPProviderConfig", cloudIdPProviderConfig);
@@ -345,7 +345,10 @@ public class CreateFederatedCredentialProviderRequest extends Request {
             } 
 
             /**
-             * IdentityProviderId.
+             * <p>The ID of the identity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idp_m7hk2hbnew5ir3ycfabug6xxxx</p>
              */
             public Builder identityProviderId(String identityProviderId) {
                 this.identityProviderId = identityProviderId;
@@ -476,7 +479,7 @@ public class CreateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>Issuer</p>
+             * <p>The token issuer identifier (Issuer).</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com">https://example.com</a></p>
@@ -929,7 +932,7 @@ public class CreateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The trust condition for the root certificate.</p>
+             * <p>The trust condition of the root certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>

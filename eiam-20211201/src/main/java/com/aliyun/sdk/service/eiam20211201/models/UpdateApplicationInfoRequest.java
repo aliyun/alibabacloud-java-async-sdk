@@ -209,7 +209,7 @@ public class UpdateApplicationInfoRequest extends Request {
         }
 
         /**
-         * ApplicationOwner.
+         * <p>The application owner.</p>
          */
         public Builder applicationOwner(ApplicationOwner applicationOwner) {
             this.putQueryParameter("ApplicationOwner", applicationOwner);
@@ -227,7 +227,7 @@ public class UpdateApplicationInfoRequest extends Request {
         }
 
         /**
-         * <p>The idempotence token.</p>
+         * <p>The idempotency token.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-example</p>
@@ -239,7 +239,7 @@ public class UpdateApplicationInfoRequest extends Request {
         }
 
         /**
-         * CustomFields.
+         * <p>The list of application extension fields.</p>
          */
         public Builder customFields(java.util.List<CustomFields> customFields) {
             this.putQueryParameter("CustomFields", customFields);
@@ -332,7 +332,7 @@ public class UpdateApplicationInfoRequest extends Request {
             } 
 
             /**
-             * GroupIds.
+             * <p>The list of group IDs.</p>
              */
             public Builder groupIds(java.util.List<String> groupIds) {
                 this.groupIds = groupIds;
@@ -340,7 +340,7 @@ public class UpdateApplicationInfoRequest extends Request {
             }
 
             /**
-             * UserIds.
+             * <p>The list of user IDs.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
@@ -422,7 +422,10 @@ public class UpdateApplicationInfoRequest extends Request {
             } 
 
             /**
-             * FieldName.
+             * <p>The name of the application extension field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent_type</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -430,7 +433,10 @@ public class UpdateApplicationInfoRequest extends Request {
             }
 
             /**
-             * FieldValue.
+             * <p>The value of the application extension field. If FieldName is set to agentType, valid values are bailian, pai, dify, and volcano. If FieldName is set to agentExternalId, enter the relevant value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -438,7 +444,10 @@ public class UpdateApplicationInfoRequest extends Request {
             }
 
             /**
-             * Operation.
+             * <p>The operation type for the application extension field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;

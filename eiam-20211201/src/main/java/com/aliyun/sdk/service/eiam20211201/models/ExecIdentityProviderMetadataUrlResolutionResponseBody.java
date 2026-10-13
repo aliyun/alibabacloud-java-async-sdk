@@ -67,7 +67,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
         } 
 
         /**
-         * <p>The identity provider metadata.</p>
+         * <p>The metadata of the identity provider.</p>
          */
         public Builder identityProviderMetadata(IdentityProviderMetadata identityProviderMetadata) {
             this.identityProviderMetadata = identityProviderMetadata;
@@ -183,7 +183,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The OAuth 2.0 authorization endpoint.</p>
+             * <p>The OAuth2 authorization endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://demo.com/oauth2/default/v1/authorize">https://demo.com/oauth2/default/v1/authorize</a></p>
@@ -194,7 +194,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * <p>The OIDC issuer.</p>
+             * <p>The OIDC issuer information.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://demo.com/fe974231-3454-4b70-9326-70fb71e41bce/v2.0/">https://demo.com/fe974231-3454-4b70-9326-70fb71e41bce/v2.0/</a></p>
@@ -205,7 +205,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * <p>The OIDC JSON Web Key Set (JWKS) URI.</p>
+             * <p>The OIDC JWKS URI.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://demo.com/oauth2/v1/keys">https://demo.com/oauth2/v1/keys</a></p>
@@ -216,7 +216,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * <p>The OAuth 2.0 token endpoint.</p>
+             * <p>The OAuth2 token endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://demo.com/api/bff/v1.2/developer/oidc/token">https://demo.com/api/bff/v1.2/developer/oidc/token</a></p>
@@ -227,7 +227,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * <p>The OIDC userinfo endpoint.</p>
+             * <p>The OIDC UserInfo endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://demo.com/api/bff/v1.2/developer/oidc/userinfo">https://demo.com/api/bff/v1.2/developer/oidc/userinfo</a></p>
@@ -284,7 +284,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The content of the certificate.</p>
+             * <p>The certificate content.</p>
              * 
              * <strong>example:</strong>
              * <p>-----BEGIN CERTIFICATE----- MIIE+zCCA0egAwIBAgIJAJZY0ZY0ZY0Z -----END CERTIFICATE-----</p>
@@ -367,7 +367,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The certificates.</p>
+             * <p>The list of IdP certificates.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -375,7 +375,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * <p>The entity ID of the SAML identity provider.</p>
+             * <p>The entity ID of the IdP.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://dc.test.com/adfs/services/trust">http://dc.test.com/adfs/services/trust</a></p>
@@ -386,7 +386,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * <p>The SSO URL of the SAML identity provider.</p>
+             * <p>The single sign-on URL of the IdP.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></p>
@@ -456,7 +456,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The OIDC identity provider metadata.</p>
+             * <p>The metadata of the OIDC IdP.</p>
              */
             public Builder oidcOpenIdConfiguration(OidcOpenIdConfiguration oidcOpenIdConfiguration) {
                 this.oidcOpenIdConfiguration = oidcOpenIdConfiguration;
@@ -464,7 +464,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * <p>The SAML identity provider metadata.</p>
+             * <p>The metadata of the SAML IdP.</p>
              */
             public Builder samlMetadataConfiguration(SamlMetadataConfiguration samlMetadataConfiguration) {
                 this.samlMetadataConfiguration = samlMetadataConfiguration;

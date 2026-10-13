@@ -188,7 +188,7 @@ public class GetCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content of the OAuth client credential.</p>
+             * <p>The credential content of the OAuth client authentication credential type.</p>
              */
             public Builder oAuthClientContent(OAuthClientContent oAuthClientContent) {
                 this.oAuthClientContent = oAuthClientContent;
@@ -461,7 +461,7 @@ public class GetCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the credential.</p>
+             * <p>The credential content.</p>
              */
             public Builder credentialContent(CredentialContent credentialContent) {
                 this.credentialContent = credentialContent;
@@ -484,7 +484,10 @@ public class GetCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialExternalId.
+             * <p>The external unique identifier of the credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>credential_external_1234567890</p>
              */
             public Builder credentialExternalId(String credentialExternalId) {
                 this.credentialExternalId = credentialExternalId;
@@ -540,7 +543,10 @@ public class GetCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialSharingScope.
+             * <p>The credential sharing scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>common</p>
              */
             public Builder credentialSharingScope(String credentialSharingScope) {
                 this.credentialSharingScope = credentialSharingScope;
@@ -548,7 +554,7 @@ public class GetCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the subject to which the credential belongs.</p>
+             * <p>The subject ID to which the credential belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>apt_werthgfdsasffxxxxx</p>
@@ -559,7 +565,7 @@ public class GetCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the subject to which the credential belongs. Valid values:</p>
+             * <p>The subject type to which the credential belongs. Valid values:</p>
              * <ul>
              * <li>authentication_token_provider: Authentication token provider.</li>
              * </ul>
@@ -575,8 +581,8 @@ public class GetCredentialResponseBody extends TeaModel {
             /**
              * <p>The credential type. Valid values:</p>
              * <ul>
-             * <li>api_key: API key credential.</li>
-             * <li>oauth_client: OAuth client credential.</li>
+             * <li>api_key: API key authentication credential.</li>
+             * <li>oauth_client: OAuth client authentication credential.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -599,7 +605,10 @@ public class GetCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ExclusiveUserId.
+             * <p>The exclusive account ID of the credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_1234567890</p>
              */
             public Builder exclusiveUserId(String exclusiveUserId) {
                 this.exclusiveUserId = exclusiveUserId;

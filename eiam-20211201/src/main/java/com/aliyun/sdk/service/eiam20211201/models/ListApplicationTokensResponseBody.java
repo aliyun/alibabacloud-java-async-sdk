@@ -261,7 +261,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>aliUid。</p>
+             * <p>The Alibaba Cloud account UID.</p>
              * 
              * <strong>example:</strong>
              * <p>1973166921975xxxx</p>
@@ -316,7 +316,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1747796654000</p>
@@ -338,7 +338,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time.</p>
+             * <p>The expiration time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1747796654000</p>
@@ -360,7 +360,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last used time.</p>
+             * <p>The last used time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1747796654000</p>

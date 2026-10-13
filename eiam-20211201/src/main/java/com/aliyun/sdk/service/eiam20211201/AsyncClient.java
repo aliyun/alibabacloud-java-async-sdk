@@ -135,7 +135,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>EIAM supports two standard SSO protocols for application access: SAML 2.0 and OIDC. This parameter cannot be changed after it is specified. Create the application based on the SSO protocol type used in your business scenario.</p>
+     * <p>EIAM supports two standard SSO protocols for application access: SAML 2.0 and OIDC. This parameter cannot be changed after it is specified. Create the application based on the SSO protocol type used in your actual business scenario.</p>
      * 
      * @param request the request parameters of CreateApplication  CreateApplicationRequest
      * @return CreateApplicationResponse
@@ -498,6 +498,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteResourceServerScopeResponse> deleteResourceServerScope(DeleteResourceServerScopeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a trusted origin from a specified EIAM instance.</p>
+     * 
      * @param request the request parameters of DeleteTrustedOrigin  DeleteTrustedOriginRequest
      * @return DeleteTrustedOriginResponse
      */
@@ -690,6 +693,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableResourceServerCustomSubjectResponse> disableResourceServerCustomSubject(DisableResourceServerCustomSubjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Disables a trusted origin in a specified EIAM instance.</p>
+     * 
      * @param request the request parameters of DisableTrustedOrigin  DisableTrustedOriginRequest
      * @return DisableTrustedOriginResponse
      */
@@ -868,6 +874,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableResourceServerCustomSubjectResponse> enableResourceServerCustomSubject(EnableResourceServerCustomSubjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Enables a trusted origin in a specified EIAM instance.</p>
+     * 
      * @param request the request parameters of EnableTrustedOrigin  EnableTrustedOriginRequest
      * @return EnableTrustedOriginResponse
      */
@@ -922,6 +931,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateWebAuthnAuthenticatorRegistrationUrlResponse> generateWebAuthnAuthenticatorRegistrationUrl(GenerateWebAuthnAuthenticatorRegistrationUrlRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you delete a specified EIAM application, make sure that the application is no longer in use. After the application is deleted, all configuration data is permanently removed and cannot be recovered.</p>
+     * 
      * @param request the request parameters of GetApplication  GetApplicationRequest
      * @return GetApplicationResponse
      */
@@ -1025,7 +1037,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Query a conditional access policy.</p>
+     * <p>Queries a conditional access policy.</p>
      * 
      * @param request the request parameters of GetConditionalAccessPolicy  GetConditionalAccessPolicyRequest
      * @return GetConditionalAccessPolicyResponse
@@ -1136,7 +1148,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that your instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
+     * <p>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
      * 
      * @param request the request parameters of GetInstanceLicense  GetInstanceLicenseRequest
      * @return GetInstanceLicenseResponse
@@ -1234,6 +1246,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSynchronizationJobResponse> getSynchronizationJob(GetSynchronizationJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries a trusted origin in a specified EIAM instance.</p>
+     * 
      * @param request the request parameters of GetTrustedOrigin  GetTrustedOriginRequest
      * @return GetTrustedOriginResponse
      */
@@ -1259,7 +1274,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only applications that are directly assigned to an organization. You can use the <strong>ApplicationIds</strong> parameter to filter the applications.</p>
+     * <p>This operation queries only the direct permissions of the organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * @param request the request parameters of ListApplicationAccountsForUser  ListApplicationAccountsForUserRequest
      * @return ListApplicationAccountsForUserResponse
@@ -1412,7 +1427,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Query the list of conditional access policies with pagination.</p>
+     * <p>Queries conditional access policies by page.</p>
      * 
      * @param request the request parameters of ListConditionalAccessPolicies  ListConditionalAccessPoliciesRequest
      * @return ListConditionalAccessPoliciesResponse
@@ -1635,6 +1650,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSynchronizationJobsResponse> listSynchronizationJobs(ListSynchronizationJobsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of trusted origins in a specified EIAM instance.</p>
+     * 
      * @param request the request parameters of ListTrustedOrigins  ListTrustedOriginsRequest
      * @return ListTrustedOriginsResponse
      */
@@ -1642,7 +1660,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the applications that are directly assigned to an organization. You can use the <strong>ApplicationIds</strong> parameter to filter the applications.</p>
+     * <p>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * @param request the request parameters of ListUserAuthnSourceMappings  ListUserAuthnSourceMappingsRequest
      * @return ListUserAuthnSourceMappingsResponse
@@ -1690,7 +1708,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that may result from this operation.</p>
+     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that may be caused by this operation.</p>
      * 
      * @param request the request parameters of ObtainApplicationToken  ObtainApplicationTokenRequest
      * @return ObtainApplicationTokenResponse
@@ -2235,6 +2253,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateResourceServerScopeResponse> updateResourceServerScope(UpdateResourceServerScopeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Updates a trusted origin in a specified EIAM instance.</p>
+     * 
      * @param request the request parameters of UpdateTrustedOrigin  UpdateTrustedOriginRequest
      * @return UpdateTrustedOriginResponse
      */

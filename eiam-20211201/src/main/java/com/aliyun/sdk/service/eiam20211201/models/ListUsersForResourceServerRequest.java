@@ -155,7 +155,7 @@ public class ListUsersForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Resource Server application.</p>
+         * <p>The ResourceServer application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class ListUsersForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>A list of filter conditions.</p>
+         * <p>The list of filter conditions.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -177,7 +177,7 @@ public class ListUsersForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class ListUsersForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for paged queries.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -202,7 +202,7 @@ public class ListUsersForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The token for the next page. Set this parameter to the value of NextToken returned by the previous API call.</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -214,7 +214,7 @@ public class ListUsersForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>权限唯一标识。</p>
+         * <p>The permission ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -296,7 +296,7 @@ public class ListUsersForResourceServerRequest extends Request {
             }
 
             /**
-             * <p>A list of values for the filter condition.</p>
+             * <p>The list of filter condition values.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

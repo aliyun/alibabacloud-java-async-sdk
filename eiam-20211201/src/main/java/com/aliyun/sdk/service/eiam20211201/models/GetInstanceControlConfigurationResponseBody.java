@@ -131,7 +131,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CAPTCHA type.</p>
+             * <p>The CAPTCHA verification type.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:idaas:humanverification:alibaba-cloud-jigsaw-verification</p>
@@ -225,7 +225,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) authenticate configuration.</p>
+             * <p>The Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) authentication configuration.</p>
              */
             public Builder humanVerificationConfig(HumanVerificationConfig humanVerificationConfig) {
                 this.humanVerificationConfig = humanVerificationConfig;

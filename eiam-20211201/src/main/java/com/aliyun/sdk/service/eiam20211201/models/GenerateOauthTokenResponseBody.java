@@ -183,10 +183,10 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Access Token。</p>
+             * <p>The access token.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJlaWFtIn0.signature</p>
              */
             public Builder accessToken(String accessToken) {
                 this.accessToken = accessToken;
@@ -216,7 +216,10 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
             }
 
             /**
-             * IssuedTokenType.
+             * <p>The issued token type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder issuedTokenType(String issuedTokenType) {
                 this.issuedTokenType = issuedTokenType;

@@ -262,7 +262,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+         * <p>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,7 +275,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>The credential content.</p>
+         * <p>The content of the credential.</p>
          * <p>This parameter is required.</p>
          */
         public Builder credentialContent(CredentialContent credentialContent) {
@@ -285,7 +285,10 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * CredentialExternalId.
+         * <p>The external unique identifier of the credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_external_id</p>
          */
         public Builder credentialExternalId(String credentialExternalId) {
             this.putQueryParameter("CredentialExternalId", credentialExternalId);
@@ -336,7 +339,10 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * CredentialSharingScope.
+         * <p>The sharing scope of the credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_exclusive</p>
          */
         public Builder credentialSharingScope(String credentialSharingScope) {
             this.putQueryParameter("CredentialSharingScope", credentialSharingScope);
@@ -345,7 +351,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>The subject ID of the credential.</p>
+         * <p>The subject ID to which the credential belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_werthgfdsasffxxxxx</p>
@@ -357,7 +363,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>The subject type of the credential. Valid values:</p>
+         * <p>The subject type to which the credential belongs. Valid values:</p>
          * <ul>
          * <li>authentication_token_provider: authentication token provider.</li>
          * </ul>
@@ -389,7 +395,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>The credential description.</p>
+         * <p>The description of the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>credential_description</p>
@@ -401,7 +407,10 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * ExclusiveUserId.
+         * <p>The exclusive user ID of the credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_xxxx</p>
          */
         public Builder exclusiveUserId(String exclusiveUserId) {
             this.putQueryParameter("ExclusiveUserId", exclusiveUserId);
@@ -469,7 +478,7 @@ public class CreateCredentialRequest extends Request {
             } 
 
             /**
-             * <p>The API key content.</p>
+             * <p>The content of the API key.</p>
              * 
              * <strong>example:</strong>
              * <p>nsklnertyt5ddwizncxxxx</p>

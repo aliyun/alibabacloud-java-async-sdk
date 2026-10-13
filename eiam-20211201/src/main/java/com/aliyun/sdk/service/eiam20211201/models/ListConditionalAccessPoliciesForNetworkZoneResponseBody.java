@@ -599,7 +599,7 @@ public class ListConditionalAccessPoliciesForNetworkZoneResponseBody extends Tea
             }
 
             /**
-             * <p>The decision action of the conditional access policy.</p>
+             * <p>The decision action effect of the conditional access policy.</p>
              * 
              * <strong>example:</strong>
              * <p>allow</p>
@@ -853,10 +853,10 @@ public class ListConditionalAccessPoliciesForNetworkZoneResponseBody extends Tea
             }
 
             /**
-             * <p>The conditional access policy name.</p>
+             * <p>The Policy Name of the conditional access policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>My policy</p>
+             * <p>MyPolicy</p>
              */
             public Builder conditionalAccessPolicyName(String conditionalAccessPolicyName) {
                 this.conditionalAccessPolicyName = conditionalAccessPolicyName;
@@ -883,7 +883,7 @@ public class ListConditionalAccessPoliciesForNetworkZoneResponseBody extends Tea
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the policy was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1741857554000</p>
@@ -946,7 +946,7 @@ public class ListConditionalAccessPoliciesForNetworkZoneResponseBody extends Tea
             }
 
             /**
-             * <p>The last updated time.</p>
+             * <p>The time when the policy was last updated. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1741857554000</p>
@@ -957,7 +957,7 @@ public class ListConditionalAccessPoliciesForNetworkZoneResponseBody extends Tea
             }
 
             /**
-             * <p>The priority.</p>
+             * <p>The priority of the conditional access policy.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

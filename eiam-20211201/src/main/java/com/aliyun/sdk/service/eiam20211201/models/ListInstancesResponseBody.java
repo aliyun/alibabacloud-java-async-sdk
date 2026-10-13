@@ -292,7 +292,7 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID of the backup instance.</p>
+             * <p>The instance ID of the disaster recovery instance.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_xxxxxx</p>
@@ -303,7 +303,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the backup instance.</p>
+             * <p>The region ID of the disaster recovery instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -534,7 +534,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether cross-region replication is enabled. Valid values: enabled or disabled.</p>
+             * <p>Indicates whether cross-region replication is enabled. Valid values: enabled and disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -545,7 +545,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cross-region replication role. Valid values: primary (primary instance) or backup (backup instance).</p>
+             * <p>The cross-region replication role. Valid values: primary, which indicates the primary instance, and backup, which indicates the backup instance.</p>
              * 
              * <strong>example:</strong>
              * <p>primary</p>
@@ -575,7 +575,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance failover activation status. Valid values: active (activated) or inactive (not activated).</p>
+             * <p>The failover activation status of the instance. Valid values: active, which indicates that failover is activated, and inactive, which indicates that failover is not activated.</p>
              * 
              * <strong>example:</strong>
              * <p>inactive</p>

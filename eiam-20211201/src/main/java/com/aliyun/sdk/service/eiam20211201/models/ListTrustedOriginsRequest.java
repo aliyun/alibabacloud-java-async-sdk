@@ -173,7 +173,7 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the IDaaS EIAM instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20. Maximum value: 100. If you set this parameter to 0, the default value is used.</p>
+         * <p>The maximum number of results per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -198,7 +198,7 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>The NextToken returned by the previous call.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>NT_example</p>
@@ -210,7 +210,7 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>Filters by the exact normalized origin.</p>
+         * <p>The origin filter.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://console.qoder.com">https://console.qoder.com</a></p>
@@ -222,7 +222,11 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>Filters by exact status. Valid values: Enabled or Disabled.</p>
+         * <p>The status filter. Valid values:</p>
+         * <ul>
+         * <li>Enabled: Enabled.</li>
+         * <li>Disabled: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -234,7 +238,7 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>Filters by exact name.</p>
+         * <p>The name filter.</p>
          * 
          * <strong>example:</strong>
          * <p>Qoder Production Console</p>
@@ -246,7 +250,7 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>Filters by exact trusted origin scene. You can specify at most one value.</p>
+         * <p>The trusted origin scene filter.</p>
          * 
          * <strong>example:</strong>
          * <p>iframe_embed</p>

@@ -204,7 +204,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the JWT derived short token capability.</p>
+             * <p>Indicates whether the JWT derived short token feature is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -226,7 +226,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable JWT expiration cleanup.</p>
+             * <p>Indicates whether JWT expiration cleanup is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -248,7 +248,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The JWKs endpoint address.</p>
+             * <p>The JWKs endpoint URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example123456.aliyunidaas.com/api/v2/auths_ngz2wj35ixxxdyat55nexxxxxx/oauth2/jwks">https://example123456.aliyunidaas.com/api/v2/auths_ngz2wj35ixxxdyat55nexxxxxx/oauth2/jwks</a></p>
@@ -435,7 +435,10 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint address used to guide users through authorization. This parameter is conditionally required: it is required when AuthorizationFlow is set to user_federation and ProviderVendor is set to custom. For preset vendors, this value can be automatically populated through DiscoveryUrl.</p>
+             * <p>The authorization endpoint of the OAuth protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/authorize">https://example.com/authorize</a></p>
              */
             public Builder authorizationEndpoint(String authorizationEndpoint) {
                 this.authorizationEndpoint = authorizationEndpoint;
@@ -443,7 +446,14 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OAuth authorization flow type. Valid values: m2m: machine-to-machine (2LO, Client Credentials). user_federation: user federation (3LO, Authorization Code).</p>
+             * <p>The OAuth authorization flow type. Valid values:</p>
+             * <ul>
+             * <li>m2m: Machine-to-machine.</li>
+             * <li>user_federation: User federation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>m2m</p>
              */
             public Builder authorizationFlow(String authorizationFlow) {
                 this.authorizationFlow = authorizationFlow;
@@ -451,7 +461,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client_id in the OAuth protocol.</p>
+             * <p>The client_id in the OAuth protocol, which is the client ID.</p>
              * 
              * <strong>example:</strong>
              * <p>client_id_example_xxx</p>
@@ -462,7 +472,10 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the discovery document used to automatically obtain OAuth endpoint configurations. This parameter is conditionally optional: it is used when AuthorizationFlow is set to user_federation. If DiscoveryUrl is not provided, you must manually configure fields such as TokenEndpoint and AuthorizationEndpoint.</p>
+             * <p>The URL of the OAuth discovery document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/.well-known/openid-configuration">https://example.com/.well-known/openid-configuration</a></p>
              */
             public Builder discoveryUrl(String discoveryUrl) {
                 this.discoveryUrl = discoveryUrl;
@@ -470,10 +483,10 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>JWT issuer。</p>
+             * <p>The issuer endpoint of the OAuth protocol.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://test.issuer.com">https://test.issuer.com</a></p>
+             * <p><a href="https://example.com/issuer">https://example.com/issuer</a></p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -481,7 +494,14 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PKCE code_challenge generation method. Default value: s256.</p>
+             * <p>The algorithm used to calculate the code challenge in PKCE. Valid values:</p>
+             * <ul>
+             * <li>S256.</li>
+             * <li>plain.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>S256</p>
              */
             public Builder pkceChallengeMethod(String pkceChallengeMethod) {
                 this.pkceChallengeMethod = pkceChallengeMethod;
@@ -489,7 +509,10 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to use the PKCE extension to enhance security. We recommend that you always enable this feature.</p>
+             * <p>Indicates whether Proof Key for Code Exchange (PKCE) is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder pkceEnabled(Boolean pkceEnabled) {
                 this.pkceEnabled = pkceEnabled;
@@ -497,7 +520,18 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The preset vendor or custom configuration. This parameter is optional. Default value: custom.</p>
+             * <p>The OAuth provider vendor type. Valid values:</p>
+             * <ul>
+             * <li>custom: Custom.</li>
+             * <li>dingtalk: DingTalk.</li>
+             * <li>feishu: Lark.</li>
+             * <li>github: GitHub.</li>
+             * <li>microsoft: Microsoft.</li>
+             * <li>google: Google.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder providerVendor(String providerVendor) {
                 this.providerVendor = providerVendor;
@@ -507,7 +541,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             /**
              * <p>The scope in the OAuth protocol, which specifies the permission scope.</p>
              * <blockquote>
-             * <p>The scope configuration of the OAuth credential provider serves as the default value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth access token, the scope configuration of the credential provider is used for token issuance.</p>
+             * <p>The scope configuration of the OAuth credential provider serves as the default value. If the scope parameter is not specified when you call the DeveloperAPI to obtain an OAuth access token, the scope configuration of the credential provider is used for token issuance.</p>
              * </blockquote>
              * <blockquote>
              * <p>Notice: Multiple scope values are separated by spaces.</p>
@@ -522,7 +556,10 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The redirect URI automatically generated by the system when the credential provider is created. Configure this value as the redirect_uri in the OAuth provider.</p>
+             * <p>The system-generated redirect URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/callback">https://example.com/callback</a></p>
              */
             public Builder systemRedirectUri(String systemRedirectUri) {
                 this.systemRedirectUri = systemRedirectUri;
@@ -816,7 +853,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the credential provider was created. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The creation time of the credential provider. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830225000</p>
@@ -935,7 +972,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the credential provider was last updated. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The update time of the credential provider. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830225000</p>

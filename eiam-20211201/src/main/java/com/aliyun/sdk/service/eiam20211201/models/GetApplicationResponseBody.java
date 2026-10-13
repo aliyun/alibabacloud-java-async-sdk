@@ -144,7 +144,7 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupIds.
+             * <p>The list of group scopes for synchronization authorization.</p>
              */
             public Builder groupIds(java.util.List<String> groupIds) {
                 this.groupIds = groupIds;
@@ -152,7 +152,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * UserIds.
+             * <p>The list of user IDs.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
@@ -219,7 +219,10 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * FieldName.
+             * <p>The identifier of the application custom field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent_source_id</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -227,7 +230,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * FieldValue.
+             * <p>The value of the application custom field. When FieldName is set to agentType, valid values are bailian, pai, dify, and volcano. When FieldName is set to agentExternalId, enter the corresponding value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>38899</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -632,7 +638,7 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the Developer API feature for the application. Valid values:</p>
+             * <p>The Developer API feature status of the application. Valid values:</p>
              * <ul>
              * <li>enabled: Enabled.</li>
              * <li>disabled: Disabled.</li>
@@ -687,7 +693,7 @@ public class GetApplicationResponseBody extends TeaModel {
              * <p>The application name.</p>
              * 
              * <strong>example:</strong>
-             * <p>SAML application</p>
+             * <p>SAML Application</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -695,7 +701,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationOwner.
+             * <p>The application owner.</p>
              */
             public Builder applicationOwner(ApplicationOwner applicationOwner) {
                 this.applicationOwner = applicationOwner;
@@ -718,7 +724,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application template associated during creation. This value is returned only when the application was created from an application template.</p>
+             * <p>The application template ID associated during creation. This value is returned only when the application was created from an application template.</p>
              * 
              * <strong>example:</strong>
              * <p>apt_rpa_tdsxxx</p>
@@ -763,7 +769,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was created. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The time when the application was created, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -774,7 +780,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * CustomFields.
+             * <p>The list of application custom fields.</p>
              */
             public Builder customFields(java.util.List<CustomFields> customFields) {
                 this.customFields = customFields;
@@ -782,7 +788,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the custom Subject field in the token is enabled. After this feature is enabled, the issued Access Token changes from \&lt;clientId\&gt; to \&lt;clientId\&gt;:\&lt;client.activeSubjectUrn\&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated identity credential of the application.</p>
+             * <p>Indicates whether the custom Subject field in the token is enabled. After this feature is enabled, the issued Access Token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated identity credential of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -796,7 +802,7 @@ public class GetApplicationResponseBody extends TeaModel {
              * <p>The application description.</p>
              * 
              * <strong>example:</strong>
-             * <p>An application for test environment</p>
+             * <p>An application for the test environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -864,7 +870,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the ResourceServer, which corresponds to the ResourceServer audience.</p>
+             * <p>The unique identifier of the ResourceServer, corresponding to the ResourceServer audience.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://www.example.com">https://www.example.com</a></p>
@@ -908,7 +914,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * SmartConfigCapabilities.
+             * <p>The list of capabilities configured through smart configuration.</p>
              */
             public Builder smartConfigCapabilities(java.util.List<String> smartConfigCapabilities) {
                 this.smartConfigCapabilities = smartConfigCapabilities;
@@ -948,7 +954,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was last updated. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The time when the application was last updated, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>

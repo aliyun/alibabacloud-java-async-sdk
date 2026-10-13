@@ -204,7 +204,7 @@ public class ListFederatedCredentialProvidersRequest extends Request {
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>The pagination token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -216,7 +216,7 @@ public class ListFederatedCredentialProvidersRequest extends Request {
         }
 
         /**
-         * <p>The token used to query the previous page.</p>
+         * <p>The pagination token for the previous page.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxxxexample</p>

@@ -1345,7 +1345,7 @@ public class UpdateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>The certificate content.</p>
+             * <p>The content of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX-----END CERTIFICATE-----</p>
@@ -1504,7 +1504,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The certificate list of the IdP.</p>
+             * <p>The list of IdP certificates.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -1557,6 +1557,9 @@ public class UpdateIdentityProviderRequest extends Request {
 
             /**
              * <p>Specifies whether the external IdP is required to sign the Assertion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder wantAssertionsSigned(Boolean wantAssertionsSigned) {
                 this.wantAssertionsSigned = wantAssertionsSigned;
@@ -1565,6 +1568,9 @@ public class UpdateIdentityProviderRequest extends Request {
 
             /**
              * <p>Specifies whether the external IdP is required to sign the Response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder wantResponseSigned(Boolean wantResponseSigned) {
                 this.wantResponseSigned = wantResponseSigned;
@@ -1694,7 +1700,10 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * ContactSecret.
+             * <p>The WeCom contacts secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mPLLiWv-_9witxxxEJCpk1xkF5hOgBzpRt4kBkxxx</p>
              */
             public Builder contactSecret(String contactSecret) {
                 this.contactSecret = contactSecret;
@@ -1713,7 +1722,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The trusted domain name.</p>
+             * <p>The trusted domain.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxx.aliyunidaas.com">https://xxx.aliyunidaas.com</a></p>

@@ -80,7 +80,7 @@ public class ListApplicationAccountsForUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the member accounts.</p>
+         * <p>The member accounts information.</p>
          */
         public Builder applicationAccounts(java.util.List<ApplicationAccounts> applicationAccounts) {
             this.applicationAccounts = applicationAccounts;
@@ -99,7 +99,7 @@ public class ListApplicationAccountsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -242,7 +242,7 @@ public class ListApplicationAccountsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application account.</p>
+             * <p>The application account name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -253,7 +253,7 @@ public class ListApplicationAccountsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the account was created.</p>
+             * <p>The time when the account was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1754359439000</p>
@@ -264,7 +264,7 @@ public class ListApplicationAccountsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the IDaaS EIAM instance.</p>
+             * <p>The IDaaS EIAM instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ki6hd7ihir4ybawogqk6xxxxx</p>

@@ -196,7 +196,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupEgressPrivateIpAddresses.
+             * <p>The private egress IP address list of the backup network access endpoint.</p>
              */
             public Builder backupEgressPrivateIpAddresses(java.util.List<String> backupEgressPrivateIpAddresses) {
                 this.backupEgressPrivateIpAddresses = backupEgressPrivateIpAddresses;
@@ -204,7 +204,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * BackupEgressPublicIpAddresses.
+             * <p>The public egress IP address range of the backup network access endpoint.</p>
              */
             public Builder backupEgressPublicIpAddresses(java.util.List<String> backupEgressPublicIpAddresses) {
                 this.backupEgressPublicIpAddresses = backupEgressPublicIpAddresses;
@@ -212,7 +212,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSecurityGroupId.
+             * <p>The ID of the backup security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1a2b3c4d5e6f7g8</p>
              */
             public Builder backupSecurityGroupId(String backupSecurityGroupId) {
                 this.backupSecurityGroupId = backupSecurityGroupId;
@@ -220,7 +223,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * BackupVSwitchIds.
+             * <p>The list of backup vSwitches.</p>
              */
             public Builder backupVSwitchIds(java.util.List<String> backupVSwitchIds) {
                 this.backupVSwitchIds = backupVSwitchIds;
@@ -228,7 +231,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * BackupVpcId.
+             * <p>The ID of the backup VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1a2b3c4d5e6f7g8</p>
              */
             public Builder backupVpcId(String backupVpcId) {
                 this.backupVpcId = backupVpcId;
@@ -236,7 +242,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * BackupVpcRegionId.
+             * <p>The region of the backup VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder backupVpcRegionId(String backupVpcRegionId) {
                 this.backupVpcRegionId = backupVpcRegionId;
@@ -459,7 +468,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupVpcEndpoint.
+             * <p>The backup VPC endpoint configuration.</p>
              */
             public Builder backupVpcEndpoint(BackupVpcEndpoint backupVpcEndpoint) {
                 this.backupVpcEndpoint = backupVpcEndpoint;
@@ -492,7 +501,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
              * <p>The public egress IP address range of the shared network access endpoint. This parameter is returned only when NetworkEndpointType is set to shared.</p>
              * 
              * <strong>example:</strong>
-             * <p>203.0.XX.XX/27</p>
+             * <p>8.xx.xx.xxx/27</p>
              */
             public Builder egressPublicIpAddresses(java.util.List<String> egressPublicIpAddresses) {
                 this.egressPublicIpAddresses = egressPublicIpAddresses;
@@ -525,7 +534,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
              * <p>The name of the dedicated network access endpoint.</p>
              * 
              * <strong>example:</strong>
-             * <p>Xx-business VPC access endpoint</p>
+             * <p>VPC access endpoint for XX service</p>
              */
             public Builder networkAccessEndpointName(String networkAccessEndpointName) {
                 this.networkAccessEndpointName = networkAccessEndpointName;
@@ -548,7 +557,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security group used by the dedicated network access endpoint.</p>
+             * <p>The security group ID used by the dedicated network access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-examplexxx</p>
@@ -587,7 +596,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of vSwitches to which the dedicated network access endpoint is connected.</p>
+             * <p>The list of vSwitches associated with the dedicated network access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-examplexxx</p>
@@ -598,7 +607,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC to which the dedicated network access endpoint is connected.</p>
+             * <p>The VPC ID associated with the dedicated network access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-examplexxx</p>
@@ -609,7 +618,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region of the VPC to which the dedicated network access endpoint is connected.</p>
+             * <p>The region of the VPC associated with the dedicated network access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>

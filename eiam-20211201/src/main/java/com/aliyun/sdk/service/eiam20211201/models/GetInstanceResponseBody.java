@@ -144,7 +144,7 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The domain name of the instance.</p>
+             * <p>The domain name address of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>example-xxx.aliyunidaas.com</p>
@@ -264,7 +264,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The automatic redirect status of the initialization domain name. Valid values:</p>
+             * <p>The auto-redirect status of the initialization domain name. Valid values:</p>
              * <ul>
              * <li><p>enabled: Enabled.</p>
              * </li>
@@ -379,7 +379,10 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupInstanceId.
+             * <p>The instance ID of the backup instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_xxxx</p>
              */
             public Builder backupInstanceId(String backupInstanceId) {
                 this.backupInstanceId = backupInstanceId;
@@ -387,7 +390,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * BackupInstanceRegionId.
+             * <p>The region ID of the backup instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder backupInstanceRegionId(String backupInstanceRegionId) {
                 this.backupInstanceRegionId = backupInstanceRegionId;
@@ -395,7 +401,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryInstanceId.
+             * <p>The instance ID of the primary instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_xxxx</p>
              */
             public Builder primaryInstanceId(String primaryInstanceId) {
                 this.primaryInstanceId = primaryInstanceId;
@@ -403,7 +412,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryInstanceRegionId.
+             * <p>The region ID of the primary instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder primaryInstanceRegionId(String primaryInstanceRegionId) {
                 this.primaryInstanceRegionId = primaryInstanceRegionId;
@@ -411,7 +423,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationCreateTime.
+             * <p>The time when the disaster recovery data replication was created. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1778499337000</p>
              */
             public Builder replicationCreateTime(Long replicationCreateTime) {
                 this.replicationCreateTime = replicationCreateTime;
@@ -621,7 +636,7 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the instance was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The time when the instance was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1550115455000</p>
@@ -632,7 +647,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CrossRegionReplication.
+             * <p>Indicates whether cross-region replication is enabled. Valid values: enabled or disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder crossRegionReplication(String crossRegionReplication) {
                 this.crossRegionReplication = crossRegionReplication;
@@ -640,7 +658,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CrossRegionReplicationRole.
+             * <p>The cross-region replication role. Valid values: primary indicates the primary instance, and backup indicates the backup instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>primary</p>
              */
             public Builder crossRegionReplicationRole(String crossRegionReplicationRole) {
                 this.crossRegionReplicationRole = crossRegionReplicationRole;
@@ -648,7 +669,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default domain name of the instance. This field is no longer maintained. Use the DomainConfig fields or refer to the query domain name list operation instead.</p>
+             * <p>The default domain name of the instance. This field is no longer maintained. Use the DomainConfig fields or refer to the domain name list query operation instead.</p>
              */
             public Builder defaultEndpoint(DefaultEndpoint defaultEndpoint) {
                 this.defaultEndpoint = defaultEndpoint;
@@ -656,7 +677,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the instance.</p>
+             * <p>The instance description.</p>
              * 
              * <strong>example:</strong>
              * <p>instance_for_test</p>
@@ -675,7 +696,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public egress CIDR blocks of the instance. For example, during Active Directory (AD) account synchronization, the EIAM instance accesses your AD server through these public CIDR blocks.</p>
+             * <p>The egress public IP address ranges of the instance. For example, during AD account synchronization, the EIAM instance accesses your AD server through these public IP address ranges.</p>
              */
             public Builder egressAddresses(java.util.List<String> egressAddresses) {
                 this.egressAddresses = egressAddresses;
@@ -683,7 +704,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceFailoverStatus.
+             * <p>The failover activation status of the instance. Valid values: active indicates activated, and inactive indicates not activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inactive</p>
              */
             public Builder instanceFailoverStatus(String instanceFailoverStatus) {
                 this.instanceFailoverStatus = instanceFailoverStatus;
@@ -702,7 +726,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ServiceCode of the Alibaba Cloud service that manages the instance.</p>
+             * <p>The service code of the Alibaba Cloud service that manages the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>sase</p>
@@ -713,7 +737,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationConfiguration.
+             * <p>The cross-region replication configuration. This parameter is returned only when CrossRegionReplication is set to enabled.</p>
              */
             public Builder replicationConfiguration(ReplicationConfiguration replicationConfiguration) {
                 this.replicationConfiguration = replicationConfiguration;
