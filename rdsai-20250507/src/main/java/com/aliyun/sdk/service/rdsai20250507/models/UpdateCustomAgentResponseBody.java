@@ -157,7 +157,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
          * <p>The name of the dedicated agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>QueryInstanceListAgent</p>
+         * <p>Query Instance List Agent</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -187,7 +187,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
          * <p>The system prompt.</p>
          * 
          * <strong>example:</strong>
-         * <p>I am your dedicated agent for querying instance lists</p>
+         * <p>I am your dedicated Agent for querying instance lists</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.systemPrompt = systemPrompt;
@@ -309,7 +309,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
              * <p>The name of the dedicated agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>QueryInstanceListAgent</p>
+             * <p>Query Instance List Agent</p>
              */
             public Builder name(String name) {
                 this.name = name;

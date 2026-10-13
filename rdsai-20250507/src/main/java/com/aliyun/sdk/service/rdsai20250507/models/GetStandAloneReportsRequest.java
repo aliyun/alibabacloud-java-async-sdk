@@ -115,7 +115,7 @@ public class GetStandAloneReportsRequest extends Request {
         } 
 
         /**
-         * <p>The end time filter in the format of YYYY-MM-DDTHH:mm:ssZ. If this parameter is not specified, no end time filter is applied.</p>
+         * <p>The end time filter in the YYYY-MM-DDTHH:mm:ssZ format. If this parameter is not specified, no filtering is applied based on the end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-19T02:20:20Z</p>
@@ -160,7 +160,7 @@ public class GetStandAloneReportsRequest extends Request {
         }
 
         /**
-         * <p>The start time filter in the format of YYYY-MM-DDTHH:mm:ssZ. If this parameter is not specified, no start time filter is applied.</p>
+         * <p>The start time filter in the YYYY-MM-DDTHH:mm:ssZ format. If this parameter is not specified, no filtering is applied based on the start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-11T02:09:00Z</p>

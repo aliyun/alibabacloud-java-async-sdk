@@ -130,7 +130,10 @@ public class DescribeMOTokenUsageSummaryRequest extends Request {
         } 
 
         /**
-         * ApiKey.
+         * <p>The API key used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-rds-*****</p>
          */
         public Builder apiKey(String apiKey) {
             this.putQueryParameter("ApiKey", apiKey);
@@ -139,7 +142,10 @@ public class DescribeMOTokenUsageSummaryRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the instance. Format: YYYY-MM-DD. The interval between EndTime and StartTime cannot exceed 31 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-30</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -148,6 +154,7 @@ public class DescribeMOTokenUsageSummaryRequest extends Request {
         }
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +167,10 @@ public class DescribeMOTokenUsageSummaryRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The model called.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-flash</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("Model", model);
@@ -169,7 +179,10 @@ public class DescribeMOTokenUsageSummaryRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the instance. Format: YYYY-MM-DD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-21</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -178,7 +191,10 @@ public class DescribeMOTokenUsageSummaryRequest extends Request {
         }
 
         /**
-         * UsageType.
+         * <p>The query type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder usageType(String usageType) {
             this.putQueryParameter("UsageType", usageType);

@@ -93,7 +93,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -276,7 +276,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API key name.</p>
+             * <p>The name of the API key.</p>
              * 
              * <strong>example:</strong>
              * <p>api-*****</p>
@@ -298,7 +298,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota allocation method. Valid values:</p>
+             * <p>The quota type. Valid values:</p>
              * <ul>
              * <li><p><strong>fixed</strong>: By fixed value.</p>
              * </li>

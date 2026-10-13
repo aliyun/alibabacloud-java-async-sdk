@@ -119,6 +119,7 @@ public class ListLLMTokenUsageRequest extends Request {
         } 
 
         /**
+         * <p>The end time of the inspection in UTC. Specify the time in the ISO 8601 standard. Format: YYYY-MM-DDTHH:mm:ssZ. The end time must be at least 2 hours later than the start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +132,7 @@ public class ListLLMTokenUsageRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the AI application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +145,10 @@ public class ListLLMTokenUsageRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The model to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-flash</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("Model", model);
@@ -152,6 +157,7 @@ public class ListLLMTokenUsageRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +170,7 @@ public class ListLLMTokenUsageRequest extends Request {
         }
 
         /**
+         * <p>The start time of the inspection in UTC. Specify the time in the ISO 8601 standard. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

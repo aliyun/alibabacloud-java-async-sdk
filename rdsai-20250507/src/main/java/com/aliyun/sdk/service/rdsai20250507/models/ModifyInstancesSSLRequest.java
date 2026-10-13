@@ -146,7 +146,7 @@ public class ModifyInstancesSSLRequest extends Request {
         }
 
         /**
-         * <p>The list of instance IDs of AI applications. A maximum of 10 instance IDs are supported.</p>
+         * <p>The list of instance IDs of AI applications. A maximum of 10 instance IDs can be specified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

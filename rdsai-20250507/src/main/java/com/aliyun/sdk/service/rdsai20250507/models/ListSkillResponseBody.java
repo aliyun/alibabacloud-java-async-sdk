@@ -136,7 +136,7 @@ public class ListSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique request identifier.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -170,6 +170,9 @@ public class ListSkillResponseBody extends TeaModel {
      * <p>ListSkillResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActiveVersion")
+        private java.util.Map<String, ?> activeVersion;
+
         @com.aliyun.core.annotation.NameInMap("ActiveVersionId")
         private String activeVersionId;
 
@@ -215,7 +218,11 @@ public class ListSkillResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UpdatedAt")
         private String updatedAt;
 
+        @com.aliyun.core.annotation.NameInMap("Visibility")
+        private String visibility;
+
         private Data(Builder builder) {
+            this.activeVersion = builder.activeVersion;
             this.activeVersionId = builder.activeVersionId;
             this.category = builder.category;
             this.content = builder.content;
@@ -231,6 +238,7 @@ public class ListSkillResponseBody extends TeaModel {
             this.skillType = builder.skillType;
             this.slug = builder.slug;
             this.updatedAt = builder.updatedAt;
+            this.visibility = builder.visibility;
         }
 
         public static Builder builder() {
@@ -239,6 +247,13 @@ public class ListSkillResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return activeVersion
+         */
+        public java.util.Map<String, ?> getActiveVersion() {
+            return this.activeVersion;
         }
 
         /**
@@ -346,7 +361,15 @@ public class ListSkillResponseBody extends TeaModel {
             return this.updatedAt;
         }
 
+        /**
+         * @return visibility
+         */
+        public String getVisibility() {
+            return this.visibility;
+        }
+
         public static final class Builder {
+            private java.util.Map<String, ?> activeVersion; 
             private String activeVersionId; 
             private String category; 
             private java.util.Map<String, ?> content; 
@@ -362,11 +385,13 @@ public class ListSkillResponseBody extends TeaModel {
             private String skillType; 
             private String slug; 
             private String updatedAt; 
+            private String visibility; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.activeVersion = model.activeVersion;
                 this.activeVersionId = model.activeVersionId;
                 this.category = model.category;
                 this.content = model.content;
@@ -382,10 +407,19 @@ public class ListSkillResponseBody extends TeaModel {
                 this.skillType = model.skillType;
                 this.slug = model.slug;
                 this.updatedAt = model.updatedAt;
+                this.visibility = model.visibility;
             } 
 
             /**
-             * <p>The ID of the currently active version.</p>
+             * <p>The currently active skill version information.</p>
+             */
+            public Builder activeVersion(java.util.Map<String, ?> activeVersion) {
+                this.activeVersion = activeVersion;
+                return this;
+            }
+
+            /**
+             * <p>The currently active version ID.</p>
              * 
              * <strong>example:</strong>
              * <p>version-example</p>
@@ -448,7 +482,7 @@ public class ListSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the skill.</p>
+             * <p>The skill display name.</p>
              * 
              * <strong>example:</strong>
              * <p>Example Skill</p>
@@ -500,7 +534,7 @@ public class ListSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The visibility scope of the skill.</p>
+             * <p>The skill visibility scope.</p>
              * 
              * <strong>example:</strong>
              * <p>PRIVATE</p>
@@ -522,7 +556,7 @@ public class ListSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stable identifier of the skill.</p>
+             * <p>The skill stable identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>example-skill</p>
@@ -540,6 +574,17 @@ public class ListSkillResponseBody extends TeaModel {
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
+                return this;
+            }
+
+            /**
+             * <p>The skill visibility for the current user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
+             */
+            public Builder visibility(String visibility) {
+                this.visibility = visibility;
                 return this;
             }
 

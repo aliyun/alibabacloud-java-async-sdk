@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSkillResponseBody</p>
  */
 public class UpdateSkillResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Action")
+    private String action;
+
+    @com.aliyun.core.annotation.NameInMap("BundleHash")
+    private String bundleHash;
+
     @com.aliyun.core.annotation.NameInMap("Content")
     private java.util.Map<String, ?> content;
 
@@ -35,21 +41,31 @@ public class UpdateSkillResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SkillId")
+    private String skillId;
+
     @com.aliyun.core.annotation.NameInMap("SkillType")
     private String skillType;
 
     @com.aliyun.core.annotation.NameInMap("UpdatedAt")
     private String updatedAt;
 
+    @com.aliyun.core.annotation.NameInMap("VersionId")
+    private String versionId;
+
     private UpdateSkillResponseBody(Builder builder) {
+        this.action = builder.action;
+        this.bundleHash = builder.bundleHash;
         this.content = builder.content;
         this.dbtypes = builder.dbtypes;
         this.description = builder.description;
         this.id = builder.id;
         this.name = builder.name;
         this.requestId = builder.requestId;
+        this.skillId = builder.skillId;
         this.skillType = builder.skillType;
         this.updatedAt = builder.updatedAt;
+        this.versionId = builder.versionId;
     }
 
     public static Builder builder() {
@@ -62,6 +78,20 @@ public class UpdateSkillResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return action
+     */
+    public String getAction() {
+        return this.action;
+    }
+
+    /**
+     * @return bundleHash
+     */
+    public String getBundleHash() {
+        return this.bundleHash;
     }
 
     /**
@@ -107,6 +137,13 @@ public class UpdateSkillResponseBody extends TeaModel {
     }
 
     /**
+     * @return skillId
+     */
+    public String getSkillId() {
+        return this.skillId;
+    }
+
+    /**
      * @return skillType
      */
     public String getSkillType() {
@@ -120,29 +157,66 @@ public class UpdateSkillResponseBody extends TeaModel {
         return this.updatedAt;
     }
 
+    /**
+     * @return versionId
+     */
+    public String getVersionId() {
+        return this.versionId;
+    }
+
     public static final class Builder {
+        private String action; 
+        private String bundleHash; 
         private java.util.Map<String, ?> content; 
         private java.util.List<String> dbtypes; 
         private String description; 
         private String id; 
         private String name; 
         private String requestId; 
+        private String skillId; 
         private String skillType; 
         private String updatedAt; 
+        private String versionId; 
 
         private Builder() {
         } 
 
         private Builder(UpdateSkillResponseBody model) {
+            this.action = model.action;
+            this.bundleHash = model.bundleHash;
             this.content = model.content;
             this.dbtypes = model.dbtypes;
             this.description = model.description;
             this.id = model.id;
             this.name = model.name;
             this.requestId = model.requestId;
+            this.skillId = model.skillId;
             this.skillType = model.skillType;
             this.updatedAt = model.updatedAt;
+            this.versionId = model.versionId;
         } 
+
+        /**
+         * <p>The update action performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADD_VERSION</p>
+         */
+        public Builder action(String action) {
+            this.action = action;
+            return this;
+        }
+
+        /**
+         * <p>The content digest of the Skill package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</p>
+         */
+        public Builder bundleHash(String bundleHash) {
+            this.bundleHash = bundleHash;
+            return this;
+        }
 
         /**
          * <p>The content.</p>
@@ -164,10 +238,10 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The skill description. The description can be up to 1000 characters in length.</p>
+         * <p>The description of the Skill. The description can be up to 1000 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>SQL Review Expert: Comprehensively reviews SQL for security, performance, and compliance, identifies risks, and provides optimization suggestions. Activated immediately when a user submits SQL or asks about &quot;SQL review&quot;, &quot;SQL audit&quot;, &quot;any risks&quot;, or &quot;how to optimize&quot;</p>
+         * <p>SQL Review Expert: Comprehensively reviews SQL for security, performance, and compliance, identifies risks, and provides optimization suggestions. Activated immediately when a user submits SQL or asks &quot;SQL review&quot;, &quot;SQL Review&quot;, &quot;any risks?&quot;, or &quot;how to optimize&quot;</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -175,7 +249,7 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the skill.</p>
+         * <p>The unique identifier of the Skill.</p>
          * 
          * <strong>example:</strong>
          * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
@@ -186,7 +260,7 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The skill name. The name can contain only lowercase letters, digits, and hyphens.</p>
+         * <p>The name of the Skill. The name can contain only lowercase letters, digits, and hyphens.</p>
          * 
          * <strong>example:</strong>
          * <p>sql-review</p>
@@ -208,7 +282,18 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The skill type.</p>
+         * <p>The ID of the updated Skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skill-example</p>
+         */
+        public Builder skillId(String skillId) {
+            this.skillId = skillId;
+            return this;
+        }
+
+        /**
+         * <p>The Skill type.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -219,13 +304,24 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the skill was last updated.</p>
+         * <p>The time when the Skill was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-04T21:14:45Z</p>
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the Skill version created in this update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>version-example</p>
+         */
+        public Builder versionId(String versionId) {
+            this.versionId = versionId;
             return this;
         }
 

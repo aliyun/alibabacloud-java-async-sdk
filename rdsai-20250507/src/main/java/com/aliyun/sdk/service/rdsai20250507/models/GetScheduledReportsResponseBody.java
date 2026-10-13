@@ -366,7 +366,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inspection end time (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The inspection end time. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-01T23:59:59Z</p>
@@ -409,7 +409,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inspection start time (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The inspection start time. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-01T00:00:00Z</p>

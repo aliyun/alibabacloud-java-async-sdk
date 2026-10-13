@@ -130,7 +130,7 @@ public class DescribeEventsListRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format. The time must be in UTC.</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-28 18:00:00</p>
@@ -142,7 +142,7 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs. You can specify one or more instance IDs.</p>
+         * <p>The list of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>r-uf6ce0r08lr7xn****</p>
@@ -154,7 +154,7 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -166,7 +166,7 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -191,7 +191,7 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format. The time must be in UTC.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-01 18:00:00</p>

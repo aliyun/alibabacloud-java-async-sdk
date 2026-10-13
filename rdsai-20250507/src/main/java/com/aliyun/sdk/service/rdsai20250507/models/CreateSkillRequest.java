@@ -34,6 +34,11 @@ public class CreateSkillRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateNote")
+    @com.aliyun.core.annotation.Validation(maxLength = 1000)
+    private String updateNote;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UploadId")
     private String uploadId;
 
@@ -51,6 +56,7 @@ public class CreateSkillRequest extends Request {
         this.dbtypes = builder.dbtypes;
         this.description = builder.description;
         this.name = builder.name;
+        this.updateNote = builder.updateNote;
         this.uploadId = builder.uploadId;
         this.uploadToken = builder.uploadToken;
         this.workspaceId = builder.workspaceId;
@@ -98,6 +104,13 @@ public class CreateSkillRequest extends Request {
     }
 
     /**
+     * @return updateNote
+     */
+    public String getUpdateNote() {
+        return this.updateNote;
+    }
+
+    /**
      * @return uploadId
      */
     public String getUploadId() {
@@ -123,6 +136,7 @@ public class CreateSkillRequest extends Request {
         private java.util.List<String> dbtypes; 
         private String description; 
         private String name; 
+        private String updateNote; 
         private String uploadId; 
         private String uploadToken; 
         private String workspaceId; 
@@ -137,6 +151,7 @@ public class CreateSkillRequest extends Request {
             this.dbtypes = request.dbtypes;
             this.description = request.description;
             this.name = request.name;
+            this.updateNote = request.updateNote;
             this.uploadId = request.uploadId;
             this.uploadToken = request.uploadToken;
             this.workspaceId = request.workspaceId;
@@ -166,7 +181,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * <p>The Skill description. The description can be up to 1000 characters in length.</p>
+         * <p>The skill description. The description can be up to 1000 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL query optimization skill</p>
@@ -178,7 +193,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * <p>The Skill name. The name can contain only lowercase letters, digits, and hyphens.</p>
+         * <p>The skill name. The name can contain only lowercase letters, digits, and hyphens.</p>
          * 
          * <strong>example:</strong>
          * <p>query-optimization</p>
@@ -190,7 +205,19 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * <p>The Skill upload session ID.</p>
+         * <p>The ContextDB skill version update note. Provide this value when confirming storage after validation passes. The note can be up to 1000 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Initial release</p>
+         */
+        public Builder updateNote(String updateNote) {
+            this.putQueryParameter("UpdateNote", updateNote);
+            this.updateNote = updateNote;
+            return this;
+        }
+
+        /**
+         * <p>The skill upload session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>upload-example</p>
@@ -202,7 +229,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * <p>The Skill upload session token.</p>
+         * <p>The skill upload session token.</p>
          * 
          * <strong>example:</strong>
          * <p>token-example</p>

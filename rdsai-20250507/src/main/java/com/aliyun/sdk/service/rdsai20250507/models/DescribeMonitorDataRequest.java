@@ -179,7 +179,7 @@ public class DescribeMonitorDataRequest extends Request {
         }
 
         /**
-         * <p>The metric to query.</p>
+         * <p>The metric to query. Valid values:</p>
          * <ul>
          * <li><p>pv</p>
          * </li>

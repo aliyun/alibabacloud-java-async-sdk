@@ -119,7 +119,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of instances.</p>
+         * <p>The list of instances.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -127,7 +127,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>This parameter is reserved for future use.</p>
+         * <p>A reserved parameter. You can ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -240,7 +240,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The component status.</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -248,7 +248,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The component type.</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -445,7 +445,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application name.</p>
+             * <p>The name of the AI application.</p>
              * 
              * <strong>example:</strong>
              * <p>test-supabase</p>
@@ -456,7 +456,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application type. The only supported value is <strong>supabase</strong>, which represents <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</p>
+             * <p>The application type. Currently, only <strong>supabase</strong> is supported, which indicates <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>supabase</p>
@@ -467,7 +467,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The components of the instance.</p>
+             * Components.
              */
             public Builder components(java.util.List<Components> components) {
                 this.components = components;
@@ -475,7 +475,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DB instance ID of the connected ApsaraDB RDS for PostgreSQL instance.</p>
+             * <p>The instance ID of the ApsaraDB RDS for PostgreSQL database that is connected to the AI application.</p>
              * 
              * <strong>example:</strong>
              * <p>pgm-2ze49qv594vi****</p>
@@ -497,7 +497,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minor version of the AI application.</p>
+             * <p>The minor version of the AI application instance.</p>
              * 
              * <strong>example:</strong>
              * <p>20241231</p>
@@ -508,7 +508,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application instance.</p>
+             * <p>The instance ID of the AI application.</p>
              * 
              * <strong>example:</strong>
              * <p>ra-supabase-8moov5lxba****</p>
@@ -519,7 +519,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public connection string.</p>
+             * <p>The public endpoint of the AI application.</p>
              * 
              * <strong>example:</strong>
              * <p>8.152. XXX.XXX:8000</p>
@@ -552,7 +552,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VSwitch ID.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-2zeaepb8k4ku05ov2****</p>
@@ -563,7 +563,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC connection string.</p>
+             * <p>The internal endpoint of the AI application.</p>
              * 
              * <strong>example:</strong>
              * <p>172.16.XXX.XXX:8000</p>

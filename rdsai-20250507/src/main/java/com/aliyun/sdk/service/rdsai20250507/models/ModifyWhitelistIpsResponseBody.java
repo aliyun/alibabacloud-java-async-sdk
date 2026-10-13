@@ -80,7 +80,7 @@ public class ModifyWhitelistIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -91,7 +91,7 @@ public class ModifyWhitelistIpsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
@@ -102,7 +102,7 @@ public class ModifyWhitelistIpsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>The request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

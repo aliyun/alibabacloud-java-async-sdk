@@ -155,12 +155,7 @@ public class CreateContextDatabaseMemberRequest extends Request {
         }
 
         /**
-         * <p>The member role. Valid values:</p>
-         * <ul>
-         * <li>owner</li>
-         * <li>admin</li>
-         * <li>member</li>
-         * </ul>
+         * <p>The member role. Valid values: owner, admin, and member.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

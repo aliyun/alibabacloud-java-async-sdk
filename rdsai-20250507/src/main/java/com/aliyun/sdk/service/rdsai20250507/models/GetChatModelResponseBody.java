@@ -67,7 +67,7 @@ public class GetChatModelResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetChatModelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class GetChatModelResponseBody extends TeaModel {
             } 
 
             /**
-             * ContextWindow.
+             * <p>The context window size of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
             public Builder contextWindow(Long contextWindow) {
                 this.contextWindow = contextWindow;
@@ -188,7 +194,10 @@ public class GetChatModelResponseBody extends TeaModel {
             }
 
             /**
-             * Default.
+             * <p>Indicates whether this is the default model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder _default(Boolean _default) {
                 this._default = _default;
@@ -196,7 +205,7 @@ public class GetChatModelResponseBody extends TeaModel {
             }
 
             /**
-             * Features.
+             * <p>The list of supported modalities.</p>
              */
             public Builder features(java.util.List<String> features) {
                 this.features = features;
@@ -204,7 +213,10 @@ public class GetChatModelResponseBody extends TeaModel {
             }
 
             /**
-             * ModelId.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3.7-max</p>
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -212,7 +224,7 @@ public class GetChatModelResponseBody extends TeaModel {
             }
 
             /**
-             * ThinkingLevels.
+             * <p>The list of thinking depth levels for the model.</p>
              */
             public Builder thinkingLevels(java.util.List<String> thinkingLevels) {
                 this.thinkingLevels = thinkingLevels;

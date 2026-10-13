@@ -119,7 +119,7 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the workspace was created, in ISO-8601 format.</p>
+         * <p>The time when the workspace was created, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-28T17:59:55Z</p>
@@ -174,7 +174,7 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The modified name of the workspace.</p>
+         * <p>The updated name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>my-workspace</p>

@@ -101,7 +101,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

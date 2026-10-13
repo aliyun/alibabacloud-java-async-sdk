@@ -93,7 +93,7 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The request result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +231,10 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiKey.
+             * <p>The API key that is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-rds-**</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -230,7 +242,10 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the instance in ISO 8601 format. The interval between EndTime and StartTime cannot exceed 30 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-30T01:45:03Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -238,7 +253,10 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_copilot**</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -246,7 +264,10 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model that is called.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>glm-5</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -254,7 +275,10 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the instance in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-28T01:45:03Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -425,7 +449,10 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             } 
 
             /**
-             * CompletedAt.
+             * <p>The completion time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-01T01:50:03Z</p>
              */
             public Builder completedAt(String completedAt) {
                 this.completedAt = completedAt;
@@ -433,7 +460,10 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-01T01:45:03Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -441,7 +471,7 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS 预签名下载 URL；status=expired 时为 null</p>
+             * <p>The download URL.</p>
              * 
              * <strong>example:</strong>
              * <p>http://***</p>
@@ -452,7 +482,10 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message. Read this message to determine the error when the final value of Status is not SUCCESSED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tenant auth error</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -460,7 +493,7 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>下载 URL 失效时间（UTC ISO8601）</p>
+             * <p>The expiration time in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-02-04T01:45:03Z</p>
@@ -471,7 +504,10 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The total size of the source backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>252</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -479,7 +515,7 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             }
 
             /**
-             * Filters.
+             * <p>The query filter conditions.</p>
              */
             public Builder filters(Filters filters) {
                 this.filters = filters;
@@ -487,7 +523,10 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * <p>The target conversion format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>csv</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -495,7 +534,10 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             }
 
             /**
-             * RowCount.
+             * <p>The total number of data rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rowCount(Long rowCount) {
                 this.rowCount = rowCount;
@@ -503,7 +545,7 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>none / pending / processing / completed / failed / expired</p>
+             * <p>The module status.</p>
              * 
              * <strong>example:</strong>
              * <p>pending / processing / completed / failed / expired</p>

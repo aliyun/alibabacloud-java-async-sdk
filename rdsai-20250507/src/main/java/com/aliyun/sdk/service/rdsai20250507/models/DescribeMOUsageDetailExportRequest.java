@@ -60,6 +60,7 @@ public class DescribeMOUsageDetailExportRequest extends Request {
         } 
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

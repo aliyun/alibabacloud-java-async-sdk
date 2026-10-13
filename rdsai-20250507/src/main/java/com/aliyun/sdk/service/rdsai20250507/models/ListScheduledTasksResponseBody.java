@@ -434,7 +434,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
              * <p>The inspection description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Automatically inspect production RDS instances at 2 AM every day</p>
+             * <p>Automatically inspect production ApsaraDB RDS instances at 2:00 AM every day</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -486,7 +486,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
              * <p>The task name.</p>
              * 
              * <strong>example:</strong>
-             * <p>InspectionTest</p>
+             * <p>Inspection test</p>
              */
             public Builder name(String name) {
                 this.name = name;

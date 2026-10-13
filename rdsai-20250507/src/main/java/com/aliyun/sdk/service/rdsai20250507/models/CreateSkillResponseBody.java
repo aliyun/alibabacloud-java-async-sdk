@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSkillResponseBody</p>
  */
 public class CreateSkillResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Action")
+    private String action;
+
+    @com.aliyun.core.annotation.NameInMap("BundleHash")
+    private String bundleHash;
+
     @com.aliyun.core.annotation.NameInMap("CatalogRevision")
     private Long catalogRevision;
 
@@ -44,13 +50,21 @@ public class CreateSkillResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Skill")
     private Skill skill;
 
+    @com.aliyun.core.annotation.NameInMap("SkillId")
+    private String skillId;
+
     @com.aliyun.core.annotation.NameInMap("SkillType")
     private String skillType;
 
     @com.aliyun.core.annotation.NameInMap("Version")
     private Version version;
 
+    @com.aliyun.core.annotation.NameInMap("VersionId")
+    private String versionId;
+
     private CreateSkillResponseBody(Builder builder) {
+        this.action = builder.action;
+        this.bundleHash = builder.bundleHash;
         this.catalogRevision = builder.catalogRevision;
         this.content = builder.content;
         this.createdAt = builder.createdAt;
@@ -60,8 +74,10 @@ public class CreateSkillResponseBody extends TeaModel {
         this.name = builder.name;
         this.requestId = builder.requestId;
         this.skill = builder.skill;
+        this.skillId = builder.skillId;
         this.skillType = builder.skillType;
         this.version = builder.version;
+        this.versionId = builder.versionId;
     }
 
     public static Builder builder() {
@@ -74,6 +90,20 @@ public class CreateSkillResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return action
+     */
+    public String getAction() {
+        return this.action;
+    }
+
+    /**
+     * @return bundleHash
+     */
+    public String getBundleHash() {
+        return this.bundleHash;
     }
 
     /**
@@ -140,6 +170,13 @@ public class CreateSkillResponseBody extends TeaModel {
     }
 
     /**
+     * @return skillId
+     */
+    public String getSkillId() {
+        return this.skillId;
+    }
+
+    /**
      * @return skillType
      */
     public String getSkillType() {
@@ -153,7 +190,16 @@ public class CreateSkillResponseBody extends TeaModel {
         return this.version;
     }
 
+    /**
+     * @return versionId
+     */
+    public String getVersionId() {
+        return this.versionId;
+    }
+
     public static final class Builder {
+        private String action; 
+        private String bundleHash; 
         private Long catalogRevision; 
         private java.util.Map<String, ?> content; 
         private String createdAt; 
@@ -163,13 +209,17 @@ public class CreateSkillResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
         private Skill skill; 
+        private String skillId; 
         private String skillType; 
         private Version version; 
+        private String versionId; 
 
         private Builder() {
         } 
 
         private Builder(CreateSkillResponseBody model) {
+            this.action = model.action;
+            this.bundleHash = model.bundleHash;
             this.catalogRevision = model.catalogRevision;
             this.content = model.content;
             this.createdAt = model.createdAt;
@@ -179,9 +229,33 @@ public class CreateSkillResponseBody extends TeaModel {
             this.name = model.name;
             this.requestId = model.requestId;
             this.skill = model.skill;
+            this.skillId = model.skillId;
             this.skillType = model.skillType;
             this.version = model.version;
+            this.versionId = model.versionId;
         } 
+
+        /**
+         * <p>The publish action for this release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_SKILL</p>
+         */
+        public Builder action(String action) {
+            this.action = action;
+            return this;
+        }
+
+        /**
+         * <p>The content digest of the Skill package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</p>
+         */
+        public Builder bundleHash(String bundleHash) {
+            this.bundleHash = bundleHash;
+            return this;
+        }
 
         /**
          * <p>The Skill catalog revision number.</p>
@@ -277,6 +351,17 @@ public class CreateSkillResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The ID of the created Skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skill-example</p>
+         */
+        public Builder skillId(String skillId) {
+            this.skillId = skillId;
+            return this;
+        }
+
+        /**
          * <p>The Skill type.</p>
          * 
          * <strong>example:</strong>
@@ -292,6 +377,17 @@ public class CreateSkillResponseBody extends TeaModel {
          */
         public Builder version(Version version) {
             this.version = version;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the created Skill version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>version-example</p>
+         */
+        public Builder versionId(String versionId) {
+            this.versionId = versionId;
             return this;
         }
 
@@ -493,7 +589,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Skill creation time.</p>
+             * <p>The creation time of the Skill.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-15T10:00:00Z</p>
@@ -515,7 +611,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Skill display name.</p>
+             * <p>The display name of the Skill.</p>
              * 
              * <strong>example:</strong>
              * <p>Example Skill</p>
@@ -578,7 +674,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Skill update time.</p>
+             * <p>The update time of the Skill.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-15T10:00:00Z</p>
@@ -795,7 +891,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Skill version ID.</p>
+             * <p>The ID of the Skill version.</p>
              * 
              * <strong>example:</strong>
              * <p>version-example</p>
@@ -806,7 +902,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Skill package size, in bytes.</p>
+             * <p>The size of the Skill package, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -817,7 +913,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The revocation reason of the Skill version.</p>
+             * <p>The reason for revoking the Skill version.</p>
              * 
              * <strong>example:</strong>
              * <p>Replaced by a newer version</p>
@@ -850,7 +946,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parent Skill.</p>
+             * <p>The ID of the Skill to which this version belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>skill-example</p>
@@ -872,7 +968,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Skill version number.</p>
+             * <p>The version number of the Skill.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>

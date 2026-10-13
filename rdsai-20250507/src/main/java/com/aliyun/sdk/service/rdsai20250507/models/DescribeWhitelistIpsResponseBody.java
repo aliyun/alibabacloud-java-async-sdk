@@ -93,7 +93,7 @@ public class DescribeWhitelistIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response data.</p>
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class DescribeWhitelistIpsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -123,7 +123,7 @@ public class DescribeWhitelistIpsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>The request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -192,7 +192,7 @@ public class DescribeWhitelistIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The domain name.</p>
+             * <p>The domain name address.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.test123.com">www.test123.com</a></p>
@@ -203,7 +203,7 @@ public class DescribeWhitelistIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of IP addresses and CIDR blocks on the whitelist.</p>
+             * <p>The list of IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>127.0.0.1,192.168.1.0/24</p>

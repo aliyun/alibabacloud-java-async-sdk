@@ -67,7 +67,7 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned data object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -196,7 +196,7 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description in English.</p>
+             * <p>The English description.</p>
              * 
              * <strong>example:</strong>
              * <p>Queries RDS instances.</p>
@@ -207,10 +207,10 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description in Japanese.</p>
+             * <p>The Japanese description.</p>
              * 
              * <strong>example:</strong>
-             * <p>RDS インスタンスの一覧を照会します。</p>
+             * <p>RDS インスタンスの一覧を照会します</p>
              */
             public Builder ja(String ja) {
                 this.ja = ja;
@@ -229,10 +229,10 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description in Traditional Chinese.</p>
+             * <p>The Traditional Chinese description.</p>
              * 
              * <strong>example:</strong>
-             * <p>查詢 RDS 實例清單。</p>
+             * <p>查詢 RDS 實例清單</p>
              */
             public Builder tc(String tc) {
                 this.tc = tc;
@@ -251,10 +251,10 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description in Simplified Chinese.</p>
+             * <p>The Chinese description.</p>
              * 
              * <strong>example:</strong>
-             * <p>查询RDS实例列表。</p>
+             * <p>查询RDS实例列表</p>
              */
             public Builder zh(String zh) {
                 this.zh = zh;

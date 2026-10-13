@@ -117,7 +117,7 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of endpoint information of the database instance.</p>
+         * <p>The list of endpoint information for the database instance.</p>
          */
         public Builder DBInstanceEndpoints(java.util.List<DBInstanceEndpoints> DBInstanceEndpoints) {
             this.DBInstanceEndpoints = DBInstanceEndpoints;
@@ -125,7 +125,7 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of endpoint information of the AI application instance.</p>
+         * <p>The list of endpoint information for the AI application instance.</p>
          */
         public Builder instanceEndpoints(java.util.List<InstanceEndpoints> instanceEndpoints) {
             this.instanceEndpoints = instanceEndpoints;

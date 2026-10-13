@@ -192,7 +192,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The date (accurate to the day).</p>
+             * <p>The date, accurate to the day.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-03-31</p>
@@ -273,7 +273,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The date (accurate to the day).</p>
+             * <p>The date, accurate to the day.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-03-31</p>
@@ -810,7 +810,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage of each key (including deleted keys).</p>
+             * <p>The usage of each key, including deleted keys.</p>
              */
             public Builder keyUsageList(java.util.List<KeyUsageList> keyUsageList) {
                 this.keyUsageList = keyUsageList;
@@ -859,7 +859,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total quota for the current cycle (such as the monthly total).</p>
+             * <p>The total quota for the current cycle, such as the monthly quota.</p>
              * 
              * <strong>example:</strong>
              * <p>200000000</p>
@@ -870,7 +870,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The used quota for the current cycle (such as the monthly usage).</p>
+             * <p>The used quota for the current cycle, such as the monthly usage.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>

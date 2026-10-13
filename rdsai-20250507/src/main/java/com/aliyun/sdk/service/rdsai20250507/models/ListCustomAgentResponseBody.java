@@ -119,7 +119,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of custom agents.</p>
+         * <p>The returned data object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -160,7 +160,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of skills.</p>
+         * Skills.
          */
         public Builder skills(java.util.List<Skills> skills) {
             this.skills = skills;
@@ -168,7 +168,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that match the query. This parameter is not returned by default.</p>
+         * <p>The total number of data records that meet the request conditions. This parameter is optional and is not returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -324,7 +324,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The agent ID.</p>
+             * <p>AgentId。</p>
              * 
              * <strong>example:</strong>
              * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
@@ -335,10 +335,10 @@ public class ListCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the custom agent.</p>
+             * <p>The name of the dedicated agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>日志分析Agent</p>
+             * <p>Log Analysis Agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -349,7 +349,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
              * <p>The system prompt.</p>
              * 
              * <strong>example:</strong>
-             * <p>我是您用来查询实例列表的专属Agent。</p>
+             * <p>I am your dedicated agent for querying instance lists</p>
              */
             public Builder systemPrompt(String systemPrompt) {
                 this.systemPrompt = systemPrompt;
@@ -357,7 +357,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of tools.</p>
+             * <p>The tool information.</p>
              */
             public Builder tools(java.util.List<String> tools) {
                 this.tools = tools;
@@ -461,7 +461,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the skill.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -469,7 +469,10 @@ public class ListCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The skill ID.</p>
+             * <p>AgentId。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -477,7 +480,10 @@ public class ListCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the skill.</p>
+             * <p>The name of the dedicated agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Log Analysis Agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -485,7 +491,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the skill.</p>
+             * SkillType.
              */
             public Builder skillType(String skillType) {
                 this.skillType = skillType;

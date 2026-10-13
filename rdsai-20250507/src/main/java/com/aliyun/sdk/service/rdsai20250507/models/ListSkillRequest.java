@@ -30,6 +30,22 @@ public class ListSkillRequest extends Request {
     private Long pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Query")
+    private String query;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
+    private String scope;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
+    private String sort;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
@@ -38,6 +54,10 @@ public class ListSkillRequest extends Request {
         this.language = builder.language;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.query = builder.query;
+        this.scope = builder.scope;
+        this.sort = builder.sort;
+        this.source = builder.source;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -76,6 +96,34 @@ public class ListSkillRequest extends Request {
     }
 
     /**
+     * @return query
+     */
+    public String getQuery() {
+        return this.query;
+    }
+
+    /**
+     * @return scope
+     */
+    public String getScope() {
+        return this.scope;
+    }
+
+    /**
+     * @return sort
+     */
+    public String getSort() {
+        return this.sort;
+    }
+
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -86,6 +134,10 @@ public class ListSkillRequest extends Request {
         private String language; 
         private Long pageNumber; 
         private Long pageSize; 
+        private String query; 
+        private String scope; 
+        private String sort; 
+        private String source; 
         private String workspaceId; 
 
         private Builder() {
@@ -97,6 +149,10 @@ public class ListSkillRequest extends Request {
             this.language = request.language;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.query = request.query;
+            this.scope = request.scope;
+            this.sort = request.sort;
+            this.source = request.source;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -139,6 +195,54 @@ public class ListSkillRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The search parameter for skill name or description. This filter is not currently enabled in the ContextDB management console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
+         */
+        public Builder query(String query) {
+            this.putQueryParameter("Query", query);
+            this.query = query;
+            return this;
+        }
+
+        /**
+         * <p>The ContextDB query scope. Valid values: all (default), private, and system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
+         */
+        public Builder scope(String scope) {
+            this.putQueryParameter("Scope", scope);
+            this.scope = scope;
+            return this;
+        }
+
+        /**
+         * <p>The sort parameter for skills. This sorting is not currently enabled in the ContextDB management console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>updated_at_desc</p>
+         */
+        public Builder sort(String sort) {
+            this.putQueryParameter("Sort", sort);
+            this.sort = sort;
+            return this;
+        }
+
+        /**
+         * <p>The filter parameter for skill source. This filter is not currently enabled in the ContextDB management console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

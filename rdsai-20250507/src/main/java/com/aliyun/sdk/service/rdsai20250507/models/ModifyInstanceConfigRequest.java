@@ -139,7 +139,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>The idempotency parameter.</p>
+         * <p>The idempotence parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCz****</p>

@@ -93,7 +93,7 @@ public class ResetApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ResetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
@@ -123,7 +123,7 @@ public class ResetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>The request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -203,7 +203,7 @@ public class ResetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the API key.</p>
+             * <p>The API key name.</p>
              * 
              * <strong>example:</strong>
              * <p>api-*****</p>
@@ -286,7 +286,7 @@ public class ResetApiKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The new system API key.</p>
+             * <p>The system API key.</p>
              * 
              * <strong>example:</strong>
              * <p>sk-rds-*****</p>
@@ -297,7 +297,7 @@ public class ResetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model invocation URL.</p>
+             * <p>The URL for model invocation.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></p>
@@ -308,7 +308,7 @@ public class ResetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of custom API keys.</p>
+             * <p>The list of custom API keys.</p>
              */
             public Builder customKeyList(java.util.List<CustomKeyList> customKeyList) {
                 this.customKeyList = customKeyList;

@@ -1,0 +1,164 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.rdsai20250507.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link RemoveContextDatabaseSyncJobExclusionRequest} extends {@link RequestModel}
+ *
+ * <p>RemoveContextDatabaseSyncJobExclusionRequest</p>
+ */
+public class RemoveContextDatabaseSyncJobExclusionRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DocumentId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String documentId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String jobId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String workspaceId;
+
+    private RemoveContextDatabaseSyncJobExclusionRequest(Builder builder) {
+        super(builder);
+        this.clientToken = builder.clientToken;
+        this.documentId = builder.documentId;
+        this.jobId = builder.jobId;
+        this.workspaceId = builder.workspaceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static RemoveContextDatabaseSyncJobExclusionRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return documentId
+     */
+    public String getDocumentId() {
+        return this.documentId;
+    }
+
+    /**
+     * @return jobId
+     */
+    public String getJobId() {
+        return this.jobId;
+    }
+
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public static final class Builder extends Request.Builder<RemoveContextDatabaseSyncJobExclusionRequest, Builder> {
+        private String clientToken; 
+        private String documentId; 
+        private String jobId; 
+        private String workspaceId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(RemoveContextDatabaseSyncJobExclusionRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.documentId = request.documentId;
+            this.jobId = request.jobId;
+            this.workspaceId = request.workspaceId;
+        } 
+
+        /**
+         * <p>The idempotency token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sync-connection-20260923-001</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>The document ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doc-as1llqmkol****</p>
+         */
+        public Builder documentId(String documentId) {
+            this.putQueryParameter("DocumentId", documentId);
+            this.documentId = documentId;
+            return this;
+        }
+
+        /**
+         * <p>The job ID, which is a system-generated UUID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400-e29b-41d4-a716-446655440000</p>
+         */
+        public Builder jobId(String jobId) {
+            this.putQueryParameter("JobId", jobId);
+            this.jobId = jobId;
+            return this;
+        }
+
+        /**
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-as1llqmkol****</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
+            return this;
+        }
+
+        @Override
+        public RemoveContextDatabaseSyncJobExclusionRequest build() {
+            return new RemoveContextDatabaseSyncJobExclusionRequest(this);
+        } 
+
+    } 
+
+}

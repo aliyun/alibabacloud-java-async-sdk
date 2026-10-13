@@ -173,7 +173,7 @@ public class CreateSandboxTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The number of CPUs for sandboxes created by using this template. Valid values: 1 to 4.</p>
+         * <p>The number of CPUs for sandboxes created from this template. Valid values: 1 to 4.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -185,7 +185,7 @@ public class CreateSandboxTemplateRequest extends Request {
         }
 
         /**
-         * <p>The memory size for sandboxes created by using this template. Unit: Gi. Valid values: 1Gi to 8Gi.</p>
+         * <p>The memory size for sandboxes created from this template. Unit: Gi. Valid values: 1Gi to 8Gi.</p>
          * 
          * <strong>example:</strong>
          * <p>1Gi</p>

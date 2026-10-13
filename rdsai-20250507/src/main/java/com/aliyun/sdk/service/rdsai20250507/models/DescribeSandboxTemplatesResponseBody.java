@@ -132,7 +132,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * <p>A reserved parameter. You can ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -195,7 +195,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records that match the request conditions.</p>
+         * <p>The total number of records that meet the request conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -376,7 +376,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPUs for the sandbox created with this template.</p>
+             * <p>The number of CPUs for the sandbox created by using this template.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -387,7 +387,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size of the sandbox created with this template.</p>
+             * <p>The memory size of the sandbox created by using this template.</p>
              * 
              * <strong>example:</strong>
              * <p>4Gi</p>
@@ -409,7 +409,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the sandbox created with this template can access resources in the VPC where Supabase resides.</p>
+             * <p>Indicates whether the sandbox created by using this template can access resources in the VPC where Supabase resides.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -455,7 +455,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sandbox template ID. Specify this ID when creating a sandbox with this template.</p>
+             * <p>The sandbox template ID. Specify this ID when you create a sandbox by using this template.</p>
              * 
              * <strong>example:</strong>
              * <p>code-interpreter-asdxxxx</p>

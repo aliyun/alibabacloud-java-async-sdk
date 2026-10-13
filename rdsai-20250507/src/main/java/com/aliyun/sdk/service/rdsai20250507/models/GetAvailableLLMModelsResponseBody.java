@@ -67,7 +67,10 @@ public class GetAvailableLLMModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * Models.
+         * <p>The models.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;glm-5&quot;,&quot;deepseek-v3.2&quot;]</p>
          */
         public Builder models(java.util.List<String> models) {
             this.models = models;
@@ -75,7 +78,10 @@ public class GetAvailableLLMModelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

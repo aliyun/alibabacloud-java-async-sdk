@@ -196,7 +196,7 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The API key name.</p>
+         * <p>The name of the API key.</p>
          * 
          * <strong>example:</strong>
          * <p>api-*****</p>
@@ -220,7 +220,7 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The quota allocation method. Valid values:</p>
+         * <p>The quota type. Valid values:</p>
          * <ul>
          * <li>ratio: by percentage.</li>
          * <li>fixed: by fixed value.</li>

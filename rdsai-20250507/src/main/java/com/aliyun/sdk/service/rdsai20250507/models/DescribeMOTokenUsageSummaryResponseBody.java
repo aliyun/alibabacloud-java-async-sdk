@@ -119,7 +119,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -127,7 +130,7 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Records.
+         * <p>The token usage records.</p>
          */
         public Builder records(java.util.List<Records> records) {
             this.records = records;
@@ -135,7 +138,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +149,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The request result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,7 +160,7 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Summary.
+         * <p>The usage summary information.</p>
          */
         public Builder summary(Summary summary) {
             this.summary = summary;
@@ -159,7 +168,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * UsageType.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder usageType(String usageType) {
             this.usageType = usageType;
@@ -329,7 +341,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiKey.
+             * <p>The API key used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-rds-ds5jjo08hyz1g9orhs3y56l5cy3l3shm</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -337,7 +352,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * CacheTokens.
+             * <p>The number of input tokens that hit the cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8000</p>
              */
             public Builder cacheTokens(Double cacheTokens) {
                 this.cacheTokens = cacheTokens;
@@ -345,7 +363,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Date.
+             * <p>The date, accurate to the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-21</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -353,7 +374,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * InputTokens.
+             * <p>The input token usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder inputTokens(Double inputTokens) {
                 this.inputTokens = inputTokens;
@@ -361,7 +385,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * <p>The API key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qcy-apikey</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -369,7 +396,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model called.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-flash</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -377,7 +407,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTokens.
+             * <p>The output token usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder outputTokens(Double outputTokens) {
                 this.outputTokens = outputTokens;
@@ -385,7 +418,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RequestCount.
+             * <p>The number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder requestCount(Long requestCount) {
                 this.requestCount = requestCount;
@@ -393,7 +429,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTokens.
+             * <p>The total number of tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder totalTokens(Double totalTokens) {
                 this.totalTokens = totalTokens;
@@ -401,7 +440,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * UsageType.
+             * <p>The query type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder usageType(String usageType) {
                 this.usageType = usageType;
@@ -494,7 +536,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * CacheTokens.
+             * <p>The number of input tokens that hit the cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9000</p>
              */
             public Builder cacheTokens(Double cacheTokens) {
                 this.cacheTokens = cacheTokens;
@@ -502,7 +547,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * InputTokens.
+             * <p>The input token usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder inputTokens(Double inputTokens) {
                 this.inputTokens = inputTokens;
@@ -510,7 +558,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTokens.
+             * <p>The output token usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder outputTokens(Double outputTokens) {
                 this.outputTokens = outputTokens;
@@ -518,7 +569,10 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTokens.
+             * <p>The total number of tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11000</p>
              */
             public Builder totalTokens(Double totalTokens) {
                 this.totalTokens = totalTokens;

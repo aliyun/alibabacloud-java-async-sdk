@@ -59,7 +59,7 @@ public class GetCustomAgentRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the custom agent.</p>
+         * <p>The ID of the dedicated agent.</p>
          * 
          * <strong>example:</strong>
          * <p>ebe44453-3b41-4c74-94d1-01d088d7****</p>

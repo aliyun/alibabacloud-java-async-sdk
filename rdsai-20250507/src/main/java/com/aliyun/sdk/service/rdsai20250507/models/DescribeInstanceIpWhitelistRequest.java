@@ -134,7 +134,7 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

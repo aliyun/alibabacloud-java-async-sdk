@@ -101,7 +101,7 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -203,7 +203,7 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned value.</p>
+             * <p>The return value.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
