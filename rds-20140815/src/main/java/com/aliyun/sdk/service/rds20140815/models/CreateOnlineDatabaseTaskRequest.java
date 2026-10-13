@@ -37,6 +37,10 @@ public class CreateOnlineDatabaseTaskRequest extends Request {
     private String DBName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepCDC")
+    private Boolean keepCDC;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MigrateTaskId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String migrateTaskId;
@@ -63,6 +67,7 @@ public class CreateOnlineDatabaseTaskRequest extends Request {
         this.clientToken = builder.clientToken;
         this.DBInstanceId = builder.DBInstanceId;
         this.DBName = builder.DBName;
+        this.keepCDC = builder.keepCDC;
         this.migrateTaskId = builder.migrateTaskId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -112,6 +117,13 @@ public class CreateOnlineDatabaseTaskRequest extends Request {
     }
 
     /**
+     * @return keepCDC
+     */
+    public Boolean getKeepCDC() {
+        return this.keepCDC;
+    }
+
+    /**
      * @return migrateTaskId
      */
     public String getMigrateTaskId() {
@@ -151,6 +163,7 @@ public class CreateOnlineDatabaseTaskRequest extends Request {
         private String clientToken; 
         private String DBInstanceId; 
         private String DBName; 
+        private Boolean keepCDC; 
         private String migrateTaskId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -167,6 +180,7 @@ public class CreateOnlineDatabaseTaskRequest extends Request {
             this.clientToken = request.clientToken;
             this.DBInstanceId = request.DBInstanceId;
             this.DBName = request.DBName;
+            this.keepCDC = request.keepCDC;
             this.migrateTaskId = request.migrateTaskId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -175,10 +189,10 @@ public class CreateOnlineDatabaseTaskRequest extends Request {
         } 
 
         /**
-         * <p>The consistency check method after the database is open. Valid values:</p>
+         * <p>The consistency check method used after the database is opened. Valid values:</p>
          * <ul>
-         * <li><strong>SyncExecuteDBCheck</strong>: synchronous database check.</li>
-         * <li><strong>AsyncExecuteDBCheck</strong>: asynchronous database check.</li>
+         * <li><strong>SyncExecuteDBCheck</strong>: Executes the database check synchronously.</li>
+         * <li><strong>AsyncExecuteDBCheck</strong>: Executes the database check asynchronously.</li>
          * </ul>
          * <blockquote>
          * <p>Compatible with SQL Server 2008 R2.</p>
@@ -195,7 +209,7 @@ public class CreateOnlineDatabaseTaskRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can contain a maximum of 64 ASCII characters. The value cannot contain non-ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -207,7 +221,7 @@ public class CreateOnlineDatabaseTaskRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+         * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +234,7 @@ public class CreateOnlineDatabaseTaskRequest extends Request {
         }
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +247,19 @@ public class CreateOnlineDatabaseTaskRequest extends Request {
         }
 
         /**
-         * <p>The migration task ID.</p>
+         * <p>Specifies whether to retain the database-level and table-level Change Data Capture (CDC) settings and the data in change tables. Regardless of the value of this parameter, CDC jobs are not rebuilt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder keepCDC(Boolean keepCDC) {
+            this.putQueryParameter("KeepCDC", keepCDC);
+            this.keepCDC = keepCDC;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the migration task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the assessment report.</p>
+         * <p>The list of pre-check reports for one-click cloud migration.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -125,7 +125,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The maximum number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of queried entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -346,7 +346,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content of the assessment report.</p>
+             * <p>The content of the pre-check report for cloud migration.</p>
              * 
              * <strong>example:</strong>
              * <p>[Check rds empty]\nCheck rds databases: success\n[Check source connectivity]\nCheck ip connectable: success\nCheck port connectable: success\nCheck database connectable: success\nCheck account replication privilege: success\nCheck account createrole privilege: success\nCheck account monitor privilege: success\n[Check source version]\nCheck major version consistent: success\n[Check source glibc version]\nCheck source glibc version compatible: warning(warning:source glibc version is not compatible with rds pg)\n[Check disk size]\nCheck disk size enough: success\n[Check wal keep size]\nCheck wal keep size large enough: success\n[Check spec params]\nCheck if spec params too large: success\n [Check triggers]\nCheck triggers compatible: success\n[Check user functions]\nCheck user functions compatible: success\n<em>Migrate check success</em></p>
@@ -390,10 +390,10 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment in which the self-managed PostgreSQL instance runs.</p>
+             * <p>The type of the self-managed PostgreSQL database. Valid values:</p>
              * <ul>
-             * <li><strong>idcOnVpc</strong>: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</li>
-             * <li><strong>ecsOnVpc</strong>: The self-managed PostgreSQL instance resides on an ECS instance.</li>
+             * <li><strong>idcOnVpc</strong>: a self-managed PostgreSQL database in an on-premises data center that is connected to a VPC.</li>
+             * <li><strong>ecsOnVpc</strong>: a self-managed PostgreSQL database on an Alibaba Cloud ECS instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -405,7 +405,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+             * <p>The internal IP address of the self-managed PostgreSQL database.</p>
              * 
              * <strong>example:</strong>
              * <p>172.2.XX.XX</p>
@@ -427,7 +427,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number that is used to connect to the self-managed PostgreSQL instance.</p>
+             * <p>The port of the self-managed PostgreSQL database.</p>
              * 
              * <strong>example:</strong>
              * <p>5432</p>
@@ -438,7 +438,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved parameter. The return value of this parameter is empty.</p>
+             * <p>A reserved parameter. The query result is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -449,7 +449,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
+             * <p>The instance ID of the target instance.</p>
              * 
              * <strong>example:</strong>
              * <p>pgm-bp102g323jd4****</p>
@@ -460,7 +460,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID.</p>
+             * <p>The ID of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>440420798</p>
@@ -471,7 +471,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task name.</p>
+             * <p>The name of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>lxbv6rtxno8</p>

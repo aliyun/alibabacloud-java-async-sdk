@@ -42,6 +42,10 @@ public class CreateMigrateTaskRequest extends Request {
     private String isOnlineDB;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepCDC")
+    private Boolean keepCDC;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MigrateTaskId")
     private String migrateTaskId;
 
@@ -72,6 +76,7 @@ public class CreateMigrateTaskRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBName = builder.DBName;
         this.isOnlineDB = builder.isOnlineDB;
+        this.keepCDC = builder.keepCDC;
         this.migrateTaskId = builder.migrateTaskId;
         this.OSSUrls = builder.OSSUrls;
         this.ossObjectPositions = builder.ossObjectPositions;
@@ -129,6 +134,13 @@ public class CreateMigrateTaskRequest extends Request {
     }
 
     /**
+     * @return keepCDC
+     */
+    public Boolean getKeepCDC() {
+        return this.keepCDC;
+    }
+
+    /**
      * @return migrateTaskId
      */
     public String getMigrateTaskId() {
@@ -176,6 +188,7 @@ public class CreateMigrateTaskRequest extends Request {
         private String DBInstanceId; 
         private String DBName; 
         private String isOnlineDB; 
+        private Boolean keepCDC; 
         private String migrateTaskId; 
         private String OSSUrls; 
         private String ossObjectPositions; 
@@ -194,6 +207,7 @@ public class CreateMigrateTaskRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBName = request.DBName;
             this.isOnlineDB = request.isOnlineDB;
+            this.keepCDC = request.keepCDC;
             this.migrateTaskId = request.migrateTaskId;
             this.OSSUrls = request.OSSUrls;
             this.ossObjectPositions = request.ossObjectPositions;
@@ -205,8 +219,8 @@ public class CreateMigrateTaskRequest extends Request {
         /**
          * <p>The type of the cloud migration task. Valid values:</p>
          * <ul>
-         * <li><strong>FULL</strong>: performs a restore operation by using a full backup file. This value is applicable to first-time migrations or full data recovery scenarios.</li>
-         * <li><strong>UPDF</strong>: restores incremental data by using an incremental backup file or log file. This value is applicable to incremental synchronization scenarios where a full backup already exists.</li>
+         * <li><strong>FULL</strong>: restores data by using a full backup file. This value is applicable to the first migration or full data recovery scenarios.</li>
+         * <li><strong>UPDF</strong>: restores incremental data by using an incremental backup file or log file. This value is applicable to incremental synchronization scenarios based on an existing full backup.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -220,10 +234,10 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * <p>The consistency check method after the database is brought online. This parameter takes effect only when IsOnlineDB is set to True. Valid values:</p>
+         * <p>The consistency check method used after the database is opened. This parameter takes effect only when IsOnlineDB is set to True. Valid values:</p>
          * <ul>
-         * <li><strong>SyncExecuteDBCheck</strong>: performs a synchronous database check. This value is applicable to scenarios that require high data consistency.</li>
-         * <li><strong>AsyncExecuteDBCheck</strong>: performs an asynchronous database check. This value provides higher performance but may delay the detection of potential issues.</li>
+         * <li><strong>SyncExecuteDBCheck</strong>: synchronously executes the database check. This value is applicable to scenarios that require high data consistency.</li>
+         * <li><strong>AsyncExecuteDBCheck</strong>: asynchronously executes the database check. This value provides higher performance but may delay the discovery of potential issues.</li>
          * </ul>
          * <p>Default value: <strong>AsyncExecuteDBCheck</strong> (compatible with SQL Server 2008 R2).</p>
          * 
@@ -237,7 +251,7 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,16 +277,16 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to bring the restored database online so that users can access it. Valid values:</p>
+         * <p>Specifies whether to bring the restored database online for user access. Valid values:</p>
          * <ul>
-         * <li><strong>True</strong>: Brings the database online.</li>
-         * <li><strong>False</strong>: Does not bring the database online.</li>
+         * <li><strong>True</strong>: brings the database online.</li>
+         * <li><strong>False</strong>: does not bring the database online.</li>
          * </ul>
          * <blockquote>
          * <ul>
          * <li>For SQL Server 2008 R2, this value is always True.</li>
-         * <li>When <strong>IsOnlineDB</strong> is set to <strong>True</strong>, <strong>BackupMode</strong> must be set to <strong>FULL</strong>.</li>
-         * <li>When <strong>IsOnlineDB</strong> is set to <strong>False</strong>, <strong>BackupMode</strong> must be set to <strong>UPDF</strong>.</li>
+         * <li>If <strong>IsOnlineDB</strong> is set to <strong>True</strong>, <strong>BackupMode</strong> must be set to <strong>FULL</strong>.</li>
+         * <li>If <strong>IsOnlineDB</strong> is set to <strong>False</strong>, <strong>BackupMode</strong> must be set to <strong>UPDF</strong>.</li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
@@ -287,10 +301,22 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * <p>The migration task ID. Valid values:</p>
+         * <p>Specifies whether to retain the database- and table-level Change Data Capture (CDC) switches and change table data. This parameter takes effect only when IsOnlineDB is set to True. Regardless of the value of this parameter, CDC jobs are not rebuilt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder keepCDC(Boolean keepCDC) {
+            this.putQueryParameter("KeepCDC", keepCDC);
+            this.keepCDC = keepCDC;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the migration task. Valid values:</p>
          * <ul>
-         * <li>When <strong>BackupMode</strong> is set to <strong>FULL</strong>, leave this parameter empty (compatible with SQL Server 2008 R2).</li>
-         * <li>When <strong>BackupMode</strong> is set to <strong>UPDF</strong>, set this parameter to the ID of the corresponding FULL task. You can call DescribeMigrateTasks to query the task ID.</li>
+         * <li>If <strong>BackupMode</strong> is set to <strong>FULL</strong>, leave this parameter empty. This ensures compatibility with SQL Server 2008 R2.</li>
+         * <li>If <strong>BackupMode</strong> is set to <strong>UPDF</strong>, set this parameter to the ID of the corresponding FULL task. You can call the DescribeMigrateTasks operation to query the ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -303,7 +329,7 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * <p>The shared URL of the backup file on OSS (URL-encoded). If multiple URLs exist, separate them with vertical bars (|) before encoding, and then pass the encoded value.</p>
+         * <p>The shared URL of the backup file in OSS. The URL must be encoded. If multiple URLs exist, separate them with vertical bars (|) and then encode the string before passing it as the parameter value.</p>
          * <blockquote>
          * <p>This parameter is required for SQL Server 2008 R2.</p>
          * </blockquote>
@@ -318,14 +344,14 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * <p>The OSS file information, which consists of the following three parts separated by colons (:):</p>
+         * <p>The components of the OSS file. The value consists of the following three parts separated by colons (:):</p>
          * <ul>
          * <li><strong>OSS endpoint</strong>: oss-ap-southeast-1.aliyuncs.com.</li>
          * <li><strong>OSS bucket name</strong>: rdsmssqlsingapore.</li>
-         * <li><strong>Backup file name on OSS</strong>: autotest_2008R2_TestMigration_FULL.bak.</li>
+         * <li><strong>Backup file name in OSS</strong>: autotest_2008R2_TestMigration_FULL.bak.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is required for SQL Server versions later than SQL Server 2008 R2.</p>
+         * <p>This parameter is required for SQL Server versions later than 2008 R2.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

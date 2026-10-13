@@ -121,7 +121,7 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         /**
          * <p>The type of the cloud migration task. Valid values:</p>
          * <ul>
-         * <li><strong>FULL</strong>: performs a restore operation by using a full backup file.</li>
+         * <li><strong>FULL</strong>: restores data by using a full backup file.</li>
          * <li><strong>UPDF</strong>: restores incremental data by using an incremental backup file or log file.</li>
          * </ul>
          * 
@@ -145,7 +145,7 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>test02</p>
@@ -156,7 +156,7 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The migration task ID.</p>
+         * <p>The ID of the migration task.</p>
          * 
          * <strong>example:</strong>
          * <p>564563****</p>

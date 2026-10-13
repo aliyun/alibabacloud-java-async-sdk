@@ -75,7 +75,7 @@ public class ModifyDBInstanceVectorSupportStatusRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+         * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

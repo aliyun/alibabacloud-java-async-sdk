@@ -93,7 +93,7 @@ public class ModifyImportTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>069EB9B1-DE12-54B9-8C20-822****</p>
@@ -115,7 +115,7 @@ public class ModifyImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>41698****</p>
@@ -126,7 +126,7 @@ public class ModifyImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task name.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>task_1234</p>

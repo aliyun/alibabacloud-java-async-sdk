@@ -119,7 +119,7 @@ public class ModifyImportTaskRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+         * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,10 +132,10 @@ public class ModifyImportTaskRequest extends Request {
         }
 
         /**
-         * <p>Valid values:</p>
+         * <p>The operation to perform. Valid values:</p>
          * <ul>
-         * <li>RETRY_IMPORT: retries the import task.</li>
-         * <li>CANCEL: cancels the task.</li>
+         * <li>RETRY_IMPORT: Retries the import.</li>
+         * <li>CANCEL: Cancels the task.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -158,7 +158,7 @@ public class ModifyImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination region. You can call DescribeRegions to query region IDs.</p>
+         * <p>The ID of the destination region. You can call the DescribeRegions operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class ModifyImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
