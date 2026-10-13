@@ -73,7 +73,7 @@ public class DeleteAgentProfilesRequest extends Request {
         } 
 
         /**
-         * AgentProfileIds.
+         * <p>The collection of agent configuration IDs.</p>
          */
         public Builder agentProfileIds(java.util.List<String> agentProfileIds) {
             String agentProfileIdsShrink = shrink(agentProfileIds, "AgentProfileIds", "json");
@@ -83,7 +83,10 @@ public class DeleteAgentProfilesRequest extends Request {
         }
 
         /**
-         * AppIp.
+         * <p>The app_ip (system field, optional).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder appIp(String appIp) {
             this.putBodyParameter("AppIp", appIp);

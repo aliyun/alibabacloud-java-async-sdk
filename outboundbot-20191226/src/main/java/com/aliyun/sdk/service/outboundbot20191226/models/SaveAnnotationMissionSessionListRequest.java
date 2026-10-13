@@ -143,7 +143,13 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
         } 
 
         /**
-         * AgentId.
+         * <p>The ID of the agent.</p>
+         * <blockquote>
+         * <p>You can obtain this value by calling the DescribeInstance API operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1198938</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -152,7 +158,13 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The key of the workspace. If you do not specify this parameter, the default workspace is accessed. You can obtain the key value on the Business Management page of the Alibaba Cloud account.</p>
+         * <blockquote>
+         * <p>You can obtain this value by calling the DescribeInstance API operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>9137ab9c27044921860030adf8590ec4_p_outbound_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -161,7 +173,14 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
         }
 
         /**
-         * AnnotationMissionDataSourceType.
+         * <p>The data source of the annotation task. Valid values:</p>
+         * <ul>
+         * <li>1: outbound call</li>
+         * <li>2: voice navigation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder annotationMissionDataSourceType(Long annotationMissionDataSourceType) {
             this.putQueryParameter("AnnotationMissionDataSourceType", annotationMissionDataSourceType);
@@ -170,7 +189,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
         }
 
         /**
-         * AnnotationMissionSessionList.
+         * <p>The session list.</p>
+         * <blockquote>
+         * <p>This parameter serves the same purpose as the AnnotationMissionSessionListJsonString parameter. Specify only one of them.</p>
+         * </blockquote>
          */
         public Builder annotationMissionSessionList(java.util.List<AnnotationMissionSessionList> annotationMissionSessionList) {
             this.putQueryParameter("AnnotationMissionSessionList", annotationMissionSessionList);
@@ -179,7 +201,14 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
         }
 
         /**
-         * AnnotationMissionSessionListJsonString.
+         * <p>The JSON string of the session list.</p>
+         * <blockquote>
+         * <p>This parameter serves the same purpose as AnnotationMissionSessionList. Specify only one of them.
+         * The JSON fields correspond to the parameters of AnnotationMissionSessionList.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;jobGroupId&quot;:&quot;4093e364-57dc-4a89-83e0-a88454642596&quot;,&quot;modifiedTime&quot;:1744971010000,&quot;instanceId&quot;:&quot;00b37342-e759-4fe5-b296-aef775933af0&quot;,&quot;version&quot;:0,&quot;annotationMissionId&quot;:&quot;3d4bfd93-0d16-4873-9d77-e4fb1771e5cf&quot;,&quot;createTime&quot;:1744971010000,&quot;annotationMissionSessionId&quot;:&quot;42032063-8ef2-48e1-bc99-587b51581742&quot;,&quot;scriptId&quot;:&quot;bc50d543-6d52-4df8-8fb0-50f31ee9c1ff&quot;,&quot;sessionId&quot;:&quot;641a2c43-5e2a-4535-8a4d-c66d4b4258d6&quot;,&quot;jobId&quot;:&quot;fa54c5bb-d8a7-40ae-a32e-9a4a0c734ce5&quot;,&quot;annotationStatus&quot;:2,&quot;debugConversation&quot;:false}]</p>
          */
         public Builder annotationMissionSessionListJsonString(String annotationMissionSessionListJsonString) {
             this.putQueryParameter("AnnotationMissionSessionListJsonString", annotationMissionSessionListJsonString);
@@ -188,7 +217,15 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li>0: NONE</li>
+         * <li>1: private cloud</li>
+         * <li>2: public cloud</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder environment(Long environment) {
             this.putQueryParameter("Environment", environment);
@@ -197,7 +234,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
         }
 
         /**
-         * UserNick.
+         * <p>The nickname of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         public Builder userNick(String userNick) {
             this.putQueryParameter("UserNick", userNick);
@@ -421,7 +461,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             } 
 
             /**
-             * <p>id</p>
+             * <p>ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b598a47a-7c03-45fb-af6b-343950dd9512</p>
              */
             public Builder annotationMissionChatCustomizationDataInfoId(String annotationMissionChatCustomizationDataInfoId) {
                 this.annotationMissionChatCustomizationDataInfoId = annotationMissionChatCustomizationDataInfoId;
@@ -429,7 +472,7 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * <p>chat id</p>
+             * <p>chat ID</p>
              * 
              * <strong>example:</strong>
              * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
@@ -440,7 +483,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionId.
+             * <p>The annotation task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -448,7 +494,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionSessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
              */
             public Builder annotationMissionSessionId(String annotationMissionSessionId) {
                 this.annotationMissionSessionId = annotationMissionSessionId;
@@ -456,7 +505,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * Content.
+             * <p>The content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You are now proactively invited to apply. This is a rare opportunity. The credit limit is free of charge if left unused and can be used as your reserve fund. The funds can be credited to your account in as fast as 5 minutes. We recommend that you claim the credit limit for free first</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -464,7 +516,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * Create.
+             * <p>Specifies whether to create the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder create(Boolean create) {
                 this.create = create;
@@ -472,7 +527,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682316909210</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -480,7 +538,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * CustomizationDataDescription.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default data description</p>
              */
             public Builder customizationDataDescription(String customizationDataDescription) {
                 this.customizationDataDescription = customizationDataDescription;
@@ -488,7 +549,7 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * <p>id</p>
+             * <p>ID</p>
              * 
              * <strong>example:</strong>
              * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
@@ -499,7 +560,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * CustomizationDataName.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default data</p>
              */
             public Builder customizationDataName(String customizationDataName) {
                 this.customizationDataName = customizationDataName;
@@ -507,7 +571,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * CustomizationDataWeight.
+             * <p>The language model data weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder customizationDataWeight(Integer customizationDataWeight) {
                 this.customizationDataWeight = customizationDataWeight;
@@ -515,7 +582,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * Delete.
+             * <p>Specifies whether to delete the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder delete(Boolean delete) {
                 this.delete = delete;
@@ -523,7 +593,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b598a47a-7c03-45fb-af6b-343950dd9512</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -531,7 +604,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1673438100000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -741,10 +817,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             } 
 
             /**
-             * <p>chat id</p>
+             * <p>chat ID</p>
              * 
              * <strong>example:</strong>
-             * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
+             * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
              */
             public Builder annotationMissionChatId(String annotationMissionChatId) {
                 this.annotationMissionChatId = annotationMissionChatId;
@@ -752,7 +828,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionChatIntentUserSayInfoId.
+             * <p>ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
              */
             public Builder annotationMissionChatIntentUserSayInfoId(String annotationMissionChatIntentUserSayInfoId) {
                 this.annotationMissionChatIntentUserSayInfoId = annotationMissionChatIntentUserSayInfoId;
@@ -760,7 +839,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionId.
+             * <p>The annotation task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -768,7 +850,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionSessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
              */
             public Builder annotationMissionSessionId(String annotationMissionSessionId) {
                 this.annotationMissionSessionId = annotationMissionSessionId;
@@ -776,7 +861,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * BotId.
+             * <p>The robot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
              */
             public Builder botId(String botId) {
                 this.botId = botId;
@@ -784,7 +872,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * Content.
+             * <p>The content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -792,7 +883,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * Create.
+             * <p>Specifies whether to create the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder create(Boolean create) {
                 this.create = create;
@@ -800,7 +894,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683858248778</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -808,7 +905,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * Delete.
+             * <p>Specifies whether to delete the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder delete(Boolean delete) {
                 this.delete = delete;
@@ -816,7 +916,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * DialogId.
+             * <p>The dialog ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2991201</p>
              */
             public Builder dialogId(Long dialogId) {
                 this.dialogId = dialogId;
@@ -824,7 +927,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -832,7 +938,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * IntentId.
+             * <p>The intent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>119839</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -840,7 +949,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683858248778</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -1024,7 +1136,7 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             } 
 
             /**
-             * <p>chat id</p>
+             * <p>chat ID</p>
              * 
              * <strong>example:</strong>
              * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
@@ -1035,6 +1147,9 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
+             * <p>ID</p>
+             * 
+             * <strong>example:</strong>
              * <p>id</p>
              */
             public Builder annotationMissionChatTagInfoId(String annotationMissionChatTagInfoId) {
@@ -1043,7 +1158,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -1051,7 +1169,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionSessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
              */
             public Builder annotationMissionSessionId(String annotationMissionSessionId) {
                 this.annotationMissionSessionId = annotationMissionSessionId;
@@ -1059,7 +1180,7 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * <p>tag id</p>
+             * <p>tag ID</p>
              * 
              * <strong>example:</strong>
              * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
@@ -1070,7 +1191,12 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionTagInfoName.
+             * <p>The name of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder annotationMissionTagInfoName(String annotationMissionTagInfoName) {
                 this.annotationMissionTagInfoName = annotationMissionTagInfoName;
@@ -1078,7 +1204,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * Create.
+             * <p>Specifies whether to create the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder create(Boolean create) {
                 this.create = create;
@@ -1086,7 +1215,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * CreateTime.
+             * <p>The end time of the annotation mission group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679710866060</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1094,7 +1226,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * Delete.
+             * <p>Specifies whether to delete the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder delete(Boolean delete) {
                 this.delete = delete;
@@ -1102,7 +1237,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32be9d94-1346-4c4a-a4d0-ccd379f87013</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1110,7 +1248,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679710866060</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -1333,7 +1474,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             } 
 
             /**
-             * <p>chat id</p>
+             * <p>chat ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
              */
             public Builder annotationMissionChatId(String annotationMissionChatId) {
                 this.annotationMissionChatId = annotationMissionChatId;
@@ -1341,7 +1485,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * <p>id</p>
+             * <p>ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
              */
             public Builder annotationMissionChatVocabularyInfoId(String annotationMissionChatVocabularyInfoId) {
                 this.annotationMissionChatVocabularyInfoId = annotationMissionChatVocabularyInfoId;
@@ -1349,7 +1496,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionId.
+             * <p>The annotation task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -1357,7 +1507,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionSessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
              */
             public Builder annotationMissionSessionId(String annotationMissionSessionId) {
                 this.annotationMissionSessionId = annotationMissionSessionId;
@@ -1365,7 +1518,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * Create.
+             * <p>Specifies whether to create the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder create(Boolean create) {
                 this.create = create;
@@ -1373,7 +1529,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677552860720</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1381,7 +1540,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * Delete.
+             * <p>Specifies whether to delete the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder delete(Boolean delete) {
                 this.delete = delete;
@@ -1389,7 +1551,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1397,7 +1562,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679283408230</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -1405,7 +1573,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * Vocabulary.
+             * <p>The hot word annotation content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder vocabulary(String vocabulary) {
                 this.vocabulary = vocabulary;
@@ -1413,7 +1584,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * VocabularyDescription.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>After-sales consultation</p>
              */
             public Builder vocabularyDescription(String vocabularyDescription) {
                 this.vocabularyDescription = vocabularyDescription;
@@ -1421,7 +1595,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * VocabularyId.
+             * <p>The hot word ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
              */
             public Builder vocabularyId(String vocabularyId) {
                 this.vocabularyId = vocabularyId;
@@ -1429,7 +1606,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * VocabularyName.
+             * <p>The processing scenario name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Consultation</p>
              */
             public Builder vocabularyName(String vocabularyName) {
                 this.vocabularyName = vocabularyName;
@@ -1437,7 +1617,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * VocabularyWeight.
+             * <p>The hot word weight. Valid values: -6 to 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder vocabularyWeight(Integer vocabularyWeight) {
                 this.vocabularyWeight = vocabularyWeight;
@@ -1751,7 +1934,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             } 
 
             /**
-             * AnnotationAsrResult.
+             * <p>The manual ASR annotation text result, which is used to calculate the character accuracy rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder annotationAsrResult(String annotationAsrResult) {
                 this.annotationAsrResult = annotationAsrResult;
@@ -1759,7 +1945,7 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionChatCustomizationDataInfoList.
+             * <p>The language model annotation information table for the annotation task chat.</p>
              */
             public Builder annotationMissionChatCustomizationDataInfoList(java.util.List<AnnotationMissionChatCustomizationDataInfoList> annotationMissionChatCustomizationDataInfoList) {
                 this.annotationMissionChatCustomizationDataInfoList = annotationMissionChatCustomizationDataInfoList;
@@ -1767,7 +1953,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * <p>chat id</p>
+             * <p>chat ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
              */
             public Builder annotationMissionChatId(String annotationMissionChatId) {
                 this.annotationMissionChatId = annotationMissionChatId;
@@ -1775,7 +1964,7 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionChatIntentUserSayInfoList.
+             * <p>The list.</p>
              */
             public Builder annotationMissionChatIntentUserSayInfoList(java.util.List<AnnotationMissionChatIntentUserSayInfoList> annotationMissionChatIntentUserSayInfoList) {
                 this.annotationMissionChatIntentUserSayInfoList = annotationMissionChatIntentUserSayInfoList;
@@ -1783,7 +1972,7 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionChatTagInfoList.
+             * <p>The mapping list of bound tags for the annotation information chat.</p>
              */
             public Builder annotationMissionChatTagInfoList(java.util.List<AnnotationMissionChatTagInfoList> annotationMissionChatTagInfoList) {
                 this.annotationMissionChatTagInfoList = annotationMissionChatTagInfoList;
@@ -1791,7 +1980,7 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionChatVocabularyInfoList.
+             * <p>The hot word annotation information table for the annotation task chat.</p>
              */
             public Builder annotationMissionChatVocabularyInfoList(java.util.List<AnnotationMissionChatVocabularyInfoList> annotationMissionChatVocabularyInfoList) {
                 this.annotationMissionChatVocabularyInfoList = annotationMissionChatVocabularyInfoList;
@@ -1799,7 +1988,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionId.
+             * <p>The annotation task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -1807,7 +1999,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionSessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c88cc004-de69-4eee-aa5f-2efed533a54e</p>
              */
             public Builder annotationMissionSessionId(String annotationMissionSessionId) {
                 this.annotationMissionSessionId = annotationMissionSessionId;
@@ -1815,7 +2010,16 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationStatus.
+             * <p>The annotation status. Valid values:</p>
+             * <ul>
+             * <li>0: Not completed (UNDO).</li>
+             * <li>1: In progress (DOING).</li>
+             * <li>2: Completed (DONE).</li>
+             * <li>3: Canceled (CLOSED).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder annotationStatus(Integer annotationStatus) {
                 this.annotationStatus = annotationStatus;
@@ -1823,7 +2027,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * Answer.
+             * <p>The reply content of the robot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;Answer\&quot;: u\&quot;\u53c2\u8003\u6587\u6863\uff1a<a href="https://help.aliyun.com/document_detail/181325.html%5C%5C">https://help.aliyun.com/document_detail/181325.html\\</a>&quot;, \&quot;QuestionId\&quot;: 372858, \&quot;Uuid\&quot;: \&quot;ac14000516762684770197536d0044\&quot;}</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -1831,7 +2038,16 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AsrAnnotationStatus.
+             * <p>The ASR annotation status. Valid values:</p>
+             * <ul>
+             * <li>0: Not completed (UNDO).</li>
+             * <li>1: In progress (DOING).</li>
+             * <li>2: Completed (DONE).</li>
+             * <li>3: Canceled (CLOSED).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder asrAnnotationStatus(Integer asrAnnotationStatus) {
                 this.asrAnnotationStatus = asrAnnotationStatus;
@@ -1839,7 +2055,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679629770336</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1847,7 +2066,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5ec263fa-c8de-46f4-b844-6fb8275bb645</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1855,7 +2077,16 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * IntentAnnotationStatus.
+             * <p>The intent annotation status. Valid values:</p>
+             * <ul>
+             * <li>0: Not completed (UNDO).</li>
+             * <li>1: In progress (DOING).</li>
+             * <li>2: Completed (DONE).</li>
+             * <li>3: Canceled (CLOSED).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder intentAnnotationStatus(Integer intentAnnotationStatus) {
                 this.intentAnnotationStatus = intentAnnotationStatus;
@@ -1863,7 +2094,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1629360780000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -1871,7 +2105,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * OccurTime.
+             * <p>The trigger time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682493047418</p>
              */
             public Builder occurTime(Long occurTime) {
                 this.occurTime = occurTime;
@@ -1879,7 +2116,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * OriginalAsrResult.
+             * <p>The ASR recognition result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder originalAsrResult(String originalAsrResult) {
                 this.originalAsrResult = originalAsrResult;
@@ -1887,7 +2127,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * SequenceId.
+             * <p>The sequence number of the current session interaction round.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1475140522</p>
              */
             public Builder sequenceId(String sequenceId) {
                 this.sequenceId = sequenceId;
@@ -1895,7 +2138,17 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * SubStatus.
+             * <p>The annotation action. Valid values:</p>
+             * <ul>
+             * <li>1: Correct.</li>
+             * <li>20: Match error, not optimized.</li>
+             * <li>21: Match error, optimized.</li>
+             * <li>3: Not covered.</li>
+             * <li>4: Invalid.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder subStatus(Integer subStatus) {
                 this.subStatus = subStatus;
@@ -1903,7 +2156,16 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * TagAnnotationStatus.
+             * <p>The tag annotation status. Valid values:</p>
+             * <ul>
+             * <li>0: Not completed (UNDO).</li>
+             * <li>1: In progress (DOING).</li>
+             * <li>2: Completed (DONE).</li>
+             * <li>3: Canceled (CLOSED).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tagAnnotationStatus(Integer tagAnnotationStatus) {
                 this.tagAnnotationStatus = tagAnnotationStatus;
@@ -1911,7 +2173,14 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * TranslationError.
+             * <p>Indicates whether a translation error occurred. Valid values:</p>
+             * <ul>
+             * <li>0: No.</li>
+             * <li>1: Yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder translationError(Integer translationError) {
                 this.translationError = translationError;
@@ -2095,7 +2364,7 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             } 
 
             /**
-             * AnnotationMissionChatList.
+             * <p>The chat list.</p>
              */
             public Builder annotationMissionChatList(java.util.List<AnnotationMissionChatList> annotationMissionChatList) {
                 this.annotationMissionChatList = annotationMissionChatList;
@@ -2103,7 +2372,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionId.
+             * <p>The annotation task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c88cc004-de69-4eee-aa5f-2efed533a54e</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -2111,7 +2383,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionSessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c88cc004-de69-4eee-aa5f-2efed533a54e</p>
              */
             public Builder annotationMissionSessionId(String annotationMissionSessionId) {
                 this.annotationMissionSessionId = annotationMissionSessionId;
@@ -2119,7 +2394,16 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * AnnotationStatus.
+             * <p>The annotation status. Valid values:</p>
+             * <ul>
+             * <li>0: Not completed (UNDO).</li>
+             * <li>1: In progress (DOING).</li>
+             * <li>2: Completed (DONE).</li>
+             * <li>3: Canceled (CLOSED).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder annotationStatus(Integer annotationStatus) {
                 this.annotationStatus = annotationStatus;
@@ -2127,7 +2411,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-14T02:01:23Z</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -2135,7 +2422,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -2143,7 +2433,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * JobGroupId.
+             * <p>The job group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29e669bd-a9d1-4529-98cd-c2b0549bcf53</p>
              */
             public Builder jobGroupId(String jobGroupId) {
                 this.jobGroupId = jobGroupId;
@@ -2151,7 +2444,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>593aaf5e-1275-4add-9990-22696385dc6e</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -2159,7 +2455,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683858248778</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -2167,7 +2466,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * ScriptId.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e4f32632-2e56-4399-9fec-47bdbaeefdf6</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -2175,7 +2477,10 @@ public class SaveAnnotationMissionSessionListRequest extends Request {
             }
 
             /**
-             * SessionId.
+             * <p>The session ID. The value is taskId for outbound robots and conversationId for voice navigator robots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e6271044-b4b2-4ad8-ade4-c720be023538</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

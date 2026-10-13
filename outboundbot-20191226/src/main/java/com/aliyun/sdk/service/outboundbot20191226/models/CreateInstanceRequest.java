@@ -131,7 +131,10 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * CallingNumber.
+         * <p>The list of calling numbers.</p>
+         * <blockquote>
+         * <p>This parameter is optional.</p>
+         * </blockquote>
          */
         public Builder callingNumber(java.util.List<String> callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -140,7 +143,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceDescription.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这个是第一的实例</p>
          */
         public Builder instanceDescription(String instanceDescription) {
             this.putQueryParameter("InstanceDescription", instanceDescription);
@@ -149,7 +155,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>第一个实例</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -158,6 +168,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of concurrent conversations for the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +181,23 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * NluServiceType.
+         * <p>The service type.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the default value is Managed.</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>DialogStudio: Conversation Engine 3.0.</p>
+         * </li>
+         * <li><p>Authorized: A chatbot for the public cloud. This value is used when a public cloud customer purchases a private Intelligent Speech Interaction service and grants authorization. To grant authorization, go to Scenario Management, click Edit, and then select Custom Service in the Invoke Service section.</p>
+         * </li>
+         * <li><p>Provided: A chatbot for on-premises deployment.</p>
+         * </li>
+         * <li><p>Managed: The legacy outbound call canvas. This is the default public Intelligent Speech Interaction service for the outbound call product.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DialogStudio</p>
          */
         public Builder nluServiceType(String nluServiceType) {
             this.putQueryParameter("NluServiceType", nluServiceType);
@@ -179,7 +206,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * <blockquote>
+         * <p>You can call the ListResourceGroups operation to obtain this ID. For more information, see the Resource Management documentation at https\://api.aliyun.com/document/ResourceManager/2020-03-31/ListResourceGroups</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwd4qr3z773y</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -74,6 +74,7 @@ public class GetMaxAttemptsPerDayRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,18 @@ public class GetMaxAttemptsPerDayRequest extends Request {
         }
 
         /**
-         * StrategyLevel.
+         * <p>The policy level. The default value is 2 for a business instance.</p>
+         * <ul>
+         * <li><p>0: System</p>
+         * </li>
+         * <li><p>1: Tenant</p>
+         * </li>
+         * <li><p>2: Instance</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder strategyLevel(Integer strategyLevel) {
             this.putQueryParameter("StrategyLevel", strategyLevel);

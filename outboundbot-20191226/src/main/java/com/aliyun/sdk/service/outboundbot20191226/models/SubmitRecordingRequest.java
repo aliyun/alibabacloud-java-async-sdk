@@ -104,6 +104,7 @@ public class SubmitRecordingRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class SubmitRecordingRequest extends Request {
         }
 
         /**
+         * <p>Script recording data</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class SubmitRecordingRequest extends Request {
         }
 
         /**
-         * ResourceRecording.
+         * <p>Script recording data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;contactId&quot;:&quot;3d35c0487cc041abb7ad0ce61752601f&quot;,&quot;duration&quot;:27,&quot;fileName&quot;:&quot;ce2659e5-a20b-4f8e-91b5-5cd909c6b96e_3d35c0487cc041abb7ad0ce61752601f.wav&quot;,&quot;filePath&quot;:&quot;oss://ForCompatibility/waveforms/&quot;,&quot;startTime&quot;:1579057583670,&quot;type&quot;:&quot;Source&quot;}</p>
          */
         public Builder resourceRecording(String resourceRecording) {
             this.putQueryParameter("ResourceRecording", resourceRecording);
@@ -137,6 +142,7 @@ public class SubmitRecordingRequest extends Request {
         }
 
         /**
+         * <p>Task ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

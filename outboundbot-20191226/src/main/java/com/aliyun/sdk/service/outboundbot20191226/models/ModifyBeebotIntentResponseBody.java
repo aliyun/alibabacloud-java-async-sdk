@@ -132,7 +132,10 @@ public class ModifyBeebotIntentResponseBody extends TeaModel {
         } 
 
         /**
-         * BeebotRequestId.
+         * <p>Internal request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1F21BF2-CB21-1968-8039-C74699E7DDEB</p>
          */
         public Builder beebotRequestId(String beebotRequestId) {
             this.beebotRequestId = beebotRequestId;
@@ -140,7 +143,10 @@ public class ModifyBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>API status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -148,7 +154,10 @@ public class ModifyBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class ModifyBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * IntentId.
+         * <p>Intent ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10717802</p>
          */
         public Builder intentId(Long intentId) {
             this.intentId = intentId;
@@ -164,7 +176,10 @@ public class ModifyBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +187,10 @@ public class ModifyBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8785D26A-7406-50A1-9653-1313C292E23B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +198,10 @@ public class ModifyBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Is successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

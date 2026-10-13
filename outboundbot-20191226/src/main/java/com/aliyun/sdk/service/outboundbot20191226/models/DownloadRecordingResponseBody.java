@@ -119,7 +119,10 @@ public class DownloadRecordingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class DownloadRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * DownloadParams.
+         * <p>The download URL.</p>
          */
         public Builder downloadParams(DownloadParams downloadParams) {
             this.downloadParams = downloadParams;
@@ -135,7 +138,10 @@ public class DownloadRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class DownloadRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class DownloadRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DownloadRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +266,7 @@ public class DownloadRecordingResponseBody extends TeaModel {
             } 
 
             /**
-             * EarlyMediaSignatureUrl.
+             * <p>The signed download URL for the early media recording file.</p>
              */
             public Builder earlyMediaSignatureUrl(String earlyMediaSignatureUrl) {
                 this.earlyMediaSignatureUrl = earlyMediaSignatureUrl;
@@ -259,7 +274,10 @@ public class DownloadRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the recording file, which is typically a UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>281eb174-3865-41c1-9274-7b6813edadab.wav</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -267,7 +285,10 @@ public class DownloadRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * SignatureUrl.
+             * <p>The URL used to download the recording file over HTTP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://tiangong-staging.oss-cn-shanghai.aliyuncs.com/record/281eb174-3865-41c1-9274-7b6813edadab.wav?Expires=1578624046&OSSAccessKeyId=LTAI****cqw&Signature=dL2dxWS6VcdZrvG9xOMOBMSP3Fg%3D">http://tiangong-staging.oss-cn-shanghai.aliyuncs.com/record/281eb174-3865-41c1-9274-7b6813edadab.wav?Expires=1578624046&amp;OSSAccessKeyId=LTAI****cqw&amp;Signature=dL2dxWS6VcdZrvG9xOMOBMSP3Fg%3D</a></p>
              */
             public Builder signatureUrl(String signatureUrl) {
                 this.signatureUrl = signatureUrl;
@@ -275,7 +296,10 @@ public class DownloadRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceSliceRecordingListJson.
+             * <p>The list of segmented recordings, including the file names and file URLs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;fileName&quot;:&quot;10a17c447415424c99491884abe27d8a-1.wav&quot;,&quot;filePath&quot;:&quot;<a href="https://ssml-test.oss-cn-shanghai.aliyuncs.com/7253/voiceSlice/10a17c447415424c99491884abe27d8a/10a17c447415424c99491884abe27d8a-1.wav?Expires=1686645470&OSSAccessKeyId=LTA*********kr8M9&Signature=V23OhiV5yIOoouriu6SiWkO9h8E%3D%22%7D%5D">https://ssml-test.oss-cn-shanghai.aliyuncs.com/7253/voiceSlice/10a17c447415424c99491884abe27d8a/10a17c447415424c99491884abe27d8a-1.wav?Expires=1686645470&amp;OSSAccessKeyId=LTA*********kr8M9&amp;Signature=V23OhiV5yIOoouriu6SiWkO9h8E%3D&quot;}]</a></p>
              */
             public Builder voiceSliceRecordingListJson(String voiceSliceRecordingListJson) {
                 this.voiceSliceRecordingListJson = voiceSliceRecordingListJson;

@@ -101,7 +101,10 @@ public class GetRealtimeConcurrencyReportRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85bf7efa-a07c-498a-850e-99a5849b8589</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -110,7 +113,10 @@ public class GetRealtimeConcurrencyReportRequest extends Request {
         }
 
         /**
-         * JobGroupId.
+         * <p>The job group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c62e6789-28a8-41db-941e-171a01d3b3b9</p>
          */
         public Builder jobGroupId(String jobGroupId) {
             this.putQueryParameter("JobGroupId", jobGroupId);
@@ -119,7 +125,10 @@ public class GetRealtimeConcurrencyReportRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -128,7 +137,10 @@ public class GetRealtimeConcurrencyReportRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

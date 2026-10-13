@@ -424,7 +424,10 @@ public class CreateTaskExportTaskRequest extends Request {
         } 
 
         /**
-         * ActualTimeGte.
+         * <p>The start time (inclusive) for searching by call time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646496000000</p>
          */
         public Builder actualTimeGte(Long actualTimeGte) {
             this.putQueryParameter("ActualTimeGte", actualTimeGte);
@@ -433,7 +436,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * ActualTimeLte.
+         * <p>The end time (inclusive) for searching by call time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646582400000</p>
          */
         public Builder actualTimeLte(Long actualTimeLte) {
             this.putQueryParameter("ActualTimeLte", actualTimeLte);
@@ -442,7 +448,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * CallDurationGte.
+         * <p>The minimum call duration for the search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder callDurationGte(Long callDurationGte) {
             this.putQueryParameter("CallDurationGte", callDurationGte);
@@ -451,7 +460,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * CallDurationLte.
+         * <p>The maximum call duration for the search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder callDurationLte(Long callDurationLte) {
             this.putQueryParameter("CallDurationLte", callDurationLte);
@@ -460,7 +472,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * CalledNumber.
+         * <p>The called number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111111111</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -478,7 +493,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * HasAnswered.
+         * <p>Specifies whether the call was answered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasAnswered(Boolean hasAnswered) {
             this.putQueryParameter("HasAnswered", hasAnswered);
@@ -487,7 +505,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * HasHangUpByRejection.
+         * <p>Specifies whether the call was hung up due to rejection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasHangUpByRejection(Boolean hasHangUpByRejection) {
             this.putQueryParameter("HasHangUpByRejection", hasHangUpByRejection);
@@ -496,7 +517,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * HasReachedEndOfFlow.
+         * <p>Specifies whether the conversation was completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasReachedEndOfFlow(Boolean hasReachedEndOfFlow) {
             this.putQueryParameter("HasReachedEndOfFlow", hasReachedEndOfFlow);
@@ -505,6 +529,7 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -517,7 +542,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * JobGroupId.
+         * <p>The job group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb731aee-0a5b-4c2b-924c-d9e82eb1d8d7</p>
          */
         public Builder jobGroupId(String jobGroupId) {
             this.putQueryParameter("JobGroupId", jobGroupId);
@@ -526,7 +554,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * JobGroupNameQuery.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试_20220217_160147</p>
          */
         public Builder jobGroupNameQuery(String jobGroupNameQuery) {
             this.putQueryParameter("JobGroupNameQuery", jobGroupNameQuery);
@@ -535,7 +566,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82097dd5-54df-475f-beba-eec8f4b7a3e1</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -544,7 +578,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * JobStatusStringList.
+         * <p>The job status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder jobStatusStringList(String jobStatusStringList) {
             this.putQueryParameter("JobStatusStringList", jobStatusStringList);
@@ -553,7 +590,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * OtherId.
+         * <p>The other ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64ebe700-91b4-49cb-b457-0b7c0b598a86</p>
          */
         public Builder otherId(String otherId) {
             this.putQueryParameter("OtherId", otherId);
@@ -562,7 +602,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The page number. Pages start from 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -571,7 +614,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -580,7 +626,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * RecordingDurationGte.
+         * <p>The minimum ringing duration for the search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder recordingDurationGte(Long recordingDurationGte) {
             this.putQueryParameter("RecordingDurationGte", recordingDurationGte);
@@ -589,7 +638,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * RecordingDurationLte.
+         * <p>The maximum ringing duration for the search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder recordingDurationLte(Long recordingDurationLte) {
             this.putQueryParameter("RecordingDurationLte", recordingDurationLte);
@@ -598,7 +650,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * ScriptNameQuery.
+         * <p>The scenario name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder scriptNameQuery(String scriptNameQuery) {
             this.putQueryParameter("ScriptNameQuery", scriptNameQuery);
@@ -607,7 +662,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field by which to sort the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>actualTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -616,7 +674,14 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>asr: ascending order</li>
+         * <li>desc: descending order</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -625,7 +690,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * TaskCreateTimeGte.
+         * <p>The start time for searching by task creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646496000000</p>
          */
         public Builder taskCreateTimeGte(Long taskCreateTimeGte) {
             this.putQueryParameter("TaskCreateTimeGte", taskCreateTimeGte);
@@ -634,7 +702,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * TaskCreateTimeLte.
+         * <p>The end time for searching by task creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646582400000</p>
          */
         public Builder taskCreateTimeLte(Long taskCreateTimeLte) {
             this.putQueryParameter("TaskCreateTimeLte", taskCreateTimeLte);
@@ -643,7 +714,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64ebe700-91b4-49cb-b457-0b7c0b598a86</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -652,7 +726,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * TaskStatusStringList.
+         * <p>The call status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded,Failed</p>
          */
         public Builder taskStatusStringList(String taskStatusStringList) {
             this.putQueryParameter("TaskStatusStringList", taskStatusStringList);
@@ -661,7 +738,10 @@ public class CreateTaskExportTaskRequest extends Request {
         }
 
         /**
-         * UserIdMatch.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82097dd5-54df-475f-beba-eec8f4b7a3e1</p>
          */
         public Builder userIdMatch(String userIdMatch) {
             this.putQueryParameter("UserIdMatch", userIdMatch);

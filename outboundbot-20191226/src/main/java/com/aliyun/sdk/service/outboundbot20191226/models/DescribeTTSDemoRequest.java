@@ -245,7 +245,13 @@ public class DescribeTTSDemoRequest extends Request {
         } 
 
         /**
-         * AccessKey.
+         * <p>The AccessKey (AK) of the namespace.</p>
+         * <blockquote>
+         * <p>When the engine is xunfei, enter the AK here.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5d0f37******<strong><strong>ef56db601</strong></strong></p>
          */
         public Builder accessKey(String accessKey) {
             this.putQueryParameter("AccessKey", accessKey);
@@ -254,7 +260,10 @@ public class DescribeTTSDemoRequest extends Request {
         }
 
         /**
-         * AliCustomizedVoice.
+         * <p>The Alibaba Cloud custom voice, which is the voice invocation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>voice-e1be3a6</p>
          */
         public Builder aliCustomizedVoice(String aliCustomizedVoice) {
             this.putQueryParameter("AliCustomizedVoice", aliCustomizedVoice);
@@ -263,7 +272,16 @@ public class DescribeTTSDemoRequest extends Request {
         }
 
         /**
-         * AppKey.
+         * <p>The speech service type.</p>
+         * <ul>
+         * <li><p>When you use <strong>ali</strong> as the custom service, this field stores the appKey of the interactive voice response product project.</p>
+         * </li>
+         * <li><p>When you use <strong>xunfei</strong> as the custom service provider, this field stores the corresponding appKey.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>xusi*******RnP7</p>
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -272,7 +290,17 @@ public class DescribeTTSDemoRequest extends Request {
         }
 
         /**
-         * Engine.
+         * <p>The storage engine. Valid values: ali, volc, xunfei.</p>
+         * <ul>
+         * <li>When using traditional voices, CosyVoice, or selecting Alibaba Cloud as the custom service, set this to <strong>ali</strong>.</li>
+         * <li>When using the doubao service, set this to <strong>volc</strong>.</li>
+         * <li>When using xunfei as the service provider, set this to <strong>xunfei</strong> (can only be used in small model scenarios).</li>
+         * <li>When using your own service, set this to <strong>dock</strong>, and set NlsServiceType to Authorized.</li>
+         * <li>When using CV-v3-flash and Qwen voices, set this to <strong>bailian</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ali</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -281,7 +309,10 @@ public class DescribeTTSDemoRequest extends Request {
         }
 
         /**
-         * ExtParams.
+         * <p>The extended parameter. When Engine is set to <strong>dock</strong>, enter the configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;thirdVoiceConfigUuid&quot;:&quot;3cd82813ece049c4aff3ea3d***********&quot;}</p>
          */
         public Builder extParams(String extParams) {
             this.putQueryParameter("ExtParams", extParams);
@@ -290,6 +321,7 @@ public class DescribeTTSDemoRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,7 +334,15 @@ public class DescribeTTSDemoRequest extends Request {
         }
 
         /**
-         * NlsServiceType.
+         * <p>The service type.
+         * Managed: the default service (public service) of the outbound robot product.
+         * Authorized: the interactive voice response service purchased by the public cloud customer (custom service), configured through system administration &gt; Third-party Voice Configuration.</p>
+         * <blockquote>
+         * <p>When using Alibaba Cloud interactive voice response as the custom service provider, set this to Authorized.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Authorized</p>
          */
         public Builder nlsServiceType(String nlsServiceType) {
             this.putQueryParameter("NlsServiceType", nlsServiceType);
@@ -311,7 +351,10 @@ public class DescribeTTSDemoRequest extends Request {
         }
 
         /**
-         * PitchRate.
+         * <p>The pitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pitchRate(Integer pitchRate) {
             this.putQueryParameter("PitchRate", pitchRate);
@@ -320,7 +363,10 @@ public class DescribeTTSDemoRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ab2d935-306c-478a-88bf-d08e4e25c1b7</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -329,7 +375,13 @@ public class DescribeTTSDemoRequest extends Request {
         }
 
         /**
-         * SecretKey.
+         * <p>The AccessKey Secret (SK) of the namespace.</p>
+         * <blockquote>
+         * <p>When the engine is xunfei, enter the SK here.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>OTdhNDE3Z****<strong><strong>zQ</strong></strong></p>
          */
         public Builder secretKey(String secretKey) {
             this.putQueryParameter("SecretKey", secretKey);
@@ -338,7 +390,12 @@ public class DescribeTTSDemoRequest extends Request {
         }
 
         /**
-         * SpeechRate.
+         * <p>The speech rate. The value is an integer in the range of [-500, 500]. Default value: 0.</p>
+         * <p>A value greater than 0 increases the pitch.</p>
+         * <p>A value less than 0 decreases the pitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder speechRate(Integer speechRate) {
             this.putQueryParameter("SpeechRate", speechRate);
@@ -347,7 +404,11 @@ public class DescribeTTSDemoRequest extends Request {
         }
 
         /**
+         * <p>The text content.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
@@ -356,7 +417,13 @@ public class DescribeTTSDemoRequest extends Request {
         }
 
         /**
-         * Voice.
+         * <p>The voice information, such as aixia, siyue, or xiaoyun. For the complete list of available voices, refer to the voice list below.</p>
+         * <blockquote>
+         * <p>Because the Voice value for cloned voices is a non-fixed value generated during voice cloning, a specific Voice value cannot be provided at this stage. You can obtain the specific VoiceID from the voice cloning page by calling the ListVoiceClone operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>aixia</p>
          */
         public Builder voice(String voice) {
             this.putQueryParameter("Voice", voice);
@@ -365,7 +432,12 @@ public class DescribeTTSDemoRequest extends Request {
         }
 
         /**
-         * Volume.
+         * <p>The volume. The value is an integer in the range of [0, 100]. Default value: 50.</p>
+         * <p>A value greater than 50 increases the volume.</p>
+         * <p>A value less than 50 decreases the volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder volume(Integer volume) {
             this.putQueryParameter("Volume", volume);

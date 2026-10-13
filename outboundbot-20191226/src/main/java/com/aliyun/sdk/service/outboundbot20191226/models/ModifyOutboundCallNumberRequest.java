@@ -120,10 +120,11 @@ public class ModifyOutboundCallNumberRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>52e80b02-0126-4556-a1e6-ef5b3747ed53/a9a3ddc7-d7d7-48cd-82b5-b31bb5510e71_2a66f8ad-dfbb-4980-9b84-439171295a11.xlsx</p>
+         * <p>8fa1953f-4a84-46d8-b80c-8ce9cf684fb3</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -132,10 +133,11 @@ public class ModifyOutboundCallNumberRequest extends Request {
         }
 
         /**
+         * <p>The number to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>10088</p>
+         * <p>10088xxx</p>
          */
         public Builder number(String number) {
             this.putQueryParameter("Number", number);
@@ -144,6 +146,7 @@ public class ModifyOutboundCallNumberRequest extends Request {
         }
 
         /**
+         * <p>The number ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +159,7 @@ public class ModifyOutboundCallNumberRequest extends Request {
         }
 
         /**
+         * <p>The number of rate limit rules.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +172,7 @@ public class ModifyOutboundCallNumberRequest extends Request {
         }
 
         /**
+         * <p>The rate limit period, in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

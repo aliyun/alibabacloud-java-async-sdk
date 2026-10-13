@@ -129,7 +129,10 @@ public class ListAnnotationMissionSessionRequest extends Request {
         } 
 
         /**
-         * AnnotationMissionId.
+         * <p>The annotation mission ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8434a4b0-41fc-41b1-aa75-bbd1f2ab0c8d</p>
          */
         public Builder annotationMissionId(String annotationMissionId) {
             this.putQueryParameter("AnnotationMissionId", annotationMissionId);
@@ -138,7 +141,13 @@ public class ListAnnotationMissionSessionRequest extends Request {
         }
 
         /**
-         * AnnotationMissionSessionId.
+         * <p>The annotation mission chat instance ID.</p>
+         * <blockquote>
+         * <p>Obtained by calling the SaveAnnotationMissionSessionList operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8434a4b0-41fc-41b1-aa75-bbd1f2ab0c8d</p>
          */
         public Builder annotationMissionSessionId(String annotationMissionSessionId) {
             this.putQueryParameter("AnnotationMissionSessionId", annotationMissionSessionId);
@@ -147,7 +156,19 @@ public class ListAnnotationMissionSessionRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment.</p>
+         * <blockquote>
+         * <p>Default value: 2.</p>
+         * </blockquote>
+         * <p><strong>Valid values:</strong></p>
+         * <ul>
+         * <li>0: NONE.</li>
+         * <li>1: Private cloud.</li>
+         * <li>2: Public cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder environment(Integer environment) {
             this.putQueryParameter("Environment", environment);
@@ -156,7 +177,21 @@ public class ListAnnotationMissionSessionRequest extends Request {
         }
 
         /**
-         * IncludeStatusListJsonString.
+         * <p>The list of included statuses.</p>
+         * <blockquote>
+         * <p>The format is [1]. Specify the actual enum values in the array.</p>
+         * </blockquote>
+         * <p><strong>Valid values:</strong></p>
+         * <ul>
+         * <li>1: Correct recognition.</li>
+         * <li>2: Incorrect recognition.</li>
+         * <li>8: Invalid data.</li>
+         * <li>4: Uncovered intent.</li>
+         * <li>16: Transcription misrecognition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[1]</p>
          */
         public Builder includeStatusListJsonString(String includeStatusListJsonString) {
             this.putQueryParameter("IncludeStatusListJsonString", includeStatusListJsonString);
@@ -165,7 +200,10 @@ public class ListAnnotationMissionSessionRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -174,7 +212,10 @@ public class ListAnnotationMissionSessionRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

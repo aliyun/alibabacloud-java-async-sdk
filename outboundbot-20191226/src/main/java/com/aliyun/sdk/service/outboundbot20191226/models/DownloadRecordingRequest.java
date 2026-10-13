@@ -103,6 +103,7 @@ public class DownloadRecordingRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class DownloadRecordingRequest extends Request {
         }
 
         /**
-         * NeedVoiceSliceRecording.
+         * <p>Specifies whether to query segmented recordings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needVoiceSliceRecording(Boolean needVoiceSliceRecording) {
             this.putQueryParameter("NeedVoiceSliceRecording", needVoiceSliceRecording);
@@ -124,7 +128,10 @@ public class DownloadRecordingRequest extends Request {
         }
 
         /**
-         * SwapChannels.
+         * <p>Specifies whether to swap the left and right audio channels. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder swapChannels(Boolean swapChannels) {
             this.putQueryParameter("SwapChannels", swapChannels);
@@ -133,6 +140,7 @@ public class DownloadRecordingRequest extends Request {
         }
 
         /**
+         * <p>The call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -90,7 +90,11 @@ public class PublishScriptRequest extends Request {
         } 
 
         /**
+         * <p>A description of the publication.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>本次发布了xxxx内容</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -99,6 +103,7 @@ public class PublishScriptRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +116,7 @@ public class PublishScriptRequest extends Request {
         }
 
         /**
+         * <p>The ID of the scenario to publish.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

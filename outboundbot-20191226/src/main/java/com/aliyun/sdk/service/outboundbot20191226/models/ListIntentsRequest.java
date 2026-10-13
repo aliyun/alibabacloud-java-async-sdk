@@ -119,6 +119,7 @@ public class ListIntentsRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +132,10 @@ public class ListIntentsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>A keyword to filter intents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>还款</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -140,6 +144,7 @@ public class ListIntentsRequest extends Request {
         }
 
         /**
+         * <p>The number of the page to return.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +157,7 @@ public class ListIntentsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to return on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +170,7 @@ public class ListIntentsRequest extends Request {
         }
 
         /**
+         * <p>The script ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

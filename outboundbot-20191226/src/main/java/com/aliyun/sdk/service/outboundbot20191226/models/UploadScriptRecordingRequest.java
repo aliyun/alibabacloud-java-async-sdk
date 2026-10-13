@@ -120,7 +120,11 @@ public class UploadScriptRecordingRequest extends Request {
         } 
 
         /**
+         * <p>The text content of the recording file.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -129,6 +133,7 @@ public class UploadScriptRecordingRequest extends Request {
         }
 
         /**
+         * <p>The key of the file in OSS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +146,7 @@ public class UploadScriptRecordingRequest extends Request {
         }
 
         /**
+         * <p>The file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +159,7 @@ public class UploadScriptRecordingRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,6 +172,7 @@ public class UploadScriptRecordingRequest extends Request {
         }
 
         /**
+         * <p>The script ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

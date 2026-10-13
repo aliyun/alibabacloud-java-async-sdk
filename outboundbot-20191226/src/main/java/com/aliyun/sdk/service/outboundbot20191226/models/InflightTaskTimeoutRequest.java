@@ -89,6 +89,7 @@ public class InflightTaskTimeoutRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class InflightTaskTimeoutRequest extends Request {
         }
 
         /**
-         * InstanceOwnerId.
+         * <p>Alibaba Cloud account ID of the instance owner</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1864632921948620</p>
          */
         public Builder instanceOwnerId(Long instanceOwnerId) {
             this.putQueryParameter("InstanceOwnerId", instanceOwnerId);
@@ -110,6 +114,7 @@ public class InflightTaskTimeoutRequest extends Request {
         }
 
         /**
+         * <p>Task ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

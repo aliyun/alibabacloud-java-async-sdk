@@ -90,6 +90,7 @@ public class RollbackScriptRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,10 +103,14 @@ public class RollbackScriptRequest extends Request {
         }
 
         /**
+         * <p>Version to roll back to</p>
+         * <blockquote>
+         * <p>For valid values, see the ListScriptPublishHistories operation.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1579055782000</p>
+         * <p>1578965079000</p>
          */
         public Builder rollbackVersion(String rollbackVersion) {
             this.putQueryParameter("RollbackVersion", rollbackVersion);
@@ -114,6 +119,7 @@ public class RollbackScriptRequest extends Request {
         }
 
         /**
+         * <p>Script ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

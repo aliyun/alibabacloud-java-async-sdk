@@ -105,6 +105,7 @@ public class DeleteBeebotIntentLgfRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class DeleteBeebotIntentLgfRequest extends Request {
         }
 
         /**
+         * <p>Intent ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class DeleteBeebotIntentLgfRequest extends Request {
         }
 
         /**
+         * <p>Utterance Template ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class DeleteBeebotIntentLgfRequest extends Request {
         }
 
         /**
+         * <p>Scenario ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

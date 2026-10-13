@@ -90,6 +90,7 @@ public class ListFlashSmsTemplatesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the flash SMS configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class ListFlashSmsTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,15 @@ public class ListFlashSmsTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the flash SMS provider.</p>
+         * <ul>
+         * <li><p>Uincall: Beijing Uincall Communication Co., Ltd.</p>
+         * </li>
+         * <li><p>ShangHaiTianNan: Shanghai Tiannan</p>
+         * </li>
+         * <li><p>HeDao: Galacos</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

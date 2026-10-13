@@ -101,7 +101,10 @@ public class ModifyAnnotationMissionRequest extends Request {
         } 
 
         /**
-         * AnnotationMissionId.
+         * <p>The annotation task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c88cc004-de69-4eee-aa5f-2efed533a54e</p>
          */
         public Builder annotationMissionId(String annotationMissionId) {
             this.putQueryParameter("AnnotationMissionId", annotationMissionId);
@@ -110,7 +113,10 @@ public class ModifyAnnotationMissionRequest extends Request {
         }
 
         /**
-         * AnnotationMissionName.
+         * <p>The annotation task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AskAboutSellingCar-AnnotationTask-20230506-112934</p>
          */
         public Builder annotationMissionName(String annotationMissionName) {
             this.putQueryParameter("AnnotationMissionName", annotationMissionName);
@@ -119,7 +125,10 @@ public class ModifyAnnotationMissionRequest extends Request {
         }
 
         /**
-         * AnnotationStatus.
+         * <p>The annotation task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder annotationStatus(Integer annotationStatus) {
             this.putQueryParameter("AnnotationStatus", annotationStatus);
@@ -128,7 +137,10 @@ public class ModifyAnnotationMissionRequest extends Request {
         }
 
         /**
-         * Delete.
+         * <p>Specifies whether to delete the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder delete(Boolean delete) {
             this.putQueryParameter("Delete", delete);

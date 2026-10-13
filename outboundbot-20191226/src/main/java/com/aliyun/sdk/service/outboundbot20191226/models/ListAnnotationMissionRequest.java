@@ -171,7 +171,10 @@ public class ListAnnotationMissionRequest extends Request {
         } 
 
         /**
-         * AnnotationMissionId.
+         * <p>The ID of the annotation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0943abcb-bd7d-4ace-8cf7-97d39d4dd0b9</p>
          */
         public Builder annotationMissionId(String annotationMissionId) {
             this.putQueryParameter("AnnotationMissionId", annotationMissionId);
@@ -180,7 +183,10 @@ public class ListAnnotationMissionRequest extends Request {
         }
 
         /**
-         * AnnotationMissionName.
+         * <p>The name of the annotation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Panorama service scenario - Annotation task - 20230316-103253</p>
          */
         public Builder annotationMissionName(String annotationMissionName) {
             this.putQueryParameter("AnnotationMissionName", annotationMissionName);
@@ -189,7 +195,7 @@ public class ListAnnotationMissionRequest extends Request {
         }
 
         /**
-         * AnnotationStatusListFilter.
+         * <p>The annotation status filter. This parameter is deprecated.</p>
          */
         public Builder annotationStatusListFilter(java.util.List<Integer> annotationStatusListFilter) {
             this.putQueryParameter("AnnotationStatusListFilter", annotationStatusListFilter);
@@ -198,7 +204,18 @@ public class ListAnnotationMissionRequest extends Request {
         }
 
         /**
-         * AnnotationStatusListStringFilter.
+         * <p>The annotation status filter.</p>
+         * <blockquote>
+         * <p>The format is [1]. You can select multiple filter conditions. The valid values are as follows:</p>
+         * </blockquote>
+         * <ul>
+         * <li>1: In progress.</li>
+         * <li>2: Completed.</li>
+         * <li>3: Closed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[1]</p>
          */
         public Builder annotationStatusListStringFilter(String annotationStatusListStringFilter) {
             this.putQueryParameter("AnnotationStatusListStringFilter", annotationStatusListStringFilter);
@@ -207,7 +224,10 @@ public class ListAnnotationMissionRequest extends Request {
         }
 
         /**
-         * CreateTimeEndFilter.
+         * <p>The end time for the annotation task creation filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1673280000000</p>
          */
         public Builder createTimeEndFilter(Long createTimeEndFilter) {
             this.putQueryParameter("CreateTimeEndFilter", createTimeEndFilter);
@@ -216,7 +236,10 @@ public class ListAnnotationMissionRequest extends Request {
         }
 
         /**
-         * CreateTimeStartFilter.
+         * <p>The start time for the annotation task creation filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1661961600000</p>
          */
         public Builder createTimeStartFilter(Long createTimeStartFilter) {
             this.putQueryParameter("CreateTimeStartFilter", createTimeStartFilter);
@@ -225,7 +248,10 @@ public class ListAnnotationMissionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>191ef468-75a2-4004-9441-a5c31bf5cd9d</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -234,7 +260,10 @@ public class ListAnnotationMissionRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -243,7 +272,10 @@ public class ListAnnotationMissionRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

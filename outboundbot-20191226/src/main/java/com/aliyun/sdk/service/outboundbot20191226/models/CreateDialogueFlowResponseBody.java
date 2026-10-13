@@ -119,7 +119,10 @@ public class CreateDialogueFlowResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateDialogueFlowResponseBody extends TeaModel {
         }
 
         /**
-         * DialogueFlowId.
+         * <p>The dialogue flow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>390515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
          */
         public Builder dialogueFlowId(String dialogueFlowId) {
             this.dialogueFlowId = dialogueFlowId;
@@ -135,7 +141,10 @@ public class CreateDialogueFlowResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class CreateDialogueFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned by the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class CreateDialogueFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class CreateDialogueFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

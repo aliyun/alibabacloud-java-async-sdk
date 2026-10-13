@@ -88,6 +88,7 @@ public class SaveMaxAttemptsPerDayRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class SaveMaxAttemptsPerDayRequest extends Request {
         }
 
         /**
-         * MaxAttemptsPerDay.
+         * <p>Daily maximum redial attempts. Default is 3 if not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxAttemptsPerDay(Integer maxAttemptsPerDay) {
             this.putQueryParameter("MaxAttemptsPerDay", maxAttemptsPerDay);
@@ -109,7 +113,13 @@ public class SaveMaxAttemptsPerDayRequest extends Request {
         }
 
         /**
-         * StrategyLevel.
+         * <p>Policy level (required)</p>
+         * <ul>
+         * <li>2: Instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder strategyLevel(Integer strategyLevel) {
             this.putQueryParameter("StrategyLevel", strategyLevel);

@@ -119,7 +119,10 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The API message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * ScriptPublishHistories.
+         * <p>The publish history list.</p>
          */
         public Builder scriptPublishHistories(ScriptPublishHistories scriptPublishHistories) {
             this.scriptPublishHistories = scriptPublishHistories;
@@ -159,7 +171,10 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -264,7 +279,10 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The publish description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>First release</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -272,7 +290,10 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -280,7 +301,10 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * PublishTime.
+             * <p>The publish time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578965079000</p>
              */
             public Builder publishTime(Long publishTime) {
                 this.publishTime = publishTime;
@@ -288,7 +312,10 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29420f65-8f1f-4009-b2f8-f4f7b5d59090</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -296,7 +323,10 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptVersion.
+             * <p>The script version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578965079000</p>
              */
             public Builder scriptVersion(String scriptVersion) {
                 this.scriptVersion = scriptVersion;
@@ -389,7 +419,7 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The data array.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -397,7 +427,10 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -405,7 +438,10 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -413,7 +449,10 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

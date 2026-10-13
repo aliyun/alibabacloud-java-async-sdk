@@ -89,7 +89,7 @@ public class DescribeJobGroupRequest extends Request {
         } 
 
         /**
-         * BriefTypes.
+         * <p>The filter conditions. This parameter is deprecated.</p>
          */
         public Builder briefTypes(java.util.List<String> briefTypes) {
             this.putQueryParameter("BriefTypes", briefTypes);
@@ -98,6 +98,7 @@ public class DescribeJobGroupRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DescribeJobGroupRequest extends Request {
         }
 
         /**
+         * <p>The job group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

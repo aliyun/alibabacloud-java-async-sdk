@@ -119,7 +119,10 @@ public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The API message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ScriptVoiceConfig.
+         * <p>The voice configuration for the script.</p>
          */
         public Builder scriptVoiceConfig(ScriptVoiceConfig scriptVoiceConfig) {
             this.scriptVoiceConfig = scriptVoiceConfig;
@@ -159,7 +171,10 @@ public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +305,10 @@ public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bdd49242-114c-4045-b1d1-25ccc1756c75</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -298,7 +316,10 @@ public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptContent.
+             * <p>The text that corresponds to the audio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好</p>
              */
             public Builder scriptContent(String scriptContent) {
                 this.scriptContent = scriptContent;
@@ -306,7 +327,10 @@ public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The script ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1d7a26e0-628b-4c3c-9918-7f2e23273f54</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -314,7 +338,10 @@ public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptVoiceConfigId.
+             * <p>The script voice configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4ddea690-6534-4c88-9cbd-0b5882ec64c0</p>
              */
             public Builder scriptVoiceConfigId(String scriptVoiceConfigId) {
                 this.scriptVoiceConfigId = scriptVoiceConfigId;
@@ -322,7 +349,10 @@ public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptWaveformRelation.
+             * <p>Maps script segments to audio recordings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;ScriptContent&quot;:&quot;你好&quot;,&quot;ScriptWaveformId&quot;:&quot;6facc560-9f25-420f-bb0b-99f4299ad0d5&quot;},{&quot;ScriptContent&quot;:&quot;吗&quot;,&quot;ScriptWaveformId&quot;:&quot;76f48266-e253-4f44-ab4f-f64f7d38f1b4&quot;}]</p>
              */
             public Builder scriptWaveformRelation(String scriptWaveformRelation) {
                 this.scriptWaveformRelation = scriptWaveformRelation;
@@ -330,7 +360,10 @@ public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The script source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DIALOGUE_FLOW</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -338,7 +371,10 @@ public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The audio source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WAVEFORM</p>
              */
             public Builder type(String type) {
                 this.type = type;

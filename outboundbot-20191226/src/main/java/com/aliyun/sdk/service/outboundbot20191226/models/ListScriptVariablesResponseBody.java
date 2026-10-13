@@ -119,7 +119,10 @@ public class ListScriptVariablesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListScriptVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListScriptVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The API message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class ListScriptVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class ListScriptVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +174,7 @@ public class ListScriptVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * Variables.
+         * <p>The list of variables.</p>
          */
         public Builder variables(java.util.List<Variables> variables) {
             this.variables = variables;
@@ -238,7 +253,10 @@ public class ListScriptVariablesResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The real name of the customer</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +264,10 @@ public class ListScriptVariablesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Name</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -254,7 +275,10 @@ public class ListScriptVariablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;

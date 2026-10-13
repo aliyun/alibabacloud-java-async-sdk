@@ -188,7 +188,10 @@ public class QueryJobsRequest extends Request {
         } 
 
         /**
-         * ContactName.
+         * <p>The contact name for filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhang San</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -197,7 +200,10 @@ public class QueryJobsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time for filtering. Default value: 0, which indicates the current time. Specify a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1579077794665</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -206,6 +212,7 @@ public class QueryJobsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +225,10 @@ public class QueryJobsRequest extends Request {
         }
 
         /**
-         * JobGroupId.
+         * <p>The job group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>994b8baf-7ef8-480c-b141-b7b6db77c4df</p>
          */
         public Builder jobGroupId(String jobGroupId) {
             this.putQueryParameter("JobGroupId", jobGroupId);
@@ -227,6 +237,7 @@ public class QueryJobsRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,6 +250,7 @@ public class QueryJobsRequest extends Request {
         }
 
         /**
+         * <p>The page size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +263,10 @@ public class QueryJobsRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>The contact phone number for filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135****8888</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -260,7 +275,10 @@ public class QueryJobsRequest extends Request {
         }
 
         /**
-         * ScenarioId.
+         * <p>The scenario ID. <strong>[Deprecated]</strong> Legacy parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b0f35dd1-0337-402e-9c4f-3a6c2426950a</p>
          */
         public Builder scenarioId(String scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);
@@ -269,7 +287,10 @@ public class QueryJobsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time for filtering. Default value: 0, which indicates 00:00 today. Specify a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1579068424883</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -278,7 +299,15 @@ public class QueryJobsRequest extends Request {
         }
 
         /**
-         * TimeAlignment.
+         * <p>The time basis for filtering. This parameter specifies the filtering criterion rather than a specific date or time. Valid values:</p>
+         * <ul>
+         * <li>start: Filters by start time.</li>
+         * <li>end: Filters by end time.</li>
+         * <li>job_create: Filters by job creation time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>start</p>
          */
         public Builder timeAlignment(String timeAlignment) {
             this.putQueryParameter("TimeAlignment", timeAlignment);

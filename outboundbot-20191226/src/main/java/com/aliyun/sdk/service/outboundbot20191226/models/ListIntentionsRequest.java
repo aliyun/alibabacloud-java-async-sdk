@@ -171,7 +171,17 @@ public class ListIntentionsRequest extends Request {
         } 
 
         /**
-         * AnnotationMissionDataSourceType.
+         * <blockquote>
+         * <p>Notice: This parameter is required. Select a value based on the scenario.</p>
+         * </blockquote>
+         * <p>The annotation data source. Valid values:</p>
+         * <ul>
+         * <li>1: outbound call</li>
+         * <li>2: navigation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder annotationMissionDataSourceType(Long annotationMissionDataSourceType) {
             this.putQueryParameter("AnnotationMissionDataSourceType", annotationMissionDataSourceType);
@@ -180,7 +190,13 @@ public class ListIntentionsRequest extends Request {
         }
 
         /**
-         * BotId.
+         * <p>The robot ID.</p>
+         * <blockquote>
+         * <p>You can obtain this value from the DescribeScript operation, which corresponds to the ChatbotId parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-n7QmzrUnNe</p>
          */
         public Builder botId(String botId) {
             this.putQueryParameter("BotId", botId);
@@ -189,7 +205,14 @@ public class ListIntentionsRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li>1: private cloud</li>
+         * <li>2: public cloud</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder environment(Long environment) {
             this.putQueryParameter("Environment", environment);
@@ -198,7 +221,10 @@ public class ListIntentionsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -207,7 +233,10 @@ public class ListIntentionsRequest extends Request {
         }
 
         /**
-         * IntentId.
+         * <p>The intent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10717802</p>
          */
         public Builder intentId(Long intentId) {
             this.putQueryParameter("IntentId", intentId);
@@ -216,7 +245,10 @@ public class ListIntentionsRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -225,7 +257,10 @@ public class ListIntentionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,7 +269,10 @@ public class ListIntentionsRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5c5d8c0-c0f1-48a7-be2b-dc46006d888a</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -243,7 +281,13 @@ public class ListIntentionsRequest extends Request {
         }
 
         /**
-         * UserNick.
+         * <p>The intent name.</p>
+         * <blockquote>
+         * <p>Supports fuzzy match by keyword as a filter condition.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>know</p>
          */
         public Builder userNick(String userNick) {
             this.putQueryParameter("UserNick", userNick);

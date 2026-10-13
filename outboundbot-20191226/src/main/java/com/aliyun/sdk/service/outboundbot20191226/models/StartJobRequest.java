@@ -131,7 +131,10 @@ public class StartJobRequest extends Request {
         } 
 
         /**
-         * CallingNumber.
+         * <p>List of caller numbers</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10086</p>
          */
         public Builder callingNumber(java.util.List<String> callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -140,6 +143,7 @@ public class StartJobRequest extends Request {
         }
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +156,10 @@ public class StartJobRequest extends Request {
         }
 
         /**
-         * JobGroupId.
+         * <p>Task group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4f21446e-324e-46f2-bf62-7f341fb004ea</p>
          */
         public Builder jobGroupId(String jobGroupId) {
             this.putQueryParameter("JobGroupId", jobGroupId);
@@ -161,7 +168,48 @@ public class StartJobRequest extends Request {
         }
 
         /**
+         * <p>Job data, which includes the following fields:</p>
+         * <p>extras // Optional extra information</p>
+         * <ul>
+         * <li><p>key // Key for a custom variable</p>
+         * </li>
+         * <li><p>value // Value for a custom variable</p>
+         * </li>
+         * </ul>
+         * <p>contacts // Required contact information for the callee</p>
+         * <ul>
+         * <li><p>phoneNumber // Required phone number of the callee</p>
+         * </li>
+         * <li><p>referenceId // Required contact ID (user-defined) to avoid duplicate names</p>
+         * </li>
+         * <li><p>role // Optional role of this contact in the outbound call scenario. If omitted, no role distinction is made</p>
+         * </li>
+         * <li><p>honorific // Optional honorific for the contact</p>
+         * </li>
+         * <li><p>name // Optional name of the contact</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;extras&quot;: [{
+         *         &quot;value&quot;: &quot;测试&quot;,
+         *         &quot;key&quot;: &quot;测试&quot;
+         *     }, {
+         *         &quot;key&quot;: &quot;ServiceId&quot;,
+         *         &quot;value&quot;: null
+         *     }, {
+         *         &quot;key&quot;: &quot;TenantId&quot;,
+         *         &quot;value&quot;: null
+         *     }],
+         *     &quot;contacts&quot;: [{
+         *         &quot;phonenumber&quot;: &quot;198********&quot;,
+         *         &quot;name&quot;: &quot;张三&quot;,
+         *         &quot;priority&quot;: 5,
+         *         &quot;referenceId&quot;: &quot;C01&quot;
+         *     }]
+         * }</p>
          */
         public Builder jobJson(String jobJson) {
             this.putQueryParameter("JobJson", jobJson);
@@ -170,7 +218,10 @@ public class StartJobRequest extends Request {
         }
 
         /**
-         * ScenarioId.
+         * <p>Scenario ID. This field supports backward compatibility with legacy outbound calling features. You can omit it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder scenarioId(String scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);
@@ -179,7 +230,10 @@ public class StartJobRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>Scenario ID (required)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1eeae263-54ca-4a52-ae14-62da58f3c473</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);

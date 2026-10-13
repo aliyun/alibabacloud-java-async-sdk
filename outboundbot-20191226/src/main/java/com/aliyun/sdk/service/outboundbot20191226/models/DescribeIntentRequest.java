@@ -90,10 +90,11 @@ public class DescribeIntentRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+         * <p>da37319b-6c83-4268-9f19-814aed62e401</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,10 +103,11 @@ public class DescribeIntentRequest extends Request {
         }
 
         /**
+         * <p>The ID of the intent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>0f8a0059-dc9c-4151-8378-4734bbadf3cc</p>
+         * <p>10717802</p>
          */
         public Builder intentId(String intentId) {
             this.putQueryParameter("IntentId", intentId);
@@ -114,10 +116,11 @@ public class DescribeIntentRequest extends Request {
         }
 
         /**
+         * <p>The ID of the script.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>b9ff4e88-65f9-4eb3-987c-11ba51f3f24d</p>
+         * <p>aa279896-64a6-4182-864c-4f2b04ec8d17</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);

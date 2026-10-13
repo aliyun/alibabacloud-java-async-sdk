@@ -158,7 +158,7 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Bots.
+         * <p>The list of chatbots.</p>
          */
         public Builder bots(java.util.List<Bots> bots) {
             this.bots = bots;
@@ -166,7 +166,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +177,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +188,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned by the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +199,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -198,7 +210,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -206,7 +221,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +243,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -353,7 +377,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Avatar.
+             * <p>The URL of the avatar.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ccrm.wengine.cn/ccrm/system/common/fileDownload/noToken?fileId=975cdeaa064846e3b6004abd9ba1d7c8">https://ccrm.wengine.cn/ccrm/system/common/fileDownload/noToken?fileId=975cdeaa064846e3b6004abd9ba1d7c8</a></p>
              */
             public Builder avatar(String avatar) {
                 this.avatar = avatar;
@@ -361,7 +388,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-18T02:36:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -369,7 +399,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e874fcf0-d2f4-4e62-9377-b6f35fe55210</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -377,7 +410,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Introduction.
+             * <p>The description of the chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is the description for the live stream</p>
              */
             public Builder introduction(String introduction) {
                 this.introduction = introduction;
@@ -385,7 +421,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LanguageCode.
+             * <p>The language of the chatbot service, such as zh-cn and en-us.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh-cn</p>
              */
             public Builder languageCode(String languageCode) {
                 this.languageCode = languageCode;
@@ -393,7 +432,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Smart Callback 2</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -401,7 +443,10 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TimeZone.
+             * <p>The time zone of the chatbot. For more information, see Public - Time Zone Codes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;

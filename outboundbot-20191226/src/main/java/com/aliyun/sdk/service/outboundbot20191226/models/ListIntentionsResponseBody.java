@@ -119,7 +119,10 @@ public class ListIntentionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListIntentionsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListIntentionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListIntentionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListIntentionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +266,7 @@ public class ListIntentionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Error.
+             * <p>The error message.</p>
              */
             public Builder error(java.util.List<String> error) {
                 this.error = error;
@@ -259,7 +274,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Strict.
+             * <p>Indicates whether strict matching is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder strict(Boolean strict) {
                 this.strict = strict;
@@ -267,7 +285,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * <p>The expression value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>know</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -275,7 +296,7 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Warning.
+             * <p>The warning message.</p>
              */
             public Builder warning(java.util.List<String> warning) {
                 this.warning = warning;
@@ -381,7 +402,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The condition ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b9932604-08ae-4525-bbe5-c8cce3066070</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -389,7 +413,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The clarification prompt label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL_SUB_QUERY</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -397,7 +424,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The condition name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试0609_20241021_101018_复制_复制_复制</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -405,7 +435,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PASSKEY</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -413,7 +446,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The condition value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BASE_VALIDATE_FILTER_SWITCH</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -584,7 +620,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             } 
 
             /**
-             * AliyunFunction.
+             * <p>The Alibaba Cloud function name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder aliyunFunction(String aliyunFunction) {
                 this.aliyunFunction = aliyunFunction;
@@ -592,7 +631,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * AliyunService.
+             * <p>The Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder aliyunService(String aliyunService) {
                 this.aliyunService = aliyunService;
@@ -600,7 +642,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The status code of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -608,7 +653,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The clarification description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GA setup for HPC cn4-HPC-EndUserServer-GlobalAccelerator</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -616,7 +664,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * EndPoint.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou.log.aliyuncs.com</p>
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -624,7 +675,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Function.
+             * <p>The clarification function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>count</p>
              */
             public Builder function(String function) {
                 this.function = function;
@@ -632,7 +686,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The function name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>方欣云呼系统每日拨测_2024年11月</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -640,7 +697,7 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>The parameters.</p>
              */
             public Builder params(java.util.Map<String, ?> params) {
                 this.params = params;
@@ -648,7 +705,11 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Switch.
+             * <p>The feature switch. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: Enabled.</li>
+             * <li><strong>off</strong>: Disabled.</li>
+             * </ul>
              */
             public Builder _switch(java.util.List<Switch> _switch) {
                 this._switch = _switch;
@@ -656,7 +717,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The clarification type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -723,7 +787,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             } 
 
             /**
-             * UserSayId.
+             * <p>The unique identifier of the intent utterance corresponding to the label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17448458</p>
              */
             public Builder userSayId(String userSayId) {
                 this.userSayId = userSayId;
@@ -731,7 +798,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tagging result of the intent utterance corresponding to the label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Do you know xxxx?</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -928,7 +998,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             } 
 
             /**
-             * FeedbackFunctions.
+             * <p>The clarification functions.</p>
+             * <blockquote>
+             * <p>Notice: 无效内容</p>
+             * </blockquote>
              */
             public Builder feedbackFunctions(java.util.List<FeedbackFunctions> feedbackFunctions) {
                 this.feedbackFunctions = feedbackFunctions;
@@ -936,7 +1009,13 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * FeedbackType.
+             * <p>The feedback type.</p>
+             * <blockquote>
+             * <p>Notice: 无效内容</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder feedbackType(String feedbackType) {
                 this.feedbackType = feedbackType;
@@ -944,7 +1023,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique identifier of the slot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9ec31b50-32b8-11eb-9478-19d2d885afdb</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -952,7 +1034,14 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * IsArray.
+             * <p>Indicates whether the slot is an array. Valid values:</p>
+             * <ul>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isArray(Boolean isArray) {
                 this.isArray = isArray;
@@ -960,7 +1049,13 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * IsEncrypt.
+             * <p>Indicates whether the slot is encrypted.</p>
+             * <blockquote>
+             * <p>Notice: 无效内容</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isEncrypt(Boolean isEncrypt) {
                 this.isEncrypt = isEncrypt;
@@ -968,7 +1063,13 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * IsInteractive.
+             * <p>Indicates whether the slot is interactive.</p>
+             * <blockquote>
+             * <p>Notice: 无效内容</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isInteractive(Boolean isInteractive) {
                 this.isInteractive = isInteractive;
@@ -976,7 +1077,14 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * IsNecessary.
+             * <p>Indicates whether the slot is required. Valid values:</p>
+             * <ul>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isNecessary(Boolean isNecessary) {
                 this.isNecessary = isNecessary;
@@ -984,7 +1092,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * LifeSpan.
+             * <p>The slot life span.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lifeSpan(Integer lifeSpan) {
                 this.lifeSpan = lifeSpan;
@@ -992,7 +1103,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The slot name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>know</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1000,7 +1114,7 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Question.
+             * <p>The slot clarification prompts.</p>
              */
             public Builder question(java.util.List<String> question) {
                 this.question = question;
@@ -1008,7 +1122,7 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The slot tagging labels.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1016,7 +1130,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The slot tagging result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@知道</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1083,7 +1200,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             } 
 
             /**
-             * SlotId.
+             * <p>The unique identifier of the slot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9ec31b50-32b8-11eb-9478-19d2d885afdb</p>
              */
             public Builder slotId(String slotId) {
                 this.slotId = slotId;
@@ -1091,7 +1211,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * <p>The utterance text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>know</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -1184,7 +1307,13 @@ public class ListIntentionsResponseBody extends TeaModel {
             } 
 
             /**
-             * FromId.
+             * <p>The source ID.</p>
+             * <blockquote>
+             * <p>Notice: 无效内容</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567</p>
              */
             public Builder fromId(String fromId) {
                 this.fromId = fromId;
@@ -1192,7 +1321,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The utterance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17448458</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1200,7 +1332,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Strict.
+             * <p>Indicates whether strict matching is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder strict(Boolean strict) {
                 this.strict = strict;
@@ -1208,7 +1343,7 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * UserSayData.
+             * <p>The list of user utterances.</p>
              */
             public Builder userSayData(java.util.List<UserSayData> userSayData) {
                 this.userSayData = userSayData;
@@ -1405,7 +1540,7 @@ public class ListIntentionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Alias.
+             * <p>The intent alias.</p>
              */
             public Builder alias(java.util.List<String> alias) {
                 this.alias = alias;
@@ -1413,7 +1548,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * BotId.
+             * <p>The robot ID. [Deprecated]</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chatbot-cn-n7QmzrUnNe</p>
              */
             public Builder botId(Long botId) {
                 this.botId = botId;
@@ -1421,7 +1559,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * BotName.
+             * <p>The robot name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder botName(String botName) {
                 this.botName = botName;
@@ -1429,7 +1570,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * DialogId.
+             * <p>The dialog flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50099</p>
              */
             public Builder dialogId(String dialogId) {
                 this.dialogId = dialogId;
@@ -1437,7 +1581,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The intent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10717802</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1445,7 +1592,14 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * <p>The language.</p>
+             * <ul>
+             * <li>English: en-us</li>
+             * <li>Chinese: zh-cn</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>zh-cn</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -1453,7 +1607,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The intent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Got it</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1461,7 +1618,7 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCheck.
+             * <p>The LGF intent utterance expressions.</p>
              */
             public Builder ruleCheck(java.util.List<RuleCheck> ruleCheck) {
                 this.ruleCheck = ruleCheck;
@@ -1469,7 +1626,7 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Slot.
+             * <p>The intent slot information.</p>
              */
             public Builder slot(java.util.List<Slot> slot) {
                 this.slot = slot;
@@ -1477,7 +1634,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * TableId.
+             * <p>The table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43258</p>
              */
             public Builder tableId(Long tableId) {
                 this.tableId = tableId;
@@ -1485,7 +1645,16 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The intent type. Valid values:</p>
+             * <ul>
+             * <li>0: normal intent. </li>
+             * <li>1: UNKNOWN. </li>
+             * <li>2: TableQA intent. </li>
+             * <li>3: generated from a standard intent.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -1493,7 +1662,7 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * UserSay.
+             * <p>The list of user utterances.</p>
              */
             public Builder userSay(java.util.List<UserSay> userSay) {
                 this.userSay = userSay;
@@ -1586,7 +1755,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             } 
 
             /**
-             * BotId.
+             * <p>The robot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chatbot-cn-n7QmzrUnNe</p>
              */
             public Builder botId(String botId) {
                 this.botId = botId;
@@ -1594,7 +1766,7 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * IntentList.
+             * <p>The list of intents.</p>
              */
             public Builder intentList(java.util.List<IntentList> intentList) {
                 this.intentList = intentList;
@@ -1602,7 +1774,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The message returned by the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1610,7 +1785,10 @@ public class ListIntentionsResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the request was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

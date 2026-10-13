@@ -105,6 +105,7 @@ public class CreateDialogueFlowRequest extends Request {
         } 
 
         /**
+         * <p>The type of the dialogue flow. Use <code>MainFlow</code> for a main flow or <code>SubFlow</code> for a subflow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +118,11 @@ public class CreateDialogueFlowRequest extends Request {
         }
 
         /**
+         * <p>The dialogue flow name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>主流程</p>
          */
         public Builder dialogueName(String dialogueName) {
             this.putQueryParameter("DialogueName", dialogueName);
@@ -126,6 +131,7 @@ public class CreateDialogueFlowRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +144,7 @@ public class CreateDialogueFlowRequest extends Request {
         }
 
         /**
+         * <p>The script ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -88,7 +88,10 @@ public class ListAgentProfilesRequest extends Request {
         } 
 
         /**
-         * AppIp.
+         * <p>The IP address of the application. This is an optional system field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder appIp(String appIp) {
             this.putBodyParameter("AppIp", appIp);
@@ -97,6 +100,7 @@ public class ListAgentProfilesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,10 @@ public class ListAgentProfilesRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d004cfd2-6a81-491c-83c6-cbe186620c95</p>
          */
         public Builder scriptId(String scriptId) {
             this.putBodyParameter("ScriptId", scriptId);

@@ -119,7 +119,10 @@ public class ListScriptsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned by the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * Scripts.
+         * <p>The list of scripts.</p>
          */
         public Builder scripts(Scripts scripts) {
             this.scripts = scripts;
@@ -159,7 +171,10 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class ListScriptsResponseBody extends TeaModel {
             } 
 
             /**
-             * FcFunction.
+             * <p>The function service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sanfang_test</p>
              */
             public Builder fcFunction(String fcFunction) {
                 this.fcFunction = fcFunction;
@@ -246,7 +264,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * FcHttpTriggerUrl.
+             * <p>The function service trigger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run">http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run</a></p>
              */
             public Builder fcHttpTriggerUrl(String fcHttpTriggerUrl) {
                 this.fcHttpTriggerUrl = fcHttpTriggerUrl;
@@ -254,7 +275,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * FcRegion.
+             * <p>The region of the function service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder fcRegion(String fcRegion) {
                 this.fcRegion = fcRegion;
@@ -607,7 +631,10 @@ public class ListScriptsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentKey.
+             * <p>The access key of the robot workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14791f5f226b4878b3d9b676a0291234</p>
              */
             public Builder agentKey(String agentKey) {
                 this.agentKey = agentKey;
@@ -615,7 +642,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * AgentLlm.
+             * <p>Indicates whether the robot workspace is a large model workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder agentLlm(Boolean agentLlm) {
                 this.agentLlm = agentLlm;
@@ -623,7 +653,7 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatBotId.
+             * <p>The chatbot ID.</p>
              */
             public Builder chatBotId(String chatBotId) {
                 this.chatBotId = chatBotId;
@@ -631,7 +661,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578965079000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -639,7 +672,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * DebugStatus.
+             * <p>The debug status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DRAFTED</p>
              */
             public Builder debugStatus(String debugStatus) {
                 this.debugStatus = debugStatus;
@@ -647,7 +683,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * EmotionEnable.
+             * <p>Indicates whether the emotion recognition configuration is enabled. This value is always false for large models.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder emotionEnable(Boolean emotionEnable) {
                 this.emotionEnable = emotionEnable;
@@ -655,7 +694,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * Industry.
+             * <p>The industry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Finance</p>
              */
             public Builder industry(String industry) {
                 this.industry = industry;
@@ -663,7 +705,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDebugDrafted.
+             * <p>Indicates whether the debug version is in the draft state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDebugDrafted(Boolean isDebugDrafted) {
                 this.isDebugDrafted = isDebugDrafted;
@@ -671,7 +716,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDrafted.
+             * <p>Indicates whether the script is a draft.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDrafted(Boolean isDrafted) {
                 this.isDrafted = isDrafted;
@@ -679,7 +727,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * IsPreset.
+             * <p>Indicates whether the scenario is a preset scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isPreset(Boolean isPreset) {
                 this.isPreset = isPreset;
@@ -687,7 +738,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * LongWaitEnable.
+             * <p>Indicates whether the long pause configuration is enabled. This value is always false for large models.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder longWaitEnable(Boolean longWaitEnable) {
                 this.longWaitEnable = longWaitEnable;
@@ -695,7 +749,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * MiniPlaybackEnable.
+             * <p>Indicates whether the filler word configuration is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder miniPlaybackEnable(Boolean miniPlaybackEnable) {
                 this.miniPlaybackEnable = miniPlaybackEnable;
@@ -703,7 +760,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * NewBargeInEnable.
+             * <p>Indicates whether the graceful barge-in configuration is enabled. This value is always false for large models.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder newBargeInEnable(Boolean newBargeInEnable) {
                 this.newBargeInEnable = newBargeInEnable;
@@ -711,7 +771,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * NluAccessType.
+             * <p>The robot access type. If the scenario is a small model scenario, this field is empty. If the scenario is a large model scenario, this field is Managed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Empty or Managed</p>
              */
             public Builder nluAccessType(String nluAccessType) {
                 this.nluAccessType = nluAccessType;
@@ -719,7 +782,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * NluEngine.
+             * <p>The robot engine. If the scenario is a small model scenario, this field is empty. If the scenario is a large model scenario, this field is Prompts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Empty or Prompts</p>
              */
             public Builder nluEngine(String nluEngine) {
                 this.nluEngine = nluEngine;
@@ -727,7 +793,7 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * NluProfile.
+             * <p>The Function Compute service mode configuration.</p>
              */
             public Builder nluProfile(NluProfile nluProfile) {
                 this.nluProfile = nluProfile;
@@ -735,7 +801,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * RejectReason.
+             * <p>The reason for rejection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Non-compliant script wording</p>
              */
             public Builder rejectReason(String rejectReason) {
                 this.rejectReason = rejectReason;
@@ -743,7 +812,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Telesales</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -751,7 +823,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptDescription.
+             * <p>The script description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Telesales script</p>
              */
             public Builder scriptDescription(String scriptDescription) {
                 this.scriptDescription = scriptDescription;
@@ -759,7 +834,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The script ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8d6a6e41-8093-49af-a9d1-0281878758ac</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -767,7 +845,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptName.
+             * <p>The script name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Telesales script</p>
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -775,7 +856,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The script status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DRAFTED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -783,7 +867,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578965079000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -791,7 +878,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * agentId.
+             * <p>The robot workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1160195</p>
              */
             public Builder agentId(Long agentId) {
                 this.agentId = agentId;
@@ -884,7 +974,7 @@ public class ListScriptsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The array of scripts.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -892,7 +982,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -900,7 +993,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -908,7 +1004,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

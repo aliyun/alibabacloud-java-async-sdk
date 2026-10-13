@@ -171,7 +171,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>API status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -179,7 +182,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * GroupId.
+         * <p>Task group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f06f7c9f-2895-4b30-a8c2-6ecccb9c9f89</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -187,7 +193,7 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * HangUpDialogueNodes.
+         * <p>Hang-up nodes</p>
          */
         public Builder hangUpDialogueNodes(java.util.List<HangUpDialogueNodes> hangUpDialogueNodes) {
             this.hangUpDialogueNodes = hangUpDialogueNodes;
@@ -195,7 +201,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -203,7 +212,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -211,7 +223,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -219,7 +234,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * NoAnswerDialogueNodes.
+         * <p>No-answer nodes</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder noAnswerDialogueNodes(java.util.List<NoAnswerDialogueNodes> noAnswerDialogueNodes) {
             this.noAnswerDialogueNodes = noAnswerDialogueNodes;
@@ -227,7 +245,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +256,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates success</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +267,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCompleted.
+         * <p>Number of completed tasks in the task group</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder totalCompleted(Integer totalCompleted) {
             this.totalCompleted = totalCompleted;
@@ -335,7 +362,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * HangUpNum.
+             * <p>Number of hang-ups</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder hangUpNum(Integer hangUpNum) {
                 this.hangUpNum = hangUpNum;
@@ -343,7 +373,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -351,7 +384,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>Node name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -359,7 +395,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * RateDisplay.
+             * <p>Proportion of quantity</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder rateDisplay(String rateDisplay) {
                 this.rateDisplay = rateDisplay;
@@ -504,7 +543,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupId.
+             * <p>Task group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f06f7c9f-2895-4b30-a8c2-6ecccb9c9f89</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -512,7 +554,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * HangUpNum.
+             * <p>Number of hang-ups</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder hangUpNum(Integer hangUpNum) {
                 this.hangUpNum = hangUpNum;
@@ -520,7 +565,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * HitNum.
+             * <p>Number of hits</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder hitNum(Integer hitNum) {
                 this.hitNum = hitNum;
@@ -528,7 +576,7 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>id</p>
+             * <p>ID, unique identifier</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -539,7 +587,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -547,7 +598,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * NoAnswerNum.
+             * <p>Number of no-answers</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder noAnswerNum(Integer noAnswerNum) {
                 this.noAnswerNum = noAnswerNum;
@@ -555,7 +609,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -563,7 +620,10 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>Node name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;

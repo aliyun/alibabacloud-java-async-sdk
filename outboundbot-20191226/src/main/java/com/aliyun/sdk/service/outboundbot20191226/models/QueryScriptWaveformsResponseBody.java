@@ -119,7 +119,10 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>API status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
         }
 
         /**
-         * ScriptWaveforms.
+         * <p>Recording list of scenario voices</p>
+         * <blockquote>
+         * <p>Recording data is returned only when the voice type is recording. It is not returned when the voice is speech synthesis.</p>
+         * </blockquote>
          */
         public Builder scriptWaveforms(java.util.List<ScriptWaveforms> scriptWaveforms) {
             this.scriptWaveforms = scriptWaveforms;
@@ -159,7 +174,10 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -264,7 +282,10 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
             } 
 
             /**
-             * FileId.
+             * <p>File key in OSS</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UPLOADED/RECORDING/a8xxxxx-2b26-4b6d-a54f-696b95xxx1/a6bf591a-cf6d-4xxxxxx.wav</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -272,7 +293,10 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>Recording file name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHUKE_ZA_ol_32_邀约.wav</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -280,7 +304,10 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptContent.
+             * <p>Scenario voice name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder scriptContent(String scriptContent) {
                 this.scriptContent = scriptContent;
@@ -288,7 +315,10 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>Scenario ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25b26ce1-009c-4791-a720-e7ac4f9821a1</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -296,7 +326,10 @@ public class QueryScriptWaveformsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptWaveformId.
+             * <p>Scenario voice recording ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>444df4-009c-4791-a720-e7ac4f9821a1</p>
              */
             public Builder scriptWaveformId(String scriptWaveformId) {
                 this.scriptWaveformId = scriptWaveformId;

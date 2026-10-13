@@ -119,7 +119,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * ScriptVoiceConfigs.
+         * <p>The paginated list of script voice configurations.</p>
          */
         public Builder scriptVoiceConfigs(ScriptVoiceConfigs scriptVoiceConfigs) {
             this.scriptVoiceConfigs = scriptVoiceConfigs;
@@ -159,7 +171,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +305,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bdd49242-114c-4045-b1d1-25ccc1756c75</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -298,7 +316,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptContent.
+             * <p>The text content of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>请问你是 @name 吗</p>
              */
             public Builder scriptContent(String scriptContent) {
                 this.scriptContent = scriptContent;
@@ -306,7 +327,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The script ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a7441a05-43bb-4a2d-acb0-365f245d7a5b</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -314,7 +338,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptVoiceConfigId.
+             * <p>The ID of the voice configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2c8fa91f-9856-4145-90f2-08252f09bc18</p>
              */
             public Builder scriptVoiceConfigId(String scriptVoiceConfigId) {
                 this.scriptVoiceConfigId = scriptVoiceConfigId;
@@ -322,7 +349,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptWaveformRelation.
+             * <p>The relationship between the script and the audio file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder scriptWaveformRelation(String scriptWaveformRelation) {
                 this.scriptWaveformRelation = scriptWaveformRelation;
@@ -330,7 +360,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DIALOGUE_FLOW</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -338,7 +371,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The voice type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TTS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -431,7 +467,7 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>An array of script voice configuration objects.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -439,7 +475,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -447,7 +486,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -455,7 +497,10 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

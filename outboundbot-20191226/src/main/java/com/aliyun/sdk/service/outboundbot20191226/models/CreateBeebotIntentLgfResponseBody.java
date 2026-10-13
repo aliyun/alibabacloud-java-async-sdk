@@ -132,7 +132,10 @@ public class CreateBeebotIntentLgfResponseBody extends TeaModel {
         } 
 
         /**
-         * BeebotRequestId.
+         * <p>The internal request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497CFAFF-48CC-161A-AD2C-252DED569037</p>
          */
         public Builder beebotRequestId(String beebotRequestId) {
             this.beebotRequestId = beebotRequestId;
@@ -140,7 +143,10 @@ public class CreateBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code of the API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -148,7 +154,10 @@ public class CreateBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class CreateBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * LgfId.
+         * <p>The ID of the user utterance template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5666117</p>
          */
         public Builder lgfId(Long lgfId) {
             this.lgfId = lgfId;
@@ -164,7 +176,10 @@ public class CreateBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned for the API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +187,10 @@ public class CreateBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +198,10 @@ public class CreateBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

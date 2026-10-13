@@ -89,6 +89,7 @@ public class DescribeIntentStatisticsRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DescribeIntentStatisticsRequest extends Request {
         }
 
         /**
+         * <p>Job group ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DescribeIntentStatisticsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>Number of statistics to display (required)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);

@@ -87,7 +87,13 @@ public class GetAnnotationMissionTagInfoListRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>If this parameter is not specified, the default tags of the tenant are returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4eee9bf8-1319-468f-ac82-83c50ae389f8</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -96,7 +102,10 @@ public class GetAnnotationMissionTagInfoListRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -105,7 +114,10 @@ public class GetAnnotationMissionTagInfoListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

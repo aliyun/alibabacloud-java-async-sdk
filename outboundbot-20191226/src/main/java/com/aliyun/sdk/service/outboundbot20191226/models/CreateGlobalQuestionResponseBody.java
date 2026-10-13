@@ -119,7 +119,10 @@ public class CreateGlobalQuestionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateGlobalQuestionResponseBody extends TeaModel {
         }
 
         /**
-         * GlobalQuestionId.
+         * <p>The ID of the global question.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a546b616-724b-437f-bdb3-629a30c98567</p>
          */
         public Builder globalQuestionId(String globalQuestionId) {
             this.globalQuestionId = globalQuestionId;
@@ -135,7 +141,10 @@ public class CreateGlobalQuestionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class CreateGlobalQuestionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class CreateGlobalQuestionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56666881-887A-530A-B679-C3B6B6B142C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class CreateGlobalQuestionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

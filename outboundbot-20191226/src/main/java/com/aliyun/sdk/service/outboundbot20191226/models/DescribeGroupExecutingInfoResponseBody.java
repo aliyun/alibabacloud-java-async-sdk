@@ -145,7 +145,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ExecutingInfo.
+         * <p>The execution information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder executingInfo(ExecutingInfo executingInfo) {
             this.executingInfo = executingInfo;
@@ -161,7 +167,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         }
 
         /**
-         * GroupId.
+         * <p>The job group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b24d321a-2a74-4dd1-a0ba-4ab09cef6652</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -169,7 +178,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -177,7 +189,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c46001bc-3ead-4bfd-9a69-4b5b66a4a3f4</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -185,7 +200,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The API response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -193,7 +211,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +222,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -345,7 +369,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * CancelledNum.
+             * <p>The number of canceled jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder cancelledNum(Integer cancelledNum) {
                 this.cancelledNum = cancelledNum;
@@ -353,7 +380,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutingNum.
+             * <p>The number of executing jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder executingNum(Integer executingNum) {
                 this.executingNum = executingNum;
@@ -361,7 +391,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FailedNum.
+             * <p>The number of failed jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder failedNum(Integer failedNum) {
                 this.failedNum = failedNum;
@@ -369,7 +402,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PausedNum.
+             * <p>The number of paused jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder pausedNum(Integer pausedNum) {
                 this.pausedNum = pausedNum;
@@ -377,7 +413,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulingNum.
+             * <p>The number of jobs being scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder schedulingNum(Integer schedulingNum) {
                 this.schedulingNum = schedulingNum;
@@ -385,7 +424,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCompletedNum.
+             * <p>The total number of completed jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCompletedNum(Integer totalCompletedNum) {
                 this.totalCompletedNum = totalCompletedNum;
@@ -393,7 +435,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TotalJobs.
+             * <p>The total number of jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalJobs(Integer totalJobs) {
                 this.totalJobs = totalJobs;
@@ -401,7 +446,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNotAnsweredNum.
+             * <p>The total number of unanswered calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalNotAnsweredNum(Integer totalNotAnsweredNum) {
                 this.totalNotAnsweredNum = totalNotAnsweredNum;
@@ -624,7 +672,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AvgTalkTime.
+             * <p>The average call duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>258</p>
              */
             public Builder avgTalkTime(Integer avgTalkTime) {
                 this.avgTalkTime = avgTalkTime;
@@ -632,7 +683,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CallFailedNum.
+             * <p>The number of failed calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder callFailedNum(Integer callFailedNum) {
                 this.callFailedNum = callFailedNum;
@@ -640,7 +694,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CallNum.
+             * <p>The number of outbound calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder callNum(Integer callNum) {
                 this.callNum = callNum;
@@ -648,7 +705,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p><strong>[Deprecated]</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -656,7 +716,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DurationDistribution.
+             * <p>The distribution of call durations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;max&quot;:&quot;40&quot;,&quot;1&quot;:&quot;1&quot;,&quot;total&quot;:&quot;40&quot;,&quot;min&quot;:&quot;40&quot;}</p>
              */
             public Builder durationDistribution(String durationDistribution) {
                 this.durationDistribution = durationDistribution;
@@ -664,7 +727,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640087774563</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -672,7 +738,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedNum.
+             * <p>The number of completed jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder finishedNum(Integer finishedNum) {
                 this.finishedNum = finishedNum;
@@ -680,7 +749,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * HangUpByClientNum.
+             * <p>The number of customer-initiated hang-ups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder hangUpByClientNum(Integer hangUpByClientNum) {
                 this.hangUpByClientNum = hangUpByClientNum;
@@ -688,7 +760,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * JobsProgress.
+             * <p>The execution progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder jobsProgress(JobsProgress jobsProgress) {
                 this.jobsProgress = jobsProgress;
@@ -696,7 +771,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NoInteractionNum.
+             * <p>The number of calls with no interaction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder noInteractionNum(Integer noInteractionNum) {
                 this.noInteractionNum = noInteractionNum;
@@ -704,7 +782,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640087774563</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -712,7 +793,19 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TalkTurnsDistribution.
+             * <p>The distribution of talk turns.</p>
+             * <ul>
+             * <li>total: The total number of talk turns involved.</li>
+             * <li>Number: The corresponding turn count.</li>
+             * </ul>
+             * <blockquote>
+             * <ul>
+             * <li>Example: {&quot;total&quot;:&quot;5&quot;,&quot;5&quot;:&quot;1&quot;} indicates that the total number of talk turns involved is 5, and there is 1 call with 5 user turns.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;total&quot;:&quot;5&quot;,&quot;5&quot;:&quot;4&quot;}</p>
              */
             public Builder talkTurnsDistribution(String talkTurnsDistribution) {
                 this.talkTurnsDistribution = talkTurnsDistribution;
@@ -720,7 +813,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TransferByIntentNum.
+             * <p>The number of intent recognitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder transferByIntentNum(Integer transferByIntentNum) {
                 this.transferByIntentNum = transferByIntentNum;
@@ -728,7 +824,10 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TransferByNoAnswer.
+             * <p>The number of unanswered calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder transferByNoAnswer(Integer transferByNoAnswer) {
                 this.transferByNoAnswer = transferByNoAnswer;

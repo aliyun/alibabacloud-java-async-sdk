@@ -73,7 +73,10 @@ public class GetAsrServerInfoRequest extends Request {
         } 
 
         /**
-         * EntryId.
+         * <p>Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>024f8cf0-c842-4c01-b74b-c8667e4579c7</p>
          */
         public Builder entryId(String entryId) {
             this.putQueryParameter("EntryId", entryId);
@@ -82,7 +85,10 @@ public class GetAsrServerInfoRequest extends Request {
         }
 
         /**
-         * StrategyLevel.
+         * <p>Policy level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder strategyLevel(Integer strategyLevel) {
             this.putQueryParameter("StrategyLevel", strategyLevel);

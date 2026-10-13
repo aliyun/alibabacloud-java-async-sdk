@@ -119,7 +119,10 @@ public class DialogueResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Interface status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class DialogueResponseBody extends TeaModel {
         }
 
         /**
-         * Feedback.
+         * <p>Returns dialogue information</p>
          */
         public Builder feedback(Feedback feedback) {
             this.feedback = feedback;
@@ -135,7 +138,10 @@ public class DialogueResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class DialogueResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Interface message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class DialogueResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DialogueResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -264,7 +279,10 @@ public class DialogueResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>Instruction for IVR</p>
+             * 
+             * <strong>example:</strong>
+             * <p>broadcast</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -272,7 +290,10 @@ public class DialogueResponseBody extends TeaModel {
             }
 
             /**
-             * ActionParams.
+             * <p>Instruction parameters</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder actionParams(String actionParams) {
                 this.actionParams = actionParams;
@@ -280,7 +301,10 @@ public class DialogueResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>Dialogue text</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好，我是**客服</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -288,7 +312,7 @@ public class DialogueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>已废弃</p>
+             * <p>Deprecated</p>
              * 
              * <strong>example:</strong>
              * <p>“”</p>
@@ -299,7 +323,10 @@ public class DialogueResponseBody extends TeaModel {
             }
 
             /**
-             * Interruptible.
+             * <p>Indicates whether the broadcast can be interrupted</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder interruptible(Boolean interruptible) {
                 this.interruptible = interruptible;

@@ -134,7 +134,10 @@ public class ListBeebotIntentUserSayRequest extends Request {
         } 
 
         /**
-         * Content.
+         * <p>The keyword in the utterance content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>know</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -143,6 +146,7 @@ public class ListBeebotIntentUserSayRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +159,7 @@ public class ListBeebotIntentUserSayRequest extends Request {
         }
 
         /**
+         * <p>The intent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +172,7 @@ public class ListBeebotIntentUserSayRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +185,7 @@ public class ListBeebotIntentUserSayRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +198,7 @@ public class ListBeebotIntentUserSayRequest extends Request {
         }
 
         /**
+         * <p>The scenario ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

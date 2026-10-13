@@ -132,7 +132,10 @@ public class DescribeScriptResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class DescribeScriptResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -148,7 +154,10 @@ public class DescribeScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The API message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +165,10 @@ public class DescribeScriptResponseBody extends TeaModel {
         }
 
         /**
-         * NlsConfig.
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder nlsConfig(String nlsConfig) {
             this.nlsConfig = nlsConfig;
@@ -164,7 +176,10 @@ public class DescribeScriptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +187,10 @@ public class DescribeScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Script.
+         * <p>The script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder script(Script script) {
             this.script = script;
@@ -180,7 +198,10 @@ public class DescribeScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -272,7 +293,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * FcFunction.
+             * <p>The function service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sanfang_test</p>
              */
             public Builder fcFunction(String fcFunction) {
                 this.fcFunction = fcFunction;
@@ -280,7 +304,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * FcHttpTriggerUrl.
+             * <p>The HTTP trigger URL of the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run">http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run</a></p>
              */
             public Builder fcHttpTriggerUrl(String fcHttpTriggerUrl) {
                 this.fcHttpTriggerUrl = fcHttpTriggerUrl;
@@ -288,7 +315,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * FcRegion.
+             * <p>The region of the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder fcRegion(String fcRegion) {
                 this.fcRegion = fcRegion;
@@ -296,7 +326,11 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * SupportBeebotPrompts.
+             * <p>Indicates whether Chatbot prompts are supported. Valid values:</p>
+             * <ul>
+             * <li>true: Supported.</li>
+             * <li>false: Not supported.</li>
+             * </ul>
              */
             public Builder supportBeebotPrompts(Boolean supportBeebotPrompts) {
                 this.supportBeebotPrompts = supportBeebotPrompts;
@@ -649,7 +683,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>The access key of the chatbot workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1218333</p>
              */
             public Builder agentId(Long agentId) {
                 this.agentId = agentId;
@@ -657,7 +694,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * AgentKey.
+             * <p>The access key of the chatbot workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14791f5f226b4878b3d9b676a0291234</p>
              */
             public Builder agentKey(String agentKey) {
                 this.agentKey = agentKey;
@@ -665,7 +705,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * AgentLlm.
+             * <p>Indicates whether the chatbot workspace is a large language model (LLM) workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder agentLlm(Boolean agentLlm) {
                 this.agentLlm = agentLlm;
@@ -673,7 +716,20 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * AsrConfig.
+             * <p>The automatic speech recognition (ASR) configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;appKey&quot;: &quot;oQDVNlE6fZ5mg46X&quot;,
+             *     &quot;engine&quot;: &quot;ali&quot;,
+             *     &quot;engineXunfei&quot;: &quot;&quot;,
+             *     &quot;globalMaxEndSilence&quot;: 700,
+             *     &quot;globalMaxEndSilenceEnable&quot;: true,
+             *     &quot;maxEndSilence&quot;: &quot;500&quot;,
+             *     &quot;nlsServiceType&quot;: &quot;Managed&quot;,
+             *     &quot;silenceTimeout&quot;: &quot;5000&quot;,
+             *     &quot;speechNoiseThreshold&quot;: &quot;0&quot;
+             * }</p>
              */
             public Builder asrConfig(String asrConfig) {
                 this.asrConfig = asrConfig;
@@ -681,7 +737,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ChatConfig.
+             * <p>The call configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;silenceConfig&quot;:{&quot;silenceReplyTimeout&quot;:499,&quot;silenceTimeoutMaxCount&quot;:10,&quot;silenceTimeoutMaxCountEnable&quot;:true},&quot;hangupConfig&quot;:{&quot;aiHangupEnable&quot;:false,&quot;delayHangup&quot;:0,&quot;hangupMaxRounds&quot;:20,&quot;hangupMaxRoundsBroadcast&quot;:&quot;Thank you for taking the call. Have a great day. Goodbye!&quot;,&quot;hangupMaxRoundsEnable&quot;:false},&quot;securityInterceptConfig&quot;:{&quot;broadcast&quot;:&quot;I cannot answer this question. Please try asking something else.&quot;},&quot;specialInterceptConfig&quot;:{&quot;specialInterceptEnable&quot;:false,&quot;specialIntercepts&quot;:[{&quot;code&quot;:&quot;voiceAssistant&quot;},{&quot;code&quot;:&quot;extensionNumberTransfer&quot;}]},&quot;transitionConfig&quot;:{&quot;transitionSwitch&quot;:false}}</p>
              */
             public Builder chatConfig(String chatConfig) {
                 this.chatConfig = chatConfig;
@@ -689,7 +748,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ChatbotId.
+             * <p>The chatbot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d31794e2a51f47d2901b4094d88311d7</p>
              */
             public Builder chatbotId(String chatbotId) {
                 this.chatbotId = chatbotId;
@@ -697,7 +759,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * DebugStatus.
+             * <p>The debug status of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DRAFTED</p>
              */
             public Builder debugStatus(String debugStatus) {
                 this.debugStatus = debugStatus;
@@ -705,7 +770,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * EmotionEnable.
+             * <p>Specifies whether the emotion recognition feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder emotionEnable(Boolean emotionEnable) {
                 this.emotionEnable = emotionEnable;
@@ -713,7 +781,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Industry.
+             * <p>The industry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Finance</p>
              */
             public Builder industry(String industry) {
                 this.industry = industry;
@@ -721,7 +792,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * IsDebugDrafted.
+             * <p>Indicates whether the debug version is in the draft state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDebugDrafted(Boolean isDebugDrafted) {
                 this.isDebugDrafted = isDebugDrafted;
@@ -729,7 +803,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * IsDrafted.
+             * <p>Indicates whether the script is in the draft state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDrafted(Boolean isDrafted) {
                 this.isDrafted = isDrafted;
@@ -737,7 +814,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * LabelConfig.
+             * <p>The custom label configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;labels\&quot;:[{\&quot;description\&quot;:\&quot;\&quot;,\&quot;name\&quot;:\&quot;Availability\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;Available\\\&quot;,\\\&quot;Unavailable\\\&quot;]\&quot;}]}</p>
              */
             public Builder labelConfig(String labelConfig) {
                 this.labelConfig = labelConfig;
@@ -745,7 +825,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * LongWaitEnable.
+             * <p>Specifies whether the intelligent sentence segmentation feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder longWaitEnable(Boolean longWaitEnable) {
                 this.longWaitEnable = longWaitEnable;
@@ -753,7 +836,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * MiniPlaybackEnable.
+             * <p>Specifies whether the mini playback feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder miniPlaybackEnable(Boolean miniPlaybackEnable) {
                 this.miniPlaybackEnable = miniPlaybackEnable;
@@ -761,7 +847,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NewBargeInEnable.
+             * <p>Specifies whether the graceful barge-in feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder newBargeInEnable(Boolean newBargeInEnable) {
                 this.newBargeInEnable = newBargeInEnable;
@@ -769,7 +858,14 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NluEngine.
+             * <p>The natural language understanding (NLU) engine. This parameter applies only to large language model (LLM) scenarios. Valid values:</p>
+             * <ul>
+             * <li>Prompts: text input mode. </li>
+             * <li>SSE_FUNCTION: Function Compute service mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prompts</p>
              */
             public Builder nluEngine(String nluEngine) {
                 this.nluEngine = nluEngine;
@@ -777,7 +873,7 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NluProfile.
+             * <p>The configuration of the Function Compute service mode.</p>
              */
             public Builder nluProfile(NluProfile nluProfile) {
                 this.nluProfile = nluProfile;
@@ -785,7 +881,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Collection</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -793,7 +892,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptDescription.
+             * <p>The description of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Collection script</p>
              */
             public Builder scriptDescription(String scriptDescription) {
                 this.scriptDescription = scriptDescription;
@@ -801,7 +903,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The script ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>810b5872-57f0-4b27-80ab-7b3f4d8a6374</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -809,7 +914,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptName.
+             * <p>The name of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Collection script</p>
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -817,7 +925,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DRAFTED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -825,7 +936,21 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * TtsConfig.
+             * <p>The text-to-speech (TTS) configuration of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;appKey&quot;: &quot;oQDVNlE6fZ5mg46X&quot;,
+             *     &quot;engine&quot;: &quot;ali&quot;,
+             *     &quot;engineXunfei&quot;: &quot;&quot;,
+             *     &quot;globalInterruptible&quot;: true,
+             *         &quot;closingStatementInterruptible&quot;: false, &quot;openingPromptInterruptible&quot;: false,
+             *     &quot;nlsServiceType&quot;: &quot;Managed&quot;,
+             *     &quot;pitchRate&quot;: &quot;0&quot;,
+             *     &quot;speechRate&quot;: &quot;0&quot;,
+             *     &quot;voice&quot;: &quot;zhiyuan&quot;,
+             *     &quot;volume&quot;: &quot;50&quot;
+             * }</p>
              */
             public Builder ttsConfig(String ttsConfig) {
                 this.ttsConfig = ttsConfig;
@@ -833,7 +958,10 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578881227000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

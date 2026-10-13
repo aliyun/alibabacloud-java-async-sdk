@@ -145,7 +145,10 @@ public class GetCurrentConcurrencyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>API status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,10 @@ public class GetCurrentConcurrencyResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentConcurrency.
+         * <p>Current concurrency</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder currentConcurrency(Integer currentConcurrency) {
             this.currentConcurrency = currentConcurrency;
@@ -161,7 +167,10 @@ public class GetCurrentConcurrencyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -169,7 +178,10 @@ public class GetCurrentConcurrencyResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12f3dd08-0c55-44ce-9b64-e69d35ed3a76</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -177,7 +189,10 @@ public class GetCurrentConcurrencyResponseBody extends TeaModel {
         }
 
         /**
-         * MaxConcurrentConversation.
+         * <p>Maximum concurrency</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxConcurrentConversation(Integer maxConcurrentConversation) {
             this.maxConcurrentConversation = maxConcurrentConversation;
@@ -185,7 +200,10 @@ public class GetCurrentConcurrencyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -193,7 +211,10 @@ public class GetCurrentConcurrencyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +222,10 @@ public class GetCurrentConcurrencyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

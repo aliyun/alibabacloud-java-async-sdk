@@ -133,6 +133,7 @@ public class CreateIntentRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +146,10 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
-         * IntentDescription.
+         * <p>A description of the intent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>确定是本人的意图</p>
          */
         public Builder intentDescription(String intentDescription) {
             this.putQueryParameter("IntentDescription", intentDescription);
@@ -154,7 +158,11 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
+         * <p>The name of the intent. This name must be unique within the script.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>是本人</p>
          */
         public Builder intentName(String intentName) {
             this.putQueryParameter("IntentName", intentName);
@@ -163,7 +171,10 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
-         * Keywords.
+         * <p>A JSON-formatted string containing an array of keywords that help identify the intent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;是&quot;,&quot;是的&quot;]</p>
          */
         public Builder keywords(String keywords) {
             this.putQueryParameter("Keywords", keywords);
@@ -172,10 +183,11 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
+         * <p>The script ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>b06fad9a-cc74-4ab6-b3a5-8d062adebf2c</p>
+         * <p>c5c5d8c0-c0f1-48a7-be2b-dc46006d888a</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -184,7 +196,11 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
+         * <p>A JSON-formatted string containing an array of sample utterances that trigger this intent.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;是&quot;,&quot;是的&quot;,&quot;是啊&quot;,&quot;嗯嗯&quot;,&quot;是我&quot;,&quot;是我，有事吗&quot;,&quot;对，是&quot;,&quot;对的&quot;,&quot;对是我&quot;,&quot;&quot;]</p>
          */
         public Builder utterances(String utterances) {
             this.putQueryParameter("Utterances", utterances);

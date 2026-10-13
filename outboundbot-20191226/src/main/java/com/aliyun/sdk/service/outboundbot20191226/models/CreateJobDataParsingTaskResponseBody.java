@@ -119,7 +119,10 @@ public class CreateJobDataParsingTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateJobDataParsingTaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,13 @@ public class CreateJobDataParsingTaskResponseBody extends TeaModel {
         }
 
         /**
-         * JobDataParsingTaskId.
+         * <p>ID of the uploaded job data parsing task.</p>
+         * <blockquote>
+         * <p>Use this value as the JobDataParsingTaskId parameter in DescribeJobDataParsingTaskProgress.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>d004cfd2-6a81-491c-83c6-cbe186620c95</p>
          */
         public Builder jobDataParsingTaskId(String jobDataParsingTaskId) {
             this.jobDataParsingTaskId = jobDataParsingTaskId;
@@ -143,7 +155,10 @@ public class CreateJobDataParsingTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +166,10 @@ public class CreateJobDataParsingTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +177,10 @@ public class CreateJobDataParsingTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

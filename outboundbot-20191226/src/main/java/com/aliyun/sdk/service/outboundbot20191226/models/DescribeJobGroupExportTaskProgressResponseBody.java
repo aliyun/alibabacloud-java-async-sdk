@@ -132,7 +132,10 @@ public class DescribeJobGroupExportTaskProgressResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class DescribeJobGroupExportTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * FileHttpUrl.
+         * <p>The file URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx.xx.com/xx">http://xxx.xx.com/xx</a></p>
          */
         public Builder fileHttpUrl(String fileHttpUrl) {
             this.fileHttpUrl = fileHttpUrl;
@@ -148,7 +154,10 @@ public class DescribeJobGroupExportTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class DescribeJobGroupExportTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The API message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +176,10 @@ public class DescribeJobGroupExportTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Progress.
+         * <p>The export progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45.0</p>
          */
         public Builder progress(Float progress) {
             this.progress = progress;
@@ -172,7 +187,10 @@ public class DescribeJobGroupExportTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +198,10 @@ public class DescribeJobGroupExportTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

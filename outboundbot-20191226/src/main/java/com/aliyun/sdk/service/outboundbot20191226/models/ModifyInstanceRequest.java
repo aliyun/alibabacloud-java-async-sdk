@@ -117,7 +117,13 @@ public class ModifyInstanceRequest extends Request {
         } 
 
         /**
-         * CallingNumber.
+         * <p>The list of caller numbers.</p>
+         * <blockquote>
+         * <p>By default, this parameter is left empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;95187&quot;]</p>
          */
         public Builder callingNumber(java.util.List<String> callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -126,7 +132,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * InstanceDescription.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a new instance</p>
          */
         public Builder instanceDescription(String instanceDescription) {
             this.putQueryParameter("InstanceDescription", instanceDescription);
@@ -135,6 +144,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +157,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>New instance</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -156,6 +169,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of concurrent conversations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

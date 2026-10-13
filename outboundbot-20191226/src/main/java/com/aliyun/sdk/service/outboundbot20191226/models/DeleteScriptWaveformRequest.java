@@ -90,7 +90,11 @@ public class DeleteScriptWaveformRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -99,7 +103,11 @@ public class DeleteScriptWaveformRequest extends Request {
         }
 
         /**
+         * <p>Scenario ID</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b9ff4e88-65f9-4eb3-987c-11ba51f3f24d</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -108,7 +116,11 @@ public class DeleteScriptWaveformRequest extends Request {
         }
 
         /**
+         * <p>Deleted recording ID</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>df8216aa-d8f6-4501-864f-f8334d946561</p>
          */
         public Builder scriptWaveformId(String scriptWaveformId) {
             this.putQueryParameter("ScriptWaveformId", scriptWaveformId);

@@ -158,7 +158,10 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Instances.
+         * <p>The list of outbound robot instances.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -182,7 +188,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned by the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +199,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -198,7 +210,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -206,7 +221,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +243,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -288,7 +312,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -296,7 +323,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -480,7 +510,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578469042851</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -488,7 +521,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34234</p>
              */
             public Builder creatorId(Long creatorId) {
                 this.creatorId = creatorId;
@@ -496,7 +532,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -504,7 +543,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDescription.
+             * <p>The description of the outbound robot instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is an instance</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -512,7 +554,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -520,7 +565,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The name of the outbound robot instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Follow-up</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -528,7 +576,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IsPreset.
+             * <p>Indicates whether the instance is a system-preset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isPreset(Boolean isPreset) {
                 this.isPreset = isPreset;
@@ -536,7 +587,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConcurrentConversation.
+             * <p>The maximum number of concurrent outbound calls allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxConcurrentConversation(Integer maxConcurrentConversation) {
                 this.maxConcurrentConversation = maxConcurrentConversation;
@@ -544,7 +598,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The name of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -552,7 +609,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -560,7 +620,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTags.
+             * <p>The tag information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder resourceTags(java.util.List<ResourceTags> resourceTags) {
                 this.resourceTags = resourceTags;

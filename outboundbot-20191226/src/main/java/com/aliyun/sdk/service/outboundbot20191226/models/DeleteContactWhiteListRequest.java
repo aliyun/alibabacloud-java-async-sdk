@@ -89,10 +89,11 @@ public class DeleteContactWhiteListRequest extends Request {
         } 
 
         /**
+         * <p>Contact whitelist ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>111111</p>
+         * <p>08c32b67-43cd-4d6a-b7ea-d057xxxxxxxx</p>
          */
         public Builder contactWhiteListId(String contactWhiteListId) {
             this.putQueryParameter("ContactWhiteListId", contactWhiteListId);
@@ -101,6 +102,7 @@ public class DeleteContactWhiteListRequest extends Request {
         }
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DeleteContactWhiteListRequest extends Request {
         }
 
         /**
-         * Operator.
+         * <p>Operator information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试人</p>
          */
         public Builder operator(String operator) {
             this.putQueryParameter("Operator", operator);

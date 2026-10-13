@@ -119,7 +119,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
         }
 
         /**
-         * GlobalQuestions.
+         * <p>The global question data.</p>
          */
         public Builder globalQuestions(GlobalQuestions globalQuestions) {
             this.globalQuestions = globalQuestions;
@@ -135,7 +138,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +292,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Answers.
+             * <p>The replies to the global question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;你好,您可以再说一遍吗&quot;,&quot;不好意思我刚才没有听清&quot;]</p>
              */
             public Builder answers(String answers) {
                 this.answers = answers;
@@ -285,7 +303,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalQuestionId.
+             * <p>The global question ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>53c27755-d41e-46a6-bb3c-4f66f257d50c</p>
              */
             public Builder globalQuestionId(String globalQuestionId) {
                 this.globalQuestionId = globalQuestionId;
@@ -293,7 +314,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalQuestionName.
+             * <p>The name of the global question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>未识别</p>
              */
             public Builder globalQuestionName(String globalQuestionName) {
                 this.globalQuestionName = globalQuestionName;
@@ -301,7 +325,16 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalQuestionType.
+             * <p>The type of the global question.</p>
+             * <ul>
+             * <li><p>SYSTEM: System-defined</p>
+             * </li>
+             * <li><p>COMMON: General</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder globalQuestionType(String globalQuestionType) {
                 this.globalQuestionType = globalQuestionType;
@@ -309,7 +342,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
             }
 
             /**
-             * Questions.
+             * <p>The list of global questions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;测试问题1&quot;,&quot;测试问题2&quot;]</p>
              */
             public Builder questions(String questions) {
                 this.questions = questions;
@@ -317,7 +353,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aa279896-64a6-4182-864c-4f2b04ec8d17</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -410,7 +449,7 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The array of global questions.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -418,7 +457,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -426,7 +468,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -434,7 +479,10 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

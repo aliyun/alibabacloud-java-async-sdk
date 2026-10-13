@@ -89,10 +89,14 @@ public class GetAgentProfileRequest extends Request {
         } 
 
         /**
+         * <p>The agent profile ID.</p>
+         * <blockquote>
+         * <p>You can obtain the agent profile ID of a created scenario from the ChatbotId response parameter of DescribeScript.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>37ca3ca1ac4b4e57adf3da5b5d939d04</p>
+         * <p>d31794e2a51f47d2901b4094d88311d7</p>
          */
         public Builder agentProfileId(String agentProfileId) {
             this.putBodyParameter("AgentProfileId", agentProfileId);
@@ -101,7 +105,10 @@ public class GetAgentProfileRequest extends Request {
         }
 
         /**
-         * AppIp.
+         * <p>The app IP address. This is a system field and is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder appIp(String appIp) {
             this.putBodyParameter("AppIp", appIp);
@@ -110,6 +117,7 @@ public class GetAgentProfileRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

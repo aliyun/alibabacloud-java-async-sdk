@@ -184,7 +184,10 @@ public class SearchTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -192,7 +195,10 @@ public class SearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -200,7 +206,10 @@ public class SearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The label information that can be used as filter conditions.</p>
+         * <blockquote>
+         * <p>Displays all label information with enumerated values in this job group.</p>
+         * </blockquote>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -208,7 +217,10 @@ public class SearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned by the API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -216,7 +228,10 @@ public class SearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.pageIndex = pageIndex;
@@ -224,7 +239,10 @@ public class SearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -232,7 +250,10 @@ public class SearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -240,7 +261,10 @@ public class SearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SearchTaskInfoList.
+         * <p>The list of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder searchTaskInfoList(java.util.List<SearchTaskInfoList> searchTaskInfoList) {
             this.searchTaskInfoList = searchTaskInfoList;
@@ -248,7 +272,10 @@ public class SearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +283,10 @@ public class SearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -264,7 +294,7 @@ public class SearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * VariableNames.
+         * <p>The full set of label name keys.</p>
          */
         public Builder variableNames(java.util.List<String> variableNames) {
             this.variableNames = variableNames;
@@ -330,7 +360,10 @@ public class SearchTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Satisfied</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -338,7 +371,7 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ValueList.
+             * <p>The list of label values.</p>
              */
             public Builder valueList(java.util.List<String> valueList) {
                 this.valueList = valueList;
@@ -405,7 +438,10 @@ public class SearchTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * K.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Satisfied</p>
              */
             public Builder k(String k) {
                 this.k = k;
@@ -413,7 +449,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * V.
+             * <p>The matched label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Yes</p>
              */
             public Builder v(String v) {
                 this.v = v;
@@ -844,7 +883,10 @@ public class SearchTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * ActualTime.
+             * <p>The actual execution time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1643436089677</p>
              */
             public Builder actualTime(Long actualTime) {
                 this.actualTime = actualTime;
@@ -852,7 +894,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CallDuration.
+             * <p>The call duration, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46000</p>
              */
             public Builder callDuration(Integer callDuration) {
                 this.callDuration = callDuration;
@@ -860,7 +905,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CallDurationDisplay.
+             * <p>The call duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47″</p>
              */
             public Builder callDurationDisplay(String callDurationDisplay) {
                 this.callDurationDisplay = callDurationDisplay;
@@ -868,7 +916,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CalledNumber.
+             * <p>The called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15205879599</p>
              */
             public Builder calledNumber(String calledNumber) {
                 this.calledNumber = calledNumber;
@@ -876,7 +927,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CallingNumber.
+             * <p>The calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02152739269</p>
              */
             public Builder callingNumber(String callingNumber) {
                 this.callingNumber = callingNumber;
@@ -884,7 +938,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DialException.
+             * <p>The exception information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;code&quot;:&quot;OutboundCallError.SipCodeError&quot;, &quot;params&quot;:[{&quot;key&quot;:&quot;SipCode&quot;,&quot;value&quot;:&quot;500&quot;}]}]</p>
              */
             public Builder dialException(String dialException) {
                 this.dialException = dialException;
@@ -892,7 +949,7 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DialExceptionCodes.
+             * <p>The field used for displaying remarks on the page.</p>
              */
             public Builder dialExceptionCodes(java.util.List<String> dialExceptionCodes) {
                 this.dialExceptionCodes = dialExceptionCodes;
@@ -900,7 +957,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DialExceptionOld.
+             * <p>The exception information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;OutboundCallError.SipTrunkError&quot;]</p>
              */
             public Builder dialExceptionOld(String dialExceptionOld) {
                 this.dialExceptionOld = dialExceptionOld;
@@ -908,7 +968,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * HasAnswered.
+             * <p>Indicates whether the call is answered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasAnswered(Boolean hasAnswered) {
                 this.hasAnswered = hasAnswered;
@@ -916,7 +979,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * HasHangUpByRejection.
+             * <p>Indicates whether the call is hung up due to unrecognized intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasHangUpByRejection(Boolean hasHangUpByRejection) {
                 this.hasHangUpByRejection = hasHangUpByRejection;
@@ -924,7 +990,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * HasLastPlaybackCompleted.
+             * <p>Indicates whether the last sentence is fully played before hanging up.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasLastPlaybackCompleted(Boolean hasLastPlaybackCompleted) {
                 this.hasLastPlaybackCompleted = hasLastPlaybackCompleted;
@@ -932,7 +1001,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * HasReachedEndOfFlow.
+             * <p>Indicates whether the dialogue is completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasReachedEndOfFlow(Boolean hasReachedEndOfFlow) {
                 this.hasReachedEndOfFlow = hasReachedEndOfFlow;
@@ -940,7 +1012,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>73df6283-26b2-402d-bad0-ffa489923ea1</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -948,7 +1023,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupId.
+             * <p>The job group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37db3113-ad34-4ba3-b930-468f016bbf95</p>
              */
             public Builder jobGroupId(String jobGroupId) {
                 this.jobGroupId = jobGroupId;
@@ -956,7 +1034,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupName.
+             * <p>The name of the job group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85% new (with notes and underlines) 2021_11_14_18_00_51</p>
              */
             public Builder jobGroupName(String jobGroupName) {
                 this.jobGroupName = jobGroupName;
@@ -964,7 +1045,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6203248e-e652-4ef8-a1eb-586ed7b54dc2</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -972,7 +1056,18 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatus.
+             * <p>The job status. Valid values:</p>
+             * <ul>
+             * <li>0: Scheduling.</li>
+             * <li>1: Executing.</li>
+             * <li>2: Succeeded (Reached).</li>
+             * <li>3: Paused.</li>
+             * <li>4: Failed (Not connected - Busy).</li>
+             * <li>5: Cancelled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder jobStatus(Integer jobStatus) {
                 this.jobStatus = jobStatus;
@@ -980,7 +1075,18 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatusName.
+             * <p>The display content of the job status. Valid values:</p>
+             * <ul>
+             * <li>0: Scheduling.</li>
+             * <li>1: Executing.</li>
+             * <li>2: Succeeded (Reached).</li>
+             * <li>3: Paused.</li>
+             * <li>4: Failed (Not connected - Busy).</li>
+             * <li>5: Cancelled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduling</p>
              */
             public Builder jobStatusName(String jobStatusName) {
                 this.jobStatusName = jobStatusName;
@@ -988,7 +1094,18 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatusString.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>Scheduling: Scheduling (0).</li>
+             * <li>Executing: Executing (1).</li>
+             * <li>Succeeded: Reached (2).</li>
+             * <li>Paused: Paused (3).</li>
+             * <li>Failed: Not connected - Busy (4).</li>
+             * <li>Cancelled: Cancelled (5).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduling</p>
              */
             public Builder jobStatusString(String jobStatusString) {
                 this.jobStatusString = jobStatusString;
@@ -996,7 +1113,7 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The label hit status of the current outbound call.</p>
              */
             public Builder labels(java.util.List<SearchTaskInfoListLabels> labels) {
                 this.labels = labels;
@@ -1004,7 +1121,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingDuration.
+             * <p>The ringing duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder recordingDuration(Integer recordingDuration) {
                 this.recordingDuration = recordingDuration;
@@ -1012,7 +1132,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptName.
+             * <p>The scenario name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chronic disease leads</p>
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -1020,7 +1143,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskCreateTime.
+             * <p>The task creation time. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1646792941</p>
              */
             public Builder taskCreateTime(Long taskCreateTime) {
                 this.taskCreateTime = taskCreateTime;
@@ -1028,7 +1154,23 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskEndReason.
+             * <p>The reason why the task ended. Valid values:</p>
+             * <ul>
+             * <li>FINISHED (1): The task completed normally.</li>
+             * <li>CHATBOT_HANGUP_AFTER_NOANSWER (2): The robot hung up after an unrecognized intent.</li>
+             * <li>CHATBOT_HANGUP_AFTER_SILENCE (3): The robot hung up due to a silence timeout.</li>
+             * <li>CLIENT_HANGUP_AFTER_NOANSWER (4): The user hung up after an unrecognized intent.</li>
+             * <li>CLIENT_HANGUP (5): The user hung up without a specific reason.</li>
+             * <li>TRANSFER_BY_INTENT (6): The call was transferred to an agent due to a matched intent.</li>
+             * <li>TRANSFER_AFTER_NOANSWER (7): The call was transferred to an agent after an unrecognized intent.</li>
+             * <li>INO_INTERACTION (8): No interaction occurred on the user side.</li>
+             * <li>ERROR (9): The task was interrupted by a system exception.</li>
+             * <li>SPECIAL_INTERCEPT_VOICE_ASSISTANT (10): The call was intercepted by the voice assistant.</li>
+             * <li>SPECIAL_INTERCEPT_EXTENSION_NUMBER_TRANSFER (11): The call was intercepted during extension number transfer.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OutOfService</p>
              */
             public Builder taskEndReason(Integer taskEndReason) {
                 this.taskEndReason = taskEndReason;
@@ -1036,7 +1178,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>479aea04-3a92-4ac3-935d-c8798c667850</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -1044,7 +1189,44 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The task status. Valid values:
+             * (Note: The <strong>Succeeded</strong> status is subdivided into specific causes. The general <strong>Succeeded</strong>: 1 (Connected) status is not displayed. Instead, specific subdivided causes are returned.)</p>
+             * <ul>
+             * <li><strong>Executing</strong>: 0 (Dialing).</li>
+             * <li><strong>Succeeded</strong>: 1 (Connected).</li>
+             * <li><strong>NoAnswer</strong>: 2 (Not connected - No answer).</li>
+             * <li><strong>NotExist</strong>: 3 (Not connected - Nonexistent number).</li>
+             * <li><strong>Busy</strong>: 4 (Not connected - Busy).</li>
+             * <li><strong>Cancelled</strong>: 5 (Not dialed - Task stopped).</li>
+             * <li><strong>Failed</strong>: 6 (Failed).</li>
+             * <li><strong>NotConnected</strong>: 7 (Not connected - Unreachable).</li>
+             * <li><strong>PoweredOff</strong>: 8 (Not connected - Powered off).</li>
+             * <li><strong>OutOfService</strong>: 9 (Not connected - Suspended).</li>
+             * <li><strong>InArrears</strong>: 10 (Not connected - Overdue payment).</li>
+             * <li><strong>EmptyNumber</strong>: 11 (Not dialed - Nonexistent number, not dialed).</li>
+             * <li><strong>PerDayCallCountLimit</strong>: 12 (Not dialed - Daily limit exceeded).</li>
+             * <li><strong>ContactBlockList</strong>: 13 (Not dialed - Blacklisted).</li>
+             * <li><strong>CallerNotRegistered</strong>: 14 (Not dialed - Caller number not registered).</li>
+             * <li><strong>Terminated</strong>: 15 (Not dialed - Terminated).</li>
+             * <li><strong>VerificationCancelled</strong>: 16 (Not dialed - Canceled due to pre-call verification failure).</li>
+             * <li><strong>OutOfServiceNoCall</strong>: 17 (Not dialed - Callee suspended, not dialed).</li>
+             * <li><strong>InArrearsNoCall</strong>: 18 (Not dialed - Callee has overdue payment, not dialed).</li>
+             * <li><strong>CallingNumberNotExist</strong>: 19 (Not dialed - Caller number does not exist).</li>
+             * <li><strong>SucceededFinish</strong>: 20 (Connected - Normal completion).</li>
+             * <li><strong>SucceededChatbotHangUpAfterNoAnswer</strong>: 21 (Connected - Robot hung up after unrecognized intent).</li>
+             * <li><strong>SucceededChatbotHangUpAfterSilence</strong>: 22 (Connected - Hung up due to silence timeout).</li>
+             * <li><strong>SucceededClientHangUpAfterNoAnswer</strong>: 23 (Connected - User hung up after unrecognized intent).</li>
+             * <li><strong>SucceededClientHangUp</strong>: 24 (Connected - User hung up without reason).</li>
+             * <li><strong>SucceededTransferByIntent</strong>: 25 (Connected - Transferred to agent due to matched intent).</li>
+             * <li><strong>SucceededTransferAfterNoAnswer</strong>: 26 (Connected - Transferred to agent after unrecognized intent).</li>
+             * <li><strong>SucceededInoInterAction</strong>: 27 (Connected - No interaction on user side).</li>
+             * <li><strong>SucceededError</strong>: 28 (Connected - Interrupted by system exception).</li>
+             * <li><strong>SucceededSpecialInterceptVoiceAssistant</strong>: 29 (Connected - Special interception - Voice assistant).</li>
+             * <li><strong>SucceededSpecialInterceptExtensionNumberTransfer</strong>: 30 (Connected - Special interception - Extension number transfer).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder taskStatus(Integer taskStatus) {
                 this.taskStatus = taskStatus;
@@ -1052,7 +1234,44 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatusName.
+             * <p>The display content of the call status. Valid values:
+             * (Note: The <strong>Succeeded</strong> status is subdivided into specific causes. The general <strong>Succeeded</strong>: 1 (Connected) status is not displayed. Instead, specific subdivided causes are returned.)</p>
+             * <ul>
+             * <li><strong>Executing</strong>: 0 (Dialing).</li>
+             * <li><strong>Succeeded</strong>: 1 (Connected).</li>
+             * <li><strong>NoAnswer</strong>: 2 (Not connected - No answer).</li>
+             * <li><strong>NotExist</strong>: 3 (Not connected - Nonexistent number).</li>
+             * <li><strong>Busy</strong>: 4 (Not connected - Busy).</li>
+             * <li><strong>Cancelled</strong>: 5 (Not dialed - Task stopped).</li>
+             * <li><strong>Failed</strong>: 6 (Failed).</li>
+             * <li><strong>NotConnected</strong>: 7 (Not connected - Unreachable).</li>
+             * <li><strong>PoweredOff</strong>: 8 (Not connected - Powered off).</li>
+             * <li><strong>OutOfService</strong>: 9 (Not connected - Suspended).</li>
+             * <li><strong>InArrears</strong>: 10 (Not connected - Overdue payment).</li>
+             * <li><strong>EmptyNumber</strong>: 11 (Not dialed - Nonexistent number, not dialed).</li>
+             * <li><strong>PerDayCallCountLimit</strong>: 12 (Not dialed - Daily limit exceeded).</li>
+             * <li><strong>ContactBlockList</strong>: 13 (Not dialed - Blacklisted).</li>
+             * <li><strong>CallerNotRegistered</strong>: 14 (Not dialed - Caller number not registered).</li>
+             * <li><strong>Terminated</strong>: 15 (Not dialed - Terminated).</li>
+             * <li><strong>VerificationCancelled</strong>: 16 (Not dialed - Canceled due to pre-call verification failure).</li>
+             * <li><strong>OutOfServiceNoCall</strong>: 17 (Not dialed - Callee suspended, not dialed).</li>
+             * <li><strong>InArrearsNoCall</strong>: 18 (Not dialed - Callee has overdue payment, not dialed).</li>
+             * <li><strong>CallingNumberNotExist</strong>: 19 (Not dialed - Caller number does not exist).</li>
+             * <li><strong>SucceededFinish</strong>: 20 (Connected - Normal completion).</li>
+             * <li><strong>SucceededChatbotHangUpAfterNoAnswer</strong>: 21 (Connected - Robot hung up after unrecognized intent).</li>
+             * <li><strong>SucceededChatbotHangUpAfterSilence</strong>: 22 (Connected - Hung up due to silence timeout).</li>
+             * <li><strong>SucceededClientHangUpAfterNoAnswer</strong>: 23 (Connected - User hung up after unrecognized intent).</li>
+             * <li><strong>SucceededClientHangUp</strong>: 24 (Connected - User hung up without reason).</li>
+             * <li><strong>SucceededTransferByIntent</strong>: 25 (Connected - Transferred to agent due to matched intent).</li>
+             * <li><strong>SucceededTransferAfterNoAnswer</strong>: 26 (Connected - Transferred to agent after unrecognized intent).</li>
+             * <li><strong>SucceededInoInterAction</strong>: 27 (Connected - No interaction on user side).</li>
+             * <li><strong>SucceededError</strong>: 28 (Connected - Interrupted by system exception).</li>
+             * <li><strong>SucceededSpecialInterceptVoiceAssistant</strong>: 29 (Connected - Special interception - Voice assistant).</li>
+             * <li><strong>SucceededSpecialInterceptExtensionNumberTransfer</strong>: 30 (Connected - Special interception - Extension number transfer).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Dialing</p>
              */
             public Builder taskStatusName(String taskStatusName) {
                 this.taskStatusName = taskStatusName;
@@ -1060,7 +1279,46 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatusString.
+             * <p>The task status. Valid values:
+             * (Note: The <strong>Succeeded</strong> status is subdivided into specific causes. The general <strong>Succeeded</strong>: 1 (Connected) status is not displayed. Instead, specific subdivided causes are returned.)</p>
+             * <ul>
+             * <li><strong>Executing</strong>: 0 (Dialing).</li>
+             * <li><strong>Succeeded</strong>: 1 (Connected).</li>
+             * <li><strong>NoAnswer</strong>: 2 (Not connected - No answer).</li>
+             * <li><strong>NotExist</strong>: 3 (Not connected - Nonexistent number).</li>
+             * <li><strong>Busy</strong>: 4 (Not connected - Busy).</li>
+             * <li><strong>Cancelled</strong>: 5 (Not dialed - Task stopped).</li>
+             * <li><strong>Failed</strong>: 6 (Failed).</li>
+             * <li><strong>NotConnected</strong>: 7 (Not connected - Unreachable).</li>
+             * <li><strong>PoweredOff</strong>: 8 (Not connected - Powered off).</li>
+             * <li><strong>OutOfService</strong>: 9 (Not connected - Suspended).</li>
+             * <li><strong>InArrears</strong>: 10 (Not connected - Overdue payment).</li>
+             * <li><strong>EmptyNumber</strong>: 11 (Not dialed - Nonexistent number, not dialed).</li>
+             * <li><strong>PerDayCallCountLimit</strong>: 12 (Not dialed - Daily limit exceeded).</li>
+             * <li><strong>ContactBlockList</strong>: 13 (Not dialed - Blacklisted).</li>
+             * <li><strong>CallerNotRegistered</strong>: 14 (Not dialed - Caller number not registered).</li>
+             * <li><strong>Terminated</strong>: 15 (Not dialed - Terminated).</li>
+             * <li><strong>VerificationCancelled</strong>: 16 (Not dialed - Canceled due to pre-call verification failure).</li>
+             * <li><strong>OutOfServiceNoCall</strong>: 17 (Not dialed - Callee suspended, not dialed).</li>
+             * <li><strong>InArrearsNoCall</strong>: 18 (Not dialed - Callee has overdue payment, not dialed).</li>
+             * <li><strong>CallingNumberNotExist</strong>: 19 (Not dialed - Caller number does not exist).</li>
+             * <li><strong>SucceededFinish</strong>: 20 (Connected - Normal completion).</li>
+             * <li><strong>SucceededChatbotHangUpAfterNoAnswer</strong>: 21 (Connected - Robot hung up after unrecognized intent).</li>
+             * <li><strong>SucceededChatbotHangUpAfterSilence</strong>: 22 (Connected - Hung up due to silence timeout).</li>
+             * <li><strong>SucceededClientHangUpAfterNoAnswer</strong>: 23 (Connected - User hung up after unrecognized intent).</li>
+             * <li><strong>SucceededClientHangUp</strong>: 24 (Connected - User hung up without reason).</li>
+             * <li><strong>SucceededTransferByIntent</strong>: 25 (Connected - Transferred to agent due to matched intent).</li>
+             * <li><strong>SucceededTransferAfterNoAnswer</strong>: 26 (Connected - Transferred to agent after unrecognized intent).</li>
+             * <li><strong>SucceededInoInterAction</strong>: 27 (Connected - No interaction on user side).</li>
+             * <li><strong>SucceededError</strong>: 28 (Connected - Interrupted by system exception).</li>
+             * <li><strong>SucceededSpecialInterceptVoiceAssistant</strong>: 29 (Connected - Special interception - Voice assistant).</li>
+             * <li><strong>SucceededSpecialInterceptExtensionNumberTransfer</strong>: 30 (Connected - Special interception - Extension number transfer).</li>
+             * <li><strong>SucceededSpecialInterceptCustomSpecialIntercept</strong>: 31 (Connected - Special interception - Custom interception).</li>
+             * <li><strong>HighRiskSipCode</strong>: 32 (Not dialed - High risk, not dialed).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Executing</p>
              */
             public Builder taskStatusString(String taskStatusString) {
                 this.taskStatusString = taskStatusString;
@@ -1068,7 +1326,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12334134</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1076,7 +1337,10 @@ public class SearchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

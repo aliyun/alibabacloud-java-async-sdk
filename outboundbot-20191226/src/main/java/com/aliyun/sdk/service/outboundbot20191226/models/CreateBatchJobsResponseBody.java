@@ -119,7 +119,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * BatchJob.
+         * <p>The job group information.</p>
          */
         public Builder batchJob(BatchJob batchJob) {
             this.batchJob = batchJob;
@@ -127,7 +127,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +138,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * BeginTime.
+             * <p>The start time. The format is HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09:00:00</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -233,7 +251,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. The format is HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -469,7 +490,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * Customized.
+             * <p>The custom information of the strategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder customized(String customized) {
                 this.customized = customized;
@@ -477,7 +501,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the scheduling strategy. The time is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2209702074000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -485,7 +512,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FollowUpStrategy.
+             * <p>The follow-up strategy for outbound calls that are not completed in the previous cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTINUE</p>
              */
             public Builder followUpStrategy(String followUpStrategy) {
                 this.followUpStrategy = followUpStrategy;
@@ -493,7 +523,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * IsTemplate.
+             * <p>Indicates whether the strategy is a template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isTemplate(Boolean isTemplate) {
                 this.isTemplate = isTemplate;
@@ -501,7 +534,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAttemptsPerDay.
+             * <p>The maximum number of retries per day after a call fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxAttemptsPerDay(Integer maxAttemptsPerDay) {
                 this.maxAttemptsPerDay = maxAttemptsPerDay;
@@ -509,7 +545,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MinAttemptInterval.
+             * <p>The minimum interval between retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder minAttemptInterval(Integer minAttemptInterval) {
                 this.minAttemptInterval = minAttemptInterval;
@@ -517,7 +556,16 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatBy.
+             * <p>The repetition mode. Valid values:</p>
+             * <ul>
+             * <li>Once: The job is not repeated.</li>
+             * <li>Day: The job is repeated every day.</li>
+             * <li>Week: The job is repeated every week.</li>
+             * <li>Month: The job is repeated every month.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Once</p>
              */
             public Builder repeatBy(String repeatBy) {
                 this.repeatBy = repeatBy;
@@ -525,7 +573,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatDays.
+             * <p>The list of days on which the job is repeated.</p>
              */
             public Builder repeatDays(java.util.List<String> repeatDays) {
                 this.repeatDays = repeatDays;
@@ -533,7 +581,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RoutingStrategy.
+             * <p>The recording strategy for the calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LocalFirst</p>
              */
             public Builder routingStrategy(String routingStrategy) {
                 this.routingStrategy = routingStrategy;
@@ -541,7 +592,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the job group starts to be executed. The time is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578550074000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -549,7 +603,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyDescription.
+             * <p>The strategy description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Job execution strategy</p>
              */
             public Builder strategyDescription(String strategyDescription) {
                 this.strategyDescription = strategyDescription;
@@ -557,7 +614,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyId.
+             * <p>The strategy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f718798d-96be-40e4-bef6-317b54855708</p>
              */
             public Builder strategyId(String strategyId) {
                 this.strategyId = strategyId;
@@ -565,7 +625,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyName.
+             * <p>The strategy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Strategy</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -573,7 +636,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The strategy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Repeatable</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -581,7 +647,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingTime.
+             * <p>The time periods during which the job is executed in a day.</p>
              */
             public Builder workingTime(java.util.List<WorkingTime> workingTime) {
                 this.workingTime = workingTime;
@@ -726,7 +792,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * BatchJobId.
+             * <p>The job group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5a7e8b09-baf9-4cab-b540-c971f47a7146</p>
              */
             public Builder batchJobId(String batchJobId) {
                 this.batchJobId = batchJobId;
@@ -734,7 +803,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CallingNumbers.
+             * <p>The list of calling numbers.</p>
              */
             public Builder callingNumbers(java.util.List<String> callingNumbers) {
                 this.callingNumbers = callingNumbers;
@@ -742,7 +811,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the job group was created. The time is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579068424000</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -750,7 +822,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobFilePath.
+             * <p>The key of the uploaded Excel file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52e80b02-0126-4556-a1e6-ef5b3747ed53/a9a3ddc7-d7d7-48cd-82b5-b31bb5510e71_2a66f8ad-dfbb-4980-9b84-439171295a11.xlsx</p>
              */
             public Builder jobFilePath(String jobFilePath) {
                 this.jobFilePath = jobFilePath;
@@ -758,7 +833,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupDescription.
+             * <p>The description of the job group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>First batch job</p>
              */
             public Builder jobGroupDescription(String jobGroupDescription) {
                 this.jobGroupDescription = jobGroupDescription;
@@ -766,7 +844,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupName.
+             * <p>The name of the job group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Batch job 01</p>
              */
             public Builder jobGroupName(String jobGroupName) {
                 this.jobGroupName = jobGroupName;
@@ -774,7 +855,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ScenarioId.
+             * <p>The scenario ID of the job group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6cea9bed-63e6-439e-ae4c-b3333efff53d</p>
              */
             public Builder scenarioId(String scenarioId) {
                 this.scenarioId = scenarioId;
@@ -782,7 +866,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Strategy.
+             * <p>The job execution strategy.</p>
              */
             public Builder strategy(Strategy strategy) {
                 this.strategy = strategy;

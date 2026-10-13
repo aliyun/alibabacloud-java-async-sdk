@@ -184,7 +184,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -192,7 +195,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -200,7 +206,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * JobGroups.
+         * <p>The list of job groups.</p>
          */
         public Builder jobGroups(java.util.List<JobGroups> jobGroups) {
             this.jobGroups = jobGroups;
@@ -208,7 +214,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -216,7 +225,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -224,7 +236,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -232,7 +247,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -240,7 +258,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -248,7 +269,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * Timeout.
+         * <p>Indicates whether the request timed out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder timeout(Boolean timeout) {
             this.timeout = timeout;
@@ -256,7 +280,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -264,7 +291,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * Vaild.
+         * <p>Indicates whether the request is valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder vaild(Boolean vaild) {
             this.vaild = vaild;
@@ -343,7 +373,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             } 
 
             /**
-             * FileHttpUrl.
+             * <p><strong>[Deprecated]</strong> The download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.xxx.com/xxx">http://www.xxx.com/xxx</a></p>
              */
             public Builder fileHttpUrl(String fileHttpUrl) {
                 this.fileHttpUrl = fileHttpUrl;
@@ -351,7 +384,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -359,7 +395,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PENDING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -543,7 +582,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             } 
 
             /**
-             * CancelledNum.
+             * <p>The number of canceled jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder cancelledNum(Integer cancelledNum) {
                 this.cancelledNum = cancelledNum;
@@ -551,7 +593,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p><strong>[Deprecated]</strong> The total execution duration up to the current time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -559,7 +604,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutingNum.
+             * <p>The number of jobs being executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder executingNum(Integer executingNum) {
                 this.executingNum = executingNum;
@@ -567,7 +615,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * FailedNum.
+             * <p>The number of failed jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder failedNum(Integer failedNum) {
                 this.failedNum = failedNum;
@@ -575,7 +626,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * PausedNum.
+             * <p>The number of paused jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pausedNum(Integer pausedNum) {
                 this.pausedNum = pausedNum;
@@ -583,7 +637,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * Scheduling.
+             * <p>The number of jobs being scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder scheduling(Integer scheduling) {
                 this.scheduling = scheduling;
@@ -591,7 +648,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p><strong>[Deprecated]</strong> The start time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640316786259</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -599,7 +659,20 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The execution status. Valid values:</p>
+             * <ul>
+             * <li>Draft: The job group is a draft.</li>
+             * <li>Scheduling: The job group is being scheduled.</li>
+             * <li>Executing: The job group is being executed.</li>
+             * <li>Completed: The job group is completed.</li>
+             * <li>Paused: The job group is paused.</li>
+             * <li>Failed: The job group failed.</li>
+             * <li>Cancelled: The job group is canceled.</li>
+             * <li>Initializing: The job group is being initialized.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduling</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -607,7 +680,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCompleted.
+             * <p>The number of completed jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCompleted(Integer totalCompleted) {
                 this.totalCompleted = totalCompleted;
@@ -615,7 +691,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * TotalJobs.
+             * <p>The total number of jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalJobs(Integer totalJobs) {
                 this.totalJobs = totalJobs;
@@ -623,7 +702,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNotAnswered.
+             * <p><strong>[Deprecated]</strong> The number of unanswered jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNotAnswered(Integer totalNotAnswered) {
                 this.totalNotAnswered = totalNotAnswered;
@@ -690,7 +772,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the strategy. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640316786259</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -698,7 +783,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the strategy. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640316786259</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -934,7 +1022,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640316786259</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -942,7 +1033,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * ExportProgress.
+             * <p>The export progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder exportProgress(ExportProgress exportProgress) {
                 this.exportProgress = exportProgress;
@@ -950,7 +1044,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * JobDataParsingTaskId.
+             * <p><strong>[Deprecated]</strong> The ID of the jobFile parsing task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
              */
             public Builder jobDataParsingTaskId(String jobDataParsingTaskId) {
                 this.jobDataParsingTaskId = jobDataParsingTaskId;
@@ -958,7 +1055,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupDescription.
+             * <p>The description of the job group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder jobGroupDescription(String jobGroupDescription) {
                 this.jobGroupDescription = jobGroupDescription;
@@ -966,7 +1066,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupId.
+             * <p>The ID of the job group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
              */
             public Builder jobGroupId(String jobGroupId) {
                 this.jobGroupId = jobGroupId;
@@ -974,7 +1077,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupName.
+             * <p>The name of the job group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder jobGroupName(String jobGroupName) {
                 this.jobGroupName = jobGroupName;
@@ -982,7 +1088,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * MinConcurrency.
+             * <p>The minimum concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minConcurrency(Integer minConcurrency) {
                 this.minConcurrency = minConcurrency;
@@ -990,7 +1099,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640316786259</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -998,7 +1110,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The node statistics information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder progress(Progress progress) {
                 this.progress = progress;
@@ -1006,7 +1121,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The ID of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -1014,7 +1132,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptName.
+             * <p>The name of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -1022,7 +1143,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptVersion.
+             * <p>The version of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder scriptVersion(String scriptVersion) {
                 this.scriptVersion = scriptVersion;
@@ -1030,7 +1154,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the job group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduling</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1038,7 +1165,13 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * Strategy.
+             * <p><strong>[Deprecated]</strong> The strategy.</p>
+             * <blockquote>
+             * <p>To view the strategy information of the job group, call the DescribeJobGroup operation.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder strategy(Strategy strategy) {
                 this.strategy = strategy;
@@ -1046,7 +1179,10 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCallNum.
+             * <p>The total number of calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCallNum(Integer totalCallNum) {
                 this.totalCallNum = totalCallNum;

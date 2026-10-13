@@ -119,7 +119,10 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * DialogueFlows.
+         * <p>A list of dialogue flows.</p>
          */
         public Builder dialogueFlows(java.util.List<DialogueFlows> dialogueFlows) {
             this.dialogueFlows = dialogueFlows;
@@ -135,7 +138,10 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,16 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +298,10 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
             } 
 
             /**
-             * DialogueFlowDefinition.
+             * <p>The dialogue flow data, formatted as a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;transitions&quot;:[{&quot;source&quot;:&quot;cc31e02b&quot;,&quot;sourceAnchor&quot;:0,&quot;target&quot;:&quot;345700de&quot;,&quot;targetAnchor&quot;:0,&quot;id&quot;:&quot;16d37c6e&quot;,&quot;index&quot;:1}],&quot;nodes&quot;:[{&quot;shape&quot;:&quot;start-html&quot;,&quot;type&quot;:&quot;start&quot;,&quot;size&quot;:&quot;170<em>34&quot;,&quot;x&quot;:180,&quot;y&quot;:134,&quot;id&quot;:&quot;cc31e02b&quot;,&quot;index&quot;:0,&quot;nodeIndex&quot;:0,&quot;content&quot;:{&quot;branches&quot;:[{&quot;branchName&quot;:&quot;发起对话&quot;,&quot;branchId&quot;:&quot;3c50a880-a7bc-11e9-80fc-5917e4f31864&quot;}]},&quot;coordinates&quot;:{&quot;x&quot;:180,&quot;y&quot;:134}},{&quot;shape&quot;:&quot;function-html&quot;,&quot;type&quot;:&quot;transfer&quot;,&quot;size&quot;:&quot;170</em>34&quot;,&quot;x&quot;:606,&quot;y&quot;:134,&quot;id&quot;:&quot;345700de&quot;,&quot;nodeIndex&quot;:1,&quot;name&quot;:&quot;功能节点&quot;,&quot;script&quot;:&quot;你是 @name ma&quot;,&quot;content&quot;:{&quot;action&quot;:&quot;Hangup&quot;,&quot;actionParams&quot;:&quot;&quot;,&quot;label&quot;:[&quot;test1&quot;,&quot;test2&quot;,&quot;test3&quot;,&quot;test4&quot;,&quot;test5&quot;]},&quot;coordinates&quot;:{&quot;x&quot;:606,&quot;y&quot;:134},&quot;index&quot;:2,&quot;questions&quot;:[&quot;你是 @联系人姓名 ma&quot;]}]}</p>
              */
             public Builder dialogueFlowDefinition(String dialogueFlowDefinition) {
                 this.dialogueFlowDefinition = dialogueFlowDefinition;
@@ -285,7 +309,10 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * DialogueFlowId.
+             * <p>The dialogue flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dae01529-3c3e-458e-b07a-97643d09ebb9</p>
              */
             public Builder dialogueFlowId(String dialogueFlowId) {
                 this.dialogueFlowId = dialogueFlowId;
@@ -293,7 +320,10 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * DialogueFlowName.
+             * <p>The dialogue flow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>主流程</p>
              */
             public Builder dialogueFlowName(String dialogueFlowName) {
                 this.dialogueFlowName = dialogueFlowName;
@@ -301,7 +331,16 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * DialogueFlowType.
+             * <p>The flow type.</p>
+             * <ul>
+             * <li><p><code>SubFlow</code>: The subflow.</p>
+             * </li>
+             * <li><p><code>MainFlow</code>: The main flow.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MainFlow</p>
              */
             public Builder dialogueFlowType(String dialogueFlowType) {
                 this.dialogueFlowType = dialogueFlowType;
@@ -309,7 +348,10 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The outbound script ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2d5aa451-661f-4f08-b0c4-28eec78decc4</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -317,7 +359,10 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptVersion.
+             * <p>The script version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1569220563549</p>
              */
             public Builder scriptVersion(String scriptVersion) {
                 this.scriptVersion = scriptVersion;

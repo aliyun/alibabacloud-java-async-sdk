@@ -89,6 +89,7 @@ public class GetTaskByUuidRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class GetTaskByUuidRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,13 @@ public class GetTaskByUuidRequest extends Request {
         }
 
         /**
-         * WithConversations.
+         * <p>Specifies whether to include conversation information.</p>
+         * <blockquote>
+         * <p>Default value: false.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withConversations(Boolean withConversations) {
             this.putQueryParameter("WithConversations", withConversations);

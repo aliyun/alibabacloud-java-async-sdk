@@ -132,7 +132,10 @@ public class CreateBeebotIntentUserSayResponseBody extends TeaModel {
         } 
 
         /**
-         * BeebotRequestId.
+         * <p>The internal request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B219FCB-EC71-1F08-BB1B-0E87C20158C8</p>
          */
         public Builder beebotRequestId(String beebotRequestId) {
             this.beebotRequestId = beebotRequestId;
@@ -140,7 +143,10 @@ public class CreateBeebotIntentUserSayResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -148,7 +154,10 @@ public class CreateBeebotIntentUserSayResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class CreateBeebotIntentUserSayResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +176,10 @@ public class CreateBeebotIntentUserSayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +187,10 @@ public class CreateBeebotIntentUserSayResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +198,10 @@ public class CreateBeebotIntentUserSayResponseBody extends TeaModel {
         }
 
         /**
-         * UserSayId.
+         * <p>The user utterance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17448458</p>
          */
         public Builder userSayId(Long userSayId) {
             this.userSayId = userSayId;

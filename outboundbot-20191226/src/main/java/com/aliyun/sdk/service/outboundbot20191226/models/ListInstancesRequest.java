@@ -115,7 +115,10 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The name of the outbound robot instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -124,7 +127,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -133,7 +139,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -142,7 +151,13 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * <blockquote>
+         * <p>You can obtain the source API from the Resource Management documentation. Related link: <a href="https://api.aliyun.com/document/ResourceManager/2020-03-31/ListResourceGroups">https://api.aliyun.com/document/ResourceManager/2020-03-31/ListResourceGroups</a></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm3iugit3uw7a</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -151,7 +166,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags of the outbound robot instances.</p>
+         * <blockquote>
+         * <p>You can obtain the tags by calling the ListResourceTags operation.</p>
+         * </blockquote>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -219,7 +237,10 @@ public class ListInstancesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the instance tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -227,7 +248,10 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the instance tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder value(String value) {
                 this.value = value;

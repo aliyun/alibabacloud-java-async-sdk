@@ -119,7 +119,10 @@ public class DeleteContactWhiteListResponseBody extends TeaModel {
         } 
 
         /**
-         * AffectedRows.
+         * <p>Number of affected rows [Deprecated]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder affectedRows(Integer affectedRows) {
             this.affectedRows = affectedRows;
@@ -127,7 +130,10 @@ public class DeleteContactWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,10 @@ public class DeleteContactWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class DeleteContactWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class DeleteContactWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class DeleteContactWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

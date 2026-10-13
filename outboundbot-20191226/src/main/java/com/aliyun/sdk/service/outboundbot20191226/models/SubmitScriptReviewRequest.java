@@ -104,7 +104,11 @@ public class SubmitScriptReviewRequest extends Request {
         } 
 
         /**
+         * <p>Description</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>第一版本提交审核</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -113,7 +117,10 @@ public class SubmitScriptReviewRequest extends Request {
         }
 
         /**
-         * From.
+         * <p>Source of review submission</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MAINSITE</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -122,6 +129,7 @@ public class SubmitScriptReviewRequest extends Request {
         }
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,10 +142,11 @@ public class SubmitScriptReviewRequest extends Request {
         }
 
         /**
+         * <p>Script ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>b0f35dd1-0337-402e-9c4f-3a6c2426950a</p>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);

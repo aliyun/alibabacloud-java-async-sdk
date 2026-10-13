@@ -171,7 +171,10 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         } 
 
         /**
-         * BeebotRequestId.
+         * <p>The internal request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497CFAFF-48CC-161A-AD2C-252DED569037</p>
          */
         public Builder beebotRequestId(String beebotRequestId) {
             this.beebotRequestId = beebotRequestId;
@@ -179,7 +182,10 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -187,7 +193,10 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -195,7 +204,7 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * Lgfs.
+         * <p>The list of LGFs.</p>
          */
         public Builder lgfs(java.util.List<Lgfs> lgfs) {
             this.lgfs = lgfs;
@@ -203,7 +212,10 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The API message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -211,7 +223,10 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -219,7 +234,10 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -227,7 +245,10 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +256,10 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +267,10 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -348,7 +375,10 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-21 10:54:18.+0800</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -356,7 +386,10 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
             }
 
             /**
-             * IntentId.
+             * <p>The intent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10717802</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -364,7 +397,10 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
             }
 
             /**
-             * LgfId.
+             * <p>The utterance template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5666117</p>
              */
             public Builder lgfId(Long lgfId) {
                 this.lgfId = lgfId;
@@ -372,7 +408,10 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-21 10:54:18.+0800</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -380,7 +419,10 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
             }
 
             /**
-             * RuleText.
+             * <p>The content of the utterance template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I am an utterance template</p>
              */
             public Builder ruleText(String ruleText) {
                 this.ruleText = ruleText;

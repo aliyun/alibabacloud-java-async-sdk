@@ -244,7 +244,10 @@ public class CreateBatchRepeatJobRequest extends Request {
         } 
 
         /**
-         * CallingNumber.
+         * <p>Calling number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder callingNumber(java.util.List<String> callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -253,7 +256,10 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Job group description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试3</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -262,7 +268,10 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
-         * FilterStatus.
+         * <p>Job group status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded,NoInteraction,Failed,Cancelled</p>
          */
         public Builder filterStatus(String filterStatus) {
             this.putQueryParameter("FilterStatus", filterStatus);
@@ -271,7 +280,16 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
-         * FlashSmsExtras.
+         * <p>Configuration parameters for flash SMS push, in JSON format, including configuration information for third-party flash SMS.</p>
+         * <ul>
+         * <li><p>Template ID: Flash SMS template ID.</p>
+         * </li>
+         * <li><p>Config ID: Flash SMS configuration ID.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;templateId&quot;:&quot;10471&quot;,&quot;configId&quot;:&quot;8037f524-6ff2-4dbe-bb28-f59234ea7a64&quot;}</p>
          */
         public Builder flashSmsExtras(String flashSmsExtras) {
             this.putQueryParameter("FlashSmsExtras", flashSmsExtras);
@@ -280,6 +298,7 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -292,7 +311,10 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
-         * MinConcurrency.
+         * <p>Minimum concurrency</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minConcurrency(Long minConcurrency) {
             this.putQueryParameter("MinConcurrency", minConcurrency);
@@ -301,6 +323,7 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
+         * <p>Job name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -313,7 +336,10 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>Job priority</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -322,7 +348,7 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
-         * RecallCallingNumber.
+         * <p>Redial calling number list</p>
          */
         public Builder recallCallingNumber(java.util.List<String> recallCallingNumber) {
             this.putQueryParameter("RecallCallingNumber", recallCallingNumber);
@@ -331,7 +357,10 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
-         * RecallStrategyJson.
+         * <p>Redial policy JSON</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;emptyNumberIgnore\&quot;:false,\&quot;inArrearsIgnore\&quot;:false,\&quot;outOfServiceIgnore\&quot;:false}</p>
          */
         public Builder recallStrategyJson(String recallStrategyJson) {
             this.putQueryParameter("RecallStrategyJson", recallStrategyJson);
@@ -340,7 +369,10 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
-         * RingingDuration.
+         * <p>Ringing duration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder ringingDuration(Long ringingDuration) {
             this.putQueryParameter("RingingDuration", ringingDuration);
@@ -349,7 +381,10 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>Script ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0fe7f71c-8771-42ef-9bb1-19aa16ae7120</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -358,6 +393,7 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
+         * <p>Job group ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -370,7 +406,10 @@ public class CreateBatchRepeatJobRequest extends Request {
         }
 
         /**
-         * StrategyJson.
+         * <p>Job execution policy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;maxAttemptsPerDay\&quot;:1,\&quot;minAttemptInterval\&quot;:1,\&quot;routingStrategy\&quot;:\&quot;LocalFirst\&quot;}</p>
          */
         public Builder strategyJson(String strategyJson) {
             this.putQueryParameter("StrategyJson", strategyJson);

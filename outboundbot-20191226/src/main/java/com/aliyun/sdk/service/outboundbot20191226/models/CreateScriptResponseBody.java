@@ -119,7 +119,10 @@ public class CreateScriptResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateScriptResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class CreateScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class CreateScriptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class CreateScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Script.
+         * <p>Script information</p>
          */
         public Builder script(Script script) {
             this.script = script;
@@ -159,7 +171,10 @@ public class CreateScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -355,7 +370,10 @@ public class CreateScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * DebugStatus.
+             * <p>Script debug status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DRAFTED</p>
              */
             public Builder debugStatus(String debugStatus) {
                 this.debugStatus = debugStatus;
@@ -363,7 +381,10 @@ public class CreateScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Industry.
+             * <p>Industry</p>
+             * 
+             * <strong>example:</strong>
+             * <p>教育</p>
              */
             public Builder industry(String industry) {
                 this.industry = industry;
@@ -371,7 +392,10 @@ public class CreateScriptResponseBody extends TeaModel {
             }
 
             /**
-             * IsDebugDrafted.
+             * <p>Is debug draft</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDebugDrafted(Boolean isDebugDrafted) {
                 this.isDebugDrafted = isDebugDrafted;
@@ -379,7 +403,10 @@ public class CreateScriptResponseBody extends TeaModel {
             }
 
             /**
-             * IsDrafted.
+             * <p>Is draft</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDrafted(Boolean isDrafted) {
                 this.isDrafted = isDrafted;
@@ -387,7 +414,10 @@ public class CreateScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NluAccessType.
+             * <p>NLU access method (applicable only to Large Language Model (LLM) scenarios). Enumeration: Managed - Access using an Alibaba public account. This field is empty for non-LLM scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Managed</p>
              */
             public Builder nluAccessType(String nluAccessType) {
                 this.nluAccessType = nluAccessType;
@@ -395,7 +425,10 @@ public class CreateScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NluEngine.
+             * <p>NLU engine (applicable only to Large Language Model (LLM) scenarios). Enumeration: Prompts - Large Language Model (LLM) scenario. This field is empty for non-LLM scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prompts</p>
              */
             public Builder nluEngine(String nluEngine) {
                 this.nluEngine = nluEngine;
@@ -403,7 +436,10 @@ public class CreateScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>Scenario</p>
+             * 
+             * <strong>example:</strong>
+             * <p>回访</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -411,7 +447,10 @@ public class CreateScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptDescription.
+             * <p>Script description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>课程满意度回访</p>
              */
             public Builder scriptDescription(String scriptDescription) {
                 this.scriptDescription = scriptDescription;
@@ -419,7 +458,10 @@ public class CreateScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>Script ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8c58d3e0-bf27-4685-a5a5-65872ec5abc4</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -427,7 +469,10 @@ public class CreateScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptName.
+             * <p>Script name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>课程满意度回访</p>
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -435,7 +480,34 @@ public class CreateScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Job status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>DRAFTED</strong>: Draft.</p>
+             * </li>
+             * <li><p><strong>INITIALIZE_IN_PROGRESS</strong>: Initializing.</p>
+             * </li>
+             * <li><p><strong>PUBLISHED</strong>: Published.</p>
+             * </li>
+             * <li><p><strong>PUBLISH_IN_PROGRESS</strong>: Publishing.</p>
+             * </li>
+             * <li><p><strong>ROLLBACK_IN_PROGRESS</strong>: Rolling back.</p>
+             * </li>
+             * <li><p><strong>EXAMINE_IN_PROGRESS</strong>: Pending review.</p>
+             * </li>
+             * <li><p><strong>PUBLISHED_AND_EXAMINE_IN_PROGRESS</strong>: Published and pending review.</p>
+             * </li>
+             * <li><p><strong>PUBLISH_FAILED</strong>: Publish failed.</p>
+             * </li>
+             * <li><p><strong>ROLLBACK_FAILED</strong>: Rollback failed.</p>
+             * </li>
+             * <li><p><strong>IMPORT_IN_PROGRESS</strong>: Importing.</p>
+             * </li>
+             * <li><p><strong>IMPORT_FAILED</strong>: Import failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DRAFTED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -443,7 +515,10 @@ public class CreateScriptResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Script update time (unit: milliseconds)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578474045152</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

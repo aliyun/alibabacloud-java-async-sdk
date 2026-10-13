@@ -132,7 +132,10 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. <code>OK</code> indicates a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -148,7 +154,10 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +165,10 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5391EB13-A0E7-402D-A407-B99D4ABAF22A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +176,10 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -172,7 +187,7 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * TagGroups.
+         * <p>A list of tag groups.</p>
          */
         public Builder tagGroups(java.util.List<TagGroups> tagGroups) {
             this.tagGroups = tagGroups;
@@ -180,7 +195,7 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * TagHitsList.
+         * <p>A list of tag hit statistics.</p>
          */
         public Builder tagHitsList(java.util.List<TagHitsList> tagHitsList) {
             this.tagHitsList = tagHitsList;
@@ -272,7 +287,7 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>ID</p>
+             * <p>The ID of the tag group.</p>
              * 
              * <strong>example:</strong>
              * <p>8bb6f8ca-85a3-49f8-86a5-3127902a2156</p>
@@ -283,7 +298,10 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The script ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8a4c6d3d-5ed6-44ca-b779-16c20f8862be</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -291,7 +309,10 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TagGroup.
+             * <p>The tag group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>标签组</p>
              */
             public Builder tagGroup(String tagGroup) {
                 this.tagGroup = tagGroup;
@@ -299,7 +320,10 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TagGroupIndex.
+             * <p>The index of the tag group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tagGroupIndex(Integer tagGroupIndex) {
                 this.tagGroupIndex = tagGroupIndex;
@@ -379,7 +403,10 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * HitCount.
+             * <p>The hit count for the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hitCount(Integer hitCount) {
                 this.hitCount = hitCount;
@@ -387,7 +414,10 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TagGroup.
+             * <p>The tag group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>当前学历</p>
              */
             public Builder tagGroup(String tagGroup) {
                 this.tagGroup = tagGroup;
@@ -395,7 +425,10 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>本科</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;

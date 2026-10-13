@@ -75,6 +75,7 @@ public class DescribeJobDataParsingTaskProgressRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,10 @@ public class DescribeJobDataParsingTaskProgressRequest extends Request {
         }
 
         /**
+         * <p>The job data analytics node ID.</p>
+         * <blockquote>
+         * <p>This parameter value is obtained from the CreateJobDataParsingTask operation.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -131,6 +131,7 @@ public class ResumeJobsRequest extends Request {
         } 
 
         /**
+         * <p>Filter condition: Specifies whether to restart all jobs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class ResumeJobsRequest extends Request {
         }
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +157,10 @@ public class ResumeJobsRequest extends Request {
         }
 
         /**
-         * JobGroupId.
+         * <p>Filter condition: Task group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de48407d-309e-451a-81ec-6fb11f8fdbf3</p>
          */
         public Builder jobGroupId(String jobGroupId) {
             this.putQueryParameter("JobGroupId", jobGroupId);
@@ -164,7 +169,13 @@ public class ResumeJobsRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>Job ID list.</p>
+         * <blockquote>
+         * <p>This parameter is required when All is false.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>b72425bd-7871-4050-838e-033d80d754b7</p>
          */
         public Builder jobId(java.util.List<String> jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -173,7 +184,13 @@ public class ResumeJobsRequest extends Request {
         }
 
         /**
-         * JobReferenceId.
+         * <p>Third-party ID of the job.</p>
+         * <blockquote>
+         * <p>This is the ReferenceId uploaded by the customer when uploading the outbound list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>d5971d98-7312-4f0e-a918-a17d67133e28</p>
          */
         public Builder jobReferenceId(java.util.List<String> jobReferenceId) {
             this.putQueryParameter("JobReferenceId", jobReferenceId);
@@ -182,7 +199,10 @@ public class ResumeJobsRequest extends Request {
         }
 
         /**
-         * ScenarioId.
+         * <p>Filter condition: Scenario ID (historical parameter, deprecated).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b016fbdb-b81c-4c06-8870-cb36b8783b6d</p>
          */
         public Builder scenarioId(String scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);

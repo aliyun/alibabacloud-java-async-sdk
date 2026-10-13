@@ -119,7 +119,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CreateAgentProfileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -420,7 +435,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentProfileId.
+             * <p>The agent profile ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d31794e2a51f47d2901b4094d88311d7</p>
              */
             public Builder agentProfileId(String agentProfileId) {
                 this.agentProfileId = agentProfileId;
@@ -428,7 +446,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * AgentProfileTemplateId.
+             * <p>The agent profile template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-survey</p>
              */
             public Builder agentProfileTemplateId(String agentProfileTemplateId) {
                 this.agentProfileTemplateId = agentProfileTemplateId;
@@ -447,7 +468,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1739333534000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -455,7 +479,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is an agent</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -463,7 +490,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1e16c663-0339-4064-9d57-07f772e78f21</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -471,7 +501,26 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * InstructionJson.
+             * <p>The instruction configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{
+             *     &quot;type&quot;: &quot;TransferToAgent&quot;,
+             *     &quot;instructions&quot;: [{
+             *         &quot;code&quot;: &quot;Transfer0&quot;,
+             *         &quot;skillGroupId&quot;: &quot;testcode&quot;,
+             *         &quot;skillGroupName&quot;: &quot;skillgroup&quot;
+             *     }],
+             *     &quot;timeoutEnable&quot;: false
+             * }, {
+             *     &quot;type&quot;: &quot;CollectNumber&quot;,
+             *     &quot;instructions&quot;: [{
+             *         &quot;code&quot;: &quot;DTMF0&quot;,
+             *         &quot;name&quot;: &quot;Number collection test&quot;,
+             *         &quot;collectVoice&quot;: true,
+             *         &quot;terminator&quot;: &quot;#&quot;
+             *     }]
+             * }]</p>
              */
             public Builder instructionJson(String instructionJson) {
                 this.instructionJson = instructionJson;
@@ -479,7 +528,14 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * LabelsJson.
+             * <p>The label descriptions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{
+             *     &quot;name&quot;: &quot;Satisfaction&quot;,
+             *     &quot;description&quot;: &quot;Whether you are interested in the introduced game content&quot;,
+             *     &quot;valueList&quot;: &quot;[\&quot;Interested\&quot;,\&quot;Not interested\&quot;]&quot;
+             * }]</p>
              */
             public Builder labelsJson(String labelsJson) {
                 this.labelsJson = labelsJson;
@@ -487,7 +543,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model_001</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -495,7 +554,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * ModelConfig.
+             * <p>The model configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder modelConfig(String modelConfig) {
                 this.modelConfig = modelConfig;
@@ -503,7 +565,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Prompt.
+             * <p>The prompt in professional mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>\nName: Annie \nIdentity: Game Promoter\nBackground: Promote the latest welfare events to players over the phone, ensuring that every player can keep up with the information in a timely manner and enjoy the game.\nSkills: As a game customer service representative, recommend limited-time game welfare events to users, emphasize the event highlights, and inform them of the participation process.\nConstraints: You need to remember that you are Annie, from the customer service team of a popular game, focusing on promoting the latest welfare events to players over the phone.\nAs a customer service representative who proactively contacts players, you need to choose whether to introduce the event based on the player\&quot;s intention to learn about it.\nMaintain the professionalism of the call, while keeping the language approachable to ensure that players can easily understand the event content.\nClarify the start and end times of the event to ensure that players do not get confused.\nEmphasize the key rewards and participation methods of the event to increase players\&quot; interest in participating</p>
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -511,7 +576,25 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * PromptJson.
+             * <p>The agent configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;name&quot;: &quot;Annie&quot;,
+             *     &quot;gender&quot;: &quot;Female&quot;,
+             *     &quot;age&quot;: 20,
+             *     &quot;role&quot;: &quot;Game Promoter&quot;,
+             *     &quot;communicationStyle&quot;: [&quot;Friendly&quot;, &quot;Conversational&quot;, &quot;Lively&quot;],
+             *     &quot;goals&quot;: &quot;Promote the latest welfare events to players over the phone, ensuring that every player can keep up with the information in a timely manner and enjoy the game.&quot;,
+             *     &quot;background&quot;: &quot;Event Introduction\nFrom ${Start Time} to ${End Time}, we have carefully prepared the \&quot;Limited-Time Treasure Hunt\&quot; welfare event for a week. As long as you log in to the game every day during this period, you can claim a login gift pack containing rare materials, energy potions, and limited-edition appearance rewards.\n\nEvent Highlights\nThe highlight of this event is that players who log in for 5 cumulative days will receive an extra \&quot;Mystery Chest\&quot;. Opening the chest to get a rare pet will add a powerful boost to your battles! Don\&quot;t miss this great opportunity to enhance your strength.\n\nHow to Participate\nAfter logging into the game, find \&quot;Limited-Time Treasure Hunt\&quot; in the event panel and click to claim the corresponding rewards. Remember to log in every day, the rewards won\&quot;t wait!&quot;,
+             *     &quot;skills&quot;: &quot;As a game customer service representative, recommend limited-time game welfare events to users, emphasize the event highlights, and inform them of the participation process.&quot;,
+             *     &quot;workflow&quot;: &quot;1. Friendly greeting and self-introduction\n- Opening: \&quot;Hello, respected adventurer! I am Annie from the game customer service team. I am honored to connect with you today to share an exclusive welfare event that is about to launch, which will definitely make your adventure more exciting!\&quot;\n- Introduce the welfare event only after confirming that the player wants to learn about it.\n2. Welfare event introduction\n3. Emphasize event highlights\n4. Explain how to participate and remind\n5. Encourage sharing and feedback\n- Call to action: \&quot;If you think this event is good, feel free to share the good news with your guild partners or game friends. At the same time, we also highly welcome you to tell us your experience and suggestions through the built-in feedback system of the game after the event ends.\&quot;\nSkill 6: Politely end the call\n- Closing: \&quot;Well, respected adventurer, the above is the main content of this event. I hope you can return with a full load from the event, and I wish you invincible in your journey! If you have any questions, feel free to contact our customer service team. Thank you for answering, look forward to serving you again, goodbye!\&quot;&quot;,
+             *     &quot;constraint&quot;: &quot;You need to remember that you are Annie, from the customer service team of a popular game, focusing on promoting the latest welfare events to players over the phone.\nAs a customer service representative who proactively contacts players, you need to choose whether to introduce the event based on the player\&quot;s intention to learn about it.\nMaintain the professionalism of the call, while keeping the language approachable to ensure that players can easily understand the event content.\nClarify the start and end times of the event to ensure that players do not get confused.\nEmphasize the key rewards and participation methods of the event to increase players\&quot; interest in participating.\nEncourage interaction and feedback among players to promote the activity of the game community.\nMaintain politeness when ending the call to leave a good impression on the player.\nWhen the user asks questions that are irrelevant to the goal or process, politely refuse and guide them back to the target question.\nFor questions you do not know, do not reply randomly. You need to politely reply \&quot;I am not sure\&quot; and guide them back to the target question.&quot;,
+             *     &quot;openingPrompt&quot;: &quot;Hello, respected adventurer! I am Annie from the game customer service team. I am honored to connect with you today to share an exclusive welfare event that is about to launch, which will definitely make your adventure more exciting!&quot;,
+             *     &quot;output&quot;: &quot;&quot;,
+             *     &quot;aiHangupOutput&quot;: &quot;&quot;,
+             *     &quot;aiSilenceTimeoutOutput&quot;: &quot;&quot;
+             * }</p>
              */
             public Builder promptJson(String promptJson) {
                 this.promptJson = promptJson;
@@ -519,7 +602,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Scenario.
+             * <p>The scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scenario</p>
              */
             public Builder scenario(String scenario) {
                 this.scenario = scenario;
@@ -527,7 +613,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d13ad2d3-3fe6-4352-b38b-bd6559047de8</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -535,7 +624,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * System.
+             * <p>Indicates whether the template is a system template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder system(Boolean system) {
                 this.system = system;
@@ -543,7 +635,10 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1737077564000</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -551,7 +646,16 @@ public class CreateAgentProfileResponseBody extends TeaModel {
             }
 
             /**
-             * VariablesJson.
+             * <p>The variable configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{
+             *     &quot;name&quot;: &quot;Start Time&quot;,
+             *     &quot;description&quot;: &quot;Start time&quot;
+             * }, {
+             *     &quot;name&quot;: &quot;End Time&quot;,
+             *     &quot;description&quot;: &quot;End time&quot;
+             * }]</p>
              */
             public Builder variablesJson(String variablesJson) {
                 this.variablesJson = variablesJson;

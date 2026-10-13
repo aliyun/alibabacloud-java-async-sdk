@@ -105,6 +105,7 @@ public class ListScriptVoiceConfigsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class ListScriptVoiceConfigsRequest extends Request {
         }
 
         /**
+         * <p>The page number of the page to return.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class ListScriptVoiceConfigsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to return on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class ListScriptVoiceConfigsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the script.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -133,6 +133,7 @@ public class ListJobsByGroupRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +146,10 @@ public class ListJobsByGroupRequest extends Request {
         }
 
         /**
-         * JobFailureReason.
+         * <p>Job failure reason</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoAnswer</p>
          */
         public Builder jobFailureReason(String jobFailureReason) {
             this.putQueryParameter("JobFailureReason", jobFailureReason);
@@ -154,6 +158,7 @@ public class ListJobsByGroupRequest extends Request {
         }
 
         /**
+         * <p>Job group ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +171,10 @@ public class ListJobsByGroupRequest extends Request {
         }
 
         /**
-         * JobStatus.
+         * <p>Job status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder jobStatus(String jobStatus) {
             this.putQueryParameter("JobStatus", jobStatus);
@@ -175,6 +183,7 @@ public class ListJobsByGroupRequest extends Request {
         }
 
         /**
+         * <p>Page number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +196,7 @@ public class ListJobsByGroupRequest extends Request {
         }
 
         /**
+         * <p>Number of entries per page</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

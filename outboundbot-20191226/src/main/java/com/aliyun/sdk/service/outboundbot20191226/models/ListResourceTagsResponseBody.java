@@ -119,7 +119,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceTags.
+         * <p>Resource tag information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder resourceTags(ResourceTags resourceTags) {
             this.resourceTags = resourceTags;
@@ -159,7 +174,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +243,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>Tag key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +254,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Tag value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -326,7 +350,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of resource tags</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -334,7 +361,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -342,7 +372,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Number of items per page</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -350,7 +383,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total number of items</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

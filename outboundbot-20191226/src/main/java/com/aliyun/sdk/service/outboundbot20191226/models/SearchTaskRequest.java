@@ -396,7 +396,10 @@ public class SearchTaskRequest extends Request {
         } 
 
         /**
-         * ActualTimeGte.
+         * <p>The start time of the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646582400000</p>
          */
         public Builder actualTimeGte(Long actualTimeGte) {
             this.putQueryParameter("ActualTimeGte", actualTimeGte);
@@ -405,7 +408,10 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * ActualTimeLte.
+         * <p>The end time of the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1643126399000</p>
          */
         public Builder actualTimeLte(Long actualTimeLte) {
             this.putQueryParameter("ActualTimeLte", actualTimeLte);
@@ -414,7 +420,10 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * CallDurationGte.
+         * <p>The minimum call duration for the search, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12341155</p>
          */
         public Builder callDurationGte(Long callDurationGte) {
             this.putQueryParameter("CallDurationGte", callDurationGte);
@@ -423,7 +432,10 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * CallDurationLte.
+         * <p>The maximum call duration for the search, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12341155</p>
          */
         public Builder callDurationLte(Long callDurationLte) {
             this.putQueryParameter("CallDurationLte", callDurationLte);
@@ -432,7 +444,10 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * CalledNumber.
+         * <p>The called number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15126426342</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -441,7 +456,10 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * CallingNumber.
+         * <p>The calling number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>051085500215</p>
          */
         public Builder callingNumber(String callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -450,6 +468,7 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -462,7 +481,10 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * JobGroupId.
+         * <p>The job group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3a30ae7c-27b2-4305-9444-7185ced9d51f</p>
          */
         public Builder jobGroupId(String jobGroupId) {
             this.putQueryParameter("JobGroupId", jobGroupId);
@@ -471,7 +493,10 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * JobGroupNameQuery.
+         * <p>The name of the job group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ChinaLifePCHospitalizationInsuranceRenewal_20220301_134130</p>
          */
         public Builder jobGroupNameQuery(String jobGroupNameQuery) {
             this.putQueryParameter("JobGroupNameQuery", jobGroupNameQuery);
@@ -480,7 +505,10 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11994321-e6bc-47bb-8b1c-8eef8f2f768b</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -489,7 +517,18 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * JobStatusStringList.
+         * <p>The job statuses. Separate multiple statuses with commas (,). If this field is not empty, it overwrites jobStatusList. Valid values:</p>
+         * <ul>
+         * <li>Scheduling: The job is being scheduled.</li>
+         * <li>Executing: The job is being executed.</li>
+         * <li>Succeeded: The job is finished and the called party is reached.</li>
+         * <li>Paused: The job is stopped.</li>
+         * <li>Failed: The job is finished but the called party is not reached.</li>
+         * <li>Cancelled: The job is canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder jobStatusStringList(String jobStatusStringList) {
             this.putQueryParameter("JobStatusStringList", jobStatusStringList);
@@ -498,7 +537,10 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * LabelsJson.
+         * <p>The filter conditions for call labels.</p>
+         * <blockquote>
+         * <p>You can only filter by labels that are configured with specific enumerated label values, which means labels configured with specific values in large language model scenarios.</p>
+         * </blockquote>
          */
         public Builder labelsJson(java.util.List<String> labelsJson) {
             this.putQueryParameter("LabelsJson", labelsJson);
@@ -507,7 +549,19 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * OtherId.
+         * <p>The other IDs.</p>
+         * <p><strong>This includes the following IDs:</strong></p>
+         * <ul>
+         * <li><p>sessionID</p>
+         * </li>
+         * <li><p>taskid</p>
+         * </li>
+         * <li><p>jobid</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AVD-2021-39685</p>
          */
         public Builder otherId(String otherId) {
             this.putQueryParameter("OtherId", otherId);
@@ -516,7 +570,13 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The page number.</p>
+         * <blockquote>
+         * <p>Page numbers for this API operation start from 0 by default.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -525,7 +585,13 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * <blockquote>
+         * <p>If this parameter is left empty, the default value is 10.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -534,7 +600,10 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * RecordingDurationGte.
+         * <p>The minimum ringing duration for the search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder recordingDurationGte(Long recordingDurationGte) {
             this.putQueryParameter("RecordingDurationGte", recordingDurationGte);
@@ -543,7 +612,10 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * RecordingDurationLte.
+         * <p>The minimum ringing duration for the search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder recordingDurationLte(Long recordingDurationLte) {
             this.putQueryParameter("RecordingDurationLte", recordingDurationLte);
@@ -552,7 +624,10 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * ScriptNameQuery.
+         * <p>The scenario name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China Life P&amp;C</p>
          */
         public Builder scriptNameQuery(String scriptNameQuery) {
             this.putQueryParameter("ScriptNameQuery", scriptNameQuery);
@@ -561,7 +636,10 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field. Default value: actualTime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>actualTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -570,7 +648,16 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><p>asc: Ascending order.</p>
+         * </li>
+         * <li><p>desc: Descending order. This is the default value.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -579,7 +666,13 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * TaskCreateTimeGte.
+         * <p>The start time of the task.</p>
+         * <blockquote>
+         * <p>This parameter must be specified together with the TaskCreateTimeLte parameter. Otherwise, it does not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1646792941</p>
          */
         public Builder taskCreateTimeGte(Long taskCreateTimeGte) {
             this.putQueryParameter("TaskCreateTimeGte", taskCreateTimeGte);
@@ -588,7 +681,13 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * TaskCreateTimeLte.
+         * <p>The end time of the task.</p>
+         * <blockquote>
+         * <p>This parameter must be specified together with the TaskCreateTimeGte parameter. Otherwise, it does not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1646792941</p>
          */
         public Builder taskCreateTimeLte(Long taskCreateTimeLte) {
             this.putQueryParameter("TaskCreateTimeLte", taskCreateTimeLte);
@@ -597,7 +696,10 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>744b27f3-437f-4a8c-a181-f668e492fd24</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -606,7 +708,46 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * TaskStatusStringList.
+         * <p>The call statuses. Separate multiple statuses with commas (,). Valid values:
+         * (Note: The <strong>Succeeded</strong> status is subdivided into specific causes. The <strong>Succeeded</strong>: 1 (Connected) status is not displayed. All subsequent returned values are specific subdivided cause types.)</p>
+         * <ul>
+         * <li><strong>Executing</strong>: 0 (Dialing).</li>
+         * <li><strong>Succeeded</strong>: 1 (Connected).</li>
+         * <li><strong>NoAnswer</strong>: 2 (Not connected - No answer).</li>
+         * <li><strong>NotExist</strong>: 3 (Not connected - Nonexistent number).</li>
+         * <li><strong>Busy</strong>: 4 (Not connected - Busy).</li>
+         * <li><strong>Cancelled</strong>: 5 (Not called - Task stopped).</li>
+         * <li><strong>Failed</strong>: 6 (Failed).</li>
+         * <li><strong>NotConnected</strong>: 7 (Not connected - Unreachable).</li>
+         * <li><strong>PoweredOff</strong>: 8 (Not connected - Powered off).</li>
+         * <li><strong>OutOfService</strong>: 9 (Not connected - Suspended).</li>
+         * <li><strong>InArrears</strong>: 10 (Not connected - Overdue payment).</li>
+         * <li><strong>EmptyNumber</strong>: 11 (Not called - Nonexistent number, no call).</li>
+         * <li><strong>PerDayCallCountLimit</strong>: 12 (Not called - Daily limit exceeded).</li>
+         * <li><strong>ContactBlockList</strong>: 13 (Not called - Blacklisted).</li>
+         * <li><strong>CallerNotRegistered</strong>: 14 (Not called - Calling number not registered).</li>
+         * <li><strong>Terminated</strong>: 15 (Not called - Terminated).</li>
+         * <li><strong>VerificationCancelled</strong>: 16 (Not called - Canceled due to pre-call verification failure).</li>
+         * <li><strong>OutOfServiceNoCall</strong>: 17 (Not called - Suspended, no call).</li>
+         * <li><strong>InArrearsNoCall</strong>: 18 (Not called - Overdue payment, no call).</li>
+         * <li><strong>CallingNumberNotExist</strong>: 19 (Not called - Calling number does not exist).</li>
+         * <li><strong>SucceededFinish</strong>: 20 (Connected - Finished normally).</li>
+         * <li><strong>SucceededChatbotHangUpAfterNoAnswer</strong>: 21 (Connected - Bot hung up after unrecognized intent).</li>
+         * <li><strong>SucceededChatbotHangUpAfterSilence</strong>: 22 (Connected - Hung up due to silence timeout).</li>
+         * <li><strong>SucceededClientHangUpAfterNoAnswer</strong>: 23 (Connected - User hung up after unrecognized intent).</li>
+         * <li><strong>SucceededClientHangUp</strong>: 24 (Connected - User hung up without reason).</li>
+         * <li><strong>SucceededTransferByIntent</strong>: 25 (Connected - Transferred to agent due to matched intent).</li>
+         * <li><strong>SucceededTransferAfterNoAnswer</strong>: 26 (Connected - Transferred to agent after unrecognized intent).</li>
+         * <li><strong>SucceededInoInterAction</strong>: 27 (Connected - No interaction on the user side).</li>
+         * <li><strong>SucceededError</strong>: 28 (Connected - Interrupted due to system exception).</li>
+         * <li><strong>SucceededSpecialInterceptVoiceAssistant</strong>: 29 (Connected - Special interception - Voice assistant).</li>
+         * <li><strong>SucceededSpecialInterceptExtensionNumberTransfer</strong>: 30 (Connected - Special interception - Extension number transfer).</li>
+         * <li><strong>SucceededSpecialInterceptCustomSpecialIntercept</strong>: 31 (Connected - Special interception - Custom interception).</li>
+         * <li><strong>HighRiskSipCode</strong>: 32 (Not called - High risk, no call).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Executing</p>
          */
         public Builder taskStatusStringList(String taskStatusStringList) {
             this.putQueryParameter("TaskStatusStringList", taskStatusStringList);
@@ -615,7 +756,17 @@ public class SearchTaskRequest extends Request {
         }
 
         /**
-         * UserIdMatch.
+         * <p>The user ID, which is the unique identifier of the user.</p>
+         * <blockquote>
+         * <p>This field is passed when you upload an outbound call list.</p>
+         * <ul>
+         * <li>If the list is uploaded in JSON format, the user ID is the value of referenceId.</li>
+         * <li>If the list is uploaded in an Excel file, the user ID is the value of contactId.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>C01</p>
          */
         public Builder userIdMatch(String userIdMatch) {
             this.putQueryParameter("UserIdMatch", userIdMatch);

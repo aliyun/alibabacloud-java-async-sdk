@@ -119,7 +119,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +174,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         }
 
         /**
-         * Task.
+         * <p>The task information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder task(Task task) {
             this.task = task;
@@ -264,7 +282,27 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The instruction. Valid values:</p>
+             * <ul>
+             * <li>BeginDialogue: starts the conversation.</li>
+             * <li>Dialogue: indicates a conversation.</li>
+             * <li>AbortDialogue: aborts the conversation.</li>
+             * <li>SilenceTimeout: indicates a silence timeout.</li>
+             * <li>CollectedNumber: indicates a collected number.</li>
+             * <li>EndDialogue: ends the conversation.</li>
+             * <li>Broadcast: indicates an opening remark.</li>
+             * <li>HangUp: hangs up the call.</li>
+             * <li>Authorize: grants authorization.</li>
+             * <li>TransferToAgent: transfers the call to an agent.</li>
+             * <li>TransferToIVR: transfers the call to an IVR.</li>
+             * <li>RedirectToPage: redirects to a page.</li>
+             * <li>CollectNumber: collects a number.</li>
+             * <li>WaitOnAsyncTask: waits for an asynchronous task.</li>
+             * <li>Error: indicates an error.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Broadcast</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -272,7 +310,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * Script.
+             * <p>The conversation text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hello, I am **customer service</p>
              */
             public Builder script(String script) {
                 this.script = script;
@@ -280,7 +321,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * SequenceId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd279983-93b9-b13b-9a34-64e5df473225</p>
              */
             public Builder sequenceId(String sequenceId) {
                 this.sequenceId = sequenceId;
@@ -288,7 +332,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * Speaker.
+             * <p>The speaker of the conversation. Valid values: Robot and Contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Robot</p>
              */
             public Builder speaker(String speaker) {
                 this.speaker = speaker;
@@ -296,7 +343,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The time when the summary was created. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579068424883</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -493,7 +543,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             } 
 
             /**
-             * ActualTime.
+             * <p>The actual execution time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640090211434</p>
              */
             public Builder actualTime(Long actualTime) {
                 this.actualTime = actualTime;
@@ -501,7 +554,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * CallId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -509,7 +565,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * CalledNumber.
+             * <p>The called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13777777777</p>
              */
             public Builder calledNumber(String calledNumber) {
                 this.calledNumber = calledNumber;
@@ -517,7 +576,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * CallingNumber.
+             * <p>The calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>057190294</p>
              */
             public Builder callingNumber(String callingNumber) {
                 this.callingNumber = callingNumber;
@@ -525,7 +587,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * Conversations.
+             * <p>The list of conversation information.</p>
              */
             public Builder conversations(java.util.List<Conversations> conversations) {
                 this.conversations = conversations;
@@ -533,7 +595,26 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * EndReason.
+             * <p>The end reason. Valid values:</p>
+             * <ul>
+             * <li>FINISHED: normal completion.</li>
+             * <li>CHATBOT_HANGUP_AFTER_NOANSWER: the robot hangs up after unrecognized input.</li>
+             * <li>CHATBOT_HANGUP_AFTER_SILENCE: the robot hangs up after a silence timeout.</li>
+             * <li>CLIENT_HANGUP_AFTER_NOANSWER: the user hangs up after unrecognized input.</li>
+             * <li>CLIENT_HANGUP: the user hangs up without a reason.</li>
+             * <li>TRANSFER_BY_INTENT: the call is transferred to a human agent due to intent matching.</li>
+             * <li>TRANSFER_AFTER_NOANSWER: the call is transferred to a human agent after unrecognized input.</li>
+             * <li>INO_INTERACTION: no interaction from the user.</li>
+             * <li>ERROR: the system is interrupted due to an exception.</li>
+             * <li>SPECIAL_INTERCEPT_VOICE_ASSISTANT: intercepted due to special circumstances - voice assistant.</li>
+             * <li>SPECIAL_INTERCEPT_EXTENSION_NUMBER_TRANSFER: intercepted due to special circumstances - extension number transfer.</li>
+             * </ul>
+             * <blockquote>
+             * <p>Notice: The data type of this parameter is String. The returned value is an enumerated value such as FINISHED.</notice></p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder endReason(String endReason) {
                 this.endReason = endReason;
@@ -541,7 +622,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640090211434</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -549,7 +633,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -557,7 +644,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -565,7 +655,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupId.
+             * <p>The job group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
              */
             public Builder jobGroupId(String jobGroupId) {
                 this.jobGroupId = jobGroupId;
@@ -573,7 +666,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -581,7 +677,10 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * PlannedTime.
+             * <p><strong>[Deprecated]</strong> The planned execution time of the task. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640090211434</p>
              */
             public Builder plannedTime(Long plannedTime) {
                 this.plannedTime = plannedTime;

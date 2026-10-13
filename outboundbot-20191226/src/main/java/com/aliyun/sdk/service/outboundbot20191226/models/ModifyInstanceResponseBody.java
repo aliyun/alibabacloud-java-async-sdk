@@ -119,7 +119,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Instance.
+         * <p>The instance information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;InstanceId\&quot;: \&quot;ob369xifpi2074\&quot;, \&quot;AutoUpgradeObVersion\&quot;: False}</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -143,7 +152,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned by the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -303,7 +321,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578469042851</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -311,7 +332,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123</p>
              */
             public Builder creatorId(Long creatorId) {
                 this.creatorId = creatorId;
@@ -319,7 +343,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -327,7 +354,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDescription.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is the first instance</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -335,7 +365,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -343,7 +376,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>First instance</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -351,7 +387,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConcurrentConversation.
+             * <p>The maximum number of concurrent conversations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxConcurrentConversation(Integer maxConcurrentConversation) {
                 this.maxConcurrentConversation = maxConcurrentConversation;
@@ -359,7 +398,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The name of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;

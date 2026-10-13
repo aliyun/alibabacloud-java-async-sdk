@@ -205,7 +205,10 @@ public class DialogueRequest extends Request {
         } 
 
         /**
-         * ActionKey.
+         * <p>Action to perform for outbound calls. Hangup ends the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>broadcast</p>
          */
         public Builder actionKey(String actionKey) {
             this.putQueryParameter("ActionKey", actionKey);
@@ -214,7 +217,10 @@ public class DialogueRequest extends Request {
         }
 
         /**
-         * ActionParams.
+         * <p>Parameters required to perform the action. (Deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder actionParams(String actionParams) {
             this.putQueryParameter("ActionParams", actionParams);
@@ -223,6 +229,7 @@ public class DialogueRequest extends Request {
         }
 
         /**
+         * <p>Call ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,6 +242,7 @@ public class DialogueRequest extends Request {
         }
 
         /**
+         * <p>Call type, typically Outbound</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,6 +255,7 @@ public class DialogueRequest extends Request {
         }
 
         /**
+         * <p>Called number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,6 +268,7 @@ public class DialogueRequest extends Request {
         }
 
         /**
+         * <p>Calling number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,6 +281,7 @@ public class DialogueRequest extends Request {
         }
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +294,10 @@ public class DialogueRequest extends Request {
         }
 
         /**
-         * ScenarioId.
+         * <p>Scenario ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6cea9bed-63e6-439e-ae4c-b3333efff53d</p>
          */
         public Builder scenarioId(String scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);
@@ -292,7 +306,7 @@ public class DialogueRequest extends Request {
         }
 
         /**
-         * <p>场景id</p>
+         * <p>Scenario ID</p>
          * 
          * <strong>example:</strong>
          * <p>c5c5d8c0-c0f1-48a7-be2b-dc46006d888a</p>
@@ -304,7 +318,10 @@ public class DialogueRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>Task ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ff44709e-39a6-43ba-959b-20fcabe3e496</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -313,7 +330,11 @@ public class DialogueRequest extends Request {
         }
 
         /**
+         * <p>User utterance</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>是的</p>
          */
         public Builder utterance(String utterance) {
             this.putQueryParameter("Utterance", utterance);

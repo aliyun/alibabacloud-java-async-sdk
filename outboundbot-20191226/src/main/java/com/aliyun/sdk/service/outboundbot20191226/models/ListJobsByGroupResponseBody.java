@@ -119,7 +119,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Jobs.
+         * <p>Job array</p>
          */
         public Builder jobs(Jobs jobs) {
             this.jobs = jobs;
@@ -143,7 +149,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -303,7 +318,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * ContactId.
+             * <p>Contact ID (system-generated)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db3db762-e421-44c9-9a01-cb423470757c</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -311,7 +329,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ContactName.
+             * <p>Contact name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -319,7 +340,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Honorific.
+             * <p>Honorific (same as contact name)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张先生</p>
              */
             public Builder honorific(String honorific) {
                 this.honorific = honorific;
@@ -327,7 +351,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Job ID (deprecated)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72dcd26b-f12d-4c27-b3af-18f6aed5b160</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -335,7 +362,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * <p>Phone number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>134********</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -343,7 +373,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceId.
+             * <p>Contact third-party system ID (uploaded by customer)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2fa6bac3-06da-4315-82ab-72d6fd3a6f34</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;
@@ -351,7 +384,12 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Deprecated</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -359,7 +397,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>Deprecated</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -426,7 +467,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>Business parameter name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>性别</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -434,7 +478,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Business parameter value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>男</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -579,7 +626,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>Conversation summary category</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -587,7 +637,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>Conversation summary content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -595,7 +648,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationDetailId.
+             * <p>Call record ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62a860f5-a8b3-4b75-9512-c7e04bb7c8bc</p>
              */
             public Builder conversationDetailId(String conversationDetailId) {
                 this.conversationDetailId = conversationDetailId;
@@ -603,7 +659,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupId.
+             * <p>Job group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88e56cfb-33f8-477a-907c-0fe83292d924</p>
              */
             public Builder jobGroupId(String jobGroupId) {
                 this.jobGroupId = jobGroupId;
@@ -611,7 +670,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Job ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f102a853-5f5a-47fb-8869-b31ea74a9620</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -619,7 +681,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SummaryId.
+             * <p>Summary ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>680f1905-81ae-4aab-99dd-2964dfb767fa</p>
              */
             public Builder summaryId(String summaryId) {
                 this.summaryId = summaryId;
@@ -627,7 +692,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SummaryName.
+             * <p>Summary name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>score</p>
              */
             public Builder summaryName(String summaryName) {
                 this.summaryName = summaryName;
@@ -635,7 +703,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Call ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b0f35dd1-0337-402e-9c4f-3a6c2426950a</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -845,7 +916,7 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * CallingNumbers.
+             * <p>Caller number list</p>
              */
             public Builder callingNumbers(java.util.List<String> callingNumbers) {
                 this.callingNumbers = callingNumbers;
@@ -853,7 +924,7 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Contacts.
+             * <p>Contact list</p>
              */
             public Builder contacts(java.util.List<Contacts> contacts) {
                 this.contacts = contacts;
@@ -861,7 +932,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Extras.
+             * <p>Business data</p>
+             * <blockquote>
+             * <p>TenantId and ServiceId are system-generated. All other parameters are custom.</p>
+             * </blockquote>
              */
             public Builder extras(java.util.List<Extras> extras) {
                 this.extras = extras;
@@ -869,7 +943,42 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * FailureReason.
+             * <p>The failure reason.</p>
+             * <ul>
+             * <li><p>Unknown: An unknown error occurred.</p>
+             * </li>
+             * <li><p>NoAnswer: The call was not answered.</p>
+             * </li>
+             * <li><p>InvalidStrategy: The policy is invalid or incorrectly configured.</p>
+             * </li>
+             * <li><p>TimeUp: The task timed out during scheduling.</p>
+             * </li>
+             * <li><p>NoStrategy: The policy is empty or was not found.</p>
+             * </li>
+             * <li><p>CallFailed: The call failed.</p>
+             * </li>
+             * <li><p>PerDayCallCountLimit: The daily call limit for the phone number was reached.</p>
+             * </li>
+             * <li><p>ContactBlockList: The phone number is on the blocklist.</p>
+             * </li>
+             * <li><p>EmptyNumber: The phone number is nonexistent.</p>
+             * </li>
+             * <li><p>JobPerDayCallCountLimit: The daily call limit for the phone number within the job was reached.</p>
+             * </li>
+             * <li><p>VerificationCancelled: The call was canceled because it failed pre-call validation.</p>
+             * </li>
+             * <li><p>ContactSuspended: Calling to the contact is suspended.</p>
+             * </li>
+             * <li><p>InArrears: The account has an overdue payment.</p>
+             * </li>
+             * <li><p>OutOfService: The phone number is out of service.</p>
+             * </li>
+             * <li><p>NoneRepeatableJobMaxAttemptCountLimit: The non-repeatable job reached the maximum number of attempts.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NoAnswer</p>
              */
             public Builder failureReason(String failureReason) {
                 this.failureReason = failureReason;
@@ -877,7 +986,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupId.
+             * <p>Job ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fce6c599-8ede-40e3-9f78-0928eda7b4e8</p>
              */
             public Builder jobGroupId(String jobGroupId) {
                 this.jobGroupId = jobGroupId;
@@ -885,7 +997,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Job ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b72425bd-7871-4050-838e-033d80d754b7</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -893,7 +1008,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>Priority</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -901,7 +1019,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceId.
+             * <p>Third-party system ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d5971d98-7312-4f0e-a918-a17d67133e28</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;
@@ -909,7 +1030,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ScenarioId.
+             * <p>Scenario ID (legacy parameter)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ade80092-03d9-4f4d-ad4f-ab8a247d3150</p>
              */
             public Builder scenarioId(String scenarioId) {
                 this.scenarioId = scenarioId;
@@ -917,7 +1041,26 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Job status</p>
+             * <ul>
+             * <li><p>Scheduling (0)</p>
+             * </li>
+             * <li><p>Executing (1)</p>
+             * </li>
+             * <li><p>Succeeded (2)</p>
+             * </li>
+             * <li><p>Paused (3)</p>
+             * </li>
+             * <li><p>Failed (4)</p>
+             * </li>
+             * <li><p>Cancelled (5)</p>
+             * </li>
+             * <li><p>Drafted (6)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeeded</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -925,7 +1068,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyId.
+             * <p>Strategy ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8a2b7f2-ad1a-4865-b872-d0080d9802d9</p>
              */
             public Builder strategyId(String strategyId) {
                 this.strategyId = strategyId;
@@ -933,7 +1079,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p>Conversation summary (deprecated)</p>
+             * <blockquote>
+             * <p>Use the DescribeJob API to retrieve this data.</p>
+             * </blockquote>
              */
             public Builder summary(java.util.List<Summary> summary) {
                 this.summary = summary;
@@ -941,7 +1090,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SystemPriority.
+             * <p>System priority</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder systemPriority(Integer systemPriority) {
                 this.systemPriority = systemPriority;
@@ -1034,7 +1186,7 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>Job list</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -1042,7 +1194,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1050,7 +1205,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1058,7 +1216,10 @@ public class ListJobsByGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

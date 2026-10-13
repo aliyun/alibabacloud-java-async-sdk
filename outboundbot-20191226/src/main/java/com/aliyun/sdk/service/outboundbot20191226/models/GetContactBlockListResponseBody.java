@@ -119,7 +119,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
         }
 
         /**
-         * ContactBlocklistList.
+         * <p>The contact blocklist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder contactBlocklistList(ContactBlocklistList contactBlocklistList) {
             this.contactBlocklistList = contactBlocklistList;
@@ -135,7 +141,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -303,7 +321,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
             } 
 
             /**
-             * ContactBlockListId.
+             * <p>The unique business key of the outbound call blocklist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
              */
             public Builder contactBlockListId(String contactBlockListId) {
                 this.contactBlockListId = contactBlockListId;
@@ -311,7 +332,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640077685465</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -319,7 +343,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -327,7 +354,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -335,7 +365,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,7 +376,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -351,7 +387,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1388888888</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -359,7 +398,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The remark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -452,7 +494,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The data array.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -460,7 +505,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -468,7 +516,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -476,7 +527,10 @@ public class GetContactBlockListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

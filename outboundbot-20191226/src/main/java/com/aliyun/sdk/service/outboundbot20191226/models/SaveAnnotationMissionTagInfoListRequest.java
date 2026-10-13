@@ -101,7 +101,10 @@ public class SaveAnnotationMissionTagInfoListRequest extends Request {
         } 
 
         /**
-         * AnnotationMissionTagInfoList.
+         * <p>The tag list.</p>
+         * <blockquote>
+         * <p>This parameter is the same as the AnnotationMissionTagInfoListJsonString parameter. Specify either one.</p>
+         * </blockquote>
          */
         public Builder annotationMissionTagInfoList(java.util.List<AnnotationMissionTagInfoList> annotationMissionTagInfoList) {
             this.putQueryParameter("AnnotationMissionTagInfoList", annotationMissionTagInfoList);
@@ -110,7 +113,13 @@ public class SaveAnnotationMissionTagInfoListRequest extends Request {
         }
 
         /**
-         * AnnotationMissionTagInfoListJsonString.
+         * <p>The tag JSON data.</p>
+         * <blockquote>
+         * <p>The parameters in the JSON are the same as those in the AnnotationMissionTagInfoList parameter. Specify either this parameter or AnnotationMissionTagInfoList.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;delete&quot;:false,				&quot;InstanceId&quot;:&quot;00b37342-e759-4fe5-b296-aef775933af0&quot;,					&quot;AnnotationMissionTagInfoName&quot;:&quot;TestData1&quot;,					&quot;AnnotationMissionTagInfoDescription&quot;:&quot;Test&quot;}]</p>
          */
         public Builder annotationMissionTagInfoListJsonString(String annotationMissionTagInfoListJsonString) {
             this.putQueryParameter("AnnotationMissionTagInfoListJsonString", annotationMissionTagInfoListJsonString);
@@ -119,7 +128,10 @@ public class SaveAnnotationMissionTagInfoListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -128,7 +140,10 @@ public class SaveAnnotationMissionTagInfoListRequest extends Request {
         }
 
         /**
-         * Reset.
+         * <p>Specifies whether to restore the default tag values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder reset(Boolean reset) {
             this.putQueryParameter("Reset", reset);
@@ -248,7 +263,10 @@ public class SaveAnnotationMissionTagInfoListRequest extends Request {
             } 
 
             /**
-             * AnnotationMissionTagInfoDescription.
+             * <p>The tag description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tag description</p>
              */
             public Builder annotationMissionTagInfoDescription(String annotationMissionTagInfoDescription) {
                 this.annotationMissionTagInfoDescription = annotationMissionTagInfoDescription;
@@ -256,7 +274,10 @@ public class SaveAnnotationMissionTagInfoListRequest extends Request {
             }
 
             /**
-             * <p>tag id</p>
+             * <p>The tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bdbff6a5-1f68-4b41-8d37-6ff805ce165a</p>
              */
             public Builder annotationMissionTagInfoId(String annotationMissionTagInfoId) {
                 this.annotationMissionTagInfoId = annotationMissionTagInfoId;
@@ -264,7 +285,10 @@ public class SaveAnnotationMissionTagInfoListRequest extends Request {
             }
 
             /**
-             * AnnotationMissionTagInfoName.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tag</p>
              */
             public Builder annotationMissionTagInfoName(String annotationMissionTagInfoName) {
                 this.annotationMissionTagInfoName = annotationMissionTagInfoName;
@@ -272,7 +296,13 @@ public class SaveAnnotationMissionTagInfoListRequest extends Request {
             }
 
             /**
-             * Delete.
+             * <p>Specifies whether to delete the tag.</p>
+             * <blockquote>
+             * <p>Set this parameter to true to delete the tag, or false to add the tag.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder delete(Boolean delete) {
                 this.delete = delete;
@@ -280,7 +310,10 @@ public class SaveAnnotationMissionTagInfoListRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bdbff6a5-1f68-4b41-8d37-6ff805ce165a</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -288,7 +321,10 @@ public class SaveAnnotationMissionTagInfoListRequest extends Request {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bdbff6a5-1f68-4b41-8d37-6ff805ce165a</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;

@@ -59,7 +59,13 @@ public class DescribeTenantBindNumberRequest extends Request {
         } 
 
         /**
-         * Number.
+         * <p>The bound number (required).</p>
+         * <blockquote>
+         * <p>Queries the binding status of the specified number across all instances. Obtain the number from the response parameters of ListAllTenantBindNumberBinding.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>15005059355</p>
          */
         public Builder number(String number) {
             this.putQueryParameter("Number", number);

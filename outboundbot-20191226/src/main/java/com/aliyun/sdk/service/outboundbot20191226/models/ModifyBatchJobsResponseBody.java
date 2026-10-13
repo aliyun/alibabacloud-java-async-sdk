@@ -119,7 +119,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
         }
 
         /**
-         * JobGroup.
+         * <p>The information about the job group.</p>
          */
         public Builder jobGroup(JobGroup jobGroup) {
             this.jobGroup = jobGroup;
@@ -143,7 +149,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned for the API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * BeginTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581937093000</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -233,7 +251,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581997093000</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -469,7 +490,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * Customized.
+             * <p>The custom data for the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder customized(String customized) {
                 this.customized = customized;
@@ -477,7 +501,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2209702074000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -485,7 +512,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FollowUpStrategy.
+             * <p>The follow-up action after an execution epoch ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTINUE</p>
              */
             public Builder followUpStrategy(String followUpStrategy) {
                 this.followUpStrategy = followUpStrategy;
@@ -493,7 +523,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * IsTemplate.
+             * <p>Indicates whether the policy is a template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isTemplate(Boolean isTemplate) {
                 this.isTemplate = isTemplate;
@@ -501,7 +534,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAttemptsPerDay.
+             * <p>The maximum number of redials after a call fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxAttemptsPerDay(Integer maxAttemptsPerDay) {
                 this.maxAttemptsPerDay = maxAttemptsPerDay;
@@ -509,7 +545,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MinAttemptInterval.
+             * <p>The interval between redials.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder minAttemptInterval(Integer minAttemptInterval) {
                 this.minAttemptInterval = minAttemptInterval;
@@ -517,7 +556,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatBy.
+             * <p>The repeat mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Once</p>
              */
             public Builder repeatBy(String repeatBy) {
                 this.repeatBy = repeatBy;
@@ -525,7 +567,7 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatDays.
+             * <p>The days of the week on which to repeat the execution.</p>
              */
             public Builder repeatDays(java.util.List<String> repeatDays) {
                 this.repeatDays = repeatDays;
@@ -533,7 +575,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RoutingStrategy.
+             * <p>The number routing policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LocalFirst</p>
              */
             public Builder routingStrategy(String routingStrategy) {
                 this.routingStrategy = routingStrategy;
@@ -541,7 +586,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578550074000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -549,7 +597,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyDescription.
+             * <p>The policy description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>催收作业执行策略</p>
              */
             public Builder strategyDescription(String strategyDescription) {
                 this.strategyDescription = strategyDescription;
@@ -557,7 +608,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyId.
+             * <p>The policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f718798d-96be-40e4-bef6-317b54855708</p>
              */
             public Builder strategyId(String strategyId) {
                 this.strategyId = strategyId;
@@ -565,7 +619,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyName.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>催收策略</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -573,7 +630,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Repeatable</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -581,7 +641,7 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingTime.
+             * <p>The time frames during which the policy is executed.</p>
              */
             public Builder workingTime(java.util.List<WorkingTime> workingTime) {
                 this.workingTime = workingTime;
@@ -726,7 +786,7 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * CallingNumbers.
+             * <p>The list of calling numbers.</p>
              */
             public Builder callingNumbers(java.util.List<String> callingNumbers) {
                 this.callingNumbers = callingNumbers;
@@ -734,7 +794,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the job group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579068424000</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -742,7 +805,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobFilePath.
+             * <p>The key of the job file after it is uploaded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52e80b02-0126-4556-a1e6-ef5b3747ed53/a9a3ddc7-d7d7-48cd-82b5-b31bb5510e71_2a66f8ad-dfbb-4980-9b84-439171295a11.xlsx</p>
              */
             public Builder jobFilePath(String jobFilePath) {
                 this.jobFilePath = jobFilePath;
@@ -750,7 +816,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupDescription.
+             * <p>The description of the job group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>第一个催收作业组</p>
              */
             public Builder jobGroupDescription(String jobGroupDescription) {
                 this.jobGroupDescription = jobGroupDescription;
@@ -758,7 +827,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupId.
+             * <p>The job group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5a7e8b09-baf9-4cab-b540-c971f47a7146</p>
              */
             public Builder jobGroupId(String jobGroupId) {
                 this.jobGroupId = jobGroupId;
@@ -766,7 +838,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupName.
+             * <p>The name of the job group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>第一个催收作业组</p>
              */
             public Builder jobGroupName(String jobGroupName) {
                 this.jobGroupName = jobGroupName;
@@ -774,7 +849,10 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ScenarioId.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6cea9bed-63e6-439e-ae4c-b3333efff53d</p>
              */
             public Builder scenarioId(String scenarioId) {
                 this.scenarioId = scenarioId;
@@ -782,7 +860,7 @@ public class ModifyBatchJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Strategy.
+             * <p>The execution policy.</p>
              */
             public Builder strategy(Strategy strategy) {
                 this.strategy = strategy;

@@ -119,7 +119,10 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
         }
 
         /**
-         * OutboundCallNumber.
+         * <p>The number information.</p>
          */
         public Builder outboundCallNumber(OutboundCallNumber outboundCallNumber) {
             this.outboundCallNumber = outboundCallNumber;
@@ -151,7 +160,10 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +266,10 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
             } 
 
             /**
-             * Number.
+             * <p>The outbound call number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10088xxxx</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -259,7 +277,10 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundCallNumberId.
+             * <p>The number ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fa0e21e9-caab-4629-9121-1e341243d599</p>
              */
             public Builder outboundCallNumberId(String outboundCallNumberId) {
                 this.outboundCallNumberId = outboundCallNumberId;
@@ -267,7 +288,10 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
             }
 
             /**
-             * RateLimitCount.
+             * <p>The rate limit cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rateLimitCount(String rateLimitCount) {
                 this.rateLimitCount = rateLimitCount;
@@ -275,7 +299,10 @@ public class ModifyOutboundCallNumberResponseBody extends TeaModel {
             }
 
             /**
-             * RateLimitPeriod.
+             * <p>The rate limit count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rateLimitPeriod(String rateLimitPeriod) {
                 this.rateLimitPeriod = rateLimitPeriod;

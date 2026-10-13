@@ -119,7 +119,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bp.java.nopowerContact</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -381,7 +400,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>id</p>
+             * <p>ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
              */
             public Builder annotationMissionChatCustomizationDataInfoId(String annotationMissionChatCustomizationDataInfoId) {
                 this.annotationMissionChatCustomizationDataInfoId = annotationMissionChatCustomizationDataInfoId;
@@ -389,7 +411,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>chat id</p>
+             * <p>ChatID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
              */
             public Builder annotationMissionChatId(String annotationMissionChatId) {
                 this.annotationMissionChatId = annotationMissionChatId;
@@ -397,7 +422,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2f03b24a-fda2-4501-90ba-0a9a59f8dd9d</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -405,7 +433,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionSessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
              */
             public Builder annotationMissionSessionId(String annotationMissionSessionId) {
                 this.annotationMissionSessionId = annotationMissionSessionId;
@@ -413,7 +444,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The speech annotation text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I apologize for any inconvenience caused. I will not bother you anymore. Have a nice day and goodbye</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -421,7 +455,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Create.
+             * <p>Indicates whether the item is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder create(Boolean create) {
                 this.create = create;
@@ -429,7 +466,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682216045619</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -437,7 +477,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CustomizationDataDescription.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default data</p>
              */
             public Builder customizationDataDescription(String customizationDataDescription) {
                 this.customizationDataDescription = customizationDataDescription;
@@ -445,7 +488,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>id</p>
+             * <p>The custom data ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
              */
             public Builder customizationDataId(String customizationDataId) {
                 this.customizationDataId = customizationDataId;
@@ -453,7 +499,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CustomizationDataName.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default data</p>
              */
             public Builder customizationDataName(String customizationDataName) {
                 this.customizationDataName = customizationDataName;
@@ -461,7 +510,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CustomizationDataWeight.
+             * <p>The weight of the language model data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder customizationDataWeight(Integer customizationDataWeight) {
                 this.customizationDataWeight = customizationDataWeight;
@@ -469,7 +521,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Delete.
+             * <p>Indicates whether the item is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder delete(Boolean delete) {
                 this.delete = delete;
@@ -477,7 +532,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d3fbfca8-4208-4d4b-a53a-c4dba5e43a66</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -485,7 +543,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679552585384</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -695,7 +756,7 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>chat id</p>
+             * <p>ChatID</p>
              * 
              * <strong>example:</strong>
              * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
@@ -706,7 +767,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>id</p>
+             * <p>ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
              */
             public Builder annotationMissionChatIntentUserSayInfoId(String annotationMissionChatIntentUserSayInfoId) {
                 this.annotationMissionChatIntentUserSayInfoId = annotationMissionChatIntentUserSayInfoId;
@@ -714,7 +778,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionId.
+             * <p>The annotation task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -722,7 +789,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionSessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
              */
             public Builder annotationMissionSessionId(String annotationMissionSessionId) {
                 this.annotationMissionSessionId = annotationMissionSessionId;
@@ -730,7 +800,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * BotId.
+             * <p>The robot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
              */
             public Builder botId(String botId) {
                 this.botId = botId;
@@ -738,7 +811,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The modified question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -746,7 +822,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Create.
+             * <p>Indicates whether the item is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder create(Boolean create) {
                 this.create = create;
@@ -754,7 +833,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682216045619</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -762,7 +844,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Delete.
+             * <p>Indicates whether the item is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder delete(Boolean delete) {
                 this.delete = delete;
@@ -770,7 +855,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * DialogId.
+             * <p>The dialog ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29921312</p>
              */
             public Builder dialogId(Long dialogId) {
                 this.dialogId = dialogId;
@@ -778,7 +866,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -786,7 +877,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * IntentId.
+             * <p>The intent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11234112</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -794,7 +888,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682216045619</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -978,7 +1075,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>chat id</p>
+             * <p>ChatID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
              */
             public Builder annotationMissionChatId(String annotationMissionChatId) {
                 this.annotationMissionChatId = annotationMissionChatId;
@@ -986,7 +1086,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>id</p>
+             * <p>The ID of the annotation chat tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
              */
             public Builder annotationMissionChatTagInfoId(String annotationMissionChatTagInfoId) {
                 this.annotationMissionChatTagInfoId = annotationMissionChatTagInfoId;
@@ -994,7 +1097,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e7272cbb-a60d-4b41-b5c4-8863edc0b8f7</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -1002,7 +1108,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionSessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
              */
             public Builder annotationMissionSessionId(String annotationMissionSessionId) {
                 this.annotationMissionSessionId = annotationMissionSessionId;
@@ -1010,7 +1119,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>tag id</p>
+             * <p>TagID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
              */
             public Builder annotationMissionTagInfoId(String annotationMissionTagInfoId) {
                 this.annotationMissionTagInfoId = annotationMissionTagInfoId;
@@ -1018,7 +1130,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionTagInfoName.
+             * <p>The name of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tag</p>
              */
             public Builder annotationMissionTagInfoName(String annotationMissionTagInfoName) {
                 this.annotationMissionTagInfoName = annotationMissionTagInfoName;
@@ -1026,7 +1141,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Create.
+             * <p>Indicates whether the item is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder create(Boolean create) {
                 this.create = create;
@@ -1034,7 +1152,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1686797050000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1042,7 +1163,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Delete.
+             * <p>Indicates whether the item is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder delete(Boolean delete) {
                 this.delete = delete;
@@ -1050,7 +1174,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32be9d94-1346-4c4a-a4d0-ccd379f87013</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1058,7 +1185,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679019660000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -1281,7 +1411,7 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>chat id</p>
+             * <p>ChatID</p>
              * 
              * <strong>example:</strong>
              * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
@@ -1292,7 +1422,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>id</p>
+             * <p>ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
              */
             public Builder annotationMissionChatVocabularyInfoId(String annotationMissionChatVocabularyInfoId) {
                 this.annotationMissionChatVocabularyInfoId = annotationMissionChatVocabularyInfoId;
@@ -1300,7 +1433,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b3f2c931-5180-43ca-b4aa-2baee2d73c8b</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -1308,7 +1444,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionSessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
              */
             public Builder annotationMissionSessionId(String annotationMissionSessionId) {
                 this.annotationMissionSessionId = annotationMissionSessionId;
@@ -1316,7 +1455,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Create.
+             * <p>Indicates whether the item is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder create(Boolean create) {
                 this.create = create;
@@ -1324,7 +1466,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1675218421941</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1332,7 +1477,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Delete.
+             * <p>Indicates whether the item is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder delete(Boolean delete) {
                 this.delete = delete;
@@ -1340,7 +1488,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>818961ce-d9ba-4f88-89ca-2a04b24bdf01</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1348,7 +1499,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1676272557653</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -1356,7 +1510,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Vocabulary.
+             * <p>The hot word annotation content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder vocabulary(String vocabulary) {
                 this.vocabulary = vocabulary;
@@ -1364,7 +1521,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * VocabularyDescription.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder vocabularyDescription(String vocabularyDescription) {
                 this.vocabularyDescription = vocabularyDescription;
@@ -1372,7 +1532,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * VocabularyId.
+             * <p>The hot word ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
              */
             public Builder vocabularyId(String vocabularyId) {
                 this.vocabularyId = vocabularyId;
@@ -1380,7 +1543,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * VocabularyName.
+             * <p>The vocabulary name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Name</p>
              */
             public Builder vocabularyName(String vocabularyName) {
                 this.vocabularyName = vocabularyName;
@@ -1388,7 +1554,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * VocabularyWeight.
+             * <p>The hot word weight. Valid values: -6 to 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder vocabularyWeight(Integer vocabularyWeight) {
                 this.vocabularyWeight = vocabularyWeight;
@@ -1702,7 +1871,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * AnnotationAsrResult.
+             * <p>The manual ASR annotation text result, which is used to calculate the character accuracy rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder annotationAsrResult(String annotationAsrResult) {
                 this.annotationAsrResult = annotationAsrResult;
@@ -1710,7 +1882,7 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionChatCustomizationDataInfoList.
+             * <p>The language model annotation information list for the chat annotation task.</p>
              */
             public Builder annotationMissionChatCustomizationDataInfoList(java.util.List<AnnotationMissionChatCustomizationDataInfoList> annotationMissionChatCustomizationDataInfoList) {
                 this.annotationMissionChatCustomizationDataInfoList = annotationMissionChatCustomizationDataInfoList;
@@ -1729,7 +1901,7 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionChatIntentUserSayInfoList.
+             * <p>The chat intent list.</p>
              */
             public Builder annotationMissionChatIntentUserSayInfoList(java.util.List<AnnotationMissionChatIntentUserSayInfoList> annotationMissionChatIntentUserSayInfoList) {
                 this.annotationMissionChatIntentUserSayInfoList = annotationMissionChatIntentUserSayInfoList;
@@ -1737,7 +1909,7 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionChatTagInfoList.
+             * <p>The list of tag mappings bound to the annotation chat.</p>
              */
             public Builder annotationMissionChatTagInfoList(java.util.List<AnnotationMissionChatTagInfoList> annotationMissionChatTagInfoList) {
                 this.annotationMissionChatTagInfoList = annotationMissionChatTagInfoList;
@@ -1745,7 +1917,7 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionChatVocabularyInfoList.
+             * <p>The hot word annotation information list for the chat annotation task.</p>
              */
             public Builder annotationMissionChatVocabularyInfoList(java.util.List<AnnotationMissionChatVocabularyInfoList> annotationMissionChatVocabularyInfoList) {
                 this.annotationMissionChatVocabularyInfoList = annotationMissionChatVocabularyInfoList;
@@ -1753,7 +1925,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionId.
+             * <p>The annotation mission ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -1761,7 +1936,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionSessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
              */
             public Builder annotationMissionSessionId(String annotationMissionSessionId) {
                 this.annotationMissionSessionId = annotationMissionSessionId;
@@ -1769,7 +1947,16 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationStatus.
+             * <p>The chat annotation status. Valid values:</p>
+             * <ul>
+             * <li>0: Pending (UNDO).</li>
+             * <li>1: In progress (DOING).</li>
+             * <li>2: Completed (DONE).</li>
+             * <li>3: Canceled (CLOSED).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder annotationStatus(Integer annotationStatus) {
                 this.annotationStatus = annotationStatus;
@@ -1777,7 +1964,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Answer.
+             * <p>The reply content of the robot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;Answer\&quot;: u\&quot;\u53c2\u8003\u6587\u6863\uff1a<a href="https://help.aliyun.com/document_detail/215402.html%5C%5C">https://help.aliyun.com/document_detail/215402.html\\</a>&quot;, \&quot;QuestionId\&quot;: 371159, \&quot;Uuid\&quot;: \&quot;ac14000116781568127896224d0044\&quot;}</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -1785,7 +1975,16 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AsrAnnotationStatus.
+             * <p>The ASR annotation status. Valid values:</p>
+             * <ul>
+             * <li>0: Pending (UNDO).</li>
+             * <li>1: In progress (DOING).</li>
+             * <li>2: Completed (DONE).</li>
+             * <li>3: Canceled (CLOSED).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder asrAnnotationStatus(Integer asrAnnotationStatus) {
                 this.asrAnnotationStatus = asrAnnotationStatus;
@@ -1793,7 +1992,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682216045619</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1801,7 +2003,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1809,7 +2014,16 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * IntentAnnotationStatus.
+             * <p>The semantic annotation status. Valid values:</p>
+             * <ul>
+             * <li>0: Pending (UNDO).</li>
+             * <li>1: In progress (DOING).</li>
+             * <li>2: Completed (DONE).</li>
+             * <li>3: Canceled (CLOSED).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder intentAnnotationStatus(Integer intentAnnotationStatus) {
                 this.intentAnnotationStatus = intentAnnotationStatus;
@@ -1817,7 +2031,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1571649300000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -1825,7 +2042,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * OccurTime.
+             * <p>The trigger time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682390676403</p>
              */
             public Builder occurTime(Long occurTime) {
                 this.occurTime = occurTime;
@@ -1833,7 +2053,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAsrResult.
+             * <p>The ASR recognition result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder originalAsrResult(String originalAsrResult) {
                 this.originalAsrResult = originalAsrResult;
@@ -1841,7 +2064,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * SequenceId.
+             * <p>The sequence ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>380578077</p>
              */
             public Builder sequenceId(String sequenceId) {
                 this.sequenceId = sequenceId;
@@ -1849,7 +2075,17 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * SubStatus.
+             * <p>The annotation action. Valid values:</p>
+             * <ul>
+             * <li>1: Correct.</li>
+             * <li>20: Matching error, not optimized.</li>
+             * <li>21: Matching error, optimized.</li>
+             * <li>3: Not covered.</li>
+             * <li>4: Invalid.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder subStatus(Integer subStatus) {
                 this.subStatus = subStatus;
@@ -1857,7 +2093,16 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * TagAnnotationStatus.
+             * <p>The tag annotation status. Valid values:</p>
+             * <ul>
+             * <li>0: Pending (UNDO).</li>
+             * <li>1: In progress (DOING).</li>
+             * <li>2: Completed (DONE).</li>
+             * <li>3: Canceled (CLOSED).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tagAnnotationStatus(Integer tagAnnotationStatus) {
                 this.tagAnnotationStatus = tagAnnotationStatus;
@@ -1865,7 +2110,14 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * TranslationError.
+             * <p>Indicates whether a transcription error occurred. Valid values:</p>
+             * <ul>
+             * <li>0: No.</li>
+             * <li>1: Yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder translationError(Integer translationError) {
                 this.translationError = translationError;
@@ -2075,7 +2327,7 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * AnnotationMissionChatList.
+             * <p>The chat list.</p>
              */
             public Builder annotationMissionChatList(java.util.List<AnnotationMissionChatList> annotationMissionChatList) {
                 this.annotationMissionChatList = annotationMissionChatList;
@@ -2083,7 +2335,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionId.
+             * <p>The annotation mission ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64ba5ac9-a4e1-4333-b03c-9d4a588c9f6c</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -2091,7 +2346,7 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID</p>
+             * <p>The session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>64ba5ac9-a4e1-4333-b03c-9d4a588c9f6c</p>
@@ -2102,7 +2357,16 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationStatus.
+             * <p>The annotation status. Valid values:</p>
+             * <ul>
+             * <li>0: Pending (UNDO).</li>
+             * <li>1: In progress (DOING).</li>
+             * <li>2: Completed (DONE).</li>
+             * <li>3: Canceled (CLOSED).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder annotationStatus(Integer annotationStatus) {
                 this.annotationStatus = annotationStatus;
@@ -2110,7 +2374,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1691117009000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -2118,7 +2385,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * DebugConversation.
+             * <p>The debug conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder debugConversation(Boolean debugConversation) {
                 this.debugConversation = debugConversation;
@@ -2126,7 +2396,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -2134,7 +2407,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupId.
+             * <p>The job group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2f642da1-b00b-4dd6-ac7d-dcbeefd13ff3</p>
              */
             public Builder jobGroupId(String jobGroupId) {
                 this.jobGroupId = jobGroupId;
@@ -2142,7 +2418,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42da7cde-a5e8-45cc-b9d2-828711d95b30</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -2150,7 +2429,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677987898384</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -2158,7 +2440,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>408d6c4d-23e2-41f6-bbdd-f919a8297aa4</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -2166,7 +2451,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The session ID. This is the task ID for outbound robots and the conversation ID for voice navigator robots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40669e52-c1c8-487f-9593-29749086bdc9</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -2174,7 +2462,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -2280,7 +2571,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * AnnotationMissionId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b3f2c931-5180-43ca-b4aa-2baee2d73c8b</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -2288,7 +2582,7 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionSessionList.
+             * <p>The session list.</p>
              */
             public Builder annotationMissionSessionList(java.util.List<AnnotationMissionSessionList> annotationMissionSessionList) {
                 this.annotationMissionSessionList = annotationMissionSessionList;
@@ -2296,7 +2590,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bp.java.nopowerContact</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -2304,7 +2601,14 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the call is successful. Valid values:</p>
+             * <ul>
+             * <li>true: The call is successful.</li>
+             * <li>false: The call fails.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -2312,7 +2616,10 @@ public class ListAnnotationMissionSessionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

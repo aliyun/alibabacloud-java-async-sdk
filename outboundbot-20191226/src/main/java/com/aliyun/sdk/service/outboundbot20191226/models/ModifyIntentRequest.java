@@ -148,6 +148,7 @@ public class ModifyIntentRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +161,10 @@ public class ModifyIntentRequest extends Request {
         }
 
         /**
-         * IntentDescription.
+         * <p>The intent description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>询问车险意图</p>
          */
         public Builder intentDescription(String intentDescription) {
             this.putQueryParameter("IntentDescription", intentDescription);
@@ -169,6 +173,7 @@ public class ModifyIntentRequest extends Request {
         }
 
         /**
+         * <p>The intent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +186,11 @@ public class ModifyIntentRequest extends Request {
         }
 
         /**
+         * <p>The intent name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>车险如何办理</p>
          */
         public Builder intentName(String intentName) {
             this.putQueryParameter("IntentName", intentName);
@@ -190,7 +199,10 @@ public class ModifyIntentRequest extends Request {
         }
 
         /**
-         * Keywords.
+         * <p>The keywords. The value must be a JSON array of strings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder keywords(String keywords) {
             this.putQueryParameter("Keywords", keywords);
@@ -199,6 +211,7 @@ public class ModifyIntentRequest extends Request {
         }
 
         /**
+         * <p>The script ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +224,11 @@ public class ModifyIntentRequest extends Request {
         }
 
         /**
+         * <p>The user utterances. The value must be a JSON array of strings.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;车险如何办理&quot;]</p>
          */
         public Builder utterances(String utterances) {
             this.putQueryParameter("Utterances", utterances);

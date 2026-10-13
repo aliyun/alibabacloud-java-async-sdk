@@ -90,6 +90,7 @@ public class DuplicateScriptRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +103,11 @@ public class DuplicateScriptRequest extends Request {
         }
 
         /**
+         * <p>The name of the new scenario.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>复制的催收话术</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -111,6 +116,7 @@ public class DuplicateScriptRequest extends Request {
         }
 
         /**
+         * <p>The ID of the source scenario.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

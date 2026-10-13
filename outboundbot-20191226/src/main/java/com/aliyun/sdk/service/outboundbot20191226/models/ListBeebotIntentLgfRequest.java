@@ -134,6 +134,7 @@ public class ListBeebotIntentLgfRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +147,7 @@ public class ListBeebotIntentLgfRequest extends Request {
         }
 
         /**
+         * <p>The intent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +160,10 @@ public class ListBeebotIntentLgfRequest extends Request {
         }
 
         /**
-         * LgfText.
+         * <p>The utterance template for the intent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I am an utterance template</p>
          */
         public Builder lgfText(String lgfText) {
             this.putQueryParameter("LgfText", lgfText);
@@ -167,6 +172,7 @@ public class ListBeebotIntentLgfRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +185,7 @@ public class ListBeebotIntentLgfRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +198,7 @@ public class ListBeebotIntentLgfRequest extends Request {
         }
 
         /**
+         * <p>The scenario ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

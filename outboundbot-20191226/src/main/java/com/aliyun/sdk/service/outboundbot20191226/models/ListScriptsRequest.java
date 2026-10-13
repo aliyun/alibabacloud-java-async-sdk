@@ -118,6 +118,7 @@ public class ListScriptsRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,20 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * NluEngine.
+         * <p>The NLU robot engine.</p>
+         * <ul>
+         * <li><p>If you do not specify this parameter, scripts in small model scenarios are queried.</p>
+         * </li>
+         * <li><p>If you set this parameter to Prompts, scripts in the text completion mode for large models are queried.</p>
+         * </li>
+         * <li><p>If you set this parameter to SSE_FUNCTION, scripts in the Function Compute mode for large models are queried.</p>
+         * </li>
+         * <li><p>If you set this parameter to BeeBot, scripts in the workflow configuration mode for large models are queried.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prompts</p>
          */
         public Builder nluEngine(String nluEngine) {
             this.putQueryParameter("NluEngine", nluEngine);
@@ -139,6 +153,7 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +166,7 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +179,10 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * ScriptName.
+         * <p>The script name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Course satisfaction follow-up</p>
          */
         public Builder scriptName(String scriptName) {
             this.putQueryParameter("ScriptName", scriptName);

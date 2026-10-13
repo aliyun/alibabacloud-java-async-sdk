@@ -119,6 +119,7 @@ public class ListBeebotIntentRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +132,13 @@ public class ListBeebotIntentRequest extends Request {
         }
 
         /**
-         * IntentName.
+         * <p>The intent name.</p>
+         * <blockquote>
+         * <p>The intent code, which is a unique identifier.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Understood</p>
          */
         public Builder intentName(String intentName) {
             this.putQueryParameter("IntentName", intentName);
@@ -140,6 +147,7 @@ public class ListBeebotIntentRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +160,7 @@ public class ListBeebotIntentRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +173,7 @@ public class ListBeebotIntentRequest extends Request {
         }
 
         /**
+         * <p>The scenario ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

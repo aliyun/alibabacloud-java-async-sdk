@@ -89,6 +89,7 @@ public class DeleteContactBlockListRequest extends Request {
         } 
 
         /**
+         * <p>Contact block list ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DeleteContactBlockListRequest extends Request {
         }
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DeleteContactBlockListRequest extends Request {
         }
 
         /**
-         * Operator.
+         * <p>Operator information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>160131</p>
          */
         public Builder operator(String operator) {
             this.putQueryParameter("Operator", operator);

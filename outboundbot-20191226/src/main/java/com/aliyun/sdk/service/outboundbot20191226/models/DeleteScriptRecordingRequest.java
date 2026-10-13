@@ -89,6 +89,7 @@ public class DeleteScriptRecordingRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID to which the recordings belong.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DeleteScriptRecordingRequest extends Request {
         }
 
         /**
+         * <p>The ID of the scenario to which the recordings belong.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,13 @@ public class DeleteScriptRecordingRequest extends Request {
         }
 
         /**
-         * UuidsJson.
+         * <p>The list of recording IDs. If this parameter is left empty, all recordings are selected by default.</p>
+         * <blockquote>
+         * <p>You can obtain recording IDs by calling the ListScriptRecording operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;d17d5bfa-4972-4389-9718-f9602edabe48&quot;]</p>
          */
         public Builder uuidsJson(String uuidsJson) {
             this.putQueryParameter("UuidsJson", uuidsJson);

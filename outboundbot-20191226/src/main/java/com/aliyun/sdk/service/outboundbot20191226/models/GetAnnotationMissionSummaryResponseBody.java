@@ -119,7 +119,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. If the request is successful, &quot;success&quot; is returned. If the request fails, a specific error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to perform this action. CDR:View privileges are required.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. true: The call was successful. false: The call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -316,7 +331,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * AddCustomizationDataCount.
+             * <p>The number of times language model data was added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder addCustomizationDataCount(Integer addCustomizationDataCount) {
                 this.addCustomizationDataCount = addCustomizationDataCount;
@@ -324,7 +342,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * AddVocabularyDataCount.
+             * <p>The number of times hot words were added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder addVocabularyDataCount(Integer addVocabularyDataCount) {
                 this.addVocabularyDataCount = addVocabularyDataCount;
@@ -332,7 +353,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationInvalid.
+             * <p>The number of invalid data entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder annotationInvalid(Integer annotationInvalid) {
                 this.annotationInvalid = annotationInvalid;
@@ -340,7 +364,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * CharacterCorrectRate.
+             * <p>The character accuracy rate, in units of 0.01%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder characterCorrectRate(Integer characterCorrectRate) {
                 this.characterCorrectRate = characterCorrectRate;
@@ -348,7 +375,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * CharacterErrorRate.
+             * <p>The character error rate, in units of 0.01%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder characterErrorRate(Integer characterErrorRate) {
                 this.characterErrorRate = characterErrorRate;
@@ -356,7 +386,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ChatTotalCount.
+             * <p>The total number of chats.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder chatTotalCount(Integer chatTotalCount) {
                 this.chatTotalCount = chatTotalCount;
@@ -364,7 +397,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * NoAnnotation.
+             * <p>The number of unannotated entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder noAnnotation(Integer noAnnotation) {
                 this.noAnnotation = noAnnotation;
@@ -372,7 +408,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * SentenceErrorRate.
+             * <p>The sentence error rate, in units of 0.01%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sentenceErrorRate(Integer sentenceErrorRate) {
                 this.sentenceErrorRate = sentenceErrorRate;
@@ -380,7 +419,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * WordErrorRate.
+             * <p>The word error rate, in units of 0.01%. Generally used for English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder wordErrorRate(Integer wordErrorRate) {
                 this.wordErrorRate = wordErrorRate;
@@ -525,7 +567,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * AnnotationCorrectCount.
+             * <p>The number of correct chats.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder annotationCorrectCount(Integer annotationCorrectCount) {
                 this.annotationCorrectCount = annotationCorrectCount;
@@ -533,7 +578,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationInvalid.
+             * <p>The number of invalid data entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder annotationInvalid(Integer annotationInvalid) {
                 this.annotationInvalid = annotationInvalid;
@@ -541,7 +589,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ChatTotalCount.
+             * <p>The total number of chats.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder chatTotalCount(Integer chatTotalCount) {
                 this.chatTotalCount = chatTotalCount;
@@ -549,7 +600,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * IntentUserSayCount.
+             * <p>The number of conversations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder intentUserSayCount(Integer intentUserSayCount) {
                 this.intentUserSayCount = intentUserSayCount;
@@ -557,7 +611,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * IntentionNotCoveredCount.
+             * <p>The number of uncovered intents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder intentionNotCoveredCount(Integer intentionNotCoveredCount) {
                 this.intentionNotCoveredCount = intentionNotCoveredCount;
@@ -565,7 +622,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * MatchErrorCount.
+             * <p>The number of recognition errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder matchErrorCount(Integer matchErrorCount) {
                 this.matchErrorCount = matchErrorCount;
@@ -573,7 +633,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * NoAnnotation.
+             * <p>The number of unannotated entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder noAnnotation(Integer noAnnotation) {
                 this.noAnnotation = noAnnotation;
@@ -581,7 +644,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TranslationUnrecognizedCount.
+             * <p>The number of unrecognized translation attempts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder translationUnrecognizedCount(Integer translationUnrecognizedCount) {
                 this.translationUnrecognizedCount = translationUnrecognizedCount;
@@ -648,7 +714,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -656,7 +725,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>知晓率1_复制</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -710,7 +782,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * TagSummaryInfoDetailList.
+             * <p>The list of tags.</p>
              */
             public Builder tagSummaryInfoDetailList(java.util.List<TagSummaryInfoDetailList> tagSummaryInfoDetailList) {
                 this.tagSummaryInfoDetailList = tagSummaryInfoDetailList;
@@ -829,7 +901,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * AnnotationMissionId.
+             * <p>The ID of the annotation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b3f2c931-5180-43ca-b4aa-2baee2d73c8b</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -837,7 +912,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * AsrSummaryInfo.
+             * <p>The speech annotate statistics information.</p>
              */
             public Builder asrSummaryInfo(AsrSummaryInfo asrSummaryInfo) {
                 this.asrSummaryInfo = asrSummaryInfo;
@@ -845,7 +920,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * IntentSummaryInfo.
+             * <p>The semantics annotate statistics information.</p>
              */
             public Builder intentSummaryInfo(IntentSummaryInfo intentSummaryInfo) {
                 this.intentSummaryInfo = intentSummaryInfo;
@@ -853,7 +928,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The additional information. If the request is successful, &quot;success&quot; is returned. If the request fails, a specific error code is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You are not authorized to perform this action. CDR:View privileges are required.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -861,7 +939,10 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the call was successful. true: The call was successful. false: The call failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -869,7 +950,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TagSummaryInfo.
+             * <p>The custom tags and their counts.</p>
              */
             public Builder tagSummaryInfo(TagSummaryInfo tagSummaryInfo) {
                 this.tagSummaryInfo = tagSummaryInfo;

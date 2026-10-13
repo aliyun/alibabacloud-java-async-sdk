@@ -90,7 +90,11 @@ public class QueryScriptWaveformsRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -99,7 +103,11 @@ public class QueryScriptWaveformsRequest extends Request {
         }
 
         /**
+         * <p>Scenario voice name</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>抱歉打扰您了,稍后会有客户经理与您联系啊,再见!</p>
          */
         public Builder scriptContent(String scriptContent) {
             this.putQueryParameter("ScriptContent", scriptContent);
@@ -108,7 +116,11 @@ public class QueryScriptWaveformsRequest extends Request {
         }
 
         /**
+         * <p>Scenario ID</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ab2d935-306c-478a-88bf-d08e4e25c1b7</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);

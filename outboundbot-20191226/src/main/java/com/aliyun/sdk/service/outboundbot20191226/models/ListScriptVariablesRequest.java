@@ -89,6 +89,7 @@ public class ListScriptVariablesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID (also known as the business ID).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,15 @@ public class ListScriptVariablesRequest extends Request {
         }
 
         /**
-         * Sandbox.
+         * <p>Specifies whether the environment is a test environment.</p>
+         * <ul>
+         * <li>true: Test environment.</li>
+         * <li>false: Production environment after release.</li>
+         * <li>Default value: false.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder sandbox(Boolean sandbox) {
             this.putQueryParameter("Sandbox", sandbox);
@@ -110,6 +119,7 @@ public class ListScriptVariablesRequest extends Request {
         }
 
         /**
+         * <p>The scenario ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

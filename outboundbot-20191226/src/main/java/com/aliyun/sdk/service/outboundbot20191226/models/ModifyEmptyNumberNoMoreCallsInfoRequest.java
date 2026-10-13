@@ -88,7 +88,10 @@ public class ModifyEmptyNumberNoMoreCallsInfoRequest extends Request {
         } 
 
         /**
-         * EmptyNumberNoMoreCalls.
+         * <p>Enable or disable the nonexistent number no-call feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder emptyNumberNoMoreCalls(Boolean emptyNumberNoMoreCalls) {
             this.putQueryParameter("EmptyNumberNoMoreCalls", emptyNumberNoMoreCalls);
@@ -97,6 +100,7 @@ public class ModifyEmptyNumberNoMoreCallsInfoRequest extends Request {
         }
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,18 @@ public class ModifyEmptyNumberNoMoreCallsInfoRequest extends Request {
         }
 
         /**
-         * StrategyLevel.
+         * <p>Policy level. Use 2 for business instances.</p>
+         * <ul>
+         * <li><p>0: system</p>
+         * </li>
+         * <li><p>1: tenant</p>
+         * </li>
+         * <li><p>2: instance</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder strategyLevel(Integer strategyLevel) {
             this.putQueryParameter("StrategyLevel", strategyLevel);

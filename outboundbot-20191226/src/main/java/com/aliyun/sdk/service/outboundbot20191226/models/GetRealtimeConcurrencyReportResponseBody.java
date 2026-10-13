@@ -132,7 +132,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -148,7 +154,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +165,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
         }
 
         /**
-         * ReportDate.
+         * <p>The time when the report was generated. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743474900488</p>
          */
         public Builder reportDate(Long reportDate) {
             this.reportDate = reportDate;
@@ -164,7 +176,7 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
         }
 
         /**
-         * Reports.
+         * <p>The report details.</p>
          */
         public Builder reports(Reports reports) {
             this.reports = reports;
@@ -172,7 +184,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -324,7 +342,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85bf7efa-a07c-498a-850e-99a5849b8589</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -332,7 +353,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Intelligent outbound call scenario</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -340,7 +364,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c62e6789-28a8-41db-941e-171a01d3b3b9</p>
              */
             public Builder jobGroupId(String jobGroupId) {
                 this.jobGroupId = jobGroupId;
@@ -348,7 +375,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupName.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>First job group</p>
              */
             public Builder jobGroupName(String jobGroupName) {
                 this.jobGroupName = jobGroupName;
@@ -356,7 +386,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConcurrencyLimit.
+             * <p>The configured maximum concurrency limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxConcurrencyLimit(Long maxConcurrencyLimit) {
                 this.maxConcurrencyLimit = maxConcurrencyLimit;
@@ -364,7 +397,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
             }
 
             /**
-             * MinConcurrencyLimit.
+             * <p>The minimum concurrency limit for the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minConcurrencyLimit(Long minConcurrencyLimit) {
                 this.minConcurrencyLimit = minConcurrencyLimit;
@@ -372,7 +408,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
             }
 
             /**
-             * OccupiedConcurrencyCount.
+             * <p>The occupied concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder occupiedConcurrencyCount(Long occupiedConcurrencyCount) {
                 this.occupiedConcurrencyCount = occupiedConcurrencyCount;
@@ -380,7 +419,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
             }
 
             /**
-             * ReportDate.
+             * <p>The time when the report was generated. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1743474900488</p>
              */
             public Builder reportDate(Long reportDate) {
                 this.reportDate = reportDate;
@@ -473,7 +515,7 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The list of reports.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -481,7 +523,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -489,7 +534,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -497,7 +545,10 @@ public class GetRealtimeConcurrencyReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

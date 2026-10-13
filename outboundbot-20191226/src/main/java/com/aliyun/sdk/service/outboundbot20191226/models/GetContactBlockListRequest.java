@@ -116,7 +116,10 @@ public class GetContactBlockListRequest extends Request {
         } 
 
         /**
-         * CountTotalRow.
+         * <p>Specifies whether to display the total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder countTotalRow(Boolean countTotalRow) {
             this.putQueryParameter("CountTotalRow", countTotalRow);
@@ -125,6 +128,7 @@ public class GetContactBlockListRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +141,10 @@ public class GetContactBlockListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -146,7 +153,10 @@ public class GetContactBlockListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,7 +165,7 @@ public class GetContactBlockListRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>The search criteria for the outbound call blocklist.</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);

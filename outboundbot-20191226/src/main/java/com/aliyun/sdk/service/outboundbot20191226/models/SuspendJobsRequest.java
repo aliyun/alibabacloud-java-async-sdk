@@ -131,6 +131,7 @@ public class SuspendJobsRequest extends Request {
         } 
 
         /**
+         * <p>Filter condition: whether to suspend all jobs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,10 +144,11 @@ public class SuspendJobsRequest extends Request {
         }
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+         * <p>ef4c09ac-2f5c-49e7-9d33-5d85249cee10</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -155,7 +157,10 @@ public class SuspendJobsRequest extends Request {
         }
 
         /**
-         * JobGroupId.
+         * <p>Filter condition, task group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6b3ea2a1-32b3-4041-842b-9bde5de9dda0</p>
          */
         public Builder jobGroupId(String jobGroupId) {
             this.putQueryParameter("JobGroupId", jobGroupId);
@@ -164,7 +169,13 @@ public class SuspendJobsRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>Job ID list.</p>
+         * <blockquote>
+         * <p>When ALL is false, JobId is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>11994321-e6bc-47bb-8b1c-8eef8f2f768b</p>
          */
         public Builder jobId(java.util.List<String> jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -173,7 +184,13 @@ public class SuspendJobsRequest extends Request {
         }
 
         /**
-         * JobReferenceId.
+         * <p>Third-party ID of the job.</p>
+         * <blockquote>
+         * <p>This is the ReferenceId uploaded by the customer when uploading the outbound list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>de3ab269-6746-477c-b13d-bd49f13202c2</p>
          */
         public Builder jobReferenceId(java.util.List<String> jobReferenceId) {
             this.putQueryParameter("JobReferenceId", jobReferenceId);
@@ -182,7 +199,10 @@ public class SuspendJobsRequest extends Request {
         }
 
         /**
-         * ScenarioId.
+         * <p>Filter condition, scenario ID (historical parameter, deprecated).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4b6dd926-3cc3-4111-a333-15d9b006fe81</p>
          */
         public Builder scenarioId(String scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);

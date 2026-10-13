@@ -119,7 +119,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * Intent.
+         * <p>The details of the intent.</p>
          */
         public Builder intent(Intent intent) {
             this.intent = intent;
@@ -143,7 +149,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>327FEE69-F173-5B2F-9F3B-DCC6182D7BA0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DescribeIntentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -303,7 +318,10 @@ public class DescribeIntentResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the intent was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578469042851</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -311,7 +329,10 @@ public class DescribeIntentResponseBody extends TeaModel {
             }
 
             /**
-             * IntentDescription.
+             * <p>The description of the intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>同意还款意图</p>
              */
             public Builder intentDescription(String intentDescription) {
                 this.intentDescription = intentDescription;
@@ -319,7 +340,10 @@ public class DescribeIntentResponseBody extends TeaModel {
             }
 
             /**
-             * IntentId.
+             * <p>The ID of the intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10722701</p>
              */
             public Builder intentId(String intentId) {
                 this.intentId = intentId;
@@ -327,7 +351,10 @@ public class DescribeIntentResponseBody extends TeaModel {
             }
 
             /**
-             * IntentName.
+             * <p>The name of the intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>统一还款</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -335,7 +362,10 @@ public class DescribeIntentResponseBody extends TeaModel {
             }
 
             /**
-             * Keywords.
+             * <p>The keywords for the intent. You can use these keywords to filter intents during list operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;还款&quot;]</p>
              */
             public Builder keywords(String keywords) {
                 this.keywords = keywords;
@@ -343,7 +373,10 @@ public class DescribeIntentResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The ID of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6ef95fd5-558f-4ee8-af34-b2ede087a87c</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -351,7 +384,10 @@ public class DescribeIntentResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the intent was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578469042851</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -359,7 +395,10 @@ public class DescribeIntentResponseBody extends TeaModel {
             }
 
             /**
-             * Utterances.
+             * <p>A list of utterances that trigger the intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;ok&quot;,&quot;好的&quot;,&quot;好吧&quot;,&quot;好嘞&quot;,&quot;可以&quot;,&quot;行啊&quot;,&quot;行吧&quot;,&quot;那行&quot;,&quot;知道了&quot;,&quot;我看一下&quot;,&quot;能的&quot;,&quot;等会吧&quot;,&quot;等一下&quot;,&quot;马上还&quot;,&quot;等一会&quot;,&quot;过两天&quot;,&quot;我会想办法处理&quot;]</p>
              */
             public Builder utterances(String utterances) {
                 this.utterances = utterances;

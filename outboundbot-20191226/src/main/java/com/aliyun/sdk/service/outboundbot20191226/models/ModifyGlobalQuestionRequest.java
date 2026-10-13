@@ -150,7 +150,11 @@ public class ModifyGlobalQuestionRequest extends Request {
         } 
 
         /**
+         * <p>A JSON string containing an array of answers.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;你好,我是你的专属客服顾问.&quot;]</p>
          */
         public Builder answers(String answers) {
             this.putQueryParameter("Answers", answers);
@@ -159,6 +163,7 @@ public class ModifyGlobalQuestionRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the global question.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +176,11 @@ public class ModifyGlobalQuestionRequest extends Request {
         }
 
         /**
+         * <p>The global question name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未识别全局问题</p>
          */
         public Builder globalQuestionName(String globalQuestionName) {
             this.putQueryParameter("GlobalQuestionName", globalQuestionName);
@@ -180,6 +189,7 @@ public class ModifyGlobalQuestionRequest extends Request {
         }
 
         /**
+         * <p>The global question type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,10 +202,11 @@ public class ModifyGlobalQuestionRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>8fa1953f-4a84-46d8-b80c-8ce9cf684fb3</p>
+         * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -204,7 +215,11 @@ public class ModifyGlobalQuestionRequest extends Request {
         }
 
         /**
+         * <p>A JSON string containing an array of questions.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;你是谁&quot;,&quot;你叫什么&quot;]</p>
          */
         public Builder questions(String questions) {
             this.putQueryParameter("Questions", questions);
@@ -213,10 +228,11 @@ public class ModifyGlobalQuestionRequest extends Request {
         }
 
         /**
+         * <p>The script ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>19ac2375-53e3-477f-abe9-6cd334227981</p>
+         * <p>0fe7f71c-8771-42ef-9bb1-19aa16ae7120</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);

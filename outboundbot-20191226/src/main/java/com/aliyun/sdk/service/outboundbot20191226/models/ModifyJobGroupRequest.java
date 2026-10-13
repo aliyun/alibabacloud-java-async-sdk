@@ -258,7 +258,7 @@ public class ModifyJobGroupRequest extends Request {
         } 
 
         /**
-         * CallingNumber.
+         * <p>The caller number.</p>
          */
         public Builder callingNumber(java.util.List<String> callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -267,7 +267,10 @@ public class ModifyJobGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The job description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Modified job group</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -276,7 +279,11 @@ public class ModifyJobGroupRequest extends Request {
         }
 
         /**
-         * FlashSmsExtras.
+         * <p>The configuration parameters for flash message push in JSON format, including the configuration information of third-party flash messages.</p>
+         * <p>templateId: the flash message template ID.<br>configId: the flash message configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;templateId&quot;:&quot;10471&quot;,&quot;configId&quot;:&quot;8037f524-6ff2-4dbe-bb28-f59234ea7a64&quot;}</p>
          */
         public Builder flashSmsExtras(String flashSmsExtras) {
             this.putQueryParameter("FlashSmsExtras", flashSmsExtras);
@@ -285,6 +292,7 @@ public class ModifyJobGroupRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,6 +305,7 @@ public class ModifyJobGroupRequest extends Request {
         }
 
         /**
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -309,7 +318,14 @@ public class ModifyJobGroupRequest extends Request {
         }
 
         /**
-         * JobGroupStatus.
+         * <p>The job status. Valid values:</p>
+         * <ul>
+         * <li>Draft: draft.</li>
+         * <li>Paused: paused.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Draft</p>
          */
         public Builder jobGroupStatus(String jobGroupStatus) {
             this.putQueryParameter("JobGroupStatus", jobGroupStatus);
@@ -318,7 +334,13 @@ public class ModifyJobGroupRequest extends Request {
         }
 
         /**
-         * MinConcurrency.
+         * <p>The guaranteed concurrency.
+         * When a job starts, a minimum of N concurrent calls are guaranteed.
+         * The sum of guaranteed concurrency values for jobs of the same priority cannot exceed the instance concurrency.
+         * If the guaranteed concurrency is set to 0, the system intelligently allocates idle concurrency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minConcurrency(Long minConcurrency) {
             this.putQueryParameter("MinConcurrency", minConcurrency);
@@ -327,7 +349,11 @@ public class ModifyJobGroupRequest extends Request {
         }
 
         /**
+         * <p>The job name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Modified job group</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -336,7 +362,14 @@ public class ModifyJobGroupRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The job group priority. Valid values:</p>
+         * <ul>
+         * <li><strong>Urgent</strong>: urgent job.</li>
+         * <li><strong>Daily</strong>: daily job.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -345,7 +378,7 @@ public class ModifyJobGroupRequest extends Request {
         }
 
         /**
-         * RecallCallingNumber.
+         * <p>The list of caller numbers for recall.</p>
          */
         public Builder recallCallingNumber(java.util.List<String> recallCallingNumber) {
             this.putQueryParameter("RecallCallingNumber", recallCallingNumber);
@@ -354,7 +387,10 @@ public class ModifyJobGroupRequest extends Request {
         }
 
         /**
-         * RecallStrategyJson.
+         * <p>The JSON string of the recall strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;emptyNumberIgnore&quot;:false,&quot;inArrearsIgnore&quot;:false,&quot;outOfServiceIgnore&quot;:false}</p>
          */
         public Builder recallStrategyJson(String recallStrategyJson) {
             this.putQueryParameter("RecallStrategyJson", recallStrategyJson);
@@ -363,7 +399,10 @@ public class ModifyJobGroupRequest extends Request {
         }
 
         /**
-         * RingingDuration.
+         * <p>The optimal ringing duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder ringingDuration(Long ringingDuration) {
             this.putQueryParameter("RingingDuration", ringingDuration);
@@ -372,7 +411,13 @@ public class ModifyJobGroupRequest extends Request {
         }
 
         /**
-         * ScenarioId.
+         * <p>The scenario ID. This is a legacy parameter. Use ScriptId instead.</p>
+         * <blockquote>
+         * <p>This parameter is a legacy parameter. You can pass any value. Keep it consistent with the ScriptId.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>c6a668d1-3145-4048-9101-cb3678bb8884</p>
          */
         public Builder scenarioId(String scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);
@@ -381,7 +426,10 @@ public class ModifyJobGroupRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The script ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5a3940ce-a12f-4222-9f0f-605a9b89ea7c</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -390,7 +438,22 @@ public class ModifyJobGroupRequest extends Request {
         }
 
         /**
-         * StrategyJson.
+         * <p>The job execution strategy.</p>
+         * <ul>
+         * <li>id: the job group strategy ID. You can obtain it from the StrategyId response parameter of the DescribeJobGroup operation.</li>
+         * <li>repeatBy: the recurrence type. Valid values: Once (no recurrence), Day (daily), Week (weekly), and Month (monthly).</li>
+         * <li>startTime: the start time of the strategy.</li>
+         * <li>endTime: the end time of the strategy.</li>
+         * <li>workingTime: the time period during which outbound calls are allowed.</li>
+         * <li>maxAttemptsPerDay: the maximum number of call attempts per day for a phone number under this job.</li>
+         * <li>minAttemptInterval: the retry interval for a phone number, in minutes.</li>
+         * <li>routingStrategy: the phone number strategy. Valid values: None (not specified), LocalFirst (local numbers first), and LocalProvinceFirst (local province numbers first).</li>
+         * <li>repeatDays: the execution days corresponding to the recurrence type. If RepeatBy is Week, 0 indicates Sunday, and 1 to 6 indicate Monday to Saturday. If RepeatBy is Month, 1 to 31 indicate the 1st to the 31st day of the month. If a month does not have the specified day, the job is not executed in that month. For example, if the 30th is selected, the job is not executed in February.</li>
+         * <li>repeatable: specifies whether to enable recurring jobs. Valid values: true and false.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;maxAttemptsPerDay&quot;:&quot;3&quot;,&quot;minAttemptInterval&quot;:&quot;10&quot;,&quot;routingStrategy&quot;:&quot;LocalProvinceFirst&quot;,&quot;repeatDays&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;],&quot;workingTime&quot;:[{&quot;beginTime&quot;:&quot;10:00:00&quot;,&quot;endTime&quot;:&quot;11:00:00&quot;},&quot;id&quot;:&quot;cdca9ed7-6470-42d0-afb3-a41e08b41383&quot;,{&quot;beginTime&quot;:&quot;14:00:00&quot;,&quot;endTime&quot;:&quot;15:00:00&quot;}],&quot;repeatable&quot;:true,&quot;endTime&quot;:1707494400000,&quot;startTime&quot;:1706976000000,&quot;repeatBy&quot;:&quot;Week&quot;}</p>
          */
         public Builder strategyJson(String strategyJson) {
             this.putQueryParameter("StrategyJson", strategyJson);

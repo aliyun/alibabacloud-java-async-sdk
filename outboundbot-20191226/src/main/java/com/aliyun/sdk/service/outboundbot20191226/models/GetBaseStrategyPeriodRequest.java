@@ -74,6 +74,7 @@ public class GetBaseStrategyPeriodRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,15 @@ public class GetBaseStrategyPeriodRequest extends Request {
         }
 
         /**
-         * StrategyLevel.
+         * <p>The policy level. Default value: 2. Valid values:</p>
+         * <ul>
+         * <li>0: System.</li>
+         * <li>1: Tenant.</li>
+         * <li>2: Instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder strategyLevel(Integer strategyLevel) {
             this.putQueryParameter("StrategyLevel", strategyLevel);

@@ -119,7 +119,10 @@ public class QueryJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class QueryJobsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class QueryJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Jobs.
+         * <p>The job data.</p>
          */
         public Builder jobs(Jobs jobs) {
             this.jobs = jobs;
@@ -143,7 +149,10 @@ public class QueryJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class QueryJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class QueryJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -303,7 +318,10 @@ public class QueryJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * ContactId.
+             * <p>The contact ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db3db762-e421-44c9-9a01-cb423470757c</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -311,7 +329,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactName.
+             * <p>The contact name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -319,7 +340,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Honorific.
+             * <p>The honorific.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mr. Zhang</p>
              */
             public Builder honorific(String honorific) {
                 this.honorific = honorific;
@@ -327,7 +351,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fce6c599-8ede-40e3-9f78-0928eda7b4e8</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -335,7 +362,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>135****8888</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -343,7 +373,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceId.
+             * <p>The associated business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2fa6bac3-06da-4315-82ab-72d6fd3a6f34</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;
@@ -351,7 +384,12 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -359,7 +397,16 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>Available: Normal.</li>
+             * <li>WrongNumber: Wrong number.</li>
+             * <li>DoesNotExist: Nonexistent number.</li>
+             * <li>Suspended: Call suspended.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -426,7 +473,10 @@ public class QueryJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The key of the business data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>djrq</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -434,7 +484,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the business data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-21 09:49:59.0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -579,7 +632,10 @@ public class QueryJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -587,7 +643,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -595,7 +654,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationDetailId.
+             * <p>The call record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>098b9b09-9223-4a8b-a422-99726f0457f3</p>
              */
             public Builder conversationDetailId(String conversationDetailId) {
                 this.conversationDetailId = conversationDetailId;
@@ -603,7 +665,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The job group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ba1ba502-d044-48c0-b710-0f1f840a7c53</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -611,7 +676,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b72425bd-7871-4050-838e-033d80d754b7</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -619,7 +687,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SummaryId.
+             * <p>The summary ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc67d544-df06-4625-ae48-13e3c9f72d8a</p>
              */
             public Builder summaryId(String summaryId) {
                 this.summaryId = summaryId;
@@ -627,7 +698,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SummaryName.
+             * <p>The summary name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>score</p>
              */
             public Builder summaryName(String summaryName) {
                 this.summaryName = summaryName;
@@ -635,7 +709,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9fdf7a81-6781-4ab8-92fb-1d4231ef365e</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -702,7 +779,10 @@ public class QueryJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * TagGroup.
+             * <p>The tag group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Intent collection</p>
              */
             public Builder tagGroup(String tagGroup) {
                 this.tagGroup = tagGroup;
@@ -710,7 +790,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Interested</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -855,7 +938,10 @@ public class QueryJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * ContactId.
+             * <p>The contact ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db3db762-e421-44c9-9a01-cb423470757c</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -863,7 +949,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactName.
+             * <p>The contact name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -871,7 +960,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Honorific.
+             * <p>The honorific.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mr. Zhang</p>
              */
             public Builder honorific(String honorific) {
                 this.honorific = honorific;
@@ -879,7 +971,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b72425bd-7871-4050-838e-033d80d754b7</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -887,7 +982,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * <p>The phone number of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>135****8888</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -895,7 +993,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceId.
+             * <p>The associated business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2fa6bac3-06da-4315-82ab-72d6fd3a6f34</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;
@@ -903,7 +1004,12 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -911,7 +1017,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1121,7 +1230,10 @@ public class QueryJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * ActualTime.
+             * <p>The actual outbound call time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579068424883</p>
              */
             public Builder actualTime(Long actualTime) {
                 this.actualTime = actualTime;
@@ -1129,7 +1241,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Brief.
+             * <p><strong>[Deprecated]</strong> The summary. This is a legacy field and is no longer used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder brief(String brief) {
                 this.brief = brief;
@@ -1137,7 +1252,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CallId.
+             * <p>The SIP call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1528189846043</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -1145,7 +1263,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CalledNumber.
+             * <p>The called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>135****8888</p>
              */
             public Builder calledNumber(String calledNumber) {
                 this.calledNumber = calledNumber;
@@ -1153,7 +1274,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CallingNumber.
+             * <p>The calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0571****3106</p>
              */
             public Builder callingNumber(String callingNumber) {
                 this.callingNumber = callingNumber;
@@ -1161,7 +1285,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatbotId.
+             * <p>The robot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder chatbotId(String chatbotId) {
                 this.chatbotId = chatbotId;
@@ -1169,7 +1296,7 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Contact.
+             * <p>The contact information.</p>
              */
             public Builder contact(Contact contact) {
                 this.contact = contact;
@@ -1177,7 +1304,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The call duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -1185,7 +1315,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b72425bd-7871-4050-838e-033d80d754b7</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -1193,7 +1326,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PlanedTime.
+             * <p>The planned outbound call time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579068424883</p>
              */
             public Builder planedTime(Long planedTime) {
                 this.planedTime = planedTime;
@@ -1201,7 +1337,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ScenarioId.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ade80092-03d9-4f4d-ad4f-ab8a247d3150</p>
              */
             public Builder scenarioId(String scenarioId) {
                 this.scenarioId = scenarioId;
@@ -1209,7 +1348,45 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Note: The Succeeded status is subdivided into specific reasons. The Succeeded: 1 (Connected) status is no longer returned. Instead, specific subdivided reason types are returned. Valid values:</p>
+             * <ul>
+             * <li>Executing: 0 (Calling).</li>
+             * <li>Succeeded: 1 (Connected).</li>
+             * <li>NoAnswer: 2 (Not connected - No answer).</li>
+             * <li>NotExist: 3 (Not connected - Nonexistent number).</li>
+             * <li>Busy: 4 (Not connected - Busy).</li>
+             * <li>Cancelled: 5 (Not called - Task stopped).</li>
+             * <li>Failed: 6 (Failed).</li>
+             * <li>NotConnected: 7 (Not connected - Unreachable).</li>
+             * <li>PoweredOff: 8 (Not connected - Powered off).</li>
+             * <li>OutOfService: 9 (Not connected - Callee service suspended).</li>
+             * <li>InArrears: 10 (Not connected - Callee overdue payment).</li>
+             * <li>EmptyNumber: 11 (Not called - Nonexistent number, no outbound call).</li>
+             * <li>PerDayCallCountLimit: 12 (Not called - Daily limit exceeded).</li>
+             * <li>ContactBlockList: 13 (Not called - Blacklisted).</li>
+             * <li>CallerNotRegistered: 14 (Not called - Caller number not registered).</li>
+             * <li>Terminated: 15 (Not called - Terminated).</li>
+             * <li>VerificationCancelled: 16 (Not called - Cancelled due to failed pre-call verification).</li>
+             * <li>OutOfServiceNoCall: 17 (Not called - Callee service suspended, no outbound call).</li>
+             * <li>InArrearsNoCall: 18 (Not called - Callee overdue payment, no outbound call).</li>
+             * <li>CallingNumberNotExist: 19 (Not called - Caller number does not exist).</li>
+             * <li>SucceededFinish: 20 (Connected - Normally finished).</li>
+             * <li>SucceededChatbotHangUpAfterNoAnswer: 21 (Connected - Robot hung up after rejection).</li>
+             * <li>SucceededChatbotHangUpAfterSilence: 22 (Connected - Hung up due to silence timeout).</li>
+             * <li>SucceededClientHangUpAfterNoAnswer: 23 (Connected - User hung up after rejection).</li>
+             * <li>SucceededClientHangUp: 24 (Connected - User hung up without reason).</li>
+             * <li>SucceededTransferByIntent: 25 (Connected - Transferred to agent due to intent match).</li>
+             * <li>SucceededTransferAfterNoAnswer: 26 (Connected - Transferred to agent after rejection).</li>
+             * <li>SucceededInoInterAction: 27 (Connected - No interaction from the user side).</li>
+             * <li>SucceededError: 28 (Connected - Interrupted due to system exception).</li>
+             * <li>SucceededSpecialInterceptVoiceAssistant: 29 (Connected - Special interception - Voice assistant).</li>
+             * <li>SucceededSpecialInterceptExtensionNumberTransfer: 30 (Connected - Special interception - Extension number transfer).</li>
+             * <li>SucceededSpecialInterceptCustomSpecialIntercept: 31 (Connected - Special interception - Custom interception).</li>
+             * <li>HighRiskSipCode: 32 (Not called - High risk, no outbound call).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeeded</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1217,7 +1394,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ff44709e-39a6-43ba-959b-20fcabe3e496</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -1440,7 +1620,7 @@ public class QueryJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * CallingNumbers.
+             * <p>The calling number list.</p>
              */
             public Builder callingNumbers(java.util.List<String> callingNumbers) {
                 this.callingNumbers = callingNumbers;
@@ -1448,7 +1628,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Contacts.
+             * <p><strong>[Deprecated]</strong> The contact information.</p>
+             * <blockquote>
+             * <p>You can obtain this information by calling the DescribeJob operation.</p>
+             * </blockquote>
              */
             public Builder contacts(java.util.List<Contacts> contacts) {
                 this.contacts = contacts;
@@ -1456,7 +1639,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Extras.
+             * <p>The business data, which displays the tag collection status in large model scenarios.</p>
+             * <blockquote>
+             * <p>If the key is TenantId or ServiceId, it is a system parameter.</p>
+             * </blockquote>
              */
             public Builder extras(java.util.List<Extras> extras) {
                 this.extras = extras;
@@ -1464,7 +1650,26 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FailureReason.
+             * <p>The reason for the failure. Valid values:</p>
+             * <ul>
+             * <li>Unknown: Unknown error.  </li>
+             * <li>NoAnswer: No answer.</li>
+             * <li>InvalidStrategy: Invalid strategy. The strategy configuration is incorrect.</li>
+             * <li>TimeUp: Timeout detected during scheduling.</li>
+             * <li>NoStrategy: The strategy is empty or not found.</li>
+             * <li>CallFailed: Call failed.</li>
+             * <li>PerDayCallCountLimit: The daily call count limit for the number is reached.</li>
+             * <li>ContactBlockList: The number is on the outbound call blacklist.</li>
+             * <li>EmptyNumber: The number is a nonexistent number and will not be called.</li>
+             * <li>JobPerDayCallCountLimit: The daily call count limit for the number is reached.</li>
+             * <li>VerificationCancelled: Cancelled due to failed pre-call verification.</li>
+             * <li>ContactSuspended: Call suspended.</li>
+             * <li>InArrears: Overdue payment.</li>
+             * <li>OutOfService: Service suspended.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NoAnswer</p>
              */
             public Builder failureReason(String failureReason) {
                 this.failureReason = failureReason;
@@ -1472,7 +1677,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupId.
+             * <p>The job group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fce6c599-8ede-40e3-9f78-0928eda7b4e8</p>
              */
             public Builder jobGroupId(String jobGroupId) {
                 this.jobGroupId = jobGroupId;
@@ -1480,7 +1688,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fce6c599-8ede-40e3-9f78-0928eda7b4e8</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -1488,7 +1699,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -1496,7 +1710,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceId.
+             * <p>The associated business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d5971d98-7312-4f0e-a918-a17d67133e28</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;
@@ -1504,7 +1721,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ScenarioId.
+             * <p><strong>[Deprecated]</strong> The scenario ID. This is a legacy parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ade80092-03d9-4f4d-ad4f-ab8a247d3150</p>
              */
             public Builder scenarioId(String scenarioId) {
                 this.scenarioId = scenarioId;
@@ -1512,7 +1732,19 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The job status. Valid values:</p>
+             * <ul>
+             * <li>Scheduling(0, &quot;Scheduling&quot;)</li>
+             * <li>Executing(1, &quot;Executing&quot;)</li>
+             * <li>Succeeded(2, &quot;Finished - Reached&quot;)</li>
+             * <li>Paused(3, &quot;Paused&quot;)</li>
+             * <li>Failed(4, &quot;Finished - Not reached&quot;)</li>
+             * <li>Cancelled(5, &quot;Cancelled - Manual intervention&quot;)</li>
+             * <li>Drafted(6, &quot;Draft&quot;)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeeded</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1520,7 +1752,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyId.
+             * <p>The strategy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8a2b7f2-ad1a-4865-b872-d0080d9802d9</p>
              */
             public Builder strategyId(String strategyId) {
                 this.strategyId = strategyId;
@@ -1528,7 +1763,7 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p><strong>[Deprecated]</strong> The conversation summary. This is a legacy field and is no longer used.</p>
              */
             public Builder summary(java.util.List<Summary> summary) {
                 this.summary = summary;
@@ -1536,7 +1771,7 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TagHits.
+             * <p>The matched tag information in small model scenarios.</p>
              */
             public Builder tagHits(java.util.List<TagHits> tagHits) {
                 this.tagHits = tagHits;
@@ -1544,7 +1779,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Tasks.
+             * <p><strong>[Deprecated]</strong> The call list.</p>
+             * <blockquote>
+             * <p>You can obtain this information by calling the searchTask operation.</p>
+             * </blockquote>
              */
             public Builder tasks(java.util.List<Tasks> tasks) {
                 this.tasks = tasks;
@@ -1637,7 +1875,7 @@ public class QueryJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The job array.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -1645,7 +1883,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1653,7 +1894,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1661,7 +1905,10 @@ public class QueryJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -119,7 +119,10 @@ public class ModifyScriptResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ModifyScriptResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ModifyScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class ModifyScriptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class ModifyScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Script.
+         * <p>The script information.</p>
          */
         public Builder script(Script script) {
             this.script = script;
@@ -159,7 +171,10 @@ public class ModifyScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -329,7 +344,10 @@ public class ModifyScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * DebugStatus.
+             * <p>The debug status of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DRAFTED</p>
              */
             public Builder debugStatus(String debugStatus) {
                 this.debugStatus = debugStatus;
@@ -337,7 +355,10 @@ public class ModifyScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Industry.
+             * <p>The industry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>政务</p>
              */
             public Builder industry(String industry) {
                 this.industry = industry;
@@ -345,7 +366,10 @@ public class ModifyScriptResponseBody extends TeaModel {
             }
 
             /**
-             * IsDebugDrafted.
+             * <p>Indicates whether the script is a debug draft.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDebugDrafted(Boolean isDebugDrafted) {
                 this.isDebugDrafted = isDebugDrafted;
@@ -353,7 +377,10 @@ public class ModifyScriptResponseBody extends TeaModel {
             }
 
             /**
-             * IsDrafted.
+             * <p>Indicates whether the script is a draft.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDrafted(Boolean isDrafted) {
                 this.isDrafted = isDrafted;
@@ -361,7 +388,10 @@ public class ModifyScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>回访</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -369,7 +399,10 @@ public class ModifyScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptDescription.
+             * <p>The description of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>返工回访话术</p>
              */
             public Builder scriptDescription(String scriptDescription) {
                 this.scriptDescription = scriptDescription;
@@ -377,7 +410,10 @@ public class ModifyScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The ID of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c153d0d8-ba04-41c0-8632-453944c9dd0b</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -385,7 +421,10 @@ public class ModifyScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptName.
+             * <p>The name of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>回访话术</p>
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -393,7 +432,10 @@ public class ModifyScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -401,7 +443,10 @@ public class ModifyScriptResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578881227000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

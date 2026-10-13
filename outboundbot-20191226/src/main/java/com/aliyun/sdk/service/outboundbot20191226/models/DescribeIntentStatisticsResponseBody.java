@@ -197,7 +197,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>API status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -205,7 +208,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * GlobalIntentNum.
+         * <p>Total count of global intents</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder globalIntentNum(Integer globalIntentNum) {
             this.globalIntentNum = globalIntentNum;
@@ -213,7 +219,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * GlobalIntents.
+         * <p>Global intent array</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder globalIntents(java.util.List<GlobalIntents> globalIntents) {
             this.globalIntents = globalIntents;
@@ -221,7 +230,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * GroupId.
+         * <p>Group ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c3f352f-d045-491d-9ce7-11f2d2b7775d</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -229,7 +241,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -237,7 +252,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -245,7 +263,7 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * IntentsAfterNoAnswer.
+         * <p>Rejected intent information list</p>
          */
         public Builder intentsAfterNoAnswer(java.util.List<IntentsAfterNoAnswer> intentsAfterNoAnswer) {
             this.intentsAfterNoAnswer = intentsAfterNoAnswer;
@@ -253,7 +271,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -261,7 +282,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * ProcessIntentNum.
+         * <p>Total count of flow intents</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder processIntentNum(Integer processIntentNum) {
             this.processIntentNum = processIntentNum;
@@ -269,7 +293,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * ProcessIntents.
+         * <p>Intent information list</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder processIntents(java.util.List<ProcessIntents> processIntents) {
             this.processIntents = processIntents;
@@ -277,7 +304,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -285,7 +315,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -416,7 +449,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupId.
+             * <p>Task group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0c3f352f-d045-491d-9ce7-11f2d2b7775d</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -424,7 +460,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * HitAfterNoAnswer.
+             * <p>Hit after no acknowledgement</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hitAfterNoAnswer(Integer hitAfterNoAnswer) {
                 this.hitAfterNoAnswer = hitAfterNoAnswer;
@@ -432,7 +471,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * HitNum.
+             * <p>Hit count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder hitNum(Integer hitNum) {
                 this.hitNum = hitNum;
@@ -440,7 +482,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -448,7 +493,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * IntentId.
+             * <p>Intent ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21343425</p>
              */
             public Builder intentId(String intentId) {
                 this.intentId = intentId;
@@ -456,7 +504,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * IntentName.
+             * <p>Intent name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>请假意图</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -464,7 +515,12 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Type</p>
+             * <p>GlobalIntent(0): Global intent</p>
+             * <p>ProcessIntent(1): Flow intent</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GlobalIntent</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -570,7 +626,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupId.
+             * <p>Task group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b24d321a-2a74-4dd1-a0ba-4ab09cef6652</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -578,7 +637,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * HitAfterNoAnswer.
+             * <p>No acknowledgement is received after a hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hitAfterNoAnswer(Integer hitAfterNoAnswer) {
                 this.hitAfterNoAnswer = hitAfterNoAnswer;
@@ -586,7 +648,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -594,7 +659,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * IntentId.
+             * <p>Intent ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10398032</p>
              */
             public Builder intentId(String intentId) {
                 this.intentId = intentId;
@@ -602,7 +670,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * IntentName.
+             * <p>Intent name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>请假意图</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -747,7 +818,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupId.
+             * <p>Task group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0c3f352f-d045-491d-9ce7-11f2d2b7775d</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -755,7 +829,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * HitAfterNoAnswer.
+             * <p>Hit after no acknowledgement</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hitAfterNoAnswer(Integer hitAfterNoAnswer) {
                 this.hitAfterNoAnswer = hitAfterNoAnswer;
@@ -763,7 +840,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * HitNum.
+             * <p>Hit count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder hitNum(Integer hitNum) {
                 this.hitNum = hitNum;
@@ -771,7 +851,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -779,7 +862,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * IntentId.
+             * <p>Intent ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12343</p>
              */
             public Builder intentId(String intentId) {
                 this.intentId = intentId;
@@ -787,7 +873,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * IntentName.
+             * <p>Intent name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>请假意图</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -795,7 +884,10 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * RateDisplay.
+             * <p>Percentage</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33.33%</p>
              */
             public Builder rateDisplay(String rateDisplay) {
                 this.rateDisplay = rateDisplay;
@@ -803,7 +895,16 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Type</p>
+             * <ul>
+             * <li><p>GlobalIntent(0): Global intent</p>
+             * </li>
+             * <li><p>ProcessIntent(1): Flow intent</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ProcessIntent</p>
              */
             public Builder type(String type) {
                 this.type = type;

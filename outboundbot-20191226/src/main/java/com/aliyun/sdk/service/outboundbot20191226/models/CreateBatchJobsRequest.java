@@ -174,7 +174,10 @@ public class CreateBatchJobsRequest extends Request {
         } 
 
         /**
-         * BatchJobDescription.
+         * <p>The description of the batch job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         public Builder batchJobDescription(String batchJobDescription) {
             this.putQueryParameter("BatchJobDescription", batchJobDescription);
@@ -183,7 +186,11 @@ public class CreateBatchJobsRequest extends Request {
         }
 
         /**
+         * <p>The name of the batch job.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>First job group</p>
          */
         public Builder batchJobName(String batchJobName) {
             this.putQueryParameter("BatchJobName", batchJobName);
@@ -192,7 +199,10 @@ public class CreateBatchJobsRequest extends Request {
         }
 
         /**
-         * CallingNumber.
+         * <p>The list of calling numbers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;95187&quot;]</p>
          */
         public Builder callingNumber(java.util.List<String> callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -201,6 +211,7 @@ public class CreateBatchJobsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +224,13 @@ public class CreateBatchJobsRequest extends Request {
         }
 
         /**
-         * JobFilePath.
+         * <p>The URL to download the Excel file for the batch job.</p>
+         * <blockquote>
+         * <p>You can obtain this parameter from the Folder response parameter of the GetJobDataUploadParams operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>52e80b02-0126-4556-a1e6-ef5b3747ed53/a9a3ddc7-d7d7-48cd-82b5-b31bb5510e71_2a66f8ad-dfbb-4980-9b84-439171295a11.xlsx</p>
          */
         public Builder jobFilePath(String jobFilePath) {
             this.putQueryParameter("JobFilePath", jobFilePath);
@@ -222,7 +239,10 @@ public class CreateBatchJobsRequest extends Request {
         }
 
         /**
-         * ScenarioId.
+         * <p>The scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c6a668d1-3145-4048-9101-cb3678bb8884</p>
          */
         public Builder scenarioId(String scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);
@@ -231,7 +251,10 @@ public class CreateBatchJobsRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The script ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b9ff4e88-65f9-4eb3-987c-11ba51f3f24d</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -240,7 +263,10 @@ public class CreateBatchJobsRequest extends Request {
         }
 
         /**
-         * StrategyJson.
+         * <p>The JSON string of the job execution strategy. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;maxAttemptsPerDay&quot;:2,&quot;name&quot;:&quot;Strategy name&quot;,&quot;workingTime&quot;:[{&quot;beginTime&quot;:&quot;09:00:00&quot;,&quot;endTime&quot;:&quot;12:00:00&quot;},{&quot;beginTime&quot;:&quot;13:00:00&quot;,&quot;endTime&quot;:&quot;18:30:00&quot;}],&quot;minAttemptInterval&quot;:60}</p>
          */
         public Builder strategyJson(String strategyJson) {
             this.putQueryParameter("StrategyJson", strategyJson);
@@ -249,6 +275,11 @@ public class CreateBatchJobsRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the job is submitted. Valid values:</p>
+         * <ul>
+         * <li>true: The job is saved as a draft.</li>
+         * <li>false: The job is submitted.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -75,6 +75,7 @@ public class ListJobsRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
+         * <p>The list of job IDs. Note: A maximum of 99 job IDs can be specified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -145,7 +145,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
         } 
 
         /**
-         * BeebotRequestId.
+         * <p>The internal request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B219FCB-EC71-1F08-BB1B-0E87C20158C8</p>
          */
         public Builder beebotRequestId(String beebotRequestId) {
             this.beebotRequestId = beebotRequestId;
@@ -153,7 +156,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -161,7 +167,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -169,7 +178,7 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * Intent.
+         * <p>The intent information.</p>
          */
         public Builder intent(Intent intent) {
             this.intent = intent;
@@ -177,7 +186,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * IntentId.
+         * <p>The intent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10717802</p>
          */
         public Builder intentId(Long intentId) {
             this.intentId = intentId;
@@ -185,7 +197,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The API message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -193,7 +208,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +219,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -358,7 +379,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
             } 
 
             /**
-             * AliasName.
+             * <p>The intent alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Okay, got it</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -366,7 +390,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-21 10:29:59.+0800</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -374,7 +401,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserId.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1252504</p>
              */
             public Builder createUserId(String createUserId) {
                 this.createUserId = createUserId;
@@ -382,7 +412,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserName.
+             * <p>The username of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:xxx@voice-navigator-testonaliyun.com">xxx@voice-navigator-testonaliyun.com</a></p>
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -390,7 +423,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * IntentId.
+             * <p>The intent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10717802</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -398,7 +434,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * IntentName.
+             * <p>The intent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Got it</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -406,7 +445,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-21 15:52:57.+0800</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -414,7 +456,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUserId.
+             * <p>The ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1252504</p>
              */
             public Builder modifyUserId(String modifyUserId) {
                 this.modifyUserId = modifyUserId;
@@ -422,7 +467,10 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUserName.
+             * <p>The username of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:xxx@voice-navigator-testonaliyun.com">xxx@voice-navigator-testonaliyun.com</a></p>
              */
             public Builder modifyUserName(String modifyUserName) {
                 this.modifyUserName = modifyUserName;

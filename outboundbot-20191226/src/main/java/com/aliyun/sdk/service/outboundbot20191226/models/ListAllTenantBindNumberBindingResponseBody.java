@@ -119,7 +119,10 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned by the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4BEAB4B-C810-5386-B72A-1A35FF1E6B15</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +292,7 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
             } 
 
             /**
-             * BillingType.
+             * <p>The billing method of the number.</p>
              */
             public Builder billingType(String billingType) {
                 this.billingType = billingType;
@@ -285,7 +300,10 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
             }
 
             /**
-             * BindingId.
+             * <p>The binding ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b5bfb844-ce85-4779-bc8f-161fba46aa07</p>
              */
             public Builder bindingId(String bindingId) {
                 this.bindingId = bindingId;
@@ -293,7 +311,7 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNameList.
+             * <p>The list of instance names.</p>
              */
             public Builder instanceNameList(java.util.List<String> instanceNameList) {
                 this.instanceNameList = instanceNameList;
@@ -301,7 +319,10 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
             }
 
             /**
-             * Number.
+             * <p>The number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15005059355</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -309,7 +330,10 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
             }
 
             /**
-             * SerializedParams.
+             * <p>The policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;rateLimitPeriod\&quot;:\&quot;1\&quot;,\&quot;rateLimitCount\&quot;:\&quot;1\&quot;}</p>
              */
             public Builder serializedParams(String serializedParams) {
                 this.serializedParams = serializedParams;
@@ -317,7 +341,10 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
             }
 
             /**
-             * TrunkName.
+             * <p>The trunk name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Xiaoma-Public</p>
              */
             public Builder trunkName(String trunkName) {
                 this.trunkName = trunkName;
@@ -371,7 +398,7 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The list.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;

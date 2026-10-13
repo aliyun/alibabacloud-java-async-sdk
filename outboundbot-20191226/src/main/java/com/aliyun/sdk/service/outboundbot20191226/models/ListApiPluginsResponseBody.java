@@ -158,7 +158,7 @@ public class ListApiPluginsResponseBody extends TeaModel {
         } 
 
         /**
-         * ApiPlugins.
+         * <p>API plugin list</p>
          */
         public Builder apiPlugins(java.util.List<ApiPlugins> apiPlugins) {
             this.apiPlugins = apiPlugins;
@@ -166,7 +166,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>API status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +177,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +188,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API prompt message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +199,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -198,7 +210,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries displayed per page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -206,7 +221,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates success</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +243,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of entries</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -392,7 +416,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>Description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这个插件是用来xxx.....</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -400,7 +427,35 @@ public class ListApiPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * DraftedConfigJson.
+             * <p>Draft configuration</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;description&quot;: &quot;测试-2&quot;,
+             *     &quot;functionMeta&quot;: {
+             *         &quot;failoverRegionWeight&quot;: 0.5,
+             *         &quot;functionMetaId&quot;: &quot;a9127136087e4172b31b8f400430d63b&quot;,
+             *         &quot;functionName&quot;: &quot;yongyu-stream-2&quot;,
+             *         &quot;regionId&quot;: &quot;cn-hangzhou&quot;
+             *     },
+             *     &quot;inputParams&quot;: [{
+             *         &quot;debugValue&quot;: &quot;1112&quot;,
+             *         &quot;description&quot;: &quot;测试&quot;,
+             *         &quot;name&quot;: &quot;test&quot;,
+             *         &quot;required&quot;: false,
+             *         &quot;type&quot;: &quot;String&quot;,
+             *         &quot;valueSource&quot;: &quot;Var&quot;
+             *     }],
+             *     &quot;name&quot;: &quot;测试插件01&quot;,
+             *     &quot;outputParams&quot;: [{
+             *         &quot;description&quot;: &quot;直接返回API结果，并作为提示词输入给模型&quot;,
+             *         &quot;name&quot;: &quot;result&quot;,
+             *         &quot;type&quot;: &quot;String&quot;
+             *     }],
+             *     &quot;timeout&quot;: 5,
+             *     &quot;transitionContent&quot;: &quot;稍等，和您确认下信息。&quot;,
+             *     &quot;type&quot;: &quot;Function&quot;
+             * }</p>
              */
             public Builder draftedConfigJson(String draftedConfigJson) {
                 this.draftedConfigJson = draftedConfigJson;
@@ -408,7 +463,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1666230851000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -416,7 +474,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Update time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1641891940000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -424,7 +485,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7c0e5b5e-a839-4999-8301-2c7d07a1f16f</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -432,7 +496,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Plugin name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一个插件</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -440,7 +507,35 @@ public class ListApiPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishedConfigJson.
+             * <p>Published configuration</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;description&quot;: &quot;发布-2&quot;,
+             *     &quot;functionMeta&quot;: {
+             *         &quot;failoverRegionWeight&quot;: 0.5,
+             *         &quot;functionMetaId&quot;: &quot;c4af5815daaa485bb8118be6b2f14058&quot;,
+             *         &quot;functionName&quot;: &quot;yongyu-stream-2&quot;,
+             *         &quot;regionId&quot;: &quot;cn-hangzhou&quot;
+             *     },
+             *     &quot;inputParams&quot;: [{
+             *         &quot;debugValue&quot;: &quot;111&quot;,
+             *         &quot;description&quot;: &quot;发布&quot;,
+             *         &quot;name&quot;: &quot;test&quot;,
+             *         &quot;required&quot;: false,
+             *         &quot;type&quot;: &quot;String&quot;,
+             *         &quot;valueSource&quot;: &quot;Var&quot;
+             *     }],
+             *     &quot;name&quot;: &quot;发布插件&quot;,
+             *     &quot;outputParams&quot;: [{
+             *         &quot;description&quot;: &quot;直接返回API结果，并作为提示词输入给模型&quot;,
+             *         &quot;name&quot;: &quot;result&quot;,
+             *         &quot;type&quot;: &quot;String&quot;
+             *     }],
+             *     &quot;timeout&quot;: 5,
+             *     &quot;transitionContent&quot;: &quot;稍等，和您确认下信息。&quot;,
+             *     &quot;type&quot;: &quot;Function&quot;
+             * }</p>
              */
             public Builder publishedConfigJson(String publishedConfigJson) {
                 this.publishedConfigJson = publishedConfigJson;
@@ -448,7 +543,18 @@ public class ListApiPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Status.</p>
+             * <ul>
+             * <li><p>Drafted</p>
+             * </li>
+             * <li><p>Published</p>
+             * </li>
+             * <li><p>PublishedAndEdited</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Drafted</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -456,7 +562,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Function</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -464,7 +573,10 @@ public class ListApiPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>Unique plugin identifier</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e1a3c448-20cf-4586-8aa2-4cdca75f7c20</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

@@ -158,7 +158,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>API status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -182,7 +191,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -190,7 +202,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -198,7 +213,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +224,7 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * ScriptRecordings.
+         * <p>Recording list</p>
          */
         public Builder scriptRecordings(java.util.List<ScriptRecordings> scriptRecordings) {
             this.scriptRecordings = scriptRecordings;
@@ -214,7 +232,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +243,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -444,7 +468,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1744963749000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -452,7 +479,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Update time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1654601332000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -460,7 +490,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * GmtUpload.
+             * <p>Recording upload time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1654601332000</p>
              */
             public Builder gmtUpload(Long gmtUpload) {
                 this.gmtUpload = gmtUpload;
@@ -468,7 +501,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * InnerId.
+             * <p>The ID of the recording file within the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>000003</p>
              */
             public Builder innerId(String innerId) {
                 this.innerId = innerId;
@@ -476,7 +512,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ff0fb845-9f90-46d3-9716-d36b8a1e753a</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -484,7 +523,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingContent.
+             * <p>Recording content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>您好！</p>
              */
             public Builder recordingContent(String recordingContent) {
                 this.recordingContent = recordingContent;
@@ -492,7 +534,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingDuration.
+             * <p>Recording duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder recordingDuration(Integer recordingDuration) {
                 this.recordingDuration = recordingDuration;
@@ -500,7 +545,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingName.
+             * <p>Recording name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello.wav</p>
              */
             public Builder recordingName(String recordingName) {
                 this.recordingName = recordingName;
@@ -508,7 +556,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * RefId.
+             * <p>The unique ID of the recording.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0a77386e-6402-8d23-4adf-6ec13b3f404d</p>
              */
             public Builder refId(String refId) {
                 this.refId = refId;
@@ -516,7 +567,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>Scenario ID of the recording</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6019b692-fd9e-4adb-8877-cef6a297b234</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -524,7 +578,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>Recording status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder state(Integer state) {
                 this.state = state;
@@ -532,7 +589,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * StateExtend.
+             * <p>State extension</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder stateExtend(String stateExtend) {
                 this.stateExtend = stateExtend;
@@ -540,7 +600,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * StorageUuid.
+             * <p>Storage UUID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>393674ed-3b5d-db44-0fda-615d05210178</p>
              */
             public Builder storageUuid(String storageUuid) {
                 this.storageUuid = storageUuid;
@@ -548,7 +611,10 @@ public class ListScriptRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>Unique ID of the recording</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0a77386e-6402-8d23-4adf-6ec13b3f404d</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

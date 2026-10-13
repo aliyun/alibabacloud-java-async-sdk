@@ -119,7 +119,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
         }
 
         /**
-         * Script.
+         * <p>The script information.</p>
          */
         public Builder script(Script script) {
             this.script = script;
@@ -159,7 +171,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -329,7 +344,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
             } 
 
             /**
-             * DebugStatus.
+             * <p>The debug status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLISHED</p>
              */
             public Builder debugStatus(String debugStatus) {
                 this.debugStatus = debugStatus;
@@ -337,7 +355,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
             }
 
             /**
-             * Industry.
+             * <p>The industry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Finance</p>
              */
             public Builder industry(String industry) {
                 this.industry = industry;
@@ -345,7 +366,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
             }
 
             /**
-             * IsDebugDrafted.
+             * <p>Indicates whether the debug version is in draft state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDebugDrafted(Boolean isDebugDrafted) {
                 this.isDebugDrafted = isDebugDrafted;
@@ -353,7 +377,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
             }
 
             /**
-             * IsDrafted.
+             * <p>Indicates whether the application version is in draft state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDrafted(Boolean isDrafted) {
                 this.isDrafted = isDrafted;
@@ -361,7 +388,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The scene.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Telemarketing</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -369,7 +399,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptDescription.
+             * <p>The script description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sales script</p>
              */
             public Builder scriptDescription(String scriptDescription) {
                 this.scriptDescription = scriptDescription;
@@ -377,7 +410,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The script ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e4e2a770-b97b-465a-80d8-06dca008c503</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -385,7 +421,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptName.
+             * <p>The script name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sales script</p>
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -393,7 +432,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -401,7 +443,10 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578881227000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

@@ -75,6 +75,7 @@ public class DeleteScriptRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteScriptRequest extends Request {
         }
 
         /**
+         * <p>The ID of the script to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

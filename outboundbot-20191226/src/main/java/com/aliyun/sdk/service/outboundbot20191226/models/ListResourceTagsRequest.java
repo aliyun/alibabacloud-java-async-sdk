@@ -90,6 +90,7 @@ public class ListResourceTagsRequest extends Request {
         } 
 
         /**
+         * <p>Page number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class ListResourceTagsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to return.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class ListResourceTagsRequest extends Request {
         }
 
         /**
+         * <p>Resource type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

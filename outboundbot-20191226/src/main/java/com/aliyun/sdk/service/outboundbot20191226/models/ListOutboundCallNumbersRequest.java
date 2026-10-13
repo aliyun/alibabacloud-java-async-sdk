@@ -90,6 +90,7 @@ public class ListOutboundCallNumbersRequest extends Request {
         } 
 
         /**
+         * <p>ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class ListOutboundCallNumbersRequest extends Request {
         }
 
         /**
+         * <p>Page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class ListOutboundCallNumbersRequest extends Request {
         }
 
         /**
+         * <p>Number of entries to return on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,10 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>API status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Is successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +174,7 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
         }
 
         /**
-         * UploadParams.
+         * <p>List of upload parameters</p>
          */
         public Builder uploadParams(UploadParams uploadParams) {
             this.uploadParams = uploadParams;
@@ -277,7 +292,10 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessId.
+             * <p>OSS access ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAI****************</p>
              */
             public Builder accessId(String accessId) {
                 this.accessId = accessId;
@@ -285,7 +303,10 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Expire.
+             * <p>Expiration time (seconds)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1741855527</p>
              */
             public Builder expire(Integer expire) {
                 this.expire = expire;
@@ -293,7 +314,13 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Folder.
+             * <p>Upload folder</p>
+             * <blockquote>
+             * <p>This parameter\&quot;s value is used in request parameters for many APIs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>UPLOADED/SCRIPT/136a055e-***-46c6-853a-731b3a2973de/18dc6d79-338f-413c-a5a8-dcce5f05b41a_9bd7916d-a340-4925-a911-92390cbe0f33.json</p>
              */
             public Builder folder(String folder) {
                 this.folder = folder;
@@ -301,7 +328,10 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>Upload server URL</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cloudagentbot-online.oss-cn-hangzhou.aliyuncs.com">https://cloudagentbot-online.oss-cn-hangzhou.aliyuncs.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -309,7 +339,10 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>Upload policy</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJleHBpcmF0aW9uIjoiMjAyNS0wMy0xM1QwODo0NToyNy4zMzFaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsNTI0Mjg4MDBdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiVVBMT0FERUQvU0NSSVBULzEzNmEwNTVlLTNkMDctNDZjNi04NTNhLTczMWIzYTI5NzNkZS8iXV19</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -317,7 +350,10 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * <p>Signature information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MD4CHQCiECtjdsP+fstJDcqsPt+GbWxSWPzGQxeQiblzAh0AuidaKc5JY5AkHFIE+qiQI3izJQQbpUoG0paPTw==</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;

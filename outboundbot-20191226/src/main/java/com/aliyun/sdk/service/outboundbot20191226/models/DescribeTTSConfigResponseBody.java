@@ -119,7 +119,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>API status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f765d3ee-ec03-4765-b235-6877501d99d1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +174,7 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TTSConfig.
+         * <p>TTS configuration</p>
          */
         public Builder TTSConfig(TTSConfig TTSConfig) {
             this.TTSConfig = TTSConfig;
@@ -277,7 +292,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AppKey.
+             * <p>AppKey for invoking TTS</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p2SjSj4zxxxxxxxx</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -285,7 +303,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>947e0875-b5d4-4b33-b18c-7b2cf85bcb4f</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -293,7 +314,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NlsServiceType.
+             * <p>Service type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Managed</p>
              */
             public Builder nlsServiceType(String nlsServiceType) {
                 this.nlsServiceType = nlsServiceType;
@@ -301,7 +325,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SpeechRate.
+             * <p>Speech rate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-150</p>
              */
             public Builder speechRate(String speechRate) {
                 this.speechRate = speechRate;
@@ -309,7 +336,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Voice.
+             * <p>TTS model</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xiaoyun</p>
              */
             public Builder voice(String voice) {
                 this.voice = voice;
@@ -317,7 +347,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Volume.
+             * <p>Volume</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder volume(String volume) {
                 this.volume = volume;

@@ -119,7 +119,10 @@ public class TaskPreparingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class TaskPreparingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class TaskPreparingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succes</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class TaskPreparingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class TaskPreparingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +174,10 @@ public class TaskPreparingResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e4e2a770-b97b-465a-80d8-06dca008c503</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

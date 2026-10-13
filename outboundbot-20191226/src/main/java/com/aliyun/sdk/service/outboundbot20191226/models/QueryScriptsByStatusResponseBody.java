@@ -119,7 +119,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Scripts.
+         * <p>The list of scenarios.</p>
          */
         public Builder scripts(Scripts scripts) {
             this.scripts = scripts;
@@ -159,7 +171,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -355,7 +370,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * AppliedVersion.
+             * <p>The version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579055782000</p>
              */
             public Builder appliedVersion(String appliedVersion) {
                 this.appliedVersion = appliedVersion;
@@ -363,7 +381,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DebugStatus.
+             * <p>The debug status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLISHED</p>
              */
             public Builder debugStatus(String debugStatus) {
                 this.debugStatus = debugStatus;
@@ -371,7 +392,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DebugVersion.
+             * <p>The debug version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01bb2df2-a273-42bb-a214-d3c626b13296</p>
              */
             public Builder debugVersion(String debugVersion) {
                 this.debugVersion = debugVersion;
@@ -379,7 +403,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Industry.
+             * <p>The industry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>General</p>
              */
             public Builder industry(String industry) {
                 this.industry = industry;
@@ -387,7 +414,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * IsDebugDrafted.
+             * <p>Indicates whether the debug version is in the draft state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDebugDrafted(Boolean isDebugDrafted) {
                 this.isDebugDrafted = isDebugDrafted;
@@ -395,7 +425,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * IsDrafted.
+             * <p>Indicates whether the version is in the draft state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDrafted(Boolean isDrafted) {
                 this.isDrafted = isDrafted;
@@ -403,7 +436,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Telemarketing</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -411,7 +447,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptDescription.
+             * <p>The script description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sales script</p>
              */
             public Builder scriptDescription(String scriptDescription) {
                 this.scriptDescription = scriptDescription;
@@ -419,7 +458,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fa0e21e9-caab-4629-9121-1e341243d599</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -427,7 +469,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptName.
+             * <p>The scenario name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sales script</p>
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -435,7 +480,23 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the application version. Valid values:</p>
+             * <ul>
+             * <li><strong>DRAFTED</strong>: Draft.</li>
+             * <li><strong>INITIALIZE_IN_PROGRESS</strong>: Initializing.</li>
+             * <li><strong>PUBLISHED</strong>: Published.</li>
+             * <li><strong>PUBLISH_IN_PROGRESS</strong>: Publishing.</li>
+             * <li><strong>ROLLBACK_IN_PROGRESS</strong>: Rolling back.</li>
+             * <li><strong>EXAMINE_IN_PROGRESS</strong>: Pending review.</li>
+             * <li><strong>PUBLISHED_AND_EXAMINE_IN_PROGRESS</strong>: Published and pending review.</li>
+             * <li><strong>PUBLISH_FAILED</strong>: Publish failed.</li>
+             * <li><strong>ROLLBACK_FAILED</strong>: Rollback failed.</li>
+             * <li><strong>IMPORT_IN_PROGRESS</strong>: Importing.</li>
+             * <li><strong>IMPORT_FAILED</strong>: Import failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -443,7 +504,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579055782000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -536,7 +600,7 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The list of scenario details.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -544,7 +608,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -552,7 +619,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -560,7 +630,10 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

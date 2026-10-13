@@ -171,7 +171,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
         } 
 
         /**
-         * BeebotRequestId.
+         * <p>The internal request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497CFAFF-48CC-161A-AD2C-252DED569037</p>
          */
         public Builder beebotRequestId(String beebotRequestId) {
             this.beebotRequestId = beebotRequestId;
@@ -179,7 +182,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -187,7 +193,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -195,7 +204,7 @@ public class ListBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * Intents.
+         * <p>The list of intents.</p>
          */
         public Builder intents(java.util.List<Intents> intents) {
             this.intents = intents;
@@ -203,7 +212,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned by the API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -211,7 +223,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -219,7 +234,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -227,7 +245,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +256,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +267,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -400,7 +427,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
             } 
 
             /**
-             * AliasName.
+             * <p>The intent alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Okay, understood</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -408,7 +438,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-21 16:03:15.+0800</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -416,7 +449,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserId.
+             * <p>The ID of the user who created the intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1252504</p>
              */
             public Builder createUserId(String createUserId) {
                 this.createUserId = createUserId;
@@ -424,7 +460,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserName.
+             * <p>The name of the user who created the intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:xxx@voice-navigator-testonaliyun.com">xxx@voice-navigator-testonaliyun.com</a></p>
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -432,7 +471,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * IntentId.
+             * <p>The intent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10717802</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -440,7 +482,13 @@ public class ListBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * IntentName.
+             * <p>The intent name.</p>
+             * <blockquote>
+             * <p>The intent code, which is a unique identifier.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Understood</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -448,7 +496,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-21 16:03:15.+0800</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -456,7 +507,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUserId.
+             * <p>The ID of the user who modified the intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1252504</p>
              */
             public Builder modifyUserId(String modifyUserId) {
                 this.modifyUserId = modifyUserId;
@@ -464,7 +518,10 @@ public class ListBeebotIntentResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUserName.
+             * <p>The name of the user who modified the intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:xxx@voice-navigator-testonaliyun.com">xxx@voice-navigator-testonaliyun.com</a></p>
              */
             public Builder modifyUserName(String modifyUserName) {
                 this.modifyUserName = modifyUserName;

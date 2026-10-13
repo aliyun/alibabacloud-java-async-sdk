@@ -75,6 +75,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
+         * <p>The new resource group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The resource group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

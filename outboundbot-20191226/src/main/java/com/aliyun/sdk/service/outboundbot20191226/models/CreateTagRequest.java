@@ -105,6 +105,7 @@ public class CreateTagRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,10 +118,11 @@ public class CreateTagRequest extends Request {
         }
 
         /**
+         * <p>The ID of the script.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>797203ac-3874-422f-838f-d4cd63c72681</p>
+         * <p>0fe7f71c-8771-42ef-9bb1-19aa16ae7120</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -129,7 +131,11 @@ public class CreateTagRequest extends Request {
         }
 
         /**
+         * <p>The tag group name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>目标学历</p>
          */
         public Builder tagGroup(String tagGroup) {
             this.putQueryParameter("TagGroup", tagGroup);
@@ -138,7 +144,11 @@ public class CreateTagRequest extends Request {
         }
 
         /**
+         * <p>The tag name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>研究生</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

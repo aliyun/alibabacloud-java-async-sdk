@@ -119,7 +119,10 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The API response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>执行失败：查找元素或操作超时，outTaskId：trademark_regnew_public_cn-uax33hol2uu,flowId：null，nodeUUID：541b6c71-8cce-4ab0-af84-713ca9741821</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1B356EDC-F69A-53B0-B4AF-2AC42200684E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +257,10 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
             } 
 
             /**
-             * ExecCount.
+             * <p>The number of successfully executed operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder execCount(Integer execCount) {
                 this.execCount = execCount;
@@ -246,7 +268,10 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The API response message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>执行失败：查找元素或操作超时，outTaskId：trademark_regnew_public_cn-uax33hol2uu，flowId：null，nodeUUID：541b6c71-8cce-4ab0-af84-713ca9741821</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -254,7 +279,10 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the operation is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

@@ -145,7 +145,10 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,10 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +167,10 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +178,10 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         }
 
         /**
-         * OnlyWeekdays.
+         * <p>Indicates whether the time periods apply only to weekends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder onlyWeekdays(Boolean onlyWeekdays) {
             this.onlyWeekdays = onlyWeekdays;
@@ -177,7 +189,10 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         }
 
         /**
-         * OnlyWorkdays.
+         * <p>Indicates whether the time periods apply only to workdays.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder onlyWorkdays(Boolean onlyWorkdays) {
             this.onlyWorkdays = onlyWorkdays;
@@ -185,7 +200,10 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +211,10 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +222,10 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         }
 
         /**
-         * WorkingTime.
+         * <p>The execution time periods of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder workingTime(java.util.List<WorkingTime> workingTime) {
             this.workingTime = workingTime;
@@ -293,7 +317,10 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
             } 
 
             /**
-             * BeginTime.
+             * <p>The start time. Format: HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00:00</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -301,7 +328,10 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
             }
 
             /**
-             * BeginTimeMillis.
+             * <p>The daily start time in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder beginTimeMillis(Long beginTimeMillis) {
                 this.beginTimeMillis = beginTimeMillis;
@@ -309,7 +339,10 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. Format: HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -317,7 +350,10 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimeMillis.
+             * <p>The daily end time in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder endTimeMillis(Long endTimeMillis) {
                 this.endTimeMillis = endTimeMillis;

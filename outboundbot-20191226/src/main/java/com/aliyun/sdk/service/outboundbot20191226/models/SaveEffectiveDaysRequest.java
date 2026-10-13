@@ -88,7 +88,10 @@ public class SaveEffectiveDaysRequest extends Request {
         } 
 
         /**
-         * EffectiveDays.
+         * <p>The effective time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder effectiveDays(Integer effectiveDays) {
             this.putQueryParameter("EffectiveDays", effectiveDays);
@@ -97,6 +100,7 @@ public class SaveEffectiveDaysRequest extends Request {
         }
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,10 @@ public class SaveEffectiveDaysRequest extends Request {
         }
 
         /**
-         * StrategyLevel.
+         * <p>Policy level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder strategyLevel(Integer strategyLevel) {
             this.putQueryParameter("StrategyLevel", strategyLevel);

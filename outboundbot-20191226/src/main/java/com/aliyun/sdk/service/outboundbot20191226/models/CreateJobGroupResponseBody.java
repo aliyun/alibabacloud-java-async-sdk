@@ -119,7 +119,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class CreateJobGroupResponseBody extends TeaModel {
         }
 
         /**
-         * JobGroup.
+         * <p>The job information.</p>
          */
         public Builder jobGroup(JobGroup jobGroup) {
             this.jobGroup = jobGroup;
@@ -143,7 +149,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * FileHttpUrl.
+             * <p><strong>[Deprecated]</strong> The file URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://***.oss-cn-shanghai.aliyuncs.com/sample</p>
              */
             public Builder fileHttpUrl(String fileHttpUrl) {
                 this.fileHttpUrl = fileHttpUrl;
@@ -246,7 +264,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p><strong>[Deprecated]</strong> The progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -254,7 +275,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p><strong>[Deprecated]</strong> The job export status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -334,7 +358,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * EmptyNumberIgnore.
+             * <p>Indicates whether nonexistent numbers are skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder emptyNumberIgnore(Boolean emptyNumberIgnore) {
                 this.emptyNumberIgnore = emptyNumberIgnore;
@@ -342,7 +369,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * InArrearsIgnore.
+             * <p>Indicates whether numbers with overdue payments are skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder inArrearsIgnore(Boolean inArrearsIgnore) {
                 this.inArrearsIgnore = inArrearsIgnore;
@@ -350,7 +380,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OutOfServiceIgnore.
+             * <p>Indicates whether suspended numbers are skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder outOfServiceIgnore(Boolean outOfServiceIgnore) {
                 this.outOfServiceIgnore = outOfServiceIgnore;
@@ -417,7 +450,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * BeginTime.
+             * <p>The start time of the window. Format: HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09:00:00</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -425,7 +461,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the window. Format: HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -661,7 +700,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Customized.
+             * <p>The custom data of the strategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder customized(String customized) {
                 this.customized = customized;
@@ -669,7 +711,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2209702074000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -677,7 +722,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * FollowUpStrategy.
+             * <p>The follow-up processing method after the execution cycle ends. This field is no longer used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTINUE</p>
              */
             public Builder followUpStrategy(String followUpStrategy) {
                 this.followUpStrategy = followUpStrategy;
@@ -685,7 +733,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * IsTemplate.
+             * <p>Indicates whether the strategy is a template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isTemplate(Boolean isTemplate) {
                 this.isTemplate = isTemplate;
@@ -693,7 +744,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAttemptsPerDay.
+             * <p>The maximum number of call attempts per day when the call is not answered in the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxAttemptsPerDay(Integer maxAttemptsPerDay) {
                 this.maxAttemptsPerDay = maxAttemptsPerDay;
@@ -701,7 +755,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MinAttemptInterval.
+             * <p>The call interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder minAttemptInterval(Integer minAttemptInterval) {
                 this.minAttemptInterval = minAttemptInterval;
@@ -709,7 +766,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatBy.
+             * <p>The repetition method. Valid values: once (no repetition), day (daily repetition), week (weekly repetition), and month (monthly repetition).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Once</p>
              */
             public Builder repeatBy(String repeatBy) {
                 this.repeatBy = repeatBy;
@@ -717,7 +777,11 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatDays.
+             * <p>The execution days for repetition.</p>
+             * <ul>
+             * <li>If the repetition cycle <strong>RepeatBy</strong> is <strong>Week</strong>, 0 represents Sunday, and 1 to 6 represent Monday to Saturday.</li>
+             * <li>If the repetition cycle <strong>RepeatBy</strong> is <strong>Month</strong>, 1 to 31 represent the 1st to the 31st day. Months without the specified date are not executed. For example, if the 30th is selected, the job is not executed in February.</li>
+             * </ul>
              */
             public Builder repeatDays(java.util.List<String> repeatDays) {
                 this.repeatDays = repeatDays;
@@ -725,7 +789,15 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RoutingStrategy.
+             * <p>The number strategy. Valid values:</p>
+             * <ul>
+             * <li>None: no special rules.</li>
+             * <li>LocalFirst: local numbers first.</li>
+             * <li>LocalProvinceFirst: local province numbers first.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LocalFirst</p>
              */
             public Builder routingStrategy(String routingStrategy) {
                 this.routingStrategy = routingStrategy;
@@ -733,7 +805,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578550074000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -741,7 +816,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyDescription.
+             * <p>The strategy description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Collection strategy</p>
              */
             public Builder strategyDescription(String strategyDescription) {
                 this.strategyDescription = strategyDescription;
@@ -749,7 +827,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyId.
+             * <p>The strategy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc9a436e-03b0-4ada-8364-77ec2290aa39</p>
              */
             public Builder strategyId(String strategyId) {
                 this.strategyId = strategyId;
@@ -757,7 +838,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyName.
+             * <p>The strategy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Collection strategy</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -765,7 +849,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The strategy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Repeatable</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -773,7 +860,7 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingTime.
+             * <p>The execution time window of the strategy.</p>
              */
             public Builder workingTime(java.util.List<WorkingTime> workingTime) {
                 this.workingTime = workingTime;
@@ -1061,7 +1148,7 @@ public class CreateJobGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * CallingNumbers.
+             * <p>The list of caller numbers.</p>
              */
             public Builder callingNumbers(java.util.List<String> callingNumbers) {
                 this.callingNumbers = callingNumbers;
@@ -1069,7 +1156,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578550074361</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -1077,7 +1167,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ExportProgress.
+             * <p>The export progress.</p>
+             * <blockquote>
+             * <p><strong>[Deprecated]</strong> This field is deprecated in the current parameter.</p>
+             * </blockquote>
              */
             public Builder exportProgress(ExportProgress exportProgress) {
                 this.exportProgress = exportProgress;
@@ -1085,7 +1178,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * JobDataParsingTaskId.
+             * <p>The ID of the background asynchronous parsing operation corresponding to the uploaded job file. If no value exists, this parameter is not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>744ff448-2b4c-40d4-94ca-51f246905b0f</p>
              */
             public Builder jobDataParsingTaskId(String jobDataParsingTaskId) {
                 this.jobDataParsingTaskId = jobDataParsingTaskId;
@@ -1093,7 +1189,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * JobFilePath.
+             * <p>The OSS path of the job file. If no value exists, this parameter is not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UPLOADED/JOB/b3865dc3-40fa-4afd-9fe4-dc7cda305a24/229eac13-379d-4abe-96e0-8cf026b56c0b_template (1).xlsx</p>
              */
             public Builder jobFilePath(String jobFilePath) {
                 this.jobFilePath = jobFilePath;
@@ -1101,7 +1200,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupDescription.
+             * <p>The description of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>First job group</p>
              */
             public Builder jobGroupDescription(String jobGroupDescription) {
                 this.jobGroupDescription = jobGroupDescription;
@@ -1109,7 +1211,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c62e6789-28a8-41db-941e-171a01d3b3b9</p>
              */
             public Builder jobGroupId(String jobGroupId) {
                 this.jobGroupId = jobGroupId;
@@ -1117,7 +1222,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * JobGroupName.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>First job group</p>
              */
             public Builder jobGroupName(String jobGroupName) {
                 this.jobGroupName = jobGroupName;
@@ -1125,7 +1233,15 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MinConcurrency.
+             * <p>The guaranteed concurrency.</p>
+             * <ul>
+             * <li>When the job starts, a minimum of N concurrent calls are guaranteed.</li>
+             * <li>The sum of guaranteed concurrency for jobs of the same priority cannot exceed the instance concurrency.</li>
+             * <li>If the guaranteed concurrency is set to 0, the system intelligently allocates idle concurrency.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minConcurrency(Long minConcurrency) {
                 this.minConcurrency = minConcurrency;
@@ -1133,7 +1249,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1628425608429</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -1141,7 +1260,14 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the job group. Valid values:</p>
+             * <ul>
+             * <li><strong>Urgent</strong>: urgent job.</li>
+             * <li><strong>Daily</strong>: daily job.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -1149,7 +1275,7 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RecallCallingNumbers.
+             * <p>The list of caller numbers for redialing.</p>
              */
             public Builder recallCallingNumbers(java.util.List<String> recallCallingNumbers) {
                 this.recallCallingNumbers = recallCallingNumbers;
@@ -1157,7 +1283,7 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RecallStrategy.
+             * <p>The redial strategy.</p>
              */
             public Builder recallStrategy(RecallStrategy recallStrategy) {
                 this.recallStrategy = recallStrategy;
@@ -1165,7 +1291,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RingingDuration.
+             * <p>The ringing duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder ringingDuration(Long ringingDuration) {
                 this.ringingDuration = ringingDuration;
@@ -1173,7 +1302,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ScenarioId.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6cea9bed-63e6-439e-ae4c-b3333efff53d</p>
              */
             public Builder scenarioId(String scenarioId) {
                 this.scenarioId = scenarioId;
@@ -1181,7 +1313,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptName.
+             * <p>The script scenario name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Script</p>
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -1189,7 +1324,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptVersion.
+             * <p>The script scenario version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1628425608429</p>
              */
             public Builder scriptVersion(String scriptVersion) {
                 this.scriptVersion = scriptVersion;
@@ -1197,7 +1335,10 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The job status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduling</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1205,7 +1346,7 @@ public class CreateJobGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Strategy.
+             * <p>The job scheduling strategy.</p>
              */
             public Builder strategy(Strategy strategy) {
                 this.strategy = strategy;

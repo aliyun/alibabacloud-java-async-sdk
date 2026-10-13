@@ -119,7 +119,10 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The API response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1364f208-982d-4d0c-89aa-d56e22b47589</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e2d7a184-7d6c-45d4-ac24-34ab48f54669</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -246,7 +264,10 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -254,7 +275,10 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
             }
 
             /**
-             * IsBinding.
+             * <p>Indicates whether the number is in a bound state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isBinding(Boolean isBinding) {
                 this.isBinding = isBinding;
@@ -308,7 +332,7 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The job group description.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;

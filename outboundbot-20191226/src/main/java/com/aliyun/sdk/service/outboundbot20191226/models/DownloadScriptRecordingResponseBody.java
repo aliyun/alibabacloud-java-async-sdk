@@ -119,7 +119,10 @@ public class DownloadScriptRecordingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>API status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class DownloadScriptRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * DownloadParams.
+         * <p>Parameters</p>
          */
         public Builder downloadParams(DownloadParams downloadParams) {
             this.downloadParams = downloadParams;
@@ -135,7 +138,10 @@ public class DownloadScriptRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class DownloadScriptRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class DownloadScriptRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DownloadScriptRecordingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class DownloadScriptRecordingResponseBody extends TeaModel {
             } 
 
             /**
-             * FileName.
+             * <p>Recording file name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>281eb174-3865-41c1-9274-7b6813edadab.wav</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -233,7 +251,10 @@ public class DownloadScriptRecordingResponseBody extends TeaModel {
             }
 
             /**
-             * SignatureUrl.
+             * <p>A URL pointing to the recording file. Use this address for playback or download.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://tiangong-staging.oss-cn-shanghai.aliyuncs.com/record/281eb174-3865-41c1-9274-7b6813edadab.wav?Expires=1578624046&OSSAccessKeyId=LTAI****cqw&Signature=dL2dxWS6VcdZrvG9xOMOBMSP3Fg%3D">http://tiangong-staging.oss-cn-shanghai.aliyuncs.com/record/281eb174-3865-41c1-9274-7b6813edadab.wav?Expires=1578624046&amp;OSSAccessKeyId=LTAI****cqw&amp;Signature=dL2dxWS6VcdZrvG9xOMOBMSP3Fg%3D</a></p>
              */
             public Builder signatureUrl(String signatureUrl) {
                 this.signatureUrl = signatureUrl;

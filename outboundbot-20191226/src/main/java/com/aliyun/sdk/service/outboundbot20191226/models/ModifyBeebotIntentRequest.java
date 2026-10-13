@@ -105,6 +105,7 @@ public class ModifyBeebotIntentRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class ModifyBeebotIntentRequest extends Request {
         }
 
         /**
+         * <p>Intent definition</p>
          * <p>This parameter is required.</p>
          */
         public Builder intentDefinition(IntentDefinition intentDefinition) {
@@ -127,6 +129,7 @@ public class ModifyBeebotIntentRequest extends Request {
         }
 
         /**
+         * <p>Intent ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +142,7 @@ public class ModifyBeebotIntentRequest extends Request {
         }
 
         /**
+         * <p>Scenario ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +215,10 @@ public class ModifyBeebotIntentRequest extends Request {
             } 
 
             /**
-             * AliasName.
+             * <p>Intent alias</p>
+             * 
+             * <strong>example:</strong>
+             * <p>嗯明白了</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -219,7 +226,11 @@ public class ModifyBeebotIntentRequest extends Request {
             }
 
             /**
+             * <p>Intent name</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>知道了么</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;

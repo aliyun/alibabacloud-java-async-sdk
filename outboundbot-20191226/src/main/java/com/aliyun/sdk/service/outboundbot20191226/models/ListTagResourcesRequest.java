@@ -117,7 +117,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b949ae1f-01dc-4191-ae5a-70fbe6772fd8</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -126,6 +129,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>Deprecated.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +142,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The list of resource IDs. Valid values of n: 1 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceId.1=b949ae1f-01dc-4191-ae5a-70fbe6772fd8</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -147,10 +154,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>instance</p>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -159,7 +167,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -227,7 +235,10 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key. Valid values of n: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tag.1.Key=key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -235,7 +246,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. Valid values of n: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tag.1.Value=value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

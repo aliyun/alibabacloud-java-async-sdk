@@ -174,7 +174,10 @@ public class ListJobGroupsRequest extends Request {
         } 
 
         /**
-         * AsyncQuery.
+         * <p>Specifies whether to asynchronously obtain the query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder asyncQuery(Boolean asyncQuery) {
             this.putQueryParameter("AsyncQuery", asyncQuery);
@@ -183,7 +186,10 @@ public class ListJobGroupsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time to filter job groups by creation time. Use a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1579965079000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -192,6 +198,7 @@ public class ListJobGroupsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +211,20 @@ public class ListJobGroupsRequest extends Request {
         }
 
         /**
-         * JobGroupStatusFilter.
+         * <p>The filter condition. Filters by job status. You can specify multiple statuses separated by commas. The logical OR operator is used. Valid values:</p>
+         * <ul>
+         * <li><strong>Draft</strong>: Draft.</li>
+         * <li><strong>Scheduling</strong>: Scheduling.</li>
+         * <li><strong>Executing</strong>: Executing.</li>
+         * <li><strong>Completed</strong>: Completed.</li>
+         * <li><strong>Paused</strong>: Paused.</li>
+         * <li><strong>Failed</strong>: Failed.</li>
+         * <li><strong>Cancelled</strong>: Cancelled.</li>
+         * <li><strong>Initializing</strong>: Initializing.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Draft</p>
          */
         public Builder jobGroupStatusFilter(String jobGroupStatusFilter) {
             this.putQueryParameter("JobGroupStatusFilter", jobGroupStatusFilter);
@@ -213,7 +233,10 @@ public class ListJobGroupsRequest extends Request {
         }
 
         /**
-         * OnlyMinConcurrencyEnabled.
+         * <p>Specifies whether to query tasks with a valid minimum concurrency guarantee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder onlyMinConcurrencyEnabled(Boolean onlyMinConcurrencyEnabled) {
             this.putQueryParameter("OnlyMinConcurrencyEnabled", onlyMinConcurrencyEnabled);
@@ -222,6 +245,7 @@ public class ListJobGroupsRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,6 +258,7 @@ public class ListJobGroupsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +271,10 @@ public class ListJobGroupsRequest extends Request {
         }
 
         /**
-         * SearchText.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Interview</p>
          */
         public Builder searchText(String searchText) {
             this.putQueryParameter("SearchText", searchText);
@@ -255,7 +283,10 @@ public class ListJobGroupsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time to filter job groups by creation time. Use a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1578965079000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

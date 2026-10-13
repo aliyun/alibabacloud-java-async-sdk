@@ -119,7 +119,10 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * OutboundCallNumbers.
+         * <p>List of outbound call numbers.</p>
          */
         public Builder outboundCallNumbers(OutboundCallNumbers outboundCallNumbers) {
             this.outboundCallNumbers = outboundCallNumbers;
@@ -151,7 +160,10 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +266,10 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * Number.
+             * <p>Phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10088</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -259,7 +277,10 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundCallNumberId.
+             * <p>ID of the phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fa0e21e9-caab-4629-9121-1e341243d599</p>
              */
             public Builder outboundCallNumberId(String outboundCallNumberId) {
                 this.outboundCallNumberId = outboundCallNumberId;
@@ -267,7 +288,10 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * RateLimitCount.
+             * <p>Time window for rate limiting, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rateLimitCount(String rateLimitCount) {
                 this.rateLimitCount = rateLimitCount;
@@ -275,7 +299,10 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * RateLimitPeriod.
+             * <p>Maximum number of calls allowed in the time window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rateLimitPeriod(String rateLimitPeriod) {
                 this.rateLimitPeriod = rateLimitPeriod;
@@ -368,7 +395,7 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>List of outbound call number data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -376,7 +403,10 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -384,7 +414,10 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Number of entries on the page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -392,7 +425,10 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

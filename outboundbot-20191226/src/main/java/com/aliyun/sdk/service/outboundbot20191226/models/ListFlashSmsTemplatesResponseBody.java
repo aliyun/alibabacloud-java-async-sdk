@@ -119,7 +119,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC08CC41-6870-5594-939A-F758F057898F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call succeeded. A value of true indicates a successful call. A value of false indicates a failed call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * TemplateContent.
+             * <p>The content of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>您好，xxx来电。</p>
              */
             public Builder templateContent(String templateContent) {
                 this.templateContent = templateContent;
@@ -246,7 +264,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the flash SMS template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17*******************01</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -254,7 +275,10 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>模板1</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

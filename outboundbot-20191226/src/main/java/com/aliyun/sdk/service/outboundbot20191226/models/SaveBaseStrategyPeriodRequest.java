@@ -130,6 +130,7 @@ public class SaveBaseStrategyPeriodRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,10 @@ public class SaveBaseStrategyPeriodRequest extends Request {
         }
 
         /**
-         * OnlyWeekdays.
+         * <p>Make outbound calls only on weekdays. Defaults to false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder onlyWeekdays(Boolean onlyWeekdays) {
             this.putQueryParameter("OnlyWeekdays", onlyWeekdays);
@@ -151,7 +155,10 @@ public class SaveBaseStrategyPeriodRequest extends Request {
         }
 
         /**
-         * OnlyWorkdays.
+         * <p>Make outbound calls only on non-holiday days. Defaults to false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder onlyWorkdays(Boolean onlyWorkdays) {
             this.putQueryParameter("OnlyWorkdays", onlyWorkdays);
@@ -160,7 +167,13 @@ public class SaveBaseStrategyPeriodRequest extends Request {
         }
 
         /**
-         * StrategyLevel.
+         * <p>Policy level (required)</p>
+         * <ul>
+         * <li>2: Instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder strategyLevel(Integer strategyLevel) {
             this.putQueryParameter("StrategyLevel", strategyLevel);
@@ -169,7 +182,10 @@ public class SaveBaseStrategyPeriodRequest extends Request {
         }
 
         /**
-         * WorkingTime.
+         * <p>Running time (deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder workingTime(java.util.List<String> workingTime) {
             this.putQueryParameter("WorkingTime", workingTime);
@@ -178,7 +194,10 @@ public class SaveBaseStrategyPeriodRequest extends Request {
         }
 
         /**
-         * WorkingTimeFramesJson.
+         * <p>Running time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;beginTime&quot;:&quot;09:00:00&quot;,&quot;endTime&quot;:&quot;21:00:00&quot;}]</p>
          */
         public Builder workingTimeFramesJson(String workingTimeFramesJson) {
             this.putQueryParameter("WorkingTimeFramesJson", workingTimeFramesJson);

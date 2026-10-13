@@ -120,7 +120,14 @@ public class CreateScriptWaveformRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the recording file.</p>
+         * <blockquote>
+         * <p>Obtain this ID from the Folder parameter of the GetJobDataUploadParams operation.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6f91885fa24b4c408d8f4eb392fd8ae6</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -129,7 +136,11 @@ public class CreateScriptWaveformRequest extends Request {
         }
 
         /**
+         * <p>The name of the recording file.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>faaf8508-9542-4ac4-84a2-0ddcbb5f79a6 (2).json</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -138,7 +149,11 @@ public class CreateScriptWaveformRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2bfa5ae4-7185-4227-a3b8-328f26f11be1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +162,11 @@ public class CreateScriptWaveformRequest extends Request {
         }
 
         /**
+         * <p>The text of the script.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您好，您昨晚在李佳琦直播间下单的娜薇诗椰子水二代精华2支装还未付款，超时未支付会自动关闭订单，活动错过不再有奥。</p>
          */
         public Builder scriptContent(String scriptContent) {
             this.putQueryParameter("ScriptContent", scriptContent);
@@ -156,7 +175,11 @@ public class CreateScriptWaveformRequest extends Request {
         }
 
         /**
+         * <p>Scenario ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5c5d8c0-c0f1-48a7-be2b-dc46006d888a</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);

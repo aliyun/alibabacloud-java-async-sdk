@@ -164,6 +164,7 @@ public class RecordFailureRequest extends Request {
         } 
 
         /**
+         * <p>The start time of the call. The value is a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,6 +177,7 @@ public class RecordFailureRequest extends Request {
         }
 
         /**
+         * <p>The call ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +190,7 @@ public class RecordFailureRequest extends Request {
         }
 
         /**
+         * <p>The called number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,6 +203,7 @@ public class RecordFailureRequest extends Request {
         }
 
         /**
+         * <p>The calling number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,10 +216,16 @@ public class RecordFailureRequest extends Request {
         }
 
         /**
+         * <p>The cause of the failure. Valid values:</p>
+         * <ul>
+         * <li>NotExists: nonexistent number.</li>
+         * <li>Busy: busy.</li>
+         * <li>NotAnswered: not answered.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>OutOfService</p>
+         * <p>NotExists</p>
          */
         public Builder dispositionCode(String dispositionCode) {
             this.putQueryParameter("DispositionCode", dispositionCode);
@@ -224,7 +234,15 @@ public class RecordFailureRequest extends Request {
         }
 
         /**
-         * ExceptionCodes.
+         * <p>The error codes that occur when the outbound call fails. Valid values:</p>
+         * <ul>
+         * <li>NotExists: nonexistent number.</li>
+         * <li>Busy: busy.</li>
+         * <li>NotAnswered: not answered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NotExists</p>
          */
         public Builder exceptionCodes(String exceptionCodes) {
             this.putQueryParameter("ExceptionCodes", exceptionCodes);
@@ -233,6 +251,7 @@ public class RecordFailureRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,6 +264,7 @@ public class RecordFailureRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

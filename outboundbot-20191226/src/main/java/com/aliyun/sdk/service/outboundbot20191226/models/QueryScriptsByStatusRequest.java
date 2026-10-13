@@ -105,6 +105,7 @@ public class QueryScriptsByStatusRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class QueryScriptsByStatusRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class QueryScriptsByStatusRequest extends Request {
         }
 
         /**
+         * <p>The page size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class QueryScriptsByStatusRequest extends Request {
         }
 
         /**
+         * <p>The list of statuses.</p>
          * <p>This parameter is required.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {

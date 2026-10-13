@@ -119,7 +119,10 @@ public class CreateAnnotationMissionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CreateAnnotationMissionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class CreateAnnotationMissionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreateAnnotationMissionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. If the request was successful, &quot;success&quot; is returned. If the request failed, a specific error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Execution failed: element lookup or operation timed out, outTaskId:trademark_regnew_public_cn-uax33hol2uu,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class CreateAnnotationMissionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class CreateAnnotationMissionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. true: The call was successful. false: The call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class CreateAnnotationMissionResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>The additional information. If the request was successful, &quot;success&quot; is returned. If the request failed, a specific error code is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Execution failed: element lookup or operation timed out, outTaskId:trademark_regnew_public_cn-uax33hol2uu,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -233,7 +251,10 @@ public class CreateAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the operation was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

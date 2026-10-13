@@ -88,7 +88,10 @@ public class SaveAfterAnswerDelayPlaybackRequest extends Request {
         } 
 
         /**
-         * AfterAnswerDelayPlayback.
+         * <p>The playback time for delayed playback. If this parameter is not specified, the default value 0 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder afterAnswerDelayPlayback(Integer afterAnswerDelayPlayback) {
             this.putQueryParameter("AfterAnswerDelayPlayback", afterAnswerDelayPlayback);
@@ -97,6 +100,7 @@ public class SaveAfterAnswerDelayPlaybackRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,13 @@ public class SaveAfterAnswerDelayPlaybackRequest extends Request {
         }
 
         /**
-         * StrategyLevel.
+         * <p>The policy level (required). Valid values:</p>
+         * <ul>
+         * <li>2: instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder strategyLevel(Integer strategyLevel) {
             this.putQueryParameter("StrategyLevel", strategyLevel);

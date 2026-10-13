@@ -132,7 +132,10 @@ public class DeleteBeebotIntentLgfResponseBody extends TeaModel {
         } 
 
         /**
-         * BeebotRequestId.
+         * <p>Internal request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B219FCB-EC71-1F08-BB1B-0E87C20158C8</p>
          */
         public Builder beebotRequestId(String beebotRequestId) {
             this.beebotRequestId = beebotRequestId;
@@ -140,7 +143,10 @@ public class DeleteBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>API status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -148,7 +154,10 @@ public class DeleteBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +165,10 @@ public class DeleteBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * LgfId.
+         * <p>Utterance Template ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5666117</p>
          */
         public Builder lgfId(Long lgfId) {
             this.lgfId = lgfId;
@@ -164,7 +176,10 @@ public class DeleteBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +187,10 @@ public class DeleteBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +198,10 @@ public class DeleteBeebotIntentLgfResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Is successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

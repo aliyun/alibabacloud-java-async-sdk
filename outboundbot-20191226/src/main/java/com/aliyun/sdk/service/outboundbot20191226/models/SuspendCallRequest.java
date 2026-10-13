@@ -88,7 +88,10 @@ public class SuspendCallRequest extends Request {
         } 
 
         /**
-         * CalledNumbers.
+         * <p>The list of called numbers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder calledNumbers(java.util.List<String> calledNumbers) {
             this.putQueryParameter("CalledNumbers", calledNumbers);
@@ -97,7 +100,10 @@ public class SuspendCallRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The task group ID. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f745881b-343d-43e4-9c51-31b7b063031c</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -106,6 +112,7 @@ public class SuspendCallRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

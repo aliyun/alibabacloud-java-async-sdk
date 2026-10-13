@@ -119,7 +119,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDR \&quot;job-c7b8a817-b8e8-40f3-b7ad-f28dcea218ff\&quot; doesn\&quot;t exists.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -433,7 +448,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             } 
 
             /**
-             * AnnotationMissionDataSourceType.
+             * <p>The data source of the annotation task. Valid values: 1: Outbound call. 2: Navigation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder annotationMissionDataSourceType(Integer annotationMissionDataSourceType) {
                 this.annotationMissionDataSourceType = annotationMissionDataSourceType;
@@ -441,7 +459,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionDebugDataSourceList.
+             * <p>The list of debug data sources for the annotation task.</p>
+             * <blockquote>
+             * <p>Note: An additional 0 is included in the response. The return values are [0,1], [0,2], or [0,1,2].</p>
+             * </blockquote>
              */
             public Builder annotationMissionDebugDataSourceList(java.util.List<Integer> annotationMissionDebugDataSourceList) {
                 this.annotationMissionDebugDataSourceList = annotationMissionDebugDataSourceList;
@@ -449,7 +470,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
              */
             public Builder annotationMissionId(String annotationMissionId) {
                 this.annotationMissionId = annotationMissionId;
@@ -457,7 +481,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Experience scenario - Move vehicle - Annotation task - 20230220-141347</p>
              */
             public Builder annotationMissionName(String annotationMissionName) {
                 this.annotationMissionName = annotationMissionName;
@@ -465,7 +492,15 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationStatus.
+             * <p>The annotation status. Valid values:</p>
+             * <ul>
+             * <li>1: In progress.</li>
+             * <li>2: Completed.</li>
+             * <li>3: Closed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder annotationStatus(Integer annotationStatus) {
                 this.annotationStatus = annotationStatus;
@@ -473,7 +508,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationTimeEndFilter.
+             * <p>The end time of the conversation time query condition for the annotation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684511999000</p>
              */
             public Builder conversationTimeEndFilter(Long conversationTimeEndFilter) {
                 this.conversationTimeEndFilter = conversationTimeEndFilter;
@@ -481,7 +519,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationTimeStartFilter.
+             * <p>The start time of the conversation time query condition for the annotation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683216000000</p>
              */
             public Builder conversationTimeStartFilter(Long conversationTimeStartFilter) {
                 this.conversationTimeStartFilter = conversationTimeStartFilter;
@@ -489,7 +530,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1676170339515</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -497,7 +541,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeOtherMissionSession.
+             * <p>Indicates whether to exclude call records that have been annotated in other tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder excludeOtherMissionSession(Boolean excludeOtherMissionSession) {
                 this.excludeOtherMissionSession = excludeOtherMissionSession;
@@ -505,7 +552,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The completion time of the annotation task. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683443903785</p>
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -513,7 +563,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32be9d94-1346-4c4a-a4d0-ccd379f87013</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -521,7 +574,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingCount.
+             * <p>The maximum limit for the sampling count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder samplingCount(Integer samplingCount) {
                 this.samplingCount = samplingCount;
@@ -529,7 +585,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingDescription.
+             * <p>The sampling description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Annotation</p>
              */
             public Builder samplingDescription(String samplingDescription) {
                 this.samplingDescription = samplingDescription;
@@ -537,7 +596,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingRate.
+             * <p>The sampling rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder samplingRate(Integer samplingRate) {
                 this.samplingRate = samplingRate;
@@ -545,7 +607,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingType.
+             * <p>The sampling type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder samplingType(Integer samplingType) {
                 this.samplingType = samplingType;
@@ -553,7 +618,20 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionEndReasonFilterList.
+             * <p>The list of call end reasons used to create the task. Valid values:</p>
+             * <ul>
+             * <li>1: Normal completion.</li>
+             * <li>2: Hang up by the robot after unrecognized input.</li>
+             * <li>3: Hang up due to silence timeout.</li>
+             * <li>4: Hang up by the user after unrecognized input.</li>
+             * <li>5: Hang up by the user without a reason.</li>
+             * <li>6: Transfer to a human agent due to intent match.</li>
+             * <li>7: Transfer to a human agent after unrecognized input.</li>
+             * <li>8: No interaction on the user side.</li>
+             * <li>9: Interruption due to a system exception.</li>
+             * <li>10: Transfer to IVR due to intent match.</li>
+             * <li>11: Transfer to IVR after unrecognized input.</li>
+             * </ul>
              */
             public Builder sessionEndReasonFilterList(java.util.List<Integer> sessionEndReasonFilterList) {
                 this.sessionEndReasonFilterList = sessionEndReasonFilterList;
@@ -561,7 +639,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionFinishCount.
+             * <p>The number of completed sessions in the annotation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sessionFinishCount(Integer sessionFinishCount) {
                 this.sessionFinishCount = sessionFinishCount;
@@ -569,7 +650,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionTotalCount.
+             * <p>The total number of sessions in the annotation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sessionTotalCount(Integer sessionTotalCount) {
                 this.sessionTotalCount = sessionTotalCount;
@@ -701,7 +785,7 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             } 
 
             /**
-             * AnnotationMissionList.
+             * <p>The list of annotation tasks.</p>
              */
             public Builder annotationMissionList(java.util.List<AnnotationMissionList> annotationMissionList) {
                 this.annotationMissionList = annotationMissionList;
@@ -709,7 +793,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CDR \&quot;job-c7b8a817-b8e8-40f3-b7ad-f28dcea218ff\&quot; doesn\&quot;t exists.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -717,7 +804,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * PageIndex.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageIndex(Long pageIndex) {
                 this.pageIndex = pageIndex;
@@ -725,7 +815,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -733,7 +826,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -741,7 +837,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -749,7 +848,10 @@ public class ListAnnotationMissionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageCount.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalPageCount(Long totalPageCount) {
                 this.totalPageCount = totalPageCount;

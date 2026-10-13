@@ -119,7 +119,10 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned by the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDR \&quot;job-efbaeefc-4d45-4e79-83f7-b33b0769c969\&quot; doesn\&quot;t exists.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +292,10 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
             } 
 
             /**
-             * AnnotationMissionTagInfoDescription.
+             * <p>The tag description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User complaint</p>
              */
             public Builder annotationMissionTagInfoDescription(String annotationMissionTagInfoDescription) {
                 this.annotationMissionTagInfoDescription = annotationMissionTagInfoDescription;
@@ -285,7 +303,10 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionTagInfoId.
+             * <p>The tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e1ee87ea-ebad-4079-aebb-1c56a4ef0c06</p>
              */
             public Builder annotationMissionTagInfoId(String annotationMissionTagInfoId) {
                 this.annotationMissionTagInfoId = annotationMissionTagInfoId;
@@ -293,7 +314,10 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * AnnotationMissionTagInfoName.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User complaint</p>
              */
             public Builder annotationMissionTagInfoName(String annotationMissionTagInfoName) {
                 this.annotationMissionTagInfoName = annotationMissionTagInfoName;
@@ -301,7 +325,10 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Delete.
+             * <p>Indicates whether the tag is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder delete(Boolean delete) {
                 this.delete = delete;
@@ -309,7 +336,10 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3c3b8d1d-deff-48d9-9318-addc80ae5b1e</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -317,7 +347,10 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DING_ORG_dingbd9daecdb7aaed3bffe93478753d9884</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -397,7 +430,7 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
             } 
 
             /**
-             * AnnotationMissionTagInfoList.
+             * <p>The list of tags.</p>
              */
             public Builder annotationMissionTagInfoList(java.util.List<AnnotationMissionTagInfoList> annotationMissionTagInfoList) {
                 this.annotationMissionTagInfoList = annotationMissionTagInfoList;
@@ -405,7 +438,10 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The message returned by the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CDR \&quot;job-efbaeefc-4d45-4e79-83f7-b33b0769c969\&quot; doesn\&quot;t exists.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -413,7 +449,10 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

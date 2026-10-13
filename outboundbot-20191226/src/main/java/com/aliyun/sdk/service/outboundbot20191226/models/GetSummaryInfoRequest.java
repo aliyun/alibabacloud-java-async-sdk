@@ -59,7 +59,10 @@ public class GetSummaryInfoRequest extends Request {
         } 
 
         /**
-         * InstanceIdList.
+         * <p>List of instance IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);

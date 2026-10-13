@@ -132,7 +132,10 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>API status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -148,7 +154,7 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>maxConcurrent</p>
+         * <p>Maximum number of concurrent conversations</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -159,7 +165,10 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>API message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -167,7 +176,10 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RemainingConcurrent.
+         * <p>Remaining concurrent conversations</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder remainingConcurrent(Integer remainingConcurrent) {
             this.remainingConcurrent = remainingConcurrent;
@@ -175,7 +187,10 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +198,10 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates if the call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

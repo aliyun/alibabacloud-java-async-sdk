@@ -132,7 +132,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -148,7 +154,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +165,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5a865b03-d2b9-4ef9-be98-f21fa0d93744</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +176,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -172,7 +187,7 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TagGroups.
+         * <p>The list of tag groups.</p>
          */
         public Builder tagGroups(java.util.List<TagGroups> tagGroups) {
             this.tagGroups = tagGroups;
@@ -180,7 +195,7 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -272,7 +287,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * ScriptId.
+             * <p>The script ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>365b955d-6f4d-4ab5-a6e1-9a301307f4b1</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -280,7 +298,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TagGroup.
+             * <p>The name of the tag group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>标签组</p>
              */
             public Builder tagGroup(String tagGroup) {
                 this.tagGroup = tagGroup;
@@ -288,7 +309,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TagGroupId.
+             * <p>The ID of the tag group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54629be9-0746-464a-ab59-4830242cf644</p>
              */
             public Builder tagGroupId(String tagGroupId) {
                 this.tagGroupId = tagGroupId;
@@ -296,7 +320,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TagGroupIndex.
+             * <p>The position of the tag group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tagGroupIndex(Integer tagGroupIndex) {
                 this.tagGroupIndex = tagGroupIndex;
@@ -402,7 +429,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * ScriptId.
+             * <p>The script ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8a4c6d3d-5ed6-44ca-b779-16c20f8862be</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -410,7 +440,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TagGroup.
+             * <p>The name of the tag group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>当前学历</p>
              */
             public Builder tagGroup(String tagGroup) {
                 this.tagGroup = tagGroup;
@@ -418,7 +451,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The unique ID of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19b23e92-4ee3-4129-8c2e-e1968670d887</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;
@@ -426,7 +462,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TagIndex.
+             * <p>The index of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tagIndex(Integer tagIndex) {
                 this.tagIndex = tagIndex;
@@ -434,7 +473,10 @@ public class ModifyTagGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>The name of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>本科</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;

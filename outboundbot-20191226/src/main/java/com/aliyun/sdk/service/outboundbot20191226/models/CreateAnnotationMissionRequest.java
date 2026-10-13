@@ -297,7 +297,13 @@ public class CreateAnnotationMissionRequest extends Request {
         } 
 
         /**
-         * AgentId.
+         * <p>The agent ID.</p>
+         * <blockquote>
+         * <p>You can obtain this value from the DescribeInstance operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1168702</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -306,7 +312,13 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * AgentKey.
+         * <p>The business space key.</p>
+         * <blockquote>
+         * <p>You can obtain this value from the DescribeInstance operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>9137ab9c27044921860030adf8590ec4_p_outbound_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -315,7 +327,13 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * AnnotationMissionDataSourceType.
+         * <p>The data type of the annotation task.</p>
+         * <ul>
+         * <li>1: outbound call</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder annotationMissionDataSourceType(Integer annotationMissionDataSourceType) {
             this.putQueryParameter("AnnotationMissionDataSourceType", annotationMissionDataSourceType);
@@ -324,7 +342,10 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * AnnotationMissionDebugDataSourceList.
+         * <p>The annotation data source list.</p>
+         * <blockquote>
+         * <p>This parameter has the same function as AnnotationMissionDebugDataSourceListJsonString. Specify either one of them.</p>
+         * </blockquote>
          */
         public Builder annotationMissionDebugDataSourceList(java.util.List<Integer> annotationMissionDebugDataSourceList) {
             String annotationMissionDebugDataSourceListShrink = shrink(annotationMissionDebugDataSourceList, "AnnotationMissionDebugDataSourceList", "json");
@@ -334,7 +355,17 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * AnnotationMissionDebugDataSourceListJsonString.
+         * <p>The debug data in JSON format.</p>
+         * <blockquote>
+         * <p>This parameter has the same function as AnnotationMissionDebugDataSourceList. Specify either one of them. The format is [1], [2], or [1,2]. You can specify multiple filter conditions in the array. The enum values for the filter conditions are as follows.</p>
+         * </blockquote>
+         * <ul>
+         * <li>1: outbound call task</li>
+         * <li>2: test task</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[1]</p>
          */
         public Builder annotationMissionDebugDataSourceListJsonString(String annotationMissionDebugDataSourceListJsonString) {
             this.putQueryParameter("AnnotationMissionDebugDataSourceListJsonString", annotationMissionDebugDataSourceListJsonString);
@@ -343,7 +374,10 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * AnnotationMissionName.
+         * <p>The name of the annotation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CarSaleInquiry-AnnotationTask-20230506-112934</p>
          */
         public Builder annotationMissionName(String annotationMissionName) {
             this.putQueryParameter("AnnotationMissionName", annotationMissionName);
@@ -352,7 +386,13 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * ChatbotId.
+         * <p>The robot ID.</p>
+         * <blockquote>
+         * <p>You can obtain this value from the DescribeScript operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-fqEnFZBYnb</p>
          */
         public Builder chatbotId(String chatbotId) {
             this.putQueryParameter("ChatbotId", chatbotId);
@@ -361,7 +401,10 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * ConversationTimeEndFilter.
+         * <p>The end time for the call time filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1682956800000</p>
          */
         public Builder conversationTimeEndFilter(Long conversationTimeEndFilter) {
             this.putQueryParameter("ConversationTimeEndFilter", conversationTimeEndFilter);
@@ -370,7 +413,10 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * ConversationTimeStartFilter.
+         * <p>The start time for the call time filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683302400000</p>
          */
         public Builder conversationTimeStartFilter(Long conversationTimeStartFilter) {
             this.putQueryParameter("ConversationTimeStartFilter", conversationTimeStartFilter);
@@ -379,7 +425,10 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * ExcludeOtherSession.
+         * <p>Specifies whether to exclude call records that have been annotated by other tasks. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder excludeOtherSession(Boolean excludeOtherSession) {
             this.putQueryParameter("ExcludeOtherSession", excludeOtherSession);
@@ -388,7 +437,17 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * Finished.
+         * <p>Specifies whether the business ended normally.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when SessionEndReasonFilterList is not specified.</p>
+         * <ul>
+         * <li>true: normal call records</li>
+         * <li>false: abnormal call records</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder finished(Boolean finished) {
             this.putQueryParameter("Finished", finished);
@@ -397,7 +456,10 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bf3b51a5-e88a-4636-98b0-1a34725a085b</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -406,7 +468,13 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * SamplingCount.
+         * <p>The custom sampling quantity.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when SamplingType is set to 3. This parameter is required in that case. Otherwise, the creation fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder samplingCount(Integer samplingCount) {
             this.putQueryParameter("SamplingCount", samplingCount);
@@ -415,7 +483,13 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * SamplingRate.
+         * <p>The sampling ratio.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when SamplingType is set to 2. This parameter is required in that case. Otherwise, the creation fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder samplingRate(Integer samplingRate) {
             this.putQueryParameter("SamplingRate", samplingRate);
@@ -424,7 +498,15 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * SamplingType.
+         * <p>The sampling type.</p>
+         * <ul>
+         * <li>1: full</li>
+         * <li>2: percentage</li>
+         * <li>3: custom quantity</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder samplingType(Integer samplingType) {
             this.putQueryParameter("SamplingType", samplingType);
@@ -433,7 +515,10 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The outbound call scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6236f21e-2e04-4dad-a47b-ae77e6a48325</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -442,7 +527,10 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * SessionEndReasonFilterList.
+         * <p>The call result status filter conditions.</p>
+         * <blockquote>
+         * <p>This parameter has the same function as SessionEndReasonFilterListJsonString. Specify either one of them.</p>
+         * </blockquote>
          */
         public Builder sessionEndReasonFilterList(java.util.List<Integer> sessionEndReasonFilterList) {
             this.putQueryParameter("SessionEndReasonFilterList", sessionEndReasonFilterList);
@@ -451,7 +539,27 @@ public class CreateAnnotationMissionRequest extends Request {
         }
 
         /**
-         * SessionEndReasonFilterListJsonString.
+         * <p>The call result status filter conditions.</p>
+         * <blockquote>
+         * <p>This parameter has the same function as SessionEndReasonFilterList. Specify either one of them. The format is [1], [1,2], etc. You can specify multiple filter conditions in the array. The enum values for the filter conditions are as follows.</p>
+         * </blockquote>
+         * <p><strong>Call record filter enum values</strong></p>
+         * <ul>
+         * <li>1: normal completion</li>
+         * <li>2: robot hung up after recognition rejection</li>
+         * <li>3: hung up due to silence timeout</li>
+         * <li>4: user hung up after recognition rejection</li>
+         * <li>5: user hung up without reason</li>
+         * <li>6: transferred to agent by intent match</li>
+         * <li>7: transferred to agent by recognition rejection</li>
+         * <li>8: no interaction on user side</li>
+         * <li>9: system exception interruption</li>
+         * <li>10: transferred to IVR by intent match</li>
+         * <li>11: transferred to IVR by recognition rejection</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[1]</p>
          */
         public Builder sessionEndReasonFilterListJsonString(String sessionEndReasonFilterListJsonString) {
             this.putQueryParameter("SessionEndReasonFilterListJsonString", sessionEndReasonFilterListJsonString);

@@ -105,6 +105,7 @@ public class ModifyBeebotIntentUserSayRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class ModifyBeebotIntentUserSayRequest extends Request {
         }
 
         /**
+         * <p>The scenario ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class ModifyBeebotIntentUserSayRequest extends Request {
         }
 
         /**
+         * <p>The definition of the user utterance.</p>
          * <p>This parameter is required.</p>
          */
         public Builder userSayDefinition(UserSayDefinition userSayDefinition) {
@@ -139,6 +142,7 @@ public class ModifyBeebotIntentUserSayRequest extends Request {
         }
 
         /**
+         * <p>The user utterance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +216,11 @@ public class ModifyBeebotIntentUserSayRequest extends Request {
             } 
 
             /**
+             * <p>The content of the user utterance.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你知道xxxxx么？</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -220,6 +228,7 @@ public class ModifyBeebotIntentUserSayRequest extends Request {
             }
 
             /**
+             * <p>The intent ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

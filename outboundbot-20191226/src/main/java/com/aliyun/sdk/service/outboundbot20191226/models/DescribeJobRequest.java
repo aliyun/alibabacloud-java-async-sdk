@@ -89,6 +89,7 @@ public class DescribeJobRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DescribeJobRequest extends Request {
         }
 
         /**
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DescribeJobRequest extends Request {
         }
 
         /**
-         * WithScript.
+         * <p>Specifies whether to return the task scenario information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withScript(Boolean withScript) {
             this.putQueryParameter("WithScript", withScript);

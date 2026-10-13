@@ -161,6 +161,7 @@ public class ListScriptRecordingRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID of the recording</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,6 +174,7 @@ public class ListScriptRecordingRequest extends Request {
         }
 
         /**
+         * <p>Page number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +187,7 @@ public class ListScriptRecordingRequest extends Request {
         }
 
         /**
+         * <p>Number of entries per page</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +200,10 @@ public class ListScriptRecordingRequest extends Request {
         }
 
         /**
-         * RefIdsJson.
+         * <p>Recording ID list (JSON format), same as UuidsJson</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;d9fad189-760b-47b9-837f-aeabb4fc9109\&quot;]</p>
          */
         public Builder refIdsJson(String refIdsJson) {
             this.putQueryParameter("RefIdsJson", refIdsJson);
@@ -206,6 +212,7 @@ public class ListScriptRecordingRequest extends Request {
         }
 
         /**
+         * <p>Scenario ID of the recording</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +225,10 @@ public class ListScriptRecordingRequest extends Request {
         }
 
         /**
-         * Search.
+         * <p>Search criteria: Search by recording name or content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您好</p>
          */
         public Builder search(String search) {
             this.putQueryParameter("Search", search);
@@ -227,7 +237,32 @@ public class ListScriptRecordingRequest extends Request {
         }
 
         /**
-         * StatesJson.
+         * <p>Recording status</p>
+         * <ul>
+         * <li><p>Validating: 1</p>
+         * </li>
+         * <li><p>Validation failed: 2</p>
+         * </li>
+         * <li><p>Processing: 3</p>
+         * </li>
+         * <li><p>Processing failed: 4</p>
+         * </li>
+         * <li><p>Reviewing: 5</p>
+         * </li>
+         * <li><p>Review failed: 6</p>
+         * </li>
+         * <li><p>Publish failed: 7</p>
+         * </li>
+         * <li><p>Published: 8</p>
+         * </li>
+         * <li><p>Pending publish: 9</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *      &quot;8&quot;
+         * ]</p>
          */
         public Builder statesJson(String statesJson) {
             this.putQueryParameter("StatesJson", statesJson);
@@ -236,7 +271,13 @@ public class ListScriptRecordingRequest extends Request {
         }
 
         /**
-         * UuidsJson.
+         * <p>Recording ID list</p>
+         * <blockquote>
+         * <p>This is a list of unique recording IDs. If left blank, all recordings display.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;d17d5bfa-4972-4389-9718-f9602edabe48&quot;]</p>
          */
         public Builder uuidsJson(String uuidsJson) {
             this.putQueryParameter("UuidsJson", uuidsJson);

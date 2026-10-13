@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBeebotIntentUserSayResponse> createBeebotIntentUserSay(CreateBeebotIntentUserSayRequest request);
 
     /**
+     * @param request the request parameters of CreateCustomScriptTemplate  CreateCustomScriptTemplateRequest
+     * @return CreateCustomScriptTemplateResponse
+     */
+    CompletableFuture<CreateCustomScriptTemplateResponse> createCustomScriptTemplate(CreateCustomScriptTemplateRequest request);
+
+    /**
      * @param request the request parameters of CreateDialogueFlow  CreateDialogueFlowRequest
      * @return CreateDialogueFlowResponse
      */
@@ -140,12 +146,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateJobGroupExportTaskResponse> createJobGroupExportTask(CreateJobGroupExportTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateNumber  CreateNumberRequest
+     * @return CreateNumberResponse
+     */
+    CompletableFuture<CreateNumberResponse> createNumber(CreateNumberRequest request);
+
+    /**
      * @param request the request parameters of CreateScript  CreateScriptRequest
      * @return CreateScriptResponse
      */
     CompletableFuture<CreateScriptResponse> createScript(CreateScriptRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>**</p>
+     * 
      * @param request the request parameters of CreateScriptWaveform  CreateScriptWaveformRequest
      * @return CreateScriptWaveformResponse
      */
@@ -168,6 +183,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateTenantKeyResponse
      */
     CompletableFuture<CreateTenantKeyResponse> createTenantKey(CreateTenantKeyRequest request);
+
+    /**
+     * @param request the request parameters of CreateVoiceClone  CreateVoiceCloneRequest
+     * @return CreateVoiceCloneResponse
+     */
+    CompletableFuture<CreateVoiceCloneResponse> createVoiceClone(CreateVoiceCloneRequest request);
 
     /**
      * @param request the request parameters of DeleteAgentProfiles  DeleteAgentProfilesRequest
@@ -210,6 +231,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteContactWhiteListResponse
      */
     CompletableFuture<DeleteContactWhiteListResponse> deleteContactWhiteList(DeleteContactWhiteListRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCustomScriptTemplate  DeleteCustomScriptTemplateRequest
+     * @return DeleteCustomScriptTemplateResponse
+     */
+    CompletableFuture<DeleteCustomScriptTemplateResponse> deleteCustomScriptTemplate(DeleteCustomScriptTemplateRequest request);
 
     /**
      * @param request the request parameters of DeleteDialogueFlow  DeleteDialogueFlowRequest
@@ -266,6 +293,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteScriptWaveformResponse> deleteScriptWaveform(DeleteScriptWaveformRequest request);
 
     /**
+     * @param request the request parameters of DeleteVoiceClone  DeleteVoiceCloneRequest
+     * @return DeleteVoiceCloneResponse
+     */
+    CompletableFuture<DeleteVoiceCloneResponse> deleteVoiceClone(DeleteVoiceCloneRequest request);
+
+    /**
      * <b>description</b> :
      * <hr>
      * 
@@ -287,6 +320,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDsReportsResponse> describeDsReports(DescribeDsReportsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>**</p>
+     * 
      * @param request the request parameters of DescribeGlobalQuestion  DescribeGlobalQuestionRequest
      * @return DescribeGlobalQuestionResponse
      */
@@ -605,6 +641,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListChatbotInstancesResponse> listChatbotInstances(ListChatbotInstancesRequest request);
 
     /**
+     * @param request the request parameters of ListCustomScriptTemplates  ListCustomScriptTemplatesRequest
+     * @return ListCustomScriptTemplatesResponse
+     */
+    CompletableFuture<ListCustomScriptTemplatesResponse> listCustomScriptTemplates(ListCustomScriptTemplatesRequest request);
+
+    /**
      * @param request the request parameters of ListDialogueFlows  ListDialogueFlowsRequest
      * @return ListDialogueFlowsResponse
      */
@@ -701,6 +743,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListScriptVariablesResponse> listScriptVariables(ListScriptVariablesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>**</p>
+     * 
      * @param request the request parameters of ListScriptVoiceConfigs  ListScriptVoiceConfigsRequest
      * @return ListScriptVoiceConfigsResponse
      */
@@ -713,6 +758,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListScriptsResponse> listScripts(ListScriptsRequest request);
 
     /**
+     * @param request the request parameters of ListSipTrunks  ListSipTrunksRequest
+     * @return ListSipTrunksResponse
+     */
+    CompletableFuture<ListSipTrunksResponse> listSipTrunks(ListSipTrunksRequest request);
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -723,6 +774,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTagsResponse
      */
     CompletableFuture<ListTagsResponse> listTags(ListTagsRequest request);
+
+    /**
+     * @param request the request parameters of ListVoiceClone  ListVoiceCloneRequest
+     * @return ListVoiceCloneResponse
+     */
+    CompletableFuture<ListVoiceCloneResponse> listVoiceClone(ListVoiceCloneRequest request);
 
     /**
      * @param request the request parameters of ModifyAgentProfile  ModifyAgentProfileRequest
@@ -809,6 +866,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyScriptResponse> modifyScript(ModifyScriptRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>**</p>
+     * 
      * @param request the request parameters of ModifyScriptVoiceConfig  ModifyScriptVoiceConfigRequest
      * @return ModifyScriptVoiceConfigResponse
      */
@@ -825,6 +885,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyTagGroupsResponse
      */
     CompletableFuture<ModifyTagGroupsResponse> modifyTagGroups(ModifyTagGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ModifyVoiceClone  ModifyVoiceCloneRequest
+     * @return ModifyVoiceCloneResponse
+     */
+    CompletableFuture<ModifyVoiceCloneResponse> modifyVoiceClone(ModifyVoiceCloneRequest request);
 
     /**
      * @param request the request parameters of PublishScript  PublishScriptRequest
@@ -953,6 +1019,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitRecordingResponse> submitRecording(SubmitRecordingRequest request);
 
     /**
+     * @param request the request parameters of SubmitScriptPreReviewResult  SubmitScriptPreReviewResultRequest
+     * @return SubmitScriptPreReviewResultResponse
+     */
+    CompletableFuture<SubmitScriptPreReviewResultResponse> submitScriptPreReviewResult(SubmitScriptPreReviewResultRequest request);
+
+    /**
      * @param request the request parameters of SubmitScriptReview  SubmitScriptReviewRequest
      * @return SubmitScriptReviewResponse
      */
@@ -978,9 +1050,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>\<em>\</em></p>
      * 
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse

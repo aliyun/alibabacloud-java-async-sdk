@@ -119,7 +119,10 @@ public class AssignJobsAsyncResponseBody extends TeaModel {
         } 
 
         /**
-         * AsyncTaskId.
+         * <p>The asynchronous task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12f3dd08-0c55-44ce-9b64-e69d35ed3a76</p>
          */
         public Builder asyncTaskId(String asyncTaskId) {
             this.asyncTaskId = asyncTaskId;
@@ -127,7 +130,10 @@ public class AssignJobsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,10 @@ public class AssignJobsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class AssignJobsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The API response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class AssignJobsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class AssignJobsAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

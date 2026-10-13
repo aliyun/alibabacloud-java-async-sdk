@@ -119,7 +119,10 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobGroup.
+         * <p>Job group information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder jobGroup(JobGroup jobGroup) {
             this.jobGroup = jobGroup;
@@ -143,7 +152,10 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +269,10 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>Job group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -259,7 +280,10 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
             }
 
             /**
-             * MinConcurrency.
+             * <p>Minimum concurrency</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minConcurrency(Long minConcurrency) {
                 this.minConcurrency = minConcurrency;
@@ -267,7 +291,10 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>Job priority</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -275,7 +302,10 @@ public class CreateBatchRepeatJobResponseBody extends TeaModel {
             }
 
             /**
-             * RingingDuration.
+             * <p>Ringing duration</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder ringingDuration(Long ringingDuration) {
                 this.ringingDuration = ringingDuration;

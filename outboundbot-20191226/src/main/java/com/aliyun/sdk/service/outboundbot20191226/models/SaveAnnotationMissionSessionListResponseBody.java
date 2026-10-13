@@ -119,7 +119,10 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Execution failed: element not found or operation timed out, outTaskId:trademark_regnew_public_cn-zz4310rp1lb, flowId:null, nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76E93048-F90F-57B7-BD46-6097611A706D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +231,10 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
             } 
 
             /**
-             * AnnotationMissionSessionListJsonString.
+             * <p>The script content of the approval application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder annotationMissionSessionListJsonString(String annotationMissionSessionListJsonString) {
                 this.annotationMissionSessionListJsonString = annotationMissionSessionListJsonString;
@@ -305,7 +327,10 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>The message returned by the API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Execution failed: element not found or operation timed out, outTaskId:trademark_regnew_public_cn-zz4310rp1lb, flowId:null, nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -313,7 +338,7 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
             }
 
             /**
-             * MessageList.
+             * <p>The message list.</p>
              */
             public Builder messageList(java.util.List<String> messageList) {
                 this.messageList = messageList;
@@ -321,7 +346,7 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
             }
 
             /**
-             * SaveAnnotationMissionSessionListRequest.
+             * <p>The request result.</p>
              */
             public Builder saveAnnotationMissionSessionListRequest(SaveAnnotationMissionSessionListRequest saveAnnotationMissionSessionListRequest) {
                 this.saveAnnotationMissionSessionListRequest = saveAnnotationMissionSessionListRequest;
@@ -329,7 +354,10 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the request is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

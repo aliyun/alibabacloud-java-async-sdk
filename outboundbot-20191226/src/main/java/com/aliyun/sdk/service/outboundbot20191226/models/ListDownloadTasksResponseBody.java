@@ -119,7 +119,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * DownloadTasks.
+         * <p>The list of download tasks.</p>
          */
         public Builder downloadTasks(DownloadTasks downloadTasks) {
             this.downloadTasks = downloadTasks;
@@ -135,7 +138,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned by the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>904CFA7B-8AD9-50FF-9B3E-404B20B9EE31</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +266,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01f8d11abdb9406996c0c46e7*******</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -259,7 +277,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p><strong>[Deprecated]</strong> The completion progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -267,7 +288,18 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The file status. Valid values:</p>
+             * <ul>
+             * <li>Pending: Pending.</li>
+             * <li>InProgress: In progress.</li>
+             * <li>Finished: Finished.</li>
+             * <li>Failed: Failed.</li>
+             * <li>Expired: Expired.</li>
+             * <li>Cancelled: Cancelled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Empty</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -275,7 +307,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GUI-TEST-Create risk</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -381,7 +416,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * DownloadTaskFiles.
+             * <p>The list of files for the download task.</p>
              */
             public Builder downloadTaskFiles(java.util.List<DownloadTaskFiles> downloadTaskFiles) {
                 this.downloadTaskFiles = downloadTaskFiles;
@@ -389,7 +424,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1646792941</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -397,7 +435,18 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The export status. Valid values:</p>
+             * <ul>
+             * <li>Pending: Pending.</li>
+             * <li>InProgress: In progress.</li>
+             * <li>Finished: Finished.</li>
+             * <li>Failed: Failed.</li>
+             * <li>Expired: Expired.</li>
+             * <li>Cancelled: Cancelled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Empty</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -405,7 +454,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6b0e547e-501c-480a-812f-d27e28e74f9a</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -413,7 +465,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GUI-TEST-Create risk</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -506,7 +561,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The array of download tasks.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -514,7 +569,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -522,7 +580,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -530,7 +591,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

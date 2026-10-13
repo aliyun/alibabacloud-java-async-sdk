@@ -189,7 +189,11 @@ public class ModifyBatchJobsRequest extends Request {
         } 
 
         /**
+         * <p>The job name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>催收作业组</p>
          */
         public Builder batchJobName(String batchJobName) {
             this.putQueryParameter("BatchJobName", batchJobName);
@@ -198,7 +202,10 @@ public class ModifyBatchJobsRequest extends Request {
         }
 
         /**
-         * CallingNumber.
+         * <p>The calling numbers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;95187&quot;]</p>
          */
         public Builder callingNumber(java.util.List<String> callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -207,7 +214,10 @@ public class ModifyBatchJobsRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the job group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是催收作业组-01</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -216,6 +226,7 @@ public class ModifyBatchJobsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +239,10 @@ public class ModifyBatchJobsRequest extends Request {
         }
 
         /**
-         * JobFilePath.
+         * <p>The download URL of the Excel file for the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52e80b02-0126-4556-a1e6-ef5b3747ed53/a9a3ddc7-d7d7-48cd-82b5-b31bb5510e71_2a66f8ad-dfbb-4980-9b84-439171295a11.xlsx</p>
          */
         public Builder jobFilePath(String jobFilePath) {
             this.putQueryParameter("JobFilePath", jobFilePath);
@@ -237,6 +251,7 @@ public class ModifyBatchJobsRequest extends Request {
         }
 
         /**
+         * <p>The job group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +264,10 @@ public class ModifyBatchJobsRequest extends Request {
         }
 
         /**
-         * ScenarioId.
+         * <p>The scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c6a668d1-3145-4048-9101-cb3678bb8884</p>
          */
         public Builder scenarioId(String scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);
@@ -258,7 +276,10 @@ public class ModifyBatchJobsRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The script ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7d820242-f4f0-4d2e-ae35-b424c41cbc5b</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -267,7 +288,10 @@ public class ModifyBatchJobsRequest extends Request {
         }
 
         /**
-         * StrategyJson.
+         * <p>The policy in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;maxAttemptsPerDay&quot;:2,&quot;name&quot;:&quot;策略名字&quot;,&quot;workingTime&quot;:[{&quot;beginTime&quot;:&quot;09:00:00&quot;,&quot;endTime&quot;:&quot;12:00:00&quot;},{&quot;beginTime&quot;:&quot;13:00:00&quot;,&quot;endTime&quot;:&quot;18:30:00&quot;}],&quot;minAttemptInterval&quot;:60}</p>
          */
         public Builder strategyJson(String strategyJson) {
             this.putQueryParameter("StrategyJson", strategyJson);
@@ -276,6 +300,7 @@ public class ModifyBatchJobsRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to submit the job. \<code>false\\</code> submits the job. \<code>true\\</code> saves the job as a draft.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -90,6 +90,7 @@ public class CreateBeebotIntentLgfRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class CreateBeebotIntentLgfRequest extends Request {
         }
 
         /**
+         * <p>The LGF definition.</p>
          * <p>This parameter is required.</p>
          */
         public Builder lgfDefinition(LgfDefinition lgfDefinition) {
@@ -112,6 +114,7 @@ public class CreateBeebotIntentLgfRequest extends Request {
         }
 
         /**
+         * <p>The scenario ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +188,7 @@ public class CreateBeebotIntentLgfRequest extends Request {
             } 
 
             /**
+             * <p>The intent ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -196,7 +200,11 @@ public class CreateBeebotIntentLgfRequest extends Request {
             }
 
             /**
+             * <p>Intent configuration</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>我是一个问法模版</p>
              */
             public Builder ruleText(String ruleText) {
                 this.ruleText = ruleText;

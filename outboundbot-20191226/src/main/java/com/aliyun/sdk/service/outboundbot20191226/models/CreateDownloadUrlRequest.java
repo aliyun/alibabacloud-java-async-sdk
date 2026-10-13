@@ -75,6 +75,10 @@ public class CreateDownloadUrlRequest extends Request {
         } 
 
         /**
+         * <p>The download task ID.</p>
+         * <blockquote>
+         * <p>This parameter is obtained from the TaskId response parameter of the ListDownloadTasks operation.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +91,10 @@ public class CreateDownloadUrlRequest extends Request {
         }
 
         /**
+         * <p>The file ID.</p>
+         * <blockquote>
+         * <p>This parameter is obtained from the FileId response parameter of the ListDownloadTasks operation.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -158,7 +158,10 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,10 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * JobGroupId.
+         * <p>The task group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d3550dd1-360d-4fe5-b4b2-667a4a664dab</p>
          */
         public Builder jobGroupId(String jobGroupId) {
             this.jobGroupId = jobGroupId;
@@ -182,7 +191,7 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * JobsId.
+         * <p>The list of job IDs.</p>
          */
         public Builder jobsId(java.util.List<String> jobsId) {
             this.jobsId = jobsId;
@@ -190,7 +199,10 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The API message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +210,10 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +221,10 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +232,10 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * Timeout.
+         * <p>Indicates whether the asynchronous task timed out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder timeout(Boolean timeout) {
             this.timeout = timeout;
@@ -222,7 +243,10 @@ public class GetAssignJobsAsyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * Valid.
+         * <p>Indicates whether the result has been fully generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder valid(Boolean valid) {
             this.valid = valid;

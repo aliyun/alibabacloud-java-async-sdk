@@ -131,6 +131,7 @@ public class CancelJobsRequest extends Request {
         } 
 
         /**
+         * <p>Specifies whether to cancel all jobs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class CancelJobsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +157,10 @@ public class CancelJobsRequest extends Request {
         }
 
         /**
-         * JobGroupId.
+         * <p>A filter condition. The task group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9f84892d-721a-4069-9975-668c8164d64e</p>
          */
         public Builder jobGroupId(String jobGroupId) {
             this.putQueryParameter("JobGroupId", jobGroupId);
@@ -164,7 +169,13 @@ public class CancelJobsRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>A filter condition. The job ID.</p>
+         * <blockquote>
+         * <p>The JobId parameter is required when the All parameter is set to false.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>edf45790-7200-4cbc-b157-8c0a5f400b75</p>
          */
         public Builder jobId(java.util.List<String> jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -173,7 +184,13 @@ public class CancelJobsRequest extends Request {
         }
 
         /**
-         * JobReferenceId.
+         * <p>A filter condition. The reference ID of the job.</p>
+         * <blockquote>
+         * <p>This is the ReferenceId that you specified when you uploaded the contact list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4a875676-b136-4087-88b4-de67c61fed69</p>
          */
         public Builder jobReferenceId(java.util.List<String> jobReferenceId) {
             this.putQueryParameter("JobReferenceId", jobReferenceId);
@@ -182,7 +199,13 @@ public class CancelJobsRequest extends Request {
         }
 
         /**
-         * ScenarioId.
+         * <p>A filter condition. The scenario ID.</p>
+         * <blockquote>
+         * <p>Obtain this ID by calling the DescribeJobGroup operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>35641113-b2f6-464e-a772-25c25554798b</p>
          */
         public Builder scenarioId(String scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);

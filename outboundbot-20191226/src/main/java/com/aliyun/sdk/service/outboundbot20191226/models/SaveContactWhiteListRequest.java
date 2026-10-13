@@ -88,7 +88,10 @@ public class SaveContactWhiteListRequest extends Request {
         } 
 
         /**
-         * ContactWhiteListList.
+         * <p>The contact whitelist. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder contactWhiteListList(java.util.List<String> contactWhiteListList) {
             this.putQueryParameter("ContactWhiteListList", contactWhiteListList);
@@ -97,7 +100,10 @@ public class SaveContactWhiteListRequest extends Request {
         }
 
         /**
-         * ContactWhiteListsJson.
+         * <p>The whitelist. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;phoneNumber&quot;:&quot;132322&quot;,&quot;remark&quot;:&quot;123321&quot;,&quot;name&quot;:&quot;ccc1&quot;,&quot;creator&quot;:&quot;ccc222&quot;}]</p>
          */
         public Builder contactWhiteListsJson(String contactWhiteListsJson) {
             this.putQueryParameter("ContactWhiteListsJson", contactWhiteListsJson);
@@ -106,6 +112,7 @@ public class SaveContactWhiteListRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

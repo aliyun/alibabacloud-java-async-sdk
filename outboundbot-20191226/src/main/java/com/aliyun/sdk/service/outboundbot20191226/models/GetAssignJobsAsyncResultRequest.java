@@ -60,6 +60,7 @@ public class GetAssignJobsAsyncResultRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the asynchronous task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

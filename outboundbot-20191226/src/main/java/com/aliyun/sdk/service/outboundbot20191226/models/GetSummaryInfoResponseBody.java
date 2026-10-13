@@ -119,7 +119,10 @@ public class GetSummaryInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * AgentBotInstanceSummaryList.
+         * <p>List of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder agentBotInstanceSummaryList(java.util.List<AgentBotInstanceSummaryList> agentBotInstanceSummaryList) {
             this.agentBotInstanceSummaryList = agentBotInstanceSummaryList;
@@ -127,7 +130,10 @@ public class GetSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,10 @@ public class GetSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class GetSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class GetSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class GetSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +269,10 @@ public class GetSummaryInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -259,7 +280,10 @@ public class GetSummaryInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCallCount.
+             * <p>Total number of outbound calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalCallCount(Long totalCallCount) {
                 this.totalCallCount = totalCallCount;
@@ -267,7 +291,10 @@ public class GetSummaryInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCallTime.
+             * <p>Total call duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCallTime(Long totalCallTime) {
                 this.totalCallTime = totalCallTime;
@@ -275,7 +302,10 @@ public class GetSummaryInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UsedRecordingStorageSpace.
+             * <p>Used recording storage space, in MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedRecordingStorageSpace(Integer usedRecordingStorageSpace) {
                 this.usedRecordingStorageSpace = usedRecordingStorageSpace;

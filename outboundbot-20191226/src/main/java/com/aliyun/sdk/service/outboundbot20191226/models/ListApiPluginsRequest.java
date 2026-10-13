@@ -104,6 +104,7 @@ public class ListApiPluginsRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class ListApiPluginsRequest extends Request {
         }
 
         /**
+         * <p>Page number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class ListApiPluginsRequest extends Request {
         }
 
         /**
+         * <p>Number of entries per page</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class ListApiPluginsRequest extends Request {
         }
 
         /**
-         * UuidsJson.
+         * <p>API plugin unique identifiers</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;d17d5bfa-4972-4389-9718-f9602edabe48&quot;]</p>
          */
         public Builder uuidsJson(String uuidsJson) {
             this.putQueryParameter("UuidsJson", uuidsJson);

@@ -90,6 +90,10 @@ public class DeleteGlobalQuestionRequest extends Request {
         } 
 
         /**
+         * <p>The global question ID.</p>
+         * <blockquote>
+         * <p>You can call the ListGlobalQuestions operation to obtain the ID.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +106,7 @@ public class DeleteGlobalQuestionRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,10 +119,11 @@ public class DeleteGlobalQuestionRequest extends Request {
         }
 
         /**
+         * <p>The script ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>aa279896-64a6-4182-864c-4f2b04ec8d17</p>
+         * <p>0fe7f71c-8771-42ef-9bb1-19aa16ae7120</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);

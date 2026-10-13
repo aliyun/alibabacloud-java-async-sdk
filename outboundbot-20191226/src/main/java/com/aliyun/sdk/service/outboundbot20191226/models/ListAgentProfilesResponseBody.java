@@ -119,7 +119,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListAgentProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -420,7 +435,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentProfileId.
+             * <p>The ID of the agent configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37ca3ca1ac4b4e57adf3da5b5d939d04</p>
              */
             public Builder agentProfileId(String agentProfileId) {
                 this.agentProfileId = agentProfileId;
@@ -428,7 +446,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * AgentProfileTemplateId.
+             * <p>The ID of the agent template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-survey</p>
              */
             public Builder agentProfileTemplateId(String agentProfileTemplateId) {
                 this.agentProfileTemplateId = agentProfileTemplateId;
@@ -436,7 +457,7 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>agent type</p>
+             * <p>The agent type.</p>
              * 
              * <strong>example:</strong>
              * <p>“”</p>
@@ -447,7 +468,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the configuration was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1721701525327</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -455,7 +479,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一个充满智慧的智能体。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -463,7 +490,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e49ad122-15a1-443a-a102-84a78a93be79</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -471,7 +501,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * InstructionJson.
+             * <p>The instruction configuration in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;type&quot;:&quot;TransferToAgent&quot;,&quot;instructions&quot;:[{&quot;code&quot;:&quot;Transfer0&quot;,&quot;skillGroupId&quot;:&quot;123&quot;,&quot;skillGroupName&quot;:&quot;123&quot;}],&quot;timeoutEnable&quot;:false},{&quot;type&quot;:&quot;CollectNumber&quot;,&quot;instructions&quot;:[]}]</p>
              */
             public Builder instructionJson(String instructionJson) {
                 this.instructionJson = instructionJson;
@@ -479,7 +512,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * LabelsJson.
+             * <p>The label definitions in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;name\&quot;:\&quot;是否送达\&quot;,\&quot;description\&quot;:\&quot;购买的家电是否已经送达\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;是\\\&quot;,\\\&quot;否\\\&quot;]\&quot;},{\&quot;name\&quot;:\&quot;预约上门时间\&quot;,\&quot;description\&quot;:\&quot;收集客户期望的上门安装时间\&quot;,\&quot;valueList\&quot;:\&quot;[]\&quot;}]</p>
              */
             public Builder labelsJson(String labelsJson) {
                 this.labelsJson = labelsJson;
@@ -487,7 +523,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model_002</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -495,7 +534,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * ModelConfig.
+             * <p>The model configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder modelConfig(String modelConfig) {
                 this.modelConfig = modelConfig;
@@ -503,7 +545,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * Prompt.
+             * <p>The prompt for the professional pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -511,7 +556,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * PromptJson.
+             * <p>The agent configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;name&quot;:&quot;小x&quot;,&quot;gender&quot;:&quot;男&quot;,&quot;age&quot;:18,&quot;role&quot;:&quot;游戏推广员&quot;,&quot;communicationStyle&quot;:[&quot;亲切&quot;],&quot;goals&quot;:&quot;你好&quot;,&quot;background&quot;:&quot;不是很好&quot;,&quot;openingPrompt&quot;:&quot;你好，我是xxx&quot;}</p>
              */
             public Builder promptJson(String promptJson) {
                 this.promptJson = promptJson;
@@ -519,7 +567,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * Scenario.
+             * <p>The scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试场景</p>
              */
             public Builder scenario(String scenario) {
                 this.scenario = scenario;
@@ -527,7 +578,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43972417-0657-452a-81c2-c59d8245a9b2</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -535,7 +589,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * System.
+             * <p>Indicates whether this is a system template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder system(Boolean system) {
                 this.system = system;
@@ -543,7 +600,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the configuration was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1721701525327</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -551,7 +611,10 @@ public class ListAgentProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * VariablesJson.
+             * <p>The variable configuration in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;name\&quot;:\&quot;name\&quot;,\&quot;description\&quot;:\&quot;客户姓名\&quot;},{\&quot;name\&quot;:\&quot;gender\&quot;,\&quot;description\&quot;:\&quot;客户性别\&quot;}]</p>
              */
             public Builder variablesJson(String variablesJson) {
                 this.variablesJson = variablesJson;
