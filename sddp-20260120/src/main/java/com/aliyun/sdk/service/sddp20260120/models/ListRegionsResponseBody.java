@@ -67,7 +67,7 @@ public class ListRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * RegionList.
+         * <p>The list of regions where assets reside.</p>
          */
         public Builder regionList(java.util.List<RegionList> regionList) {
             this.regionList = regionList;
@@ -75,7 +75,10 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used to locate this API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class ListRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * RegionId.
+             * <p>The region ID where the assets reside.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -149,7 +155,10 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * <p>The name of the region where the assets reside.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China North 3 (Zhangjiakou)</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

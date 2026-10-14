@@ -166,7 +166,16 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
-         * AuthRole.
+         * <p>The column encryption access permissions. Valid values:</p>
+         * <ul>
+         * <li>fullAccess: plaintext access.</li>
+         * <li>restrictedAccess: restricted access.</li>
+         * <li>noneAccess: decryption denied.</li>
+         * </ul>
+         * <p>noneAccess applies only to ApsaraDB RDS for MySQL instances whose active key pattern is client_key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fullAccess</p>
          */
         public Builder authRole(String authRole) {
             this.putQueryParameter("AuthRole", authRole);
@@ -175,7 +184,10 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time of the plaintext access permissions. Specify a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC. This parameter is required only when ExpireTimeOperation is set to SET. The value must be later than the current time and no later than 2145953410000. The server stores the value with second-level precision. Do not specify this parameter when ExpireTimeOperation is set to PRESERVE or CLEAR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2145953410000</p>
          */
         public Builder expireTime(Long expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -184,7 +196,16 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
-         * ExpireTimeOperation.
+         * <p>The action to take on the permission expiration time. Valid values:</p>
+         * <ul>
+         * <li>PRESERVE: Retains the existing expiration time.</li>
+         * <li>CLEAR: Clears the expiration time.</li>
+         * <li>SET: Sets the expiration time to the value specified by ExpireTime.</li>
+         * </ul>
+         * <p>Default value: PRESERVE. Only fullAccess supports configuring a validity period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRESERVE</p>
          */
         public Builder expireTimeOperation(String expireTimeOperation) {
             this.putQueryParameter("ExpireTimeOperation", expireTimeOperation);
@@ -193,7 +214,14 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response description. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -202,7 +230,10 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -211,7 +242,16 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The cloud product type identifier. Valid values:</p>
+         * <ul>
+         * <li>5: RDS.</li>
+         * <li>8: POLARDB.</li>
+         * <li>27: PolarDBX2.</li>
+         * </ul>
+         * <p>If both ProductId and ProductCode are specified, they must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -220,7 +260,7 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
-         * UserList.
+         * <p>The list of database accounts for which to set permissions.</p>
          */
         public Builder userList(java.util.List<UserList> userList) {
             String userListShrink = shrink(userList, "UserList", "json");
@@ -289,7 +329,10 @@ public class UpdateDataMaskingUsersRequest extends Request {
             } 
 
             /**
-             * AccountId.
+             * <p>The database account identifier. Obtain this value from Items[].Id in the response of ListDataAssetAccounts and pass it as a string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -297,7 +340,10 @@ public class UpdateDataMaskingUsersRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The database instance identity. Obtain this value from Items[].InstanceId in the response of ListDataMaskingInstances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze1abcdefgh****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

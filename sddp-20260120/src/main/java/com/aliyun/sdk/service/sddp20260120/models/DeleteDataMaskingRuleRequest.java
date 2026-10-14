@@ -152,7 +152,10 @@ public class DeleteDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * EngineType.
+         * <p>The database engine type. This value must match the EngineType of the target instance, such as MySQL or PostgreSQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -161,7 +164,10 @@ public class DeleteDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The database instance identity. You can obtain this value from Items[].InstanceId in the response of ListDataMaskingInstances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1abcdefgh****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,7 +176,14 @@ public class DeleteDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response description. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -179,7 +192,10 @@ public class DeleteDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -188,7 +204,16 @@ public class DeleteDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The cloud product type identifier. Valid values:</p>
+         * <ul>
+         * <li>5: RDS.</li>
+         * <li>8: POLARDB.</li>
+         * <li>27: PolarDBX2.</li>
+         * </ul>
+         * <p>If both ProductId and ProductCode are specified, they must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -197,7 +222,7 @@ public class DeleteDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * SubRuleList.
+         * <p>The list of column encryption targets grouped by database and table.</p>
          */
         public Builder subRuleList(java.util.List<SubRuleList> subRuleList) {
             String subRuleListShrink = shrink(subRuleList, "SubRuleList", "json");
@@ -279,7 +304,10 @@ public class DeleteDataMaskingRuleRequest extends Request {
             } 
 
             /**
-             * Columns.
+             * <p>The list of target column names. Separate multiple column names with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phone,email</p>
              */
             public Builder columns(String columns) {
                 this.columns = columns;
@@ -287,7 +315,10 @@ public class DeleteDataMaskingRuleRequest extends Request {
             }
 
             /**
-             * DbName.
+             * <p>The name of the target database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>business_db</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -295,7 +326,10 @@ public class DeleteDataMaskingRuleRequest extends Request {
             }
 
             /**
-             * TableName.
+             * <p>The name of the target table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

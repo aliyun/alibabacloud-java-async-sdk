@@ -106,7 +106,10 @@ public class ListColumnsResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of records returned by this query.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -122,7 +125,10 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page for this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used to locate this API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that match the current query scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -425,7 +437,10 @@ public class ListColumnsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The creation time of the data object. This value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1788566400000</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -433,7 +448,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DataAssetSourceId.
+             * <p>The cloud instance identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze1abcdefgh****</p>
              */
             public Builder dataAssetSourceId(String dataAssetSourceId) {
                 this.dataAssetSourceId = dataAssetSourceId;
@@ -441,7 +459,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>business_db</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -449,7 +470,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * <p>The data type of the database column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -457,7 +481,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineType.
+             * <p>The database engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -465,7 +492,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The cloud instance identity to which the column belongs. This is a compatible field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze1abcdefgh****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -473,7 +503,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * MaskingStatus.
+             * <p>The compatible field for column encryption status. To query column encryption results, call ListDataMaskingColumns.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maskingStatus(Integer maskingStatus) {
                 this.maskingStatus = maskingStatus;
@@ -481,7 +514,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the data column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phone</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -489,7 +525,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The cloud product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -497,7 +536,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -505,7 +547,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RevisionId.
+             * <p>The ID of the detection result revision record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder revisionId(Long revisionId) {
                 this.revisionId = revisionId;
@@ -513,7 +558,14 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RevisionStatus.
+             * <p>The revision status of the detection result. Valid values:</p>
+             * <ul>
+             * <li>0: not revised.</li>
+             * <li>1: revised.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder revisionStatus(Long revisionStatus) {
                 this.revisionStatus = revisionStatus;
@@ -521,7 +573,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * <p>The sensitivity level ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -529,7 +584,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * <p>The sensitivity level name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S2</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -537,7 +595,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the matched detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -545,7 +606,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the matched detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Phone number</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -553,7 +617,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The database schema name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -561,7 +628,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Sensitive.
+             * <p>Indicates whether the data is detected as sensitive data.</p>
              */
             public Builder sensitive(Boolean sensitive) {
                 this.sensitive = sensitive;
@@ -569,7 +636,10 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The data table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

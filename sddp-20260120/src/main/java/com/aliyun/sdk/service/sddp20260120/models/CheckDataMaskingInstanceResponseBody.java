@@ -80,7 +80,10 @@ public class CheckDataMaskingInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The instance check result code. A value of Success indicates that the check passed. For other values, handle the error based on ErrorMessage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -88,7 +91,10 @@ public class CheckDataMaskingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The instance check result description. A specific reason is returned when the check fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The instance is not in the running state</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -96,7 +102,10 @@ public class CheckDataMaskingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used to locate this API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

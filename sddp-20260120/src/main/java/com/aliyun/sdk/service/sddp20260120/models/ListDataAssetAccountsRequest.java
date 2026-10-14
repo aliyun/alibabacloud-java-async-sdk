@@ -194,7 +194,10 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * <p>The database account name. Filters by exact account name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_reader</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -203,7 +206,15 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * AuthRole.
+         * <p>The column encryption access permissions. Valid values:</p>
+         * <ul>
+         * <li>fullAccess: plaintext access.</li>
+         * <li>restrictedAccess: restricted access.</li>
+         * <li>noneAccess: decryption prohibited. noneAccess applies only to ApsaraDB RDS for MySQL instances whose current effective key pattern is client_key.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fullAccess</p>
          */
         public Builder authRole(String authRole) {
             this.putQueryParameter("AuthRole", authRole);
@@ -212,7 +223,10 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>The query business scenario. Use DataMasking for the column encryption scenario. This value is case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataMasking</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -221,7 +235,10 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current query. Pages start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -230,7 +247,10 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The database instance identity. You can obtain this value from Items[].InstanceId returned by ListDataMaskingInstances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1abcdefgh****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -239,7 +259,14 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response description. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -248,7 +275,10 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Keep other filter conditions consistent when querying the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -257,7 +287,10 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two values must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -266,7 +299,10 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * ProductIds.
+         * <p>The list of cloud product type identifiers. Separate multiple values with commas (,). Valid values for the column encryption scenario: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder productIds(String productIds) {
             this.putQueryParameter("ProductIds", productIds);

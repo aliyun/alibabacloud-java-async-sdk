@@ -67,7 +67,7 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
         } 
 
         /**
-         * ColumnCount.
+         * <p>The column encryption statistics.</p>
          */
         public Builder columnCount(ColumnCount columnCount) {
             this.columnCount = columnCount;
@@ -75,7 +75,10 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used to locate this API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
             } 
 
             /**
-             * MaskedCount.
+             * <p>The number of encrypted columns within the current scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maskedCount(Long maskedCount) {
                 this.maskedCount = maskedCount;
@@ -175,7 +181,10 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
             }
 
             /**
-             * MaskingFailedCount.
+             * <p>The number of columns that failed to be encrypted within the current scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maskingFailedCount(Long maskingFailedCount) {
                 this.maskingFailedCount = maskingFailedCount;
@@ -183,7 +192,10 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveCount.
+             * <p>The number of sensitive columns within the current scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder sensitiveCount(Long sensitiveCount) {
                 this.sensitiveCount = sensitiveCount;
@@ -191,7 +203,10 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of columns within the current scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

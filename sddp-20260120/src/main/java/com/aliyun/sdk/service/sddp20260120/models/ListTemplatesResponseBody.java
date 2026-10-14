@@ -106,7 +106,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of records returned by the current query.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -122,7 +125,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page for the current query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used to locate this API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that match the current query scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -321,7 +333,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentRiskLevel.
+             * <p>The current sensitivity level of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder currentRiskLevel(Integer currentRiskLevel) {
                 this.currentRiskLevel = currentRiskLevel;
@@ -329,7 +344,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the classification and grading template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Used to detect common sensitive data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -337,7 +355,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the template was created. This value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1788566400000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -345,7 +366,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the template was last modified. This value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1788566400000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -353,7 +377,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the classification and grading template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -361,7 +388,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCategoryLevel.
+             * <p>The maximum category level supported by the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxCategoryLevel(Integer maxCategoryLevel) {
                 this.maxCategoryLevel = maxCategoryLevel;
@@ -369,7 +399,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRiskLevel.
+             * <p>The maximum sensitivity level supported by the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxRiskLevel(Integer maxRiskLevel) {
                 this.maxRiskLevel = maxRiskLevel;
@@ -377,7 +410,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the classification and grading template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>General classification and grading template</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -385,7 +421,16 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the template. Valid values:</p>
+             * <ul>
+             * <li>0: disabled.</li>
+             * <li>1: enabled as the primary template.</li>
+             * <li>2: active template.</li>
+             * <li>3: general-purpose detection model.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -393,7 +438,14 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportEdit.
+             * <p>Indicates whether the template can be edited. Valid values:</p>
+             * <ul>
+             * <li>0: not supported.</li>
+             * <li>1: supported.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder supportEdit(Integer supportEdit) {
                 this.supportEdit = supportEdit;
@@ -401,7 +453,20 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The category of the template. Valid values:</p>
+             * <ul>
+             * <li>1: Alibaba template.</li>
+             * <li>2: finance template.</li>
+             * <li>3: energy template.</li>
+             * <li>4: personal information security template.</li>
+             * <li>5: travel template.</li>
+             * <li>65: general-purpose template.</li>
+             * <li>66: custom template.</li>
+             * <li>67: template from another cloud service.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>65</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

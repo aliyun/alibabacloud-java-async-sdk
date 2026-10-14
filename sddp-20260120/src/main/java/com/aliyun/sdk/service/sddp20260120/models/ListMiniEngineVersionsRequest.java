@@ -124,7 +124,10 @@ public class ListMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance identity of the database. You can obtain this value from Items[].InstanceId returned by the ListDataMaskingInstances operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1abcdefgh****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -133,7 +136,14 @@ public class ListMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response description. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -142,7 +152,10 @@ public class ListMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The code of the cloud product. Column encryption supports RDS, POLARDB, and PolarDBX2. If you also specify ProductId, the two values must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -151,7 +164,16 @@ public class ListMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The identifier of the cloud product type. Valid values:</p>
+         * <ul>
+         * <li>5: ApsaraDB RDS.</li>
+         * <li>8: PolarDB.</li>
+         * <li>27: PolarDBX2.</li>
+         * </ul>
+         * <p>If you specify both ProductId and ProductCode, the values must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);

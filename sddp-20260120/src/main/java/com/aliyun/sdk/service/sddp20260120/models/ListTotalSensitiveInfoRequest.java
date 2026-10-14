@@ -115,7 +115,15 @@ public class ListTotalSensitiveInfoRequest extends Request {
         } 
 
         /**
-         * CountType.
+         * <p>The statistics scenario. Valid values:</p>
+         * <ul>
+         * <li>41: overview.</li>
+         * <li>42: data catalog statistics by product.</li>
+         * <li>43: region and template summary by product.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>43</p>
          */
         public Builder countType(Integer countType) {
             this.putQueryParameter("CountType", countType);
@@ -124,7 +132,14 @@ public class ListTotalSensitiveInfoRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response description. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -133,7 +148,10 @@ public class ListTotalSensitiveInfoRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If you also specify ProductId, the two values must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -142,7 +160,10 @@ public class ListTotalSensitiveInfoRequest extends Request {
         }
 
         /**
-         * ProductCodeList.
+         * <p>Multiple product codes separated by commas (,). This parameter is used when CountType is set to 43 and ProductCode is not specified. The results are merged by region and template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS,POLARDB,PolarDBX2</p>
          */
         public Builder productCodeList(String productCodeList) {
             this.putQueryParameter("ProductCodeList", productCodeList);
@@ -151,7 +172,10 @@ public class ListTotalSensitiveInfoRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the data classification template. You can obtain this value from Items[].Id in the response of the ListTemplates operation. The value must be consistent with the selected sensitivity level and detection model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

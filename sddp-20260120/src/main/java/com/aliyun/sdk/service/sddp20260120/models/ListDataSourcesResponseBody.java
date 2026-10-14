@@ -132,7 +132,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -140,7 +143,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of records returned by the query.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -148,7 +151,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records that can be returned for the current cursor-based pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -156,7 +162,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A compatible pagination cursor field. The ListDataSources operation uses page number-based pagination and does not rely on this field to determine whether more pages exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token-example</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -164,7 +173,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -172,7 +184,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request identity, which is active when you invoke this API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries that meet the current statistics or query scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -493,7 +511,16 @@ public class ListDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectStatus.
+             * <p>The connection status of the data source. Valid values:</p>
+             * <ul>
+             * <li>UnConnected: Not connected.</li>
+             * <li>Processing: Connecting.</li>
+             * <li>Success: Connected.</li>
+             * <li>Failed: Connection failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder connectStatus(String connectStatus) {
                 this.connectStatus = connectStatus;
@@ -501,7 +528,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataAssetId.
+             * <p>The identifier of the data asset in Data Security Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asset-example-001</p>
              */
             public Builder dataAssetId(String dataAssetId) {
                 this.dataAssetId = dataAssetId;
@@ -509,7 +539,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceId.
+             * <p>The identifier of the data source in Data Security Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-example-001</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -517,7 +550,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceSize.
+             * <p>The statistical value of the data source capacity. This field is not used in the column encryption process for relational databases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder dataSourceSize(Long dataSourceSize) {
                 this.dataSourceSize = dataSourceSize;
@@ -525,7 +561,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DbName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>business_db</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -533,7 +572,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Business data source</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -541,7 +583,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * EngineType.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -549,7 +594,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The business error code of the record or operation. This field can be empty if no error occurs. Evaluate this field together with ErrorMessage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_masking_not_running</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -557,7 +605,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The business error message of the record or operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The instance is not in the running state</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -565,7 +616,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The identifier of the record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -573,7 +627,20 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * IdentifyStatus.
+             * <p>The status of the data source detection switch. Valid values:</p>
+             * <ul>
+             * <li>Enable: Submitted for enabling.</li>
+             * <li>Enabling: Enabling.</li>
+             * <li>Enabled: Enabled.</li>
+             * <li>EnableFailed: Enabling failed.</li>
+             * <li>Disable: Submitted for disabling.</li>
+             * <li>Disabling: Disabling.</li>
+             * <li>Disabled: Disabled.</li>
+             * <li>DisableFailed: Disabling failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder identifyStatus(String identifyStatus) {
                 this.identifyStatus = identifyStatus;
@@ -581,7 +648,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The database instance identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze1abcdefgh****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -589,7 +659,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * MemberAccount.
+             * <p>The identity of the member accounts to which the asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789012****</p>
              */
             public Builder memberAccount(Long memberAccount) {
                 this.memberAccount = memberAccount;
@@ -597,7 +670,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port for the database connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -605,7 +681,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The code of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -613,7 +692,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The identifier of the cloud service type. 5: ApsaraDB RDS; 8: PolarDB; 27: PolarDB-X 2.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder productId(Long productId) {
                 this.productId = productId;
@@ -621,7 +703,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region where the asset resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -629,7 +714,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * <p>The name of the region where the asset resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Zhangjiakou)</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -637,7 +725,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmexample****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -645,7 +736,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The identifier of the database tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tenant-example</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -653,7 +747,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The name of the database account used to connect to the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dsc_reader</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

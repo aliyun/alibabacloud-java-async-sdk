@@ -110,7 +110,7 @@ public class ListRegionsRequest extends Request {
         }
 
         /**
-         * Audited.
+         * <p>Specifies whether to filter regions by assets that have audit enabled. A value of true indicates that audit is enabled. A value of false indicates that audit is not enabled. If you do not specify this parameter, this filter condition is not applied.</p>
          */
         public Builder audited(Boolean audited) {
             this.putQueryParameter("Audited", audited);
@@ -119,7 +119,7 @@ public class ListRegionsRequest extends Request {
         }
 
         /**
-         * Identified.
+         * <p>Specifies whether to filter regions by assets that have detection enabled. A value of true indicates that detection is enabled. A value of false indicates that detection is not enabled. If you do not specify this parameter, this filter condition is not applied.</p>
          */
         public Builder identified(Boolean identified) {
             this.putQueryParameter("Identified", identified);
@@ -128,7 +128,14 @@ public class ListRegionsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response description. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

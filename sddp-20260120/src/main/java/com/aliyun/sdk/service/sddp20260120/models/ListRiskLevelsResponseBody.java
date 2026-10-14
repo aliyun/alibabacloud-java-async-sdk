@@ -67,7 +67,10 @@ public class ListRiskLevelsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use this ID to locate the API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListRiskLevelsResponseBody extends TeaModel {
         }
 
         /**
-         * RiskLevelList.
+         * <p>The list of sensitivity levels.</p>
          */
         public Builder riskLevelList(java.util.List<RiskLevelList> riskLevelList) {
             this.riskLevelList = riskLevelList;
@@ -167,7 +170,10 @@ public class ListRiskLevelsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the sensitivity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Personal information data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -175,7 +181,10 @@ public class ListRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the sensitivity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -183,7 +192,10 @@ public class ListRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the sensitivity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S2</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -191,7 +203,10 @@ public class ListRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceNum.
+             * <p>The number of references to the sensitivity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder referenceNum(Integer referenceNum) {
                 this.referenceNum = referenceNum;

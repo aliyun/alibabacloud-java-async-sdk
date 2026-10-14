@@ -67,7 +67,7 @@ public class ListMiniEngineVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * KernelVersions.
+         * <p>The list of available kernel versions.</p>
          */
         public Builder kernelVersions(java.util.List<KernelVersions> kernelVersions) {
             this.kernelVersions = kernelVersions;
@@ -75,7 +75,10 @@ public class ListMiniEngineVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use this ID to locate the API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class ListMiniEngineVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * KernelReleaseType.
+             * <p>The release type of the kernel version. This value is the same as the value returned by the corresponding database product. For example, for ApsaraDB RDS, LTS indicates a long-term support version and BETA indicates a preview version. For PolarDB, the value can be Stable, Old, HighRisk, or Beta.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTS</p>
              */
             public Builder kernelReleaseType(String kernelReleaseType) {
                 this.kernelReleaseType = kernelReleaseType;
@@ -162,7 +168,10 @@ public class ListMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * KernelVersion.
+             * <p>The available kernel version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_20220731</p>
              */
             public Builder kernelVersion(String kernelVersion) {
                 this.kernelVersion = kernelVersion;
@@ -170,7 +179,10 @@ public class ListMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * KernelVersionName.
+             * <p>The display name of the kernel version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL 8.0</p>
              */
             public Builder kernelVersionName(String kernelVersionName) {
                 this.kernelVersionName = kernelVersionName;

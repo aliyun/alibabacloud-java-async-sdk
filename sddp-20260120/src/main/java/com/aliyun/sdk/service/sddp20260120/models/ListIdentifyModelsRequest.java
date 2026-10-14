@@ -101,7 +101,10 @@ public class ListIdentifyModelsRequest extends Request {
         } 
 
         /**
-         * FeatureType.
+         * <p>A reserved feature type parameter. This parameter is not used to filter results in the current query. You do not need to specify this parameter for column encryption calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -110,7 +113,7 @@ public class ListIdentifyModelsRequest extends Request {
         }
 
         /**
-         * FilterAuditModel.
+         * <p>Specifies whether to return only detection models supported in audit scenarios. If this parameter is set to true, only audit-supported models such as phone number, ID card, and bank card models are returned. You do not need to specify this parameter for column encryption scenarios.</p>
          */
         public Builder filterAuditModel(Boolean filterAuditModel) {
             this.putQueryParameter("FilterAuditModel", filterAuditModel);
@@ -119,7 +122,14 @@ public class ListIdentifyModelsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response description. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -128,7 +138,10 @@ public class ListIdentifyModelsRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the data classification template. You can obtain this value from Items[].Id in the response of the ListTemplates operation. The template must be consistent with the selected sensitivity level and detection models.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

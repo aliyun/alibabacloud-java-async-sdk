@@ -67,7 +67,7 @@ public class ListDataMaskingEncryptionAlgorithmsResponseBody extends TeaModel {
         } 
 
         /**
-         * Algorithms.
+         * <p>The list of column encryption algorithms.</p>
          */
         public Builder algorithms(java.util.List<Algorithms> algorithms) {
             this.algorithms = algorithms;
@@ -75,7 +75,10 @@ public class ListDataMaskingEncryptionAlgorithmsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used to locate this API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class ListDataMaskingEncryptionAlgorithmsResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>The business error code for the record or operation. This value can be empty if no error occurs. Evaluate this value together with ErrorMessage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_masking_not_running</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -162,7 +168,10 @@ public class ListDataMaskingEncryptionAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The business error description for the record or operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The instance is not in the running state</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -170,7 +179,10 @@ public class ListDataMaskingEncryptionAlgorithmsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The algorithm name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AES_256_GCM</p>
              */
             public Builder name(String name) {
                 this.name = name;

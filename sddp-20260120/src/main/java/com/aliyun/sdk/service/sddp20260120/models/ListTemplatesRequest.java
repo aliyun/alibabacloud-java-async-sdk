@@ -115,7 +115,10 @@ public class ListTemplatesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -124,7 +127,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * FeatureType.
+         * <p>A reserved feature type parameter. This parameter is not used to filter results in the current query and is not required for column encryption calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -133,7 +139,14 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response description. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -142,7 +155,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Keep other filter conditions consistent when querying the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +167,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * UsageScenario.
+         * <p>The scenario identifier for compatible template queries. This parameter is not required for column encryption queries. The available templates are determined by the returned list. Do not rely on this parameter to determine whether general-purpose templates are included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usageScenario(Integer usageScenario) {
             this.putQueryParameter("UsageScenario", usageScenario);

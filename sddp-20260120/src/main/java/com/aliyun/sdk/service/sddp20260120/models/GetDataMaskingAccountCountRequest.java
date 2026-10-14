@@ -96,7 +96,14 @@ public class GetDataMaskingAccountCountRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response description. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +112,10 @@ public class GetDataMaskingAccountCountRequest extends Request {
         }
 
         /**
-         * ProductIds.
+         * <p>The list of cloud product type identifiers. Separate multiple values with commas (,). For column encryption scenarios, valid values: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder productIds(String productIds) {
             this.putQueryParameter("ProductIds", productIds);

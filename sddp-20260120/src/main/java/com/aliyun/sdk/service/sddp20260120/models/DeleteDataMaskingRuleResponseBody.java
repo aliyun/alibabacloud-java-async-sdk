@@ -54,7 +54,10 @@ public class DeleteDataMaskingRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use this ID to locate the API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

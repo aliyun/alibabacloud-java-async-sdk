@@ -124,7 +124,10 @@ public class ListDataMaskingEncryptionAlgorithmsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The database instance identifier. You can obtain this value from Items[].InstanceId in the response of ListDataMaskingInstances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1abcdefgh****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -133,7 +136,10 @@ public class ListDataMaskingEncryptionAlgorithmsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response descriptions. Valid values: zh: Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -142,7 +148,10 @@ public class ListDataMaskingEncryptionAlgorithmsRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two values must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -151,7 +160,10 @@ public class ListDataMaskingEncryptionAlgorithmsRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The cloud product type identifier. Valid values: 5: RDS. 8: POLARDB. 27: PolarDBX2. If specified together with ProductCode, the two values must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);

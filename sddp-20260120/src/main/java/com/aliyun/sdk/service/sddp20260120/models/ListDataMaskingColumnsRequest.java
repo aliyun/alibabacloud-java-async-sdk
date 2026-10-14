@@ -292,7 +292,10 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * ColumnName.
+         * <p>The column name filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phone</p>
          */
         public Builder columnName(String columnName) {
             this.putQueryParameter("ColumnName", columnName);
@@ -301,7 +304,10 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current query. Pages start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -310,7 +316,10 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * DbName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>business_db</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -319,7 +328,10 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * EngineType.
+         * <p>The database engine type. This value must match the EngineType of the target instance, for example, MySQL or PostgreSQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -328,7 +340,10 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance identity of the database. You can obtain this value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1abcdefgh****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -337,7 +352,14 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response description. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -346,7 +368,15 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * MaskingStatus.
+         * <p>The column encryption status filter. Valid values:</p>
+         * <ul>
+         * <li>NotEncrypted: Not encrypted.</li>
+         * <li>Success: Encryption succeeded.</li>
+         * <li>Failed: Encryption failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NotEncrypted</p>
          */
         public Builder maskingStatus(String maskingStatus) {
             this.putQueryParameter("MaskingStatus", maskingStatus);
@@ -355,7 +385,10 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Keep other filter conditions consistent when querying the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -364,7 +397,10 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two values must correspond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -373,7 +409,16 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The cloud product type ID. Valid values:</p>
+         * <ul>
+         * <li>5: RDS.</li>
+         * <li>8: POLARDB.</li>
+         * <li>27: PolarDBX2.</li>
+         * </ul>
+         * <p>This value must correspond to ProductCode if both are specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -382,7 +427,10 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * ProductIds.
+         * <p>The compatible product ID list parameter. For column queries, use a single ProductId or ProductCode. Call the operation separately for each product when querying multiple products.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder productIds(String productIds) {
             this.putQueryParameter("ProductIds", productIds);
@@ -391,7 +439,10 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * RiskLeveLId.
+         * <p>The ID of a sensitivity level. You can obtain this value from the ListRiskLevels operation. The uppercase L in the parameter name must be preserved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskLeveLId(Long riskLeveLId) {
             this.putQueryParameter("RiskLeveLId", riskLeveLId);
@@ -400,7 +451,10 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * RiskLevelIds.
+         * <p>The list of sensitivity level IDs, separated by commas. Select values from the ListRiskLevels response that corresponds to the same TemplateId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2</p>
          */
         public Builder riskLevelIds(String riskLevelIds) {
             this.putQueryParameter("RiskLevelIds", riskLevelIds);
@@ -409,7 +463,10 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>The table name. For PostgreSQL or Oracle scenarios, preserve the schema.table format obtained from the table list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -418,7 +475,10 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the data classification template. You can obtain this value from Items[].Id in the response of the ListTemplates operation. This value must be consistent with the selected sensitivity level and detection model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -427,7 +487,10 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * TemplateRuleIds.
+         * <p>The list of detection model IDs, separated by commas. Select values from the ListIdentifyModels response that corresponds to the same TemplateId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001,1002</p>
          */
         public Builder templateRuleIds(String templateRuleIds) {
             this.putQueryParameter("TemplateRuleIds", templateRuleIds);

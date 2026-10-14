@@ -106,7 +106,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of records returned by the current query.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -122,7 +125,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page for the current query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used to locate this API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that match the current query scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID of the model tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -212,7 +227,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the model tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Personal information</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -487,7 +505,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataType.
+             * <p>The data type of the database column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -495,7 +516,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DbName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>business_db</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -503,7 +527,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineType.
+             * <p>The database engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -511,7 +538,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The business error code of the record or operation. This value can be empty if no error occurs. Evaluate this value together with ErrorMessage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_masking_not_running</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -519,7 +549,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The business error description of the record or operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The instance is not in the running state</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -527,7 +560,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the column record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column-example-001</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -535,7 +571,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance identity of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze1abcdefgh****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -543,7 +582,18 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * MaskingStatus.
+             * <p>The column encryption status. Valid values:</p>
+             * <ul>
+             * <li>NotEncrypted: Not encrypted.</li>
+             * <li>Processing: Being processed.</li>
+             * <li>Success: Encryption succeeded.</li>
+             * <li>Failed: Encryption failed.</li>
+             * <li>Deleting: Being disabled.</li>
+             * <li>DeleteFailed: Disabling failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder maskingStatus(String maskingStatus) {
                 this.maskingStatus = maskingStatus;
@@ -551,7 +601,7 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * ModelTags.
+             * <p>The list of matched model tags.</p>
              */
             public Builder modelTags(java.util.List<ModelTags> modelTags) {
                 this.modelTags = modelTags;
@@ -559,7 +609,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the data column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phone</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -567,7 +620,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The cloud product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -575,7 +631,15 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The cloud product type ID. Valid values:</p>
+             * <ul>
+             * <li>5: RDS.</li>
+             * <li>8: POLARDB.</li>
+             * <li>27: PolarDBX2.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder productId(Long productId) {
                 this.productId = productId;
@@ -583,7 +647,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -591,7 +658,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * <p>The ID of the sensitivity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -599,7 +669,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * <p>The name of the sensitivity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S2</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -607,7 +680,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the matched detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -615,7 +691,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the matched detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Phone number</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -623,7 +702,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

@@ -67,7 +67,7 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
         } 
 
         /**
-         * AccountCount.
+         * <p>The permission statistics of column encryption accounts.</p>
          */
         public Builder accountCount(AccountCount accountCount) {
             this.accountCount = accountCount;
@@ -75,7 +75,10 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used to locate this API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
             } 
 
             /**
-             * FullAccessCount.
+             * <p>The number of fullAccess accounts that have plaintext access.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder fullAccessCount(Long fullAccessCount) {
                 this.fullAccessCount = fullAccessCount;
@@ -175,7 +181,10 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
             }
 
             /**
-             * NoneAccessCount.
+             * <p>The number of noneAccess accounts that are prohibited from decryption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder noneAccessCount(Long noneAccessCount) {
                 this.noneAccessCount = noneAccessCount;
@@ -183,7 +192,10 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
             }
 
             /**
-             * RestrictedAccessCount.
+             * <p>The number of restrictedAccess accounts that have restricted access.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder restrictedAccessCount(Long restrictedAccessCount) {
                 this.restrictedAccessCount = restrictedAccessCount;
@@ -191,7 +203,10 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of database accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

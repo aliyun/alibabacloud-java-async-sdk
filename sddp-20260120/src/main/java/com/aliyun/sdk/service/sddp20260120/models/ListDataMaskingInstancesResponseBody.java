@@ -106,7 +106,10 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of records returned by the current query.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -122,7 +125,10 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page for the current query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use this ID to locate the API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that match the current statistics or query scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -295,7 +307,10 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * EncryptionAlgorithm.
+             * <p>The column encryption algorithm used by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AES_256_GCM</p>
              */
             public Builder encryptionAlgorithm(String encryptionAlgorithm) {
                 this.encryptionAlgorithm = encryptionAlgorithm;
@@ -303,7 +318,10 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptionKeyId.
+             * <p>The ID of the KMS key used by the instance. This field may not be returned for local key scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678-1234-1234-1234-12345678****</p>
              */
             public Builder encryptionKeyId(String encryptionKeyId) {
                 this.encryptionKeyId = encryptionKeyId;
@@ -311,7 +329,10 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EngineType.
+             * <p>The database engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -319,7 +340,10 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * FullAccessAccountCount.
+             * <p>The number of database accounts that have fullAccess plaintext access permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder fullAccessAccountCount(Integer fullAccessAccountCount) {
                 this.fullAccessAccountCount = fullAccessAccountCount;
@@ -327,7 +351,10 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance identity of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze1abcdefgh****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -335,7 +362,10 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The code of the cloud product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -343,7 +373,10 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The ID of the cloud product type. Valid values: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder productId(Long productId) {
                 this.productId = productId;
@@ -351,7 +384,10 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -359,7 +395,10 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * <p>The region name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Zhangjiakou)</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

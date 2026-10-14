@@ -106,7 +106,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of records returned by the current query.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -122,7 +125,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page for the current query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use this ID to locate the API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that match the current query or statistical scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -334,7 +346,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>The database account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_reader</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -342,7 +357,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AliUid.
+             * <p>The Alibaba Cloud account ID to which the asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789012****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -350,7 +368,15 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthRole.
+             * <p>The column encryption access permissions. Valid values:</p>
+             * <ul>
+             * <li>fullAccess: plaintext access.</li>
+             * <li>restrictedAccess: restricted access.</li>
+             * <li>noneAccess: decryption prohibited. noneAccess applies only to ApsaraDB RDS for MySQL instances whose current effective key pattern is client_key.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>fullAccess</p>
              */
             public Builder authRole(String authRole) {
                 this.authRole = authRole;
@@ -358,7 +384,15 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptionKeyMode.
+             * <p>The current effective column encryption key mode. Valid values:</p>
+             * <ul>
+             * <li>client_key: local master key.</li>
+             * <li>kms_key: KMS key.</li>
+             * </ul>
+             * <p>This field is not returned if no column encryption configuration is in effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>client_key</p>
              */
             public Builder encryptionKeyMode(String encryptionKeyMode) {
                 this.encryptionKeyMode = encryptionKeyMode;
@@ -366,7 +400,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineType.
+             * <p>The database engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -374,7 +411,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time of the plaintext access permissions. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC. This field is not returned if no expiration time is set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2145953410000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -382,7 +422,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The database account identifier. This value is used as AccountId when configuring permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -390,7 +433,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The database instance identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze1abcdefgh****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -398,7 +444,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The cloud product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -406,7 +455,15 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The cloud product type identifier. Valid values:</p>
+             * <ul>
+             * <li>5: RDS.</li>
+             * <li>8: POLARDB.</li>
+             * <li>27: PolarDBX2.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder productId(Long productId) {
                 this.productId = productId;
@@ -414,7 +471,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -422,7 +482,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * <p>The region name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China North 3 (Zhangjiakou)</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

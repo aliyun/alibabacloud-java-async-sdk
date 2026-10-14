@@ -250,7 +250,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -259,7 +262,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * DataAssetSourceId.
+         * <p>The cloud database instance identity. Set this parameter to the InstanceId from the instance list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1abcdefgh****</p>
          */
         public Builder dataAssetSourceId(String dataAssetSourceId) {
             this.putQueryParameter("DataAssetSourceId", dataAssetSourceId);
@@ -268,7 +274,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * DataSourceName.
+         * <p>The database name. Set this parameter to the DbName returned by ListDataSources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>business_db</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putQueryParameter("DataSourceName", dataSourceName);
@@ -277,7 +286,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * EngineType.
+         * <p>The database engine type. This value must match the EngineType of the target instance, such as MySQL or PostgreSQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -286,7 +298,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The compatible parameter for the instance identity. DataAssetSourceId takes precedence. If both are specified, DataAssetSourceId is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1abcdefgh****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -295,7 +310,14 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response description. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -304,7 +326,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The column name filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phone</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -313,7 +338,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Keep other filter conditions consistent when querying the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -322,7 +350,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two values must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -331,7 +362,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * RiskLevelId.
+         * <p>The sensitivity level ID. You can obtain this value from the list returned by ListRiskLevels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskLevelId(Long riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -340,7 +374,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>The ID of the detection rule or model. Set this parameter to the ID of the corresponding detection rule in the target template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -349,7 +386,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>The name of the data table. For PostgreSQL or Oracle scenarios, retain the schema.table format obtained from the table list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -358,7 +398,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the classification and grading template. You can obtain this value from Items[].Id returned by ListTemplates. Ensure consistency with the selected sensitivity level and detection model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

@@ -96,7 +96,10 @@ public class SyncDataAssetsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values: zh: Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +108,10 @@ public class SyncDataAssetsRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

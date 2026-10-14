@@ -152,7 +152,10 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends Request {
         }
 
         /**
-         * EncryptionAlgorithm.
+         * <p>The name of the instance-level column encryption algorithm. Select an available algorithm from the ListDataMaskingEncryptionAlgorithms operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AES_256_GCM</p>
          */
         public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             this.putQueryParameter("EncryptionAlgorithm", encryptionAlgorithm);
@@ -161,7 +164,10 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends Request {
         }
 
         /**
-         * EncryptionKeyId.
+         * <p>The KMS key identifier. You can obtain this value from Items[].KeyId in the response of the ListKmsKeys operation. Specify this parameter when you use a KMS key. Do not specify this parameter for local key scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-12345678****</p>
          */
         public Builder encryptionKeyId(String encryptionKeyId) {
             this.putQueryParameter("EncryptionKeyId", encryptionKeyId);
@@ -170,7 +176,10 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The database instance identity. You can obtain this value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1abcdefgh****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -179,7 +188,14 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response description. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -188,7 +204,10 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If you also specify ProductId, the two values must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -197,7 +216,16 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The cloud product type identifier. Valid values:</p>
+         * <ul>
+         * <li>5: RDS.</li>
+         * <li>8: POLARDB.</li>
+         * <li>27: PolarDBX2.</li>
+         * </ul>
+         * <p>If you specify both ProductId and ProductCode, the values must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);

@@ -145,7 +145,10 @@ public class ListTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -153,7 +156,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of records returned by this query.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -161,7 +164,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Marker.
+         * <p>The pagination cursor used in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -169,7 +175,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * NextMarker.
+         * <p>The cursor used to query the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder nextMarker(String nextMarker) {
             this.nextMarker = nextMarker;
@@ -177,7 +186,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -185,7 +197,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used to locate this API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries that match the current statistical or query scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -201,7 +219,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Truncated.
+         * <p>Indicates whether more pages are available. A value of true indicates that more data exists. A value of false indicates that no more data exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder truncated(String truncated) {
             this.truncated = truncated;
@@ -280,7 +301,10 @@ public class ListTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of hits for this detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -288,7 +312,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The detection model or rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Phone number</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -296,7 +323,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * <p>The sensitivity level ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -545,7 +575,10 @@ public class ListTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The comment of the data table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Customer contact information</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -553,7 +586,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time of the data object. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1788566400000</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -561,7 +597,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DataAssetSourceId.
+             * <p>The cloud instance identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze1abcdefgh****</p>
              */
             public Builder dataAssetSourceId(String dataAssetSourceId) {
                 this.dataAssetSourceId = dataAssetSourceId;
@@ -569,7 +608,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>business_db</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -577,7 +619,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDescription.
+             * <p>The description of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Business database instance</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -585,7 +630,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The data table name. Some engines return the name in the schema.table format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -593,7 +641,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The Alibaba Cloud account ID of the data table owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789012****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -601,7 +652,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The cloud product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -609,7 +663,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * <p>The sensitivity level ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -617,7 +674,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * <p>The sensitivity level name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S2</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -625,7 +685,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleList.
+             * <p>The list of detection models or rules.</p>
              */
             public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
@@ -633,7 +693,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Sensitive.
+             * <p>Indicates whether the data is detected as sensitive data.</p>
              */
             public Builder sensitive(Boolean sensitive) {
                 this.sensitive = sensitive;
@@ -641,7 +701,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveCount.
+             * <p>The number of sensitive data entries within the current statistical scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder sensitiveCount(Integer sensitiveCount) {
                 this.sensitiveCount = sensitiveCount;
@@ -649,7 +712,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveRatio.
+             * <p>The proportion of sensitive data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder sensitiveRatio(String sensitiveRatio) {
                 this.sensitiveRatio = sensitiveRatio;
@@ -657,7 +723,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantName.
+             * <p>The tenant name to which the data asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Business tenant</p>
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -665,7 +734,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries that match the current statistical or query scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

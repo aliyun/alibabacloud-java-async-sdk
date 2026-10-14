@@ -250,7 +250,10 @@ public class CreateDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * EncAlgorithm.
+         * <p>The name of the column encryption algorithm. The availability of AES_128_GCM, AES_256_GCM, and SM4_128_GCM depends on the instance. Select an available algorithm from <a href="https://help.aliyun.com/document_detail/2859327.html">ListDataMaskingEncryptionAlgorithms</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AES_256_GCM</p>
          */
         public Builder encAlgorithm(String encAlgorithm) {
             this.putQueryParameter("EncAlgorithm", encAlgorithm);
@@ -259,7 +262,10 @@ public class CreateDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * EncryptionKeyId.
+         * <p>The KMS key ID. You can obtain this value from Items[].KeyId in the response of <a href="https://help.aliyun.com/document_detail/2859328.html">ListKmsKeys</a>. Specify this parameter when you use a KMS key. Do not specify this parameter for local key scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-12345678****</p>
          */
         public Builder encryptionKeyId(String encryptionKeyId) {
             this.putQueryParameter("EncryptionKeyId", encryptionKeyId);
@@ -268,7 +274,14 @@ public class CreateDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * EncryptionKeyMode.
+         * <p>The key mode. Valid values:</p>
+         * <ul>
+         * <li>client_key: local key.</li>
+         * <li>kms_key: KMS key. If you set this parameter to kms_key, you must specify EncryptionKeyId.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>client_key</p>
          */
         public Builder encryptionKeyMode(String encryptionKeyMode) {
             this.putQueryParameter("EncryptionKeyMode", encryptionKeyMode);
@@ -277,7 +290,10 @@ public class CreateDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * EngineType.
+         * <p>The database engine type. This value must match the EngineType of the target instance, such as MySQL or PostgreSQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -286,7 +302,10 @@ public class CreateDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time of the plaintext access permissions. This value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC. Specify this parameter only when ExpireTimeOperation is set to SET. The value must be later than the current time and no greater than 2145953410000. The server stores the value with second-level precision. Do not specify this parameter when ExpireTimeOperation is set to PRESERVE or CLEAR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2145953410000</p>
          */
         public Builder expireTime(Long expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -295,7 +314,16 @@ public class CreateDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * ExpireTimeOperation.
+         * <p>The handling method for the permission expiration time. Valid values:</p>
+         * <ul>
+         * <li>PRESERVE: Retains the original expiration time.</li>
+         * <li>CLEAR: Clears the expiration time.</li>
+         * <li>SET: Sets the expiration time to the value specified by ExpireTime.</li>
+         * </ul>
+         * <p>Default value: PRESERVE. Only fullAccess supports expiration time settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRESERVE</p>
          */
         public Builder expireTimeOperation(String expireTimeOperation) {
             this.putQueryParameter("ExpireTimeOperation", expireTimeOperation);
@@ -304,7 +332,10 @@ public class CreateDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The database instance identity. You can obtain this value from Items[].InstanceId in the response of <a href="https://help.aliyun.com/document_detail/2859326.html">ListDataMaskingInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1abcdefgh****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -313,7 +344,14 @@ public class CreateDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response description. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -322,7 +360,10 @@ public class CreateDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If you specify both ProductCode and ProductId, the values must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -331,7 +372,16 @@ public class CreateDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The cloud product type ID. Valid values:</p>
+         * <ul>
+         * <li>5: RDS.</li>
+         * <li>8: POLARDB.</li>
+         * <li>27: PolarDBX2.</li>
+         * </ul>
+         * <p>If you specify both ProductId and ProductCode, the values must correspond to each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -340,7 +390,10 @@ public class CreateDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * RiskHandleId.
+         * <p>The ID of the associated risk handling record. You do not need to specify this parameter for standard column encryption creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder riskHandleId(Long riskHandleId) {
             this.putQueryParameter("RiskHandleId", riskHandleId);
@@ -349,7 +402,7 @@ public class CreateDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * SubRuleList.
+         * <p>The list of column encryption targets grouped by database and table.</p>
          */
         public Builder subRuleList(java.util.List<SubRuleList> subRuleList) {
             String subRuleListShrink = shrink(subRuleList, "SubRuleList", "json");
@@ -359,7 +412,7 @@ public class CreateDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * UserList.
+         * <p>The list of database accounts to be granted fullAccess plaintext access permissions. The accounts must belong to the target instance.</p>
          */
         public Builder userList(java.util.List<UserList> userList) {
             String userListShrink = shrink(userList, "UserList", "json");
@@ -441,7 +494,10 @@ public class CreateDataMaskingRuleRequest extends Request {
             } 
 
             /**
-             * Columns.
+             * <p>The list of target column names. Separate multiple column names with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phone,email</p>
              */
             public Builder columns(String columns) {
                 this.columns = columns;
@@ -449,7 +505,10 @@ public class CreateDataMaskingRuleRequest extends Request {
             }
 
             /**
-             * DbName.
+             * <p>The name of the target database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>business_db</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -457,7 +516,10 @@ public class CreateDataMaskingRuleRequest extends Request {
             }
 
             /**
-             * TableName.
+             * <p>The name of the target table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -511,7 +573,10 @@ public class CreateDataMaskingRuleRequest extends Request {
             } 
 
             /**
-             * AccountId.
+             * <p>The database account ID. You can obtain this value from Items[].Id in the response of <a href="https://help.aliyun.com/document_detail/2859330.html">ListDataAssetAccounts</a>. Pass this value as a string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
