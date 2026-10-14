@@ -129,7 +129,7 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -151,7 +151,11 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call is successful. true: successful. false: failed.</p>
+         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The API call is successful.</li>
+         * <li>false: The API call failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

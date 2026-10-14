@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetHostCountRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("cluster")
     private String cluster;
 
@@ -37,18 +33,12 @@ public class GetHostCountRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("start")
     private Float start;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private GetHostCountRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.cluster = builder.cluster;
         this.end = builder.end;
         this.instance = builder.instance;
         this.start = builder.start;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -62,13 +52,6 @@ public class GetHostCountRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -99,20 +82,11 @@ public class GetHostCountRequest extends Request {
         return this.start;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<GetHostCountRequest, Builder> {
-        private String xDebugId; 
         private String cluster; 
         private Float end; 
         private String instance; 
         private Float start; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -120,22 +94,11 @@ public class GetHostCountRequest extends Request {
 
         private Builder(GetHostCountRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.cluster = request.cluster;
             this.end = request.end;
             this.instance = request.instance;
             this.start = request.start;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>The cluster ID.</p>
@@ -182,15 +145,6 @@ public class GetHostCountRequest extends Request {
         public Builder start(Float start) {
             this.putQueryParameter("start", start);
             this.start = start;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

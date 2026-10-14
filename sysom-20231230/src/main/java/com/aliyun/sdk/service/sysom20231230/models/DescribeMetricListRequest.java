@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeMetricListRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("endTime")
     private Long endTime;
 
@@ -37,18 +33,12 @@ public class DescribeMetricListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("startTime")
     private Long startTime;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private DescribeMetricListRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.endTime = builder.endTime;
         this.instance = builder.instance;
         this.metricName = builder.metricName;
         this.startTime = builder.startTime;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -62,13 +52,6 @@ public class DescribeMetricListRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -99,20 +82,11 @@ public class DescribeMetricListRequest extends Request {
         return this.startTime;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<DescribeMetricListRequest, Builder> {
-        private String xDebugId; 
         private Long endTime; 
         private String instance; 
         private String metricName; 
         private Long startTime; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -120,25 +94,14 @@ public class DescribeMetricListRequest extends Request {
 
         private Builder(DescribeMetricListRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.endTime = request.endTime;
             this.instance = request.instance;
             this.metricName = request.metricName;
             this.startTime = request.startTime;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
 
         /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
-
-        /**
-         * <p>The end time, in seconds (UNIX timestamp).</p>
+         * <p>The end time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683618245000</p>
@@ -174,7 +137,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The start time, in seconds (UNIX timestamp).</p>
+         * <p>The start time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1709740800000</p>
@@ -182,15 +145,6 @@ public class DescribeMetricListRequest extends Request {
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);
             this.startTime = startTime;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

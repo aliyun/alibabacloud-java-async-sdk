@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAbnormalyEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("cluster")
     private String cluster;
 
@@ -65,13 +61,8 @@ public class ListAbnormalyEventsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("start")
     private Float start;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private ListAbnormalyEventsRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.cluster = builder.cluster;
         this.current = builder.current;
         this.end = builder.end;
@@ -83,7 +74,6 @@ public class ListAbnormalyEventsRequest extends Request {
         this.pod = builder.pod;
         this.showPod = builder.showPod;
         this.start = builder.start;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -97,13 +87,6 @@ public class ListAbnormalyEventsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -183,15 +166,7 @@ public class ListAbnormalyEventsRequest extends Request {
         return this.start;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<ListAbnormalyEventsRequest, Builder> {
-        private String xDebugId; 
         private String cluster; 
         private Integer current; 
         private Float end; 
@@ -203,7 +178,6 @@ public class ListAbnormalyEventsRequest extends Request {
         private String pod; 
         private Integer showPod; 
         private Float start; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -211,7 +185,6 @@ public class ListAbnormalyEventsRequest extends Request {
 
         private Builder(ListAbnormalyEventsRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.cluster = request.cluster;
             this.current = request.current;
             this.end = request.end;
@@ -223,17 +196,7 @@ public class ListAbnormalyEventsRequest extends Request {
             this.pod = request.pod;
             this.showPod = request.showPod;
             this.start = request.start;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>The cluster ID.</p>
@@ -248,7 +211,7 @@ public class ListAbnormalyEventsRequest extends Request {
         }
 
         /**
-         * <p>The current page number. This parameter is present during paginated queries.</p>
+         * <p>The current page number. This field exists when pagination is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -275,7 +238,7 @@ public class ListAbnormalyEventsRequest extends Request {
          * <p>The name of the anomaly event.</p>
          * 
          * <strong>example:</strong>
-         * <p>节点根文件系统使用检测</p>
+         * <p>Node root filesystem usage check</p>
          */
         public Builder event(String event) {
             this.putQueryParameter("event", event);
@@ -344,7 +307,7 @@ public class ListAbnormalyEventsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display pod anomaly events.</p>
+         * <p>Specifies whether to display anomaly events of the pod.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -364,15 +327,6 @@ public class ListAbnormalyEventsRequest extends Request {
         public Builder start(Float start) {
             this.putQueryParameter("start", start);
             this.start = start;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

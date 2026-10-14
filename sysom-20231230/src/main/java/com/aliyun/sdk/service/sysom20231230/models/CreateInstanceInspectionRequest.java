@@ -17,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceInspectionRequest</p>
  */
 public class CreateInstanceInspectionRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("instance")
     private String instance;
@@ -41,19 +37,13 @@ public class CreateInstanceInspectionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("source")
     private String source;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private CreateInstanceInspectionRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.instance = builder.instance;
         this.items = builder.items;
         this.metricSource = builder.metricSource;
         this.region = builder.region;
         this.source = builder.source;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -67,13 +57,6 @@ public class CreateInstanceInspectionRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -111,21 +94,12 @@ public class CreateInstanceInspectionRequest extends Request {
         return this.source;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<CreateInstanceInspectionRequest, Builder> {
-        private String xDebugId; 
         private String instance; 
         private java.util.List<String> items; 
         private String metricSource; 
         private String region; 
         private String source; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -133,23 +107,12 @@ public class CreateInstanceInspectionRequest extends Request {
 
         private Builder(CreateInstanceInspectionRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.instance = request.instance;
             this.items = request.items;
             this.metricSource = request.metricSource;
             this.region = request.region;
             this.source = request.source;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>The instance ID.</p>
@@ -205,15 +168,6 @@ public class CreateInstanceInspectionRequest extends Request {
         public Builder source(String source) {
             this.putBodyParameter("source", source);
             this.source = source;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

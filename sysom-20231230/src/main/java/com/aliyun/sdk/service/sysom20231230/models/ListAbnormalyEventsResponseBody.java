@@ -95,7 +95,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <ul>
-         * <li><code>code == Success</code> indicates that the authorization was successful.</li>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
          * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
          * </ul>
          * 
@@ -116,7 +116,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code description. This value is empty if no error occurred.</p>
+         * <p>The error code description. This field is empty if no error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -648,10 +648,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detailed description of the anomaly item.</p>
+             * <p>The description of the anomaly item.</p>
              * 
              * <strong>example:</strong>
-             * <p>节点发生OOM, 可查看OOM发生原因</p>
+             * <p>An OOM event occurred on the node. Check the cause of the OOM event</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -659,14 +659,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic status. Valid values:</p>
-             * <ul>
-             * <li>1: diagnosis ready.</li>
-             * <li>2: diagnosis in progress.</li>
-             * <li>3: diagnosis completed.</li>
-             * <li>4: not diagnosable.</li>
-             * <li>5: diagnosis failed.</li>
-             * </ul>
+             * <p>The diagnostic status. Valid values: 1: the diagnosis is ready. 2: the diagnosis is running. 3: the diagnosis is complete. 4: the item is not diagnosable. 5: the diagnosis failed.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -702,7 +695,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
              * <p>The name of the anomaly item.</p>
              * 
              * <strong>example:</strong>
-             * <p>节点CPU使用率检测</p>
+             * <p>Node CPU usage check</p>
              */
             public Builder item(String item) {
                 this.item = item;

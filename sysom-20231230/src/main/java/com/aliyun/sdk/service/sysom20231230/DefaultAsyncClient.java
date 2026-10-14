@@ -43,13 +43,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: The diagnosis feature requires a service-linked role to be created under the Resource Access Management (RAM) user. Invoking this operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
-     * Take note of the following items when you invoke this operation to authorize SysOM to diagnose ECS instances:</p>
+     * <p>Notice: The diagnostics feature requires a service-linked role to be created under the Resource Access Management (RAM) user. Invoking this operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
+     * Note the following when you invoke this operation to authorize SysOM to diagnose ECS instances:</p>
      * </blockquote>
      * <ul>
      * <li>Each authorization is valid for 7 days. After 7 days, the authorization expires and you must invoke this operation again to re-authorize.</li>
      * <li>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The Resource Access Management (RAM) user that invokes this operation must have the <code>ram:CreateServiceLinkedRole</code> permission.</li>
-     * <li>When you invoke this operation to authorize diagnosis on a specific instance, the label <code>sysom:diagnosis</code> is automatically associated with the target ECS instance. SysOM only allows diagnosis on instances that have this label.</li>
+     * <li>When you invoke this operation to authorize diagnostics on a specific instance, the label <code>sysom:diagnosis</code> is automatically associated with the target ECS instance. SysOM only allows diagnostics on instances that have this label.</li>
      * </ul>
      * 
      * @param request the request parameters of AuthDiagnosis  AuthDiagnosisRequest
@@ -64,6 +64,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AuthDiagnosisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The instance list retrieved by this operation contains only machines managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * 
+     * @param request the request parameters of CheckAgentConfigSupported  CheckAgentConfigSupportedRequest
+     * @return CheckAgentConfigSupportedResponse
+     */
+    @Override
+    public CompletableFuture<CheckAgentConfigSupportedResponse> checkAgentConfigSupported(CheckAgentConfigSupportedRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CheckAgentConfigSupported").setMethod(HttpMethod.GET).setPathRegex("/api/v1/am/agent/checkAgentConfigSupported").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckAgentConfigSupportedResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckAgentConfigSupportedResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -134,6 +155,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAgentConfig  CreateAgentConfigRequest
+     * @return CreateAgentConfigResponse
+     */
+    @Override
+    public CompletableFuture<CreateAgentConfigResponse> createAgentConfig(CreateAgentConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAgentConfig").setMethod(HttpMethod.POST).setPathRegex("/api/v1/am/agent/createAgentConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAgentConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAgentConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateAlertDestination  CreateAlertDestinationRequest
      * @return CreateAlertDestinationResponse
      */
@@ -172,9 +211,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</li>
-     * <li>Populate the parameters based on the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
-     * <li>Convert the returned data from a string to a dict before use. Refer to the general LLM service response format.</li>
+     * <li>Use this operation together with the call_sseapi operation in the aliyun-tea-openapi-inner package.</li>
+     * <li>Populate the parameters based on the input parameters of the general LLM service, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Convert the returned string to a dictionary before use. Refer to the response format of the general LLM service.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateClusterVpcEndpointConnection  CreateClusterVpcEndpointConnectionRequest
@@ -231,6 +270,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteAgentConfig  DeleteAgentConfigRequest
+     * @return DeleteAgentConfigResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAgentConfigResponse> deleteAgentConfig(DeleteAgentConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAgentConfig").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/am/agent/deleteAgentConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAgentConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAgentConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteAlertDestination  DeleteAlertDestinationRequest
      * @return DeleteAlertDestinationResponse
      */
@@ -268,7 +325,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * <p>The instance list returned by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
      * 
      * @param request the request parameters of DescribeMetricList  DescribeMetricListRequest
      * @return DescribeMetricListResponse
@@ -290,7 +347,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Populate parameters according to the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
      * <li>Convert the returned data from a string to a dict before use. Refer to the standard LLM service response format.</li>
      * </ul>
      * 
@@ -315,7 +372,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <ul>
      * <li>Use this operation together with the call_sseapi interface in the aliyun-tea-openapi-inner package.</li>
-     * <li>Populate parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
      * <li>Convert the returned string data to a dict before use. Refer to the standard LLM service response format.</li>
      * </ul>
      * 
@@ -401,6 +458,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAgentConfig  GetAgentConfigRequest
+     * @return GetAgentConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetAgentConfigResponse> getAgentConfig(GetAgentConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAgentConfig").setMethod(HttpMethod.GET).setPathRegex("/api/v1/am/agent/getAgentConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgentConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgentConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAgentTask  GetAgentTaskRequest
      * @return GetAgentTaskResponse
      */
@@ -413,6 +488,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAgentTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. Check the <code>data.status</code> field in the response to determine the current state. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic results from <code>data.result</code>.</p>
+     * 
+     * @param request the request parameters of GetAifgResult  GetAifgResultRequest
+     * @return GetAifgResultResponse
+     */
+    @Override
+    public CompletableFuture<GetAifgResultResponse> getAifgResult(GetAifgResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAifgResult").setMethod(HttpMethod.GET).setPathRegex("/api/v1/aifg/getAifgResult").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAifgResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAifgResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response data to determine the current state. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
+     * 
+     * @param request the request parameters of GetAifgUrl  GetAifgUrlRequest
+     * @return GetAifgUrlResponse
+     */
+    @Override
+    public CompletableFuture<GetAifgUrlResponse> getAifgUrl(GetAifgUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAifgUrl").setMethod(HttpMethod.GET).setPathRegex("/api/v1/aifg/getAifgUrl").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAifgUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAifgUrlResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -492,7 +609,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic results from <code>data.result</code>.</p>
      * 
      * @param request the request parameters of GetDiagnosisResult  GetDiagnosisResultRequest
      * @return GetDiagnosisResultResponse
@@ -506,6 +623,81 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetDiagnosisResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After installing the component for the target ACK cluster:</p>
+     * <ol>
+     * <li>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances are included in the first batch.</li>
+     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component without user intervention.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of GetGpuClusterArgsOptions  GetGpuClusterArgsOptionsRequest
+     * @return GetGpuClusterArgsOptionsResponse
+     */
+    @Override
+    public CompletableFuture<GetGpuClusterArgsOptionsResponse> getGpuClusterArgsOptions(GetGpuClusterArgsOptionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetGpuClusterArgsOptions").setMethod(HttpMethod.GET).setPathRegex("/api/v1/aiTopology/topology/listClusterTopologyOptions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGpuClusterArgsOptionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGpuClusterArgsOptionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After installing the component on the target ACK cluster:</p>
+     * <ol>
+     * <li>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without user intervention.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of GetGpuClusterListAlarmRecord  GetGpuClusterListAlarmRecordRequest
+     * @return GetGpuClusterListAlarmRecordResponse
+     */
+    @Override
+    public CompletableFuture<GetGpuClusterListAlarmRecordResponse> getGpuClusterListAlarmRecord(GetGpuClusterListAlarmRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetGpuClusterListAlarmRecord").setMethod(HttpMethod.GET).setPathRegex("/api/v1/aiTopology/topology/listAlarmRecord").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGpuClusterListAlarmRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGpuClusterListAlarmRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After you install the component on the target ACK cluster:</p>
+     * <ol>
+     * <li>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without requiring manual intervention.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of GetGpuClusterTopology  GetGpuClusterTopologyRequest
+     * @return GetGpuClusterTopologyResponse
+     */
+    @Override
+    public CompletableFuture<GetGpuClusterTopologyResponse> getGpuClusterTopology(GetGpuClusterTopologyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetGpuClusterTopology").setMethod(HttpMethod.GET).setPathRegex("/api/v1/aiTopology/topology/clusterTopology").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGpuClusterTopologyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGpuClusterTopologyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -560,6 +752,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetHotSpotUniqListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The hotfix task process is asynchronous. When you call this operation, the task may still be running. You can check the <code>data.status</code> field in the response to determine the task status. If <code>data.status</code> is <code>Success</code>, the task succeeded, and you can obtain the task result from the <code>data.result</code> field.</p>
+     * 
+     * @param request the request parameters of GetHotfixTask  GetHotfixTaskRequest
+     * @return GetHotfixTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetHotfixTaskResponse> getHotfixTask(GetHotfixTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetHotfixTask").setMethod(HttpMethod.GET).setPathRegex("/api/v1/hotfix_manager/task/get").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetHotfixTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetHotfixTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -692,6 +905,31 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After installing the component for the target ACK cluster:</p>
+     * <ol>
+     * <li>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</li>
+     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of GetListGpuCluster  GetListGpuClusterRequest
+     * @return GetListGpuClusterResponse
+     */
+    @Override
+    public CompletableFuture<GetListGpuClusterResponse> getListGpuCluster(GetListGpuClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetListGpuCluster").setMethod(HttpMethod.GET).setPathRegex("/api/v1/aiTopology/topology/listCluster").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetListGpuClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetListGpuClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetListRecord  GetListRecordRequest
      * @return GetListRecordResponse
      */
@@ -806,8 +1044,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>Some SysOM API operations require role assumption based on the <code>AliyunServiceRoleForSysom</code> service-linked role. Before using SysOM features, invoke this operation to perform initialization and ensure that the service-linked role has been created.</p>
      * <ul>
-     * <li><code>check_only</code>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, invoking this operation triggers automatic creation of the service-linked role if it does not exist.<blockquote>
-     * <p>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, refer to: <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a>, <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a></p>
+     * <li><code>check_only</code>: If this parameter is set to True, only a check is performed to determine whether the service-linked role exists. The service-linked role is not created. If this parameter is set to False or left empty, automatic creation of the service-linked role is performed if it does not exist.<blockquote>
+     * <p>Note: When you call this operation to initialize the role, you agree to the user agreement of the operating system console by default. For more information, see <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -831,7 +1069,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the task execution status.</p>
+     * <p>Calling this operation to install an agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the task execution status.</p>
      * 
      * @param request the request parameters of InstallAgent  InstallAgentRequest
      * @return InstallAgentResponse
@@ -854,8 +1092,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>After you install a component on the target ACK cluster:</p>
      * <ol>
-     * <li>First, when the cluster is managed for the first time, the component is installed on all existing ECS instances in the cluster. If the cluster contains more than 50 nodes, only 50 instances are processed in the first batch.</li>
-     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster in each epoch. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
+     * <li>First, when the cluster is managed for the first time, the component is installed on all existing ECS instances in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</li>
+     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
      * </ol>
      * 
      * @param request the request parameters of InstallAgentForCluster  InstallAgentForClusterRequest
@@ -877,7 +1115,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</p>
+     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to check the task execution status.</p>
      * 
      * @param request the request parameters of InstallAgentWithType  InstallAgentWithTypeRequest
      * @return InstallAgentWithTypeResponse
@@ -891,6 +1129,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<InstallAgentWithTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation asynchronously installs the agent. After the operation is called, a task ID is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
+     * 
+     * @param request the request parameters of InstallHotfix  InstallHotfixRequest
+     * @return InstallHotfixResponse
+     */
+    @Override
+    public CompletableFuture<InstallHotfixResponse> installHotfix(InstallHotfixRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InstallHotfix").setMethod(HttpMethod.POST).setPathRegex("/api/v1/hotfix_manager/hotfix/install").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InstallHotfixResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InstallHotfixResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -990,6 +1249,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAgentsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation retrieves the list of regions where the current user has machines managed by SysOM. If the user has ECS instances in a region but those instances are not managed by SysOM, that region does not appear in the results.</p>
+     * 
+     * @param request the request parameters of ListAifgJobs  ListAifgJobsRequest
+     * @return ListAifgJobsResponse
+     */
+    @Override
+    public CompletableFuture<ListAifgJobsResponse> listAifgJobs(ListAifgJobsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAifgJobs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/aifg/listAifgJobs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAifgJobsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAifgJobsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1320,6 +1600,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The call to this operation to install the agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to obtain the execution status of the task.</p>
+     * 
+     * @param request the request parameters of QueryHotfixStatus  QueryHotfixStatusRequest
+     * @return QueryHotfixStatusResponse
+     */
+    @Override
+    public CompletableFuture<QueryHotfixStatusResponse> queryHotfixStatus(QueryHotfixStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryHotfixStatus").setMethod(HttpMethod.POST).setPathRegex("/api/v1/hotfix_manager/hotfix/query_status").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryHotfixStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryHotfixStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StartAIAnalysis  StartAIAnalysisRequest
      * @return StartAIAnalysisResponse
      */
@@ -1339,7 +1640,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Currently, only comparative analysis of the same pid across different steps within the same AI Infra analysis record is supported.</p>
+     * <p>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</p>
      * 
      * @param request the request parameters of StartAIDiffAnalysis  StartAIDiffAnalysisRequest
      * @return StartAIDiffAnalysisResponse
@@ -1353,6 +1654,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StartAIDiffAnalysisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</p>
+     * 
+     * @param request the request parameters of StartAifgAnalysis  StartAifgAnalysisRequest
+     * @return StartAifgAnalysisResponse
+     */
+    @Override
+    public CompletableFuture<StartAifgAnalysisResponse> startAifgAnalysis(StartAifgAnalysisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartAifgAnalysis").setMethod(HttpMethod.POST).setPathRegex("/api/v1/aifg/startAifgAnalysis").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartAifgAnalysisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartAifgAnalysisResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1399,7 +1721,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * <p>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * @param request the request parameters of UninstallAgentWithType  UninstallAgentWithTypeRequest
      * @return UninstallAgentWithTypeResponse
@@ -1413,6 +1735,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UninstallAgentWithTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
+     * 
+     * @param request the request parameters of UninstallHotfix  UninstallHotfixRequest
+     * @return UninstallHotfixResponse
+     */
+    @Override
+    public CompletableFuture<UninstallHotfixResponse> uninstallHotfix(UninstallHotfixRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UninstallHotfix").setMethod(HttpMethod.POST).setPathRegex("/api/v1/hotfix_manager/hotfix/uninstall").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UninstallHotfixResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UninstallHotfixResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After the configuration is updated, the new configuration is delivered to all resources that use it.</p>
+     * 
+     * @param request the request parameters of UpdateAgentConfig  UpdateAgentConfigRequest
+     * @return UpdateAgentConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAgentConfigResponse> updateAgentConfig(UpdateAgentConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAgentConfig").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/am/agent/updateAgentConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAgentConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAgentConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1476,6 +1840,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateClusterAgentConfig  UpdateClusterAgentConfigRequest
+     * @return UpdateClusterAgentConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateClusterAgentConfigResponse> updateClusterAgentConfig(UpdateClusterAgentConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateClusterAgentConfig").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/am/agent/updateClusterAgentConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateClusterAgentConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateClusterAgentConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateEventsAttention  UpdateEventsAttentionRequest
      * @return UpdateEventsAttentionResponse
      */
@@ -1518,8 +1900,26 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateInstanceAgentConfig  UpdateInstanceAgentConfigRequest
+     * @return UpdateInstanceAgentConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateInstanceAgentConfigResponse> updateInstanceAgentConfig(UpdateInstanceAgentConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateInstanceAgentConfig").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/am/agent/updateInstanceAgentConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateInstanceAgentConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateInstanceAgentConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
-     * <p>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * <p>Calling this operation to update an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * @param request the request parameters of UpgradeAgent  UpgradeAgentRequest
      * @return UpgradeAgentResponse
@@ -1558,7 +1958,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * <p>Calling this operation to update an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * @param request the request parameters of UpgradeAgentWithType  UpgradeAgentWithTypeRequest
      * @return UpgradeAgentWithTypeResponse

@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateFuncSwitchRecordRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("channel")
     @com.aliyun.core.annotation.Validation(required = true)
     private String channel;
@@ -36,17 +32,11 @@ public class UpdateFuncSwitchRecordRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private UpdateFuncSwitchRecordRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.channel = builder.channel;
         this.params = builder.params;
         this.serviceName = builder.serviceName;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -60,13 +50,6 @@ public class UpdateFuncSwitchRecordRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -90,19 +73,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
         return this.serviceName;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<UpdateFuncSwitchRecordRequest, Builder> {
-        private String xDebugId; 
         private String channel; 
         private Params params; 
         private String serviceName; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -110,21 +84,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
 
         private Builder(UpdateFuncSwitchRecordRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.channel = request.channel;
             this.params = request.params;
             this.serviceName = request.serviceName;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>The diagnostic channel. Currently, this parameter is fixed to the ECS channel.</p>
@@ -140,7 +103,7 @@ public class UpdateFuncSwitchRecordRequest extends Request {
         }
 
         /**
-         * <p>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match specified values.</p>
+         * <p>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</p>
          * <p>This parameter is required.</p>
          */
         public Builder params(Params params) {
@@ -160,15 +123,6 @@ public class UpdateFuncSwitchRecordRequest extends Request {
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("service_name", serviceName);
             this.serviceName = serviceName;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 
@@ -345,7 +299,7 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             }
 
             /**
-             * <p>The start duration. Unit: seconds.</p>
+             * <p>The start duration, in seconds (s).</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>

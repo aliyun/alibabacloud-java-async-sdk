@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAllInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("current")
     private String current;
 
@@ -57,13 +53,8 @@ public class ListAllInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private ListAllInstancesRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.current = builder.current;
         this.filters = builder.filters;
         this.instanceType = builder.instanceType;
@@ -73,7 +64,6 @@ public class ListAllInstancesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.pluginId = builder.pluginId;
         this.region = builder.region;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -87,13 +77,6 @@ public class ListAllInstancesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -159,15 +142,7 @@ public class ListAllInstancesRequest extends Request {
         return this.region;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<ListAllInstancesRequest, Builder> {
-        private String xDebugId; 
         private String current; 
         private String filters; 
         private String instanceType; 
@@ -177,7 +152,6 @@ public class ListAllInstancesRequest extends Request {
         private String pageSize; 
         private String pluginId; 
         private String region; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -185,7 +159,6 @@ public class ListAllInstancesRequest extends Request {
 
         private Builder(ListAllInstancesRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.current = request.current;
             this.filters = request.filters;
             this.instanceType = request.instanceType;
@@ -195,17 +168,7 @@ public class ListAllInstancesRequest extends Request {
             this.pageSize = request.pageSize;
             this.pluginId = request.pluginId;
             this.region = request.region;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>The current page number.</p>
@@ -256,7 +219,7 @@ public class ListAllInstancesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to retrieve in a single request.</p>
+         * <p>The maximum number of entries to return in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -315,15 +278,6 @@ public class ListAllInstancesRequest extends Request {
         public Builder region(String region) {
             this.putQueryParameter("region", region);
             this.region = region;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

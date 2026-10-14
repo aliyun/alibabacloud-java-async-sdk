@@ -17,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckInstanceSupportRequest</p>
  */
 public class CheckInstanceSupportRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("instances")
     private java.util.List<String> instances;
@@ -29,16 +25,10 @@ public class CheckInstanceSupportRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private CheckInstanceSupportRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.instances = builder.instances;
         this.region = builder.region;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -55,13 +45,6 @@ public class CheckInstanceSupportRequest extends Request {
     }
 
     /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
-    }
-
-    /**
      * @return instances
      */
     public java.util.List<String> getInstances() {
@@ -75,18 +58,9 @@ public class CheckInstanceSupportRequest extends Request {
         return this.region;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<CheckInstanceSupportRequest, Builder> {
-        private String xDebugId; 
         private java.util.List<String> instances; 
         private String region; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -94,20 +68,9 @@ public class CheckInstanceSupportRequest extends Request {
 
         private Builder(CheckInstanceSupportRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.instances = request.instances;
             this.region = request.region;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>The list of instance IDs to check.</p>
@@ -122,7 +85,7 @@ public class CheckInstanceSupportRequest extends Request {
         }
 
         /**
-         * <p>The region to which the instances belong. Ensure that all instance IDs passed in instances belong to the same region.</p>
+         * <p>The region to which the instances belong. Make sure that all instance IDs specified in instances belong to the same region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -130,15 +93,6 @@ public class CheckInstanceSupportRequest extends Request {
         public Builder region(String region) {
             this.putBodyParameter("region", region);
             this.region = region;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

@@ -96,7 +96,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
          * <p>The status code.</p>
          * <ul>
          * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-         * <li>Other status codes indicate that the authorization failed. If the authorization fails, check the <code>message</code> field for the detailed fault information.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault message.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -119,7 +119,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
          * <p>The error message.</p>
          * <ul>
          * <li>If <code>code == Success</code>, this field is empty.</li>
-         * <li>Otherwise, this field contains the request error information.</li>
+         * <li>Otherwise, this field contains the request error message.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The collection of clusters for which alerts are received.</p>
+             * <p>The collection of clusters that receive alerts.</p>
              */
             public Builder clusters(java.util.List<String> clusters) {
                 this.clusters = clusters;
@@ -229,10 +229,10 @@ public class GetAlertStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of anomaly items for which alerts are received.</p>
+             * <p>The list of exception items that receive alerts.</p>
              * 
              * <strong>example:</strong>
-             * <p>Node CPU utilization detection</p>
+             * <p>Node CPU utilization check</p>
              */
             public Builder items(Object items) {
                 this.items = items;

@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstanceStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("current")
     private Long current;
 
@@ -41,19 +37,13 @@ public class ListInstanceStatusRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private ListInstanceStatusRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.current = builder.current;
         this.instance = builder.instance;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
         this.status = builder.status;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -67,13 +57,6 @@ public class ListInstanceStatusRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -111,21 +94,12 @@ public class ListInstanceStatusRequest extends Request {
         return this.status;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<ListInstanceStatusRequest, Builder> {
-        private String xDebugId; 
         private Long current; 
         private String instance; 
         private Long pageSize; 
         private String region; 
         private String status; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -133,23 +107,12 @@ public class ListInstanceStatusRequest extends Request {
 
         private Builder(ListInstanceStatusRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.current = request.current;
             this.instance = request.instance;
             this.pageSize = request.pageSize;
             this.region = request.region;
             this.status = request.status;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>The current page number (starting from 1). This field is present when pagination is used.</p>
@@ -200,7 +163,7 @@ public class ListInstanceStatusRequest extends Request {
         }
 
         /**
-         * <p>Filters the instance list by status. If this field is specified, only instances with the corresponding status are returned.</p>
+         * <p>The instance status used to filter the instance list. If this parameter is specified, only instances in the specified status are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -208,15 +171,6 @@ public class ListInstanceStatusRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("status", status);
             this.status = status;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

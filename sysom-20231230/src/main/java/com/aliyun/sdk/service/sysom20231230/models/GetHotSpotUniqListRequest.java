@@ -17,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHotSpotUniqListRequest</p>
  */
 public class GetHotSpotUniqListRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("beg_end")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -49,20 +45,14 @@ public class GetHotSpotUniqListRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String uniq;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private GetHotSpotUniqListRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.begEnd = builder.begEnd;
         this.begStart = builder.begStart;
         this.instance = builder.instance;
         this.pid = builder.pid;
         this.table = builder.table;
         this.uniq = builder.uniq;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -76,13 +66,6 @@ public class GetHotSpotUniqListRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -127,22 +110,13 @@ public class GetHotSpotUniqListRequest extends Request {
         return this.uniq;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<GetHotSpotUniqListRequest, Builder> {
-        private String xDebugId; 
         private Long begEnd; 
         private Long begStart; 
         private String instance; 
         private Long pid; 
         private String table; 
         private String uniq; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -150,24 +124,13 @@ public class GetHotSpotUniqListRequest extends Request {
 
         private Builder(GetHotSpotUniqListRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.begEnd = request.begEnd;
             this.begStart = request.begStart;
             this.instance = request.instance;
             this.pid = request.pid;
             this.table = request.table;
             this.uniq = request.uniq;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>The end time.</p>
@@ -237,20 +200,11 @@ public class GetHotSpotUniqListRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>默认需要为&quot;flag&quot;，待查询的字段</p>
+         * <p>The default value must be &quot;flag&quot;, which specifies the field to query</p>
          */
         public Builder uniq(String uniq) {
             this.putBodyParameter("uniq", uniq);
             this.uniq = uniq;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

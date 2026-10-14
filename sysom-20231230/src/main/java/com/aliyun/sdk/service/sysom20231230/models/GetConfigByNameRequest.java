@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetConfigByNameRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("configName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String configName;
@@ -43,19 +39,13 @@ public class GetConfigByNameRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("versionId")
     private Long versionId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private GetConfigByNameRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.configName = builder.configName;
         this.configType = builder.configType;
         this.entityId = builder.entityId;
         this.useGlobalUid = builder.useGlobalUid;
         this.versionId = builder.versionId;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -69,13 +59,6 @@ public class GetConfigByNameRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -113,21 +96,12 @@ public class GetConfigByNameRequest extends Request {
         return this.versionId;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<GetConfigByNameRequest, Builder> {
-        private String xDebugId; 
         private String configName; 
         private String configType; 
         private String entityId; 
         private Boolean useGlobalUid; 
         private Long versionId; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -135,30 +109,19 @@ public class GetConfigByNameRequest extends Request {
 
         private Builder(GetConfigByNameRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.configName = request.configName;
             this.configType = request.configType;
             this.entityId = request.entityId;
             this.useGlobalUid = request.useGlobalUid;
             this.versionId = request.versionId;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>The configuration name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>节点网络延时检测</p>
+         * <p>Node network latency detection</p>
          */
         public Builder configName(String configName) {
             this.putQueryParameter("configName", configName);
@@ -192,7 +155,7 @@ public class GetConfigByNameRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use the global UID.</p>
+         * <p>Specifies whether to use a global UID.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -212,15 +175,6 @@ public class GetConfigByNameRequest extends Request {
         public Builder versionId(Long versionId) {
             this.putQueryParameter("versionId", versionId);
             this.versionId = versionId;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

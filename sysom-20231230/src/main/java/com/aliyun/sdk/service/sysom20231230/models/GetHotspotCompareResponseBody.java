@@ -125,7 +125,7 @@ public class GetHotspotCompareResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -149,8 +149,8 @@ public class GetHotspotCompareResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the API call was successful. Valid values:</p>
          * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
+         * <li>true: The API call was successful.</li>
+         * <li>false: The API call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

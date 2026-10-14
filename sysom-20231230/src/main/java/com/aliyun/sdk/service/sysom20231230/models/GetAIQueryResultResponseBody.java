@@ -104,7 +104,7 @@ public class GetAIQueryResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result. The data volume is large.</p>
+         * <p>The response data. The data volume can be large.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;task_id\&quot;: \&quot;y4ba8uRV\&quot;}</p>
@@ -119,7 +119,7 @@ public class GetAIQueryResultResponseBody extends TeaModel {
          * 
          * <strong>example:</strong>
          * <p>Analysis ID: 56dae746-ef55-4f77-8373-cb3594c41457
-         * Analysis failed for machine i-bp164ns76pzirbwv0snt. Cause: Not get GPU trace data for \&quot;56dae746-ef55-4f77-8373-cb3594c41457\&quot; \&quot;[\&quot;93811\&quot;]\&quot;!</p>
+         * Analysis failed for instance i-bp164ns76pzirbwv0snt. Cause: Not get GPU trace data for \&quot;56dae746-ef55-4f77-8373-cb3594c41457\&quot; \&quot;[\&quot;93811\&quot;]\&quot;!</p>
          */
         public Builder message(String message) {
             this.message = message;

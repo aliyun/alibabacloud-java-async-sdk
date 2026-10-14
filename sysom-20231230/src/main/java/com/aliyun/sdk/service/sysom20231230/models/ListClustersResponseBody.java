@@ -119,8 +119,8 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <ul>
-         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * <li>If <code>code == Success</code>, the authorization is successful.</li>
+         * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,8 +305,8 @@ public class ListClustersResponseBody extends TeaModel {
              * <p>The actual cluster ID.</p>
              * <blockquote>
              * <ul>
-             * <li>For <code>ACK</code> type clusters, this is the ACK cluster ID.</li>
-             * <li>For <code>CUSTOM</code> type clusters, this serves as a unique identifier with no additional meaning.</li>
+             * <li>For <code>ACK</code> clusters, this cluster ID is the ACK cluster ID.</li>
+             * <li>For <code>CUSTOM</code> clusters, this cluster ID serves as a unique identifier and has no additional meaning.</li>
              * </ul>
              * </blockquote>
              * 
@@ -338,7 +338,7 @@ public class ListClustersResponseBody extends TeaModel {
             /**
              * <ul>
              * <li><code>ACK</code>: ACK cluster.</li>
-             * <li><code>CUSTOM</code>: Custom cluster (default clusters belong to custom clusters).</li>
+             * <li><code>CUSTOM</code>: Custom cluster. The default cluster belongs to the custom cluster type.</li>
              * </ul>
              * 
              * <strong>example:</strong>

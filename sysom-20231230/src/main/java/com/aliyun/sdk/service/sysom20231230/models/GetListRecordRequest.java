@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetListRecordRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("analysisId")
     private String analysisId;
 
@@ -41,19 +37,13 @@ public class GetListRecordRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private GetListRecordRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.analysisId = builder.analysisId;
         this.current = builder.current;
         this.customId = builder.customId;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -67,13 +57,6 @@ public class GetListRecordRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -111,21 +94,12 @@ public class GetListRecordRequest extends Request {
         return this.region;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<GetListRecordRequest, Builder> {
-        private String xDebugId; 
         private String analysisId; 
         private Long current; 
         private Long customId; 
         private Long pageSize; 
         private String region; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -133,26 +107,15 @@ public class GetListRecordRequest extends Request {
 
         private Builder(GetListRecordRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.analysisId = request.analysisId;
             this.current = request.current;
             this.customId = request.customId;
             this.pageSize = request.pageSize;
             this.region = request.region;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
 
         /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the analysis record to query the status of.</p>
+         * <p>The ID of the analysis record to query the status for.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxxxxx-f37b-478d-87f6-2259ed8766bf</p>
@@ -205,15 +168,6 @@ public class GetListRecordRequest extends Request {
         public Builder region(String region) {
             this.putQueryParameter("region", region);
             this.region = region;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

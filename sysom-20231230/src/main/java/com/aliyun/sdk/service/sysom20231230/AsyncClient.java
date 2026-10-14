@@ -22,19 +22,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: The diagnosis feature requires a service-linked role to be created under the Resource Access Management (RAM) user. Invoking this operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
-     * Take note of the following items when you invoke this operation to authorize SysOM to diagnose ECS instances:</p>
+     * <p>Notice: The diagnostics feature requires a service-linked role to be created under the Resource Access Management (RAM) user. Invoking this operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
+     * Note the following when you invoke this operation to authorize SysOM to diagnose ECS instances:</p>
      * </blockquote>
      * <ul>
      * <li>Each authorization is valid for 7 days. After 7 days, the authorization expires and you must invoke this operation again to re-authorize.</li>
      * <li>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The Resource Access Management (RAM) user that invokes this operation must have the <code>ram:CreateServiceLinkedRole</code> permission.</li>
-     * <li>When you invoke this operation to authorize diagnosis on a specific instance, the label <code>sysom:diagnosis</code> is automatically associated with the target ECS instance. SysOM only allows diagnosis on instances that have this label.</li>
+     * <li>When you invoke this operation to authorize diagnostics on a specific instance, the label <code>sysom:diagnosis</code> is automatically associated with the target ECS instance. SysOM only allows diagnostics on instances that have this label.</li>
      * </ul>
      * 
      * @param request the request parameters of AuthDiagnosis  AuthDiagnosisRequest
      * @return AuthDiagnosisResponse
      */
     CompletableFuture<AuthDiagnosisResponse> authDiagnosis(AuthDiagnosisRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>The instance list retrieved by this operation contains only machines managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * 
+     * @param request the request parameters of CheckAgentConfigSupported  CheckAgentConfigSupportedRequest
+     * @return CheckAgentConfigSupportedResponse
+     */
+    CompletableFuture<CheckAgentConfigSupportedResponse> checkAgentConfigSupported(CheckAgentConfigSupportedRequest request);
 
     /**
      * <b>description</b> :
@@ -56,6 +65,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<CpuHighAgentStreamResponseResponseBody> cpuHighAgentStreamResponseWithResponseIterable(CpuHighAgentStreamResponseRequest request);
 
     /**
+     * @param request the request parameters of CreateAgentConfig  CreateAgentConfigRequest
+     * @return CreateAgentConfigResponse
+     */
+    CompletableFuture<CreateAgentConfigResponse> createAgentConfig(CreateAgentConfigRequest request);
+
+    /**
      * @param request the request parameters of CreateAlertDestination  CreateAlertDestinationRequest
      * @return CreateAlertDestinationResponse
      */
@@ -70,9 +85,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</li>
-     * <li>Populate the parameters based on the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
-     * <li>Convert the returned data from a string to a dict before use. Refer to the general LLM service response format.</li>
+     * <li>Use this operation together with the call_sseapi operation in the aliyun-tea-openapi-inner package.</li>
+     * <li>Populate the parameters based on the input parameters of the general LLM service, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Convert the returned string to a dictionary before use. Refer to the response format of the general LLM service.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateClusterVpcEndpointConnection  CreateClusterVpcEndpointConnectionRequest
@@ -93,6 +108,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVmcoreDiagnosisTaskResponse> createVmcoreDiagnosisTask(CreateVmcoreDiagnosisTaskRequest request);
 
     /**
+     * @param request the request parameters of DeleteAgentConfig  DeleteAgentConfigRequest
+     * @return DeleteAgentConfigResponse
+     */
+    CompletableFuture<DeleteAgentConfigResponse> deleteAgentConfig(DeleteAgentConfigRequest request);
+
+    /**
      * @param request the request parameters of DeleteAlertDestination  DeleteAlertDestinationRequest
      * @return DeleteAlertDestinationResponse
      */
@@ -106,7 +127,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * <p>The instance list returned by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
      * 
      * @param request the request parameters of DescribeMetricList  DescribeMetricListRequest
      * @return DescribeMetricListResponse
@@ -116,7 +137,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Populate parameters according to the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
      * <li>Convert the returned data from a string to a dict before use. Refer to the standard LLM service response format.</li>
      * </ul>
      * 
@@ -129,7 +150,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Use this operation together with the call_sseapi interface in the aliyun-tea-openapi-inner package.</li>
-     * <li>Populate parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
      * <li>Convert the returned string data to a dict before use. Refer to the standard LLM service response format.</li>
      * </ul>
      * 
@@ -159,10 +180,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAgentResponse> getAgent(GetAgentRequest request);
 
     /**
+     * @param request the request parameters of GetAgentConfig  GetAgentConfigRequest
+     * @return GetAgentConfigResponse
+     */
+    CompletableFuture<GetAgentConfigResponse> getAgentConfig(GetAgentConfigRequest request);
+
+    /**
      * @param request the request parameters of GetAgentTask  GetAgentTaskRequest
      * @return GetAgentTaskResponse
      */
     CompletableFuture<GetAgentTaskResponse> getAgentTask(GetAgentTaskRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. Check the <code>data.status</code> field in the response to determine the current state. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic results from <code>data.result</code>.</p>
+     * 
+     * @param request the request parameters of GetAifgResult  GetAifgResultRequest
+     * @return GetAifgResultResponse
+     */
+    CompletableFuture<GetAifgResultResponse> getAifgResult(GetAifgResultRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response data to determine the current state. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
+     * 
+     * @param request the request parameters of GetAifgUrl  GetAifgUrlRequest
+     * @return GetAifgUrlResponse
+     */
+    CompletableFuture<GetAifgUrlResponse> getAifgUrl(GetAifgUrlRequest request);
 
     /**
      * @param request the request parameters of GetAlertDestination  GetAlertDestinationRequest
@@ -190,12 +235,51 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic results from <code>data.result</code>.</p>
      * 
      * @param request the request parameters of GetDiagnosisResult  GetDiagnosisResultRequest
      * @return GetDiagnosisResultResponse
      */
     CompletableFuture<GetDiagnosisResultResponse> getDiagnosisResult(GetDiagnosisResultRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>After installing the component for the target ACK cluster:</p>
+     * <ol>
+     * <li>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances are included in the first batch.</li>
+     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component without user intervention.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of GetGpuClusterArgsOptions  GetGpuClusterArgsOptionsRequest
+     * @return GetGpuClusterArgsOptionsResponse
+     */
+    CompletableFuture<GetGpuClusterArgsOptionsResponse> getGpuClusterArgsOptions(GetGpuClusterArgsOptionsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>After installing the component on the target ACK cluster:</p>
+     * <ol>
+     * <li>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without user intervention.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of GetGpuClusterListAlarmRecord  GetGpuClusterListAlarmRecordRequest
+     * @return GetGpuClusterListAlarmRecordResponse
+     */
+    CompletableFuture<GetGpuClusterListAlarmRecordResponse> getGpuClusterListAlarmRecord(GetGpuClusterListAlarmRecordRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>After you install the component on the target ACK cluster:</p>
+     * <ol>
+     * <li>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without requiring manual intervention.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of GetGpuClusterTopology  GetGpuClusterTopologyRequest
+     * @return GetGpuClusterTopologyResponse
+     */
+    CompletableFuture<GetGpuClusterTopologyResponse> getGpuClusterTopology(GetGpuClusterTopologyRequest request);
 
     /**
      * @param request the request parameters of GetHealthPercentage  GetHealthPercentageRequest
@@ -214,6 +298,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetHotSpotUniqListResponse
      */
     CompletableFuture<GetHotSpotUniqListResponse> getHotSpotUniqList(GetHotSpotUniqListRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>The hotfix task process is asynchronous. When you call this operation, the task may still be running. You can check the <code>data.status</code> field in the response to determine the task status. If <code>data.status</code> is <code>Success</code>, the task succeeded, and you can obtain the task result from the <code>data.result</code> field.</p>
+     * 
+     * @param request the request parameters of GetHotfixTask  GetHotfixTaskRequest
+     * @return GetHotfixTaskResponse
+     */
+    CompletableFuture<GetHotfixTaskResponse> getHotfixTask(GetHotfixTaskRequest request);
 
     /**
      * @param request the request parameters of GetHotspotAnalysis  GetHotspotAnalysisRequest
@@ -258,6 +351,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstantScoreResponse> getInstantScore(GetInstantScoreRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>After installing the component for the target ACK cluster:</p>
+     * <ol>
+     * <li>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</li>
+     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of GetListGpuCluster  GetListGpuClusterRequest
+     * @return GetListGpuClusterResponse
+     */
+    CompletableFuture<GetListGpuClusterResponse> getListGpuCluster(GetListGpuClusterRequest request);
+
+    /**
      * @param request the request parameters of GetListRecord  GetListRecordRequest
      * @return GetListRecordResponse
      */
@@ -300,8 +406,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>Some SysOM API operations require role assumption based on the <code>AliyunServiceRoleForSysom</code> service-linked role. Before using SysOM features, invoke this operation to perform initialization and ensure that the service-linked role has been created.</p>
      * <ul>
-     * <li><code>check_only</code>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, invoking this operation triggers automatic creation of the service-linked role if it does not exist.<blockquote>
-     * <p>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, refer to: <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a>, <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a></p>
+     * <li><code>check_only</code>: If this parameter is set to True, only a check is performed to determine whether the service-linked role exists. The service-linked role is not created. If this parameter is set to False or left empty, automatic creation of the service-linked role is performed if it does not exist.<blockquote>
+     * <p>Note: When you call this operation to initialize the role, you agree to the user agreement of the operating system console by default. For more information, see <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -313,7 +419,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the task execution status.</p>
+     * <p>Calling this operation to install an agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the task execution status.</p>
      * 
      * @param request the request parameters of InstallAgent  InstallAgentRequest
      * @return InstallAgentResponse
@@ -324,8 +430,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>After you install a component on the target ACK cluster:</p>
      * <ol>
-     * <li>First, when the cluster is managed for the first time, the component is installed on all existing ECS instances in the cluster. If the cluster contains more than 50 nodes, only 50 instances are processed in the first batch.</li>
-     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster in each epoch. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
+     * <li>First, when the cluster is managed for the first time, the component is installed on all existing ECS instances in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</li>
+     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
      * </ol>
      * 
      * @param request the request parameters of InstallAgentForCluster  InstallAgentForClusterRequest
@@ -335,12 +441,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</p>
+     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to check the task execution status.</p>
      * 
      * @param request the request parameters of InstallAgentWithType  InstallAgentWithTypeRequest
      * @return InstallAgentWithTypeResponse
      */
     CompletableFuture<InstallAgentWithTypeResponse> installAgentWithType(InstallAgentWithTypeRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This operation asynchronously installs the agent. After the operation is called, a task ID is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
+     * 
+     * @param request the request parameters of InstallHotfix  InstallHotfixRequest
+     * @return InstallHotfixResponse
+     */
+    CompletableFuture<InstallHotfixResponse> installHotfix(InstallHotfixRequest request);
 
     /**
      * @param request the request parameters of InvokeAnomalyDiagnosis  InvokeAnomalyDiagnosisRequest
@@ -380,6 +495,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAgentsResponse
      */
     CompletableFuture<ListAgentsResponse> listAgents(ListAgentsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This operation retrieves the list of regions where the current user has machines managed by SysOM. If the user has ECS instances in a region but those instances are not managed by SysOM, that region does not appear in the results.</p>
+     * 
+     * @param request the request parameters of ListAifgJobs  ListAifgJobsRequest
+     * @return ListAifgJobsResponse
+     */
+    CompletableFuture<ListAifgJobsResponse> listAifgJobs(ListAifgJobsRequest request);
 
     /**
      * @param request the request parameters of ListAlertDestinations  ListAlertDestinationsRequest
@@ -502,6 +626,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListVmcoreDiagnosisTaskResponse> listVmcoreDiagnosisTask(ListVmcoreDiagnosisTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The call to this operation to install the agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to obtain the execution status of the task.</p>
+     * 
+     * @param request the request parameters of QueryHotfixStatus  QueryHotfixStatusRequest
+     * @return QueryHotfixStatusResponse
+     */
+    CompletableFuture<QueryHotfixStatusResponse> queryHotfixStatus(QueryHotfixStatusRequest request);
+
+    /**
      * @param request the request parameters of StartAIAnalysis  StartAIAnalysisRequest
      * @return StartAIAnalysisResponse
      */
@@ -509,12 +642,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Currently, only comparative analysis of the same pid across different steps within the same AI Infra analysis record is supported.</p>
+     * <p>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</p>
      * 
      * @param request the request parameters of StartAIDiffAnalysis  StartAIDiffAnalysisRequest
      * @return StartAIDiffAnalysisResponse
      */
     CompletableFuture<StartAIDiffAnalysisResponse> startAIDiffAnalysis(StartAIDiffAnalysisRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</p>
+     * 
+     * @param request the request parameters of StartAifgAnalysis  StartAifgAnalysisRequest
+     * @return StartAifgAnalysisResponse
+     */
+    CompletableFuture<StartAifgAnalysisResponse> startAifgAnalysis(StartAifgAnalysisRequest request);
 
     /**
      * <b>description</b> :
@@ -533,12 +675,30 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * <p>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * @param request the request parameters of UninstallAgentWithType  UninstallAgentWithTypeRequest
      * @return UninstallAgentWithTypeResponse
      */
     CompletableFuture<UninstallAgentWithTypeResponse> uninstallAgentWithType(UninstallAgentWithTypeRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
+     * 
+     * @param request the request parameters of UninstallHotfix  UninstallHotfixRequest
+     * @return UninstallHotfixResponse
+     */
+    CompletableFuture<UninstallHotfixResponse> uninstallHotfix(UninstallHotfixRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>After the configuration is updated, the new configuration is delivered to all resources that use it.</p>
+     * 
+     * @param request the request parameters of UpdateAgentConfig  UpdateAgentConfigRequest
+     * @return UpdateAgentConfigResponse
+     */
+    CompletableFuture<UpdateAgentConfigResponse> updateAgentConfig(UpdateAgentConfigRequest request);
 
     /**
      * <b>description</b> :
@@ -562,6 +722,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAlertStrategyResponse> updateAlertStrategy(UpdateAlertStrategyRequest request);
 
     /**
+     * @param request the request parameters of UpdateClusterAgentConfig  UpdateClusterAgentConfigRequest
+     * @return UpdateClusterAgentConfigResponse
+     */
+    CompletableFuture<UpdateClusterAgentConfigResponse> updateClusterAgentConfig(UpdateClusterAgentConfigRequest request);
+
+    /**
      * @param request the request parameters of UpdateEventsAttention  UpdateEventsAttentionRequest
      * @return UpdateEventsAttentionResponse
      */
@@ -580,8 +746,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateFuncSwitchRecordResponse> updateFuncSwitchRecord(UpdateFuncSwitchRecordRequest request);
 
     /**
+     * @param request the request parameters of UpdateInstanceAgentConfig  UpdateInstanceAgentConfigRequest
+     * @return UpdateInstanceAgentConfigResponse
+     */
+    CompletableFuture<UpdateInstanceAgentConfigResponse> updateInstanceAgentConfig(UpdateInstanceAgentConfigRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * <p>Calling this operation to update an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * @param request the request parameters of UpgradeAgent  UpgradeAgentRequest
      * @return UpgradeAgentResponse
@@ -596,7 +768,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * <p>Calling this operation to update an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * @param request the request parameters of UpgradeAgentWithType  UpgradeAgentWithTypeRequest
      * @return UpgradeAgentWithTypeResponse

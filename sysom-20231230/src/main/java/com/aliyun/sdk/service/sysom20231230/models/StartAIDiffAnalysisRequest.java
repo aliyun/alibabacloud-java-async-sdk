@@ -17,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartAIDiffAnalysisRequest</p>
  */
 public class StartAIDiffAnalysisRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("task1")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -31,16 +27,10 @@ public class StartAIDiffAnalysisRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Task2 task2;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private StartAIDiffAnalysisRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.task1 = builder.task1;
         this.task2 = builder.task2;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -57,13 +47,6 @@ public class StartAIDiffAnalysisRequest extends Request {
     }
 
     /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
-    }
-
-    /**
      * @return task1
      */
     public Task1 getTask1() {
@@ -77,18 +60,9 @@ public class StartAIDiffAnalysisRequest extends Request {
         return this.task2;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<StartAIDiffAnalysisRequest, Builder> {
-        private String xDebugId; 
         private Task1 task1; 
         private Task2 task2; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -96,20 +70,9 @@ public class StartAIDiffAnalysisRequest extends Request {
 
         private Builder(StartAIDiffAnalysisRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.task1 = request.task1;
             this.task2 = request.task2;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>The task1 parameters.</p>
@@ -129,20 +92,11 @@ public class StartAIDiffAnalysisRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>task2 parameters. Currently, only comparison with the same analysisId and pid is supported</p>
+         * <p>task2 parameters. Currently, only comparison with the same analysisId and PID is supported</p>
          */
         public Builder task2(Task2 task2) {
             this.putBodyParameter("task2", task2);
             this.task2 = task2;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 
@@ -243,7 +197,7 @@ public class StartAIDiffAnalysisRequest extends Request {
             }
 
             /**
-             * <p>The process IDs (PIDs) of AI job processes. Batch input is supported with comma-separated values.</p>
+             * <p>The PIDs of AI job processes. You can specify multiple PIDs separated by commas.</p>
              */
             public Builder pids(java.util.List<String> pids) {
                 this.pids = pids;
@@ -374,7 +328,7 @@ public class StartAIDiffAnalysisRequest extends Request {
             }
 
             /**
-             * <p>The process IDs (PIDs) of AI job processes. Batch input is supported with comma-separated values.</p>
+             * <p>The PIDs of AI job processes. You can specify multiple PIDs separated by commas.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

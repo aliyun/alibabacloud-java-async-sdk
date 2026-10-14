@@ -17,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateEventsAttentionRequest</p>
  */
 public class UpdateEventsAttentionRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("mode")
     private Integer mode;
@@ -34,17 +30,11 @@ public class UpdateEventsAttentionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String uuid;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private UpdateEventsAttentionRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.mode = builder.mode;
         this.range = builder.range;
         this.uuid = builder.uuid;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -58,13 +48,6 @@ public class UpdateEventsAttentionRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -88,19 +71,10 @@ public class UpdateEventsAttentionRequest extends Request {
         return this.uuid;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<UpdateEventsAttentionRequest, Builder> {
-        private String xDebugId; 
         private Integer mode; 
         private String range; 
         private String uuid; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -108,21 +82,10 @@ public class UpdateEventsAttentionRequest extends Request {
 
         private Builder(UpdateEventsAttentionRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.mode = request.mode;
             this.range = request.range;
             this.uuid = request.uuid;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>The sensitivity of the anomaly event. Valid values: -1 to 3. A value of -1 indicates that the sensitivity is decreased by 1. A value of 0 indicates that the sensitivity is increased by 1.</p>
@@ -158,15 +121,6 @@ public class UpdateEventsAttentionRequest extends Request {
         public Builder uuid(String uuid) {
             this.putBodyParameter("uuid", uuid);
             this.uuid = uuid;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAgentInstallRecordsRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("current")
     private Long current;
 
@@ -49,13 +45,8 @@ public class ListAgentInstallRecordsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private ListAgentInstallRecordsRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.current = builder.current;
         this.instanceId = builder.instanceId;
         this.pageSize = builder.pageSize;
@@ -63,7 +54,6 @@ public class ListAgentInstallRecordsRequest extends Request {
         this.pluginVersion = builder.pluginVersion;
         this.region = builder.region;
         this.status = builder.status;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -77,13 +67,6 @@ public class ListAgentInstallRecordsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -135,15 +118,7 @@ public class ListAgentInstallRecordsRequest extends Request {
         return this.status;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<ListAgentInstallRecordsRequest, Builder> {
-        private String xDebugId; 
         private Long current; 
         private String instanceId; 
         private Long pageSize; 
@@ -151,7 +126,6 @@ public class ListAgentInstallRecordsRequest extends Request {
         private String pluginVersion; 
         private String region; 
         private String status; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -159,7 +133,6 @@ public class ListAgentInstallRecordsRequest extends Request {
 
         private Builder(ListAgentInstallRecordsRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.current = request.current;
             this.instanceId = request.instanceId;
             this.pageSize = request.pageSize;
@@ -167,17 +140,7 @@ public class ListAgentInstallRecordsRequest extends Request {
             this.pluginVersion = request.pluginVersion;
             this.region = request.region;
             this.status = request.status;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>The current page number. Pages start from page 1.</p>
@@ -192,7 +155,7 @@ public class ListAgentInstallRecordsRequest extends Request {
         }
 
         /**
-         * <p>Specifies the instance ID. If this parameter is specified, only the Agent installation records for the specified instance are returned.</p>
+         * <p>The instance ID. If you specify this parameter, only the Agent installation records for the specified instance are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp118piqcio9tiwgh84b</p>
@@ -216,7 +179,7 @@ public class ListAgentInstallRecordsRequest extends Request {
         }
 
         /**
-         * <p>Specifies the Agent ID. If this parameter is specified, only the installation records for the specified Agent are returned. You can use this parameter together with the plugin_version parameter.</p>
+         * <p>The Agent ID. If you specify this parameter, only the installation records for the specified Agent are returned. You can use this parameter together with the plugin_version parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
@@ -228,7 +191,7 @@ public class ListAgentInstallRecordsRequest extends Request {
         }
 
         /**
-         * <p>Specifies the Agent version. This parameter cannot be used alone and must be used together with the plugin_id parameter to filter the installation records for a specific version of the specified Agent.</p>
+         * <p>The Agent version. This parameter cannot be used alone. Use it together with the plugin_id parameter to filter the installation records for a specific version of the specified Agent.</p>
          * 
          * <strong>example:</strong>
          * <p>3.4.0-1</p>
@@ -252,7 +215,7 @@ public class ListAgentInstallRecordsRequest extends Request {
         }
 
         /**
-         * <p>Filters component installation records by status.</p>
+         * <p>The status used to filter component installation records.</p>
          * 
          * <strong>example:</strong>
          * <p>Installed</p>
@@ -260,15 +223,6 @@ public class ListAgentInstallRecordsRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("status", status);
             this.status = status;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

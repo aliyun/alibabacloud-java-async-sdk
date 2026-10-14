@@ -17,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVmcoreDiagnosisTaskRequest</p>
  */
 public class CreateVmcoreDiagnosisTaskRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("debuginfoCommonUrl")
     private String debuginfoCommonUrl;
@@ -42,19 +38,13 @@ public class CreateVmcoreDiagnosisTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("vmcoreUrl")
     private String vmcoreUrl;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private CreateVmcoreDiagnosisTaskRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.debuginfoCommonUrl = builder.debuginfoCommonUrl;
         this.debuginfoUrl = builder.debuginfoUrl;
         this.dmesgUrl = builder.dmesgUrl;
         this.taskType = builder.taskType;
         this.vmcoreUrl = builder.vmcoreUrl;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -68,13 +58,6 @@ public class CreateVmcoreDiagnosisTaskRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -112,21 +95,12 @@ public class CreateVmcoreDiagnosisTaskRequest extends Request {
         return this.vmcoreUrl;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<CreateVmcoreDiagnosisTaskRequest, Builder> {
-        private String xDebugId; 
         private String debuginfoCommonUrl; 
         private String debuginfoUrl; 
         private String dmesgUrl; 
         private String taskType; 
         private String vmcoreUrl; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -134,23 +108,12 @@ public class CreateVmcoreDiagnosisTaskRequest extends Request {
 
         private Builder(CreateVmcoreDiagnosisTaskRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.debuginfoCommonUrl = request.debuginfoCommonUrl;
             this.debuginfoUrl = request.debuginfoUrl;
             this.dmesgUrl = request.dmesgUrl;
             this.taskType = request.taskType;
             this.vmcoreUrl = request.vmcoreUrl;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>The download URL of the debuginfo-common file. This parameter is optional when the diagnosis type is vmcore.</p>
@@ -193,8 +156,8 @@ public class CreateVmcoreDiagnosisTaskRequest extends Request {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li>vmcore: vmcore file diagnostic task.</li>
-         * <li>dmesg: dmesg log diagnostic task.</li>
+         * <li>vmcore: a vmcore file diagnostic task.</li>
+         * <li>dmesg: a dmesg log diagnostic task.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -216,15 +179,6 @@ public class CreateVmcoreDiagnosisTaskRequest extends Request {
         public Builder vmcoreUrl(String vmcoreUrl) {
             this.putBodyParameter("vmcoreUrl", vmcoreUrl);
             this.vmcoreUrl = vmcoreUrl;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

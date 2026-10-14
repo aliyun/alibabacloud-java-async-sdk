@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPluginsInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("current")
     private Long current;
 
@@ -52,13 +48,8 @@ public class ListPluginsInstancesRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private ListPluginsInstancesRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.current = builder.current;
         this.instanceIdName = builder.instanceIdName;
         this.instanceTag = builder.instanceTag;
@@ -66,7 +57,6 @@ public class ListPluginsInstancesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.pluginId = builder.pluginId;
         this.region = builder.region;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -80,13 +70,6 @@ public class ListPluginsInstancesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -138,15 +121,7 @@ public class ListPluginsInstancesRequest extends Request {
         return this.region;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<ListPluginsInstancesRequest, Builder> {
-        private String xDebugId; 
         private Long current; 
         private String instanceIdName; 
         private String instanceTag; 
@@ -154,7 +129,6 @@ public class ListPluginsInstancesRequest extends Request {
         private Long pageSize; 
         private String pluginId; 
         private String region; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -162,7 +136,6 @@ public class ListPluginsInstancesRequest extends Request {
 
         private Builder(ListPluginsInstancesRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.current = request.current;
             this.instanceIdName = request.instanceIdName;
             this.instanceTag = request.instanceTag;
@@ -170,20 +143,10 @@ public class ListPluginsInstancesRequest extends Request {
             this.pageSize = request.pageSize;
             this.pluginId = request.pluginId;
             this.region = request.region;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
 
         /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
-
-        /**
-         * <p>The page number for pagination. This field indicates the current page.</p>
+         * <p>The page number for paginated queries. This field indicates the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -219,7 +182,7 @@ public class ListPluginsInstancesRequest extends Request {
         }
 
         /**
-         * <p>Filters instances by plugin installation status.</p>
+         * <p>Filters instances by plug-in installation status.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,15 +229,6 @@ public class ListPluginsInstancesRequest extends Request {
         public Builder region(String region) {
             this.putQueryParameter("region", region);
             this.region = region;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

@@ -17,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAlertDestinationRequest</p>
  */
 public class CreateAlertDestinationRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("app_id")
     private String appId;
@@ -53,13 +49,8 @@ public class CreateAlertDestinationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("target")
     private String target;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private CreateAlertDestinationRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.appId = builder.appId;
         this.appSecret = builder.appSecret;
         this.groupId = builder.groupId;
@@ -68,7 +59,6 @@ public class CreateAlertDestinationRequest extends Request {
         this.params = builder.params;
         this.source = builder.source;
         this.target = builder.target;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -82,13 +72,6 @@ public class CreateAlertDestinationRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -147,15 +130,7 @@ public class CreateAlertDestinationRequest extends Request {
         return this.target;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<CreateAlertDestinationRequest, Builder> {
-        private String xDebugId; 
         private String appId; 
         private String appSecret; 
         private java.util.List<String> groupId; 
@@ -164,7 +139,6 @@ public class CreateAlertDestinationRequest extends Request {
         private Params params; 
         private String source; 
         private String target; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -172,7 +146,6 @@ public class CreateAlertDestinationRequest extends Request {
 
         private Builder(CreateAlertDestinationRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.appId = request.appId;
             this.appSecret = request.appSecret;
             this.groupId = request.groupId;
@@ -181,17 +154,7 @@ public class CreateAlertDestinationRequest extends Request {
             this.params = request.params;
             this.source = request.source;
             this.target = request.target;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * app_id.
@@ -271,15 +234,6 @@ public class CreateAlertDestinationRequest extends Request {
         public Builder target(String target) {
             this.putBodyParameter("target", target);
             this.target = target;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 
@@ -391,7 +345,7 @@ public class CreateAlertDestinationRequest extends Request {
             }
 
             /**
-             * <p>The secret key of the chatbot.</p>
+             * <p>The chatbot secret key.</p>
              * 
              * <strong>example:</strong>
              * <p>SECxxx</p>

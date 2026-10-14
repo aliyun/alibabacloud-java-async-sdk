@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstanceInfoRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("infoType")
     private String infoType;
 
@@ -49,13 +45,8 @@ public class ListInstanceInfoRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private ListInstanceInfoRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.infoType = builder.infoType;
         this.instanceType = builder.instanceType;
         this.managedType = builder.managedType;
@@ -63,7 +54,6 @@ public class ListInstanceInfoRequest extends Request {
         this.nextToken = builder.nextToken;
         this.pluginId = builder.pluginId;
         this.region = builder.region;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -77,13 +67,6 @@ public class ListInstanceInfoRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -135,15 +118,7 @@ public class ListInstanceInfoRequest extends Request {
         return this.region;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<ListInstanceInfoRequest, Builder> {
-        private String xDebugId; 
         private String infoType; 
         private String instanceType; 
         private String managedType; 
@@ -151,7 +126,6 @@ public class ListInstanceInfoRequest extends Request {
         private String nextToken; 
         private String pluginId; 
         private String region; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -159,7 +133,6 @@ public class ListInstanceInfoRequest extends Request {
 
         private Builder(ListInstanceInfoRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.infoType = request.infoType;
             this.instanceType = request.instanceType;
             this.managedType = request.managedType;
@@ -167,17 +140,7 @@ public class ListInstanceInfoRequest extends Request {
             this.nextToken = request.nextToken;
             this.pluginId = request.pluginId;
             this.region = request.region;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>The information type.</p>
@@ -260,15 +223,6 @@ public class ListInstanceInfoRequest extends Request {
         public Builder region(String region) {
             this.putQueryParameter("region", region);
             this.region = region;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

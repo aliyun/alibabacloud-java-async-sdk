@@ -138,7 +138,7 @@ public class ListInstanceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned per request.</p>
+         * <p>The maximum number of records returned in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -152,7 +152,7 @@ public class ListInstanceInfoResponseBody extends TeaModel {
          * <p>The error message.</p>
          * <ul>
          * <li>If <code>code == Success</code>, this field is empty.</li>
-         * <li>Otherwise, this field contains the request error message.</li>
+         * <li>Otherwise, this field contains the error message of the request.</li>
          * </ul>
          * 
          * <strong>example:</strong>

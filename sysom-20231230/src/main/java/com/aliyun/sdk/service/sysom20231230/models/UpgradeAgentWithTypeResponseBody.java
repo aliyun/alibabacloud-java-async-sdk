@@ -108,7 +108,7 @@ public class UpgradeAgentWithTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -119,7 +119,7 @@ public class UpgradeAgentWithTypeResponseBody extends TeaModel {
          * <p>The error message.</p>
          * <ul>
          * <li>If <code>code == Success</code>, this field is empty.</li>
-         * <li>Otherwise, this field contains the request error information.</li>
+         * <li>Otherwise, this field contains the error information of the request.</li>
          * </ul>
          * 
          * <strong>example:</strong>

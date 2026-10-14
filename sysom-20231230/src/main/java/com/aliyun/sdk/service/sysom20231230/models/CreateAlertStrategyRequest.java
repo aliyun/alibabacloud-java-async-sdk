@@ -17,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAlertStrategyRequest</p>
  */
 public class CreateAlertStrategyRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("enabled")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -40,18 +36,12 @@ public class CreateAlertStrategyRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Strategy strategy;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private CreateAlertStrategyRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.enabled = builder.enabled;
         this.k8sLabel = builder.k8sLabel;
         this.name = builder.name;
         this.strategy = builder.strategy;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -65,13 +55,6 @@ public class CreateAlertStrategyRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -102,20 +85,11 @@ public class CreateAlertStrategyRequest extends Request {
         return this.strategy;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<CreateAlertStrategyRequest, Builder> {
-        private String xDebugId; 
         private Boolean enabled; 
         private Boolean k8sLabel; 
         private String name; 
         private Strategy strategy; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -123,22 +97,11 @@ public class CreateAlertStrategyRequest extends Request {
 
         private Builder(CreateAlertStrategyRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.enabled = request.enabled;
             this.k8sLabel = request.k8sLabel;
             this.name = request.name;
             this.strategy = request.strategy;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
-
-        /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
 
         /**
          * <p>Specifies whether the alert policy is enabled.</p>
@@ -182,15 +145,6 @@ public class CreateAlertStrategyRequest extends Request {
         public Builder strategy(Strategy strategy) {
             this.putBodyParameter("strategy", strategy);
             this.strategy = strategy;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 
@@ -267,7 +221,7 @@ public class CreateAlertStrategyRequest extends Request {
             } 
 
             /**
-             * <p>The collection of clusters for which alerts are received.</p>
+             * <p>The collection of clusters that receive alerts.</p>
              */
             public Builder clusters(java.util.List<String> clusters) {
                 this.clusters = clusters;
@@ -283,7 +237,7 @@ public class CreateAlertStrategyRequest extends Request {
             }
 
             /**
-             * <p>The collection of anomaly items for which alerts are received.</p>
+             * <p>The collection of exception items that receive alerts.</p>
              */
             public Builder items(java.util.List<String> items) {
                 this.items = items;

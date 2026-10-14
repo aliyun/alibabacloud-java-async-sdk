@@ -108,8 +108,8 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <ul>
-         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * <li>If <code>code == Success</code>, the authorization is successful.</li>
+         * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -387,7 +387,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata of the instance.</p>
+             * <p>The instance metadata.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -436,7 +436,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system name of the instance (obtained from /etc/os-release).</p>
+             * <p>The operating system name of the instance, obtained from /etc/os-release.</p>
              * 
              * <strong>example:</strong>
              * <p>Anolis OS</p>
@@ -447,7 +447,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system name ID of the instance (obtained from /etc/os-release).</p>
+             * <p>The operating system name ID of the instance, obtained from /etc/os-release.</p>
              * 
              * <strong>example:</strong>
              * <p>anolis</p>
@@ -458,7 +458,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system version of the instance (obtained from /etc/os-release).</p>
+             * <p>The operating system version of the instance, obtained from /etc/os-release.</p>
              * 
              * <strong>example:</strong>
              * <p>8.9</p>
@@ -469,7 +469,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system version ID of the instance (obtained from /etc/os-release).</p>
+             * <p>The operating system version ID of the instance, obtained from /etc/os-release.</p>
              * 
              * <strong>example:</strong>
              * <p>rhel fedora centos</p>

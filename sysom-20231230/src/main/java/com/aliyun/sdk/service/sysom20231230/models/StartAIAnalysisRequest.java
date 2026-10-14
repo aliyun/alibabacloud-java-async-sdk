@@ -17,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartAIAnalysisRequest</p>
  */
 public class StartAIAnalysisRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
-    private String xDebugId;
-
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("analysisTool")
     private String analysisTool;
@@ -77,13 +73,8 @@ public class StartAIAnalysisRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("uid")
     private String uid;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
-    private String xSysomInvokeSource;
-
     private StartAIAnalysisRequest(Builder builder) {
         super(builder);
-        this.xDebugId = builder.xDebugId;
         this.analysisTool = builder.analysisTool;
         this.analysisParams = builder.analysisParams;
         this.channel = builder.channel;
@@ -98,7 +89,6 @@ public class StartAIAnalysisRequest extends Request {
         this.region = builder.region;
         this.timeout = builder.timeout;
         this.uid = builder.uid;
-        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -112,13 +102,6 @@ public class StartAIAnalysisRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return xDebugId
-     */
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     /**
@@ -219,15 +202,7 @@ public class StartAIAnalysisRequest extends Request {
         return this.uid;
     }
 
-    /**
-     * @return xSysomInvokeSource
-     */
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static final class Builder extends Request.Builder<StartAIAnalysisRequest, Builder> {
-        private String xDebugId; 
         private String analysisTool; 
         private java.util.List<String> analysisParams; 
         private String channel; 
@@ -242,7 +217,6 @@ public class StartAIAnalysisRequest extends Request {
         private String region; 
         private Integer timeout; 
         private String uid; 
-        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -250,7 +224,6 @@ public class StartAIAnalysisRequest extends Request {
 
         private Builder(StartAIAnalysisRequest request) {
             super(request);
-            this.xDebugId = request.xDebugId;
             this.analysisTool = request.analysisTool;
             this.analysisParams = request.analysisParams;
             this.channel = request.channel;
@@ -265,20 +238,10 @@ public class StartAIAnalysisRequest extends Request {
             this.region = request.region;
             this.timeout = request.timeout;
             this.uid = request.uid;
-            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
 
         /**
-         * X-Debug-Id.
-         */
-        public Builder xDebugId(String xDebugId) {
-            this.putQueryParameter("X-Debug-Id", xDebugId);
-            this.xDebugId = xDebugId;
-            return this;
-        }
-
-        /**
-         * <p>The analysis tool. This parameter does not need to be specified when you use OpenAPI.</p>
+         * <p>The analysis tool. This parameter does not need to be specified when you call this operation by using OpenAPI.</p>
          * 
          * <strong>example:</strong>
          * <p>gp/pyki/analysis</p>
@@ -290,7 +253,7 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * <p>The data richness level.</p>
+         * <p>The data richness.</p>
          */
         public Builder analysisParams(java.util.List<String> analysisParams) {
             this.putBodyParameter("analysis_params", analysisParams);
@@ -323,7 +286,7 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * <p>The creator. This parameter does not need to be specified when you use OpenAPI.</p>
+         * <p>The creator. This parameter does not need to be specified when you call this operation by using OpenAPI.</p>
          * 
          * <strong>example:</strong>
          * <p>445333</p>
@@ -347,7 +310,7 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * <p>The instance type. This parameter does not need to be specified when you use OpenAPI.</p>
+         * <p>The instance type. This parameter does not need to be specified when you call this operation by using OpenAPI.</p>
          * 
          * <strong>example:</strong>
          * <p>ip/sn/hostname</p>
@@ -392,7 +355,7 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * <p>The process IDs (PIDs) of the AI job. Multiple PIDs are supported, separated by commas.</p>
+         * <p>The process IDs (PIDs) of the AI job. Multiple PIDs are supported and separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>2421,36547,10043</p>
@@ -416,7 +379,9 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * <p>The AI Infra analysis duration. Unit: milliseconds. Default value: 2000.</p>
+         * <p>The AI Infra analysis duration.
+         * Unit: milliseconds.
+         * Default value: 2000.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -428,7 +393,7 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud user ID. This parameter does not need to be specified when you use OpenAPI.</p>
+         * <p>The Alibaba Cloud account ID. This parameter does not need to be specified when you call this operation by using OpenAPI.</p>
          * 
          * <strong>example:</strong>
          * <p>123423414</p>
@@ -436,15 +401,6 @@ public class StartAIAnalysisRequest extends Request {
         public Builder uid(String uid) {
             this.putBodyParameter("uid", uid);
             this.uid = uid;
-            return this;
-        }
-
-        /**
-         * x-sysom-invoke-source.
-         */
-        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
-            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
-            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 
