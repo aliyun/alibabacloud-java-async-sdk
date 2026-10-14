@@ -54,7 +54,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -107,10 +107,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The diagnostics list.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal.</p>
+             * <p>The list of diagnostic information.</p>
              */
             public Builder suggestions(java.util.List<String> suggestions) {
                 this.suggestions = suggestions;

@@ -298,7 +298,7 @@ public class ListJobRunsRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The end time range of the job.</p>
+         * <p>The time range for the end time of the job run.</p>
          */
         public Builder endTime(EndTime endTime) {
             String endTimeShrink = shrink(endTime, "endTime", "json");
@@ -345,7 +345,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * groupByState.
+         * <p>Specifies whether to aggregate and return statistical results by job run state.</p>
          */
         public Builder groupByState(Boolean groupByState) {
             this.putQueryParameter("groupByState", groupByState);
@@ -354,7 +354,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the job is a workflow job.</p>
+         * <p>Specifies whether the job run is a workflow job.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -366,7 +366,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The job ID of the streaming job deployment.</p>
+         * <p>The ID of the streaming job deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>jd-b6d003f1930f****</p>
@@ -378,7 +378,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>The ID of the job run.</p>
          * 
          * <strong>example:</strong>
          * <p>j-xxx</p>
@@ -390,7 +390,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to retrieve in a single request. Maximum value: 100.</p>
+         * <p>The maximum number of entries to return in a single call. The maximum value is 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -402,7 +402,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The minimum execution duration of the job, in milliseconds.</p>
+         * <p>The minimum execution duration of the job run, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60000</p>
@@ -414,7 +414,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The job name.</p>
+         * <p>The name of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>emr-spark-demo-job</p>
@@ -426,7 +426,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that marks the position from which to start reading.</p>
+         * <p>The pagination token that specifies the starting position for the query.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -450,7 +450,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The name of the resource queue on which the Spark job runs.</p>
+         * <p>The name of the resource queue in which the Spark job runs.</p>
          * 
          * <strong>example:</strong>
          * <p>dev_queue</p>
@@ -474,7 +474,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The start time range of the job.</p>
+         * <p>The time range for the start time of the job run.</p>
          */
         public Builder startTime(StartTime startTime) {
             String startTimeShrink = shrink(startTime, "startTime", "json");
@@ -484,7 +484,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The job states.</p>
+         * <p>The states of the job runs.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;Running&quot;,&quot;Submitted&quot;]</p>
@@ -566,7 +566,7 @@ public class ListJobRunsRequest extends Request {
             } 
 
             /**
-             * <p>The end of the end time range.</p>
+             * <p>The end time of the time range. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1710432000000</p>
@@ -577,7 +577,7 @@ public class ListJobRunsRequest extends Request {
             }
 
             /**
-             * <p>The beginning of the end time range.</p>
+             * <p>The start time of the time range. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1709740800000</p>
@@ -647,7 +647,7 @@ public class ListJobRunsRequest extends Request {
             } 
 
             /**
-             * <p>The end of the start time range.</p>
+             * <p>The end time of the time range. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1710432000000</p>
@@ -658,7 +658,7 @@ public class ListJobRunsRequest extends Request {
             }
 
             /**
-             * <p>The beginning of the start time range.</p>
+             * <p>The start time of the time range. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1709740800000</p>

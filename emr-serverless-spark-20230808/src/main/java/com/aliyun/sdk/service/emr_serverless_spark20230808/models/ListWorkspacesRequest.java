@@ -143,7 +143,7 @@ public class ListWorkspacesRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of records to retrieve in a single request.</p>
+         * <p>The maximum number of records to return in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -155,7 +155,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The name of the workspace. Fuzzy match is supported.</p>
+         * <p>The name of the workspace. Fuzzy search by workspace name is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test_workspace</p>
@@ -167,7 +167,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that marks the current read position.</p>
+         * <p>The token that indicates the position from which to start reading.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -191,7 +191,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2thxggoqhmhq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -200,7 +203,14 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The workspace status.</p>
+         * <p>The state of the workspace. Valid values:</p>
+         * <ul>
+         * <li>Starting: The workspace is starting.</li>
+         * <li>Running: The workspace is running.</li>
+         * <li>Stopping: The workspace is stopping.</li>
+         * <li>Stopped: The workspace is stopped.</li>
+         * <li>Error: The workspace failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -212,7 +222,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>The list of tags used to filter workspaces.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
@@ -281,7 +291,10 @@ public class ListWorkspacesRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen-finance.edas.config.server</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -289,7 +302,10 @@ public class ListWorkspacesRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iPhone remaining disk space percentage</p>
              */
             public Builder value(String value) {
                 this.value = value;

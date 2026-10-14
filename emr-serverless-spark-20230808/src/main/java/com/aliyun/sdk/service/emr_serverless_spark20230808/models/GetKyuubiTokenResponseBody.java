@@ -67,7 +67,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the token automatically expires.</p>
+             * <p>Specifies whether auto-expiration is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -155,7 +155,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration period, in days.</p>
+             * <p>The expiration period in days.</p>
              * 
              * <strong>example:</strong>
              * <p>365</p>
@@ -329,7 +329,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The automatic expiration configuration.</p>
+             * <p>The auto-expiration configuration struct.</p>
              */
             public Builder autoExpireConfiguration(AutoExpireConfiguration autoExpireConfiguration) {
                 this.autoExpireConfiguration = autoExpireConfiguration;
@@ -337,7 +337,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1749456094000</p>
@@ -348,7 +348,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator name.</p>
+             * <p>The name of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>
@@ -359,7 +359,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time.</p>
+             * <p>The expiration time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1753932319390</p>
@@ -370,7 +370,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last used time.</p>
+             * <p>The last used time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1749456098000</p>
@@ -381,7 +381,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud Resource Names (ARNs) of the authorized users.</p>
+             * <p>The list of authorized user ARNs.</p>
              */
             public Builder memberArns(java.util.List<String> memberArns) {
                 this.memberArns = memberArns;
@@ -419,7 +419,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token ID.</p>
+             * <p>Token ID。</p>
              * 
              * <strong>example:</strong>
              * <p>tk-zpi0*****hdv4y</p>

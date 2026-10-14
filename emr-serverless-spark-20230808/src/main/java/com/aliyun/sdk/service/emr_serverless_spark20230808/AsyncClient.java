@@ -350,6 +350,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNetworkServicesResponse> listNetworkServices(ListNetworkServicesRequest request);
 
     /**
+     * @param request the request parameters of ListQueueTopJobs  ListQueueTopJobsRequest
+     * @return ListQueueTopJobsResponse
+     */
+    CompletableFuture<ListQueueTopJobsResponse> listQueueTopJobs(ListQueueTopJobsRequest request);
+
+    /**
      * @param request the request parameters of ListRayCluster  ListRayClusterRequest
      * @return ListRayClusterResponse
      */

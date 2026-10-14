@@ -900,7 +900,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>The business ID of the folder.</p>
+         * <p>The category business ID.</p>
          */
         public Builder categoryBizId(String categoryBizId) {
             this.categoryBizId = categoryBizId;
@@ -916,8 +916,11 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>The UID of the creator.</p>
+         * <p>The creator UID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150978934701****</p>
          */
         public Builder creator(Long creator) {
             this.creator = creator;
@@ -925,7 +928,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>The credential for direct OSS upload.</p>
+         * <p>The direct upload information for OSS.</p>
          */
         public Builder credential(Credential credential) {
             this.credential = credential;
@@ -942,6 +945,9 @@ public class Task extends TeaModel {
 
         /**
          * <p>The default database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder defaultDatabase(String defaultDatabase) {
             this.defaultDatabase = defaultDatabase;
@@ -974,6 +980,9 @@ public class Task extends TeaModel {
 
         /**
          * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-cpv569tlhtgndjl8****</p>
          */
         public Builder environmentId(String environmentId) {
             this.environmentId = environmentId;
@@ -981,7 +990,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>The IDs of extra Spark artifacts.</p>
+         * <p>The IDs of additional Spark resources.</p>
          */
         public Builder extraArtifactIds(java.util.List<String> extraArtifactIds) {
             this.extraArtifactIds = extraArtifactIds;
@@ -989,7 +998,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>The custom spark-submit configuration parameters.</p>
+         * <p>The custom Spark submit parameters.</p>
          */
         public Builder extraSparkSubmitParams(String extraSparkSubmitParams) {
             this.extraSparkSubmitParams = extraSparkSubmitParams;
@@ -1005,7 +1014,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the fusion feature is enabled.</p>
+         * <p>The Fusion status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fusion(Boolean fusion) {
             this.fusion = fusion;
@@ -1015,6 +1027,9 @@ public class Task extends TeaModel {
         /**
          * <p>The creation time.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-10T02:02:41.000+00:00</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -1024,6 +1039,9 @@ public class Task extends TeaModel {
         /**
          * <p>The last modified time.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-10T02:02:41.000+00:00</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -1031,7 +1049,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the task has been changed after the last commit.</p>
+         * <p>The change status after the last commit.</p>
          */
         public Builder hasChanged(Boolean hasChanged) {
             this.hasChanged = hasChanged;
@@ -1039,7 +1057,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the task has been submitted.</p>
+         * <p>The commit status.</p>
          * <p>This parameter is required.</p>
          */
         public Builder hasCommited(Boolean hasCommited) {
@@ -1048,7 +1066,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the task is a streaming task.</p>
+         * <p>The streaming task status.</p>
          */
         public Builder isStreaming(Boolean isStreaming) {
             this.isStreaming = isStreaming;
@@ -1072,7 +1090,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource queue used in the last run.</p>
+         * <p>The ID of the resource queue for the last run.</p>
          */
         public Builder lastRunResourceQueueId(String lastRunResourceQueueId) {
             this.lastRunResourceQueueId = lastRunResourceQueueId;
@@ -1080,8 +1098,11 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>The UID of the last modifier.</p>
+         * <p>The UID of the last updater.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150978934701****</p>
          */
         public Builder modifier(Long modifier) {
             this.modifier = modifier;
@@ -1091,6 +1112,9 @@ public class Task extends TeaModel {
         /**
          * <p>The task name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ods_transform_task</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -1106,7 +1130,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>The PySpark dependency pyfiles for the Spark task.</p>
+         * <p>The PyFiles for PySpark dependencies.</p>
          */
         public Builder pyFiles(java.util.List<String> pyFiles) {
             this.pyFiles = pyFiles;
@@ -1178,7 +1202,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * rayHeadSpec.
+         * <p>The Ray cluster head node parameters.</p>
          */
         public Builder rayHeadSpec(RayHeadSpec rayHeadSpec) {
             this.rayHeadSpec = rayHeadSpec;
@@ -1234,7 +1258,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * rayVersion.
+         * <p>The database engine version of the Ray DPI engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>err-1.3.0 (Ray 2.55.1, Python 3.12)</p>
          */
         public Builder rayVersion(String rayVersion) {
             this.rayVersion = rayVersion;
@@ -1250,7 +1277,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * rayWorkerSpec.
+         * <p>The list of worker node parameters for the Ray cluster. A maximum of 50 groups are supported.</p>
          */
         public Builder rayWorkerSpec(java.util.List<RayWorkerSpec> rayWorkerSpec) {
             this.rayWorkerSpec = rayWorkerSpec;
@@ -1266,7 +1293,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * sessionClusterId.
+         * <p>The interactive job session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234abcd-12ab-34cd-56ef-1234567890ab</p>
          */
         public Builder sessionClusterId(String sessionClusterId) {
             this.sessionClusterId = sessionClusterId;
@@ -1274,7 +1304,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>The Spark arguments.</p>
+         * <p>The Spark parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1285,7 +1315,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>The list of Spark configurations.</p>
+         * <p>The Spark configuration list.</p>
          */
         public Builder sparkConf(java.util.List<SparkConf> sparkConf) {
             this.sparkConf = sparkConf;
@@ -1295,6 +1325,9 @@ public class Task extends TeaModel {
         /**
          * <p>The number of Spark driver cores.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sparkDriverCores(Integer sparkDriverCores) {
             this.sparkDriverCores = sparkDriverCores;
@@ -1304,6 +1337,9 @@ public class Task extends TeaModel {
         /**
          * <p>The Spark driver memory.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1073741824</p>
          */
         public Builder sparkDriverMemory(Long sparkDriverMemory) {
             this.sparkDriverMemory = sparkDriverMemory;
@@ -1311,7 +1347,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>The Spark main class entrypoint.</p>
+         * <p>The Spark entry point.</p>
          */
         public Builder sparkEntrypoint(String sparkEntrypoint) {
             this.sparkEntrypoint = sparkEntrypoint;
@@ -1321,6 +1357,9 @@ public class Task extends TeaModel {
         /**
          * <p>The number of Spark executor cores.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sparkExecutorCores(Integer sparkExecutorCores) {
             this.sparkExecutorCores = sparkExecutorCores;
@@ -1330,6 +1369,9 @@ public class Task extends TeaModel {
         /**
          * <p>The Spark executor memory.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1073741824</p>
          */
         public Builder sparkExecutorMemory(Long sparkExecutorMemory) {
             this.sparkExecutorMemory = sparkExecutorMemory;
@@ -1339,6 +1381,9 @@ public class Task extends TeaModel {
         /**
          * <p>The Spark log level.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         public Builder sparkLogLevel(String sparkLogLevel) {
             this.sparkLogLevel = sparkLogLevel;
@@ -1348,6 +1393,9 @@ public class Task extends TeaModel {
         /**
          * <p>The Spark log path.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://your_bucket/path/to/your/log</p>
          */
         public Builder sparkLogPath(String sparkLogPath) {
             this.sparkLogPath = sparkLogPath;
@@ -1355,7 +1403,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>The spark-submit task submission clause.</p>
+         * <p>The Spark submit statement.</p>
          */
         public Builder sparkSubmitClause(String sparkSubmitClause) {
             this.sparkSubmitClause = sparkSubmitClause;
@@ -1365,6 +1413,9 @@ public class Task extends TeaModel {
         /**
          * <p>The Spark version.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-4.1.1</p>
          */
         public Builder sparkVersion(String sparkVersion) {
             this.sparkVersion = sparkVersion;
@@ -1372,7 +1423,7 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>The task labels.</p>
+         * <p>The task tags.</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             this.tags = tags;
@@ -1380,7 +1431,10 @@ public class Task extends TeaModel {
         }
 
         /**
-         * <p>The task timeout period.</p>
+         * <p>The task timeout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200</p>
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;
@@ -1390,6 +1444,9 @@ public class Task extends TeaModel {
         /**
          * <p>The task type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -1760,7 +1817,10 @@ public class Task extends TeaModel {
             } 
 
             /**
-             * cpu.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -1768,7 +1828,10 @@ public class Task extends TeaModel {
             }
 
             /**
-             * enableAutoScaling.
+             * <p>Specifies whether to enable auto scaling for worker nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableAutoScaling(Boolean enableAutoScaling) {
                 this.enableAutoScaling = enableAutoScaling;
@@ -1776,7 +1839,7 @@ public class Task extends TeaModel {
             }
 
             /**
-             * <p>The environment variables of the Ray node.</p>
+             * <p>The environment variables for Ray nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>MY_ENV=123456</p>
@@ -1787,7 +1850,10 @@ public class Task extends TeaModel {
             }
 
             /**
-             * gpuSpec.
+             * <p>The GPU instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn6i-c4g1.xlarge</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -1795,7 +1861,10 @@ public class Task extends TeaModel {
             }
 
             /**
-             * idleTimeoutSeconds.
+             * <p>The idle timeout period for worker nodes after auto scaling is enabled, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder idleTimeoutSeconds(Long idleTimeoutSeconds) {
                 this.idleTimeoutSeconds = idleTimeoutSeconds;
@@ -1803,7 +1872,10 @@ public class Task extends TeaModel {
             }
 
             /**
-             * memory.
+             * <p>The memory size, in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8Gi</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -1811,7 +1883,10 @@ public class Task extends TeaModel {
             }
 
             /**
-             * queueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -1819,7 +1894,7 @@ public class Task extends TeaModel {
             }
 
             /**
-             * <p>The startup parameters of Ray.</p>
+             * <p>The Ray startup parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>--num-cpus=0</p>
@@ -1830,7 +1905,7 @@ public class Task extends TeaModel {
             }
 
             /**
-             * <p>The DPI engine version of Ray.</p>
+             * <p>The database engine version of the Ray DPI engine.</p>
              * 
              * <strong>example:</strong>
              * <p>err-1.3.0 (Ray 2.55.1, Python 3.12)</p>
@@ -1841,7 +1916,10 @@ public class Task extends TeaModel {
             }
 
             /**
-             * replica.
+             * <p>The number of head nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -2025,7 +2103,10 @@ public class Task extends TeaModel {
             } 
 
             /**
-             * cpu.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -2033,7 +2114,7 @@ public class Task extends TeaModel {
             }
 
             /**
-             * <p>The environment variables of Ray.</p>
+             * <p>The environment variables for Ray.</p>
              * 
              * <strong>example:</strong>
              * <p>MY_ENV=123456</p>
@@ -2044,7 +2125,10 @@ public class Task extends TeaModel {
             }
 
             /**
-             * gpuSpec.
+             * <p>The GPU instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn6i-c4g1.xlarge</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -2052,7 +2136,10 @@ public class Task extends TeaModel {
             }
 
             /**
-             * groupName.
+             * <p>The worker group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WorkerGroup1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -2060,7 +2147,10 @@ public class Task extends TeaModel {
             }
 
             /**
-             * maxReplica.
+             * <p>The maximum number of worker nodes after auto scaling is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxReplica(Integer maxReplica) {
                 this.maxReplica = maxReplica;
@@ -2068,7 +2158,10 @@ public class Task extends TeaModel {
             }
 
             /**
-             * memory.
+             * <p>The memory size, in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16Gi</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -2076,7 +2169,10 @@ public class Task extends TeaModel {
             }
 
             /**
-             * minReplica.
+             * <p>The minimum number of worker nodes after auto scaling is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minReplica(Integer minReplica) {
                 this.minReplica = minReplica;
@@ -2084,7 +2180,10 @@ public class Task extends TeaModel {
             }
 
             /**
-             * queueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -2092,7 +2191,7 @@ public class Task extends TeaModel {
             }
 
             /**
-             * <p>The startup parameters of Ray.</p>
+             * <p>The Ray startup parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>--num-cpus=0</p>
@@ -2103,7 +2202,7 @@ public class Task extends TeaModel {
             }
 
             /**
-             * <p>The DPI engine version of Ray.</p>
+             * <p>The database engine version of the Ray DPI engine.</p>
              * 
              * <strong>example:</strong>
              * <p>err-1.3.0 (Ray 2.55.1, Python 3.12)</p>
@@ -2114,7 +2213,10 @@ public class Task extends TeaModel {
             }
 
             /**
-             * replica.
+             * <p>The number of worker nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;

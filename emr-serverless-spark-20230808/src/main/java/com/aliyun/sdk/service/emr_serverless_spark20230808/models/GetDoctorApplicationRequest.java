@@ -127,7 +127,7 @@ public class GetDoctorApplicationRequest extends Request {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>The run ID.</p>
          * 
          * <strong>example:</strong>
          * <p>jr-d2d82aa09155****</p>
@@ -139,7 +139,7 @@ public class GetDoctorApplicationRequest extends Request {
         }
 
         /**
-         * <p>The language of diagnostic information.</p>
+         * <p>The language of the diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -151,7 +151,7 @@ public class GetDoctorApplicationRequest extends Request {
         }
 
         /**
-         * <p>The query time.</p>
+         * <p>The query date in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01</p>

@@ -132,7 +132,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return code from the backend API.</p>
+         * <p>The return code from the API backend.</p>
          * 
          * <strong>example:</strong>
          * <p>1400009</p>
@@ -151,7 +151,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of failed operations.</p>
+         * <p>The number of failures.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -173,7 +173,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed description that corresponds to the return code.</p>
+         * <p>The detailed description corresponding to the request code.</p>
          * 
          * <strong>example:</strong>
          * <p>No permission for resource action</p>
@@ -184,7 +184,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -195,7 +195,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -485,7 +485,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The email address for alerts.</p>
+             * <p>The email address for alert notifications.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></p>
@@ -518,7 +518,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the workflow definition was created.</p>
+             * <p>The creation time of the workflow definition. The time is in UTC and follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-09-05T02:03:19Z</p>
@@ -540,7 +540,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the workflow definition.</p>
+             * <p>The node definition description.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -551,7 +551,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the schedule.</p>
+             * <p>The end time of the task time range. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1710432000000</p>
@@ -606,7 +606,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release state of the workflow.</p>
+             * <p>The online status of the workflow.</p>
              * 
              * <strong>example:</strong>
              * <p>ONLINE</p>
@@ -617,7 +617,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the schedule.</p>
+             * <p>The start time of the scheduling.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -639,7 +639,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the workflow definition was updated.</p>
+             * <p>The update time of the workflow definition. The time is in UTC and follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-05T06:24:27Z</p>
@@ -650,7 +650,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who scheduled the workflow.</p>
+             * <p>The ID of the scheduling user.</p>
              * 
              * <strong>example:</strong>
              * <p>113*********</p>
@@ -661,7 +661,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user who scheduled the workflow.</p>
+             * <p>The name of the scheduling user.</p>
              * 
              * <strong>example:</strong>
              * <p>w-********</p>
@@ -683,7 +683,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hash code of the version.</p>
+             * <p>The version hash code.</p>
              * 
              * <strong>example:</strong>
              * <p>dwerf*********</p>

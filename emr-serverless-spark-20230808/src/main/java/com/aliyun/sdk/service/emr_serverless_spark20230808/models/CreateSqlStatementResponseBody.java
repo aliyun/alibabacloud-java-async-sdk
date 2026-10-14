@@ -131,7 +131,7 @@ public class CreateSqlStatementResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the interactive query.</p>
+             * <p>The interactive query ID.</p>
              * 
              * <strong>example:</strong>
              * <p>st-1231dfafadfa***</p>

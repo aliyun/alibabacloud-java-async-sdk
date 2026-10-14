@@ -78,14 +78,11 @@ public class GetAICenterStateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state of the AI center. Valid values:</p>
+         * <p>The status of AI Hub. Valid values:</p>
          * <ul>
-         * <li><p>Running</p>
-         * </li>
-         * <li><p>inactive</p>
-         * </li>
-         * <li><p>activating</p>
-         * </li>
+         * <li>active</li>
+         * <li>inactive</li>
+         * <li>activating</li>
          * </ul>
          * 
          * <strong>example:</strong>

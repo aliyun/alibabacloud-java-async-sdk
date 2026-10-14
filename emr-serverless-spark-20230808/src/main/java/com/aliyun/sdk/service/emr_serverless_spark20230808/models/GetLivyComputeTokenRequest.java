@@ -101,7 +101,7 @@ public class GetLivyComputeTokenRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>w-8adde60aa809701f</p>
@@ -125,7 +125,7 @@ public class GetLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the token.</p>
+         * <p>Token ID。</p>
          * 
          * <strong>example:</strong>
          * <p>lctk-xxxxxxxx</p>
@@ -137,7 +137,7 @@ public class GetLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

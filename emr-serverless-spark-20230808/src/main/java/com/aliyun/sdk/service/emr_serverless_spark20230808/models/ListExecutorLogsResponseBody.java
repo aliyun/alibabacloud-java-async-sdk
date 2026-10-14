@@ -106,7 +106,7 @@ public class ListExecutorLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The retrieved logs, sorted in contextual order. If no contextual logs are found based on the specified starting log, this parameter is empty.</p>
+         * <p>The retrieved logs, sorted in contextual order. This parameter is empty if no contextual logs are found in the log query based on the specified starting log.</p>
          */
         public Builder logs(java.util.List<Logs> logs) {
             this.logs = logs;
@@ -114,7 +114,7 @@ public class ListExecutorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of results returned per page.</p>
+         * <p>The maximum number of records to return in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListExecutorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token to retrieve the next page of results. This value is null when there are no more results to return.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -136,7 +136,7 @@ public class ListExecutorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944</p>
@@ -147,7 +147,7 @@ public class ListExecutorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total count of log files.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -255,7 +255,7 @@ public class ListExecutorLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The full path of the log file.</p>
+             * <p>The full file path.</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -263,7 +263,7 @@ public class ListExecutorLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the file, in bytes.</p>
+             * <p>The file size.</p>
              * 
              * <strong>example:</strong>
              * <p>6383327</p>
@@ -296,7 +296,7 @@ public class ListExecutorLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time the log file was last updated, as a Unix timestamp.</p>
+             * <p>The log update time. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1745390462</p>

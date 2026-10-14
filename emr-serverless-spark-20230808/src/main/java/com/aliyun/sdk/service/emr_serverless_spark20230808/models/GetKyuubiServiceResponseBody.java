@@ -67,7 +67,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -326,7 +326,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The specifications of the Kyuubi service.</p>
+             * <p>The Kyuubi service specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>2c8g</p>
@@ -337,7 +337,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the service was created.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1749456094000</p>
@@ -359,7 +359,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal same-region endpoint.</p>
+             * <p>The internal network domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>kyuubi-cn-beijing-internal.spark.emr.aliyuncs.com</p>
@@ -370,7 +370,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the Kyuubi service.</p>
+             * <p>The Kyuubi service configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>[]</p>
@@ -381,7 +381,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Kyuubi service engine version.</p>
+             * <p>The Kyuubi service DPI engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.9.2-0.0.2</p>
@@ -392,7 +392,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Kyuubi service.</p>
+             * <p>Kyuubi Service ID。</p>
              * 
              * <strong>example:</strong>
              * <p>kb-4e209b04588***95f04ad3538ae4</p>
@@ -403,7 +403,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Kyuubi service.</p>
+             * <p>The Kyuubi service name.</p>
              * 
              * <strong>example:</strong>
              * <p>dev_serverless_spark</p>
@@ -425,7 +425,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether public network access is enabled.</p>
+             * <p>Specifies whether public network access is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -436,7 +436,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the queue.</p>
+             * <p>The queue name.</p>
              * 
              * <strong>example:</strong>
              * <p>dev_queue</p>
@@ -447,7 +447,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Spark engine version.</p>
+             * <p>The Spark DPI engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>esr-4.6.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -458,7 +458,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of high-availability (HA) replicas.</p>
+             * <p>The number of replicas enabled for high availability.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -480,7 +480,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the service was started.</p>
+             * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1749456094000</p>
@@ -491,7 +491,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the Kyuubi service.</p>
+             * <p>The Kyuubi service status.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>

@@ -146,7 +146,7 @@ public class ListExecutorLogsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class ListExecutorLogsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the job run.</p>
+         * <p>The job run ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class ListExecutorLogsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the job executor.</p>
+         * <p>The job executor ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class ListExecutorLogsRequest extends Request {
         }
 
         /**
-         * <p>The type of log. Only logs of this type are returned.</p>
+         * <p>The log type.</p>
          * 
          * <strong>example:</strong>
          * <p>log4j</p>
@@ -197,7 +197,7 @@ public class ListExecutorLogsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results to return per page. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The maximum number of records to return in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -209,7 +209,7 @@ public class ListExecutorLogsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. This is the <code>nextToken</code> from a previously truncated response.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -221,7 +221,7 @@ public class ListExecutorLogsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

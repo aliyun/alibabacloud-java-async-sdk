@@ -111,7 +111,7 @@ public class ListRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+         * <p>The number of entries to return on each page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -131,7 +131,7 @@ public class GetJobRunResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of configurations.</p>
+             * <p>The configuration list.</p>
              */
             public Builder configurations(java.util.List<Configuration> configurations) {
                 this.configurations = configurations;
@@ -232,6 +232,185 @@ public class GetJobRunResponseBody extends TeaModel {
      *
      * <p>GetJobRunResponseBody</p>
      */
+    public static class TokenDetails extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enableThinking")
+        private String enableThinking;
+
+        @com.aliyun.core.annotation.NameInMap("inputModality")
+        private String inputModality;
+
+        @com.aliyun.core.annotation.NameInMap("modelName")
+        private String modelName;
+
+        @com.aliyun.core.annotation.NameInMap("tokenRange")
+        private String tokenRange;
+
+        @com.aliyun.core.annotation.NameInMap("tokenSource")
+        private String tokenSource;
+
+        @com.aliyun.core.annotation.NameInMap("tokenUsed")
+        private Long tokenUsed;
+
+        private TokenDetails(Builder builder) {
+            this.enableThinking = builder.enableThinking;
+            this.inputModality = builder.inputModality;
+            this.modelName = builder.modelName;
+            this.tokenRange = builder.tokenRange;
+            this.tokenSource = builder.tokenSource;
+            this.tokenUsed = builder.tokenUsed;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TokenDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableThinking
+         */
+        public String getEnableThinking() {
+            return this.enableThinking;
+        }
+
+        /**
+         * @return inputModality
+         */
+        public String getInputModality() {
+            return this.inputModality;
+        }
+
+        /**
+         * @return modelName
+         */
+        public String getModelName() {
+            return this.modelName;
+        }
+
+        /**
+         * @return tokenRange
+         */
+        public String getTokenRange() {
+            return this.tokenRange;
+        }
+
+        /**
+         * @return tokenSource
+         */
+        public String getTokenSource() {
+            return this.tokenSource;
+        }
+
+        /**
+         * @return tokenUsed
+         */
+        public Long getTokenUsed() {
+            return this.tokenUsed;
+        }
+
+        public static final class Builder {
+            private String enableThinking; 
+            private String inputModality; 
+            private String modelName; 
+            private String tokenRange; 
+            private String tokenSource; 
+            private Long tokenUsed; 
+
+            private Builder() {
+            } 
+
+            private Builder(TokenDetails model) {
+                this.enableThinking = model.enableThinking;
+                this.inputModality = model.inputModality;
+                this.modelName = model.modelName;
+                this.tokenRange = model.tokenRange;
+                this.tokenSource = model.tokenSource;
+                this.tokenUsed = model.tokenUsed;
+            } 
+
+            /**
+             * <p>Specifies whether thinking mode is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enableThinking(String enableThinking) {
+                this.enableThinking = enableThinking;
+                return this;
+            }
+
+            /**
+             * <p>The input modality.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
+             */
+            public Builder inputModality(String inputModality) {
+                this.inputModality = inputModality;
+                return this;
+            }
+
+            /**
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
+             */
+            public Builder modelName(String modelName) {
+                this.modelName = modelName;
+                return this;
+            }
+
+            /**
+             * <p>The input token range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0&lt;Token≤256K</p>
+             */
+            public Builder tokenRange(String tokenRange) {
+                this.tokenRange = tokenRange;
+                return this;
+            }
+
+            /**
+             * <p>The token source. Valid values: input and output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>input</p>
+             */
+            public Builder tokenSource(String tokenSource) {
+                this.tokenSource = tokenSource;
+                return this;
+            }
+
+            /**
+             * <p>The number of tokens consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
+             */
+            public Builder tokenUsed(Long tokenUsed) {
+                this.tokenUsed = tokenUsed;
+                return this;
+            }
+
+            public TokenDetails build() {
+                return new TokenDetails(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobRunResponseBody</p>
+     */
     public static class JobRun extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("codeType")
         private String codeType;
@@ -293,6 +472,9 @@ public class GetJobRunResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List<Tag> tags;
 
+        @com.aliyun.core.annotation.NameInMap("tokenDetails")
+        private java.util.List<TokenDetails> tokenDetails;
+
         @com.aliyun.core.annotation.NameInMap("totalTokens")
         private Long totalTokens;
 
@@ -323,6 +505,7 @@ public class GetJobRunResponseBody extends TeaModel {
             this.stateChangeReason = builder.stateChangeReason;
             this.submitTime = builder.submitTime;
             this.tags = builder.tags;
+            this.tokenDetails = builder.tokenDetails;
             this.totalTokens = builder.totalTokens;
             this.webUI = builder.webUI;
             this.workspaceId = builder.workspaceId;
@@ -477,6 +660,13 @@ public class GetJobRunResponseBody extends TeaModel {
         }
 
         /**
+         * @return tokenDetails
+         */
+        public java.util.List<TokenDetails> getTokenDetails() {
+            return this.tokenDetails;
+        }
+
+        /**
          * @return totalTokens
          */
         public Long getTotalTokens() {
@@ -518,6 +708,7 @@ public class GetJobRunResponseBody extends TeaModel {
             private StateChangeReason stateChangeReason; 
             private Long submitTime; 
             private java.util.List<Tag> tags; 
+            private java.util.List<TokenDetails> tokenDetails; 
             private Long totalTokens; 
             private String webUI; 
             private String workspaceId; 
@@ -546,13 +737,14 @@ public class GetJobRunResponseBody extends TeaModel {
                 this.stateChangeReason = model.stateChangeReason;
                 this.submitTime = model.submitTime;
                 this.tags = model.tags;
+                this.tokenDetails = model.tokenDetails;
                 this.totalTokens = model.totalTokens;
                 this.webUI = model.webUI;
                 this.workspaceId = model.workspaceId;
             } 
 
             /**
-             * <p>The code type of the job. Valid values:</p>
+             * <p>The job code type. Valid values:</p>
              * <ul>
              * <li><p>SQL</p>
              * </li>
@@ -590,7 +782,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job ended.</p>
+             * <p>The job end time. The value is a Unix timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1684122914000</p>
@@ -612,7 +804,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution timeout period, in seconds.</p>
+             * <p>The execution timeout period.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -623,7 +815,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Fusion engine acceleration is enabled.</p>
+             * <p>Specifies whether the Fusion engine acceleration is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -661,7 +853,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job run name.</p>
+             * <p>The job name.</p>
              * 
              * <strong>example:</strong>
              * <p>jobName</p>
@@ -672,7 +864,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download URL of the NOTEBOOK file. This parameter is returned only when the job type is NOTEBOOK.</p>
+             * <p>The download URL of the NOTEBOOK file. This parameter is returned only if the job type is NOTEBOOK.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx">http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx</a></p>
@@ -694,7 +886,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Spark DPI engine version used to run the job.</p>
+             * <p>The Spark DPI engine version used to run the node.</p>
              * 
              * <strong>example:</strong>
              * <p>esr-3.3.1</p>
@@ -727,7 +919,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job run state.</p>
+             * <p>The job status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -738,7 +930,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the state change.</p>
+             * <p>The reason for the status change.</p>
              */
             public Builder stateChangeReason(StateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -746,7 +938,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was submitted.</p>
+             * <p>The job submission time. The value is a Unix timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1684119314000</p>
@@ -757,10 +949,18 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of tags.</p>
+             * <p>The tag list.</p>
              */
             public Builder tags(java.util.List<Tag> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * <p>The details of token consumption.</p>
+             */
+            public Builder tokenDetails(java.util.List<TokenDetails> tokenDetails) {
+                this.tokenDetails = tokenDetails;
                 return this;
             }
 

@@ -322,7 +322,7 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the session was created. This is a UNIX timestamp in milliseconds.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1768213240000</p>
@@ -333,7 +333,7 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of compute units (CUs) consumed during the task execution. This is an estimated value. The actual value is subject to the bill.</p>
+             * <p>The number of compute units (CUs) consumed during the job runtime. This value is an estimate. The actual value is subject to the bill.</p>
              * 
              * <strong>example:</strong>
              * <p>322.5</p>
@@ -344,7 +344,7 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the session ended. This is a UNIX timestamp in milliseconds.</p>
+             * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1768213240000</p>
@@ -366,7 +366,7 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total amount of memory in MB allocated to the task multiplied by the number of seconds the task has been running.</p>
+             * <p>The total amount of memory allocated to the job multiplied by the number of seconds the job has run.</p>
              * 
              * <strong>example:</strong>
              * <p>1098888</p>
@@ -426,18 +426,13 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session state.</p>
+             * <p>The session status. Valid values:</p>
              * <ul>
-             * <li><p>starting: The session is starting.</p>
-             * </li>
-             * <li><p>running: The session is running.</p>
-             * </li>
-             * <li><p>terminating: The session is being terminated.</p>
-             * </li>
-             * <li><p>terminated: The session is terminated.</p>
-             * </li>
-             * <li><p>error: The session failed.</p>
-             * </li>
+             * <li>starting: Starting.</li>
+             * <li>running: Running.</li>
+             * <li>terminating: Terminating.</li>
+             * <li>terminated: Terminated.</li>
+             * <li>error: Error.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -449,7 +444,7 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of vCores allocated to the task multiplied by the number of seconds the task has been running.</p>
+             * <p>The total number of vcores allocated to the job multiplied by the number of seconds the job has run.</p>
              * 
              * <strong>example:</strong>
              * <p>343</p>
@@ -460,7 +455,7 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The web UI URL of the session.</p>
+             * <p>The web UI address of the session.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://emr-spark-ui-cn-hangzhou.data.aliyun.com">http://emr-spark-ui-cn-hangzhou.data.aliyun.com</a></p>

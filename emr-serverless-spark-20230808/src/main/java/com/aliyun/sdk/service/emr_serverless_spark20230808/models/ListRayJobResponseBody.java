@@ -80,7 +80,7 @@ public class ListRayJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of Ray Jobs.</p>
+         * <p>The list of Ray jobs.</p>
          */
         public Builder rayJobs(java.util.List<RayJobs> rayJobs) {
             this.rayJobs = rayJobs;
@@ -300,10 +300,10 @@ public class ListRayJobResponseBody extends TeaModel {
             /**
              * <p>The status of the corresponding Ray cluster. Valid values:</p>
              * <ul>
-             * <li>Deleted: deleted.</li>
-             * <li>Submitted: submitted but not yet being created.</li>
-             * <li>Pending: being created.</li>
-             * <li>Running: running.</li>
+             * <li>Deleted: The cluster is deleted.</li>
+             * <li>Submitted: The cluster is submitted but not yet created.</li>
+             * <li>Pending: The cluster is being created.</li>
+             * <li>Running: The cluster is running.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -326,7 +326,7 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of compute units (CUs) consumed during the job execution cycle. This value is an estimate. The actual value is subject to the bill.</p>
+             * <p>The number of compute units (CUs) consumed during the job runtime. This value is an estimate. The actual value is subject to the bill.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -337,7 +337,7 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the Ray cluster dashboard. When the Ray cluster is in the Running state, the URL points to the Runtime UI. After the cluster is in the Deleted state, the URL points to the History UI. The History UI is supported only in err-1.2.0 and later versions.</p>
+             * <p>The URL of the Ray cluster dashboard. If the Ray cluster is in the Running state, the URL points to the Runtime UI. If the cluster is in the Deleted state, the URL points to the History UI. The History UI is supported only in err-1.2.0 and later.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://emr-ray-gateway.aliyuncs.com?token=xxxxxxxxx">https://emr-ray-gateway.aliyuncs.com?token=xxxxxxxxx</a></p>
@@ -348,7 +348,7 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration of the job. Unit: seconds.</p>
+             * <p>The execution duration of the job, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3564</p>
@@ -359,7 +359,7 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job ended.</p>
+             * <p>The time when the job ended. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1776945509000</p>
@@ -370,7 +370,7 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Ray Job.</p>
+             * <p>The name of the Ray job.</p>
              * 
              * <strong>example:</strong>
              * <p>testRayJob</p>
@@ -381,7 +381,7 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Ray DPI engine version.</p>
+             * <p>The Ray engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>err-1.2.0 (Ray 2.55.1, Python 3.12)</p>
@@ -392,7 +392,7 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was started.</p>
+             * <p>The time when the job was started. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1776945499000</p>
@@ -403,16 +403,16 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job status. Valid values:</p>
+             * <p>The status of the job. Valid values:</p>
              * <ul>
-             * <li>Submitted: submitted.</li>
-             * <li>Pending: the cluster is being created.</li>
-             * <li>Running: the job is running.</li>
-             * <li>Succeeded: the job succeeded.</li>
-             * <li>Failed: the job failed.</li>
-             * <li>Cancelling: the job is being canceled.</li>
-             * <li>Cancelled: the job is canceled.</li>
-             * <li>Timeout: the job timed out and was canceled.</li>
+             * <li>Submitted: The job is submitted.</li>
+             * <li>Pending: The cluster is being created.</li>
+             * <li>Running: The job is running.</li>
+             * <li>Succeeded: The job succeeded.</li>
+             * <li>Failed: The job failed.</li>
+             * <li>Cancelling: The job is being cancelled.</li>
+             * <li>Cancelled: The job is cancelled.</li>
+             * <li>Timeout: The job is cancelled due to a timeout.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -424,7 +424,7 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Ray Job.</p>
+             * <p>The ID of the Ray job.</p>
              * 
              * <strong>example:</strong>
              * <p>rj-uiulpgow9xljimm1</p>
@@ -435,7 +435,7 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was submitted.</p>
+             * <p>The time when the job was submitted. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1776945399000</p>

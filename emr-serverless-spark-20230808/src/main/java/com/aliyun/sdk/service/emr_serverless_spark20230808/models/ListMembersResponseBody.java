@@ -106,7 +106,7 @@ public class ListMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The maximum number of records to return per request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page of results.</p>
+         * <p>The pagination token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -136,7 +136,7 @@ public class ListMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -147,7 +147,7 @@ public class ListMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -266,7 +266,7 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission.</p>
+             * <p>The name of the action.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>
@@ -277,7 +277,7 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of action dependencies.</p>
+             * <p>The list of dependencies for the action.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;view&quot;]</p>
@@ -419,7 +419,7 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission.</p>
+             * <p>The name of the action.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>
@@ -430,7 +430,7 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of action dependencies.</p>
+             * <p>The list of dependencies for the action.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;view&quot;]</p>
@@ -569,7 +569,7 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the role was created.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1753412502000</p>
@@ -750,7 +750,7 @@ public class ListMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of operations allowed for this user.</p>
+             * <p>The list of actions allowed for the user.</p>
              */
             public Builder actions(java.util.List<Actions> actions) {
                 this.actions = actions;
@@ -758,7 +758,7 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the member was created.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1753412502000</p>
@@ -780,7 +780,7 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the user.</p>
+             * <p>The ARN of the member.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:emr::w-1234*<em><strong>abcd:member/202265</strong></em>**276</p>
@@ -810,7 +810,11 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the user.</p>
+             * <p>The type of the user. Valid values:</p>
+             * <ul>
+             * <li>ROLE</li>
+             * <li>MEMBER</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>MEMBER</p>

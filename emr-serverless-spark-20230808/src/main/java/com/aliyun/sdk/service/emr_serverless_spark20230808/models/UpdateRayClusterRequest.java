@@ -245,7 +245,7 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The Ray cluster head node information.</p>
+         * <p>The head node information for the Ray cluster.</p>
          */
         public Builder headSpec(HeadSpec headSpec) {
             this.putBodyParameter("headSpec", headSpec);
@@ -254,7 +254,7 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The Ray cluster name. The name must be 1 to 64 characters in length.</p>
+         * <p>The name of the Ray cluster. The name must be 1 to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>myRayCluster</p>
@@ -266,7 +266,7 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The network connectivity name.</p>
+         * <p>The network connection name.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc</p>
@@ -278,7 +278,7 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The list of managed folder IDs to mount.</p>
+         * <p>The list of managed directory IDs to mount.</p>
          */
         public Builder volumeIds(java.util.List<String> volumeIds) {
             this.putBodyParameter("volumeIds", volumeIds);
@@ -287,7 +287,7 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The Ray cluster worker node information. A maximum of 50 groups are supported.</p>
+         * <p>The worker node information for the Ray cluster. A maximum of 50 worker groups are supported.</p>
          */
         public Builder workerSpec(java.util.List<WorkerSpec> workerSpec) {
             this.putBodyParameter("workerSpec", workerSpec);
@@ -599,7 +599,7 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable automatic scaling.</p>
+             * <p>Specifies whether to enable auto scaling.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -621,7 +621,7 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The GCS Fault Tolerance configuration.</p>
+             * <p>The GCS fault tolerance configuration.</p>
              */
             public Builder gftConfig(GftConfig gftConfig) {
                 this.gftConfig = gftConfig;
@@ -629,7 +629,7 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable GCS Fault Tolerance.</p>
+             * <p>Specifies whether to enable GCS fault tolerance.</p>
              */
             public Builder gftEnabled(Boolean gftEnabled) {
                 this.gftEnabled = gftEnabled;
@@ -648,7 +648,7 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The idle timeout period of workers after automatic scaling is enabled.</p>
+             * <p>The idle timeout period for workers after auto scaling is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -958,7 +958,7 @@ public class UpdateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of workers. Minimum value: 1. The value must be less than or equal to maxReplica.</p>
+             * <p>The minimum number of workers. Minimum value: 1. The value must be less than or equal to the value of maxReplica.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -265,7 +265,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Spark application submitted by Kyuubi, used for searching.</p>
+         * <p>The ID of the Spark application submitted by Kyuubi, used for search.</p>
          * 
          * <strong>example:</strong>
          * <p>spark-339f844005b6404c95f9f7c7a13b****</p>
@@ -277,7 +277,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The name of the Spark application submitted by Kyuubi, used for searching.</p>
+         * <p>The name of the Spark application submitted by Kyuubi, used for search.</p>
          * 
          * <strong>example:</strong>
          * <p>kyuubi-connection-spark-sql-anonymous-fa9a5e73-b4b1-474a-b****</p>
@@ -289,7 +289,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>The end time range of the task.</p>
          */
         public Builder endTime(EndTime endTime) {
             String endTimeShrink = shrink(endTime, "endTime", "json");
@@ -299,7 +299,10 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * latestSqlStatementStatuses.
+         * <p>The list of statuses of the latest SQL statement used for filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;SUCCESS&quot;]</p>
          */
         public Builder latestSqlStatementStatuses(String latestSqlStatementStatuses) {
             this.putQueryParameter("latestSqlStatementStatuses", latestSqlStatementStatuses);
@@ -308,7 +311,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to return.</p>
+         * <p>The maximum number of records to retrieve at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -320,7 +323,10 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * minDuration.
+         * <p>The minimum execution duration of the application, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60000</p>
          */
         public Builder minDuration(Long minDuration) {
             this.putQueryParameter("minDuration", minDuration);
@@ -329,7 +335,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The token to retrieve the next page of results.</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -341,7 +347,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * orderBy.
+         * <p>The list of sort fields.</p>
          */
         public Builder orderBy(java.util.List<String> orderBy) {
             String orderByShrink = shrink(orderBy, "orderBy", "json");
@@ -351,7 +357,10 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * resourceQueueId.
+         * <p>The resource queue ID used to filter Spark applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root_queue</p>
          */
         public Builder resourceQueueId(String resourceQueueId) {
             this.putQueryParameter("resourceQueueId", resourceQueueId);
@@ -360,7 +369,10 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * sort.
+         * <p>The sort order. A value of asc indicates ascending order, and desc indicates descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("sort", sort);
@@ -369,7 +381,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The time range when the task started.</p>
+         * <p>The start time range of the task.</p>
          */
         public Builder startTime(StartTime startTime) {
             String startTimeShrink = shrink(startTime, "startTime", "json");
@@ -379,7 +391,10 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * states.
+         * <p>The list of Spark application states used for filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ERROR&quot;]</p>
          */
         public Builder states(String states) {
             this.putQueryParameter("states", states);
@@ -447,7 +462,10 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
             } 
 
             /**
-             * endTime.
+             * <p>The end point of the task end time range. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774209636</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -455,7 +473,10 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
             }
 
             /**
-             * <p>The time range when the task started.</p>
+             * <p>The start point of the task end time range. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774209636</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -522,7 +543,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
             } 
 
             /**
-             * <p>The end of the time range.</p>
+             * <p>The end point of the task start time range. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1710432000000</p>
@@ -533,7 +554,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
             }
 
             /**
-             * <p>The start of the time range.</p>
+             * <p>The start point of the task start time range. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1709740800000</p>

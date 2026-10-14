@@ -139,7 +139,7 @@ public class ListLivyComputeSessionsRequest extends Request {
         }
 
         /**
-         * <p>The page number. The default value is 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

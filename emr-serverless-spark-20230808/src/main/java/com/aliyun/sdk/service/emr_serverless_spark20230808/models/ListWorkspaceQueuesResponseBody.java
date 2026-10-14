@@ -106,7 +106,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of records returned per request.</p>
+         * <p>The maximum number of records to return per request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -255,7 +255,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action ARN.</p>
+             * <p>The ARN of the action.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:emr::workspaceId:action/create_queue</p>
@@ -277,7 +277,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of action dependencies.</p>
+             * <p>The list of dependencies for the action.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;view&quot;]</p>
@@ -288,7 +288,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The action description.</p>
+             * <p>The description of the action.</p>
              * 
              * <strong>example:</strong>
              * <p>Directory traversal and file browsing</p>
@@ -302,7 +302,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
              * <p>The display name of the permission.</p>
              * 
              * <strong>example:</strong>
-             * <p>File directory traversal, file browsing</p>
+             * <p>Directory traversal and file browsing</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -616,7 +616,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of allowed actions on the queue.</p>
+             * <p>The list of allowed operations for the queue.</p>
              */
             public Builder allowActions(java.util.List<AllowActions> allowActions) {
                 this.allowActions = allowActions;
@@ -624,7 +624,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the workspace was created.</p>
+             * <p>The time when the workspace was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1684115879955</p>
@@ -635,7 +635,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the user who created the queue.</p>
+             * <p>The UID of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>237109</p>
@@ -657,7 +657,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of queue environment types.</p>
+             * <p>The list of environment types for the queue.</p>
              */
             public Builder environments(java.util.List<String> environments) {
                 this.environments = environments;
@@ -665,7 +665,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * gpuMachineNum.
+             * <p>The number of GPU machines.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gpuMachineNum(Integer gpuMachineNum) {
                 this.gpuMachineNum = gpuMachineNum;
@@ -673,7 +676,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of GPU models.</p>
+             * <p>The list of GPU instance types.</p>
              */
             public Builder gpuSpec(java.util.List<String> gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -681,7 +684,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The ID of the resource instance associated with the queue.</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -711,10 +714,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing type. Valid values:</p>
+             * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>PayAsYouGo: pay-as-you-go.</li>
-             * <li>Pre: subscription.</li>
+             * <li>PayAsYouGo: pay-as-you-go</li>
+             * <li>Pre: subscription</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -726,7 +729,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether resource prefetch is enabled.</p>
+             * <p>Specifies whether resource prefetching is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder preheat(Boolean preheat) {
                 this.preheat = preheat;
@@ -745,7 +751,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queue category, CPU or GPU.</p>
+             * <p>The queue category, such as CPU or GPU.</p>
              * 
              * <strong>example:</strong>
              * <p>CPU</p>

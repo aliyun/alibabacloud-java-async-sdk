@@ -125,7 +125,7 @@ public class GetKyuubiTokenRequest extends Request {
         }
 
         /**
-         * <p>The token ID.</p>
+         * <p>Token ID。</p>
          * 
          * <strong>example:</strong>
          * <p>tk-zpi0*****hdv4y</p>
