@@ -327,7 +327,10 @@ public class ExperimentRecord extends TeaModel {
         } 
 
         /**
-         * completedAt.
+         * <p>The completion time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1767229200000</p>
          */
         public Builder completedAt(Long completedAt) {
             this.completedAt = completedAt;
@@ -335,7 +338,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * completedTasks.
+         * <p>The number of completed tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder completedTasks(Integer completedTasks) {
             this.completedTasks = completedTasks;
@@ -343,7 +349,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * dataSourceType.
+         * <p>The data source type. Valid values: simple, dataset-full, and dataset-partial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset-full</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
@@ -351,7 +360,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * datasetId.
+         * <p>The dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset-123456</p>
          */
         public Builder datasetId(String datasetId) {
             this.datasetId = datasetId;
@@ -359,7 +371,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * datasetProject.
+         * <p>The SLS project where the dataset is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentspace-project</p>
          */
         public Builder datasetProject(String datasetProject) {
             this.datasetProject = datasetProject;
@@ -367,7 +382,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Model invocation timeout</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -375,7 +393,7 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * evaluationTaskId.
+         * <p>The ID of the associated evaluation task.</p>
          */
         public Builder evaluationTaskId(String evaluationTaskId) {
             this.evaluationTaskId = evaluationTaskId;
@@ -383,7 +401,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * evaluators.
+         * <p>The list of evaluators.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;Builtin.agent_correctness&quot;}]</p>
          */
         public Builder evaluators(java.util.List<Evaluator> evaluators) {
             this.evaluators = evaluators;
@@ -391,7 +412,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * executedAt.
+         * <p>The execution time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1767225600000</p>
          */
         public Builder executedAt(Long executedAt) {
             this.executedAt = executedAt;
@@ -399,7 +423,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * experimentConfig.
+         * <p>The list of experiment configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;label&quot;:&quot;A&quot;,&quot;name&quot;:&quot;baseline&quot;,&quot;modelName&quot;:&quot;qwen-max&quot;}]</p>
          */
         public Builder experimentConfig(java.util.List<ExperimentConfig> experimentConfig) {
             this.experimentConfig = experimentConfig;
@@ -407,7 +434,7 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * experimentPlanId.
+         * <p>The ID of the associated experiment plan.</p>
          */
         public Builder experimentPlanId(String experimentPlanId) {
             this.experimentPlanId = experimentPlanId;
@@ -415,7 +442,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * failedTasks.
+         * <p>The number of failed tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder failedTasks(Integer failedTasks) {
             this.failedTasks = failedTasks;
@@ -423,7 +453,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * input.
+         * <p>The single-line input in SIMPLE mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;:&quot;test&quot;,&quot;test2&quot;:1}</p>
          */
         public Builder input(java.util.Map<String, ?> input) {
             this.input = input;
@@ -431,7 +464,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * modelNames.
+         * <p>The list of model names used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;qwen-max&quot;]</p>
          */
         public Builder modelNames(java.util.List<String> modelNames) {
             this.modelNames = modelNames;
@@ -439,7 +475,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * planName.
+         * <p>The name of the associated experiment plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer-service-eval</p>
          */
         public Builder planName(String planName) {
             this.planName = planName;
@@ -447,7 +486,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * progress.
+         * <p>The execution progress, ranging from 0 to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder progress(Float progress) {
             this.progress = progress;
@@ -455,7 +497,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * querySql.
+         * <p>The custom query SQL clause in dataset-partial mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>level &gt; 2</p>
          */
         public Builder querySql(String querySql) {
             this.querySql = querySql;
@@ -463,7 +508,7 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * recordId.
+         * <p>The experiment record ID.</p>
          */
         public Builder recordId(String recordId) {
             this.recordId = recordId;
@@ -471,7 +516,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * recordName.
+         * <p>The experiment record name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baseline-run</p>
          */
         public Builder recordName(String recordName) {
             this.recordName = recordName;
@@ -479,7 +527,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * selectedItemIds.
+         * <p>The list of selected data item IDs in dataset-partial mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;item-123456&quot;]</p>
          */
         public Builder selectedItemIds(java.util.List<String> selectedItemIds) {
             this.selectedItemIds = selectedItemIds;
@@ -487,7 +538,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status. Valid values: pending, running, completed, and failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -495,7 +549,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * totalTasks.
+         * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalTasks(Integer totalTasks) {
             this.totalTasks = totalTasks;

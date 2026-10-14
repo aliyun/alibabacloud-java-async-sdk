@@ -143,7 +143,7 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * <p>Filters context stores by name. Exact match is supported. If this parameter is not specified, no filtering is applied.</p>
+         * <p>The name of the context store used for filtering. Exact match is supported. If this parameter is not specified, no filtering is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>my-context-store</p>
@@ -155,7 +155,7 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * <p>Filters context stores by type, such as experience or memory. If this parameter is not specified, no filtering is applied.</p>
+         * <p>The type of the context store used for filtering, such as experience or memory. If this parameter is not specified, no filtering is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>experience</p>
@@ -167,7 +167,7 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of context stores to return. Default value: 20. Maximum value: 100.</p>
+         * <p>The maximum number of context stores to return in the current request. Default value: 20. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -179,7 +179,7 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the nextToken value returned in the previous response to retrieve the next page. Do not specify this parameter for the first request.</p>
+         * <p>The pagination token. To retrieve the next page, pass the nextToken value from the previous response. Do not specify this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>MTIzNDU2Nzg5MA==</p>
@@ -191,7 +191,10 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * sourceType.
+         * <p>The memory data source type used for filtering, such as manual, trajectory, or dataset. If this parameter is not specified, no filtering is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trajectory</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("sourceType", sourceType);

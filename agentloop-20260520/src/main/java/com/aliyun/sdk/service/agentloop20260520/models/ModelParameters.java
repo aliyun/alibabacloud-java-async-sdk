@@ -132,7 +132,10 @@ public class ModelParameters extends TeaModel {
         } 
 
         /**
-         * frequencyPenalty.
+         * <p>The frequency penalty. Positive values reduce repetition. Valid values: -2.0 to 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
          */
         public Builder frequencyPenalty(Float frequencyPenalty) {
             this.frequencyPenalty = frequencyPenalty;
@@ -140,7 +143,10 @@ public class ModelParameters extends TeaModel {
         }
 
         /**
-         * maxTokens.
+         * <p>The maximum number of output tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder maxTokens(Long maxTokens) {
             this.maxTokens = maxTokens;
@@ -148,7 +154,10 @@ public class ModelParameters extends TeaModel {
         }
 
         /**
-         * presencePenalty.
+         * <p>The presence penalty. Positive values encourage new topics. Valid values: -2.0 to 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         public Builder presencePenalty(Float presencePenalty) {
             this.presencePenalty = presencePenalty;
@@ -156,7 +165,10 @@ public class ModelParameters extends TeaModel {
         }
 
         /**
-         * stopSequences.
+         * <p>The stop sequences. Generation stops immediately when any of these sequences is encountered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;END&quot;]</p>
          */
         public Builder stopSequences(java.util.List<String> stopSequences) {
             this.stopSequences = stopSequences;
@@ -164,7 +176,10 @@ public class ModelParameters extends TeaModel {
         }
 
         /**
-         * temperature.
+         * <p>The temperature parameter that controls the randomness of the output. Valid values: 0 to 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.7</p>
          */
         public Builder temperature(Float temperature) {
             this.temperature = temperature;
@@ -172,7 +187,10 @@ public class ModelParameters extends TeaModel {
         }
 
         /**
-         * topK.
+         * <p>The top-k sampling parameter. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder topK(Integer topK) {
             this.topK = topK;
@@ -180,7 +198,10 @@ public class ModelParameters extends TeaModel {
         }
 
         /**
-         * topP.
+         * <p>The top-p sampling parameter. Valid values: 0 to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.9</p>
          */
         public Builder topP(Float topP) {
             this.topP = topP;

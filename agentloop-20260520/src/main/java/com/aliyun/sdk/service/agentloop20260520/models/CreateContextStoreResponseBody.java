@@ -67,7 +67,7 @@ public class CreateContextStoreResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID, which is used to locate the request when troubleshooting issues.</p>
          * 
          * <strong>example:</strong>
          * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -78,7 +78,10 @@ public class CreateContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * strategyVersion.
+         * <p>The currently effective strategy version number for the memory type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder strategyVersion(Integer strategyVersion) {
             this.strategyVersion = strategyVersion;

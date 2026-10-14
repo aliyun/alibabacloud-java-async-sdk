@@ -80,7 +80,10 @@ public class OfflineExperimentConfig extends TeaModel {
         } 
 
         /**
-         * desc.
+         * <p>The experiment description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Baseline experiment</p>
          */
         public Builder desc(String desc) {
             this.desc = desc;
@@ -88,7 +91,10 @@ public class OfflineExperimentConfig extends TeaModel {
         }
 
         /**
-         * label.
+         * <p>The experiment label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         public Builder label(String label) {
             this.label = label;
@@ -96,7 +102,10 @@ public class OfflineExperimentConfig extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The experiment name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baseline</p>
          */
         public Builder name(String name) {
             this.name = name;

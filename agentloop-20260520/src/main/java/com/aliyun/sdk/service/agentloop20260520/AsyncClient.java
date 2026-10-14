@@ -96,6 +96,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateExperimentRunResponse> createExperimentRun(CreateExperimentRunRequest request);
 
     /**
+     * @param request the request parameters of CreateOptimizeRun  CreateOptimizeRunRequest
+     * @return CreateOptimizeRunResponse
+     */
+    CompletableFuture<CreateOptimizeRunResponse> createOptimizeRun(CreateOptimizeRunRequest request);
+
+    /**
+     * @param request the request parameters of CreateOptimizeTask  CreateOptimizeTaskRequest
+     * @return CreateOptimizeTaskResponse
+     */
+    CompletableFuture<CreateOptimizeTaskResponse> createOptimizeTask(CreateOptimizeTaskRequest request);
+
+    /**
      * @param request the request parameters of CreatePipeline  CreatePipelineRequest
      * @return CreatePipelineResponse
      */
@@ -166,6 +178,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteExperimentRunResponse
      */
     CompletableFuture<DeleteExperimentRunResponse> deleteExperimentRun(DeleteExperimentRunRequest request);
+
+    /**
+     * @param request the request parameters of DeleteOptimizeTask  DeleteOptimizeTaskRequest
+     * @return DeleteOptimizeTaskResponse
+     */
+    CompletableFuture<DeleteOptimizeTaskResponse> deleteOptimizeTask(DeleteOptimizeTaskRequest request);
 
     /**
      * @param request the request parameters of DeletePipeline  DeletePipelineRequest
@@ -256,6 +274,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetExperimentRunResponse> getExperimentRun(GetExperimentRunRequest request);
 
     /**
+     * @param request the request parameters of GetOptimizeRun  GetOptimizeRunRequest
+     * @return GetOptimizeRunResponse
+     */
+    CompletableFuture<GetOptimizeRunResponse> getOptimizeRun(GetOptimizeRunRequest request);
+
+    /**
+     * @param request the request parameters of GetOptimizeTask  GetOptimizeTaskRequest
+     * @return GetOptimizeTaskResponse
+     */
+    CompletableFuture<GetOptimizeTaskResponse> getOptimizeTask(GetOptimizeTaskRequest request);
+
+    /**
      * @param request the request parameters of GetPipeline  GetPipelineRequest
      * @return GetPipelineResponse
      */
@@ -341,6 +371,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListExperimentRunsResponse
      */
     CompletableFuture<ListExperimentRunsResponse> listExperimentRuns(ListExperimentRunsRequest request);
+
+    /**
+     * @param request the request parameters of ListOptimizeRuns  ListOptimizeRunsRequest
+     * @return ListOptimizeRunsResponse
+     */
+    CompletableFuture<ListOptimizeRunsResponse> listOptimizeRuns(ListOptimizeRunsRequest request);
+
+    /**
+     * @param request the request parameters of ListOptimizeTasks  ListOptimizeTasksRequest
+     * @return ListOptimizeTasksResponse
+     */
+    CompletableFuture<ListOptimizeTasksResponse> listOptimizeTasks(ListOptimizeTasksRequest request);
 
     /**
      * @param request the request parameters of ListPipelineRuns  ListPipelineRunsRequest
@@ -444,7 +486,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. You can update only plans created by the current account.</p>
+     * <p>Updates a specified experiment plan. Fields that are not specified remain unchanged. You can only update plans created by the current account.</p>
      * 
      * @param request the request parameters of UpdateExperimentPlan  UpdateExperimentPlanRequest
      * @return UpdateExperimentPlanResponse
@@ -459,6 +501,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateExperimentRunResponse
      */
     CompletableFuture<UpdateExperimentRunResponse> updateExperimentRun(UpdateExperimentRunRequest request);
+
+    /**
+     * @param request the request parameters of UpdateOptimizeRun  UpdateOptimizeRunRequest
+     * @return UpdateOptimizeRunResponse
+     */
+    CompletableFuture<UpdateOptimizeRunResponse> updateOptimizeRun(UpdateOptimizeRunRequest request);
+
+    /**
+     * @param request the request parameters of UpdateOptimizeTask  UpdateOptimizeTaskRequest
+     * @return UpdateOptimizeTaskResponse
+     */
+    CompletableFuture<UpdateOptimizeTaskResponse> updateOptimizeTask(UpdateOptimizeTaskRequest request);
 
     /**
      * @param request the request parameters of UpdatePipeline  UpdatePipelineRequest

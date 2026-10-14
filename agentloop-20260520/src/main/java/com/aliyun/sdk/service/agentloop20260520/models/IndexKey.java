@@ -106,10 +106,10 @@ public class IndexKey extends TeaModel {
         } 
 
         /**
-         * <p>Specifies whether Chinese is included. This parameter is required only when the <strong>type</strong> parameter is set to <strong>text</strong>. Valid values:</p>
+         * <p>Specifies whether the field contains Chinese characters. This parameter is required only when the <strong>type</strong> parameter is set to <strong>text</strong>. Valid values:</p>
          * <ul>
-         * <li>true: Chinese is included.</li>
-         * <li>false: Chinese is not included.</li>
+         * <li>true: The field contains Chinese characters.</li>
+         * <li>false: The field does not contain Chinese characters.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class IndexKey extends TeaModel {
         }
 
         /**
-         * <p>The description.</p>
+         * <p>The field description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -132,7 +132,7 @@ public class IndexKey extends TeaModel {
         }
 
         /**
-         * <p>The field embedding type.</p>
+         * <p>The embedding type of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>agentloop-embedding-v4</p>
@@ -143,7 +143,10 @@ public class IndexKey extends TeaModel {
         }
 
         /**
-         * <p>The JSON subfields. This parameter takes effect only when type is set to json.</p>
+         * <p>The JSON subfields. This property takes effect only when the type is set to json.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;content&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;chn&quot;:true}}</p>
          */
         public Builder jsonKeys(java.util.Map<String, IndexJsonKey> jsonKeys) {
             this.jsonKeys = jsonKeys;
@@ -151,7 +154,7 @@ public class IndexKey extends TeaModel {
         }
 
         /**
-         * <p>The type.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>

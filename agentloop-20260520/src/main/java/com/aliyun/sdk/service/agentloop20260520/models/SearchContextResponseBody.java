@@ -93,7 +93,10 @@ public class SearchContextResponseBody extends TeaModel {
         } 
 
         /**
-         * auditStatus.
+         * <p>The audit write status. Valid values: ok and degraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder auditStatus(String auditStatus) {
             this.auditStatus = auditStatus;
@@ -101,7 +104,10 @@ public class SearchContextResponseBody extends TeaModel {
         }
 
         /**
-         * recallEventId.
+         * <p>The recall event ID. You can use this ID to call the GetContextStoreRecall operation to view audit details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0190f1c2-7d3e-7a1b-9c4d-2e5f6a7b8c9d</p>
          */
         public Builder recallEventId(String recallEventId) {
             this.recallEventId = recallEventId;
@@ -109,7 +115,7 @@ public class SearchContextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use this ID to locate and troubleshoot issues.</p>
+         * <p>The request ID, which can be used to locate the request during troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>

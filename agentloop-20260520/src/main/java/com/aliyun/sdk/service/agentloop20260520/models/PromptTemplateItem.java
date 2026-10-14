@@ -67,7 +67,10 @@ public class PromptTemplateItem extends TeaModel {
         } 
 
         /**
-         * content.
+         * <p>The content, which supports {{variable name}} placeholders.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Please answer: {{question}}</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -75,7 +78,10 @@ public class PromptTemplateItem extends TeaModel {
         }
 
         /**
-         * role.
+         * <p>The role: system/user/assistant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder role(String role) {
             this.role = role;

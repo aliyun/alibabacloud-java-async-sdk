@@ -184,7 +184,10 @@ public class ExperimentPlanData extends TeaModel {
         } 
 
         /**
-         * createdAt.
+         * <p>The creation time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1767225600000</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -192,7 +195,10 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
-         * datasetId.
+         * <p>The ID of the associated dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset-123456</p>
          */
         public Builder datasetId(String datasetId) {
             this.datasetId = datasetId;
@@ -200,7 +206,10 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Offline evaluation plan for customer service Q&amp;A</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -208,7 +217,10 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
-         * experimentCount.
+         * <p>The number of experiment executions under this plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder experimentCount(Integer experimentCount) {
             this.experimentCount = experimentCount;
@@ -216,7 +228,10 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
-         * experimentType.
+         * <p>The experiment type. Valid values: offline (offline experiment) and online (online experiment).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>offline</p>
          */
         public Builder experimentType(String experimentType) {
             this.experimentType = experimentType;
@@ -224,7 +239,10 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
-         * pipelineName.
+         * <p>The name of the associated data processing pipeline. This field is empty if no pipeline is associated. After association, when an experiment under this plan completes and writes results to a Logstore, the system filters by the trace ID of the experiment trace and calls PreviewPipeline to write the pipeline-processed results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trace-process-pipeline</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.pipelineName = pipelineName;
@@ -232,7 +250,7 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
-         * planId.
+         * <p>The experiment plan ID.</p>
          */
         public Builder planId(String planId) {
             this.planId = planId;
@@ -240,7 +258,10 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
-         * planName.
+         * <p>The experiment plan name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer-service-eval</p>
          */
         public Builder planName(String planName) {
             this.planName = planName;
@@ -248,7 +269,10 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
-         * querySql.
+         * <p>The custom query SQL clause in dataset-partial mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>level &gt; 2</p>
          */
         public Builder querySql(String querySql) {
             this.querySql = querySql;
@@ -256,7 +280,10 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status. Valid values: pending, running, and stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pending</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -264,7 +291,10 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The update time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1767229200000</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;

@@ -75,7 +75,7 @@ public class GetContextStoreRequest extends Request {
         } 
 
         /**
-         * <p>The AgentSpace name. The name must be 2 to 64 characters in length.</p>
+         * <p>The name of the AgentSpace. The name must be 2 to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetContextStoreRequest extends Request {
         }
 
         /**
-         * <p>The context store name. The name must be 2 to 64 characters in length.</p>
+         * <p>The name of the context store. The name must be 2 to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -188,7 +188,7 @@ public class SearchContextRequest extends Request {
         } 
 
         /**
-         * <p>The AgentSpace name. The name must be 2 to 64 characters in length.</p>
+         * <p>The name of the AgentSpace. The length must be 2 to 64 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * <p>The context store name. The name must be 2 to 64 characters in length.</p>
+         * <p>The name of the context store. The length must be 2 to 64 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to apply structured formatting to the returned results.</p>
+         * <p>Specifies whether to structurally format the returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -238,7 +238,10 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * includeInactive.
+         * <p>Specifies whether to include memories with sourceState=inactive. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeInactive(Boolean includeInactive) {
             this.putBodyParameter("includeInactive", includeInactive);
@@ -247,7 +250,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of returned results (similarity Top-N).</p>
+         * <p>The maximum number of returned results, which corresponds to the Top-N similarity.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -263,7 +266,7 @@ public class SearchContextRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>用户最近的偏好设置</p>
+         * <p>Recent user preferences</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("query", query);
@@ -272,7 +275,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * <p>The retrieval options that control the retrieval strategy.</p>
+         * <p>The retrieval options used to control the retrieval strategy.</p>
          * 
          * <strong>example:</strong>
          * <p>semantic</p>
@@ -284,7 +287,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * scope.
+         * <p>The recall scope. If a field with the same name conflicts with the filter, a 400 ScopeFilterConflict error is returned.</p>
          */
         public Builder scope(Scope scope) {
             this.putBodyParameter("scope", scope);
@@ -390,7 +393,10 @@ public class SearchContextRequest extends Request {
             } 
 
             /**
-             * agentId.
+             * <p>Agent Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sales-copilot</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -398,7 +404,10 @@ public class SearchContextRequest extends Request {
             }
 
             /**
-             * appId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crm-service</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -406,7 +415,10 @@ public class SearchContextRequest extends Request {
             }
 
             /**
-             * runId.
+             * <p>The run ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>run-001</p>
              */
             public Builder runId(String runId) {
                 this.runId = runId;
@@ -414,7 +426,10 @@ public class SearchContextRequest extends Request {
             }
 
             /**
-             * userId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>u-10001</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

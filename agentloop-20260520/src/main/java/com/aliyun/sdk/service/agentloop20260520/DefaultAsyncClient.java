@@ -248,6 +248,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateOptimizeRun  CreateOptimizeRunRequest
+     * @return CreateOptimizeRunResponse
+     */
+    @Override
+    public CompletableFuture<CreateOptimizeRunResponse> createOptimizeRun(CreateOptimizeRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateOptimizeRun").setMethod(HttpMethod.POST).setPathRegex("/agentspace/{agentSpace}/optimizetasks/{optimizeTaskName}/runs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateOptimizeRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateOptimizeRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateOptimizeTask  CreateOptimizeTaskRequest
+     * @return CreateOptimizeTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateOptimizeTaskResponse> createOptimizeTask(CreateOptimizeTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateOptimizeTask").setMethod(HttpMethod.POST).setPathRegex("/agentspace/{agentSpace}/optimizetasks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateOptimizeTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateOptimizeTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreatePipeline  CreatePipelineRequest
      * @return CreatePipelineResponse
      */
@@ -446,6 +482,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteExperimentRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteOptimizeTask  DeleteOptimizeTaskRequest
+     * @return DeleteOptimizeTaskResponse
+     */
+    @Override
+    public CompletableFuture<DeleteOptimizeTaskResponse> deleteOptimizeTask(DeleteOptimizeTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteOptimizeTask").setMethod(HttpMethod.DELETE).setPathRegex("/agentspace/{agentSpace}/optimizetasks/{optimizeTaskName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteOptimizeTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteOptimizeTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -696,6 +750,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetOptimizeRun  GetOptimizeRunRequest
+     * @return GetOptimizeRunResponse
+     */
+    @Override
+    public CompletableFuture<GetOptimizeRunResponse> getOptimizeRun(GetOptimizeRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetOptimizeRun").setMethod(HttpMethod.GET).setPathRegex("/agentspace/{agentSpace}/optimizetasks/{optimizeTaskName}/runs/{optimizeRunId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetOptimizeRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetOptimizeRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetOptimizeTask  GetOptimizeTaskRequest
+     * @return GetOptimizeTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetOptimizeTaskResponse> getOptimizeTask(GetOptimizeTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetOptimizeTask").setMethod(HttpMethod.GET).setPathRegex("/agentspace/{agentSpace}/optimizetasks/{optimizeTaskName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetOptimizeTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetOptimizeTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetPipeline  GetPipelineRequest
      * @return GetPipelineResponse
      */
@@ -933,6 +1023,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListExperimentRunsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListOptimizeRuns  ListOptimizeRunsRequest
+     * @return ListOptimizeRunsResponse
+     */
+    @Override
+    public CompletableFuture<ListOptimizeRunsResponse> listOptimizeRuns(ListOptimizeRunsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListOptimizeRuns").setMethod(HttpMethod.GET).setPathRegex("/agentspace/{agentSpace}/optimizetasks/{optimizeTaskName}/runs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListOptimizeRunsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListOptimizeRunsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListOptimizeTasks  ListOptimizeTasksRequest
+     * @return ListOptimizeTasksResponse
+     */
+    @Override
+    public CompletableFuture<ListOptimizeTasksResponse> listOptimizeTasks(ListOptimizeTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListOptimizeTasks").setMethod(HttpMethod.GET).setPathRegex("/agentspace/{agentSpace}/optimizetasks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListOptimizeTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListOptimizeTasksResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1220,7 +1346,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. You can update only plans created by the current account.</p>
+     * <p>Updates a specified experiment plan. Fields that are not specified remain unchanged. You can only update plans created by the current account.</p>
      * 
      * @param request the request parameters of UpdateExperimentPlan  UpdateExperimentPlanRequest
      * @return UpdateExperimentPlanResponse
@@ -1255,6 +1381,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateExperimentRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateOptimizeRun  UpdateOptimizeRunRequest
+     * @return UpdateOptimizeRunResponse
+     */
+    @Override
+    public CompletableFuture<UpdateOptimizeRunResponse> updateOptimizeRun(UpdateOptimizeRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateOptimizeRun").setMethod(HttpMethod.PUT).setPathRegex("/agentspace/{agentSpace}/optimizetasks/{optimizeTaskName}/runs/{optimizeRunId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateOptimizeRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateOptimizeRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateOptimizeTask  UpdateOptimizeTaskRequest
+     * @return UpdateOptimizeTaskResponse
+     */
+    @Override
+    public CompletableFuture<UpdateOptimizeTaskResponse> updateOptimizeTask(UpdateOptimizeTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateOptimizeTask").setMethod(HttpMethod.PUT).setPathRegex("/agentspace/{agentSpace}/optimizetasks/{optimizeTaskName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateOptimizeTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateOptimizeTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

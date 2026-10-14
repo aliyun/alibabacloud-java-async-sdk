@@ -106,7 +106,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries per page that was specified in the request. This value is echoed back.</p>
+         * <p>The maximum number of results per page specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page. An empty string indicates that the current page is the last page.</p>
+         * <p>The token for the next page. An empty string indicates that the last page is reached.</p>
          * 
          * <strong>example:</strong>
          * <p>MTIzNDU2Nzg5MA==</p>
@@ -128,7 +128,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use this ID to locate and troubleshoot issues.</p>
+         * <p>The request ID, which can be used to locate the request during troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -147,7 +147,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of context stores that match the query conditions.</p>
+         * <p>The total number of context stores that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -381,7 +381,7 @@ public class ListContextStoresResponseBody extends TeaModel {
              * <p>The description of the context store.</p>
              * 
              * <strong>example:</strong>
-             * <p>我的上下文库</p>
+             * <p>My context store</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -389,7 +389,7 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the context store.</p>
+             * <p>The ID of the region where the context store resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -400,7 +400,7 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of service names. This parameter has a value only for context stores of the experience type. The service names are used together with the data source AgentSpace to locate trace data sources.</p>
+             * <p>The list of service names. This parameter has a value only for the experience type. It is used together with the data source AgentSpace to locate the trace data source.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;order-service&quot;,&quot;payment-service&quot;]</p>
@@ -411,7 +411,10 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * <p>The memory data source type, such as manual, trajectory, or dataset. This parameter has a value only for the memory type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trajectory</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -419,7 +422,7 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the context store. Valid values: ACTIVE, INITIALIZING, and FAILED.</p>
+             * <p>The status of the context store. Valid values include ACTIVE, INITIALIZING, and FAILED.</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>
@@ -430,7 +433,10 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * storageMode.
+             * <p>The memory storage mode, such as event or upsert. This parameter has a value only for the memory type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>upsert</p>
              */
             public Builder storageMode(String storageMode) {
                 this.storageMode = storageMode;
