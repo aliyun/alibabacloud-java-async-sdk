@@ -21,14 +21,9 @@ public class VerifyImageSignatureRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ObjectKey")
-    private String objectKey;
-
     private VerifyImageSignatureRequest(Builder builder) {
         super(builder);
         this.imageUrl = builder.imageUrl;
-        this.objectKey = builder.objectKey;
     }
 
     public static Builder builder() {
@@ -51,16 +46,8 @@ public class VerifyImageSignatureRequest extends Request {
         return this.imageUrl;
     }
 
-    /**
-     * @return objectKey
-     */
-    public String getObjectKey() {
-        return this.objectKey;
-    }
-
     public static final class Builder extends Request.Builder<VerifyImageSignatureRequest, Builder> {
         private String imageUrl; 
-        private String objectKey; 
 
         private Builder() {
             super();
@@ -69,24 +56,17 @@ public class VerifyImageSignatureRequest extends Request {
         private Builder(VerifyImageSignatureRequest request) {
             super(request);
             this.imageUrl = request.imageUrl;
-            this.objectKey = request.objectKey;
         } 
 
         /**
-         * ImageUrl.
+         * <p>The URL of the image to verify. Specify either <code>ImageUrl</code> or <code>ObjectKey</code>. At least one of them is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/signed-photo.jpg">https://example.com/signed-photo.jpg</a></p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
             this.imageUrl = imageUrl;
-            return this;
-        }
-
-        /**
-         * ObjectKey.
-         */
-        public Builder objectKey(String objectKey) {
-            this.putQueryParameter("ObjectKey", objectKey);
-            this.objectKey = objectKey;
             return this;
         }
 

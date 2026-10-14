@@ -1,0 +1,217 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.aideepsign20260511.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link CancelC2paBucketSignTaskResponseBody} extends {@link TeaModel}
+ *
+ * <p>CancelC2paBucketSignTaskResponseBody</p>
+ */
+public class CancelC2paBucketSignTaskResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
+    private Integer httpStatusCode;
+
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
+
+    private CancelC2paBucketSignTaskResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.httpStatusCode = builder.httpStatusCode;
+        this.message = builder.message;
+        this.requestId = builder.requestId;
+        this.status = builder.status;
+        this.success = builder.success;
+        this.taskId = builder.taskId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CancelC2paBucketSignTaskResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private Integer httpStatusCode; 
+        private String message; 
+        private String requestId; 
+        private String status; 
+        private Boolean success; 
+        private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CancelC2paBucketSignTaskResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+            this.taskId = model.taskId;
+        } 
+
+        /**
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01A03DCE-4091-1A91-9810-692C3D783877</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>The stop processing status. CANCELING indicates that the stop process is being finalized. Repeated requests may return the completed CANCELED status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CANCELING</p>
+         */
+        public Builder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the bucket batch signing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>047b8305-9572-4eed-b7fb-8588b989b6e5</p>
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+
+        public CancelC2paBucketSignTaskResponseBody build() {
+            return new CancelC2paBucketSignTaskResponseBody(this);
+        } 
+
+    } 
+
+}

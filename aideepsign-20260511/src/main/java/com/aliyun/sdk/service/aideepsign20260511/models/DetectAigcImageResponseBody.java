@@ -119,7 +119,7 @@ public class DetectAigcImageResponseBody extends TeaModel {
         } 
 
         /**
-         * Body.
+         * <p>The list of AIGC detection result labels.</p>
          */
         public Builder body(java.util.List<DetectAigcImageResponseBodyBody> body) {
             this.body = body;
@@ -127,7 +127,10 @@ public class DetectAigcImageResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The business error code. The value <code>OK</code> is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +138,10 @@ public class DetectAigcImageResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. The value <code>200</code> is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class DetectAigcImageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. The value <code>success</code> is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class DetectAigcImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,11 @@ public class DetectAigcImageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +241,10 @@ public class DetectAigcImageResponseBody extends TeaModel {
             } 
 
             /**
-             * Confidence.
+             * <p>The confidence score. Value range: 0 to 1. A higher value indicates a higher probability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.51</p>
              */
             public Builder confidence(String confidence) {
                 this.confidence = confidence;
@@ -233,7 +252,14 @@ public class DetectAigcImageResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The detection label. Valid values:</p>
+             * <ul>
+             * <li><code>ai_generated</code>: AI-generated.</li>
+             * <li><code>non_ai_generated</code>: Not AI-generated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ai_generated</p>
              */
             public Builder label(String label) {
                 this.label = label;

@@ -60,6 +60,7 @@ public class GetSensitiveScanResultRequest extends Request {
         } 
 
         /**
+         * <p>The task ID returned by <code>CreateSensitiveScanTask</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

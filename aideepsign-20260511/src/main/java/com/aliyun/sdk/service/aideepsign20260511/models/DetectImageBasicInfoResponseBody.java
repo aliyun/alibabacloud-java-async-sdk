@@ -158,7 +158,10 @@ public class DetectImageBasicInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The business error code. Returns &quot;OK&quot; when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class DetectImageBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Dpi.
+         * <p>The image resolution (width × height), such as 1920 × 1080. Empty if the resolution cannot be identified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048 * 2048</p>
          */
         public Builder dpi(String dpi) {
             this.dpi = dpi;
@@ -174,7 +180,10 @@ public class DetectImageBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. Returns 200 when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +191,10 @@ public class DetectImageBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. Returns &quot;success&quot; when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +202,10 @@ public class DetectImageBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>photo.jpg</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -198,7 +213,10 @@ public class DetectImageBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +224,10 @@ public class DetectImageBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Size.
+         * <p>The file size in a human-readable format, such as 1.5 MB or 256 KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.3 MB</p>
          */
         public Builder size(String size) {
             this.size = size;
@@ -214,7 +235,7 @@ public class DetectImageBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +243,10 @@ public class DetectImageBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The image format, such as JPEG, PNG, GIF, or WEBP. Returns <code>UNKNOWN</code> if the format cannot be identified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PNG</p>
          */
         public Builder type(String type) {
             this.type = type;

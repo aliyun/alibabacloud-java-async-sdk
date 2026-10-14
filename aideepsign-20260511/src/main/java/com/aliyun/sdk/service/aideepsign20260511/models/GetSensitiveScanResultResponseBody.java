@@ -132,7 +132,10 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The business error code. The value &quot;OK&quot; is returned when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. The value 200 is returned when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -148,7 +154,10 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. The value &quot;success&quot; is returned when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +165,10 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +176,7 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The scan result. This parameter is returned only when the status is completed.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -172,7 +184,15 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>running: The task is running.</li>
+         * <li>completed: The task is completed.</li>
+         * <li>terminated: The task is terminated or failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>completed</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -180,7 +200,7 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -272,7 +292,10 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryName.
+             * <p>The category name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>个人信息</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -280,7 +303,10 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The number of hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -288,7 +314,10 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * <p>The risk level name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S2</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -296,7 +325,10 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>身份证号</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -402,7 +434,10 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * BucketName.
+             * <p>The name of the bucket to which the object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aideepsign-bucket</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -410,7 +445,10 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The sensitive data category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>个人信息</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -418,7 +456,10 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the scanned object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc12345.jpg</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -426,7 +467,10 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * <p>The overall risk level name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S2</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -434,7 +478,7 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * RuleList.
+             * <p>The list of sensitive data rules that are hit.</p>
              */
             public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
@@ -488,7 +532,7 @@ public class GetSensitiveScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * OssObjectDetail.
+             * <p>The name of the scanned object.</p>
              */
             public Builder ossObjectDetail(OssObjectDetail ossObjectDetail) {
                 this.ossObjectDetail = ossObjectDetail;

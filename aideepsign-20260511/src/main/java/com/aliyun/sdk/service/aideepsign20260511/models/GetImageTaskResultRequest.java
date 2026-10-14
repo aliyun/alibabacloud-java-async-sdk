@@ -60,6 +60,7 @@ public class GetImageTaskResultRequest extends Request {
         } 
 
         /**
+         * <p>The task ID returned by <code>CreateImageTask</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

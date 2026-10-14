@@ -119,7 +119,10 @@ public class CreateImageDetectionTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The business error code. <code>OK</code> is returned if the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateImageDetectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. <code>200</code> is returned if the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class CreateImageDetectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. <code>success</code> is returned if the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class CreateImageDetectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class CreateImageDetectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +171,10 @@ public class CreateImageDetectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID, which is used to call <code>GetImageDetectionTaskResult</code> to query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f47ac10b-58cc-4372-a567-0e02b2c3d479</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

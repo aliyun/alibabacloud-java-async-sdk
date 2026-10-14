@@ -25,15 +25,10 @@ public class CreateSensitiveScanTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ObjectKey")
-    private String objectKey;
-
     private CreateSensitiveScanTaskRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.imageUrl = builder.imageUrl;
-        this.objectKey = builder.objectKey;
     }
 
     public static Builder builder() {
@@ -63,17 +58,9 @@ public class CreateSensitiveScanTaskRequest extends Request {
         return this.imageUrl;
     }
 
-    /**
-     * @return objectKey
-     */
-    public String getObjectKey() {
-        return this.objectKey;
-    }
-
     public static final class Builder extends Request.Builder<CreateSensitiveScanTaskRequest, Builder> {
         private String clientToken; 
         private String imageUrl; 
-        private String objectKey; 
 
         private Builder() {
             super();
@@ -83,11 +70,13 @@ public class CreateSensitiveScanTaskRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.imageUrl = request.imageUrl;
-            this.objectKey = request.objectKey;
         } 
 
         /**
-         * ClientToken.
+         * <p>Ensures the idempotence of the request. The client generates this parameter value, which must be unique across different requests. <code>ClientToken</code> supports only ASCII characters and cannot exceed 64 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -96,20 +85,14 @@ public class CreateSensitiveScanTaskRequest extends Request {
         }
 
         /**
-         * ImageUrl.
+         * <p>The URL of the image to be scanned. Only HTTP/HTTPS protocols are supported. The image size cannot exceed 10 MB. You must specify either <code>ImageUrl</code> or <code>ObjectKey</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/document.jpg">https://example.com/document.jpg</a></p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
             this.imageUrl = imageUrl;
-            return this;
-        }
-
-        /**
-         * ObjectKey.
-         */
-        public Builder objectKey(String objectKey) {
-            this.putQueryParameter("ObjectKey", objectKey);
-            this.objectKey = objectKey;
             return this;
         }
 

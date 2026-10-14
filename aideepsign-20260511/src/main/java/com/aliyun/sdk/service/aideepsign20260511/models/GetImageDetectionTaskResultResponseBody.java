@@ -171,7 +171,10 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The business error code. The value &quot;OK&quot; is returned when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -179,7 +182,15 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * DetectMode.
+         * <p>The detection mode that was actually executed. Valid values:</p>
+         * <ul>
+         * <li>aigc: AIGC only.</li>
+         * <li>tamper: tamper detection.</li>
+         * </ul>
+         * <p>This field is returned only when Status is succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tamper</p>
          */
         public Builder detectMode(String detectMode) {
             this.detectMode = detectMode;
@@ -187,7 +198,10 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. The value 200 is returned when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -195,7 +209,7 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The list of detection result labels. This field is returned only when Status is succeeded and AIGC detection is included. The label values and confidence ranges vary depending on DetectMode. In aigc mode, AIGC generation identification labels are returned (see the table below). In tamper mode, aigc/aips labels are returned (confidence range: 0 to 1).</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -203,7 +217,10 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. The value &quot;success&quot; is returned when the request succeeds. The error message is returned when the task fails. This field is returned only when Status is failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -211,7 +228,10 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +239,16 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>pending: waiting.</li>
+         * <li>running: in progress.</li>
+         * <li>succeeded: completed.</li>
+         * <li>failed: failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -227,7 +256,7 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -235,7 +264,7 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * Tamper.
+         * <p>The tamper detection result.</p>
          */
         public Builder tamper(Tamper tamper) {
             this.tamper = tamper;
@@ -243,7 +272,10 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f47ac10b-58cc-4372-a567-0e02b2c3d479</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -309,7 +341,10 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Confidence.
+             * <p>The confidence level. Value range: 0 to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9562</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -317,7 +352,10 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The detection label. When DetectMode is aigc, valid values are: risk_aigc (the image is suspected to be AIGC-generated), risk_fake (the image is suspected to be a composite image), risk_edit (the image is suspected to be AI-edited). When DetectMode is tamper, valid values are: aigc (AIGC detection score), aips (AI post-processing detection score).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>risk_aigc</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -341,11 +379,15 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
+        @com.aliyun.core.annotation.NameInMap("Risk")
+        private String risk;
+
         @com.aliyun.core.annotation.NameInMap("Score")
         private Float score;
 
         private Aigc(Builder builder) {
             this.desc = builder.desc;
+            this.risk = builder.risk;
             this.score = builder.score;
         }
 
@@ -365,6 +407,13 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return risk
+         */
+        public String getRisk() {
+            return this.risk;
+        }
+
+        /**
          * @return score
          */
         public Float getScore() {
@@ -373,6 +422,7 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String desc; 
+            private String risk; 
             private Float score; 
 
             private Builder() {
@@ -380,11 +430,15 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
 
             private Builder(Aigc model) {
                 this.desc = model.desc;
+                this.risk = model.risk;
                 this.score = model.score;
             } 
 
             /**
-             * Desc.
+             * <p>The AIGC detection result description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Suspected AI-generated image</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -392,7 +446,21 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The AIGC dimension risk label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>高风险</p>
+             */
+            public Builder risk(String risk) {
+                this.risk = risk;
+                return this;
+            }
+
+            /**
+             * <p>The AIGC detection score. Value range: 0 to 1. A higher value indicates a greater likelihood of AI generation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.47</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -416,11 +484,15 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
+        @com.aliyun.core.annotation.NameInMap("Risk")
+        private String risk;
+
         @com.aliyun.core.annotation.NameInMap("Score")
         private Float score;
 
         private Aips(Builder builder) {
             this.desc = builder.desc;
+            this.risk = builder.risk;
             this.score = builder.score;
         }
 
@@ -440,6 +512,13 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return risk
+         */
+        public String getRisk() {
+            return this.risk;
+        }
+
+        /**
          * @return score
          */
         public Float getScore() {
@@ -448,6 +527,7 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String desc; 
+            private String risk; 
             private Float score; 
 
             private Builder() {
@@ -455,11 +535,15 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
 
             private Builder(Aips model) {
                 this.desc = model.desc;
+                this.risk = model.risk;
                 this.score = model.score;
             } 
 
             /**
-             * Desc.
+             * <p>The AI post-processing detection result description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No AI post-processing traces detected</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -467,7 +551,21 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The local PS/AI editing dimension risk label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>高风险</p>
+             */
+            public Builder risk(String risk) {
+                this.risk = risk;
+                return this;
+            }
+
+            /**
+             * <p>The AI post-processing detection score. Value range: 0 to 1. A higher value indicates a greater likelihood of AI post-processing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.12</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -534,7 +632,7 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Bbox.
+             * <p>The bounding box coordinates of the tampered region, in the format <code>[x1, y1, x2, y2]</code>.</p>
              */
             public Builder bbox(java.util.List<Float> bbox) {
                 this.bbox = bbox;
@@ -542,7 +640,10 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The tamper confidence of the region. Value range: 0 to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.67</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -609,7 +710,10 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Desc.
+             * <p>The PS tamper localization result description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1 suspected PS-modified region detected</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -617,7 +721,7 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * <p>The list of tampered regions.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -626,6 +730,111 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
 
             public PsLoc build() {
                 return new PsLoc(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetImageDetectionTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetImageDetectionTaskResultResponseBody</p>
+     */
+    public static class Recap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Desc")
+        private String desc;
+
+        @com.aliyun.core.annotation.NameInMap("Risk")
+        private String risk;
+
+        @com.aliyun.core.annotation.NameInMap("Score")
+        private Float score;
+
+        private Recap(Builder builder) {
+            this.desc = builder.desc;
+            this.risk = builder.risk;
+            this.score = builder.score;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Recap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return desc
+         */
+        public String getDesc() {
+            return this.desc;
+        }
+
+        /**
+         * @return risk
+         */
+        public String getRisk() {
+            return this.risk;
+        }
+
+        /**
+         * @return score
+         */
+        public Float getScore() {
+            return this.score;
+        }
+
+        public static final class Builder {
+            private String desc; 
+            private String risk; 
+            private Float score; 
+
+            private Builder() {
+            } 
+
+            private Builder(Recap model) {
+                this.desc = model.desc;
+                this.risk = model.risk;
+                this.score = model.score;
+            } 
+
+            /**
+             * <p>The recapture/copy detection result description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Recapture detection score</p>
+             */
+            public Builder desc(String desc) {
+                this.desc = desc;
+                return this;
+            }
+
+            /**
+             * <p>The recapture/copy dimension risk label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>高风险</p>
+             */
+            public Builder risk(String risk) {
+                this.risk = risk;
+                return this;
+            }
+
+            /**
+             * <p>The recapture/copy detection score. Value range: 0 to 1. A higher value indicates a greater likelihood of recapture or copying.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9998</p>
+             */
+            public Builder score(Float score) {
+                this.score = score;
+                return this;
+            }
+
+            public Recap build() {
+                return new Recap(this);
             } 
 
         } 
@@ -650,11 +859,15 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PsLoc")
         private PsLoc psLoc;
 
+        @com.aliyun.core.annotation.NameInMap("Recap")
+        private Recap recap;
+
         private BaseResults(Builder builder) {
             this.aigc = builder.aigc;
             this.aips = builder.aips;
             this.imgType = builder.imgType;
             this.psLoc = builder.psLoc;
+            this.recap = builder.recap;
         }
 
         public static Builder builder() {
@@ -693,11 +906,19 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             return this.psLoc;
         }
 
+        /**
+         * @return recap
+         */
+        public Recap getRecap() {
+            return this.recap;
+        }
+
         public static final class Builder {
             private Aigc aigc; 
             private Aips aips; 
             private String imgType; 
             private PsLoc psLoc; 
+            private Recap recap; 
 
             private Builder() {
             } 
@@ -707,10 +928,11 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
                 this.aips = model.aips;
                 this.imgType = model.imgType;
                 this.psLoc = model.psLoc;
+                this.recap = model.recap;
             } 
 
             /**
-             * Aigc.
+             * <p>The AIGC detection result.</p>
              */
             public Builder aigc(Aigc aigc) {
                 this.aigc = aigc;
@@ -718,7 +940,7 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * Aips.
+             * <p>The AI post-processing detection score.</p>
              */
             public Builder aips(Aips aips) {
                 this.aips = aips;
@@ -726,7 +948,10 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * ImgType.
+             * <p>The image type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>natural</p>
              */
             public Builder imgType(String imgType) {
                 this.imgType = imgType;
@@ -734,10 +959,18 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * PsLoc.
+             * <p>The PS tamper localization result.</p>
              */
             public Builder psLoc(PsLoc psLoc) {
                 this.psLoc = psLoc;
+                return this;
+            }
+
+            /**
+             * <p>The recapture/copy detection result.</p>
+             */
+            public Builder recap(Recap recap) {
+                this.recap = recap;
                 return this;
             }
 
@@ -755,23 +988,35 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
      * <p>GetImageDetectionTaskResultResponseBody</p>
      */
     public static class Tamper extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AiWatermark")
+        private String aiWatermark;
+
         @com.aliyun.core.annotation.NameInMap("BaseResults")
         private BaseResults baseResults;
+
+        @com.aliyun.core.annotation.NameInMap("FinalConclusion")
+        private String finalConclusion;
 
         @com.aliyun.core.annotation.NameInMap("LlmResult")
         private String llmResult;
 
-        @com.aliyun.core.annotation.NameInMap("RiskCode")
-        private String riskCode;
+        @com.aliyun.core.annotation.NameInMap("MetadataAiFlag")
+        private String metadataAiFlag;
 
-        @com.aliyun.core.annotation.NameInMap("RiskReasons")
-        private java.util.List<String> riskReasons;
+        @com.aliyun.core.annotation.NameInMap("MetadataAiSource")
+        private String metadataAiSource;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
 
         private Tamper(Builder builder) {
+            this.aiWatermark = builder.aiWatermark;
             this.baseResults = builder.baseResults;
+            this.finalConclusion = builder.finalConclusion;
             this.llmResult = builder.llmResult;
-            this.riskCode = builder.riskCode;
-            this.riskReasons = builder.riskReasons;
+            this.metadataAiFlag = builder.metadataAiFlag;
+            this.metadataAiSource = builder.metadataAiSource;
+            this.riskLevel = builder.riskLevel;
         }
 
         public static Builder builder() {
@@ -783,10 +1028,24 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return aiWatermark
+         */
+        public String getAiWatermark() {
+            return this.aiWatermark;
+        }
+
+        /**
          * @return baseResults
          */
         public BaseResults getBaseResults() {
             return this.baseResults;
+        }
+
+        /**
+         * @return finalConclusion
+         */
+        public String getFinalConclusion() {
+            return this.finalConclusion;
         }
 
         /**
@@ -797,37 +1056,61 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * @return riskCode
+         * @return metadataAiFlag
          */
-        public String getRiskCode() {
-            return this.riskCode;
+        public String getMetadataAiFlag() {
+            return this.metadataAiFlag;
         }
 
         /**
-         * @return riskReasons
+         * @return metadataAiSource
          */
-        public java.util.List<String> getRiskReasons() {
-            return this.riskReasons;
+        public String getMetadataAiSource() {
+            return this.metadataAiSource;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
         public static final class Builder {
+            private String aiWatermark; 
             private BaseResults baseResults; 
+            private String finalConclusion; 
             private String llmResult; 
-            private String riskCode; 
-            private java.util.List<String> riskReasons; 
+            private String metadataAiFlag; 
+            private String metadataAiSource; 
+            private String riskLevel; 
 
             private Builder() {
             } 
 
             private Builder(Tamper model) {
+                this.aiWatermark = model.aiWatermark;
                 this.baseResults = model.baseResults;
+                this.finalConclusion = model.finalConclusion;
                 this.llmResult = model.llmResult;
-                this.riskCode = model.riskCode;
-                this.riskReasons = model.riskReasons;
+                this.metadataAiFlag = model.metadataAiFlag;
+                this.metadataAiSource = model.metadataAiSource;
+                this.riskLevel = model.riskLevel;
             } 
 
             /**
-             * BaseResults.
+             * <p>The AI visible watermark. This field is returned only in large model mode. It is empty in small model mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>是</p>
+             */
+            public Builder aiWatermark(String aiWatermark) {
+                this.aiWatermark = aiWatermark;
+                return this;
+            }
+
+            /**
+             * <p>The basic algorithm detection results, including multi-dimensional detection scores and risk labels.</p>
              */
             public Builder baseResults(BaseResults baseResults) {
                 this.baseResults = baseResults;
@@ -835,7 +1118,21 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * LlmResult.
+             * <p>The final conclusion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Metadata data analytics result verified as high risk</p>
+             */
+            public Builder finalConclusion(String finalConclusion) {
+                this.finalConclusion = finalConclusion;
+                return this;
+            }
+
+            /**
+             * <p>The comprehensive analysis result from the large language model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The image has been detected with traces of AI generation. The AIGC detection score is 0.95. We recommend further verifying the image source</p>
              */
             public Builder llmResult(String llmResult) {
                 this.llmResult = llmResult;
@@ -843,18 +1140,35 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCode.
+             * <p>The metadata AI flag. This field is always returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>高风险</p>
              */
-            public Builder riskCode(String riskCode) {
-                this.riskCode = riskCode;
+            public Builder metadataAiFlag(String metadataAiFlag) {
+                this.metadataAiFlag = metadataAiFlag;
                 return this;
             }
 
             /**
-             * RiskReasons.
+             * <p>The source of the metadata AI flag. This field is returned only in large model mode. It is empty in small model mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>通义</p>
              */
-            public Builder riskReasons(java.util.List<String> riskReasons) {
-                this.riskReasons = riskReasons;
+            public Builder metadataAiSource(String metadataAiSource) {
+                this.metadataAiSource = metadataAiSource;
+                return this;
+            }
+
+            /**
+             * <p>The determination result. This field is always returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>高风险</p>
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
                 return this;
             }
 

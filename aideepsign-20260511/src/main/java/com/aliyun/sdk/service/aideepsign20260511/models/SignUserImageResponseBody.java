@@ -171,7 +171,10 @@ public class SignUserImageResponseBody extends TeaModel {
         } 
 
         /**
-         * Algorithm.
+         * <p>The algorithm used for signing, such as ps256 or es256.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ps256</p>
          */
         public Builder algorithm(String algorithm) {
             this.algorithm = algorithm;
@@ -179,7 +182,10 @@ public class SignUserImageResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateSubject.
+         * <p>The subject information of the signing certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN=AIDeepSign User Certificate,O=Alibaba Cloud</p>
          */
         public Builder certificateSubject(String certificateSubject) {
             this.certificateSubject = certificateSubject;
@@ -187,7 +193,10 @@ public class SignUserImageResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The business error code. &quot;OK&quot; is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -195,7 +204,10 @@ public class SignUserImageResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. 200 is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -203,7 +215,10 @@ public class SignUserImageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. &quot;success&quot; is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -211,7 +226,10 @@ public class SignUserImageResponseBody extends TeaModel {
         }
 
         /**
-         * ObjectKey.
+         * <p>The ObjectKey of the signed image in OSS. You can use this value for subsequent API calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deepsign/123456789/signed/abc12345-def6-7890-abcd-ef1234567890.png</p>
          */
         public Builder objectKey(String objectKey) {
             this.objectKey = objectKey;
@@ -219,7 +237,10 @@ public class SignUserImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +248,10 @@ public class SignUserImageResponseBody extends TeaModel {
         }
 
         /**
-         * SignTime.
+         * <p>The signing time in ISO 8601 format, such as <code>2026-01-15T08:30:00Z</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-18T10:30:00Z</p>
          */
         public Builder signTime(String signTime) {
             this.signTime = signTime;
@@ -235,7 +259,10 @@ public class SignUserImageResponseBody extends TeaModel {
         }
 
         /**
-         * SignedImageUrl.
+         * <p>The pre-signed download URL of the signed image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bucket.oss-cn-hangzhou.aliyuncs.com/deepsign/123456789/signed/abc12345.png?Expires=1718700000&OSSAccessKeyId=">https://bucket.oss-cn-hangzhou.aliyuncs.com/deepsign/123456789/signed/abc12345.png?Expires=1718700000&amp;OSSAccessKeyId=</a>...</p>
          */
         public Builder signedImageUrl(String signedImageUrl) {
             this.signedImageUrl = signedImageUrl;
@@ -243,7 +270,7 @@ public class SignUserImageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

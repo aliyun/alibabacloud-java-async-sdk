@@ -158,7 +158,10 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The business error code. The value &quot;OK&quot; is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. The value <code>200</code> is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,7 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * Issuer.
+         * <p>The issuer information.</p>
          */
         public Builder issuer(Issuer issuer) {
             this.issuer = issuer;
@@ -182,7 +188,7 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * IssuerTrusted.
+         * <p>Indicates whether the issuer is trusted. A value of true indicates that the issuer certificate is issued by a trusted certification authority (CA).</p>
          */
         public Builder issuerTrusted(Boolean issuerTrusted) {
             this.issuerTrusted = issuerTrusted;
@@ -190,7 +196,7 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * Manifest.
+         * <p>The content credentials manifest information. This parameter is returned only when the image contains a C2PA signature.</p>
          */
         public Builder manifest(Manifest manifest) {
             this.manifest = manifest;
@@ -198,7 +204,10 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. The value <code>success</code> is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -206,7 +215,10 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +226,7 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +234,16 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * VerificationState.
+         * <p>The signature verification status. Valid values:</p>
+         * <ul>
+         * <li>Unsigned: The image does not contain C2PA data.</li>
+         * <li>Invalid: The signature, data hash, or C2PA structure is invalid.</li>
+         * <li>Valid: The signature and data hash are valid, but the issuer is not necessarily trusted.</li>
+         * <li>Trusted: The signature is valid and the issuer certificate is trusted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Valid</p>
          */
         public Builder verificationState(String verificationState) {
             this.verificationState = verificationState;
@@ -288,7 +309,10 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
             } 
 
             /**
-             * CommonName.
+             * <p>The common name (CN) of the issuer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AIDeepSign User Certificate</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -296,7 +320,10 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * Organization.
+             * <p>The organization name (O) of the issuer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud</p>
              */
             public Builder organization(String organization) {
                 this.organization = organization;
@@ -363,7 +390,10 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The assertion data, which is detailed metadata in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;actions&quot;:[{&quot;action&quot;:&quot;c2pa.created&quot;}]}</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -371,7 +401,10 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The assertion label, such as c2pa.actions or stds.exif.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c2pa.actions</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -451,7 +484,10 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
             } 
 
             /**
-             * Alg.
+             * <p>The signature algorithm, such as <code>ps256</code> or <code>es256</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ps256</p>
              */
             public Builder alg(String alg) {
                 this.alg = alg;
@@ -459,7 +495,10 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * <p>The distinguished name (DN) of the signing certificate issuer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN=AIDeepSign CA,O=Alibaba Cloud</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -467,7 +506,10 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The signing time in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-18T10:30:00Z</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -534,7 +576,7 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
             } 
 
             /**
-             * Assertions.
+             * <p>The list of assertions, which contains metadata such as the provenance and editing history of the image.</p>
              */
             public Builder assertions(java.util.List<Assertions> assertions) {
                 this.assertions = assertions;
@@ -542,7 +584,7 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * SignatureInfo.
+             * <p>The signature details.</p>
              */
             public Builder signatureInfo(SignatureInfo signatureInfo) {
                 this.signatureInfo = signatureInfo;

@@ -158,7 +158,10 @@ public class GetImageTaskResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The business error code. The value <code>OK</code> is returned if the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class GetImageTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message. This parameter is returned only when the task status is <code>failed</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance access forbidden.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -174,7 +180,10 @@ public class GetImageTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. The value <code>200</code> is returned if the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +191,7 @@ public class GetImageTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * Images.
+         * <p>The list of generated images. This parameter is returned only when <code>Status</code> is <code>succeeded</code>.</p>
          */
         public Builder images(java.util.List<Images> images) {
             this.images = images;
@@ -190,7 +199,10 @@ public class GetImageTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. The value <code>success</code> is returned if the request succeeds. An error message is returned if the task fails. This parameter is returned only when <code>Status</code> is <code>failed</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +210,10 @@ public class GetImageTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +221,10 @@ public class GetImageTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values: <code>pending</code> (waiting), <code>running</code> (in progress), <code>succeeded</code> (completed), <code>failed</code> (failed).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -214,7 +232,10 @@ public class GetImageTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +243,10 @@ public class GetImageTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f47ac10b-58cc-4372-a567-0e02b2c3d479</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -288,7 +312,10 @@ public class GetImageTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * ObjectKey.
+             * <p>The <code>ObjectKey</code> of the image in OSS. You can use this value in subsequent API calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deepsign/123456789/image-generation/abc12345-def6-7890-abcd-ef1234567890.png</p>
              */
             public Builder objectKey(String objectKey) {
                 this.objectKey = objectKey;
@@ -296,7 +323,10 @@ public class GetImageTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The pre-signed download URL of the image. The URL is valid for 1 hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://bucket.oss-cn-hangzhou.aliyuncs.com/deepsign/123456789/image-generation/abc12345.png?Expires=1718700000&OSSAccessKeyId=">https://bucket.oss-cn-hangzhou.aliyuncs.com/deepsign/123456789/image-generation/abc12345.png?Expires=1718700000&amp;OSSAccessKeyId=</a>...</p>
              */
             public Builder url(String url) {
                 this.url = url;

@@ -21,14 +21,9 @@ public class DetectAigcImageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ObjectKey")
-    private String objectKey;
-
     private DetectAigcImageRequest(Builder builder) {
         super(builder);
         this.imageUrl = builder.imageUrl;
-        this.objectKey = builder.objectKey;
     }
 
     public static Builder builder() {
@@ -51,16 +46,8 @@ public class DetectAigcImageRequest extends Request {
         return this.imageUrl;
     }
 
-    /**
-     * @return objectKey
-     */
-    public String getObjectKey() {
-        return this.objectKey;
-    }
-
     public static final class Builder extends Request.Builder<DetectAigcImageRequest, Builder> {
         private String imageUrl; 
-        private String objectKey; 
 
         private Builder() {
             super();
@@ -69,24 +56,17 @@ public class DetectAigcImageRequest extends Request {
         private Builder(DetectAigcImageRequest request) {
             super(request);
             this.imageUrl = request.imageUrl;
-            this.objectKey = request.objectKey;
         } 
 
         /**
-         * ImageUrl.
+         * <p>The URL of the image to detect. Only HTTP/HTTPS protocols are supported. You must provide at least one of <code>ImageUrl</code> and <code>ObjectKey</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/photo.jpg">https://example.com/photo.jpg</a></p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
             this.imageUrl = imageUrl;
-            return this;
-        }
-
-        /**
-         * ObjectKey.
-         */
-        public Builder objectKey(String objectKey) {
-            this.putQueryParameter("ObjectKey", objectKey);
-            this.objectKey = objectKey;
             return this;
         }
 
