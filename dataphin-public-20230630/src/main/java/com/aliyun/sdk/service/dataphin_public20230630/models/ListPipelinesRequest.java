@@ -162,7 +162,7 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * <p>The user ID of the operator.</p>
+         * <p>The ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>30001011</p>
@@ -234,12 +234,7 @@ public class ListPipelinesRequest extends Request {
             } 
 
             /**
-             * <p>The environment identifier. Valid values:</p>
-             * <ul>
-             * <li>DEV: development environment.</li>
-             * <li>PROD: production environment.</li>
-             * </ul>
-             * <p>Default value: PROD.</p>
+             * <p>The environment identifier. Valid values: DEV: development environment. PROD: production environment. Default value: PROD.</p>
              * 
              * <strong>example:</strong>
              * <p>PROD</p>
@@ -490,7 +485,7 @@ public class ListPipelinesRequest extends Request {
             } 
 
             /**
-             * <p>The list of creator user IDs for filtering. If left empty, no filtering is applied. Multiple values are evaluated with an OR relationship.</p>
+             * <p>The user IDs of the creators used for filtering. If this parameter is left empty, no filtering is performed. If multiple IDs are specified, they are evaluated by using the OR operator.</p>
              */
             public Builder creatorList(java.util.List<String> creatorList) {
                 this.creatorList = creatorList;
@@ -498,7 +493,7 @@ public class ListPipelinesRequest extends Request {
             }
 
             /**
-             * <p>The list of development owner user IDs for filtering. If left empty, no filtering is applied. Multiple values are evaluated with an OR relationship.</p>
+             * <p>The user IDs of the development owners used for filtering. If this parameter is left empty, no filtering is performed. If multiple IDs are specified, they are evaluated by using the OR operator.</p>
              */
             public Builder developOwnerList(java.util.List<String> developOwnerList) {
                 this.developOwnerList = developOwnerList;
@@ -506,7 +501,7 @@ public class ListPipelinesRequest extends Request {
             }
 
             /**
-             * <p>The list of full folder paths to query. If left empty, the root folder is queried.</p>
+             * <p>The full paths of the directories to query. If this parameter is left empty, the root directory is queried.</p>
              */
             public Builder directories(java.util.List<String> directories) {
                 this.directories = directories;
@@ -514,7 +509,7 @@ public class ListPipelinesRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to use exact match for node names. Default value: false.</p>
+             * <p>Specifies whether an exact match is performed on the node name. Default value: false.</p>
              */
             public Builder exactMatch(Boolean exactMatch) {
                 this.exactMatch = exactMatch;
@@ -522,7 +517,7 @@ public class ListPipelinesRequest extends Request {
             }
 
             /**
-             * <p>The list of node name keywords. This parameter is optional. If left empty, no filtering by name is applied. For exact match, specify full names. For fuzzy match, specify keywords. Multiple values are evaluated with an OR relationship.</p>
+             * <p>The keywords used to filter task names. This parameter is optional. If this parameter is left empty, tasks are not filtered by name. If exact match is enabled, this parameter specifies a list of full names. If fuzzy match is used, this parameter specifies a list of keywords. If multiple keywords are specified, they are evaluated by using the OR operator.</p>
              */
             public Builder keywords(java.util.List<String> keywords) {
                 this.keywords = keywords;
@@ -530,7 +525,7 @@ public class ListPipelinesRequest extends Request {
             }
 
             /**
-             * <p>The cursor-based pagination parameter (an opaque cursor that callers do not need to interpret). This parameter is optional. If not specified, the request is treated as a first-page request and returns the actual total count. If specified, the request is treated as a subsequent-page request. Pass the NextCursor value returned from the previous page as-is. The SQL layer automatically filters by incrementing ID to query the next page without re-querying the total count. No OFFSET is used throughout, which avoids performance degradation in deep paging scenarios.</p>
+             * <p>The cursor for the next page. Leave this parameter empty for the first page. For subsequent pages, pass the NextCursor value returned from the previous page.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -541,7 +536,7 @@ public class ListPipelinesRequest extends Request {
             }
 
             /**
-             * <p>The list of O&amp;M owner user IDs for filtering. If left empty, no filtering is applied. Multiple values are evaluated with an OR relationship.</p>
+             * <p>The user IDs of the O&amp;M owners used for filtering. If this parameter is left empty, no filtering is performed. If multiple IDs are specified, they are evaluated by using the OR operator.</p>
              */
             public Builder opsOwnerList(java.util.List<String> opsOwnerList) {
                 this.opsOwnerList = opsOwnerList;
@@ -549,7 +544,7 @@ public class ListPipelinesRequest extends Request {
             }
 
             /**
-             * <p>The page number. Default value: 1. Pages start from 1.</p>
+             * <p>The page number. Default value: 1. The value starts from 1.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -571,16 +566,7 @@ public class ListPipelinesRequest extends Request {
             }
 
             /**
-             * <p>The list of node types. Default value: [0] (batch integration). Valid values:</p>
-             * <ul>
-             * <li>0: batch integration.</li>
-             * <li>1: real-time integration.</li>
-             * <li>13: data aggregation.</li>
-             * <li>14: offline unstructured workflow.</li>
-             * <li>15: real-time unstructured workflow.</li>
-             * <li>16: online unstructured workflow.</li>
-             * </ul>
-             * <p>If null or an empty list is passed, the default value [0] is used.</p>
+             * <p>The task types. Default value: [0]. Valid values: 0: offline integration. 1: real-time integration. 13: data ingestion. 14: offline unstructured workflow. 15: real-time unstructured workflow. 16: online unstructured workflow. If you pass null or an empty list, the default value [0] is used.</p>
              */
             public Builder pipelineTypeList(java.util.List<Integer> pipelineTypeList) {
                 this.pipelineTypeList = pipelineTypeList;
@@ -588,7 +574,7 @@ public class ListPipelinesRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to recursively query subfolders. Default value: false.</p>
+             * <p>Specifies whether to recursively query subdirectories. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -599,13 +585,7 @@ public class ListPipelinesRequest extends Request {
             }
 
             /**
-             * <p>The list of scheduling types for filtering. If left empty, no filtering is applied. Valid values:</p>
-             * <ul>
-             * <li>1: periodic scheduling.</li>
-             * <li>3: manual scheduling.</li>
-             * <li>5: real-time scheduling.</li>
-             * <li>7: online workflow.</li>
-             * </ul>
+             * <p>The schedule types used for filtering. If this parameter is left empty, no filtering is performed. Valid values: 1: periodic scheduling. 3: manual scheduling. 5: real-time scheduling. 7: online workflow.</p>
              */
             public Builder scheduleTypeList(java.util.List<Integer> scheduleTypeList) {
                 this.scheduleTypeList = scheduleTypeList;
@@ -613,13 +593,7 @@ public class ListPipelinesRequest extends Request {
             }
 
             /**
-             * <p>The list of submit statuses for filtering. If left empty, no filtering is applied. Valid values:</p>
-             * <ul>
-             * <li>DRAFT: draft.</li>
-             * <li>SUBMITTING: submitting.</li>
-             * <li>SUBMITTED: submitted.</li>
-             * <li>PUBLISHED: published.</li>
-             * </ul>
+             * <p>The submit statuses used for filtering. If this parameter is left empty, no filtering is performed. Valid values: DRAFT: draft. SUBMITTING: submitting. SUBMITTED: submitted. PUBLISHED: published.</p>
              */
             public Builder submitStatusList(java.util.List<String> submitStatusList) {
                 this.submitStatusList = submitStatusList;
@@ -627,7 +601,7 @@ public class ListPipelinesRequest extends Request {
             }
 
             /**
-             * <p>The list of label names for filtering. If left empty, no filtering is applied. Multiple values are evaluated with an OR relationship.</p>
+             * <p>The tag names used for filtering. If this parameter is left empty, no filtering is performed. If multiple names are specified, they are evaluated by using the OR operator.</p>
              */
             public Builder tagList(java.util.List<String> tagList) {
                 this.tagList = tagList;
@@ -635,7 +609,7 @@ public class ListPipelinesRequest extends Request {
             }
 
             /**
-             * <p>The total number of records for cursor-based pagination. This parameter is optional and takes effect only when NextCursor is not empty. After the first-page request returns the actual total count, pass this value back as-is for subsequent pages. The server does not re-query the total count and directly echoes the value, which avoids redundant count overhead. If not specified, the system falls back to querying one extra record to determine whether a next page exists.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>1233</p>

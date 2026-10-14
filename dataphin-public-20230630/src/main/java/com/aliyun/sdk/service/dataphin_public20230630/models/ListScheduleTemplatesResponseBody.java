@@ -119,7 +119,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. OK indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * ListScheduleTemplatesResponse.
+         * <p>The schedule template list response.</p>
          */
         public Builder listScheduleTemplatesResponse(ListScheduleTemplatesResponse listScheduleTemplatesResponse) {
             this.listScheduleTemplatesResponse = listScheduleTemplatesResponse;
@@ -143,7 +149,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +302,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * ConditionName.
+             * <p>The name of the condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rerun on failure condition</p>
              */
             public Builder conditionName(String conditionName) {
                 this.conditionName = conditionName;
@@ -298,7 +313,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CronExpression.
+             * <p>The cron expression used after the condition is met.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 30 * * * ?</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -306,7 +324,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Specifies whether the condition is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -314,7 +335,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * FollowScheduleParam.
+             * <p>Specifies whether to follow the main schedule parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder followScheduleParam(Boolean followScheduleParam) {
                 this.followScheduleParam = followScheduleParam;
@@ -322,7 +346,15 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeStatus.
+             * <p>The node schedule status after the condition is met. Valid values:</p>
+             * <ul>
+             * <li>1: Normal.</li>
+             * <li>2: Paused.</li>
+             * <li>3: Dry run.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeStatus(Integer nodeStatus) {
                 this.nodeStatus = nodeStatus;
@@ -330,7 +362,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleConditionJson.
+             * <p>The conditional expression tree as a JSON character string. The keys are in lower camel case and must be parsed by the caller.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;EXPRESSION_GROUP&quot;,&quot;operator&quot;:&quot;or&quot;}</p>
              */
             public Builder scheduleConditionJson(String scheduleConditionJson) {
                 this.scheduleConditionJson = scheduleConditionJson;
@@ -338,7 +373,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTime.
+             * <p>The schedule time used after the condition is met.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:30</p>
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -444,7 +482,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the effective period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23:59</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -452,7 +493,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The interval value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -460,7 +504,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * IntervalUnit.
+             * <p>The interval unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MINUTE</p>
              */
             public Builder intervalUnit(String intervalUnit) {
                 this.intervalUnit = intervalUnit;
@@ -468,7 +515,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulePeriod.
+             * <p>The schedule period to which the interval belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAY_INTERVAL</p>
              */
             public Builder schedulePeriod(String schedulePeriod) {
                 this.schedulePeriod = schedulePeriod;
@@ -476,7 +526,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the effective period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -582,7 +635,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the effective period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23:59</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -590,7 +646,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The interval value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -598,7 +657,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * IntervalUnit.
+             * <p>The interval unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MINUTE</p>
              */
             public Builder intervalUnit(String intervalUnit) {
                 this.intervalUnit = intervalUnit;
@@ -606,7 +668,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulePeriod.
+             * <p>The schedule period to which the interval belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAY_INTERVAL</p>
              */
             public Builder schedulePeriod(String schedulePeriod) {
                 this.schedulePeriod = schedulePeriod;
@@ -614,7 +679,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the effective period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -941,7 +1009,7 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * ConditionScheduleParamList.
+             * <p>The condition-based schedule parameters. This parameter has a value only for condition-based schedule templates.</p>
              */
             public Builder conditionScheduleParamList(java.util.List<ConditionScheduleParamList> conditionScheduleParamList) {
                 this.conditionScheduleParamList = conditionScheduleParamList;
@@ -949,7 +1017,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CronExpression.
+             * <p>The cron expression for automatic scheduling. Refer to Linux cron expressions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 1 * * ?</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -957,7 +1028,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomCronExpression.
+             * <p>Specifies whether a custom cron expression is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder customCronExpression(Boolean customCronExpression) {
                 this.customCronExpression = customCronExpression;
@@ -965,7 +1039,7 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomIntervalConfig.
+             * <p>The custom schedule interval configuration. This configuration takes effect only when used together with CustomIntervalConfigType.</p>
              */
             public Builder customIntervalConfig(CustomIntervalConfig customIntervalConfig) {
                 this.customIntervalConfig = customIntervalConfig;
@@ -973,7 +1047,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomIntervalConfigType.
+             * <p>The type of the custom interval configuration. Valid values: TIME_POINT, TIME_PERIOD, CUSTOM_TIME_POINT, and CUSTOM_TIME_PERIOD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM_TIME_PERIOD</p>
              */
             public Builder customIntervalConfigType(String customIntervalConfigType) {
                 this.customIntervalConfigType = customIntervalConfigType;
@@ -981,7 +1058,7 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomIntervalConfigs.
+             * <p>The custom schedule interval configurations. This parameter is valid only when CustomIntervalConfigType is set to CUSTOM_TIME_PERIOD.</p>
              */
             public Builder customIntervalConfigs(java.util.List<CustomIntervalConfigs> customIntervalConfigs) {
                 this.customIntervalConfigs = customIntervalConfigs;
@@ -989,7 +1066,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1704153600000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -997,7 +1077,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModify.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1709516800000</p>
              */
             public Builder gmtModify(Long gmtModify) {
                 this.gmtModify = gmtModify;
@@ -1005,7 +1088,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * HasReference.
+             * <p>Specifies whether the schedule template is referenced by a node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasReference(Boolean hasReference) {
                 this.hasReference = hasReference;
@@ -1013,7 +1099,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierId.
+             * <p>The ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001012</p>
              */
             public Builder modifierId(String modifierId) {
                 this.modifierId = modifierId;
@@ -1021,7 +1110,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierName.
+             * <p>The name of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Li Si</p>
              */
             public Builder modifierName(String modifierName) {
                 this.modifierName = modifierName;
@@ -1029,7 +1121,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleIntervalType.
+             * <p>The schedule interval type. Valid values: YEARLY, MONTHLY, WEEKLY, DAILY, HOURLY, and MINUTELY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAILY</p>
              */
             public Builder scheduleIntervalType(String scheduleIntervalType) {
                 this.scheduleIntervalType = scheduleIntervalType;
@@ -1037,7 +1132,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTemplateDesc.
+             * <p>The description of the schedule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduled at 1:00 AM on weekdays</p>
              */
             public Builder scheduleTemplateDesc(String scheduleTemplateDesc) {
                 this.scheduleTemplateDesc = scheduleTemplateDesc;
@@ -1045,7 +1143,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTemplateId.
+             * <p>The ID of the schedule template, which is used to bind a schedule template when updating a node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder scheduleTemplateId(Long scheduleTemplateId) {
                 this.scheduleTemplateId = scheduleTemplateId;
@@ -1053,7 +1154,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTemplateName.
+             * <p>The name of the schedule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1:00 AM every day</p>
              */
             public Builder scheduleTemplateName(String scheduleTemplateName) {
                 this.scheduleTemplateName = scheduleTemplateName;
@@ -1061,7 +1165,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTemplateType.
+             * <p>The templatetype. Valid values: BASE_SCHEDULE_TEMPLATE: basic scheduling template, CONDITION_SCHEDULE_TEMPLATE: conditional scheduling template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BASE_SCHEDULE_TEMPLATE</p>
              */
             public Builder scheduleTemplateType(String scheduleTemplateType) {
                 this.scheduleTemplateType = scheduleTemplateType;
@@ -1069,7 +1176,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleType.
+             * <p>The schedule type. Valid values: normal scheduling, dry run scheduling, and paused scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scheduleType(Integer scheduleType) {
                 this.scheduleType = scheduleType;
@@ -1077,7 +1187,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The ID of the tenant to which the schedule template belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001011</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -1085,7 +1198,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001011</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1093,7 +1209,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1101,7 +1220,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ValidEndDate.
+             * <p>The end date of the effective period, in the yyyy-MM-dd format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9999-01-01</p>
              */
             public Builder validEndDate(String validEndDate) {
                 this.validEndDate = validEndDate;
@@ -1109,7 +1231,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ValidStartDate.
+             * <p>The start date of the effective period, in the yyyy-MM-dd format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01</p>
              */
             public Builder validStartDate(String validStartDate) {
                 this.validStartDate = validStartDate;
@@ -1176,7 +1301,10 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The total number of schedule templates that meet the specified conditions. This number is not limited by pagination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1184,7 +1312,7 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ResultData.
+             * <p>The schedule templates.</p>
              */
             public Builder resultData(java.util.List<ResultData> resultData) {
                 this.resultData = resultData;

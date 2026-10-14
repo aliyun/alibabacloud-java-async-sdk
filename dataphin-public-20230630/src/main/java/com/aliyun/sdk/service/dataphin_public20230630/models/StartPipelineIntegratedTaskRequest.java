@@ -127,6 +127,7 @@ public class StartPipelineIntegratedTaskRequest extends Request {
         }
 
         /**
+         * <p>The request context.</p>
          * <p>This parameter is required.</p>
          */
         public Builder context(Context context) {
@@ -137,6 +138,7 @@ public class StartPipelineIntegratedTaskRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,7 +151,10 @@ public class StartPipelineIntegratedTaskRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30110121</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -158,6 +163,7 @@ public class StartPipelineIntegratedTaskRequest extends Request {
         }
 
         /**
+         * <p>The startup parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder startCommand(StartCommand startCommand) {
@@ -229,6 +235,11 @@ public class StartPipelineIntegratedTaskRequest extends Request {
             } 
 
             /**
+             * <p>The current operating environment. Valid values:</p>
+             * <ul>
+             * <li>DEV: Development environment.</li>
+             * <li>PROD: Production environment.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -240,6 +251,7 @@ public class StartPipelineIntegratedTaskRequest extends Request {
             }
 
             /**
+             * <p>The ID of the project to which the integration pipeline node belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -401,7 +413,10 @@ public class StartPipelineIntegratedTaskRequest extends Request {
             } 
 
             /**
-             * ByteSpeed.
+             * <p>The bandwidth limit for the offline full task. Unit: MB/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder byteSpeed(Integer byteSpeed) {
                 this.byteSpeed = byteSpeed;
@@ -409,7 +424,10 @@ public class StartPipelineIntegratedTaskRequest extends Request {
             }
 
             /**
-             * Checkpoint.
+             * <p>The specified time checkpoint for starting in pure incremental mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-22 15:28:31</p>
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -417,7 +435,10 @@ public class StartPipelineIntegratedTaskRequest extends Request {
             }
 
             /**
-             * Concurrent.
+             * <p>The concurrency for the offline full task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder concurrent(Integer concurrent) {
                 this.concurrent = concurrent;
@@ -425,7 +446,14 @@ public class StartPipelineIntegratedTaskRequest extends Request {
             }
 
             /**
-             * FullTaskMode.
+             * <p>The startup mode for the full table task. Valid values:</p>
+             * <ul>
+             * <li>INIT</li>
+             * <li>RELAY</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RELAY</p>
              */
             public Builder fullTaskMode(String fullTaskMode) {
                 this.fullTaskMode = fullTaskMode;
@@ -433,7 +461,10 @@ public class StartPipelineIntegratedTaskRequest extends Request {
             }
 
             /**
-             * IncrementalTaskId.
+             * <p>The incremental instance ID required when restarting the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_1234567890_123123</p>
              */
             public Builder incrementalTaskId(String incrementalTaskId) {
                 this.incrementalTaskId = incrementalTaskId;
@@ -441,7 +472,10 @@ public class StartPipelineIntegratedTaskRequest extends Request {
             }
 
             /**
-             * Memory.
+             * <p>The memory for the offline full task. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -449,7 +483,10 @@ public class StartPipelineIntegratedTaskRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * <p>The ID of the real-time node required when starting from a node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_1234567890</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -457,7 +494,10 @@ public class StartPipelineIntegratedTaskRequest extends Request {
             }
 
             /**
-             * QuotaGroupId.
+             * <p>The ID of the resource group used by the full table instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder quotaGroupId(String quotaGroupId) {
                 this.quotaGroupId = quotaGroupId;
@@ -465,7 +505,14 @@ public class StartPipelineIntegratedTaskRequest extends Request {
             }
 
             /**
-             * SyncMode.
+             * <p>The synchronization mode. Valid values:</p>
+             * <ul>
+             * <li>DI_DF</li>
+             * <li>DI</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DI_DF</p>
              */
             public Builder syncMode(String syncMode) {
                 this.syncMode = syncMode;

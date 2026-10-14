@@ -119,7 +119,10 @@ public class CheckDataSourceConnectivityOnResourceGroupResponseBody extends TeaM
         } 
 
         /**
-         * Code.
+         * <p>The error code of the request. A value of OK indicates that the request is normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CheckDataSourceConnectivityOnResourceGroupResponseBody extends TeaM
         }
 
         /**
-         * Data.
+         * <p>The ID of the connectivity check task. You can poll the task result by calling GetCheckConnectivityJobByJobId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>129837xxxx</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class CheckDataSourceConnectivityOnResourceGroupResponseBody extends TeaM
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class CheckDataSourceConnectivityOnResourceGroupResponseBody extends TeaM
         }
 
         /**
-         * Message.
+         * <p>The error message of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class CheckDataSourceConnectivityOnResourceGroupResponseBody extends TeaM
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class CheckDataSourceConnectivityOnResourceGroupResponseBody extends TeaM
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

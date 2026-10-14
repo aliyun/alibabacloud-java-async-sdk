@@ -112,6 +112,7 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The check object.</p>
          * <p>This parameter is required.</p>
          */
         public Builder checkCommand(CheckCommand checkCommand) {
@@ -122,6 +123,7 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -202,7 +207,10 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jdbc.url</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -210,7 +218,10 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The configuration value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jdbc:mysql://host:port/database</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -303,7 +314,7 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends Request {
             } 
 
             /**
-             * ConfigItemList.
+             * <p>The connection configuration items. If DataSourceId is specified, this parameter is optional and the saved configurations of the data source are used by default.</p>
              */
             public Builder configItemList(java.util.List<ConfigItemList> configItemList) {
                 this.configItemList = configItemList;
@@ -311,7 +322,10 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends Request {
             }
 
             /**
-             * DataSourceId.
+             * <p>The data source ID. This parameter is optional. If specified, the check result is associated with the data source and visible on the data source page, and the old check records of the data source on the target resource group are cleared first. If Type and ConfigItemList are not specified, the saved type and configurations of the data source are used for the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -319,7 +333,10 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends Request {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the schedule resource group. The connectivity check task is executed on this resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg_269xxxxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -327,7 +344,10 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The data source type. If DataSourceId is specified, this parameter is optional and the saved type of the data source is used by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MYSQL</p>
              */
             public Builder type(String type) {
                 this.type = type;

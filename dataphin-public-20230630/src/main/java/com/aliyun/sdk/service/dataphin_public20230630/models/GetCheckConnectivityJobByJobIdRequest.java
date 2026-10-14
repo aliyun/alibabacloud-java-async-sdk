@@ -112,6 +112,7 @@ public class GetCheckConnectivityJobByJobIdRequest extends Request {
         }
 
         /**
+         * <p>The ID of the connectivity check task, which is the Data returned by CheckDataSourceConnectivityOnResourceGroup.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,7 @@ public class GetCheckConnectivityJobByJobIdRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +138,10 @@ public class GetCheckConnectivityJobByJobIdRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);

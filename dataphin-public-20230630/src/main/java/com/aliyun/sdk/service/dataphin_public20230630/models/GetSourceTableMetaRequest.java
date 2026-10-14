@@ -127,6 +127,7 @@ public class GetSourceTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The request context.</p>
          * <p>This parameter is required.</p>
          */
         public Builder context(Context context) {
@@ -137,6 +138,7 @@ public class GetSourceTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,7 +151,10 @@ public class GetSourceTableMetaRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -158,6 +163,7 @@ public class GetSourceTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The query conditions for the integration source table.</p>
          * <p>This parameter is required.</p>
          */
         public Builder query(GetSourceTableMetaRequestQuery query) {
@@ -227,7 +233,14 @@ public class GetSourceTableMetaRequest extends Request {
             } 
 
             /**
-             * Env.
+             * <p>The current operation environment. Valid values:</p>
+             * <ul>
+             * <li>DEV: development environment.</li>
+             * <li>PROD: production environment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -235,7 +248,10 @@ public class GetSourceTableMetaRequest extends Request {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the project to which the integration pipeline task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -341,7 +357,10 @@ public class GetSourceTableMetaRequest extends Request {
             } 
 
             /**
-             * Catalog.
+             * <p>The catalog name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hive_catalog</p>
              */
             public Builder catalog(String catalog) {
                 this.catalog = catalog;
@@ -349,7 +368,10 @@ public class GetSourceTableMetaRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The identifier of the data source or compute source. If QueryMode is set to DATA_SOURCE, specify the physical data source ID. If QueryMode is set to PROJECT_COMPUTE_SOURCE, specify the data source ID bound to the compute source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -357,7 +379,14 @@ public class GetSourceTableMetaRequest extends Request {
             }
 
             /**
-             * QueryMode.
+             * <p>The query mode. Valid values:</p>
+             * <ul>
+             * <li>DATA_SOURCE: physical data source. This is the default value. It includes direct queries and automatic routing of external data source metadata.</li>
+             * <li>PROJECT_COMPUTE_SOURCE: tables under the project or compute source. The data source is parsed based on the compute source of the project specified by Context.ProjectId.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_SOURCE</p>
              */
             public Builder queryMode(String queryMode) {
                 this.queryMode = queryMode;
@@ -365,7 +394,10 @@ public class GetSourceTableMetaRequest extends Request {
             }
 
             /**
-             * SchemaName.
+             * <p>The schema name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -373,7 +405,10 @@ public class GetSourceTableMetaRequest extends Request {
             }
 
             /**
-             * TableName.
+             * <p>The table name. The schema.table format is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ods_user_info</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

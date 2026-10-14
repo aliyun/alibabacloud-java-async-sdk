@@ -119,7 +119,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The error code. OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The paged query result.</p>
+         * <p>The paging query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request failed.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -171,7 +171,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -357,7 +357,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of user IDs of development owners.</p>
+             * <p>The list of user IDs of the development owners.</p>
              */
             public Builder developOwners(java.util.List<String> developOwners) {
                 this.developOwners = developOwners;
@@ -365,10 +365,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory where the node is located.</p>
+             * <p>The directory.</p>
              * 
              * <strong>example:</strong>
-             * <p>/dwd/finance_domain/</p>
+             * <p>/dwd/Financial domain/</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -387,7 +387,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The schedule node ID.</p>
+             * <p>The scheduling node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>n_6793582765516849152</p>
@@ -398,7 +398,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node name.</p>
+             * <p>The task name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -409,7 +409,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of user IDs of O&amp;M owners.</p>
+             * <p>The list of user IDs of the O&amp;M owners.</p>
              */
             public Builder opsOwners(java.util.List<String> opsOwners) {
                 this.opsOwners = opsOwners;
@@ -430,9 +430,9 @@ public class ListPipelinesResponseBody extends TeaModel {
             /**
              * <p>The schedule type. Valid values:</p>
              * <ul>
-             * <li>1: periodic scheduling.</li>
-             * <li>3: manual scheduling.</li>
-             * <li>5: real-time scheduling.</li>
+             * <li>1: Periodic scheduling.</li>
+             * <li>3: Manual scheduling.</li>
+             * <li>5: Real-time scheduling.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -444,7 +444,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of node tag names.</p>
+             * <p>The list of task tag names.</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
@@ -452,12 +452,12 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node status. Valid values:</p>
+             * <p>The task status. Valid values:</p>
              * <ul>
-             * <li>DRAFT: draft.</li>
-             * <li>SUBMITTING: being submitted.</li>
-             * <li>SUBMITTED: submitted.</li>
-             * <li>PUBLISHED: published.</li>
+             * <li>DRAFT: Draft.</li>
+             * <li>SUBMITTING: Submitting.</li>
+             * <li>SUBMITTED: Submitted.</li>
+             * <li>PUBLISHED: Published.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -469,13 +469,13 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node type. Valid values:</p>
+             * <p>The task type. Valid values:</p>
              * <ul>
-             * <li>0: offline integration.</li>
-             * <li>1: real-time integration.</li>
-             * <li>13: data aggregation.</li>
-             * <li>14: offline unstructured workflow.</li>
-             * <li>15: real-time unstructured workflow.</li>
+             * <li>0: Offline integration.</li>
+             * <li>1: Real-time integration.</li>
+             * <li>13: Data aggregation.</li>
+             * <li>14: Offline unstructured workflow.</li>
+             * <li>15: Real-time unstructured workflow.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -585,7 +585,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of node information on the current page.</p>
+             * <p>The list of task information on the current page.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -593,7 +593,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cursor for the next page (an opaque cursor that the caller does not need to interpret). A null value indicates that there are no more pages. Otherwise, pass this value as the nextCursor parameter in the next request to retrieve the next page.</p>
+             * <p>The cursor for the next page in cursor-based pagination. This is an opaque cursor and does not need to be parsed. A value of null indicates that there are no more pages. Otherwise, pass this value as the nextCursor parameter in the next request to retrieve the next page.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -604,7 +604,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current page number, starting from 1.</p>
+             * <p>The current page number. Pages start from 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -626,7 +626,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records that match the conditions. For the first page request, the actual total count is returned. For subsequent page requests (when nextCursor is passed in), if totalCount is included in the request, the same value is returned. Otherwise, this field is not returned. The total value is a snapshot taken at the time of the first page query and is not updated in real time as data changes during pagination.</p>
+             * <p>The total number of records that meet the query conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>105</p>

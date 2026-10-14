@@ -119,7 +119,10 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The batch results of stopping integrated incremental and full instances.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * JobName.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eedsauto</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -246,7 +264,10 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The job owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1692173406264688</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -254,7 +275,10 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The operation status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FAIED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -334,7 +358,7 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * DevOpsActionResDTOList.
+             * <p>The stop results for each instance.</p>
              */
             public Builder devOpsActionResDTOList(java.util.List<DevOpsActionResDTOList> devOpsActionResDTOList) {
                 this.devOpsActionResDTOList = devOpsActionResDTOList;
@@ -342,7 +366,10 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Fail.
+             * <p>The number of failed stops.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fail(Long fail) {
                 this.fail = fail;
@@ -350,7 +377,10 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>The number of successful stops.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder success(Long success) {
                 this.success = success;

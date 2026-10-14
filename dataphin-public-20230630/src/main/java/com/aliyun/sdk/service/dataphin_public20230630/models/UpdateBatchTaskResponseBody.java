@@ -119,7 +119,7 @@ public class UpdateBatchTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates a successful request.</p>
+         * <p>The error code. A value of OK indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -163,7 +163,7 @@ public class UpdateBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -224,7 +224,7 @@ public class UpdateBatchTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The node ID in the folder tree.</p>
+             * <p>The ID of the task directory tree node.</p>
              * 
              * <strong>example:</strong>
              * <p>12113111</p>

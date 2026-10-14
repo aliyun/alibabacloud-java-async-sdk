@@ -119,7 +119,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The request error code. OK indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code of the backend response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class ListTenantRolesResponseBody extends TeaModel {
         }
 
         /**
-         * RoleList.
+         * <p>The role list.</p>
          */
         public Builder roleList(java.util.List<RoleList> roleList) {
             this.roleList = roleList;
@@ -159,7 +171,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -355,7 +370,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthJson.
+             * <p>The JSON string of the permission set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder authJson(String authJson) {
                 this.authJson = authJson;
@@ -363,7 +381,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The user ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30121201</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -371,7 +392,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-07 16:45:30</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -379,7 +403,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-07 16:45:30</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -387,7 +414,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The user ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30121201</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -395,7 +425,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleDesc.
+             * <p>The role description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder roleDesc(String roleDesc) {
                 this.roleDesc = roleDesc;
@@ -403,7 +436,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleKey.
+             * <p>The role key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test::1212</p>
              */
             public Builder roleKey(String roleKey) {
                 this.roleKey = roleKey;
@@ -411,7 +447,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -419,7 +458,14 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleType.
+             * <p>The role type. Valid values:</p>
+             * <ul>
+             * <li>BUILD_IN: built-in role</li>
+             * <li>CUSTOM: custom role</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -427,7 +473,15 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The role status. Valid values:</p>
+             * <ul>
+             * <li>ON: enabled</li>
+             * <li>OFF: disabled</li>
+             * <li>DEL: deleted</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -435,7 +489,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30121001</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -443,7 +500,10 @@ public class ListTenantRolesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantType.
+             * <p>The tenant type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder tenantType(String tenantType) {
                 this.tenantType = tenantType;

@@ -130,7 +130,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The HTTP response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backend exception.</p>
+         * <p>The backend exception details.</p>
          * 
          * <strong>example:</strong>
          * <p>internal error</p>
@@ -171,7 +171,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -703,7 +703,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the business unit.</p>
+             * <p>The business unit ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2011</p>
@@ -714,7 +714,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the business unit.</p>
+             * <p>The business unit name.</p>
              * 
              * <strong>example:</strong>
              * <p>LD_test01</p>
@@ -725,7 +725,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The comment of the table.</p>
+             * <p>The table comment.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -747,7 +747,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the creator.</p>
+             * <p>The creator ID.</p>
              * 
              * <strong>example:</strong>
              * <p>30011211</p>
@@ -758,7 +758,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data domain.</p>
+             * <p>The data domain ID.</p>
              * 
              * <strong>example:</strong>
              * <p>211</p>
@@ -769,7 +769,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data domain.</p>
+             * <p>The subject area name.</p>
              * 
              * <strong>example:</strong>
              * <p>211</p>
@@ -780,7 +780,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data source.</p>
+             * <p>The data source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3301</p>
@@ -791,10 +791,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the table.</p>
+             * <p>The table display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>学生</p>
+             * <p>Student</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -802,11 +802,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment. Valid values:</p>
-             * <ul>
-             * <li>dev</li>
-             * <li>prod.</li>
-             * </ul>
+             * <p>The environment. Valid values: dev and prod.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -817,7 +813,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file ID. This value is used to navigate to the ODM model.</p>
+             * <p>The file ID used to navigate to the ODM model.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -828,7 +824,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GUID of the table.</p>
+             * <p>The table GUID.</p>
              * 
              * <strong>example:</strong>
              * <p>10011</p>
@@ -839,7 +835,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the project or business version to which the table belongs is in Basic mode.</p>
+             * <p>Specifies whether the project or business version to which the table belongs is in Basic mode.</p>
              */
             public Builder isBasicMode(Boolean isBasicMode) {
                 this.isBasicMode = isBasicMode;
@@ -847,7 +843,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the table is a partitioned table.</p>
+             * <p>Specifies whether the table is a partitioned table.</p>
              */
             public Builder isPartitionTable(Boolean isPartitionTable) {
                 this.isPartitionTable = isPartitionTable;
@@ -899,7 +895,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the table.</p>
+             * <p>The table name.</p>
              * 
              * <strong>example:</strong>
              * <p>t_test01</p>
@@ -910,7 +906,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Dataphin user ID of the table owner. This value may be empty if the owner is not bound.</p>
+             * <p>The user ID of the table owner in Dataphin. This parameter may be empty if the owner is not bound.</p>
              * 
              * <strong>example:</strong>
              * <p>30011211</p>
@@ -921,7 +917,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parent model. This value is used to navigate to the ODM model.</p>
+             * <p>The parent model ID used to navigate to the ODM model.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -932,7 +928,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the logical project.</p>
+             * <p>The logical project ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1011</p>
@@ -943,7 +939,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the logical project.</p>
+             * <p>The logical project name.</p>
              * 
              * <strong>example:</strong>
              * <p>testPrj</p>
@@ -968,7 +964,7 @@ public class ListTablesResponseBody extends TeaModel {
              * <p>The abbreviation of the security classification name.</p>
              * 
              * <strong>example:</strong>
-             * <p>高级</p>
+             * <p>High</p>
              */
             public Builder securityLevelAbbreviation(String securityLevelAbbreviation) {
                 this.securityLevelAbbreviation = securityLevelAbbreviation;
@@ -976,10 +972,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the security classification.</p>
+             * <p>The security classification name.</p>
              * 
              * <strong>example:</strong>
-             * <p>高级</p>
+             * <p>High</p>
              */
             public Builder securityLevelName(String securityLevelName) {
                 this.securityLevelName = securityLevelName;
@@ -987,11 +983,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type. Valid values:</p>
-             * <ul>
-             * <li>HIVE</li>
-             * <li>MAX_COMPUTE.</li>
-             * </ul>
+             * <p>The storage type. Valid values: HIVE and MAX_COMPUTE.</p>
              * 
              * <strong>example:</strong>
              * <p>HIVE</p>
@@ -1002,7 +994,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dynamic properties of the real-time meta table.</p>
+             * <p>The dynamic properties of the real-time metatable.</p>
              */
             public Builder streamTableConfig(java.util.List<StreamTableConfig> streamTableConfig) {
                 this.streamTableConfig = streamTableConfig;
@@ -1091,7 +1083,7 @@ public class ListTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of tables.</p>
+             * <p>The table list.</p>
              */
             public Builder tableList(java.util.List<TableList> tableList) {
                 this.tableList = tableList;

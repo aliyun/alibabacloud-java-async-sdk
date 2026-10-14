@@ -347,7 +347,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>在指定调度资源组上异步发起数据源连通性检查，立即返回检查任务ID（Data）；任务结果通过 GetCheckConnectivityJobByJobId 轮询。与 CheckDataSourceConnectivity 的区别：本接口的检查任务在客户指定的调度资源组上执行，适用于 Dataphin 服务端与目标数据源网络不通的场景。</p>
+     * <p>Asynchronously initiates a data source connectivity check on a specified schedule resource group and immediately returns the check task ID in the Data field. You can poll the task result by calling GetCheckConnectivityJobByJobId. Difference from CheckDataSourceConnectivity: The check task of this operation is executed on the schedule resource group specified by the customer, which is applicable to scenarios where the network between the Dataphin server and the target data source is disconnected.</p>
      * 
      * @param request the request parameters of CheckDataSourceConnectivityOnResourceGroup  CheckDataSourceConnectivityOnResourceGroupRequest
      * @return CheckDataSourceConnectivityOnResourceGroupResponse
@@ -2255,7 +2255,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>按任务ID查询数据源连通性检查任务的最新状态与错误信息，用于轮询 CheckDataSourceConnectivityOnResourceGroup 返回的异步任务。任务不存在时 Data 为空。</p>
+     * <p>Queries the latest status and error message of a data source connectivity check task by task ID. This operation is used to poll the asynchronous task returned by CheckDataSourceConnectivityOnResourceGroup. If the task does not exist, Data is empty.</p>
      * 
      * @param request the request parameters of GetCheckConnectivityJobByJobId  GetCheckConnectivityJobByJobIdRequest
      * @return GetCheckConnectivityJobByJobIdResponse
@@ -5196,11 +5196,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>获取租户角色列表。返回角色列表中 roleType 字段标识角色类型：</p>
+     * <p>Retrieves the list of tenant roles. The roleType field in the returned role list indicates the role type:</p>
      * <ul>
-     * <li>BUILD_IN：内置角色</li>
-     * <li>CUSTOM：自定义角色（即租户自定义创建的角色）
-     * 本接口无需额外业务入参，tenantId 由 POP 网关上下文自动注入。</li>
+     * <li>BUILD_IN: built-in role</li>
+     * <li>CUSTOM: custom role (created by the tenant)
+     * This operation does not require additional business request parameters. The tenantId parameter is automatically injected by the POP gateway context.</li>
      * </ul>
      * 
      * @param request the request parameters of ListTenantRoles  ListTenantRolesRequest
@@ -5891,12 +5891,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>同步用户的部门映射关系。支持为指定用户设置部门，或通过传入空列表 departmentIdList 清除该用户已设置的全部部门。
-     * 使用说明：</p>
+     * <p>Synchronizes the department mapping relationships of users. You can set departments for a specified user or clear all departments set for the user by passing an empty list for departmentIdList.
+     * Usage notes:</p>
      * <ul>
-     * <li>departmentIdList 为 null（未传）：直接报错，防止调用方误清空；</li>
-     * <li>departmentIdList 为空列表 []：显式清除该 sourceUserId 对应的全部部门映射；</li>
-     * <li>departmentIdList 为非空列表：全量覆盖，先删除该用户全部旧部门映射，再插入新列表中的部门。</li>
+     * <li>If departmentIdList is null (not passed): An error is returned directly to prevent the caller from accidentally clearing the data.</li>
+     * <li>If departmentIdList is an empty list []: All department mappings corresponding to the sourceUserId are explicitly cleared.</li>
+     * <li>If departmentIdList is a non-empty list: A full overwrite is performed. All old department mappings of the user are deleted first, and then the departments in the new list are inserted.</li>
      * </ul>
      * 
      * @param request the request parameters of SyncDepartmentUser  SyncDepartmentUserRequest

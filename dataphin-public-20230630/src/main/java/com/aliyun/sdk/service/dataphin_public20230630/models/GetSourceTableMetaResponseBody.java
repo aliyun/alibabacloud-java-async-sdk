@@ -119,7 +119,10 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The metadata of the integration source table, including the table description and field list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +302,10 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The column comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unique id</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -298,7 +313,10 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * <p>The column data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigint</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -306,7 +324,10 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -314,7 +335,10 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Pk.
+             * <p>Indicates whether the column is a primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder pk(Boolean pk) {
                 this.pk = pk;
@@ -322,7 +346,10 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Pt.
+             * <p>Indicates whether the column is a partition column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder pt(Boolean pt) {
                 this.pt = pt;
@@ -330,7 +357,10 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * RawDataType.
+             * <p>The raw column data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigint</p>
              */
             public Builder rawDataType(String rawDataType) {
                 this.rawDataType = rawDataType;
@@ -338,7 +368,10 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * SeqNumber.
+             * <p>The column sequence number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder seqNumber(Integer seqNumber) {
                 this.seqNumber = seqNumber;
@@ -431,7 +464,7 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
             } 
 
             /**
-             * Columns.
+             * <p>The column list.</p>
              */
             public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
@@ -439,7 +472,10 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Guid.
+             * <p>The globally unique identifier (GUID) of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300001410.default.sample</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -447,7 +483,10 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * TableComment.
+             * <p>The table description or comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sample</p>
              */
             public Builder tableComment(String tableComment) {
                 this.tableComment = tableComment;
@@ -455,7 +494,10 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sample</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

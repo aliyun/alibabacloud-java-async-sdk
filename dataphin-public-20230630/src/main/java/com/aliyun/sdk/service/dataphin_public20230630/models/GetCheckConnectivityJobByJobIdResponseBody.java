@@ -119,7 +119,10 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The connectivity check task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +305,10 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
             } 
 
             /**
-             * DataSourceId.
+             * <p>The ID of the data source. This parameter is empty if the check is performed before creation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -298,7 +316,10 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>The error message returned when the check fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>notFoundIp</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -306,7 +327,10 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the connectivity check task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -314,7 +338,10 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The job type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application/cluster</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -322,7 +349,10 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The job status. Valid values: NEW, IN_PROCESS, SUCCESS, and FAILED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +360,10 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The ID of the tenant to which the check task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001011</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -338,7 +371,10 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * VoldemortTaskId.
+             * <p>The ID of the underlying execution task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_7572319950395080706_20251225_7572319950395080707</p>
              */
             public Builder voldemortTaskId(String voldemortTaskId) {
                 this.voldemortTaskId = voldemortTaskId;

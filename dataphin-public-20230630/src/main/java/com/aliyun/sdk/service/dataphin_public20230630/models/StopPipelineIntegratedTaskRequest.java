@@ -127,6 +127,7 @@ public class StopPipelineIntegratedTaskRequest extends Request {
         }
 
         /**
+         * <p>The request context information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder context(Context context) {
@@ -137,6 +138,7 @@ public class StopPipelineIntegratedTaskRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,7 +151,10 @@ public class StopPipelineIntegratedTaskRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30121101</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -158,6 +163,7 @@ public class StopPipelineIntegratedTaskRequest extends Request {
         }
 
         /**
+         * <p>The stop parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder stopCommand(StopCommand stopCommand) {
@@ -229,6 +235,7 @@ public class StopPipelineIntegratedTaskRequest extends Request {
             } 
 
             /**
+             * <p>The current operating environment. Valid values: DEV: development environment. PROD: production environment.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -240,6 +247,7 @@ public class StopPipelineIntegratedTaskRequest extends Request {
             }
 
             /**
+             * <p>The ID of the project to which the integration pipeline task belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -298,6 +306,7 @@ public class StopPipelineIntegratedTaskRequest extends Request {
             } 
 
             /**
+             * <p>The list of instance IDs of the incremental instances to stop.</p>
              * <p>This parameter is required.</p>
              */
             public Builder taskIds(java.util.List<String> taskIds) {

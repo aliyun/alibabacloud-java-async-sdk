@@ -119,7 +119,10 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result of the batch asset owner transfer.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +289,10 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorMessage.
+             * <p>The error message. This parameter is empty if no error occurs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NullPointException</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -285,7 +300,10 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
             }
 
             /**
-             * FailCount.
+             * <p>The number of failed transfers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -293,7 +311,7 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
             }
 
             /**
-             * FailedGuids.
+             * <p>The list of asset GUIDs for which the transfer failed. This parameter is empty if all transfers succeed.</p>
              */
             public Builder failedGuids(java.util.List<String> failedGuids) {
                 this.failedGuids = failedGuids;
@@ -301,7 +319,17 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the batch transfer task. Valid values:</p>
+             * <ul>
+             * <li>INIT: Initial.</li>
+             * <li>HANDOVER_RECORDS_GENERATED: Records generated.</li>
+             * <li>PROCESSING_WITHOUT_APPROVAL: Processing.</li>
+             * <li>SUCCESS: Success.</li>
+             * <li>FINISHED_WITH_EXCEPTION: Finished with failures.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -309,7 +337,10 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of successful transfers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -317,7 +348,10 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of transferred assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

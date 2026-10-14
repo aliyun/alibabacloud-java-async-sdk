@@ -111,6 +111,7 @@ public class GetTableRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +124,10 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -132,7 +136,10 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * <p>The GUID of the table asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dp_ds_table.123.12344.db.table</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

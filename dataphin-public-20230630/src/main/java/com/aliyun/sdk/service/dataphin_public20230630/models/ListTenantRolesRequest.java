@@ -97,6 +97,7 @@ public class ListTenantRolesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class ListTenantRolesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
