@@ -30,10 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "ddoscoo";
         this.version = "2020-01-01";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("ap-southeast-1", "ddoscoo.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "ddoscoo.cn-hangzhou.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -43,6 +40,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>QPS limit</h3>
+     * <p>If you exceed the limit, your API calls are throttled, which may impact your business. To avoid throttling, call this operation at a reasonable rate.</p>
+     * 
      * @param request the request parameters of AddAutoCcBlacklist  AddAutoCcBlacklistRequest
      * @return AddAutoCcBlacklistResponse
      */
@@ -62,10 +63,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the AddAutoCcWhitelist operation to add IP addresses to the whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance. This way, the Anti-DDoS Pro or Anti-DDoS Premium instance allows traffic from the IP addresses.
-     * By default, the traffic from the IP addresses that you add to the whitelist is always allowed. If you no longer use the whitelist, you can call the <a href="https://help.aliyun.com/document_detail/157505.html">EmptyAutoCcWhitelist</a> operation to remove the IP addresses from the whitelist.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation adds whitelist IP addresses for a single Anti-DDoS Pro or Anti-DDoS Premium instance so that the instance directly allows request traffic from the specified IP addresses.
+     * After whitelist IP addresses are added, they are permanently valid by default. If you no longer need the whitelist IP addresses, invoke <a href="https://help.aliyun.com/document_detail/157505.html">EmptyAutoCcWhitelist</a> to clear the whitelist IP address list.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</p>
      * 
      * @param request the request parameters of AddAutoCcWhitelist  AddAutoCcWhitelistRequest
      * @return AddAutoCcWhitelistResponse
@@ -158,7 +159,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the <strong>Policy</strong> parameter in the &quot;Request parameters&quot; section of this topic.</p>
+     * <p>If a website that is added to Anti-DDoS Pro and Anti-DDoS Premium has multiple origin servers in the website configuration, you can modify the load balancing algorithm by configuring back-to-origin policies. The default algorithm is IP Hash. You can change it to polling or Least Time. For more information, see the description of the <strong>Policy</strong> request parameter.</p>
      * 
      * @param request the request parameters of ConfigL7RsPolicy  ConfigL7RsPolicyRequest
      * @return ConfigL7RsPolicyResponse
@@ -305,9 +306,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to configure filtering policies to filter out UDP traffic from specific ports. This helps defend against UDP reflection attacks.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation adds a UDP reflection attack attack prevention protection policy for an Anti-DDoS Pro or Anti-DDoS Premium instance to filter specified reflection source ports.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation as needed.</p>
      * 
      * @param request the request parameters of ConfigUdpReflect  ConfigUdpReflectRequest
      * @return ConfigUdpReflectResponse
@@ -436,7 +437,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation by using Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</p>
+     * <p>This operation supports integration with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform</a>.</p>
      * 
      * @param request the request parameters of CreatePort  CreatePortRequest
      * @return CreatePortResponse
@@ -703,12 +704,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DeleteTagResources operation to remove tags from Anti-DDoS Proxy (Chinese Mainland) instances.</p>
+     * <p>This API operation removes tags from an Anti-DDoS Proxy (Chinese Mainland) instance.</p>
      * <blockquote>
-     * <p> Only Anti-DDoS Proxy (Chinese Mainland) supports tags.</p>
+     * <p>Only Anti-DDoS Proxy (Chinese Mainland) supports the tag feature.</p>
      * </blockquote>
-     * <h3><a href="#qps-"></a>QPS limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Plan your calls accordingly.</p>
      * 
      * @param request the request parameters of DeleteTagResources  DeleteTagResourcesRequest
      * @return DeleteTagResourcesResponse
@@ -825,9 +826,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeAsyncTasks operation to query the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation queries detailed information about asynchronous export tasks, including task ID, start and end times, status, parameters, results, and more.</p>
+     * <h3>QPS limits</h3>
+     * <p>The single-user QPS limit for this operation is 10 queries per second (QPS). API calls that exceed this limit will be throttled, which may affect your business. You should call this operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeAsyncTasks  DescribeAsyncTasksRequest
      * @return DescribeAsyncTasksResponse
@@ -956,12 +957,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the Diversion from Origin Server configurations of one or more Anti-DDoS Proxy (Chinese Mainland) instances.</p>
+     * <p>This operation is used to query the near-origin traffic diversion configurations of an Anti-DDoS Pro and Anti-DDoS Premium instance in the Chinese mainland.</p>
      * <blockquote>
-     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</p>
+     * <p>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (Chinese Mainland).</p>
      * </blockquote>
-     * <h3><a href="#qps-"></a>QPS limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</p>
      * 
      * @param request the request parameters of DescribeBlockStatus  DescribeBlockStatusRequest
      * @return DescribeBlockStatusResponse
@@ -1000,9 +1001,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to query all applicable certificates of a domain name that you want to add to Anti-DDoS Proxy. Multiple certificates may be queried for a domain name. You can use an exact domain name to query exact-domain certificates or wildcard-domain certificates.</p>
+     * <p>You can call this operation to query all certificates that are available for a domain name protected by an Anti-DDoS instance. A domain name can be associated with multiple certificates. For example, a query for a specific domain name can return both a certificate for that specific domain name and a wildcard certificate.</p>
      * <blockquote>
-     * <p> If you want to query the certificate that is in use for the current domain name, you can call the <a href="https://help.aliyun.com/document_detail/473610.html">DescribeWebRules</a> operation to obtain the values of the CertName and CertRegion parameters. Then, you can call the <a href="https://help.aliyun.com/document_detail/411733.html">ListUserCertificateOrder</a> operation of Certificate Management Service to query the ID and other details of the certificate by using the value of the CertName parameter.</p>
+     * <p>To query the certificate that is currently used by a domain name, call the <a href="https://help.aliyun.com/document_detail/473610.html">DescribeWebRules</a> operation to obtain the CertName and CertRegion values. Then, call the <a href="https://help.aliyun.com/document_detail/411733.html">ListUserCertificateOrder</a> operation of Certificate Management Service. Use the returned CertName value to query the corresponding certificate ID and other details.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeCerts  DescribeCertsRequest
@@ -1023,6 +1024,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is applicable only to Anti-DDoS Proxy (Outside Chinese Mainland).</p>
+     * 
      * @param request the request parameters of DescribeCnameReuses  DescribeCnameReusesRequest
      * @return DescribeCnameReusesResponse
      */
@@ -1060,9 +1064,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeDDosAllEventList operation to query DDoS attack events within a specific time range by page. The information about a DDoS attack event includes the start time and end time of the attack, attack event type, attacked object, peak bandwidth of attack traffic, and peak packet forwarding rate.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation is used to query the list of DDoS attack events within a specified time range by using paging. DDoS attack events contain the following information: attack start time and end time, attack type, attacked object, and peak attack traffic (peak bandwidth or peak packet forwarding rate).</p>
+     * <h3>Rate limit</h3>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</p>
      * 
      * @param request the request parameters of DescribeDDosAllEventList  DescribeDDosAllEventListRequest
      * @return DescribeDDosAllEventListResponse
@@ -1084,7 +1088,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is suitable only for volumetric attacks.</p>
+     * <p>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeDDosEventArea  DescribeDDosEventAreaRequest
@@ -1107,7 +1111,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is suitable only for volumetric attacks.</p>
+     * <p>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeDDosEventAttackType  DescribeDDosEventAttackTypeRequest
@@ -1130,7 +1134,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is suitable only for volumetric attacks.</p>
+     * <p>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeDDosEventIsp  DescribeDDosEventIspRequest
@@ -1171,7 +1175,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is suitable only for volumetric attacks.</p>
+     * <p>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeDDosEventSrcIp  DescribeDDosEventSrcIpRequest
@@ -1220,7 +1224,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is suitable only for Anti-DDoS Premium.</p>
+     * <p>This API operation is available only for the Anti-DDoS Premium service.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeDefenseRecords  DescribeDefenseRecordsRequest
@@ -1368,10 +1372,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeDomainResource operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the domain name-related configurations, protocol-related configurations, HTTPS-related configurations, and configurations that are used to mitigate HTTP flood attacks.
-     * You can call this operation by using Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This API returns a paginated list of detailed configurations for your website forwarding rules, such as website domain name, protocol, HTTPS settings, and CC attack protection configuration.
+     * This API integrates with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</p>
+     * <h3>QPS limit</h3>
+     * <p>The per-user QPS limit for this API is 50 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Plan your API calls accordingly.</p>
      * 
      * @param request the request parameters of DescribeDomainResource  DescribeDomainResourceRequest
      * @return DescribeDomainResourceResponse
@@ -1627,7 +1631,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</p>
+     * <p>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland) service.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeElasticBandwidthSpec  DescribeElasticBandwidthSpecRequest
@@ -1739,9 +1743,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeInstanceDetails operation to query the information about the IP addresses and ISP lines of the instances. The information includes the IP address, status, and protection line.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation is used to query the IP address and line information of an Anti-DDoS Pro or Anti-DDoS Premium instance, such as the IP address, status, and protection line of the instance.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can invoke this operation up to 10 times per second per account. If the number of calls exceeds the limit, throttling is triggered. Throttling may affect your business. Invoke this operation within the limit.</p>
      * 
      * @param request the request parameters of DescribeInstanceDetails  DescribeInstanceDetailsRequest
      * @return DescribeInstanceDetailsResponse
@@ -1779,6 +1783,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the IDs, editions, remarks, and IP types of all Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API operation at a reasonable rate.</p>
+     * 
      * @param request the request parameters of DescribeInstanceIds  DescribeInstanceIdsRequest
      * @return DescribeInstanceIdsResponse
      */
@@ -1798,9 +1807,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeInstanceSpecs operation to query the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances at a time. The specifications include the clean bandwidth, protection bandwidth, function plan, and the numbers of domain names and ports that can be protected.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation queries the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances in batches, such as the clean bandwidth, mitigation bandwidth, feature edition, number of protected domain names, and number of ports.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeInstanceSpecs  DescribeInstanceSpecsRequest
      * @return DescribeInstanceSpecsResponse
@@ -1857,7 +1866,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.</p>
+     * <p>Queries the details of Anti-DDoS Pro or Anti-DDoS Premium instances owned by the current Alibaba Cloud account by using paging. The details include the instance ID, edition, expiration time, and service traffic forwarding status.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 invocations per second. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke this operation based on your business requirements.</p>
      * 
      * @param request the request parameters of DescribeInstances  DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -2023,8 +2034,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).
-     * You can query operations performed on Anti-DDoS Proxy (Chinese Mainland), such as configuring the burstable protection bandwidth, deactivating blackhole filtering, configuring the near-origin traffic diversion feature, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.</p>
+     * <p>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland).
+     * Operation log types include: settings for elastic protection specifications of an instance, Unblock (deactivation of blackhole filtering), settings for near-origin traffic diversion, offsetting with anti-DDoS mitigation plans, changing an ECS IP address, and clearing full logs.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeOpEntities  DescribeOpEntitiesRequest
@@ -2046,7 +2057,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation by using Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</p>
+     * <p>This operation supports integration with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</p>
      * 
      * @param request the request parameters of DescribePort  DescribePortRequest
      * @return DescribePortResponse
@@ -2216,12 +2227,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.</p>
+     * <p>Queries the distribution of request source Internet service providers (ISPs) for an Anti-DDoS Pro or Anti-DDoS Premium instance within a specified time period.</p>
      * <blockquote>
-     * <p>The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the <a href="https://help.aliyun.com/document_detail/157460.html">DescribePortFlowList</a> operation.</p>
+     * <p>Because the Layer 4 transport-layer identity statistics algorithm of Anti-DDoS Pro and Anti-DDoS Premium has been updated, the data returned by this operation does not reflect the actual traffic volume. The data can only be used to calculate the proportion of requests from different ISPs (that is, the distribution of request source ISPs). To obtain request traffic data, call <a href="https://help.aliyun.com/document_detail/157460.html">DescribePortFlowList</a>.</p>
      * </blockquote>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</p>
      * 
      * @param request the request parameters of DescribePortViewSourceIsps  DescribePortViewSourceIspsRequest
      * @return DescribePortViewSourceIspsResponse
@@ -2284,9 +2295,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeSceneDefensePolicies operation to query the configurations of a scenario-specific custom policy that is created. For example, you can query the status, protected objects, and protection rules of the policy.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation queries the detailed configurations of created scenario-specific policies, such as the policy status, protected objects, and protection rules.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this operation up to 10 times per second per user. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation within the limit.</p>
      * 
      * @param request the request parameters of DescribeSceneDefensePolicies  DescribeSceneDefensePoliciesRequest
      * @return DescribeSceneDefensePoliciesResponse
@@ -2397,9 +2408,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeStsGrantStatus operation to query whether Anti-DDoS Pro or Anti-DDoS Premium of the current Alibaba Cloud account is authorized to access other cloud services.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation queries whether your Alibaba Cloud account has authorized Anti-DDoS Pro and Anti-DDoS Premium to access other cloud services.</p>
+     * <h3>QPS limits</h3>
+     * <p>The maximum number of queries per second (QPS) for this operation is 10 per user. If the number of API calls exceeds this limit, throttling is triggered. This may affect your business operations. Ensure that you call this operation at an appropriate rate.</p>
      * 
      * @param request the request parameters of DescribeStsGrantStatus  DescribeStsGrantStatusRequest
      * @return DescribeStsGrantStatusResponse
@@ -2420,10 +2431,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeSystemLog operation to query the system logs of Anti-DDoS Pro or Anti-DDoS Premium. The system logs contain only billing logs for the burstable clean bandwidth.
-     * If you have enabled the burstable clean bandwidth feature, you can call this operation to query the details of the bills of the burstable clean bandwidth.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation lets you query the system logs of Anti-DDoS Pro. System logs currently include only the billing logs of burstable clean bandwidth.
+     * If you have enabled burstable clean bandwidth, you can call this operation to query the billing details of burstable clean bandwidth.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for this operation is 10 per second per user. If the number of calls per second exceeds this limit, throttling is triggered. This may affect your business operations. Therefore, call this operation at an appropriate frequency.</p>
      * 
      * @param request the request parameters of DescribeSystemLog  DescribeSystemLogRequest
      * @return DescribeSystemLogResponse
@@ -2551,7 +2562,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</p>
+     * <p>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland) service.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeUnBlockCount  DescribeUnBlockCountRequest
@@ -2573,9 +2584,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeWebAccessLogDispatchStatus operation to check whether the log analysis feature is enabled for all domain names that are added to your Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation is used to query the full log switch status of all domain names that are added to Anti-DDoS Pro for protection.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit on this operation is 10 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a proper frequency.</p>
      * 
      * @param request the request parameters of DescribeWebAccessLogDispatchStatus  DescribeWebAccessLogDispatchStatusRequest
      * @return DescribeWebAccessLogDispatchStatusResponse
@@ -2818,10 +2829,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This interface is used for paginated querying of the configurations of website business forwarding rules you have created, such as forwarding protocol types, source server addresses, HTTPS configurations, IP blacklist configurations, and more.
-     * Before calling this interface, you must have already called <a href="~~CreateWebRule~~">CreateWebRule</a> to create website business forwarding rules.</p>
-     * <h3>QPS Limit</h3>
-     * <p>The per-user QPS limit for this interface is 50 times/second. Exceeding this limit will result in API calls being throttled, which may impact your business; please use it reasonably.</p>
+     * <p>This operation is used to query the configurations of website forwarding rules that you have created by using paging. For example, you can query the forwarding protocol type, origin server address, HTTPS configuration, and IP blacklist configuration.
+     * Before you invoke this operation, you must have invoked <a href="https://help.aliyun.com/document_detail/157463.html">CreateWebRule</a> to create website forwarding rules.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can invoke this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</p>
      * 
      * @param request the request parameters of DescribeWebRules  DescribeWebRulesRequest
      * @return DescribeWebRulesResponse
@@ -3057,9 +3068,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can switch between the metering methods of the burstable clean bandwidth feature. The new metering method takes effect from 00:00 on the first day of the next month. You can change the metering method up to three times each calendar month. The most recent metering method that you select takes effect in the next month. You cannot change the metering method on the last day of each calendar month.</p>
-     * 
      * @param request the request parameters of ModifyBizBandWidthMode  ModifyBizBandWidthModeRequest
      * @return ModifyBizBandWidthModeResponse
      */
@@ -3162,7 +3170,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</p>
+     * <p>This operation is applicable only to Anti-DDoS Pro (the Chinese mainland) service.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyElasticBandWidth  ModifyElasticBandWidthRequest
@@ -3183,9 +3191,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Before you call this operation, make sure that you have fully understood the billing method and <a href="https://help.aliyun.com/document_detail/283754.html">pricing</a> of the burstable clean bandwidth feature. After you call this operation for the first time, the modification immediately takes effect.</p>
-     * 
      * @param request the request parameters of ModifyElasticBizBandWidth  ModifyElasticBizBandWidthRequest
      * @return ModifyElasticBizBandWidthResponse
      */
@@ -3205,7 +3210,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can enable burstable QPS only for IPv4 instances.</p>
+     * <p>Both IPv4 and IPv6 instances support burstable QPS.</p>
      * 
      * @param request the request parameters of ModifyElasticBizQps  ModifyElasticBizQpsRequest
      * @return ModifyElasticBizQpsResponse
@@ -3378,7 +3383,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the ModifyPort operation by using Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</p>
+     * <p>This operation can be used with Terraform. For more information, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform</a>.</p>
      * 
      * @param request the request parameters of ModifyPort  ModifyPortRequest
      * @return ModifyPortResponse
@@ -3561,9 +3566,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the ModifyWebAreaBlockSwitch operation to enable or disable the Location Blacklist (Domain Names) policy for a domain name.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation sets the status of the Location Blacklist feature for website services (for domain names).</p>
+     * <h3>QPS limits</h3>
+     * <p>The single-user queries per second (QPS) limit for this operation is 10. API calls that exceed the limit are throttled, which may affect your business. We recommend that you call this operation at an appropriate rate.</p>
      * 
      * @param request the request parameters of ModifyWebAreaBlockSwitch  ModifyWebAreaBlockSwitchRequest
      * @return ModifyWebAreaBlockSwitchResponse
@@ -3733,10 +3738,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Debugging</h2>
-     * <p><a href="https://api.aliyun.com/#product=ddoscoo%5C&api=ModifyWebRule%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
-     * 
      * @param request the request parameters of ModifyWebRule  ModifyWebRuleRequest
      * @return ModifyWebRuleResponse
      */
@@ -3756,7 +3757,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>After an Anti-DDoS instance expires, it stops providing DDoS attack protection services. Seven days after expiration, it stops forwarding service traffic.</p>
+     * <ul>
+     * <li>We recommend that you renew your instance before it expires to avoid impacts on service protection and forwarding. You can call <a href="https://help.aliyun.com/document_detail/91478.html">DescribeInstances</a> to query the expiration time of an instance. To renew the instance, go to the <a href="https://yundun.console.aliyun.com/?p=ddoscoo">Anti-DDoS console</a> to perform the operation.</li>
+     * <li>If you do not plan to renew the instance, we recommend that you restore the protected service IP (no longer use the Anti-DDoS IP as the service IP) or service DNS parsing (no longer parse service traffic to the CNAME address of Anti-DDoS) before the Anti-DDoS instance expires. This prevents service traffic from being forwarded to the Anti-DDoS instance and avoids disruption to normal service forwarding when the instance expires.
+     * After the instance expires, you can call this operation to release the specified Anti-DDoS instance.<blockquote>
+     * <p>Before releasing the specified instance, ensure that you have restored the protected service IP or service DNS parsing.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * @param request the request parameters of ReleaseInstance  ReleaseInstanceRequest
      * @return ReleaseInstanceResponse

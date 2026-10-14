@@ -102,7 +102,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tags that are added to the Anti-DDoS Proxy (Chinese Mainland) instance.</p>
+         * TagResources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -194,10 +194,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Anti-DDoS Proxy (Chinese Mainland) instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ddoscoo-cn-zz121ogz****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -205,10 +202,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type. The value is fixed as <strong>INSTANCE</strong>, which indicates an Anti-DDoS Proxy instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>INSTANCE</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -216,10 +210,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the tag that is added to the Anti-DDoS Proxy (Chinese Mainland) instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testvalue</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -227,10 +218,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag that is added to the Anti-DDoS Proxy (Chinese Mainland) instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testkey</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

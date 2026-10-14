@@ -202,6 +202,13 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
+         * <p>The blocking type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>close</strong>: block</p>
+         * </li>
+         * <li><p><strong>captcha</strong>: bot detection</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,6 +221,7 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
+         * <p>The number of access attempts from a single IP address. Valid values: <strong>2</strong> to <strong>2000</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,6 +234,10 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
+         * <p>The domain name of the website business.</p>
+         * <blockquote>
+         * <p>The domain name must have a configured website business forwarding rule. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,6 +250,7 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
+         * <p>The detection duration. Valid values: <strong>5</strong> to <strong>10800</strong>. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,6 +263,13 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
+         * <p>The matching pattern. Valid values:</p>
+         * <ul>
+         * <li><p><strong>prefix</strong>: prefix match</p>
+         * </li>
+         * <li><p><strong>match</strong>: exact match</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,6 +282,7 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
+         * <p>The rule name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,7 +295,10 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID to which the Anti-DDoS Proxy instance belongs in the Resource Management product. The default value is empty, which indicates that the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -296,9 +320,9 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
-         * <p>The check path.</p>
+         * <p>The detection path.</p>
          * <blockquote>
-         * <p> You cannot modify the Uniform Resource Identifier (URI). The domain name of the website, the check path, and the rule name uniquely identify a rule.</p>
+         * <p>The URI cannot be modified. A rule is uniquely identified by the domain name of the website business, the detection path, and the rule name.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

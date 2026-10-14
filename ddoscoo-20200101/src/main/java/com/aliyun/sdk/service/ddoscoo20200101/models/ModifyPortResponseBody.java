@@ -54,7 +54,7 @@ public class ModifyPortResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>39499F01-19D9-4EA4-A0E9-C6014BA5CDBE</p>

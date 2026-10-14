@@ -127,14 +127,7 @@ public class DescribeTotalAttackMaxFlowRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
-         * <blockquote>
-         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1659697200</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -143,7 +136,6 @@ public class DescribeTotalAttackMaxFlowRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the Anti-DDoS Proxy instances. Separate multiple instance IDs with commas (,). Example: InstanceIds.1, InstanceIds.2, InstanceIds.3.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
@@ -153,10 +145,7 @@ public class DescribeTotalAttackMaxFlowRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. If you do not configure this parameter, the instance belongs to the default resource group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -165,14 +154,7 @@ public class DescribeTotalAttackMaxFlowRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
-         * <blockquote>
-         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1669240800</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

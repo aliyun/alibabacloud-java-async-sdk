@@ -112,9 +112,9 @@ public class DeleteAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses that you want to manage. This parameter is a JSON string. The string contains the following fields:</p>
+         * <p>A JSON string that contains the IP addresses to remove from the blacklist. The string has the following structure:</p>
          * <ul>
-         * <li><strong>src</strong>: the IP address. This field is required and must be of the STRING type.</li>
+         * <li><strong>src</strong>: The IP address to remove. This is a required string.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -128,9 +128,9 @@ public class DeleteAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro and Anti-DDoS Premium instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -125,7 +125,7 @@ public class ConfigWebIpSetRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses and CIDR blocks in the blacklist. You can add up to 200 IP addresses or CIDR blocks to the blacklist.</p>
+         * <p>The list of IP addresses or address segments to add to the blacklist. You can add up to 200 IP addresses or address segments.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
@@ -139,7 +139,7 @@ public class ConfigWebIpSetRequest extends Request {
         /**
          * <p>The domain name of the website.</p>
          * <blockquote>
-         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>A website forwarding rule must be configured for the domain name. Call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -153,7 +153,7 @@ public class ConfigWebIpSetRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group in Resource Management to which the Anti-DDoS instance belongs. If you leave this parameter empty, the instance is added to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -165,7 +165,7 @@ public class ConfigWebIpSetRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses and CIDR blocks in the whitelist. You can add up to 200 IP addresses or CIDR blocks to the whitelist.</p>
+         * <p>The IP addresses or CIDR blocks for the whitelist. You can add up to 200 IP addresses or CIDR blocks.</p>
          * 
          * <strong>example:</strong>
          * <p>2.2.2.2/24</p>

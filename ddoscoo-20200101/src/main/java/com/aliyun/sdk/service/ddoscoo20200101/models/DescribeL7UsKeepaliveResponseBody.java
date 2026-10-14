@@ -67,10 +67,10 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
-         * <p>39499F01-19D9-4EA4-A0E9-C6014BA5CDBE</p>
+         * <p>39499F01-19D9-4EA4-A0E9-C6014BA5CDHE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The value of the Back-to-origin Persistent Connections parameter.</p>
+         * <p>The configured back-to-origin persistent connection parameters.</p>
          */
         public Builder rsKeepalive(RsKeepalive rsKeepalive) {
             this.rsKeepalive = rsKeepalive;
@@ -178,10 +178,10 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Back-to-origin Persistent Connections is turned on. Valid values:</p>
+             * <p>Indicates whether back-to-origin persistent connections are enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Not enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of requests that reuse persistent connections.</p>
+             * <p>The number of requests that can reuse a persistent connection.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -204,7 +204,7 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period of idle persistent connections.</p>
+             * <p>The idle timeout period of a persistent connection.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>

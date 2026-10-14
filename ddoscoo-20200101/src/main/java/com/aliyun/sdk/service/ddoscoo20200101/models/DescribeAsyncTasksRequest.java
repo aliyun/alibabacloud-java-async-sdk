@@ -112,7 +112,7 @@ public class DescribeAsyncTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number for the paged query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class DescribeAsyncTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of asynchronous export tasks to return on each page for the paged query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,8 +138,8 @@ public class DescribeAsyncTasksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
-         * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+         * <p>The resource group ID of the Anti-DDoS instance in Resource Management.</p>
+         * <p>If this parameter is not specified, the default resource group is used.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2pz25js****</p>

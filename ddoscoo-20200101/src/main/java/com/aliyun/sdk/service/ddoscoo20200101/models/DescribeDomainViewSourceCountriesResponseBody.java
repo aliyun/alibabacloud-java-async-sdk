@@ -78,7 +78,7 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array consisting of the country or area from which the requests are sent.</p>
+         * <p>The information about request source countries for the website service.</p>
          */
         public Builder sourceCountrys(java.util.List<SourceCountrys> sourceCountrys) {
             this.sourceCountrys = sourceCountrys;
@@ -144,7 +144,7 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of requests.</p>
+             * <p>The number of requests.</p>
              * 
              * <strong>example:</strong>
              * <p>3390671</p>
@@ -155,7 +155,7 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The abbreviation of the country or area. For more information, see the <strong>Codes of countries and areas</strong> section of the <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a> topic. For example, <strong>cn</strong> indicates China, and <strong>us</strong> indicates the United States.</p>
+             * <p>The abbreviation of the country. For more information, see the <strong>Chinese mainland and regions outside China</strong> section in <a href="https://help.aliyun.com/document_detail/167926.html">Country codes</a>. For example, <strong>cn</strong> indicates China and <strong>us</strong> indicates the United States.</p>
              * 
              * <strong>example:</strong>
              * <p>cn</p>

@@ -89,11 +89,11 @@ public class ConfigUdpReflectRequest extends Request {
         } 
 
         /**
-         * <p>The configuration of the filtering policy for UDP reflection attacks.</p>
-         * <p>The value is a string that consists of a JSON struct. The JSON struct contains the following field:</p>
+         * <p>The configuration of the UDP reflection attack attack prevention protection policy to add.</p>
+         * <p>This parameter is a string that represents a JSON structure transformed into a character string. The JSON structure contains the following field:</p>
          * <ul>
-         * <li><p><strong>UdpSports</strong>: the source ports of the UDP traffic that you want to block. This field is required and must be of the ARRAY type. Example: <code>[17,19]</code>.</p>
-         * <p>We recommend that you block the following source ports of UDP traffic:</p>
+         * <li><p><strong>UdpSports</strong>: Array type. Required. The UDP reflection source ports to block. Example: <code>[17,19]</code>.</p>
+         * <p>  Block the following source ports that are commonly used in UDP reflection attacks:</p>
          * <ul>
          * <li>UDP 17: QOTD reflection attacks</li>
          * <li>UDP 19: CharGEN reflection attacks</li>
@@ -106,14 +106,14 @@ public class ConfigUdpReflectRequest extends Request {
          * <li>UDP 1194: OpenVPN reflection attacks</li>
          * <li>UDP 1900: SSDP reflection attacks</li>
          * <li>UDP 3389: RDP reflection attacks</li>
-         * <li>UDP 11211: memcached reflection attacks</li>
+         * <li>UDP 11211: Memcached reflection attacks</li>
          * </ul>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;UdpSports&quot;:[17,19]}</p>
+         * <p>{\&quot;UdpSports\&quot;:[17,19]}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -122,9 +122,9 @@ public class ConfigUdpReflectRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance to manage.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>You can invoke <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -138,10 +138,10 @@ public class ConfigUdpReflectRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the Anti-DDoS Proxy instance. Valid values:</p>
+         * <p>The region ID of the Anti-DDoS Pro or Anti-DDoS Premium instance. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: indicates an Anti-DDoS Proxy (Chinese Mainland) instance. This is the default value.</li>
-         * <li><strong>ap-southeast-1</strong>: indicates an Anti-DDoS Proxy (Outside Chinese Mainland) instance.</li>
+         * <li><strong>cn-hangzhou</strong> (default): the Chinese mainland, which indicates an Anti-DDoS Pro instance.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland, which indicates an Anti-DDoS Premium instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>

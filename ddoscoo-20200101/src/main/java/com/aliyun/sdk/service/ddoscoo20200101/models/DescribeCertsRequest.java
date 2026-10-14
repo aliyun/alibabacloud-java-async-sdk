@@ -96,9 +96,9 @@ public class DescribeCertsRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the website.</p>
+         * <p>The domain name of your website.</p>
          * <blockquote>
-         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>A website forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class DescribeCertsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS instance belongs in Resource Management. If you leave this parameter empty, the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

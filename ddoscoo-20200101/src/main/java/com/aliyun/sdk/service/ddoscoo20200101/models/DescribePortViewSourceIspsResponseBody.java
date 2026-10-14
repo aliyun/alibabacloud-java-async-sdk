@@ -67,7 +67,7 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the details of the ISP.</p>
+         * <p>The request source ISP information of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
          */
         public Builder isps(java.util.List<Isps> isps) {
             this.isps = isps;
@@ -144,9 +144,9 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of requests that are sent from the ISP.</p>
+             * <p>The relative number of requests.</p>
              * <blockquote>
-             * <p>This parameter does not indicate the accurate number of requests. You can use this parameter to calculate the proportion of requests from different ISPs.</p>
+             * <p>This value does not represent the actual number of requests. You can use this value to calculate the proportion of requests from different ISPs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ISP. For more information, see the ISP codes table.</p>
+             * <p>The ISP ID. For more information, see the ISP code table below the response parameters. The ISP ID corresponds to the code in the table.</p>
              * 
              * <strong>example:</strong>
              * <p>100017</p>

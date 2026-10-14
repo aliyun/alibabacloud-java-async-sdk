@@ -170,9 +170,9 @@ public class ModifyWebRuleRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the website.</p>
+         * <p>The domain name of the website business to operate.</p>
          * <blockquote>
-         * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query the domain names for which forwarding rules are configured.</p>
+         * <p>The domain name must have a website forwarding rule configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names that have website forwarding rules configured.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -186,16 +186,16 @@ public class ModifyWebRuleRequest extends Request {
         }
 
         /**
-         * <p>The advanced HTTPS settings. This parameter takes effect only when the value of <strong>ProxyType</strong> includes <strong>https</strong>. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
+         * <p>The HTTPS advanced settings, which take effect only when the website protocol type supports HTTPS (<strong>ProxyType</strong> includes <strong>https</strong>). This parameter is a string converted from a JSON struct that contains the following fields:</p>
          * <ul>
-         * <li><p><strong>Http2https</strong>: specifies whether to turn on Enforce HTTPS Routing. This field is optional and must be an integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enforce HTTPS Routing is turned off. The value 1 indicates that Enforce HTTPS Routing is turned on. The default value is 0.</p>
-         * <p>If your website supports both HTTP and HTTPS, this feature suits your needs. If you turn on the switch, all HTTP requests are redirected to HTTPS requests on port 443 by default.</p>
+         * <li><p><strong>Http2https</strong>: Integer type | Optional | Specifies whether to enable the HTTPS force redirect feature. Valid values: <strong>0</strong> (disabled) | <strong>1</strong> (enabled). Default value: 0 (disabled).</p>
+         * <p>This is applicable when your website supports both HTTP and HTTPS protocols. After this setting is enabled, all HTTP requests will be forcibly converted to HTTPS requests and redirected to port 443 by default.</p>
          * </li>
-         * <li><p><strong>Https2http</strong>: specifies whether to turn on Enable HTTP. This field is optional and must be an integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enable HTTP is turned off. The value 1 indicates that Enable HTTP is turned on. The default value is 0.</p>
-         * <p>If your website does not support HTTPS, this feature suits your needs. If you turn on the switch, all HTTPS requests are redirected to HTTP requests and forwarded to origin servers. The feature can also redirect WebSockets requests to WebSocket requests. All requests are redirected over port 80.</p>
+         * <li><p><strong>Https2http</strong>: Integer type | Optional | Specifies whether to enable the HTTP back-to-origin feature. Valid values: <strong>0</strong> (disabled) | <strong>1</strong> (enabled). Default value: 0 (disabled).</p>
+         * <p>This is applicable when your website does not support HTTPS back-to-origin. After this setting is enabled, all HTTPS protocol requests will be forwarded to the origin through HTTP (Websockets protocol requests will be forwarded through Websocket), and the default back-to-origin port is 80.</p>
          * </li>
-         * <li><p><strong>Http2</strong>: specifies whether to turn on Enable HTTP/2. This field is optional and must be an integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enable HTTP/2 is turned off. The value 1 indicates that Enable HTTP/2 is turned on. The default value is 0.</p>
-         * <p>After you turn on the switch, the protocol type is HTTP/2.</p>
+         * <li><p><strong>Http2</strong>: Integer type | Optional | Specifies whether to enable the HTTP2.0 protocol type. Valid values: <strong>0</strong> (disabled) | <strong>1</strong> (enabled). Default value: 0 (disabled).</p>
+         * <p>After this setting is enabled, the protocol version is HTTP2.0.</p>
          * </li>
          * </ul>
          * 
@@ -209,7 +209,10 @@ public class ModifyWebRuleRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The list of Anti-DDoS Proxy instance IDs to associate. You can associate up to 100 instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -218,10 +221,12 @@ public class ModifyWebRuleRequest extends Request {
         }
 
         /**
-         * <p>The protocol of the forwarding rule. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
+         * <p>The protocol information of the website forwarding rule. This parameter is a string converted from a JSON array. Each element in the JSON array is a JSON struct that contains the following fields:</p>
          * <ul>
-         * <li><strong>ProxyType</strong>: the protocol type. This field is required and must be a string. Valid values: <strong>http</strong>, <strong>https</strong>, <strong>websocket</strong>, and <strong>websockets</strong>.</li>
-         * <li><strong>ProxyPort</strong>: the port number. This field is required and must be an array.</li>
+         * <li><p><strong>ProxyType</strong>: String type | Required | The website protocol type. Valid values: <strong>http</strong> | <strong>https</strong> | <strong>websocket</strong> | <strong>websockets</strong>.</p>
+         * </li>
+         * <li><p><strong>ProxyPorts</strong>: array type | Required | The port numbers corresponding to the protocol.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -235,6 +240,7 @@ public class ModifyWebRuleRequest extends Request {
         }
 
         /**
+         * <p>The list of origin server addresses.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,8 +253,8 @@ public class ModifyWebRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
-         * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
+         * <p>The resource group ID of the Anti-DDoS Proxy instance in Resource Management. Default value: empty, which indicates that the instance belongs to the default resource group.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2pz25js****</p>
@@ -262,8 +268,10 @@ public class ModifyWebRuleRequest extends Request {
         /**
          * <p>The address type of the origin server. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: IP address.</li>
-         * <li><strong>1</strong>: domain name. Use the domain name of the origin server if you deploy proxies, such as Web Application Firewall (WAF), between the origin server and the Anti-DDoS Pro or Anti-DDoS Premium instance. If you use the domain name, you must enter the address of the proxy, such as the CNAME of WAF.</li>
+         * <li><p><strong>0</strong>: indicates the IP address of the origin server.</p>
+         * </li>
+         * <li><p><strong>1</strong>: indicates the domain name of the origin server. This is typically applicable to scenarios where other proxy services (such as WAF) are deployed between the origin server and Anti-DDoS Proxy, specifically referring to the redirect address of the proxy service (such as the WAF CNAME address).</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

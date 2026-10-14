@@ -80,7 +80,7 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the details of the IP addresses in the blacklist of the instance.</p>
+         * <p>The list of blacklisted IP addresses for the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
          */
         public Builder autoCcBlacklist(java.util.List<AutoCcBlacklist> autoCcBlacklist) {
             this.autoCcBlacklist = autoCcBlacklist;
@@ -88,7 +88,7 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>E78C8472-0B15-42D5-AF22-A32A78818AB2</p>
@@ -99,7 +99,7 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned IP addresses in the blacklist.</p>
+         * <p>The total number of blacklisted IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -194,7 +194,7 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the instance.</p>
+             * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
              * 
              * <strong>example:</strong>
              * <p>192.0.XX.XX</p>
@@ -205,7 +205,7 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity period of the IP address in the blacklist. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The expiration time of the blacklisted IP address. This value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1584093569</p>
@@ -216,7 +216,7 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address in the blacklist.</p>
+             * <p>The blacklisted IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX</p>
@@ -227,10 +227,12 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode of how the IP address is added to the blacklist. Valid values:</p>
+             * <p>The source of the blacklisted IP address. Valid values:</p>
              * <ul>
-             * <li><strong>manual</strong>: manually added</li>
-             * <li><strong>auto</strong>: automatically added</li>
+             * <li><p><strong>manual</strong>: The IP address is manually added.</p>
+             * </li>
+             * <li><p><strong>auto</strong>: The IP address is automatically added.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

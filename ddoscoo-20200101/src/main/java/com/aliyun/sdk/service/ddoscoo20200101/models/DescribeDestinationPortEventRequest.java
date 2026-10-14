@@ -122,8 +122,10 @@ public class DescribeDestinationPortEventRequest extends Request {
         /**
          * <p>The type of the attack event that you want to query. Valid values:</p>
          * <ul>
-         * <li><strong>defense</strong>: attack events that trigger traffic scrubbing.</li>
-         * <li><strong>blackhole</strong>: attack events that trigger blackhole filtering.</li>
+         * <li><p><strong>defense</strong>: attack events that trigger traffic scrubbing.</p>
+         * </li>
+         * <li><p><strong>blackhole</strong>: attack events that trigger blackhole filtering.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -165,8 +167,10 @@ public class DescribeDestinationPortEventRequest extends Request {
         /**
          * <p>The region in which your service is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn</strong>: a region in the Chinese mainland.</li>
-         * <li><strong>cn-hongkong</strong>: a region outside the Chinese mainland.</li>
+         * <li><p><strong>cn</strong>: a region in the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>cn-hongkong</strong>: a region outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -182,7 +186,7 @@ public class DescribeDestinationPortEventRequest extends Request {
         /**
          * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

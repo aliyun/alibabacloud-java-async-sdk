@@ -67,7 +67,7 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status of each mitigation policy for the website.</p>
+         * <p>The status of protection features for website services.</p>
          */
         public Builder protectSwitchList(java.util.List<ProtectSwitchList> protectSwitchList) {
             this.protectSwitchList = protectSwitchList;
@@ -75,7 +75,7 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3ADD9EED-CA4B-488C-BC82-01B0B899363D</p>
@@ -261,10 +261,10 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The mode of Intelligent Protection. Valid values:</p>
+             * <p>The mode of AI-based intelligent analysis. Valid values:</p>
              * <ul>
-             * <li><strong>watch</strong>: Warning</li>
-             * <li><strong>defense</strong>: Defense</li>
+             * <li><strong>watch</strong>: Warning mode</li>
+             * <li><strong>defense</strong>: Defense mode</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -276,10 +276,10 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of Intelligent Protection. Valid values:</p>
+             * <p>The status of the AI-based intelligent analysis feature. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: turned off</li>
-             * <li><strong>1:</strong> turned on</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -291,7 +291,7 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of Intelligent Protection. Valid values:</p>
+             * <p>The level of AI-based intelligent analysis. Valid values:</p>
              * <ul>
              * <li><strong>level30</strong>: Loose</li>
              * <li><strong>level60</strong>: Normal</li>
@@ -307,10 +307,10 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of Blacklist/Whitelist (Domain Names). Valid values:</p>
+             * <p>The status of the blacklists and whitelists feature for the domain name. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: turned off</li>
-             * <li><strong>1:</strong> turned on</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -322,10 +322,10 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the Custom Rules switch for Frequency Control. Valid values:</p>
+             * <p>The status of the custom frequency control (HTTP flood mitigation) feature. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: turned off</li>
-             * <li><strong>1:</strong> turned on</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -337,10 +337,10 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of Frequency Control. Valid values:</p>
+             * <p>The status of the frequency control (HTTP flood mitigation) feature. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: turned off</li>
-             * <li><strong>1:</strong> turned on</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -360,7 +360,7 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode of Frequency Control. Valid values:</p>
+             * <p>The mode of frequency control (HTTP flood mitigation). Valid values:</p>
              * <ul>
              * <li><strong>default</strong>: Normal</li>
              * <li><strong>gf_under_attack</strong>: Emergency</li>
@@ -388,10 +388,10 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of Accurate Access Control. Valid values:</p>
+             * <p>The status of the accurate access control feature. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: turned off</li>
-             * <li><strong>1:</strong> turned on</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -403,10 +403,10 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of Location Blacklist (Domain Names). Valid values:</p>
+             * <p>The status of the location blacklist feature for the domain name. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: turned off</li>
-             * <li><strong>1:</strong> turned on</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>

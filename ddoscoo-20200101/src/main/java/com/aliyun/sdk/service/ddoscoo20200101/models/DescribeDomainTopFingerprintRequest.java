@@ -150,7 +150,7 @@ public class DescribeDomainTopFingerprintRequest extends Request {
         /**
          * <p>The domain name of the website.</p>
          * <blockquote>
-         * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>The domain name must have a website traffic forwarding rule configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -163,9 +163,9 @@ public class DescribeDomainTopFingerprintRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the query. Specify a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>The value must be on the exact minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -179,7 +179,7 @@ public class DescribeDomainTopFingerprintRequest extends Request {
         }
 
         /**
-         * <p>The interval for returning data. Unit: seconds.</p>
+         * <p>The step size for returned data. Unit: seconds. This specifies the interval between consecutive results.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +192,7 @@ public class DescribeDomainTopFingerprintRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return.</p>
+         * <p>The number of data entries to return.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,10 +214,10 @@ public class DescribeDomainTopFingerprintRequest extends Request {
         }
 
         /**
-         * <p>The region in which your service is deployed. Valid values:</p>
+         * <p>The region of the service. Valid values:</p>
          * <ul>
-         * <li><strong>cn</strong>: a region in the Chinese mainland.</li>
-         * <li><strong>cn-hongkong</strong>: a region outside the Chinese mainland.</li>
+         * <li><strong>cn</strong>: the Chinese mainland.</li>
+         * <li><strong>cn-hongkong</strong>: outside the Chinese mainland.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -231,9 +231,9 @@ public class DescribeDomainTopFingerprintRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the query. Specify a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>The value must be on the exact minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

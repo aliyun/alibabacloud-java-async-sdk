@@ -112,7 +112,7 @@ public class CreateAsyncTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs in Resource Management. If this parameter is empty, the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -124,14 +124,14 @@ public class CreateAsyncTaskRequest extends Request {
         }
 
         /**
-         * <p>The details of the asynchronous export task. The value is a JSON string. The field in the value varies with <strong>TaskType</strong>.</p>
-         * <p>If <strong>TaskType</strong> is set to <strong>1</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, or <strong>6</strong>, the following filed is returned:</p>
+         * <p>The task parameter information. The value is a JSON-formatted string. The required task parameters vary based on the value of <strong>TaskType</strong>.</p>
+         * <p>If <strong>TaskType</strong> is set to <strong>1</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, or <strong>6</strong>, the task parameters use the following structure:</p>
          * <ul>
-         * <li><strong>instanceId</strong>: the ID of the instance. This field is required and must be of the STRING type.</li>
+         * <li><strong>instanceId</strong>: String type. Required. The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</li>
          * </ul>
-         * <p>If <strong>TaskType</strong> is set to <strong>2</strong>, the following field is returned:</p>
+         * <p>If <strong>TaskType</strong> is set to <strong>2</strong>, the task parameters use the following structure:</p>
          * <ul>
-         * <li><strong>domain</strong>: the domain name of the website, which must be of the STRING type. If you do not specify this field, the forwarding rules of all websites are exported.</li>
+         * <li><strong>domain</strong>: String type. Optional. The domain name of the website. If this parameter is not specified, the forwarding rules of all websites are exported.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -145,14 +145,14 @@ public class CreateAsyncTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the asynchronous export task that you want to create. Valid values:</p>
+         * <p>The type of the export task to create. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: the task to export the port forwarding rules of an instance</li>
-         * <li><strong>2</strong>: the task to export the forwarding rules of a website protected by an instance</li>
-         * <li><strong>3</strong>: the task to export the session persistence and health check settings of an instance</li>
-         * <li><strong>4</strong>: the task to export the anti-DDoS mitigation policies of an instance</li>
-         * <li><strong>5</strong>: the task to download the blacklist for destination IP addresses of an instance</li>
-         * <li><strong>6</strong>: the task to download the whitelist for destination IP addresses of an instance</li>
+         * <li><strong>1</strong>: Layer 4 export task. Exports port forwarding rules of the Anti-DDoS Pro or Anti-DDoS Premium instance.</li>
+         * <li><strong>2</strong>: Layer 7 export task. Exports website forwarding rules.</li>
+         * <li><strong>3</strong>: Session persistence and health check export task. Exports session persistence and health check configurations of the Anti-DDoS Pro or Anti-DDoS Premium instance.</li>
+         * <li><strong>4</strong>: DDoS mitigation policy export task. Exports DDoS mitigation policy configurations of the Anti-DDoS Pro or Anti-DDoS Premium instance.</li>
+         * <li><strong>5</strong>: Blacklist (destination IP address-based) download task. Exports blacklisted IP addresses for the Anti-DDoS Pro or Anti-DDoS Premium instance.</li>
+         * <li><strong>6</strong>: Whitelist (destination IP address-based) download task. Exports whitelisted IP addresses for the Anti-DDoS Pro or Anti-DDoS Premium instance.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

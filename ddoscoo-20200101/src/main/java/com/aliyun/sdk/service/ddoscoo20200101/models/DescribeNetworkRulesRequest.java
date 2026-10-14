@@ -157,7 +157,7 @@ public class DescribeNetworkRulesRequest extends Request {
         }
 
         /**
-         * <p>The forwarding port.</p>
+         * <p>The forward port.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -169,9 +169,9 @@ public class DescribeNetworkRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -185,7 +185,7 @@ public class DescribeNetworkRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. For example, to query the returned results on the first page, set the value to <strong>1</strong>.</p>
+         * <p>The page number to return in a paging query. For example, set this parameter to <strong>1</strong> to return the first page of results.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class DescribeNetworkRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of records displayed on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

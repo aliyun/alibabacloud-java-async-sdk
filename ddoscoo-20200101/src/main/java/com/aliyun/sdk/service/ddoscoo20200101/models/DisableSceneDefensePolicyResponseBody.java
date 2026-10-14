@@ -78,10 +78,12 @@ public class DisableSceneDefensePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the API call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><p><strong>true</strong>: Yes</p>
+         * </li>
+         * <li><p><strong>false</strong>: No</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

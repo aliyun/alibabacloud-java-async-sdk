@@ -78,7 +78,7 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the instances to which a website service is added.</p>
+         * <p>The information about Anti-DDoS Pro or Anti-DDoS Premium instances associated with website services.</p>
          */
         public Builder webInstanceRelations(java.util.List<WebInstanceRelations> webInstanceRelations) {
             this.webInstanceRelations = webInstanceRelations;
@@ -157,7 +157,7 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP addresses of the instance.</p>
+             * <p>The list of IP addresses of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
              */
             public Builder eipList(java.util.List<String> eipList) {
                 this.eipList = eipList;
@@ -165,10 +165,10 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The function plan of the instance. Valid values:</p>
+             * <p>The function plan type. Valid values:</p>
              * <ul>
-             * <li><strong>default</strong>: Standard function plan</li>
-             * <li><strong>enhance</strong>: Enhanced function plan</li>
+             * <li><strong>default</strong>: Standard function.</li>
+             * <li><strong>enhance</strong>: Enhanced function.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The Anti-DDoS Pro or Anti-DDoS Premium instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ddoscoo-cn-0pp163pd****</p>
@@ -261,7 +261,7 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the instance to which a website service is added.</p>
+             * <p>The information about the associated Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
              */
             public Builder instanceDetails(java.util.List<InstanceDetails> instanceDetails) {
                 this.instanceDetails = instanceDetails;

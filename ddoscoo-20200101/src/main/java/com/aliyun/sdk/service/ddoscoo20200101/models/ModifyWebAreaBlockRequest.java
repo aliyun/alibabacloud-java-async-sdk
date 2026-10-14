@@ -111,9 +111,9 @@ public class ModifyWebAreaBlockRequest extends Request {
         }
 
         /**
-         * <p>The domain name whose configurations you want to modify.</p>
+         * <p>The domain name for which you want to configure geo-blocking.</p>
          * <blockquote>
-         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>The domain name must have a website forwarding rule configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -127,9 +127,9 @@ public class ModifyWebAreaBlockRequest extends Request {
         }
 
         /**
-         * <p>The regions from which you block requests.</p>
+         * <p>The list of regions to block.</p>
          * <blockquote>
-         * <p>If you do not configure this parameter, the Blocked Regions (Domain Names) policy is disabled.</p>
+         * <p>If you do not set this parameter, the Location Blacklist (domain-specific) feature is shutdown.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class ModifyWebAreaBlockRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
          * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
          * 
          * <strong>example:</strong>

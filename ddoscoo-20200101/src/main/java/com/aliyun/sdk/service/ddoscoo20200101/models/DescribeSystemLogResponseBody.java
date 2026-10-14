@@ -91,7 +91,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of details of the billing logs for the burstable clean bandwidth.</p>
+         * <p>The details of the billing logs for burstable clean bandwidth.</p>
          */
         public Builder systemLog(java.util.List<SystemLog> systemLog) {
             this.systemLog = systemLog;
@@ -99,7 +99,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of billing logs for the burstable clean bandwidth.</p>
+         * <p>The total number of billing logs for burstable clean bandwidth that are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -246,7 +246,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the instance.</p>
+             * <p>The IP address of the Anti-DDoS instance.</p>
              * 
              * <strong>example:</strong>
              * <p>203.107.XX.XX</p>
@@ -257,7 +257,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the system log. The value is fixed as <strong>20</strong>, which indicates the billing logs for burstable clean bandwidth.</p>
+             * <p>The type of the system log. The value is fixed at <strong>20</strong>, which indicates the billing log of burstable clean bandwidth.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -268,7 +268,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the bill was generated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The time when the bill was created. This value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1631793531000</p>
@@ -279,7 +279,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the bill was last modified. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The time when the bill was last modified. This value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1635425407000</p>
@@ -301,7 +301,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation type. The value is fixed as <strong>100</strong>, which indicates the billing logs for the burstable clean bandwidth that you increased.</p>
+             * <p>The operation type. The value is fixed at <strong>100</strong>, which indicates that a billing record for burstable clean bandwidth is added.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -312,18 +312,18 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the bill. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
+             * <p>The details of the bill. This value is a string that is converted from a JSON struct. The JSON struct contains the following fields:</p>
              * <ul>
-             * <li><p><strong>newEntity</strong>: the bill record, which contains the following fields. Data type: object.</p>
+             * <li><p><strong>newEntity</strong>: Object type, which indicates the bill record and contains the following fields:</p>
              * <ul>
-             * <li><strong>billValue</strong>: the usage of the burstable clean bandwidth within a month. Unit: Mbit/s. Data type: integer.</li>
-             * <li><strong>instanceId</strong>: the ID of the instance. Data type: string.</li>
-             * <li><strong>ip</strong>: the IP address of the instance. Data type: string.</li>
-             * <li><strong>maxBw</strong>: the peak service traffic (monthly 95th percentile bandwidth) within a month. Unit: Mbit/s. Data type: string.</li>
-             * <li><strong>month</strong>: the month in which the bill of the previous calendar month is issued. This value is a UNIX timestamp. Unit: milliseconds. Data type: long.</li>
-             * <li><strong>overBandwidth</strong>: the peak service traffic minus the clean bandwidth of the instance. Unit: Mbit/s. Data type: integer.</li>
-             * <li><strong>peakTime</strong>: the time in point of the peak service traffic that is measured for billing. This value is a UNIX timestamp. Unit: seconds. Data type: long.</li>
-             * <li><strong>startTimestamp</strong>: the beginning of the time range for the peak service traffic range. This value is a UNIX timestamp. Unit: seconds. Data type: long.</li>
+             * <li><strong>billValue</strong>: Integer type | The usage of burstable clean bandwidth in the billing month. Unit: Mbit/s.</li>
+             * <li><strong>instanceId</strong>: String type | The ID of the Anti-DDoS instance.</li>
+             * <li><strong>ip</strong>: String type | The IP address of the Anti-DDoS instance.</li>
+             * <li><strong>maxBw</strong>: String type | The actual peak value of service traffic in the billing month (monthly 95th percentile). Unit: Mbit/s.</li>
+             * <li><strong>month</strong>: Long type | The month when the bill is generated (the billing month is the calendar month before the month when the bill is generated). This value is a timestamp in milliseconds.</li>
+             * <li><strong>overBandwidth</strong>: Integer type | The bandwidth that exceeds the clean bandwidth specification of the instance. Unit: Mbit/s.</li>
+             * <li><strong>peakTime</strong>: Long type | The time when the actual peak value of service traffic is measured. This value is a timestamp in seconds.</li>
+             * <li><strong>startTimestamp</strong>: Long type | The start time of the period when the peak value of instance service traffic is measured. This value is a timestamp in seconds.</li>
              * </ul>
              * </li>
              * </ul>
@@ -339,9 +339,9 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             /**
              * <p>The status of the bill. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: to be billed</li>
-             * <li><strong>1</strong>: billed</li>
-             * <li><strong>2</strong>: terminated</li>
+             * <li><strong>0</strong>: indicates that the bill is pending.</li>
+             * <li><strong>1</strong>: indicates that the bill is generated.</li>
+             * <li><strong>2</strong>: indicates that the bill is terminated.</li>
              * </ul>
              * 
              * <strong>example:</strong>

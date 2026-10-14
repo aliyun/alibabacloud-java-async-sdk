@@ -128,7 +128,7 @@ public class CreateSceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * <p>The end time of the policy. This value is a UNIX timestamp. Units: milliseconds.</p>
+         * <p>The end time when the policy takes effect. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class CreateSceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The policy name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class CreateSceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * <p>The start time of the policy. This value is a UNIX timestamp. Units: milliseconds.</p>
+         * <p>The start time when the policy takes effect. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,10 +167,10 @@ public class CreateSceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * <p>The template of the policy. Valid values:</p>
+         * <p>The policy template. Valid values:</p>
          * <ul>
-         * <li><strong>promotion</strong>: important activity.</li>
-         * <li><strong>bypass</strong>: all traffic forwarded.</li>
+         * <li><strong>promotion</strong>: Important Activity template.</li>
+         * <li><strong>bypass</strong>: full forwarding.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

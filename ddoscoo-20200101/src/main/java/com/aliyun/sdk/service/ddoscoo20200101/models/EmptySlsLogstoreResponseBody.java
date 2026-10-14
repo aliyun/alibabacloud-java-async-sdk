@@ -54,7 +54,7 @@ public class EmptySlsLogstoreResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of this request.</p>
          * 
          * <strong>example:</strong>
          * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>

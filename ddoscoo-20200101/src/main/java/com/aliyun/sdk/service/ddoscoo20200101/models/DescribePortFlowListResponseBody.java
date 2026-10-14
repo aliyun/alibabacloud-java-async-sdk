@@ -67,7 +67,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned traffic data.</p>
+         * <p>The traffic data.</p>
          */
         public Builder portFlowList(java.util.List<PortFlowList> portFlowList) {
             this.portFlowList = portFlowList;
@@ -339,7 +339,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bandwidth of attack traffic. Unit: bit/s.</p>
+             * <p>The attack bandwidth. Unit: bit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -350,7 +350,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The packet forwarding rate of attack traffic. Unit: pps.</p>
+             * <p>The attack packet forwarding rate. Unit: pps.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -372,7 +372,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The packet forwarding rate of inbound traffic. Unit: packets per second.</p>
+             * <p>The inbound packet forwarding rate. Unit: pps.</p>
              * 
              * <strong>example:</strong>
              * <p>2934</p>
@@ -405,7 +405,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The packet forwarding rate of outbound traffic. Unit: packets per second (pps).</p>
+             * <p>The outbound packet forwarding rate. Unit: pps.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -416,17 +416,17 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source region of the traffic. Valid values:</p>
+             * <p>The source location of the access traffic. Valid values:</p>
              * <ul>
-             * <li><strong>cn</strong>: mainland China</li>
-             * <li><strong>alb-ap-northeast-1-gf-x</strong>: Japan (Tokyo)</li>
-             * <li><strong>alb-ap-southeast-gf-x</strong>: Singapore</li>
-             * <li><strong>alb-cn-hongkong-gf-x</strong>: Hong Kong (China)</li>
-             * <li><strong>alb-eu-central-1-gf-x</strong>: Germany (Frankfurt)</li>
-             * <li><strong>alb-us-west-1-gf-x</strong>: US (Silicon Valley)</li>
+             * <li><strong>cn</strong>: the Chinese mainland.</li>
+             * <li><strong>alb-ap-northeast-1-gf-x</strong>: Japan.</li>
+             * <li><strong>alb-ap-southeast-gf-x</strong>: Singapore.</li>
+             * <li><strong>alb-cn-hongkong-gf-x</strong>: Hong Kong (China).</li>
+             * <li><strong>alb-eu-central-1-gf-x</strong>: Germany.</li>
+             * <li><strong>alb-us-west-1-gf-x</strong>: US West.</li>
              * </ul>
              * <blockquote>
-             * <p>The values except <strong>cn</strong> are returned only when <strong>RegionId</strong> is set to <strong>ap-southeast-1</strong>.</p>
+             * <p>Values other than <strong>cn</strong> are available only for Anti-DDoS Pro and Anti-DDoS Premium (<strong>RegionId</strong> is <strong>ap-southeast-1</strong>).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -438,7 +438,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * SlaBpsDropBps.
+             * <p>The destination bandwidth rate limiting. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder slaBpsDropBps(Long slaBpsDropBps) {
                 this.slaBpsDropBps = slaBpsDropBps;
@@ -446,7 +449,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * SlaBpsDropPps.
+             * <p>The destination bandwidth packet forwarding rate. Unit: pps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder slaBpsDropPps(Long slaBpsDropPps) {
                 this.slaBpsDropPps = slaBpsDropPps;
@@ -454,7 +460,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * SlaConnDropBps.
+             * <p>The destination concurrent connections rate limiting. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder slaConnDropBps(Long slaConnDropBps) {
                 this.slaConnDropBps = slaConnDropBps;
@@ -462,7 +471,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * SlaConnDropPps.
+             * <p>The destination concurrent connections packet forwarding rate. Unit: pps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder slaConnDropPps(Long slaConnDropPps) {
                 this.slaConnDropPps = slaConnDropPps;
@@ -470,7 +482,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * SlaCpsDropBps.
+             * <p>The destination new connections rate limiting. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder slaCpsDropBps(Long slaCpsDropBps) {
                 this.slaCpsDropBps = slaCpsDropBps;
@@ -478,7 +493,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * SlaCpsDropPps.
+             * <p>The destination new connections packet forwarding rate. Unit: pps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder slaCpsDropPps(Long slaCpsDropPps) {
                 this.slaCpsDropPps = slaCpsDropPps;
@@ -486,7 +504,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * SlaPpsDropBps.
+             * <p>The destination packets rate limiting. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder slaPpsDropBps(Long slaPpsDropBps) {
                 this.slaPpsDropBps = slaPpsDropBps;
@@ -494,7 +515,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * SlaPpsDropPps.
+             * <p>The destination packets packet forwarding rate. Unit: pps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder slaPpsDropPps(Long slaPpsDropPps) {
                 this.slaPpsDropPps = slaPpsDropPps;
@@ -502,7 +526,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The statistics time. The value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1582992000</p>

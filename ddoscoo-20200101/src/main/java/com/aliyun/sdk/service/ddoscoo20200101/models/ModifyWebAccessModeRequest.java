@@ -98,11 +98,11 @@ public class ModifyWebAccessModeRequest extends Request {
         }
 
         /**
-         * <p>The mode in which a website service is added to Anti-DDoS Pro or Anti-DDoS Premium. Valid values:</p>
+         * <p>The access mode for website services. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: A record mode</li>
-         * <li><strong>1</strong>: anti-DDoS mode</li>
-         * <li><strong>2</strong>: origin redundancy mode</li>
+         * <li><strong>0</strong>: A record</li>
+         * <li><strong>1</strong>: Anti-DDoS Pro mode</li>
+         * <li><strong>2</strong>: Back-to-origin mode</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -116,9 +116,9 @@ public class ModifyWebAccessModeRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the website.</p>
+         * <p>The domain name of the website service.</p>
          * <blockquote>
-         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>The domain name must have forwarding rules configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

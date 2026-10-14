@@ -247,7 +247,7 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of 200 status codes within the specified period of time.</p>
+         * <p>The number of 200 status codes within the query time range.</p>
          * 
          * <strong>example:</strong>
          * <p>951159</p>
@@ -258,7 +258,7 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of 2xx status codes within the specified period of time.</p>
+         * <p>The number of 2XX status codes within the query time range.</p>
          * 
          * <strong>example:</strong>
          * <p>951472</p>
@@ -269,7 +269,7 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of 3xx status codes within the specified period of time.</p>
+         * <p>The number of 3XX status codes within the query time range.</p>
          * 
          * <strong>example:</strong>
          * <p>133209</p>
@@ -280,7 +280,7 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of 403 status codes within the specified period of time.</p>
+         * <p>The number of 403 status codes within the query time range.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -291,7 +291,7 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of 404 status codes within the specified period of time.</p>
+         * <p>The number of 404 status codes within the query time range.</p>
          * 
          * <strong>example:</strong>
          * <p>897</p>
@@ -302,7 +302,7 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of 405 status codes within the specified period of time.</p>
+         * <p>The number of 405 status codes within the query time range.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -313,7 +313,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * Status410.
+         * <p>The number of 410 status codes within the query time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status410(Long status410) {
             this.status410 = status410;
@@ -321,7 +324,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * Status499.
+         * <p>The number of 499 status codes within the query time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status499(Long status499) {
             this.status499 = status499;
@@ -329,7 +335,7 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of 4xx status codes within the specified period of time.</p>
+         * <p>The number of 4XX status codes within the query time range.</p>
          * 
          * <strong>example:</strong>
          * <p>5653</p>
@@ -340,7 +346,7 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of 501 status codes within the specified period of time.</p>
+         * <p>The number of 501 status codes within the query time range.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -351,7 +357,7 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of 502 status codes within the specified period of time.</p>
+         * <p>The number of 502 status codes within the query time range.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -362,7 +368,7 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of 503 status codes within the specified period of time.</p>
+         * <p>The number of 503 status codes within the query time range.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -373,7 +379,7 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of 504 status codes within the specified period of time.</p>
+         * <p>The number of 504 status codes within the query time range.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -384,7 +390,7 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of 5xx status codes within the specified period of time.</p>
+         * <p>The number of 5XX status codes within the query time range.</p>
          * 
          * <strong>example:</strong>
          * <p>14</p>

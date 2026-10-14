@@ -83,11 +83,11 @@ public class DescribeNetworkRuleAttributesRequest extends Request {
         }
 
         /**
-         * <p>The details of the port forwarding rule. This parameter is a JSON string. The string contains the following fields:</p>
+         * <p>The port forwarding rules to query. This parameter is a JSON string with the following structure:</p>
          * <ul>
-         * <li><strong>InstanceId</strong>: the ID of the instance. This field is required and must be of the STRING type.</li>
-         * <li><strong>Protocol</strong>: the forwarding protocol. This field is required and must be of the STRING type. Valid values: <strong>tcp</strong> and <strong>udp</strong>.</li>
-         * <li><strong>FrontendPort</strong>: the forwarding port. This field is required and must be of the INTEGER type.</li>
+         * <li><strong>InstanceId</strong>: String type. Required. The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</li>
+         * <li><strong>Protocol</strong>: String type. Required. The forwarding protocol type. Valid values: <strong>tcp</strong>, <strong>udp</strong>.</li>
+         * <li><strong>FrontendPort</strong>: Integer type. Required. The forwarding port.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

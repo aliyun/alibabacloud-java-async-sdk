@@ -67,7 +67,7 @@ public class DescribeAttackAnalysisMaxQpsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The peak queries per second (QPS) of DDoS attacks. Units: QPS.</p>
+         * <p>The peak value of the DDoS attack. Unit: QPS.</p>
          * 
          * <strong>example:</strong>
          * <p>41652</p>
@@ -78,7 +78,7 @@ public class DescribeAttackAnalysisMaxQpsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of this request.</p>
          * 
          * <strong>example:</strong>
          * <p>8DFB602D-1AAC-46C4-90F2-C84086E7A6E4</p>

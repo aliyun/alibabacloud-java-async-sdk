@@ -67,7 +67,7 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about top HTTP methods.</p>
+         * <p>The list of top HTTP methods for the domain name.</p>
          */
         public Builder domainTopMethod(java.util.List<DomainTopMethod> domainTopMethod) {
             this.domainTopMethod = domainTopMethod;
@@ -75,7 +75,7 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
@@ -168,7 +168,7 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP method.</p>
+             * <p>The HTTP method of the domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>GET</p>
@@ -179,7 +179,7 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page views.</p>
+             * <p>The number of matching requests.</p>
              * 
              * <strong>example:</strong>
              * <p>22121</p>

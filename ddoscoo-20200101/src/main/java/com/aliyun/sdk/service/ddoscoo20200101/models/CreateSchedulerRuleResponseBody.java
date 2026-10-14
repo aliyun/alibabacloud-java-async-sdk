@@ -80,9 +80,9 @@ public class CreateSchedulerRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The CNAME that is assigned by Sec-Traffic Manager for the scheduling rule.</p>
+         * <p>The CNAME assigned by Sec-Traffic Manager for the rule.</p>
          * <blockquote>
-         * <p>To enable the scheduling rule, you must map the domain name of the service to the CNAME.</p>
+         * <p>You must map your service domain name to the CNAME of Sec-Traffic Manager to enable the rule.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -94,7 +94,7 @@ public class CreateSchedulerRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. The value is a unique identifier that Alibaba Cloud generates for the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>8DFB602D-1AAC-46C4-90F2-C84086E7A6E4</p>

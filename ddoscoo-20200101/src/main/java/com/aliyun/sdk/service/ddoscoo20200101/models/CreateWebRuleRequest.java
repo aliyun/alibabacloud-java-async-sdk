@@ -169,13 +169,13 @@ public class CreateWebRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the associated defense. This parameter applies to scenarios in which other cloud services, such as Object Storage Service (OSS), are integrated with Anti-DDoS Pro or Anti-DDoS Premium.</p>
+         * <p>The ID of the protection rule to associate. This parameter is used when an Alibaba Cloud service, such as Object Storage Service (OSS), is integrated with an Anti-DDoS instance.</p>
          * <blockquote>
-         * <p>This parameter is in internal preview. Do not use this parameter.</p>
+         * <p>This parameter is for internal use. Do not use this parameter.</p>
          * </blockquote>
-         * <p>For example, if you integrate OSS with Anti-DDoS Pro or Anti-DDoS Premium, Anti-DDoS Pro or Anti-DDoS Premium allocates an IP address pool for the OSS production account. Each IP address corresponds to a unique defense ID. A defense ID is a CNAME, which is automatically resolved to the IP address of the required Anti-DDoS Pro or Anti-DDoS Premium instance. A defense ID can be resolved to the same IP address to facilitate scheduling.</p>
+         * <p>For example, if your OSS is integrated with an Anti-DDoS Proxy instance, the instance allocates a resource pool of IP addresses to the OSS tenant account. Each IP address has a unique protection ID. The protection ID is a CNAME that resolves to the IP address of the Anti-DDoS instance by default. You can resolve the CNAME to an IP address. This lets you reuse the IP address for flexible scheduling.</p>
          * <blockquote>
-         * <p>You can specify only one of the following parameters: <strong>InstanceIds</strong> and <strong>DefenseId</strong>.</p>
+         * <p>You cannot specify both <strong>InstanceIds</strong> and <strong>DefenseId</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class CreateWebRuleRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the website that you want to add to the instance.</p>
+         * <p>The domain name of the website to add to the Anti-DDoS Proxy instance for protection.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,16 +201,16 @@ public class CreateWebRuleRequest extends Request {
         }
 
         /**
-         * <p>The advanced HTTPS settings. This parameter takes effect only when the value of the <strong>ProxyType</strong> parameter includes <strong>https</strong>. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
+         * <p>The advanced HTTPS settings. This parameter takes effect only when the value of <strong>ProxyType</strong> includes <strong>https</strong>. This parameter is a JSON string. The value is a JSON object that contains the following fields:</p>
          * <ul>
-         * <li><p><strong>Http2https</strong>: specifies whether to turn on Enforce HTTPS Routing. This field is optional and must be an integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enforce HTTPS Routing is turned off. The value 1 indicates that Enforce HTTPS Routing is turned on. The default value is 0.</p>
-         * <p>If your website supports both HTTP and HTTPS, this feature meets your business requirements. If you enable this feature, all HTTP requests to access the website are redirected to HTTPS requests on the standard port 443.</p>
+         * <li><p><strong>Http2https</strong>: This field is an integer. Optional. Specifies whether to forcibly redirect HTTP requests to HTTPS requests. Valid values: <strong>0</strong> (disabled) and <strong>1</strong> (enabled). The default value is 0.</p>
+         * <p>This setting is available when your website supports both HTTP and HTTPS. If you enable this setting, all HTTP requests are redirected to HTTPS requests over port 443.</p>
          * </li>
-         * <li><p><strong>Https2http</strong>: specifies whether to turn on Enable HTTP. This field is optional and must be an integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enable HTTP is turned off. The value 1 indicates that Enable HTTP is turned on. The default value is 0.</p>
-         * <p>If your website does not support HTTPS, this feature meets your business requirements If this feature is enabled, all HTTPS requests are redirected to HTTP requests and forwarded to origin servers. This feature can redirect WebSockets requests to WebSocket requests. Requests are redirected over the standard port 80.</p>
+         * <li><p><strong>Https2http</strong>: This field is an integer. Optional. Specifies whether to enable HTTP back-to-origin. Valid values: <strong>0</strong> (disabled) and <strong>1</strong> (enabled). The default value is 0.</p>
+         * <p>This setting applies to websites that do not support HTTPS back-to-origin. If you enable this setting, all HTTPS requests are sent to the origin server over HTTP on port 80 by default. All WebSockets requests are sent to the origin server over WebSocket.</p>
          * </li>
-         * <li><p><strong>Http2</strong>: specifies whether to turn on Enable HTTP/2. This field is optional and must be an integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enable HTTP/2 is turned off. The value 1 indicates that Enable HTTP/2 is turned on. The default value is 0.</p>
-         * <p>After you turn on Enable HTTP/2, the protocol type is HTTP/2.</p>
+         * <li><p><strong>Http2</strong>: This field is an integer. Optional. Specifies whether to enable HTTP/2. Valid values: <strong>0</strong> (disabled) and <strong>1</strong> (enabled). The default value is 0.</p>
+         * <p>If you enable this setting, HTTP/2 is used.</p>
          * </li>
          * </ul>
          * 
@@ -224,7 +224,7 @@ public class CreateWebRuleRequest extends Request {
         }
 
         /**
-         * <p>An array consisting of the IDs of instances that you want to associate.</p>
+         * <p>The IDs of the Anti-DDoS Proxy instances to associate.</p>
          * 
          * <strong>example:</strong>
          * <p>ddoscoo-cn-mp91j1ao****</p>
@@ -236,7 +236,7 @@ public class CreateWebRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Proxy instance belongs in Resource Management. If you leave this parameter empty, the instance belongs to the default resource group.</p>
          * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
          * 
          * <strong>example:</strong>
@@ -251,8 +251,10 @@ public class CreateWebRuleRequest extends Request {
         /**
          * <p>The address type of the origin server. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: IP address</li>
-         * <li><strong>1</strong>: domain name The domain name of the origin server is returned if you deploy proxies, such as Web Application Firewall (WAF), between the origin server and the instance. In this case, the address of the proxy, such as the CNAME provided by WAF, is returned.</li>
+         * <li><p><strong>0</strong>: IP address.</p>
+         * </li>
+         * <li><p><strong>1</strong>: domain name. This value is typically used when a proxy service, such as Web Application Firewall (WAF), is deployed between the origin server and the Anti-DDoS Proxy instance. The domain name is the back-to-origin address of the proxy service, such as the canonical name (CNAME) of WAF.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -266,15 +268,17 @@ public class CreateWebRuleRequest extends Request {
         }
 
         /**
-         * <p>The details of the forwarding rule. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
+         * <p>The details of the forwarding rule, in a JSON string format. The value is an array of objects. Each object contains the following fields:</p>
          * <ul>
-         * <li><p><strong>ProxyRules</strong>: the information about the origin server. The information includes the port number and IP address. This field is required and must be a JSON array. Each element in a JSON array is a JSON struct that contains the following fields:</p>
+         * <li><p><strong>ProxyRules</strong>: This field is a JSON array. Required. The information about the origin server, including the port number and server address. Each object in the array contains the following fields:</p>
          * <ul>
-         * <li><strong>ProxyPort</strong>: the port number. This field is required and must be an integer.</li>
-         * <li><strong>RealServers</strong>: the IP address. This field is required and must be a string array.</li>
+         * <li><p><strong>ProxyPort</strong>: This field is an integer. Required. The port number that is used by the protocol.</p>
+         * </li>
+         * <li><p><strong>RealServers</strong>: This field is a string array. Required. The addresses of the origin servers.</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p><strong>ProxyType</strong>: the protocol type. This field is required and must be a string. Valid values: <strong>http</strong>, <strong>https</strong>, <strong>websocket</strong>, and <strong>websockets</strong>.</p>
+         * <li><p><strong>ProxyType</strong>: This field is a string. Required. The protocol of the website. Valid values: <strong>http</strong>, <strong>https</strong>, <strong>websocket</strong>, and <strong>websockets</strong>.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>

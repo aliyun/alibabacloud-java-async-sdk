@@ -67,7 +67,7 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of information about the source IP address of the volumetric attack.</p>
+         * <p>The information about attack source IP addresses.</p>
          */
         public Builder ips(java.util.List<Ips> ips) {
             this.ips = ips;
@@ -75,7 +75,7 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>38A0224E-FDBC-4733-A362-B391827FC1E9</p>
@@ -157,7 +157,7 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code or ID of the source region. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a>. For example, <strong>110000</strong> indicates Beijing, China, and <strong>us</strong> indicates the United States.</p>
+             * <p>The region code of the attack source. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Region codes</a>. For example, <strong>110000</strong> indicates Beijing, China, and <strong>us</strong> indicates the United States.</p>
              * 
              * <strong>example:</strong>
              * <p>110000</p>
@@ -168,22 +168,22 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Internet service provider (ISP) for the volumetric attack. Valid values:</p>
+             * <p>The Internet service provider (ISP) of the attack source. Valid values:</p>
              * <ul>
              * <li><strong>100017</strong>: China Telecom</li>
              * <li><strong>100026</strong>: China Unicom</li>
              * <li><strong>100025</strong>: China Mobile</li>
-             * <li><strong>100027</strong>: China Education and Research Network</li>
-             * <li><strong>100020</strong>: China Mobile Tietong</li>
-             * <li><strong>1000143</strong>: Dr.Peng Telecom &amp; Media Group</li>
-             * <li><strong>100080</strong>: Beijing Gehua CATV Network</li>
-             * <li><strong>1000139</strong>: National Radio and Television Administration</li>
-             * <li><strong>100023</strong>: Oriental Cable Network</li>
+             * <li><strong>100027</strong>: CERNET</li>
+             * <li><strong>100020</strong>: China Tietong</li>
+             * <li><strong>1000143</strong>: Dr. Peng</li>
+             * <li><strong>100080</strong>: Gehua</li>
+             * <li><strong>1000139</strong>: China Broadcasting Network</li>
+             * <li><strong>100023</strong>: Wired</li>
              * <li><strong>100063</strong>: Founder Broadband</li>
-             * <li><strong>1000337</strong>: China Internet Exchange</li>
-             * <li><strong>100021</strong>: 21Vianet Group</li>
-             * <li><strong>1000333</strong>: Wasu Media Holding</li>
-             * <li><strong>100093</strong>: Wangsu Science &amp; Technology</li>
+             * <li><strong>1000337</strong>: Haonet</li>
+             * <li><strong>100021</strong>: 21Vianet</li>
+             * <li><strong>1000333</strong>: Wasu Media</li>
+             * <li><strong>100093</strong>: ChinaNetCenter</li>
              * <li><strong>1000401</strong>: Tencent</li>
              * <li><strong>100099</strong>: Baidu</li>
              * <li><strong>1000323</strong>: Alibaba Cloud</li>
@@ -199,7 +199,7 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source IP address of the volumetric attack.</p>
+             * <p>The attack source IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>218.<em><strong>.</strong></em>.24</p>

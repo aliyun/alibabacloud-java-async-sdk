@@ -112,7 +112,7 @@ public class DescribeDDosEventMaxRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class DescribeDDosEventMaxRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

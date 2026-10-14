@@ -138,7 +138,7 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the website that you want to query.</p>
+         * <p>The domain name to query.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -150,7 +150,7 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of the IDs of instances to query.</p>
+         * <p>The IDs of the Anti-DDoS Pro instances to query.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -159,7 +159,7 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The number of the page to return. The default value is <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,7 +171,7 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of forwarding rules per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -183,10 +183,12 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * <p>The match mode. Valid values:</p>
+         * <p>The matching pattern for the query. Valid values:</p>
          * <ul>
-         * <li><strong>fuzzy</strong>: fuzzy match. This is the default value.</li>
-         * <li><strong>exact</strong>: exact match.</li>
+         * <li><p><strong>fuzzy</strong> (default): Specifies a fuzzy search.</p>
+         * </li>
+         * <li><p><strong>exact</strong>: Specifies an exact match.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -91,7 +91,7 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the log analysis feature is enabled for domain names.</p>
+         * <p>The full log switch status of the domain names.</p>
          */
         public Builder slsConfigStatus(java.util.List<SlsConfigStatus> slsConfigStatus) {
             this.slsConfigStatus = slsConfigStatus;
@@ -99,7 +99,7 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of domain names queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -179,10 +179,10 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the log analysis feature is enabled. Valid values:</p>
+             * <p>Indicates whether full log collection is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: yes</li>
-             * <li><strong>false</strong>: no</li>
+             * <li><strong>true</strong>: enabled.</li>
+             * <li><strong>false</strong>: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

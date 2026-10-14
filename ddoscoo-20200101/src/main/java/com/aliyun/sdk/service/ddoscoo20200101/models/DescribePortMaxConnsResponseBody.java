@@ -67,7 +67,7 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the maximum number of connections that can be established over a port of the instance.</p>
+         * <p>The peak connection information of ports on the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
          */
         public Builder portMaxConns(java.util.List<PortMaxConns> portMaxConns) {
             this.portMaxConns = portMaxConns;
@@ -157,7 +157,7 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum number of connections per second (CPS).</p>
+             * <p>The maximum number of connections per second.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -168,7 +168,7 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the instance.</p>
+             * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
              * 
              * <strong>example:</strong>
              * <p>203.<em><strong>.</strong></em>.117</p>
@@ -179,7 +179,7 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port of the instance.</p>
+             * <p>The port of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>

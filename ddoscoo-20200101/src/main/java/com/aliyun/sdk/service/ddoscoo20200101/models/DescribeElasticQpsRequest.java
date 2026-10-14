@@ -118,9 +118,9 @@ public class DescribeElasticQpsRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end of the query time range, specified as a UNIX timestamp in seconds.</p>
          * <blockquote>
-         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>The timestamp must be the start of a minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -134,7 +134,7 @@ public class DescribeElasticQpsRequest extends Request {
         }
 
         /**
-         * <p>The sampling interval. Unit: seconds. The value must be a multiple of 60. Default value: 60. Unit: seconds. The query result varies depending on the sampling interval.</p>
+         * <p>The sampling interval, in seconds. The value must be a multiple of 60. The default value is 60.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -146,7 +146,7 @@ public class DescribeElasticQpsRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the Anti-DDoS Proxy instance to query.</p>
+         * <p>The IP address of the Anti-DDoS instance to query.</p>
          * 
          * <strong>example:</strong>
          * <p>203.107.XX.XX</p>
@@ -158,10 +158,12 @@ public class DescribeElasticQpsRequest extends Request {
         }
 
         /**
-         * <p>The type of the service. Valid values:</p>
+         * <p>The service region. Valid values:</p>
          * <ul>
-         * <li><strong>cn</strong>: Anti-DDoS Proxy (Chinese Mainland)</li>
-         * <li><strong>cn-hongkong</strong>: Anti-DDoS Proxy (Outside Chinese Mainland)</li>
+         * <li><p><strong>cn</strong>: Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>cn-hongkong</strong>: Outside Chinese mainland.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -175,9 +177,9 @@ public class DescribeElasticQpsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start of the query time range, specified as a UNIX timestamp in seconds.</p>
          * <blockquote>
-         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>The timestamp must be the start of a minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

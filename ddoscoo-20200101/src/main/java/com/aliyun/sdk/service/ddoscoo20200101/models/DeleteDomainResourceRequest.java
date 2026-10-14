@@ -83,7 +83,7 @@ public class DeleteDomainResourceRequest extends Request {
         }
 
         /**
-         * <p>The domain name for which the forwarding rule is configured.</p>
+         * <p>The domain name corresponding to the website business forwarding rule to be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,7 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The Logstore of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+         * <p>The log store that is associated with Anti-DDoS Pro and Anti-DDoS Premium.</p>
          * 
          * <strong>example:</strong>
          * <p>ddoscoo-logstore</p>
@@ -130,7 +130,7 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Logstore project of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+         * <p>The log project that is associated with Anti-DDoS Pro and Anti-DDoS Premium.</p>
          * 
          * <strong>example:</strong>
          * <p>ddoscoo-project-181071506993****-cn-hangzhou</p>
@@ -163,7 +163,7 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The log storage duration. Unit: days.</p>
+         * <p>The storage duration of logs. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>
@@ -174,9 +174,9 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The used log storage capacity. Unit: bytes.</p>
+         * <p>The used storage capacity. Unit: bytes.</p>
          * <blockquote>
-         * <p>The statistics on Log Service are delayed for about two hours.</p>
+         * <p>The statistics from Simple Log Service have a delay of approximately two hours.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

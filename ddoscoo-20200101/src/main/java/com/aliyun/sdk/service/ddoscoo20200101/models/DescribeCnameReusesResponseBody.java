@@ -67,7 +67,7 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
         } 
 
         /**
-         * CnameReuses.
+         * <p>The CNAME reuse information.</p>
          */
         public Builder cnameReuses(java.util.List<CnameReuses> cnameReuses) {
             this.cnameReuses = cnameReuses;
@@ -75,7 +75,10 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
             } 
 
             /**
-             * Cname.
+             * <p>The reused canonical name value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4o6ep6q217k9****.aliyunddos0004.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -162,7 +168,10 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -170,7 +179,16 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether CNAME reuse is enabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: disabled</p>
+             * </li>
+             * <li><p><strong>1</strong>: enabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;

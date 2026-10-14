@@ -80,7 +80,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The DDoS attack events.</p>
+         * <p>A list of DDoS attack events.</p>
          */
         public Builder dDoSEvents(java.util.List<DDoSEvents> dDoSEvents) {
             this.dDoSEvents = dDoSEvents;
@@ -99,7 +99,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned attack events.</p>
+         * <p>The total number of attack events.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -246,7 +246,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bandwidth of attack traffic. Unit: bit/s.</p>
+             * <p>The bandwidth of the attack traffic. Unit: Mbps.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -257,7 +257,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the DDoS attack stopped. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The time when the attack ended. This is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1583933330</p>
@@ -270,8 +270,10 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             /**
              * <p>The type of the attack event. Valid values:</p>
              * <ul>
-             * <li><strong>defense</strong>: traffic scrubbing events</li>
-             * <li><strong>blackhole</strong>: blackhole filtering events</li>
+             * <li><p><strong>defense</strong>: scrubbing events.</p>
+             * </li>
+             * <li><p><strong>blackhole</strong>: blackhole filtering events.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -305,7 +307,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The packet forwarding rate of attack traffic. Unit: packets per second (pps).</p>
+             * <p>The packet forwarding rate of the attack traffic. Unit: pps.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -316,17 +318,23 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region from which the attack was launched. Valid values:</p>
+             * <p>The source location of the attack. Valid values:</p>
              * <ul>
-             * <li><strong>cn</strong>: a region in the Chinese mainland</li>
-             * <li><strong>alb-ap-northeast-1-gf-x</strong>: Japan (Tokyo)</li>
-             * <li><strong>alb-ap-southeast-gf-x</strong>: Singapore</li>
-             * <li><strong>alb-cn-hongkong-gf-x</strong>: Hong Kong (China)</li>
-             * <li><strong>alb-eu-central-1-gf-x</strong>: Germany (Frankfurt)</li>
-             * <li><strong>alb-us-west-1-gf-x</strong>: US (Silicon Valley)</li>
+             * <li><p><strong>cn</strong>: the Chinese mainland.</p>
+             * </li>
+             * <li><p><strong>alb-ap-northeast-1-gf-x</strong>: Japan.</p>
+             * </li>
+             * <li><p><strong>alb-ap-southeast-gf-x</strong>: Singapore.</p>
+             * </li>
+             * <li><p><strong>alb-cn-hongkong-gf-x</strong>: Hong Kong (China).</p>
+             * </li>
+             * <li><p><strong>alb-eu-central-1-gf-x</strong>: Germany.</p>
+             * </li>
+             * <li><p><strong>alb-us-west-1-gf-x</strong>: US (West).</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p>The values except <strong>cn</strong> are returned only when <strong>RegionId</strong> is set to <strong>ap-southeast-1</strong>.</p>
+             * <p>Values other than <strong>cn</strong> are available only for the Anti-DDoS Premium service, for which the <strong>RegionId</strong> is <strong>ap-southeast-1</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -338,7 +346,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the DDoS attack started. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The time when the attack started. This is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1583933277</p>

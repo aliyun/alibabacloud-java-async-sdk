@@ -141,9 +141,9 @@ public class DescribeAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all Anti-DDoS Pro and Anti-DDoS Premium instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -157,9 +157,9 @@ public class DescribeAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * <p>The keyword for the query. This keyword is used to specify the prefix of the source IP address that you want to query.</p>
+         * <p>The keyword for a fuzzy search. The value is a prefix of the source IP address that you want to query.</p>
          * <blockquote>
-         * <p>The keyword must be greater than three characters in length.</p>
+         * <p>The keyword must be more than three characters long.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class DescribeAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. For example, to query the returned results on the first page, set the value to <strong>1</strong>.</p>
+         * <p>The number of the page to return for a paged query. For example, to query the results on the first page, set the value to <strong>1</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class DescribeAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of records to display on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

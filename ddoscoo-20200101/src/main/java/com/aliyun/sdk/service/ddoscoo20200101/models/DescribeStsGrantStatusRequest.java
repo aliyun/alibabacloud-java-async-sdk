@@ -97,8 +97,8 @@ public class DescribeStsGrantStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
-         * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Proxy instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the default resource group is used.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2pz25js****</p>
@@ -110,9 +110,9 @@ public class DescribeStsGrantStatusRequest extends Request {
         }
 
         /**
-         * <p>The name of the RAM role to query. Set the value to <strong>AliyunDDoSCOODefaultRole</strong>, which indicates the default role of Anti-DDoS Pro or Anti-DDoS Premium.</p>
+         * <p>The name of the RAM role that you want to query. The value is fixed as <strong>AliyunDDoSCOODefaultRole</strong>, which indicates the default role of Anti-DDoS Proxy.</p>
          * <blockquote>
-         * <p>Anti-DDoS Pro or Anti-DDoS Premium uses the default role to access other cloud services.</p>
+         * <p>Anti-DDoS Proxy use this role by default to access your resources in other cloud services.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

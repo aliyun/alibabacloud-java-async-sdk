@@ -67,7 +67,7 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the user agents.</p>
+         * <p>The list of User-Agent data.</p>
          */
         public Builder domainTopUa(java.util.List<DomainTopUa> domainTopUa) {
             this.domainTopUa = domainTopUa;
@@ -75,7 +75,7 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
@@ -157,7 +157,7 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The domain name of the website.</p>
+             * <p>The website domain name.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -168,7 +168,7 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page views.</p>
+             * <p>The number of request matches.</p>
              * 
              * <strong>example:</strong>
              * <p>22121</p>
@@ -179,7 +179,7 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Base64-encoded user agent.</p>
+             * <p>The Base64-encoded value of the User-Agent.</p>
              * 
              * <strong>example:</strong>
              * <p>TW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvOTYuMC40NjY0LjExMCACYWZhcmkvNTM3LjM2</p>

@@ -67,7 +67,7 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the source region from which the volumetric attack was initiated.</p>
+         * <p>The information about the attack source regions.</p>
          */
         public Builder areas(java.util.List<Areas> areas) {
             this.areas = areas;
@@ -144,7 +144,10 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code or ID of the source region. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a>. For example, <strong>110000</strong> indicates Beijing, China, and <strong>us</strong> indicates the United States.</p>
+             * <p>The code of the attack source region, including Chinese regions (at the province or city level) and international regions (at the country level). For example, <strong>110000</strong> indicates Beijing, China, and <strong>us</strong> indicates the United States.</p>
+             * <blockquote>
+             * <p>For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/167926.html">China and international regions</a>.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>110000</p>
@@ -155,7 +158,7 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of request packets that were sent from the source region.</p>
+             * <p>The number of request packets from the attack source region.</p>
              * 
              * <strong>example:</strong>
              * <p>228</p>

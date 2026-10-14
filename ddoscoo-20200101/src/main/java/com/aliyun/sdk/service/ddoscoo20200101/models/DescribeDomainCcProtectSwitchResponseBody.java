@@ -67,7 +67,7 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
         } 
 
         /**
-         * ProtectSwitchList.
+         * <p>The status of each protection feature for the website.</p>
          */
         public Builder protectSwitchList(java.util.List<ProtectSwitchList> protectSwitchList) {
             this.protectSwitchList = protectSwitchList;
@@ -75,7 +75,10 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. This ID is unique to the request. Use the request ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -258,7 +261,16 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
             } 
 
             /**
-             * AiMode.
+             * <p>The mode of AI-powered protection. Valid values:</p>
+             * <ul>
+             * <li><p><strong>watch</strong>: Warning mode</p>
+             * </li>
+             * <li><p><strong>defense</strong>: Defense mode</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>defense</p>
              */
             public Builder aiMode(String aiMode) {
                 this.aiMode = aiMode;
@@ -266,7 +278,16 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * AiRuleEnable.
+             * <p>The status of the AI-powered protection feature. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Disabled</p>
+             * </li>
+             * <li><p><strong>1</strong>: Enabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder aiRuleEnable(Integer aiRuleEnable) {
                 this.aiRuleEnable = aiRuleEnable;
@@ -274,7 +295,18 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * AiTemplate.
+             * <p>The level of AI-powered protection. Valid values:</p>
+             * <ul>
+             * <li><p><strong>level30</strong>: Loose</p>
+             * </li>
+             * <li><p><strong>level60</strong>: Normal</p>
+             * </li>
+             * <li><p><strong>level90</strong>: Strict</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>level60</p>
              */
             public Builder aiTemplate(String aiTemplate) {
                 this.aiTemplate = aiTemplate;
@@ -282,7 +314,16 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * BlackWhiteListEnable.
+             * <p>The status of the blacklists and whitelists feature. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Disabled</p>
+             * </li>
+             * <li><p><strong>1</strong>: Enabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder blackWhiteListEnable(Integer blackWhiteListEnable) {
                 this.blackWhiteListEnable = blackWhiteListEnable;
@@ -290,7 +331,16 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * CcCustomRuleEnable.
+             * <p>The status of custom CC rules. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Disabled</p>
+             * </li>
+             * <li><p><strong>1</strong>: Enabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ccCustomRuleEnable(Integer ccCustomRuleEnable) {
                 this.ccCustomRuleEnable = ccCustomRuleEnable;
@@ -298,7 +348,16 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * CcEnable.
+             * <p>The status of the rate limiting (CC protection) feature. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Disabled</p>
+             * </li>
+             * <li><p><strong>1</strong>: Enabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ccEnable(Integer ccEnable) {
                 this.ccEnable = ccEnable;
@@ -306,7 +365,16 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * CcGlobalSwitch.
+             * <p>The status of the global switch for custom and precise CC protection. Valid values:</p>
+             * <ul>
+             * <li><p><strong>open</strong>: Enabled</p>
+             * </li>
+             * <li><p><strong>close</strong>: Disabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>close</p>
              */
             public Builder ccGlobalSwitch(String ccGlobalSwitch) {
                 this.ccGlobalSwitch = ccGlobalSwitch;
@@ -314,7 +382,20 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * CcTemplate.
+             * <p>The CC protection mode. Valid values:</p>
+             * <ul>
+             * <li><p><strong>default</strong>: Normal</p>
+             * </li>
+             * <li><p><strong>gf_under_attack</strong>: Emergency</p>
+             * </li>
+             * <li><p><strong>gf_sos_verify</strong>: Strict</p>
+             * </li>
+             * <li><p><strong>gf_sos_enhance</strong>: Very Strict</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder ccTemplate(String ccTemplate) {
                 this.ccTemplate = ccTemplate;
@@ -322,7 +403,10 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -330,7 +414,16 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * PreciseRuleEnable.
+             * <p>The status of the precise access control feature. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Disabled</p>
+             * </li>
+             * <li><p><strong>1</strong>: Enabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder preciseRuleEnable(Integer preciseRuleEnable) {
                 this.preciseRuleEnable = preciseRuleEnable;
@@ -338,7 +431,16 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * RegionBlockEnable.
+             * <p>The status of the Location Blacklist (Domain Names) feature. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Disabled</p>
+             * </li>
+             * <li><p><strong>1</strong>: Enabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder regionBlockEnable(Integer regionBlockEnable) {
                 this.regionBlockEnable = regionBlockEnable;

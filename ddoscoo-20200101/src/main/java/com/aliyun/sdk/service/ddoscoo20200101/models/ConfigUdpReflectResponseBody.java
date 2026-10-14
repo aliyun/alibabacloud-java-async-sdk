@@ -54,7 +54,7 @@ public class ConfigUdpReflectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9EC62E89-BD30-4FCD-9CB8-FA53865FF0D7</p>

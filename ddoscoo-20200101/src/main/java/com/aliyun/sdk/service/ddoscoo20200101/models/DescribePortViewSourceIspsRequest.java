@@ -127,9 +127,9 @@ public class DescribePortViewSourceIspsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the request data to query. Specify a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>The value must be on the minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -143,7 +143,7 @@ public class DescribePortViewSourceIspsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the Anti-DDoS Proxy instances to query.</p>
+         * <p>The IDs of the Anti-DDoS Pro or Anti-DDoS Premium instances to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,8 +156,8 @@ public class DescribePortViewSourceIspsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the Anti-DDoS Proxy instance belongs in Resource Management.</p>
-         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs in Resource Management.</p>
+         * <p>If you do not set this parameter, the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2pz25js****</p>
@@ -169,9 +169,9 @@ public class DescribePortViewSourceIspsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the request data to query. Specify a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>The value must be on the minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

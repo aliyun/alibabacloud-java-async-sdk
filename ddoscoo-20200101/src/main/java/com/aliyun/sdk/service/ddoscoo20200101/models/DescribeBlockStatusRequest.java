@@ -97,9 +97,9 @@ public class DescribeBlockStatusRequest extends Request {
         }
 
         /**
-         * <p>An array consisting of information about the IDs of the instances that you want to query.</p>
+         * <p>The IDs of the Anti-DDoS Pro and Anti-DDoS Premium instances to query for near-origin traffic diversion configurations.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>You can invoke <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro and Anti-DDoS Premium instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -113,8 +113,8 @@ public class DescribeBlockStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
-         * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Pro and Anti-DDoS Premium instance belongs in Resource Management.</p>
+         * <p>If you do not set this parameter, the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2pz25js****</p>

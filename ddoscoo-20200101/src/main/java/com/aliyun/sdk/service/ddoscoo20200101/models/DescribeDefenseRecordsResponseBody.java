@@ -80,7 +80,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of details of the log of an advanced mitigation session.</p>
+         * <p>The advanced mitigation logs.</p>
          */
         public Builder defenseRecords(java.util.List<DefenseRecords> defenseRecords) {
             this.defenseRecords = defenseRecords;
@@ -99,7 +99,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of advanced mitigation sessions.</p>
+         * <p>The total number of advanced mitigation records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -220,7 +220,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The peak attack traffic. Unit: bit/s.</p>
+             * <p>The peak attack throughput. Unit: bps.</p>
              * 
              * <strong>example:</strong>
              * <p>6584186000</p>
@@ -231,7 +231,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the advanced mitigation session. This value is a UNIX timestamp. Units: miliseconds.</p>
+             * <p>The end time of the mitigation. This is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1583683200000</p>
@@ -253,7 +253,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The ID of the Anti-DDoS instance.</p>
              * 
              * <strong>example:</strong>
              * <p>ddoscoo-cn-mp91j1ao****</p>
@@ -264,7 +264,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the advanced mitigation session. This value is a UNIX timestamp. Units: miliseconds.</p>
+             * <p>The start time of the mitigation. This is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1582992000000</p>
@@ -275,10 +275,12 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the advanced mitigation session. Valid values:</p>
+             * <p>The status of advanced mitigation. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The advanced mitigation session is being used.</li>
-             * <li><strong>1</strong>: The advanced mitigation session is used.</li>
+             * <li><p><strong>0</strong>: in use</p>
+             * </li>
+             * <li><p><strong>1</strong>: ended</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -170,9 +170,9 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * <blockquote>
-         * <p>The time must be in the latest 30 days.</p>
+         * <p>The time range cannot exceed 30 days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -186,7 +186,7 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * <p>The operation object that you want to query.</p>
+         * <p>The operation object used to filter results.</p>
          * 
          * <strong>example:</strong>
          * <p>203.<em><strong>.</strong></em>.132</p>
@@ -198,12 +198,12 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * <p>The type of the operation object that you want to query. Valid values:</p>
+         * <p>The type of the operation object used to filter results. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: the IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance</li>
-         * <li><strong>2</strong>: Anti-DDoS plans</li>
-         * <li><strong>3</strong>: ECS instances</li>
-         * <li><strong>4</strong>: all logs</li>
+         * <li><strong>1</strong>: IP Address of Anti-DDoS Proxy instance</li>
+         * <li><strong>2</strong>: Anti-DDoS Pro and Anti-DDoS Premium mitigation plan</li>
+         * <li><strong>3</strong>: ECS instance</li>
+         * <li><strong>4</strong>: full logs</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,7 +216,7 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. For example, to query the returned results on the first page, set the value to <strong>1</strong>.</p>
+         * <p>The page number to return in a paging query. For example, to query the first page, set the value to <strong>1</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Pro and Anti-DDoS Premium instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -254,9 +254,9 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * <blockquote>
-         * <p>The time must be in the latest 30 days.</p>
+         * <p>The time range cannot exceed 30 days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -181,7 +181,7 @@ public class DescribeWebRulesRequest extends Request {
         /**
          * <p>The domain name of the website to query.</p>
          * <blockquote>
-         * <p>The domain must have been configured with website business forwarding rules. You can call <a href="~~DescribeDomains~~">DescribeDomains</a> to query all domains that have been configured with website business forwarding rules.</p>
+         * <p>The domain name must have a website forwarding rule configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names that have website forwarding rules configured.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * <p>The list of DDoS protection instance IDs to query.</p>
+         * <p>The IDs of the Anti-DDoS Pro or Anti-DDoS Premium instances to query.</p>
          * 
          * <strong>example:</strong>
          * <p>ddoscoo-cn-mp91j1ao****</p>
@@ -206,7 +206,7 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number when you use paging. Set the current page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -218,7 +218,7 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>10</strong>.</p>
+         * <p>The number of forwarding rules per page when you use paging. Set the number of entries per page. Valid values: <strong>1</strong> to <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -230,10 +230,10 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * <p>The query matching pattern. Values:</p>
+         * <p>The query match mode. Valid values:</p>
          * <ul>
-         * <li><strong>fuzzy</strong> (default): Indicates fuzzy query.</li>
-         * <li><strong>exact</strong>: Indicates exact query.</li>
+         * <li><strong>fuzzy</strong> (default): fuzzy match.</li>
+         * <li><strong>exact</strong>: exact match.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,8 +246,8 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID of the DDoS protection instance in the resource management service.</p>
-         * <p>Not setting this parameter indicates the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs in Resource Management.</p>
+         * <p>If you do not set this parameter to a value, the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2pz25js****</p>

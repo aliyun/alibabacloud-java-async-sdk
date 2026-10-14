@@ -112,12 +112,14 @@ public class ModifyWebAreaBlockSwitchRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable or disable the Location Blacklist (Domain Names) policy for a domain name. The value is a string that consists of a JSON struct. The JSON struct contains the following parameters:</p>
+         * <p>The status of the Location Blacklist feature (for domain names). This parameter is a string that is converted from a JSON struct. The JSON struct contains the following parameter:</p>
          * <ul>
-         * <li><p><strong>RegionblockEnable</strong>: the status of the Location Blacklist (Domain Names) policy. This parameter is required and must be of the INTEGER type. Valid values:</p>
+         * <li><p><strong>RegionblockEnable</strong>: An Integer value that is required. The status of the Location Blacklist feature (for domain names). Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: enables the policy.</li>
-         * <li><strong>0</strong>: disables the policy.</li>
+         * <li><p><strong>1</strong>: enables the feature.</p>
+         * </li>
+         * <li><p><strong>0</strong>: disables the feature.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -133,9 +135,9 @@ public class ModifyWebAreaBlockSwitchRequest extends Request {
         }
 
         /**
-         * <p>The domain name for which you want to enable or disable the Location Blacklist policy.</p>
+         * <p>The domain name for which you want to set the Location Blacklist feature.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names that are protected by Anti-DDoS Proxy.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -149,8 +151,8 @@ public class ModifyWebAreaBlockSwitchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
-         * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Proxy instance belongs in Resource Management.</p>
+         * <p>If you do not set this parameter, the default resource group is used.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2pz25js****</p>

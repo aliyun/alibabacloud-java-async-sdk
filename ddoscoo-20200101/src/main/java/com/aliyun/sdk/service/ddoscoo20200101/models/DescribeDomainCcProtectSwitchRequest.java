@@ -97,6 +97,10 @@ public class DescribeDomainCcProtectSwitchRequest extends Request {
         }
 
         /**
+         * <p>The domain names of the websites. You can specify up to five domain names.</p>
+         * <blockquote>
+         * <p>A website forwarding rule must be configured for the domain name. Call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          */
         public Builder domains(java.util.List<String> domains) {
@@ -106,7 +110,10 @@ public class DescribeDomainCcProtectSwitchRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the Anti-DDoS Pro instance belongs in Resource Management. If you do not specify this parameter, the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

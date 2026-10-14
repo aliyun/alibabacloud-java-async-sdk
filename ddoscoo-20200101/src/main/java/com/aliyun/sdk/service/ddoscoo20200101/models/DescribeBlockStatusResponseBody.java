@@ -78,7 +78,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of details of the Diversion from Origin Server configurations of the instance.</p>
+         * <p>The near-origin traffic diversion configurations of the Anti-DDoS Pro and Anti-DDoS Premium instances.</p>
          */
         public Builder statusList(java.util.List<StatusList> statusList) {
             this.statusList = statusList;
@@ -170,10 +170,10 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The blocking status of the network traffic. Valid values:</p>
+             * <p>The traffic blocking status. Valid values:</p>
              * <ul>
-             * <li><strong>areablock</strong>: Network traffic is blocked.</li>
-             * <li><strong>normal</strong>: Network traffic is not blocked.</li>
+             * <li><strong>areablock</strong>: Blocked.</li>
+             * <li><strong>normal</strong>: Normal (not blocked).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the blocking. This value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The end time of the blocking. The value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1540196323</p>
@@ -196,10 +196,10 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Internet service provider (ISP) line from which the traffic is blocked. Valid values:</p>
+             * <p>The type of the blocked line. Valid values:</p>
              * <ul>
-             * <li><strong>ct</strong>: China Telecom (International)</li>
-             * <li><strong>cut</strong>: China Unicom (International)</li>
+             * <li><strong>ct</strong>: China Telecom international line.</li>
+             * <li><strong>cut</strong>: China Unicom international line.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the blocking. This value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The start time of the blocking. The value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1540195323</p>
@@ -281,7 +281,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An array that consists of details of the Diversion from Origin Server configuration.</p>
+             * <p>The near-origin traffic diversion configurations.</p>
              */
             public Builder blockStatusList(java.util.List<BlockStatusList> blockStatusList) {
                 this.blockStatusList = blockStatusList;
@@ -289,7 +289,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the instance.</p>
+             * <p>The IP address of the Anti-DDoS Pro and Anti-DDoS Premium instance.</p>
              * 
              * <strong>example:</strong>
              * <p>203.XX.XX.88</p>

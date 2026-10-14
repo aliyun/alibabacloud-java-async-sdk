@@ -127,10 +127,10 @@ public class DescribeDDosEventAreaRequest extends Request {
         }
 
         /**
-         * <p>The type of the attack event that you want to query. Valid values:</p>
+         * <p>The event type of the attack event to query. Valid values:</p>
          * <ul>
-         * <li><strong>defense</strong>: attack events that trigger traffic scrubbing</li>
-         * <li><strong>blackhole</strong>: attack events that trigger blackhole filtering</li>
+         * <li><strong>defense</strong>: traffic scrubbing events for volumetric attacks.</li>
+         * <li><strong>blackhole</strong>: blackhole filtering events for volumetric attacks.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -144,11 +144,11 @@ public class DescribeDDosEventAreaRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+         * <p>The attacked IP Address of Anti-DDoS Proxy instance of Anti-DDoS Pro and Anti-DDoS Premium.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>203.<em><strong>.</strong></em>.199</p>
+         * <p>203.XX.XX.199</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -157,7 +157,10 @@ public class DescribeDDosEventAreaRequest extends Request {
         }
 
         /**
-         * Range.
+         * <p>The number of data entries to return. Unit: entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder range(Long range) {
             this.putQueryParameter("Range", range);
@@ -166,9 +169,9 @@ public class DescribeDDosEventAreaRequest extends Request {
         }
 
         /**
-         * <p>The UNIX timestamp when the query starts. Unit: seconds.</p>
+         * <p>The start timestamp of the event to query. Unit: seconds.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188604.html">DescribeDDosAllEventList</a> operation to query the beginning time of all attack events.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/188604.html">DescribeDDosAllEventList</a> to query the start time of all events.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -97,9 +97,9 @@ public class DescribeWebAreaBlockConfigsRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the website.</p>
+         * <p>The domain names of the website services.</p>
          * <blockquote>
-         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>The domain names must have forwarding rules configured for website services. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -113,7 +113,7 @@ public class DescribeWebAreaBlockConfigsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The resource group ID of the Anti-DDoS Proxy instance in Resource Management. The default value is empty, which indicates that the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

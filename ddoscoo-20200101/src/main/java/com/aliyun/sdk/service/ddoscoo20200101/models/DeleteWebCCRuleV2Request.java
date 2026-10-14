@@ -113,7 +113,7 @@ public class DeleteWebCCRuleV2Request extends Request {
         /**
          * <p>The domain name of the website.</p>
          * <blockquote>
-         * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -129,8 +129,10 @@ public class DeleteWebCCRuleV2Request extends Request {
         /**
          * <p>The source of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>manual</strong> (default): manually created.</li>
-         * <li><strong>clover</strong>: automatically created. Specify this value when you want to delete intelligent protection rules.</li>
+         * <li><p><strong>manual</strong> (default): manually created.</p>
+         * </li>
+         * <li><p><strong>clover</strong>: automatically created. Specify this value when you want to delete intelligent protection rules.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,7 +148,7 @@ public class DeleteWebCCRuleV2Request extends Request {
          * <p>The names of the rules that you want to delete.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;trdsss&quot;]</p>
+         * <p>[\&quot;trdsss\&quot;]</p>
          */
         public Builder ruleNames(String ruleNames) {
             this.putQueryParameter("RuleNames", ruleNames);

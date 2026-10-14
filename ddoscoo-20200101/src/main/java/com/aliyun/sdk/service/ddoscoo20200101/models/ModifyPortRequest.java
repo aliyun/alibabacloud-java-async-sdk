@@ -157,7 +157,7 @@ public class ModifyPortRequest extends Request {
         }
 
         /**
-         * <p>The port of the origin server. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>The origin server port. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,8 +185,10 @@ public class ModifyPortRequest extends Request {
         /**
          * <p>The type of the forwarding protocol. Valid values:</p>
          * <ul>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
+         * <li><p><strong>tcp</strong>: TCP protocol.</p>
+         * </li>
+         * <li><p><strong>udp</strong>: UDP protocol.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -200,9 +202,9 @@ public class ModifyPortRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance to which the port forwarding rule belongs.</p>
+         * <p>The ID of the Anti-DDoS Proxy instance to which the port forwarding rule belongs.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Proxy instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -216,7 +218,16 @@ public class ModifyPortRequest extends Request {
         }
 
         /**
-         * ProxyEnable.
+         * <p>Indicates whether the traffic diversion switch is on. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: off.</p>
+         * </li>
+         * <li><p><strong>1</strong>: on.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder proxyEnable(Long proxyEnable) {
             this.putQueryParameter("ProxyEnable", proxyEnable);
@@ -225,7 +236,7 @@ public class ModifyPortRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of the IP addresses of origin servers.</p>
+         * <p>The IP addresses of origin servers.</p>
          * <p>This parameter is required.</p>
          */
         public Builder realServers(java.util.List<String> realServers) {

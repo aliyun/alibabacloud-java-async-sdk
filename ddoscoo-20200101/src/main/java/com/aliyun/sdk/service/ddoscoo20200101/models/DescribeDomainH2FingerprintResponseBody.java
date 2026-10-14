@@ -67,7 +67,7 @@ public class DescribeDomainH2FingerprintResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about top N HTTP/2 fingerprints.</p>
+         * <p>The list of top N HTTP/2.0 fingerprints for the domain name.</p>
          */
         public Builder domainH2Fp(java.util.List<DomainH2Fp> domainH2Fp) {
             this.domainH2Fp = domainH2Fp;
@@ -75,7 +75,7 @@ public class DescribeDomainH2FingerprintResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>112777CC-2AD6-46FC-A263-00B931406FCD</p>
@@ -168,7 +168,7 @@ public class DescribeDomainH2FingerprintResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP/2 fingerprint.</p>
+             * <p>The HTTP/2.0 fingerprint.</p>
              * 
              * <strong>example:</strong>
              * <p>532501bc316d02c8b1a007db76f2c796</p>
@@ -179,7 +179,7 @@ public class DescribeDomainH2FingerprintResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page views.</p>
+             * <p>The number of times the HTTP/2.0 fingerprint is matched for the domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>471755</p>

@@ -156,7 +156,7 @@ public class DescribeSystemLogRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The bills of the burstable clean bandwidth that are issued before this point in time are queried. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The end time to query bills of burstable clean bandwidth that are generated before the specified time. This value is a timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,9 +169,9 @@ public class DescribeSystemLogRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the instance.</p>
+         * <p>The IP address of the Anti-DDoS instance to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91490.html">DescribeInstanceDetails</a> operation to query the IP addresses of all instances.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/91490.html">DescribeInstanceDetails</a> to query the IP addresses of Anti-DDoS instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -184,9 +184,9 @@ public class DescribeSystemLogRequest extends Request {
         }
 
         /**
-         * <p>The type of the system log. Set the value to <strong>20</strong>, which indicates the billing logs for the burstable clean bandwidth.</p>
+         * <p>The type of system logs to query. The value is fixed at <strong>20</strong>, which indicates the billing logs of burstable clean bandwidth.</p>
          * <blockquote>
-         * <p>You must specify this parameter. Otherwise, the call fails.</p>
+         * <p>You must set this parameter. Otherwise, the call fails.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class DescribeSystemLogRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number of the returned page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class DescribeSystemLogRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of logs to return on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +225,7 @@ public class DescribeSystemLogRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The bills of the burstable clean bandwidth that are issued after this point in time are queried. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The start time to query bills of burstable clean bandwidth that are generated after the specified time. This value is a timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

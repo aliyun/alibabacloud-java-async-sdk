@@ -238,12 +238,12 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The mitigation plan of the instance to query. Valid values:</p>
+         * <p>The mitigation plan edition of the Anti-DDoS Pro or Anti-DDoS Premium instance to query. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</li>
-         * <li><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</li>
-         * <li><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan</li>
-         * <li><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</li>
+         * <li><strong>0</strong>: Anti-DDoS Pro and Anti-DDoS Premium (outside the Chinese mainland) Insurance edition.</li>
+         * <li><strong>1</strong>: Anti-DDoS Pro and Anti-DDoS Premium (outside the Chinese mainland) Unlimited edition.</li>
+         * <li><strong>2</strong>: Anti-DDoS Pro and Anti-DDoS Premium (outside the Chinese mainland) acceleration line.</li>
+         * <li><strong>9</strong>: Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland) Professional Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,10 +256,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The traffic forwarding status of the instance to query. Valid values:</p>
+         * <p>The service traffic forwarding status of the Anti-DDoS Pro or Anti-DDoS Premium instance to query. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The instance no longer forwards service traffic.</li>
-         * <li><strong>1</strong>: The instance forwards service traffic as expected.</li>
+         * <li><strong>0</strong>: Service traffic forwarding is stopped.</li>
+         * <li><strong>1</strong>: Service traffic forwarding is normal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,7 +272,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Instances whose expiration time is earlier than the point in time are queried. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The latest expiration time of the Anti-DDoS Pro or Anti-DDoS Premium instances to query. This means that only instances whose expiration time is earlier than the value of <strong>ExpireEndTime</strong> are queried. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640361700000</p>
@@ -284,7 +284,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Instances whose expiration time is later than the point in time are queried. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The earliest expiration time of the Anti-DDoS Pro or Anti-DDoS Premium instances to query. This means that only instances whose expiration time is later than the value of <strong>ExpireStartTime</strong> are queried. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640361500000</p>
@@ -296,7 +296,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instances to query. You can specify up to 200 instance IDs.</p>
+         * <p>The IDs of the Anti-DDoS Pro or Anti-DDoS Premium instances to query. You can specify up to 200 Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -305,7 +305,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the instance to query.</p>
+         * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance to query.</p>
          * 
          * <strong>example:</strong>
          * <p>203.107.XX.XX</p>
@@ -317,7 +317,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number for paging.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,7 +330,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of instances per page for paging. Valid values: 1 to 50.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -343,7 +343,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The remarks of the instance to query. Fuzzy match is supported.</p>
+         * <p>The remark of the Anti-DDoS Pro or Anti-DDoS Premium instance to query. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>doc-test</p>
@@ -355,8 +355,8 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
-         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the default resource group is used.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2pz25js****</p>
@@ -368,7 +368,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The states of the instances to query. You can specify up to two states.</p>
+         * <p>The statuses of the Anti-DDoS Pro or Anti-DDoS Premium instances to query. You can specify up to 2 Anti-DDoS Pro or Anti-DDoS Premium instance statuses.</p>
          */
         public Builder status(java.util.List<Integer> status) {
             this.putQueryParameter("Status", status);
@@ -377,7 +377,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The tags that are added to the instances to query.</p>
+         * <p>The tags attached to the Anti-DDoS Pro or Anti-DDoS Premium instances to query.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -445,13 +445,13 @@ public class DescribeInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag that is added to the instance to query. You can specify up to 200 tag keys. When you specify tags, take note of the following rules:</p>
+             * <p>The tag key attached to the Anti-DDoS Pro or Anti-DDoS Premium instance to query. Maximum value of N: 200, which means you can specify up to 200 tag keys. The configuration rules are as follows:</p>
              * <ul>
-             * <li>Each tag consists of a key (<strong>Key</strong>) and a value (<strong>Value</strong>), which are separated with a comma (,).</li>
-             * <li>Separate multiple tags with commas (,).</li>
+             * <li>Each tag consists of a tag key (<strong>Key</strong>) and a tag value (<strong>Value</strong>), separated by a comma (,).</li>
+             * <li>Tags are separated by commas (,).</li>
              * </ul>
              * <blockquote>
-             * <p> The tag key (<strong>Key</strong>) and tag value (<strong>Value</strong>) must be specified in pairs.</p>
+             * <p>The tag key (<strong>Key</strong>) and tag value (<strong>Value</strong>) must appear in pairs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -463,13 +463,13 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag that is added to the instance to query. You can specify up to 200 tag values. When you specify tags, take note of the following rules:</p>
+             * <p>The tag value attached to the Anti-DDoS Pro or Anti-DDoS Premium instance to query. Maximum value of N: 200, which means you can specify up to 200 tag values. The configuration rules are as follows:</p>
              * <ul>
-             * <li>Each tag consists of a key (<strong>Key</strong>) and a value (<strong>Value</strong>), which are separated with a comma (,).</li>
-             * <li>Separate multiple tags with commas (,).</li>
+             * <li>Each tag consists of a tag key (<strong>Key</strong>) and a tag value (<strong>Value</strong>), separated by a comma (,).</li>
+             * <li>Tags are separated by commas (,).</li>
              * </ul>
              * <blockquote>
-             * <p> The tag key (<strong>Key</strong>) and tag value (<strong>Value</strong>) must be specified in pairs.</p>
+             * <p>The tag key (<strong>Key</strong>) and tag value (<strong>Value</strong>) must appear in pairs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

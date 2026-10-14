@@ -167,7 +167,13 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * Cert.
+         * <p>The public key of the certificate to associate. This parameter must be used together with CertName and Key. </p>
+         * <blockquote>
+         * <p>If you specify CertName, Cert, and Key, you do not need to specify CertId.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE----- 62EcYPWd2Oy1vs6MTXcJSf*************************************************************************************************************************************************************************ZIo2ZUhl02SIDNggIEeg== -----END CERTIFICATE-----</p>
          */
         public Builder cert(String cert) {
             this.putBodyParameter("Cert", cert);
@@ -176,7 +182,13 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * CertId.
+         * <p>The certificate ID.</p>
+         * <blockquote>
+         * <p>If you specify the certificate ID, you do not need to specify CertName, Cert, or Key. This parameter cannot be used together with CertIdentifier.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2404693</p>
          */
         public Builder certId(Integer certId) {
             this.putBodyParameter("CertId", certId);
@@ -185,9 +197,9 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * <p>The globally unique ID of the certificate. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of the CertIdentifier parameter is 123-cn-hangzhou.</p>
+         * <p>The global certificate ID, which is in the format of certificate ID + &quot;-cn-hangzhou&quot;. For example, if the certificate ID is 123, set CertIdentifier to &quot;123-cn-hangzhou&quot;.</p>
          * <blockquote>
-         * <p> You can specify only one of this parameter and the CertId parameter.</p>
+         * <p>This parameter cannot be used together with CertId.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -200,7 +212,13 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * CertName.
+         * <p>The certificate name. </p>
+         * <blockquote>
+         * <p>The name of the certificate to associate. This parameter must be used together with Cert and Key.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>example-cert</p>
          */
         public Builder certName(String certName) {
             this.putBodyParameter("CertName", certName);
@@ -209,7 +227,7 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * <p>The region of the certificate. Valid values: <strong>cn-hangzhou</strong> and <strong>ap-southeast-1</strong>. Default value: <strong>cn-hangzhou</strong>.</p>
+         * <p>The region where the certificate is stored. Valid values: <strong>cn-hangzhou</strong> and <strong>ap-southeast-1</strong>. Default value: <strong>cn-hangzhou</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -221,7 +239,14 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
+         * <p>The domain name of the website service.</p>
+         * <blockquote>
+         * <p>The domain name must have a website forwarding rule configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domain(String domain) {
             this.putBodyParameter("Domain", domain);
@@ -230,7 +255,13 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * Key.
+         * <p>The private key of the certificate to associate. This parameter must be used together with CertName and Cert. </p>
+         * <blockquote>
+         * <p>If you specify CertName, Cert, and Key, you do not need to specify CertId.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN RSA PRIVATE KEY----- DADTPZoOHd9WtZ3UKHJT**************************************************************************************************************************************************************************qf0YF8bv5UK5G04RtKadOw== -----END RSA PRIVATE KEY-----</p>
          */
         public Builder key(String key) {
             this.putBodyParameter("Key", key);

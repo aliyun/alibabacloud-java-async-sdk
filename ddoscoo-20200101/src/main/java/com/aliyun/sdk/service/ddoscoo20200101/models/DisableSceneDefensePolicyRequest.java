@@ -83,9 +83,9 @@ public class DisableSceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy that you want to disable.</p>
+         * <p>The ID of the policy to disable.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/159382.html">DescribeSceneDefensePolicies</a> operation to query the IDs of all policies.</p>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/159382.html">DescribeSceneDefensePolicies</a> to query all policy IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

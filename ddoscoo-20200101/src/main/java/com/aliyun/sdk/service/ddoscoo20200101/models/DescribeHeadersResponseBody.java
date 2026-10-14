@@ -80,7 +80,7 @@ public class DescribeHeadersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the custom header.</p>
+         * <p>The custom header information.</p>
          */
         public Builder customHeader(CustomHeader customHeader) {
             this.customHeader = customHeader;
@@ -88,7 +88,10 @@ public class DescribeHeadersResponseBody extends TeaModel {
         }
 
         /**
-         * EmbeddedHeaders.
+         * <p>The request header that can be used to mark the Layer 7 attack. The value is a string that consists of a JSON object. The JSON object contains the following fields:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;X-Client-IP&quot;:true,&quot;X-True-IP&quot;:true,&quot;Web-Server-Type&quot;:true,&quot;WL-Proxy-Client-IP&quot;:true,&quot;X-Forwarded-Proto&quot;:true}</p>
          */
         public Builder embeddedHeaders(String embeddedHeaders) {
             this.embeddedHeaders = embeddedHeaders;
@@ -96,7 +99,7 @@ public class DescribeHeadersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>48BC7BA5-69BE-5C31-A080-AFF2431AE48D</p>
@@ -176,7 +179,7 @@ public class DescribeHeadersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The header of the response.</p>
+             * <p>The custom headers. The value is a string that consists of a JSON object. The JSON object contains the following fields:</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;X-Forwarded-ClientSrcPort&quot;:&quot;&quot;,&quot;header1&quot;:&quot;hLeLele&quot;}</p>

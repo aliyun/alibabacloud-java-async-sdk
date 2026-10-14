@@ -89,7 +89,10 @@ public class ConfigDomainSecurityProfileRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is unavailable.</p>
+         * <p>Not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder cluster(String cluster) {
             this.putQueryParameter("Cluster", cluster);
@@ -98,19 +101,25 @@ public class ConfigDomainSecurityProfileRequest extends Request {
         }
 
         /**
-         * <p>The configurations for the global mitigation policy feature. The configurations include the following fields:</p>
+         * <p>The Anti-DDoS Global Mitigation Policy for Protection for Website Services. The structure is as follows:</p>
          * <ul>
-         * <li><p><strong>global_rule_mode</strong>: optional. The mode for the global mitigation policy feature. Data type: string. Valid values:</p>
-         * <ul>
-         * <li><strong>weak</strong>: loose.</li>
-         * <li><strong>default</strong>: normal.</li>
-         * <li><strong>hard</strong>: strict.</li>
+         * <li><strong>global_rule_mode</strong>: String type. Optional. The protection level of the DDoS global mitigation feature. Valid values:<ul>
+         * <li><strong>weak</strong>: Loose.</li>
+         * <li><strong>default</strong>: Normal.</li>
+         * <li><strong>hard</strong>: Strict.</li>
          * </ul>
          * </li>
-         * <li><p><strong>global_rule_enable</strong>: optional. Specifies whether to enable the global mitigation policy feature. Data type: string. Valid values:</p>
+         * <li><strong>global_rule_enable</strong>: Integer type. Optional. The switch of the DDoS global mitigation feature. Valid values:<ul>
+         * <li><strong>0</strong>: Shutdown.</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>The Blacklist/Whitelist feature of the custom mitigation policies for Protection for Website Services. The structure is as follows:</p>
          * <ul>
-         * <li><strong>0</strong>: disabled.</li>
-         * <li><strong>1</strong>: enabled.</li>
+         * <li><strong>bwlist_enable</strong>: Integer type. Optional. The switch of the custom mitigation policy blacklist/whitelist. Valid values:<ul>
+         * <li><strong>0</strong>: Shutdown.</li>
+         * <li><strong>1</strong>: Enabled.</li>
          * </ul>
          * </li>
          * </ul>
@@ -126,14 +135,14 @@ public class ConfigDomainSecurityProfileRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the website.</p>
+         * <p>The domain name of the website service.</p>
          * <blockquote>
-         * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>The domain name must have a website forwarding rule configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>live.abcde.com</p>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);

@@ -67,7 +67,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The certificate information about the website.</p>
+         * <p>The certificate information.</p>
          */
         public Builder certs(java.util.List<Certs> certs) {
             this.certs = certs;
@@ -222,7 +222,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The global certificate ID, which is in the certificate ID-cn-hangzhou format. If the ID of the certificate is 123, CertIdentifier is 123-cn-hangzhou.</p>
+             * <p>The global certificate ID. The value is a string that consists of the certificate ID and the region ID, separated by a hyphen (-). For example, if the certificate ID is \<code>123\\</code> and the region is \<code>cn-hangzhou\\</code>, the value of \<code>CertIdentifier\\</code> is \<code>123-cn-hangzhou\\</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>126345-ap-southeast-1</p>
@@ -246,8 +246,10 @@ public class DescribeCertsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the certificate is associated with the domain name. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: The certificate is associated with the domain name.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The certificate is not associated with the domain name.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -270,7 +272,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificate ID.</p>
+             * <p>The ID of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>81</p>
@@ -281,7 +283,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificate authority (CA) that issued the certificate.</p>
+             * <p>The certification authority (CA) that issued the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>Symantec</p>

@@ -83,7 +83,7 @@ public class DescribeInstanceDetailsRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of the IDs of instances to query.</p>
+         * <p>The IDs of the Anti-DDoS Pro or Anti-DDoS Premium instances to query.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {

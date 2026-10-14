@@ -75,9 +75,9 @@ public class DescribeInstanceStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Anti-DDoS Proxy instance to query.</p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance that you want to query.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all Anti-DDoS Proxy (Chinese Mainland) or Anti-DDoS Proxy (Outside Chinese Mainland) instances.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all Anti-DDoS Proxy (Chinese Mainland) or Anti-DDoS Proxy (Outside Chinese Mainland) instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -91,10 +91,12 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * <p>The type of the Anti-DDoS Proxy instance to query. Valid values:</p>
+         * <p>The type of the Anti-DDoS Pro or Anti-DDoS Premium instance that you want to query. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: an Anti-DDoS Proxy (Chinese Mainland) instance</li>
-         * <li><strong>2</strong>: an Anti-DDoS Proxy (Outside Chinese Mainland) instance</li>
+         * <li><p><strong>1</strong>: an Anti-DDoS Proxy (Chinese Mainland) instance.</p>
+         * </li>
+         * <li><p><strong>2</strong>: an Anti-DDoS Proxy (Outside Chinese Mainland) instance.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

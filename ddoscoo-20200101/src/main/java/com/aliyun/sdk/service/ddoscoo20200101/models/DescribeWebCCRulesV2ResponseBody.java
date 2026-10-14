@@ -104,7 +104,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
@@ -115,7 +115,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned custom frequency control rules.</p>
+         * <p>The total number of frequency control rules.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -126,7 +126,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The custom frequency control rules.</p>
+         * <p>The frequency control (HTTP flood mitigation) custom rules.</p>
          */
         public Builder webCCRules(java.util.List<WebCCRules> webCCRules) {
             this.webCCRules = webCCRules;
@@ -231,7 +231,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The match content.</p>
+             * <p>The matching content.</p>
              * 
              * <strong>example:</strong>
              * <p>192.0.XX.XX</p>
@@ -242,7 +242,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The match content when the match method is Equals to One of Multiple Values.</p>
+             * <p>The matching content when the matching method is set to equal to one of multiple values.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;2&quot;,&quot;3&quot;,&quot;ad&quot;]</p>
@@ -253,7 +253,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The match field.</p>
+             * <p>The matching field.</p>
              * 
              * <strong>example:</strong>
              * <p>ip</p>
@@ -264,10 +264,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom HTTP request header.</p>
-             * <blockquote>
-             * <p> This parameter takes effect only when <strong>Field</strong> is set to <strong>header</strong>.</p>
-             * </blockquote>
+             * <p>The name of the custom HTTP header field.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -278,7 +275,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The match method.</p>
+             * <p>The matching method.</p>
              * 
              * <strong>example:</strong>
              * <p>belong</p>
@@ -398,7 +395,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the field. This parameter is required only when the Target parameter is set to header.</p>
+             * <p>The field name. This parameter is required only when the statistics source is set to header.</p>
              * 
              * <strong>example:</strong>
              * <p>action</p>
@@ -409,11 +406,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical method. Valid values:</p>
-             * <ul>
-             * <li><strong>ip</strong></li>
-             * <li><strong>header</strong></li>
-             * </ul>
+             * <p>The statistics source. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>ip</p>
@@ -518,11 +511,11 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The statistical method. Valid values:</p>
+             * <p>The statistics source. Valid values:</p>
              * <ul>
-             * <li><strong>ip</strong></li>
-             * <li><strong>header</strong></li>
-             * <li><strong>uri</strong></li>
+             * <li><strong>ip</strong>: by IP address</li>
+             * <li><strong>header</strong>: by header</li>
+             * <li><strong>uri</strong>: by URI</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -534,7 +527,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the header. This parameter is required only when the Field parameter is set to header.</p>
+             * <p>This parameter is required only when the statistics source is set to header.</p>
              * 
              * <strong>example:</strong>
              * <p>hello</p>
@@ -545,11 +538,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the system collects statistics after deduplication. Valid values:</p>
-             * <ul>
-             * <li><strong>count</strong>: The system collects statistics before deduplication.</li>
-             * <li><strong>distinct</strong>: The system collects statistics after deduplication.</li>
-             * </ul>
+             * <p>The deduplication mode. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>count</p>
@@ -660,8 +649,8 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             /**
              * <p>The status code. Valid values: <strong>100</strong> to <strong>599</strong>.</p>
              * <ul>
-             * <li><strong>200</strong>: The request was successful.</li>
-             * <li>Other codes: The request failed.</li>
+             * <li><strong>200</strong>: Successful.</li>
+             * <li>Other values: An error code.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -673,7 +662,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If a ratio is not used, the handling action is triggered only when the number of requests of the corresponding status code reaches the value of <strong>CountThreshold</strong>. Valid values: <strong>2</strong> to <strong>50000</strong>.</p>
+             * <p>When the ratio is not used, the action is triggered only when the corresponding status code reaches <strong>CountThreshold</strong>. Valid range: <strong>2</strong> to <strong>50000</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -684,11 +673,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the status code is enabled. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
+             * <p>Indicates whether the feature is enabled. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -699,7 +684,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If a ratio is used, the handling action is triggered only when the number of requests of the corresponding status code reaches the value of <strong>RatioThreshold</strong>. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+             * <p>When the ratio is used, the action is triggered only when the corresponding status code reaches <strong>RatioThreshold</strong>. Valid range: <strong>1</strong> to <strong>100</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -710,11 +695,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to use a ratio.</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
+             * <p>Indicates whether to use the ratio:</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -901,12 +882,12 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action triggered if the rule is matched. Valid values:</p>
+             * <p>The matching action. Valid values:</p>
              * <ul>
-             * <li><strong>accept</strong>: The requests that match the rule are allowed.</li>
-             * <li><strong>block</strong>: The requests that match the rule are blocked.</li>
-             * <li><strong>challenge</strong>: Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule is implemented.</li>
-             * <li><strong>watch</strong>: The requests that match the rule are recorded in logs and allowed.</li>
+             * <li><strong>accept</strong>: Allow.</li>
+             * <li><strong>block</strong>: Block.</li>
+             * <li><strong>challenge</strong>: JavaScript Challenge.</li>
+             * <li><strong>watch</strong>: Monitor.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -918,7 +899,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The match conditions.</p>
+             * <p>The list of matching conditions.</p>
              */
             public Builder condition(java.util.List<Condition> condition) {
                 this.condition = condition;
@@ -926,10 +907,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter is deprecated.</p>
+             * <p>The legacy rule format. This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
-             * <p>废弃</p>
+             * <p>Deprecated</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -937,7 +918,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter is deprecated.</p>
+             * <p>The legacy rule format. This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -948,10 +929,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter is deprecated.</p>
+             * <p>The legacy rule format. This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
-             * <p>废弃</p>
+             * <p>Deprecated</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -978,7 +959,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics after deduplication. By default, the system collects statistics before deduplication.</p>
+             * <p>The deduplication statistics. This parameter is optional. If this parameter is not specified, deduplication is not performed.</p>
              */
             public Builder statistics(Statistics statistics) {
                 this.statistics = statistics;
@@ -986,7 +967,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status codes.</p>
+             * <p>The status code.</p>
              */
             public Builder statusCode(StatusCode statusCode) {
                 this.statusCode = statusCode;
@@ -994,7 +975,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter is deprecated.</p>
+             * <p>The legacy rule format. This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -1005,7 +986,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter is deprecated.</p>
+             * <p>The legacy rule format. This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>/p3shijihao</p>
@@ -1101,7 +1082,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The validity period of the rule. Unit: seconds. If the Action parameter is set to block, the system blocks the requests that match the rule within the validity period of the rule. The value 0 indicates that the rule is permanently valid.</p>
+             * <p>The validity period of the rule. Unit: seconds. This parameter takes effect when the matching action is set to block (action is block). Access requests are blocked within the validity period. A value of 0 indicates that the rule is permanently effective.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1123,11 +1104,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method used to create the rule. Valid values:</p>
-             * <ul>
-             * <li><strong>manual</strong> (default): manually created.</li>
-             * <li><strong>clover</strong>: automatically created.</li>
-             * </ul>
+             * <p>The source of the rule. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>manual</p>
@@ -1138,7 +1115,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the rule.</p>
+             * <p>The rule details.</p>
              */
             public Builder ruleDetail(RuleDetail ruleDetail) {
                 this.ruleDetail = ruleDetail;

@@ -155,9 +155,9 @@ public class DescribeDomainViewTopUrlRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the website.</p>
+         * <p>The domain name of the website service.</p>
          * <blockquote>
-         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>The domain name must have a website service forwarding rule configured. You can invoke <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names that are added to Anti-DDoS Pro and Anti-DDoS Premium.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -170,9 +170,9 @@ public class DescribeDomainViewTopUrlRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end of the time range to query. Specify a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>The value must be on the exact minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -186,7 +186,18 @@ public class DescribeDomainViewTopUrlRequest extends Request {
         }
 
         /**
-         * Inerval.
+         * <p>The step size for returning data, in seconds. This parameter specifies the interval at which a result is returned. The supported step size varies based on the query time range (determined by <strong>StartTime</strong> and <strong>EndTime</strong>). Recommended settings:</p>
+         * <ul>
+         * <li>Query time range of up to 1 hour: minimum step size of 60 seconds, maximum not exceeding the query time range.</li>
+         * <li>Query time range of more than 1 hour but up to 6 hours: minimum step size of 600 seconds, maximum not exceeding the query time range.</li>
+         * <li>Query time range of more than 6 hours but up to 24 hours: minimum step size of 1800 seconds, maximum not exceeding the query time range.</li>
+         * <li>Query time range of more than 24 hours but up to 7 days: minimum step size of 3600 seconds, maximum not exceeding the query time range.</li>
+         * <li>Query time range of more than 7 days but up to 15 days: minimum step size of 14400 seconds, maximum not exceeding the query time range.</li>
+         * <li>Query time range of more than 15 days: minimum step size of 43200 seconds, maximum not exceeding the query time range.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder inerval(Long inerval) {
             this.putQueryParameter("Inerval", inerval);
@@ -195,7 +206,7 @@ public class DescribeDomainViewTopUrlRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -207,9 +218,9 @@ public class DescribeDomainViewTopUrlRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The beginning of the time range to query. Specify a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>The value must be on the exact minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -223,7 +234,7 @@ public class DescribeDomainViewTopUrlRequest extends Request {
         }
 
         /**
-         * <p>The number of URLs to query. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+         * <p>The number of URLs to return. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

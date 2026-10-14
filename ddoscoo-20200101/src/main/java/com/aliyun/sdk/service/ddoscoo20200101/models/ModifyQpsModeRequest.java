@@ -100,7 +100,7 @@ public class ModifyQpsModeRequest extends Request {
         /**
          * <p>The region ID of the Anti-DDoS Pro instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -116,8 +116,10 @@ public class ModifyQpsModeRequest extends Request {
         /**
          * <p>The metering method of QPS. Valid values:</p>
          * <ul>
-         * <li><strong>month</strong>: monthly 95th percentile QPS.</li>
-         * <li><strong>day</strong>: daily 95th percentile QPS.</li>
+         * <li><p><strong>month</strong>: monthly 95th percentile QPS.</p>
+         * </li>
+         * <li><p><strong>day</strong>: daily 95th percentile QPS.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

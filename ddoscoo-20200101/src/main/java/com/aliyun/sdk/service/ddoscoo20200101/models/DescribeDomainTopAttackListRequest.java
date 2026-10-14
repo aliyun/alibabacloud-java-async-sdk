@@ -126,9 +126,9 @@ public class DescribeDomainTopAttackListRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>The value must be on the hour or half hour.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -142,7 +142,14 @@ public class DescribeDomainTopAttackListRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time granularity of the query data. Unit: seconds.</p>
+         * <ul>
+         * <li>Valid values: 300, 3600, 14400, 28800, and 86400.</li>
+         * <li>If you do not specify this parameter or specify an unsupported value, the default value 3600 is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -151,7 +158,7 @@ public class DescribeDomainTopAttackListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Pro and Anti-DDoS Premium instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -163,9 +170,9 @@ public class DescribeDomainTopAttackListRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>The value must be on the hour or half hour.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -80,7 +80,10 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02FE96D9-C77B-5735-B36D-329E052C8047</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
         }
 
         /**
-         * SchedulerRules.
+         * <p>The traffic scheduling rules.</p>
          */
         public Builder schedulerRules(java.util.List<SchedulerRules> schedulerRules) {
             this.schedulerRules = schedulerRules;
@@ -96,7 +99,10 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -162,7 +168,10 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessQps.
+             * <p>The QPS threshold that triggers a resource switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder accessQps(Long accessQps) {
                 this.accessQps = accessQps;
@@ -170,7 +179,10 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UpstreamQps.
+             * <p>A reserved field. The default value is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder upstreamQps(Long upstreamQps) {
                 this.upstreamQps = upstreamQps;
@@ -237,7 +249,7 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * ParamData.
+             * <p>The interaction conditions.</p>
              */
             public Builder paramData(ParamData paramData) {
                 this.paramData = paramData;
@@ -245,7 +257,16 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ParamType.
+             * <p>The type of the resource for interaction. Valid values:</p>
+             * <ul>
+             * <li><p><strong>cdn</strong>: Alibaba Cloud CDN</p>
+             * </li>
+             * <li><p><strong>dcdn</strong>: DCDN</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cdn</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -364,7 +385,10 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * Priority.
+             * <p>The priority of the rule. Valid values: 0 to 100. A larger value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -372,7 +396,10 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID. The default value is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -380,7 +407,16 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Inactive</p>
+             * </li>
+             * <li><p><strong>1</strong>: Active</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -388,7 +424,18 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The format of the resource address. Valid values:</p>
+             * <ul>
+             * <li><p><strong>A</strong>: IPv4 address</p>
+             * </li>
+             * <li><p><strong>AAAA</strong>: IPv6 address</p>
+             * </li>
+             * <li><p><strong>CNAME</strong>: canonical name</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -396,7 +443,10 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The resource address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.107.XX.XX</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -404,7 +454,16 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ValueType.
+             * <p>The type of the resource address. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: Anti-DDoS IP</p>
+             * </li>
+             * <li><p><strong>5</strong>: Accelerated domain name for CDN interaction</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder valueType(Integer valueType) {
                 this.valueType = valueType;
@@ -497,7 +556,10 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * Cname.
+             * <p>The canonical name of the Anti-DDoS instance that is associated with the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -505,7 +567,7 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Param.
+             * <p>The resource for interaction.</p>
              */
             public Builder param(Param param) {
                 this.param = param;
@@ -513,7 +575,10 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the traffic scheduling rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDDos</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -521,7 +586,7 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The rule information.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -601,7 +666,16 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * CdnLinkageEnable.
+             * <p>Specifies whether CDN interaction is enabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Disabled</p>
+             * </li>
+             * <li><p><strong>1</strong>: Enabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cdnLinkageEnable(Integer cdnLinkageEnable) {
                 this.cdnLinkageEnable = cdnLinkageEnable;
@@ -609,7 +683,7 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CdnLinkageRule.
+             * <p>The CDN interaction rule.</p>
              */
             public Builder cdnLinkageRule(CdnLinkageRule cdnLinkageRule) {
                 this.cdnLinkageRule = cdnLinkageRule;
@@ -617,7 +691,10 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;

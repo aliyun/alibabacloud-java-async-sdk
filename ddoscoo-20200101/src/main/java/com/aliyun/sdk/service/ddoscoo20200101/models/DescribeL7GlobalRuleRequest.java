@@ -97,6 +97,7 @@ public class DescribeL7GlobalRuleRequest extends Request {
         }
 
         /**
+         * <p>The domain name of the website service to operate on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,14 @@ public class DescribeL7GlobalRuleRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type for the request and response messages. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

@@ -218,8 +218,10 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
             /**
              * <p>The region to which the destination IP address belongs. Valid values:</p>
              * <ul>
-             * <li><strong>cn</strong>: a region in the Chinese mainland</li>
-             * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+             * <li><p><strong>cn</strong>: a region in the Chinese mainland</p>
+             * </li>
+             * <li><p><strong>cn-hongkong</strong>: China (Hong Kong)</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

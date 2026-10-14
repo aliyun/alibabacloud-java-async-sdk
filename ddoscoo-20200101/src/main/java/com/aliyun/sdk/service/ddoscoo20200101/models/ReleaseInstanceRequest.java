@@ -83,6 +83,10 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance to be released.</p>
+         * <blockquote>
+         * <p>Only expired instances can be released. You can call <a href="https://help.aliyun.com/document_detail/91478.html">DescribeInstances</a> to query the IDs and expiration status of all Anti-DDoS Proxy instances.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

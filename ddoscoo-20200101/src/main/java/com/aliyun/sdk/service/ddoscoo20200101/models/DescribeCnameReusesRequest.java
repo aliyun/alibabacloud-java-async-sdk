@@ -99,7 +99,7 @@ public class DescribeCnameReusesRequest extends Request {
         /**
          * <p>The domain names of the websites. You can specify the domain names of up to 200 websites.</p>
          * <blockquote>
-         * <p> A forwarding rule must be configured for a domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>A forwarding rule must be configured for the domain name. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -113,7 +113,10 @@ public class DescribeCnameReusesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the Anti-DDoS Proxy instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

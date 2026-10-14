@@ -97,7 +97,7 @@ public class DescribeLayer4RulePolicyRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;InstanceId&quot;:&quot;ddosDip-sg-4hr2b3l****&quot;,&quot;FrontendPort&quot;:2020,&quot;Protocol&quot;:&quot;udp&quot;}]</p>
+         * <p>[{\&quot;InstanceId\&quot;:\&quot;ddosDip-sg-4hr2b3l****\&quot;,\&quot;FrontendPort\&quot;:2020,\&quot;Protocol\&quot;:\&quot;udp\&quot;}]</p>
          */
         public Builder listeners(String listeners) {
             this.putQueryParameter("Listeners", listeners);

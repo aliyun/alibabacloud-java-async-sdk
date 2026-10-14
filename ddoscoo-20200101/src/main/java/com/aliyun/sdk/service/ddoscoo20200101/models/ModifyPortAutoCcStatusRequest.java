@@ -113,9 +113,9 @@ public class ModifyPortAutoCcStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -129,11 +129,11 @@ public class ModifyPortAutoCcStatusRequest extends Request {
         }
 
         /**
-         * <p>The mode of the Intelligent Protection policy. Valid values:</p>
+         * <p>The mode of AI-based intelligent protection for non-website services. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong></li>
-         * <li><strong>loose</strong></li>
-         * <li><strong>strict</strong></li>
+         * <li><strong>normal</strong>: Normal.</li>
+         * <li><strong>loose</strong>: Loose.</li>
+         * <li><strong>strict</strong>: Strict.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -147,10 +147,10 @@ public class ModifyPortAutoCcStatusRequest extends Request {
         }
 
         /**
-         * <p>Specifies the status of the Intelligent Protection policy. Valid values:</p>
+         * <p>The status of AI-based intelligent protection for non-website services. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: enables the policy.</li>
-         * <li><strong>off</strong>: disables the policy.</li>
+         * <li><strong>on</strong>: enabled</li>
+         * <li><strong>off</strong>: disabled</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

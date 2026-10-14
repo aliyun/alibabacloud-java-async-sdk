@@ -78,7 +78,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistics on response status codes.</p>
+         * <p>The statistics information on response status codes.</p>
          */
         public Builder statusCodeList(java.util.List<StatusCodeList> statusCodeList) {
             this.statusCodeList = statusCodeList;
@@ -348,7 +348,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of 2xx status codes.</p>
+             * <p>The number of 2XX status codes.</p>
              * 
              * <strong>example:</strong>
              * <p>15520</p>
@@ -359,7 +359,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of 3xx status codes.</p>
+             * <p>The number of 3XX status codes.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -403,7 +403,10 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status410.
+             * <p>The number of 410 status codes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status410(Long status410) {
                 this.status410 = status410;
@@ -411,7 +414,10 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status499.
+             * <p>The number of 499 status codes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status499(Long status499) {
                 this.status499 = status499;
@@ -419,7 +425,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of 4xx status codes.</p>
+             * <p>The number of 4XX status codes.</p>
              * 
              * <strong>example:</strong>
              * <p>4486</p>
@@ -474,7 +480,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of 5xx status codes.</p>
+             * <p>The number of 5XX status codes.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -485,7 +491,7 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The time of the statistic. This value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1582992000</p>

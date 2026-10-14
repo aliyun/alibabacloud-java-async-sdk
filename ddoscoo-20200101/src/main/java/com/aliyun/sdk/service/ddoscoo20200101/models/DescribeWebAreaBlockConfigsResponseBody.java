@@ -67,7 +67,7 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the configurations of the Location Blacklist (Domain Names) policy.</p>
+         * <p>The configuration information of the Location Blacklist feature (for domain names).</p>
          */
         public Builder areaBlockConfigs(java.util.List<AreaBlockConfigs> areaBlockConfigs) {
             this.areaBlockConfigs = areaBlockConfigs;
@@ -144,10 +144,12 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the location is blocked. Valid values:</p>
+             * <p>The blocking status. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: yes</li>
-             * <li><strong>1</strong>: no</li>
+             * <li><p><strong>0</strong>: not blocked</p>
+             * </li>
+             * <li><p><strong>1</strong>: blocked</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -159,7 +161,7 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the location.</p>
+             * <p>The region.</p>
              * 
              * <strong>example:</strong>
              * <p>CN-SHANGHAI</p>
@@ -240,7 +242,7 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the blocked locations.</p>
+             * <p>The information about the blocked regions.</p>
              */
             public Builder regionList(java.util.List<RegionList> regionList) {
                 this.regionList = regionList;

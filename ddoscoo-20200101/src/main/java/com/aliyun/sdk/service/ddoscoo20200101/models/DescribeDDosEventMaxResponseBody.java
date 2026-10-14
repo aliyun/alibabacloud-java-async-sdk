@@ -93,7 +93,7 @@ public class DescribeDDosEventMaxResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The peak of connection flood attacks. Unit: connections per seconds (CPS).</p>
+         * <p>The peak attack throughput of connection flood attacks. Unit: cps.</p>
          * 
          * <strong>example:</strong>
          * <p>1302</p>
@@ -104,7 +104,7 @@ public class DescribeDDosEventMaxResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The peak of volumetric attacks. Unit: Mbit/s.</p>
+         * <p>The peak attack throughput of volumetric traffic attacks. Unit: Mbps.</p>
          * 
          * <strong>example:</strong>
          * <p>6809</p>
@@ -115,7 +115,7 @@ public class DescribeDDosEventMaxResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The peak of resource exhaustion attacks. Unit: queries per second (QPS).</p>
+         * <p>The peak attack throughput of web resource exhaustion attacks. Unit: qps.</p>
          * 
          * <strong>example:</strong>
          * <p>26314</p>
@@ -126,7 +126,7 @@ public class DescribeDDosEventMaxResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5AE2FC86-C840-41AE-9F1A-3A2747C7C1DF</p>

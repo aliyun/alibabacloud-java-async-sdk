@@ -82,7 +82,7 @@ public class DescribeWebCustomPortsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The resource group ID of the Anti-DDoS Proxy instance in Resource Management. The default value is empty, which indicates that the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

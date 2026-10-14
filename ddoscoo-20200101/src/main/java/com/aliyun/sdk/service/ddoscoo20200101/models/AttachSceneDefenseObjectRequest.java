@@ -113,7 +113,7 @@ public class AttachSceneDefenseObjectRequest extends Request {
         }
 
         /**
-         * <p>The type of the object. Set the value to <strong>Domain</strong>, which indicates a domain name.</p>
+         * <p>The object type. Set the value to <strong>Domain</strong>, which indicates a domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class AttachSceneDefenseObjectRequest extends Request {
         }
 
         /**
-         * <p>The object that you want to add to the policy. Separate multiple objects with commas (,).</p>
+         * <p>The protected objects to add. Separate multiple objects with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,9 +139,9 @@ public class AttachSceneDefenseObjectRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The policy ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/159382.html">DescribeSceneDefensePolicies</a> operation to query the IDs of all policies.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/159382.html">DescribeSceneDefensePolicies</a> to query all policy IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

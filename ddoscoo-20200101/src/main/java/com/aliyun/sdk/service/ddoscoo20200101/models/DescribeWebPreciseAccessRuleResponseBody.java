@@ -67,7 +67,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configuration of the accurate access control rule that is created for the website.</p>
+         * <p>The precise access control rules for the website.</p>
          */
         public Builder preciseAccessConfigList(java.util.List<PreciseAccessConfigList> preciseAccessConfigList) {
             this.preciseAccessConfigList = preciseAccessConfigList;
@@ -194,7 +194,23 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ContentList.
+             * <p>The match conditions of the rule. The value is a JSON string. The value contains the following fields:</p>
+             * <blockquote>
+             * <p>If you specify multiple match conditions, the logical relation between these conditions is AND.</p>
+             * </blockquote>
+             * <ul>
+             * <li><p><strong>field</strong>: The match field. This parameter is of the string type.</p>
+             * </li>
+             * <li><p><strong>match_method</strong>: The match method. This parameter is of the string type.</p>
+             * <blockquote>
+             * <p>For more information about the valid values of <strong>field</strong> and <strong>match_method</strong>, see the &quot;Additional information about field and match_method&quot; section in this topic.</p>
+             * </blockquote>
+             * </li>
+             * <li><p><strong>content</strong>: The match content. This parameter is of the string type.</p>
+             * </li>
+             * <li><p><strong>header_name</strong>: The name of the header field. This parameter is of the string type. This parameter is required only when <strong>field</strong> is set to <strong>header</strong>.</p>
+             * </li>
+             * </ul>
              */
             public Builder contentList(java.util.List<String> contentList) {
                 this.contentList = contentList;
@@ -213,9 +229,9 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom HTTP request header.</p>
+             * <p>The name of the custom HTTP header field.</p>
              * <blockquote>
-             * <p> This parameter takes effect only when <strong>Field</strong> is set to <strong>header</strong>.</p>
+             * <p>This parameter is required only when <strong>Field</strong> is set to <strong>header</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -349,11 +365,14 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action triggered if the rule is matched. Valid values:</p>
+             * <p>The action that is performed on requests that match the rule. Valid values:</p>
              * <ul>
-             * <li><strong>accept</strong>: The requests that match the rule are allowed.</li>
-             * <li><strong>block</strong>: The requests that match the rule are blocked.</li>
-             * <li><strong>challenge</strong>: Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule is implemented.</li>
+             * <li><p><strong>accept</strong>: allows the requests.</p>
+             * </li>
+             * <li><p><strong>block</strong>: blocks the requests.</p>
+             * </li>
+             * <li><p><strong>challenge</strong>: triggers a JavaScript Challenge for the requests.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -365,7 +384,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The match conditions.</p>
+             * <p>The list of match conditions.</p>
              */
             public Builder conditionList(java.util.List<ConditionList> conditionList) {
                 this.conditionList = conditionList;
@@ -373,7 +392,10 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirePeriod.
+             * <p>The validity period of the rule. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1598889600</p>
              */
             public Builder expirePeriod(Long expirePeriod) {
                 this.expirePeriod = expirePeriod;
@@ -381,7 +403,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity period of the rule. Unit: seconds. This parameter takes effect only when <strong>action</strong> of a rule is <strong>block</strong>. Access requests that match the rule are blocked within the specified validity period of the rule. The value <strong>0</strong> indicates that the whitelist takes effect all the time.</p>
+             * <p>The validity period of the rule. Unit: seconds. This parameter is required only when the <strong>action</strong> of the rule is <strong>block</strong>. Requests that match the rule are blocked within the validity period. A value of <strong>0</strong> indicates that the rule is permanently valid.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -392,7 +414,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the scheduling rule.</p>
+             * <p>The name of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>testrule</p>
@@ -405,8 +427,10 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             /**
              * <p>The source of the rule. Valid values:</p>
              * <ul>
-             * <li><strong>manual</strong> (default): manually created.</li>
-             * <li><strong>auto</strong>: automatically generated.</li>
+             * <li><p><strong>manual</strong> (default): The rule is manually created.</p>
+             * </li>
+             * <li><p><strong>clover</strong>: The rule is automatically generated.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -488,7 +512,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduling rules.</p>
+             * <p>The list of rules.</p>
              */
             public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;

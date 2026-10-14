@@ -67,7 +67,7 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the blackhole filtering status of the instance.</p>
+         * <p>The blackhole filtering status information of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
          */
         public Builder blackholeStatus(java.util.List<BlackholeStatus> blackholeStatus) {
             this.blackholeStatus = blackholeStatus;
@@ -170,10 +170,12 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether blackhole filtering is triggered for the instance. Valid values:</p>
+             * <p>The blackhole filtering status. Valid values:</p>
              * <ul>
-             * <li><strong>blackhole</strong>: yes</li>
-             * <li><strong>normal</strong>: no</li>
+             * <li><p><strong>blackhole</strong>: Black Hole Activated</p>
+             * </li>
+             * <li><p><strong>normal</strong>: Normal</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -185,7 +187,7 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of blackhole filtering. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The end time of blackhole filtering. This value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1540196323</p>
@@ -196,7 +198,7 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the instance.</p>
+             * <p>The IP address of the Anti-DDoS Proxy instance.</p>
              * 
              * <strong>example:</strong>
              * <p>203.<em><strong>.</strong></em>.132</p>
@@ -207,7 +209,7 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of blackhole filtering. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The start time of blackhole filtering. This value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1540195323</p>

@@ -54,10 +54,7 @@ public class ModifyElasticBizBandWidthResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>C566BA3A-192F-5D32-8A33-21422F975145</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

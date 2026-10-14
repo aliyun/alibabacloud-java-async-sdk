@@ -83,16 +83,16 @@ public class ConfigNetworkRulesRequest extends Request {
         }
 
         /**
-         * <p>The details of the port forwarding rule. This parameter is a JSON string. The string contains the following fields:</p>
+         * <p>The details of the port forwarding rules. The value is a JSON format character string that contains the following structure:</p>
          * <ul>
-         * <li><strong>InstanceId</strong>: the ID of the instance. This field is required and must be of the STRING type.</li>
-         * <li><strong>Protocol</strong>: the forwarding protocol. This field is required and must be of the STRING type. Valid values: <strong>tcp</strong> and <strong>udp</strong>.</li>
-         * <li><strong>FrontendPort</strong>: the forwarding port. This field is required and must be of the INTEGER type.</li>
-         * <li><strong>BackendPort</strong>: the port of the origin server. This field is required and must be of the INTEGER type.</li>
-         * <li><strong>RealServers</strong>: the IP addresses of the origin server. This field is required and must be a JSON array. You can specify up to 20 IP addresses.</li>
+         * <li><strong>InstanceId</strong>: String. Required. The instance ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</li>
+         * <li><strong>Protocol</strong>: String. Required. The forwarding protocol type. Valid values: <strong>tcp</strong>, <strong>udp</strong>.</li>
+         * <li><strong>FrontendPort</strong>: Integer. Required. The Redirection Port.</li>
+         * <li><strong>BackendPort</strong>: Integer. Required. The origin server port.</li>
+         * <li><strong>RealServers</strong>: JSON array. Required. The list of origin server IP addresses. A maximum of 20 IP addresses are supported.</li>
          * </ul>
          * <blockquote>
-         * <p>You can modify only the value of <strong>RealServers</strong> when you modify a port forwarding rule.</p>
+         * <p>When you edit port forwarding rules, you can modify only <strong>RealServers</strong>, which specifies the origin server IP addresses.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

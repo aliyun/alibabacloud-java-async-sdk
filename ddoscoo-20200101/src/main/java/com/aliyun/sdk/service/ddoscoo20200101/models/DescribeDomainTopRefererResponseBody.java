@@ -67,7 +67,7 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about top referers.</p>
+         * <p>The top referer data of the website.</p>
          */
         public Builder domainTopReferer(java.util.List<DomainTopReferer> domainTopReferer) {
             this.domainTopReferer = domainTopReferer;
@@ -75,7 +75,7 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
@@ -157,7 +157,7 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The domain name of the website.</p>
+             * <p>The domain name of the website service.</p>
              * 
              * <strong>example:</strong>
              * <p>example.aliyundoc.com</p>
@@ -168,7 +168,7 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page views.</p>
+             * <p>The number of request matches.</p>
              * 
              * <strong>example:</strong>
              * <p>257031</p>
@@ -179,7 +179,7 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Base64-encoded referer.</p>
+             * <p>The Base64-encoded value of the referer.</p>
              * 
              * <strong>example:</strong>
              * <p>aHR0cHM6Ly9zZXJ2aWNld2VjaGF0LmNvbS93eGY3ZDc5YWY0YzU4ZDH3NTEvNC9wYWdlLWZyYW1lLmh0bWw=</p>

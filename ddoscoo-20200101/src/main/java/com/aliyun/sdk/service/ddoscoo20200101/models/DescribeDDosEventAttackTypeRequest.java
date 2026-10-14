@@ -113,10 +113,10 @@ public class DescribeDDosEventAttackTypeRequest extends Request {
         }
 
         /**
-         * <p>The type of the attack event that you want to query. Valid values:</p>
+         * <p>The type of the attack event to query. Valid values:</p>
          * <ul>
-         * <li><strong>defense</strong>: attack events that trigger traffic scrubbing</li>
-         * <li><strong>blackhole</strong>: attack events that trigger blackhole filtering</li>
+         * <li><strong>defense</strong>: volumetric attack scrubbing events.</li>
+         * <li><strong>blackhole</strong>: volumetric attack blackhole filtering events.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -130,7 +130,7 @@ public class DescribeDDosEventAttackTypeRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+         * <p>The attacked IP Address of Anti-DDoS Proxy instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,9 +143,9 @@ public class DescribeDDosEventAttackTypeRequest extends Request {
         }
 
         /**
-         * <p>The UNIX timestamp when the query starts. Unit: seconds.</p>
+         * <p>The start timestamp of the event to query. Unit: seconds.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188604.html">DescribeDDosAllEventList</a> operation to query the beginning time of all attack events.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/188604.html">DescribeDDosAllEventList</a> to query the start time of all events.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

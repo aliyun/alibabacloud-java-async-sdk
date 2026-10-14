@@ -170,7 +170,7 @@ public class CreatePortRequest extends Request {
         }
 
         /**
-         * <p>The port of the origin server. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>The origin server port. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>55</p>
@@ -182,7 +182,7 @@ public class CreatePortRequest extends Request {
         }
 
         /**
-         * <p>The forwarding port. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>The forward port. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,10 +195,10 @@ public class CreatePortRequest extends Request {
         }
 
         /**
-         * <p>The type of the forwarding protocol. Valid values:</p>
+         * <p>The forwarding protocol type. Valid values:</p>
          * <ul>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
+         * <li><strong>tcp</strong>: TCP protocol.</li>
+         * <li><strong>udp</strong>: UDP protocol.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -214,7 +214,7 @@ public class CreatePortRequest extends Request {
         /**
          * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance to which the port forwarding rule belongs.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -237,7 +237,14 @@ public class CreatePortRequest extends Request {
         }
 
         /**
-         * ProxyEnable.
+         * <p>The traffic redirection switch. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder proxyEnable(Long proxyEnable) {
             this.putQueryParameter("ProxyEnable", proxyEnable);
@@ -246,7 +253,7 @@ public class CreatePortRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of the IP addresses of origin servers.</p>
+         * <p>The list of origin server IP addresses.</p>
          * <p>This parameter is required.</p>
          */
         public Builder realServers(java.util.List<String> realServers) {

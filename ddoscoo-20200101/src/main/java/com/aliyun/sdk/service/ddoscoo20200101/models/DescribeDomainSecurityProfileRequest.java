@@ -60,14 +60,7 @@ public class DescribeDomainSecurityProfileRequest extends Request {
         } 
 
         /**
-         * <p>The domain name of the website.</p>
-         * <blockquote>
-         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.aliyundoc.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);

@@ -78,7 +78,7 @@ public class DescribeStsGrantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The authorization status of Anti-DDoS Pro or Anti-DDoS Premium.</p>
+         * <p>The authorization status of Anti-DDoS Pro and Anti-DDoS Premium.</p>
          */
         public Builder stsGrant(StsGrant stsGrant) {
             this.stsGrant = stsGrant;
@@ -133,8 +133,10 @@ public class DescribeStsGrantStatusResponseBody extends TeaModel {
             /**
              * <p>The authorization status. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Anti-DDoS Pro or Anti-DDoS Premium is not authorized to access other cloud services.</li>
-             * <li><strong>1</strong>: Anti-DDoS Pro or Anti-DDoS Premium is authorized to access other cloud services.</li>
+             * <li><p><strong>0</strong>: Anti-DDoS Proxy are not authorized to access resources of other cloud services.</p>
+             * </li>
+             * <li><p><strong>1</strong>: Anti-DDoS Proxy are authorized to access resources of other cloud services.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

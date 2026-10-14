@@ -67,7 +67,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the mitigation settings of the port forwarding rule for a non-website service. The mitigation settings include session persistence and DDoS mitigation policies.</p>
+         * <p>The protection settings of port forwarding rules for non-website services, including session persistence and DDoS mitigation policies.</p>
          */
         public Builder networkRuleAttributes(java.util.List<NetworkRuleAttributes> networkRuleAttributes) {
             this.networkRuleAttributes = networkRuleAttributes;
@@ -170,7 +170,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The threshold that the number of connections initiated from a source IP address can exceed the limit. Set the value to <strong>5</strong>. If the number of connections initiated from a source IP address exceeds the limit five times during the check, the source IP address is added to the blacklist.</p>
+             * <p>The number of times the source connection exceeds the limit. The value is fixed at <strong>5</strong>, which indicates that if the source connection exceeds the limit 5 times within the check interval, the source IP address is added to the blacklist.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -181,7 +181,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interval at which checks are performed. Set the value to <strong>60</strong>. Unit: seconds.</p>
+             * <p>The check interval. The value is fixed at <strong>60</strong>. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -192,7 +192,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity period of the IP address in the blacklist. Valid values: <strong>60</strong> to <strong>604800</strong>. Unit: seconds.</p>
+             * <p>The validity period of the blacklist entry. Valid values: <strong>60</strong> to <strong>604800</strong>. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>600</p>
@@ -203,12 +203,12 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the limit that causes a source IP address to be added to the blacklist. Valid values:</p>
+             * <p>The type of the source IP address blacklist configuration. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Source New Connection Rate Limit</li>
-             * <li><strong>2</strong>: Source Concurrent Connection Rate Limit</li>
-             * <li><strong>3</strong>: PPS Limit for Source</li>
-             * <li><strong>4</strong>: Bandwidth Limit for Source</li>
+             * <li><strong>1</strong>: IP blacklist for the maximum number of new connections from a source IP address.</li>
+             * <li><strong>2</strong>: IP blacklist for the maximum number of concurrent connections from a source IP address.</li>
+             * <li><strong>3</strong>: IP blacklist for source PPS rate limiting.</li>
+             * <li><strong>4</strong>: IP blacklist for source bandwidth throttling.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -266,7 +266,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The protection policy that a source IP address is added to the blacklist when the number of connections initiated from the IP address frequently exceeds the limit.</p>
+             * <p>The policy for adding a source IP address to the blacklist when the source connection exceeds the limit multiple times.</p>
              */
             public Builder sblack(java.util.List<Sblack> sblack) {
                 this.sblack = sblack;
@@ -333,7 +333,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum length of a packet. Valid values: <strong>0</strong> to <strong>6000</strong>. Unit: bytes.</p>
+             * <p>The maximum packet length. Valid values: <strong>0</strong> to <strong>6000</strong>. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>6000</p>
@@ -344,7 +344,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum length of a packet. Valid values: <strong>0</strong> to <strong>6000</strong>. Unit: bytes.</p>
+             * <p>The minimum packet length. Valid values: <strong>0</strong> to <strong>6000</strong>. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -440,7 +440,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum number of new connections per second that can be established over the port of the destination instance. Valid values: <strong>100</strong> to <strong>100000</strong>.</p>
+             * <p>The maximum number of new connections to a destination IP address. Valid values: <strong>100</strong> to <strong>100000</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>100000</p>
@@ -451,10 +451,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the Destination New Connection Rate Limit switch. Valid values:</p>
+             * <p>The status of the maximum number of new connections to a destination IP address. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The switch is turned off.</li>
-             * <li><strong>1</strong>: The switch is turned on.</li>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -466,7 +466,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of concurrent connections that can be established over the port of the destination instance. Valid values: <strong>1000</strong> to <strong>1000000</strong>.</p>
+             * <p>The maximum number of concurrent connections to a destination IP address. Valid values: <strong>1000</strong> to <strong>1000000</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -477,10 +477,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the Destination Concurrent Connection Rate Limit switch. Valid values:</p>
+             * <p>The status of the maximum number of concurrent connections to a destination IP address. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The switch is turned off.</li>
-             * <li><strong>1</strong>: The switch is turned on.</li>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -616,7 +616,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bandwidth limit for a source IP address. Valid values: <strong>1024</strong> to <strong>268435456</strong>. Unit: bytes/s. Default value: <strong>0</strong>, which indicates that the bandwidth for a source IP address is unlimited.</p>
+             * <p>The source bandwidth throttling value. Valid values: <strong>1024</strong> to <strong>268435456</strong>. Unit: Byte/s. Default value: <strong>0</strong>, which indicates that source bandwidth throttling is disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -627,7 +627,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of new connections per second that can be initiated from a source IP address. Valid values: <strong>1</strong> to <strong>500000</strong>.</p>
+             * <p>The maximum number of new connections from a source IP address. Valid values: <strong>1</strong> to <strong>500000</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -638,10 +638,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the Source New Connection Rate Limit switch. Valid values:</p>
+             * <p>The status of the maximum number of new connections from a source IP address. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The switch is turned off.</li>
-             * <li><strong>1</strong>: The switch is turned on.</li>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -653,10 +653,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode of the Source New Connection Rate Limit switch. Valid values:</p>
+             * <p>The mode of the maximum number of new connections from a source IP address. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: the manual mode</li>
-             * <li><strong>2</strong>: the automatic mode</li>
+             * <li><strong>1</strong>: manual.</li>
+             * <li><strong>2</strong>: automatic.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -668,7 +668,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of concurrent connections initiated from a source IP address. Valid values: <strong>1</strong> to <strong>500000</strong>.</p>
+             * <p>The maximum number of concurrent connections from a source IP address. Valid values: <strong>1</strong> to <strong>500000</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -679,10 +679,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the Source Concurrent Connection Rate Limit switch. Valid values:</p>
+             * <p>The status of the maximum number of concurrent connections from a source IP address. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The switch is turned off.</li>
-             * <li><strong>1</strong>: The switch is turned on.</li>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -694,7 +694,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The packets per second (pps) limit for a source IP address. Valid values: <strong>1</strong> to <strong>100000</strong>. Unit: packets/s. Default value: <strong>0</strong>, which indicates that the pps for a source IP address is unlimited.</p>
+             * <p>The source packets per second (PPS) rate limit. Valid values: <strong>1</strong> to <strong>100000</strong>. Unit: Packet/s. Default value: <strong>0</strong>, which indicates that source PPS rate limiting is disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -829,7 +829,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The protection policy applied when the number of connections initiated from a source IP address frequently exceeds the limit.</p>
+             * <p>The policy for controlling sources that frequently exceed connection limits.</p>
              */
             public Builder cc(Cc cc) {
                 this.cc = cc;
@@ -837,10 +837,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the Empty Connection switch. Valid values:</p>
+             * <p>The status of the Empty Connection filter. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong>: The switch is turned on.</li>
-             * <li><strong>off</strong>: The switch is turned off.</li>
+             * <li><strong>on</strong>: enabled.</li>
+             * <li><strong>off</strong>: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -852,7 +852,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The settings of the Packet Length Limit policy.</p>
+             * <p>The Packet Length Limit configuration.</p>
              */
             public Builder payloadLen(PayloadLen payloadLen) {
                 this.payloadLen = payloadLen;
@@ -871,7 +871,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The settings of the Speed Limit for Destination policy.</p>
+             * <p>The Speed Limit for Destination configuration.</p>
              */
             public Builder sla(Sla sla) {
                 this.sla = sla;
@@ -879,7 +879,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The settings of the Speed Limit for Source policy.</p>
+             * <p>The source rate limiting configuration.</p>
              */
             public Builder slimit(Slimit slimit) {
                 this.slimit = slimit;
@@ -887,10 +887,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the False Source switch. Valid values:</p>
+             * <p>The status of the False Source filter. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong>: The switch is turned on.</li>
-             * <li><strong>off</strong>: The switch is turned off.</li>
+             * <li><strong>on</strong>: enabled.</li>
+             * <li><strong>off</strong>: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -987,7 +987,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The mitigation settings of the port forwarding rule.</p>
+             * <p>The protection settings of the port forwarding rules.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -1006,7 +1006,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
              * 
              * <strong>example:</strong>
              * <p>ddoscoo-cn-mp91j1ao****</p>

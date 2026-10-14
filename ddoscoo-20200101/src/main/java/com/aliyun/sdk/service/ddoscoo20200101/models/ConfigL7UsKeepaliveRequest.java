@@ -88,9 +88,9 @@ public class ConfigL7UsKeepaliveRequest extends Request {
         } 
 
         /**
-         * <p>The domain name of the website.</p>
+         * <p>The domain name of the website service.</p>
          * <blockquote>
-         * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>The domain name must have a website service forwarding rule configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,10 @@ public class ConfigL7UsKeepaliveRequest extends Request {
         }
 
         /**
-         * DownstreamKeepalive.
+         * <p>The idle timeout period of the persistent connection between the client and Anti-DDoS Proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder downstreamKeepalive(String downstreamKeepalive) {
             this.putQueryParameter("DownstreamKeepalive", downstreamKeepalive);
@@ -112,11 +115,11 @@ public class ConfigL7UsKeepaliveRequest extends Request {
         }
 
         /**
-         * <p>The settings for back-to-origin persistent connections. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
+         * <p>The persistent connection settings for back-to-origin requests of Anti-DDoS Proxy. The value is a string that represents a JSON struct. The JSON struct contains the following fields:</p>
          * <ul>
-         * <li><strong>enabled</strong>: the switch for back-to-origin persistent connections. This field is required, and the value is of the Boolean type.</li>
-         * <li><strong>keepalive_requests</strong>: the number of requests that reuse a persistent connection. This field is required, and the value is of the integer type.</li>
-         * <li><strong>keepalive_timeout</strong>: the timeout period for an idle persistent connection. This field is required, and the value is of the integer type.</li>
+         * <li><strong>enabled</strong>: Boolean | Required | Specifies whether to enable persistent connections for back-to-origin requests.</li>
+         * <li><strong>keepalive_requests</strong>: Integer | Required | The number of requests that can be sent over a persistent connection.</li>
+         * <li><strong>keepalive_timeout</strong>: Integer | Required | The idle timeout period of a persistent connection.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

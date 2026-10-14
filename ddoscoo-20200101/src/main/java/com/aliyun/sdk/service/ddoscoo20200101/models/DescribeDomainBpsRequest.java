@@ -121,7 +121,7 @@ public class DescribeDomainBpsRequest extends Request {
         /**
          * <p>The domain name of the website.</p>
          * <blockquote>
-         * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class DescribeDomainBpsRequest extends Request {
         /**
          * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -165,8 +165,10 @@ public class DescribeDomainBpsRequest extends Request {
         /**
          * <p>The region in which your service is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn</strong>: a region in the Chinese mainland.</li>
-         * <li><strong>cn-hongkong</strong>: a region outside the Chinese mainland.</li>
+         * <li><p><strong>cn</strong>: a region in the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>cn-hongkong</strong>: a region outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -182,7 +184,7 @@ public class DescribeDomainBpsRequest extends Request {
         /**
          * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

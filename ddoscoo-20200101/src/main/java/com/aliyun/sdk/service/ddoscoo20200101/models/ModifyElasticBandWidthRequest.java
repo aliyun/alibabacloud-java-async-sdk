@@ -98,9 +98,9 @@ public class ModifyElasticBandWidthRequest extends Request {
         }
 
         /**
-         * <p>The new burstable protection bandwidth that you want to use. Unit: Gbit/s.</p>
+         * <p>The burstable protection bandwidth that you want to set. Unit: Gbps.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91502.html">DescribeElasticBandwidthSpec</a> operation to query the available burstable protection bandwidth of the instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/91502.html">DescribeElasticBandwidthSpec</a> to query the available burstable protection bandwidth specifications.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -114,9 +114,9 @@ public class ModifyElasticBandWidthRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
          * <blockquote>
-         * <p> The instance must be in a normal state. You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>The instance must be in a normal state. You can call <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

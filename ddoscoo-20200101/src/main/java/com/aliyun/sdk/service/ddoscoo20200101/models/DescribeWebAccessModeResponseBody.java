@@ -67,7 +67,7 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array consisting of the modes in which the website service is added.</p>
+         * <p>The access mode information of website businesses.</p>
          */
         public Builder domainModes(java.util.List<DomainModes> domainModes) {
             this.domainModes = domainModes;
@@ -144,11 +144,14 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The mode in which the website service is added. Valid values:</p>
+             * <p>The access mode. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: A record</li>
-             * <li><strong>1</strong>: anti-DDoS mode</li>
-             * <li><strong>2</strong>: origin redundancy mode</li>
+             * <li><p><strong>0</strong>: A record access</p>
+             * </li>
+             * <li><p><strong>1</strong>: Anti-DDoS Proxy mode</p>
+             * </li>
+             * <li><p><strong>2</strong>: Back-to-origin mode</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

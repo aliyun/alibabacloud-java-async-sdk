@@ -67,7 +67,7 @@ public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the fingerprints of the clients.</p>
+         * <p>The list of client fingerprints for the website.</p>
          */
         public Builder domainTopFp(java.util.List<DomainTopFp> domainTopFp) {
             this.domainTopFp = domainTopFp;
@@ -75,7 +75,7 @@ public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
@@ -168,7 +168,7 @@ public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fingerprint of the client.</p>
+             * <p>The client fingerprint.</p>
              * 
              * <strong>example:</strong>
              * <p>8a374c9724582b14a4cfa58c8c9fb2bc</p>
@@ -179,7 +179,7 @@ public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page views.</p>
+             * <p>The number of request matches.</p>
              * 
              * <strong>example:</strong>
              * <p>22121</p>

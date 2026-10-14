@@ -67,7 +67,7 @@ public class DescribeElasticBandwidthSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the available burstable protection bandwidths. Unit: Gbit/s.</p>
+         * <p>The list of available burstable protection bandwidth specifications. Unit: Gbit/s.</p>
          */
         public Builder elasticBandwidthSpec(java.util.List<String> elasticBandwidthSpec) {
             this.elasticBandwidthSpec = elasticBandwidthSpec;

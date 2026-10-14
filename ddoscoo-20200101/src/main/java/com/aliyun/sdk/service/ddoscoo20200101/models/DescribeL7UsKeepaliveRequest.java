@@ -59,9 +59,9 @@ public class DescribeL7UsKeepaliveRequest extends Request {
         } 
 
         /**
-         * <p>The domain name of the website.</p>
+         * <p>The domain name of the website service.</p>
          * <blockquote>
-         * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>The domain name must have a website service forwarding rule configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

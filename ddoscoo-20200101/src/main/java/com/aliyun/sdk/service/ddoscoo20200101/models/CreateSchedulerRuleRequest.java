@@ -141,16 +141,14 @@ public class CreateSchedulerRuleRequest extends Request {
         }
 
         /**
-         * <p>The details of the CDN interaction rule. This parameter is a JSON string. The following list describes the fields in the value of the parameter:</p>
+         * <p>The details of the CDN interaction rule. This parameter is a JSON format character string. The following list describes the structure:</p>
          * <ul>
-         * <li><p><strong>ParamType</strong>: the type of the scheduling rule. This field is required and must be of the string type. Set the value to <strong>cdn</strong>. This indicates that you want to modify a CDN interaction rule.</p>
-         * </li>
-         * <li><p><strong>ParamData</strong>: the values of parameters that you want to modify for the CDN interaction rule. This field is required and must be of the map type. ParamData contains the following parameters:</p>
-         * <ul>
-         * <li><strong>Domain</strong>: the accelerated domain in CDN. This parameter is required and must be of the string type.</li>
-         * <li><strong>Cname</strong>: the CNAME that is assigned to the accelerated domain. This parameter is required and must be of the string type.</li>
-         * <li><strong>AccessQps</strong>: the queries per second (QPS) threshold that is used to switch service traffic to Anti-DDoS Pro or Anti-DDoS Premium. This parameter is required and must be of the integer type.</li>
-         * <li><strong>UpstreamQps</strong>: the QPS threshold that is used to switch service traffic to CDN. This parameter is optional and must be of the integer type.</li>
+         * <li><strong>ParamType</strong>: Required. String type. The type of CDN interaction. Valid values: <strong>cdn</strong>, which indicates CDN interaction.</li>
+         * <li><strong>ParamData</strong>: Required. Map type. The CDN interaction parameters. The following list describes the structure:<ul>
+         * <li><strong>Domain</strong>: Required. String type. The CDN-accelerated domain name.</li>
+         * <li><strong>Cname</strong>: Required. String type. The CNAME of the accelerated domain name.</li>
+         * <li><strong>AccessQps</strong>: Required. Integer type. The access QPS threshold. If the QPS exceeds this threshold, traffic is switched to Anti-DDoS Pro and Anti-DDoS Premium.</li>
+         * <li><strong>UpstreamQps</strong>: Optional. Integer type. The back-to-origin QPS threshold. If the QPS is lower than this threshold, traffic is switched to CDN.</li>
          * </ul>
          * </li>
          * </ul>
@@ -165,7 +163,7 @@ public class CreateSchedulerRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -193,8 +191,8 @@ public class CreateSchedulerRuleRequest extends Request {
          * <p>The type of the rule. Valid values:</p>
          * <ul>
          * <li><strong>2</strong>: tiered protection</li>
-         * <li><strong>3</strong>: network acceleration</li>
-         * <li><strong>5</strong>: Alibaba Cloud CDN (CDN) interaction</li>
+         * <li><strong>3</strong>: acceleration for China-to-global traffic</li>
+         * <li><strong>5</strong>: CDN interaction</li>
          * <li><strong>6</strong>: cloud service interaction</li>
          * <li><strong>8</strong>: secure acceleration</li>
          * </ul>
@@ -210,29 +208,24 @@ public class CreateSchedulerRuleRequest extends Request {
         }
 
         /**
-         * <p>The details of the scheduling rule. This parameter is a JSON string. The following list describes the fields in the value of the parameter:</p>
+         * <p>The details of the general interaction rule. This parameter is a JSON string that consists of the following characters. The following list describes the structure:</p>
          * <ul>
-         * <li><p><strong>Type</strong>: the address type of the interaction resource that you want to use in the scheduling rule. This field is required and must be of the string type. Valid values:</p>
-         * <ul>
+         * <li><strong>Type</strong>: String type. Required. The format of the Resource for Interaction address. Valid values:<ul>
          * <li><strong>A</strong>: IP address</li>
          * <li><strong>CNAME</strong>: domain name</li>
          * </ul>
          * </li>
-         * <li><p><strong>Value</strong>: the address of the interaction resource that you want to use in the scheduling rule. This field is required and must be of the string type.</p>
-         * </li>
-         * <li><p><strong>Priority</strong>: the priority of the scheduling rule. This field is required and must be of the integer type. Valid values: <strong>0</strong> to <strong>100</strong>. A larger value indicates a higher priority.</p>
-         * </li>
-         * <li><p><strong>ValueType</strong>: the type of the interaction resource that you want to use in the scheduling rule. This field is required and must be of the integer type. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: the IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance</li>
-         * <li><strong>2</strong>: the IP address of the interaction resource in the tiered protection scenario</li>
-         * <li><strong>3</strong>: the IP address that is used to accelerate access in the network acceleration scenario</li>
-         * <li><strong>5</strong>: the domain name that is configured in Alibaba Cloud CDN (CDN) in the CDN interaction scenario</li>
-         * <li><strong>6</strong> the IP address of the interaction resource in the cloud service interaction scenario</li>
+         * <li><strong>Value</strong>: String type. Required. The address of the Resource for Interaction.</li>
+         * <li><strong>Priority</strong>: Integer type. Required. The priority of the rule. Valid values: <strong>0</strong> to <strong>100</strong>. A larger value indicates a higher priority.</li>
+         * <li><strong>ValueType</strong>: Integer type. Required. The type of the Resource for Interaction. Valid values:<ul>
+         * <li><strong>1</strong>: IP Address of Anti-DDoS Proxy instance </li>
+         * <li><strong>2</strong>: (Tiered protection) IP addresses of cloud resources</li>
+         * <li><strong>3</strong>: (Sec-acceleration for China-to-global traffic) acceleration line IP address</li>
+         * <li><strong>5</strong>: (CDN interaction) acceleration domain name</li>
+         * <li><strong>6</strong>: (Cloud service interaction) IP addresses of cloud resources</li>
          * </ul>
          * </li>
-         * <li><p><strong>RegionId</strong>: the region where the interaction resource is deployed. This parameter must be specified when <strong>ValueType</strong> is set to <strong>2</strong>. The value must be of the string type.</p>
-         * </li>
+         * <li><strong>RegionId</strong>: String type. Optional (required when <strong>ValueType</strong> is <strong>2</strong>). The region ID.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

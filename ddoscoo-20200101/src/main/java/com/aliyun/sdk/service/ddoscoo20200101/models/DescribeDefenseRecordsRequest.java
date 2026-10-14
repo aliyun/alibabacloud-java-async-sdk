@@ -156,9 +156,9 @@ public class DescribeDefenseRecordsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. This value is a UNIX timestamp. Units: miliseconds.</p>
+         * <p>The end of the time range to query. This is a UNIX timestamp. Unit: milliseconds.</p>
          * <blockquote>
-         * <p>The time must be in the latest 90 days.</p>
+         * <p>The time span of the query cannot exceed 90 days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -172,9 +172,9 @@ public class DescribeDefenseRecordsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Anti-DDoS instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class DescribeDefenseRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. For example, to query the returned results on the first page, set the value to <strong>1</strong>.</p>
+         * <p>The number of the page to return. For example, to query the first page, set this parameter to <strong>1</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class DescribeDefenseRecordsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS instance belongs. If you leave this parameter empty, the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -225,9 +225,9 @@ public class DescribeDefenseRecordsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Units: miliseconds.</p>
+         * <p>The beginning of the time range to query. This is a UNIX timestamp. Unit: milliseconds.</p>
          * <blockquote>
-         * <p>The time must be in the latest 90 days.</p>
+         * <p>The time span of the query cannot exceed 90 days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

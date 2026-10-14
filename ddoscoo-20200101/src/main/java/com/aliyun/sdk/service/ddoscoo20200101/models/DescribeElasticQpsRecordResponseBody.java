@@ -325,9 +325,12 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the instance has expired or is released. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: The instance runs as expected.</li>
-             * <li><strong>2</strong>: The instance has expired.</li>
-             * <li><strong>4</strong>: The instance is released.</li>
+             * <li><p><strong>1</strong>: The instance runs as expected.</p>
+             * </li>
+             * <li><p><strong>2</strong>: The instance has expired.</p>
+             * </li>
+             * <li><p><strong>4</strong>: The instance is released.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

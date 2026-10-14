@@ -156,7 +156,10 @@ public class DescribeDDosAllEventListRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The DDoS attack events occur before <strong>EndTime</strong> are queried. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end of the time range to query. DDoS attack events that occurred before <strong>EndTime</strong> are queried. Specify a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p>EndTime can specify only events within the last three months.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,15 +172,15 @@ public class DescribeDDosAllEventListRequest extends Request {
         }
 
         /**
-         * <p>The type of the DDoS attack events you want to query. Valid values:</p>
+         * <p>The type of DDoS attack event to query. Valid values:</p>
          * <ul>
-         * <li><strong>web-cc</strong>: resource exhaustion attacks</li>
-         * <li><strong>cc</strong>: connection flood attacks</li>
-         * <li><strong>defense</strong>: DDoS attacks that trigger traffic scrubbing</li>
-         * <li><strong>blackhole</strong>: DDoS attacks that trigger blackhole filtering</li>
+         * <li><strong>web-cc</strong>: web resource exhaustion attack.</li>
+         * <li><strong>cc</strong>: connection flood attack.</li>
+         * <li><strong>defense</strong>: volumetric attack (scrubbing event).</li>
+         * <li><strong>blackhole</strong>: volumetric attack (blackhole filtering event).</li>
          * </ul>
-         * <p>If you want to query multiple types of DDoS attack events, separate them with commas (,).</p>
-         * <p>If you do not configure this parameter, DDoS attack events of all types are queried.</p>
+         * <p>You can specify multiple types. Separate them with commas (,).</p>
+         * <p>If you do not set this parameter, attack events of all types are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>defense</p>
@@ -189,7 +192,10 @@ public class DescribeDDosAllEventListRequest extends Request {
         }
 
         /**
-         * Ip.
+         * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -198,7 +204,7 @@ public class DescribeDDosAllEventListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number to return in a paging query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +217,7 @@ public class DescribeDDosAllEventListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of attack events to return on each page in a paging query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +230,10 @@ public class DescribeDDosAllEventListRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The DDoS attack events occur after <strong>StartTime</strong> are queried. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The beginning of the time range to query. DDoS attack events that occurred after <strong>StartTime</strong> are queried. Specify a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p>StartTime can specify only events within the last three months.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

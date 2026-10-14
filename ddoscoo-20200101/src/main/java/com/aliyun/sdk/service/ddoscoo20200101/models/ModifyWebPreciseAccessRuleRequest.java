@@ -126,9 +126,9 @@ public class ModifyWebPreciseAccessRuleRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the website.</p>
+         * <p>The domain of the website.</p>
          * <blockquote>
-         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>You must configure a forwarding rule for the domain. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domains.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -142,7 +142,7 @@ public class ModifyWebPreciseAccessRuleRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the rule. Unit: seconds. This parameter takes effect only when <strong>action</strong> of a rule is <strong>block</strong>. Access requests that match the rule are blocked within the specified validity period of the rule. If you do not specify this parameter, this rule takes effect all the time.</p>
+         * <p>The validity period of the rule, in seconds. This parameter applies only when <strong>action</strong> is set to <strong>block</strong>. Requests that match the rule are blocked for the specified duration. If you do not specify this parameter, the rule is permanently effective.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -154,7 +154,7 @@ public class ModifyWebPreciseAccessRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Pro instance belongs. If you do not specify this parameter, the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2pz25js****</p>
@@ -166,32 +166,52 @@ public class ModifyWebPreciseAccessRuleRequest extends Request {
         }
 
         /**
-         * <p>The settings of the accurate access control rule. This parameter is a JSON string. The following list describes the fields in the value of the parameter:</p>
+         * <p>The configuration of the precise access control rule, specified as a JSON-formatted string. The string has the following structure:</p>
          * <ul>
-         * <li><p><strong>action</strong>: the action that is performed if the rule is matched. This field is required and must be of the string type. Valid values:</p>
+         * <li><p><strong>action</strong>: String. Required. The action to perform on matching requests. Valid values:</p>
          * <ul>
-         * <li><strong>accept</strong>: allows the requests that match the rule.</li>
-         * <li><strong>block</strong>: blocks the requests that match the rule.</li>
-         * <li><strong>challenge</strong>: implements a CAPTCHA for the requests that match the rule.</li>
-         * </ul>
+         * <li><p><strong>accept</strong>: Allows the request.</p>
          * </li>
-         * <li><p><strong>name</strong>: the name of the rule. This field is required and must be of the string type.</p>
+         * <li><p><strong>block</strong>: Blocks the request.</p>
          * </li>
-         * <li><p><strong>condition</strong>: the match conditions. This field is required and must be of the map type. A match condition contains the following parameters.</p>
-         * <p>**</p>
-         * <p><strong>Note</strong>The AND logical operator is used to define the relationship among multiple match conditions.</p>
-         * <ul>
-         * <li><p><strong>field</strong>: the match field. This parameter is required and must be of the string type.</p>
+         * <li><p><strong>challenge</strong>: Initiates a challenge to verify the request.</p>
          * </li>
-         * <li><p><strong>match_method</strong>: the logical relation. This parameter is required and must be of the string type.</p>
-         * <p>**</p>
-         * <p><strong>Note</strong>For information about the mappings between the <strong>field</strong> and <strong>match_method</strong> parameters, see the Mappings between the field and match_method parameters table in this topic.</p>
-         * </li>
-         * <li><p><strong>content</strong>: the match content. This parameter is required and must be of the string type.</p>
+         * <li><p><strong>watch</strong>: Monitors the request.</p>
          * </li>
          * </ul>
          * </li>
-         * <li><p><strong>header_name</strong>: the HTTP header. This parameter is optional and must be of the string type. This parameter takes effect only when <strong>field</strong> is <strong>header</strong>.</p>
+         * <li><p><strong>name</strong>: String. Required. The name of the rule.</p>
+         * </li>
+         * <li><p><strong>condition</strong>: Map. Required. The match conditions. The structure is as follows:</p>
+         * <blockquote>
+         * <p>If you specify multiple match conditions, they are evaluated with a logical AND.</p>
+         * </blockquote>
+         * <ul>
+         * <li><p><strong>field</strong>: String. Required. The match field.</p>
+         * </li>
+         * <li><p><strong>match_method</strong>: String. Required. The match method.</p>
+         * <blockquote>
+         * <p>For information about the valid values for <strong>field</strong> and <strong>match_method</strong>, see the &quot;Additional information about request parameters&quot; section.</p>
+         * </blockquote>
+         * </li>
+         * <li><p><strong>content</strong>: String. The value to match. You can specify either this parameter or <code>content_list</code>.</p>
+         * </li>
+         * <li><p><strong>content_list</strong>: String. A list of values to match. You can specify either this parameter or <code>content</code>.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>For information about the valid values for <strong>match_method</strong> and <strong>content/content_list</strong>, see the &quot;Additional information about request parameters&quot; section.</p>
+         * </blockquote>
+         * </li>
+         * <li><p><strong>header_name</strong>: String. Optional. The name of the request header. This parameter applies only when <strong>field</strong> is set to <strong>header</strong>.</p>
+         * </li>
+         * <li><p><strong>case_insensitive</strong>: Boolean. Optional. The default value is false. Valid values:</p>
+         * <ul>
+         * <li><p><strong>false</strong>: case-sensitive</p>
+         * </li>
+         * <li><p><strong>true</strong>: case-insensitive</p>
+         * </li>
+         * </ul>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>

@@ -97,9 +97,9 @@ public class DescribeHeadersRequest extends Request {
         }
 
         /**
-         * <p>The domain name that you want to query.</p>
+         * <p>The domain name for which to query custom headers.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -113,7 +113,7 @@ public class DescribeHeadersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group in Resource Management to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek3cmuvpia****</p>

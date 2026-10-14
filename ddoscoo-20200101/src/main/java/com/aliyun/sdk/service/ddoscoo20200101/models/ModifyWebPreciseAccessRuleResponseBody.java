@@ -54,7 +54,7 @@ public class ModifyWebPreciseAccessRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The unique ID of the request. You can use this ID to locate and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>F908E959-ADA8-4D7B-8A05-FF2F67F50964</p>

@@ -112,9 +112,9 @@ public class AddAutoCcWhitelistRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
          * <blockquote>
-         * <p>This parameter indicates the validity period of the IP address blacklist. By default, the traffic from the IP addresses that you add to the whitelist is always allowed. You do not need to set this parameter.</p>
+         * <p>This parameter specifies the validity period of blacklist IP addresses. Whitelist IP addresses are permanently valid by default. You do not need to set this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -127,9 +127,9 @@ public class AddAutoCcWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance for which you want to add whitelist IP addresses.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>You can invoke <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -143,9 +143,9 @@ public class AddAutoCcWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the IP addresses that you want to add to the whitelist. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
+         * <p>The configuration of the whitelist IP addresses to add. This parameter is a string that is converted from a JSON array. Each element in the JSON array is a whitelist IP struct that contains the following field:</p>
          * <ul>
-         * <li><strong>src</strong>: the IP address that you want to add. This parameter is required. Data type: string.</li>
+         * <li><strong>src</strong>: String | Required | The IP address to add to the whitelist.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

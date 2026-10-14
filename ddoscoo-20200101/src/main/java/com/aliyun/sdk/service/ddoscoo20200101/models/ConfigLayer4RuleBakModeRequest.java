@@ -98,10 +98,10 @@ public class ConfigLayer4RuleBakModeRequest extends Request {
         }
 
         /**
-         * <p>The mode that you want to use to forward service traffic. Valid values:</p>
+         * <p>The back-to-origin mode. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: the default mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the origin IP address that you specified when you created the port forwarding rule. You can call the <a href="https://help.aliyun.com/document_detail/157482.html">CreateNetworkRules</a> operation to create a port forwarding rule.</li>
-         * <li><strong>1</strong>: the origin redundancy mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary or secondary origin servers. You can call the <a href="https://help.aliyun.com/document_detail/312684.html">ConfigLayer4RulePolicy</a> operation to configure IP addresses.</li>
+         * <li><strong>0</strong>: The default back-to-origin mode. Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the origin server IP address that you specified when you called <a href="https://help.aliyun.com/document_detail/157482.html">CreateNetworkRules</a> to create the port forwarding rule.</li>
+         * <li><strong>1</strong>: The origin redundancy mode. Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the primary origin server IP address or secondary origin server IP address that you configured by calling <a href="https://help.aliyun.com/document_detail/312684.html">ConfigLayer4RulePolicy</a>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -115,21 +115,21 @@ public class ConfigLayer4RuleBakModeRequest extends Request {
         }
 
         /**
-         * <p>The port forwarding rule that you want to manage.</p>
-         * <p>This parameter is a string that consists of JSON arrays. Each element in a JSON array indicates a port forwarding rule. You can perform this operation only on one port forwarding rule at a time.</p>
+         * <p>The port forwarding rule to configure.</p>
+         * <p>This parameter is a string converted from a JSON array. Each element in the JSON array represents a created port forwarding rule. You can configure up to one port forwarding rule at a time.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157484.html">DescribeNetworkRules</a> to query existing port forwarding rules.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/157484.html">DescribeNetworkRules</a> to query all created port forwarding rules.</p>
          * </blockquote>
          * <p>Each port forwarding rule contains the following fields:</p>
          * <ul>
-         * <li><strong>InstanceId</strong>: the ID of the instance. This field is required and must be of the STRING type.</li>
-         * <li><strong>Protocol</strong>: the forwarding protocol. This field is required and must be of the STRING type. Valid values: <strong>tcp</strong> and <strong>udp</strong>.</li>
-         * <li><strong>FrontendPort</strong>: the forwarding port. This field is required and must be of the INTEGER type.</li>
+         * <li><strong>InstanceId</strong>: String type. Required. The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</li>
+         * <li><strong>Protocol</strong>: String type. Required. The forwarding protocol type. Valid values: <strong>tcp</strong>, <strong>udp</strong>.</li>
+         * <li><strong>FrontendPort</strong>: Integer type. Required. The Redirection Port.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;InstanceId&quot;:&quot;ddosDip-sg-4hr2b3l****&quot;,&quot;FrontendPort&quot;:2020,&quot;Protocol&quot;:&quot;udp&quot;}]</p>
+         * <p>[{\&quot;InstanceId\&quot;:\&quot;ddosDip-sg-4hr2b3l****\&quot;,\&quot;FrontendPort\&quot;:2020,\&quot;Protocol\&quot;:\&quot;udp\&quot;}]</p>
          */
         public Builder listeners(String listeners) {
             this.putQueryParameter("Listeners", listeners);

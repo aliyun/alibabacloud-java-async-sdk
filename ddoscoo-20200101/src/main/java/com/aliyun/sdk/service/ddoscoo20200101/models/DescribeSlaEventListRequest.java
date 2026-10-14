@@ -134,12 +134,12 @@ public class DescribeSlaEventListRequest extends Request {
         /**
          * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>3289457398</p>
+         * <p>1671886740</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -186,8 +186,10 @@ public class DescribeSlaEventListRequest extends Request {
         /**
          * <p>The type of the service Valid values:</p>
          * <ul>
-         * <li><strong>cn</strong>: Anti-DDoS Pro</li>
-         * <li><strong>cn-hongkong</strong>: Anti-DDoS Premium</li>
+         * <li><p><strong>cn</strong>: Anti-DDoS Pro</p>
+         * </li>
+         * <li><p><strong>cn-hongkong</strong>: Anti-DDoS Premium</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -203,12 +205,12 @@ public class DescribeSlaEventListRequest extends Request {
         /**
          * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>3289457398</p>
+         * <p>1678080840</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

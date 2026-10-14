@@ -67,7 +67,7 @@ public class DescribeL7GlobalRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * GlobalRules.
+         * <p>The global template rule information.</p>
          */
         public Builder globalRules(java.util.List<GlobalRules> globalRules) {
             this.globalRules = globalRules;
@@ -75,7 +75,10 @@ public class DescribeL7GlobalRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,15 @@ public class DescribeL7GlobalRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action that the rule performs. Valid values:</p>
+             * <ul>
+             * <li><strong>watch</strong>: Monitor.</li>
+             * <li><strong>block</strong>: Block.</li>
+             * <li><strong>challenge</strong>: JavaScript Challenge.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>watch</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -201,7 +212,15 @@ public class DescribeL7GlobalRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ActionDefault.
+             * <p>The default action of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>watch</strong>: Monitor.</li>
+             * <li><strong>block</strong>: Block.</li>
+             * <li><strong>challenge</strong>: JavaScript Challenge.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>watch</p>
              */
             public Builder actionDefault(String actionDefault) {
                 this.actionDefault = actionDefault;
@@ -209,7 +228,10 @@ public class DescribeL7GlobalRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP请求疑似模拟浏览器，校验浏览器Header等组合特征#4</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -217,7 +239,14 @@ public class DescribeL7GlobalRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Enabled.</li>
+             * <li><strong>0</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enabled(Long enabled) {
                 this.enabled = enabled;
@@ -225,7 +254,10 @@ public class DescribeL7GlobalRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global_1</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -233,7 +265,10 @@ public class DescribeL7GlobalRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>模拟浏览器请求</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;

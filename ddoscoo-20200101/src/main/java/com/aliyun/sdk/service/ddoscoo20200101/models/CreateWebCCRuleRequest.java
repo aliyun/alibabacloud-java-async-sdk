@@ -202,10 +202,10 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * <p>The action on the requests that trigger the custom frequency control rule. Valid values:</p>
+         * <p>The action to be performed on requests that match the rule. Valid values:</p>
          * <ul>
-         * <li><strong>close</strong>: blocks the requests.</li>
-         * <li><strong>captcha</strong>: triggers Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests.</li>
+         * <li><strong>close</strong>: blocks the request.</li>
+         * <li><strong>captcha</strong>: initiates bot detection.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -219,6 +219,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
+         * <p>The number of access requests from a single IP address. Valid values: <strong>2</strong> to <strong>2000</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +234,7 @@ public class CreateWebCCRuleRequest extends Request {
         /**
          * <p>The domain name of the website.</p>
          * <blockquote>
-         * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>The domain name must have a website forwarding rule configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -247,6 +248,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
+         * <p>The detection duration. Valid values: <strong>5</strong> to <strong>10800</strong>. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,7 +267,7 @@ public class CreateWebCCRuleRequest extends Request {
          * <li><strong>match</strong>: exact match.</li>
          * </ul>
          * <blockquote>
-         * <p> If the <strong>URI</strong> of the check path contains parameters, you must set this parameter to <strong>prefix</strong>.</p>
+         * <p>If the detection path <strong>URI</strong> contains parameters, select prefix match (<strong>prefix</strong>).</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -279,7 +281,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the rule. The name can be up to 128 characters in length and contain letters, digits, and underscores (_).</p>
+         * <p>The rule name. The name can contain letters, digits, and underscores (_) and cannot exceed 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -292,8 +294,8 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the Anti-DDoS Proxy instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
-         * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
+         * <p>The resource group ID of the Anti-DDoS instance in Resource Management. Default value: empty, which indicates that the instance belongs to the default resource group.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2pz25js****</p>
@@ -318,9 +320,9 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * <p>The check path.</p>
+         * <p>The detection path.</p>
          * <blockquote>
-         * <p> The URI cannot be modified. The domain name of the website, the check path, and the rule name uniquely identify a rule.</p>
+         * <p>The URI cannot be modified. A rule is uniquely identified by the domain name of the website, the detection path, and the rule name.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

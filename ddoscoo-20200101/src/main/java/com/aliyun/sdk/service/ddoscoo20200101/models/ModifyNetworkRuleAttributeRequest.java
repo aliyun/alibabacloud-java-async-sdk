@@ -142,39 +142,57 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
         }
 
         /**
-         * <p>The detailed settings of the port forwarding rule. This parameter is a JSON string and contains the following fields. The detailed settings of a TCP port forwarding rule contain the following fields.</p>
+         * <p>The advanced settings for the port forwarding rule. Specify the settings as a JSON string. The structure is described below.
+         * The structure of \<code>TcpConfig\\</code> is as follows:</p>
          * <ul>
-         * <li><strong>PersistenceTimeout</strong>: the timeout period of session persistence. This field is required and of the integer type. Valid values: <strong>30</strong> to <strong>3600</strong>. Unit: seconds. Default value: <strong>0</strong>, which indicates that session persistence is disabled.</li>
-         * <li><strong>Synproxy</strong>: specifies whether to enable the false source feature in the DDoS mitigation policy. This field is required and of the string type. Valid values: off and on.</li>
-         * <li><strong>NodataConn</strong>: specifies whether to enable the empty connection feature in the DDoS mitigation policy. This field is required and of the string type. Valid values: off and on.</li>
-         * <li><strong>Sla</strong>: the settings of the speed limit for destination feature. This field is required and of the struct type. For more information, see the following description about Sla.</li>
-         * <li><strong>Slimit</strong>: the settings of the rate limit for source feature. This field is required and of the struct type. For more information, see the following description about Slimit.</li>
-         * <li><strong>PayloadLen</strong>: the settings of the packet length limit feature. This field is required and of the struct type. For more information, see the following description about PayloadLen.</li>
+         * <li><p><strong>PersistenceTimeout</strong>: An integer. This parameter is required. The timeout period for session persistence. Unit: seconds. Valid values: <strong>30</strong> to <strong>3600</strong>. The default value is <strong>0</strong>, which disables session persistence.</p>
+         * </li>
+         * <li><p><strong>Synproxy</strong>: A string. This parameter is required. The status of the False Source setting for the DDoS mitigation policy. Valid values: \<code>off\\</code> and \<code>on\\</code>.</p>
+         * </li>
+         * <li><p><strong>NodataConn</strong>: A string. This parameter is required. The status of the Empty Connection setting for the DDoS mitigation policy. Valid values: \<code>off\\</code> and \<code>on\\</code>.</p>
+         * </li>
+         * <li><p><strong>Sla</strong>: A struct. This parameter is required. The configuration for destination rate limiting. For more information, see the \<code>Sla\\</code> section below.</p>
+         * </li>
+         * <li><p><strong>Slimit</strong>: A struct. This parameter is required. The configuration for source rate limiting. For more information, see the \<code>Slimit\\</code> section below.</p>
+         * </li>
+         * <li><p><strong>PayloadLen</strong>: A struct. This parameter is required. The packet length filter configuration. For more information, see the \<code>PayloadLen\\</code> section below.</p>
+         * </li>
          * </ul>
-         * <p>Sla contains the following fields:</p>
+         * <p>The structure of \<code>Sla\\</code> is as follows:</p>
          * <ul>
-         * <li><strong>Cps</strong>: the destination rate limit on new connections in the DDoS mitigation policy. This field is required and of the integer type. Valid values: 100 to 100000.</li>
-         * <li><strong>Maxconn</strong>: the destination rate limit on concurrent connections in the DDoS mitigation policy. This field is required and of the integer type. Valid values: 1000 to 1000000.</li>
-         * <li><strong>CpsEnable</strong>: specifies whether to enable Cps. This field is required and of the integer type. Valid values: 0 and 1. Default value: 1. The value 0 indicates that Cps is disabled, and the value 1 indicates that Cps is enabled.</li>
-         * <li><strong>MaxconnEnable</strong>: specifies whether to enable Maxconn. This field is required and of the integer type. Valid values: 0 and 1. Default value: 1. The value 0 indicates that Maxconn is disabled, and the value 1 indicates that Maxconn is enabled.</li>
+         * <li><p><strong>Cps</strong>: An integer. This parameter is required. The maximum number of new connections per second to a destination IP address. Valid values: 100 to 100,000.</p>
+         * </li>
+         * <li><p><strong>Maxconn</strong>: An integer. This parameter is required. The maximum number of concurrent connections to a destination IP address. Valid values: 1,000 to 1,000,000.</p>
+         * </li>
+         * <li><p><strong>CpsEnable</strong>: An integer. This parameter is required. Specifies whether to enable the limit on new connections. Valid values: 0 (disabled) and 1 (enabled). The default value is 1.</p>
+         * </li>
+         * <li><p><strong>MaxconnEnable</strong>: An integer. This parameter is required. Specifies whether to enable the limit on concurrent connections. Valid values: 0 (disabled) and 1 (enabled). The default value is 1.</p>
+         * </li>
          * </ul>
-         * <p>Slimit contains the following fields:</p>
+         * <p>The structure of \<code>Slimit\\</code> is as follows:</p>
          * <ul>
-         * <li><strong>Cps</strong>: the source rate limit on new connections in the DDoS mitigation policy. This field is required and of the integer type. Valid values: 1 to 50000.</li>
-         * <li><strong>Maxconn</strong>: the source rate limit on concurrent connections in the DDoS mitigation policy. This field is required and of the integer type. Valid values: 1 to 50000.</li>
-         * <li><strong>CpsEnable</strong>: specifies whether to enable Cps. This field is required and of the integer type. Valid values: 0 and 1. Default value: 1. The value 0 indicates that Cps is disabled, and the value 1 indicates that Cps is enabled.</li>
-         * <li><strong>MaxconnEnable</strong>: specifies whether to enable Maxconn. This field is required and of the integer type. Valid values: 0 and 1. Default value: 1. The value 0 indicates that Maxconn is disabled, and the value 1 indicates that Maxconn is enabled.</li>
-         * <li><strong>CpsMode</strong>: specifies whether to enable the source rate limit on new connections. This field is required and of the integer type. Valid values: 1 and 2. The value 1 indicates that the source rate limit is disabled. The value 2 indicates that the system determines whether to enable the source rate limit.</li>
+         * <li><p><strong>Cps</strong>: An integer. This parameter is required. The maximum number of new connections per second from a source IP address. Valid values: 1 to 50,000.</p>
+         * </li>
+         * <li><p><strong>Maxconn</strong>: An integer. This parameter is required. The maximum number of concurrent connections from a source IP address. Valid values: 1 to 50,000.</p>
+         * </li>
+         * <li><p><strong>CpsEnable</strong>: An integer. This parameter is required. Specifies whether to enable the limit on new connections. Valid values: 0 (disabled) and 1 (enabled). The default value is 1.</p>
+         * </li>
+         * <li><p><strong>MaxconnEnable</strong>: An integer. This parameter is required. Specifies whether to enable the limit on concurrent connections. Valid values: 0 (disabled) and 1 (enabled). The default value is 1.</p>
+         * </li>
+         * <li><p><strong>CpsMode</strong>: An integer. This parameter is required. The mode for the new connection rate limit from a source IP address. Valid values: 1 (off) and 2 (auto).</p>
+         * </li>
          * </ul>
-         * <p>PayloadLen contains the following fields:</p>
+         * <p>The structure of \<code>PayloadLen\\</code> is as follows:</p>
          * <ul>
-         * <li><strong>Min</strong>: the minimum packet length in the DDoS mitigation policy. This field is required and of the integer type. Valid values: 0 to 1500.</li>
-         * <li><strong>Max</strong>: the maximum packet length in the DDoS mitigation policy. This field is required and of the integer type. Valid values: 0 to 1500.</li>
+         * <li><p><strong>Min</strong>: An integer. This parameter is required. The minimum packet length. Valid values: 0 to 1,500.</p>
+         * </li>
+         * <li><p><strong>Max</strong>: An integer. This parameter is required. The maximum packet length. Valid values: 0 to 1,500.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;PersistenceTimeout&quot;:900}</p>
+         * <p>{&quot;Slimit&quot;:{&quot;CpsEnable&quot;:1,&quot;MaxconnEnable&quot;:1,&quot;Cps&quot;:1,&quot;Maxconn&quot;:1},&quot;Sla&quot;:{&quot;CpsEnable&quot;:1,&quot;MaxconnEnable&quot;:1,&quot;Cps&quot;:100,&quot;Maxconn&quot;:1000},&quot;PayloadLen&quot;:{&quot;Min&quot;:0,&quot;Max&quot;:1500}}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -185,8 +203,10 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
         /**
          * <p>The forwarding protocol. Valid values:</p>
          * <ul>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
+         * <li><p><strong>tcp</strong></p>
+         * </li>
+         * <li><p><strong>udp</strong></p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -213,9 +233,9 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro and Anti-DDoS Premium instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -229,7 +249,11 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
         }
 
         /**
-         * Module.
+         * <p>The module for Layer 7 port support. The default value is sla. Valid value:</p>
+         * <p><strong>sla</strong>: Speed Limit for Destination</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sla</p>
          */
         public Builder module(String module) {
             this.putQueryParameter("Module", module);

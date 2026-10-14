@@ -80,7 +80,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>39499F01-19D9-4EA4-A0E9-C6014BA5CDBE</p>
@@ -91,7 +91,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of forwarding rules.</p>
+         * <p>The total number of web rules returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,7 +102,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configurations of the forwarding rule.</p>
+         * <p>An array of web rule configurations.</p>
          */
         public Builder webRules(java.util.List<WebRules> webRules) {
             this.webRules = webRules;
@@ -168,7 +168,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The port numbers.</p>
+             * <p>The array of ports associated with the protocol.</p>
              */
             public Builder proxyPorts(java.util.List<String> proxyPorts) {
                 this.proxyPorts = proxyPorts;
@@ -176,12 +176,16 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the protocol. Valid values:</p>
+             * <p>The proxy protocol. Valid values:</p>
              * <ul>
-             * <li><strong>http</strong></li>
-             * <li><strong>https</strong></li>
-             * <li><strong>websocket</strong></li>
-             * <li><strong>websockets</strong></li>
+             * <li><p><strong>http</strong>: HTTP</p>
+             * </li>
+             * <li><p><strong>https</strong>: HTTPS</p>
+             * </li>
+             * <li><p><strong>websocket</strong>: WebSocket</p>
+             * </li>
+             * <li><p><strong>websockets</strong>: WebSockets</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -551,7 +555,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP addresses that are included in the blacklist of the domain name.</p>
+             * <p>An array of IP addresses on the blocklist for the domain.</p>
              */
             public Builder blackList(java.util.List<String> blackList) {
                 this.blackList = blackList;
@@ -559,10 +563,12 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Frequency Control is enabled. Valid values:</p>
+             * <p>Whether CC protection is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -574,10 +580,12 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Custom Rules switch of Frequency Control is turned on. Valid values:</p>
+             * <p>Whether custom CC protection rules are enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -589,12 +597,16 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode of Frequency Control. Valid values:</p>
+             * <p>The CC protection mode. Valid values:</p>
              * <ul>
-             * <li><strong>default</strong>: the Normal mode</li>
-             * <li><strong>gf_under_attack</strong>: the Emergency mode</li>
-             * <li><strong>gf_sos_verify</strong>: the Strict mode</li>
-             * <li><strong>gf_sos_verify</strong>: the Super Strict mode</li>
+             * <li><p><strong>default</strong>: normal mode</p>
+             * </li>
+             * <li><p><strong>gf_under_attack</strong>: Emergency mode</p>
+             * </li>
+             * <li><p><strong>gf_sos_verify</strong>: Strict mode</p>
+             * </li>
+             * <li><p><strong>gf_sos_enhance</strong>: Super Strict mode</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -606,7 +618,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the SSL certificate used by the domain name.</p>
+             * <p>The name of the SSL certificate used by the domain.</p>
              * 
              * <strong>example:</strong>
              * <p>49944XX.pem</p>
@@ -617,7 +629,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CNAME provided by the instance to which the domain name is added.</p>
+             * <p>The CNAME assigned to the domain by Anti-DDoS Pro.</p>
              * 
              * <strong>example:</strong>
              * <p>0ekb69x3j9wvXXXX.aliyunddosXXXX.com</p>
@@ -628,7 +640,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom cipher suites.</p>
+             * <p>An array of custom cipher suites.</p>
              */
             public Builder customCiphers(java.util.List<String> customCiphers) {
                 this.customCiphers = customCiphers;
@@ -636,7 +648,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name of the website.</p>
+             * <p>The domain name.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -647,10 +659,12 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Enable HTTP/2 is turned on. Valid values:</p>
+             * <p>Whether HTTP/2 is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -662,10 +676,12 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Enable HTTPS Redirection is turned on. Valid values:</p>
+             * <p>Whether forced HTTPS redirect is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -677,10 +693,12 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Enable HTTP Redirection of Back-to-origin Requests is turned on. Valid values:</p>
+             * <p>Whether HTTP back-to-source is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -692,11 +710,14 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The advanced HTTPS settings. This parameter takes effect only when the value of the <strong>ProxyType</strong> parameter includes <strong>https</strong>. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
+             * <p>The advanced HTTPS settings, formatted as a JSON string. These settings apply only when the domain uses HTTPS (the <code>ProxyType</code> value includes <code>https</code>). The string contains the following fields:</p>
              * <ul>
-             * <li><strong>Http2https</strong>: indicates whether Enable HTTPS Redirection is turned on. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enable HTTPS Redirection is turned on. The value 1 indicates that Enable HTTPS Redirection is turned off.</li>
-             * <li><strong>Https2http</strong>: indicates whether Enable HTTP Redirection of Back-to-origin Requests is turned on. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is turned on. The value 1 indicates that the feature is turned off.</li>
-             * <li><strong>Http2</strong>: indicates whether Enable HTTP/2 is turned on. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enable HTTP/2 is turned off. The value 1 indicates that Enable HTTP/2 is turned on.</li>
+             * <li><p><strong>Http2https</strong>: integer. Specifies whether to enable forced HTTPS redirect. Valid values: <strong>0</strong> (disabled) and <strong>1</strong> (enabled).</p>
+             * </li>
+             * <li><p><strong>Https2http</strong>: integer. Specifies whether to enable HTTP back-to-source. Valid values: <strong>0</strong> (disabled) and <strong>1</strong> (enabled).</p>
+             * </li>
+             * <li><p><strong>Http2</strong>: integer. Specifies whether to enable HTTP/2. Valid values: <strong>0</strong> (disabled) and <strong>1</strong> (enabled).</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -708,7 +729,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the instances to which the domain name is added.</p>
+             * <p>An array of IDs for the Anti-DDoS Pro instances associated with the domain.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -716,10 +737,12 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Online Certificate Status Protocol (OCSP) feature is turned on. Valid values:</p>
+             * <p>Whether Online Certificate Status Protocol (OCSP) is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -731,11 +754,14 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduling algorithm for back-to-origin traffic. Valid values:</p>
+             * <p>The back-to-source load balancing algorithm. This algorithm determines how traffic is distributed to origin servers. Valid values:</p>
              * <ul>
-             * <li><strong>ip_hash</strong>: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.</li>
-             * <li><strong>rr</strong>: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.</li>
-             * <li><strong>least_time</strong>: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from the instance to origin servers based on the intelligent DNS resolution feature.</li>
+             * <li><p><strong>ip_hash</strong>: IP Hash. This algorithm hashes the source IP address and routes all requests from the same IP address to the same origin server.</p>
+             * </li>
+             * <li><p><strong>rr</strong>: Round Robin. This algorithm distributes requests across origin servers in turn.</p>
+             * </li>
+             * <li><p><strong>least_time</strong>: Least Time. This algorithm uses intelligent DNS resolution to minimize end-to-end latency from the protection node to the origin server.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -747,10 +773,12 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instance forwards the traffic that is destined for the website. Valid values:</p>
+             * <p>Whether Anti-DDoS Pro forwards traffic for the domain. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: Forwarding is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Forwarding is disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -762,7 +790,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details about the protocol type and port number.</p>
+             * <p>An array of proxy configurations for the domain, each specifying a protocol and its associated ports.</p>
              */
             public Builder proxyTypes(java.util.List<ProxyTypes> proxyTypes) {
                 this.proxyTypes = proxyTypes;
@@ -770,12 +798,14 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the domain name is invalid. Valid values:</p>
+             * <p>The reason the domain is penalized. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: No Content Provider (ICP) filing is completed for the domain name.</li>
-             * <li><strong>2</strong>: The business for which you registered the domain name does not meet regulatory requirements.</li>
+             * <li><p><strong>1</strong>: The domain does not have an ICP filing.</p>
+             * </li>
+             * <li><p><strong>2</strong>: The business hosted on the domain does not meet regulatory requirements.</p>
+             * </li>
              * </ul>
-             * <p>If the two reasons are both involved, the value <strong>2</strong> is returned.</p>
+             * <p>If both reasons apply, this parameter returns <strong>2</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -786,10 +816,12 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the domain name is invalid. Valid values:</p>
+             * <p>Whether the domain is penalized. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The domain name is invalid. You can view the specific reasons from the <strong>PunishReason</strong> parameter.</li>
-             * <li><strong>false</strong>: The domain name is valid.</li>
+             * <li><p><strong>true</strong>: The domain is penalized. For more information, see the <code>PunishReason</code> parameter.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The domain is not penalized.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -801,7 +833,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The addresses of origin servers.</p>
+             * <p>An array of origin server addresses.</p>
              */
             public Builder realServers(java.util.List<String> realServers) {
                 this.realServers = realServers;
@@ -811,8 +843,10 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             /**
              * <p>The address type of the origin server. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: IP address</li>
-             * <li><strong>1</strong>: domain name</li>
+             * <li><p><strong>0</strong>: IP address</p>
+             * </li>
+             * <li><p><strong>1</strong>: domain</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -824,10 +858,12 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether TLS 1.3 is supported. Valid values:</p>
+             * <p>Whether TLS 1.3 is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -839,11 +875,16 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cipher suite. Valid values:</p>
+             * <p>The cipher suite configuration type. Valid values:</p>
              * <ul>
-             * <li><strong>default</strong>: custom cipher suite</li>
-             * <li><strong>all</strong>: all cipher suites</li>
-             * <li><strong>strong</strong>: strong cipher suites</li>
+             * <li><p><strong>default</strong>: Custom</p>
+             * </li>
+             * <li><p><strong>all</strong>: All</p>
+             * </li>
+             * <li><p><strong>strong</strong>: Strong</p>
+             * </li>
+             * <li><p><strong>improved</strong>: Improved</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -855,11 +896,14 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the TLS protocol. Valid values:</p>
+             * <p>The minimum TLS protocol version. Valid values:</p>
              * <ul>
-             * <li><strong>tls1.0</strong>: TLS 1.0 or later</li>
-             * <li><strong>tls1.1</strong>: TLS 1.1 or later</li>
-             * <li><strong>tls1.2</strong>: TLS 1.2 or later</li>
+             * <li><p><strong>tls1.0</strong>: TLS 1.0 and later versions.</p>
+             * </li>
+             * <li><p><strong>tls1.1</strong>: TLS 1.1 and later versions.</p>
+             * </li>
+             * <li><p><strong>tls1.2</strong>: TLS 1.2 and later versions.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -871,7 +915,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses that are included in the whitelist of the domain name.</p>
+             * <p>An array of IP addresses on the allowlist for the domain.</p>
              */
             public Builder whiteList(java.util.List<String> whiteList) {
                 this.whiteList = whiteList;

@@ -156,9 +156,9 @@ public class DescribeDDoSEventsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end of the time range to query. This is a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>The timestamp must be on the minute.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -171,9 +171,9 @@ public class DescribeDDoSEventsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The IDs of the Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro and Anti-DDoS Premium instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -187,7 +187,7 @@ public class DescribeDDoSEventsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. For example, to query the returned results on the first page, set the value to <strong>1</strong>.</p>
+         * <p>The number of the page to return. For example, to query the first page, set this parameter to <strong>1</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class DescribeDDoSEventsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group in Resource Management to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs. By default, this parameter is empty, which means that the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -225,9 +225,9 @@ public class DescribeDDoSEventsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The beginning of the time range to query. This is a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>The timestamp must be on the minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

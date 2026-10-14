@@ -113,12 +113,12 @@ public class AddAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses that you want to manage. This parameter is a JSON string. The string contains the following field:</p>
+         * <p>The IP addresses to add to the blacklist. This is a JSON array. Each object in the array contains the following field:</p>
          * <ul>
-         * <li><strong>src</strong>: the IP address. This field is required and must be of the STRING type.</li>
+         * <li><strong>src</strong>: String. Required. The IP address to add.</li>
          * </ul>
          * <blockquote>
-         * <p> You can manually add up to 2,000 IP addresses to the IP address blacklist. Separate multiple IP addresses with spaces or line breaks.</p>
+         * <p>You can add up to 2,000 IP addresses per request.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -132,6 +132,7 @@ public class AddAutoCcBlacklistRequest extends Request {
         }
 
         /**
+         * <p>The expiration time for the blacklist entries, in seconds. Valid values: <strong>300</strong> to <strong>604800</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +145,10 @@ public class AddAutoCcBlacklistRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Anti-DDoS Pro instance.</p>
+         * <blockquote>
+         * <p>Call the <strong>DescribeInstanceIds</strong> operation to query the IDs of all Anti-DDoS Pro instances.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

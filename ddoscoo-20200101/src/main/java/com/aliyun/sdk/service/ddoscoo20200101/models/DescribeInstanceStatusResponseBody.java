@@ -80,7 +80,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ddoscoo-cn-6ja1y6p5****</p>
@@ -91,12 +91,9 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the instance. Valid values:</p>
+         * <p>The status of the Anti-DDoS Pro or Anti-DDoS Premium instance. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: normal</li>
-         * <li><strong>2</strong>: expired</li>
-         * <li><strong>3</strong>: overdue</li>
-         * <li><strong>4</strong>: released</li>
+         * <li><strong>1</strong>: Normal.</li>
          * </ul>
          * 
          * <strong>example:</strong>

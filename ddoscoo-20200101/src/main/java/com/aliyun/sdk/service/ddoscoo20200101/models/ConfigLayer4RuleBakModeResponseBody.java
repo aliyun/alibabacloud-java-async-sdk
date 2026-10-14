@@ -54,7 +54,7 @@ public class ConfigLayer4RuleBakModeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CC042262-15A3-4A49-ADF0-130968EA47BC</p>

@@ -156,13 +156,7 @@ public class DescribeWebReportTopIpRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the website.</p>
-         * <blockquote>
-         * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query the domain names for which forwarding rules are configured.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>app.bmjqxvb.cn</p>
+         * Domain.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -171,14 +165,7 @@ public class DescribeWebReportTopIpRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
-         * <blockquote>
-         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1687228200</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -187,16 +174,7 @@ public class DescribeWebReportTopIpRequest extends Request {
         }
 
         /**
-         * <p>The interval at which data is collected. Unit: seconds. Valid values are 300, 3600, and 86400.</p>
-         * <ul>
-         * <li>If the time span between StartTime and EndTime is less than 3 days (3 days excluded), valid values are 300, 3600, and 86400.</li>
-         * <li>If the time span between StartTime and EndTime is from 3 to 31 days (31 days excluded), valid values are 3600 and 86400.</li>
-         * <li>If the time span between StartTime and EndTime is 31 days or longer, the valid value is 86400.</li>
-         * </ul>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>300</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -205,15 +183,7 @@ public class DescribeWebReportTopIpRequest extends Request {
         }
 
         /**
-         * <p>The source of the statistics. Valid values:</p>
-         * <ul>
-         * <li><strong>visit</strong>: indicates all IP addresses.</li>
-         * <li><strong>block</strong>: indicates blocked IP addresses.</li>
-         * </ul>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>block</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -222,14 +192,7 @@ public class DescribeWebReportTopIpRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
-         * <blockquote>
-         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1680424200</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -238,10 +201,7 @@ public class DescribeWebReportTopIpRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5</p>
+         * Top.
          */
         public Builder top(Integer top) {
             this.putQueryParameter("Top", top);

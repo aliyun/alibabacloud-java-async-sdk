@@ -224,7 +224,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             /**
              * <p>The domain name.</p>
              * <blockquote>
-             * <p> This parameter is returned only when the Layer 7 health check configuration is queried.</p>
+             * <p>This parameter is returned only when the Layer 7 health check configuration is queried.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -282,8 +282,10 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             /**
              * <p>The type of the protocol. Valid values:</p>
              * <ul>
-             * <li><strong>tcp</strong>: The Layer 4 health check configuration was queried.</li>
-             * <li><strong>http</strong>: The Layer 7 health check configuration was queried.</li>
+             * <li><p><strong>tcp</strong>: The Layer 4 health check configuration was queried.</p>
+             * </li>
+             * <li><p><strong>http</strong>: The Layer 7 health check configuration was queried.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -308,7 +310,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             /**
              * <p>The check path.</p>
              * <blockquote>
-             * <p> This parameter is returned only when the Layer 7 health check configuration is queried.</p>
+             * <p>This parameter is returned only when the Layer 7 health check configuration is queried.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -437,8 +439,10 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             /**
              * <p>The forwarding protocol. Valid values:</p>
              * <ul>
-             * <li><strong>tcp</strong></li>
-             * <li><strong>udp</strong></li>
+             * <li><p><strong>tcp</strong></p>
+             * </li>
+             * <li><p><strong>udp</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

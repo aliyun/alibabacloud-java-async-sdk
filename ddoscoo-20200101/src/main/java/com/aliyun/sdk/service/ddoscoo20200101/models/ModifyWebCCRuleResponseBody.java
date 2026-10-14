@@ -54,7 +54,7 @@ public class ModifyWebCCRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of this request.</p>
          * 
          * <strong>example:</strong>
          * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>

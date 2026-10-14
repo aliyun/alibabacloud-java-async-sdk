@@ -125,7 +125,10 @@ public class DescribeSchedulerRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page. For example, to query the results on the first page, enter <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -134,6 +137,7 @@ public class DescribeSchedulerRulesRequest extends Request {
         }
 
         /**
+         * <p>The number of records displayed on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +150,10 @@ public class DescribeSchedulerRulesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID of the Anti-DDoS Proxy instance in Resource Management. The default value is empty, which indicates that the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -155,7 +162,10 @@ public class DescribeSchedulerRulesRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testrule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

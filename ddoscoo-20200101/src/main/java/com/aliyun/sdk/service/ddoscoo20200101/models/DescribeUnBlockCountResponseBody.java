@@ -80,7 +80,7 @@ public class DescribeUnBlockCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The remaining number of times that you can enable the near-origin traffic diversion feature.</p>
+         * <p>The remaining number of available near-origin traffic diversion sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -102,7 +102,7 @@ public class DescribeUnBlockCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of times that you can enable the near-origin traffic diversion feature.</p>
+         * <p>The total number of available near-origin traffic diversion sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -126,7 +126,13 @@ public class DescribeCdnLinkageRulesRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>The domain name of your website.</p>
+         * <blockquote>
+         * <p>The domain name must be added to your Anti-DDoS instance. Call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -135,6 +141,7 @@ public class DescribeCdnLinkageRulesRequest extends Request {
         }
 
         /**
+         * <p>The number of the page to return for a paged query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +154,7 @@ public class DescribeCdnLinkageRulesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to return on each page for a paged query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +167,10 @@ public class DescribeCdnLinkageRulesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the Anti-DDoS instance belongs in Resource Management. If you leave this parameter empty, the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

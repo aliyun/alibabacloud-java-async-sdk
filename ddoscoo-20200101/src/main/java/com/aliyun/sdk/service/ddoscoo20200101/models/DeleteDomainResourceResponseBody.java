@@ -54,7 +54,7 @@ public class DeleteDomainResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of this request.</p>
          * 
          * <strong>example:</strong>
          * <p>39499F01-19D9-4EA4-A0E9-C6014BA5CDBE</p>

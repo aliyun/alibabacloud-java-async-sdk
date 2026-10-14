@@ -108,10 +108,14 @@ public class SwitchSchedulerRuleRequest extends Request {
         /**
          * <p>The type of the scheduling rule. Valid values:</p>
          * <ul>
-         * <li><strong>2</strong>: tiered protection rule</li>
-         * <li><strong>3</strong>: network acceleration rule</li>
-         * <li><strong>5</strong>: Alibaba Cloud CDN (CDN) interaction rule</li>
-         * <li><strong>6</strong>: cloud service interaction rule</li>
+         * <li><p><strong>2</strong>: tiered protection rule</p>
+         * </li>
+         * <li><p><strong>3</strong>: network acceleration rule</p>
+         * </li>
+         * <li><p><strong>5</strong>: Alibaba Cloud CDN (CDN) interaction rule</p>
+         * </li>
+         * <li><p><strong>6</strong>: cloud service interaction rule</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -131,14 +135,18 @@ public class SwitchSchedulerRuleRequest extends Request {
          * </li>
          * <li><p><strong>State</strong>: required. The operation type. Data type: integer. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: switches service traffic from the associated resource to your Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing.</li>
-         * <li><strong>1</strong>: switches service traffic back to the associated cloud resource.</li>
+         * <li><p><strong>0</strong>: switches service traffic from the associated resource to your Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing.</p>
+         * </li>
+         * <li><p><strong>1</strong>: switches service traffic back to the associated cloud resource.</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p><strong>Interval</strong>: optional. The waiting time that is required before the service traffic is switched back. Unit: minutes. Data type: integer. Usage notes:</p>
          * <ul>
-         * <li>If the <strong>State</strong> parameter is set to <strong>0</strong>, you must set this parameter to **-1**. Otherwise, the call fails.</li>
-         * <li>If the <strong>State</strong> parameter is set to <strong>1</strong>, you do not need to set this parameter.</li>
+         * <li><p>If the <strong>State</strong> parameter is set to <strong>0</strong>, you must set this parameter to \<em>\</em>-1\<em>\</em>. Otherwise, the call fails.</p>
+         * </li>
+         * <li><p>If the <strong>State</strong> parameter is set to <strong>1</strong>, you do not need to set this parameter.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>

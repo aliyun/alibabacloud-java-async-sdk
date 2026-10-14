@@ -116,9 +116,12 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         /**
          * <p>The scheduling algorithm for back-to-origin traffic. Valid values:</p>
          * <ul>
-         * <li><strong>ip_hash</strong>: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.</li>
-         * <li><strong>rr</strong>: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.</li>
-         * <li><strong>least_time</strong>: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.</li>
+         * <li><p><strong>ip_hash</strong>: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.</p>
+         * </li>
+         * <li><p><strong>rr</strong>: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.</p>
+         * </li>
+         * <li><p><strong>least_time</strong>: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,8 +157,10 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         /**
          * <p>The back-to-origin retry switch. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: on</li>
-         * <li><strong>0</strong>: off</li>
+         * <li><p><strong>1</strong>: on</p>
+         * </li>
+         * <li><p><strong>0</strong>: off</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,8 +330,10 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             /**
              * <p>The primary/secondary flag. Valid values:</p>
              * <ul>
-             * <li><strong>active</strong>: primary</li>
-             * <li><strong>backup</strong>: secondary</li>
+             * <li><p><strong>active</strong>: primary</p>
+             * </li>
+             * <li><p><strong>backup</strong>: secondary</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -360,7 +367,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight of the origin server. This parameter takes effect only if the value of <strong>ProxyMode</strong> is <strong>rr</strong> or <strong>ip_hash</strong>.****</p>
+             * <p>The weight of the origin server. This parameter takes effect only if the value of <strong>ProxyMode</strong> is <strong>rr</strong> or <strong>ip_hash</strong>.\<em>\</em>\<em>\</em></p>
              * <p>Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>100</strong>. A server with a higher weight receives more requests.</p>
              * 
              * <strong>example:</strong>
@@ -465,8 +472,10 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             /**
              * <p>The address type of the origin server. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: IP address</li>
-             * <li><strong>1</strong>: domain name</li>
+             * <li><p><strong>0</strong>: IP address</p>
+             * </li>
+             * <li><p><strong>1</strong>: domain name</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

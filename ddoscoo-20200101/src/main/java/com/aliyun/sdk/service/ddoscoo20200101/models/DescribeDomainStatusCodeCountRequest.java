@@ -126,9 +126,9 @@ public class DescribeDomainStatusCodeCountRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the website.</p>
+         * <p>The domain name of the website to query. If you leave this parameter unspecified, the statistics on all domain names are queried.</p>
          * <blockquote>
-         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>The domain name must be protected by Anti-DDoS Proxy. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names that are protected by Anti-DDoS Proxy.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class DescribeDomainStatusCodeCountRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the query. The value is a timestamp. Unit: seconds.</p>
          * <blockquote>
          * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
          * </blockquote>
@@ -157,10 +157,11 @@ public class DescribeDomainStatusCodeCountRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Proxy instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>default</p>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -169,7 +170,7 @@ public class DescribeDomainStatusCodeCountRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
          * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
          * </blockquote>

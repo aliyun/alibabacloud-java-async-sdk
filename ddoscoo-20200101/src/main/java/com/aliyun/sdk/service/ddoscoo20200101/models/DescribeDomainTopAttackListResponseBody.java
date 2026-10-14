@@ -67,7 +67,7 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The peak QPS of the website.</p>
+         * <p>The peak QPS data of website services.</p>
          */
         public Builder attackList(java.util.List<AttackList> attackList) {
             this.attackList = attackList;
@@ -75,7 +75,7 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
@@ -157,7 +157,7 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The attack QPS. Unit: QPS</p>
+             * <p>The attack QPS. Unit: QPS.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -168,7 +168,7 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of all QPS, which includes normal and attack QPS. Unit: QPS.</p>
+             * <p>The total QPS, including normal service requests and attacks. Unit: QPS.</p>
              * 
              * <strong>example:</strong>
              * <p>294</p>
@@ -179,7 +179,7 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name of the website.</p>
+             * <p>The website domain name.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>

@@ -67,7 +67,7 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
@@ -78,7 +78,7 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array consisting of the details of the administrative region in China from which the requests are sent.</p>
+         * <p>The information about request source provinces in China for the website service.</p>
          */
         public Builder sourceProvinces(java.util.List<SourceProvinces> sourceProvinces) {
             this.sourceProvinces = sourceProvinces;
@@ -144,7 +144,7 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of requests.</p>
+             * <p>The number of requests.</p>
              * 
              * <strong>example:</strong>
              * <p>3390671</p>
@@ -155,7 +155,7 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region inside China. For more information, see the <strong>Codes of administrative regions in China</strong> section of the <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a> topic. For example, <strong>110000</strong> indicates Beijing, and <strong>120000</strong> indicates Tianjin.</p>
+             * <p>The province ID. For more information, see the <strong>China region codes</strong> section in <a href="https://help.aliyun.com/document_detail/167926.html">China and overseas region codes</a>. For example, <strong>110000</strong> indicates Beijing and <strong>120000</strong> indicates Tianjin.</p>
              * 
              * <strong>example:</strong>
              * <p>440000</p>

@@ -139,7 +139,7 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * <p>The forwarding port to query. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>The forward port to query. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>55</p>
@@ -151,10 +151,10 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * <p>The type of the forwarding protocol to query. Valid values:</p>
+         * <p>The Forwarding Protocol type to query. Valid values:</p>
          * <ul>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
+         * <li><strong>tcp</strong>: TCP protocol.</li>
+         * <li><strong>udp</strong>: UDP protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,9 +167,9 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance to query.</p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * <p>You can invoke <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -183,7 +183,7 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * <p>The page number. For example, if you want to obtain results on the first page, set the value to <strong>1</strong>.</p>
+         * <p>The page number to return in a paged query. For example, set this parameter to <strong>1</strong> to return the first page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -195,7 +195,7 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records on each page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

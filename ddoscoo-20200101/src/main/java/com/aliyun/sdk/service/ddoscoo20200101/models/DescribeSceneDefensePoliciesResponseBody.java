@@ -80,7 +80,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the configurations of the scenario-specific custom policy.</p>
+         * <p>The detailed configurations of the scenario-specific policies.</p>
          */
         public Builder policies(java.util.List<Policies> policies) {
             this.policies = policies;
@@ -88,7 +88,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F65DF043-E0EB-4796-9467-23DDCDF92C1D</p>
@@ -101,8 +101,8 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,9 +198,9 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The protection rule that is applied when the policy takes effect.</p>
-             * <p>If you set <strong>PolicyType</strong> to <strong>1</strong>, the value is <strong>{&quot;cc_rule_enable&quot;: false }</strong>. The value indicates that the Frequency Control policy is disabled.</p>
-             * <p>If you set <strong>PolicyType</strong> to <strong>2</strong>, the value is <strong>{&quot;ai_rule_enable&quot;: 0}</strong>. The value indicates that the Intelligent Protection policy is disabled.</p>
+             * <p>The protection rule when the policy takes effect.</p>
+             * <p>If <strong>PolicyType</strong> is <strong>1</strong>, the value is <strong>{&quot;cc_rule_enable&quot;: false }</strong>, which indicates that frequency control is disabled.</p>
+             * <p>If <strong>PolicyType</strong> is <strong>2</strong>, the value is <strong>{&quot;ai_rule_enable&quot;: 0}</strong>, which indicates that AI-based intelligent analysis is disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;cc_rule_enable&quot;: false }</p>
@@ -211,10 +211,10 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protection policy whose status is changed when the policy takes effect. Valid values:</p>
+             * <p>The type of protection feature change triggered when the policy takes effect. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: indicates that the Frequency Control policy is changed.</li>
-             * <li><strong>2</strong>: indicates that the Intelligent Protection policy is changed.</li>
+             * <li><strong>1</strong>: frequency control feature change.</li>
+             * <li><strong>2</strong>: AI-based intelligent analysis feature change.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -226,15 +226,15 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running status of the policy. Valid values:</p>
+             * <p>The runtime status of the policy. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The policy has not been issued or is restored.</li>
-             * <li><strong>1</strong>: The policy is pending.</li>
-             * <li><strong>2</strong>: The policy is being restored.</li>
-             * <li><strong>3</strong>: The policy takes effect.</li>
-             * <li><strong>4</strong>: The policy fails to take effect.</li>
-             * <li><strong>5</strong>:The policy fails to be restored.</li>
-             * <li><strong>6</strong>: The configurations of the protected objects for the policy does not exist because the configurations may be deleted.</li>
+             * <li><strong>0</strong>: not delivered or policy restored successfully.</li>
+             * <li><strong>1</strong>: active (policy takes effect).</li>
+             * <li><strong>2</strong>: being restored (policy restoration).</li>
+             * <li><strong>3</strong>: policy took effect successfully.</li>
+             * <li><strong>4</strong>: policy failed to take effect.</li>
+             * <li><strong>5</strong>: policy restoration failed.</li>
+             * <li><strong>6</strong>: the configuration of the object associated with the policy does not exist (may have been deleted).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -246,9 +246,9 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protection rule that is applied before the policy takes effect.</p>
-             * <p>If you set <strong>PolicyType</strong> to <strong>1</strong>, the value is <strong>{&quot;cc_rule_enable&quot;: true}</strong>. The value indicates that the Frequency Control policy is enabled.</p>
-             * <p>If you set <strong>PolicyType</strong> to <strong>2</strong>, the value is <strong>{&quot;ai_rule_enable&quot;: 1}</strong>. The value indicates that the Intelligent Protection policy is enabled.</p>
+             * <p>The protection rule before the policy takes effect.</p>
+             * <p>If <strong>PolicyType</strong> is <strong>1</strong>, the value is <strong>{&quot;cc_rule_enable&quot;: true}</strong>, which indicates that frequency control is enabled.</p>
+             * <p>If <strong>PolicyType</strong> is <strong>2</strong>, the value is <strong>{&quot;ai_rule_enable&quot;: 1}</strong>, which indicates that AI-based intelligent analysis is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;cc_rule_enable&quot;: true}</p>
@@ -411,9 +411,9 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             /**
              * <p>The execution status of the policy. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: not executed or execution completed</li>
-             * <li><strong>0</strong>: being executed</li>
-             * <li><strong>-1</strong>: execution failed</li>
+             * <li><strong>1</strong>: not executed or execution completed.</li>
+             * <li><strong>0</strong>: being executed.</li>
+             * <li><strong>-1</strong>: execution failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -425,7 +425,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the policy expires. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The time when the policy stops taking effect. The value is a timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1586016000000</p>
@@ -436,7 +436,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the policy.</p>
+             * <p>The policy name.</p>
              * 
              * <strong>example:</strong>
              * <p>testpolicy</p>
@@ -447,7 +447,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of objects that are protected by the policy.</p>
+             * <p>The number of protected objects in the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -458,7 +458,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the policy.</p>
+             * <p>The policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>321a-fd31-df51-****</p>
@@ -469,7 +469,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running rules of the policy.</p>
+             * <p>The runtime rules of the policy.</p>
              */
             public Builder runtimePolicies(java.util.List<RuntimePolicies> runtimePolicies) {
                 this.runtimePolicies = runtimePolicies;
@@ -477,7 +477,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the policy takes effect. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The time when the policy starts to take effect. The value is a timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1585670400000</p>
@@ -490,10 +490,10 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             /**
              * <p>The status of the policy. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: disabled</li>
-             * <li><strong>1</strong>: pending enabling</li>
-             * <li><strong>2</strong>: enabled</li>
-             * <li><strong>3</strong>: expired</li>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: pending activation.</li>
+             * <li><strong>2</strong>: active.</li>
+             * <li><strong>3</strong>: expired.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -505,10 +505,10 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the template that is used to create the policy. Valid values:</p>
+             * <p>The templatetype used by the policy. Valid values:</p>
              * <ul>
-             * <li><strong>promotion</strong>: the Important Activity template</li>
-             * <li><strong>bypass</strong>: the Forward All template</li>
+             * <li><strong>promotion</strong>: Important Activity template.</li>
+             * <li><strong>bypass</strong>: full forwarding template.</li>
              * </ul>
              * 
              * <strong>example:</strong>

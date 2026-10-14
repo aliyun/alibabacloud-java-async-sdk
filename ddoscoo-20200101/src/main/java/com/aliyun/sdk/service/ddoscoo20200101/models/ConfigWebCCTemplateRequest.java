@@ -112,9 +112,9 @@ public class ConfigWebCCTemplateRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the website.</p>
+         * <p>The domain name of the website service.</p>
          * <blockquote>
-         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>The domain name must have a website forwarding rule configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -128,7 +128,7 @@ public class ConfigWebCCTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs in Resource Management. By default, this parameter is empty, which indicates that the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -140,12 +140,12 @@ public class ConfigWebCCTemplateRequest extends Request {
         }
 
         /**
-         * <p>The mode of the Frequency Control policy. Valid values:</p>
+         * <p>The defense mode for frequency control (HTTP flood mitigation). Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: Normal</li>
-         * <li><strong>gf_under_attack</strong>: Emergency</li>
-         * <li><strong>gf_sos_verify</strong>: Strict</li>
-         * <li><strong>gf_sos_enhance</strong>: Super Strict</li>
+         * <li><strong>default</strong>: Normal.</li>
+         * <li><strong>gf_under_attack</strong>: Emergency.</li>
+         * <li><strong>gf_sos_verify</strong>: Strict.</li>
+         * <li><strong>gf_sos_enhance</strong>: Super Strict.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

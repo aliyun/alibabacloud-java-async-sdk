@@ -314,10 +314,14 @@ public class ModifyDomainResourceRequest extends Request {
             /**
              * <p>The type of the protocol. Valid values:</p>
              * <ul>
-             * <li><strong>http</strong></li>
-             * <li><strong>https</strong></li>
-             * <li><strong>websocket</strong></li>
-             * <li><strong>websockets</strong></li>
+             * <li><p><strong>http</strong></p>
+             * </li>
+             * <li><p><strong>https</strong></p>
+             * </li>
+             * <li><p><strong>websocket</strong></p>
+             * </li>
+             * <li><p><strong>websockets</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

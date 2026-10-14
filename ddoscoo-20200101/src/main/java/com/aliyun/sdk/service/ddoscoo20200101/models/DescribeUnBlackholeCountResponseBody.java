@@ -80,7 +80,7 @@ public class DescribeUnBlackholeCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The remaining quota that you can deactivate blackhole filtering.</p>
+         * <p>The remaining number of times that blackhole filtering can be deactivated.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -91,7 +91,7 @@ public class DescribeUnBlackholeCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>232929FA-40B6-4C53-9476-EE335ABA44CD</p>
@@ -102,7 +102,7 @@ public class DescribeUnBlackholeCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total quota that you can deactivate blackhole filtering.</p>
+         * <p>The total number of times that blackhole filtering can be deactivated.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

@@ -80,8 +80,10 @@ public class DetachSceneDefenseObjectResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><p><strong>true</strong>: yes</p>
+         * </li>
+         * <li><p><strong>false</strong>: no</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

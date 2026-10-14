@@ -209,8 +209,10 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             /**
              * <p>The function plan. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Standard</li>
-             * <li><strong>1</strong>: Enhanced</li>
+             * <li><p><strong>0</strong>: Standard</p>
+             * </li>
+             * <li><p><strong>1</strong>: Enhanced</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -246,11 +248,16 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             /**
              * <p>The type of the instance. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</li>
-             * <li><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</li>
-             * <li><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan</li>
-             * <li><strong>3</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan</li>
-             * <li><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</li>
+             * <li><p><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</p>
+             * </li>
+             * <li><p><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</p>
+             * </li>
+             * <li><p><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan</p>
+             * </li>
+             * <li><p><strong>3</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan</p>
+             * </li>
+             * <li><p><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

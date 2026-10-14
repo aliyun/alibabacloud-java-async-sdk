@@ -67,7 +67,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the burstable QPS.</p>
+         * <p>The time-series data of elastic QPS.</p>
          */
         public Builder elasticQps(java.util.List<ElasticQps> elasticQps) {
             this.elasticQps = elasticQps;
@@ -75,7 +75,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * <p>The unique ID generated for the request. Use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>2E7F7F7B-39A8-5D92-BAB4-D89D9DCE7D4F</p>
@@ -248,7 +248,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The index number of the returned data.</p>
+             * <p>The index of the returned data point.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -259,7 +259,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The peak QPS of the normal service.</p>
+             * <p>The peak normal business QPS.</p>
              * 
              * <strong>example:</strong>
              * <p>23</p>
@@ -281,7 +281,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of requests during the step size period.</p>
+             * <p>The total number of requests within the sampling interval.</p>
              * 
              * <strong>example:</strong>
              * <p>15104</p>
@@ -292,7 +292,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of HTTP 2xx status codes during the step size period.</p>
+             * <p>The number of 2xx status codes within the sampling interval.</p>
              * 
              * <strong>example:</strong>
              * <p>455</p>
@@ -303,7 +303,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of HTTP 3xx status codes during the step size period.</p>
+             * <p>The number of 3xx status codes within the sampling interval.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -314,7 +314,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of HTTP 4xx status codes during the step size period.</p>
+             * <p>The number of 4xx status codes within the sampling interval.</p>
              * 
              * <strong>example:</strong>
              * <p>34</p>
@@ -325,7 +325,10 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * Status410Pv.
+             * <p>The number of 410 status codes within the sampling interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder status410Pv(Long status410Pv) {
                 this.status410Pv = status410Pv;
@@ -333,7 +336,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of HTTP 5xx status codes during the step size period.</p>
+             * <p>The number of 5xx status codes within the sampling interval.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -344,7 +347,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of origin requests during the step size period.</p>
+             * <p>The total number of origin-pull requests within the sampling interval.</p>
              * 
              * <strong>example:</strong>
              * <p>1223</p>

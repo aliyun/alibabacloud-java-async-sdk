@@ -67,7 +67,7 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID, type, description, and IP version of the instance.</p>
+         * <p>The IDs, editions, remarks, and IP types of the Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
          */
         public Builder instanceIds(java.util.List<InstanceIds> instanceIds) {
             this.instanceIds = instanceIds;
@@ -75,7 +75,10 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>310A41FD-0990-5610-92E0-A6A55D7C6444</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,13 +183,13 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the instance. Valid values:</p>
+             * <p>The edition of the instance. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</li>
-             * <li><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</li>
-             * <li><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the CMA mitigation plan</li>
-             * <li><strong>3</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Sec-CMA mitigation plan</li>
-             * <li><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</li>
+             * <li><strong>0</strong>: Anti-DDoS Pro or Anti-DDoS Premium (outside the Chinese mainland) Insurance Edition.</li>
+             * <li><strong>1</strong>: Anti-DDoS Pro or Anti-DDoS Premium (outside the Chinese mainland) Unlimited Edition.</li>
+             * <li><strong>2</strong>: Anti-DDoS Pro or Anti-DDoS Premium (outside the Chinese mainland) Acceleration Line.</li>
+             * <li><strong>3</strong>: Anti-DDoS Pro or Anti-DDoS Premium (outside the Chinese mainland) Secure Acceleration Line.</li>
+             * <li><strong>9</strong>: Anti-DDoS Pro or Anti-DDoS Premium (the Chinese mainland) Professional Edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -198,7 +201,7 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ddoscoo-cn-zvp2eibz****</p>
@@ -209,10 +212,10 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address-based forwarding mode of the instance. Valid values:</p>
+             * <p>The IP forwarding mode of the instance. Valid values:</p>
              * <ul>
-             * <li><strong>fnat</strong>: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.</li>
-             * <li><strong>v6tov4</strong>: All requests are forwarded to origin servers that use IPv4 addresses.</li>
+             * <li><strong>fnat</strong>: The IP versions of the origin server and the client are the same. IPv4 client requests are forwarded to the IPv4 origin server, and IPv6 client requests are forwarded to the IPv6 origin server.</li>
+             * <li><strong>v6tov4</strong>: Both IPv6 and IPv4 client requests are forwarded to the IPv4 origin server.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -224,10 +227,10 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP version of the instance. Valid values:</p>
+             * <p>The IP protocol version of the instance. Valid values:</p>
              * <ul>
-             * <li><strong>Ipv4</strong></li>
-             * <li><strong>Ipv6</strong></li>
+             * <li><strong>Ipv4</strong>: IPv4.</li>
+             * <li><strong>Ipv6</strong>: IPv6.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -239,7 +242,7 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the instance.</p>
+             * <p>The remark of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

@@ -132,10 +132,12 @@ public class DeleteTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
+         * <p>Specifies whether to remove all tags from the resource. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes.</li>
-         * <li><strong>false</strong> no. This is the default value.</li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong> (default)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,7 +150,7 @@ public class DeleteTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. Set the value to <strong>cn-hangzhou</strong>, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.</p>
+         * <p>The region ID of the Anti-DDoS instance. The value is fixed to <strong>cn-hangzhou</strong>, which indicates the Chinese mainland.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,8 +163,8 @@ public class DeleteTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
-         * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS instance belongs in Resource Management.</p>
+         * <p>If you do not set this parameter, the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2pz25js****</p>
@@ -174,7 +176,7 @@ public class DeleteTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>An array consisting of the IDs of instances from which you want to remove tags.</p>
+         * <p>A list of IDs of the Anti-DDoS instances from which you want to remove tags.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +189,7 @@ public class DeleteTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource to which the tag belongs. Set the value to <strong>INSTANCE</strong>, which indicates an Anti-DDoS Pro instance.</p>
+         * <p>The resource type. The value is fixed to <strong>INSTANCE</strong>, which indicates an Anti-DDoS instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +202,7 @@ public class DeleteTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>An array consisting of the keys of the tags that you want to remove.</p>
+         * <p>A list of tag keys to remove.</p>
          * 
          * <strong>example:</strong>
          * <p>testkey</p>

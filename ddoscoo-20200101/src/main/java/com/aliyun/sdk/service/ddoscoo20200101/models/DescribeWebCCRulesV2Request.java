@@ -101,7 +101,7 @@ public class DescribeWebCCRulesV2Request extends Request {
         } 
 
         /**
-         * <p>The domain name of the website that you want to add to the Anti-DDoS Proxy instance for protection.</p>
+         * <p>The domain name of the website that is added to Anti-DDoS Pro and Anti-DDoS Premium for protection.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -113,7 +113,7 @@ public class DescribeWebCCRulesV2Request extends Request {
         }
 
         /**
-         * <p>The number of entries that you want the system to skip before the system returns entries. Default value: <strong>0</strong>.</p>
+         * <p>The start index, which specifies the position from which the results are displayed. Default value: <strong>0</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -125,10 +125,10 @@ public class DescribeWebCCRulesV2Request extends Request {
         }
 
         /**
-         * <p>The method used to create the rule. Valid values:</p>
+         * <p>The source of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>manual</strong> (default): manually created.</li>
-         * <li><strong>clover</strong>: automatically created.</li>
+         * <li><strong>manual</strong> (default): manually added.</li>
+         * <li><strong>clover</strong>: automatically generated.</li>
          * </ul>
          * 
          * <strong>example:</strong>

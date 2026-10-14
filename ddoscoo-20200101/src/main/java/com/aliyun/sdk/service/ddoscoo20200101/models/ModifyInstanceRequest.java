@@ -281,7 +281,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>Address type. Values:</p>
+         * <p>The address type. Valid values:</p>
          * <ul>
          * <li><strong>Ipv4</strong>: IPv4.</li>
          * <li><strong>Ipv6</strong>: IPv6.</li>
@@ -297,7 +297,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>Elastic protection bandwidth (Mainland China). Unit: Gbps.</p>
+         * <p>The burstable protection bandwidth (the Chinese mainland). Unit: Gbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -309,7 +309,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>Guaranteed protection bandwidth (Mainland China). Unit: Gbps.</p>
+         * <p>The basic protection bandwidth (the Chinese mainland). Unit: Gbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -321,7 +321,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>Number of protected domains.</p>
+         * <p>The number of protected domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -333,10 +333,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>Protection package (Mainland China). Values:</p>
+         * <p>The mitigation plan (the Chinese mainland). Valid values:</p>
          * <ul>
-         * <li><strong>coop</strong>: Indicates the DDoS High Defense (Mainland China) Professional Edition.</li>
-         * <li><strong>advance</strong>: Indicates the DDoS High Defense (Mainland China) Professional Edition.</li>
+         * <li><strong>coop</strong>: Professional Edition of Anti-DDoS Pro or Anti-DDoS Premium (Chinese mainland).</li>
+         * <li><strong>advance</strong>: Professional Edition of Anti-DDoS Pro or Anti-DDoS Premium (Chinese mainland).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -349,10 +349,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>Function version, with values:</p>
+         * <p>The function version. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Standard function.</li>
-         * <li><strong>1</strong>: Enhanced function.</li>
+         * <li><strong>0</strong>: standard features.</li>
+         * <li><strong>1</strong>: enhanced features.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -365,9 +365,9 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DDoS High Defense instance.</p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
          * <blockquote>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the ID information of all DDoS High Defense instances.</p>
+         * <p>You can invoke <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -381,7 +381,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>Adjustment type, with values</p>
+         * <p>The type of specification change. Valid values:</p>
          * <ul>
          * <li>UPGRADE: Upgrade.</li>
          * <li>DOWNGRADE: Downgrade.</li>
@@ -398,7 +398,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>Business bandwidth (outside Mainland China). Unit: Mbps.</p>
+         * <p>The clean bandwidth (outside the Chinese mainland). Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -410,7 +410,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>Business QPS. Unit: Mbps.</p>
+         * <p>The clean queries per second (QPS). Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -422,7 +422,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>Number of protected ports.</p>
+         * <p>The number of protected ports.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -434,12 +434,12 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>Protection package (outside Mainland China). Values:</p>
+         * <p>The mitigation plan (outside the Chinese mainland). Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Indicates the DDoS High Defense (outside Mainland China) Insurance Edition.</li>
-         * <li><strong>1</strong>: Indicates the DDoS High Defense (outside Mainland China) Worry-Free Edition.</li>
-         * <li><strong>2</strong>: Indicates the DDoS High Defense (outside Mainland China) Acceleration Line.</li>
-         * <li><strong>3</strong>: Indicates the DDoS High Defense (outside Mainland China) Secure Acceleration Line.</li>
+         * <li><strong>0</strong>: Insurance mitigation plan for Anti-DDoS Pro or Anti-DDoS Premium (outside the Chinese mainland).</li>
+         * <li><strong>1</strong>: Unlimited mitigation plan for Anti-DDoS Pro or Anti-DDoS Premium (outside the Chinese mainland).</li>
+         * <li><strong>2</strong>: acceleration line for Anti-DDoS Pro or Anti-DDoS Premium (outside the Chinese mainland).</li>
+         * <li><strong>3</strong>: secure acceleration line for Anti-DDoS Pro or Anti-DDoS Premium (outside the Chinese mainland).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -452,12 +452,12 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>Product type.
-         * Values:</p>
+         * <p>The product type.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><strong>ddoscoo</strong>: Indicates that the DDoS High Defense (Mainland China) instance is being adjusted for a China site account.</li>
-         * <li><strong>ddoscoo_intl</strong>: Indicates that the DDoS High Defense (Mainland China) instance is being adjusted for an international site account.</li>
-         * <li><strong>ddosDip</strong>: Indicates that the DDoS High Defense (outside Mainland China) instance is being adjusted for either a China or international site account.</li>
+         * <li><strong>ddoscoo</strong>: indicates that the China site account is used for specification changes of an Anti-DDoS Pro or Anti-DDoS Premium (Chinese mainland) instance.</li>
+         * <li><strong>ddoscoo_intl</strong>: indicates that the international site account is used for specification changes of an Anti-DDoS Pro or Anti-DDoS Premium (Chinese mainland) instance.</li>
+         * <li><strong>ddosDip</strong>: indicates that the China site account or international site account is used for specification changes of an Anti-DDoS Pro or Anti-DDoS Premium (outside the Chinese mainland) instance.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -471,7 +471,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>Business bandwidth (Mainland China). Unit: Mbps.</p>
+         * <p>The clean bandwidth (the Chinese mainland). Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -483,9 +483,9 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>Line resources of the instance (Mainland China). Values:</p>
+         * <p>The line resource of the instance (the Chinese mainland). Valid values:</p>
          * <ul>
-         * <li><strong>coop-line-001</strong>: Indicates the DDoS High Defense (Mainland China) 8-line BGP line.</li>
+         * <li><strong>coop-line-001</strong>: eight-line BGP line for Anti-DDoS Pro or Anti-DDoS Premium (Chinese mainland).</li>
          * </ul>
          * 
          * <strong>example:</strong>

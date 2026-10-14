@@ -78,7 +78,7 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array consisting of the URLs that receive the most requests.</p>
+         * <p>The list of top URLs by access volume for the website service.</p>
          */
         public Builder urlList(java.util.List<UrlList> urlList) {
             this.urlList = urlList;
@@ -157,7 +157,7 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of requests.</p>
+             * <p>The number of requests.</p>
              * 
              * <strong>example:</strong>
              * <p>3390671</p>
@@ -168,7 +168,7 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name of the website.</p>
+             * <p>The website domain name.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
@@ -179,7 +179,7 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL that is Base64-encoded.</p>
+             * <p>The URL. The value is Base64-encoded.</p>
              * 
              * <strong>example:</strong>
              * <p>Lw==</p>

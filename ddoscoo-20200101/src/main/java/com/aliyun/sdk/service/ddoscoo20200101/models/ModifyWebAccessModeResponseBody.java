@@ -54,7 +54,7 @@ public class ModifyWebAccessModeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>

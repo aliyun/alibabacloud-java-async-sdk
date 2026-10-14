@@ -54,7 +54,10 @@ public class ConfigWebCCRuleV2ResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

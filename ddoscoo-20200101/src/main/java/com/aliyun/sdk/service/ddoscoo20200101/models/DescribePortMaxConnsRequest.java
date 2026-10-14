@@ -127,9 +127,9 @@ public class DescribePortMaxConnsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the query. This value is a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>The value must be on the minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -143,9 +143,9 @@ public class DescribePortMaxConnsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the Anti-DDoS Proxy instances.</p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all Anti-DDoS Proxy instances.</p>
+         * <p>You can invoke <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -159,7 +159,7 @@ public class DescribePortMaxConnsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -171,9 +171,9 @@ public class DescribePortMaxConnsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the query. This value is a UNIX timestamp. Unit: seconds.</p>
          * <blockquote>
-         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * <p>The value must be on the minute.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -126,21 +126,23 @@ public class ModifyHeadersRequest extends Request {
         }
 
         /**
-         * <p>The key-value pair of the custom header. The key specifies the header name, and the value specifies the header value. You can specify up to five key-value pairs. The key-value pairs can be up to 200 characters in length.</p>
-         * <p>Take note of the following items:</p>
+         * <p>The custom header, specified as a key-value pair. The key is the header name and the value is the header value. You can specify up to 5 key-value pairs. The total length cannot exceed 200 characters.</p>
+         * <p>Important:</p>
          * <ul>
-         * <li><p>Do not use the following default HTTP headers:</p>
-         * <ul>
-         * <li>X-Forwarded-ClientSrcPort: This header is used to obtain the source ports of clients that access Anti-DDoS Proxy (a Layer 7 proxy).</li>
-         * <li>X-Forwarded-ProxyPort: This header is used to obtain the ports of listeners that access Anti-DDoS Proxy (a Layer 7 proxy).</li>
-         * <li>X-Forwarded-For: This header is used to obtain the IP addresses of clients that access Anti-DDoS Proxy (a Layer 7 proxy).</li>
+         * <li><ul>
+         * <li><p>X-Forwarded-ClientSrcPort: Used by default to retrieve the client port that accesses the Layer 7 engine of Anti-DDoS Pro.</p>
+         * </li>
+         * <li><p>X-Forwarded-ProxyPort: Used by default to retrieve the listening port of the Layer 7 engine of Anti-DDoS Pro.</p>
+         * </li>
+         * <li><p>X-Forwarded-For: Used by default to retrieve the client IP address that accesses the Layer 7 engine of Anti-DDoS Pro.</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Do not use standard HTTP headers or specific widely used custom HTTP headers. The standard HTTP headers include Host, User-Agent, Connection, and Upgrade, and the widely used custom HTTP headers include X-Real-IP, X-True-IP, X-Client-IP, Web-Server-Type, WL-Proxy-Client-IP, eEagleEye-RpcID, EagleEye-TraceID, X-Forwarded-Cluster, and X-Forwarded-Proto. If the preceding headers are used, the original content of the headers is overwritten.</p>
+         * <li><p>Do not use standard HTTP header fields (such as <code>host</code>, <code>user-agent</code>, <code>connection</code>, and <code>upgrade</code>) or common custom HTTP header fields (such as <code>x-real-ip</code>, <code>x-true-ip</code>, <code>x-client-ip</code>, <code>web-server-type</code>, <code>wl-proxy-client-ip</code>, <code>eagleeye-rpcid</code>, <code>eagleeye-traceid</code>, <code>x-forwarded-cluster</code>, and <code>x-forwarded-proto</code>) as they will overwrite the original header values in requests.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p> If you specify a key of X-Forwarded-ClientSrcPort, the system obtains the originating ports of clients that access Anti-DDoS Proxy (a Layer 7 proxy). In this case, the value is an empty string.</p>
+         * <p>To use the <code>X-Forwarded-ClientSrcPort</code> key to retrieve the client port that accesses the Layer 7 engine of Anti-DDoS Pro, set the value to <code>&quot;&quot;</code>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -154,9 +156,9 @@ public class ModifyHeadersRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the website.</p>
+         * <p>The domain of the website.</p>
          * <blockquote>
-         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * <p>A website service forwarding rule must be configured for the domain. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all your domains.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -170,7 +172,23 @@ public class ModifyHeadersRequest extends Request {
         }
 
         /**
-         * EmbeddedHeaders.
+         * <p>The forwarding configuration for request headers. This parameter is a JSON string of key-value pairs where the key is the header field name and the value is a boolean. Set the value to <code>true</code> to enable forwarding or <code>false</code> to disable it.</p>
+         * <p>Field description:</p>
+         * <p><code>X-Client-IP</code>: Forwards the client\&quot;s real IP address.</p>
+         * <p><code>X-True-IP</code>: Forwards the client\&quot;s connection IP address.</p>
+         * <p><code>Web-Server-Type</code>: Informs the back-end server about the type of front-end web server or proxy that is handling the request.</p>
+         * <p><code>WL-Proxy-Client-IP</code>: A request header specific to Oracle WebLogic Server that provides the same functionality as <code>X-Client-IP</code>.</p>
+         * <p><code>X-Forwarded-Proto</code>: Indicates the protocol used for the connection between the client and the first proxy.</p>
+         * <p>Important:</p>
+         * <ul>
+         * <li><p><strong>Supported Headers</strong>: The configuration supports only the five preset header fields listed above.</p>
+         * </li>
+         * <li><p><strong>Default settings</strong>: All the listed header fields are enabled by default. To make changes, you must explicitly set the corresponding value to <code>false</code>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;X-Client-IP&quot;:true,&quot;X-True-IP&quot;:true,&quot;Web-Server-Type&quot;:true,&quot;WL-Proxy-Client-IP&quot;:true,&quot;X-Forwarded-Proto&quot;:true}</p>
          */
         public Builder embeddedHeaders(String embeddedHeaders) {
             this.putQueryParameter("EmbeddedHeaders", embeddedHeaders);
@@ -179,14 +197,14 @@ public class ModifyHeadersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <p>The ID of the resource group.</p>
          * <blockquote>
+         * <ul>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain a list of resource group IDs. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li><p>You can query resource group IDs in the Anti-DDoS Pro or Anti-DDoS Premium console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
-         * </li>
-         * <li><p>Before you modify the resource group to which an instance belongs, you can call the <a href="https://help.aliyun.com/document_detail/158866.html">ListResources</a> operation to view the current resource group of the instance.</p>
-         * </li>
+         * <li>To find the current resource group of an instance before changing it, call the <a href="https://help.aliyun.com/document_detail/158866.html">ListResources</a> operation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
