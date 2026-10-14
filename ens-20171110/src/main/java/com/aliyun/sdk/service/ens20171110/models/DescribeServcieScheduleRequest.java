@@ -89,7 +89,8 @@ public class DescribeServcieScheduleRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
+         * <p>You can obtain this value after you call the CreateApplication operation to create an application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +103,7 @@ public class DescribeServcieScheduleRequest extends Request {
         }
 
         /**
-         * <p>This parameter does not take effect.</p>
+         * <p>This parameter is invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>android</p>
@@ -114,7 +115,8 @@ public class DescribeServcieScheduleRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the device.</p>
+         * <p>The unique ID of the terminal device.</p>
+         * <p>You can obtain this value after you call the RunServiceSchedule operation and set ServiceAction to Start to start service scheduling.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

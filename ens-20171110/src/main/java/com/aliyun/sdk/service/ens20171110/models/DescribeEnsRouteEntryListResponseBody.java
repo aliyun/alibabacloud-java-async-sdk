@@ -439,7 +439,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
              * <p>Enter a description for the route.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;

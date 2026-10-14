@@ -59,7 +59,7 @@ public class BatchEventRedeployInstanceRequest extends Request {
         } 
 
         /**
-         * <p>List of events.</p>
+         * <p>The list of events.</p>
          */
         public Builder eventInfos(java.util.List<EventInfos> eventInfos) {
             String eventInfosShrink = shrink(eventInfos, "EventInfos", "json");
@@ -167,7 +167,7 @@ public class BatchEventRedeployInstanceRequest extends Request {
             } 
 
             /**
-             * <p>System event ID.</p>
+             * <p>The system event ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e-d71ff150945b9c02eb6ebc0016328468</p>
@@ -178,9 +178,9 @@ public class BatchEventRedeployInstanceRequest extends Request {
             }
 
             /**
-             * <p>Operation type, value range:</p>
+             * <p>The O&amp;M task type. Valid values:</p>
              * <ul>
-             * <li>immediate: Execute immediately.</li>
+             * <li>immediate: Immediate execution.</li>
              * <li>scheduled: Scheduled execution.</li>
              * </ul>
              * 
@@ -193,7 +193,7 @@ public class BatchEventRedeployInstanceRequest extends Request {
             }
 
             /**
-             * <p>Scheduled execution time, in timestamp, unit is milliseconds. This field is required when OpsType=scheduled.</p>
+             * <p>The scheduled execution time. The value is a timestamp in milliseconds. This parameter is required when OpsType is set to scheduled.</p>
              * 
              * <strong>example:</strong>
              * <p>immediate</p>
@@ -212,7 +212,7 @@ public class BatchEventRedeployInstanceRequest extends Request {
             }
 
             /**
-             * <p>Resource ID.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-55qi8m11rr53c4i964md8a00l</p>

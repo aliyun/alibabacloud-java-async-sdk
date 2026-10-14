@@ -88,7 +88,7 @@ public class DetachKeyPairRequest extends Request {
         } 
 
         /**
-         * <p>The instance IDs.</p>
+         * <p>An array of instance IDs from which to detach the key pair.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DetachKeyPairRequest extends Request {
         }
 
         /**
-         * <p>The key pair ID.</p>
+         * <p>The ID of the key pair.</p>
          * 
          * <strong>example:</strong>
          * <p>ssh-xxx</p>
@@ -114,7 +114,7 @@ public class DetachKeyPairRequest extends Request {
         }
 
         /**
-         * <p>The name of the SSH key pair.</p>
+         * <p>The name of the key pair.</p>
          * 
          * <strong>example:</strong>
          * <p>test-kp</p>

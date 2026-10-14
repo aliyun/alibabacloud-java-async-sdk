@@ -232,9 +232,9 @@ public class ImportImageRequest extends Request {
         } 
 
         /**
-         * <p>System architecture. Allowed values:</br></p>
+         * <p>The system architecture. Valid values:</br></p>
          * <ul>
-         * <li>x86_64.</br></li>
+         * <li>x86_64</li>
          * </ul>
          * <p>Currently, only x86_64 is supported.</p>
          * <p>This parameter is required.</p>
@@ -249,8 +249,8 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p><code>Image Type</code>
-         * ens_vm: ens virtual machine image (default)</p>
+         * <p>The image type. Valid values:</p>
+         * <p>ens_vm: ENS virtual machine image (default).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,7 +263,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>List of custom image information being created.</p>
+         * <p>The list of custom image information.</p>
          */
         public Builder diskDeviceMapping(java.util.List<DiskDeviceMapping> diskDeviceMapping) {
             String diskDeviceMappingShrink = shrink(diskDeviceMapping, "DiskDeviceMapping", "json");
@@ -273,7 +273,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>Image format. Allowed values:</br>
+         * <p>The image format. Valid values:</br>
          * qcow2.</br>
          * Currently, only qcow2 is supported.</p>
          * <p>This parameter is required.</p>
@@ -288,11 +288,11 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>Image name. The length should be [2, 128] English or Chinese characters. It must start with a letter (uppercase or lowercase) or a Chinese character, and cannot start with http:// or https://. It can contain numbers, colons (:), underscores (_), or hyphens (-).</p>
+         * <p>The image name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with http:// or https://.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>镜像名称</p>
+         * <p>ImageName</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -301,7 +301,10 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * LicenseType.
+         * <p>The image license type. Valid values: Aliyun (Alibaba Cloud license) and BYOL (Bring Your Own Key).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder licenseType(String licenseType) {
             this.putQueryParameter("LicenseType", licenseType);
@@ -310,7 +313,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The OSS Bucket where the image file is located.</p>
+         * <p>The OSS bucket that stores the image file.</p>
          * 
          * <strong>example:</strong>
          * <p>tmp-hybrid</p>
@@ -334,7 +337,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The Region where the image is located. Currently, only cn-beijing is supported.</p>
+         * <p>The region where the image resides. Currently, only cn-beijing is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -346,10 +349,10 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>Operating system platform type. Allowed values:</p>
+         * <p>The type of the operating system platform. Valid values:</p>
          * <ul>
-         * <li>windows.</li>
-         * <li>linux.</li>
+         * <li>windows</li>
+         * <li>linux</li>
          * </ul>
          * <p>Currently, only linux is supported.</p>
          * <p>This parameter is required.</p>
@@ -364,7 +367,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>Operating system distribution version</p>
+         * <p>The version of the operating system distribution.</p>
          * 
          * <strong>example:</strong>
          * <p>6.8</p>
@@ -376,7 +379,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>Operating system distribution. Allowed values:</p>
+         * <p>The operating system distribution. Valid values:</p>
          * <ul>
          * <li>centos</li>
          * <li>ubuntu</li>
@@ -392,7 +395,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The target OSS region where the image will be stored.</br></p>
+         * <p>The region of the destination OSS bucket where the image is stored.</br></p>
          * <blockquote>
          * <p>Currently, only cn-beijing and ap-southeast-1 are supported.</p>
          * </blockquote>
@@ -479,7 +482,7 @@ public class ImportImageRequest extends Request {
             } 
 
             /**
-             * <p>The OSS Bucket where the image is stored.</p>
+             * <p>The OSS bucket that stores the image.</p>
              * 
              * <strong>example:</strong>
              * <p>www-cn</p>
@@ -490,7 +493,7 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * <p>The filename (key) of the image file after it is uploaded to the OSS Bucket.</p>
+             * <p>The file name (key) of the image file stored in the OSS bucket after the image is uploaded.</p>
              * 
              * <strong>example:</strong>
              * <p>image-bucket</p>
@@ -501,7 +504,7 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * <p>The Region where the image is located.</p>
+             * <p>The region where the image resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>

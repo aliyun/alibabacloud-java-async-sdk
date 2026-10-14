@@ -117,7 +117,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the rules.</p>
+         * Permissions.
          */
         public Builder permissions(Permissions permissions) {
             this.permissions = permissions;
@@ -346,10 +346,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time at which the security group rule was created. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-12-12T07:28:38Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -357,7 +354,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description.</p>
+             * <p>The description of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>testDescription1</p>
@@ -368,10 +365,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The range of destination IP addresses for outbound access control.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.0.0.0/0</p>
+             * DestCidrIp.
              */
             public Builder destCidrIp(String destCidrIp) {
                 this.destCidrIp = destCidrIp;
@@ -379,10 +373,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The direction in which the security group rule is applied.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ingress</p>
+             * Direction.
              */
             public Builder direction(String direction) {
                 this.direction = direction;
@@ -390,10 +381,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transport layer protocol.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TCP</p>
+             * IpProtocol.
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -417,10 +405,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Accept</p>
+             * Policy.
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -428,10 +413,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source port range.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80/80</p>
+             * PortRange.
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -439,10 +421,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -450,10 +429,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The range of source IP addresses for inbound access control.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.0.0.0/0</p>
+             * SourceCidrIp.
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
@@ -461,10 +437,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source port number range for the security group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>22/22</p>
+             * SourcePortRange.
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;

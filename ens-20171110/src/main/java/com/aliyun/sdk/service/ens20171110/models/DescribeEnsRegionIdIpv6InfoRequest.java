@@ -64,7 +64,7 @@ public class DescribeEnsRegionIdIpv6InfoRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-chengdu-xxxx-4</p>
+         * <p>cn-chengdu-****-4</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);

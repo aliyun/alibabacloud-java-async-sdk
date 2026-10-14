@@ -109,7 +109,7 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
          * <p>The information about the metering method.</p>
          * 
          * <strong>example:</strong>
-         * <p>{ &quot;BandWidthName&quot;: &quot;Monthly peak bandwidth of 95&quot;, 			&quot;BandWidthType&quot;: &quot;95BandwidthByMonth&quot; 		}</p>
+         * <p>{ &quot;BandWidthName&quot;: &quot;Monthly 95th percentile bandwidth&quot;, &quot;BandWidthType&quot;: &quot;95BandwidthByMonth&quot; }</p>
          */
         public Builder bandWithTypeInfo(String bandWithTypeInfo) {
             this.bandWithTypeInfo = bandWithTypeInfo;
@@ -119,8 +119,10 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
         /**
          * <p>The metering type.</p>
          * <ul>
-         * <li>ChargeByUnified: unified metering.</li>
-         * <li>ChargeByGrade: differential metering.</li>
+         * <li><p>ChargeByUnified: unified metering.</p>
+         * </li>
+         * <li><p>ChargeByGrade: differential metering.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

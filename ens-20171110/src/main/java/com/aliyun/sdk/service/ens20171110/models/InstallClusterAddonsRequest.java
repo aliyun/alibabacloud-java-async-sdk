@@ -75,6 +75,7 @@ public class InstallClusterAddonsRequest extends Request {
         } 
 
         /**
+         * <p>The component information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
@@ -85,6 +86,7 @@ public class InstallClusterAddonsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +184,10 @@ public class InstallClusterAddonsRequest extends Request {
             } 
 
             /**
-             * AppVersion.
+             * <p>The application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>859e9d595b2974ed79c444658d1dea89</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -190,7 +195,10 @@ public class InstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * ConfigVersion.
+             * <p>The configuration version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4155709cd12a09bdb8cbaca71bf03233</p>
              */
             public Builder configVersion(String configVersion) {
                 this.configVersion = configVersion;
@@ -198,7 +206,10 @@ public class InstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edge-csi-lite</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -206,7 +217,10 @@ public class InstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * Params.
+             * <p>The custom parameters of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;v1&quot;}</p>
              */
             public Builder params(java.util.Map<String, ?> params) {
                 this.params = params;
@@ -286,7 +300,7 @@ public class InstallClusterAddonsRequest extends Request {
             } 
 
             /**
-             * ConfigSchema.
+             * <p>The schema for the custom parameters of the component.</p>
              */
             public Builder configSchema(java.util.List<ConfigSchema> configSchema) {
                 this.configSchema = configSchema;
@@ -294,7 +308,10 @@ public class InstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The plug-in name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edge-csi-lite</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -302,7 +319,10 @@ public class InstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;

@@ -38,6 +38,9 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private InstanceIds instanceIds;
 
+    @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
+    private String ipv6CidrBlock;
+
     @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
     private LoadBalancerIds loadBalancerIds;
 
@@ -70,6 +73,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         this.ensRegionId = builder.ensRegionId;
         this.haVipIds = builder.haVipIds;
         this.instanceIds = builder.instanceIds;
+        this.ipv6CidrBlock = builder.ipv6CidrBlock;
         this.loadBalancerIds = builder.loadBalancerIds;
         this.natGatewayIds = builder.natGatewayIds;
         this.networkId = builder.networkId;
@@ -142,6 +146,13 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     }
 
     /**
+     * @return ipv6CidrBlock
+     */
+    public String getIpv6CidrBlock() {
+        return this.ipv6CidrBlock;
+    }
+
+    /**
      * @return loadBalancerIds
      */
     public LoadBalancerIds getLoadBalancerIds() {
@@ -205,6 +216,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         private String ensRegionId; 
         private HaVipIds haVipIds; 
         private InstanceIds instanceIds; 
+        private String ipv6CidrBlock; 
         private LoadBalancerIds loadBalancerIds; 
         private NatGatewayIds natGatewayIds; 
         private String networkId; 
@@ -225,6 +237,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
             this.ensRegionId = model.ensRegionId;
             this.haVipIds = model.haVipIds;
             this.instanceIds = model.instanceIds;
+            this.ipv6CidrBlock = model.ipv6CidrBlock;
             this.loadBalancerIds = model.loadBalancerIds;
             this.natGatewayIds = model.natGatewayIds;
             this.networkId = model.networkId;
@@ -236,7 +249,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of available IP addresses in the VSwitch.</p>
+         * <p>The number of available IP addresses in the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>253</p>
@@ -258,7 +271,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time, in UTC format (yyyy-MM-ddTHH:mm:ssZ).</p>
+         * <p>The time when the vSwitch was created. This value uses UTC and follows the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-06-01T00:00:00Z</p>
@@ -269,7 +282,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the VSwitch.</p>
+         * <p>The description of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>This is my vswitch.</p>
@@ -280,7 +293,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ENS node ID.</p>
+         * <p>The ID of the ENS edge zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-xian-unicom</p>
@@ -291,7 +304,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of high-availability VIP instance IDs.</p>
+         * HaVipIds.
          */
         public Builder haVipIds(HaVipIds haVipIds) {
             this.haVipIds = haVipIds;
@@ -299,7 +312,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of instance IDs.</p>
+         * InstanceIds.
          */
         public Builder instanceIds(InstanceIds instanceIds) {
             this.instanceIds = instanceIds;
@@ -307,7 +320,15 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of load balancer instance IDs.</p>
+         * Ipv6CidrBlock.
+         */
+        public Builder ipv6CidrBlock(String ipv6CidrBlock) {
+            this.ipv6CidrBlock = ipv6CidrBlock;
+            return this;
+        }
+
+        /**
+         * LoadBalancerIds.
          */
         public Builder loadBalancerIds(LoadBalancerIds loadBalancerIds) {
             this.loadBalancerIds = loadBalancerIds;
@@ -315,7 +336,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of NAT gateway IDs.</p>
+         * NatGatewayIds.
          */
         public Builder natGatewayIds(NatGatewayIds natGatewayIds) {
             this.natGatewayIds = natGatewayIds;
@@ -323,7 +344,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The network ID.</p>
+         * <p>The ID of the network.</p>
          * 
          * <strong>example:</strong>
          * <p>n-257gqcdfvx6n****</p>
@@ -334,7 +355,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of elastic network interface IDs.</p>
+         * NetworkInterfaceIds.
          */
         public Builder networkInterfaceIds(NetworkInterfaceIds networkInterfaceIds) {
             this.networkInterfaceIds = networkInterfaceIds;
@@ -342,7 +363,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C0003****2A8</p>
@@ -353,11 +374,14 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the VSwitch, as follows:</p>
+         * <p>The status of the vSwitch. Valid values:</p>
          * <ul>
-         * <li>Pending</li>
-         * <li>Available</li>
-         * <li>Releasing</li>
+         * <li><p>Pending: The vSwitch is being configured.</p>
+         * </li>
+         * <li><p>Available: The vSwitch is active.</p>
+         * </li>
+         * <li><p>Releasing: The vSwitch is being released.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -369,7 +393,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the VSwitch.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-5****</p>
@@ -380,7 +404,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the VSwitch.</p>
+         * <p>The name of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>Test-switch</p>

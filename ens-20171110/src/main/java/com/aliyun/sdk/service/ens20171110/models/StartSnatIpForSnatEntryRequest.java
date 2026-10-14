@@ -92,7 +92,7 @@ public class StartSnatIpForSnatEntryRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>219.152.82.143</p>
+         * <p>219.152.XX.XX</p>
          */
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);

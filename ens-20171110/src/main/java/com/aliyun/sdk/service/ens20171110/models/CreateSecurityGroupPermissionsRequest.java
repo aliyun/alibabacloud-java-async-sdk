@@ -86,7 +86,7 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the security groups.</p>
+         * <p>The security group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -281,7 +281,7 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             } 
 
             /**
-             * <p>The description of the storage gateway. It must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+             * <p>The description. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>testDescription</p>
@@ -292,7 +292,7 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * <p>The destination IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.</p>
+             * <p>The destination IPv4 CIDR block. Both CIDR format and IPv4 format IP address range are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>10.XX.XX.14/32</p>
@@ -303,10 +303,10 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * <p>The direction in which the security group rule is applied.</p>
+             * <p>The authorization direction. Valid values:</p>
              * <ul>
-             * <li>egress</li>
-             * <li>ingress</li>
+             * <li>egress: outbound.</li>
+             * <li>ingress: inbound.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -319,12 +319,12 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * <p>Protocol type. Valid values:</p>
+             * <p>The protocol type. Valid values: </p>
              * <ul>
-             * <li>TCP</li>
-             * <li>UDP</li>
-             * <li>ICMP: the ICMP protocol</li>
-             * <li>ICMPv6: the ICMP protocol for IPv6.</li>
+             * <li>TCP: TCP protocol.</li>
+             * <li>UDP: UDP protocol.</li>
+             * <li>ICMP: ICMP protocol.</li>
+             * <li>ICMPv6: ICMPv6 protocol.</li>
              * <li>ALL: All protocols are supported.</li>
              * </ul>
              * <p>This parameter is required.</p>
@@ -338,9 +338,9 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
+             * <p>The destination IPv6 CIDR block. Both CIDR format and IPv6 format IP address range are supported. </p>
              * <blockquote>
-             * <p> This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time.</p>
+             * <p>This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time. Settings for these two parameters are mutually exclusive.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -352,9 +352,9 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * <p>The source IPv6 CIDR block of the security group rule. or IPv6 address.</p>
+             * <p>The source IPv6 CIDR block. Both CIDR format and IPv6 format IP address range are supported.</p>
              * <blockquote>
-             * <p> This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time.</p>
+             * <p>This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time. Settings for these two parameters are mutually exclusive.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -366,10 +366,10 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * <p>The action specified in the security group rule. Valid values:</p>
+             * <p>The access permissions. Valid values: </p>
              * <ul>
-             * <li>Accept</li>
-             * <li>Drop</li>
+             * <li>Accept: Allows access.</li>
+             * <li>Drop: Deny access.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -382,12 +382,12 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * <p>The destination port range of the security group rule. Valid values:</p>
+             * <p>The range of destination ports that correspond to the protocols for the security group. Valid values:</p>
              * <ul>
-             * <li>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
-             * <li>If you set IpProtocol to ICMP, the port range is -1/-1.</li>
-             * <li>ICMPv6:-1/-1.</li>
-             * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
+             * <li>TCP/UDP protocol: Valid values are 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</li>
+             * <li>ICMP protocol: -1/-1.</li>
+             * <li>ICMPv6: -1/-1.</li>
+             * <li>ALL: -1/-1.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -400,7 +400,7 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
+             * <p>The priority of the security group rule. A smaller value indicates a higher priority. Valid values: 1 to 100.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -412,7 +412,7 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * <p>The source IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.</p>
+             * <p>The source IPv4 CIDR block. Both CIDR format and IPv4 format IP address range are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.0.0/0</p>
@@ -423,12 +423,12 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * <p>The range of source port numbers for the protocols specified in the security group rule. Valid values:</p>
+             * <p>The range of source ports that correspond to the protocols for the security group. Valid values:</p>
              * <ul>
-             * <li>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
-             * <li>If you set IpProtocol to ICMP, the port range is -1/-1.</li>
-             * <li>ICMPv6:-1/-1.</li>
-             * <li>If you set IpProtocol to ALL, the port range is -1/-1.</li>
+             * <li>TCP/UDP protocol: Valid values are 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</li>
+             * <li>ICMP protocol: -1/-1.</li>
+             * <li>ICMPv6: -1/-1.</li>
+             * <li>ALL: -1/-1.</li>
              * </ul>
              * 
              * <strong>example:</strong>

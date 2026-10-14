@@ -130,7 +130,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The image information.</p>
+         * Images.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -266,12 +266,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The format of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The format of the image.
-             * raw
-             * qcow2</p>
+             * Format.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -279,10 +274,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the disk. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * Size.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -290,14 +282,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the disk. Valid values:</p>
-             * <ul>
-             * <li>system: system disk.</li>
-             * <li>data: data disk.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Data</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -305,10 +290,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-test</p>
+             * imageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -598,14 +580,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The image architecture. Valid values:</p>
-             * <ul>
-             * <li>i386</li>
-             * <li>x86_64</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>x86_64</p>
+             * Architecture.
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -613,10 +588,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Computing type. ens_vm/ens: x86 computing. bare_metal: x86 bare machine or x86 bare metal. arm_vm: ARM computing. arm_bare_metal: ARM bare machine or ARM bare metal. pcfarm: heterogeneous computing.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ens_vm</p>
+             * ComputeType.
              */
             public Builder computeType(String computeType) {
                 this.computeType = computeType;
@@ -624,10 +596,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-12-08T12:10:03Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -635,7 +604,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mappings between the disk and the snapshot in the image.</p>
+             * DiskDeviceMappings.
              */
             public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
                 this.diskDeviceMappings = diskDeviceMappings;
@@ -643,10 +612,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>centos_6_08_64_20G_a****</p>
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -654,10 +620,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>centos_6_08_64_20G_a****</p>
+             * ImageName.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -665,14 +628,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the image. Valid values:</p>
-             * <ul>
-             * <li><strong>others</strong>: a custom image that is shared by other Alibaba Cloud accounts.</li>
-             * <li><strong>self</strong>: your own custom image.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>system</p>
+             * ImageOwnerAlias.
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -680,10 +636,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the image. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * ImageSize.
              */
             public Builder imageSize(String imageSize) {
                 this.imageSize = imageSize;
@@ -691,10 +644,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the image storage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>400</p>
+             * ImageStorageSize.
              */
             public Builder imageStorageSize(String imageStorageSize) {
                 this.imageStorageSize = imageStorageSize;
@@ -702,10 +652,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-5iqczfxps7csjrxeca****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -713,10 +660,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>7.2</p>
+             * OsVersion.
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -724,18 +668,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The platform.</p>
-             * <ul>
-             * <li>centos</li>
-             * <li>ubuntu</li>
-             * <li>alios</li>
-             * <li>debian</li>
-             * <li>rhel</li>
-             * <li>windows</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>centos</p>
+             * Platform.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -743,10 +676,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shenzhen</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -754,10 +684,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The snapshot ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sp-5yt3bdedxzdz6t6uuw****</p>
+             * SnapshotId.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -765,20 +692,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the image.</p>
-             * <ul>
-             * <li>Creating.</li>
-             * <li>Packing.</li>
-             * <li>Uploading.</li>
-             * <li>Pack_failed.</li>
-             * <li>Upload_failed.</li>
-             * <li>Available: Only images in the Available state can be used and operated.</li>
-             * <li>Unavailable.</li>
-             * <li>Copying.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Creating</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

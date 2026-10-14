@@ -29,8 +29,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Ens";
         this.version = "2017-11-10";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-beijing", "ens.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "ens.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "ens.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "ens.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "ens.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "ens.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "ens.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -59,9 +67,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API call rate limit: 100 calls per second.</li>
+     * <li>Per-user call rate limit: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of AddBackendServers  AddBackendServersRequest
@@ -83,9 +91,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 5 times per second per user.</li>
      * <li>Internal networks and IPv4 addresses are not supported.</li>
      * </ul>
      * 
@@ -162,7 +170,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation to associate an HAVIP, take note of the following items:</p>
+     * <p>When you To associate an HAVIP, take note of the following items:</p>
      * <ul>
      * <li>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</li>
      * <li>The HAVIP and ENS instance must belong to the same vSwitch.</li>
@@ -212,11 +220,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h1><a href="#"></a>Usage notes</h1>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
-     * <li>After you execute the command, the instance restarts loading.</li>
-     * <li>Limits: The instance has at least two vCPUs and 4 GB memory. An image of CentOS 7.4 or later is required.</li>
+     * <li>Maximum request rate per user: 10 requests per second.</li>
+     * <li>After the command script runs successfully, the instance restarts and loads automatically.</li>
+     * <li>Instance requirements: minimum size of 2C4G and CentOS 7.4 or later image.
+     * &lt;props=&quot;china&quot;&gt;
+     * Before calling this operation, <a href="https://cs.console.aliyun.com/#/k8s/overview">activate Container Service for Kubernetes</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of AttachEnsInstances  AttachEnsInstancesRequest
@@ -274,12 +283,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a></h2>
-     * <p>This operation is used to bind a key pair to instances. Only disabled instances are supported.</p>
+     * <p>You can only attach a key pair to stopped instances.</p>
      * <ul>
-     * <li>You can bind a maximum of 30 instances at a time.</li>
-     * <li>At least one of the key_pair_name and key_pair_id parameters is not empty.</li>
-     * <li>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</li>
+     * <li>Specify up to 30 instances per call.</li>
+     * <li>Specify either <code>KeyPairName</code> or <code>KeyPairId</code>.</li>
+     * <li>We recommend using <code>KeyPairId</code>, as <code>KeyPairName</code> will be deprecated.</li>
      * </ul>
      * 
      * @param request the request parameters of AttachKeyPair  AttachKeyPairRequest
@@ -307,7 +315,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>An ENI can be attached to only one instance that is the same zone and the same Virtual Private Cloud (VPC).</li>
      * <li>The instance must be in the Stopped state.</li>
      * <li>A maximum of 10 ENIs can be attached to an instance.</li>
-     * <li>This operation is an asynchronous operation. After you call this operation to attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</li>
+     * <li>This operation is an asynchronous operation. After you To attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</li>
      * </ul>
      * 
      * @param request the request parameters of AttachNetworkInterface  AttachNetworkInterfaceRequest
@@ -368,9 +376,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</li>
+     * <li>This O&amp;M operation currently supports only the following event type: Instance:SystemUpgrade.Migrate (migration required due to underlying infrastructure upgrade).</li>
      * </ul>
      * 
      * @param request the request parameters of BatchEventMigrateInstance  BatchEventMigrateInstanceRequest
@@ -392,7 +400,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  This O\&amp;M operation supports only the following event types: Instance:SystemMaintenance.Reboot (instance reboot due to system problems)</p>
+     * <ul>
+     * <li>This O&amp;M operation currently supports only the following event type: Instance:SystemMaintenance.Reboot (instance restart due to system maintenance).</li>
+     * </ul>
      * 
      * @param request the request parameters of BatchEventRebootInstance  BatchEventRebootInstanceRequest
      * @return BatchEventRebootInstanceResponse
@@ -414,7 +424,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation currently only supports event types: Instance:SystemFailure.Redeploy (redeploy instance due to system issues), Instance:SystemMaintenance.Redeploy (redeploy instance due to system maintenance)</li>
+     * <li>This O&amp;M operation currently supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system failures) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</li>
      * </ul>
      * 
      * @param request the request parameters of BatchEventRedeployInstance  BatchEventRedeployInstanceRequest
@@ -544,9 +554,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 10 times per second per account.</p>
      * <ul>
-     * <li>Creating a cluster is an asynchronous operation. After this operation returns the response, it takes 10 to 20 minutes to initialize the cluster. You can call the DescribeCluster operation to query the cluster status. After you create a cluster, you can call the DescribeClusterKubeConfig operation to obtain the cluster certificate.</li>
+     * <li>Single-user call frequency: 10 calls per second.</li>
+     * <li>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateCluster  CreateClusterRequest
@@ -567,6 +577,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 10 calls per second.</li>
+     * <li>Creating a cluster is an asynchronous operation. After the API call returns, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateClusterNodePool  CreateClusterNodePoolRequest
      * @return CreateClusterNodePoolResponse
      */
@@ -604,9 +620,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 5,000 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 50 times per second per user.</li>
+     * <li>API call frequency: 5000 calls per second.</li>
+     * <li>Per-user call frequency: 50 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateEipInstance  CreateEipInstanceRequest
@@ -772,10 +788,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 10 times per second per account.</p>
      * <ul>
-     * <li>We recommend that you increase the request time because instance creation is an asynchronous operation. If the return code of the API operation is 0, it indicates that the request is successful, but does not indicate that the instance is created. If the request is successful, an instance ID is returned. You can check whether the instance is created based on the instance ID.</li>
-     * <li>InvalidUserData.NotInWhiteList operation restriction: You can create an instance only if you are in the whitelist in which members have the purchase permissions. Otherwise, an error is returned.</li>
+     * <li>Per-user call frequency: 10 calls per second.</li>
+     * <li>Because instance creation is an asynchronous operation, increase the request timeout as needed. When the API returns Code=0, this only indicates that the request was successful, not that the instance was created successfully. An instance ID is returned upon a successful request. You can then query the instance by its ID to check whether the instance is created.</li>
+     * <li>InvalidUserData.NotInWhiteList restriction: Only accounts that are added to the relevant whitelist with purchase permissions can create instances. Otherwise, an error is returned.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateInstance  CreateInstanceRequest
@@ -836,9 +852,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>API call frequency: 100 times per second.</li>
+     * <li>Per-user call frequency: 5 times per second.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateLoadBalancer  CreateLoadBalancerRequest
@@ -860,9 +876,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateLoadBalancerHTTPListener  CreateLoadBalancerHTTPListenerRequest
@@ -884,9 +900,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateLoadBalancerHTTPSListener  CreateLoadBalancerHTTPSListenerRequest
@@ -908,9 +924,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 requests per second.</li>
+     * <li>Per-user call rate: 10 requests per second.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateLoadBalancerTCPListener  CreateLoadBalancerTCPListenerRequest
@@ -932,9 +948,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Per-user call rate: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateLoadBalancerUDPListener  CreateLoadBalancerUDPListenerRequest
@@ -996,9 +1012,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 5 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateNetwork  CreateNetworkRequest
@@ -1074,12 +1090,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:</p>
+     * <p>A Shared Data Group (SDG) is a data partition image of a virtual device. You can save the data partition of a virtual device as an SDG. The SDG can then be deployed to the data partition of other virtual devices for fast data sharing and application deployment. The following describes the workflow of SDG-related operations:</p>
      * <ul>
-     * <li>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG, which is bound to AIC Instance A (InstanceId). After you create the SDG, a blank cloud disk (also known as an original cloud disk) is attached to Device A (InstanceId).</li>
-     * <li>Install applications on and deliver files to AIC Instance A (InstanceId).</li>
-     * <li>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data disk of AIC instance A as SDG A.</li>
-     * <li>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC Instance B. This operattion is executed asynchronously. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC Instance B. If the status of AIC Instance B changes to success, AIC insance B is available, and AIC Instances A and B have the same applications running.</li>
+     * <li>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG. The SDG is bound to AIC instance A (InstanceId). After the SDG is created, a blank cloud disk (also called a raw cloud disk) is mounted to device A (InstanceId) for SDG creation.</li>
+     * <li>Install applications, deliver files, and perform other required operations on AIC instance A (InstanceId).</li>
+     * <li>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data cloud disk of AIC instance A as SDG A.</li>
+     * <li>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC instance B. This process is asynchronous. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC instance B. When the status changes back to success, AIC instance B is available and has the same applications as AIC instance A.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateSDG  CreateSDGRequest
@@ -1263,9 +1279,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Only the Alibaba Cloud Account ID owner of a bucket can delete the bucket from the account.</p>
      * <ul>
-     * <li>You cannot delete buckets that store objects. You can only delete empty buckets.</li>
+     * <li>Only the Alibaba Cloud account that owns the bucket can delete it.</li>
+     * <li>A bucket must be empty before it can be deleted.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteBucket  DeleteBucketRequest
@@ -1304,6 +1320,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can specify the RetainResources parameter when you delete a cluster. The default value is false. If you set this parameter to true, the Edge Node Service (ENS) compute instances on which worker nodes run are retained.
+     * When you delete a cluster, all nodes and node pools in the cluster are automatically deleted. ENS compute instances that you manually added by using scripts obtained from the DescribeAttachScript operation are retained.
+     * If a node pool in the cluster is being scaled out or in, wait until the scaling process is complete before you delete the cluster.</p>
+     * 
      * @param request the request parameters of DeleteCluster  DeleteClusterRequest
      * @return DeleteClusterResponse
      */
@@ -1322,6 +1343,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Each user is limited to 10 calls per second.</li>
+     * <li>Cluster creation is an asynchronous operation. After the API call is successful, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to check the cluster status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster\&quot;s kubeconfig file.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteClusterNodePool  DeleteClusterNodePoolRequest
      * @return DeleteClusterNodePoolResponse
      */
@@ -1340,6 +1367,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If ReleaseNode is set to false, you must manually stop the kubelet process on the node before you call DeleteClusterNodes. Otherwise, the node may automatically rejoin the cluster.</p>
+     * 
      * @param request the request parameters of DeleteClusterNodes  DeleteClusterNodesRequest
      * @return DeleteClusterNodesResponse
      */
@@ -1472,6 +1502,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a NAS file system. Before deleting the file system, call DeleteMountTarget to delete all mount targets of the file system. After DeleteMountTarget succeeds, there is an eventual consistency window. Poll DescribeFileSystems to confirm that MountTargets is empty before calling this API operation.</p>
+     * 
      * @param request the request parameters of DeleteFileSystem  DeleteFileSystemRequest
      * @return DeleteFileSystemResponse
      */
@@ -1545,8 +1578,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</p>
      * <ul>
+     * <li>After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</li>
      * <li>If you delete an SSH key pair that is bound to an Edge Node Service (ENS) instance, ENS no longer stores the SSH key pair. However, you can still use the key pair to access the instance. When you call the DescribeInstance operation to query instance information, no other information but the name of the key pair (<strong>KeyPairName</strong>) is returned.</li>
      * </ul>
      * 
@@ -1569,9 +1602,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteLoadBalancerListener  DeleteLoadBalancerListenerRequest
@@ -1740,7 +1773,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.</p>
+     * <p>If all SDGs associated with the original cloud disk are deleted, the original cloud disk is automatically cleaned up.</p>
      * 
      * @param request the request parameters of DeleteSDG  DeleteSDGRequest
      * @return DeleteSDGResponse
@@ -1982,6 +2015,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 100 calls per second.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeAddon  DescribeAddonRequest
      * @return DescribeAddonResponse
      */
@@ -2018,6 +2056,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries available resources. A successful business response is indicated by Code=0 in the response body. Do not confuse the business code in the response body with the HTTP status code.</p>
+     * 
      * @param request the request parameters of DescribeAvailableResource  DescribeAvailableResourceRequest
      * @return DescribeAvailableResourceResponse
      */
@@ -2127,7 +2168,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>Single-user call frequency: 100 calls per second.</li>
+     * </ul>
      * 
      * @param request the request parameters of DescribeCluster  DescribeClusterRequest
      * @return DescribeClusterResponse
@@ -2165,6 +2208,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Per-user call frequency: 100 calls per second.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeClusterDetail  DescribeClusterDetailRequest
      * @return DescribeClusterDetailResponse
      */
@@ -2184,7 +2232,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The maximum number of times that each user can call this operation per second is 100.</p>
+     * <ul>
+     * <li>Single-user call frequency: 100 calls per second.</li>
+     * </ul>
      * 
      * @param request the request parameters of DescribeClusterKubeConfig  DescribeClusterKubeConfigRequest
      * @return DescribeClusterKubeConfigResponse
@@ -2204,6 +2254,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 100 calls per second.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeClusterNodePools  DescribeClusterNodePoolsRequest
      * @return DescribeClusterNodePoolsResponse
      */
@@ -2222,6 +2277,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 100 calls per second.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeClusterNodes  DescribeClusterNodesRequest
      * @return DescribeClusterNodesResponse
      */
@@ -2240,6 +2300,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>A single user is limited to 100 calls per second.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeClusterUserKubeconfig  DescribeClusterUserKubeconfigRequest
      * @return DescribeClusterUserKubeconfigResponse
      */
@@ -2330,6 +2395,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the pre-push results of application data. Before calling this operation, make sure that your account has activated the Edge Node Service (ENS) edge application hosting service.</p>
+     * 
      * @param request the request parameters of DescribeDataPushResult  DescribeDataPushResultRequest
      * @return DescribeDataPushResultResponse
      */
@@ -2787,8 +2855,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</p>
      * <ul>
+     * <li>to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</li>
      * <li>Empty strings are returned for images that are not exported.</li>
      * <li>The download links may become invalid if you delete objects in OSS.</li>
      * </ul>
@@ -2902,7 +2970,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You must specify an event type to query. You can query multiple event types at the same time.</p>
+     * <ul>
+     * <li>EventTypes must specify at least one event type for the query. Multiple event types can be queried at the same time.</li>
+     * </ul>
      * 
      * @param request the request parameters of DescribeHistoryEvents  DescribeHistoryEventsRequest
      * @return DescribeHistoryEventsResponse
@@ -2995,10 +3065,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 800 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 100 times per second per user.</li>
-     * <li>You can specify multiple request parameters to filter query results. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, this parameter is regarded as a valid filter condition and an empty result is returned.</li>
+     * <li>Request parameters act as filters. Filters are evaluated by using the logical AND operator. If a parameter is empty, the corresponding filter does not take effect. However, if InstanceIds is set to an empty JSON array, the filter is considered valid and an empty result is returned.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeInstanceBandwidthDetail  DescribeInstanceBandwidthDetailRequest
@@ -3131,10 +3199,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 800 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 100 times per second per user.</li>
-     * <li>You can specify multiple request parameters to be queried. Specified parameters are evaluated by using the AND operator. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, it is regarded as a valid filter condition and an empty result is returned.</li>
+     * <li>API call frequency: 800 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeInstances  DescribeInstancesRequest
@@ -3174,9 +3240,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Per-user call rate: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeLoadBalancerAttribute  DescribeLoadBalancerAttributeRequest
@@ -3198,9 +3264,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeLoadBalancerHTTPListenerAttribute  DescribeLoadBalancerHTTPListenerAttributeRequest
@@ -3222,9 +3288,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeLoadBalancerHTTPSListenerAttribute  DescribeLoadBalancerHTTPSListenerAttributeRequest
@@ -3246,9 +3312,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeLoadBalancerListenMonitor  DescribeLoadBalancerListenMonitorRequest
@@ -3306,9 +3372,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Per-user call rate: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeLoadBalancerTCPListenerAttribute  DescribeLoadBalancerTCPListenerAttributeRequest
@@ -3330,9 +3396,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API rate limit: 100 requests per second (RPS).</li>
+     * <li>Per-user rate limit: 10 RPS.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeLoadBalancerUDPListenerAttribute  DescribeLoadBalancerUDPListenerAttributeRequest
@@ -3354,9 +3420,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeLoadBalancers  DescribeLoadBalancersRequest
@@ -3486,9 +3552,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API rate limit: 100 calls/sec.</li>
+     * <li>Per-user rate limit: 10 calls/sec.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeNetworkAttribute  DescribeNetworkAttributeRequest
@@ -3546,9 +3612,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeNetworks  DescribeNetworksRequest
@@ -3840,9 +3906,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Per-user call rate: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeServerLoadBalancerListenMonitor  DescribeServerLoadBalancerListenMonitorRequest
@@ -3864,9 +3930,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeServerLoadBalancerMonitor  DescribeServerLoadBalancerMonitorRequest
@@ -4068,13 +4134,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a></h2>
-     * <p>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</p>
+     * <h2>Usage notes</h2>
+     * <p>This operation detaches a key pair from multiple instances in a batch. The target instances must be in a stopped state.</p>
      * <ul>
-     * <li>You can unbind a maximum of 30 instances at a time.</li>
-     * <li>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</li>
-     * <li>At least one of key_pair_name and key_pair_id is not empty.</li>
-     * <li>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</li>
+     * <li>You can detach a key pair from a maximum of 30 instances in a single request.</li>
+     * <li>The operation returns an error if you specify the <code>KeyPairName</code> parameter and any of the specified instances are not associated with that key pair name.</li>
+     * <li>You must specify either the <code>KeyPairName</code> or <code>KeyPairId</code> parameter.</li>
+     * <li>We recommend using the <code>KeyPairId</code> parameter. The <code>KeyPairName</code> parameter will be deprecated in a future release.</li>
      * </ul>
      * 
      * @param request the request parameters of DetachKeyPair  DetachKeyPairRequest
@@ -4141,7 +4207,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</p>
+     * <ul>
+     * <li>This O\&amp;M task currently supports only the <code>Instance:SystemUpgrade.Migrate</code> event type for migrations due to an underlying upgrade.</li>
+     * </ul>
      * 
      * @param request the request parameters of EventMigrateInstance  EventMigrateInstanceRequest
      * @return EventMigrateInstanceResponse
@@ -4162,7 +4230,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  This O\&amp;M operation supports only the Instance:SystemMaintenance.Reboot event</p>
+     * <ul>
+     * <li>This operation currently supports only the following Event Type: Instance:SystemMaintenance.Reboot (an Instance Reboot due to System Maintenance).</li>
+     * </ul>
      * 
      * @param request the request parameters of EventRebootInstance  EventRebootInstanceRequest
      * @return EventRebootInstanceResponse
@@ -4183,7 +4253,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  This O\&amp;M operation supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system problems) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</p>
+     * <ul>
+     * <li>This O\&amp;M operation supports only the following event types: <code>Instance:SystemFailure.Redeploy</code> (redeployment due to a system failure) and <code>Instance:SystemMaintenance.Redeploy</code> (redeployment for system maintenance).</li>
+     * </ul>
      * 
      * @param request the request parameters of EventRedeployInstance  EventRedeployInstanceRequest
      * @return EventRedeployInstanceResponse
@@ -4311,6 +4383,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>It can be deleted only when the instance group information is empty.</p>
+     * 
      * @param request the request parameters of GetClusterAddonInstance  GetClusterAddonInstanceRequest
      * @return GetClusterAddonInstanceResponse
      */
@@ -4387,8 +4462,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  After the key pair is imported, ENS stores the public key. You must securely store the private key.</p>
      * <ul>
+     * <li>After the key pair is imported, ENS stores the public key. You must securely store the private key.</li>
      * <li>The key pair can be only in the ssh-rsa format.</li>
      * </ul>
      * 
@@ -4428,6 +4503,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The call frequency for a single user is limited to 10 calls per second.</li>
+     * <li>Cluster creation is an asynchronous operation. After the API call returns, the cluster requires 10 to 20 minutes to complete initialization. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * @param request the request parameters of InstallClusterAddons  InstallClusterAddonsRequest
      * @return InstallClusterAddonsResponse
      */
@@ -4465,7 +4546,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation to add an instance to a security group, make sure that the instance is in the Stopped or Running state.</p>
+     * <p>Before you To add an instance to a security group, make sure that the instance is in the Stopped or Running state.</p>
      * 
      * @param request the request parameters of JoinSecurityGroup  JoinSecurityGroupRequest
      * @return JoinSecurityGroupResponse
@@ -4486,7 +4567,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For the Internal Connection mode and the Intelligent Acceleration and Internal Connection mode, instances of the vSwitch take effect automatically. You do not need to manually add instances. For public connections such as intelligent acceleration, you need to call an operation to manually add the instances to Internet-facing instances.</p>
+     * <p>For the internal network connection and internal network connection with intelligent acceleration modes, instances in the vSwitch take effect automatically and do not require manual addition. For the intelligent acceleration public public mode, you only need to call the API operation to add instances to the public public mode instance information.</p>
      * 
      * @param request the request parameters of JoinVSwitchesToEpnInstance  JoinVSwitchesToEpnInstanceRequest
      * @return JoinVSwitchesToEpnInstanceResponse
@@ -4725,6 +4806,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies an installed add-on in an ECK cluster. The target cluster must be in the running state, and ComponentName must reference an installed add-on.</p>
+     * 
      * @param request the request parameters of ModifyClusterAddon  ModifyClusterAddonRequest
      * @return ModifyClusterAddonResponse
      */
@@ -4743,6 +4827,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Single-user call frequency: 10 calls per second.</li>
+     * <li>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyClusterNodePool  ModifyClusterNodePoolRequest
      * @return ModifyClusterNodePoolResponse
      */
@@ -4906,10 +4996,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  If an instance is in the Starting state, you cannot reset the password of the instance.</p>
      * <ul>
-     * <li>When the instance is in the Running state, you cannot change the password of the instance.</li>
-     * <li>After resetting the password, you must Restart the instance in the ECS console or call the RebootInstance operation to validate the modifications. The restart operation within the instance does not validate the modifications.</li>
+     * <li>You cannot reset the instance password when the instance status is Starting.</li>
+     * <li>You cannot modify the instance password when the instance status is Running.</li>
+     * <li>After resetting the password, restart the instance in the console or invoke the RebootInstance operation for the change to take effect. Restarting the instance from within the operating system does not take effect.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyInstanceAttribute  ModifyInstanceAttributeRequest
@@ -4949,11 +5039,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  If an instance is in the Starting state, you cannot reset the password of the instance.</p>
-     * <ul>
-     * <li>If the instance is in the Running state, you cannot change the password of the instance.</li>
-     * <li>After resetting the password, you must restart the instance in the ENS console or call the RebootInstance operation to apply the change. The restart operation within the instance does not apply the change.</li>
-     * </ul>
+     * <p>Modifies the boot configuration of a heterogeneous instance (PCFarm bare metal instance, where InstanceTypeFamily is pc_bmi). If the current state of the instance does not support this operation, the API returns IncorrectInstanceStatus.</p>
      * 
      * @param request the request parameters of ModifyInstanceBootConfiguration  ModifyInstanceBootConfigurationRequest
      * @return ModifyInstanceBootConfigurationResponse
@@ -4974,8 +5060,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of ENS.
-     * The instances must be in the Running or Stopped state, and you have no overdue payments for them.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of Edge Node Service (ENS).
+     * The target instance must be in the Running or Stopped state and must not have an overdue payment before you can change the billing method.</p>
      * 
      * @param request the request parameters of ModifyInstanceChargeType  ModifyInstanceChargeTypeRequest
      * @return ModifyInstanceChargeTypeResponse
@@ -5031,9 +5117,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyLoadBalancerAttribute  ModifyLoadBalancerAttributeRequest
@@ -5055,9 +5141,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>Rate limit: 100 requests per second.</li>
+     * <li>up to 5 times per second per user.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyNetworkAttribute  ModifyNetworkAttributeRequest
@@ -5096,6 +5182,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the instance type of a subscription instance. Before calling this operation, stop the instance by calling StopInstance. After the specification change is complete, start the instance by calling StartInstance.</p>
+     * 
      * @param request the request parameters of ModifyPrepayInstanceSpec  ModifyPrepayInstanceSpecRequest
      * @return ModifyPrepayInstanceSpecResponse
      */
@@ -5115,9 +5204,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>Rate limit: 100 requests per second.</li>
+     * <li>up to 5 times per second per user.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifySecurityGroupAttribute  ModifySecurityGroupAttributeRequest
@@ -5175,9 +5264,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 5 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyVSwitchAttribute  ModifyVSwitchAttributeRequest
@@ -5307,9 +5396,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can configure up to 1,000 rules.</p>
      * <ul>
-     * <li>If an object meets multiple rules, the rule that has the earliest expiration time prevails.</li>
+     * <li>You can configure up to 1,000 rules.</li>
+     * <li>If an object matches multiple rules, the rule with the earliest expiration time applies.</li>
      * </ul>
      * 
      * @param request the request parameters of PutBucketLifecycle  PutBucketLifecycleRequest
@@ -5385,8 +5474,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Only instances that are in the Running state can be restarted.</p>
      * <ul>
+     * <li>Only instances that are in the Running state can be restarted.</li>
      * <li>If the operation is successful, the status of the instance becomes Starting.</li>
      * </ul>
      * 
@@ -5517,8 +5606,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 10,000 times per second per account.</p>
      * <ul>
+     * <li>up to 10,000 times per second per account.</li>
      * <li>The maximum number of times that each user can call this operation per second is 50.</li>
      * </ul>
      * 
@@ -5576,12 +5665,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
-     * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
-     * </ul>
-     * 
      * @param request the request parameters of RemoveBackendServers  RemoveBackendServersRequest
      * @return RemoveBackendServersResponse
      */
@@ -5690,6 +5773,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Renews a subscription AIC server instance. The instance State must be success. You can call DescribeARMServerInstances to query the instance status. Instances in intermediate states such as creating cannot be renewed.</p>
+     * 
      * @param request the request parameters of RenewARMServerInstance  RenewARMServerInstanceRequest
      * @return RenewARMServerInstanceResponse
      */
@@ -5826,10 +5912,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.</p>
      * <ul>
-     * <li>You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.</li>
-     * <li>You can specify one or more of the following parameters to remove access control for a CIDR block: IpProtocol, PortRange, Policy, and SourceCidrIp.</li>
+     * <li>In security group API documentation, the traffic initiator is referred to as the source (Source), and the data transmission receiver is referred to as the destination (Dest).</li>
+     * <li>Any one of the following sets of parameters can identify an inbound security group rule. Specifying only a single parameter cannot identify a security group rule.</li>
+     * <li>Revoke permission settings for a specified IP address range: IpProtocol, PortRange, Policy, SourceCidrIp.</li>
      * </ul>
      * 
      * @param request the request parameters of RevokeSecurityGroup  RevokeSecurityGroupRequest
@@ -5852,7 +5938,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> In the security group-related API documents, outbound traffic refers to the traffic sent by the source and received by the destination.</p>
+     * <p>In the API documentation for security groups, the end that initiates traffic is referred to as the source, and the end that receives data is referred to as the destination (Dest).</p>
      * </blockquote>
      * 
      * @param request the request parameters of RevokeSecurityGroupEgress  RevokeSecurityGroupEgressRequest
@@ -5927,6 +6013,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Saves a Shared Data Group (SDG). SDGs in the failed status cannot be saved. Before calling this operation, call DescribeSDGs to query the current status.</p>
+     * 
      * @param request the request parameters of SaveSDG  SaveSDGRequest
      * @return SaveSDGResponse
      */
@@ -5945,6 +6034,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 10 calls per second.</li>
+     * <li>Scaling out a node pool is an asynchronous operation. After you call the operation, you must wait 5 to 10 minutes for the task to complete.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ScaleClusterNodePool  ScaleClusterNodePoolRequest
      * @return ScaleClusterNodePoolResponse
      */
@@ -5963,12 +6058,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
-     * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
-     * </ul>
-     * 
      * @param request the request parameters of SetBackendServers  SetBackendServersRequest
      * @return SetBackendServersResponse
      */
@@ -5988,9 +6077,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of SetLoadBalancerHTTPListenerAttribute  SetLoadBalancerHTTPListenerAttributeRequest
@@ -6012,9 +6101,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * @param request the request parameters of SetLoadBalancerHTTPSListenerAttribute  SetLoadBalancerHTTPSListenerAttributeRequest
@@ -6036,9 +6125,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * @param request the request parameters of SetLoadBalancerStatus  SetLoadBalancerStatusRequest
@@ -6060,9 +6149,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate limit: 100 calls per second.</li>
+     * <li>Per-user call rate limit: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of SetLoadBalancerTCPListenerAttribute  SetLoadBalancerTCPListenerAttributeRequest
@@ -6084,9 +6173,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API call rate limit: 100 requests/second.</li>
+     * <li>Per-user rate limit: 10 requests/second.</li>
      * </ul>
      * 
      * @param request the request parameters of SetLoadBalancerUDPListenerAttribute  SetLoadBalancerUDPListenerAttributeRequest
@@ -6144,8 +6233,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call the operation only when the instance is in the Stopped state.</p>
      * <ul>
+     * <li>You can call the operation only when the instance is in the Stopped state.</li>
      * <li>If the operation is successful, the status of the instance becomes Starting.</li>
      * </ul>
      * 
@@ -6186,9 +6275,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * @param request the request parameters of StartLoadBalancerListener  StartLoadBalancerListenerRequest
@@ -6246,8 +6335,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to stop instances that are only in the Running state.</p>
      * <ul>
+     * <li>to stop instances that are only in the Running state.</li>
      * <li>If the call is successful, the state of the instance becomes Stopping.</li>
      * <li>Once the instance is stopped, the state of the instance becomes Stopped.</li>
      * <li>Force stop is supported, which is equivalent to power-off. Data that is not written to disks on the instance may be lost.</li>
@@ -6290,9 +6379,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * @param request the request parameters of StopLoadBalancerListener  StopLoadBalancerListenerRequest
@@ -6370,6 +6459,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Uninstalls add-ons from an ECK cluster. The target cluster must be in the running state. You can call DescribeClustersV1 to query the cluster state and wait until the cluster initialization is complete before you call this operation.</p>
+     * 
      * @param request the request parameters of UnInstallClusterAddons  UnInstallClusterAddonsRequest
      * @return UnInstallClusterAddonsResponse
      */
@@ -6496,6 +6588,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 10 calls per second.</li>
+     * <li>Updating the cluster certificate is an asynchronous operation. After you call the API operation, wait 5 to 10 minutes for the cluster certificate to be updated and the control components to restart. During this process, you can call the DescribeClustersV1 operation to query the update status of the cluster certificate. After the cluster certificate is updated, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateClusterCertificate  UpdateClusterCertificateRequest
      * @return UpdateClusterCertificateResponse
      */
@@ -6568,6 +6666,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Each user can call this operation up to 10 times per second.</li>
+     * <li>Creating a cluster is an asynchronous operation. After calling the operation, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpgradeClusterAddons  UpgradeClusterAddonsRequest
      * @return UpgradeClusterAddonsResponse
      */

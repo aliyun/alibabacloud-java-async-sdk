@@ -75,7 +75,7 @@ public class RemoveBackendServersRequest extends Request {
         } 
 
         /**
-         * <p>The list of backend servers that you want to remove. You can remove up to 20 backend servers at a time.</p>
+         * <p>The list of backend servers to remove. You can remove up to 20 backend servers per call.</p>
          * <p>This parameter is required.</p>
          */
         public Builder backendServers(java.util.List<BackendServers> backendServers) {
@@ -86,7 +86,7 @@ public class RemoveBackendServersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
+         * <p>The ID of the load balancing instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class RemoveBackendServersRequest extends Request {
              * <p>The IP address of the backend server.</p>
              * 
              * <strong>example:</strong>
-             * <p>192.XXX.X.X</p>
+             * <p>192.168.0.1</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -211,7 +211,7 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * <p>The backend port that is used by the Edge Load Balancer (ELB) instance.</p>
+             * <p>The port used by the backend servers of the load balancing instance.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -234,10 +234,10 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * <p>The type of backend server. Valid values:</p>
+             * <p>The backend server type. Valid values:</p>
              * <ul>
-             * <li><strong>ens</strong>: an Edge Node Service (ENS) instance.</li>
-             * <li><strong>eni</strong>: an Elastic Network Interface (ENI).</li>
+             * <li><strong>ens</strong>: ENS instance.</li>
+             * <li><strong>eni</strong>: network interface controller (NIC).</li>
              * </ul>
              * 
              * <strong>example:</strong>

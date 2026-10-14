@@ -59,7 +59,8 @@ public class SaveSDGRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the SDG to be saved.</p>
+         * <p>The ID of the SDG to save.</p>
+         * <p>This parameter is required. If this parameter is not specified, the service returns a Parameter.Invalid error.</p>
          * 
          * <strong>example:</strong>
          * <p>sdg-xxxx</p>

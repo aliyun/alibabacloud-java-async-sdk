@@ -24,12 +24,11 @@ public class DescribeClusterNodePoolsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer pageSize;
 
     private DescribeClusterNodePoolsRequest(Builder builder) {
@@ -103,7 +102,7 @@ public class DescribeClusterNodePoolsRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * <p>The page number. Pages start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -115,7 +114,7 @@ public class DescribeClusterNodePoolsRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

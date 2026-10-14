@@ -106,7 +106,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried events.</p>
+         * <p>The list of events.</p>
          */
         public Builder events(java.util.List<Events> events) {
             this.events = events;
@@ -114,7 +114,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5359599C-F656-57BD-8A0D-329A2FD511A6</p>
@@ -147,7 +147,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -333,7 +333,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the event.</p>
+             * <p>The event ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e-d71ff150945b9c02eb6ebc0016328468</p>
@@ -344,11 +344,11 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the specific event. Valid values:</p>
+             * <p>The event level. Valid values:</p>
              * <ul>
-             * <li>CRITICAL</li>
-             * <li>WARN</li>
-             * <li>INFO</li>
+             * <li>CRITICAL: Critical.</li>
+             * <li>WARN: Warning.</li>
+             * <li>INFO: Information.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -360,15 +360,15 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the event. Valid values:</p>
+             * <p>The event status. Valid values:</p>
              * <ul>
-             * <li>Inquiring</li>
-             * <li>Scheduled</li>
-             * <li>Executing</li>
-             * <li>Executed</li>
-             * <li>Failed</li>
-             * <li>Canceled</li>
-             * <li>Avoided</li>
+             * <li>Inquiring: Inquiring.</li>
+             * <li>Scheduled: Scheduled.</li>
+             * <li>Executing: Executing.</li>
+             * <li>Executed: Executed.</li>
+             * <li>Failed: Failed.</li>
+             * <li>Canceled: Canceled.</li>
+             * <li>Avoided: Avoided.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -380,17 +380,17 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the event. Description:</p>
+             * <p>The event type. Valid values:</p>
              * <ul>
-             * <li>Instance:SystemFailure.Redeploy: The instance is redeployed due to system issues.</li>
-             * <li>Instance:SystemFailure.Reboot: The instance is restarted due to a system error.</li>
-             * <li>Instance:RegionNetworkDown: The node network is interrupted.</li>
-             * <li>Disk:Stalled: The disk performance is impaired.</li>
-             * <li>EnsRegion:NetworkMigration: The instance is migrated due to a system error.</li>
-             * <li>IP:SafeRisk: IP alerts.</li>
-             * <li>IP:SafeBan: IP blocking.</li>
-             * <li>Instance:SystemUpgrade.Migrate: The instance needs to be migrated due to underlying upgrades.</li>
-             * <li>Instance:SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
+             * <li>Instance:SystemFailure.Redeploy: The instance deployment due to a system fault.</li>
+             * <li>Instance:SystemFailure.Reboot: The instance is restarted due to a system fault.</li>
+             * <li>Instance:RegionNetworkDown: The edge zone network break.</li>
+             * <li>Disk:Stalled: The disk performance is degraded.</li>
+             * <li>EnsRegion:NetworkMigration: Instance migration due to a system fault.</li>
+             * <li>IP:SafeRisk: IP alerting.</li>
+             * <li>IP:SafeBan: The IP address is blocked.</li>
+             * <li>Instance:SystemUpgrade.Migrate: The instance needs to be migrated due to an underlying upgrade.</li>
+             * <li>Instance:SystemMaintenance.Redeploy: The instance deployment due to system maintenance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -402,7 +402,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended attributes.</p>
+             * <p>The extended attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -413,7 +413,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled execution time of the event in milliseconds.</p>
+             * <p>The scheduled execution time of the event, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1715578245000</p>
@@ -432,7 +432,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release time in milliseconds.</p>
+             * <p>The publish time, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1715578245000</p>
@@ -451,7 +451,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event cause.</p>
+             * <p>The reason for the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The current system policy quota is insufficient</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -459,7 +462,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the associated resources.</p>
+             * <p>The ID of the associated resource.</p>
              * 
              * <strong>example:</strong>
              * <p>i-55qi8m11rr53c4i964md8a00l</p>

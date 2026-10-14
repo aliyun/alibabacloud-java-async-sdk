@@ -164,11 +164,16 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         /**
          * <p>The transport layer protocol. The value of this parameter is case-sensitive. Valid values:</p>
          * <ul>
-         * <li>tcp</li>
-         * <li>udp</li>
-         * <li>icmp</li>
-         * <li>gre</li>
-         * <li>all: All protocols are supported.</li>
+         * <li><p>tcp</p>
+         * </li>
+         * <li><p>udp</p>
+         * </li>
+         * <li><p>icmp</p>
+         * </li>
+         * <li><p>gre</p>
+         * </li>
+         * <li><p>all: All protocols are supported.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -184,8 +189,10 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         /**
          * <p>The action of the security group rule. Valid values:</p>
          * <ul>
-         * <li>accept: allows access. This is the default value.</li>
-         * <li>drop: denies access and does not return responses.</li>
+         * <li><p>accept: allows access. This is the default value.</p>
+         * </li>
+         * <li><p>drop: denies access and does not return responses.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,10 +207,14 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         /**
          * <p>The range of destination ports that correspond to the transport layer protocol for security group rule N. Valid values:</p>
          * <ul>
-         * <li>When the IpProtocol parameter is set to tcp or udp, the port number range is <strong>1</strong> to <strong>65535</strong>. The start port number and the end port number are separated by a forward slash (/). Correct example: <strong>1/200</strong>. Incorrect example: <strong>200/1</strong>.</li>
-         * <li>When the IpProtocol parameter is set to icmp, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
-         * <li>When the IpProtocol parameter is set to gre, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
-         * <li>When the IpProtocol parameter is set to all, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
+         * <li><p>When the IpProtocol parameter is set to tcp or udp, the port number range is <strong>1</strong> to <strong>65535</strong>. The start port number and the end port number are separated by a forward slash (/). Correct example: <strong>1/200</strong>. Incorrect example: <strong>200/1</strong>.</p>
+         * </li>
+         * <li><p>When the IpProtocol parameter is set to icmp, the port number range is <strong>-1/-1</strong>, which indicates all ports.</p>
+         * </li>
+         * <li><p>When the IpProtocol parameter is set to gre, the port number range is <strong>-1/-1</strong>, which indicates all ports.</p>
+         * </li>
+         * <li><p>When the IpProtocol parameter is set to all, the port number range is <strong>-1/-1</strong>, which indicates all ports.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -244,10 +255,14 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         /**
          * <p>The range of port numbers that correspond to the transport layer protocol for the source security group. Valid values:</p>
          * <ul>
-         * <li>When the IpProtocol parameter is set to tcp or udp, the port number range is <strong>1</strong> to <strong>65535</strong>. The start port number and the end port number are separated by a forward slash (/). Correct example: <strong>1/200</strong>. Incorrect example: <strong>200/1</strong>.</li>
-         * <li>When the IpProtocol parameter is set to icmp, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
-         * <li>When the IpProtocol parameter is set to gre, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
-         * <li>When the IpProtocol parameter is set to all, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
+         * <li><p>When the IpProtocol parameter is set to tcp or udp, the port number range is <strong>1</strong> to <strong>65535</strong>. The start port number and the end port number are separated by a forward slash (/). Correct example: <strong>1/200</strong>. Incorrect example: <strong>200/1</strong>.</p>
+         * </li>
+         * <li><p>When the IpProtocol parameter is set to icmp, the port number range is <strong>-1/-1</strong>, which indicates all ports.</p>
+         * </li>
+         * <li><p>When the IpProtocol parameter is set to gre, the port number range is <strong>-1/-1</strong>, which indicates all ports.</p>
+         * </li>
+         * <li><p>When the IpProtocol parameter is set to all, the port number range is <strong>-1/-1</strong>, which indicates all ports.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -169,8 +169,10 @@ public class DescribeStorageVolumeRequest extends Request {
         /**
          * <p>Specifies whether to enable the volume. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong> (default): enables the volume.</li>
-         * <li><strong>0</strong>: disables the volume.</li>
+         * <li><p><strong>1</strong> (default): enables the volume.</p>
+         * </li>
+         * <li><p><strong>0</strong>: disables the volume.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

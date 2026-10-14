@@ -132,7 +132,10 @@ public class ModifyAICInstanceTypeRequest extends Request {
         } 
 
         /**
-         * EnvironmentVar.
+         * <p>One or more environment variables to set during instance initialization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[object Object]</p>
          */
         public Builder environmentVar(String environmentVar) {
             this.putQueryParameter("EnvironmentVar", environmentVar);
@@ -141,7 +144,15 @@ public class ModifyAICInstanceTypeRequest extends Request {
         }
 
         /**
-         * Frequency.
+         * <p>The refresh rate. Unit: Hz. Valid values:</p>
+         * <ul>
+         * <li>30</li>
+         * <li>60</li>
+         * <li>120</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder frequency(Long frequency) {
             this.putQueryParameter("Frequency", frequency);
@@ -150,6 +161,7 @@ public class ModifyAICInstanceTypeRequest extends Request {
         }
 
         /**
+         * <p>The image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +174,7 @@ public class ModifyAICInstanceTypeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance whose specifications you want to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +187,7 @@ public class ModifyAICInstanceTypeRequest extends Request {
         }
 
         /**
+         * <p>The target AIC container instance specifications.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +200,20 @@ public class ModifyAICInstanceTypeRequest extends Request {
         }
 
         /**
-         * Resolution.
+         * <p>The resolution. Valid values:</p>
+         * <ul>
+         * <li>1920*1080</li>
+         * <li>1080*1920</li>
+         * <li>1280*720</li>
+         * <li>720*1280</li>
+         * <li>2400*1080</li>
+         * <li>1080*2400</li>
+         * <li>1920*864</li>
+         * <li>864*1920</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>720*1280</p>
          */
         public Builder resolution(String resolution) {
             this.putQueryParameter("Resolution", resolution);

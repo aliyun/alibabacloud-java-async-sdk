@@ -80,7 +80,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token of the first page to query.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>abcfeg368547ccdef</p>
@@ -91,7 +91,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C78D9B61-69D8-5655-A312-A15DA5EA5D5E</p>
@@ -102,7 +102,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tags that are added to specified one or more resources.</p>
+         * <p>The collection of tagged resources.</p>
          */
         public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -194,7 +194,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the associated resources.</p>
+             * <p>The ID of the associated resource.</p>
              * 
              * <strong>example:</strong>
              * <p>i-5zy93g7z1hnkdmav84joxyzgn</p>
@@ -205,7 +205,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource.</p>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>instance</p>
@@ -227,7 +227,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>CLUSTER</p>

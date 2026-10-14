@@ -91,7 +91,7 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the regions.</p>
+         * EnsNetDistricts.
          */
         public Builder ensNetDistricts(EnsNetDistricts ensNetDistricts) {
             this.ensNetDistricts = ensNetDistricts;
@@ -220,10 +220,7 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of nodes in the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * EnsRegionIdCount.
              */
             public Builder ensRegionIdCount(String ensRegionIdCount) {
                 this.ensRegionIdCount = ensRegionIdCount;
@@ -231,10 +228,7 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100106</p>
+             * NetDistrictCode.
              */
             public Builder netDistrictCode(String netDistrictCode) {
                 this.netDistrictCode = netDistrictCode;
@@ -242,10 +236,7 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>southWest</p>
+             * NetDistrictEnName.
              */
             public Builder netDistrictEnName(String netDistrictEnName) {
                 this.netDistrictEnName = netDistrictEnName;
@@ -253,10 +244,7 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent code of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100000</p>
+             * NetDistrictFatherCode.
              */
             public Builder netDistrictFatherCode(String netDistrictFatherCode) {
                 this.netDistrictFatherCode = netDistrictFatherCode;
@@ -264,15 +252,7 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the region.</p>
-             * <ul>
-             * <li><strong>Big</strong>: area</li>
-             * <li><strong>Middle</strong>: province</li>
-             * <li><strong>Small</strong>: city</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Big</p>
+             * NetDistrictLevel.
              */
             public Builder netDistrictLevel(String netDistrictLevel) {
                 this.netDistrictLevel = netDistrictLevel;
@@ -280,10 +260,7 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>southwest China</p>
+             * NetDistrictName.
              */
             public Builder netDistrictName(String netDistrictName) {
                 this.netDistrictName = netDistrictName;

@@ -183,11 +183,16 @@ public class ListApplicationsRequest extends Request {
         /**
          * <p>The region level by which edge resources of the application are collected. The value is of the enumeration type. Valid values:</p>
          * <ul>
-         * <li>National: Chinese mainland</li>
-         * <li>Big: area</li>
-         * <li>Middle: province</li>
-         * <li>Small: city</li>
-         * <li>RegionId: edge node</li>
+         * <li><p>National: Chinese mainland</p>
+         * </li>
+         * <li><p>Big: area</p>
+         * </li>
+         * <li><p>Middle: province</p>
+         * </li>
+         * <li><p>Small: city</p>
+         * </li>
+         * <li><p>RegionId: edge node</p>
+         * </li>
          * </ul>
          * <p>Default value: National.</p>
          * 
@@ -228,7 +233,7 @@ public class ListApplicationsRequest extends Request {
          * <p>Specifies whether to return other information about the application, such as statistics on resource instances and pods. The value must be a JSON string. By default, all information is returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;appInfo&quot;:true,&quot;detailStat&quot;: true, &quot;appVersionStat&quot;: true, &quot;districtStat&quot;:true ,&quot;instanceStat&quot;: true, &quot;podCountStat&quot;: true}</p>
+         * <p>{\&quot;appInfo\&quot;:true,\&quot;detailStat\&quot;: true, \&quot;appVersionStat\&quot;: true, \&quot;districtStat\&quot;:true ,\&quot;instanceStat\&quot;: true, \&quot;podCountStat\&quot;: true}</p>
          */
         public Builder outAppInfoParams(String outAppInfoParams) {
             this.putQueryParameter("OutAppInfoParams", outAppInfoParams);

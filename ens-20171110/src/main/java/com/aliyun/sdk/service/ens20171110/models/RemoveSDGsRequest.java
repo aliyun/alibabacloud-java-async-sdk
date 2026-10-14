@@ -74,7 +74,7 @@ public class RemoveSDGsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the instances.</p>
+         * <p>The list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
@@ -85,7 +85,7 @@ public class RemoveSDGsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of SDG.</p>
+         * <p>The list of SDG IDs.</p>
          */
         public Builder sdgIds(java.util.List<String> sdgIds) {
             String sdgIdsShrink = shrink(sdgIds, "SdgIds", "json");

@@ -67,7 +67,10 @@ public class UnInstallClusterAddonsResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eck-xxxxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;

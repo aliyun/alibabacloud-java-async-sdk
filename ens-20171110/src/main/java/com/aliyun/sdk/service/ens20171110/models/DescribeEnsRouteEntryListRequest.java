@@ -198,9 +198,12 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         /**
          * <p>The type of next hop of the custom route entry. Valid values:</p>
          * <ul>
-         * <li>Instance (default): an ENS instance.</li>
-         * <li>HaVip: a high-availability virtual IP address (HAVIP).</li>
-         * <li>NetworkPeer: VPC peering connection.</li>
+         * <li><p>Instance (default): an ENS instance.</p>
+         * </li>
+         * <li><p>HaVip: a high-availability virtual IP address (HAVIP).</p>
+         * </li>
+         * <li><p>NetworkPeer: VPC peering connection.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,8 +266,10 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         /**
          * <p>The route type. Valid values:</p>
          * <ul>
-         * <li>Custom: custom route</li>
-         * <li>System: system route</li>
+         * <li><p>Custom: custom route</p>
+         * </li>
+         * <li><p>System: system route</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -60,7 +60,7 @@ public class CreateFileSystemRequest extends Request {
         } 
 
         /**
-         * <p>The information about the orders.</p>
+         * <p>The list of orders. Each element in the list contains the details of an order.</p>
          * <p>This parameter is required.</p>
          */
         public Builder orderDetails(java.util.List<OrderDetails> orderDetails) {
@@ -216,10 +216,10 @@ public class CreateFileSystemRequest extends Request {
             } 
 
             /**
-             * <p>The billing method of the NAS file system. Valid values:</p>
+             * <p>The billable methods of NAS. Valid values:  </p>
              * <ul>
-             * <li>PrePaid: subscription. This billing method is not supported.</li>
-             * <li>PostPaid: pay-as-you-go.</li>
+             * <li>PrePaid: subscription (currently not supported).  </li>
+             * <li>PostPaid: pay-as-you-go billing method.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -232,7 +232,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * <p>The ID of the edge node.</p>
+             * <p>The edge zone ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -244,7 +244,8 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * <p>The name of the file system. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * <p>The file system name.
+             * The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -256,7 +257,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * <p>The name of the mount target. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * <p>The mount target name. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -280,7 +281,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * <p>The type of the order. Set the value to BUY.</p>
+             * <p>The order type. Valid values: BUY.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -292,7 +293,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * <p>The storage protocol. Set the value to nfs.</p>
+             * <p>The storage protocol. Valid values: nfs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -306,8 +307,10 @@ public class CreateFileSystemRequest extends Request {
             /**
              * <p>The storage type. Valid values:</p>
              * <ul>
-             * <li>Capacity.</li>
-             * <li>Performance.</li>
+             * <li><p>capacity: storage-optimized.</p>
+             * </li>
+             * <li><p>Performance: ultra-fast.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

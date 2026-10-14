@@ -75,7 +75,7 @@ public class CopySDGRequest extends Request {
         } 
 
         /**
-         * <p>The destination nodes.</p>
+         * <p>The list of destination edge zones.</p>
          * <p>This parameter is required.</p>
          */
         public Builder destinationRegionIds(java.util.List<String> destinationRegionIds) {
@@ -86,7 +86,7 @@ public class CopySDGRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SDG that you want to copy.</p>
+         * <p>The ID of the SDG to copy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

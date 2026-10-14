@@ -104,10 +104,10 @@ public class RenewARMServerInstanceRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable auto-renewal for the premium bandwidth plan. Valid values:</p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>.</li>
-         * <li><strong>false</strong> (default).</li>
+         * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+         * <li><strong>false</strong>: Auto-renewal is not enabled. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,8 @@ public class RenewARMServerInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance that you want to renew.</p>
+         * <p>The ID of the server instance to be renewed.</p>
+         * <p>Pass the ServerId (with the cas- prefix) returned by DescribeARMServerInstances, not the InstanceId (with the aic- prefix) in AICInstances.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +134,7 @@ public class RenewARMServerInstanceRequest extends Request {
         }
 
         /**
-         * <p>The renewal period. By default, instances are renewed on a monthly basis. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
+         * <p>The renewal period. By default, the instance is renewed on a monthly basis. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

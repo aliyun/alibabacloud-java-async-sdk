@@ -80,7 +80,7 @@ public class CreateSnapshotResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>21969183547****</p>
@@ -102,7 +102,7 @@ public class CreateSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the snapshots.</p>
+         * <p>The snapshot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bp17441ohwka0yuh****</p>

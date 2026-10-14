@@ -67,7 +67,7 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IOPS monitoring data of the cloud disk.</p>
+         * <p>The list of cloud disk I/O monitoring data.</p>
          */
         public Builder diskIopsList(java.util.List<DiskIopsList> diskIopsList) {
             this.diskIopsList = diskIopsList;
@@ -235,7 +235,7 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The business time . The time is displayed in the yyyy-MM-dd HH:mm:ss.</p>
+             * <p>The business time in the format of yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-12-14 00:00:00</p>
@@ -246,7 +246,7 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the disk.</p>
+             * <p>The disk ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-5tzm9wnhzlhjzcbtxo465****</p>
@@ -257,7 +257,7 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read throughput. Unit: bytes.</p>
+             * <p>The read throughput (in bytes).</p>
              * 
              * <strong>example:</strong>
              * <p>10054</p>
@@ -268,7 +268,7 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read latency. Unit: ms.</p>
+             * <p>The read latency (in microseconds).</p>
              * 
              * <strong>example:</strong>
              * <p>15646532</p>
@@ -290,7 +290,7 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the node.</p>
+             * <p>The edge zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-3</p>
@@ -301,7 +301,7 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The write throughput. Unit: bytes.</p>
+             * <p>The write throughput (in bytes).</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -312,7 +312,7 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The write latency. Unit: microseconds.</p>
+             * <p>The write latency (in microseconds).</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

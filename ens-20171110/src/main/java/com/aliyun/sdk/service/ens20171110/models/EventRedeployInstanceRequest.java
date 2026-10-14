@@ -118,7 +118,7 @@ public class EventRedeployInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the system event.</p>
+         * <p>The system event ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,10 +131,12 @@ public class EventRedeployInstanceRequest extends Request {
         }
 
         /**
-         * <p>The type of the O&amp;M task. Valid values:</p>
+         * <p>The O\&amp;M task type. Valid values:</p>
          * <ul>
-         * <li>immediate</li>
-         * <li>scheduled</li>
+         * <li><p>immediate: Immediate execution.</p>
+         * </li>
+         * <li><p>scheduled: Scheduled execution.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -148,7 +150,7 @@ public class EventRedeployInstanceRequest extends Request {
         }
 
         /**
-         * <p>The execution time of the reservation. The timestamp is measured in milliseconds. If the OpsType parameter is set to scheduled, this parameter is required.</p>
+         * <p>The scheduled execution time, specified as a timestamp in milliseconds. This parameter is required if \&quot;OpsType\&quot; is set to \&quot;scheduled\&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>1742452232000</p>
@@ -169,7 +171,7 @@ public class EventRedeployInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

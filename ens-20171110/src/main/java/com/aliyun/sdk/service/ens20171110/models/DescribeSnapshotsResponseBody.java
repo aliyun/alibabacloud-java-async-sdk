@@ -106,7 +106,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -139,7 +139,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the snapshots.</p>
+         * <p>The collection of snapshot details.</p>
          */
         public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -188,6 +188,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SnapshotName")
         private String snapshotName;
 
+        @com.aliyun.core.annotation.NameInMap("SnapshotType")
+        private String snapshotType;
+
         @com.aliyun.core.annotation.NameInMap("SourceDiskCategory")
         private String sourceDiskCategory;
 
@@ -213,6 +216,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             this.size = builder.size;
             this.snapshotId = builder.snapshotId;
             this.snapshotName = builder.snapshotName;
+            this.snapshotType = builder.snapshotType;
             this.sourceDiskCategory = builder.sourceDiskCategory;
             this.sourceDiskId = builder.sourceDiskId;
             this.sourceDiskType = builder.sourceDiskType;
@@ -272,6 +276,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return snapshotType
+         */
+        public String getSnapshotType() {
+            return this.snapshotType;
+        }
+
+        /**
          * @return sourceDiskCategory
          */
         public String getSourceDiskCategory() {
@@ -320,6 +331,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String size; 
             private String snapshotId; 
             private String snapshotName; 
+            private String snapshotType; 
             private String sourceDiskCategory; 
             private String sourceDiskId; 
             private String sourceDiskType; 
@@ -337,6 +349,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
                 this.size = model.size;
                 this.snapshotId = model.snapshotId;
                 this.snapshotName = model.snapshotName;
+                this.snapshotType = model.snapshotType;
                 this.sourceDiskCategory = model.sourceDiskCategory;
                 this.sourceDiskId = model.sourceDiskId;
                 this.sourceDiskType = model.sourceDiskType;
@@ -346,10 +359,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The creation time. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ss format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
-             * <p>2020-08-20T14:52:28Z</p>
+             * <p>2020-08-20 14:52:28</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -357,7 +370,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the snapshot.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>testDescription</p>
@@ -368,7 +381,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the edge node.</p>
+             * <p>The ID of the ENS edge zone.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing-15</p>
@@ -379,7 +392,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity of the disk. Unit: MiB.</p>
+             * <p>The disk capacity. Unit: MiB.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -390,7 +403,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the snapshot.</p>
+             * <p>The snapshot ID.</p>
              * 
              * <strong>example:</strong>
              * <p>s-bp67acfmxazb4p****</p>
@@ -401,7 +414,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.</p>
+             * <p>The display name of the snapshot. This field is returned if a display name was specified when the snapshot was created.</p>
              * 
              * <strong>example:</strong>
              * <p>testSnapshotName</p>
@@ -412,12 +425,23 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the disk. Valid value:</p>
+             * <p>The snapshot type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>manual</p>
+             */
+            public Builder snapshotType(String snapshotType) {
+                this.snapshotType = snapshotType;
+                return this;
+            }
+
+            /**
+             * <p>The disk type. Valid values:</p>
              * <ul>
-             * <li>cloud_efficiency: ultra disk</li>
-             * <li>cloud_ssd: all-flash disk</li>
-             * <li>local_hdd: local HDD</li>
-             * <li>local_ssd: local SSD</li>
+             * <li>cloud_efficiency: ultra cloud disk.</li>
+             * <li>cloud_ssd: all-flash cloud disk.</li>
+             * <li>local_hdd: local HDD.</li>
+             * <li>local_ssd: local SSD.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -429,7 +453,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source disk. This parameter is retained even after the source disk for which the snapshot was created is released.</p>
+             * <p>The ID of the source cloud disk. This field is retained even if the source cloud disk of the snapshot has been released.</p>
              * 
              * <strong>example:</strong>
              * <p>d-bp67acfmxazb4ph****</p>
@@ -440,10 +464,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the disk. Valid value:</p>
+             * <p>The disk property. Valid values:</p>
              * <ul>
-             * <li>1: system disk</li>
-             * <li>2: data disk</li>
+             * <li>1: system cloud disk.</li>
+             * <li>2: data cloud disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -455,7 +479,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source edge node.</p>
+             * <p>The ID of the source ENS edge zone.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-27</p>
@@ -477,12 +501,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the snapshot. Valid value:</p>
+             * <p>The snapshot status. Valid values:</p>
              * <ul>
              * <li>creating: The snapshot is being created.</li>
-             * <li>Available: The snapshot is available.</li>
+             * <li>available: The snapshot is available.</li>
              * <li>deleting: The snapshot is being deleted.</li>
-             * <li>error: An error occurred on the snapshot.</li>
+             * <li>error: An error occurred.</li>
              * </ul>
              * 
              * <strong>example:</strong>

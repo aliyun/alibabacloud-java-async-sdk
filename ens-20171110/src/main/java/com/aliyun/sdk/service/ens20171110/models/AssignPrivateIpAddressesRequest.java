@@ -78,7 +78,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>eni-uf6533jbifugr5fo2j1w</p>
+         * <p>eni-uf6533jbifugr5f*****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -90,7 +90,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
          * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-5rllcjb3ol6duzjdnbm1ombn7</p>
+         * <p>vsw-5rllcjb3ol6duzjdnbm1o*****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

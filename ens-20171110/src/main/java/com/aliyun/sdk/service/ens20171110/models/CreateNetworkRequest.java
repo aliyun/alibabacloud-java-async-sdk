@@ -28,9 +28,17 @@ public class CreateNetworkRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableIpv6")
+    private Boolean enableIpv6;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
+    private String ipv6Isp;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkName")
@@ -45,7 +53,9 @@ public class CreateNetworkRequest extends Request {
         super(builder);
         this.cidrBlock = builder.cidrBlock;
         this.description = builder.description;
+        this.enableIpv6 = builder.enableIpv6;
         this.ensRegionId = builder.ensRegionId;
+        this.ipv6Isp = builder.ipv6Isp;
         this.networkName = builder.networkName;
         this.tag = builder.tag;
     }
@@ -78,10 +88,24 @@ public class CreateNetworkRequest extends Request {
     }
 
     /**
+     * @return enableIpv6
+     */
+    public Boolean getEnableIpv6() {
+        return this.enableIpv6;
+    }
+
+    /**
      * @return ensRegionId
      */
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    /**
+     * @return ipv6Isp
+     */
+    public String getIpv6Isp() {
+        return this.ipv6Isp;
     }
 
     /**
@@ -101,7 +125,9 @@ public class CreateNetworkRequest extends Request {
     public static final class Builder extends Request.Builder<CreateNetworkRequest, Builder> {
         private String cidrBlock; 
         private String description; 
+        private Boolean enableIpv6; 
         private String ensRegionId; 
+        private String ipv6Isp; 
         private String networkName; 
         private java.util.List<Tag> tag; 
 
@@ -113,17 +139,22 @@ public class CreateNetworkRequest extends Request {
             super(request);
             this.cidrBlock = request.cidrBlock;
             this.description = request.description;
+            this.enableIpv6 = request.enableIpv6;
             this.ensRegionId = request.ensRegionId;
+            this.ipv6Isp = request.ipv6Isp;
             this.networkName = request.networkName;
             this.tag = request.tag;
         } 
 
         /**
-         * <p>The CIDR block of the network. You can use one of the following CIDR blocks or their subnets as the CIDR block of the network:</p>
+         * <p>The CIDR block of the network. You can use one of the following CIDR blocks or their subsets:</p>
          * <ul>
-         * <li>10.0.0.0/8 (default)</li>
-         * <li>172.16.0.0/12</li>
-         * <li>192.168.0.0/16</li>
+         * <li><p>10.0.0.0/8 (default).</p>
+         * </li>
+         * <li><p>172.16.0.0/12.</p>
+         * </li>
+         * <li><p>192.168.0.0/16.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -137,8 +168,8 @@ public class CreateNetworkRequest extends Request {
         }
 
         /**
-         * <p>The description of the network.</p>
-         * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
+         * <p>A description of the network.</p>
+         * <p>Must be 2 to 256 characters long, start with a letter or a Chinese character, and cannot start with http\:// or https\://.</p>
          * 
          * <strong>example:</strong>
          * <p>this is my first network</p>
@@ -150,7 +181,16 @@ public class CreateNetworkRequest extends Request {
         }
 
         /**
-         * <p>The ID of the edge node.</p>
+         * EnableIpv6.
+         */
+        public Builder enableIpv6(Boolean enableIpv6) {
+            this.putQueryParameter("EnableIpv6", enableIpv6);
+            this.enableIpv6 = enableIpv6;
+            return this;
+        }
+
+        /**
+         * <p>The node ID of ENS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,11 +203,23 @@ public class CreateNetworkRequest extends Request {
         }
 
         /**
-         * <p>The name of the network. The name must meet the following requirements:</p>
+         * Ipv6Isp.
+         */
+        public Builder ipv6Isp(String ipv6Isp) {
+            this.putQueryParameter("Ipv6Isp", ipv6Isp);
+            this.ipv6Isp = ipv6Isp;
+            return this;
+        }
+
+        /**
+         * <p>The network name. Follow these naming rules:</p>
          * <ul>
-         * <li>The name must be 2 to 128 characters in length.</li>
-         * <li>The name must start with a letter but cannot start with http:// or https://.</li>
-         * <li>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * <li><p>Must be 2 to 128 characters long, using English or Chinese characters.</p>
+         * </li>
+         * <li><p>Must start with a letter or a Chinese character. Cannot start with http\:// or https\://.</p>
+         * </li>
+         * <li><p>Can contain digits, colons (:), underscores (_), or hyphens (-).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,7 +232,7 @@ public class CreateNetworkRequest extends Request {
         }
 
         /**
-         * <p>The resource tags.</p>
+         * <p>Resource tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -248,11 +300,14 @@ public class CreateNetworkRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag that are to add to the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * <p>The tag key for the instance. N ranges from <strong>1</strong> to <strong>20</strong>.</p>
              * <ul>
-             * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
-             * <li>The key must be up to 64 characters in length.</li>
-             * <li>The tag key cannot be an empty string.</li>
+             * <li><p>Cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
+             * </li>
+             * <li><p>Supports up to 64 characters.</p>
+             * </li>
+             * <li><p>Cannot be an empty string.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -264,7 +319,7 @@ public class CreateNetworkRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.</p>
+             * <p>The tag value for the resource. N ranges from 1 to 20. This value can be an empty string once provided. It supports up to 128 characters, cannot start with acs:, and cannot contain http\:// or https\://.</p>
              * 
              * <strong>example:</strong>
              * <p>tagValue</p>

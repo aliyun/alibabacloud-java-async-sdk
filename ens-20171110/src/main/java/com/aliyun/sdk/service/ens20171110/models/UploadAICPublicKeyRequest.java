@@ -120,7 +120,7 @@ public class UploadAICPublicKeyRequest extends Request {
         } 
 
         /**
-         * <p>Public Key</p>
+         * <p>The content of the public key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,10 +133,10 @@ public class UploadAICPublicKeyRequest extends Request {
         }
 
         /**
-         * <p>The description of the document.</p>
+         * <p>The description of the public key.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -145,7 +145,7 @@ public class UploadAICPublicKeyRequest extends Request {
         }
 
         /**
-         * <p>Public Key Grouping</p>
+         * <p>The group of the public key.</p>
          * 
          * <strong>example:</strong>
          * <p>g-test</p>
@@ -157,7 +157,7 @@ public class UploadAICPublicKeyRequest extends Request {
         }
 
         /**
-         * <p>Public Key Name</p>
+         * <p>The name of the public key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class UploadAICPublicKeyRequest extends Request {
         }
 
         /**
-         * <p>Public key type</p>
+         * <p>The type of the public key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

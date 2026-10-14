@@ -91,7 +91,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The renewal status of the instance.</p>
+         * InstanceRenewAttributes.
          */
         public Builder instanceRenewAttributes(InstanceRenewAttributes instanceRenewAttributes) {
             this.instanceRenewAttributes = instanceRenewAttributes;
@@ -181,14 +181,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The renewal type of the instance.</p>
-             * <ul>
-             * <li><strong>true</strong>: enables auto-renewal.</li>
-             * <li><strong>false</strong>: disables auto-renewal.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * AutoRenewal.
              */
             public Builder autoRenewal(Boolean autoRenewal) {
                 this.autoRenewal = autoRenewal;
@@ -196,10 +189,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the auto-renewal period.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Duration.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -207,10 +197,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-5ci7l7k1m9m2zmhp4iw3o****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

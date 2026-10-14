@@ -78,7 +78,7 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The specifications of resources that you can purchase.</p>
+         * SupportResources.
          */
         public Builder supportResources(SupportResources supportResources) {
             this.supportResources = supportResources;
@@ -144,16 +144,7 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the disk.</p>
-             * <ul>
-             * <li>cloud_efficiency: ultra disk.</li>
-             * <li>cloud_ssd: all-flash disk.</li>
-             * <li>local_hdd: local HDD.</li>
-             * <li>local_ssd: local SSD.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>cloud_efficiency</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -161,10 +152,7 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the edge node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-guangzhou-10</p>
+             * EnsRegionId.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;

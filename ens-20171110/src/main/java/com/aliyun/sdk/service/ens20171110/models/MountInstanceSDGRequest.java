@@ -75,7 +75,7 @@ public class MountInstanceSDGRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the instances.</p>
+         * <p>The list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {

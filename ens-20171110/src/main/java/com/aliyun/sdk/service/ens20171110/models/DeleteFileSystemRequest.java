@@ -75,7 +75,7 @@ public class DeleteFileSystemRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the edge node.</p>
+         * <p>The edge zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteFileSystemRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system that you want to delete.</p>
+         * <p>The ID of the file system to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

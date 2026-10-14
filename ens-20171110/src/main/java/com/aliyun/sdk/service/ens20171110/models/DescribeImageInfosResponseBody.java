@@ -80,7 +80,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -91,7 +91,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about images.</p>
+         * Images.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -194,12 +194,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The format of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The format of the image.
-             * raw
-             * qcow2</p>
+             * Format.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -207,10 +202,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the image. Unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * Size.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -218,10 +210,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the disk. Valid values: System and Data.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Data</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -229,10 +218,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-test</p>
+             * imageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -319,6 +305,9 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
+        @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
+        private String imageOwnerAlias;
+
         @com.aliyun.core.annotation.NameInMap("ImageSize")
         private String imageSize;
 
@@ -339,6 +328,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             this.description = builder.description;
             this.diskDeviceMappings = builder.diskDeviceMappings;
             this.imageId = builder.imageId;
+            this.imageOwnerAlias = builder.imageOwnerAlias;
             this.imageSize = builder.imageSize;
             this.imageVersion = builder.imageVersion;
             this.OSName = builder.OSName;
@@ -383,6 +373,13 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageOwnerAlias
+         */
+        public String getImageOwnerAlias() {
+            return this.imageOwnerAlias;
+        }
+
+        /**
          * @return imageSize
          */
         public String getImageSize() {
@@ -422,6 +419,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             private String description; 
             private DiskDeviceMappings diskDeviceMappings; 
             private String imageId; 
+            private String imageOwnerAlias; 
             private String imageSize; 
             private String imageVersion; 
             private String OSName; 
@@ -436,6 +434,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
                 this.description = model.description;
                 this.diskDeviceMappings = model.diskDeviceMappings;
                 this.imageId = model.imageId;
+                this.imageOwnerAlias = model.imageOwnerAlias;
                 this.imageSize = model.imageSize;
                 this.imageVersion = model.imageVersion;
                 this.OSName = model.OSName;
@@ -444,16 +443,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The computing type of the image. Valid values:</p>
-             * <ul>
-             * <li>ens_vm: x86 computing.</li>
-             * <li>arm_vm: ARM computing.</li>
-             * <li>bare_metal: x86 bare machine.</li>
-             * <li>pcfarm: heterogeneous computing.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ens_vm</p>
+             * ComputeType.
              */
             public Builder computeType(String computeType) {
                 this.computeType = computeType;
@@ -461,10 +451,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>centos_6_08_64_20G_alibase_2017****</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -472,7 +459,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mappings between disks and snapshots in the image.</p>
+             * DiskDeviceMappings.
              */
             public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
                 this.diskDeviceMappings = diskDeviceMappings;
@@ -480,10 +467,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>centos_6_08_64_20G_alibase_2017****</p>
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -491,10 +475,15 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the image. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * ImageOwnerAlias.
+             */
+            public Builder imageOwnerAlias(String imageOwnerAlias) {
+                this.imageOwnerAlias = imageOwnerAlias;
+                return this;
+            }
+
+            /**
+             * ImageSize.
              */
             public Builder imageSize(String imageSize) {
                 this.imageSize = imageSize;
@@ -502,10 +491,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6.8</p>
+             * ImageVersion.
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -513,10 +499,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the image. Valid values: <strong>centos</strong>, <strong>debian</strong>, <strong>ubuntu</strong>, and <strong>windows</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>centos</p>
+             * OSName.
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -524,10 +507,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the operating system.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>linux</p>
+             * OSType.
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -535,10 +515,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shenzhen</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

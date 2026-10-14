@@ -103,7 +103,7 @@ public class ModifyInstanceBootConfigurationRequest extends Request {
         } 
 
         /**
-         * <p>The startup method.</p>
+         * <p>The boot method.</p>
          * 
          * <strong>example:</strong>
          * <p>legacy</p>
@@ -115,11 +115,12 @@ public class ModifyInstanceBootConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The startup type.</p>
+         * <p>The boot type.
+         * Governance testing has confirmed that the value disk passes parameter validation, whereas the original example value pxe returns Parameter.Invalid. Other values have not been confirmed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pxe</p>
+         * <p>disk</p>
          */
         public Builder bootType(String bootType) {
             this.putQueryParameter("BootType", bootType);
@@ -128,7 +129,7 @@ public class ModifyInstanceBootConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the startup depends on the disk.</p>
+         * <p>Specifies whether the boot process depends on a disk.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -140,7 +141,7 @@ public class ModifyInstanceBootConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance for which you want to modify the configuration. You can specify only one ID.</p>
+         * <p>The ID of the instance whose boot configuration you want to modify. You can specify only one instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

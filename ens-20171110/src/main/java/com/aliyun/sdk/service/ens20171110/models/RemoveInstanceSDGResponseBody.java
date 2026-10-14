@@ -80,7 +80,7 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned service code. 0 indicates that the request was successful.</p>
+         * <p>The business code returned. A value of 0 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -91,7 +91,7 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data object.</p>
+         * <p>The returned Data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -168,7 +168,7 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error message that is returned.</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
              * <p>sdg not found</p>
@@ -179,7 +179,7 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aic-xxxxx-0</p>
@@ -273,7 +273,7 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the failed tasks.</p>
+             * <p>The list of failure details.</p>
              */
             public Builder failedItems(java.util.List<FailedItems> failedItems) {
                 this.failedItems = failedItems;
@@ -364,7 +364,7 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response message. Success is returned for a successful request.</p>
+             * <p>The response message. A value of success indicates a successful request.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -375,7 +375,7 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution result of the synchronization request.</p>
+             * <p>The execution result of the synchronous request.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -383,10 +383,10 @@ public class RemoveInstanceSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether all tasks are successful. Valid values:</p>
+             * <p>Indicates whether all requests are successful. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: All tasks are successful.</li>
-             * <li><strong>false</strong>: Failed tasks exist.</li>
+             * <li><strong>true</strong>: All requests are successful.</li>
+             * <li><strong>false</strong>: Some tasks failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

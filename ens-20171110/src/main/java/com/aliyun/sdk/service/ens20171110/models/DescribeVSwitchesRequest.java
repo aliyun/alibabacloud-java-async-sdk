@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeVSwitchesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableIpv6")
+    private Boolean enableIpv6;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
@@ -52,6 +56,7 @@ public class DescribeVSwitchesRequest extends Request {
 
     private DescribeVSwitchesRequest(Builder builder) {
         super(builder);
+        this.enableIpv6 = builder.enableIpv6;
         this.ensRegionId = builder.ensRegionId;
         this.ensRegionIds = builder.ensRegionIds;
         this.networkId = builder.networkId;
@@ -73,6 +78,13 @@ public class DescribeVSwitchesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return enableIpv6
+     */
+    public Boolean getEnableIpv6() {
+        return this.enableIpv6;
     }
 
     /**
@@ -132,6 +144,7 @@ public class DescribeVSwitchesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeVSwitchesRequest, Builder> {
+        private Boolean enableIpv6; 
         private String ensRegionId; 
         private java.util.List<String> ensRegionIds; 
         private String networkId; 
@@ -147,6 +160,7 @@ public class DescribeVSwitchesRequest extends Request {
 
         private Builder(DescribeVSwitchesRequest request) {
             super(request);
+            this.enableIpv6 = request.enableIpv6;
             this.ensRegionId = request.ensRegionId;
             this.ensRegionIds = request.ensRegionIds;
             this.networkId = request.networkId;
@@ -156,6 +170,15 @@ public class DescribeVSwitchesRequest extends Request {
             this.vSwitchIds = request.vSwitchIds;
             this.vSwitchName = request.vSwitchName;
         } 
+
+        /**
+         * EnableIpv6.
+         */
+        public Builder enableIpv6(Boolean enableIpv6) {
+            this.putQueryParameter("EnableIpv6", enableIpv6);
+            this.enableIpv6 = enableIpv6;
+            return this;
+        }
 
         /**
          * <p>The ID of the ENS node.</p>
@@ -170,7 +193,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
+         * <p>The IDs of the ENS nodes. You can specify 1 to 100 IDs.</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -179,7 +202,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC to which the vSwitch belongs.</p>
+         * <p>The ID of the VPC to which the VSwitch belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-25cdvfeq58pl****</p>
@@ -215,7 +238,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The ID of the VSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-5m9xhlq8oh***</p>
@@ -227,7 +250,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of vSwitches. You can specify 1 to 100 IDs.</p>
+         * <p>The IDs of the vSwitches. You can specify 1 to 100 IDs.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
@@ -236,7 +259,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * <p>The name of the vSwitch.</p>
+         * <p>The name of the VSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>testVSwitchName</p>

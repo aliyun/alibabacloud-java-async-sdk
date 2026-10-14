@@ -106,7 +106,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number for paging during a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page set in Settings for paging during a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The push results of data files.</p>
+         * PushResults.
          */
         public Builder pushResults(PushResults pushResults) {
             this.pushResults = pushResults;
@@ -136,7 +136,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
@@ -147,7 +147,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -242,10 +242,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the ENS node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-wuxi-5</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -253,10 +250,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the push operation. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-12-28T16:00:00Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -264,10 +258,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the status.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Success</p>
+             * StatusDescrip.
              */
             public Builder statusDescrip(String statusDescrip) {
                 this.statusDescrip = statusDescrip;
@@ -275,10 +266,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the status was last updated. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-12-07T02:37:10Z</p>
+             * UpdateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -332,10 +320,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the ENS node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-wuxi-5</p>
+             * RegionId.
              */
             public Builder regionId(java.util.List<RegionId> regionId) {
                 this.regionId = regionId;
@@ -415,10 +400,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of ENS nodes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * RegionIdCount.
              */
             public Builder regionIdCount(Integer regionIdCount) {
                 this.regionIdCount = regionIdCount;
@@ -426,7 +408,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The push status of data files on the ENS node.</p>
+             * RegionIds.
              */
             public Builder regionIds(RegionIds regionIds) {
                 this.regionIds = regionIds;
@@ -434,10 +416,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The push status. The value is of the enumeration type. Valid values: SUCCESS FAILED PUSHING</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FAILED</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -571,10 +550,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the data file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>gcs-pre-websocket-eip-telecom</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -582,7 +558,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The push status of data files.</p>
+             * StatusStatS.
              */
             public Builder statusStatS(StatusStatS statusStatS) {
                 this.statusStatS = statusStatS;
@@ -590,10 +566,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the data file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>standard</p>
+             * Version.
              */
             public Builder version(String version) {
                 this.version = version;

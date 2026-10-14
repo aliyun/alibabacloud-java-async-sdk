@@ -67,7 +67,7 @@ public class CreateEipInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the EIP.</p>
+         * <p>The ID of the EIP instance.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-25877c70gddh****</p>
@@ -78,7 +78,7 @@ public class CreateEipInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9DB6123F-470D-510A-A9EB-EBA799340452</p>

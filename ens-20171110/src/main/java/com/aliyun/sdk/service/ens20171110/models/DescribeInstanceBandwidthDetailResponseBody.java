@@ -106,7 +106,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the maximum public bandwidth.</p>
+         * <p>The collection of Internet bandwidth cap information.</p>
          */
         public Builder bandwidths(java.util.List<Bandwidths> bandwidths) {
             this.bandwidths = bandwidths;
@@ -114,7 +114,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the current page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -344,7 +344,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bandwidth service time. The data granularity is 5 minutes.</p>
+             * <p>The bandwidth business time. The bandwidth calculation granularity is 5 minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-11 00:00:00</p>
@@ -366,7 +366,11 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the bandwidth. Valid values: 1, which indicates public network bandwidth. 2, which indicates internal network bandwidth.</p>
+             * <p>The bandwidth type. Valid values:</p>
+             * <ul>
+             * <li>1: public network.</li>
+             * <li>2: internal network.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -377,7 +381,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plan ID.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-6ecpqvkicnchxccozrpxxxx</p>
@@ -388,7 +392,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance, such as vm, eip, single_tenant, and nc.</p>
+             * <p>The instance type, such as vm, eip, single_tenant, or nc.</p>
              * 
              * <strong>example:</strong>
              * <p>vm</p>
@@ -399,7 +403,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>null</p>
+             * <p>The IP address of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>203.107.***</p>
@@ -410,7 +414,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Internet service provider to which the IP address belongs.</p>
+             * <p>The Internet service provider (ISP) of the IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>cmcc</p>
@@ -421,7 +425,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>null</p>
+             * <p>The inbound bandwidth. Unit: bit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>43795230</p>
@@ -432,7 +436,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the service, such as vm, eip, esk, and meta.</p>
+             * <p>The service type, such as vm, eip, esk, or meta.</p>
              * 
              * <strong>example:</strong>
              * <p>vm</p>
@@ -443,7 +447,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>null</p>
+             * <p>The outbound bandwidth. Unit: bit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>25415638</p>

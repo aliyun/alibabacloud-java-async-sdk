@@ -103,6 +103,8 @@ public class ModifyClusterNodePoolRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
+         * <p>Only ECK cluster IDs with the eck- prefix are supported. You can obtain the ID by calling the DescribeClustersV1 operation. Serverless cluster IDs returned by the DescribeCluster operation are not supported. The cluster must be in the running state. After creation, it typically takes 10 to 20 minutes to complete initialization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +117,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * KubernetesConfig.
+         * <p>The Kubernetes configuration.</p>
          */
         public Builder kubernetesConfig(KubernetesConfig kubernetesConfig) {
             String kubernetesConfigShrink = shrink(kubernetesConfig, "KubernetesConfig", "json");
@@ -125,6 +127,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
+         * <p>The node pool information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodepoolInfo(NodepoolInfo nodepoolInfo) {
@@ -135,7 +138,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * ScalingGroup.
+         * <p>The scaling group configuration.</p>
          */
         public Builder scalingGroup(ScalingGroup scalingGroup) {
             String scalingGroupShrink = shrink(scalingGroup, "ScalingGroup", "json");
@@ -204,7 +207,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * PreUserData.
+             * <p>The script to run after instance creation but before joining the cluster. The content must be Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWNobyBvawo=</p>
              */
             public Builder preUserData(String preUserData) {
                 this.preUserData = preUserData;
@@ -212,7 +218,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * UserData.
+             * <p>The script to run after instance creation and after joining the cluster. The content must be Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWNobyBvawo=</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -233,11 +242,15 @@ public class ModifyClusterNodePoolRequest extends Request {
      * <p>ModifyClusterNodePoolRequest</p>
      */
     public static class NodepoolInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
         @com.aliyun.core.annotation.NameInMap("NodepoolId")
         @com.aliyun.core.annotation.Validation(required = true)
         private String nodepoolId;
 
         private NodepoolInfo(Builder builder) {
+            this.name = builder.name;
             this.nodepoolId = builder.nodepoolId;
         }
 
@@ -250,6 +263,13 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
          * @return nodepoolId
          */
         public String getNodepoolId() {
@@ -257,16 +277,27 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         public static final class Builder {
+            private String name; 
             private String nodepoolId; 
 
             private Builder() {
             } 
 
             private Builder(NodepoolInfo model) {
+                this.name = model.name;
                 this.nodepoolId = model.nodepoolId;
             } 
 
             /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The node pool ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -337,7 +368,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * Category.
+             * <p>The data cloud disk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -345,7 +379,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The data cloud disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -503,7 +540,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * DataDisks.
+             * <p>The data cloud disk information.</p>
              */
             public Builder dataDisks(java.util.List<DataDisks> dataDisks) {
                 this.dataDisks = dataDisks;
@@ -511,7 +548,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * ImageId.
+             * <p>The instance image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-68bysm5a8gkm7oik7ngacf0in</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -519,7 +559,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * InstanceChargeType.
+             * <p>The instance billing type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -527,7 +570,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * InstanceTypes.
+             * <p>The instance types.</p>
              */
             public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -535,7 +578,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * KeyPairName.
+             * <p>The instance key pair. This parameter is mutually exclusive with password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tf-testAcc</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -543,7 +589,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * Password.
+             * <p>The instance password. This parameter is mutually exclusive with key_pair_name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@AN5Ejx1YyzzK</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -551,7 +600,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * SystemDiskCategory.
+             * <p>The system cloud disk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -559,7 +611,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * SystemDiskSize.
+             * <p>The system cloud disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -567,7 +622,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * VswitchIds.
+             * <p>The vSwitches used by instances.</p>
              */
             public Builder vswitchIds(java.util.List<String> vswitchIds) {
                 this.vswitchIds = vswitchIds;

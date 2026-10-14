@@ -35,6 +35,10 @@ public class CreateClusterRequest extends Request {
     private String ensRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Isp")
+    private String isp;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KubernetesVersion")
     private String kubernetesVersion;
 
@@ -45,6 +49,10 @@ public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+    private String natGatewayId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PodVswitchIds")
@@ -77,9 +85,11 @@ public class CreateClusterRequest extends Request {
         this.containerCidr = builder.containerCidr;
         this.controlPlaneConfig = builder.controlPlaneConfig;
         this.ensRegionId = builder.ensRegionId;
+        this.isp = builder.isp;
         this.kubernetesVersion = builder.kubernetesVersion;
         this.loadBalancerId = builder.loadBalancerId;
         this.name = builder.name;
+        this.natGatewayId = builder.natGatewayId;
         this.podVswitchIds = builder.podVswitchIds;
         this.profile = builder.profile;
         this.publicAccess = builder.publicAccess;
@@ -130,6 +140,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return isp
+     */
+    public String getIsp() {
+        return this.isp;
+    }
+
+    /**
      * @return kubernetesVersion
      */
     public String getKubernetesVersion() {
@@ -148,6 +165,13 @@ public class CreateClusterRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return natGatewayId
+     */
+    public String getNatGatewayId() {
+        return this.natGatewayId;
     }
 
     /**
@@ -197,9 +221,11 @@ public class CreateClusterRequest extends Request {
         private String containerCidr; 
         private ControlPlaneConfig controlPlaneConfig; 
         private String ensRegionId; 
+        private String isp; 
         private String kubernetesVersion; 
         private String loadBalancerId; 
         private String name; 
+        private String natGatewayId; 
         private java.util.List<String> podVswitchIds; 
         private String profile; 
         private Boolean publicAccess; 
@@ -217,9 +243,11 @@ public class CreateClusterRequest extends Request {
             this.containerCidr = request.containerCidr;
             this.controlPlaneConfig = request.controlPlaneConfig;
             this.ensRegionId = request.ensRegionId;
+            this.isp = request.isp;
             this.kubernetesVersion = request.kubernetesVersion;
             this.loadBalancerId = request.loadBalancerId;
             this.name = request.name;
+            this.natGatewayId = request.natGatewayId;
             this.podVswitchIds = request.podVswitchIds;
             this.profile = request.profile;
             this.publicAccess = request.publicAccess;
@@ -229,6 +257,8 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
+         * <p>Kubernetes or ManagedKubernetes. The former indicates an ECK cluster, and the latter indicates a serverless VC.
+         * Must be used together with the profile parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +271,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ContainerCidr.
+         * <p>The pod network CIDR block. The CIDR block must be a valid private CIDR block, which includes the following CIDR blocks and their subnets: 10.0.0.0/8, 172.16-31.0.0/12-16, and 192.168.0.0/16. The CIDR block cannot overlap with the CIDR blocks used by the VPC or existing Kubernetes clusters in the VPC. You cannot modify the CIDR block after the cluster is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.20.0.0/16</p>
          */
         public Builder containerCidr(String containerCidr) {
             this.putQueryParameter("ContainerCidr", containerCidr);
@@ -250,7 +283,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ControlPlaneConfig.
+         * <p>The control plane configuration.</p>
          */
         public Builder controlPlaneConfig(ControlPlaneConfig controlPlaneConfig) {
             String controlPlaneConfigShrink = shrink(controlPlaneConfig, "ControlPlaneConfig", "json");
@@ -260,7 +293,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * <p>The ENS Region ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -269,7 +305,19 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * KubernetesVersion.
+         * Isp.
+         */
+        public Builder isp(String isp) {
+            this.putQueryParameter("Isp", isp);
+            this.isp = isp;
+            return this;
+        }
+
+        /**
+         * <p>The cluster version, which is consistent with the Kubernetes community baseline version. Select the latest version. If you do not specify this parameter, the latest version is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.32.1</p>
          */
         public Builder kubernetesVersion(String kubernetesVersion) {
             this.putQueryParameter("KubernetesVersion", kubernetesVersion);
@@ -278,7 +326,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * <p>The ID of the CLB instance used for API Server access. If you specify this parameter, automatic creation of a CLB instance for the API Server is skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-wz9t256gqa3vbouk****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -287,7 +338,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>mycluster-1</p>
@@ -299,7 +350,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * PodVswitchIds.
+         * NatGatewayId.
+         */
+        public Builder natGatewayId(String natGatewayId) {
+            this.putQueryParameter("NatGatewayId", natGatewayId);
+            this.natGatewayId = natGatewayId;
+            return this;
+        }
+
+        /**
+         * <p>Each pod vSwitch corresponds to a worker node vSwitch. The zone of the pod vSwitch must be the same as that of the worker node vSwitch. If you do not specify this parameter, vswitch_ids is used by default.</p>
          */
         public Builder podVswitchIds(java.util.List<String> podVswitchIds) {
             String podVswitchIdsShrink = shrink(podVswitchIds, "PodVswitchIds", "json");
@@ -309,6 +369,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * <p>Default or Serverless. The former indicates an ECK cluster, and the latter indicates a serverless VC.
+         * Must be used together with the cluster_type parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -321,7 +383,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * PublicAccess.
+         * <p>Specifies whether to enable public network access. The API Server is exposed through an EIP to enable public access to the cluster.
+         * ● true: Enable public network access.
+         * ● false: Disable public network access. If you select this option, you cannot access the cluster API Server from the Internet.
+         * Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder publicAccess(Boolean publicAccess) {
             this.putQueryParameter("PublicAccess", publicAccess);
@@ -330,7 +398,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ServiceCidr.
+         * <p>The service network CIDR block. Valid ranges: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The CIDR block cannot overlap with the VPC CIDR block 10.1.0.0/21 or the CIDR blocks used by existing Kubernetes clusters in the VPC. You cannot modify the CIDR block after the cluster is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.19.0.0/20</p>
          */
         public Builder serviceCidr(String serviceCidr) {
             this.putQueryParameter("ServiceCidr", serviceCidr);
@@ -339,7 +410,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The VPC used by the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -348,7 +422,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * VswitchIds.
+         * <p>The IDs of the vSwitches for cluster nodes. The ENS Region of the vswitch_ids must be the same as the ens_region_id value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;vsw-xxx&quot;, &quot;vsw-yyy&quot;]</p>
          */
         public Builder vswitchIds(java.util.List<String> vswitchIds) {
             String vswitchIdsShrink = shrink(vswitchIds, "VswitchIds", "json");
@@ -495,7 +572,10 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * ImageId.
+             * <p>The control plane virtual machine image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-5ul335umat4e2y9ynwi84p3f9</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -503,7 +583,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * InstanceSpec.
+             * <p>The node instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ens.esk.sn1.medium</p>
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -511,7 +594,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * LoginPassword.
+             * <p>The logon password for the cluster control plane machines.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ThisIsAPassword</p>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -519,7 +605,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * NodePortRange.
+             * <p>The node service port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000-32767</p>
              */
             public Builder nodePortRange(String nodePortRange) {
                 this.nodePortRange = nodePortRange;
@@ -527,7 +616,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Runtime.
+             * <p>The control plane node runtime name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>containerd</p>
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -535,7 +627,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The number of control plane nodes. Valid values: 3 and 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -543,7 +638,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * SystemDiskCategory.
+             * <p>The node system cloud disk type. Valid values: &quot;local_ssd&quot;, &quot;cloud_ssd&quot;, &quot;cloud_efficiency&quot;, &quot;local_hdd&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -551,7 +649,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * SystemDiskSize.
+             * <p>The node system cloud disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder systemDiskSize(Long systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;

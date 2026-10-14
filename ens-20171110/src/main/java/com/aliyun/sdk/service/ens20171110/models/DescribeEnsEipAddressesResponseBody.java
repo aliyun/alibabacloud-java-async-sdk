@@ -106,10 +106,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the EIPs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;106.14.194.193&quot;]</p>
+         * EipAddresses.
          */
         public Builder eipAddresses(EipAddresses eipAddresses) {
             this.eipAddresses = eipAddresses;
@@ -117,7 +114,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Valid values: an integer that is greater than 0. Default value: 1.</p>
+         * <p>The page number of the query list. Valid values: &gt; 0. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +125,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
+         * <p>The number of entries per page for paging queries. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -139,7 +136,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8629F679-B51D-4194-A1CC-5D8F504C362B</p>
@@ -150,7 +147,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>

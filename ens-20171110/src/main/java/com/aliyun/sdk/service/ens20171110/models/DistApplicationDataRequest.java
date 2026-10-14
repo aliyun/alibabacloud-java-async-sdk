@@ -106,7 +106,7 @@ public class DistApplicationDataRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;name&quot;:&quot;app01&quot;,        &quot;version&quot;:&quot;1.0&quot;,        &quot;destPath&quot;:&quot;/root/installed&quot;,        &quot;decompress&quot;:true,        &quot;targetDirName&quot;:&quot;target01&quot;,        &quot;fileMode&quot;:755,        &quot;timeout&quot;:1000    },    {        &quot;name&quot;:&quot;app02&quot;,        &quot;version&quot;:&quot;1.1&quot;,        &quot;destPath&quot;:&quot;/tmp/test.txt&quot;,        &quot;decompress&quot;:false    }]</p>
+         * <p>[{\&quot;name\&quot;:\&quot;app01\&quot;,        \&quot;version\&quot;:\&quot;1.0\&quot;,        \&quot;destPath\&quot;:\&quot;/root/installed\&quot;,        \&quot;decompress\&quot;:true,        \&quot;targetDirName\&quot;:\&quot;target01\&quot;,        \&quot;fileMode\&quot;:755,        \&quot;timeout\&quot;:1000    },    {        \&quot;name\&quot;:\&quot;app02\&quot;,        \&quot;version\&quot;:\&quot;1.1\&quot;,        \&quot;destPath\&quot;:\&quot;/tmp/test.txt\&quot;,        \&quot;decompress\&quot;:false    }]</p>
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
@@ -118,7 +118,7 @@ public class DistApplicationDataRequest extends Request {
          * <p>The canary release policy. The value must be a JSON string. You can specify multiple distribution policies. By default, all data files are distributed.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;name&quot;:&quot;ScheduleToAllByMatchExpressions&quot;,&quot;parameters&quot;:{&quot;match_expressions&quot;:[{&quot;key&quot;:&quot;region_id&quot;,&quot;operator&quot;:&quot;In&quot;,&quot;values&quot;:[&quot;cn-wuhan-telecom_unicom_cmcc-2&quot;]}]}}</p>
+         * <p>{\&quot;name\&quot;:\&quot;ScheduleToAllByMatchExpressions\&quot;,\&quot;parameters\&quot;:{\&quot;match_expressions\&quot;:[{\&quot;key\&quot;:\&quot;region_id\&quot;,\&quot;operator\&quot;:\&quot;In\&quot;,\&quot;values\&quot;:[\&quot;cn-wuhan-telecom_unicom_cmcc-2\&quot;]}]}}</p>
          */
         public Builder distStrategy(String distStrategy) {
             this.putQueryParameter("DistStrategy", distStrategy);

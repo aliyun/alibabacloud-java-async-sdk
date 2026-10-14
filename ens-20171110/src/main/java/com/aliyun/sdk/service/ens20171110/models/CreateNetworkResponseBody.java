@@ -67,7 +67,7 @@ public class CreateNetworkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the network.</p>
+         * <p>The network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n-5***</p>

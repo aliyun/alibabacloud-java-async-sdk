@@ -74,7 +74,7 @@ public class UnInstallClusterAddonsRequest extends Request {
         } 
 
         /**
-         * Addons.
+         * <p>The add-on information.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             String addonsShrink = shrink(addons, "Addons", "json");
@@ -84,6 +84,8 @@ public class UnInstallClusterAddonsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cluster.</p>
+         * <p>The target cluster must be in the running state. You can call DescribeClustersV1 to query the cluster state.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +144,10 @@ public class UnInstallClusterAddonsRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The name of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edge-csi-lite</p>
              */
             public Builder name(String name) {
                 this.name = name;

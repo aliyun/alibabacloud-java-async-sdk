@@ -118,7 +118,7 @@ public class EventRebootInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the system event.</p>
+         * <p>The ID of the system Event.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,10 +131,12 @@ public class EventRebootInstanceRequest extends Request {
         }
 
         /**
-         * <p>The type of the O&amp;M task. Valid values:</p>
+         * <p>The type of the operation. Valid values:</p>
          * <ul>
-         * <li>immediate</li>
-         * <li>scheduled</li>
+         * <li><p>immediate: Executes the operation immediately.</p>
+         * </li>
+         * <li><p>scheduled: Executes the operation at the specified time.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -148,7 +150,7 @@ public class EventRebootInstanceRequest extends Request {
         }
 
         /**
-         * <p>The execution time of the reservation. The timestamp is measured in milliseconds. If the OpsType parameter is set to scheduled, this parameter is required.</p>
+         * <p>The scheduled execution time, as a Timestamp in milliseconds. This parameter is required when OpsType is set to scheduled.</p>
          * 
          * <strong>example:</strong>
          * <p>1742452232000</p>
@@ -160,7 +162,7 @@ public class EventRebootInstanceRequest extends Request {
         }
 
         /**
-         * PlanUtcTime.
+         * <p>Reserved parameter.</p>
          */
         public Builder planUtcTime(String planUtcTime) {
             this.putQueryParameter("PlanUtcTime", planUtcTime);
@@ -169,7 +171,7 @@ public class EventRebootInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The ID of the Resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

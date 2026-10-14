@@ -67,7 +67,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the information about clusters.</p>
+         * <p>The list of cluster information.</p>
          */
         public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;
@@ -75,7 +75,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
@@ -194,7 +194,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the cluster.</p>
+             * <p>The version information of the current cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>1.18.8</p>
@@ -216,7 +216,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next version of the cluster.</p>
+             * <p>The next version information of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>1.20.8</p>
@@ -227,12 +227,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The health status of the instance.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>healthy</li>
-             * <li>unhealthy</li>
-             * </ul>
+             * <p>The health status of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>healthy</p>

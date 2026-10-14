@@ -73,7 +73,7 @@ public class ResetAICInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AIC instance.</p>
+         * <p>The AIC instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aic-instance****</p>
@@ -85,7 +85,7 @@ public class ResetAICInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The server instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cas-instance****</p>

@@ -114,7 +114,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status information of the application.</p>
+         * <p>The application status information.</p>
          */
         public Builder appStatus(AppStatus appStatus) {
             this.appStatus = appStatus;
@@ -122,7 +122,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3A535110-3EE3-5EC5-B1ED-10B7067A1FC8</p>
@@ -133,7 +133,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the devices.</p>
+         * <p>The device list.</p>
          */
         public Builder resourceDetailInfos(java.util.List<ResourceDetailInfos> resourceDetailInfos) {
             this.resourceDetailInfos = resourceDetailInfos;
@@ -141,7 +141,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the instances.</p>
+         * <p>The list of resource instance information.</p>
          */
         public Builder resourceInfos(java.util.List<ResourceInfos> resourceInfos) {
             this.resourceInfos = resourceInfos;
@@ -272,7 +272,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>97a32f2a-aa2c-436a-b19c-05b20d258618</p>
@@ -283,7 +283,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>iotx-api-admin</p>
@@ -305,10 +305,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the application. The value is of the enumeration type. Valid values:</p>
+             * <p>The application type. Valid values:</p>
              * <ul>
-             * <li>Common</li>
-             * <li>Scheduler</li>
+             * <li>Common: common.</li>
+             * <li>Scheduler: schedule resource.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -320,7 +320,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application cluster.</p>
+             * <p>The application cluster name.</p>
              * 
              * <strong>example:</strong>
              * <p>poc</p>
@@ -345,7 +345,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
              * <p>The description of the application.</p>
              * 
              * <strong>example:</strong>
-             * <p>test application</p>
+             * <p>Test application</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -425,7 +425,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the application. The value is of the enumeration type. Valid values:</p>
+             * <p>The application status. Valid values:</p>
              * <p>Three intermediate states:</p>
              * <ul>
              * <li>CREATING</li>
@@ -452,7 +452,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
              * <p>The description of the application status.</p>
              * 
              * <strong>example:</strong>
-             * <p>Creating in progress</p>
+             * <p>Creating</p>
              */
             public Builder statusDescrip(String statusDescrip) {
                 this.statusDescrip = statusDescrip;
@@ -460,7 +460,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the status was last updated.</p>
+             * <p>The most recent status update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-26T05:04Z</p>
@@ -634,7 +634,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the device.</p>
+             * <p>The device name.</p>
              * 
              * <strong>example:</strong>
              * <p>5JhF100NEgdBcpNren32</p>
@@ -645,7 +645,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud device.</p>
+             * <p>The cloud device ID.</p>
              * 
              * <strong>example:</strong>
              * <p>h-uf6009zoaexs5pefypbo</p>
@@ -667,7 +667,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Internet service provider (ISP).</p>
+             * <p>The Internet service provider (ISP) information.</p>
              * 
              * <strong>example:</strong>
              * <p>cmcc</p>
@@ -678,7 +678,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image.</p>
+             * <p>The image ID.</p>
              * 
              * <strong>example:</strong>
              * <p>m-2ze40oyhjorpyw61k7be</p>
@@ -689,7 +689,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The media access control (MAC) address of the device.</p>
+             * <p>The MAC address of the device.</p>
              * 
              * <strong>example:</strong>
              * <p>AA:BB:77:88:99:03</p>
@@ -700,7 +700,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ENS node.</p>
+             * <p>The ID of the ENS edge node.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-jiaozuo-2</p>
@@ -711,7 +711,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The server name of the ENS node.</p>
+             * <p>The server NC name of the ENS edge node.</p>
              * 
              * <strong>example:</strong>
              * <p>ens-nc2</p>
@@ -722,7 +722,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the device.</p>
+             * <p>The device status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -733,7 +733,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the device.</p>
+             * <p>The device type.</p>
              * 
              * <strong>example:</strong>
              * <p>ens.ac6.large</p>
@@ -829,7 +829,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The port of the container.</p>
+             * <p>The container port.</p>
              * 
              * <strong>example:</strong>
              * <p>10000-10010</p>
@@ -851,7 +851,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port range.</p>
+             * <p>The host port range.</p>
              * 
              * <strong>example:</strong>
              * <p>80-8080</p>
@@ -862,7 +862,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol of the gateway. The value is of the enumeration type. Valid values:</p>
+             * <p>The gateway protocol. Valid values:</p>
              * <ul>
              * <li>TCP</li>
              * <li>UDP</li>
@@ -949,7 +949,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the device.</p>
+             * <p>The device name.</p>
              * 
              * <strong>example:</strong>
              * <p>test-api</p>
@@ -960,7 +960,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network information.</p>
+             * <p>The list of network information.</p>
              */
             public Builder network(java.util.List<Network> network) {
                 this.network = network;
@@ -1025,7 +1025,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The internal IP address.</p>
+             * <p>The IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.2.3</p>
@@ -1082,7 +1082,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The public IP address.</p>
+             * <p>The IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>122.13.173.137</p>
@@ -1282,7 +1282,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version of the application.</p>
+             * <p>The application version number.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -1304,10 +1304,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region name.</p>
+             * <p>The area name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Jiaozuo City, Henan Province, Central China</p>
+             * <p>Central China, Henan Province, Jiaozuo City</p>
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -1315,7 +1315,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was created.</p>
+             * <p>The time when the resource was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-10-02T08:26Z</p>
@@ -1326,7 +1326,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the devices.</p>
+             * <p>The list of device information.</p>
              */
             public Builder deviceInfos(java.util.List<DeviceInfos> deviceInfos) {
                 this.deviceInfos = deviceInfos;
@@ -1334,7 +1334,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-5s9boobrmh5000kv4jmi0oeai</p>
@@ -1345,7 +1345,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance.</p>
+             * <p>The instance status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -1356,7 +1356,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal IP addresses.</p>
+             * <p>The list of internal IP addresses.</p>
              */
             public Builder internalIps(java.util.List<InternalIps> internalIps) {
                 this.internalIps = internalIps;
@@ -1372,7 +1372,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region code.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-jiaozuo-2</p>
@@ -1383,7 +1383,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ENS node.</p>
+             * <p>The ID of the ENS edge node.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-jiaozuo-2</p>
@@ -1394,7 +1394,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the region.</p>
+             * <p>The area name.</p>
              * 
              * <strong>example:</strong>
              * <p>China Jiaozuo-2</p>

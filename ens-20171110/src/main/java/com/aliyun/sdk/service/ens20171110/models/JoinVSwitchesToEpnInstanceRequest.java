@@ -75,7 +75,8 @@ public class JoinVSwitchesToEpnInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the edge network instance.</p>
+         * <p>The edge-to-edge communication instance ID.</p>
+         * <p>The NetworkingModel of the EPN instance must be Connection or SpeedUpAndConnection. The SpeedUp pattern does not allow you to associate vSwitches.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +89,7 @@ public class JoinVSwitchesToEpnInstanceRequest extends Request {
         }
 
         /**
-         * <p>The information about the internal networking to which you want to add the edge network instance.</p>
+         * <p>The internal networking information to be added.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

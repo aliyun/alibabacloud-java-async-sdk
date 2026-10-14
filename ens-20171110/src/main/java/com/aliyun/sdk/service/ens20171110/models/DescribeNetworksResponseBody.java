@@ -106,7 +106,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The VPCs.</p>
+         * Networks.
          */
         public Builder networks(Networks networks) {
             this.networks = networks;
@@ -114,7 +114,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>Current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>Number of entries per page in the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -136,7 +136,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -147,7 +147,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>Total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -163,6 +163,156 @@ public class DescribeNetworksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNetworksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworksResponseBody</p>
+     */
+    public static class Ipv6CidrBlock extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
+        private String ipv6CidrBlock;
+
+        @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
+        private String ipv6Isp;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Ipv6CidrBlock(Builder builder) {
+            this.ipv6CidrBlock = builder.ipv6CidrBlock;
+            this.ipv6Isp = builder.ipv6Isp;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6CidrBlock create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6CidrBlock
+         */
+        public String getIpv6CidrBlock() {
+            return this.ipv6CidrBlock;
+        }
+
+        /**
+         * @return ipv6Isp
+         */
+        public String getIpv6Isp() {
+            return this.ipv6Isp;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String ipv6CidrBlock; 
+            private String ipv6Isp; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6CidrBlock model) {
+                this.ipv6CidrBlock = model.ipv6CidrBlock;
+                this.ipv6Isp = model.ipv6Isp;
+                this.type = model.type;
+            } 
+
+            /**
+             * Ipv6CidrBlock.
+             */
+            public Builder ipv6CidrBlock(String ipv6CidrBlock) {
+                this.ipv6CidrBlock = ipv6CidrBlock;
+                return this;
+            }
+
+            /**
+             * Ipv6Isp.
+             */
+            public Builder ipv6Isp(String ipv6Isp) {
+                this.ipv6Isp = ipv6Isp;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Ipv6CidrBlock build() {
+                return new Ipv6CidrBlock(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworksResponseBody</p>
+     */
+    public static class Ipv6CidrBlocks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
+        private java.util.List<Ipv6CidrBlock> ipv6CidrBlock;
+
+        private Ipv6CidrBlocks(Builder builder) {
+            this.ipv6CidrBlock = builder.ipv6CidrBlock;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6CidrBlocks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6CidrBlock
+         */
+        public java.util.List<Ipv6CidrBlock> getIpv6CidrBlock() {
+            return this.ipv6CidrBlock;
+        }
+
+        public static final class Builder {
+            private java.util.List<Ipv6CidrBlock> ipv6CidrBlock; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6CidrBlocks model) {
+                this.ipv6CidrBlock = model.ipv6CidrBlock;
+            } 
+
+            /**
+             * Ipv6CidrBlock.
+             */
+            public Builder ipv6CidrBlock(java.util.List<Ipv6CidrBlock> ipv6CidrBlock) {
+                this.ipv6CidrBlock = ipv6CidrBlock;
+                return this;
+            }
+
+            public Ipv6CidrBlocks build() {
+                return new Ipv6CidrBlocks(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeNetworksResponseBody} extends {@link TeaModel}
@@ -352,10 +502,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -379,10 +526,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bandwidth.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -526,6 +670,9 @@ public class DescribeNetworksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GatewayRouteTableId")
         private String gatewayRouteTableId;
 
+        @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlocks")
+        private Ipv6CidrBlocks ipv6CidrBlocks;
+
         @com.aliyun.core.annotation.NameInMap("NetworkAclId")
         private String networkAclId;
 
@@ -562,6 +709,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             this.description = builder.description;
             this.ensRegionId = builder.ensRegionId;
             this.gatewayRouteTableId = builder.gatewayRouteTableId;
+            this.ipv6CidrBlocks = builder.ipv6CidrBlocks;
             this.networkAclId = builder.networkAclId;
             this.networkId = builder.networkId;
             this.networkName = builder.networkName;
@@ -615,6 +763,13 @@ public class DescribeNetworksResponseBody extends TeaModel {
          */
         public String getGatewayRouteTableId() {
             return this.gatewayRouteTableId;
+        }
+
+        /**
+         * @return ipv6CidrBlocks
+         */
+        public Ipv6CidrBlocks getIpv6CidrBlocks() {
+            return this.ipv6CidrBlocks;
         }
 
         /**
@@ -693,6 +848,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             private String description; 
             private String ensRegionId; 
             private String gatewayRouteTableId; 
+            private Ipv6CidrBlocks ipv6CidrBlocks; 
             private String networkAclId; 
             private String networkId; 
             private String networkName; 
@@ -713,6 +869,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
                 this.description = model.description;
                 this.ensRegionId = model.ensRegionId;
                 this.gatewayRouteTableId = model.gatewayRouteTableId;
+                this.ipv6CidrBlocks = model.ipv6CidrBlocks;
                 this.networkAclId = model.networkAclId;
                 this.networkId = model.networkId;
                 this.networkName = model.networkName;
@@ -726,10 +883,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IPv4 CIDR block of the network.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.0.xx.xx/24</p>
+             * CidrBlock.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -737,10 +891,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the instance was created. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-06-16T06:33:15Z</p>
+             * CreatedTime.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -748,10 +899,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the network.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>exampleDescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -759,10 +907,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the edge node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * EnsRegionId.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -770,10 +915,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the gateway route table.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rt-5*****tbs</p>
+             * GatewayRouteTableId.
              */
             public Builder gatewayRouteTableId(String gatewayRouteTableId) {
                 this.gatewayRouteTableId = gatewayRouteTableId;
@@ -781,10 +923,15 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the network access control list (ACL).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>nacl-a2do9e413e0spxscd****</p>
+             * Ipv6CidrBlocks.
+             */
+            public Builder ipv6CidrBlocks(Ipv6CidrBlocks ipv6CidrBlocks) {
+                this.ipv6CidrBlocks = ipv6CidrBlocks;
+                return this;
+            }
+
+            /**
+             * NetworkAclId.
              */
             public Builder networkAclId(String networkAclId) {
                 this.networkAclId = networkAclId;
@@ -792,10 +939,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the network.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>n-5***</p>
+             * NetworkId.
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -803,10 +947,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the network.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>example</p>
+             * NetworkName.
              */
             public Builder networkName(String networkName) {
                 this.networkName = networkName;
@@ -814,10 +955,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the route table.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rt-5*****pks</p>
+             * RouteTableId.
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -825,7 +963,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the route tables.</p>
+             * RouteTableIds.
              */
             public Builder routeTableIds(RouteTableIds routeTableIds) {
                 this.routeTableIds = routeTableIds;
@@ -833,10 +971,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route table ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rtb-5**</p>
+             * RouterTableId.
              */
             public Builder routerTableId(String routerTableId) {
                 this.routerTableId = routerTableId;
@@ -852,14 +987,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the network. Valid values:</p>
-             * <ul>
-             * <li>Pending</li>
-             * <li>Available</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Available</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -875,7 +1003,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of vSwitches in the network.</p>
+             * VSwitchIds.
              */
             public Builder vSwitchIds(VSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;

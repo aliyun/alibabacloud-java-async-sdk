@@ -67,7 +67,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
         } 
 
         /**
-         * Nodepool.
+         * <p>The node pool configurations.</p>
          */
         public Builder nodepool(Nodepool nodepool) {
             this.nodepool = nodepool;
@@ -75,7 +75,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             } 
 
             /**
-             * PreUserData.
+             * <p>The script to be executed after the instance is created and before it is added to the cluster. The content must be Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWNobyBvawo=</p>
              */
             public Builder preUserData(String preUserData) {
                 this.preUserData = preUserData;
@@ -149,7 +155,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The script to be executed after the instance is created and added to the cluster. The content must be Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWNobyBvawo=</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -229,7 +238,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             } 
 
             /**
-             * EnsRegionId.
+             * <p>The ENS region ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-guiyang-14</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -237,7 +249,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -245,7 +260,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * NodepoolId.
+             * <p>The node pool ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np1176939548ac49e59febe82dcbf1ad56</p>
              */
             public Builder nodepoolId(String nodepoolId) {
                 this.nodepoolId = nodepoolId;
@@ -312,7 +330,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The disk category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -320,7 +341,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the data cloud disk. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -478,7 +502,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             } 
 
             /**
-             * DataDisks.
+             * <p>The data cloud disk information of the nodes.</p>
              */
             public Builder dataDisks(java.util.List<DataDisks> dataDisks) {
                 this.dataDisks = dataDisks;
@@ -486,7 +510,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID of the control plane virtual machine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-67bdk1kpu1ylmt7k33h5dbiov</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -494,7 +521,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceChargeType.
+             * <p>The billing method of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -502,7 +532,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypes.
+             * <p>The list of instance types for the nodes in the node pool.</p>
              */
             public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -510,7 +540,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairName.
+             * <p>The name of the key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-pair-name</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -518,7 +551,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * <p>The logon password of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -526,7 +562,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskCategory.
+             * <p>The system cloud disk category of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -534,7 +573,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskSize.
+             * <p>The size of the system cloud disk. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -542,7 +584,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchIds.
+             * <p>The IDs of the vSwitches where the cluster nodes reside.</p>
              */
             public Builder vswitchIds(java.util.List<String> vswitchIds) {
                 this.vswitchIds = vswitchIds;
@@ -674,7 +716,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             } 
 
             /**
-             * DesiredNodes.
+             * <p>The expected number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder desiredNodes(Integer desiredNodes) {
                 this.desiredNodes = desiredNodes;
@@ -682,7 +727,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * FailedNodes.
+             * <p>The nodes that failed to be created in the node pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failedNodes(Integer failedNodes) {
                 this.failedNodes = failedNodes;
@@ -690,7 +738,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * InitialNodes.
+             * <p>The number of instances that are being created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder initialNodes(Integer initialNodes) {
                 this.initialNodes = initialNodes;
@@ -698,7 +749,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * RemovingNodes.
+             * <p>The number of instances that are being deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder removingNodes(Integer removingNodes) {
                 this.removingNodes = removingNodes;
@@ -706,7 +760,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * ServingNodes.
+             * <p>The number of instances that are in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder servingNodes(Integer servingNodes) {
                 this.servingNodes = servingNodes;
@@ -714,7 +771,15 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The state of the node pool. Valid values:</p>
+             * <ul>
+             * <li>active: The desired state is reached.</li>
+             * <li>scaling: The node pool is scaling out.</li>
+             * <li>removing_nodes: The node pool is scaling in.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -722,7 +787,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNodes.
+             * <p>The total number of instances, including instances that are being created, in use, and being deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalNodes(Integer totalNodes) {
                 this.totalNodes = totalNodes;
@@ -828,7 +896,10 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eck-d2666c5f</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -836,7 +907,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * KubernetesConfig.
+             * <p>The Kubernetes-related configurations.</p>
              */
             public Builder kubernetesConfig(KubernetesConfig kubernetesConfig) {
                 this.kubernetesConfig = kubernetesConfig;
@@ -844,7 +915,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * NodepoolInfo.
+             * <p>The node pool information.</p>
              */
             public Builder nodepoolInfo(NodepoolInfo nodepoolInfo) {
                 this.nodepoolInfo = nodepoolInfo;
@@ -852,7 +923,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingGroup.
+             * <p>The ID of the resource group to which the newly created scaling group belongs. You can assign the newly created scaling group to a specified resource group. If you do not specify this parameter, the scaling group is assigned to the default resource group.</p>
              */
             public Builder scalingGroup(ScalingGroup scalingGroup) {
                 this.scalingGroup = scalingGroup;
@@ -860,7 +931,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status information of the node pool.</p>
              */
             public Builder status(Status status) {
                 this.status = status;

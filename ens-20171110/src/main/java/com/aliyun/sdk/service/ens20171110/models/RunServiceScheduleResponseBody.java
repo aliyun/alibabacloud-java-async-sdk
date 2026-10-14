@@ -145,7 +145,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The execution results of the commands.</p>
+         * CommandResults.
          */
         public Builder commandResults(CommandResults commandResults) {
             this.commandResults = commandResults;
@@ -301,10 +301,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The command.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ls -l /data</p>
+             * Command.
              */
             public Builder command(String command) {
                 this.command = command;
@@ -312,10 +309,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the container.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>android</p>
+             * ContainerName.
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -323,10 +317,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution result of the command.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>success</p>
+             * ResultMsg.
              */
             public Builder resultMsg(String resultMsg) {
                 this.resultMsg = resultMsg;

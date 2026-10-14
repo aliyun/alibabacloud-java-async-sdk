@@ -91,8 +91,8 @@ public class DeploySDGRequest extends Request {
         /**
          * <p>The SDG deployment type. Valid values:</p>
          * <ul>
-         * <li>common (default): read/write deployment. Data updates are written to disks.</li>
-         * <li>overlay: read/write splitting deployment. Content in SDGs is read-only. Data updates are written to the local storage of the instance.</li>
+         * <li>common: (default) read/write deployment. Data updates are written to the cloud disk.</li>
+         * <li>overlay: read/write splitting deployment. The SDG content is read-only, and data updates are written to the local storage of the instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class DeploySDGRequest extends Request {
         }
 
         /**
-         * <p>The IDs of instances on which you want to deploy SDGs. You can deploy SDGs on a maximum of 100 instances at a time.</p>
+         * <p>The list of device resource IDs to which the SDG is deployed. Batch deployment is supported, with a maximum of 100 instances per request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
@@ -116,7 +116,7 @@ public class DeploySDGRequest extends Request {
         }
 
         /**
-         * <p>The SDG ID. This parameter is used to create a disk, which is attached to an instance.</p>
+         * <p>The SDG ID. A cloud disk is created based on this SDG ID and mounted to the specified instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

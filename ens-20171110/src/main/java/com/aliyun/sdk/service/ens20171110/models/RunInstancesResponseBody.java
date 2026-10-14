@@ -80,7 +80,7 @@ public class RunInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of instances.</p>
+         * <p>The list of instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.instanceIds = instanceIds;

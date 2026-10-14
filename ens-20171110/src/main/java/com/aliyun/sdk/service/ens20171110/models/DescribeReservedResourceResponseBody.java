@@ -104,7 +104,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the image.</p>
+         * Images.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -123,7 +123,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resources.</p>
+         * SupportResources.
          */
         public Builder supportResources(SupportResources supportResources) {
             this.supportResources = supportResources;
@@ -189,10 +189,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>centos_6_08_64_20G_alibase_****</p>
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -200,10 +197,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>centos_6_08_64_20G_alibase_****</p>
+             * ImageName.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -471,7 +465,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The sizes of data disks.</p>
+             * DataDiskSizes.
              */
             public Builder dataDiskSizes(DataDiskSizes dataDiskSizes) {
                 this.dataDiskSizes = dataDiskSizes;
@@ -479,10 +473,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing-cmcc</p>
+             * EnsRegionId.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -490,10 +481,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of instances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ens.sn1.stiny</p>
+             * InstanceSpec.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -501,10 +489,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of resources that you can purchase.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>9</p>
+             * SupportResourcesCount.
              */
             public Builder supportResourcesCount(String supportResourcesCount) {
                 this.supportResourcesCount = supportResourcesCount;
@@ -512,7 +497,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sizes of system disks.</p>
+             * SystemDiskSizes.
              */
             public Builder systemDiskSizes(SystemDiskSizes systemDiskSizes) {
                 this.systemDiskSizes = systemDiskSizes;

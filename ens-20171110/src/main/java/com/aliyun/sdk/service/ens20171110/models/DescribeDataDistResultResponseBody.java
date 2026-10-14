@@ -106,7 +106,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The distribution status of data files on edge instances.</p>
+         * DistResults.
          */
         public Builder distResults(DistResults distResults) {
             this.distResults = distResults;
@@ -114,7 +114,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number for the paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for the paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>50373E71-7710-4620-8AAB-133CCE49451C</p>
@@ -147,7 +147,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries in the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>
@@ -242,10 +242,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the instance</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-5qzje8f5un1wmi341m2yetaxv</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -253,10 +250,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the distribution. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-11-19T07:24:52Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -264,10 +258,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the distribution status.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SUCCESS</p>
+             * StatusDescrip.
              */
             public Builder statusDescrip(String statusDescrip) {
                 this.statusDescrip = statusDescrip;
@@ -275,10 +266,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the distribution status was last updated. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-10-11T02:38:19Z</p>
+             * UpdateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -412,10 +400,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of associated edge instances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * InstanceCount.
              */
             public Builder instanceCount(String instanceCount) {
                 this.instanceCount = instanceCount;
@@ -423,7 +408,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The distribution status of the edge instance.</p>
+             * Instances.
              */
             public Builder instances(Instances instances) {
                 this.instances = instances;
@@ -431,17 +416,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The distribution status. The value is of the enumeration type. Valid values:</p>
-             * <ul>
-             * <li>SUCCESS: The distribution is successful.</li>
-             * <li>FAILED: The distribution failed.</li>
-             * <li>DISTING: The data is being distributed.</li>
-             * <li>POD_RESTARTING: The idle pod is being restarted.</li>
-             * <li>DELETED: The data is cleared or removed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>SUCCESS</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -575,10 +550,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the data file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>gcs-prod-websocket-eip-unicom</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -586,7 +558,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The distribution status statistics.</p>
+             * StatusStats.
              */
             public Builder statusStats(StatusStats statusStats) {
                 this.statusStats = statusStats;
@@ -594,10 +566,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the data file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>standard</p>
+             * Version.
              */
             public Builder version(String version) {
                 this.version = version;

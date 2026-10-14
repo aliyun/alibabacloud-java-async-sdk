@@ -201,10 +201,10 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * <p>The directory to which the data file is mounted. The value must be a full path and cannot be &quot;/../&quot;. Example: [&quot;/data/app01&quot;, &quot;/data/user&quot;]. Specify the relative path of the virtual device for this parameter. For example, specify /data for this parameter when the actual path of the virtual device is /data/{input path}.</p>
+         * <p>The directory to which the data file is mounted. The value must be a full path and cannot be \&quot;/../\&quot;. Example: [&quot;/data/app01&quot;, &quot;/data/user&quot;]. Specify the relative path of the virtual device for this parameter. For example, specify /data for this parameter when the actual path of the virtual device is /data/{input path}.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;/data/app01&quot;, &quot;/data/user&quot;]</p>
+         * <p>[\&quot;/data/app01\&quot;, \&quot;/data/user\&quot;]</p>
          */
         public Builder directorys(String directorys) {
             this.putQueryParameter("Directorys", directorys);
@@ -240,7 +240,7 @@ public class RunServiceScheduleRequest extends Request {
          * <p>The scheduling policy of the device. The value must be a JSON string.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;selectLevel&quot;: &quot;RegionId&quot;, &quot;values&quot;: [&quot;cn-chengdu-telecom-2&quot;]  }</p>
+         * <p>{\&quot;selectLevel\&quot;: \&quot;RegionId\&quot;, \&quot;values\&quot;: [\&quot;cn-chengdu-telecom-2\&quot;]  }</p>
          */
         public Builder scheduleStrategy(String scheduleStrategy) {
             this.putQueryParameter("ScheduleStrategy", scheduleStrategy);
@@ -252,16 +252,23 @@ public class RunServiceScheduleRequest extends Request {
          * <p>The scheduling operation. The value must be of the enumeration type. Valid values:</p>
          * <p>Container scenario:</p>
          * <ul>
-         * <li>Start: selects and activates an idle cloud device.</li>
-         * <li>Stop: stops and releases the cloud device.</li>
-         * <li>Console: performs the scheduling operation when the device is in the scheduling state.</li>
+         * <li><p>Start: selects and activates an idle cloud device.</p>
+         * </li>
+         * <li><p>Stop: stops and releases the cloud device.</p>
+         * </li>
+         * <li><p>Console: performs the scheduling operation when the device is in the scheduling state.</p>
+         * </li>
          * </ul>
          * <p>Bare metal instance or virtual machine scenario:</p>
          * <ul>
-         * <li>PreSchedule: locks a virtual machine instance for scheduling.</li>
-         * <li>Confirm: confirms the scheduling operation.</li>
-         * <li>Cancel: cancels the scheduling operation.</li>
-         * <li>Console: performs the scheduling operation when the device is in the scheduling state.</li>
+         * <li><p>PreSchedule: locks a virtual machine instance for scheduling.</p>
+         * </li>
+         * <li><p>Confirm: confirms the scheduling operation.</p>
+         * </li>
+         * <li><p>Cancel: cancels the scheduling operation.</p>
+         * </li>
+         * <li><p>Console: performs the scheduling operation when the device is in the scheduling state.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -278,7 +285,7 @@ public class RunServiceScheduleRequest extends Request {
          * <p>The service commands. The value must be a JSON string.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;containerName&quot;: &quot;android&quot;,       &quot;commands&quot;:[&quot;cat /tmp/token.json&quot;]    },    {      &quot;commands&quot;:[&quot;ls -l /data/data&quot;]    }]</p>
+         * <p>[{\&quot;containerName\&quot;: \&quot;android\&quot;,       \&quot;commands\&quot;:[\&quot;cat /tmp/token.json\&quot;]    },    {      \&quot;commands\&quot;:[\&quot;ls -l /data/data\&quot;]    }]</p>
          */
         public Builder serviceCommands(String serviceCommands) {
             this.putQueryParameter("ServiceCommands", serviceCommands);

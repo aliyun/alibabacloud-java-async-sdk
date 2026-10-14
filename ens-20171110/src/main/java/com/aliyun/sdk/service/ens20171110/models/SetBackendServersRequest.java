@@ -75,7 +75,7 @@ public class SetBackendServersRequest extends Request {
         } 
 
         /**
-         * <p>The list of backend servers that you added. You can modify the weights of up to 20 backend servers in each request.</p>
+         * <p>The list of backend servers to add. You can modify up to 20 backend servers in each call.</p>
          * <p>This parameter is required.</p>
          */
         public Builder backendServers(java.util.List<BackendServers> backendServers) {
@@ -86,7 +86,7 @@ public class SetBackendServersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
+         * <p>The ID of the load balancing instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -112,6 +112,9 @@ public class SetBackendServersRequest extends Request {
      * <p>SetBackendServersRequest</p>
      */
     public static class BackendServers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ip")
+        private String ip;
+
         @com.aliyun.core.annotation.NameInMap("ServerId")
         @com.aliyun.core.annotation.Validation(required = true)
         private String serverId;
@@ -124,6 +127,7 @@ public class SetBackendServersRequest extends Request {
         private Integer weight;
 
         private BackendServers(Builder builder) {
+            this.ip = builder.ip;
             this.serverId = builder.serverId;
             this.type = builder.type;
             this.weight = builder.weight;
@@ -135,6 +139,13 @@ public class SetBackendServersRequest extends Request {
 
         public static BackendServers create() {
             return builder().build();
+        }
+
+        /**
+         * @return ip
+         */
+        public String getIp() {
+            return this.ip;
         }
 
         /**
@@ -159,6 +170,7 @@ public class SetBackendServersRequest extends Request {
         }
 
         public static final class Builder {
+            private String ip; 
             private String serverId; 
             private String type; 
             private Integer weight; 
@@ -167,13 +179,25 @@ public class SetBackendServersRequest extends Request {
             } 
 
             private Builder(BackendServers model) {
+                this.ip = model.ip;
                 this.serverId = model.serverId;
                 this.type = model.type;
                 this.weight = model.weight;
             } 
 
             /**
-             * <p>The ID of the instance that you use as the backend server.</p>
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.10</p>
+             */
+            public Builder ip(String ip) {
+                this.ip = ip;
+                return this;
+            }
+
+            /**
+             * <p>The instance ID of the backend server.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -185,10 +209,10 @@ public class SetBackendServersRequest extends Request {
             }
 
             /**
-             * <p>The type of the backend server. Valid values:</p>
+             * <p>The server type of the backend server. Valid values:</p>
              * <ul>
-             * <li><strong>ens</strong>: ENS instance</li>
-             * <li><strong>eni</strong>: elastic network interface (ENI)</li>
+             * <li><strong>ens</strong>: ENS instance.</li>
+             * <li><strong>eni</strong>: elastic network interfaces (ENIs) instance. The backend server is a network interface controller (NIC).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -202,7 +226,7 @@ public class SetBackendServersRequest extends Request {
             /**
              * <p>The weight of the backend server. Default value: 100. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
              * <blockquote>
-             * <p> The value 0 indicates that requests are not forwarded to the backend server.</p>
+             * <p>A value of 0 indicates that no requests are forwarded to the backend server.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 

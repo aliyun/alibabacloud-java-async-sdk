@@ -106,7 +106,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the instance list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page that was specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
@@ -139,7 +139,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the servers and the AIC instances.</p>
+         * <p>The array of ARM server and AIC instance information.</p>
          */
         public Builder servers(java.util.List<Servers> servers) {
             this.servers = servers;
@@ -147,7 +147,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of instances returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -334,9 +334,12 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             /**
              * <p>The deployment status of the SDG. Valid values:</p>
              * <ul>
-             * <li><strong>sdg_deploying</strong></li>
-             * <li><strong>failed</strong></li>
-             * <li><strong>success</strong></li>
+             * <li><p><strong>sdg_deploying</strong>: Being deployed.</p>
+             * </li>
+             * <li><p><strong>failed</strong>: Deployment failed.</p>
+             * </li>
+             * <li><p><strong>success</strong>: Deployment succeeded.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -535,7 +538,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AIC image.</p>
+             * <p>The AIC image ID.</p>
              * 
              * <strong>example:</strong>
              * <p>m-****</p>
@@ -546,7 +549,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AIC instance.</p>
+             * <p>The AIC instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aic-instance****</p>
@@ -557,7 +560,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation that was most recently performed.</p>
+             * <p>The most recent operation.</p>
              * 
              * <strong>example:</strong>
              * <p>ServerCreate</p>
@@ -568,7 +571,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the container.</p>
+             * <p>The container name.</p>
              * 
              * <strong>example:</strong>
              * <p>AIC-Name</p>
@@ -579,7 +582,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network attributes of the AIC instance.</p>
+             * <p>The network attributes.</p>
              */
             public Builder networkAttributes(NetworkAttributes networkAttributes) {
                 this.networkAttributes = networkAttributes;
@@ -598,7 +601,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the shared data group (SDG) that is deployed on the AIC instance.</p>
+             * <p>The shared data group (SDG) information deployed on the instance.</p>
              */
             public Builder sdgDeployInfo(SdgDeployInfo sdgDeployInfo) {
                 this.sdgDeployInfo = sdgDeployInfo;
@@ -617,14 +620,14 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation status of the AIC instance. Valid values:</p>
+             * <p>The operation state of the AIC instance. Valid values:</p>
              * <ul>
-             * <li><strong>success</strong></li>
-             * <li><strong>failed</strong></li>
-             * <li><strong>creating</strong></li>
-             * <li><strong>releasing</strong></li>
-             * <li><strong>rebooting</strong></li>
-             * <li><strong>reseting</strong></li>
+             * <li><strong>success</strong>: Succeeded.</li>
+             * <li><strong>failed</strong>: Failed.</li>
+             * <li><strong>creating</strong>: Being created.</li>
+             * <li><strong>releasing</strong>: Being released.</li>
+             * <li><strong>rebooting</strong>: Being restarted.</li>
+             * <li><strong>reseting</strong>: Being reset.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -638,9 +641,9 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             /**
              * <p>The running status of the AIC instance. Valid values:</p>
              * <ul>
-             * <li><strong>running</strong></li>
-             * <li><strong>pending</strong></li>
-             * <li><strong>terminating</strong></li>
+             * <li><strong>running</strong>: Running.</li>
+             * <li><strong>pending</strong>: Pending.</li>
+             * <li><strong>terminating</strong>: Being terminated.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -711,7 +714,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -719,7 +725,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -929,7 +938,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the AIC instances.</p>
+             * <p>The array of AIC instance information.</p>
              */
             public Builder AICInstances(java.util.List<AICInstances> AICInstances) {
                 this.AICInstances = AICInstances;
@@ -948,7 +957,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ENS node.</p>
+             * <p>The ENS edge zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hanghzou-27</p>
@@ -970,7 +979,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation that was most recently performed.</p>
+             * <p>The most recent operation.</p>
              * 
              * <strong>example:</strong>
              * <p>ServerCreate</p>
@@ -981,7 +990,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the server.</p>
+             * <p>The server name.</p>
              * 
              * <strong>example:</strong>
              * <p>Server-Name</p>
@@ -992,7 +1001,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the cluster to which the server belongs.</p>
+             * <p>The namespace of the cluster to which the card belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -1014,7 +1023,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the server.</p>
+             * <p>The server ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cas-******</p>
@@ -1036,14 +1045,14 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation status of the server. Valid values:</p>
+             * <p>The operation state of the server. Valid values:</p>
              * <ul>
-             * <li><strong>success</strong></li>
-             * <li><strong>failed</strong></li>
-             * <li><strong>creating</strong></li>
-             * <li><strong>releasing</strong></li>
-             * <li><strong>rebooting</strong></li>
-             * <li><strong>upgrading</strong></li>
+             * <li><strong>success</strong>: Succeeded.</li>
+             * <li><strong>failed</strong>: Failed.</li>
+             * <li><strong>creating</strong>: Being created.</li>
+             * <li><strong>releasing</strong>: Being released.</li>
+             * <li><strong>rebooting</strong>: Being restarted.</li>
+             * <li><strong>upgrading</strong>: Being upgraded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1057,10 +1066,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             /**
              * <p>The running status of the server. Valid values:</p>
              * <ul>
-             * <li><strong>running</strong></li>
-             * <li><strong>stopping</strong></li>
-             * <li><strong>down</strong></li>
-             * <li><strong>starting</strong></li>
+             * <li><strong>running</strong>: Running.</li>
+             * <li><strong>stopping</strong>: Being stopped.</li>
+             * <li><strong>down</strong>: Shut down.</li>
+             * <li><strong>starting</strong>: Being started.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1072,7 +1081,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The collection of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

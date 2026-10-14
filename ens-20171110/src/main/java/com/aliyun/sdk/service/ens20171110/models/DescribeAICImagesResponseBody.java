@@ -106,7 +106,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the images.</p>
+         * <p>The array of image information.</p>
          */
         public Builder images(java.util.List<Images> images) {
             this.images = images;
@@ -125,7 +125,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for paging.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +137,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>72DC6C0A-D9A8-5345-A2BE-FE354CC728A0</p>
@@ -148,7 +148,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -282,7 +282,10 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * AndroidVersion.
+             * <p>The Android version of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder androidVersion(String androidVersion) {
                 this.androidVersion = androidVersion;
@@ -290,10 +293,10 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was created.</p>
+             * <p>The time when the image was created, in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
-             * <p>2022-09-22 10:54:34</p>
+             * <p>2022-01-22 10:54:34</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -304,7 +307,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
              * <p>The description of the image.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test operation of console</p>
+             * <p>Console test operation</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -312,7 +315,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image ID of the AIC instance.</p>
+             * <p>The ID of the Android in Container (AIC) image.</p>
              * 
              * <strong>example:</strong>
              * <p>m-ad0ddaddc2d54adeaa09b7c0f1e****</p>
@@ -334,7 +337,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the image. <strong>Available</strong> is returned for this parameter. Available indicates that the image is available.</p>
+             * <p>The image status. Valid values: <strong>available</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>available</p>
@@ -345,7 +348,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the image repository.</p>
+             * <p>The repository username of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>

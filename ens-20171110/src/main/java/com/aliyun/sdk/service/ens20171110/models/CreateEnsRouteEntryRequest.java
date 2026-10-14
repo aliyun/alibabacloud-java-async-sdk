@@ -162,14 +162,17 @@ public class CreateEnsRouteEntryRequest extends Request {
         /**
          * <p>The destination CIDR block of the custom route entry. Make sure that the following requirements are met:</p>
          * <ul>
-         * <li>The destination CIDR block cannot point or belong to 100.64.0.0/10.</li>
-         * <li>The destination CIDR blocks of the custom route entries in the same route table cannot overlap.</li>
-         * <li>0.0.0.0/0 indicates the default CIDR block.</li>
+         * <li><p>The destination CIDR block cannot point or belong to 100.64.0.0/10.</p>
+         * </li>
+         * <li><p>The destination CIDR blocks of the custom route entries in the same route table cannot overlap.</p>
+         * </li>
+         * <li><p>0.0.0.0/0 indicates the default CIDR block.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.0.0.0/0</p>
+         * <p>120.XXX.XXX.0/24</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -193,9 +196,12 @@ public class CreateEnsRouteEntryRequest extends Request {
         /**
          * <p>The next hop type of the custom route. Valid values:</p>
          * <ul>
-         * <li>Instance: an ENS instance.</li>
-         * <li>HaVip: a high-availability virtual IP address (HAVIP).</li>
-         * <li>NetworkPeer: VPC peering connection.</li>
+         * <li><p>Instance: an ENS instance.</p>
+         * </li>
+         * <li><p>HaVip: a high-availability virtual IP address (HAVIP).</p>
+         * </li>
+         * <li><p>NetworkPeer: VPC peering connection.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,7 +214,7 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The name of the custom route entry that you want to add. The name must be 1 to 128 characters in length. It cannot start with http:// or https://.</p>
+         * <p>The name of the custom route entry that you want to add. The name must be 1 to 128 characters in length. It cannot start with http\:// or https\://.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

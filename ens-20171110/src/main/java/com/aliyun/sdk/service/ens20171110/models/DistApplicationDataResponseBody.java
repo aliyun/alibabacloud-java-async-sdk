@@ -93,7 +93,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of ENS instance IDs.</p>
+         * DistInstanceIds.
          */
         public Builder distInstanceIds(DistInstanceIds distInstanceIds) {
             this.distInstanceIds = distInstanceIds;
@@ -112,7 +112,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The distribution result of the data file.</p>
+         * DistResults.
          */
         public Builder distResults(DistResults distResults) {
             this.distResults = distResults;
@@ -269,10 +269,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the data file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>gcs-prod-websocket-eip-unicom</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -280,10 +277,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code. The value is of the enumerated data type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>400</p>
+             * ResultCode.
              */
             public Builder resultCode(Integer resultCode) {
                 this.resultCode = resultCode;
@@ -291,10 +285,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the distribution result.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Success</p>
+             * ResultDescrip.
              */
             public Builder resultDescrip(String resultDescrip) {
                 this.resultDescrip = resultDescrip;
@@ -302,10 +293,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the data file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>standard</p>
+             * Version.
              */
             public Builder version(String version) {
                 this.version = version;

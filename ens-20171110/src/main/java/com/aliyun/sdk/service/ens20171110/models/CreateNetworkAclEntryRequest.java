@@ -209,7 +209,7 @@ public class CreateNetworkAclEntryRequest extends Request {
 
         /**
          * <p>The description of the network ACL.</p>
-         * <p>The description must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with http\:// or https\://.</p>
          * 
          * <strong>example:</strong>
          * <p>This is my NetworkAcl.</p>
@@ -221,7 +221,10 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * DestinationCidrBlock.
+         * <p>The destination network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.130.220.0/24</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -232,8 +235,10 @@ public class CreateNetworkAclEntryRequest extends Request {
         /**
          * <p>The direction in which the rule is applied. Valid values:</p>
          * <ul>
-         * <li><strong>ingress</strong></li>
-         * <li><strong>egress</strong></li>
+         * <li><p><strong>ingress</strong></p>
+         * </li>
+         * <li><p><strong>egress</strong></p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -248,7 +253,7 @@ public class CreateNetworkAclEntryRequest extends Request {
 
         /**
          * <p>The name of the rule.</p>
-         * <p>The name must be 1 to 128 characters in length and cannot start with http:// or https://.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with http\:// or https\://.</p>
          * 
          * <strong>example:</strong>
          * <p>acl-1</p>
@@ -275,8 +280,10 @@ public class CreateNetworkAclEntryRequest extends Request {
         /**
          * <p>The action that is performed on network traffic that matches the rule. Valid values:</p>
          * <ul>
-         * <li><strong>accept</strong>: allows network traffic.</li>
-         * <li><strong>drop</strong>: blocks network traffic.</li>
+         * <li><p><strong>accept</strong>: allows network traffic.</p>
+         * </li>
+         * <li><p><strong>drop</strong>: blocks network traffic.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -292,8 +299,10 @@ public class CreateNetworkAclEntryRequest extends Request {
         /**
          * <p>The port range.</p>
          * <ul>
-         * <li>If you set <strong>Protocol</strong> to <strong>all</strong> or <strong>icmp</strong>, set this parameter to -1/-1, which specifies all ports.</li>
-         * <li>If you set <strong>Protocol</strong> to <strong>tcp</strong> or <strong>udp</strong>, the port can be <strong>1 to 65535</strong>. You can set this parameter to <strong>1/200</strong> or <strong>80/80</strong>, which specifies ports 1 to 200 or port 80.</li>
+         * <li><p>If you set <strong>Protocol</strong> to <strong>all</strong> or <strong>icmp</strong>, set this parameter to -1/-1, which specifies all ports.</p>
+         * </li>
+         * <li><p>If you set <strong>Protocol</strong> to <strong>tcp</strong> or <strong>udp</strong>, the port can be <strong>1 to 65535</strong>. You can set this parameter to <strong>1/200</strong> or <strong>80/80</strong>, which specifies ports 1 to 200 or port 80.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -322,10 +331,14 @@ public class CreateNetworkAclEntryRequest extends Request {
         /**
          * <p>The type of the protocol. Valid values:</p>
          * <ul>
-         * <li><strong>icmp</strong>: ICMP</li>
-         * <li><strong>tcp</strong>: TCP</li>
-         * <li><strong>udp</strong>: UDP</li>
-         * <li><strong>all</strong>: all protocols</li>
+         * <li><p><strong>icmp</strong>: ICMP</p>
+         * </li>
+         * <li><p><strong>tcp</strong>: TCP</p>
+         * </li>
+         * <li><p><strong>udp</strong>: UDP</p>
+         * </li>
+         * <li><p><strong>all</strong>: all protocols</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

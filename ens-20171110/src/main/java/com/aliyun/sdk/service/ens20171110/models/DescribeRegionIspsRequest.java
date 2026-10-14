@@ -59,7 +59,7 @@ public class DescribeRegionIspsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the node. You can specify only one node ID in a call.</p>
+         * <p>The edge node ID. Only a single query is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-dalian-unicom</p>

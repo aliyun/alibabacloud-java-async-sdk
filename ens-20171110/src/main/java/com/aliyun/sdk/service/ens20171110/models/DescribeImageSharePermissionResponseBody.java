@@ -119,7 +119,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The account information.</p>
+         * Accounts.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -227,10 +227,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud account with which you share the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1515285523xxxx</p>
+             * AliyunUid.
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;

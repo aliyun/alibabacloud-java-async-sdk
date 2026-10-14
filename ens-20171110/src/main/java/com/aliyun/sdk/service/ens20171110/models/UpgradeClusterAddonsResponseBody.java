@@ -67,7 +67,10 @@ public class UpgradeClusterAddonsResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eck-xxxxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -75,7 +78,7 @@ public class UpgradeClusterAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>

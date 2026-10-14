@@ -93,7 +93,7 @@ public class ReinitInstanceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>m-5wn1dhz5syoo9b48f440ntvad</p>
+         * <p>m-5wn1dh*******b48f440ntvad</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -106,7 +106,7 @@ public class ReinitInstanceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>i-5vn4n3y4laeb2ii9zxxltlvzi</p>
+         * <p>i-5vn4n3y4laeb*******ltlvzi</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -116,10 +116,10 @@ public class ReinitInstanceRequest extends Request {
 
         /**
          * <p>The password of the instance.</p>
-         * <p>It must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letters, lowercase letters, digits, and special characters. The following special character are supported: <code>()\&quot;~! @#$%^&amp;*-_+={}[]:;\&quot;&lt;&gt;,.?/</code></p>
+         * <p>It must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letters, lowercase letters, digits, and special characters. The following special character are supported: <code>()\\&quot;~! @#$%^&amp;*-_+={}[]:;\\&quot;&lt;&gt;,.?/</code></p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Example123@</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);

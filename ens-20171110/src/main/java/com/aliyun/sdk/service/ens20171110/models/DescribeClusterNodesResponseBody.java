@@ -80,7 +80,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * Nodes.
+         * <p>The node information.</p>
          */
         public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
@@ -88,7 +88,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Page.
+         * <p>The pagination information.</p>
          */
         public Builder page(Page page) {
             this.page = page;
@@ -96,7 +96,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,6 +112,111 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNodesResponseBody</p>
+     */
+    public static class NodeInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContainerRuntimeVersion")
+        private String containerRuntimeVersion;
+
+        @com.aliyun.core.annotation.NameInMap("KubeletVersion")
+        private String kubeletVersion;
+
+        @com.aliyun.core.annotation.NameInMap("OsImage")
+        private String osImage;
+
+        private NodeInfo(Builder builder) {
+            this.containerRuntimeVersion = builder.containerRuntimeVersion;
+            this.kubeletVersion = builder.kubeletVersion;
+            this.osImage = builder.osImage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NodeInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return containerRuntimeVersion
+         */
+        public String getContainerRuntimeVersion() {
+            return this.containerRuntimeVersion;
+        }
+
+        /**
+         * @return kubeletVersion
+         */
+        public String getKubeletVersion() {
+            return this.kubeletVersion;
+        }
+
+        /**
+         * @return osImage
+         */
+        public String getOsImage() {
+            return this.osImage;
+        }
+
+        public static final class Builder {
+            private String containerRuntimeVersion; 
+            private String kubeletVersion; 
+            private String osImage; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeInfo model) {
+                this.containerRuntimeVersion = model.containerRuntimeVersion;
+                this.kubeletVersion = model.kubeletVersion;
+                this.osImage = model.osImage;
+            } 
+
+            /**
+             * <p>The container runtime version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>containerd://1.6.28</p>
+             */
+            public Builder containerRuntimeVersion(String containerRuntimeVersion) {
+                this.containerRuntimeVersion = containerRuntimeVersion;
+                return this;
+            }
+
+            /**
+             * <p>The kubelet version of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.30.7-aliyun.1</p>
+             */
+            public Builder kubeletVersion(String kubeletVersion) {
+                this.kubeletVersion = kubeletVersion;
+                return this;
+            }
+
+            /**
+             * <p>The operating system image of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS Linux 7 (Core)</p>
+             */
+            public Builder osImage(String osImage) {
+                this.osImage = osImage;
+                return this;
+            }
+
+            public NodeInfo build() {
+                return new NodeInfo(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeClusterNodesResponseBody} extends {@link TeaModel}
@@ -131,6 +239,9 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
         private java.util.List<String> ipAddress;
 
+        @com.aliyun.core.annotation.NameInMap("NodeInfo")
+        private NodeInfo nodeInfo;
+
         @com.aliyun.core.annotation.NameInMap("NodepoolId")
         private String nodepoolId;
 
@@ -146,6 +257,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             this.imageId = builder.imageId;
             this.instanceId = builder.instanceId;
             this.ipAddress = builder.ipAddress;
+            this.nodeInfo = builder.nodeInfo;
             this.nodepoolId = builder.nodepoolId;
             this.payType = builder.payType;
             this.state = builder.state;
@@ -195,6 +307,13 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeInfo
+         */
+        public NodeInfo getNodeInfo() {
+            return this.nodeInfo;
+        }
+
+        /**
          * @return nodepoolId
          */
         public String getNodepoolId() {
@@ -221,6 +340,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             private String imageId; 
             private String instanceId; 
             private java.util.List<String> ipAddress; 
+            private NodeInfo nodeInfo; 
             private String nodepoolId; 
             private String payType; 
             private String state; 
@@ -234,13 +354,17 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
                 this.imageId = model.imageId;
                 this.instanceId = model.instanceId;
                 this.ipAddress = model.ipAddress;
+                this.nodeInfo = model.nodeInfo;
                 this.nodepoolId = model.nodepoolId;
                 this.payType = model.payType;
                 this.state = model.state;
             } 
 
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eck-xxxxxxxx</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -248,7 +372,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * <p>The ENS edge zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-fuzhou-23</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -256,7 +383,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The instance image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-680cki2ruj1q2bm0mz1k9tnbz</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -264,7 +394,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-51mctytg7tv4yw4amu3oczxsx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -272,7 +405,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * <p>The IP address of the ENS instance.</p>
              */
             public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
@@ -280,7 +413,18 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodepoolId.
+             * <p>The node information.</p>
+             */
+            public Builder nodeInfo(NodeInfo nodeInfo) {
+                this.nodeInfo = nodeInfo;
+                return this;
+            }
+
+            /**
+             * <p>The node pool ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np861febb748f84f5f9f1c76819eff7f56</p>
              */
             public Builder nodepoolId(String nodepoolId) {
                 this.nodepoolId = nodepoolId;
@@ -288,7 +432,13 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>PostPaid: pay-as-you-go.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -296,7 +446,15 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status of the node pool. Valid values:</p>
+             * <ul>
+             * <li>initial: The node pool is being created.</li>
+             * <li>running: The node pool is created.</li>
+             * <li>removing: The node pool is being removed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>initial</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -376,7 +534,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -384,7 +545,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -392,7 +556,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

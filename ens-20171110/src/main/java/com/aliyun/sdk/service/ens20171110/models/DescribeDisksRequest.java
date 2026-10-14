@@ -255,12 +255,12 @@ public class DescribeDisksRequest extends Request {
         } 
 
         /**
-         * <p>The category of the disk.</p>
+         * <p>The disk category.</p>
          * <ul>
-         * <li>cloud_efficiency: ultra disk.</li>
-         * <li>cloud_ssd: all-flash disk.</li>
-         * <li>local_hdd: local HDD.</li>
-         * <li>local_ssd: local SSD.</li>
+         * <li>cloud_efficiency: ultra cloud disk</li>
+         * <li>cloud_ssd: all-flash cloud disk</li>
+         * <li>local_hdd: local HDD</li>
+         * <li>local_ssd: local SSD</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,10 +273,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The billing method.</p>
+         * <p>The billing type.</p>
          * <ul>
-         * <li>prePay: subscription.</li>
-         * <li>postpay: pay-as-you-go.</li>
+         * <li>prepay: subscription</li>
+         * <li>postpay: pay-as-you-go</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -289,7 +289,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the disk.</p>
+         * <p>The ID of the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>d-5soak1gqa507lyfzvz0xo****</p>
@@ -301,10 +301,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the disk.</p>
+         * <p>The disk IDs.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;d-wz99njena32z90ki****&quot;]</p>
+         * <p>[\&quot;d-wz99njena32z90ki****\&quot;]</p>
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -325,11 +325,11 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The purchase method of the disk. Valid values:</p>
+         * <p>The disk purchase method.</p>
          * <ul>
-         * <li>ServiceDisk: The disk is purchased when ENS is activated.</li>
-         * <li>ResoureDisk: The disk is purchased when the instance is created.</li>
-         * <li>PostPayDisk: The disk is separately purchased.</li>
+         * <li>ServiceDisk: disk created by an edge service</li>
+         * <li>ResoureDisk: purchased with an instance</li>
+         * <li>PostPayDisk: purchased separately</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -342,7 +342,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the edge node.</p>
+         * <p>The ID of the ENS edge zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-kunming-telecom</p>
@@ -354,7 +354,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The node information.</p>
+         * <p>The list of edge zones.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;cn-suzhou-telecom&quot;,&quot;cn-chengdu-telecom&quot;]</p>
@@ -366,7 +366,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance to which the disk is attached.</p>
+         * <p>The instance to which the cloud disk is mounted.</p>
          * 
          * <strong>example:</strong>
          * <p>i-5t77rb0yoz79m28ku60sx****</p>
@@ -378,7 +378,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The order in which you want to sort the returned data. Example: {&quot;EnsRegionId&quot;:&quot;desc&quot;}. By default, the nodes are sorted by IDs in descending order.</p>
+         * <p>The sorting parameter. Format example: {&quot;EnsRegionId&quot;:&quot;desc&quot;}. By default, results are sorted by edge zone ID in descending order.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;DiskNameSort&quot;:&quot;desc&quot;,&quot;EnsRegionIdSort&quot;:&quot;asc&quot; }</p>
@@ -390,7 +390,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Pages start from page <strong>1</strong>.</p>
+         * <p>The page number of the query list. Minimum value: <strong>1</strong>.</p>
          * <p>Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -403,7 +403,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>.</p>
+         * <p>The number of entries per page for a paged query. Maximum value: <strong>50</strong>.</p>
          * <p>Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -416,7 +416,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the snapshot.</p>
+         * <p>The snapshot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>s-897654321****</p>
@@ -428,17 +428,17 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The status of the disk. Valid values:</p>
+         * <p>The disk status.</p>
          * <ul>
-         * <li>In-use: The disk is in use.</li>
-         * <li>Available: The disk can be attached.</li>
-         * <li>Attaching: The disk is being attached.</li>
-         * <li>Detaching: The disk is being detached.</li>
-         * <li>Creating: The disk is being created.</li>
-         * <li>ReIniting: The disk is being reset.</li>
-         * <li>Deleting: The disk is being released.</li>
-         * <li>Deleted: The disk is released.</li>
-         * <li>Expiring: The disk is about to expire.</li>
+         * <li>In-use: in use</li>
+         * <li>Available: to be mounted</li>
+         * <li>Attaching: being mounted</li>
+         * <li>Detaching: being unmounted</li>
+         * <li>Creating: being created</li>
+         * <li>ReIniting: being reset</li>
+         * <li>Deleting: being released</li>
+         * <li>Deleted: released</li>
+         * <li>Expiring: about to expire</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -451,10 +451,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The type of the disk. Valid values:</p>
+         * <p>The disk property.</p>
          * <ul>
-         * <li>system: system disk.</li>
-         * <li>data: data disk.</li>
+         * <li>system: system cloud disk</li>
+         * <li>data: data cloud disk</li>
          * </ul>
          * 
          * <strong>example:</strong>

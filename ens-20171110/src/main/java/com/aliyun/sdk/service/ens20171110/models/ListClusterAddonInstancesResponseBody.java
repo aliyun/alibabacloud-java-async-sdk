@@ -67,7 +67,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>List of addon information.</p>
+         * <p>The list of add-on information.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
@@ -75,7 +75,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
@@ -170,7 +170,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Application version.</p>
+             * <p>The application version.</p>
              * 
              * <strong>example:</strong>
              * <p>7380581386597434629002</p>
@@ -181,7 +181,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Configuration version.</p>
+             * <p>The configuration version.</p>
              * 
              * <strong>example:</strong>
              * <p>4572581386436834662215</p>
@@ -192,7 +192,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Component name.</p>
+             * <p>The add-on name.</p>
              * 
              * <strong>example:</strong>
              * <p>edge-csi-lite</p>
@@ -203,7 +203,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Custom parameters.</p>
+             * <p>The custom add-on parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;key1&quot;: &quot;val1&quot;}</p>
@@ -312,7 +312,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether to automatically clean up associated cloud resources.</p>
+             * <p>Specifies whether to automatically clean up associated cloud resources.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -323,7 +323,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of custom parameter schemas for the addon.</p>
+             * <p>The list of schemas for custom add-on parameters.</p>
              */
             public Builder configSchema(java.util.List<ConfigSchema> configSchema) {
                 this.configSchema = configSchema;
@@ -331,7 +331,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Addon name.</p>
+             * <p>The plug-in name.</p>
              * 
              * <strong>example:</strong>
              * <p>test1</p>
@@ -342,7 +342,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Current addon status. Values:</p>
+             * <p>The current add-on status. Valid values:</p>
              * <ul>
              * <li><strong>enabling</strong>: Enabling.</li>
              * <li><strong>enabled</strong>: Enabled.</li>
@@ -360,7 +360,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Version number.</p>
+             * <p>The version number.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>

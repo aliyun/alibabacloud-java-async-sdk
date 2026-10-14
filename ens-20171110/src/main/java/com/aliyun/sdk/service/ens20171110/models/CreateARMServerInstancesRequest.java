@@ -319,7 +319,7 @@ public class CreateARMServerInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The number of instances to create. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+         * <p>The number of instances to create. Minimum value: <strong>1</strong>. Maximum value: <strong>100</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -332,11 +332,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal for the subscription. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
-         * </ul>
+         * <p>Specifies whether to enable auto-renewal.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -349,10 +345,6 @@ public class CreateARMServerInstancesRequest extends Request {
 
         /**
          * <p>Specifies whether to use coupons. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -364,7 +356,10 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * Cidr.
+         * <p>The IPv4 CIDR block used by the instance, in CIDR notation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         public Builder cidr(String cidr) {
             this.putQueryParameter("Cidr", cidr);
@@ -373,7 +368,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * <p>The ENS edge zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -386,7 +381,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>Set one or more environment variables during EAIS instance initialization.</p>
+         * <p>One or more environment variables to set during EAIS instance initialization.</p>
          * 
          * <strong>example:</strong>
          * <p>[object Object]</p>
@@ -398,7 +393,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The refresh rate. Unit: Hz. Valid values: 30 and 60.</p>
+         * <p>The refresh rate, in Hz. Valid values: 30 and 60.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -410,7 +405,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -423,7 +418,14 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * InstanceBillingCycle.
+         * <p>The instance billing cycle. Valid values:</p>
+         * <ul>
+         * <li>Hour</li>
+         * <li>Day</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Hour</p>
          */
         public Builder instanceBillingCycle(String instanceBillingCycle) {
             this.putQueryParameter("InstanceBillingCycle", instanceBillingCycle);
@@ -432,29 +434,50 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The specification of the Android in Container (AIC) instance. Examples:</p>
+         * <p>The instance type of the AIC container instance. Valid values:</p>
          * <ul>
-         * <li>aic.cf52r.c1.np</li>
-         * <li>aic.cf52r.c2.np</li>
-         * <li>aic.cf53r.c2.np</li>
-         * <li>aic.cf52r.c4.np</li>
-         * <li>aic.cf53r.c3.np</li>
-         * <li>aic.cf52r.c3.np</li>
-         * <li>aic.cf53r.c1.np</li>
-         * <li>aic.cf53r.c5.np</li>
-         * <li>aic.cf53r.c6</li>
-         * <li>aic.cf53r.c4.np</li>
-         * <li>aic.cf53r.c6.np</li>
-         * <li>aic.cf53r.c7.np</li>
-         * <li>aic.cf52m1r.c5.np</li>
-         * <li>aic.cf53r.c8.np</li>
-         * <li>aic.cf53r.c7</li>
-         * <li>aic.cf52m1r.c2.np</li>
-         * <li>aic.cf52m1r.c1.np</li>
-         * <li>aic.cf52m1r.c3.np</li>
-         * <li>aic.cf52m1r.c4.np</li>
-         * <li>aic.cf52m1r.c6</li>
-         * <li>ens.a6c2</li>
+         * <li><p>aic.cf52r.c1.np</p>
+         * </li>
+         * <li><p>aic.cf52r.c2.np</p>
+         * </li>
+         * <li><p>aic.cf53r.c2.np</p>
+         * </li>
+         * <li><p>aic.cf52r.c4.np</p>
+         * </li>
+         * <li><p>aic.cf53r.c3.np</p>
+         * </li>
+         * <li><p>aic.cf52r.c3.np</p>
+         * </li>
+         * <li><p>aic.cf53r.c1.np</p>
+         * </li>
+         * <li><p>aic.cf53r.c5.np</p>
+         * </li>
+         * <li><p>aic.cf53r.c6</p>
+         * </li>
+         * <li><p>aic.cf53r.c4.np</p>
+         * </li>
+         * <li><p>aic.cf53r.c6.np</p>
+         * </li>
+         * <li><p>aic.cf53r.c7.np</p>
+         * </li>
+         * <li><p>aic.cf52m1r.c5.np</p>
+         * </li>
+         * <li><p>aic.cf53r.c8.np</p>
+         * </li>
+         * <li><p>aic.cf53r.c7</p>
+         * </li>
+         * <li><p>aic.cf52m1r.c2.np</p>
+         * </li>
+         * <li><p>aic.cf52m1r.c1.np</p>
+         * </li>
+         * <li><p>aic.cf52m1r.c3.np</p>
+         * </li>
+         * <li><p>aic.cf52m1r.c4.np</p>
+         * </li>
+         * <li><p>aic.cf52m1r.c6</p>
+         * </li>
+         * <li><p>ens.a6c2</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -468,7 +491,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the key pair.</p>
+         * <p>The key pair name.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKeyPairName</p>
@@ -492,10 +515,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Set the value to <strong>PrePaid</strong>. PrePaid specifies the subscription billing method.</p>
-         * <blockquote>
-         * <p> Only PrePaid is supported.</p>
-         * </blockquote>
+         * <p>The billing type. Valid values: <strong>PrePaid</strong> (subscription).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -508,11 +528,11 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the instance.</p>
+         * <p>The duration for which you want to purchase the resource.</p>
          * <ul>
-         * <li>If you leave PeriodUnit empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</li>
-         * <li>If you set PeriodUnit to Day, you can set Period only to 3.</li>
-         * <li>If you set PeriodUnit to Month, you can set Period to a value within the range of [1,9], or set the value to 12.</li>
+         * <li>If you do not specify PeriodUnit, the resource is purchased on a monthly basis by default. Currently, only Days and Month are supported.</li>
+         * <li>If PeriodUnit is set to Day, Period can only be set to 3.</li>
+         * <li>If PeriodUnit is set to Month, Period can be set to 1 to 9 or 12.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -525,12 +545,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration.</p>
-         * <ul>
-         * <li>If you leave PeriodUnit empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</li>
-         * <li>If you set PeriodUnit to Day, you can set Period only to 3.</li>
-         * <li>If you set PeriodUnit to Month, you can set Period to a value within the range of [1,9], or set the value to 12.</li>
-         * </ul>
+         * <p>The unit of the purchase duration.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -542,16 +557,24 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The resolution. Examples:</p>
+         * <p>The resolution. Valid values:</p>
          * <ul>
-         * <li>1920*864</li>
-         * <li>1080*1920</li>
-         * <li>1920*1080</li>
-         * <li>720*1280</li>
-         * <li>2400*1080</li>
-         * <li>1080*2400</li>
-         * <li>1280*720</li>
-         * <li>864*1920</li>
+         * <li><p>1920*864</p>
+         * </li>
+         * <li><p>1080*1920</p>
+         * </li>
+         * <li><p>1920*1080</p>
+         * </li>
+         * <li><p>720*1280</p>
+         * </li>
+         * <li><p>2400*1080</p>
+         * </li>
+         * <li><p>1080*2400</p>
+         * </li>
+         * <li><p>1280*720</p>
+         * </li>
+         * <li><p>864*1920</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -565,7 +588,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>AIC-Server</p>
@@ -577,7 +600,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The specification of the ARM server. Examples:</p>
+         * <p>The ARM board specification. Valid values:</p>
          * <ul>
          * <li>cas.cf53r</li>
          * <li>cas.cf52r</li>
@@ -597,7 +620,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags bound to the instance.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -665,7 +688,10 @@ public class CreateARMServerInstancesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>team</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -673,7 +699,10 @@ public class CreateARMServerInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backend</p>
              */
             public Builder value(String value) {
                 this.value = value;

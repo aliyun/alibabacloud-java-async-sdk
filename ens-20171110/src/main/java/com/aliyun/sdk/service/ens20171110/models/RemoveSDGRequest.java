@@ -60,7 +60,7 @@ public class RemoveSDGRequest extends Request {
         } 
 
         /**
-         * <p>IDs of Android in Container (AIC) instances.</p>
+         * <p>The list of AIC instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {

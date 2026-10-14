@@ -22,6 +22,10 @@ public class DescribeClustersV1Request extends Request {
     private String clusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    private String clusterType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
@@ -29,11 +33,17 @@ public class DescribeClustersV1Request extends Request {
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Profile")
+    private String profile;
+
     private DescribeClustersV1Request(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.clusterType = builder.clusterType;
         this.ensRegionId = builder.ensRegionId;
         this.name = builder.name;
+        this.profile = builder.profile;
     }
 
     public static Builder builder() {
@@ -57,6 +67,13 @@ public class DescribeClustersV1Request extends Request {
     }
 
     /**
+     * @return clusterType
+     */
+    public String getClusterType() {
+        return this.clusterType;
+    }
+
+    /**
      * @return ensRegionId
      */
     public String getEnsRegionId() {
@@ -70,10 +87,19 @@ public class DescribeClustersV1Request extends Request {
         return this.name;
     }
 
+    /**
+     * @return profile
+     */
+    public String getProfile() {
+        return this.profile;
+    }
+
     public static final class Builder extends Request.Builder<DescribeClustersV1Request, Builder> {
         private String clusterId; 
+        private String clusterType; 
         private String ensRegionId; 
         private String name; 
+        private String profile; 
 
         private Builder() {
             super();
@@ -82,12 +108,14 @@ public class DescribeClustersV1Request extends Request {
         private Builder(DescribeClustersV1Request request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.clusterType = request.clusterType;
             this.ensRegionId = request.ensRegionId;
             this.name = request.name;
+            this.profile = request.profile;
         } 
 
         /**
-         * <p>The name of the ECS instance.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eck-xxxxxxxx</p>
@@ -99,7 +127,16 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * ClusterType.
+         */
+        public Builder clusterType(String clusterType) {
+            this.putQueryParameter("ClusterType", clusterType);
+            this.clusterType = clusterType;
+            return this;
+        }
+
+        /**
+         * <p>The ENS region ID where the cluster resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-58</p>
@@ -111,7 +148,7 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * <p>System specified parameters. Set the value to <strong>DescribeClustersV1</strong>.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-eck-name</p>
@@ -119,6 +156,15 @@ public class DescribeClustersV1Request extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * Profile.
+         */
+        public Builder profile(String profile) {
+            this.putQueryParameter("Profile", profile);
+            this.profile = profile;
             return this;
         }
 

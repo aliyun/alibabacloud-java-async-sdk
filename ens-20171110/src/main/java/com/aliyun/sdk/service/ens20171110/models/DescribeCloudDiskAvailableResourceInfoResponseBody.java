@@ -78,7 +78,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         }
 
         /**
-         * <p>The specifications of resources that you can purchase.</p>
+         * SupportResources.
          */
         public Builder supportResources(SupportResources supportResources) {
             this.supportResources = supportResources;
@@ -276,7 +276,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             } 
 
             /**
-             * <p>Node product capability.</p>
+             * Ability.
              */
             public Builder ability(Ability ability) {
                 this.ability = ability;
@@ -284,10 +284,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * <p>The number of disks that you can purchase.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * CanBuyCount.
              */
             public Builder canBuyCount(Long canBuyCount) {
                 this.canBuyCount = canBuyCount;
@@ -295,16 +292,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * <p>The type of the disk.</p>
-             * <ul>
-             * <li>cloud_efficiency:ultra disk.</li>
-             * <li>cloud_ssd:all-flash disk.</li>
-             * <li>local_hdd:local HDD.</li>
-             * <li>local_ssd:local SSD.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>cloud_ssd</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -312,10 +300,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * <p>The default size of the disk. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * DefaultDiskSize.
              */
             public Builder defaultDiskSize(Long defaultDiskSize) {
                 this.defaultDiskSize = defaultDiskSize;
@@ -323,10 +308,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * <p>The maximum size of the disk. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * DiskMaxSize.
              */
             public Builder diskMaxSize(Long diskMaxSize) {
                 this.diskMaxSize = diskMaxSize;
@@ -334,10 +316,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * <p>The minimum size of the disk size. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * DiskMinSize.
              */
             public Builder diskMinSize(Long diskMinSize) {
                 this.diskMinSize = diskMinSize;
@@ -345,10 +324,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * <p>The ID of the edge node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing-cmcc</p>
+             * EnsRegionId.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -356,10 +332,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * <p>The name of the task node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Beijing Mobile</p>
+             * EnsRegionName.
              */
             public Builder ensRegionName(String ensRegionName) {
                 this.ensRegionName = ensRegionName;

@@ -143,11 +143,16 @@ public class DescribeApplicationRequest extends Request {
         /**
          * <p>The region level by which edge resources of the application are collected. The value is of the enumeration type. Valid values:</p>
          * <ul>
-         * <li>National: Chinese mainland</li>
-         * <li>Big: area</li>
-         * <li>Middle: province</li>
-         * <li>Small: city</li>
-         * <li>RegionId: edge node</li>
+         * <li><p>National: Chinese mainland</p>
+         * </li>
+         * <li><p>Big: area</p>
+         * </li>
+         * <li><p>Middle: province</p>
+         * </li>
+         * <li><p>Small: city</p>
+         * </li>
+         * <li><p>RegionId: edge node</p>
+         * </li>
          * </ul>
          * <p>Default value: National.</p>
          * 
@@ -164,7 +169,7 @@ public class DescribeApplicationRequest extends Request {
          * <p>Specifies whether to return other information about the application, such as statistics on resource instances and pods. The value must be a JSON string. By default, all information is returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;appInfo&quot;:true,&quot;detailStat&quot;: true, &quot;appVersionStat&quot;: true, &quot;districtStat&quot;:true ,&quot;instanceStat&quot;: true, &quot;podCountStat&quot;: true}</p>
+         * <p>{\&quot;appInfo\&quot;:true,\&quot;detailStat\&quot;: true, \&quot;appVersionStat\&quot;: true, \&quot;districtStat\&quot;:true ,\&quot;instanceStat\&quot;: true, \&quot;podCountStat\&quot;: true}</p>
          */
         public Builder outDetailStatParams(String outDetailStatParams) {
             this.putQueryParameter("OutDetailStatParams", outDetailStatParams);
@@ -176,7 +181,7 @@ public class DescribeApplicationRequest extends Request {
          * <p>The resource filtering condition.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;regionCode&quot;: &quot;cn-wuxi-telecom_unicom_cmcc-3&quot;,    &quot;ispCode&quot;: &quot;telecom&quot;,    &quot;count&quot;: 2	},{    &quot;regionCode&quot;: &quot;cn-shanghai-cmcc&quot;,    &quot;count&quot;: 4	}]</p>
+         * <p>[{\&quot;regionCode\&quot;: \&quot;cn-wuxi-telecom_unicom_cmcc-3\&quot;,    \&quot;ispCode\&quot;: \&quot;telecom\&quot;,    \&quot;count\&quot;: 2	},{    \&quot;regionCode\&quot;: \&quot;cn-shanghai-cmcc\&quot;,    \&quot;count\&quot;: 4	}]</p>
          */
         public Builder resourceSelector(String resourceSelector) {
             this.putQueryParameter("ResourceSelector", resourceSelector);

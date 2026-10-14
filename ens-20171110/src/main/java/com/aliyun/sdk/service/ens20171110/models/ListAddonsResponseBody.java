@@ -67,7 +67,7 @@ public class ListAddonsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of component information.</p>
+         * <p>A list of component information.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
@@ -75,7 +75,7 @@ public class ListAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>
@@ -181,7 +181,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the configuration file.</p>
+             * <p>The configuration version.</p>
              * 
              * <strong>example:</strong>
              * <p>4155709cd12a09bdb8cbaca71bf03233</p>
@@ -192,7 +192,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The component name.</p>
+             * <p>The name of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>edge-csi-lite</p>
@@ -203,7 +203,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom configurations of the component.</p>
+             * <p>The custom parameters of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;key1&quot;:&quot;val1&quot;}</p>
@@ -299,7 +299,7 @@ public class ListAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to clear resources.</p>
+             * <p>Indicates whether to automatically clean up associated cloud resources.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -310,7 +310,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The schema of the custom parameters of the component.</p>
+             * <p>The schemas for the custom parameters of the component.</p>
              */
             public Builder configSchema(java.util.List<ConfigSchema> configSchema) {
                 this.configSchema = configSchema;
@@ -318,7 +318,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The component name.</p>
+             * <p>The name of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>edge-csi-lite</p>
@@ -329,7 +329,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The component version.</p>
+             * <p>The version of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>v2</p>

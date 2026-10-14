@@ -80,7 +80,10 @@ public class UpdateClusterCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eck-xxxxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -88,7 +91,10 @@ public class UpdateClusterCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. The value is success if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;

@@ -117,7 +117,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -139,7 +139,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -150,7 +150,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the vSwitches. For more information, see the array of vSwitches in the response examples in the JSON format.</p>
+         * <p>A collection of VSwitches.</p>
          */
         public Builder vSwitches(VSwitches vSwitches) {
             this.vSwitches = vSwitches;
@@ -244,10 +244,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -271,10 +268,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request error rate.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -364,6 +358,9 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FreeIpCount")
         private Long freeIpCount;
 
+        @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
+        private String ipv6CidrBlock;
+
         @com.aliyun.core.annotation.NameInMap("NetworkId")
         private String networkId;
 
@@ -385,6 +382,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             this.description = builder.description;
             this.ensRegionId = builder.ensRegionId;
             this.freeIpCount = builder.freeIpCount;
+            this.ipv6CidrBlock = builder.ipv6CidrBlock;
             this.networkId = builder.networkId;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -436,6 +434,13 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipv6CidrBlock
+         */
+        public String getIpv6CidrBlock() {
+            return this.ipv6CidrBlock;
+        }
+
+        /**
          * @return networkId
          */
         public String getNetworkId() {
@@ -476,6 +481,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             private String description; 
             private String ensRegionId; 
             private Long freeIpCount; 
+            private String ipv6CidrBlock; 
             private String networkId; 
             private String status; 
             private Tags tags; 
@@ -491,6 +497,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
                 this.description = model.description;
                 this.ensRegionId = model.ensRegionId;
                 this.freeIpCount = model.freeIpCount;
+                this.ipv6CidrBlock = model.ipv6CidrBlock;
                 this.networkId = model.networkId;
                 this.status = model.status;
                 this.tags = model.tags;
@@ -499,10 +506,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IPv4 CIDR block of the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.21.224.0/22</p>
+             * CidrBlock.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -510,10 +514,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the VPC was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-06-16T06:33:15Z</p>
+             * CreatedTime.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -521,10 +522,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>VSwitchDescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -532,10 +530,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ENS node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-xian-unicom</p>
+             * EnsRegionId.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -543,10 +538,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of available IP addresses.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1024</p>
+             * FreeIpCount.
              */
             public Builder freeIpCount(Long freeIpCount) {
                 this.freeIpCount = freeIpCount;
@@ -554,10 +546,15 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-25cdvfeq58pl****</p>
+             * Ipv6CidrBlock.
+             */
+            public Builder ipv6CidrBlock(String ipv6CidrBlock) {
+                this.ipv6CidrBlock = ipv6CidrBlock;
+                return this;
+            }
+
+            /**
+             * NetworkId.
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -565,14 +562,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the vSwitch. Valid values:</p>
-             * <ul>
-             * <li>Pending</li>
-             * <li>Available</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Pending</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -588,10 +578,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-5m9xhlq8oh***</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -599,10 +586,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testVSwitchName</p>
+             * VSwitchName.
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;

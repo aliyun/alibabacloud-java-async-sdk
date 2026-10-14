@@ -67,7 +67,30 @@ public class DescribeClusterUserKubeconfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Config.
+         * <p>The kubeconfig file of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiVersion: v1
+         * clusters:</p>
+         * <ul>
+         * <li>cluster:
+         *   certificate-authority-data: x
+         *   server: <a href="https://111.111.111.111:6443">https://111.111.111.111:6443</a>
+         * name: kubernetes
+         * contexts:</li>
+         * <li>context:
+         *   cluster: kubernetes
+         *   user: user
+         * name: eck-xxxxx
+         * current-context: eck-xxxx
+         * kind: Config
+         * preferences: {}
+         * users:</li>
+         * <li>name: user
+         * user:
+         *   client-certificate-data: x
+         *   client-key-data: x</li>
+         * </ul>
          */
         public Builder config(Object config) {
             this.config = config;
@@ -75,7 +98,7 @@ public class DescribeClusterUserKubeconfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>

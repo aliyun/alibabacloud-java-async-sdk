@@ -67,7 +67,7 @@ public class PreloadRegionSDGResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data object.</p>
+         * <p>The Data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,7 @@ public class PreloadRegionSDGResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the destination node.</p>
+             * <p>The ID of the destination edge zone.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-xxx</p>
@@ -155,7 +155,7 @@ public class PreloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message that is returned.</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
              * <p>region not found</p>
@@ -238,7 +238,7 @@ public class PreloadRegionSDGResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failed tasks.</p>
+             * <p>The number of failures.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -249,7 +249,7 @@ public class PreloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the failed tasks.</p>
+             * <p>The list of failure details.</p>
              */
             public Builder failedItems(java.util.List<FailedItems> failedItems) {
                 this.failedItems = failedItems;
@@ -257,7 +257,7 @@ public class PreloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successful tasks.</p>
+             * <p>The number of successes.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -340,7 +340,7 @@ public class PreloadRegionSDGResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The message returned.</p>
+             * <p>The response message.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -351,7 +351,7 @@ public class PreloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution result of the synchronization request.</p>
+             * <p>The execution result of the synchronous request.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -359,10 +359,10 @@ public class PreloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether all tasks are successful. Valid values:</p>
+             * <p>Indicates whether all requests are successful. Valid values:</p>
              * <ul>
-             * <li>true: All tasks are successful.</li>
-             * <li>false: Failed tasks exist.</li>
+             * <li>true: All requests are successful.</li>
+             * <li>false: Some tasks failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

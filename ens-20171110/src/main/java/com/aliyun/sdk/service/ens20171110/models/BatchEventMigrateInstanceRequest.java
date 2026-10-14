@@ -59,7 +59,7 @@ public class BatchEventMigrateInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The details of events.</p>
+         * <p>The list of events.</p>
          */
         public Builder eventInfos(java.util.List<EventInfos> eventInfos) {
             String eventInfosShrink = shrink(eventInfos, "EventInfos", "json");
@@ -199,9 +199,9 @@ public class BatchEventMigrateInstanceRequest extends Request {
             /**
              * <p>The data migration policy. Valid values:</p>
              * <ul>
-             * <li>abandon: does not migrate data. This is the default value.</li>
-             * <li>force_transfer: forcibly migrates data.</li>
-             * <li>try_transfer: Migrate data as much as possible.</li>
+             * <li>abandon: Does not migrate data. This is the default value.</li>
+             * <li>force_transfer: Performs forcible migration of EPS resource data.</li>
+             * <li>try_transfer: Migrates data on a best-effort basis.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class BatchEventMigrateInstanceRequest extends Request {
             }
 
             /**
-             * <p>Event ID e-*.</p>
+             * <p>The event ID, in the format of e-*.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -225,10 +225,10 @@ public class BatchEventMigrateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The type of the O&amp;M task. Valid values:</p>
+             * <p>The O&amp;M task type. Valid values:</p>
              * <ul>
-             * <li>immediate</li>
-             * <li>scheduled</li>
+             * <li>immediate: immediate execution.</li>
+             * <li>scheduled: scheduled execution.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -241,9 +241,9 @@ public class BatchEventMigrateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The password of the instance. This parameter is optional. If you do not specify this parameter, a random password is used.</p>
-             * <p>The password must be 8 to 30 characters in length. The password must contain uppercase letters, lowercase letters, digits, and special characters.</p>
-             * <p>Note that you cannot enter a password for scheduled execution.</p>
+             * <p>The instance password. This parameter is optional. If you do not specify this parameter, a random password is used.</p>
+             * <p>The password must be 8 to 30 characters in length and must contain uppercase letters, lowercase letters, and digits.</p>
+             * <p>Note: Password specification is not supported for scheduled execution.</p>
              * 
              * <strong>example:</strong>
              * <p>AAaa1234</p>
@@ -254,7 +254,8 @@ public class BatchEventMigrateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The execution time of the reservation. The timestamp is measured in milliseconds. If the OpsType parameter is set to scheduled, this parameter is required.</p>
+             * <p>The scheduled execution time. The value is a timestamp in milliseconds.
+             * This parameter is required when OpsType is set to scheduled.</p>
              * 
              * <strong>example:</strong>
              * <p>1742452232000</p>
@@ -273,7 +274,7 @@ public class BatchEventMigrateInstanceRequest extends Request {
             }
 
             /**
-             * <p>Resource ID i-*.</p>
+             * <p>The resource ID, in the format of i-*.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

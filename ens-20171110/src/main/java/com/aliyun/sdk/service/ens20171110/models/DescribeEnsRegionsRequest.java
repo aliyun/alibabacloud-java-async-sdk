@@ -59,8 +59,8 @@ public class DescribeEnsRegionsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the node.</p>
-         * <p>By default, all available node IDs are returned.</p>
+         * <p>The ID of the edge zone.</p>
+         * <p>If you do not specify this parameter, the IDs of all active edge zones are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-dalian-unicom</p>

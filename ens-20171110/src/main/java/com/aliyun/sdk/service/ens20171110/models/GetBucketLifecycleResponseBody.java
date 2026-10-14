@@ -78,7 +78,7 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed information about the rule.</p>
+         * <p>The rule details.</p>
          */
         public Builder rule(java.util.List<Rule> rule) {
             this.rule = rule;
@@ -144,7 +144,7 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The expiration date.</p>
+             * <p>The expiration date in ISO 8601 UTC format, which is YYYY-MM-DDTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>yyy-MM-DDThh:mm:ssZ</p>
@@ -155,7 +155,7 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity period, in days.</p>
+             * <p>The number of days before expiration.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -270,7 +270,7 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prefix that is applied to the rule.</p>
+             * <p>The prefix to which the rule applies.</p>
              * 
              * <strong>example:</strong>
              * <p>image</p>
@@ -283,8 +283,10 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
             /**
              * <p>The status of the rule. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong>: The rule is periodically executed.</li>
-             * <li><strong>Disabled</strong>: The rule is ignored.</li>
+             * <li><p><strong>Enabled</strong>: The rule is executed periodically.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: The rule is ignored.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

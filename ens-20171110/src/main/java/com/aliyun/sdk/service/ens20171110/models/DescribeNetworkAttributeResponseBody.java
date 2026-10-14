@@ -41,6 +41,9 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private InstanceIds instanceIds;
 
+    @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlocks")
+    private Ipv6CidrBlocks ipv6CidrBlocks;
+
     @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
     private LoadBalancerIds loadBalancerIds;
 
@@ -89,6 +92,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         this.gatewayRouteTableId = builder.gatewayRouteTableId;
         this.haVipIds = builder.haVipIds;
         this.instanceIds = builder.instanceIds;
+        this.ipv6CidrBlocks = builder.ipv6CidrBlocks;
         this.loadBalancerIds = builder.loadBalancerIds;
         this.natGatewayIds = builder.natGatewayIds;
         this.networkAclId = builder.networkAclId;
@@ -170,6 +174,13 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
      */
     public InstanceIds getInstanceIds() {
         return this.instanceIds;
+    }
+
+    /**
+     * @return ipv6CidrBlocks
+     */
+    public Ipv6CidrBlocks getIpv6CidrBlocks() {
+        return this.ipv6CidrBlocks;
     }
 
     /**
@@ -272,6 +283,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         private String gatewayRouteTableId; 
         private HaVipIds haVipIds; 
         private InstanceIds instanceIds; 
+        private Ipv6CidrBlocks ipv6CidrBlocks; 
         private LoadBalancerIds loadBalancerIds; 
         private NatGatewayIds natGatewayIds; 
         private String networkAclId; 
@@ -298,6 +310,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
             this.gatewayRouteTableId = model.gatewayRouteTableId;
             this.haVipIds = model.haVipIds;
             this.instanceIds = model.instanceIds;
+            this.ipv6CidrBlocks = model.ipv6CidrBlocks;
             this.loadBalancerIds = model.loadBalancerIds;
             this.natGatewayIds = model.natGatewayIds;
             this.networkAclId = model.networkAclId;
@@ -325,7 +338,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of resources in the network.</p>
+         * CloudResources.
          */
         public Builder cloudResources(CloudResources cloudResources) {
             this.cloudResources = cloudResources;
@@ -333,7 +346,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the network was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time at which the network was created. The time is in UTC and is formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-06-01T00:00:00Z</p>
@@ -355,7 +368,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the edge node.</p>
+         * <p>The ID of the ENS node.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -366,7 +379,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the gateway route table.</p>
+         * <p>The gateway route table ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rt-539***tbs</p>
@@ -377,7 +390,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of HaVipIds.</p>
+         * HaVipIds.
          */
         public Builder haVipIds(HaVipIds haVipIds) {
             this.haVipIds = haVipIds;
@@ -385,7 +398,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance IDs.</p>
+         * InstanceIds.
          */
         public Builder instanceIds(InstanceIds instanceIds) {
             this.instanceIds = instanceIds;
@@ -393,7 +406,15 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of ELB instances.</p>
+         * Ipv6CidrBlocks.
+         */
+        public Builder ipv6CidrBlocks(Ipv6CidrBlocks ipv6CidrBlocks) {
+            this.ipv6CidrBlocks = ipv6CidrBlocks;
+            return this;
+        }
+
+        /**
+         * LoadBalancerIds.
          */
         public Builder loadBalancerIds(LoadBalancerIds loadBalancerIds) {
             this.loadBalancerIds = loadBalancerIds;
@@ -401,7 +422,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of NAT Gateways.</p>
+         * NatGatewayIds.
          */
         public Builder natGatewayIds(NatGatewayIds natGatewayIds) {
             this.natGatewayIds = natGatewayIds;
@@ -409,7 +430,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the network access control list (ACL).</p>
+         * <p>The ID of the network ACL.</p>
          * 
          * <strong>example:</strong>
          * <p>nacl-a2do9e413e0sp****</p>
@@ -420,7 +441,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the network.</p>
+         * <p>The network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n-5***</p>
@@ -431,7 +452,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of multicast source IDs.</p>
+         * NetworkInterfaceIds.
          */
         public Builder networkInterfaceIds(NetworkInterfaceIds networkInterfaceIds) {
             this.networkInterfaceIds = networkInterfaceIds;
@@ -439,7 +460,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the network.</p>
+         * <p>The network name.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -461,7 +482,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the route table.</p>
+         * <p>The route table ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rt-539***fpu</p>
@@ -472,7 +493,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of routing table IDs.</p>
+         * RouteTableIds.
          */
         public Builder routeTableIds(RouteTableIds routeTableIds) {
             this.routeTableIds = routeTableIds;
@@ -480,7 +501,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the route table.</p>
+         * <p>The route table ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rtb-5***</p>
@@ -501,8 +522,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         /**
          * <p>The status of the network. Valid values:</p>
          * <ul>
-         * <li>Pending</li>
-         * <li>Available</li>
+         * <li><p>Pending: The network is being configured.</p>
+         * </li>
+         * <li><p>Available: The network is ready for use.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -514,7 +537,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of vSwitches in the network.</p>
+         * VSwitchIds.
          */
         public Builder vSwitchIds(VSwitchIds vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -580,10 +603,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of resources in the network.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * ResourceCount.
              */
             public Builder resourceCount(Integer resourceCount) {
                 this.resourceCount = resourceCount;
@@ -591,10 +611,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type. VSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>VSwitch</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -765,6 +782,156 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
 
             public InstanceIds build() {
                 return new InstanceIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworkAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAttributeResponseBody</p>
+     */
+    public static class Ipv6CidrBlock extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
+        private String ipv6CidrBlock;
+
+        @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
+        private String ipv6Isp;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Ipv6CidrBlock(Builder builder) {
+            this.ipv6CidrBlock = builder.ipv6CidrBlock;
+            this.ipv6Isp = builder.ipv6Isp;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6CidrBlock create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6CidrBlock
+         */
+        public String getIpv6CidrBlock() {
+            return this.ipv6CidrBlock;
+        }
+
+        /**
+         * @return ipv6Isp
+         */
+        public String getIpv6Isp() {
+            return this.ipv6Isp;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String ipv6CidrBlock; 
+            private String ipv6Isp; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6CidrBlock model) {
+                this.ipv6CidrBlock = model.ipv6CidrBlock;
+                this.ipv6Isp = model.ipv6Isp;
+                this.type = model.type;
+            } 
+
+            /**
+             * Ipv6CidrBlock.
+             */
+            public Builder ipv6CidrBlock(String ipv6CidrBlock) {
+                this.ipv6CidrBlock = ipv6CidrBlock;
+                return this;
+            }
+
+            /**
+             * Ipv6Isp.
+             */
+            public Builder ipv6Isp(String ipv6Isp) {
+                this.ipv6Isp = ipv6Isp;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Ipv6CidrBlock build() {
+                return new Ipv6CidrBlock(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworkAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAttributeResponseBody</p>
+     */
+    public static class Ipv6CidrBlocks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
+        private java.util.List<Ipv6CidrBlock> ipv6CidrBlock;
+
+        private Ipv6CidrBlocks(Builder builder) {
+            this.ipv6CidrBlock = builder.ipv6CidrBlock;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6CidrBlocks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6CidrBlock
+         */
+        public java.util.List<Ipv6CidrBlock> getIpv6CidrBlock() {
+            return this.ipv6CidrBlock;
+        }
+
+        public static final class Builder {
+            private java.util.List<Ipv6CidrBlock> ipv6CidrBlock; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6CidrBlocks model) {
+                this.ipv6CidrBlock = model.ipv6CidrBlock;
+            } 
+
+            /**
+             * Ipv6CidrBlock.
+             */
+            public Builder ipv6CidrBlock(java.util.List<Ipv6CidrBlock> ipv6CidrBlock) {
+                this.ipv6CidrBlock = ipv6CidrBlock;
+                return this;
+            }
+
+            public Ipv6CidrBlocks build() {
+                return new Ipv6CidrBlocks(this);
             } 
 
         } 
@@ -972,7 +1139,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the route table.</p>
+             * <p>The route table ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rt-539***fpu</p>

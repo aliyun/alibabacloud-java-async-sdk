@@ -23,6 +23,14 @@ public class ModifyVSwitchAttributeRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableIPv6")
+    private Boolean enableIPv6;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
+    private String ipv6CidrBlock;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
@@ -35,6 +43,8 @@ public class ModifyVSwitchAttributeRequest extends Request {
     private ModifyVSwitchAttributeRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
+        this.enableIPv6 = builder.enableIPv6;
+        this.ipv6CidrBlock = builder.ipv6CidrBlock;
         this.vSwitchId = builder.vSwitchId;
         this.vSwitchName = builder.vSwitchName;
     }
@@ -60,6 +70,20 @@ public class ModifyVSwitchAttributeRequest extends Request {
     }
 
     /**
+     * @return enableIPv6
+     */
+    public Boolean getEnableIPv6() {
+        return this.enableIPv6;
+    }
+
+    /**
+     * @return ipv6CidrBlock
+     */
+    public String getIpv6CidrBlock() {
+        return this.ipv6CidrBlock;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -75,6 +99,8 @@ public class ModifyVSwitchAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyVSwitchAttributeRequest, Builder> {
         private String description; 
+        private Boolean enableIPv6; 
+        private String ipv6CidrBlock; 
         private String vSwitchId; 
         private String vSwitchName; 
 
@@ -85,19 +111,23 @@ public class ModifyVSwitchAttributeRequest extends Request {
         private Builder(ModifyVSwitchAttributeRequest request) {
             super(request);
             this.description = request.description;
+            this.enableIPv6 = request.enableIPv6;
+            this.ipv6CidrBlock = request.ipv6CidrBlock;
             this.vSwitchId = request.vSwitchId;
             this.vSwitchName = request.vSwitchName;
         } 
 
         /**
-         * <p>The description of the listener.</p>
+         * <p>Description.</p>
          * <ul>
-         * <li>The description must be 2 to 256 characters in length.</li>
-         * <li>It must start with a letter but cannot start with http:// or https://.</li>
+         * <li><p>Must be 2 to 256 characters in length and can contain English or Chinese characters.</p>
+         * </li>
+         * <li><p>Cannot start with http\:// or https\://.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>this is my first network</p>
+         * <p>this is my first vswitch</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -106,7 +136,25 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * EnableIPv6.
+         */
+        public Builder enableIPv6(Boolean enableIPv6) {
+            this.putQueryParameter("EnableIPv6", enableIPv6);
+            this.enableIPv6 = enableIPv6;
+            return this;
+        }
+
+        /**
+         * Ipv6CidrBlock.
+         */
+        public Builder ipv6CidrBlock(String ipv6CidrBlock) {
+            this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
+            this.ipv6CidrBlock = ipv6CidrBlock;
+            return this;
+        }
+
+        /**
+         * <p>vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,10 +167,12 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * <p>The name of the vSwitch.</p>
+         * <p>vSwitch name.</p>
          * <ul>
-         * <li>The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
-         * <li>It must start with a letter but cannot start with http:// or https://.</li>
+         * <li><p>Must be 2 to 128 characters long. Can contain letters, digits, Chinese characters, underscores (_), and hyphens (-).</p>
+         * </li>
+         * <li><p>Must start with a letter or a Chinese character. Cannot start with http\:// or https\://.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

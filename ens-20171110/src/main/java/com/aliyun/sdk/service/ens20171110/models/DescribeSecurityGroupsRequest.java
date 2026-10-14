@@ -104,8 +104,10 @@ public class DescribeSecurityGroupsRequest extends Request {
         /**
          * <p>The page number.</p>
          * <ul>
-         * <li>Pages start from page 1.</li>
-         * <li>Default value: 1</li>
+         * <li><p>Pages start from page 1.</p>
+         * </li>
+         * <li><p>Default value: 1</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,8 +122,10 @@ public class DescribeSecurityGroupsRequest extends Request {
         /**
          * <p>The number of entries per page.</p>
          * <ul>
-         * <li>Maximum value: 50.</li>
-         * <li>Default value: 10</li>
+         * <li><p>Maximum value: 50.</p>
+         * </li>
+         * <li><p>Default value: 10</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the file system that was created.</p>
+         * <p>The file systems that are created.</p>
          */
         public Builder allocationId(java.util.List<String> allocationId) {
             this.allocationId = allocationId;
@@ -114,7 +114,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * AllocationIds.
+         * <p>The list of instance allocation information for the file system across ENS edge zones.</p>
          */
         public Builder allocationIds(java.util.List<AllocationIds> allocationIds) {
             this.allocationIds = allocationIds;
@@ -122,10 +122,10 @@ public class CreateFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code for successful operations. Valid values:</p>
+         * <p>The status code that indicates the result. Valid values:  </p>
          * <ul>
-         * <li>PartSuccess: The operation is partially successful.</li>
-         * <li>AllSuccess: The operation is successful.</li>
+         * <li>PartSuccess: partially successful.</li>
+         * <li>AllSuccess: all successful.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,7 +137,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
@@ -148,7 +148,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the file system that failed to be created.</p>
+         * <p>The file systems that failed to be created.</p>
          */
         public Builder unAllocationId(java.util.List<String> unAllocationId) {
             this.unAllocationId = unAllocationId;
@@ -214,7 +214,10 @@ public class CreateFileSystemResponseBody extends TeaModel {
             } 
 
             /**
-             * EnsRegionId.
+             * <p>The ENS edge zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-cm</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -222,7 +225,10 @@ public class CreateFileSystemResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5s7xxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

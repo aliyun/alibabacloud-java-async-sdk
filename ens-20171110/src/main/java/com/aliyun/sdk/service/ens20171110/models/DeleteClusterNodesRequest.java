@@ -89,6 +89,7 @@ public class DeleteClusterNodesRequest extends Request {
         } 
 
         /**
+         * <p>The request body parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(DeleteClusterNodesRequestBody body) {
@@ -99,6 +100,7 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +113,7 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * ReleaseNode.
+         * <p>Specifies whether to release the ENS instance where the node resides. Default value: true.</p>
          */
         public Builder releaseNode(Boolean releaseNode) {
             this.putQueryParameter("ReleaseNode", releaseNode);
@@ -167,6 +169,7 @@ public class DeleteClusterNodesRequest extends Request {
             } 
 
             /**
+             * <p>The information about the nodes to be removed.</p>
              * <p>This parameter is required.</p>
              */
             public Builder nodes(java.util.List<String> nodes) {

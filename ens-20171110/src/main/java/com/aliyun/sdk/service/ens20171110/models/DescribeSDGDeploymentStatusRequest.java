@@ -171,7 +171,7 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         }
 
         /**
-         * DiskIds.
+         * <p>The list of disk IDs.</p>
          */
         public Builder diskIds(java.util.List<String> diskIds) {
             String diskIdsShrink = shrink(diskIds, "DiskIds", "json");
@@ -181,7 +181,7 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         }
 
         /**
-         * <p>IDs of Android in Container (AIC) instances.</p>
+         * <p>The list of AIC instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -191,7 +191,7 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Pages start from <strong>1</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -203,7 +203,7 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -215,7 +215,7 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the nodes.</p>
+         * <p>The list of region IDs.</p>
          */
         public Builder regionIds(java.util.List<String> regionIds) {
             String regionIdsShrink = shrink(regionIds, "RegionIds", "json");

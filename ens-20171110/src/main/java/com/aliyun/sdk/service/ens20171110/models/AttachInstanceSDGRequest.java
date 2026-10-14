@@ -117,7 +117,16 @@ public class AttachInstanceSDGRequest extends Request {
         } 
 
         /**
-         * DiskAccessProtocol.
+         * <p>The cloud disk access protocol type. Valid values:</p>
+         * <ul>
+         * <li><p>iscsi: the default protocol for standard cloud disks. Both rbd cloud disks and standard cloud disks support this protocol.</p>
+         * </li>
+         * <li><p>rbd: the default protocol for rbd cloud disks. Only rbd cloud disks support this mount protocol.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>iscsi</p>
          */
         public Builder diskAccessProtocol(String diskAccessProtocol) {
             this.putQueryParameter("DiskAccessProtocol", diskAccessProtocol);
@@ -126,7 +135,20 @@ public class AttachInstanceSDGRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * <p>The type of the shared cloud disk to be created. Valid values:</p>
+         * <ul>
+         * <li>standard: standard cloud disk.</li>
+         * <li>rbd: rbd cloud disk.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If no shared cloud disk type is specified, a standard cloud disk is created by default.</li>
+         * <li>An rbd shared cloud disk can be created only when the parent disk type is rbd.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -135,7 +157,7 @@ public class AttachInstanceSDGRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instances.</p>
+         * <p>The list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
@@ -146,7 +168,7 @@ public class AttachInstanceSDGRequest extends Request {
         }
 
         /**
-         * LoadOpt.
+         * <p>The file loading rate optimization parameter.</p>
          */
         public Builder loadOpt(LoadOpt loadOpt) {
             String loadOptShrink = shrink(loadOpt, "LoadOpt", "json");
@@ -254,7 +276,10 @@ public class AttachInstanceSDGRequest extends Request {
             } 
 
             /**
-             * BlockRwSplit.
+             * <p>Specifies whether to enable block device read/write splitting. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder blockRwSplit(Boolean blockRwSplit) {
                 this.blockRwSplit = blockRwSplit;
@@ -262,7 +287,10 @@ public class AttachInstanceSDGRequest extends Request {
             }
 
             /**
-             * BlockRwSplitSize.
+             * <p>The size for block device read/write splitting, in GiB. A value of 0 indicates that the default size is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder blockRwSplitSize(Integer blockRwSplitSize) {
                 this.blockRwSplitSize = blockRwSplitSize;
@@ -270,7 +298,10 @@ public class AttachInstanceSDGRequest extends Request {
             }
 
             /**
-             * Cache.
+             * <p>Specifies whether to enable caching. Block device read/write splitting must be enabled before caching can be used. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cache(Boolean cache) {
                 this.cache = cache;
@@ -278,7 +309,10 @@ public class AttachInstanceSDGRequest extends Request {
             }
 
             /**
-             * CacheSize.
+             * <p>The cache size, in GiB. A value of 0 indicates that the default size is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder cacheSize(Integer cacheSize) {
                 this.cacheSize = cacheSize;

@@ -106,7 +106,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The listeners of the ELB instance.</p>
+         * Listeners.
          */
         public Builder listeners(Listeners listeners) {
             this.listeners = listeners;
@@ -307,10 +307,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The backend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3306</p>
+             * BackendServerPort.
              */
             public Builder backendServerPort(Integer backendServerPort) {
                 this.backendServerPort = backendServerPort;
@@ -318,10 +315,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the listener was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-08-15T08:42:57Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -329,10 +323,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the listener.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -340,10 +331,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The listener port that is used for HTTP-to-HTTPS redirection.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>443</p>
+             * ForwardPort.
              */
             public Builder forwardPort(String forwardPort) {
                 this.forwardPort = forwardPort;
@@ -351,14 +339,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether HTTP-to-HTTPS redirection is enabled for the listener. Valid values:</p>
-             * <ul>
-             * <li><strong>on</strong></li>
-             * <li><strong>off</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>off</p>
+             * ListenerForward.
              */
             public Builder listenerForward(String listenerForward) {
                 this.listenerForward = listenerForward;
@@ -366,10 +347,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The listening port.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8080</p>
+             * ListenerPort.
              */
             public Builder listenerPort(String listenerPort) {
                 this.listenerPort = listenerPort;
@@ -377,10 +355,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ELB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>lb-51a5fhou****</p>
+             * LoadBalancerId.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -388,16 +363,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network transmission protocol that is used by the listener.</p>
-             * <ul>
-             * <li><strong>tcp</strong></li>
-             * <li><strong>udp</strong></li>
-             * <li><strong>http</strong></li>
-             * <li><strong>https</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>tcp</p>
+             * Protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -405,14 +371,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the listener. Valid values:</p>
-             * <ul>
-             * <li><strong>running</strong></li>
-             * <li><strong>stopped</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>running</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

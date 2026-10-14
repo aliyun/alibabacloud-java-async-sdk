@@ -87,7 +87,7 @@ public class GetBucketLifecycleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the rule that you want to query. If this parameter is not specified, all rules are returned.</p>
+         * <p>The ID of the rule to retrieve. If this parameter is not specified, information about all rules is retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

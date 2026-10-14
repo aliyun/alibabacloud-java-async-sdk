@@ -60,7 +60,7 @@ public class RecoverAICInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The server instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -60,7 +60,7 @@ public class DeleteAICPublicKeyRequest extends Request {
         } 
 
         /**
-         * <p>Public Key Name</p>
+         * <p>The name of the public key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

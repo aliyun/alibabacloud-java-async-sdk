@@ -60,7 +60,7 @@ public class DeleteSDGRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the SDGs that you want to delete.</p>
+         * <p>The list of SDGs to delete.</p>
          * <p>This parameter is required.</p>
          */
         public Builder SDGId(java.util.List<String> SDGId) {

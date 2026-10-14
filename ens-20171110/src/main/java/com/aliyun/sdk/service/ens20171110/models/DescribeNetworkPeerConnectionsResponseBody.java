@@ -106,7 +106,7 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
         } 
 
         /**
-         * NetworkPeerConnects.
+         * <p>A list of the network peering connections.</p>
          */
         public Builder networkPeerConnects(java.util.List<NetworkPeerConnects> networkPeerConnects) {
             this.networkPeerConnects = networkPeerConnects;
@@ -114,7 +114,10 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,7 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Ipv4Cidrs.
+             * <p>The CIDR blocks of the accepter network.</p>
              */
             public Builder ipv4Cidrs(java.util.List<String> ipv4Cidrs) {
                 this.ipv4Cidrs = ipv4Cidrs;
@@ -212,7 +224,10 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkId.
+             * <p>The network ID of the accepter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n-5q28114****</p>
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -279,7 +294,7 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Ipv4Cidrs.
+             * <p>The CIDR blocks of the requester network.</p>
              */
             public Builder ipv4Cidrs(java.util.List<String> ipv4Cidrs) {
                 this.ipv4Cidrs = ipv4Cidrs;
@@ -287,7 +302,10 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkId.
+             * <p>The network ID of the requester.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n-5q73bm****</p>
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -458,7 +476,7 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
             } 
 
             /**
-             * AcceptingNetwork.
+             * <p>Details of the accepter network.</p>
              */
             public Builder acceptingNetwork(AcceptingNetwork acceptingNetwork) {
                 this.acceptingNetwork = acceptingNetwork;
@@ -466,7 +484,10 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * AcceptingNetworkId.
+             * <p>The network ID of the accepter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n-5q28114****</p>
              */
             public Builder acceptingNetworkId(String acceptingNetworkId) {
                 this.acceptingNetworkId = acceptingNetworkId;
@@ -474,7 +495,10 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-31T06:43:29Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -482,7 +506,10 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the network peering connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -490,7 +517,10 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * <p>The ID of the ENS node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-dongguan-9</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -498,7 +528,10 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the network peering connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pcc-521pzxdg****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -506,7 +539,10 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the network peering connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -514,7 +550,7 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * <p>Details of the requester network.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -522,7 +558,10 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkId.
+             * <p>The network ID of the requester.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n-5q73bm****</p>
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -530,7 +569,18 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the network peering connection. Valid values:</p>
+             * <ul>
+             * <li><p><code>Creating</code>: The connection is being created.</p>
+             * </li>
+             * <li><p><code>Activated</code>: The connection is active.</p>
+             * </li>
+             * <li><p><code>Deleting</code>: The connection is being deleted.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Activated</p>
              */
             public Builder status(String status) {
                 this.status = status;

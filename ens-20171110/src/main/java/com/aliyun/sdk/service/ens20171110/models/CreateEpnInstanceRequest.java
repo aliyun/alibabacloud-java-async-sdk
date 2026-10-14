@@ -146,10 +146,14 @@ public class CreateEpnInstanceRequest extends Request {
         /**
          * <p>The billing method for network usage. Valid values:</p>
          * <ul>
-         * <li><strong>BandwidthByDay</strong>: Pay by daily peak bandwidth.</li>
-         * <li><strong>95BandwidthByMonth</strong>: Pay by monthly 95th percentile bandwidth.</li>
-         * <li><strong>PayByBandwidth4thMonth</strong>: Pay by monthly fourth peak bandwidth.</li>
-         * <li><strong>PayByBandwidth</strong>: Pay by fixed bandwidth.</li>
+         * <li><p><strong>BandwidthByDay</strong>: Pay by daily peak bandwidth.</p>
+         * </li>
+         * <li><p><strong>95BandwidthByMonth</strong>: Pay by monthly 95th percentile bandwidth.</p>
+         * </li>
+         * <li><p><strong>PayByBandwidth4thMonth</strong>: Pay by monthly fourth peak bandwidth.</p>
+         * </li>
+         * <li><p><strong>PayByBandwidth</strong>: Pay by fixed bandwidth.</p>
+         * </li>
          * </ul>
          * <p>You can specify only one metering method for network usage and cannot overwrite the existing metering method.</p>
          * <p>This parameter is required.</p>
@@ -179,9 +183,12 @@ public class CreateEpnInstanceRequest extends Request {
         /**
          * <p>The networking mode. Valid values:</p>
          * <ul>
-         * <li><strong>SpeedUp</strong>: intelligent acceleration network (Internet)</li>
-         * <li><strong>Connection</strong>: internal network</li>
-         * <li><strong>SpeedUpAndConnection</strong>: intelligent acceleration network and internal network</li>
+         * <li><p><strong>SpeedUp</strong>: intelligent acceleration network (Internet)</p>
+         * </li>
+         * <li><p><strong>Connection</strong>: internal network</p>
+         * </li>
+         * <li><p><strong>SpeedUpAndConnection</strong>: intelligent acceleration network and internal network</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

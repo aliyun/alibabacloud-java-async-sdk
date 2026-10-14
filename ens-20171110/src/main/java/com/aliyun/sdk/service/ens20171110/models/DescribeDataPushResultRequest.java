@@ -158,7 +158,7 @@ public class DescribeDataPushResultRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * <p>The name of the data file. Separate multiple names with commas (,). By default, all data files are queried.</p>
+         * <p>The names of the data files. This is a filter condition for the query. Multiple values are supported and separated by commas (,). By default, all data files are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>159828628258496/mirror_file/game-2553efe7-7bf8-40fb-a6e7-09c9c00a992a.tar</p>
@@ -183,7 +183,7 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * <p>The version number of the data file. Separate multiple numbers with commas (,). By default, all versions of data files are queried.</p>
+         * <p>The version numbers of the data files. This is a filter condition for the query. Multiple values are supported and separated by commas (,). By default, all versions are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>90396</p>
@@ -195,7 +195,7 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * <p>The end time of the query. Format: YYYY-MM-DD. By default, there is no time limit.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-20</p>
@@ -207,7 +207,7 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * <p>The start time of the query. Format: YYYY-MM-DD. By default, there is no time limit.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-15</p>
@@ -219,7 +219,10 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1. This parameter is not required when you export all information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -228,7 +231,7 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. This parameter is optional if you want to return the push status of all data files.</p>
+         * <p>The number of entries per page set in Settings for paging during a paged query. This parameter is not required when you export all entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -240,7 +243,7 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * <p>The IDs of ENS nodes. Separate multiple IDs with commas (,). By default, all ENS nodes are queried.</p>
+         * <p>The IDs of the edge nodes. This is a filter condition for the query. Multiple values are supported and separated by commas (,). By default, all edge nodes are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-wuhan-telecom_unicom_cmcc-2,cn-jiaozuo-2</p>

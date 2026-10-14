@@ -132,7 +132,7 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         } 
 
         /**
-         * <p>The end time of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ss format. The time must be in UTC+0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,10 +147,10 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         /**
          * <p>The Internet service provider (ISP). Valid values:</p>
          * <ul>
-         * <li>cmcc: China Mobile</li>
-         * <li>telecom: China Telecom</li>
-         * <li>unicom: China Unicom</li>
-         * <li>multiCarrier: multi-line ISP</li>
+         * <li>cmcc: China Mobile.</li>
+         * <li>telecom: China Telecom.</li>
+         * <li>unicom: China Unicom.</li>
+         * <li>multiCarrier: multi-ISP.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -163,15 +163,15 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         }
 
         /**
-         * <p>The order in which the resources to return are sorted. Valid values:</p>
+         * <p>The sort order. Valid values: asc (ascending) and desc (descending). Only the following three parameters are supported:</p>
          * <ul>
-         * <li>InstanceCount: desc</li>
-         * <li>Area: asc</li>
-         * <li>InternetBandwidth: asc</li>
+         * <li>InstanceCount: desc.</li>
+         * <li>Area: asc.</li>
+         * <li>InternetBandwidth: asc.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>InstanceCount: desc</p>
+         * <p>InstanceCount：desc</p>
          */
         public Builder orderByParams(String orderByParams) {
             this.putQueryParameter("OrderByParams", orderByParams);
@@ -180,7 +180,7 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the instance status list. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -192,7 +192,7 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for a paged query. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -204,7 +204,7 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

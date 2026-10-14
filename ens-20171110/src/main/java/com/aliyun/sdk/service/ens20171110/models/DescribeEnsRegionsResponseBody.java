@@ -80,7 +80,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</p>
+         * <p>The status code. A value of 0 indicates that the call was successful. If the call failed, an error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -91,7 +91,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the regions.</p>
+         * EnsRegions.
          */
         public Builder ensRegions(EnsRegions ensRegions) {
             this.ensRegions = ensRegions;
@@ -207,10 +207,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>NorthEastChina</p>
+             * Area.
              */
             public Builder area(String area) {
                 this.area = area;
@@ -218,10 +215,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>NorthChina</p>
+             * EnName.
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -229,10 +223,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-dalian-unicom</p>
+             * EnsRegionId.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -240,10 +231,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Dalian Unicom</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -251,10 +239,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The province where the node is deployed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Liaoning Province</p>
+             * Province.
              */
             public Builder province(String province) {
                 this.province = province;
@@ -308,7 +293,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the regions.</p>
+             * EnsRegions.
              */
             public Builder ensRegions(java.util.List<EnsRegionsEnsRegions> ensRegions) {
                 this.ensRegions = ensRegions;

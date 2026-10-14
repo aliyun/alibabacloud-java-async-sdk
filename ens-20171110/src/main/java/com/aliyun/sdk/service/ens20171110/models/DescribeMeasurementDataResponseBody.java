@@ -67,7 +67,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The metering data returned.</p>
+         * MeasurementDatas.
          */
         public Builder measurementDatas(MeasurementDatas measurementDatas) {
             this.measurementDatas = measurementDatas;
@@ -75,7 +75,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
@@ -157,10 +157,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the bandwidth plan.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-cmcc-1</p>
+             * CostCode.
              */
             public Builder costCode(String costCode) {
                 this.costCode = costCode;
@@ -168,10 +165,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the bandwidth plan.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Beijing, Shanghai, and Guangzhou Mobile</p>
+             * CostName.
              */
             public Builder costName(String costName) {
                 this.costName = costName;
@@ -179,10 +173,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bandwidth consumption. Unit: bit/second.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>16486</p>
+             * CostVal.
              */
             public Builder costVal(Integer costVal) {
                 this.costVal = costVal;
@@ -316,10 +307,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The memory size. Unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>24</p>
+             * Memory.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -327,10 +315,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage capacity. Unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>60</p>
+             * Storage.
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -338,10 +323,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of vCPUs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12</p>
+             * Vcpu.
              */
             public Builder vcpu(Integer vcpu) {
                 this.vcpu = vcpu;
@@ -434,10 +416,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vCPU</p>
+             * CostCode.
              */
             public Builder costCode(String costCode) {
                 this.costCode = costCode;
@@ -445,10 +424,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vCPU</p>
+             * CostName.
              */
             public Builder costName(String costName) {
                 this.costName = costName;
@@ -456,15 +432,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumption of the resource.</p>
-             * <ul>
-             * <li>Memory unit: GB.</li>
-             * <li>CPU unit: vCPU.</li>
-             * <li>Storage unit: GB.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>55</p>
+             * CostVal.
              */
             public Builder costVal(Integer costVal) {
                 this.costVal = costVal;
@@ -472,10 +440,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vCPU</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -661,7 +626,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bandwidth data returned.</p>
+             * BandWidthFeeDatas.
              */
             public Builder bandWidthFeeDatas(BandWidthFeeDatas bandWidthFeeDatas) {
                 this.bandWidthFeeDatas = bandWidthFeeDatas;
@@ -669,14 +634,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metering method. Valid values:</p>
-             * <ul>
-             * <li>ChargeByUnified: unified metering.</li>
-             * <li>ChargeByGrade: differential metering.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ChargeByGrade</p>
+             * ChargeModel.
              */
             public Builder chargeModel(String chargeModel) {
                 this.chargeModel = chargeModel;
@@ -684,10 +642,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metering cycle.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-07-30</p>
+             * CostCycle.
              */
             public Builder costCycle(String costCycle) {
                 this.costCycle = costCycle;
@@ -695,10 +650,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the metering cycle.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-07-30T16:00:00Z</p>
+             * CostEndTime.
              */
             public Builder costEndTime(String costEndTime) {
                 this.costEndTime = costEndTime;
@@ -706,10 +658,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the metering cycle.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-07-29T16:00:00Z</p>
+             * CostStartTime.
              */
             public Builder costStartTime(String costStartTime) {
                 this.costStartTime = costStartTime;
@@ -717,7 +666,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about computing resources.</p>
+             * ResourceFeeData.
              */
             public Builder resourceFeeData(ResourceFeeData resourceFeeData) {
                 this.resourceFeeData = resourceFeeData;
@@ -725,7 +674,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the computing resources.</p>
+             * ResourceFeeDataDetails.
              */
             public Builder resourceFeeDataDetails(ResourceFeeDataDetails resourceFeeDataDetails) {
                 this.resourceFeeDataDetails = resourceFeeDataDetails;

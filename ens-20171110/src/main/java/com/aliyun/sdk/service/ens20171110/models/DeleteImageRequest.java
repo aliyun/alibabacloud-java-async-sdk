@@ -60,8 +60,8 @@ public class DeleteImageRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the image. You can specify only one image ID.</p>
-         * <p>You can delete only custom images that you created.</p>
+         * <p>The image ID. Only a single ID is supported.</p>
+         * <p>Only custom images are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

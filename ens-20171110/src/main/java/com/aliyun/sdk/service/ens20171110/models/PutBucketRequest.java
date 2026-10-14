@@ -130,7 +130,10 @@ public class PutBucketRequest extends Request {
         } 
 
         /**
-         * BucketAcl.
+         * <p>Bucket permission type: private (default). public-read-write: Allows public read and write access. public-read: Allows public read access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder bucketAcl(String bucketAcl) {
             this.putQueryParameter("BucketAcl", bucketAcl);
@@ -139,7 +142,11 @@ public class PutBucketRequest extends Request {
         }
 
         /**
+         * <p>Bucket name. Must be 3 to 50 characters long. Use only lowercase letters, numbers, and hyphens (-). Cannot start or end with a hyphen.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-bucket</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -148,7 +155,10 @@ public class PutBucketRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>Comment. Up to 128 characters, including letters, digits, Chinese characters, and emojis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -157,7 +167,19 @@ public class PutBucketRequest extends Request {
         }
 
         /**
-         * DispatchScope.
+         * <p>Scheduling scope. Valid values:</p>
+         * <ul>
+         * <li><p>domestic (within China)</p>
+         * </li>
+         * <li><p>outside China</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>You must specify this parameter when creating a global bucket.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>sink</p>
          */
         public Builder dispatchScope(String dispatchScope) {
             this.putQueryParameter("DispatchScope", dispatchScope);
@@ -166,7 +188,10 @@ public class PutBucketRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * <p>Edge zone ID. If not specified, the global default edge zone is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx-xx-xx</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -175,7 +200,10 @@ public class PutBucketRequest extends Request {
         }
 
         /**
-         * LogicalBucketType.
+         * <p>The logical type of the bucket. Valid values: sink: A sink bucket on a specified node. standard: A standard global bucket. This is the default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sink</p>
          */
         public Builder logicalBucketType(String logicalBucketType) {
             this.putQueryParameter("LogicalBucketType", logicalBucketType);

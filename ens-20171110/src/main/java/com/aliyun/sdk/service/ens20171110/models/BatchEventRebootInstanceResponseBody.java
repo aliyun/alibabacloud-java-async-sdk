@@ -67,7 +67,7 @@ public class BatchEventRebootInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request。</p>
          * 
          * <strong>example:</strong>
          * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>
@@ -78,7 +78,7 @@ public class BatchEventRebootInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result.</p>
+         * <p>The results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -181,7 +181,7 @@ public class BatchEventRebootInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the system event.</p>
+             * <p>The system event ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e-d71ff150945b9c02eb6ebc0016328468</p>
@@ -192,7 +192,7 @@ public class BatchEventRebootInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message of the operation. If the value of the Code parameter is 200, the value of this parameter is successful.</p>
+             * <p>The operation message. When code is 200, the message is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -203,7 +203,7 @@ public class BatchEventRebootInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource IDs.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-55qi8m11rr53c4i964md8a00l</p>

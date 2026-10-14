@@ -242,7 +242,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The container specifications.</p>
+         * <p>The list of container specifications.</p>
          */
         public Builder AICSpecs(java.util.List<String> AICSpecs) {
             String AICSpecsShrink = shrink(AICSpecs, "AICSpecs", "json");
@@ -252,10 +252,12 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>Spcifies whether the result contains the container information. Valid values:</p>
+         * <p>Specifies whether the query results include container information. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Included.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not included.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +270,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the Edge Node Service (ENS) nodes.</p>
+         * <p>The list of ENS edge zone IDs.</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             String ensRegionIdsShrink = shrink(ensRegionIds, "EnsRegionIds", "json");
@@ -278,7 +280,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * <p>The end time of the query. Format: &quot;2006-01-02&quot;. By default, no time limit is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>2006-01-03</p>
@@ -290,7 +292,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * <p>The start time of the query. Format: &quot;2006-01-02&quot;. By default, no time limit is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>2006-01-02</p>
@@ -302,7 +304,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the server.</p>
+         * <p>The server name.</p>
          * 
          * <strong>example:</strong>
          * <p>Server-Name</p>
@@ -326,11 +328,11 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The sorting order of the results to return. Valid values: ServerIdSort, ServerNameSort, ExpireTimeSort, CreationTimeSort, and EnsRegionIdSort.</p>
-         * <p>asc: ascending order. desc: descending order.</p>
+         * <p>The sorting method for query results. You can sort results by one or more of the following fields: ServerIdSort (server ID), ServerNameSort (server name), ExpireTimeSort (expiration time), CreationTimeSort (creation time), and EnsRegionIdSort (edge zone ID).</p>
+         * <p>Valid values: asc (ascending order) and desc (descending order).</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;ServerIdSort&quot;:&quot;desc&quot;,&quot;ServerNameSort&quot;:&quot;desc&quot;,&quot;ExpireTimeSort&quot;:&quot;asc&quot;,&quot;CreationTimeSort&quot;:&quot;asc&quot;,&quot;EnsRegionIdSort&quot;:&quot;asc&quot;}</p>
+         * <p>{&quot;ServerIdSort&quot;:&quot;desc&quot;,&quot;ServerNameSort&quot;:&quot;desc&quot;,&quot;ExpireTimeSort&quot;:&quot;asc&quot;}</p>
          */
         public Builder orderByParams(String orderByParams) {
             this.putQueryParameter("OrderByParams", orderByParams);
@@ -339,7 +341,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page <strong>1</strong>.</p>
+         * <p>The page number of the query list. Minimum value: <strong>1</strong>.</p>
          * <p>Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -352,7 +354,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>.</p>
+         * <p>The number of entries per page for a paged query. Maximum value: <strong>100</strong>.</p>
          * <p>Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -365,7 +367,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the ARM servers.</p>
+         * <p>The list of server instance IDs.</p>
          */
         public Builder serverIds(java.util.List<String> serverIds) {
             String serverIdsShrink = shrink(serverIds, "ServerIds", "json");
@@ -375,7 +377,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The server specifications.</p>
+         * <p>The list of server specifications.</p>
          */
         public Builder serverSpecs(java.util.List<String> serverSpecs) {
             String serverSpecsShrink = shrink(serverSpecs, "ServerSpecs", "json");
@@ -385,7 +387,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The operation statuses.</p>
+         * <p>The list of operation states.</p>
          */
         public Builder states(java.util.List<String> states) {
             String statesShrink = shrink(states, "States", "json");
@@ -395,7 +397,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -464,7 +466,10 @@ public class DescribeARMServerInstancesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -472,7 +477,10 @@ public class DescribeARMServerInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
              */
             public Builder value(String value) {
                 this.value = value;

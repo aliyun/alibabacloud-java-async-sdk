@@ -130,7 +130,7 @@ public class DescribeHistoryEventsRequest extends Request {
         } 
 
         /**
-         * <p>The levels of the event-triggered alerts.</p>
+         * <p>The list of event levels.</p>
          */
         public Builder eventLevels(java.util.List<String> eventLevels) {
             String eventLevelsShrink = shrink(eventLevels, "EventLevels", "simple");
@@ -140,7 +140,7 @@ public class DescribeHistoryEventsRequest extends Request {
         }
 
         /**
-         * <p>Event status list.</p>
+         * <p>The list of event statuses.</p>
          */
         public Builder eventStatus(java.util.List<String> eventStatus) {
             String eventStatusShrink = shrink(eventStatus, "EventStatus", "simple");
@@ -161,7 +161,7 @@ public class DescribeHistoryEventsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class DescribeHistoryEventsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -185,7 +185,7 @@ public class DescribeHistoryEventsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of resources.</p>
+         * <p>The list of resource IDs.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "ResourceIds", "simple");

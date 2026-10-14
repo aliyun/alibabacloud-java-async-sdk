@@ -130,7 +130,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the images.</p>
+         * Images.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -266,12 +266,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The format of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The format of the image.
-             * raw
-             * qcow2</p>
+             * Format.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -279,10 +274,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the disk. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * Size.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -290,14 +282,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the disk. Valid values:</p>
-             * <ul>
-             * <li>system: system disk.</li>
-             * <li>data: data disk.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Data</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -305,10 +290,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-test</p>
+             * imageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -533,10 +515,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The architecture of the image. Example: <strong>x86_64</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>x86_64</p>
+             * Architecture.
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -544,10 +523,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was created. The time follows the ISO 8601 standard.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-12-08T12:10:03Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -555,7 +531,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mappings between the disk and the snapshot in the image.</p>
+             * DiskDeviceMappings.
              */
             public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
                 this.diskDeviceMappings = diskDeviceMappings;
@@ -563,10 +539,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>centos_6_08_64_20G_alibase_2017****</p>
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -574,10 +547,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Ubuntu_16.04</p>
+             * ImageName.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -585,15 +555,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the image. Valid values:</p>
-             * <ul>
-             * <li>system: Alibaba Cloud public images</li>
-             * <li>self: your custom images</li>
-             * <li>others: shared images from other Alibaba Cloud accounts, or community images published by other Alibaba Cloud accounts</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>system</p>
+             * ImageOwnerAlias.
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -601,10 +563,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the image. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>40</p>
+             * ImageSize.
              */
             public Builder imageSize(String imageSize) {
                 this.imageSize = imageSize;
@@ -612,14 +571,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system type of the image. Valid values:</p>
-             * <ul>
-             * <li>Linux</li>
-             * <li>Windows</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>centos</p>
+             * Platform.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -627,10 +579,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-qingdao</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -638,10 +587,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the snapshot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mock-clone_snapshot_id</p>
+             * SnapshotId.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;

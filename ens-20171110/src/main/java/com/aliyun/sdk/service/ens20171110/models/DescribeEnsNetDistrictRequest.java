@@ -102,7 +102,7 @@ public class DescribeEnsNetDistrictRequest extends Request {
         }
 
         /**
-         * NetDistrictCodeNode.
+         * <p>Region code</p>
          */
         public Builder netDistrictCodeNode(Boolean netDistrictCodeNode) {
             this.putQueryParameter("NetDistrictCodeNode", netDistrictCodeNode);
@@ -113,9 +113,12 @@ public class DescribeEnsNetDistrictRequest extends Request {
         /**
          * <p>The level of the region.</p>
          * <ul>
-         * <li><strong>Big</strong>: area</li>
-         * <li><strong>Middle</strong>: province</li>
-         * <li><strong>Small</strong>: city</li>
+         * <li><p><strong>Big</strong>: area</p>
+         * </li>
+         * <li><p><strong>Middle</strong>: province</p>
+         * </li>
+         * <li><p><strong>Small</strong>: city</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

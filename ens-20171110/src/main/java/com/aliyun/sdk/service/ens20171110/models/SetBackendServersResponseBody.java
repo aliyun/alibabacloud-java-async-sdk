@@ -67,7 +67,7 @@ public class SetBackendServersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The backend servers.</p>
+         * BackendServers.
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -183,10 +183,7 @@ public class SetBackendServersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the backend server.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.0.1</p>
+             * Ip.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -194,10 +191,7 @@ public class SetBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backend port that is used by the ELB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -205,10 +199,7 @@ public class SetBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance that you want to use as the backend server.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-5uf6hj58zvml4ali8****</p>
+             * ServerId.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -216,14 +207,7 @@ public class SetBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the backend server. Valid values:</p>
-             * <ul>
-             * <li><strong>ens</strong>: ENS instance.</li>
-             * <li><strong>eni</strong>: ENI instance.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ens</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -231,13 +215,7 @@ public class SetBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight of the backend server. Default value: 100. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
-             * <blockquote>
-             * <p> The value 0 indicates that requests are not forwarded to the backend server.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * Weight.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

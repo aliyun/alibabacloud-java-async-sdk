@@ -80,7 +80,7 @@ public class CreateImageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned service code. 0 indicates that the request was successful.</p>
+         * <p>The business return code. A value of 0 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -91,7 +91,7 @@ public class CreateImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>m-5xxgg</p>

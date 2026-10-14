@@ -297,11 +297,11 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         /**
          * <p>The name of the listener. The value must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
          * <blockquote>
-         * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value cannot start with <code>http://</code> or <code>https://</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>Monitoring instructions</p>
+         * <p>Listener description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -312,8 +312,10 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         /**
          * <p>Specifies whether to enable the health check feature. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong></li>
-         * <li><strong>off</strong></li>
+         * <li><p><strong>on</strong></p>
+         * </li>
+         * <li><p><strong>off</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -328,7 +330,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         /**
          * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If you leave this parameter empty, the port specified by BackendServerPort is used for health checks.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+         * <p>This parameter takes effect only if you set HealthCheck to on.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -343,7 +345,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         /**
          * <p>The domain name that you want to use for health checks.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+         * <p>This parameter takes effect only if you set HealthCheck to on.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -358,13 +360,17 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         /**
          * <p>The HTTP status code for a successful health check. Valid values:</p>
          * <ul>
-         * <li><strong>http_2xx</strong> (default)</li>
-         * <li><strong>http_3xx</strong>.</li>
-         * <li><strong>http_4xx</strong></li>
-         * <li><strong>http_5xx</strong></li>
+         * <li><p><strong>http_2xx</strong> (default)</p>
+         * </li>
+         * <li><p><strong>http_3xx</strong>.</p>
+         * </li>
+         * <li><p><strong>http_4xx</strong></p>
+         * </li>
+         * <li><p><strong>http_5xx</strong></p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+         * <p>This parameter takes effect only if you set HealthCheck to on.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -379,7 +385,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         /**
          * <p>The interval at which health checks are performed. Valid values: <strong>1</strong> to <strong>50</strong>. Unit: seconds.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+         * <p>This parameter takes effect only if you set HealthCheck to on.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -394,11 +400,13 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         /**
          * <p>The HTTP request method for health checks. Valid values:</p>
          * <ul>
-         * <li><strong>head</strong> (default): requests the head of the page.</li>
-         * <li><strong>get</strong>: requests the specified part of the page and returns the entity body.</li>
+         * <li><p><strong>head</strong> (default): requests the head of the page.</p>
+         * </li>
+         * <li><p><strong>get</strong>: requests the specified part of the page and returns the entity body.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only if the HealthCheck parameter is set to on.</p>
+         * <p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -413,9 +421,12 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         /**
          * <p>The timeout period of a health check response. If the backend ENS does not respond within the specified time, the health check fails.</p>
          * <ul>
-         * <li>Default value: 5.</li>
-         * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
-         * <li>Unit: seconds.</li>
+         * <li><p>Default value: 5.</p>
+         * </li>
+         * <li><p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
+         * </li>
+         * <li><p>Unit: seconds.</p>
+         * </li>
          * </ul>
          * <blockquote>
          * </blockquote>
@@ -458,7 +469,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         /**
          * <p>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+         * <p>This parameter takes effect only if you set HealthCheck to on.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -473,7 +484,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         /**
          * <p>The timeout period for idle connections. Default value: 15. Valid values: <strong>1</strong> to <strong>60</strong>. Unit: seconds.</p>
          * <blockquote>
-         * <p> If no request is received within the specified timeout period, ELB closes the connection. When another request is received, ELB establishes a new connection.</p>
+         * <p>If no request is received within the specified timeout period, ELB closes the connection. When another request is received, ELB establishes a new connection.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -514,7 +525,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         /**
          * <p>The timeout period of requests. Default value: 60. Valid values: <strong>1</strong> to <strong>180</strong>. Unit: seconds.</p>
          * <blockquote>
-         * <p> If no response is received from the backend server within the specified timeout period, ELB returns an HTTP 504 error code to the client.</p>
+         * <p>If no response is received from the backend server within the specified timeout period, ELB returns an HTTP 504 error code to the client.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -529,12 +540,18 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         /**
          * <p>The scheduling algorithm. Valid values:</p>
          * <ul>
-         * <li><strong>wrr</strong>: Backend servers with higher weights receive more requests than those with lower weights.</li>
-         * <li><strong>wlc</strong>: Requests are distributed based on the weights and number of connections to backend servers. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
-         * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
-         * <li><strong>sch</strong>: consistent hashing based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
-         * <li><strong>qch</strong>: consistent hashing based on QUIC connection IDs (CIDs). Requests that contain the same QUIC CID are distributed to the same backend server.</li>
-         * <li><strong>iqch</strong>: consistent hashing based on three specific bytes of iQUIC CIDs. Requests with the same second, third, and fourth bytes are distributed to the same backend server.</li>
+         * <li><p><strong>wrr</strong>: Backend servers with higher weights receive more requests than those with lower weights.</p>
+         * </li>
+         * <li><p><strong>wlc</strong>: Requests are distributed based on the weights and number of connections to backend servers. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</p>
+         * </li>
+         * <li><p><strong>rr</strong>: Requests are distributed to backend servers in sequence.</p>
+         * </li>
+         * <li><p><strong>sch</strong>: consistent hashing based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</p>
+         * </li>
+         * <li><p><strong>qch</strong>: consistent hashing based on QUIC connection IDs (CIDs). Requests that contain the same QUIC CID are distributed to the same backend server.</p>
+         * </li>
+         * <li><p><strong>iqch</strong>: consistent hashing based on three specific bytes of iQUIC CIDs. Requests with the same second, third, and fourth bytes are distributed to the same backend server.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -561,7 +578,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         /**
          * <p>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+         * <p>This parameter takes effect only if you set HealthCheck to on.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -80,7 +80,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code. If the request is successful, 0 is returned. If the request fails, a non-zero error code is returned.</p>
+         * <p>The business code. A value of 0 indicates success. An error code is returned upon failure.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -91,7 +91,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the instance types.</p>
+         * InstanceTypes.
          */
         public Builder instanceTypes(InstanceTypes instanceTypes) {
             this.instanceTypes = instanceTypes;
@@ -125,6 +125,15 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuCoreCount")
         private Integer cpuCoreCount;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceBandwidthRx")
+        private Long instanceBandwidthRx;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceBandwidthTx")
+        private Long instanceBandwidthTx;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private String instanceType;
+
         @com.aliyun.core.annotation.NameInMap("InstanceTypeId")
         private String instanceTypeId;
 
@@ -136,6 +145,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         private InstanceType(Builder builder) {
             this.cpuCoreCount = builder.cpuCoreCount;
+            this.instanceBandwidthRx = builder.instanceBandwidthRx;
+            this.instanceBandwidthTx = builder.instanceBandwidthTx;
+            this.instanceType = builder.instanceType;
             this.instanceTypeId = builder.instanceTypeId;
             this.instanceTypeName = builder.instanceTypeName;
             this.memorySize = builder.memorySize;
@@ -154,6 +166,27 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
          */
         public Integer getCpuCoreCount() {
             return this.cpuCoreCount;
+        }
+
+        /**
+         * @return instanceBandwidthRx
+         */
+        public Long getInstanceBandwidthRx() {
+            return this.instanceBandwidthRx;
+        }
+
+        /**
+         * @return instanceBandwidthTx
+         */
+        public Long getInstanceBandwidthTx() {
+            return this.instanceBandwidthTx;
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         /**
@@ -179,6 +212,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer cpuCoreCount; 
+            private Long instanceBandwidthRx; 
+            private Long instanceBandwidthTx; 
+            private String instanceType; 
             private String instanceTypeId; 
             private String instanceTypeName; 
             private Integer memorySize; 
@@ -188,16 +224,16 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
             private Builder(InstanceType model) {
                 this.cpuCoreCount = model.cpuCoreCount;
+                this.instanceBandwidthRx = model.instanceBandwidthRx;
+                this.instanceBandwidthTx = model.instanceBandwidthTx;
+                this.instanceType = model.instanceType;
                 this.instanceTypeId = model.instanceTypeId;
                 this.instanceTypeName = model.instanceTypeName;
                 this.memorySize = model.memorySize;
             } 
 
             /**
-             * <p>The number of vCPUs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * CpuCoreCount.
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
@@ -205,10 +241,31 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is unavailable.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This parameter is not needed temporarily.</p>
+             * InstanceBandwidthRx.
+             */
+            public Builder instanceBandwidthRx(Long instanceBandwidthRx) {
+                this.instanceBandwidthRx = instanceBandwidthRx;
+                return this;
+            }
+
+            /**
+             * InstanceBandwidthTx.
+             */
+            public Builder instanceBandwidthTx(Long instanceBandwidthTx) {
+                this.instanceBandwidthTx = instanceBandwidthTx;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * InstanceTypeId.
              */
             public Builder instanceTypeId(String instanceTypeId) {
                 this.instanceTypeId = instanceTypeId;
@@ -216,10 +273,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ens.xxx.small</p>
+             * InstanceTypeName.
              */
             public Builder instanceTypeName(String instanceTypeName) {
                 this.instanceTypeName = instanceTypeName;
@@ -227,10 +281,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size. Unit: MB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8192</p>
+             * MemorySize.
              */
             public Builder memorySize(Integer memorySize) {
                 this.memorySize = memorySize;

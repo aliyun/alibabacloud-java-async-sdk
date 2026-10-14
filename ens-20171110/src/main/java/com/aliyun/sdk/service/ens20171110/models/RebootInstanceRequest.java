@@ -76,8 +76,10 @@ public class RebootInstanceRequest extends Request {
         /**
          * <p>Specifies whether to forcefully stop the instance before you restart it.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong> (default)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -88,7 +88,7 @@ public class ShareAICImageRequest extends Request {
         }
 
         /**
-         * <p>The user groups.</p>
+         * <p>The user group.</p>
          * <p>This parameter is required.</p>
          */
         public Builder users(java.util.List<String> users) {

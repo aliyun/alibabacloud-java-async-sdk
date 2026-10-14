@@ -74,7 +74,7 @@ public class PrepareUploadRequest extends Request {
         } 
 
         /**
-         * <p>The name of the bucket.</p>
+         * <p>The bucket name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,10 +87,10 @@ public class PrepareUploadRequest extends Request {
         }
 
         /**
-         * <p>The specified IP address. This parameter is applicable to scenarios where the user IP address is inconsistent with the operation calling IP address, such as the scenario where the server obtains authorization and sends the authorization to the client.</p>
+         * <p>The client\&quot;s IP address. Use this parameter when the client\&quot;s IP address differs from the IP address used to call the API. For example, a server obtains authorization and then sends it to a client.</p>
          * 
          * <strong>example:</strong>
-         * <p>180.166.XX.XXX</p>
+         * <p>180.166.XX.XX</p>
          */
         public Builder clientIp(String clientIp) {
             this.putQueryParameter("ClientIp", clientIp);

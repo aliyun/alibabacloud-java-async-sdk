@@ -89,7 +89,7 @@ public class UnloadRegionSDGRequest extends Request {
         } 
 
         /**
-         * <p>The destination nodes.</p>
+         * <p>The list of destination edge zones.</p>
          * <p>This parameter is required.</p>
          */
         public Builder destinationRegionIds(java.util.List<String> destinationRegionIds) {
@@ -100,7 +100,7 @@ public class UnloadRegionSDGRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of queried namespaces.</p>
+         * <p>The list of namespaces.</p>
          */
         public Builder namespaces(java.util.List<String> namespaces) {
             String namespacesShrink = shrink(namespaces, "Namespaces", "json");
@@ -110,7 +110,7 @@ public class UnloadRegionSDGRequest extends Request {
         }
 
         /**
-         * <p>Deletes the shared data group (SDG) ID of the preloaded data.</p>
+         * <p>The ID of the SDG from which to delete preloaded data.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -222,7 +222,7 @@ public class DescribeImagesRequest extends Request {
          * <p>This parameter is unavailable.</p>
          * 
          * <strong>example:</strong>
-         * <p>This parameter is not currently in use.</p>
+         * <p>This parameter is not in use.</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -67,7 +67,7 @@ public class BatchEventRedeployInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
@@ -78,7 +78,7 @@ public class BatchEventRedeployInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of results.</p>
+         * <p>The list of results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -170,7 +170,7 @@ public class BatchEventRedeployInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Status code.</p>
+             * <p>The status code.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -181,7 +181,7 @@ public class BatchEventRedeployInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>System event ID.</p>
+             * <p>The system event ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e-d71ff150945b9c02eb6ebc0016328468</p>
@@ -192,7 +192,7 @@ public class BatchEventRedeployInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Operational message, when code=200, the message is &quot;successful&quot;.</p>
+             * <p>The operation message. When code is 200, the message is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -203,7 +203,7 @@ public class BatchEventRedeployInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource ID.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-55qi8m11rr53c4i964md8a00l</p>

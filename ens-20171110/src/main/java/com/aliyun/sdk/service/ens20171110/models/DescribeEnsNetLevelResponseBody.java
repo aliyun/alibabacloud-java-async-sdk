@@ -91,7 +91,7 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The network levels.</p>
+         * EnsNetLevels.
          */
         public Builder ensNetLevels(EnsNetLevels ensNetLevels) {
             this.ensNetLevels = ensNetLevels;
@@ -155,15 +155,7 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The network level. Valid values:</p>
-             * <ul>
-             * <li>Big: greater area.</li>
-             * <li>Middle: province.</li>
-             * <li>Small: city.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Big</p>
+             * EnsNetLevelCode.
              */
             public Builder ensNetLevelCode(String ensNetLevelCode) {
                 this.ensNetLevelCode = ensNetLevelCode;

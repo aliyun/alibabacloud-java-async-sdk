@@ -106,7 +106,7 @@ public class DescribeSecondaryPublicIpAddressesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number returned.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeSecondaryPublicIpAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for paging queries.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -139,7 +139,7 @@ public class DescribeSecondaryPublicIpAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The array of returned secondary IP addresses.</p>
+         * <p>The list of secondary public IP addresses.</p>
          */
         public Builder secondaryPublicIpAddresses(java.util.List<SecondaryPublicIpAddresses> secondaryPublicIpAddresses) {
             this.secondaryPublicIpAddresses = secondaryPublicIpAddresses;
@@ -147,7 +147,7 @@ public class DescribeSecondaryPublicIpAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -294,7 +294,7 @@ public class DescribeSecondaryPublicIpAddressesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The subnet mask of the CIDR block.</p>
+             * <p>The CIDR mask of the IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>24</p>
@@ -305,7 +305,7 @@ public class DescribeSecondaryPublicIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the secondary public IP address was created. The time is displayed in UTC.</p>
+             * <p>The creation time in UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-07-25T09:43:49Z</p>
@@ -316,7 +316,7 @@ public class DescribeSecondaryPublicIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the edge node.</p>
+             * <p>The ID of the ENS edge zone.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing-15</p>
@@ -338,10 +338,12 @@ public class DescribeSecondaryPublicIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the IP address. Valid values:</p>
+             * <p>The IP address version. Valid values:</p>
              * <ul>
-             * <li><strong>ipv4</strong></li>
-             * <li><strong>ipv6</strong></li>
+             * <li><p><strong>ipv4</strong>: IPv4 address.</p>
+             * </li>
+             * <li><p><strong>ipv6</strong>: IPv6 address.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -353,7 +355,7 @@ public class DescribeSecondaryPublicIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Internet service provider. Valid values:</p>
+             * <p>The Internet service provider (ISP). Valid values:</p>
              * <ul>
              * <li>cmcc: China Mobile.</li>
              * <li>unicom: China Unicom.</li>

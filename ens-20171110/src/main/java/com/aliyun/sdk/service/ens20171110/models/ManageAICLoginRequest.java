@@ -105,12 +105,8 @@ public class ManageAICLoginRequest extends Request {
         } 
 
         /**
-         * <p>Manage actions</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>open</li>
-         * <li>close</li>
-         * </ul>
+         * <p>The management action.
+         * When this parameter is set to open, the AIC instance must be in the running state. You can call DescribeAICInstances to query the state.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +119,7 @@ public class ManageAICLoginRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +132,8 @@ public class ManageAICLoginRequest extends Request {
         }
 
         /**
-         * <p>Public Key Grouping</p>
+         * <p>The group of the public key.
+         * When you set ActionName to open and use the public key to log on, you must first upload the public key by calling UploadAICPublicKey and provide the corresponding KeyName and KeyGroup.</p>
          * 
          * <strong>example:</strong>
          * <p>g-test</p>
@@ -148,7 +145,8 @@ public class ManageAICLoginRequest extends Request {
         }
 
         /**
-         * <p>Public Key Name</p>
+         * <p>The name of the public key.
+         * When you set ActionName to open and use the public key to log on, you must first upload the public key by calling UploadAICPublicKey and provide the corresponding KeyName and KeyGroup.</p>
          * 
          * <strong>example:</strong>
          * <p>mykey</p>

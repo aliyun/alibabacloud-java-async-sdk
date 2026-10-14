@@ -106,7 +106,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result. For more information, see the Images parameter described in the JSON-formatted sample success response.</p>
+         * Images.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -294,10 +294,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The architecture of the image. Example: <strong>x86_64</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>x86_64</p>
+             * Architecture.
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -305,10 +302,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-12-08T12:10:03Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -316,10 +310,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the exported image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://user_defined_bucket.oss-cn-beijing.aliyuncs.com/m-xxxxxxxxx1.qcow2">https://user_defined_bucket.oss-cn-beijing.aliyuncs.com/m-xxxxxxxxx1.qcow2</a></p>
+             * ExportedImageURL.
              */
             public Builder exportedImageURL(String exportedImageURL) {
                 this.exportedImageURL = exportedImageURL;
@@ -327,16 +318,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The export status of the image. Valid values:</p>
-             * <ul>
-             * <li>Exporting</li>
-             * <li>Exported</li>
-             * <li>ExportError</li>
-             * <li>Unexported</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Exported</p>
+             * ImageExportStatus.
              */
             public Builder imageExportStatus(String imageExportStatus) {
                 this.imageExportStatus = imageExportStatus;
@@ -344,10 +326,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>m-xxxxxxxxx1</p>
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -355,10 +334,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>m-xxxxxxxxx1</p>
+             * ImageName.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -366,14 +342,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the image. Valid values:</p>
-             * <ul>
-             * <li>system: public image</li>
-             * <li>self: custom image</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>system</p>
+             * ImageOwnerAlias.
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -381,10 +350,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OS.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>centos</p>
+             * Platform.
              */
             public Builder platform(String platform) {
                 this.platform = platform;

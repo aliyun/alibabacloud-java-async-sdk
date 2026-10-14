@@ -90,6 +90,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
         }
 
         /**
+         * <p>The array of instances, including the instance information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instances(java.util.List<String> instances) {
@@ -112,6 +114,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
         }
 
         /**
+         * <p>The node pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

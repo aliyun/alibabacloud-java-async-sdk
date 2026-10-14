@@ -60,7 +60,7 @@ public class RemoveInstanceSDGRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.</p>
+         * <p>The list of instance IDs. The value is a JSON array. A maximum of 100 IDs can be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {

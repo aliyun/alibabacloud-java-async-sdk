@@ -74,6 +74,7 @@ public class DescribeAddonRequest extends Request {
         } 
 
         /**
+         * <p>The name of the add-on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * AddonVersion.
+         * <p>The version of the add-on. If you do not specify a version, all available versions are returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder addonVersion(String addonVersion) {
             this.putQueryParameter("AddonVersion", addonVersion);

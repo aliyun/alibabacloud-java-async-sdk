@@ -73,7 +73,7 @@ public class DescribeSDGsRequest extends Request {
         } 
 
         /**
-         * <p>The AIC instance ID to be queried.</p>
+         * <p>The list of AIC instance IDs to query.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -83,7 +83,7 @@ public class DescribeSDGsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of SDGs that you want to query. By default, all SDGs are queried.</p>
+         * <p>The list of SDG IDs to query.</p>
          */
         public Builder SDGIds(java.util.List<String> SDGIds) {
             String SDGIdsShrink = shrink(SDGIds, "SDGIds", "json");

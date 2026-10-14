@@ -131,7 +131,10 @@ public class DescribeNetworkPeerConnectionsRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * <p>The ID of the ENS node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-xian-unicom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -140,7 +143,10 @@ public class DescribeNetworkPeerConnectionsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the network peer connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcc-5inkeimcipxk26yqtzm4q****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -149,7 +155,10 @@ public class DescribeNetworkPeerConnectionsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the network peer connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -158,7 +167,7 @@ public class DescribeNetworkPeerConnectionsRequest extends Request {
         }
 
         /**
-         * NetworkIds.
+         * <p>The IDs of the networks involved in the connection. The query does not distinguish between the requester and accepter.</p>
          */
         public Builder networkIds(java.util.List<String> networkIds) {
             this.putQueryParameter("NetworkIds", networkIds);
@@ -167,7 +176,10 @@ public class DescribeNetworkPeerConnectionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number for the returned results. Default: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -176,7 +188,10 @@ public class DescribeNetworkPeerConnectionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Default: <strong>10</strong>. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

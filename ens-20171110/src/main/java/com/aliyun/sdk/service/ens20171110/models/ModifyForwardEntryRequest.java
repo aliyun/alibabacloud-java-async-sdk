@@ -174,10 +174,14 @@ public class ModifyForwardEntryRequest extends Request {
         /**
          * <p>The external port or port range that is used for port forwarding.</p>
          * <ul>
-         * <li>Valid values: 1 to 65535.</li>
-         * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20. The first port and the last port are included.</li>
-         * <li>If you set ExternalPort to a port range, you must also set InternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</li>
-         * <li>The maximum port range is 1000.</li>
+         * <li><p>Valid values: 1 to 65535.</p>
+         * </li>
+         * <li><p>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20. The first port and the last port are included.</p>
+         * </li>
+         * <li><p>If you set ExternalPort to a port range, you must also set InternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</p>
+         * </li>
+         * <li><p>The maximum port range is 1000.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,10 +245,14 @@ public class ModifyForwardEntryRequest extends Request {
         /**
          * <p>The private port or port range that is used in port forwarding.</p>
          * <ul>
-         * <li>Valid values: 1 to 65535.</li>
-         * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20. The first port and the last port are included.</li>
-         * <li>If you set InternalPort to a port range, you must also set ExternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</li>
-         * <li>The maximum port range is 1000.</li>
+         * <li><p>Valid values: 1 to 65535.</p>
+         * </li>
+         * <li><p>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20. The first port and the last port are included.</p>
+         * </li>
+         * <li><p>If you set InternalPort to a port range, you must also set ExternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</p>
+         * </li>
+         * <li><p>The maximum port range is 1000.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -259,9 +267,12 @@ public class ModifyForwardEntryRequest extends Request {
         /**
          * <p>The protocol. Valid values:</p>
          * <ul>
-         * <li><strong>TCP</strong>: forwards TCP packets.</li>
-         * <li><strong>UDP</strong>: forwards UDP packets.</li>
-         * <li><strong>Any</strong> (default): forwards all packets.</li>
+         * <li><p><strong>TCP</strong>: forwards TCP packets.</p>
+         * </li>
+         * <li><p><strong>UDP</strong>: forwards UDP packets.</p>
+         * </li>
+         * <li><p><strong>Any</strong> (default): forwards all packets.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

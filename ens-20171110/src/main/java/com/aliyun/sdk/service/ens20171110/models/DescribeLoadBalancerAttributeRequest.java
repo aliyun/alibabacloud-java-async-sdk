@@ -60,7 +60,7 @@ public class DescribeLoadBalancerAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ELB instance.</p>
+         * <p>The ID of the load balancing instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

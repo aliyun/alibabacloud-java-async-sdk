@@ -215,7 +215,7 @@ public class DescribeLoadBalancersRequest extends Request {
         } 
 
         /**
-         * <p>The IP address that the ELB instance uses to provide services.</p>
+         * <p>The service address of the load balancing instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.XX.XX</p>
@@ -227,7 +227,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * <p>The ENS edge zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-guangzhou-10</p>
@@ -239,7 +239,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the Edge Node Service (ENS) nodes.</p>
+         * <p>The list of ENS edge zone IDs.</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -248,7 +248,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ELB instance.</p>
+         * <p>The ID of the load balancing instance.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-5q73cv04zeyh43lh74lp4****</p>
@@ -260,7 +260,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The name of the ELB instance.</p>
+         * <p>The name of the load balancing instance.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -272,10 +272,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The status of the listener for the ELB instance. Valid values:</p>
+         * <p>The listener status of the load balancing instance. Valid values:</p>
          * <ul>
-         * <li><strong>Active</strong>: The listener for the instance can forward the received traffic based on forwarding rules.</li>
-         * <li><strong>InActive</strong>: The listener for the instance does not forward the received traffic.</li>
+         * <li><strong>Active</strong>: The listeners in the instance can forward accepted traffic based on rules.</li>
+         * <li><strong>InActive</strong>: The listeners in the instance no longer forward accepted traffic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * LoadBalancerType.
+         * <p>The type of the load balancing instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLB</p>
          */
         public Builder loadBalancerType(String loadBalancerType) {
             this.putQueryParameter("LoadBalancerType", loadBalancerType);
@@ -297,7 +300,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network.</p>
+         * <p>The network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n-5s9ayrxsd9hszrlt5fgv2****</p>
@@ -309,7 +312,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number of the list. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -321,7 +324,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
+         * <p>The Settings for the number of entries per page during paging in a paged query. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -333,7 +336,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backend server.</p>
+         * <p>The backend server instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-5f67ffjc004wwz0t****</p>
@@ -345,7 +348,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-5sy773iy25rulsmgskmba****</p>

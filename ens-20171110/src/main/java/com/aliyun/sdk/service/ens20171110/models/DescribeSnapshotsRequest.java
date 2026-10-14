@@ -157,7 +157,7 @@ public class DescribeSnapshotsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the disk.</p>
+         * <p>The ID of the specified cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>d-bp67acfmxazb4p****</p>
@@ -169,7 +169,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ENS node. You can query the node ID by calling the <a href="https://help.aliyun.com/document_detail/2637662.html">DescribeEnsRegions</a> operation.</p>
+         * <p>The ID of the ENS edge zone. You can call <a href="https://help.aliyun.com/document_detail/2637662.html">DescribeEnsRegions</a> to query edge zone IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -181,7 +181,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The node information.</p>
+         * <p>The array of ENS edge zone IDs. Array length: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;cn-suzhou-telecom&quot;,&quot;cn-chengdu-telecom&quot;]</p>
@@ -193,7 +193,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp67acfmxazb4p****</p>
@@ -205,7 +205,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -217,7 +217,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -229,7 +229,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the snapshot. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).</p>
+         * <p>The snapshot ID. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>sp-bp67acfmxazb4p****</p>
@@ -241,7 +241,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The display name of the snapshot. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testSnapshotName</p>

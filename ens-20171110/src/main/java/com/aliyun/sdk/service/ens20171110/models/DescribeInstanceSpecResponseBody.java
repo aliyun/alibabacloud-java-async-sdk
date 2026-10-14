@@ -176,7 +176,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about instance specifications.</p>
+         * InstanceSpecs.
          */
         public Builder instanceSpecs(InstanceSpecs instanceSpecs) {
             this.instanceSpecs = instanceSpecs;
@@ -290,10 +290,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of CPU cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Core.
              */
             public Builder core(String core) {
                 this.core = core;
@@ -301,10 +298,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the instance type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Computational 1C2G</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -312,10 +306,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ens.sn1.stiny</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -323,10 +314,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size. Unit: MB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2048</p>
+             * Memory.
              */
             public Builder memory(String memory) {
                 this.memory = memory;

@@ -91,7 +91,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the ISPs in the area.</p>
+         * EnsNetDistricts.
          */
         public Builder ensNetDistricts(EnsNetDistricts ensNetDistricts) {
             this.ensNetDistricts = ensNetDistricts;
@@ -233,10 +233,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the ISP.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{                         &quot;count&quot;:2,                         &quot;name&quot;:&quot;telecommunication&quot;,                         &quot;code&quot;:&quot;telecom&quot;,                         &quot;country&quot;:&quot;cn&quot;                     }</p>
+             * EnsRegionIdCount.
              */
             public Builder ensRegionIdCount(String ensRegionIdCount) {
                 this.ensRegionIdCount = ensRegionIdCount;
@@ -244,10 +241,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{                         &quot;count&quot;:2,                         &quot;code&quot;:&quot;multiCarrier&quot;                     }</p>
+             * InstanceCount.
              */
             public Builder instanceCount(String instanceCount) {
                 this.instanceCount = instanceCount;
@@ -255,10 +249,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region code.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100101</p>
+             * NetDistrictCode.
              */
             public Builder netDistrictCode(String netDistrictCode) {
                 this.netDistrictCode = netDistrictCode;
@@ -266,10 +257,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>northEast</p>
+             * NetDistrictEnName.
              */
             public Builder netDistrictEnName(String netDistrictEnName) {
                 this.netDistrictEnName = netDistrictEnName;
@@ -277,10 +265,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent code of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100000</p>
+             * NetDistrictFatherCode.
              */
             public Builder netDistrictFatherCode(String netDistrictFatherCode) {
                 this.netDistrictFatherCode = netDistrictFatherCode;
@@ -288,15 +273,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region level. Valid values:</p>
-             * <ul>
-             * <li><strong>Big</strong>: area</li>
-             * <li><strong>Middle</strong>: province</li>
-             * <li><strong>Small</strong>: city</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Big</p>
+             * NetDistrictLevel.
              */
             public Builder netDistrictLevel(String netDistrictLevel) {
                 this.netDistrictLevel = netDistrictLevel;
@@ -304,10 +281,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Chinese name of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Northeast China</p>
+             * NetDistrictName.
              */
             public Builder netDistrictName(String netDistrictName) {
                 this.netDistrictName = netDistrictName;

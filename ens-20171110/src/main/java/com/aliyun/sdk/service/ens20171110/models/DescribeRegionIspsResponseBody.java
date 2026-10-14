@@ -144,7 +144,7 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the ISP.</p>
+             * <p>The ISP code.</p>
              * 
              * <strong>example:</strong>
              * <p>cmcc</p>
@@ -155,10 +155,10 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ISP.</p>
+             * <p>The ISP name.</p>
              * 
              * <strong>example:</strong>
-             * <p>move</p>
+             * <p>China Mobile</p>
              */
             public Builder name(String name) {
                 this.name = name;

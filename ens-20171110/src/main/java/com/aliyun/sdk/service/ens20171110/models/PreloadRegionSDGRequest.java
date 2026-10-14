@@ -118,7 +118,7 @@ public class PreloadRegionSDGRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the destination nodes.</p>
+         * <p>The list of destination edge zones.</p>
          * <p>This parameter is required.</p>
          */
         public Builder destinationRegionIds(java.util.List<String> destinationRegionIds) {
@@ -129,7 +129,21 @@ public class PreloadRegionSDGRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * <p>The type of the shared cloud disk to be created. Valid values:</p>
+         * <ul>
+         * <li><p>standard: standard cloud disk.</p>
+         * </li>
+         * <li><p>rbd: rbd cloud disk.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If you do not specify the shared cloud disk type, a standard cloud disk is created by default.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rbd</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -138,7 +152,7 @@ public class PreloadRegionSDGRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of queried namespaces.</p>
+         * <p>The list of namespaces.</p>
          */
         public Builder namespaces(java.util.List<String> namespaces) {
             String namespacesShrink = shrink(namespaces, "Namespaces", "json");
@@ -148,7 +162,7 @@ public class PreloadRegionSDGRequest extends Request {
         }
 
         /**
-         * <p>The number of redundant replicas to support rapid deployment.</p>
+         * <p>The redundancy count to support fast deployment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +175,7 @@ public class PreloadRegionSDGRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SDG for which data is preloaded.</p>
+         * <p>The ID of the SDG that you want to preload.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

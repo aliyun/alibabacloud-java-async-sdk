@@ -60,6 +60,7 @@ public class DeleteNetworkPeerConnectionRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the network peer connection to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

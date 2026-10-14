@@ -67,7 +67,10 @@ public class DescribeClusterAttachScriptsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class DescribeClusterAttachScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * Script.
+         * <p>The cluster attachment script, Base64-encoded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y2QgWnhiU0o=</p>
          */
         public Builder script(String script) {
             this.script = script;

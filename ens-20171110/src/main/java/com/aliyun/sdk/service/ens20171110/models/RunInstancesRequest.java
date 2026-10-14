@@ -23,6 +23,10 @@ public class RunInstancesRequest extends Request {
     private Long amount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoInstallCloudAssistant")
+    private Boolean autoInstallCloudAssistant;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
     private String autoReleaseTime;
 
@@ -41,6 +45,10 @@ public class RunInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Carrier")
     private String carrier;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudAssistantRegion")
+    private String cloudAssistantRegion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDisk")
@@ -202,11 +210,13 @@ public class RunInstancesRequest extends Request {
     private RunInstancesRequest(Builder builder) {
         super(builder);
         this.amount = builder.amount;
+        this.autoInstallCloudAssistant = builder.autoInstallCloudAssistant;
         this.autoReleaseTime = builder.autoReleaseTime;
         this.autoRenew = builder.autoRenew;
         this.autoUseCoupon = builder.autoUseCoupon;
         this.billingCycle = builder.billingCycle;
         this.carrier = builder.carrier;
+        this.cloudAssistantRegion = builder.cloudAssistantRegion;
         this.dataDisk = builder.dataDisk;
         this.deletionProtection = builder.deletionProtection;
         this.deploymentSetId = builder.deploymentSetId;
@@ -269,6 +279,13 @@ public class RunInstancesRequest extends Request {
     }
 
     /**
+     * @return autoInstallCloudAssistant
+     */
+    public Boolean getAutoInstallCloudAssistant() {
+        return this.autoInstallCloudAssistant;
+    }
+
+    /**
      * @return autoReleaseTime
      */
     public String getAutoReleaseTime() {
@@ -301,6 +318,13 @@ public class RunInstancesRequest extends Request {
      */
     public String getCarrier() {
         return this.carrier;
+    }
+
+    /**
+     * @return cloudAssistantRegion
+     */
+    public String getCloudAssistantRegion() {
+        return this.cloudAssistantRegion;
     }
 
     /**
@@ -578,11 +602,13 @@ public class RunInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunInstancesRequest, Builder> {
         private Long amount; 
+        private Boolean autoInstallCloudAssistant; 
         private String autoReleaseTime; 
         private Boolean autoRenew; 
         private String autoUseCoupon; 
         private String billingCycle; 
         private String carrier; 
+        private String cloudAssistantRegion; 
         private java.util.List<DataDisk> dataDisk; 
         private Boolean deletionProtection; 
         private String deploymentSetId; 
@@ -630,11 +656,13 @@ public class RunInstancesRequest extends Request {
         private Builder(RunInstancesRequest request) {
             super(request);
             this.amount = request.amount;
+            this.autoInstallCloudAssistant = request.autoInstallCloudAssistant;
             this.autoReleaseTime = request.autoReleaseTime;
             this.autoRenew = request.autoRenew;
             this.autoUseCoupon = request.autoUseCoupon;
             this.billingCycle = request.billingCycle;
             this.carrier = request.carrier;
+            this.cloudAssistantRegion = request.cloudAssistantRegion;
             this.dataDisk = request.dataDisk;
             this.deletionProtection = request.deletionProtection;
             this.deploymentSetId = request.deploymentSetId;
@@ -677,7 +705,7 @@ public class RunInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The number of instances that you want to create. Valid values: 1 to 100.</p>
+         * <p>The number of instances to create. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -689,10 +717,21 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The time when to automatically release the pay-as-you-go instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <p>Specifies whether to automatically install the Cloud Assistant client on the instance.</p>
+         */
+        public Builder autoInstallCloudAssistant(Boolean autoInstallCloudAssistant) {
+            this.putQueryParameter("AutoInstallCloudAssistant", autoInstallCloudAssistant);
+            this.autoInstallCloudAssistant = autoInstallCloudAssistant;
+            return this;
+        }
+
+        /**
+         * <p>The automatic release time of the pay-as-you-go instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
          * <ul>
-         * <li>If the value of <code>ss</code> is not <code>00</code>, the start time is automatically rounded down to the nearest minute based on the value of <code>mm</code>.</li>
-         * <li>The specified time must be at least one hour later than the current time.</li>
+         * <li><p>If the value of seconds (<code>ss</code>) is not <code>00</code>, the time is automatically set to the start of the current minute (<code>mm</code>).</p>
+         * </li>
+         * <li><p>The earliest release time is one hour after the current time.</p>
+         * </li>
          * </ul>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
@@ -706,13 +745,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal for the premium bandwidth plan. Valid values:</p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>.</li>
-         * <li><strong>false</strong> (default).</li>
+         * <li><strong>true</strong>: enables auto-renewal.</li>
+         * <li><strong>false</strong>: does not enable auto-renewal. (Default)</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is not available when InstanceChargeType is set to PostPaid.</p>
+         * <p>This parameter is invalid for pay-as-you-go instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -725,7 +764,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use coupons. Default value: true.</p>
+         * <p>Specifies whether to use coupons. Default value: true (AutoUseCoupon=true).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -737,10 +776,12 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The billing cycle of computing resources of the instance. Only pay-as-you-go instances are supported. Valid values:</p>
+         * <p>The billing cycle for instance compute resources. Only instance-level pay-as-you-go is supported. Valid values:</p>
          * <ul>
-         * <li><strong>Day</strong>.</li>
-         * <li><strong>Month</strong>.</li>
+         * <li><p><strong>Day</strong>: daily billing.</p>
+         * </li>
+         * <li><p><strong>Month</strong>: monthly billing.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -753,9 +794,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The Internet service provider (ISP).</p>
+         * <p>The carrier.</p>
          * <blockquote>
-         * <p> This parameter required if ScheduleAreaLevel is set to Region.<br>If you set ScheduleAreaLevel to Region, a node has multiple ISPs, and you do not specify an ISP, then the create instance uses the ISP of the node. If the node has two ISPs, such as China Mobile and China Unicom, the created instance has two ISPs.<br>You can call the DescribeRegionIsps operation to query ISPs of the edge node.<a href="~~2637461~~"></a></p>
+         * <p>This parameter is required for region-level scheduling.</br>
+         * For node-level scheduling, if a node has multiple carriers and you do not specify a carrier, instances are created for each carrier on the node. For example, if a node has both China Mobile and China Unicom carriers, instances with two ISPs are created.</br>You can call <a href="https://help.aliyun.com/document_detail/2637461.html">DescribeRegionIsps</a> to query the carrier information of a node.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -768,7 +810,19 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The specifications of data disks.</p>
+         * <p>The region for Cloud Assistant access. Valid values: cn-zhangjiakou (Zhangjiakou) and ap-southeast-1 (Singapore).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
+         */
+        public Builder cloudAssistantRegion(String cloudAssistantRegion) {
+            this.putQueryParameter("CloudAssistantRegion", cloudAssistantRegion);
+            this.cloudAssistantRegion = cloudAssistantRegion;
+            return this;
+        }
+
+        /**
+         * <p>The data cloud disk specifications.</p>
          */
         public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             String dataDiskShrink = shrink(dataDisk, "DataDisk", "json");
@@ -778,7 +832,18 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * DeletionProtection.
+         * <p>The release protection property of the instance. Specifies whether the instance can be released from the console or by calling an API operation. Valid values: </p>
+         * <ul>
+         * <li>true: Enables instance release protection.</li>
+         * <li>false: Disables instance release protection.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p>This property applies only to pay-as-you-go instances and can only restrict manual release operations. It does not take effect on system-initiated release operations.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -787,7 +852,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * DeploymentSetId.
+         * <p>The deployment set ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-5s1p6x2l3r4b****</p>
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -796,9 +864,9 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          * <blockquote>
-         * <p> This parameter is required if ScheduleAreaLevel is set to Region and is not available if ScheduleAreaLevel is set to other values.</p>
+         * <p>This parameter is required for node-level scheduling and is invalid for region-level scheduling.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -811,7 +879,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the host.</p>
+         * <p>The hostname.</p>
          * 
          * <strong>example:</strong>
          * <p>test-HostName</p>
@@ -823,10 +891,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image. For ARM PCB-based server instances, leave this parameter empty. For other instances, this parameter is required.</p>
+         * <p>The image ID. This parameter cannot be specified for ARM-based instances. This parameter is required for other instance types.</p>
          * 
          * <strong>example:</strong>
-         * <p>m-5si16wo6simkt267p8b7hcmy3</p>
+         * <p>m-5si16wo6simkt267p8b7h****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -835,10 +903,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The billing policy of the instance. Valid values:</p>
+         * <p>The instance billing strategy. Valid values:</p>
          * <ul>
-         * <li><strong>instance</strong>: Bills are generated based on instances.</li>
-         * <li>If you do not specify this parameter, bills are generated based on users.</li>
+         * <li><strong>instance</strong>: instance-level billing.</li>
+         * <li>If not specified, the default is user-level billing.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -854,7 +922,7 @@ public class RunInstancesRequest extends Request {
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
          * <li><strong>PrePaid</strong>: subscription.</li>
-         * <li><strong>PostPaid:</strong> pay-as-you-go.</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -867,8 +935,8 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
-         * <p>The default value of this parameter is the value of the InstanceId parameter.</p>
+         * <p>The instance name. The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. It can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), or hyphens (-).</p>
+         * <p>Default value: the InstanceId of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>TestName</p>
@@ -892,13 +960,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The bandwidth billing method. Valid values:</p>
+         * <p>Billable methods for bandwidth. Valid values:</p>
          * <ul>
-         * <li><strong>BandwidthByDay</strong>: pay by daily peak bandwidth</li>
-         * <li><strong>95BandwidthByMonth</strong>: pay by monthly 95th percentile bandwidth</li>
+         * <li><strong>BandwidthByDay</strong>: daily peak bandwidth</li>
+         * <li><strong>95BandwidthByMonth</strong>: monthly 95th percentile bandwidth</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is required if you purchase an ENS instance for the first time. The value that you specified is used as the default value for subsequent purchases.</p>
+         * <p>You can select a billing method only for the first purchase. Subsequent purchases use the billing method selected during the first purchase by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -911,7 +979,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The maximum public bandwidth. If the value of this parameter is greater than 0, a public IP address is assigned to the instance.</p>
+         * <p>The maximum public bandwidth. If the value of this parameter is greater than 0, a public IP address is automatically assigned to the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -923,12 +991,16 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The type of the IP address. Valid values:</p>
+         * <p>The IP type. Valid values:</p>
          * <ul>
-         * <li><strong>ipv4</strong> (default).</li>
-         * <li><strong>ipv6</strong>.</li>
-         * <li><strong>ipv4Andipv6</strong> (single stack).</li>
-         * <li><strong>ipv4Withipv6</strong> (dual stack).</li>
+         * <li><p><strong>ipv4</strong> (default): IPv4.</p>
+         * </li>
+         * <li><p><strong>ipv6</strong>: IPv6.</p>
+         * </li>
+         * <li><p><strong>ipv4Andipv6</strong>: IPv4 and IPv6 (single stack).</p>
+         * </li>
+         * <li><p><strong>ipv4Withipv6</strong>: IPv4 and IPv6 (dual-stack).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -941,7 +1013,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Ipv6AddressCount.
+         * <p>The number of randomly generated IPv6 addresses to assign to the primary ENI of the private network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder ipv6AddressCount(Long ipv6AddressCount) {
             this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
@@ -950,9 +1025,9 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the key pair.</p>
+         * <p>The key pair name.</p>
          * <blockquote>
-         * <p> You need to specify at least one of <strong>Password</strong>, <strong>KeyPairName</strong>, and <strong>PasswordInherit</strong>.</p>
+         * <p>Specify at least one of <strong>Password</strong>, <strong>KeyPairName</strong>, and <strong>PasswordInherit</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -965,7 +1040,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * LaunchTemplateId.
+         * <p>The ID of the instance launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lt-test</p>
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -974,7 +1052,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * LaunchTemplateName.
+         * <p>The name of the instance launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lt-test</p>
          */
         public Builder launchTemplateName(String launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);
@@ -983,7 +1064,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * LaunchTemplateVersion.
+         * <p>The version of the instance launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder launchTemplateVersion(Integer launchTemplateVersion) {
             this.putQueryParameter("LaunchTemplateVersion", launchTemplateVersion);
@@ -992,9 +1076,9 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The code of the region.</p>
+         * <p>The region code.</p>
          * <blockquote>
-         * <p> This parameter is not available if ScheduleAreaLevel is set to Region and is required if ScheduleAreaLevel is set to other values.</p>
+         * <p>This parameter is required for region-level scheduling and is invalid for node-level scheduling.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1007,9 +1091,9 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network.</p>
+         * <p>The network ID.</p>
          * <blockquote>
-         * <p> This parameter is available only if ScheduleAreaLevel is set to Region and cannot be configured if ScheduleAreaLevel is set to other values. Otherwise, an error occurs.</p>
+         * <p>This parameter can only be used for node-level scheduling. An error is returned if this parameter is specified for region-level scheduling. If you do not specify vSwitch information, only the validity of the network ID is verified. The actual resource creation does not use this network ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1022,9 +1106,9 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The password that is used to connect to the instance.</p>
+         * <p>The instance password.</p>
          * <blockquote>
-         * <p> You need to specify at least one of <strong>Password</strong>, <strong>KeyPairName</strong>, and <strong>PasswordInherit</strong>.</p>
+         * <p>Specify at least one of <strong>Password</strong>, <strong>KeyPairName</strong>, and <strong>PasswordInherit</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1039,11 +1123,11 @@ public class RunInstancesRequest extends Request {
         /**
          * <p>Specifies whether to use the preset password of the image. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: uses the preset password.</li>
+         * <li><strong>false</strong>: does not use the preset password.</li>
          * </ul>
          * <blockquote>
-         * <p> You need to specify at least one of <strong>Password</strong>, <strong>KeyPairName</strong>, and <strong>PasswordInherit</strong>.</p>
+         * <p>Specify at least one of <strong>Password</strong>, <strong>KeyPairName</strong>, and <strong>PasswordInherit</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1056,14 +1140,16 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription period.</p>
+         * <p>The duration of the purchased resource.</p>
          * <ul>
-         * <li>If <strong>PeriodUnit</strong> is set to <strong>Day</strong>, <strong>Period</strong> can only be set to <strong>3</strong>.</li>
-         * <li>If <strong>PeriodUnit</strong> is <strong>Month</strong>, <strong>Period</strong> can be set to <strong>1 to 9</strong> or <strong>12</strong>.</li>
+         * <li><p>If <strong>PeriodUnit</strong> is set to <strong>Day</strong>, <strong>Period</strong> can only be set to <strong>3</strong>.</p>
+         * </li>
+         * <li><p>If <strong>PeriodUnit</strong> is set to <strong>Month</strong>, <strong>Period</strong> can be set to <strong>1-9</strong> or <strong>12</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>1-9,12</p>
+         * <p>1</p>
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
@@ -1072,10 +1158,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription period. Valid values:</p>
+         * <p>The unit of the purchase duration. Valid values:</p>
          * <ul>
-         * <li><strong>Month</strong> (default).</li>
-         * <li><strong>Day</strong>.</li>
+         * <li><strong>Month</strong> (default): monthly purchase.</li>
+         * <li><strong>Day</strong>: daily purchase.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1090,11 +1176,12 @@ public class RunInstancesRequest extends Request {
         /**
          * <p>The private IP address.</p>
          * <blockquote>
-         * <p> This parameter is available only if ScheduleAreaLevel is set to Region and cannot be configured if ScheduleAreaLevel is set to other values. Otherwise, an error occurs. If you specify a private IP address, the number of instances must be 1. The private IP address takes effect only when the private IP address and the vSwitch ID are not empty.</p>
+         * <p>This parameter can only be used for node-level scheduling. An error is returned if this parameter is specified for region-level scheduling.
+         * If a private IP address is specified, the number of instances can only be 1. The private IP address takes effect only when both the private IP address and vSwitch ID are specified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>10.0.0.120</p>
+         * <p>10.0.XX.XX</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -1103,7 +1190,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable public IP address identification. Valid values: true and false. Default value: false.</p>
+         * <p>Specifies whether to enable public IP identification. Valid values:</p>
+         * <ul>
+         * <li><p>true: enables public IP identification.</p>
+         * </li>
+         * <li><p>false: does not enable public IP identification.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1115,9 +1209,9 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The scheduling level. This parameter specifies area-level scheduling or node-level scheduling. Valid values:</p>
+         * <p>The scheduling level. Use this parameter to specify node-level or region-level scheduling. Valid values:</p>
          * <ul>
-         * <li><strong>Big</strong>: greater area</li>
+         * <li><strong>Big</strong>: major area</li>
          * <li><strong>Middle</strong>: province</li>
          * <li><strong>Small</strong>: city</li>
          * <li><strong>Region</strong>: node</li>
@@ -1133,10 +1227,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The scheduling price policy. Valid values:</p>
+         * <p>The scheduling price strategy. Valid values:</p>
          * <ul>
-         * <li><strong>PriceHighPriority</strong>: The high price prevails.</li>
-         * <li><strong>PriceLowPriority</strong>: The low price prevails.</li>
+         * <li><strong>PriceHighPriority</strong>: high price first</li>
+         * <li><strong>PriceLowPriority</strong>: low price first</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1149,17 +1243,17 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The scheduling policy of the taint. Valid values:</p>
+         * <p>The scheduling strategy. Valid values:</p>
          * <ul>
-         * <li><strong>Concentrate</strong></li>
-         * <li><strong>Disperse</strong></li>
+         * <li><strong>Concentrate</strong>: concentrated</li>
+         * <li><strong>Disperse</strong>: dispersed</li>
          * </ul>
          * <blockquote>
-         * <p> If ScheduleAreaLevel is set to Region, set this parameter to <strong>Concentrate</strong>. If ScheduleAreaLevel is set to other values, set this parameter to Concentrate or Disperse based on your business requirements.</p>
+         * <p>For node-level scheduling, the value is <strong>Concentrate</strong>. For region-level scheduling, select a value based on your requirements.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>concentrate</p>
+         * <p>Concentrate</p>
          */
         public Builder schedulingStrategy(String schedulingStrategy) {
             this.putQueryParameter("SchedulingStrategy", schedulingStrategy);
@@ -1168,7 +1262,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of security group.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-test</p>
@@ -1180,15 +1274,11 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
-         * <ul>
-         * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-         * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-         * </ul>
-         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</p>
+         * <p>The protection period of the spot instance.</p>
+         * <p>Unit: hours.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>1</p>
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -1197,10 +1287,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The bidding policy for the pay-as-you-go instance. This parameter is valid only when the <code>InstanceChargeType</code> parameter is set to <code>PostPaid</code>. Valid values:</p>
+         * <p>The bidding policy for the pay-as-you-go instance. This parameter takes effect when the <code>InstanceChargeType</code> parameter is set to <code>PostPaid</code>. Valid values:</p>
          * <ul>
-         * <li>NoSpot: The elastic container instances are pay-as-you-go instances.</li>
-         * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
+         * <li>NoSpot: a regular pay-as-you-go instance.</li>
+         * <li>SpotAsPriceGo: the system automatically bids at the current market price.</li>
          * </ul>
          * <p>Default value: NoSpot.</p>
          * 
@@ -1214,7 +1304,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The specification of the system disk.</p>
+         * <p>The system cloud disk specifications.</p>
          */
         public Builder systemDisk(SystemDisk systemDisk) {
             String systemDiskShrink = shrink(systemDisk, "SystemDisk", "json");
@@ -1224,7 +1314,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags that are bound to the instance.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1233,7 +1323,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to append sequential suffixes to the hostname specified by the <strong>HostName</strong> parameter and to the instance name specified by the <strong>InstanceName</strong> parameter. The sequential suffixes range from 001 to 999.</p>
+         * <p>Specifies whether to add sequential suffixes to <strong>HostName</strong> and <strong>InstanceName</strong>. The sequential suffixes start from 001 and cannot exceed 999.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -1245,7 +1335,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The custom data. The maximum data size is 16 KB. You can specify <strong>UserData</strong>. <strong>UserData</strong> must be Base64-encoded.</p>
+         * <p>The custom user data. Maximum size: 16 KB. You can pass in <strong>UserData</strong> information. <strong>UserData</strong> is Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWtest</p>
@@ -1257,13 +1347,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * <blockquote>
-         * <p> This parameter is available only if ScheduleAreaLevel is set to Region and cannot be configured if ScheduleAreaLevel is set to other values. Otherwise, an error occurs.</p>
+         * <p>This parameter can only be used for node-level scheduling. An error is returned if this parameter is specified for region-level scheduling.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>vsw-5sagnw7m613oulalkd10nv0ob</p>
+         * <p>vsw-5sagnw7m613oulalkd10n****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1272,7 +1362,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * VpdId.
+         * <p>The VPD network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-5s7xxxxxxx</p>
          */
         public Builder vpdId(String vpdId) {
             this.putQueryParameter("VpdId", vpdId);
@@ -1281,7 +1374,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * VpdVSwitchIds.
+         * <p>The list of VPD vSwitch IDs.</p>
          */
         public Builder vpdVSwitchIds(java.util.List<String> vpdVSwitchIds) {
             String vpdVSwitchIdsShrink = shrink(vpdVSwitchIds, "VpdVSwitchIds", "json");
@@ -1376,12 +1469,12 @@ public class RunInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The category of the disk. Valid values:</p>
+             * <p>The disk category. Valid values:</p>
              * <ul>
-             * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
-             * <li><strong>cloud_ssd</strong>: all-flash disk.</li>
-             * <li><strong>local_hdd</strong>: local HDD.</li>
-             * <li><strong>local_ssd</strong>: local SSD.</li>
+             * <li><strong>cloud_efficiency</strong>: ultra cloud disk</li>
+             * <li><strong>cloud_ssd</strong>: all-flash cloud disk</li>
+             * <li><strong>local_hdd</strong>: local HDD</li>
+             * <li><strong>local_ssd</strong>: local SSD</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1393,10 +1486,12 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to encrypt the disk. Valid values:</p>
+             * <p>Specifies whether to encrypt the cloud disk. Valid values:</p>
              * <ul>
-             * <li>true.</li>
-             * <li>false (default).</li>
+             * <li><p>true: encrypts the cloud disk.</p>
+             * </li>
+             * <li><p>false (default): does not encrypt the cloud disk.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1408,13 +1503,15 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * <p>The ID of the Key Management Service (KMS) key that is used for the disk. Valid values:</p>
+             * <p>The ID of the KMS key used by the cloud disk. Valid values:</p>
              * <ul>
-             * <li>true.</li>
-             * <li>false (default).</li>
+             * <li><p>true: encrypts the cloud disk.</p>
+             * </li>
+             * <li><p>false (default): does not encrypt the cloud disk.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> If you set the Encrypted parameter to true, the default service key is used when the KMSKeyId parameter is empty.</p>
+             * <p>If Encrypted is set to true and KMSKeyId is empty, the default service key is used.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1426,7 +1523,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * <p>The size of a data disk. Unit: GiB.</p>
+             * <p>The size of the data cloud disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1496,7 +1593,7 @@ public class RunInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The category of the system disk.</p>
+             * <p>The type of the system cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>local_ssd</p>
@@ -1507,7 +1604,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * <p>The size of the system disk. Unit: GiB.</p>
+             * <p>The size of the system cloud disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -1577,7 +1674,7 @@ public class RunInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The custom tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>team</p>
@@ -1588,7 +1685,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value. The tag value cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>tagValue</p>

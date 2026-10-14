@@ -92,7 +92,7 @@ public class ModifyImageAttributeRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Image Name</p>
+         * <p>Image name</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);

@@ -89,7 +89,7 @@ public class ModifyClusterAddonRequest extends Request {
         } 
 
         /**
-         * Addon.
+         * <p>The parameter settings of the add-on.</p>
          */
         public Builder addon(Addon addon) {
             String addonShrink = shrink(addon, "Addon", "json");
@@ -99,6 +99,7 @@ public class ModifyClusterAddonRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +112,7 @@ public class ModifyClusterAddonRequest extends Request {
         }
 
         /**
+         * <p>The name of the add-on. It must reference an installed add-on in the target cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +210,10 @@ public class ModifyClusterAddonRequest extends Request {
             } 
 
             /**
-             * AppVersion.
+             * <p>The application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d0ead1f4e28de0f9e3c86588409a88a4</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -216,7 +221,10 @@ public class ModifyClusterAddonRequest extends Request {
             }
 
             /**
-             * ConfigVersion.
+             * <p>The configuration version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d0ead1f4e28de0f9e3c86588409a88a4</p>
              */
             public Builder configVersion(String configVersion) {
                 this.configVersion = configVersion;
@@ -224,7 +232,10 @@ public class ModifyClusterAddonRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edge-csi-lite</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -232,7 +243,10 @@ public class ModifyClusterAddonRequest extends Request {
             }
 
             /**
-             * Params.
+             * <p>The custom parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;v1&quot;}</p>
              */
             public Builder params(java.util.Map<String, ?> params) {
                 this.params = params;
@@ -312,7 +326,7 @@ public class ModifyClusterAddonRequest extends Request {
             } 
 
             /**
-             * ConfigSchema.
+             * <p>The schema of the custom parameters for the add-on.</p>
              */
             public Builder configSchema(java.util.List<ConfigSchema> configSchema) {
                 this.configSchema = configSchema;
@@ -320,7 +334,10 @@ public class ModifyClusterAddonRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edge-csi-lite</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -328,7 +345,10 @@ public class ModifyClusterAddonRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;

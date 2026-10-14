@@ -67,7 +67,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         } 
 
         /**
-         * Addons.
+         * <p>The add-on information.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
@@ -170,7 +170,10 @@ public class DescribeAddonResponseBody extends TeaModel {
             } 
 
             /**
-             * AppVersion.
+             * <p>The application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>859e9d595b2974ed79c444658d1dea89</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -178,7 +181,10 @@ public class DescribeAddonResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigVersion.
+             * <p>The configuration version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4155709cd12a09bdb8cbaca71bf03233</p>
              */
             public Builder configVersion(String configVersion) {
                 this.configVersion = configVersion;
@@ -186,7 +192,10 @@ public class DescribeAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edge-csi-lite</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +203,10 @@ public class DescribeAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>The custom parameters of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key1&quot;:&quot;val1&quot;}</p>
              */
             public Builder params(Object params) {
                 this.params = params;
@@ -287,7 +299,10 @@ public class DescribeAddonResponseBody extends TeaModel {
             } 
 
             /**
-             * CleanupCloudResources.
+             * <p>Indicates whether associated cloud resources are automatically cleaned up.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cleanupCloudResources(String cleanupCloudResources) {
                 this.cleanupCloudResources = cleanupCloudResources;
@@ -295,7 +310,7 @@ public class DescribeAddonResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigSchema.
+             * <p>The schema of custom parameters for the add-on.</p>
              */
             public Builder configSchema(java.util.List<ConfigSchema> configSchema) {
                 this.configSchema = configSchema;
@@ -303,7 +318,10 @@ public class DescribeAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edge-csi-lite</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -311,7 +329,10 @@ public class DescribeAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The add-on version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;

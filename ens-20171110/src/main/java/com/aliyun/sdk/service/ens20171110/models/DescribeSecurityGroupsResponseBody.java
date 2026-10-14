@@ -139,7 +139,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about security groups.</p>
+         * SecurityGroups.
          */
         public Builder securityGroups(SecurityGroups securityGroups) {
             this.securityGroups = securityGroups;
@@ -389,10 +389,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-11-01T06:08:46Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -400,10 +397,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the security group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestDescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -411,10 +405,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of associated instances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * InstanceCount.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -422,7 +413,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the instances that are associated with the security group.</p>
+             * InstanceIds.
              */
             public Builder instanceIds(InstanceIds instanceIds) {
                 this.instanceIds = instanceIds;
@@ -430,7 +421,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the ENIs that are associated with the security group.</p>
+             * NetworkInterfaceIds.
              */
             public Builder networkInterfaceIds(NetworkInterfaceIds networkInterfaceIds) {
                 this.networkInterfaceIds = networkInterfaceIds;
@@ -438,10 +429,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sg-bp67acfmxazb4ph***</p>
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -449,10 +437,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the security group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>DocTest</p>
+             * SecurityGroupName.
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;

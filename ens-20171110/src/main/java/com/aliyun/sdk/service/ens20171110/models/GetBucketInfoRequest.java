@@ -60,7 +60,7 @@ public class GetBucketInfoRequest extends Request {
         } 
 
         /**
-         * <p>The name of the bucket.</p>
+         * <p>Bucket name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -59,7 +59,7 @@ public class BatchEventRebootInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The details of events.</p>
+         * <p>The list of events.</p>
          */
         public Builder eventInfos(java.util.List<EventInfos> eventInfos) {
             String eventInfosShrink = shrink(eventInfos, "EventInfos", "json");
@@ -167,7 +167,7 @@ public class BatchEventRebootInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the system event.</p>
+             * <p>The system event ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e-4452cec5a8f8eb9b2879a054207687d6</p>
@@ -178,10 +178,12 @@ public class BatchEventRebootInstanceRequest extends Request {
             }
 
             /**
-             * <p>The type of the O&amp;M task.</p>
+             * <p>The O&amp;M task type. Valid values:</p>
              * <ul>
-             * <li>immediate</li>
-             * <li>scheduled</li>
+             * <li><p>immediate: immediate execution.</p>
+             * </li>
+             * <li><p>scheduled: scheduled execution.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -193,7 +195,7 @@ public class BatchEventRebootInstanceRequest extends Request {
             }
 
             /**
-             * <p>The execution time of the reservation. The timestamp is measured in milliseconds. If the OpsType parameter is set to scheduled, this parameter is required.</p>
+             * <p>The scheduled execution time. The value is a timestamp in milliseconds. This parameter is required when OpsType is set to scheduled.</p>
              * 
              * <strong>example:</strong>
              * <p>1742452232000</p>
@@ -212,7 +214,7 @@ public class BatchEventRebootInstanceRequest extends Request {
             }
 
             /**
-             * <p>A client ID.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>n-54hi3ffi63zrjt4wzx9mepeyh</p>

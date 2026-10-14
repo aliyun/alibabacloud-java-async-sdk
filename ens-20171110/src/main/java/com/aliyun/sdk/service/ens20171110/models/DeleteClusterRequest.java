@@ -74,6 +74,7 @@ public class DeleteClusterRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * RetainResources.
+         * <p>Specifies whether to retain cloud resources. Default value: false.</p>
          */
         public Builder retainResources(Boolean retainResources) {
             this.putQueryParameter("RetainResources", retainResources);

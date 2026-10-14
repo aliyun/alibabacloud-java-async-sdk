@@ -106,7 +106,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -139,7 +139,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the SDGs.</p>
+         * <p>The list of SDG information.</p>
          */
         public Builder SDGs(java.util.List<SDGs> SDGs) {
             this.SDGs = SDGs;
@@ -147,7 +147,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>
@@ -242,7 +242,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the SDG was created on the node.</p>
+             * <p>The creation time of the SDG in the edge zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-02-27 15:13:26</p>
@@ -253,7 +253,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the node.</p>
+             * <p>The edge zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-26</p>
@@ -264,7 +264,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the snapshot.</p>
+             * <p>The snapshot ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sp-517qu0tgznrg622he7nf4wd7n</p>
@@ -275,13 +275,13 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the SDG on the node. Valid values:</p>
+             * <p>The status of the SDG in the edge zone. Valid values:</p>
              * <ul>
-             * <li><strong>sdg_making</strong></li>
-             * <li><strong>sdg_saving</strong></li>
-             * <li><strong>sdg_copying</strong></li>
-             * <li><strong>failed</strong></li>
-             * <li><strong>success</strong></li>
+             * <li><strong>sdg_making</strong>: Being created.</li>
+             * <li><strong>sdg_saving</strong>: Being saved.</li>
+             * <li><strong>sdg_copying</strong>: Being synchronized across edge zones.</li>
+             * <li><strong>failed</strong>: Creation failed.</li>
+             * <li><strong>success</strong>: Creation succeeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -404,7 +404,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the SDG was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-02-16T06:18:40Z</p>
@@ -415,7 +415,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * <p>The disk type of the redundant shared disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -434,7 +437,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of redundant replicas to quickly respond to shared mounts.</p>
+             * <p>The number of redundant copies for fast shared mounting response.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -445,7 +448,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the node.</p>
+             * <p>The edge zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -456,7 +459,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the status was last updated.</p>
+             * <p>The most recent status update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-22T08:17Z</p>
@@ -695,7 +698,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>SDGs that have snapshots.</p>
+             * <p>The list of edge zones where SDG snapshots exist.</p>
              */
             public Builder avaliableRegionIds(java.util.List<AvaliableRegionIds> avaliableRegionIds) {
                 this.avaliableRegionIds = avaliableRegionIds;
@@ -703,7 +706,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * BillingCycle.
+             * <p>The billing cycle of the shared disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day</p>
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -711,7 +717,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * BillingType.
+             * <p>The billing type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Open</p>
              */
             public Builder billingType(String billingType) {
                 this.billingType = billingType;
@@ -719,7 +728,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * CreationDiskType.
+             * <p>The disk type of the source disk used to create the SDG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder creationDiskType(String creationDiskType) {
                 this.creationDiskType = creationDiskType;
@@ -727,7 +739,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance on which the SDG is created.</p>
+             * <p>The instance ID of the instance from which the SDG was created.</p>
              * 
              * <strong>example:</strong>
              * <p>aic-5x20dyeos****</p>
@@ -738,7 +750,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the node on which the SDG is created.</p>
+             * <p>The ID of the edge zone where the SDG was created.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-26</p>
@@ -749,7 +761,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the first SDG in the node was created.</p>
+             * <p>The time when the SDG was first created.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-02-27 15:07:21</p>
@@ -763,7 +775,7 @@ public class DescribeSDGResponseBody extends TeaModel {
              * <p>The description of the SDG.</p>
              * 
              * <strong>example:</strong>
-             * <p>Testing SDGs</p>
+             * <p>Test SDG</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -771,7 +783,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source SDG from which you want to create an SDG. The value of this parameter is the value of the <strong>FromSDGId</strong> parameter that you need to specify when you call the <a href="https://help.aliyun.com/document_detail/608128.html">CreateSDG</a> operation.</p>
+             * <p>The ID of the source SDG for incremental creation. This is the FromSDGId parameter specified when you called <a href="https://help.aliyun.com/document_detail/608128.html">CreateSDG</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>sdg-xxxxx</p>
@@ -782,7 +794,10 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * PerformanceLevel.
+             * <p>The sharing ratio of the SDG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -790,7 +805,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The preload information.</p>
+             * <p>The preload configuration information.</p>
              */
             public Builder preloadInfos(java.util.List<PreloadInfos> preloadInfos) {
                 this.preloadInfos = preloadInfos;
@@ -820,12 +835,12 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the SDG creation. Valid values:</p>
+             * <p>The creation status of the SDG. Valid values:</p>
              * <ul>
-             * <li><strong>sdg_making</strong></li>
-             * <li><strong>sdg_saving</strong></li>
-             * <li><strong>failed</strong></li>
-             * <li><strong>success</strong></li>
+             * <li><strong>sdg_making</strong>: Being created.</li>
+             * <li><strong>sdg_saving</strong>: Being saved.</li>
+             * <li><strong>failed</strong>: Creation failed.</li>
+             * <li><strong>success</strong>: Creation succeeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>

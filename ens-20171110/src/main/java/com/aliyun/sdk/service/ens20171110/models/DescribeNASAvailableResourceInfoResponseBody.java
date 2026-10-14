@@ -93,7 +93,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+         * <p>Business status code. Returns 0 on success.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -104,7 +104,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>Error message.</p>
          * 
          * <strong>example:</strong>
          * <p>you are not authorized to this workspace, or workspace not exists.</p>
@@ -115,7 +115,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of available NAS resources.</p>
+         * <p>Available NAS resource information.</p>
          */
         public Builder nasAvailableResourceInfo(java.util.List<NasAvailableResourceInfo> nasAvailableResourceInfo) {
             this.nasAvailableResourceInfo = nasAvailableResourceInfo;
@@ -270,7 +270,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The product supported by the edge node.</p>
+             * <p>Edge zone product capabilities.</p>
              */
             public Builder ability(java.util.List<String> ability) {
                 this.ability = ability;
@@ -278,7 +278,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region to which the ENS node belongs.</p>
+             * <p>Area to which the ENS edge zone belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>SouthWestChina</p>
@@ -289,7 +289,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The English name.</p>
+             * <p>English name.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-chenzhou-telecom_unicom_cmcc</p>
@@ -300,7 +300,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ENS node.</p>
+             * <p>ENS edge zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-chenzhou-telecom_unicom_cmcc</p>
@@ -311,7 +311,10 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ENS node.</p>
+             * <p>ENS edge zone name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China Hangzhou36</p>
              */
             public Builder ensRegionName(String ensRegionName) {
                 this.ensRegionName = ensRegionName;
@@ -319,7 +322,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>the number of available NAS resources.</p>
+             * <p>Available NAS resource count.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -330,7 +333,7 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The types of available NAS resources.</p>
+             * <p>Available NAS resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>capacity</p>
@@ -341,7 +344,10 @@ public class DescribeNASAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The province to which the ENS node belongs.</p>
+             * <p>Province to which the ENS edge zone belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>湖北省</p>
              */
             public Builder province(String province) {
                 this.province = province;

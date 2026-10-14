@@ -74,7 +74,7 @@ public class UpgradeClusterAddonsRequest extends Request {
         } 
 
         /**
-         * Addons.
+         * <p>The component information.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             String addonsShrink = shrink(addons, "Addons", "json");
@@ -84,6 +84,7 @@ public class UpgradeClusterAddonsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +182,10 @@ public class UpgradeClusterAddonsRequest extends Request {
             } 
 
             /**
-             * AppVersion.
+             * <p>The application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4155709cd12a09bdb8cbaca71bf03233</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -189,7 +193,10 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * ConfigVersion.
+             * <p>The configuration version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4155709cd12a09bdb8cbaca71bf03233</p>
              */
             public Builder configVersion(String configVersion) {
                 this.configVersion = configVersion;
@@ -197,7 +204,10 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edge-csi-lite</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -205,7 +215,10 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * Params.
+             * <p>The custom parameters for the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;v1&quot;}</p>
              */
             public Builder params(java.util.Map<String, ?> params) {
                 this.params = params;
@@ -285,7 +298,7 @@ public class UpgradeClusterAddonsRequest extends Request {
             } 
 
             /**
-             * ConfigSchema.
+             * <p>The schema of the custom parameters for the component.</p>
              */
             public Builder configSchema(java.util.List<ConfigSchema> configSchema) {
                 this.configSchema = configSchema;
@@ -293,7 +306,10 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edge-csi-lite</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -301,7 +317,10 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * NextVersion.
+             * <p>The target version for the upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder nextVersion(String nextVersion) {
                 this.nextVersion = nextVersion;

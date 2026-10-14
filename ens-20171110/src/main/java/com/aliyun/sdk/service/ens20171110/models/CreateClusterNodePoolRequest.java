@@ -104,6 +104,7 @@ public class CreateClusterNodePoolRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +117,7 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
-         * KubernetesConfig.
+         * <p>The cluster-related configurations.</p>
          */
         public Builder kubernetesConfig(KubernetesConfig kubernetesConfig) {
             String kubernetesConfigShrink = shrink(kubernetesConfig, "KubernetesConfig", "json");
@@ -126,6 +127,7 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
+         * <p>The node pool configurations.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodepoolInfo(NodepoolInfo nodepoolInfo) {
@@ -136,6 +138,7 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
+         * <p>The scaling group configurations.</p>
          * <p>This parameter is required.</p>
          */
         public Builder scalingGroup(ScalingGroup scalingGroup) {
@@ -205,7 +208,10 @@ public class CreateClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * PreUserData.
+             * <p>The script to be executed after the machine is created and before it is added to the cluster. The content must be Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWNobyBvawo=</p>
              */
             public Builder preUserData(String preUserData) {
                 this.preUserData = preUserData;
@@ -213,7 +219,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * UserData.
+             * <p>The script to be executed after the machine is created and added to the cluster. The content must be Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWNobyBvawo=</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -268,6 +277,7 @@ public class CreateClusterNodePoolRequest extends Request {
             } 
 
             /**
+             * <p>The name of the node pool.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -338,7 +348,10 @@ public class CreateClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * Category.
+             * <p>The disk category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -346,7 +359,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The size of the data cloud disk. Unit: GB. Minimum value: 20. The value must be a multiple of 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -520,7 +536,7 @@ public class CreateClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * DataDisks.
+             * <p>The size of the data cloud disk. Unit: GB.</p>
              */
             public Builder dataDisks(java.util.List<DataDisks> dataDisks) {
                 this.dataDisks = dataDisks;
@@ -528,7 +544,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * DesiredSize.
+             * <p>The expected number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder desiredSize(Integer desiredSize) {
                 this.desiredSize = desiredSize;
@@ -536,6 +555,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
+             * <p>The image ID of the instance.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -547,7 +567,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * InstanceChargeType.
+             * <p>The billing method of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -555,6 +578,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
+             * <p>The list of instance types for the nodes in the node pool.</p>
              * <p>This parameter is required.</p>
              */
             public Builder instanceTypes(java.util.List<String> instanceTypes) {
@@ -563,7 +587,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * KeyPairName.
+             * <p>The key pair of the instance. This parameter and Password are mutually exclusive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-pair-name</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -571,7 +598,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * Password.
+             * <p>The password used when creating instances in the node pool. This parameter and KeyPairName are mutually exclusive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>some-test-password</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -579,7 +609,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * SystemDiskCategory.
+             * <p>The category of the system cloud disk. Valid values: local_ssd, local_hdd, cloud_efficiency, and cloud_ssd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -587,7 +620,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * SystemDiskSize.
+             * <p>The size of the system cloud disk. Unit: GB. Minimum value: 20. The value must be a multiple of 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -595,6 +631,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
+             * <p>The vSwitches used by the instances.</p>
              * <p>This parameter is required.</p>
              */
             public Builder vswitchIds(java.util.List<String> vswitchIds) {

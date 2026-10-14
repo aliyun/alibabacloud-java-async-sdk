@@ -89,7 +89,7 @@ public class ScaleClusterNodePoolRequest extends Request {
         } 
 
         /**
-         * Body.
+         * <p>The HTTP request body.</p>
          */
         public Builder body(ScaleClusterNodePoolRequestBody body) {
             String bodyShrink = shrink(body, "Body", "json");
@@ -99,6 +99,7 @@ public class ScaleClusterNodePoolRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +112,7 @@ public class ScaleClusterNodePoolRequest extends Request {
         }
 
         /**
+         * <p>The node pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +172,7 @@ public class ScaleClusterNodePoolRequest extends Request {
             } 
 
             /**
+             * <p>The expected number of instances.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

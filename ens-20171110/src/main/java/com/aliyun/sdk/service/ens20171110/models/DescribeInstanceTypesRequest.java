@@ -17,8 +17,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTypesRequest</p>
  */
 public class DescribeInstanceTypesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    private String instanceType;
+
     private DescribeInstanceTypesRequest(Builder builder) {
         super(builder);
+        this.instanceType = builder.instanceType;
     }
 
     public static Builder builder() {
@@ -34,7 +39,15 @@ public class DescribeInstanceTypesRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeInstanceTypesRequest, Builder> {
+        private String instanceType; 
 
         private Builder() {
             super();
@@ -42,7 +55,20 @@ public class DescribeInstanceTypesRequest extends Request {
 
         private Builder(DescribeInstanceTypesRequest request) {
             super(request);
+            this.instanceType = request.instanceType;
         } 
+
+        /**
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.sn1.small</p>
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
 
         @Override
         public DescribeInstanceTypesRequest build() {

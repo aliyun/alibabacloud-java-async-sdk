@@ -119,7 +119,7 @@ public class DescribeDisksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned service code. 0 indicates that the request was successful.</p>
+         * <p>The returned business code. A value of 0 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -130,7 +130,7 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the disks.</p>
+         * Disks.
          */
         public Builder disks(Disks disks) {
             this.disks = disks;
@@ -138,7 +138,7 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -149,7 +149,7 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -171,7 +171,7 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned pages.</p>
+         * <p>The total number of pages for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -590,16 +590,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the disk.</p>
-             * <ul>
-             * <li>cloud_efficiency: ultra disk.</li>
-             * <li>cloud_ssd: all-flash disk.</li>
-             * <li>local_hdd: local HDD.</li>
-             * <li>local_ssd: local SSD.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>local_ssd</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -607,10 +598,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the disk was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-11-11T14:34:55+08:00</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -618,14 +606,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the disk is released when the instance to which the disk is attached is released. Valid values:</p>
-             * <ul>
-             * <li>true: The disk is released when the associated instance is released.</li>
-             * <li>false: The disk is retained when the associated instance is released.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * DeleteWithInstance.
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -633,10 +614,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>disk-description</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -644,14 +622,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the cloud disk or local disk. Valid values:</p>
-             * <ul>
-             * <li><strong>prepaid</strong>: subscription.</li>
-             * <li><strong>postpaid</strong>: pay-as-you-go.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>prepaid</p>
+             * DiskChargeType.
              */
             public Builder diskChargeType(String diskChargeType) {
                 this.diskChargeType = diskChargeType;
@@ -659,10 +630,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d-5svum1dx1w4a4spr54lgr****</p>
+             * DiskId.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -670,10 +638,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fvt-ecs-5cf0****</p>
+             * DiskName.
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -681,14 +646,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cloud disk is encrypted. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>False</p>
+             * Encrypted.
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -696,10 +654,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Key Management Service (KMS) key that is used for the cloud disk.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>05467897a-4262-4802-b8cb-00d3fb40****</p>
+             * EncryptedKeyId.
              */
             public Builder encryptedKeyId(String encryptedKeyId) {
                 this.encryptedKeyId = encryptedKeyId;
@@ -707,10 +662,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the edge node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-guangzhou-10</p>
+             * EnsRegionId.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -718,10 +670,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-5t77rb0yoz79m28ku60sx****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -729,10 +678,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Edge Prod Environment Streaming Machine -1063</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -740,20 +686,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cloud disk or local disk is removable. Valid values:</p>
-             * <ul>
-             * <li>true: The disk is removable. A removable disk can independently exist and can be attached to or detached from an instance within the same zone.</li>
-             * <li>false: The disk is not removable. A disk that is not removable cannot independently exist or be attached to or detached from an instance within the same zone.</li>
-             * </ul>
-             * <p>If disks are of the following categories or types, the <strong>Portable</strong> value is <strong>false</strong> and the disks have the same lifecycle as their attached instances:</p>
-             * <ul>
-             * <li>Local HDDs</li>
-             * <li>Local SSDs</li>
-             * <li>Data disks that use the subscription billing method</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Portable.
              */
             public Builder portable(Boolean portable) {
                 this.portable = portable;
@@ -761,10 +694,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123</p>
+             * SerialId.
              */
             public Builder serialId(String serialId) {
                 this.serialId = serialId;
@@ -772,10 +702,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the disk. Unit: MiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * Size.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -783,10 +710,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the snapshot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>s-bp67acfmxazb4p****</p>
+             * SnapshotId.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -794,18 +718,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the disk. Valid values:</p>
-             * <ul>
-             * <li>In-use: The disk is in use.</li>
-             * <li>Available: The disk can be attached.</li>
-             * <li>Attaching: The disk is being attached.</li>
-             * <li>Detaching: The disk is being detached.</li>
-             * <li>Creating: The disk is being created.</li>
-             * <li>ReIniting: The disk is being reset.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Available</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -821,14 +734,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cloud disk or local disk. Valid values:</p>
-             * <ul>
-             * <li>1: system disk.</li>
-             * <li>2: data disk.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -882,7 +788,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the disks.</p>
+             * Disks.
              */
             public Builder disks(java.util.List<DisksDisks> disks) {
                 this.disks = disks;

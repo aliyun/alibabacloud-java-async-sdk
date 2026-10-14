@@ -79,7 +79,7 @@ public class SetLoadBalancerStatusRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>lb-5t18quoohsrc3xkf86spmnu77</p>
+         * <p>lb-5t18quoohsrc3xkf86sp*****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -90,8 +90,10 @@ public class SetLoadBalancerStatusRequest extends Request {
         /**
          * <p>The new instance status. Valid values:</p>
          * <ul>
-         * <li><strong>Active</strong></li>
-         * <li><strong>InActive</strong></li>
+         * <li><p><strong>Active</strong></p>
+         * </li>
+         * <li><p><strong>InActive</strong></p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

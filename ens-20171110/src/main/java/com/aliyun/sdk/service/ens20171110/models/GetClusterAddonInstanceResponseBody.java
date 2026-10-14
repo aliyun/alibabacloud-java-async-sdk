@@ -119,7 +119,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * CleanupCloudResources.
+         * <p>Indicates whether associated cloud resources are automatically cleaned up.</p>
          */
         public Builder cleanupCloudResources(Boolean cleanupCloudResources) {
             this.cleanupCloudResources = cleanupCloudResources;
@@ -127,7 +127,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigSchema.
+         * <p>The schema of custom parameters for the add-on.</p>
          */
         public Builder configSchema(java.util.List<ConfigSchema> configSchema) {
             this.configSchema = configSchema;
@@ -135,7 +135,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The add-on name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edge-csi-lite</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -154,7 +157,16 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The current component instance status. Valid values:</p>
+         * <ul>
+         * <li><strong>enabled</strong>: Running normally.</li>
+         * <li><strong>deleting</strong>: Stopping.</li>
+         * <li><strong>enabling</strong>: Starting.</li>
+         * <li><strong>upgrading</strong>: In upgrade or configuration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +174,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -254,7 +269,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * AppVersion.
+             * <p>The application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d0ead1f4e28de0f9e3c86588409a88a4</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -262,7 +280,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigVersion.
+             * <p>The configuration version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d0ead1f4e28de0f9e3c86588409a88a4</p>
              */
             public Builder configVersion(String configVersion) {
                 this.configVersion = configVersion;
@@ -270,7 +291,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The add-on name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edge-csi-lite</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -278,7 +302,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>The custom parameters of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;v1&quot;}</p>
              */
             public Builder params(String params) {
                 this.params = params;

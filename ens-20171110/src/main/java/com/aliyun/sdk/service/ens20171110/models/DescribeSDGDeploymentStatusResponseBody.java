@@ -114,7 +114,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paging query. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of queried deployment records.</p>
+         * <p>The total number of deployment records returned.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -320,7 +320,10 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * BlockRwSplitSize.
+             * <p>The size of the writable layer for the block device. Unit: GiB. A value of 0 indicates that this feature is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder blockRwSplitSize(Integer blockRwSplitSize) {
                 this.blockRwSplitSize = blockRwSplitSize;
@@ -328,7 +331,10 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CacheSize.
+             * <p>The cache size. Unit: GiB. A value of 0 indicates that this feature is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder cacheSize(Integer cacheSize) {
                 this.cacheSize = cacheSize;
@@ -336,7 +342,10 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DiskAccessProtocol.
+             * <p>The disk access protocol type of the mounted shared cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iscsi</p>
              */
             public Builder diskAccessProtocol(String diskAccessProtocol) {
                 this.diskAccessProtocol = diskAccessProtocol;
@@ -344,7 +353,10 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * <p>The disk type of the mounted shared cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -352,7 +364,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AIC instance.</p>
+             * <p>The AIC instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aic-xxxx</p>
@@ -364,11 +376,6 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
 
             /**
              * <p>The deployment type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>overlay: read/write splitting.</li>
-             * <li>common: common deployment.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>overlay</p>
@@ -379,7 +386,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment phase of the SDG.</p>
+             * <p>The SDG deployment phase.</p>
              * 
              * <strong>example:</strong>
              * <p>attach</p>
@@ -390,7 +397,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the edge node.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -402,12 +409,6 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
 
             /**
              * <p>The deployment status of the SDG.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>sdg_deploying</li>
-             * <li>success</li>
-             * <li>failed</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -418,7 +419,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the status was last updated.</p>
+             * <p>The time when the status was last updated. The time is displayed in the ISO 8601 UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-02-17T02:44:31Z</p>

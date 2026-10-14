@@ -76,8 +76,10 @@ public class StopInstanceRequest extends Request {
         /**
          * <p>Specifies whether to forcibly stop the instance.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong> (default)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

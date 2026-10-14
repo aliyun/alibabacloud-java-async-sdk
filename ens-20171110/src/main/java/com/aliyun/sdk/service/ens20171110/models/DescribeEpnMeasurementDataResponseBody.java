@@ -67,7 +67,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The metering data returned.</p>
+         * MeasurementDatas.
          */
         public Builder measurementDatas(MeasurementDatas measurementDatas) {
             this.measurementDatas = measurementDatas;
@@ -183,10 +183,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the billable item.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-cmcc-1</p>
+             * CostCode.
              */
             public Builder costCode(String costCode) {
                 this.costCode = costCode;
@@ -194,10 +191,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the billable item.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Beijing, Shanghai, and Guangzhou Mobile</p>
+             * CostName.
              */
             public Builder costName(String costName) {
                 this.costName = costName;
@@ -205,14 +199,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Metering method</p>
-             * <ul>
-             * <li>SpeedUp: bandwidth of intelligent acceleration</li>
-             * <li>IntranetConnection: internal bandwidth</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>SpeedUp</p>
+             * CostType.
              */
             public Builder costType(String costType) {
                 this.costType = costType;
@@ -220,10 +207,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the billable item.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>16486</p>
+             * CostVal.
              */
             public Builder costVal(Integer costVal) {
                 this.costVal = costVal;
@@ -231,10 +215,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is unavailable.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This parameter is not currently in use.</p>
+             * IspLine.
              */
             public Builder ispLine(String ispLine) {
                 this.ispLine = ispLine;
@@ -394,7 +375,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bandwidth data returned.</p>
+             * BandWidthFeeDatas.
              */
             public Builder bandWidthFeeDatas(BandWidthFeeDatas bandWidthFeeDatas) {
                 this.bandWidthFeeDatas = bandWidthFeeDatas;
@@ -402,14 +383,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metering method. Valid values:</p>
-             * <ul>
-             * <li>ChargeByUnified: unified metering.</li>
-             * <li>ChargeByGrade: differential metering.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ChargeByGrade</p>
+             * ChargeModel.
              */
             public Builder chargeModel(String chargeModel) {
                 this.chargeModel = chargeModel;
@@ -417,10 +391,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metering cycle.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-07-30</p>
+             * CostCycle.
              */
             public Builder costCycle(String costCycle) {
                 this.costCycle = costCycle;
@@ -428,10 +399,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the metering cycle.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-07-30T16:00:00Z</p>
+             * CostEndTime.
              */
             public Builder costEndTime(String costEndTime) {
                 this.costEndTime = costEndTime;
@@ -439,10 +407,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the metering cycle.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-07-29T16:00:00Z</p>
+             * CostStartTime.
              */
             public Builder costStartTime(String costStartTime) {
                 this.costStartTime = costStartTime;

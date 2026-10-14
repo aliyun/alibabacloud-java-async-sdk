@@ -185,7 +185,7 @@ public class DescribeHaVipsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-cmcc</p>
@@ -197,7 +197,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
+         * <p>The IDs of ENS nodes. Array length: 1 to 100.</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -206,7 +206,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the HAVIP.</p>
+         * <p>The IP address of the HaVip instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10.5.XX.XX</p>
@@ -218,7 +218,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the HAVIP.</p>
+         * <p>The HaVip instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>havip-5p14t****</p>
@@ -230,7 +230,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * <p>The name of the HAVIP.</p>
+         * <p>The name of the HaVip instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -242,7 +242,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network.</p>
+         * <p>The network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n-57gqcdfvx6n****</p>
@@ -254,7 +254,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -266,7 +266,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paged query. Settings for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -278,12 +278,12 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * <p>The status of the HAVIP. Valid values:</p>
+         * <p>The HaVip status. Valid values:</p>
          * <ul>
-         * <li>Creating</li>
-         * <li>Available</li>
-         * <li>InUse</li>
-         * <li>Deleting</li>
+         * <li>Creating: The HaVip is being created.</li>
+         * <li>Available: The HaVip is available.</li>
+         * <li>InUse: The HaVip is in use.</li>
+         * <li>Deleting: The HaVip is being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -296,7 +296,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-5****</p>

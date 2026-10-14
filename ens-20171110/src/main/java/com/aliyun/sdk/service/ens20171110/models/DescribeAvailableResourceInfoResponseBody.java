@@ -80,7 +80,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the image.</p>
+         * Images.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -99,7 +99,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The specifications of resources that you can purchase.</p>
+         * SupportResources.
          */
         public Builder supportResources(SupportResources supportResources) {
             this.supportResources = supportResources;
@@ -178,10 +178,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>centos_6_08_64_20G_a****</p>
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -189,10 +186,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>centos_6_08_64_20G_a****</p>
+             * ImageName.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -200,10 +194,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the image. Unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * ImageSize.
              */
             public Builder imageSize(Integer imageSize) {
                 this.imageSize = imageSize;
@@ -484,10 +475,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>EastChina</p>
+             * Area.
              */
             public Builder area(String area) {
                 this.area = area;
@@ -495,10 +483,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name. This parameter is empty by default.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>EnName</p>
+             * EnName.
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -506,10 +491,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the edge node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-chengdu-telecom-4</p>
+             * EnsRegionId.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -517,10 +499,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the Internet service provider (ISP).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>unicom</p>
+             * Isp.
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -528,10 +507,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the edge node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Taizhou Telecom, China Unicom, and China Mobile</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -539,10 +515,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The province.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Zhejiang Province</p>
+             * Province.
              */
             public Builder province(String province) {
                 this.province = province;
@@ -596,10 +569,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the edge node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-chengdu-telecom-4</p>
+             * EnsRegionId.
              */
             public Builder ensRegionId(java.util.List<EnsRegionId> ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -707,10 +677,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the Internet service provider (ISP).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>unicom</p>
+             * Isp.
              */
             public Builder isp(java.util.List<String> isp) {
                 this.isp = isp;
@@ -868,7 +835,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Bandwidth billing method.</p>
+             * BandwidthTypes.
              */
             public Builder bandwidthTypes(BandwidthTypes bandwidthTypes) {
                 this.bandwidthTypes = bandwidthTypes;
@@ -876,10 +843,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum capacity of a data disk. Unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * DataDiskMaxSize.
              */
             public Builder dataDiskMaxSize(Integer dataDiskMaxSize) {
                 this.dataDiskMaxSize = dataDiskMaxSize;
@@ -887,10 +851,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum data disk size. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * DataDiskMinSize.
              */
             public Builder dataDiskMinSize(Integer dataDiskMinSize) {
                 this.dataDiskMinSize = dataDiskMinSize;
@@ -898,7 +859,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>node ID</p>
+             * EnsRegionIds.
              */
             public Builder ensRegionIds(EnsRegionIds ensRegionIds) {
                 this.ensRegionIds = ensRegionIds;
@@ -906,7 +867,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supplementary information about the edge nodes.</p>
+             * EnsRegionIdsExtends.
              */
             public Builder ensRegionIdsExtends(EnsRegionIdsExtends ensRegionIdsExtends) {
                 this.ensRegionIdsExtends = ensRegionIdsExtends;
@@ -922,7 +883,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Operator</p>
+             * Isp.
              */
             public Builder isp(Isp isp) {
                 this.isp = isp;
@@ -930,10 +891,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum size of the system disk. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * SystemDiskMaxSize.
              */
             public Builder systemDiskMaxSize(Integer systemDiskMaxSize) {
                 this.systemDiskMaxSize = systemDiskMaxSize;
@@ -941,10 +899,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum capacity of a system disk. Unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * SystemDiskMinSize.
              */
             public Builder systemDiskMinSize(Integer systemDiskMinSize) {
                 this.systemDiskMinSize = systemDiskMinSize;
