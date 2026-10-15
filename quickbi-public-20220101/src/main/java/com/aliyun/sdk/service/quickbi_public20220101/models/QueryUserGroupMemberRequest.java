@@ -77,7 +77,7 @@ public class QueryUserGroupMemberRequest extends Request {
          * <p>Keyword for the username or nickname of the user group member.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>小刘</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

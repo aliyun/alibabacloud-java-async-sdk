@@ -354,7 +354,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Applicant&quot;s user ID, qbi user ID.</p>
+             * <p>Applicant\&quot;s user ID, qbi user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1359508</p>
@@ -365,10 +365,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Applicant&quot;s nickname.</p>
+             * <p>Applicant\&quot;s nickname.</p>
              * 
              * <strong>example:</strong>
-             * <p>Li Fei</p>
+             * <p>李飞</p>
              */
             public Builder applicantName(String applicantName) {
                 this.applicantName = applicantName;
@@ -390,7 +390,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
              * <p>Application reason.</p>
              * 
              * <strong>example:</strong>
-             * <p>Development needs</p>
+             * <p>开发需要</p>
              */
             public Builder applyReason(String applyReason) {
                 this.applyReason = applyReason;
@@ -398,7 +398,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Approver&quot;s user ID, qbi user ID.</p>
+             * <p>Approver\&quot;s user ID, qbi user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sdasascasxasd</p>
@@ -409,7 +409,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Approver&quot;s nickname.</p>
+             * <p>Approver\&quot;s nickname.</p>
              * 
              * <strong>example:</strong>
              * <p>data_fusion_002</p>
@@ -487,7 +487,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
              * <p>Handling reason.</p>
              * 
              * <strong>example:</strong>
-             * <p>Development needs</p>
+             * <p>开发需要</p>
              */
             public Builder handleReason(String handleReason) {
                 this.handleReason = handleReason;
@@ -509,7 +509,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
              * <p>The name of the resource for which permission is requested (e.g., report name, space name...).</p>
              * 
              * <strong>example:</strong>
-             * <p>Test Resources</p>
+             * <p>测试资源</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -531,7 +531,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
              * <p>The name of the workspace.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test Workspace</p>
+             * <p>测试工作空间</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

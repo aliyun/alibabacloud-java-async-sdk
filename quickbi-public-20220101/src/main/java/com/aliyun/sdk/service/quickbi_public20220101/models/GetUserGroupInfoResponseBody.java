@@ -80,7 +80,7 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D7980306-1F08-5A88-9FE7-ECB8B9C4C0F5</p>
@@ -91,7 +91,7 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>User group information.</p>
+         * <p>The user group information.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -99,7 +99,7 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
          * <li>true: The request was successful.</li>
          * <li>false: The request failed.</li>
@@ -263,7 +263,7 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Creation time of the user group.</p>
+             * <p>The time when the user group was created, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-03-15 17:13:55</p>
@@ -274,7 +274,7 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creator of the sub-user group. This is the UserID in Quick BI, not the UID in Alibaba Cloud.</p>
+             * <p>The creator of the child user group. This is the UserID in Quick BI, not the UID of the Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>46e5374665ba4b679ee22e2a2927****</p>
@@ -285,7 +285,7 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Directory level of the user group.</p>
+             * <p>The folder hierarchy of the user group.</p>
              */
             public Builder identifiedPath(String identifiedPath) {
                 this.identifiedPath = identifiedPath;
@@ -293,7 +293,7 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last modified time of the user group.</p>
+             * <p>The time when the user group was last modified, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-03-15 20:36:40</p>
@@ -304,7 +304,7 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modifier of the user group. This is the UserID in Quick BI, not the UID in Alibaba Cloud.</p>
+             * <p>The user who last modified the user group. This is the UserID in Quick BI, not the UID of the Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>46e5374665ba4b679ee22e2a2927****</p>
@@ -315,7 +315,7 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Parent user group ID.</p>
+             * <p>The ID of the parent user group.</p>
              * 
              * <strong>example:</strong>
              * <p>2fe4fbd8-588f-489a-b3e1-e92c7af0****</p>
@@ -326,10 +326,10 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description of the user group.</p>
+             * <p>The description of the user group.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Test description</p>
              */
             public Builder usergroupDesc(String usergroupDesc) {
                 this.usergroupDesc = usergroupDesc;
@@ -337,7 +337,7 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User group ID.</p>
+             * <p>The ID of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>34fd141d-4598-4093-8c33-8e066dcb****</p>
@@ -348,10 +348,10 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Name of the user group.</p>
+             * <p>The name of the user group.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Test user group 01</p>
              */
             public Builder usergroupName(String usergroupName) {
                 this.usergroupName = usergroupName;

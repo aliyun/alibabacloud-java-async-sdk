@@ -80,7 +80,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>38C0F*<strong><strong>0-415</strong></strong>9F1-*****422BDB65</p>
@@ -91,7 +91,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Array of report objects</p>
+         * <p>The report array object.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,7 +99,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -207,7 +207,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Embed time</p>
+             * <p>The time when the report was embedded, in the format of YYYY-mm-DD hh:MM:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>YYYY-mm-DD hh:MM:ss</p>
@@ -218,7 +218,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Report ID</p>
+             * <p>The report ID.</p>
              * 
              * <strong>example:</strong>
              * <p>897ce25e-<strong><strong>-</strong></strong>-af84-d13c5610****</p>
@@ -229,10 +229,10 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Report name</p>
+             * <p>The report name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Test</p>
              */
             public Builder worksName(String worksName) {
                 this.worksName = worksName;
@@ -240,7 +240,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Report type</p>
+             * <p>The report type.</p>
              * 
              * <strong>example:</strong>
              * <p>page</p>
@@ -251,7 +251,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Workspace ID</p>
+             * <p>The ID of the workspace to which the report belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>87c6b145-<strong><strong>-43e1-9426-8f93be23</strong></strong></p>
@@ -360,7 +360,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Array of reports</p>
+             * <p>The report array.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -368,7 +368,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page number</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -379,7 +379,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of items per page</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -390,7 +390,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of items</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>18</p>
@@ -401,7 +401,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of pages</p>
+             * <p>The total number of pages.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

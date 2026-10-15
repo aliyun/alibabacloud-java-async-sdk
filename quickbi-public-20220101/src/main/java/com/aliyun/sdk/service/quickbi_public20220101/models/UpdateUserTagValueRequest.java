@@ -112,7 +112,7 @@ public class UpdateUserTagValueRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Product Director</p>
+         * <p>产品总监</p>
          */
         public Builder tagValue(String tagValue) {
             this.putQueryParameter("TagValue", tagValue);

@@ -102,7 +102,9 @@ public class SmartqQueryAbilityRequest extends Request {
         } 
 
         /**
-         * <p>Dataset ID.</p>
+         * <p>The dataset ID.</p>
+         * <p>Navigate to Workbench &gt; Datasets, open the desired dataset, and find the cubeId in the URL.</p>
+         * <p>In multi-table scenarios, leave this parameter empty.</p>
          * 
          * <strong>example:</strong>
          * <p>7c7223ae-****-3c744528014b</p>
@@ -114,7 +116,11 @@ public class SmartqQueryAbilityRequest extends Request {
         }
 
         /**
-         * MultipleCubeIds.
+         * <p>The list of multiple dataset IDs.
+         * The model selects one or more tables from the list based on the question to generate an answer. This parameter is required in multi-table scenarios and is not needed in single-table scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7c7****-3c744528014b,a876asd***yhashd2</p>
          */
         public Builder multipleCubeIds(String multipleCubeIds) {
             this.putQueryParameter("MultipleCubeIds", multipleCubeIds);
@@ -123,9 +129,9 @@ public class SmartqQueryAbilityRequest extends Request {
         }
 
         /**
-         * <p>User ID.</p>
+         * <p>The user ID.</p>
          * <blockquote>
-         * <p>Notice: If this field is not filled, the data will be queried by default as the organization owner.</p>
+         * <p>Notice: If this parameter is not specified, data is queried as the organization owner by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -138,11 +144,11 @@ public class SmartqQueryAbilityRequest extends Request {
         }
 
         /**
-         * <p>Question text.</p>
+         * <p>The question text.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>This year&quot;s sales data</p>
+         * <p>test</p>
          */
         public Builder userQuestion(String userQuestion) {
             this.putQueryParameter("UserQuestion", userQuestion);

@@ -80,7 +80,10 @@ public class GetMailTaskListResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c52************8e1952a3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class GetMailTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The paging information for the tracking tasks.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,16 @@ public class GetMailTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +213,10 @@ public class GetMailTaskListResponseBody extends TeaModel {
             } 
 
             /**
-             * BizOwnerName.
+             * <p>The nickname of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder bizOwnerName(String bizOwnerName) {
                 this.bizOwnerName = bizOwnerName;
@@ -209,7 +224,10 @@ public class GetMailTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * BizOwnerUserId.
+             * <p>The user ID of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asag****2423</p>
              */
             public Builder bizOwnerUserId(String bizOwnerUserId) {
                 this.bizOwnerUserId = bizOwnerUserId;
@@ -217,7 +235,10 @@ public class GetMailTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * MailId.
+             * <p>The mail ID of the tracking task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2342526</p>
              */
             public Builder mailId(String mailId) {
                 this.mailId = mailId;
@@ -225,7 +246,16 @@ public class GetMailTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Paused.
+             * <p>Indicates whether the task is paused.</p>
+             * <ul>
+             * <li><p>true: The task is paused.</p>
+             * </li>
+             * <li><p>false: The task is not paused.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder paused(Boolean paused) {
                 this.paused = paused;
@@ -233,7 +263,10 @@ public class GetMailTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * SubscribeName.
+             * <p>The name of the tracking task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder subscribeName(String subscribeName) {
                 this.subscribeName = subscribeName;
@@ -365,7 +398,7 @@ public class GetMailTaskListResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>An array of tracking task models.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -373,7 +406,10 @@ public class GetMailTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Next.
+             * <p>The next page number. A value of null or 0 indicates that there is no next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder next(Integer next) {
                 this.next = next;
@@ -381,7 +417,10 @@ public class GetMailTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -389,7 +428,10 @@ public class GetMailTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page that was set for the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -397,7 +439,10 @@ public class GetMailTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Pre.
+             * <p>The previous page number. A value of null or 0 indicates that there is no previous page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder pre(Integer pre) {
                 this.pre = pre;
@@ -405,7 +450,10 @@ public class GetMailTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -413,7 +461,10 @@ public class GetMailTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

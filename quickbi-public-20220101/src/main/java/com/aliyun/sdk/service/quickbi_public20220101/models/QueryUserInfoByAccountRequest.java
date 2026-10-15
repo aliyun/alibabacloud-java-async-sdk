@@ -74,17 +74,15 @@ public class QueryUserInfoByAccountRequest extends Request {
         } 
 
         /**
-         * <p>Enter the name or ID of the Alibaba Cloud account that you want to query.</p>
+         * <p>The Alibaba Cloud account name or Alibaba Cloud ID to query.</p>
          * <ul>
-         * <li><p>When you enter an account name:</p>
-         * <ul>
-         * <li>If the organization user is a master account, such as main_account, the query account format is master account. That is, the main account main_account to be entered.</li>
-         * <li>If the organization user is a RAM user, such as a <a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>, the query account format is the head of the RAM user, that is, the RAM user to be entered is zhangsan.</li>
+         * <li>When you enter an account name:<ul>
+         * <li>If the organization user is a primary account (for example, main_account), the query account format is the primary account. That is, enter the primary account main_account. </li>
+         * <li>If the organization user is a RAM user (for example, <a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>), the query account format is the prefix of the RAM user. That is, enter zhangsan.</li>
          * </ul>
          * </li>
-         * <li><p>ID:</p>
-         * <ul>
-         * <li>Enter the UID of the account to query the account information.</li>
+         * <li>When you enter an Alibaba Cloud ID:<ul>
+         * <li>Enter the complete account UID to query the corresponding account information.</li>
          * </ul>
          * </li>
          * </ul>
@@ -100,7 +98,7 @@ public class QueryUserInfoByAccountRequest extends Request {
         }
 
         /**
-         * <p>When a duplicate error occurs while querying the sub-account, enter the primary account&quot;s username, for example, <a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>.</p>
+         * <p>The account name of the primary account when a duplicate error occurs during RAM user query. For example, <a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a></p>

@@ -80,7 +80,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -91,7 +91,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns the paginated result of the workspace list, with detailed information about the workspaces stored in the Data parameter.</p>
+         * <p>The paginated result of the workspace list. The detailed information of workspaces is stored in the Data response parameter.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,10 +99,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: Request succeeded</li>
-         * <li>false: Request failed</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,7 +263,15 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowExcelImageFile.
+             * <p>Specifies how images are handled when exporting Excel files with formatting. This field takes effect only when configured at the organization level.
+             * Valid values:</p>
+             * <ul>
+             * <li>false: Image fields are not converted to images.</li>
+             * <li>true: Image fields can be converted to images. The option appears on the report export page, and users must manually select it to convert images.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowExcelImageFile(Boolean allowExcelImageFile) {
                 this.allowExcelImageFile = allowExcelImageFile;
@@ -271,7 +279,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * DataExport.
+             * <p>Specifies whether to allow exporting data as an Excel file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataExport(Boolean dataExport) {
                 this.dataExport = dataExport;
@@ -279,7 +290,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultExportType.
+             * <p>The default export type (with formatting: true. Without formatting: false).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultExportType(Boolean defaultExportType) {
                 this.defaultExportType = defaultExportType;
@@ -287,7 +301,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * ExportMainSwitch.
+             * <p>The master switch for export. If set to false, all export settings below do not take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder exportMainSwitch(Boolean exportMainSwitch) {
                 this.exportMainSwitch = exportMainSwitch;
@@ -295,7 +312,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * ExportToLocal.
+             * <p>Specifies whether to allow exporting to a local device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder exportToLocal(Boolean exportToLocal) {
                 this.exportToLocal = exportToLocal;
@@ -303,7 +323,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * ExportToPublicWork.
+             * <p>Specifies whether public links of works support export.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder exportToPublicWork(Boolean exportToPublicWork) {
                 this.exportToPublicWork = exportToPublicWork;
@@ -311,7 +334,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * ExportToServer.
+             * <p>Specifies whether to allow exporting to a server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder exportToServer(Boolean exportToServer) {
                 this.exportToServer = exportToServer;
@@ -319,7 +345,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageExport.
+             * <p>Specifies whether to allow exporting as an image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder imageExport(Boolean imageExport) {
                 this.imageExport = imageExport;
@@ -327,7 +356,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * PdfExport.
+             * <p>Specifies whether to allow exporting as a PDF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder pdfExport(Boolean pdfExport) {
                 this.pdfExport = pdfExport;
@@ -576,10 +608,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether the work can be made public. Value range:</p>
+             * <p>Indicates whether works can be made public. Valid values:</p>
              * <ul>
-             * <li>true: Public</li>
-             * <li>false: Not public</li>
+             * <li>true: Public.</li>
+             * <li>false: Not public.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -591,10 +623,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the work can be authorized for sharing. Possible values:</p>
+             * <p>Indicates whether works can be shared with authorization. Valid values:</p>
              * <ul>
-             * <li>true: Authorized</li>
-             * <li>false: Not authorized</li>
+             * <li>true: Authorized.</li>
+             * <li>false: Not authorized.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -606,7 +638,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time of the workspace.</p>
+             * <p>The time when the workspace was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-10 17:51:07</p>
@@ -617,7 +649,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quick BI user ID of the creator.</p>
+             * <p>The Quick BI user ID of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>de4bc5f9429141cc8091cdd1c15b****</p>
@@ -628,7 +660,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Aliyun account name of the creator.</p>
+             * <p>The Alibaba Cloud account name of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>pop****@aliyun.com</p>
@@ -639,7 +671,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last modified time of the workspace.</p>
+             * <p>The time when the workspace was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-10 17:51:07</p>
@@ -650,7 +682,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID of the Quick BI user who modified the workspace.</p>
+             * <p>The Quick BI user ID of the modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>de4bc5f9429141cc8091cdd1c15b****</p>
@@ -661,7 +693,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Aliyun account name of the modifier.</p>
+             * <p>The Alibaba Cloud account name of the modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>pop****@aliyun.com</p>
@@ -672,7 +704,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID of the organization to which the workspace belongs.</p>
+             * <p>The ID of the organization to which the workspace belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>2fe4fbd8-588f-489a-b3e1-e92c7af0****</p>
@@ -683,7 +715,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quick BI user ID of the workspace owner.</p>
+             * <p>The Quick BI user ID of the workspace owner.</p>
              * 
              * <strong>example:</strong>
              * <p>de4bc5f9429141cc8091cdd1c15b****</p>
@@ -694,7 +726,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Aliyun account name of the workspace owner.</p>
+             * <p>The Alibaba Cloud account name of the workspace owner.</p>
              * 
              * <strong>example:</strong>
              * <p>pop****@aliyun.com</p>
@@ -705,7 +737,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * RealOwnerAccountName.
+             * <p>The Quick BI account name of the workspace owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder realOwnerAccountName(String realOwnerAccountName) {
                 this.realOwnerAccountName = realOwnerAccountName;
@@ -713,10 +748,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Workspace description.</p>
+             * <p>The description of the workspace.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>This workspace is a test workspace</p>
              */
             public Builder workspaceDescription(String workspaceDescription) {
                 this.workspaceDescription = workspaceDescription;
@@ -724,7 +759,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceExportConfig.
+             * <p>The workspace export configuration.</p>
              */
             public Builder workspaceExportConfig(WorkspaceExportConfig workspaceExportConfig) {
                 this.workspaceExportConfig = workspaceExportConfig;
@@ -732,7 +767,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Workspace ID.</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>7350a155-0e94-4c6c-8620-57bbec38****</p>
@@ -743,10 +778,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Name of the workspace.</p>
+             * <p>The workspace name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Test workspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -852,7 +887,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of workspaces.</p>
+             * <p>The list of workspaces.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -860,7 +895,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page number.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -871,7 +906,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of rows per page as set in the request.</p>
+             * <p>The number of rows per page specified in the request.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -882,7 +917,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of rows.</p>
+             * <p>The total number of rows.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -893,7 +928,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of pages.</p>
+             * <p>The total number of pages.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

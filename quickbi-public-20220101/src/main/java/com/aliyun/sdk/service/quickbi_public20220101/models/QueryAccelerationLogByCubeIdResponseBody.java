@@ -80,7 +80,10 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D8749D********80FF3B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,11 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The execution result of the operation. Valid values:</p>
+         * <ul>
+         * <li>true: The execution succeeded.</li>
+         * <li>false: The execution failed.</li>
+         * </ul>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +103,14 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request succeeded.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +228,10 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
             } 
 
             /**
-             * Duration.
+             * <p>The duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -222,7 +239,10 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * JobHistoryId.
+             * <p>The task history ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REST_A***************6a8</p>
              */
             public Builder jobHistoryId(String jobHistoryId) {
                 this.jobHistoryId = jobHistoryId;
@@ -230,7 +250,10 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REST_A***************6a8</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -238,7 +261,18 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatus.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>0: pending</li>
+             * <li>1: running</li>
+             * <li>2: succeeded</li>
+             * <li>3: failed</li>
+             * <li>4: canceled</li>
+             * <li>5: warning</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -246,7 +280,10 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * JonStartDate.
+             * <p>The task start time. Format: yyyy/MM/dd HH:mm:ss. Time zone: UTC+8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025/09/10 13:59:19</p>
              */
             public Builder jonStartDate(String jonStartDate) {
                 this.jonStartDate = jonStartDate;
@@ -254,7 +291,10 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * Log.
+             * <p>The log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdav************</p>
              */
             public Builder log(String log) {
                 this.log = log;
@@ -386,7 +426,7 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The array of acceleration task logs.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -394,7 +434,10 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * Next.
+             * <p>The next page. A value of NULL or 0 indicates that no next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder next(Integer next) {
                 this.next = next;
@@ -402,7 +445,10 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -410,7 +456,10 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -418,7 +467,10 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * Pre.
+             * <p>The previous page. A value of NULL or 0 indicates that no previous page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder pre(Integer pre) {
                 this.pre = pre;
@@ -426,7 +478,10 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -434,7 +489,10 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

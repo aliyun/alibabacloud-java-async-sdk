@@ -91,7 +91,7 @@ public class ListApiDatasourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query results are returned.</p>
+         * <p>The query result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -287,7 +287,7 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter configuration of the query statement in JSON format. You can customize the parameter configuration.</p>
+             * <p>The query statement parameter settings in JSON format, which can be user-defined.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
@@ -300,7 +300,7 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             /**
              * <p>The data volume of the API data source.</p>
              * <ul>
-             * <li>Unit: Kbit/s</li>
+             * <li>Unit: KB.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -312,7 +312,7 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last synchronization time of the API data source.</p>
+             * <p>The last synchronization time of the API data source. Format example: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-05-25 16:19:43</p>
@@ -323,7 +323,7 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the quota plan was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-05-25 16:19:43</p>
@@ -334,7 +334,7 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the optimization job was modified.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-05-25 16:19:43</p>
@@ -345,7 +345,7 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job ID.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>REST_API_SYNC_0f2c3c6409be4dc0810f2a5785e816a8</p>
@@ -356,10 +356,10 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter configurations in the JSONArray format.</p>
+             * <p>The parameter settings in JSONArray format.</p>
              * <ul>
-             * <li>name: parameter name</li>
-             * <li>value: the parameter value</li>
+             * <li>name: the parameter name.</li>
+             * <li>value: the parameter value.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -374,7 +374,7 @@ public class ListApiDatasourceResponseBody extends TeaModel {
              * <p>The name of the API data source.</p>
              * 
              * <strong>example:</strong>
-             * <p>test data source</p>
+             * <p>TestDataSource</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -382,14 +382,7 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the API data source synchronization task.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>0: the to be run.</li>
-             * <li>1: The is running.</li>
-             * <li>2: The is successfully.</li>
-             * <li>3: failed.</li>
-             * </ul>
+             * <p>The synchronization task status of the API data source.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -485,7 +478,7 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of API data sources that were queried.</p>
+             * <p>The list of API data sources.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -493,7 +486,7 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number of the returned data, used for pagination.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -504,7 +497,7 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows per page set when the interface is requested.</p>
+             * <p>The number of rows per page specified in the request.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

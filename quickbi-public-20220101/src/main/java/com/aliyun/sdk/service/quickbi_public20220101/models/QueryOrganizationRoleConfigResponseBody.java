@@ -313,7 +313,7 @@ public class QueryOrganizationRoleConfigResponseBody extends TeaModel {
              * <p>Role name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Organization Admin</p>
+             * <p>组织管理员</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

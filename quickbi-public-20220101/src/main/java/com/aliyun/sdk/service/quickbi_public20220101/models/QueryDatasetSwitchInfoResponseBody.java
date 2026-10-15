@@ -91,7 +91,7 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the dataset&quot;s row and column permission switches.</p>
+         * <p>Details of the dataset\&quot;s row and column permission switches.</p>
          */
         public Builder result(Result result) {
             this.result = result;

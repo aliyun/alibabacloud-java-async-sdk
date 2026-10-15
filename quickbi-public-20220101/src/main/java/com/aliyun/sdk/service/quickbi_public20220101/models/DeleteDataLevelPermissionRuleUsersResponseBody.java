@@ -80,7 +80,10 @@ public class DeleteDataLevelPermissionRuleUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,16 @@ public class DeleteDataLevelPermissionRuleUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result of the API call. Valid values:</p>
+         * <ul>
+         * <li><p>true: The call was successful.</p>
+         * </li>
+         * <li><p>false: The call failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -96,7 +108,16 @@ public class DeleteDataLevelPermissionRuleUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

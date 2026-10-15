@@ -80,7 +80,7 @@ public class QueryDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>a4d1a221d-41za1-****</p>
@@ -91,10 +91,12 @@ public class QueryDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns the result of the interface execution. Possible values:</p>
+         * <p>The result of the API call. Valid values:</p>
          * <ul>
-         * <li>true: Execution succeeded</li>
-         * <li>false: Execution failed</li>
+         * <li><p>true: The call was successful.</p>
+         * </li>
+         * <li><p>false: The call failed.</p>
+         * </li>
          * </ul>
          */
         public Builder result(Result result) {
@@ -103,10 +105,12 @@ public class QueryDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <p>Whether the request succeeded. Valid values:</p>
          * <ul>
-         * <li>true: Request succeeded</li>
-         * <li>false: Request failed</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,18 +245,28 @@ public class QueryDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Aggregation operator. Only present for measure fields, such as SUM, AVG, and MAX.</p>
+             * <p>The aggregate operator. Returned only for measure fields.</p>
              * <ul>
-             * <li>SUM: Sum</li>
-             * <li>MAX: Maximum value</li>
-             * <li>MIN: Minimum value</li>
-             * <li>AVG: Average</li>
-             * <li>COUNT: Count</li>
-             * <li>COUNTD: Distinct count</li>
-             * <li>STDDEV_POP: Population standard deviation</li>
-             * <li>STDDEV_SAMP: Sample standard deviation</li>
-             * <li>VAR_POP: Population variance</li>
-             * <li>VAR_SAMP: Sample variance</li>
+             * <li><p>SUM: The sum.</p>
+             * </li>
+             * <li><p>MAX: The maximum value.</p>
+             * </li>
+             * <li><p>MIN: The minimum value.</p>
+             * </li>
+             * <li><p>AVG: The average value.</p>
+             * </li>
+             * <li><p>COUNT: The count.</p>
+             * </li>
+             * <li><p>COUNTD: The count of unique values.</p>
+             * </li>
+             * <li><p>STDDEV_POP: The population standard deviation.</p>
+             * </li>
+             * <li><p>STDDEV_SAMP: The sample standard deviation.</p>
+             * </li>
+             * <li><p>VAR_POP: The population variance.</p>
+             * </li>
+             * <li><p>VAR_SAMP: The sample variance.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -264,10 +278,10 @@ public class QueryDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Field name, corresponding to the physical table field name.</p>
+             * <p>The physical table field name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Specific physical field name</p>
+             * <p>test</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -275,7 +289,19 @@ public class QueryDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The keyword of the sensitive field type.</p>
+             * <p>The field data type. Common types:</p>
+             * <ul>
+             * <li><p>number</p>
+             * </li>
+             * <li><p>string</p>
+             * </li>
+             * <li><p>date</p>
+             * </li>
+             * <li><p>time</p>
+             * </li>
+             * <li><p>datetime</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -286,12 +312,11 @@ public class QueryDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The granularity of the dimension field.
-             * This field is returned only when the requested field is a date or geographic dimension, with the following possible values:</p>
+             * <p>The dimension granularity. Returned only for date or geographic dimensions. Valid values:</p>
              * <ul>
-             * <li><p>Date Granularity: yearRegion (year), monthRegion (month), weekRegion (week), dayRegion (day), hourRegion (hour), minRegion (minute), secRegion (second)</p>
+             * <li><p>Date granularity: yearRegion (year), monthRegion (month), weekRegion (week), dayRegion (day), hourRegion (hour), minRegion (minute), secRegion (second)</p>
              * </li>
-             * <li><p>Geographic Granularity: COUNTRY (international level), PROVINCE (provincial level), CITY (city level), XIAN (district/county level), REGION (region)</p>
+             * <li><p>Geographic granularity: COUNTRY (country), PROVINCE (province), CITY (city), XIAN (county/district), REGION (region)</p>
              * </li>
              * </ul>
              * 
@@ -304,7 +329,7 @@ public class QueryDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Field alias, which serves as the key in the map data rows of the <code>values</code> parameter.</p>
+             * <p>The field alias. Used as the key in each Values map entry.</p>
              * 
              * <strong>example:</strong>
              * <p>area</p>
@@ -315,7 +340,10 @@ public class QueryDataResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalColumn.
+             * <p>The original field name in the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>area</p>
              */
             public Builder originalColumn(String originalColumn) {
                 this.originalColumn = originalColumn;
@@ -323,10 +351,12 @@ public class QueryDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Field type, used to distinguish between dimension and measure fields.</p>
+             * <p>Whether the field is a dimension or measure.</p>
              * <ul>
-             * <li>Dimension: dimension</li>
-             * <li>Measure: measure</li>
+             * <li><p>Dimension</p>
+             * </li>
+             * <li><p>Measure</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -410,7 +440,7 @@ public class QueryDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Column headers.</p>
+             * <p>The column headers.</p>
              */
             public Builder headers(java.util.List<Headers> headers) {
                 this.headers = headers;
@@ -418,13 +448,13 @@ public class QueryDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL query that was executed.</p>
+             * <p>The SQL statement for the query.</p>
              * <blockquote>
-             * <p>The filter conditions in the returned SQL statement include not only the parameters passed through this interface but also the row and column permission configurations.</p>
+             * <p>The returned SQL includes both the filter conditions from this call and any row-level or column-level permission rules.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>SELECT COMPANY_T_1_.<code>area</code> AS D_AREA_2_, COMPANY_T_1_.<code>city</code> AS D_CITY_3_, SUM(COMPANY_T_1_.<code>profit_amt</code>) AS D_PROFIT_4_ FROM <code>quickbi_test</code>.<code>company_sales_record_copy</code> AS COMPANY_T_1_ WHERE COMPANY_T_1_.<code>area</code> LIKE \&quot;%test%\&quot; GROUP BY COMPANY_T_1_.<code>area</code>, COMPANY_T_1_.<code>city</code> HAVING SUM(COMPANY_T_1_.<code>order_amt</code>) &gt; 1 LIMIT 0, 10</p>
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -432,7 +462,7 @@ public class QueryDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of the query.</p>
+             * <p>The query results.</p>
              */
             public Builder values(java.util.List<java.util.Map<String, ?>> values) {
                 this.values = values;

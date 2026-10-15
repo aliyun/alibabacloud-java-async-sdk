@@ -74,7 +74,10 @@ public class IpWhiteListConfigRequest extends Request {
         } 
 
         /**
-         * IpWhiteList.
+         * <p>Required for add and delete operations. The IP whitelist. Separate multiple IP addresses with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60.205.254.120</p>
          */
         public Builder ipWhiteList(String ipWhiteList) {
             this.putQueryParameter("IpWhiteList", ipWhiteList);
@@ -83,7 +86,16 @@ public class IpWhiteListConfigRequest extends Request {
         }
 
         /**
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li>ADD: Incrementally adds entries.</li>
+         * <li>DELETE: Deletes entries.</li>
+         * <li>QUERY: Queries entries.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);

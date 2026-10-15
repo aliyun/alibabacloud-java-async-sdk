@@ -80,7 +80,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E****************05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The acceleration task information model.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -253,7 +263,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatorName.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -261,7 +274,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * CubeId.
+             * <p>The dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d14e*********fef8de29fd</p>
              */
             public Builder cubeId(String cubeId) {
                 this.cubeId = cubeId;
@@ -269,7 +285,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * CubeName.
+             * <p>The dataset name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder cubeName(String cubeName) {
                 this.cubeName = cubeName;
@@ -277,7 +296,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * EnableQuickindexTime.
+             * <p>The time when acceleration was enabled, in the format of YYYYMMDD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20250911 00:00:00</p>
              */
             public Builder enableQuickindexTime(String enableQuickindexTime) {
                 this.enableQuickindexTime = enableQuickindexTime;
@@ -285,7 +307,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * JobHistoryId.
+             * <p>The task history ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QWDAASG*******8SAD</p>
              */
             public Builder jobHistoryId(String jobHistoryId) {
                 this.jobHistoryId = jobHistoryId;
@@ -293,7 +318,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The acceleration task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b30b74**********b3b</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -301,7 +329,18 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatus.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>0: pending</li>
+             * <li>1: running</li>
+             * <li>2: completed</li>
+             * <li>3: failed</li>
+             * <li>4: canceled</li>
+             * <li>5: warning</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder jobStatus(Integer jobStatus) {
                 this.jobStatus = jobStatus;
@@ -309,7 +348,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyTime.
+             * <p>The last modification time, in the format of YYYYMMDD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20250911 00:00:00</p>
              */
             public Builder lastModifyTime(String lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -317,7 +359,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47045632</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -449,7 +494,7 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The array of acceleration task information.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -457,7 +502,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Next.
+             * <p>The next page number. A value of NULL or 0 indicates that there is no next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder next(Integer next) {
                 this.next = next;
@@ -465,7 +513,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -473,7 +524,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of rows per page specified in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -481,7 +535,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Pre.
+             * <p>The previous page number. A value of NULL or 0 indicates that there is no previous page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pre(Integer pre) {
                 this.pre = pre;
@@ -489,7 +546,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>The total number of rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -497,7 +557,10 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

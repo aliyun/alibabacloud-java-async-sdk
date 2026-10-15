@@ -494,7 +494,7 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
              * <p>The name of the add-on.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>线图</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -714,7 +714,7 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
              * <p>The name of the group.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>测试空间</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

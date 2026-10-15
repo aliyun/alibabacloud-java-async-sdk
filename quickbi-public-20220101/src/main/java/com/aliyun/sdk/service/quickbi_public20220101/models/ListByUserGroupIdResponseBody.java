@@ -80,7 +80,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
@@ -91,7 +91,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user group query result is returned.</p>
+         * <p>The query results of the user groups.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,7 +99,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
          * <li>true: The request was successful.</li>
          * <li>false: The request failed.</li>
@@ -263,7 +263,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the Secret was created.</p>
+             * <p>The creation time in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-03-15 17:13:55</p>
@@ -274,7 +274,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UserID of the creator in the Quick BI.</p>
+             * <p>The UserID of the creator in Quick BI.</p>
              * 
              * <strong>example:</strong>
              * <p>46e5*******ee22e2a292704c8</p>
@@ -296,7 +296,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the protection policy was last modified.</p>
+             * <p>The modification time in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-03-15 20:36:40</p>
@@ -307,7 +307,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UserID of the modifier in the Quick BI.</p>
+             * <p>The UserID of the modifier in Quick BI.</p>
              * 
              * <strong>example:</strong>
              * <p>46e5*******ee22e2a292704c8</p>
@@ -332,7 +332,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
              * <p>The description of the user group.</p>
              * 
              * <strong>example:</strong>
-             * <p>Description</p>
+             * <p>Description information</p>
              */
             public Builder usergroupDesc(String usergroupDesc) {
                 this.usergroupDesc = usergroupDesc;
@@ -340,7 +340,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user group.</p>
+             * <p>The user group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>34fd141d-****-4093-8c33-8e066dcbc33f</p>
@@ -421,7 +421,10 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of failed user groups.</p>
+             * <p>The list of user group IDs that failed to be queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder failedUserGroupIds(java.util.List<String> failedUserGroupIds) {
                 this.failedUserGroupIds = failedUserGroupIds;
@@ -429,7 +432,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the user group that was queried.</p>
+             * <p>The details of the queried user groups.</p>
              */
             public Builder userGroupModels(java.util.List<UserGroupModels> userGroupModels) {
                 this.userGroupModels = userGroupModels;

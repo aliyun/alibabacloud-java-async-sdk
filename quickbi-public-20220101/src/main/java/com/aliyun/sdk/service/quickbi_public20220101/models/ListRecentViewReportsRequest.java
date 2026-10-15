@@ -130,10 +130,10 @@ public class ListRecentViewReportsRequest extends Request {
         } 
 
         /**
-         * <p>Keyword of the name of the work.</p>
+         * <p>The keyword in the name of the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>Financial Statements</p>
+         * <p>FinancialReport</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -142,7 +142,7 @@ public class ListRecentViewReportsRequest extends Request {
         }
 
         /**
-         * <p>The number of days to query data in the last few days. Default value: 10.</p>
+         * <p>The number of recent days to query data for. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -154,10 +154,10 @@ public class ListRecentViewReportsRequest extends Request {
         }
 
         /**
-         * <p>Query the number of rows in the work list:</p>
+         * <p>The number of rows in the work list to query:</p>
          * <ul>
          * <li>Default value: 10.</li>
-         * <li>Maximum value: 9999</li>
+         * <li>Maximum value: 9999.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,8 +172,8 @@ public class ListRecentViewReportsRequest extends Request {
         /**
          * <p>The query mode. Valid values:</p>
          * <ul>
-         * <li>1: Sort by number of visits</li>
-         * <li>2: Sort by Last Access Time</li>
+         * <li>1: Sorted by number of visits.</li>
+         * <li>2: Sorted by most recent visit time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -186,10 +186,10 @@ public class ListRecentViewReportsRequest extends Request {
         }
 
         /**
-         * <p>Query the type of the work (fill in the blank to query all types). Valid values:</p>
+         * <p>The type of work to query. Leave this parameter empty to query all types. Valid values:</p>
          * <ul>
-         * <li>DATAPRODUCT: BI portal</li>
-         * <li>PAGE: Dashboard</li>
+         * <li>DATAPRODUCT: data portal</li>
+         * <li>PAGE: dashboard</li>
          * <li>REPORT: workbook</li>
          * </ul>
          * 
@@ -203,7 +203,7 @@ public class ListRecentViewReportsRequest extends Request {
         }
 
         /**
-         * <p>The UserID of the user in the Quick BI.</p>
+         * <p>The UserID of the user to query in Quick BI.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

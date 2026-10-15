@@ -77,7 +77,7 @@ public class QueryDataRangeRequest extends Request {
          * <p>Name, for fuzzy search.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

@@ -75,7 +75,7 @@ public class QuerySmartqPermissionByCubeIdRequest extends Request {
         } 
 
         /**
-         * <p>Dataset ID.</p>
+         * <p>The ID of the dataset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class QuerySmartqPermissionByCubeIdRequest extends Request {
         }
 
         /**
-         * <p>User ID.</p>
+         * <p>The ID of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -80,7 +80,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The keyword used to search for the dataset name.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -91,7 +91,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Test dataset</p>
+         * <p>The paginated result of the dataset list. The detailed information of the dataset list is stored in the Data response parameter.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,10 +99,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether to recursively wrap the dataset in the subdirectory. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: returns datasets in all recursive subdirectories in the directoryId directory.</li>
-         * <li>false: Only datasets in the directory specified by directoryId are returned, excluding subdirectories.</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
+             * <p>The data source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>261b252d-c3c3-498a-a0a7-5d1ec6cd****</p>
@@ -196,10 +196,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the scaling group was modified.</p>
+             * <p>The data source name.</p>
              * 
              * <strong>example:</strong>
-             * <p>The name of the training dataset.</p>
+             * <p>test</p>
              */
             public Builder dsName(String dsName) {
                 this.dsName = dsName;
@@ -207,7 +207,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the dataset owner in the Quick BI.</p>
+             * <p>The data source type.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql</p>
@@ -303,7 +303,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the directory path.</p>
+             * <p>The directory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>schemaad8aad00-9c55-4984-a767-b4e0ec60****</p>
@@ -314,10 +314,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data source.</p>
+             * <p>The directory name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Information about the directory where the dataset is located</p>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -325,7 +325,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the data source.</p>
+             * <p>The ID of the directory path.</p>
              * 
              * <strong>example:</strong>
              * <p>schemaad8aad00-9c55-4984-a767-b4e0ec60****</p>
@@ -336,10 +336,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data source.</p>
+             * <p>The name of the directory path.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test a data source</p>
+             * <p>test</p>
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -549,7 +549,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the dataset list.</p>
+             * <p>The creation time, in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-02 10:36:05</p>
@@ -560,7 +560,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Test Space</p>
+             * <p>The data source information of the dataset.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -568,7 +568,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workspace.</p>
+             * <p>The dataset ID.</p>
              * 
              * <strong>example:</strong>
              * <p>5820f58c-c734-4d8a-baf1-7979af4f****</p>
@@ -579,7 +579,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Tom</p>
+             * <p>The dataset name.</p>
              * 
              * <strong>example:</strong>
              * <p>company_sales_record_copy12</p>
@@ -590,10 +590,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows per page set when the interface is requested.</p>
+             * <p>The description of the dataset.</p>
              * 
              * <strong>example:</strong>
-             * <p>The total number of rows in the table.</p>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -601,7 +601,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the data source to which the dataset belongs.</p>
+             * <p>The directory information of the dataset.</p>
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
@@ -609,7 +609,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nickname of the dataset owner.</p>
+             * <p>The modification time, in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-02 10:36:05</p>
@@ -620,7 +620,14 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * OpenOfflineAcceleration.
+             * <p>Indicates whether extraction acceleration is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder openOfflineAcceleration(Boolean openOfflineAcceleration) {
                 this.openOfflineAcceleration = openOfflineAcceleration;
@@ -628,7 +635,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The Quick BI user ID of the dataset owner.</p>
              * 
              * <strong>example:</strong>
              * <p>136516262323****</p>
@@ -639,14 +646,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to enable row-level permissions. Valid values:</p>
-             * <ul>
-             * <li>true: The VIP Netty channel is enabled.</li>
-             * <li>false: The incremental log backup feature is disabled.</li>
-             * </ul>
+             * <p>The nickname of the dataset owner.</p>
              * 
              * <strong>example:</strong>
-             * <p>The ID of the workspace.</p>
+             * <p>test</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -654,7 +657,11 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of pages returned.</p>
+             * <p>Indicates whether row-level permissions are enabled. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -665,7 +672,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>95296e95-ca89-4c7d-8af9-dedf0ad06adf</p>
@@ -676,10 +683,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the dataset.</p>
+             * <p>The workspace name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test dataset</p>
+             * <p>test</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -785,7 +792,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Returns the pagination results of the dataset list. The detailed information of the dataset list is stored in the response parameter Data.</p>
+             * <p>The details of the dataset list.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -793,11 +800,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows per page in a paged query.</p>
-             * <ul>
-             * <li>Default value: 10.</li>
-             * <li>Maximum value: 1,000.</li>
-             * </ul>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -808,11 +811,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request is successful. Valid values:</p>
-             * <ul>
-             * <li>true: The request was successful.</li>
-             * <li>false: The request failed.</li>
-             * </ul>
+             * <p>The number of rows per page specified in the request.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -823,7 +822,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the request.</p>
+             * <p>The total number of rows.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -834,11 +833,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Current page number for dataset list:</p>
-             * <ul>
-             * <li>Pages start from page 1.</li>
-             * <li>Default value: 1.</li>
-             * </ul>
+             * <p>The total number of pages.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -95,7 +95,7 @@ public class UpdateUserGroupRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Description</p>
+         * <p>描述信息</p>
          */
         public Builder userGroupDescription(String userGroupDescription) {
             this.putQueryParameter("UserGroupDescription", userGroupDescription);

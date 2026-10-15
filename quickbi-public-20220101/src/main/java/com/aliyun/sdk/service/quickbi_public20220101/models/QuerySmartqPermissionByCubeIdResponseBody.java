@@ -80,7 +80,7 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>617277******************ABA47E31</p>
@@ -91,7 +91,7 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Basic information of the dataset.</p>
+         * <p>The basic information about the dataset.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,10 +99,12 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +187,7 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Dataset ID.</p>
+             * <p>The ID of the dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>7c7223ae-****-3c744528014b</p>
@@ -196,7 +198,7 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Dataset name.</p>
+             * <p>The name of the dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -207,7 +209,7 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the current user has permission for the smart question. Note: &quot;HasPerssion&quot; seems to be a typo, it should probably be &quot;HasPermission&quot;.</p>
+             * <p>Indicates whether the current user has permissions for Smart Q\&amp;A.</p>
              */
             public Builder hasPerssion(Boolean hasPerssion) {
                 this.hasPerssion = hasPerssion;

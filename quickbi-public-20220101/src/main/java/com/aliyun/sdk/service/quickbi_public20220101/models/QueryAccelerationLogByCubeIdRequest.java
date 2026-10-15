@@ -118,6 +118,7 @@ public class QueryAccelerationLogByCubeIdRequest extends Request {
         } 
 
         /**
+         * <p>The dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class QueryAccelerationLogByCubeIdRequest extends Request {
         }
 
         /**
+         * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +144,10 @@ public class QueryAccelerationLogByCubeIdRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -151,7 +156,13 @@ public class QueryAccelerationLogByCubeIdRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Default value: 10.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,6 +171,7 @@ public class QueryAccelerationLogByCubeIdRequest extends Request {
         }
 
         /**
+         * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

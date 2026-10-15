@@ -80,7 +80,10 @@ public class CreateDatasetResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F68B***********A3DF743</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,16 @@ public class CreateDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result of the operation. Valid values:</p>
+         * <ul>
+         * <li><p>true: The request is successful.</p>
+         * </li>
+         * <li><p>false: The request fails.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(String result) {
             this.result = result;
@@ -96,7 +108,16 @@ public class CreateDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The request is successful.</p>
+         * </li>
+         * <li><p>false: The request fails.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

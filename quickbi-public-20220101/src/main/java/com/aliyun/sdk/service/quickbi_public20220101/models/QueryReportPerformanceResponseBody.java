@@ -714,7 +714,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
              * <p>The name of the group.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>自定义模板</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

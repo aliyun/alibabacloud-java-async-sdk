@@ -103,10 +103,10 @@ public class QueryOrganizationWorkspaceListRequest extends Request {
         } 
 
         /**
-         * <p>Keyword for the workspace name.</p>
+         * <p>The keyword of the workspace name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>application</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -115,10 +115,10 @@ public class QueryOrganizationWorkspaceListRequest extends Request {
         }
 
         /**
-         * <p>Current page number of the workspace list:</p>
+         * <p>The page number of the workspace list.</p>
          * <ul>
-         * <li>Starting value: 1</li>
-         * <li>Default value: 1</li>
+         * <li>Minimum value: 1.</li>
+         * <li>Default value: 1.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,10 +131,10 @@ public class QueryOrganizationWorkspaceListRequest extends Request {
         }
 
         /**
-         * <p>Number of rows per page in a paginated query:</p>
+         * <p>The number of rows per page in a paged query.</p>
          * <ul>
-         * <li>Default value: 10</li>
-         * <li>Maximum value: 1000</li>
+         * <li>Default value: 10.</li>
+         * <li>Maximum value: 1000.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class QueryOrganizationWorkspaceListRequest extends Request {
         }
 
         /**
-         * <p>User ID in Quick BI.</p>
+         * <p>The ID of the user in Quick BI.</p>
          * 
          * <strong>example:</strong>
          * <p>fe67f61a35a94b7da1a34ba174a7****</p>

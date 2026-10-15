@@ -80,7 +80,7 @@ public class CreateTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -102,10 +102,10 @@ public class CreateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Value range: </p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: Request succeeded </li>
-         * <li>false: Request failed</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

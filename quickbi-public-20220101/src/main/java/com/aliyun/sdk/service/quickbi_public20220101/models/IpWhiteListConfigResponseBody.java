@@ -80,7 +80,10 @@ public class IpWhiteListConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class IpWhiteListConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The IP whitelist.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,10 @@ public class IpWhiteListConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -149,7 +155,7 @@ public class IpWhiteListConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * IpWhiteList.
+             * <p>The IP whitelist array.</p>
              */
             public Builder ipWhiteList(java.util.List<String> ipWhiteList) {
                 this.ipWhiteList = ipWhiteList;

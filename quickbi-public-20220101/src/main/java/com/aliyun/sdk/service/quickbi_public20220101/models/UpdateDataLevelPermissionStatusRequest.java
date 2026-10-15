@@ -90,7 +90,7 @@ public class UpdateDataLevelPermissionStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
+         * <p>The ID of the dataset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,6 +103,13 @@ public class UpdateDataLevelPermissionStatusRequest extends Request {
         }
 
         /**
+         * <p>The status of the permission switch. Valid values:</p>
+         * <ul>
+         * <li><p>1: On</p>
+         * </li>
+         * <li><p>0: Off</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +122,13 @@ public class UpdateDataLevelPermissionStatusRequest extends Request {
         }
 
         /**
+         * <p>The type of data-level permission. Valid values:</p>
+         * <ul>
+         * <li><p>ROW_LEVEL: Row-level permission</p>
+         * </li>
+         * <li><p>COLUMN_LEVEL: Column-level permission</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

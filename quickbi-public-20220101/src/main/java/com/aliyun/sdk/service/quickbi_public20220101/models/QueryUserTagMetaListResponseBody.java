@@ -188,7 +188,7 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
              * <p>The description of the tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>Used to distinguish some positions</p>
+             * <p>用于区分部分职位</p>
              */
             public Builder tagDescription(String tagDescription) {
                 this.tagDescription = tagDescription;
@@ -210,7 +210,7 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
              * <p>The name of the tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>Position</p>
+             * <p>职位</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;

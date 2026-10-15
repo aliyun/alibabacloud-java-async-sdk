@@ -60,6 +60,7 @@ public class CheckDatasetExistedRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the dataset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

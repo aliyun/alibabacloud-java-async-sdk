@@ -80,7 +80,7 @@ public class UpdateWorkspaceUserRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -91,10 +91,10 @@ public class UpdateWorkspaceUserRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns the result of the interface execution. Value range:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true: Execution successful</li>
-         * <li>false: Execution failed</li>
+         * <li>true: The operation succeeded.</li>
+         * <li>false: The operation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,10 +106,10 @@ public class UpdateWorkspaceUserRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Value range:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: Request successful</li>
-         * <li>false: Request failed</li>
+         * <li>true: The request succeeded.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

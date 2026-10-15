@@ -642,7 +642,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
              * <p>The name of the group.</p>
              * 
              * <strong>example:</strong>
-             * <p>taascontainerprod</p>
+             * <p>测试工作空间</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

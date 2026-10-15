@@ -127,7 +127,7 @@ public class CreateUserGroupRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>User group description</p>
+         * <p>用户分组描述</p>
          */
         public Builder userGroupDescription(String userGroupDescription) {
             this.putQueryParameter("UserGroupDescription", userGroupDescription);
@@ -160,7 +160,7 @@ public class CreateUserGroupRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Hangzhou Financial Report</p>
+         * <p>杭州财报</p>
          */
         public Builder userGroupName(String userGroupName) {
             this.putQueryParameter("UserGroupName", userGroupName);

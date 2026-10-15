@@ -80,7 +80,7 @@ public class QueryWorksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -91,7 +91,7 @@ public class QueryWorksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the work.</p>
+         * <p>The details of the data work.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,7 +99,7 @@ public class QueryWorksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
          * <li>true: The request was successful.</li>
          * <li>false: The request failed.</li>
@@ -198,7 +198,7 @@ public class QueryWorksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the directory.</p>
+             * <p>The ID of the directory to which the data work belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>83d37ba6-d909-48a2-a517-f4d05c3a****</p>
@@ -209,10 +209,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the directory.</p>
+             * <p>The directory name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test directory</p>
+             * <p>TestDirectory</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -220,7 +220,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hierarchical structure of the directory ID to which the directory belongs. Separate the hierarchical structure with a /.</p>
+             * <p>The hierarchical path of the directory IDs, separated by a forward slash (/).</p>
              * 
              * <strong>example:</strong>
              * <p>83d37ba6-d909-48a2-a517-f4d05c3a****</p>
@@ -231,10 +231,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hierarchical structure of the directory to which the directory belongs. Separate the hierarchical structure with a (/).</p>
+             * <p>The hierarchical path of the directory names, separated by a forward slash (/).</p>
              * 
              * <strong>example:</strong>
-             * <p>Test directory</p>
+             * <p>TestDirectory</p>
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -327,7 +327,16 @@ public class QueryWorksResponseBody extends TeaModel {
             } 
 
             /**
-             * DataType.
+             * <p>The field type. Valid values:</p>
+             * <ul>
+             * <li>enum: enumeration</li>
+             * <li>string: text</li>
+             * <li>number: numeric</li>
+             * <li>datetime: date</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -335,7 +344,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * ParamAlias.
+             * <p>The parameter alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lastQueryAt</p>
              */
             public Builder paramAlias(String paramAlias) {
                 this.paramAlias = paramAlias;
@@ -343,7 +355,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * ParamName.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lastQueryAt</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -351,7 +366,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * <p>Indicates whether the parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -626,10 +644,10 @@ public class QueryWorksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Third-party embedding status. Valid values:</p>
+             * <p>The third-party embedding status. Valid values:</p>
              * <ul>
-             * <li>0: The embed service is not enabled.</li>
-             * <li>1: Embed is enabled.</li>
+             * <li>0: Embedding is not enabled.</li>
+             * <li>1: Embedding is enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -641,10 +659,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Remarks on the work.</p>
+             * <p>The remarks of the data work.</p>
              * 
              * <strong>example:</strong>
-             * <p>Description</p>
+             * <p>Remarks</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -652,7 +670,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory to which the work belongs.</p>
+             * <p>The directory to which the data work belongs.</p>
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
@@ -660,7 +678,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalParamVoList.
+             * <p>The array of global parameters.</p>
              */
             public Builder globalParamVoList(java.util.List<GlobalParamVoList> globalParamVoList) {
                 this.globalParamVoList = globalParamVoList;
@@ -668,7 +686,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the creation of the work in milliseconds.</p>
+             * <p>The timestamp when the data work was created, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1496651577000</p>
@@ -679,7 +697,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the modification of the work in milliseconds.</p>
+             * <p>The timestamp when the data work was last modified, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1496651577000</p>
@@ -690,10 +708,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account name of the person who modified the work.</p>
+             * <p>The Alibaba Cloud account name of the user who last modified the data work.</p>
              * 
              * <strong>example:</strong>
-             * <p>Tom</p>
+             * <p>John</p>
              */
             public Builder modifyName(String modifyName) {
                 this.modifyName = modifyName;
@@ -701,7 +719,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the work owner in the Quick BI.</p>
+             * <p>The Quick BI UserID of the data work owner.</p>
              * 
              * <strong>example:</strong>
              * <p>9187a612aa474e2a8ac1414d5529****</p>
@@ -712,10 +730,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account name of the work owner.</p>
+             * <p>The Alibaba Cloud account name of the data work owner.</p>
              * 
              * <strong>example:</strong>
-             * <p>Tom</p>
+             * <p>John</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -723,7 +741,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Is it public</p>
+             * <p>Indicates whether the data work is public.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -734,7 +752,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Deadline for the public release of the report</p>
+             * <p>The expiration date for the public access of the report. This value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1721366354000</p>
@@ -745,20 +763,18 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Security policies for collaborative authorization of works. Valid values:</p>
+             * <p>The security policy for collaborative authorization of the data work. Valid values:</p>
              * <ul>
-             * <li>0: private</li>
-             * <li>12: Authorize specified members</li>
-             * <li>1 or 11: Authorize all workspace members</li>
+             * <li>0: Private.</li>
+             * <li>12: Authorized to specified members.</li>
+             * <li>1 or 11: Authorized to all workspace members.</li>
              * </ul>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li><p>If you use legacy permissions, the return value is 1.</p>
-             * </li>
-             * <li><p>If you use the new permissions, the return value is 11.</p>
-             * </li>
+             * <li>If you use the legacy permission model, the return value is 1.</li>
+             * <li>If you use the new permission model, the return value is 11.</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -769,12 +785,12 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the report. Valid values:</p>
+             * <p>The report status. Valid values:</p>
              * <ul>
-             * <li>0: unpublished</li>
-             * <li>1: published</li>
-             * <li>2: modified but not published</li>
-             * <li>3: unpublished</li>
+             * <li>0: Unpublished.</li>
+             * <li>1: Published.</li>
+             * <li>2: Modified but not published.</li>
+             * <li>3: Offline.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -786,10 +802,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the work.</p>
+             * <p>The name of the data work.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test report</p>
+             * <p>TestReport</p>
              */
             public Builder workName(String workName) {
                 this.workName = workName;
@@ -797,13 +813,13 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Queries the types of works. Fill in the blanks to query all types. Valid values:</p>
+             * <p>The type of the data work. Leave this parameter empty to query all types. Valid values:</p>
              * <ul>
-             * <li>DATAPRODUCT: BI portal</li>
-             * <li>PAGE: Dashboard</li>
-             * <li>FULLPAGE: full-screen dashboards</li>
+             * <li>DATAPRODUCT: data portal</li>
+             * <li>PAGE: dashboard</li>
+             * <li>FULLPAGE: full-screen dashboard</li>
              * <li>REPORT: workbook</li>
-             * <li>dashboardOfflineQuery: self-service data retrieval</li>
+             * <li>dashboardOfflineQuery: custom query</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -815,7 +831,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the work.</p>
+             * <p>The ID of the data work.</p>
              * 
              * <strong>example:</strong>
              * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
@@ -826,7 +842,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace to which the work belongs.</p>
+             * <p>The ID of the workspace to which the data work belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>87c6b145-090c-43e1-9426-8f93be23****</p>
@@ -837,10 +853,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workspace to which the work belongs.</p>
+             * <p>The name of the workspace to which the data work belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test Space</p>
+             * <p>TestWorkspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

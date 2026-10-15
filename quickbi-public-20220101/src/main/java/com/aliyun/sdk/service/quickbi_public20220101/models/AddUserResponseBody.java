@@ -80,7 +80,7 @@ public class AddUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -91,7 +91,7 @@ public class AddUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns detailed information about the newly added Aliyun user.</p>
+         * <p>The details of the newly added Alibaba Cloud user.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,7 +99,7 @@ public class AddUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
          * <li>true: The request was successful.</li>
          * <li>false: The request failed.</li>
@@ -250,7 +250,7 @@ public class AddUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Aliyun account.</p>
+             * <p>The Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:xxxxxx@163.com">xxxxxx@163.com</a></p>
@@ -261,12 +261,12 @@ public class AddUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the organization administrator role is assigned. Value range: </p>
+             * <p>Indicates whether the organization administrator role is bound. Valid values:</p>
              * <ul>
-             * <li>true: Yes</li>
-             * <li>false: No</li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
-             * <p><notice>This parameter is deprecated and not recommended for use. It is invalid when RoleIdList is provided.</notice></p>
+             * <p><notice>This parameter is deprecated. When RoleIdList is specified, this parameter does not take effect.</notice></p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -277,12 +277,12 @@ public class AddUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the permission administrator role is assigned. Value range: </p>
+             * <p>Indicates whether the permission management administrator role is attached. Valid values:</p>
              * <ul>
-             * <li>true: Yes</li>
-             * <li>false: No</li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
-             * <p><notice>This parameter is deprecated and not recommended for use. It is invalid when RoleIdList is provided.</notice></p>
+             * <p><notice>This parameter has expired and is no longer recommended. When RoleIdList is specified, this parameter does not take effect.</notice></p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -293,7 +293,7 @@ public class AddUserResponseBody extends TeaModel {
             }
 
             /**
-             * CopilotModules.
+             * <p>The intelligent module quotas owned by the user.</p>
              */
             public Builder copilotModules(java.util.List<String> copilotModules) {
                 this.copilotModules = copilotModules;
@@ -301,10 +301,10 @@ public class AddUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Aliyun account nickname.</p>
+             * <p>The nickname of the Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
-             * <p>ddd</p>
+             * <p>John</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -312,7 +312,7 @@ public class AddUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of organization role IDs bound to the user.</p>
+             * <p>The list of organization role IDs bound to the user.</p>
              */
             public Builder roleIdList(java.util.List<Long> roleIdList) {
                 this.roleIdList = roleIdList;
@@ -320,7 +320,7 @@ public class AddUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UserID in Quick BI.</p>
+             * <p>The user ID in Quick BI.</p>
              * 
              * <strong>example:</strong>
              * <p>b5d8fd9348cc4327****afb604</p>
@@ -331,11 +331,11 @@ public class AddUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User type of the organization member. Value range: </p>
+             * <p>The user type of the organization member. Valid values:</p>
              * <ul>
-             * <li>1: Developer </li>
-             * <li>2: Visitor </li>
-             * <li>3: Analyst</li>
+             * <li>1: Developer.</li>
+             * <li>2: Visitor.</li>
+             * <li>3: Analyst.</li>
              * </ul>
              * 
              * <strong>example:</strong>

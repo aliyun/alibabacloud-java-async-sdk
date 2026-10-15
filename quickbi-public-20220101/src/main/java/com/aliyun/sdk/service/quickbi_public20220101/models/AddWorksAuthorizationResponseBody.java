@@ -80,7 +80,10 @@ public class AddWorksAuthorizationResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78C1AA***************C462E57A95</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class AddWorksAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The authorization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdasf8****sda</p>
          */
         public Builder result(String result) {
             this.result = result;
@@ -96,7 +102,10 @@ public class AddWorksAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

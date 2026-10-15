@@ -60,7 +60,7 @@ public class QueryUserInfoByUserIdRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the user. The UserID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+         * <p>The user ID. The UserID here refers to the Quick BI UserID, not the Alibaba Cloud UID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

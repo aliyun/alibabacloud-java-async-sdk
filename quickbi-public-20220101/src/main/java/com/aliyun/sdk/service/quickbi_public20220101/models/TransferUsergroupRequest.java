@@ -75,6 +75,7 @@ public class TransferUsergroupRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the parent user group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class TransferUsergroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the user group to migrate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

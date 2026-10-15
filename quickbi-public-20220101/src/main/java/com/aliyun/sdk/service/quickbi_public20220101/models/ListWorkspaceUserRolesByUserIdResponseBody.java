@@ -81,7 +81,10 @@ public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC4E***************F67E2C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,6 +92,7 @@ public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The list of all workspace role information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder result(java.util.List<Result> result) {
@@ -97,7 +101,16 @@ public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -176,7 +189,10 @@ public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
             } 
 
             /**
-             * RoleCode.
+             * <p>The code that corresponds to the preset workspace role. This parameter is not returned for custom roles.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34637***35</p>
              */
             public Builder roleCode(String roleCode) {
                 this.roleCode = roleCode;
@@ -184,7 +200,20 @@ public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>The workspace role ID. This includes, but is not limited to, the following preset workspace roles:</p>
+             * <ul>
+             * <li><p>25: Workspace Admin (preset role)</p>
+             * </li>
+             * <li><p>26: Workspace Developer (preset role)</p>
+             * </li>
+             * <li><p>27: Workspace Analyst (preset role)</p>
+             * </li>
+             * <li><p>30: Workspace Viewer (preset role)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>111111111</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -192,7 +221,10 @@ public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The name of the workspace role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-admin</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -272,7 +304,7 @@ public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
             } 
 
             /**
-             * RoleModel.
+             * <p>The workspace role information.</p>
              */
             public Builder roleModel(RoleModel roleModel) {
                 this.roleModel = roleModel;
@@ -280,7 +312,10 @@ public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9337d121-a78f-4c1b-a8bc-f81de117****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -288,7 +323,10 @@ public class ListWorkspaceUserRolesByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

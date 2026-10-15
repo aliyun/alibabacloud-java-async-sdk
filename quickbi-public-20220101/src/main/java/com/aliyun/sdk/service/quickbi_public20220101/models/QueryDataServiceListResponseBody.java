@@ -350,7 +350,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
              * <p>Display name in the cube model (can be in Chinese or English).</p>
              * 
              * <strong>example:</strong>
-             * <p>date(year)</p>
+             * <p>日期(year)</p>
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -561,7 +561,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
              * <p>Remark for the returned field.</p>
              * 
              * <strong>example:</strong>
-             * <p>Theme Configuration already exists</p>
+             * <p>主题配置已存在。</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -705,7 +705,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
              * <p>Dataset name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test data source</p>
+             * <p>测试数据集</p>
              */
             public Builder cubeName(String cubeName) {
                 this.cubeName = cubeName;
@@ -1000,10 +1000,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creator&quot;s name.</p>
+             * <p>Creator\&quot;s name.</p>
              * 
              * <strong>example:</strong>
-             * <p>zhangsan</p>
+             * <p>张仔龙</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -1025,7 +1025,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
              * <p>Dataset name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test data source</p>
+             * <p>测试数据集</p>
              */
             public Builder cubeName(String cubeName) {
                 this.cubeName = cubeName;
@@ -1036,7 +1036,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
              * <p>Description</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>测试用</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -1066,7 +1066,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modifier&quot;s userId.</p>
+             * <p>Modifier\&quot;s userId.</p>
              * 
              * <strong>example:</strong>
              * <p>7cb94cd48701</p>
@@ -1077,10 +1077,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modifier&quot;s name</p>
+             * <p>Modifier\&quot;s name</p>
              * 
              * <strong>example:</strong>
-             * <p>zhangsan</p>
+             * <p>张仔龙</p>
              */
             public Builder modifierName(String modifierName) {
                 this.modifierName = modifierName;
@@ -1091,7 +1091,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
              * <p>Data service name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test report</p>
+             * <p>测试报表</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1110,10 +1110,10 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Owner&quot;s name</p>
+             * <p>Owner\&quot;s name</p>
              * 
              * <strong>example:</strong>
-             * <p>lisi</p>
+             * <p>李四</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -1146,7 +1146,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
              * <p>Workspace name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test workspace</p>
+             * <p>测试工作空间</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

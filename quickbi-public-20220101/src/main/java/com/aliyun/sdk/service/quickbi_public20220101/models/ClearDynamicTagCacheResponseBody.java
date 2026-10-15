@@ -80,7 +80,10 @@ public class ClearDynamicTagCacheResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78C17888****C462E57A95</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,14 @@ public class ClearDynamicTagCacheResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Indicates whether the cache is purged.</p>
+         * <ul>
+         * <li>true: The cache is purged.</li>
+         * <li>false: No cache exists.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -96,7 +106,10 @@ public class ClearDynamicTagCacheResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

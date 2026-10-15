@@ -80,7 +80,7 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>617277C****************ABA47E31</p>
@@ -91,7 +91,7 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Array of failed user information.</p>
+         * <p>An array of user information for failed operations.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -99,10 +99,12 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. The value range is as follows:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: Request succeeded</li>
-         * <li>false: Request failed</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +200,7 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Reason for failure.</p>
+             * <p>The reason for the failure.</p>
              * 
              * <strong>example:</strong>
              * <p>INVALID_FILE_FORMAT</p>
@@ -209,7 +211,7 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Q&amp;A resource ID.</p>
+             * <p>The Q\&amp;A resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>617277C****************ABA47E31</p>
@@ -220,7 +222,7 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Analysis theme ID.</p>
+             * <p>The analysis subject ID.</p>
              * 
              * <strong>example:</strong>
              * <p>617277C****************ABA47E31</p>
@@ -231,7 +233,7 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User ID.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>617277C****************ABA47E31</p>

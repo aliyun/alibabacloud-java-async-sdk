@@ -91,7 +91,7 @@ public class CreateUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the added user group is returned. An empty string &quot;&quot; is returned if the add fails.</p>
+         * <p>The ID of the added user group is returned. An empty string \&quot;\&quot; is returned if the add fails.</p>
          * 
          * <strong>example:</strong>
          * <p>f5eeb52e-d9c2-4a8b-80e3-47ab55c2****</p>

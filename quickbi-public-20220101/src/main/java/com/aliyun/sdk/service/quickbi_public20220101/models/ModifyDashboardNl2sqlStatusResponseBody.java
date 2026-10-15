@@ -80,7 +80,10 @@ public class ModifyDashboardNl2sqlStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46e537a5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ModifyDashboardNl2sqlStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>A list of dashboard IDs for which the operation failed.</p>
          */
         public Builder result(java.util.List<String> result) {
             this.result = result;
@@ -96,7 +99,16 @@ public class ModifyDashboardNl2sqlStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

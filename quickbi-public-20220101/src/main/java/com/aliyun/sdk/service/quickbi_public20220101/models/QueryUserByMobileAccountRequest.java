@@ -75,6 +75,12 @@ public class QueryUserByMobileAccountRequest extends Request {
         } 
 
         /**
+         * <p>The bound mobile type.</p>
+         * <ul>
+         * <li>DingTalk: ding</li>
+         * <li>WeCom: corp_weixin</li>
+         * <li>Lark: feishu</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +93,15 @@ public class QueryUserByMobileAccountRequest extends Request {
         }
 
         /**
+         * <p>The bound mobile user ID.</p>
+         * <ul>
+         * <li>DingTalk: The unionId of the DingTalk account.</li>
+         * <li>WeCom: The userId of the WeCom account.</li>
+         * <li>Lark: The userId of the Lark account.<blockquote>
+         * <p>Notice: The mobileUserId must be obtained by calling the relevant API operations of DingTalk, WeCom, or Lark.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

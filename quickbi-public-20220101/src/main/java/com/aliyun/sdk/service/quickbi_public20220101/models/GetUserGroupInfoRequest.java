@@ -60,11 +60,11 @@ public class GetUserGroupInfoRequest extends Request {
         } 
 
         /**
-         * <p>Keyword of the user group name.</p>
+         * <p>The keyword of the user group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Test user group</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

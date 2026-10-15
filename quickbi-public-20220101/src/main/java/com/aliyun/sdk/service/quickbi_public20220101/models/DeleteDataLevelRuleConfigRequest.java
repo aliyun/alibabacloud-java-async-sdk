@@ -75,6 +75,7 @@ public class DeleteDataLevelRuleConfigRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the dataset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteDataLevelRuleConfigRequest extends Request {
         }
 
         /**
+         * <p>The ID of the row-level permission rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

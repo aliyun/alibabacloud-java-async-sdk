@@ -60,6 +60,7 @@ public class ClearDynamicTagCacheRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the tag configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

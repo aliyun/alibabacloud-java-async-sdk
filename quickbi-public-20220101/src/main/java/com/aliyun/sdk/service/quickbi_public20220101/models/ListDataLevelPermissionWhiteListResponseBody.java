@@ -80,7 +80,7 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
@@ -91,7 +91,7 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whitelist for the specified row-level permission type.</p>
+         * <p>The whitelist of the specified row-level or column-level permission type.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,10 +99,10 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: Request succeeded</li>
-         * <li>false: Request failed</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,10 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>UserGroups.</p>
+             * <p>The list of user group IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;0d5fb19b-***-1248fc27ca51&quot;]</p>
              */
             public Builder userGroups(java.util.List<String> userGroups) {
                 this.userGroups = userGroups;
@@ -180,7 +183,10 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Users.</p>
+             * <p>The list of Quick BI user IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;4334***358&quot;]</p>
              */
             public Builder users(java.util.List<String> users) {
                 this.users = users;
@@ -260,7 +266,7 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Dataset ID.</p>
+             * <p>The dataset ID.</p>
              * 
              * <strong>example:</strong>
              * <p>7c7223ae-****-3c744528014b</p>
@@ -271,10 +277,10 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Type of dataset row and column permissions. Possible values:</p>
+             * <p>The type of row and column permission for the dataset. Valid values:</p>
              * <ul>
-             * <li>ROW_LEVEL: Row-level permission</li>
-             * <li>COLUMN_LEVEL: Column-level permission</li>
+             * <li>ROW_LEVEL: row-level permission</li>
+             * <li>COLUMN_LEVEL: column-level permission</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -286,7 +292,7 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whitelist information.</p>
+             * <p>The whitelist information.</p>
              */
             public Builder usersModel(UsersModel usersModel) {
                 this.usersModel = usersModel;

@@ -80,7 +80,10 @@ public class QueryUserByMobileAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46e53***********270</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryUserByMobileAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The user information bound to the third-party account.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryUserByMobileAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +172,10 @@ public class QueryUserByMobileAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * BoundUserId.
+             * <p>The Quick BI user ID of the bound account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder boundUserId(String boundUserId) {
                 this.boundUserId = boundUserId;
@@ -170,7 +183,10 @@ public class QueryUserByMobileAccountResponseBody extends TeaModel {
             }
 
             /**
-             * ThirdAccountName.
+             * <p>The mobile account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder thirdAccountName(String thirdAccountName) {
                 this.thirdAccountName = thirdAccountName;

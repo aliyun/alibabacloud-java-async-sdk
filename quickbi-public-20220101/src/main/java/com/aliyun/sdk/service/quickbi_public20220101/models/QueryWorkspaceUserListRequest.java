@@ -107,7 +107,7 @@ public class QueryWorkspaceUserListRequest extends Request {
          * <p>Keyword for the username of the workspace member.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>分析</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

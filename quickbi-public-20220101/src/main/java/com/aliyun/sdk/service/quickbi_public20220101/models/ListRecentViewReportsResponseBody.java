@@ -80,7 +80,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -91,7 +91,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query results are returned.</p>
+         * <p>The query result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,7 +99,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
          * <li>true: The request was successful.</li>
          * <li>false: The request failed.</li>
@@ -341,7 +341,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Queries whether the user has collected the work.</p>
+             * <p>Indicates whether the queried user has added the work to favorites.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -363,7 +363,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the work was modified.</p>
+             * <p>The timestamp when the work was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>1640595729000</p>
@@ -374,7 +374,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query user has the editing rights of the work.</p>
+             * <p>Indicates whether the queried user has edit permissions on the work.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -385,7 +385,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query user has the permission to view the work.</p>
+             * <p>Indicates whether the queried user has view permissions on the work.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -410,7 +410,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
              * <p>The name of the work.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test report</p>
+             * <p>TestReport</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -421,7 +421,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
              * <p>The Alibaba Cloud account name of the work owner.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>John</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -440,12 +440,12 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The publication status of the work. Valid values:</p>
+             * <p>The publish status of the work. Valid values:</p>
              * <ul>
-             * <li>0: unpublished</li>
-             * <li>1: published</li>
-             * <li>2: modified and saved but not published.</li>
-             * <li>3: unpublished</li>
+             * <li>0: Unpublished.</li>
+             * <li>1: Published.</li>
+             * <li>2: Modified and saved but not published.</li>
+             * <li>3: Offline.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -470,8 +470,8 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             /**
              * <p>The type of the work. Valid values:</p>
              * <ul>
-             * <li>DATAPRODUCT: BI portal</li>
-             * <li>PAGE: Dashboard</li>
+             * <li>DATAPRODUCT: data portal</li>
+             * <li>PAGE: dashboard</li>
              * <li>REPORT: workbook</li>
              * </ul>
              * 
@@ -484,7 +484,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times the work was accessed.</p>
+             * <p>The number of times the work has been accessed.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -509,7 +509,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
              * <p>The name of the workspace to which the work belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test Workspace</p>
+             * <p>TestWorkspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -628,10 +628,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Attention</p>
+             * <p>The notice indicating that pagination parameters (such as TotalNum) returned by this API will be deprecated soon.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>The pagination parameters such as TotalNum returned by this API will be deprecated soon. If you are using them, modify your code promptly</p>
              */
             public Builder attention(String attention) {
                 this.attention = attention;
@@ -647,7 +647,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -658,10 +658,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page.</p>
              * <ul>
              * <li>Default value: 10.</li>
-             * <li>Maximum of 100 articles</li>
+             * <li>Maximum value: 100.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -673,7 +673,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of rows in the table.</p>
+             * <p>The total number of rows.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -684,7 +684,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of pages returned.</p>
+             * <p>The total number of pages.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

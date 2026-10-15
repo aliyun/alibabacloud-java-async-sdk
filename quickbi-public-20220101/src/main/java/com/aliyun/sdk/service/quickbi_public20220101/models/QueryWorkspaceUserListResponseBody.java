@@ -216,7 +216,7 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
              * <p>Name of the preset role.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>管理员</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -347,7 +347,7 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
              * <p>Nickname.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>我就是那个分析师大神</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;

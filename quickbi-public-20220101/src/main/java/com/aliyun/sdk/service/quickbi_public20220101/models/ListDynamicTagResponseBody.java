@@ -80,7 +80,10 @@ public class ListDynamicTagResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A**********DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListDynamicTagResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The label list.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -96,7 +99,10 @@ public class ListDynamicTagResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -227,7 +233,10 @@ public class ListDynamicTagResponseBody extends TeaModel {
             } 
 
             /**
-             * ColumnName.
+             * <p>The column name of the associated data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>site_id</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -235,7 +244,10 @@ public class ListDynamicTagResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigId.
+             * <p>The ID of the individual configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cfg****14352318681088</p>
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -243,7 +255,10 @@ public class ListDynamicTagResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigName.
+             * <p>The name of the label configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip</p>
              */
             public Builder configName(String configName) {
                 this.configName = configName;
@@ -251,7 +266,10 @@ public class ListDynamicTagResponseBody extends TeaModel {
             }
 
             /**
-             * DsId.
+             * <p>The ID of the associated data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a201c85c-******</p>
              */
             public Builder dsId(String dsId) {
                 this.dsId = dsId;
@@ -259,7 +277,10 @@ public class ListDynamicTagResponseBody extends TeaModel {
             }
 
             /**
-             * OrganizationId.
+             * <p>The organization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2fe4fbd8-<strong><strong>-</strong></strong>-b3e1-e92c7af083ea</p>
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;
@@ -267,7 +288,15 @@ public class ListDynamicTagResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedAttribute.
+             * <p>The associated user attribute. Valid values:</p>
+             * <ul>
+             * <li>0: account ID</li>
+             * <li>1: account name</li>
+             * <li>2: nickname within the organization</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder relatedAttribute(Integer relatedAttribute) {
                 this.relatedAttribute = relatedAttribute;
@@ -275,7 +304,10 @@ public class ListDynamicTagResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name of the associated data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testTable02\&quot;\&quot;</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

@@ -90,12 +90,12 @@ public class AddWorkspaceUsersRequest extends Request {
         } 
 
         /**
-         * <p>Preset space role ID. Value range:</p>
+         * <p>The ID of the preset workspace role. Valid values:</p>
          * <ul>
-         * <li>25: Space Administrator</li>
-         * <li>26: Space Developer</li>
-         * <li>27: Space Analyst</li>
-         * <li>30: Space Viewer</li>
+         * <li>25: storage management administrator</li>
+         * <li>26: workspace developer</li>
+         * <li>27: storage analysis analyst</li>
+         * <li>30: workspace viewer</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -109,9 +109,9 @@ public class AddWorkspaceUsersRequest extends Request {
         }
 
         /**
-         * <p>User ID. This is the UserID for Quick BI, not the Alibaba Cloud UID.</p>
+         * <p>The user IDs. These are Quick BI user IDs, not Alibaba Cloud UIDs.</p>
          * <ul>
-         * <li>Supports batch parameters, with user IDs separated by commas (,).</li>
+         * <li>You can pass multiple user IDs separated by commas (,).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -125,7 +125,7 @@ public class AddWorkspaceUsersRequest extends Request {
         }
 
         /**
-         * <p>Workspace ID.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

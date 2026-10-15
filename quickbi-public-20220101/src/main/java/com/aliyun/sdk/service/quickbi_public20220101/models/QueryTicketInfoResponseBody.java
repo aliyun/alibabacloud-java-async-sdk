@@ -101,8 +101,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -314,7 +316,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
              * <p>Global parameters.</p>
              * 
              * <strong>example:</strong>
-             * <p>[&amp;{quot;paramKey&amp;quot;:&amp;quot;price&amp;quot;,&amp;quot;joinType&amp;quot;and&amp;quot;,&amp;quot;conditionList&amp;quot;:[{&amp;quot; operation&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;value ;&amp; quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot product_type&amp;quot;,&amp;quot;joinType&amp;quot;:&amp;quot;and &quot;;,&amp; quot;conditionList&amp;quot;, the conditions must be:[{&amp;quot;operate&quot; ;:&amp; quot;in&amp;quot;,&amp;quot;value&amp;quot;, the conditions must be:[&amp;quot; office supplies&amp;quot;,&amp;quot; furniture products&amp;quot;]}]}]\n</p>
+             * <p>[{&quot;paramKey&quot;:&quot;price&quot;,&quot;joinType&quot;:&quot;and&quot;,&quot;conditionList&quot;:[{&quot;operate&quot;:&quot;&gt;&quot;,&quot;value&quot;:&quot;0&quot;}]},{&quot;paramKey&quot;:&quot;product_type&quot;,&quot;joinType&quot;:&quot;and&quot;,&quot;conditionList&quot;:[{&quot;operate&quot;:&quot;in&quot;,&quot;value&quot;:[&quot;]}]}]\n</p>
              */
             public Builder globalParam(String globalParam) {
                 this.globalParam = globalParam;
@@ -391,7 +393,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
              * <p>Set the watermarking parameters.</p>
              * 
              * <strong>example:</strong>
-             * <p>Tripartite embedding of Ticket</p>
+             * <p>ticket</p>
              */
             public Builder watermarkParam(String watermarkParam) {
                 this.watermarkParam = watermarkParam;

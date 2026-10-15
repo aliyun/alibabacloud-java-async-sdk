@@ -80,7 +80,7 @@ public class QueryUserListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -91,7 +91,7 @@ public class QueryUserListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination result of the user list is returned. The detailed information list of organization members is stored in the response parameter Data.</p>
+         * <p>The paginated result of the user list. The detailed information of organization members is stored in the Data response parameter.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,7 +99,7 @@ public class QueryUserListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
          * <li>true: The request was successful.</li>
          * <li>false: The request failed.</li>
@@ -302,7 +302,7 @@ public class QueryUserListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
+             * <p>The Alibaba Cloud account ID. For users who are not added through RAM self-service reading, the Alibaba Cloud account ID can be obtained only after they log on.</p>
              * 
              * <strong>example:</strong>
              * <p>1355********</p>
@@ -313,10 +313,10 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Alibaba Cloud account that corresponds to the member.</p>
+             * <p>The Alibaba Cloud account name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test user</p>
+             * <p>test</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -324,11 +324,12 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the organization administrator. Valid values:</p>
+             * <p>Indicates whether the organization administrator role is bound. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
+             * <p><notice>This parameter is deprecated. Use the RoleIdList parameter instead.</notice></p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -339,11 +340,12 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicate whether the RAM user is a permission administrator. Valid values:</p>
+             * <p>Indicates whether the permission management administrator role is attached. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
+             * <p><notice>This parameter is expired and no longer recommended. Use the RoleIdList parameter instead.</notice></p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -354,7 +356,13 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * CopilotModules.
+             * <p>The intelligent module quota of the user.</p>
+             * <ul>
+             * <li>qreport: Q report</li>
+             * <li>qExploreNum: Q explore edition</li>
+             * <li>smartQAskNum: Q data query</li>
+             * <li>smartQDevNum: Q builder</li>
+             * </ul>
              */
             public Builder copilotModules(java.util.List<String> copilotModules) {
                 this.copilotModules = copilotModules;
@@ -362,10 +370,10 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User status: </p>
+             * <p>The user status. Valid values: </p>
              * <ul>
-             * <li>Active - false </li>
-             * <li>Inactive - true</li>
+             * <li>false: activated</li>
+             * <li>true: deactivated</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -377,7 +385,7 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Join Date</p>
+             * <p>The date when the member joined the organization. This value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1718691704000</p>
@@ -388,7 +396,7 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last login time.</p>
+             * <p>The last logon time. This value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1718761320681</p>
@@ -402,7 +410,7 @@ public class QueryUserListResponseBody extends TeaModel {
              * <p>The nickname of the organization member.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test user</p>
+             * <p>test</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -410,7 +418,7 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of organization role IDs bound to the user.</p>
+             * <p>The list of organization role IDs bound to the user.</p>
              */
             public Builder roleIdList(java.util.List<Long> roleIdList) {
                 this.roleIdList = roleIdList;
@@ -418,7 +426,7 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UserID in the Quick BI.</p>
+             * <p>The user ID in Quick BI.</p>
              * 
              * <strong>example:</strong>
              * <p>fe67f61a35a94b7da1a34ba174a7****</p>
@@ -429,11 +437,11 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role type of the organization member. Valid values:</p>
+             * <p>The user type of the organization member. Valid values:</p>
              * <ul>
-             * <li>1 : developer</li>
-             * <li>2 : visitors</li>
-             * <li>3 : Analyst</li>
+             * <li>1: developer</li>
+             * <li>2: visitor</li>
+             * <li>3: analyst</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -543,7 +551,7 @@ public class QueryUserListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Returns the list of requested users.</p>
+             * <p>The list of users returned by the request.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -551,7 +559,7 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -562,7 +570,7 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows per page set when the interface is requested.</p>
+             * <p>The number of rows per page specified in the request.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -573,7 +581,7 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of rows in the table.</p>
+             * <p>The total number of rows.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -584,7 +592,7 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of pages returned.</p>
+             * <p>The total number of pages.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

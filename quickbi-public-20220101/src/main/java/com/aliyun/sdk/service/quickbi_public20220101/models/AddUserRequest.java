@@ -162,11 +162,10 @@ public class AddUserRequest extends Request {
         } 
 
         /**
-         * <p>Aliyun account ID.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * <blockquote>
-         * <p>Warning: For versions of Quick BI released after December 31, 2024, AccountId will be a required parameter. Please modify your API before this date.</p>
+         * <p>Warning: For Quick BI versions released after December 31, 2024, AccountId is a required parameter. Update your API calls before this date.</p>
          * </blockquote>
-         * <p>&lt;props=&quot;china&quot;&gt;Published only on the China site</p>
          * 
          * <strong>example:</strong>
          * <p>191476xxxxx23754</p>
@@ -178,10 +177,10 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * <p>Aliyun account name.</p>
+         * <p>The Alibaba Cloud account name.</p>
          * <ul>
-         * <li>Note: If it is a sub-account, the format should be &quot;primary account: sub-account&quot;. For example: <a href="mailto:master_test@aliyun.com">master_test@aliyun.com</a>:subaccount</li>
-         * <li>Format check: Maximum length of 50 characters.</li>
+         * <li>Note: For a RAM user, the format is &quot;primary account:RAM user&quot;. Example: <a href="mailto:master_test@aliyun.com">master_test@aliyun.com</a>:subaccount</li>
+         * <li>Format check: The maximum length is 50 characters.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,12 +193,12 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * <p>Whether to assign the organization administrator role. Value range: </p>
+         * <p>Specifies whether to assign the organization administrator role. Valid values: </p>
          * <ul>
-         * <li>true: Yes </li>
-         * <li>false: No</li>
+         * <li>true: Yes. </li>
+         * <li>false: No.</li>
          * </ul>
-         * <p><notice>This parameter is deprecated and not recommended for use. It is invalid when RoleIds is provided.</notice></p>
+         * <p><notice>This parameter is deprecated. When RoleIds is specified, this parameter does not take effect.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -211,12 +210,12 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * <p>Whether to assign the organization permission administrator role. Value range: </p>
+         * <p>Specifies whether to assign the organization permission management administrator role. Valid values: </p>
          * <ul>
-         * <li>true: Yes </li>
-         * <li>false: No</li>
+         * <li>true: Yes. </li>
+         * <li>false: No.</li>
          * </ul>
-         * <p><notice>This parameter is deprecated and not recommended for use. It is invalid when RoleIds is provided.</notice></p>
+         * <p><notice>This parameter has expired and is no longer recommended. When RoleIds is specified, this parameter does not take effect.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -228,7 +227,16 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * CopilotModules.
+         * <p>The intelligent module quotas of the user. Separate multiple modules with commas (,).</p>
+         * <ul>
+         * <li>qreport -- Small Q Report</li>
+         * <li>qExploreNum -- Small Q Explorer</li>
+         * <li>smartQAskNum -- Small Q Ask</li>
+         * <li>smartQDevNum -- Small Q Builder</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>qreport,qExploreNum</p>
          */
         public Builder copilotModules(String copilotModules) {
             this.putQueryParameter("CopilotModules", copilotModules);
@@ -237,15 +245,15 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * <p>Aliyun account nickname.</p>
+         * <p>The nickname of the Alibaba Cloud account.</p>
          * <ul>
-         * <li>Format check: Maximum length of 50 characters.</li>
-         * <li>Special format validation: Chinese and English characters, numbers, _ \ / | () ] [</li>
+         * <li>Format check: The maximum length is 50 characters.</li>
+         * <li>Special character validation: Chinese characters, English characters, digits, _ \ / | () ] [</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ddd</p>
+         * <p>John</p>
          */
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);
@@ -254,11 +262,11 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * <p>Preset or custom organization role IDs bound to the user, separated by commas, with a maximum of 3. Value range:</p>
+         * <p>The IDs of preset or custom organization roles to attach to the user, separated by commas (,). A maximum of three role IDs are supported. Valid values:</p>
          * <ul>
-         * <li>Organization Administrator (preset role): 111111111</li>
-         * <li>Permission Administrator (preset role): 111111112</li>
-         * <li>Regular User (preset role): 111111113</li>
+         * <li>Organization administrator (preset role): 111111111</li>
+         * <li>Permission management administrator (preset role): 111111112</li>
+         * <li>Common user (preset role): 111111113</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,11 +279,11 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * <p>The user type of the organization member. Value range:</p>
+         * <p>The user type of the organization member. Valid values:</p>
          * <ul>
-         * <li>1: Developer</li>
-         * <li>2: Visitor</li>
-         * <li>3: Analyst</li>
+         * <li>1: Developer.</li>
+         * <li>2: Visitor.</li>
+         * <li>3: Analyst.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

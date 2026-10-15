@@ -158,7 +158,10 @@ public class CreateWorkspaceRequest extends Request {
         } 
 
         /**
-         * AllowPublish.
+         * <p>Specifies whether reports in the workspace can be made public. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowPublish(Boolean allowPublish) {
             this.putQueryParameter("AllowPublish", allowPublish);
@@ -167,7 +170,10 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * AllowShare.
+         * <p>Specifies whether reports in the workspace can be shared. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowShare(Boolean allowShare) {
             this.putQueryParameter("AllowShare", allowShare);
@@ -176,7 +182,10 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * AllowViewAll.
+         * <p>Specifies whether the workspace is in collaboration mode. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowViewAll(Boolean allowViewAll) {
             this.putQueryParameter("AllowViewAll", allowViewAll);
@@ -185,7 +194,10 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * DefaultShareToAll.
+         * <p>Specifies whether to grant read permissions on the works in the workspace to all workspace members by default. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder defaultShareToAll(Boolean defaultShareToAll) {
             this.putQueryParameter("DefaultShareToAll", defaultShareToAll);
@@ -194,7 +206,10 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * OnlyAdminCreateDatasource.
+         * <p>Specifies whether only administrators can create data sources in the workspace. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder onlyAdminCreateDatasource(Boolean onlyAdminCreateDatasource) {
             this.putQueryParameter("OnlyAdminCreateDatasource", onlyAdminCreateDatasource);
@@ -203,7 +218,10 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * UseComment.
+         * <p>Specifies whether to use table remarks when you create a dataset in the workspace. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useComment(Boolean useComment) {
             this.putQueryParameter("UseComment", useComment);
@@ -212,7 +230,10 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * WorkspaceDescription.
+         * <p>The description of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder workspaceDescription(String workspaceDescription) {
             this.putQueryParameter("WorkspaceDescription", workspaceDescription);
@@ -221,7 +242,11 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putQueryParameter("WorkspaceName", workspaceName);

@@ -257,7 +257,7 @@ public class ListDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Owner&quot;s nickname.</p>
+             * <p>Owner\&quot;s nickname.</p>
              * 
              * <strong>example:</strong>
              * <p>system</p>

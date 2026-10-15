@@ -80,7 +80,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -91,7 +91,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned organization user information.</p>
+         * <p>The organization user information returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,7 +99,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
          * <li>true: The request was successful.</li>
          * <li>false: The request failed.</li>
@@ -302,7 +302,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
+             * <p>The Alibaba Cloud account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>135****5848</p>
@@ -313,7 +313,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Alibaba Cloud account that corresponds to the member.</p>
+             * <p>The Alibaba Cloud account name.</p>
              * 
              * <strong>example:</strong>
              * <p>1386587****@163.com</p>
@@ -324,11 +324,12 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether you are an administrator of the organization. Valid values:</p>
+             * <p>Indicates whether the user is an organization administrator. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
+             * <p><notice>This parameter is deprecated. Use the RoleIdList parameter instead.</notice></p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -339,11 +340,12 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether you are a permission administrator. Valid values:</p>
+             * <p>Indicates whether the user has the permission management administrator role attached. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
+             * <p><notice>This parameter has expired and is no longer recommended. Use the RoleIList parameter instead.</notice></p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -354,7 +356,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * CopilotModules.
+             * <p>The intelligent quota owned by the user.</p>
              */
             public Builder copilotModules(java.util.List<String> copilotModules) {
                 this.copilotModules = copilotModules;
@@ -362,7 +364,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email address of the user.</p>
+             * <p>The email address.</p>
              * 
              * <strong>example:</strong>
              * <p>1386587****@163.com</p>
@@ -373,7 +375,14 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * IsDeleted.
+             * <p>Indicates whether the user is disabled. Valid values:</p>
+             * <ul>
+             * <li>true: Disabled.</li>
+             * <li>false: Active.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDeleted(Boolean isDeleted) {
                 this.isDeleted = isDeleted;
@@ -381,7 +390,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nickname of the account.</p>
+             * <p>The nickname.</p>
              * 
              * <strong>example:</strong>
              * <p>Test user</p>
@@ -392,7 +401,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phone number of the alert contact.</p>
+             * <p>The phone number.</p>
              * 
              * <strong>example:</strong>
              * <p>1386587****</p>
@@ -403,7 +412,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * RoleIdList.
+             * <p>The list of organization role IDs bound to the user.</p>
              */
             public Builder roleIdList(java.util.List<Long> roleIdList) {
                 this.roleIdList = roleIdList;
@@ -411,7 +420,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UserID in the Quick BI.</p>
+             * <p>The UserID in Quick BI.</p>
              * 
              * <strong>example:</strong>
              * <p>fe67f61a35a94b7da1a34ba174a7****</p>
@@ -422,11 +431,11 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role type of the organization member. Valid values:</p>
+             * <p>The user type of the organization member. Valid values:</p>
              * <ul>
-             * <li>1 : developer</li>
-             * <li>2 : visitors</li>
-             * <li>3 : Analyst</li>
+             * <li>1: Developer.</li>
+             * <li>2: Viewer.</li>
+             * <li>3: Analyst.</li>
              * </ul>
              * 
              * <strong>example:</strong>

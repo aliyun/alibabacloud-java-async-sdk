@@ -134,6 +134,7 @@ public class UpdateCubeBySqlRequest extends Request {
         } 
 
         /**
+         * <p>The dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +147,7 @@ public class UpdateCubeBySqlRequest extends Request {
         }
 
         /**
+         * <p>The custom SQL statement.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class UpdateCubeBySqlRequest extends Request {
         }
 
         /**
+         * <p>The data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +173,16 @@ public class UpdateCubeBySqlRequest extends Request {
         }
 
         /**
-         * Placeholders.
+         * <p>The placeholder parameters. For more information, see the supplementary description below.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *     {
+         *         &quot;name&quot;: &quot;test&quot;,
+         *         &quot;style&quot;: &quot;placeholder&quot;,
+         *         &quot;type&quot;: &quot;string&quot;
+         *     }
+         * ]</p>
          */
         public Builder placeholders(String placeholders) {
             this.putQueryParameter("Placeholders", placeholders);
@@ -179,6 +191,7 @@ public class UpdateCubeBySqlRequest extends Request {
         }
 
         /**
+         * <p>The user ID of a Quick BI user who has permissions to create datasets. This is not your Alibaba Cloud account ID. You can call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=api-workbench.api_explorer.0.0.672f50daGq9ooV&params=%7B%7D&tab=DOC&sdkStyle=old&RegionId=cn-hangzhou">QueryUserInfoByAccount</a> operation to obtain the user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +204,7 @@ public class UpdateCubeBySqlRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

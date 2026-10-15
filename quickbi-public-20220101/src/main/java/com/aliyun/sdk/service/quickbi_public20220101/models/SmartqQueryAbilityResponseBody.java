@@ -81,7 +81,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D787E1A3-A************2B05DF8D885</p>
@@ -92,7 +92,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -100,7 +100,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the operation was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Column tuple name.</p>
+             * <p>The column tuple name.</p>
              * 
              * <strong>example:</strong>
              * <p>Polar***STPS</p>
@@ -194,7 +194,14 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The metadata row or column type.</p>
+             * <ul>
+             * <li>Dimension: dimension</li>
+             * <li>Measure: measure</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Dimension</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -202,7 +209,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Column tuple type.</p>
+             * <p>The column tuple type.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -259,7 +266,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Data values for each row.</p>
+             * <p>The data values for each row.</p>
              */
             public Builder row(java.util.List<String> row) {
                 this.row = row;
@@ -378,7 +385,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Suggested chart type.</p>
+             * <p>The suggested chart type.</p>
              * 
              * <strong>example:</strong>
              * <p>NEW_TABLE</p>
@@ -389,10 +396,10 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Summary information.</p>
+             * <p>The summary information.</p>
              * 
              * <strong>example:</strong>
-             * <p>Schedule</p>
+             * <p>test</p>
              */
             public Builder conclusionText(String conclusionText) {
                 this.conclusionText = conclusionText;
@@ -400,7 +407,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             }
 
             /**
-             * DataList.
+             * <p>The data list returned only in multi-step scenarios. Each element corresponds to a chart dataset.</p>
              */
             public Builder dataList(java.util.List<String> dataList) {
                 this.dataList = dataList;
@@ -408,7 +415,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Visualized logical SQL.</p>
+             * <p>The visualization logic SQL.</p>
              * 
              * <strong>example:</strong>
              * <p>select * ****</p>
@@ -419,7 +426,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of column tuple types.</p>
+             * <p>The list of column tuple types.</p>
              */
             public Builder metaType(java.util.List<MetaType> metaType) {
                 this.metaType = metaType;
@@ -427,7 +434,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Array of data value lists.</p>
+             * <p>The array of data value lists.</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;

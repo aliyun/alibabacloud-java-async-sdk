@@ -212,7 +212,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
              * <p>The name of the directory.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test directory</p>
+             * <p>测试目录</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -220,7 +220,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hierarchical structure of the directory ID, which is separated with &quot;/&quot;.</p>
+             * <p>The hierarchical structure of the directory ID, which is separated with \&quot;/\&quot;.</p>
              * 
              * <strong>example:</strong>
              * <p>e4276ea5-b232-4fb1-8f0f-efcee4a2****</p>
@@ -231,10 +231,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hierarchical structure of the directory name, which is separated with &quot;/&quot;.</p>
+             * <p>The hierarchical structure of the directory name, which is separated with \&quot;/\&quot;.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test directory</p>
+             * <p>测试目录</p>
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -484,7 +484,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
              * <p>Remarks on the work.</p>
              * 
              * <strong>example:</strong>
-             * <p>Description</p>
+             * <p>备注</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -503,7 +503,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
              * <p>The name of the Alibaba Cloud account to which the modifier belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>Li Si</p>
+             * <p>李四</p>
              */
             public Builder modifyName(String modifyName) {
                 this.modifyName = modifyName;
@@ -536,7 +536,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
              * <p>The Alibaba Cloud account name of the owner.</p>
              * 
              * <strong>example:</strong>
-             * <p>Tom</p>
+             * <p>张三</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -603,7 +603,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
              * <p>The name of the work.</p>
              * 
              * <strong>example:</strong>
-             * <p>Company Region Table</p>
+             * <p>公司地区表</p>
              */
             public Builder workName(String workName) {
                 this.workName = workName;
@@ -653,7 +653,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
              * <p>The name of the workspace to which the work belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test Workspace</p>
+             * <p>测试工作空间</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

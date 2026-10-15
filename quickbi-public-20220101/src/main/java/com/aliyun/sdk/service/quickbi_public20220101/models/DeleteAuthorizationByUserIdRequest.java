@@ -90,6 +90,7 @@ public class DeleteAuthorizationByUserIdRequest extends Request {
         } 
 
         /**
+         * <p>The Quick BI user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteAuthorizationByUserIdRequest extends Request {
         }
 
         /**
+         * <p>The resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,17 @@ public class DeleteAuthorizationByUserIdRequest extends Request {
         }
 
         /**
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>dashboard: dashboard</li>
+         * <li>report: workbook</li>
+         * <li>dashboardOfflineQuery: self-service data retrieval</li>
+         * <li>cube: dataset</li>
+         * <li>datasource: data source</li>
+         * <li>screen: data dashboard</li>
+         * <li>ANALYSIS: ad hoc analysis</li>
+         * <li>dataForm: data entry form</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

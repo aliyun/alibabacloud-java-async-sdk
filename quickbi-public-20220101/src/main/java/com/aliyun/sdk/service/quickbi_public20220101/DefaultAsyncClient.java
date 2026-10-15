@@ -30,18 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "quickbi-public";
         this.version = "2022-01-01";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("ap-northeast-1", "quickbi-public.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "quickbi-public.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "quickbi-public.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "quickbi-public.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "quickbi-public.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "quickbi-public.cn-hongkong.aliyuncs.com"),
-            new TeaPair("us-east-1", "quickbi-public.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "quickbi-public.eu-central-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "quickbi-public.me-central-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "quickbi-public.cn-shanghai-finance-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -53,7 +42,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <strong>Upgrade</strong>.\n</p>
+     * <p>This API operation supports only the new row-level permission model in Quick BI. If you are using the previous row-level permission model, you must migrate to the new model before you call this operation. To migrate, go to Organization Management &gt; Security Settings &gt; Upgrade Row-level Permissions, and then click <strong>One-click Upgrade</strong>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of AddDataLevelPermissionRuleUsers  AddDataLevelPermissionRuleUsersRequest
@@ -75,7 +64,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>ROW_LEVEL</p>
+     * <blockquote>
+     * <p>This API operation supports only the new permission model for row-level and column-level permissions in Quick BI. If you are using the old permission model, you must migrate to the new one before you call this operation. To perform a one-click migration, you can go to Organization Management &gt; Security Configuration &gt; Upgrade to New Row-level and Column-level Permissions and click <strong>One-click Upgrade</strong>.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of AddDataLevelPermissionWhiteList  AddDataLevelPermissionWhiteListRequest
      * @return AddDataLevelPermissionWhiteListResponse
@@ -493,7 +484,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For detailed usage, please refer to <a href="https://help.aliyun.com/document_detail/391291.html">Report Embedding Data Permission Control and Parameter Passing Security Enhancement Solution</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/391291.html">Security enhancement for data permission control and parameter passing in embedded reports</a>.</p>
      * 
      * @param request the request parameters of CreateTicket  CreateTicketRequest
      * @return CreateTicketResponse
@@ -658,7 +649,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>{&quot;ruleId&quot;:&quot;a5bb24da-<em><strong>-a891683e14da&quot;,&quot;cubeId&quot;:&quot;7c7223ae-</strong></em>-3c744528014b&quot;,&quot;delModel&quot;:{&quot;userGroups&quot;:[&quot;0d5fb19b-<em><strong>-1248fc27ca51&quot;,&quot;3d2c23d4-</strong></em>-f6390f325c2d&quot;],&quot;users&quot;:[&quot;4334<em><strong>358&quot;,&quot;Huang</strong></em>3fa822&quot;]}}</p>
+     * <blockquote>
+     * <p>This API supports only the new row-level permission model of Quick BI. If you use the old row-level permissions, you must migrate to the new model before you call this API. To migrate, go to Organization Management &gt; Security Settings &gt; Upgrade to New Row-level Permissions and click <strong>One-click Upgrade</strong>.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of DeleteDataLevelPermissionRuleUsers  DeleteDataLevelPermissionRuleUsersRequest
      * @return DeleteDataLevelPermissionRuleUsersResponse
@@ -679,7 +672,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
+     * <blockquote>
+     * <p>This operation supports only the new Quick BI row-level permission model. If you are using the old model, you must upgrade before you call this operation. To upgrade, go to Organization Management &gt; Security Configurations &gt; Upgrade Row-level Permissions and click <strong>Upgrade Now</strong>.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of DeleteDataLevelRuleConfig  DeleteDataLevelRuleConfigRequest
      * @return DeleteDataLevelRuleConfigResponse
@@ -952,7 +947,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/409330.html">Create an API data source</a>.</p>
+     * <p>For more information about the parameter description, see <a href="https://help.aliyun.com/document_detail/409330.html">Create an API data source.</a></p>
      * 
      * @param request the request parameters of ListApiDatasource  ListApiDatasourceRequest
      * @return ListApiDatasourceResponse
@@ -966,6 +961,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListApiDatasourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAuthConfigByResource  ListAuthConfigByResourceRequest
+     * @return ListAuthConfigByResourceResponse
+     */
+    @Override
+    public CompletableFuture<ListAuthConfigByResourceResponse> listAuthConfigByResource(ListAuthConfigByResourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAuthConfigByResource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAuthConfigByResourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAuthConfigByResourceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1033,7 +1046,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This API only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. To migrate to the new row and column permission model, follow these steps: In Organization Management -&gt; Security Configuration -&gt; Upgrade Row and Column Permissions, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * <p>: This operation supports only the new row and column permission model of Quick BI. If you are still using the legacy row and column permissions, migrate to the new model before calling this operation. To migrate to the new row and column permission model: In Organization Management &gt; Security Configuration &gt; Row and Column Permission Upgrade, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListDataLevelPermissionWhiteList  ListDataLevelPermissionWhiteListRequest
@@ -1527,12 +1540,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h3>Prerequisites</h3>
-     * <p>You need to create a data service API through Quick BI\&quot;s data service. For more details, see: <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</p>
-     * <h3>Usage Restrictions</h3>
+     * <p>Create an API in <a href="https://help.aliyun.com/document_detail/144980.html">DataService Studio</a> before calling this operation.</p>
+     * <h3>Limits</h3>
      * <ul>
-     * <li>The data service feature is only available to professional edition customers.</li>
-     * <li>The timeout for data service API calls is 60s, and the QPS for a single API is 10 times/second.</li>
-     * <li>If row-level permissions are enabled on the dataset referenced by the data service API, the API call will also be intercepted by the row-level permission policy.</li>
+     * <li>Requires Quick BI Professional Edition.</li>
+     * <li>API call timeout: 60s. QPS limit per API: 10.</li>
+     * <li>Row-level permissions on the referenced dataset also apply to API calls.</li>
      * </ul>
      * 
      * @param request the request parameters of QueryData  QueryDataRequest
@@ -1616,7 +1629,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).</p>
+     * <p>The response includes the data source, directory, and a dataset model containing dimensions, measures, physical fields, custom SQL text, and relationships.</p>
      * 
      * @param request the request parameters of QueryDatasetDetailInfo  QueryDatasetDetailInfoRequest
      * @return QueryDatasetDetailInfoResponse
@@ -2342,7 +2355,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Used for batch management of smart Q&amp;A authorizations. Repeatedly adding an authorization will be treated as a new addition; repeatedly deleting an authorization will be skipped by default and will not be recorded in the audit log.</p>
+     * <p>Manages authorizations for Intelligent Q\&amp;A in batches. Granting an existing authorization is treated as a new grant operation. By default, an attempt to delete an authorization that does not exist is skipped and no audit log is recorded.</p>
      * 
      * @param request the request parameters of SmartqAuthorize  SmartqAuthorizeRequest
      * @return SmartqAuthorizeResponse
@@ -2363,7 +2376,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Special Note: When a user is authorized to call this API, it is assumed that the user has the permission to query the corresponding data by passing in the userId as that user.</p>
+     * <p>Note: When a user is authorized to call this API, the user can query data as a specified user by passing in the userId parameter.</p>
      * 
      * @param request the request parameters of SmartqQueryAbility  SmartqQueryAbilityRequest
      * @return SmartqQueryAbilityResponse
@@ -2401,6 +2414,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateAuthorizationAttributes  UpdateAuthorizationAttributesRequest
+     * @return UpdateAuthorizationAttributesResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAuthorizationAttributesResponse> updateAuthorizationAttributes(UpdateAuthorizationAttributesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAuthorizationAttributes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAuthorizationAttributesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAuthorizationAttributesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateCubeBySql  UpdateCubeBySqlRequest
      * @return UpdateCubeBySqlResponse
      */
@@ -2420,11 +2451,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The execution result of the interface. Valid values:</p>
-     * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
-     * </ul>
+     * <blockquote>
+     * <p>This API operation supports only the new row-level and column-level permission model in Quick BI. If you are using the old permission model, you must migrate to the new model before calling this operation. To migrate, navigate to Organization Management &gt; Security Configuration &gt; Upgrade to New Row-level and Column-level Permissions, and then click <strong>One-click Upgrade</strong>.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of UpdateDataLevelPermissionStatus  UpdateDataLevelPermissionStatusRequest
      * @return UpdateDataLevelPermissionStatusResponse

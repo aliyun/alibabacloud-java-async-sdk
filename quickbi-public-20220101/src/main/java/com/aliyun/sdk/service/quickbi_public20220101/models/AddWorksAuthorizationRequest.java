@@ -134,6 +134,11 @@ public class AddWorksAuthorizationRequest extends Request {
         } 
 
         /**
+         * <p>The permissions to grant. Valid values:</p>
+         * <p><code>1</code>: View</p>
+         * <p><code>3</code>: View and Export</p>
+         * <p><code>11</code>: Edit, View, and Export</p>
+         * <p><strong>Note</strong>: If AuthPoints is set to 11, the authorization is permanent and the ExpireDay parameter is ignored.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +151,17 @@ public class AddWorksAuthorizationRequest extends Request {
         }
 
         /**
+         * <p>The type of the principal. Valid values:</p>
+         * <ul>
+         * <li><p><code>0</code>: User. Set AuthorizedId to the user ID.</p>
+         * </li>
+         * <li><p><code>1</code>: User group. Set AuthorizedId to the user group ID.</p>
+         * </li>
+         * <li><p><code>2</code>: All members of an organization. Set AuthorizedId to the organization ID.</p>
+         * </li>
+         * <li><p><code>3</code>: All members of a workspace. Set AuthorizedId to the workspace ID.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +174,7 @@ public class AddWorksAuthorizationRequest extends Request {
         }
 
         /**
+         * <p>The ID of the principal to be authorized. The AuthorizeScope parameter specifies the type of principal.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +187,12 @@ public class AddWorksAuthorizationRequest extends Request {
         }
 
         /**
-         * ExpireDay.
+         * <p>The expiration date for the permissions.</p>
+         * <p>Format: <code>YYYY-MM-DD</code>.</p>
+         * <p><strong>Note</strong>: This parameter is required if AuthPoints is not 11. The authorization must be valid for at least one day after the authorization date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2099-12-31</p>
          */
         public Builder expireDay(String expireDay) {
             this.putQueryParameter("ExpireDay", expireDay);
@@ -179,6 +201,7 @@ public class AddWorksAuthorizationRequest extends Request {
         }
 
         /**
+         * <p>The ID of the work.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +214,25 @@ public class AddWorksAuthorizationRequest extends Request {
         }
 
         /**
+         * <p>The type of the work. Valid values:</p>
+         * <ul>
+         * <li><p><code>dashboard</code>: A dashboard.</p>
+         * </li>
+         * <li><p><code>report</code>: A report.</p>
+         * </li>
+         * <li><p><code>dashboardOfflineQuery</code>: An ad-hoc query.</p>
+         * </li>
+         * <li><p><code>cube</code>: A dataset.</p>
+         * </li>
+         * <li><p><code>datasource</code>: A data source.</p>
+         * </li>
+         * <li><p><code>screen</code>: A data screen.</p>
+         * </li>
+         * <li><p><code>ANALYSIS</code>: An ad-hoc analysis.</p>
+         * </li>
+         * <li><p><code>dataForm</code>: A data form.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

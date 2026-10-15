@@ -159,11 +159,12 @@ public class UpdateUserRequest extends Request {
         } 
 
         /**
-         * <p>Indicates whether the organization administrator. Valid values:</p>
+         * <p>Specifies whether to assign the organization administrator role. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
+         * <p><notice>This parameter is deprecated. When RoleIds is specified, this parameter does not take effect.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -175,11 +176,12 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>Indicate whether the RAM user is a permission administrator. Valid values:</p>
+         * <p>Specifies whether to assign the organization permission management administrator role. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
+         * <p><notice>This parameter has expired and is not recommended. When RoleIds is specified, this parameter does not take effect.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -191,7 +193,32 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * CopilotModules.
+         * <p>The intelligent module quota modification information.</p>
+         * <p>Pass the parameter as a JSON array. Each array element contains the following fields:</p>
+         * <p>moduleType -- The intelligent module.</p>
+         * <ul>
+         * <li>smartQAskNum -- Smart Q question count.</li>
+         * <li>smartQDevNum -- Smart Q building.</li>
+         * <li>qreport -- Smart Q report.</li>
+         * <li>qExploreNum -- Smart Q exploration edition.</li>
+         * </ul>
+         * <p>status -- Specifies whether to enable the module.</p>
+         * <ul>
+         * <li>0 -- Revoke authorization.</li>
+         * <li>1 -- Grant authorization.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *     {
+         *         &quot;moduleType&quot;: &quot;smartQAskNum&quot;,
+         *         &quot;status&quot;: 1
+         *     },
+         *     {
+         *         &quot;moduleType&quot;: &quot;smartQDevNum&quot;,
+         *         &quot;status&quot;: 0
+         *     }
+         * ]</p>
          */
         public Builder copilotModules(String copilotModules) {
             this.putQueryParameter("CopilotModules", copilotModules);
@@ -200,10 +227,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>User status: </p>
+         * <p>The user status. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: Active</li>
-         * <li><strong>true</strong>: Inactive</li>
+         * <li><strong>false</strong>: Activated.</li>
+         * <li><strong>true</strong>: Deactivated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,14 +243,14 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The nickname of the account.</p>
+         * <p>The nickname.</p>
          * <ul>
-         * <li>Format check: The value can be up to 50 characters in length.</li>
-         * <li>Special format verification: Chinese and English digits_ \ / | () ] [</li>
+         * <li>Format check: The maximum length is 50 characters.</li>
+         * <li>Special format check: Chinese characters, English letters, digits, _ \ / | () ] [</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Xiao Zhang</p>
+         * <p>test</p>
          */
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);
@@ -232,7 +259,12 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the preset or custom organization roles bound to the user, separated by English commas &quot;,&quot;, with a maximum of 3. The value range is as follows: - Organization Administrator (preset role): 111111111 - Permission Administrator (preset role): 111111112 - Regular User (preset role): 111111113</p>
+         * <p>The IDs of preset or custom organization roles to attach to the user, separated by commas (,). A maximum of three role IDs are supported. Valid values:</p>
+         * <ul>
+         * <li>Organization administrator (preset role): 111111111</li>
+         * <li>Permission management administrator (preset role): 111111112</li>
+         * <li>Common user (preset role): 111111113</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>111111111,456</p>
@@ -244,7 +276,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user to be updated. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+         * <p>The ID of the user to update. This user ID is the Quick BI UserID, not the Alibaba Cloud UID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,11 +289,11 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The type of user who is a member of the organization. Valid values:</p>
+         * <p>The user type of the organization member. Valid values:</p>
          * <ul>
-         * <li>1 : developer</li>
-         * <li>2 : visitors</li>
-         * <li>3 : Analyst</li>
+         * <li>1: Developer.</li>
+         * <li>2: Visitor.</li>
+         * <li>3: Analyst.</li>
          * </ul>
          * 
          * <strong>example:</strong>

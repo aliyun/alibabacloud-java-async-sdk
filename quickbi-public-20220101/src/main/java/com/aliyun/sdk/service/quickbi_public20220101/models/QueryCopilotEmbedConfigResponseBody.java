@@ -373,10 +373,10 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Robot&quot;s nickname.</p>
+             * <p>Robot\&quot;s nickname.</p>
              * 
              * <strong>example:</strong>
-             * <p>little Q</p>
+             * <p>小Q</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -409,7 +409,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
              * <p>Nickname of the creator.</p>
              * 
              * <strong>example:</strong>
-             * <p>zhangsan</p>
+             * <p>诸葛</p>
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -439,7 +439,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
              * <p>Module name.</p>
              * 
              * <strong>example:</strong>
-             * <p>little Q</p>
+             * <p>小Q</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;

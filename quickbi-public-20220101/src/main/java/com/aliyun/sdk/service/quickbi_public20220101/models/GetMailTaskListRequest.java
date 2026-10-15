@@ -101,7 +101,16 @@ public class GetMailTaskListRequest extends Request {
         } 
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * <ul>
+         * <li><p>Starts from: 1</p>
+         * </li>
+         * <li><p>Default value: 1</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -110,7 +119,13 @@ public class GetMailTaskListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>Default value: 25</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -119,7 +134,10 @@ public class GetMailTaskListRequest extends Request {
         }
 
         /**
-         * Paused.
+         * <p>Specifies whether the tracking task is paused.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder paused(Boolean paused) {
             this.putQueryParameter("Paused", paused);
@@ -128,7 +146,10 @@ public class GetMailTaskListRequest extends Request {
         }
 
         /**
-         * UserNick.
+         * <p>The nickname of the user who owns the tracking task. If this parameter is not specified, all tasks are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder userNick(String userNick) {
             this.putQueryParameter("UserNick", userNick);

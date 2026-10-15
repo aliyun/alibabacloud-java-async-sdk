@@ -116,7 +116,10 @@ public class ListAccelerationOfWorkspaceRequest extends Request {
         } 
 
         /**
-         * CreatorId.
+         * <p>The user ID in Quick BI, not your Alibaba Cloud account ID. You can call the QueryUserInfoByAccount operation to obtain the user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1***************139</p>
          */
         public Builder creatorId(String creatorId) {
             this.putQueryParameter("CreatorId", creatorId);
@@ -125,7 +128,10 @@ public class ListAccelerationOfWorkspaceRequest extends Request {
         }
 
         /**
-         * CubeName.
+         * <p>The dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder cubeName(String cubeName) {
             this.putQueryParameter("CubeName", cubeName);
@@ -134,7 +140,10 @@ public class ListAccelerationOfWorkspaceRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -143,7 +152,11 @@ public class ListAccelerationOfWorkspaceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page for a paged query.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -152,6 +165,7 @@ public class ListAccelerationOfWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

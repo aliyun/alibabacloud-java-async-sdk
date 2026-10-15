@@ -115,10 +115,10 @@ public class GetWorksEmbedListRequest extends Request {
         } 
 
         /**
-         * <p>Report name (fuzzy match)</p>
+         * <p>The report name for fuzzy match.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Test dataset</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -127,7 +127,7 @@ public class GetWorksEmbedListRequest extends Request {
         }
 
         /**
-         * <p>Page number (defaults to 1 if empty)</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,7 +139,7 @@ public class GetWorksEmbedListRequest extends Request {
         }
 
         /**
-         * <p>Number of items per page (defaults to 10 if empty)</p>
+         * <p>The number of entries per page. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -151,14 +151,14 @@ public class GetWorksEmbedListRequest extends Request {
         }
 
         /**
-         * <p>Report type</p>
+         * <p>The report type. Valid values:</p>
          * <ul>
-         * <li>page, Dashboard</li>
-         * <li>screen, Data Screen</li>
-         * <li>report, Spreadsheet</li>
-         * <li>ANALYSIS, Ad-hoc Analysis</li>
-         * <li>dashboardOfflineQuery, Self-service Data Retrieval</li>
-         * <li>dataForm, Data Entry Form</li>
+         * <li>page: dashboard.</li>
+         * <li>screen: data screen.</li>
+         * <li>report: workbook.</li>
+         * <li>ANALYSIS: ad hoc analysis.</li>
+         * <li>dashboardOfflineQuery: self-service data retrieval.</li>
+         * <li>dataForm: data entry form.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class GetWorksEmbedListRequest extends Request {
         }
 
         /**
-         * <p>Workspace ID</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>919818-<em><strong>-</strong></em>**-wdasd</p>

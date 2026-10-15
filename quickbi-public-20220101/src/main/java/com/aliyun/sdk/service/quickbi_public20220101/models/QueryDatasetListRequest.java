@@ -130,7 +130,10 @@ public class QueryDatasetListRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The directory ID.</p>
+         * <ul>
+         * <li>If this parameter is specified, all datasets in the specified directory are returned.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>schemaad8aad00-9c55-4984-a767-b4e0ec60****</p>
@@ -142,10 +145,10 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * <p>Information about the directory where the dataset is located</p>
+         * <p>The keyword used to search for dataset names.</p>
          * 
          * <strong>example:</strong>
-         * <p>Queries the datasets of a specified workspace. The datasets are sorted in descending order by creation time.</p>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -154,7 +157,11 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The page number of the dataset list.</p>
+         * <ul>
+         * <li>Minimum value: 1</li>
+         * <li>Default value: 1</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -166,9 +173,10 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * <p>Specifies the directory ID.</p>
+         * <p>The number of rows per page for a paged query.</p>
          * <ul>
-         * <li>If this field is not empty, all datasets in the directory are obtained.</li>
+         * <li>Default value: 10</li>
+         * <li>Maximum value: 1000</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,7 +189,11 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * <p>The total number of pages returned.</p>
+         * <p>Specifies whether to recursively include datasets in subdirectories. Valid values:</p>
+         * <ul>
+         * <li>true: Returns datasets in all recursive subdirectories under the directory specified by directoryId.</li>
+         * <li>false: Returns only datasets in the directory specified by directoryId, excluding subdirectories.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -193,7 +205,7 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * <p>The name of the data source.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
