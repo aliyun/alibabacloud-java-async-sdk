@@ -119,7 +119,7 @@ public class CustomDomainResp extends TeaModel {
         } 
 
         /**
-         * certConfig.
+         * <p>The certificate configuration used by the domain name.</p>
          */
         public Builder certConfig(CertConfig certConfig) {
             this.certConfig = certConfig;
@@ -127,7 +127,7 @@ public class CustomDomainResp extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The creation time of the custom domain name.</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -135,7 +135,10 @@ public class CustomDomainResp extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the custom domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom domain name for the production cloud sandbox</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -143,7 +146,10 @@ public class CustomDomainResp extends TeaModel {
         }
 
         /**
-         * domainName.
+         * <p>The custom domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api.example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -151,7 +157,7 @@ public class CustomDomainResp extends TeaModel {
         }
 
         /**
-         * tlsConfig.
+         * <p>The TLS configuration used by the domain name.</p>
          */
         public Builder tlsConfig(TLSConfig tlsConfig) {
             this.tlsConfig = tlsConfig;
@@ -159,7 +165,7 @@ public class CustomDomainResp extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The last update time of the custom domain name.</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;

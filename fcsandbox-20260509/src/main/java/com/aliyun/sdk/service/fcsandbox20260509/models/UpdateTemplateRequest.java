@@ -99,7 +99,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The request struct for updating a template. Specify only the fields that you want to change.</p>
+         * <p>The request struct for updating a template. Specify only the fields to be updated.</p>
          */
         public Builder body(PublicUpdateTemplateInput body) {
             this.putBodyParameter("body", body);

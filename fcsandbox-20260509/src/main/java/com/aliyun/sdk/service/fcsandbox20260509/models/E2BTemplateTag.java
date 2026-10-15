@@ -80,7 +80,10 @@ public class E2BTemplateTag extends TeaModel {
         } 
 
         /**
-         * buildID.
+         * <p>The ID of the template build associated with the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>your-build-id</p>
          */
         public Builder buildID(String buildID) {
             this.buildID = buildID;
@@ -88,7 +91,10 @@ public class E2BTemplateTag extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The creation time of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01T00:00:00Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -96,7 +102,10 @@ public class E2BTemplateTag extends TeaModel {
         }
 
         /**
-         * tag.
+         * <p>The name of the template tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>staging</p>
          */
         public Builder tag(String tag) {
             this.tag = tag;

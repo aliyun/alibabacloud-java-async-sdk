@@ -59,7 +59,7 @@ public class CreateTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The request struct.</p>
+         * <p>The request structure.</p>
          */
         public Builder body(CreateTemplateInput body) {
             this.putBodyParameter("body", body);

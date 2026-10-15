@@ -236,7 +236,10 @@ public class E2BListedSandbox extends TeaModel {
         } 
 
         /**
-         * cpuCount.
+         * <p>The number of CPU cores used by the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = cpuCount;
@@ -244,7 +247,10 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * diskSizeMB.
+         * <p>The disk size of the sandbox, in MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder diskSizeMB(Integer diskSizeMB) {
             this.diskSizeMB = diskSizeMB;
@@ -252,7 +258,10 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * endAt.
+         * <p>The end time of the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01T01:00:00Z</p>
          */
         public Builder endAt(String endAt) {
             this.endAt = endAt;
@@ -260,7 +269,10 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * memoryMB.
+         * <p>The memory size of the sandbox, in MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder memoryMB(Integer memoryMB) {
             this.memoryMB = memoryMB;
@@ -268,7 +280,10 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * metadata.
+         * <p>The custom metadata of the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;team&quot;:&quot;data&quot;}</p>
          */
         public Builder metadata(java.util.Map<String, String> metadata) {
             this.metadata = metadata;
@@ -276,7 +291,10 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The ID of the resource group to which the sandbox belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwxqyrgwabcd</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -284,7 +302,10 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * sandboxID.
+         * <p>The ID of the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sbx-xxx</p>
          */
         public Builder sandboxID(String sandboxID) {
             this.sandboxID = sandboxID;
@@ -292,7 +313,10 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * startedAt.
+         * <p>The start time of the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01T00:00:00Z</p>
          */
         public Builder startedAt(String startedAt) {
             this.startedAt = startedAt;
@@ -300,7 +324,10 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * state.
+         * <p>The current status of the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -308,7 +335,10 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team to which the sandbox belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88a4c762-b0ce-4661-9413-578b2309e60f</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -316,7 +346,10 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * teamName.
+         * <p>The name of the team to which the sandbox belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-team</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -324,7 +357,10 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * teamPlan.
+         * <p>The plan of the team to which the sandbox belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pro</p>
          */
         public Builder teamPlan(String teamPlan) {
             this.teamPlan = teamPlan;
@@ -332,7 +368,10 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * templateID.
+         * <p>The ID of the template used to create the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>your-template-id</p>
          */
         public Builder templateID(String templateID) {
             this.templateID = templateID;
@@ -340,7 +379,10 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * templateName.
+         * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-template</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -348,7 +390,10 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * userID.
+         * <p>The ID of the user who created the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder userID(String userID) {
             this.userID = userID;

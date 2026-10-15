@@ -288,7 +288,10 @@ public class E2BListedTemplate extends TeaModel {
         } 
 
         /**
-         * buildStatus.
+         * <p>The build status of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ready</p>
          */
         public Builder buildStatus(String buildStatus) {
             this.buildStatus = buildStatus;
@@ -296,7 +299,7 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * category.
+         * <p>The category of the template.</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -304,7 +307,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * containerConfiguration.
+         * <p>The container image configuration of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;image&quot;:&quot;registry.cn-hangzhou.aliyuncs.com/demo/nginx:latest&quot;}</p>
          */
         public Builder containerConfiguration(ContainerConfiguration containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
@@ -312,7 +318,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * cpuCount.
+         * <p>The number of CPU cores configured for the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = cpuCount;
@@ -320,7 +329,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The time when the template was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01T00:00:00Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -328,7 +340,7 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * functionName.
+         * <p>The name of the Function Compute function corresponding to the template.</p>
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -336,7 +348,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * logConfiguration.
+         * <p>The log configuration of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;project&quot;:&quot;sandbox-project&quot;,&quot;logstore&quot;:&quot;sandbox-logstore&quot;}</p>
          */
         public Builder logConfiguration(LogConfiguration logConfiguration) {
             this.logConfiguration = logConfiguration;
@@ -344,7 +359,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * memoryMB.
+         * <p>The memory size configured for the template, in MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder memoryMB(Integer memoryMB) {
             this.memoryMB = memoryMB;
@@ -352,7 +370,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * names.
+         * <p>The list of template names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;my-template&quot;]</p>
          */
         public Builder names(java.util.List<String> names) {
             this.names = names;
@@ -360,7 +381,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * public.
+         * <p>Indicates whether the template is publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder _public(Boolean _public) {
             this._public = _public;
@@ -368,7 +392,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The ID of the resource group to which the template belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwxqyrgwabcd</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -376,7 +403,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * statusReason.
+         * <p>The reason for the build status of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Image pull failed</p>
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -384,7 +414,7 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The list of tags for the template.</p>
          */
         public Builder tags(java.util.List<E2BTemplateTag> tags) {
             this.tags = tags;
@@ -392,7 +422,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team to which the template belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88a4c762-b0ce-4661-9413-578b2309e60f</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -400,7 +433,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * teamName.
+         * <p>The name of the team to which the template belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-team</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -408,7 +444,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * teamPlan.
+         * <p>The plan of the team to which the template belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pro</p>
          */
         public Builder teamPlan(String teamPlan) {
             this.teamPlan = teamPlan;
@@ -416,7 +455,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * templateID.
+         * <p>The unique identifier of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>your-template-id</p>
          */
         public Builder templateID(String templateID) {
             this.templateID = templateID;
@@ -424,7 +466,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time when the template was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01T00:00:00Z</p>
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
@@ -432,7 +477,10 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * userID.
+         * <p>The ID of the user who created the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder userID(String userID) {
             this.userID = userID;

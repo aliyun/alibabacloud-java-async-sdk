@@ -38,6 +38,9 @@ public class PublicTemplateSandboxConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("startCommand")
     private String startCommand;
 
+    @com.aliyun.core.annotation.NameInMap("steps")
+    private java.util.List<PublicTemplateStep> steps;
+
     private PublicTemplateSandboxConfig(Builder builder) {
         this.acrInstanceId = builder.acrInstanceId;
         this.generation = builder.generation;
@@ -46,6 +49,7 @@ public class PublicTemplateSandboxConfig extends TeaModel {
         this.readyCommand = builder.readyCommand;
         this.registryConfig = builder.registryConfig;
         this.startCommand = builder.startCommand;
+        this.steps = builder.steps;
     }
 
     public static Builder builder() {
@@ -109,6 +113,13 @@ public class PublicTemplateSandboxConfig extends TeaModel {
         return this.startCommand;
     }
 
+    /**
+     * @return steps
+     */
+    public java.util.List<PublicTemplateStep> getSteps() {
+        return this.steps;
+    }
+
     public static final class Builder {
         private String acrInstanceId; 
         private Integer generation; 
@@ -117,6 +128,7 @@ public class PublicTemplateSandboxConfig extends TeaModel {
         private String readyCommand; 
         private PublicTemplateRegistryConfig registryConfig; 
         private String startCommand; 
+        private java.util.List<PublicTemplateStep> steps; 
 
         private Builder() {
         } 
@@ -129,10 +141,11 @@ public class PublicTemplateSandboxConfig extends TeaModel {
             this.readyCommand = model.readyCommand;
             this.registryConfig = model.registryConfig;
             this.startCommand = model.startCommand;
+            this.steps = model.steps;
         } 
 
         /**
-         * <p>The ACR Enterprise instance ID.</p>
+         * <p>The ID of the ACR Enterprise instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-abcd1234efgh</p>
@@ -143,7 +156,7 @@ public class PublicTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * <p>The sandbox generation. A value of 1 indicates the first-generation sandbox. A value of 2 indicates the second-generation sandbox.</p>
+         * <p>The sandbox generation. A value of 1 indicates the first-generation sandbox, and a value of 2 indicates the second-generation sandbox.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -202,6 +215,14 @@ public class PublicTemplateSandboxConfig extends TeaModel {
          */
         public Builder startCommand(String startCommand) {
             this.startCommand = startCommand;
+            return this;
+        }
+
+        /**
+         * <p>The list of custom build steps.</p>
+         */
+        public Builder steps(java.util.List<PublicTemplateStep> steps) {
+            this.steps = steps;
             return this;
         }
 

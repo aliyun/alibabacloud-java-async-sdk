@@ -80,7 +80,10 @@ public class ContainerConfiguration extends TeaModel {
         } 
 
         /**
-         * acrInstanceId.
+         * <p>The ID of the ACR Enterprise instance to which the container image belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-abcd1234efgh</p>
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.acrInstanceId = acrInstanceId;
@@ -88,7 +91,10 @@ public class ContainerConfiguration extends TeaModel {
         }
 
         /**
-         * image.
+         * <p>The container image address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-hangzhou.aliyuncs.com/demo/nginx:latest</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -96,7 +102,10 @@ public class ContainerConfiguration extends TeaModel {
         }
 
         /**
-         * registryCredential.
+         * <p>The repository credentials used to pull private images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;username&quot;:&quot;registry-user&quot;,&quot;password&quot;:&quot;******&quot;}</p>
          */
         public Builder registryCredential(RegistryCredential registryCredential) {
             this.registryCredential = registryCredential;
@@ -162,7 +171,10 @@ public class ContainerConfiguration extends TeaModel {
             } 
 
             /**
-             * password.
+             * <p>The password of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -170,7 +182,10 @@ public class ContainerConfiguration extends TeaModel {
             }
 
             /**
-             * username.
+             * <p>The username of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-user</p>
              */
             public Builder username(String username) {
                 this.username = username;

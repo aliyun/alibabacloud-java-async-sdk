@@ -104,7 +104,10 @@ public class UpdateTeamInput extends TeaModel {
         }
 
         /**
-         * plan.
+         * <p>The plan used by the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pro</p>
          */
         public Builder plan(String plan) {
             this.plan = plan;

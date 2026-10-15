@@ -93,7 +93,7 @@ public class UpdateTemplateInput extends TeaModel {
         } 
 
         /**
-         * containerConfiguration.
+         * <p>The container image configuration of the template.</p>
          */
         public Builder containerConfiguration(ContainerConfiguration containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
@@ -101,7 +101,7 @@ public class UpdateTemplateInput extends TeaModel {
         }
 
         /**
-         * logConfiguration.
+         * <p>The Log Service configuration of the template.</p>
          */
         public Builder logConfiguration(LogConfiguration logConfiguration) {
             this.logConfiguration = logConfiguration;
@@ -109,7 +109,7 @@ public class UpdateTemplateInput extends TeaModel {
         }
 
         /**
-         * networkConfiguration.
+         * <p>The VPC configuration of the template.</p>
          */
         public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
@@ -117,7 +117,10 @@ public class UpdateTemplateInput extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team to which the template belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;

@@ -93,7 +93,10 @@ public class CreateTemplateCacheResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CreateTemplateCacheResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class CreateTemplateCacheResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class CreateTemplateCacheResponseBody extends TeaModel {
         }
 
         /**
-         * templateCache.
+         * <p>The template cache object.</p>
          */
         public Builder templateCache(PublicTemplateCache templateCache) {
             this.templateCache = templateCache;

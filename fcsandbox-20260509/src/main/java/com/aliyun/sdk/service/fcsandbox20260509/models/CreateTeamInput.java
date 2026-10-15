@@ -96,7 +96,7 @@ public class CreateTeamInput extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Development only</p>
+         * <p>For development only</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -104,7 +104,10 @@ public class CreateTeamInput extends TeaModel {
         }
 
         /**
-         * plan.
+         * <p>The plan used by the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pro</p>
          */
         public Builder plan(String plan) {
             this.plan = plan;

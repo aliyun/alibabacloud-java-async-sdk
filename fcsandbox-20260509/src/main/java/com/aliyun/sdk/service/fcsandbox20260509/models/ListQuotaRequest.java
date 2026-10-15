@@ -73,7 +73,7 @@ public class ListQuotaRequest extends Request {
         } 
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of results per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -85,7 +85,7 @@ public class ListQuotaRequest extends Request {
         }
 
         /**
-         * <p>The pagination token used to retrieve more results. You do not need to specify this parameter for the first request. For subsequent requests, use the token obtained from the previous response.</p>
+         * <p>The pagination token used to retrieve more results. You do not need to specify this parameter for the first query. You can obtain the token for subsequent queries from the response.</p>
          * 
          * <strong>example:</strong>
          * <p>Trigger_fasdatalake_deductionfee</p>

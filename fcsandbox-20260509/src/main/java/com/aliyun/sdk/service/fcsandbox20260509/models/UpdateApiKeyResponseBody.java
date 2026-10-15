@@ -119,7 +119,7 @@ public class UpdateApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>API Key。</p>
+         * <p>The API key.</p>
          * 
          * <strong>example:</strong>
          * <p>asdfjoY87-9IUHH</p>
@@ -141,7 +141,7 @@ public class UpdateApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * ipBlacklist.
+         * <p>The list of IP addresses blocked from using the API key.</p>
          */
         public Builder ipBlacklist(java.util.List<IPConfig> ipBlacklist) {
             this.ipBlacklist = ipBlacklist;
@@ -149,7 +149,7 @@ public class UpdateApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * ipWhitelist.
+         * <p>The list of IP addresses allowed to use the API key.</p>
          */
         public Builder ipWhitelist(java.util.List<IPConfig> ipWhitelist) {
             this.ipWhitelist = ipWhitelist;

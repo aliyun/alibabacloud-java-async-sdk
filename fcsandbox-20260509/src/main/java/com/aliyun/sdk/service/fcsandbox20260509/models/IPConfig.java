@@ -67,7 +67,10 @@ public class IPConfig extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>The description of the IP configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>应用固定出口</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -75,7 +78,10 @@ public class IPConfig extends TeaModel {
         }
 
         /**
-         * ipAddress.
+         * <p>The IP address or CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.0.113.10</p>
          */
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = ipAddress;

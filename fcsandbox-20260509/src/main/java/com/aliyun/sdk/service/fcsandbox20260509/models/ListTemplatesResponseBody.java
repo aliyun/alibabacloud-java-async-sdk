@@ -130,7 +130,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries to return.</p>
+         * <p>The maximum number of results to return.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -152,7 +152,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page.</p>
+         * <p>The next page token.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJNYXhSZXN1bHRzIjoxMH0=</p>

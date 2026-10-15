@@ -171,7 +171,7 @@ public class E2BTeam extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the team name can be modified.</p>
+         * <p>Specifies whether the team name can be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -182,7 +182,7 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * <p>The time when the team was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-23T11:26:25Z</p>
@@ -204,7 +204,10 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * plan.
+         * <p>The plan used by the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pro</p>
          */
         public Builder plan(String plan) {
             this.plan = plan;
@@ -212,7 +215,7 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * readOnly.
+         * <p>Specifies whether the team is read-only.</p>
          */
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = readOnly;
@@ -220,7 +223,7 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmwxqyrgwabcd</p>
@@ -231,7 +234,7 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * <p>The status of the team.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>

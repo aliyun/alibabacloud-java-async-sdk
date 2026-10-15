@@ -106,7 +106,7 @@ public class CreateApiKeyInput extends TeaModel {
         } 
 
         /**
-         * <p>The API key name.</p>
+         * <p>The name of the API key.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -128,7 +128,7 @@ public class CreateApiKeyInput extends TeaModel {
         }
 
         /**
-         * ipBlacklist.
+         * <p>The list of IP addresses that are blocked from using the API key.</p>
          */
         public Builder ipBlacklist(java.util.List<IPConfig> ipBlacklist) {
             this.ipBlacklist = ipBlacklist;
@@ -136,7 +136,7 @@ public class CreateApiKeyInput extends TeaModel {
         }
 
         /**
-         * ipWhitelist.
+         * <p>The list of IP addresses that are allowed to use the API key.</p>
          */
         public Builder ipWhitelist(java.util.List<IPConfig> ipWhitelist) {
             this.ipWhitelist = ipWhitelist;

@@ -273,7 +273,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The masked display value of the API key.</p>
+         * <p>The display value of the API key.</p>
          * 
          * <strong>example:</strong>
          * <p>e2b_xxxx****xxxx</p>
@@ -306,7 +306,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The time when the API key was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-13T08:27:20Z</p>
@@ -328,7 +328,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * ipBlacklist.
+         * <p>The list of IP addresses that are prohibited from using the API key.</p>
          */
         public Builder ipBlacklist(java.util.List<IPConfig> ipBlacklist) {
             this.ipBlacklist = ipBlacklist;
@@ -336,7 +336,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * ipWhitelist.
+         * <p>The list of IP addresses that are allowed to use the API key.</p>
          */
         public Builder ipWhitelist(java.util.List<IPConfig> ipWhitelist) {
             this.ipWhitelist = ipWhitelist;
@@ -344,7 +344,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The time when the API key was last used.</p>
+         * <p>The last used time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-14T08:27:20Z</p>
@@ -355,7 +355,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmwxqyrgwabcd</p>
@@ -366,7 +366,7 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The source of the API key.</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -403,7 +403,7 @@ public class ApiKey extends TeaModel {
          * <p>The name of the team.</p>
          * 
          * <strong>example:</strong>
-         * <p>Development Team</p>
+         * <p>Development team</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -411,7 +411,10 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * teamPlan.
+         * <p>The plan of the team to which the API key belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pro</p>
          */
         public Builder teamPlan(String teamPlan) {
             this.teamPlan = teamPlan;

@@ -130,7 +130,10 @@ public class ListQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records per page returned in this response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -149,7 +152,7 @@ public class ListQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token used to retrieve more results. You do not need to specify this parameter for the first request. For subsequent requests, use the token obtained from the previous response.</p>
+         * <p>The pagination token used to retrieve more results. You do not need to specify this parameter for the first query. You can obtain the token for subsequent queries from the response.</p>
          * 
          * <strong>example:</strong>
          * <p>qxGrXje86XMrYQ51aJMy</p>

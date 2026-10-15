@@ -80,7 +80,10 @@ public class AgenticFSVolumeConfig extends TeaModel {
         } 
 
         /**
-         * groupID.
+         * <p>The group ID (GID) for accessing the mounted directory in the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder groupID(Integer groupID) {
             this.groupID = groupID;
@@ -88,7 +91,10 @@ public class AgenticFSVolumeConfig extends TeaModel {
         }
 
         /**
-         * serverAddr.
+         * <p>The service address of the AgenticFS access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-12345678.fs-12345678-abc.cn-hangzhou.nas.aliyuncs.com:/</p>
          */
         public Builder serverAddr(String serverAddr) {
             this.serverAddr = serverAddr;
@@ -96,7 +102,10 @@ public class AgenticFSVolumeConfig extends TeaModel {
         }
 
         /**
-         * userID.
+         * <p>The user ID (UID) for accessing the mounted directory in the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder userID(Integer userID) {
             this.userID = userID;

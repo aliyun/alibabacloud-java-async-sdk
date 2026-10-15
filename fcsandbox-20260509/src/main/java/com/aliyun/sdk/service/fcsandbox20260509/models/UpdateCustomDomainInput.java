@@ -80,7 +80,7 @@ public class UpdateCustomDomainInput extends TeaModel {
         } 
 
         /**
-         * certConfig.
+         * <p>The certificate configuration for the domain name.</p>
          */
         public Builder certConfig(CertConfig certConfig) {
             this.certConfig = certConfig;
@@ -88,7 +88,10 @@ public class UpdateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the custom domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>生产环境云沙箱自定义域名</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -96,7 +99,7 @@ public class UpdateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * tlsConfig.
+         * <p>The TLS configuration for the domain name.</p>
          */
         public Builder tlsConfig(TLSConfig tlsConfig) {
             this.tlsConfig = tlsConfig;

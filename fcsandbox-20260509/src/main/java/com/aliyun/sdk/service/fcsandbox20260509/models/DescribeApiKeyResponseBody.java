@@ -145,7 +145,7 @@ public class DescribeApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The Bailian API key.</p>
+         * <p>The Model Studio API key.</p>
          * 
          * <strong>example:</strong>
          * <p>asdfjoY87-9IUHH</p>
@@ -167,7 +167,7 @@ public class DescribeApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * effectivePermissions.
+         * <p>The set of permissions currently in effect for the API key.</p>
          */
         public Builder effectivePermissions(EffectivePermissions effectivePermissions) {
             this.effectivePermissions = effectivePermissions;
@@ -175,7 +175,7 @@ public class DescribeApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * ipBlacklist.
+         * <p>The list of IP addresses that are blocked from using the API key.</p>
          */
         public Builder ipBlacklist(java.util.List<IPConfig> ipBlacklist) {
             this.ipBlacklist = ipBlacklist;
@@ -202,7 +202,7 @@ public class DescribeApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * permissionPolicy.
+         * <p>The access policy configured for the API key.</p>
          */
         public Builder permissionPolicy(PermissionPolicy permissionPolicy) {
             this.permissionPolicy = permissionPolicy;

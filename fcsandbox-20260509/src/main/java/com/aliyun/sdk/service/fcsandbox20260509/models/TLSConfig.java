@@ -80,7 +80,7 @@ public class TLSConfig extends TeaModel {
         } 
 
         /**
-         * cipherSuites.
+         * <p>The list of allowed TLS cipher suites.</p>
          */
         public Builder cipherSuites(java.util.List<String> cipherSuites) {
             this.cipherSuites = cipherSuites;
@@ -88,7 +88,10 @@ public class TLSConfig extends TeaModel {
         }
 
         /**
-         * maxVersion.
+         * <p>The maximum allowed TLS version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLSv1.3</p>
          */
         public Builder maxVersion(String maxVersion) {
             this.maxVersion = maxVersion;
@@ -96,7 +99,10 @@ public class TLSConfig extends TeaModel {
         }
 
         /**
-         * minVersion.
+         * <p>The minimum allowed TLS version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLSv1.2</p>
          */
         public Builder minVersion(String minVersion) {
             this.minVersion = minVersion;

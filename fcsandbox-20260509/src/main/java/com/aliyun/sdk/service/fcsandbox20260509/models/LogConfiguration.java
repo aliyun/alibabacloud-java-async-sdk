@@ -67,7 +67,10 @@ public class LogConfiguration extends TeaModel {
         } 
 
         /**
-         * logstore.
+         * <p>The name of the Simple Log Service Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sandbox-logstore</p>
          */
         public Builder logstore(String logstore) {
             this.logstore = logstore;
@@ -75,7 +78,10 @@ public class LogConfiguration extends TeaModel {
         }
 
         /**
-         * project.
+         * <p>The name of the Simple Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sandbox-project</p>
          */
         public Builder project(String project) {
             this.project = project;

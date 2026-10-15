@@ -87,7 +87,7 @@ public class ListTemplatesRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of entries to return.</p>
+         * <p>The maximum number of results to return.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

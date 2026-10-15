@@ -93,7 +93,10 @@ public class NetworkConfiguration extends TeaModel {
         } 
 
         /**
-         * networkMode.
+         * <p>The network mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder networkMode(String networkMode) {
             this.networkMode = networkMode;
@@ -101,7 +104,10 @@ public class NetworkConfiguration extends TeaModel {
         }
 
         /**
-         * securityGroupID.
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1gx7yj8ud5mabcde</p>
          */
         public Builder securityGroupID(String securityGroupID) {
             this.securityGroupID = securityGroupID;
@@ -109,7 +115,10 @@ public class NetworkConfiguration extends TeaModel {
         }
 
         /**
-         * vpcID.
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1mwrqm3wkq7abcde</p>
          */
         public Builder vpcID(String vpcID) {
             this.vpcID = vpcID;
@@ -117,7 +126,10 @@ public class NetworkConfiguration extends TeaModel {
         }
 
         /**
-         * vswitchIDs.
+         * <p>The list of vSwitch IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;vsw-bp1s5fnlk4jl2abcde&quot;]</p>
          */
         public Builder vswitchIDs(java.util.List<String> vswitchIDs) {
             this.vswitchIDs = vswitchIDs;

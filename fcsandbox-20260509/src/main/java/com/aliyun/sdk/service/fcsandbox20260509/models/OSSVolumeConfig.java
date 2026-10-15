@@ -93,7 +93,10 @@ public class OSSVolumeConfig extends TeaModel {
         } 
 
         /**
-         * bucketName.
+         * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket</p>
          */
         public Builder bucketName(String bucketName) {
             this.bucketName = bucketName;
@@ -101,7 +104,10 @@ public class OSSVolumeConfig extends TeaModel {
         }
 
         /**
-         * bucketPath.
+         * <p>The path to mount within the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/agent-workspace</p>
          */
         public Builder bucketPath(String bucketPath) {
             this.bucketPath = bucketPath;
@@ -109,7 +115,10 @@ public class OSSVolumeConfig extends TeaModel {
         }
 
         /**
-         * endpoint.
+         * <p>The OSS access endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -117,7 +126,10 @@ public class OSSVolumeConfig extends TeaModel {
         }
 
         /**
-         * readOnly.
+         * <p>Specifies whether to mount the volume in read-only mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = readOnly;

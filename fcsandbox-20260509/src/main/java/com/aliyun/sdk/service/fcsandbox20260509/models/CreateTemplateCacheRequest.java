@@ -59,7 +59,7 @@ public class CreateTemplateCacheRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The request struct for creating a template cache.</p>
          */
         public Builder body(CreateTemplateCacheInput body) {
             this.putBodyParameter("body", body);

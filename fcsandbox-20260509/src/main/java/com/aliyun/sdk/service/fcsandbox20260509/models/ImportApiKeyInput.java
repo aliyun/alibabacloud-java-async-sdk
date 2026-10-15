@@ -93,7 +93,10 @@ public class ImportApiKeyInput extends TeaModel {
         } 
 
         /**
-         * apiKeyName.
+         * <p>The name of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         public Builder apiKeyName(String apiKeyName) {
             this.apiKeyName = apiKeyName;
@@ -101,7 +104,7 @@ public class ImportApiKeyInput extends TeaModel {
         }
 
         /**
-         * apiKeyValue.
+         * <p>The value of the API key to import.</p>
          */
         public Builder apiKeyValue(String apiKeyValue) {
             this.apiKeyValue = apiKeyValue;
@@ -109,7 +112,7 @@ public class ImportApiKeyInput extends TeaModel {
         }
 
         /**
-         * expireTime.
+         * <p>The expiration time of the API key.</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -117,7 +120,10 @@ public class ImportApiKeyInput extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team to which the API key belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
