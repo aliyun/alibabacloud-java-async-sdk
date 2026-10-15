@@ -106,7 +106,7 @@ public class VideoGenerationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. A value of success indicates a successful call, and a value of failed indicates a failed call.</p>
+         * <p>The response code. A value of success indicates that the call is successful, and a value of failed indicates that the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -117,7 +117,7 @@ public class VideoGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response struct.</p>
+         * <p>The struct information of the returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class VideoGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error message is returned if the call fails.</p>
+         * <p>The returned message. An error message is returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -136,7 +136,7 @@ public class VideoGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which uniquely identifies a single API call.</p>
+         * <p>The request ID, which is used to identify a unique request call.</p>
          * 
          * <strong>example:</strong>
          * <p>70CBEFDF-BB17-1EB3-8A21-569F3124738F</p>
@@ -227,7 +227,7 @@ public class VideoGenerationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metering usage information.</p>
+             * <p>The metering and usage information.</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

@@ -88,7 +88,6 @@ public class PetHealthAnalysisRequest extends Request {
         } 
 
         /**
-         * <p>The list of HTTPS URLs of images to analyze. At least one accessible image must be provided.</p>
          * <p>This parameter is required.</p>
          */
         public Builder imageUrl(java.util.List<String> imageUrl) {
@@ -99,10 +98,7 @@ public class PetHealthAnalysisRequest extends Request {
         }
 
         /**
-         * <p>The system prompt used to specify the response role or requirements. The value must comply with JSON string escaping rules.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>You are a professional veterinarian</p>
+         * SystemPrompt.
          */
         public Builder systemPrompt(String systemPrompt) {
             this.putQueryParameter("SystemPrompt", systemPrompt);
@@ -111,10 +107,7 @@ public class PetHealthAnalysisRequest extends Request {
         }
 
         /**
-         * <p>The custom analysis requirement. If not specified or set to an empty string, excrement analysis is performed by default. The value must comply with JSON string escaping rules.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Please analyze the health condition of this pet</p>
+         * UserPrompt.
          */
         public Builder userPrompt(String userPrompt) {
             this.putQueryParameter("UserPrompt", userPrompt);

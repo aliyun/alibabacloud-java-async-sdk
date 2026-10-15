@@ -23,6 +23,10 @@ public class VideoTranslationRequest extends Request {
     private java.util.List<String> capabilities;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableQualityCheck")
+    private Boolean enableQualityCheck;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceLanguage")
     private String sourceLanguage;
 
@@ -39,6 +43,7 @@ public class VideoTranslationRequest extends Request {
     private VideoTranslationRequest(Builder builder) {
         super(builder);
         this.capabilities = builder.capabilities;
+        this.enableQualityCheck = builder.enableQualityCheck;
         this.sourceLanguage = builder.sourceLanguage;
         this.targetLanguage = builder.targetLanguage;
         this.videoUrl = builder.videoUrl;
@@ -65,6 +70,13 @@ public class VideoTranslationRequest extends Request {
     }
 
     /**
+     * @return enableQualityCheck
+     */
+    public Boolean getEnableQualityCheck() {
+        return this.enableQualityCheck;
+    }
+
+    /**
      * @return sourceLanguage
      */
     public String getSourceLanguage() {
@@ -87,6 +99,7 @@ public class VideoTranslationRequest extends Request {
 
     public static final class Builder extends Request.Builder<VideoTranslationRequest, Builder> {
         private java.util.List<String> capabilities; 
+        private Boolean enableQualityCheck; 
         private String sourceLanguage; 
         private String targetLanguage; 
         private String videoUrl; 
@@ -98,13 +111,14 @@ public class VideoTranslationRequest extends Request {
         private Builder(VideoTranslationRequest request) {
             super(request);
             this.capabilities = request.capabilities;
+            this.enableQualityCheck = request.enableQualityCheck;
             this.sourceLanguage = request.sourceLanguage;
             this.targetLanguage = request.targetLanguage;
             this.videoUrl = request.videoUrl;
         } 
 
         /**
-         * <p>The array of translation capabilities. Valid values: [&quot;visual&quot;].</p>
+         * <p>The array of translation capabilities. Current valid value: [&quot;visual&quot;].</p>
          * <p>This parameter is required.</p>
          */
         public Builder capabilities(java.util.List<String> capabilities) {
@@ -115,7 +129,19 @@ public class VideoTranslationRequest extends Request {
         }
 
         /**
-         * <p>The source language. This parameter is optional. Default value: auto, which indicates automatic detection.</p>
+         * <p>Specifies whether to enable the visual quality check. This parameter takes effect only when Capabilities includes visual.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder enableQualityCheck(Boolean enableQualityCheck) {
+            this.putBodyParameter("EnableQualityCheck", enableQualityCheck);
+            this.enableQualityCheck = enableQualityCheck;
+            return this;
+        }
+
+        /**
+         * <p>The source language. This parameter is optional. Default value: auto, which indicates automatic recognition.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -140,7 +166,7 @@ public class VideoTranslationRequest extends Request {
         }
 
         /**
-         * <p>The URL of the video (MP4/MOV, ≤ 200 MB).</p>
+         * <p>The video URL. Supported formats: MP4 and MOV. Maximum size: 200 MB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,10 +106,7 @@ public class PetHealthAnalysisResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +114,7 @@ public class PetHealthAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The asynchronous task submit status.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,10 +122,7 @@ public class PetHealthAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message or failure description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Task submitted</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,10 +130,7 @@ public class PetHealthAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>70CBEFDF-BB17-1EB3-8A21-569F3124738F</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,10 +138,7 @@ public class PetHealthAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>True</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -203,10 +191,7 @@ public class PetHealthAnalysisResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The asynchronous task ID used for QueryAsyncTaskResult queries.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>task_778fa8bd21804828a5d147050e30edac</p>
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

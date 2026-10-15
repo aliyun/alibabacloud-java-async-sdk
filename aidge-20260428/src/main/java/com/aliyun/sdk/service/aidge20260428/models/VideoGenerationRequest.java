@@ -193,7 +193,7 @@ public class VideoGenerationRequest extends Request {
             } 
 
             /**
-             * <p>The asset index.</p>
+             * <p>The asset index, such as 0, 1, 2, or 3, which must be consistent with the number of the image URL.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -204,7 +204,12 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * <p>The asset description.</p>
+             * <p>The description of the image. Examples:   </p>
+             * <ol>
+             * <li>Description for look_reference: Front full-body outfit reference image of the person.   </li>
+             * <li>Description for scene_reference: Specified clothing display scene.   </li>
+             * <li>Description for garment_reference:<br>● Front of the top;<br>● Back of the bottom;<br>● Side of the shoes.</li>
+             * </ol>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -217,7 +222,12 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * <p>The asset usage.</p>
+             * <p>Specifies the asset usage. Valid values:   </p>
+             * <ul>
+             * <li>look_reference: Corresponds to the full outfit effect image of the person wearing the clothes (overall visual).   </li>
+             * <li>scene_reference: Corresponds to the scene reference image (usually the cover main image).   </li>
+             * <li>garment_reference: Corresponds to all product detail images (including front, back, and side of clothes, shoes, skirts, and other partial close-ups).</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -333,7 +343,7 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * <p>The list of product image URLs (1 to 6 images). The URLs must be publicly accessible.</p>
+             * <p>The list of product image URLs (1 to 8 images), which must be accessible over the Internet.</p>
              * <p>This parameter is required.</p>
              */
             public Builder images(java.util.List<String> images) {
@@ -342,7 +352,7 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * <p>The product title. A maximum of the first 60 characters are used.</p>
+             * <p>The product title. Only the first 60 characters are used.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -426,7 +436,7 @@ public class VideoGenerationRequest extends Request {
             } 
 
             /**
-             * <p>The distribution channel.</p>
+             * <p>The delivery channel.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -439,10 +449,15 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * <p>The business goal. Valid values:</p>
-             * <p>camera_motion: Camera movement mode. Generates video based on fixed 360° camera movement logic.</p>
-             * <p>scripted_video: Scripted mode. Provides a script or prompt, and the system generates video based on the script.</p>
-             * <p>auto_video: Unscripted mode. No script is provided. The system automatically plans the script and then generates the video.</p>
+             * <p>Specifies the business goal. Valid values:</p>
+             * <ul>
+             * <li><p>camera_motion: Camera movement mode. Generates videos based on a fixed 360-degree camera movement logic.</p>
+             * </li>
+             * <li><p>scripted_video: Scripted mode. Provides a script or prompt, and the system generates the video according to the script.</p>
+             * </li>
+             * <li><p>auto_video: Unscripted mode. Does not provide a script, and the system automatically plans the script and generates the video.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>auto_video</p>
@@ -549,7 +564,7 @@ public class VideoGenerationRequest extends Request {
             } 
 
             /**
-             * <p>The video duration in seconds. Currently supports integers between 5 and 15. More options will be available in the future.</p>
+             * <p>The video duration varies by Intent.goal: auto_video supports 5 to 15 seconds, scripted_video supports 5 to 30 seconds, and camera_motion generates a fixed 10-second video and returns two 5-second videos.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -573,7 +588,7 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * <p>The video aspect ratio.</p>
+             * <p>The aspect ratio varies by Intent.goal: auto_video and scripted_video only support 9:16, and camera_motion only supports 3:4.</p>
              * 
              * <strong>example:</strong>
              * <p>9:16</p>
