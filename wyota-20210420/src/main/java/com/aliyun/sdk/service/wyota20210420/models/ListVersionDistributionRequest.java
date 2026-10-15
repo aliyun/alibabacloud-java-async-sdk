@@ -118,6 +118,17 @@ public class ListVersionDistributionRequest extends Request {
         } 
 
         /**
+         * <p>The terminal type. Valid values:</p>
+         * <ul>
+         * <li>1: hardware terminal.</li>
+         * <li>2: software terminal.</li>
+         * <li>3: secure browser plugin.</li>
+         * <li>4: GuestOS application.</li>
+         * <li>5: DingTalk Wuying plugin.</li>
+         * <li>6: cloud application component.</li>
+         * <li>7: Cloud Hub.</li>
+         * <li>8: H5.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +141,7 @@ public class ListVersionDistributionRequest extends Request {
         }
 
         /**
-         * InManage.
+         * <p>The management status. A value of true indicates managed, and a value of false indicates unmanaged. If this parameter is not specified, all terminals are queried.</p>
          */
         public Builder inManage(Boolean inManage) {
             this.putBodyParameter("InManage", inManage);
@@ -139,7 +150,10 @@ public class ListVersionDistributionRequest extends Request {
         }
 
         /**
-         * MainBizType.
+         * <p>The business type. Default value: enterprise.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         public Builder mainBizType(String mainBizType) {
             this.putBodyParameter("MainBizType", mainBizType);
@@ -148,6 +162,7 @@ public class ListVersionDistributionRequest extends Request {
         }
 
         /**
+         * <p>The terminal model.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +175,11 @@ public class ListVersionDistributionRequest extends Request {
         }
 
         /**
+         * <p>The version type. Valid values:</p>
+         * <ul>
+         * <li>SYS: system version.</li>
+         * <li>APP: application version.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

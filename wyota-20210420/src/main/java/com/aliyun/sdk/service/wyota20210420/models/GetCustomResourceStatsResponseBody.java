@@ -119,7 +119,10 @@ public class GetCustomResourceStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. 200 is returned if the call is successful. An error code is returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PARAM_ERROR</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetCustomResourceStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The custom resource statistics information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetCustomResourceStatsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetCustomResourceStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. This parameter is empty if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>parameter error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetCustomResourceStatsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5DCE54A-B266-522E-A6ED-468AF45F5AAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetCustomResourceStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +263,10 @@ public class GetCustomResourceStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomResourceCount.
+             * <p>The number of terminals with custom resources configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder customResourceCount(Long customResourceCount) {
                 this.customResourceCount = customResourceCount;
@@ -259,7 +274,10 @@ public class GetCustomResourceStatsResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveCount.
+             * <p>The number of terminals on which custom resources have taken effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder effectiveCount(Long effectiveCount) {
                 this.effectiveCount = effectiveCount;
@@ -267,7 +285,10 @@ public class GetCustomResourceStatsResponseBody extends TeaModel {
             }
 
             /**
-             * NoCustomResourceCount.
+             * <p>The number of terminals without custom resources configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder noCustomResourceCount(Long noCustomResourceCount) {
                 this.noCustomResourceCount = noCustomResourceCount;
@@ -275,7 +296,10 @@ public class GetCustomResourceStatsResponseBody extends TeaModel {
             }
 
             /**
-             * UnEffectiveCount.
+             * <p>The number of terminals on which custom resources have not taken effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder unEffectiveCount(Long unEffectiveCount) {
                 this.unEffectiveCount = unEffectiveCount;

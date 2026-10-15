@@ -119,7 +119,10 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PARAMETER_ERROR</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned when the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>parameter error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5DCE54A-B266-522E-A6ED-468AF45F5AAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthCode.
+             * <p>The authentication code for device enrollment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>000000</p>
              */
             public Builder authCode(String authCode) {
                 this.authCode = authCode;
@@ -246,7 +264,10 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time of the compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1772162247</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -254,7 +275,10 @@ public class GetOrCreateInvitationCodeResponseBody extends TeaModel {
             }
 
             /**
-             * Expired.
+             * <p>Indicates whether the invitation code has expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;

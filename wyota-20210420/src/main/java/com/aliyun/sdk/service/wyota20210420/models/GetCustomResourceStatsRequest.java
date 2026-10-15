@@ -59,7 +59,10 @@ public class GetCustomResourceStatsRequest extends Request {
         } 
 
         /**
-         * MainBizType.
+         * <p>The business type. Default value: enterprise.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         public Builder mainBizType(String mainBizType) {
             this.putBodyParameter("MainBizType", mainBizType);

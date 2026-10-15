@@ -119,7 +119,10 @@ public class ListVersionDistributionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 is returned if the call is successful. An error code is returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PARAMETER_MISSING</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListVersionDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of version distribution information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListVersionDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListVersionDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. This parameter is empty if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>parameter missing</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListVersionDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5DCE54A-B266-522E-A6ED-468AF45F5AAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class ListVersionDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +250,10 @@ public class ListVersionDistributionResponseBody extends TeaModel {
             } 
 
             /**
-             * DeviceCount.
+             * <p>The number of terminals corresponding to this version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder deviceCount(Long deviceCount) {
                 this.deviceCount = deviceCount;
@@ -246,7 +261,10 @@ public class ListVersionDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage.
+             * <p>The version percentage. Valid values: 0 to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder percentage(Double percentage) {
                 this.percentage = percentage;
@@ -254,7 +272,10 @@ public class ListVersionDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.3.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

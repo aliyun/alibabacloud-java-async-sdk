@@ -256,7 +256,7 @@ public class DescribeClientsRequest extends Request {
         } 
 
         /**
-         * <p>aliuid</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -268,6 +268,7 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
+         * <p>The client type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -280,7 +281,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * CustomResourceId.
+         * <p>The custom task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-***</p>
          */
         public Builder customResourceId(String customResourceId) {
             this.putBodyParameter("CustomResourceId", customResourceId);
@@ -289,7 +293,12 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * CustomResourceStatus.
+         * <p>The effective status of the custom task. Valid values:</p>
+         * <ul>
+         * <li>true: effective.</li>
+         * <li>false: ineffective.</li>
+         * <li>null: all.</li>
+         * </ul>
          */
         public Builder customResourceStatus(Boolean customResourceStatus) {
             this.putBodyParameter("CustomResourceStatus", customResourceStatus);
@@ -298,7 +307,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * InManage.
+         * <p>Specifies whether the client is managed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder inManage(Boolean inManage) {
             this.putBodyParameter("InManage", inManage);
@@ -307,7 +319,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * IncludeSubGroups.
+         * <p>Specifies whether to include subgroups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeSubGroups(Boolean includeSubGroups) {
             this.putBodyParameter("IncludeSubGroups", includeSubGroups);
@@ -316,7 +331,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -325,7 +343,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The device model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>US02-2BFXG</p>
          */
         public Builder model(String model) {
             this.putBodyParameter("Model", model);
@@ -334,7 +355,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdEdsXbwG2ZlbWCzN4wTTg6wQvfp7u1BJl4bxCAby41POSaYAlCvfULQpkAnb0ff****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -343,7 +367,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * OnlineStatus.
+         * <p>The soft client status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder onlineStatus(Boolean onlineStatus) {
             this.putBodyParameter("OnlineStatus", onlineStatus);
@@ -352,7 +379,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>The soft client platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder platform(String platform) {
             this.putBodyParameter("Platform", platform);
@@ -361,7 +391,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * SearchKeyword.
+         * <p>The fuzzy search parameter. Supports fuzzy search by SN, alias, or IP address. This parameter is incompatible with exact search parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>061</p>
          */
         public Builder searchKeyword(String searchKeyword) {
             this.putBodyParameter("SearchKeyword", searchKeyword);
@@ -370,7 +403,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * TerminalGroupId.
+         * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tg-bp103v8x70nasykdjrd1</p>
          */
         public Builder terminalGroupId(String terminalGroupId) {
             this.putBodyParameter("TerminalGroupId", terminalGroupId);
@@ -379,7 +415,7 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * <p>The UUIDs of the servers to query. Separate multiple UUIDs with commas (,).</p>
          */
         public Builder uuids(java.util.List<String> uuids) {
             this.putBodyParameter("Uuids", uuids);
@@ -388,7 +424,7 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * WithBindUser.
+         * <p>Specifies whether to return bound users.</p>
          */
         public Builder withBindUser(Boolean withBindUser) {
             this.putBodyParameter("WithBindUser", withBindUser);

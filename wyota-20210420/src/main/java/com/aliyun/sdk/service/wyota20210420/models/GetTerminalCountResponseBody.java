@@ -119,7 +119,10 @@ public class GetTerminalCountResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. 200 is returned if the call is successful. An error code is returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PARAM_ERROR</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetTerminalCountResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The terminal count statistics information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetTerminalCountResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetTerminalCountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. This parameter is empty if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>parameter error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetTerminalCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5DCE54A-B266-522E-A6ED-468AF45F5AAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetTerminalCountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +263,10 @@ public class GetTerminalCountResponseBody extends TeaModel {
             } 
 
             /**
-             * BindUserCount.
+             * <p>The number of hardware terminals that are bound to users. This parameter is returned only when ClientType is set to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder bindUserCount(Long bindUserCount) {
                 this.bindUserCount = bindUserCount;
@@ -259,7 +274,10 @@ public class GetTerminalCountResponseBody extends TeaModel {
             }
 
             /**
-             * InManageCount.
+             * <p>The number of managed terminals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder inManageCount(Long inManageCount) {
                 this.inManageCount = inManageCount;
@@ -267,7 +285,10 @@ public class GetTerminalCountResponseBody extends TeaModel {
             }
 
             /**
-             * NotInManageCount.
+             * <p>The number of unmanaged terminals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder notInManageCount(Long notInManageCount) {
                 this.notInManageCount = notInManageCount;
@@ -275,7 +296,10 @@ public class GetTerminalCountResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of terminals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
