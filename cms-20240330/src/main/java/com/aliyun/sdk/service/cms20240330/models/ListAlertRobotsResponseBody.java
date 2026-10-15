@@ -139,7 +139,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The robot IDs.</p>
+         * <p>The chatbot IDs.</p>
          */
         public Builder robots(java.util.List<Robots> robots) {
             this.robots = robots;
@@ -316,7 +316,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The robot name.</p>
+             * <p>The name of the chatbot.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -327,7 +327,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the robot.</p>
+             * <p>The unique ID of the chatbot.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -338,7 +338,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The signing key of the robot.</p>
+             * <p>The signature key of the chatbot.</p>
              * 
              * <strong>example:</strong>
              * <p>abc123</p>
@@ -349,7 +349,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The robot types.</p>
+             * <p>The chatbot types.</p>
              * 
              * <strong>example:</strong>
              * <p>DING</p>
@@ -360,7 +360,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The webhook URL of the robot.</p>
+             * <p>The webhook URL of the chatbot.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>*******</p>

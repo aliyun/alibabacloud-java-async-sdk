@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListPrometheusViewsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("filterRegionIds")
+    @Deprecated
     private String filterRegionIds;
 
     @com.aliyun.core.annotation.Query
@@ -187,7 +188,7 @@ public class ListPrometheusViewsRequest extends Request {
         } 
 
         /**
-         * <p>Filters by region ID.</p>
+         * <p>Filters the results by region ID. Currently, only a single region ID is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou,cn-beijing</p>
@@ -235,7 +236,7 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * <p>The Prometheus view name.</p>
+         * <p>The name of the Prometheus view.</p>
          * 
          * <strong>example:</strong>
          * <p>view1</p>
@@ -247,7 +248,7 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm3gn5i6bigbi</p>
@@ -281,7 +282,7 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * <p>The instance version: V1 or V2.</p>
+         * <p>The instance version.</p>
          * 
          * <strong>example:</strong>
          * <p>V2</p>
@@ -293,7 +294,7 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test</p>

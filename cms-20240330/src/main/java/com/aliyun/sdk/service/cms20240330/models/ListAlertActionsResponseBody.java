@@ -106,7 +106,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of action integration configurations.</p>
+         * <p>The list of alert action integration configurations.</p>
          */
         public Builder alertActions(java.util.List<AlertActions> alertActions) {
             this.alertActions = alertActions;
@@ -463,7 +463,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The function name of the Function Compute service.</p>
+             * <p>The name of the function in Function Compute.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -568,7 +568,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The function name of the Function Compute service.</p>
+             * <p>The name of the function in Function Compute.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -673,7 +673,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource type of Simple Message Queue (formerly MNS).</p>
+             * <p>The resource type in Simple Message Queue (formerly MNS).</p>
              * 
              * <strong>example:</strong>
              * <p>queue</p>
@@ -684,7 +684,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource name.</p>
+             * <p>The name of the resource.</p>
              * <ul>
              * <li>If the resource type is queue, the resource name is the queue name.</li>
              * <li>If the resource type is topic, the resource name is the topic name.</li>
@@ -769,7 +769,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The integration key of PagerDuty.</p>
+             * <p>The integration key for PagerDuty.</p>
              * 
              * <strong>example:</strong>
              * <p>fsfer4543t5t65g4t4</p>
@@ -780,7 +780,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The integration webhook of PagerDuty. V1 and V2 versions are supported.</p>
+             * <p>The integration webhook URL for PagerDuty. Both V1 and V2 are supported.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
@@ -863,7 +863,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the Simple Log Service Logstore.</p>
+             * <p>The name of the Logstore in Simple Log Service.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -874,7 +874,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Simple Log Service project.</p>
+             * <p>The name of the project in Simple Log Service.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1198,7 +1198,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The unique IDs of the action integrations.</p>
+             * <p>The unique identifiers of the alert action integrations.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1209,7 +1209,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the action integration.</p>
+             * <p>The name of the alert action integration.</p>
              * 
              * <strong>example:</strong>
              * <p>testName</p>
@@ -1276,7 +1276,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the action integration.</p>
+             * <p>The type of the alert action integration.</p>
              * 
              * <strong>example:</strong>
              * <p>FC</p>

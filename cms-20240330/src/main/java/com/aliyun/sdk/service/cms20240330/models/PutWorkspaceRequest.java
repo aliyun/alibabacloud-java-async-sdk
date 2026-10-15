@@ -195,7 +195,7 @@ public class PutWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The tags attached to the workspace when it is created.</p>
+         * <p>The tags bound to the workspace when it is created.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);

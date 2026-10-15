@@ -54,7 +54,7 @@ public class DeleteAlertWebhooksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E5B1D3D4-BB28-5996-8AD2-***********</p>

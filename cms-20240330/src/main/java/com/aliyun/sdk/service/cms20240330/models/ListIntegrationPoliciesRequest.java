@@ -31,6 +31,7 @@ public class ListIntegrationPoliciesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("filterRegionIds")
+    @Deprecated
     private String filterRegionIds;
 
     @com.aliyun.core.annotation.Query
@@ -241,7 +242,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         } 
 
         /**
-         * <p>The addon name.</p>
+         * <p>The add-on name.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-default</p>
@@ -265,7 +266,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The entity IDs used for filtering. Separate multiple IDs with commas (,).</p>
+         * <p>The entity IDs used for filtering, separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>eg-1,eg-2,eg-3</p>
@@ -277,7 +278,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The region IDs used for region-based queries. Separate multiple region IDs with commas (,).</p>
+         * <p>The region IDs used for the query, separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing,cn-hangzhou</p>
@@ -301,7 +302,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The token used to retrieve more results. You do not need to specify this parameter for the first query. For subsequent queries, use the token obtained from the previous response.</p>
+         * <p>The token used to retrieve more results. This parameter is not required for the first query. For subsequent queries, use the token returned in the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>mvnX6zqg3P</p>
@@ -361,7 +362,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The general query string.</p>
+         * <p>The query string for general queries.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -385,7 +386,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");

@@ -2160,7 +2160,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of alert robots under the current account. Alert robots are webhook receivers for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter results by robot ID, name, type, and workspace.</p>
+     * <p>Queries the list of alert chatbots under the current account. Alert chatbots serve as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by chatbot ID, name, type, and workspace.</p>
      * 
      * @param request the request parameters of ListAlertRobots  ListAlertRobotsRequest
      * @return ListAlertRobotsResponse
@@ -2238,7 +2238,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to create an alert contact group named <code>ECS_Group</code>.</p>
+     * <p>This topic provides an example of creating an alert contact group named <code>ECS_Group</code>.</p>
      * 
      * @param request the request parameters of ListContacts  ListContactsRequest
      * @return ListContactsResponse
@@ -2352,7 +2352,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the integration list.</p>
+     * <p>Queries the list of integrations.</p>
      * 
      * @param request the request parameters of ListIntegrationPolicies  ListIntegrationPoliciesRequest
      * @return ListIntegrationPoliciesResponse
@@ -2633,7 +2633,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of Prometheus view instances.</p>
+     * <p>Queries a list of Prometheus view instances.</p>
      * 
      * @param request the request parameters of ListPrometheusViews  ListPrometheusViewsRequest
      * @return ListPrometheusViewsResponse
@@ -2849,7 +2849,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example of querying an alert template list. The response shows that the list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * @param request the request parameters of QueryAlertRules  QueryAlertRulesRequest
      * @return QueryAlertRulesResponse

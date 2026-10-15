@@ -104,6 +104,9 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("clusterType")
         private String clusterType;
 
+        @com.aliyun.core.annotation.NameInMap("entityUserId")
+        private String entityUserId;
+
         @com.aliyun.core.annotation.NameInMap("vpcCidr")
         private String vpcCidr;
 
@@ -113,6 +116,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         private BindResource(Builder builder) {
             this.clusterId = builder.clusterId;
             this.clusterType = builder.clusterType;
+            this.entityUserId = builder.entityUserId;
             this.vpcCidr = builder.vpcCidr;
             this.vpcId = builder.vpcId;
         }
@@ -140,6 +144,13 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return entityUserId
+         */
+        public String getEntityUserId() {
+            return this.entityUserId;
+        }
+
+        /**
          * @return vpcCidr
          */
         public String getVpcCidr() {
@@ -156,6 +167,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String clusterId; 
             private String clusterType; 
+            private String entityUserId; 
             private String vpcCidr; 
             private String vpcId; 
 
@@ -165,6 +177,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             private Builder(BindResource model) {
                 this.clusterId = model.clusterId;
                 this.clusterType = model.clusterType;
+                this.entityUserId = model.entityUserId;
                 this.vpcCidr = model.vpcCidr;
                 this.vpcId = model.vpcId;
             } 
@@ -188,6 +201,17 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
+                return this;
+            }
+
+            /**
+             * <p>The UID of the actual owner of the bound resource in cross-account scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12xxxx</p>
+             */
+            public Builder entityUserId(String entityUserId) {
+                this.entityUserId = entityUserId;
                 return this;
             }
 
@@ -308,7 +332,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag values.</p>
+             * <p>The tag value.</p>
              */
             public Builder tagValues(java.util.List<String> tagValues) {
                 this.tagValues = tagValues;
@@ -877,7 +901,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance IDs.</p>
+             * <p>The instance ID.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -893,7 +917,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The labels.</p>
+             * <p>The tags.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -920,7 +944,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag values.</p>
+             * <p>The tag value.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1106,7 +1130,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Used for querying.</p>
+             * <p>The query.</p>
              * 
              * <strong>example:</strong>
              * <p>status: 200 AND totalTime &gt; 0.5</p>
@@ -1514,7 +1538,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The names of all components installed in this policy.</p>
+             * <p>The names of all components installed in the policy.</p>
              */
             public Builder addonNames(java.util.List<String> addonNames) {
                 this.addonNames = addonNames;
@@ -1522,7 +1546,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bound resource information.</p>
+             * <p>The information about the bound resource.</p>
              */
             public Builder bindResource(BindResource bindResource) {
                 this.bindResource = bindResource;
@@ -1530,7 +1554,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The umodel installation status in the container environment.</p>
+             * <p>The installation status of umodel in the container environment.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

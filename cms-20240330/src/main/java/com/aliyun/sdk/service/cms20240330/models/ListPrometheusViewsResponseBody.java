@@ -374,7 +374,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance creation time in UTC+0, in the format of yyyy-MM-ddTHH:mmZ.</p>
+             * <p>The time when the instance was created. The time is displayed in UTC+0 in the yyyy-MM-ddTHH:mmZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-12T02:18:36Z</p>
@@ -385,9 +385,11 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type:
-             * prom-view: aggregated view of the new version.
-             * global-view: aggregated view of the legacy version.</p>
+             * <p>The instance type. Valid values:</p>
+             * <ul>
+             * <li>prom-view: new version of the aggregate view</li>
+             * <li>global-view: legacy version of the aggregate view</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>prom-view</p>
@@ -398,7 +400,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing type. Currently, the fixed value is FREE.</p>
+             * <p>The billing method. The value is fixed to FREE.</p>
              * 
              * <strong>example:</strong>
              * <p>FREE</p>
@@ -409,7 +411,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product to which the Prometheus instance belongs (arms or cms).</p>
+             * <p>The product to which the Prometheus instance belongs, such as ARMS or CMS.</p>
              * 
              * <strong>example:</strong>
              * <p>cms</p>
@@ -431,7 +433,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Prometheus view ID.</p>
+             * <p>The ID of the Prometheus view.</p>
              * 
              * <strong>example:</strong>
              * <p>view-xxx</p>
@@ -442,7 +444,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Prometheus view name.</p>
+             * <p>The name of the Prometheus view.</p>
              * 
              * <strong>example:</strong>
              * <p>view1</p>
@@ -464,7 +466,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfm3gn5i6bigbi</p>
@@ -475,7 +477,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fixed value: PrometheusView.</p>
+             * <p>The resource type. The value is fixed to PrometheusView.</p>
              * 
              * <strong>example:</strong>
              * <p>PrometheusView</p>
@@ -486,7 +488,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backend data storage status.</p>
+             * <p>The status of the backend data storage.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -497,7 +499,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>123xxx</p>
