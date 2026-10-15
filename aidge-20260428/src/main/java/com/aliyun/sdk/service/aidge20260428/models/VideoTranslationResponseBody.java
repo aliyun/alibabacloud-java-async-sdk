@@ -147,7 +147,11 @@ public class VideoTranslationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values: true (successful) and false (failed).</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>True</p>
