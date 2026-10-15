@@ -191,7 +191,8 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         } 
 
         /**
-         * <p>The instance ID that is used to filter bills. You can specify multiple instance IDs to query bills of multiple instances. If you leave this parameter empty, the bills of all instances are queried by default. You can specify a maximum of 10 instance IDs.</p>
+         * <p>The IDs of resource owners. The resource owner is the account that uses the resources.
+         * You can specify a maximum of 10 IDs.</p>
          */
         public Builder billOwnerIdList(java.util.List<String> billOwnerIdList) {
             this.putBodyParameter("BillOwnerIdList", billOwnerIdList);
@@ -200,7 +201,8 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * <p>The ID of the member that needs to settle the bill. The member ID is used to filter bills. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account and all members of the current account are queried by default. You can specify a maximum of 10 IDs.</p>
+         * <p>The IDs of billable accounts. This parameter is used to filter bills by the RAM user who pays for the resources. If you specify this parameter, you can query the bills of the specified RAM user. If you leave this parameter empty, the bills of the current account and all its RAM users are queried.
+         * You can specify a maximum of 10 IDs.</p>
          */
         public Builder billUserIdList(java.util.List<String> billUserIdList) {
             this.putBodyParameter("BillUserIdList", billUserIdList);
@@ -209,7 +211,8 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * <p>The allocation month. Format: YYYY-MM.</p>
+         * <p>The amortization month.
+         * Format: YYYY-MM.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +225,8 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * <p>The billing cycle that is used to filter bills. You can specify a maximum of 10 billing cycles.</p>
+         * <p>The filter for billing cycle months.
+         * You can specify a maximum of 10 elements.</p>
          */
         public Builder consumePeriodFilter(java.util.List<String> consumePeriodFilter) {
             this.putBodyParameter("ConsumePeriodFilter", consumePeriodFilter);
@@ -255,7 +259,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * <p>The position from which the query starts. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.</p>
+         * <p>The token that marks the position to start the query. If you leave this parameter empty, the query starts from the beginning. Set this parameter to the value of NextToken that is returned in the last response to query the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
@@ -267,7 +271,8 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * <p>The code of the service. You can obtain the value of this parameter by calling the QueryProductList operation or the DescribeResourcePackageProduct operation.</p>
+         * <p>The product code.
+         * For more information about how to obtain this parameter, see QueryProductList and DescribeResourcePackageProduct.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -279,7 +284,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * <p>The specific service resource.</p>
+         * <p>The details of the product.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -291,10 +296,12 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The subscription type. Valid values:</p>
          * <ul>
-         * <li>Subscription: the subscription billing method</li>
-         * <li>PayAsYouGo: the pay-as-you-go billing method</li>
+         * <li><p>Subscription: subscription.</p>
+         * </li>
+         * <li><p>PayAsYouGo: pay-as-you-go.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

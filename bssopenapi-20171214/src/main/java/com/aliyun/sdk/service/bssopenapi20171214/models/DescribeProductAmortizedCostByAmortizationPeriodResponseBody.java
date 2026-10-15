@@ -106,7 +106,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -147,7 +147,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -827,7 +827,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             } 
 
             /**
-             * AfterDiscountAmount.
+             * <p>The amount after a discount is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder afterDiscountAmount(Double afterDiscountAmount) {
                 this.afterDiscountAmount = afterDiscountAmount;
@@ -835,7 +838,8 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The allocation month. Format: YYYYMM.</p>
+             * <p>The amortization month.
+             * Format: YYYYMM.</p>
              * 
              * <strong>example:</strong>
              * <p>202210</p>
@@ -846,10 +850,12 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The allocation status. Valid values:</p>
+             * <p>The amortization status. Valid values:</p>
              * <ul>
-             * <li>amortized: allocated</li>
-             * <li>unAmortized: not allocated</li>
+             * <li><p>amortized: The cost is amortized.</p>
+             * </li>
+             * <li><p>unAmortized: The cost is not amortized.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -883,7 +889,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The ID of the account to which the resource belongs.</p>
+             * <p>The ID of the resource owner.</p>
              * 
              * <strong>example:</strong>
              * <p>185xxxxx489</p>
@@ -894,7 +900,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The name of the account to which the resource belongs.</p>
+             * <p>The name of the resource owner.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
@@ -916,7 +922,8 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The billing cycle. Format: YYYYMM.</p>
+             * <p>The billing cycle.
+             * Format: YYYYMM.</p>
              * 
              * <strong>example:</strong>
              * <p>202210</p>
@@ -927,7 +934,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * CurrentAmortizationAfterDiscountAmount.
+             * <p>The amount that is amortized in the current period, after a discount is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationAfterDiscountAmount(Double currentAmortizationAfterDiscountAmount) {
                 this.currentAmortizationAfterDiscountAmount = currentAmortizationAfterDiscountAmount;
@@ -935,7 +945,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The amount deducted by using vouchers and allocated to the current allocation month.</p>
+             * <p>The amount deducted by cash coupons that is amortized in the current period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -946,7 +956,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The amount deducted by using coupons and allocated to the current allocation month.</p>
+             * <p>The amount deducted by coupons that is amortized in the current period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -957,7 +967,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The amount deducted by using prepaid cards and allocated to the current allocation month.</p>
+             * <p>The amount paid by prepaid card that is amortized in the current period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -968,7 +978,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The expenditure amount allocated to the current allocation month. Invoicing is supported.</p>
+             * <p>The expenditure amount that is amortized in the current period. This amount can be invoiced.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -979,7 +989,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The discount amount allocated to the current allocation month.</p>
+             * <p>The discount that is amortized in the current period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -990,7 +1000,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The pretax amount allocated to the current allocation month.</p>
+             * <p>The pretax amount that is amortized in the current period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1001,7 +1011,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The pretax gross amount allocated to the current allocation month.</p>
+             * <p>The pretax gross amount that is amortized in the current period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1012,7 +1022,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The round-off amount allocated to the current allocation month.</p>
+             * <p>The amount rounded down that is amortized in the current period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1023,7 +1033,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The amount deducted by using vouchers.</p>
+             * <p>The amount deducted by cash coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1034,7 +1044,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The amount deducted by using coupons.</p>
+             * <p>The amount deducted by coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1045,7 +1055,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The amount deducted by using prepaid cards.</p>
+             * <p>The amount paid by prepaid card.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1056,7 +1066,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The expenditure amount. Invoicing is supported.</p>
+             * <p>The expenditure amount. This amount can be invoiced.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1067,7 +1077,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The discount amount.</p>
+             * <p>The discount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1100,7 +1110,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * PreviouslyAmortizedAfterDiscountAmount.
+             * <p>The amount that was amortized before the beginning of the period, after a discount is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedAfterDiscountAmount(Double previouslyAmortizedAfterDiscountAmount) {
                 this.previouslyAmortizedAfterDiscountAmount = previouslyAmortizedAfterDiscountAmount;
@@ -1108,7 +1121,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The amount deducted by using vouchers and allocated before the current allocation month.</p>
+             * <p>The amount deducted by cash coupons that was amortized before the beginning of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1119,7 +1132,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The amount deducted by using coupons and allocated before the current allocation month.</p>
+             * <p>The amount deducted by coupons that was amortized before the beginning of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1130,7 +1143,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The amount deducted by using prepaid cards and allocated before the current allocation month.</p>
+             * <p>The amount paid by prepaid card that was amortized before the beginning of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1141,7 +1154,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The expenditure amount allocated before the current allocation month. Invoicing is supported.</p>
+             * <p>The expenditure amount that was amortized before the beginning of the period. This amount can be invoiced.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1152,7 +1165,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The discount amount allocated before the current allocation month.</p>
+             * <p>The discount that was amortized before the beginning of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1163,7 +1176,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The pretax amount allocated before the current allocation month.</p>
+             * <p>The pretax amount that was amortized before the beginning of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1174,7 +1187,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The pretax gross amount allocated before the current allocation month.</p>
+             * <p>The pretax gross amount that was amortized before the beginning of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1185,7 +1198,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The round-off amount allocated before the current allocation month.</p>
+             * <p>The amount rounded down that was amortized before the beginning of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1196,7 +1209,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The code of the service.</p>
+             * <p>The product code.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -1207,10 +1220,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The specific service resource.</p>
+             * <p>The details of the product.</p>
              * 
              * <strong>example:</strong>
-             * <p>ApsaraDB RDS</p>
+             * <p>云数据库RDS</p>
              */
             public Builder productDetail(String productDetail) {
                 this.productDetail = productDetail;
@@ -1218,7 +1231,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The code of the specific service resource.</p>
+             * <p>The code of the product details.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -1229,10 +1242,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The product name.</p>
              * 
              * <strong>example:</strong>
-             * <p>ApsaraDB RDS</p>
+             * <p>云数据库RDS</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -1240,7 +1253,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * RemainingAmortizationAfterDiscountAmount.
+             * <p>The unamortized amount at the end of the period, after a discount is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationAfterDiscountAmount(Double remainingAmortizationAfterDiscountAmount) {
                 this.remainingAmortizationAfterDiscountAmount = remainingAmortizationAfterDiscountAmount;
@@ -1248,7 +1264,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The amount deducted by using vouchers and to be allocated to one or more future allocation months.</p>
+             * <p>The unamortized amount deducted by cash coupons at the end of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1259,7 +1275,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The amount deducted by using coupons and to be allocated to one or more future allocation months.</p>
+             * <p>The unamortized amount deducted by coupons at the end of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1270,7 +1286,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The amount deducted by using prepaid cards and to be allocated to one or more future allocation months.</p>
+             * <p>The unamortized amount paid by prepaid card at the end of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1281,7 +1297,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The expenditure amount to be allocated to one or more future allocation months. Invoicing is supported.</p>
+             * <p>The unamortized expenditure amount at the end of the period. This amount can be invoiced.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1292,7 +1308,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The discount amount to be allocated to one or more future allocation months.</p>
+             * <p>The unamortized discount at the end of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1303,7 +1319,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The pretax amount to be allocated to one or more future allocation months.</p>
+             * <p>The unamortized pretax amount at the end of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1314,7 +1330,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The pretax gross amount to be allocated to one or more future allocation months.</p>
+             * <p>The unamortized pretax gross amount at the end of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1325,7 +1341,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The round-off amount to be allocated to one or more future allocation months.</p>
+             * <p>The unamortized amount rounded down at the end of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1336,7 +1352,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The round-off amount.</p>
+             * <p>The amount rounded down.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1347,10 +1363,12 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The billing method. Valid values:</p>
+             * <p>The subscription type. Valid values:</p>
              * <ul>
-             * <li>Subscription: the subscription billing method</li>
-             * <li>PayAsYouGo: the pay-as-you-go billing method</li>
+             * <li><p>Subscription: subscription.</p>
+             * </li>
+             * <li><p>PayAsYouGo: pay-as-you-go.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1495,7 +1513,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The data entries returned.</p>
+             * <p>The data entries.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -1514,7 +1532,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The position from which the results started to return. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.</p>
+             * <p>The token that is used to query the next page of results.</p>
              * 
              * <strong>example:</strong>
              * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
@@ -1525,7 +1543,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

@@ -74,7 +74,10 @@ public class QueryCommodityListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language. If this parameter is not specified, the default value zh (Chinese) is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -83,7 +86,7 @@ public class QueryCommodityListRequest extends Request {
         }
 
         /**
-         * <p>The code of the service.</p>
+         * <p>The product code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -227,7 +227,7 @@ public class QueryAvailableInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The end time when the specified instance is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time of the creation time range. Specify the time in the ISO 8601 standard in the UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-05-23T12:00:00Z</p>
@@ -239,7 +239,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The start time when the specified instance is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time of the creation time range. Specify the time in the ISO 8601 standard in the UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-05-23T12:00:00Z</p>
@@ -251,7 +251,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-05-23T12:00:00Z.</p>
+         * <p>The end time of the expiration time range. Specify the time in the ISO 8601 standard in the UTC format. Example: 2016-05-23T12:00:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-05-23T12:00:00Z</p>
@@ -263,7 +263,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-05-23T12:00:00Z.</p>
+         * <p>The start time of the expiration time range. Specify the time in the ISO 8601 standard in the UTC format. Example: 2016-05-23T12:00:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-05-23T12:00:00Z</p>
@@ -275,7 +275,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. Separate multiple IDs with commas (,). You can specify a maximum of 100 IDs.</p>
+         * <p>The instance IDs. Separate multiple IDs with commas. You can specify up to 100 IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-xxxxxxxxxxxx</p>
@@ -296,7 +296,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -308,7 +308,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page. Default value: 20. Maximum value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -320,9 +320,9 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The code of the service. You can query the service code by calling the <strong>QueryProductList</strong> operation or viewing <strong>Codes of Alibaba Cloud services</strong>.</p>
+         * <p>The product code. You can call the <strong>QueryProductList</strong> operation to query product codes.</p>
          * <blockquote>
-         * <p>This parameter cannot be left empty if the region is specified.</p>
+         * <p>If the region is specified, this parameter cannot be empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The type of the service.</p>
+         * <p>The product type.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -347,7 +347,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the instance resides.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -359,11 +359,11 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The renewal status of the specified instance. Valid values:</p>
+         * <p>The renewal status. Valid values:</p>
          * <ul>
-         * <li>AutoRenewal: The instance is automatically renewed.</li>
-         * <li>ManualRenewal: The instance is manually renewed.</li>
-         * <li>NotRenewal: The instance is not renewed.</li>
+         * <li>AutoRenewal: auto-renewal.</li>
+         * <li>ManualRenewal: manual renewal.</li>
+         * <li>NotRenewal: no renewal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -376,10 +376,10 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The subscription type.</p>
          * <ul>
-         * <li>Subscription: subscription</li>
-         * <li>PayAsYouGo: pay-as-you-go</li>
+         * <li>Subscription: subscription.</li>
+         * <li>PayAsYouGo: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>

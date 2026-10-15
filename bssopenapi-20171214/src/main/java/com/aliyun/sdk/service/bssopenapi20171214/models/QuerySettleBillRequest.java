@@ -215,7 +215,10 @@ public class QuerySettleBillRequest extends Request {
         } 
 
         /**
-         * BillOwnerId.
+         * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -224,6 +227,7 @@ public class QuerySettleBillRequest extends Request {
         }
 
         /**
+         * <p>The billing cycle, in the format of YYYY-MM.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +249,14 @@ public class QuerySettleBillRequest extends Request {
         }
 
         /**
-         * IsHideZeroCharge.
+         * <p>Specifies whether to filter based on whether the original price (PretaxGrossAmount) is 0. Default value: false (compatible with existing logic). Valid values:</p>
+         * <ul>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isHideZeroCharge(Boolean isHideZeroCharge) {
             this.putQueryParameter("IsHideZeroCharge", isHideZeroCharge);
@@ -254,7 +265,10 @@ public class QuerySettleBillRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of data records to read in this request. Default value: 20. Maximum value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -263,7 +277,10 @@ public class QuerySettleBillRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that marks the position from which the next query starts. Leave this parameter empty to start from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -281,7 +298,10 @@ public class QuerySettleBillRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The product code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -290,7 +310,10 @@ public class QuerySettleBillRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -299,7 +322,10 @@ public class QuerySettleBillRequest extends Request {
         }
 
         /**
-         * RecordID.
+         * <p>The order ID or bill ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12233</p>
          */
         public Builder recordID(String recordID) {
             this.putQueryParameter("RecordID", recordID);
@@ -308,7 +334,17 @@ public class QuerySettleBillRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * <p>The subscription type. Valid values:</p>
+         * <ul>
+         * <li>Subscription: subscription</li>
+         * <li>PayAsYouGo: pay-as-you-go<blockquote>
+         * <p> This parameter must be used together with the ProductCode parameter.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);
@@ -317,7 +353,16 @@ public class QuerySettleBillRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type. Valid values:</p>
+         * <ul>
+         * <li>SubscriptionOrder: prepaid order</li>
+         * <li>PayAsYouGoBill: pay-as-you-go bill</li>
+         * <li>Refund: refund bill</li>
+         * <li>Adjustment: adjustment bill</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SubscriptionOrder</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

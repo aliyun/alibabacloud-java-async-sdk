@@ -172,7 +172,7 @@ public class CreateAgAccountRequest extends Request {
         } 
 
         /**
-         * <p>The attribute of the account. To view the attribute of the account, use the account to log on to the Alibaba Cloud Management Console, move the pointer over the profile picture in the upper-right corner, and then click <strong>Security Settings</strong>.</p>
+         * <p>The properties of the new account. In the console, click Account Properties in the top menu bar to go to the <strong>Security Settings</strong> page and view the properties.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,10 +184,10 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * <p>The name of the city.</p>
+         * <p>The name of the city in English.</p>
          * 
          * <strong>example:</strong>
-         * <p>Beijing</p>
+         * <p>北京</p>
          */
         public Builder cityName(String cityName) {
             this.putQueryParameter("CityName", cityName);
@@ -196,10 +196,10 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * <p>The name of the enterprise.</p>
+         * <p>The name of the enterprise. This is the enterprise name that corresponds to the Unified Social Credit Code.</p>
          * 
          * <strong>example:</strong>
-         * <p>Dongguan ChuangNeng Electric Appliance Co., Ltd</p>
+         * <p>阿里云测试有限公司</p>
          */
         public Builder enterpriseName(String enterpriseName) {
             this.putQueryParameter("EnterpriseName", enterpriseName);
@@ -208,10 +208,10 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * <p>The first name.</p>
+         * <p>The first name of the user under the level 1 category.</p>
          * 
          * <strong>example:</strong>
-         * <p>Zhicheng</p>
+         * <p>志成</p>
          */
         public Builder firstName(String firstName) {
             this.putQueryParameter("FirstName", firstName);
@@ -220,11 +220,11 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * <p>The last name.</p>
-         * <p>The last name can be up to 64 characters in length.</p>
+         * <p>The last name of the user.</p>
+         * <p>Maximum length: 64 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>Wu</p>
+         * <p>吴</p>
          */
         public Builder lastName(String lastName) {
             this.putQueryParameter("LastName", lastName);
@@ -233,7 +233,7 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * <p>The email address used to log on to the account.</p>
+         * <p>The logon email address of the member account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,7 +258,7 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * <p>The zip code.</p>
+         * <p>The postal code.</p>
          * 
          * <strong>example:</strong>
          * <p>350000</p>
@@ -273,7 +273,7 @@ public class CreateAgAccountRequest extends Request {
          * <p>The name of the province. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
-         * <p>Beijing</p>
+         * <p>北京</p>
          */
         public Builder provinceName(String provinceName) {
             this.putQueryParameter("ProvinceName", provinceName);

@@ -160,7 +160,7 @@ public class ModifyInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</p>
          * 
          * <strong>example:</strong>
          * <p>JAKSJFHFAKJSF</p>
@@ -172,7 +172,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance for which you want to modify the configurations.</p>
+         * <p>The instance ID of the instance whose configuration you want to modify.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-akjhkdsjhfskjfhd</p>
@@ -184,10 +184,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The type of configuration modifications. Valid values:</p>
+         * <p>The type of configuration change. Valid values:</p>
          * <ul>
-         * <li>Upgrade: upgrades the configurations of the instance.</li>
-         * <li>Downgrade: downgrades the configurations of the instance.</li>
+         * <li>Upgrade: upgrade.</li>
+         * <li>Downgrade: downgrade.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -210,7 +210,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The details about the parameters.</p>
+         * <p>The list of parameters.</p>
          */
         public Builder parameter(java.util.List<Parameter> parameter) {
             this.putQueryParameter("Parameter", parameter);
@@ -219,7 +219,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The code of the service to which the instance belongs.</p>
+         * <p>The product code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The type of the service to which the instance belongs.</p>
+         * <p>The product type.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -246,8 +246,8 @@ public class ModifyInstanceRequest extends Request {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>Subscription: subscription</li>
-         * <li>PayAsYouGo: pay-as-you-go</li>
+         * <li>Subscription: subscription.</li>
+         * <li>PayAsYouGo: pay-as-you-go.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -322,9 +322,9 @@ public class ModifyInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The code of the parameter n. Valid values of n: 1 to 100. Multiple parameters are concatenated in the order of n.</p>
+             * <p>The code of the nth module property. Valid values of n: 1 to 100. If multiple module properties exist, concatenate the parameters in the format of n=1,2,3…n.</p>
              * <blockquote>
-             * <p> Only the parameters of the attributes that you want to modify for the instance must be configured. For example, if the instance has Attribute A and Attribute B and only Attribute A must be modified, configure only the parameter of Attribute A.</p>
+             * <p>Specify only the module properties that need to be changed. For example, if only property A needs to be changed among properties A and B, pass only the information related to property A.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -337,7 +337,7 @@ public class ModifyInstanceRequest extends Request {
             }
 
             /**
-             * <p>The value of the parameter n. Valid values of n: 1 to 100.</p>
+             * <p>The value of the nth module property. Valid values of n: 1 to 100.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

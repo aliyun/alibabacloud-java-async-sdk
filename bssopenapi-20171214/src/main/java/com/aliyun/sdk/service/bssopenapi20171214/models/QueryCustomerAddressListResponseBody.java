@@ -117,7 +117,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -136,7 +136,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BBEF51A3-E933-4F40-A534-C673CBDB9C80</p>
@@ -147,7 +147,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -346,10 +346,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The addressee.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Addressee.
              */
             public Builder addressee(String addressee) {
                 this.addressee = addressee;
@@ -357,10 +354,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * BizType.
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -368,10 +362,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The city to which the invoice is mailed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Hangzhou</p>
+             * City.
              */
             public Builder city(String city) {
                 this.city = city;
@@ -379,10 +370,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the district to which the invoice is mailed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test District</p>
+             * County.
              */
             public Builder county(String county) {
                 this.county = county;
@@ -390,10 +378,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detailed address to which the invoice is mailed. This parameter is returned after fields are concatenated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test Address</p>
+             * DeliveryAddress.
              */
             public Builder deliveryAddress(String deliveryAddress) {
                 this.deliveryAddress = deliveryAddress;
@@ -401,10 +386,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>311601051</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -412,10 +394,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phone number of the addressee.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>138xxxxxxxx</p>
+             * Phone.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -423,10 +402,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The postcode.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>000000</p>
+             * PostalCode.
              */
             public Builder postalCode(String postalCode) {
                 this.postalCode = postalCode;
@@ -434,10 +410,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The province to which the invoice is mailed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Zhejiang</p>
+             * Province.
              */
             public Builder province(String province) {
                 this.province = province;
@@ -445,10 +418,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the street to which the invoice is mailed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test Street</p>
+             * Street.
              */
             public Builder street(String street) {
                 this.street = street;
@@ -456,10 +426,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4382956342857</p>
+             * UserId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -467,10 +434,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nickname of the user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testNick</p>
+             * UserNick.
              */
             public Builder userNick(String userNick) {
                 this.userNick = userNick;
@@ -578,7 +542,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of addresses to which invoices are mailed.</p>
+             * CustomerInvoiceAddressList.
              */
             public Builder customerInvoiceAddressList(CustomerInvoiceAddressList customerInvoiceAddressList) {
                 this.customerInvoiceAddressList = customerInvoiceAddressList;

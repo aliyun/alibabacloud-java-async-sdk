@@ -106,7 +106,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data that is returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful！</p>
@@ -136,7 +136,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -147,7 +147,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -229,7 +229,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the factor.</p>
+             * <p>The code of the pricing factor.</p>
              * 
              * <strong>example:</strong>
              * <p>vm_region_no</p>
@@ -240,7 +240,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the factor.</p>
+             * <p>The name of the pricing factor.</p>
              * 
              * <strong>example:</strong>
              * <p>Region</p>
@@ -251,7 +251,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The values of the factor.</p>
+             * <p>The list of pricing factor values.</p>
              */
             public Builder priceFactorValueList(java.util.List<String> priceFactorValueList) {
                 this.priceFactorValueList = priceFactorValueList;
@@ -331,7 +331,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the billable item.</p>
+             * <p>The code of the pricing entity.</p>
              * 
              * <strong>example:</strong>
              * <p>instance_type</p>
@@ -342,10 +342,10 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the billable item.</p>
+             * <p>The name of the pricing entity.</p>
              * 
              * <strong>example:</strong>
-             * <p>Elastic Compute Service (ECS) instance</p>
+             * <p>ECS Instance</p>
              */
             public Builder priceEntityName(String priceEntityName) {
                 this.priceEntityName = priceEntityName;
@@ -353,7 +353,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The factors of the billable item.</p>
+             * <p>The list of pricing factors for the pricing entity.</p>
              */
             public Builder priceFactorList(java.util.List<PriceFactorList> priceFactorList) {
                 this.priceFactorList = priceFactorList;
@@ -407,7 +407,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the billable items.</p>
+             * <p>The list of pricing entities.</p>
              */
             public Builder priceEntityInfoList(java.util.List<PriceEntityInfoList> priceEntityInfoList) {
                 this.priceEntityInfoList = priceEntityInfoList;

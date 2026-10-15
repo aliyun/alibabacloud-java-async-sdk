@@ -106,7 +106,7 @@ public class RefundInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>ResourceNotExists</p>
@@ -117,7 +117,7 @@ public class RefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -136,7 +136,7 @@ public class RefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The Tracing Analysis character string for the execute. Provide this string to the platform when troubleshooting issues.</p>
          * 
          * <strong>example:</strong>
          * <p>UUID</p>
@@ -147,7 +147,7 @@ public class RefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * <p>Indicates whether the call is successful. A value of true indicates that the call is complete. A value of false indicates that an error occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -216,7 +216,7 @@ public class RefundInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The site of the execution host.</p>
+             * <p>The site where the execution host resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn</p>
@@ -227,7 +227,7 @@ public class RefundInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the refund order that is returned only if the instance is unsubscribed from.</p>
+             * <p>The refund order ID returned when the unsubscription is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>2100000000***</p>

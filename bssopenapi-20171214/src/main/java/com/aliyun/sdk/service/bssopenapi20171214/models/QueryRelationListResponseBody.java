@@ -106,7 +106,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -320,7 +320,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
+             * <p>The UID of the Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>1851253838840762</p>
@@ -331,7 +331,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the account.</p>
+             * <p>The logon name of the Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>caiwuyun_test4</p>
@@ -353,7 +353,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the account. Valid values: MASTER and MEMBER.</p>
+             * <p>The type of the financial account. Valid values: MASTER and MEMBER.</p>
              * 
              * <strong>example:</strong>
              * <p>MEMBER</p>
@@ -364,7 +364,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the relationship became invalid. If no value is returned, the relationship is still valid.</p>
+             * <p>The time when the relationship expires. If this parameter is empty, the relationship does not expire.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-03-08T15:12Z</p>
@@ -375,7 +375,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the relationship.</p>
+             * <p>The relationship ID.</p>
              * 
              * <strong>example:</strong>
              * <p>51463</p>
@@ -386,7 +386,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the relationship. Valid values: FinancialManagement and FinancialTrusteeship.</p>
+             * <p>The relationship type. <code>FinancialManagement</code> indicates Financial Management and <code>FinancialTrusteeship</code> indicates finance trusteeship.</p>
              * 
              * <strong>example:</strong>
              * <p>FinancialManagement</p>
@@ -397,7 +397,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the relationship was established. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. Example: 2016-05-23T12:00:00Z.</p>
+             * <p>The time when the relationship was established. The time is in UTC and follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-03-02T15:12Z</p>
@@ -408,7 +408,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the relationship became valid. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. Example: 2016-05-23T12:00:00Z.</p>
+             * <p>The time when the relationship takes effect. The time is in UTC and follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-03-02T15:12Z</p>
@@ -419,7 +419,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the relationship. One of the enumeration members of the RelationshipStatusEnum data type is returned.</p>
+             * <p>The status of the relationship. The value is an enumeration of RelationshipStatusEnum.</p>
              * 
              * <strong>example:</strong>
              * <p>RELATED</p>
@@ -515,7 +515,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The relationships.</p>
+             * <p>The list of relationships.</p>
              */
             public Builder financialRelationInfoList(java.util.List<FinancialRelationInfoList> financialRelationInfoList) {
                 this.financialRelationInfoList = financialRelationInfoList;
@@ -523,7 +523,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -534,7 +534,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -545,7 +545,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

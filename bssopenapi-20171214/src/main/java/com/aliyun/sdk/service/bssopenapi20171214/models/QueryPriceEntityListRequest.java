@@ -74,7 +74,7 @@ public class QueryPriceEntityListRequest extends Request {
         } 
 
         /**
-         * <p>The code of the service.</p>
+         * <p>The commodity code. You can call the <strong>QueryCommodityList</strong> operation to query the commodity code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,10 @@ public class QueryPriceEntityListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language. Default value: zh (Chinese).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

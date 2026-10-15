@@ -59,7 +59,7 @@ public class ModifyCostUnitRequest extends Request {
         } 
 
         /**
-         * <p>The cost centers to be modified.</p>
+         * <p>The list of financial units.</p>
          */
         public Builder unitEntityList(java.util.List<UnitEntityList> unitEntityList) {
             this.putQueryParameter("UnitEntityList", unitEntityList);
@@ -143,7 +143,7 @@ public class ModifyCostUnitRequest extends Request {
             } 
 
             /**
-             * <p>The new name of the cost center.</p>
+             * <p>The new name of the financial unit.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class ModifyCostUnitRequest extends Request {
             }
 
             /**
-             * <p>The user ID of the cost center owner.</p>
+             * <p>The user ID of the financial unit owner.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class ModifyCostUnitRequest extends Request {
             }
 
             /**
-             * <p>The ID of the cost center.</p>
+             * <p>The ID of the financial unit.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

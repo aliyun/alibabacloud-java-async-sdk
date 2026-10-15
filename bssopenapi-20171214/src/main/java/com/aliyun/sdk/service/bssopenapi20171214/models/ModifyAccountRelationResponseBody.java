@@ -106,7 +106,7 @@ public class ModifyAccountRelationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class ModifyAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,10 +125,10 @@ public class ModifyAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Message returned</p>
+         * <p>返回消息</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,7 +139,7 @@ public class ModifyAccountRelationResponseBody extends TeaModel {
          * <p>The unique ID of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>request_id</p>
+         * <p>48602faf-abbe-4d46-8029-654cc5aead5d</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,7 +147,7 @@ public class ModifyAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -203,10 +203,10 @@ public class ModifyAccountRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>HostId</p>
+             * <p>The source IP address of the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>HostId</p>
+             * <p>127.0.0.1</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;

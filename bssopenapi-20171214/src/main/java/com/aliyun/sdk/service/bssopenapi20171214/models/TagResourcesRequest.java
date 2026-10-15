@@ -90,7 +90,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of resources.</p>
+         * <p>The list of resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -100,7 +100,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Specify savings plan instance as the type of the resource.</p>
+         * <p>The resource type. Set the value to instance for savings plan instances.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags. You can add 1 to 20 tags at a time.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -184,7 +184,7 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag. You can create N tag keys at a time. Valid values of N: 1 to 20. The value of this parameter can be an empty string.</p>
+             * <p>The tag key. An empty string is allowed.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag N. Valid values of N: 1 to 20.</p>
+             * <p>The tag value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -106,7 +106,10 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CCBB1BB9-22F1-4177-867B-7A75D665B488</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -1422,7 +1434,10 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             } 
 
             /**
-             * HostId.
+             * <p>The ID of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -1430,7 +1445,7 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             }
 
             /**
-             * Modules.
+             * <p>A container for cost details.</p>
              */
             public Builder modules(Modules modules) {
                 this.modules = modules;
@@ -1438,7 +1453,10 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -1446,7 +1464,10 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1454,7 +1475,10 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

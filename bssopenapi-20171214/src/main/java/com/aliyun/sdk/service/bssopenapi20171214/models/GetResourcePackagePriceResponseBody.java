@@ -216,10 +216,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the promotion.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000680914</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -227,10 +224,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the discount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>A discount of 17% is offered if you purchase a resource plan for six months.</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -423,7 +417,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the discount.</p>
+             * Promotions.
              */
             public Builder promotions(Promotions promotions) {
                 this.promotions = promotions;

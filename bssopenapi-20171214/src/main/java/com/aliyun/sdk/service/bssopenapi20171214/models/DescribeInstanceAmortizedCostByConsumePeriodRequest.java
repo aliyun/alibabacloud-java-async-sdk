@@ -205,7 +205,8 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         } 
 
         /**
-         * AmortizationPeriodFilter.
+         * <p>The filter for the amortization month.
+         * Maximum number of elements: 10.</p>
          */
         public Builder amortizationPeriodFilter(java.util.List<String> amortizationPeriodFilter) {
             this.putBodyParameter("AmortizationPeriodFilter", amortizationPeriodFilter);
@@ -214,7 +215,9 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         }
 
         /**
-         * BillOwnerIdList.
+         * <p>The filter for the ID of the resource owner.
+         * The resource owner is the account that actually uses the resource.
+         * Maximum number of elements: 10.</p>
          */
         public Builder billOwnerIdList(java.util.List<String> billOwnerIdList) {
             this.putBodyParameter("BillOwnerIdList", billOwnerIdList);
@@ -223,7 +226,9 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         }
 
         /**
-         * BillUserIdList.
+         * <p>The filter for the ID of the bill payer.
+         * This is the ID of a RAM user. If you specify this parameter, you can view the bills of the RAM user. If you leave this parameter empty, the bills of the current account and all its RAM users are returned.
+         * Maximum number of elements: 10.</p>
          */
         public Builder billUserIdList(java.util.List<String> billUserIdList) {
             this.putBodyParameter("BillUserIdList", billUserIdList);
@@ -232,6 +237,8 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         }
 
         /**
+         * <p>The billing cycle.
+         * Format: YYYY-MM.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +251,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         }
 
         /**
-         * CostUnitCode.
+         * <p>The code of the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123#</p>
          */
         public Builder costUnitCode(String costUnitCode) {
             this.putBodyParameter("CostUnitCode", costUnitCode);
@@ -253,7 +263,9 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         }
 
         /**
-         * InstanceIdList.
+         * <p>The filter for the instance ID.
+         * You can query multiple instances. If you leave this parameter empty, all instances are queried.
+         * Maximum number of elements: 10.</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putBodyParameter("InstanceIdList", instanceIdList);
@@ -262,7 +274,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of data records to return in this call. Default value: 20. Maximum value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -271,7 +286,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to retrieve the next page of results. You do not need to specify this parameter for the first request. You must set the value to the token that is returned in the previous call. If you leave this parameter empty, the query starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -280,7 +298,11 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         }
 
         /**
-         * ProductCode.
+         * <p>The product code.
+         * To obtain the value of this parameter, call QueryProductList to query product information, or call DescribeResourcePackageProduct to query information about a specific resource plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -289,7 +311,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         }
 
         /**
-         * ProductDetail.
+         * <p>The details of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productDetail(String productDetail) {
             this.putBodyParameter("ProductDetail", productDetail);
@@ -298,7 +323,16 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         }
 
         /**
-         * SubscriptionType.
+         * <p>The subscription type. Valid values:</p>
+         * <ul>
+         * <li><p>Subscription: subscription.</p>
+         * </li>
+         * <li><p>PayAsYouGo: pay-as-you-go.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putBodyParameter("SubscriptionType", subscriptionType);

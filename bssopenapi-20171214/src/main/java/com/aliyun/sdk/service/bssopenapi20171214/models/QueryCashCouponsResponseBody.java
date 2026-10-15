@@ -117,7 +117,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,10 +125,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The execution result message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Successful</p>
+         * <p>Successful！</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,7 +136,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>147B566E-DB4C-4E43-BDBB-5DB1D9D268DB</p>
@@ -147,7 +147,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the call is successful. Valid values: true (the call is successful) and false (the call fails).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -333,10 +333,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The service to which the voucher is applicable.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>All Alibaba Cloud services</p>
+             * ApplicableProducts.
              */
             public Builder applicableProducts(String applicableProducts) {
                 this.applicableProducts = applicableProducts;
@@ -344,10 +341,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scenario to which the voucher is applicable.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Pay for the pay-as-you-go bills of Alibaba Cloud services or purchase an instance of an Alibaba Cloud service</p>
+             * ApplicableScenarios.
              */
             public Builder applicableScenarios(String applicableScenarios) {
                 this.applicableScenarios = applicableScenarios;
@@ -355,10 +349,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remaining quota of the voucher.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100.00</p>
+             * Balance.
              */
             public Builder balance(String balance) {
                 this.balance = balance;
@@ -366,10 +357,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the voucher.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>34534253254325</p>
+             * CashCouponId.
              */
             public Builder cashCouponId(Long cashCouponId) {
                 this.cashCouponId = cashCouponId;
@@ -377,10 +365,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the voucher.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Q-b1485def8f04a</p>
+             * CashCouponNo.
              */
             public Builder cashCouponNo(String cashCouponNo) {
                 this.cashCouponNo = cashCouponNo;
@@ -388,10 +373,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the voucher.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This voucher is used for testing product function</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -399,10 +381,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the voucher took effect.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-08-02T15:15:50Z</p>
+             * EffectiveTime.
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -410,10 +389,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the voucher expired.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-01-29T15:15:50Z</p>
+             * ExpiryTime.
              */
             public Builder expiryTime(String expiryTime) {
                 this.expiryTime = expiryTime;
@@ -421,10 +397,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the voucher was released.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-08-02T15:15:50Z</p>
+             * GrantedTime.
              */
             public Builder grantedTime(String grantedTime) {
                 this.grantedTime = grantedTime;
@@ -432,10 +405,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The denomination of the voucher.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100.00</p>
+             * NominalValue.
              */
             public Builder nominalValue(String nominalValue) {
                 this.nominalValue = nominalValue;
@@ -443,15 +413,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the voucher. Valid values:</p>
-             * <ul>
-             * <li>Available: The voucher is valid.</li>
-             * <li>Expired: The voucher has expired.</li>
-             * <li>Cancelled: The voucher is canceled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Available</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

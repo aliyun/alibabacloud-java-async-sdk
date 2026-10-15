@@ -117,7 +117,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful！</p>
@@ -136,7 +136,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DF58589C-A06C-4224-8615-7797E6474FA3</p>
@@ -147,7 +147,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -307,10 +307,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the fees are deducted by using the RI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-05-23 12:00:00</p>
+             * DeductDate.
              */
             public Builder deductDate(String deductDate) {
                 this.deductDate = deductDate;
@@ -318,10 +315,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total amount of computing power of the RI or capacity of SCU in the time period.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * DeductFactorTotal.
              */
             public Builder deductFactorTotal(Float deductFactorTotal) {
                 this.deductFactorTotal = deductFactorTotal;
@@ -329,10 +323,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deduct factor. This parameter is returned only if the RICommodityCode parameter is set to ecsRi.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>24</p>
+             * DeductHours.
              */
             public Builder deductHours(String deductHours) {
                 this.deductHours = deductHours;
@@ -340,10 +331,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The computing power or capacity of the pay-as-you-go instance whose fees are deducted by using the RI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * DeductQuantity.
              */
             public Builder deductQuantity(Float deductQuantity) {
                 this.deductQuantity = deductQuantity;
@@ -351,10 +339,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the service whose fees are deducted by using the RI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rds</p>
+             * DeductedCommodityCode.
              */
             public Builder deductedCommodityCode(String deductedCommodityCode) {
                 this.deductedCommodityCode = deductedCommodityCode;
@@ -362,10 +347,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance whose fees are deducted by using the RI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>safdffghfgh</p>
+             * DeductedInstanceId.
              */
             public Builder deductedInstanceId(String deductedInstanceId) {
                 this.deductedInstanceId = deductedInstanceId;
@@ -373,10 +355,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service whose fees are deducted by using the RI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ApsaraDB RDS</p>
+             * DeductedProductDetail.
              */
             public Builder deductedProductDetail(String deductedProductDetail) {
                 this.deductedProductDetail = deductedProductDetail;
@@ -384,10 +363,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type of the instance whose fees are deducted by using the RI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rds.mysql.s3.large</p>
+             * InstanceSpec.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -395,10 +371,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>324253645</p>
+             * RIInstanceId.
              */
             public Builder RIInstanceId(String RIInstanceId) {
                 this.RIInstanceId = RIInstanceId;
@@ -545,7 +518,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The usage details of the RI.</p>
+             * DetailList.
              */
             public Builder detailList(DataDetailList detailList) {
                 this.detailList = detailList;
@@ -553,7 +526,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -564,7 +537,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -575,7 +548,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

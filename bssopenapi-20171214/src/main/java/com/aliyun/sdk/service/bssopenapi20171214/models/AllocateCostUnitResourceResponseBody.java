@@ -106,7 +106,7 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The message code. Example: success.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -117,7 +117,7 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful！</p>
@@ -136,7 +136,7 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>845C629F-47A7-4F46-A470-ED5047C4C250</p>
@@ -229,10 +229,10 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether resources are allocated to the specified cost center. Valid values:</p>
+             * <p>Indicates whether the financial unit resource allocation is successful.</p>
              * <ul>
-             * <li>true: The resources are allocated to the specified cost center.</li>
-             * <li>false: The resources fail to be allocated to the specified cost center.</li>
+             * <li>true: The allocation succeeded.</li>
+             * <li>false: The allocation failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the destination cost center.</p>
+             * <p>The ID of the destination financial unit.</p>
              * 
              * <strong>example:</strong>
              * <p>32857346527</p>
@@ -255,7 +255,7 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the owner of the destination cost center.</p>
+             * <p>The ID of the owner of the destination financial unit.</p>
              * 
              * <strong>example:</strong>
              * <p>34857693874</p>

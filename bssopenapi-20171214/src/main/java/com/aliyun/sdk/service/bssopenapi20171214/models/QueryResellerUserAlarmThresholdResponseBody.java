@@ -119,7 +119,10 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the request. If the call fails, an error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -135,7 +141,7 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned. If the call fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EAE08A27-386C-579E-966D-8853EC3C5D0E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +266,10 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
             } 
 
             /**
-             * Denominator.
+             * <p>The denominator of the alert percentage. This parameter is valid only when ThresholdType is set to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder denominator(Integer denominator) {
                 this.denominator = denominator;
@@ -259,7 +277,10 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * Numerator.
+             * <p>The numerator of the alert percentage. This parameter is valid only when ThresholdType is set to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder numerator(Integer numerator) {
                 this.numerator = numerator;
@@ -267,7 +288,10 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * ThresholdAmount.
+             * <p>The alert threshold in amount. This parameter is valid only when ThresholdType is set to 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder thresholdAmount(String thresholdAmount) {
                 this.thresholdAmount = thresholdAmount;
@@ -275,7 +299,10 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * ThresholdType.
+             * <p>The type of the alert threshold. Valid values: 0 (amount) and 1 (percentage).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder thresholdType(Integer thresholdType) {
                 this.thresholdType = thresholdType;

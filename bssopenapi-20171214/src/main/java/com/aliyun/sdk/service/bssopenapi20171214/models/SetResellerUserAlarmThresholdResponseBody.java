@@ -106,7 +106,10 @@ public class SetResellerUserAlarmThresholdResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned when the call fails. For more information, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class SetResellerUserAlarmThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class SetResellerUserAlarmThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information about the call result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class SetResellerUserAlarmThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class SetResellerUserAlarmThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. A value of true indicates that the call was completed. A value of false indicates that an error occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -106,7 +106,10 @@ public class RenewChangeInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class RenewChangeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class RenewChangeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,7 @@ public class RenewChangeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -141,7 +147,10 @@ public class RenewChangeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>success=true indicates that the call was successful. success=false indicates that an error occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -207,7 +216,10 @@ public class RenewChangeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * HostId.
+             * <p>The site where the host runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.100.64.1:8150</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -215,7 +227,10 @@ public class RenewChangeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The ID of the successfully created order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202407022550621</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

@@ -106,7 +106,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful！</p>
@@ -136,7 +136,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
@@ -229,7 +229,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the host.</p>
+             * <p>The host ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn</p>
@@ -240,7 +240,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates that the returned usage data starts from the next page. If no value is returned for this parameter or this parameter is not returned, no data can be queried.</p>
+             * <p>The NextToken field for the start of the next page. If this field is empty or not present, it indicates that no more data is available.</p>
              * 
              * <strong>example:</strong>
              * <p>NextToken</p>
@@ -251,7 +251,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
             }
 
             /**
-             * OmsData.
+             * <p>The OMS data list.</p>
              */
             public Builder omsData(java.util.List<java.util.Map<String, ?>> omsData) {
                 this.omsData = omsData;

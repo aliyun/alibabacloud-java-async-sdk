@@ -117,7 +117,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>This API is not applicable for caller.</p>
@@ -136,7 +136,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C40A8EE0-8084-49FE-B66E-5E1C3B6AE025</p>
@@ -147,7 +147,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -242,10 +242,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The attribute value that corresponds to the module code.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2 Cores and 4 GB Memory (Basic Edition)</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -253,10 +250,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the module values.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Connections: 4,000 IOPS is related to storage space</p>
+             * Remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -264,14 +258,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the attribute value that corresponds to the module code. Valid values:</p>
-             * <ul>
-             * <li>single_float: single value</li>
-             * <li>range_float: range value</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>single_string</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -279,13 +266,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attribute value that corresponds to the module code.</p>
-             * <blockquote>
-             * <p> If the Type parameter is set to range_float, the valid values of this parameter range from 1024 to 1024000. A value of 1024 indicates that the step size is 1024.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>mysql.n2.medium.1</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -432,10 +413,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the attribute.</p>
+             * <p>The status code.</p>
              * 
              * <strong>example:</strong>
-             * <p>DBInstanceStorage</p>
+             * <p>Success</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -443,10 +424,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the attribute.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Capacity</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -454,10 +432,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the attribute.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>GB</p>
+             * Unit.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -465,7 +440,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attribute values.</p>
+             * Values.
              */
             public Builder values(Values values) {
                 this.values = values;
@@ -687,10 +662,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currency. Default value: CNY.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CNY</p>
+             * Currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -698,10 +670,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the pricing module.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>InstanceType</p>
+             * ModuleCode.
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -709,10 +678,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the pricing module.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Instance</p>
+             * ModuleName.
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -720,18 +686,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price type. Valid values:</p>
-             * <ul>
-             * <li>Usage: usage price</li>
-             * <li>Hour: hourly price</li>
-             * <li>Day: daily price</li>
-             * <li>Week: weekly price</li>
-             * <li>Month: monthly price</li>
-             * <li>Year: annual price</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Month</p>
+             * PriceType.
              */
             public Builder priceType(String priceType) {
                 this.priceType = priceType;
@@ -852,7 +807,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The module attributes.</p>
+             * AttributeList.
              */
             public Builder attributeList(AttributeList attributeList) {
                 this.attributeList = attributeList;
@@ -860,7 +815,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pricing information of modules.</p>
+             * ModuleList.
              */
             public Builder moduleList(ModuleList moduleList) {
                 this.moduleList = moduleList;

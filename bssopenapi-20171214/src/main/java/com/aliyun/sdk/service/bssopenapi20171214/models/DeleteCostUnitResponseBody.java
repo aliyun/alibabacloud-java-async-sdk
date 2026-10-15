@@ -117,7 +117,7 @@ public class DeleteCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -136,7 +136,7 @@ public class DeleteCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F5B803CF-94D8-43AF-ADB3-D819AAD30E27</p>
@@ -147,7 +147,7 @@ public class DeleteCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -229,7 +229,7 @@ public class DeleteCostUnitResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the call is complete.</p>
+             * <p>Indicates whether the operation is complete.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -240,7 +240,7 @@ public class DeleteCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the cost center owner.</p>
+             * <p>The ID of the owner of the financial unit.</p>
              * 
              * <strong>example:</strong>
              * <p>12431</p>
@@ -251,7 +251,7 @@ public class DeleteCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cost center.</p>
+             * <p>The ID of the new financial unit.</p>
              * 
              * <strong>example:</strong>
              * <p>123412343</p>

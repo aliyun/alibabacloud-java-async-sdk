@@ -103,7 +103,7 @@ public class QueryCostUnitResourceRequest extends Request {
         } 
 
         /**
-         * <p>The user ID of the cost center owner.</p>
+         * <p>The user ID of the financial unit owner.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class QueryCostUnitResourceRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class QueryCostUnitResourceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -140,7 +140,7 @@ public class QueryCostUnitResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cost center.</p>
+         * <p>The ID of the financial unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

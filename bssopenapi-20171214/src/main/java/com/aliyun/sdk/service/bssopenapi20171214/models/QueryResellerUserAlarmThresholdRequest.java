@@ -73,7 +73,10 @@ public class QueryResellerUserAlarmThresholdRequest extends Request {
         } 
 
         /**
-         * AlarmType.
+         * <p>The type of alert. This parameter is required. Set the value to quota_low_balance, which indicates a low quota alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota_low_balance</p>
          */
         public Builder alarmType(String alarmType) {
             this.putQueryParameter("AlarmType", alarmType);

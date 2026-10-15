@@ -106,7 +106,7 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,10 +125,10 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Message returned</p>
+         * <p>返回消息</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -147,7 +147,7 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -203,7 +203,7 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>hostid</p>
+             * <p>The ID of the host.</p>
              * 
              * <strong>example:</strong>
              * <p>HostId</p>

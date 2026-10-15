@@ -146,7 +146,10 @@ public class RenewChangeInstanceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>Ensures the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JASIOFKVNVIXXXXXX</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -155,6 +158,7 @@ public class RenewChangeInstanceRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +180,7 @@ public class RenewChangeInstanceRequest extends Request {
         }
 
         /**
-         * Parameter.
+         * <p>Module list</p>
          */
         public Builder parameter(java.util.List<Parameter> parameter) {
             this.putQueryParameter("Parameter", parameter);
@@ -185,6 +189,7 @@ public class RenewChangeInstanceRequest extends Request {
         }
 
         /**
+         * <p>The product code. To obtain it, call <strong>QueryProductList</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +202,10 @@ public class RenewChangeInstanceRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>Product type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -206,6 +214,17 @@ public class RenewChangeInstanceRequest extends Request {
         }
 
         /**
+         * <p>The subscription renewal duration, in months. Valid values:</p>
+         * <ul>
+         * <li><p>1-9</p>
+         * </li>
+         * <li><p>12</p>
+         * </li>
+         * <li><p>24</p>
+         * </li>
+         * <li><p>36</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,6 +298,7 @@ public class RenewChangeInstanceRequest extends Request {
             } 
 
             /**
+             * <p>The code configuration for the Nth module property. The value of N can be an integer from 1 to 100. If you have multiple module properties, create a separate parameter for each by setting n to 1, 2, 3, and so on.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -290,6 +310,7 @@ public class RenewChangeInstanceRequest extends Request {
             }
 
             /**
+             * <p>The value configuration for the nth module property. The value of n ranges from 1 to 100.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

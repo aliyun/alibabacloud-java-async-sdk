@@ -132,7 +132,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
         } 
 
         /**
-         * <p>The details of pricing modules.</p>
+         * <p>The list of pricing modules.</p>
          * <p>This parameter is required.</p>
          */
         public Builder moduleList(java.util.List<ModuleList> moduleList) {
@@ -151,7 +151,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
         }
 
         /**
-         * <p>The code of the service.</p>
+         * <p>The product code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
         }
 
         /**
-         * <p>The type of the service.</p>
+         * <p>The product type.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -176,7 +176,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -188,7 +188,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Set the value to PayAsYouGo.</p>
+         * <p>The subscription type. Valid values: PayAsYouGo.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,9 +276,9 @@ public class GetPayAsYouGoPriceRequest extends Request {
             } 
 
             /**
-             * <p>The configuration of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.</p>
+             * <p>The configuration of the Nth pricing module. The value of N ranges from 1 to 50. Format: &quot;AA:aa,BB:bb&quot;, where AA and BB are the property codes of the pricing module, and aa and bb are the corresponding property values.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the configuration parameters of the pricing module.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the Module parameter.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -291,9 +291,9 @@ public class GetPayAsYouGoPriceRequest extends Request {
             }
 
             /**
-             * <p>The code of the Nth pricing module.</p>
+             * <p>The module code of the Nth pricing module.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the module code.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the Module parameter.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -308,13 +308,13 @@ public class GetPayAsYouGoPriceRequest extends Request {
             /**
              * <p>The price type of the Nth pricing module. Valid values:</p>
              * <ul>
-             * <li>Hour: hourly price</li>
-             * <li>Usage: usage price</li>
-             * <li>Month: monthly price</li>
-             * <li>Year: annual price</li>
+             * <li>Hour: hourly price.</li>
+             * <li>Usage: usage-based price.</li>
+             * <li>Month: monthly price.</li>
+             * <li>Year: yearly price.</li>
              * </ul>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the configuration parameters of the pricing module.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the Module parameter.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 

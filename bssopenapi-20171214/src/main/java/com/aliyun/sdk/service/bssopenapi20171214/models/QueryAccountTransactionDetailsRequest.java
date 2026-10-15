@@ -171,7 +171,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         } 
 
         /**
-         * <p>The end of the creation time range to query.</p>
+         * <p>The end time of creation.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-20</p>
@@ -183,7 +183,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the creation time range to query.</p>
+         * <p>The start time of creation.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-20</p>
@@ -195,7 +195,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * <p>This parameter is invalid.</p>
+         * <p>An invalid parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -207,7 +207,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * <p>The token that is used for paging.</p>
+         * <p>The paging token for the paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>ABEDSDS124DASA</p>
@@ -219,7 +219,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the order or bill.</p>
+         * <p>The order ID or bill ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2022120336190912</p>
@@ -231,10 +231,23 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * <p>The transaction channel.</p>
+         * <p>The transaction channel. If you specify one of the following transaction channel types, the query returns results of the specified type. If no results are found, an empty result is returned. If you do not specify this parameter, all types are returned by default.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AccountBalance: account balance</li>
+         * <li>BankTransfer: bank transfer</li>
+         * <li>Alipay: Alipay</li>
+         * <li>AntCreditPay: Ant Credit Pay</li>
+         * <li>OfflineRemittance: offline remittance</li>
+         * <li>RegularBankCreditRefund: credit limit refund</li>
+         * <li>CreditCard: credit card</li>
+         * <li>MyBankCredit: MYbank credit</li>
+         * <li>HuaxiaBankCInstallment: Huaxia Bank installment</li>
+         * <li>ApplePay: Apple Pay</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>ALIPAY</p>
+         * <p>AccountBalance</p>
          */
         public Builder transactionChannel(String transactionChannel) {
             this.putQueryParameter("TransactionChannel", transactionChannel);
@@ -243,7 +256,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the transaction channel.</p>
+         * <p>The payment reference No. of the transaction channel.</p>
          * 
          * <strong>example:</strong>
          * <p>2022112122001470591458665933</p>
@@ -255,7 +268,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * <p>The number of the transaction.</p>
+         * <p>The transaction number.</p>
          * 
          * <strong>example:</strong>
          * <p>410874027490089</p>
@@ -267,10 +280,19 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * <p>The type of the transaction.</p>
+         * <p>The transaction type. If you specify one of the following transaction types, the query returns results of the specified type. If no results are found, an empty result is returned. If you do not specify this parameter, all types are returned by default.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Payment: top-up</li>
+         * <li>Withdraw: withdrawal</li>
+         * <li>Refund: refund</li>
+         * <li>Consumption: consumption</li>
+         * <li>Transfer: transfer</li>
+         * <li>Adjust: adjustment</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>CHARGE</p>
+         * <p>Payment</p>
          */
         public Builder transactionType(String transactionType) {
             this.putQueryParameter("TransactionType", transactionType);

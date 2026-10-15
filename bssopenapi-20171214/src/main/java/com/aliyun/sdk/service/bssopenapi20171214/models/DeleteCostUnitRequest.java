@@ -75,7 +75,7 @@ public class DeleteCostUnitRequest extends Request {
         } 
 
         /**
-         * <p>The user ID of the cost center owner.</p>
+         * <p>The ID of the owner of the financial unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteCostUnitRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cost center. A value of -1 indicates the root cost center.</p>
+         * <p>The ID of the financial unit. A value of -1 indicates the root financial unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

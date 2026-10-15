@@ -147,12 +147,12 @@ public class QueryUserOmsDataRequest extends Request {
         } 
 
         /**
-         * <p>The time type of the usage data. Set the parameter based on the description in the documentation of the specified service. Valid values:</p>
+         * <p>The data timestamp type of the metering data. Refer to the specific service documentation for details. Valid values:</p>
          * <ul>
-         * <li>Raw</li>
-         * <li>Hour</li>
-         * <li>Day</li>
-         * <li>Month</li>
+         * <li>Raw: hourly</li>
+         * <li>Hour: hourly</li>
+         * <li>Day: daily</li>
+         * <li>Month: monthly</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -166,8 +166,8 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query.</p>
-         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time of the request.</p>
+         * <p>The date format must comply with the ISO 8601 standard and use UTC time. Format: yyyy-mm-ddThh:mm:ssZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * <p>The name of the record from which the usage data starts to return. The usage data records whose names are alphabetically after the value of the Marker parameter are returned. By default, the usage data starts to return from the earliest record.</p>
+         * <p>The marker that specifies the starting point for returning results in alphabetical order after the NextToken. By default, results are returned from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>NextToken</p>
@@ -201,7 +201,7 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 1 to 200. Default value: 100.</p>
+         * <p>The number of rows per page for paging in a paged query. Valid values: 1 to 200. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -213,8 +213,8 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
-         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time of the request.</p>
+         * <p>The date format must comply with the ISO 8601 standard and use UTC time. Format: yyyy-mm-ddThh:mm:ssZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * <p>The service whose usage data you want to query and the details of the usage data. The parameter value is usually set to the code of a service. Various usage models are provided for different services.</p>
+         * <p>The product and detail information for the usage data, which is typically the ProductCode. Different services support multiple metering models.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

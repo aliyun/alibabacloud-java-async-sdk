@@ -171,7 +171,10 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         } 
 
         /**
-         * CommodityCode.
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>savingplan_common_public_cn</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -180,7 +183,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The end time. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-01 00:00:00</p>
@@ -204,10 +207,12 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * <p>The language of the return data. Valid values:</p>
+         * <p>The language of the response.</p>
          * <ul>
-         * <li>ZH: Chinese</li>
-         * <li>EN: English</li>
+         * <li><p>EN: English</p>
+         * </li>
+         * <li><p>ZH: Chinese</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,7 +225,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -232,7 +237,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -244,7 +249,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-01-01 00:00:00</p>
@@ -256,11 +261,9 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * <p>The status of the Instance. </p>
-         * <ul>
-         * <li>NORMAL</li>
-         * <li>RELEASE</li>
-         * </ul>
+         * <p>The status of the instance. Valid values:
+         * NORMAL: The instance is active.
+         * RELEASE: The instance is released.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -272,7 +275,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tag elements.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -340,10 +343,10 @@ public class QuerySavingsPlansInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag to query.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>ecs</p>
+             * <p>测试标签</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -351,10 +354,10 @@ public class QuerySavingsPlansInstanceRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag to query.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>001</p>
+             * <p>测试标签</p>
              */
             public Builder value(String value) {
                 this.value = value;

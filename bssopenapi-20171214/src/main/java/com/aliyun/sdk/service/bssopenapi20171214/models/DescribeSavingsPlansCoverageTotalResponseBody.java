@@ -117,7 +117,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -136,7 +136,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -147,7 +147,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -216,7 +216,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The coverage.</p>
+             * <p>The coverage rate.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -227,8 +227,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period.</p>
-             * <p>The value is in the format of yyyyMMddHH.</p>
+             * <p>The period. Format: yyyyMMddHH.</p>
              * 
              * <strong>example:</strong>
              * <p>2021071500</p>
@@ -298,7 +297,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total coverage.</p>
+             * <p>The total coverage rate.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -309,7 +308,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total deducted amount.</p>
+             * <p>The total offset amount.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -379,7 +378,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The coverage in different periods.</p>
+             * <p>The coverage rate by period.</p>
              */
             public Builder periodCoverage(java.util.List<PeriodCoverage> periodCoverage) {
                 this.periodCoverage = periodCoverage;
@@ -387,7 +386,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coverage summary.</p>
+             * <p>The total coverage rate.</p>
              */
             public Builder totalCoverage(TotalCoverage totalCoverage) {
                 this.totalCoverage = totalCoverage;

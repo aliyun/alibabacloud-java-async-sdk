@@ -118,7 +118,7 @@ public class RelieveAccountRelationRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used as the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</p>
+         * <p>The UID of the RAM user. You must specify either the RelationId parameter, or the ParentUserId, ChildUserId, and RelationType parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>1512996702208737</p>
@@ -130,7 +130,7 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used as the management account. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</p>
+         * <p>The UID of the Alibaba Cloud account. You must specify either the RelationId parameter, or the ParentUserId, ChildUserId, and RelationType parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>1738376485192612</p>
@@ -142,7 +142,7 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the financial relationship between the management account and the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</p>
+         * <p>The ID of the account association. You must specify either the RelationId parameter, or the ParentUserId, ChildUserId, and RelationType parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>RelationId</p>
@@ -154,7 +154,7 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * <p>The type of the financial relationship. Set the value to enterprise_group.</p>
+         * <p>The relationship type. Only enterprise_group is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>enterprise_group</p>
@@ -166,7 +166,7 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.</p>
+         * <p>The unique ID of the request. This ID is used to troubleshoot issues.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -205,7 +205,9 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         } 
 
         /**
-         * <p>The ID of the member to which the bill belongs. The member ID is used to filter bills. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account and all members of the current account are queried. You can specify a maximum of 10 IDs.</p>
+         * <p>The filter condition for the account to which the resource belongs.
+         * The resource ownership account is the account that actually uses the resource.
+         * Maximum number of elements: 10.</p>
          */
         public Builder billOwnerIdList(java.util.List<String> billOwnerIdList) {
             this.putBodyParameter("BillOwnerIdList", billOwnerIdList);
@@ -214,7 +216,9 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * <p>The ID of the member that needs to settle the bill. The member ID is used to filter bills. If you specify a value for this parameter, you can query the bills of the specified member account. If you leave this parameter empty, the bills of the current account and all members of the current account are queried by default. You can specify a maximum of 10 IDs.</p>
+         * <p>The filter condition for the ID of the bill owner.
+         * This parameter specifies the ID of a RAM user. You can set this parameter to query the bills of a RAM user. If you do not set this parameter, the bills of the current account and all RAM users of the current account are queried.
+         * Maximum number of elements: 10.</p>
          */
         public Builder billUserIdList(java.util.List<String> billUserIdList) {
             this.putBodyParameter("BillUserIdList", billUserIdList);
@@ -223,7 +227,8 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * <p>The allocation month. Format: YYYY-MM.</p>
+         * <p>The amortization month.
+         * Format: YYYY-MM.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +241,8 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * <p>The billing cycle that is used to filter bills. You can specify a maximum of 10 billing cycles.</p>
+         * <p>The filter condition for the billing cycle.
+         * Maximum number of elements: 10.</p>
          */
         public Builder consumePeriodFilter(java.util.List<String> consumePeriodFilter) {
             this.putBodyParameter("ConsumePeriodFilter", consumePeriodFilter);
@@ -257,7 +263,9 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * <p>The instance ID that is used to filter bills. You can specify multiple instance IDs to query bills of multiple instances. If you leave this parameter empty, the bills of all instances are queried by default. You can specify a maximum of 10 instance IDs.</p>
+         * <p>The filter condition for the instance ID.
+         * You can query multiple instances. If you do not set this parameter, all instances are queried.
+         * Maximum number of elements: 10.</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putBodyParameter("InstanceIdList", instanceIdList);
@@ -266,7 +274,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * <p>The maximum number of entries to return. Default value: 20. Maximum value: 300.</p>
+         * <p>The maximum number of data records to return. Default value: 20. Maximum value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -278,7 +286,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * <p>The position from which the query starts. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.</p>
+         * <p>The position from which to start reading the current call. The value of this parameter must be empty or the value of NextToken that is returned in the last call. Otherwise, an error is reported. If this parameter is empty, the query starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
@@ -290,7 +298,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * <p>The code of the service. You can obtain the value of this parameter by calling the QueryProductList operation or the DescribeResourcePackageProduct operation.</p>
+         * <p>The product code. To obtain the value of this parameter, call QueryProductList or DescribeResourcePackageProduct.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -302,7 +310,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * <p>The specific service resource.</p>
+         * <p>The details of the product.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -314,10 +322,12 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The subscription type. Valid values:</p>
          * <ul>
-         * <li>Subscription: the subscription billing method</li>
-         * <li>PayAsYouGo: the pay-as-you-go billing method</li>
+         * <li><p>Subscription: subscription.</p>
+         * </li>
+         * <li><p>PayAsYouGo: pay-as-you-go.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

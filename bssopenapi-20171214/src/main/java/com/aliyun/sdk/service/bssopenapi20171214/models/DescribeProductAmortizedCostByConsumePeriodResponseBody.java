@@ -106,7 +106,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful！</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -815,7 +827,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             } 
 
             /**
-             * AfterDiscountAmount.
+             * <p>The amount after discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder afterDiscountAmount(Double afterDiscountAmount) {
                 this.afterDiscountAmount = afterDiscountAmount;
@@ -823,7 +838,11 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * AmortizationPeriod.
+             * <p>The amortization month.
+             * Format: YYYYMM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202210</p>
              */
             public Builder amortizationPeriod(String amortizationPeriod) {
                 this.amortizationPeriod = amortizationPeriod;
@@ -831,7 +850,16 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * AmortizationStatus.
+             * <p>The amortization status. Valid values:</p>
+             * <ul>
+             * <li><p>amortized: The cost is amortized.</p>
+             * </li>
+             * <li><p>unAmortized: The cost is not amortized.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>amortized</p>
              */
             public Builder amortizationStatus(String amortizationStatus) {
                 this.amortizationStatus = amortizationStatus;
@@ -839,7 +867,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * BillAccountID.
+             * <p>The ID of the account to which the bill belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185xxxxx489</p>
              */
             public Builder billAccountID(Long billAccountID) {
                 this.billAccountID = billAccountID;
@@ -847,7 +878,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * BillAccountName.
+             * <p>The name of the account to which the bill belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder billAccountName(String billAccountName) {
                 this.billAccountName = billAccountName;
@@ -855,7 +889,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * BillOwnerID.
+             * <p>The ID of the resource owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185xxxxx489</p>
              */
             public Builder billOwnerID(Long billOwnerID) {
                 this.billOwnerID = billOwnerID;
@@ -863,7 +900,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * BillOwnerName.
+             * <p>The name of the resource owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder billOwnerName(String billOwnerName) {
                 this.billOwnerName = billOwnerName;
@@ -871,7 +911,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * BizType.
+             * <p>The business type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trusteeship</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -879,7 +922,11 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * ConsumePeriod.
+             * <p>The billing cycle.
+             * Format: YYYYMM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202210</p>
              */
             public Builder consumePeriod(String consumePeriod) {
                 this.consumePeriod = consumePeriod;
@@ -887,7 +934,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * CurrentAmortizationAfterDiscountAmount.
+             * <p>The amortized amount for the current period after discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationAfterDiscountAmount(Double currentAmortizationAfterDiscountAmount) {
                 this.currentAmortizationAfterDiscountAmount = currentAmortizationAfterDiscountAmount;
@@ -895,7 +945,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * CurrentAmortizationDeductedByCashCoupons.
+             * <p>The amount deducted by cash coupons that is amortized in the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationDeductedByCashCoupons(Double currentAmortizationDeductedByCashCoupons) {
                 this.currentAmortizationDeductedByCashCoupons = currentAmortizationDeductedByCashCoupons;
@@ -903,7 +956,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * CurrentAmortizationDeductedByCoupons.
+             * <p>The amount deducted by coupons that is amortized in the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationDeductedByCoupons(Double currentAmortizationDeductedByCoupons) {
                 this.currentAmortizationDeductedByCoupons = currentAmortizationDeductedByCoupons;
@@ -911,7 +967,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * CurrentAmortizationDeductedByPrepaidCard.
+             * <p>The amount paid with a prepaid card that is amortized in the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationDeductedByPrepaidCard(Double currentAmortizationDeductedByPrepaidCard) {
                 this.currentAmortizationDeductedByPrepaidCard = currentAmortizationDeductedByPrepaidCard;
@@ -919,7 +978,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * CurrentAmortizationExpenditureAmount.
+             * <p>The expenditure amount (which can be invoiced) amortized in the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationExpenditureAmount(Double currentAmortizationExpenditureAmount) {
                 this.currentAmortizationExpenditureAmount = currentAmortizationExpenditureAmount;
@@ -927,7 +989,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * CurrentAmortizationInvoiceDiscount.
+             * <p>The discount amortized in the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationInvoiceDiscount(Double currentAmortizationInvoiceDiscount) {
                 this.currentAmortizationInvoiceDiscount = currentAmortizationInvoiceDiscount;
@@ -935,7 +1000,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * CurrentAmortizationPretaxAmount.
+             * <p>The pretax amount amortized in the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationPretaxAmount(Double currentAmortizationPretaxAmount) {
                 this.currentAmortizationPretaxAmount = currentAmortizationPretaxAmount;
@@ -943,7 +1011,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * CurrentAmortizationPretaxGrossAmount.
+             * <p>The list price amortized in the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationPretaxGrossAmount(Double currentAmortizationPretaxGrossAmount) {
                 this.currentAmortizationPretaxGrossAmount = currentAmortizationPretaxGrossAmount;
@@ -951,7 +1022,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * CurrentAmortizationRoundDownDiscount.
+             * <p>The amount deducted by rounding down that is amortized in the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationRoundDownDiscount(Double currentAmortizationRoundDownDiscount) {
                 this.currentAmortizationRoundDownDiscount = currentAmortizationRoundDownDiscount;
@@ -959,7 +1033,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * DeductedByCashCoupons.
+             * <p>The amount deducted by cash coupons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByCashCoupons(Double deductedByCashCoupons) {
                 this.deductedByCashCoupons = deductedByCashCoupons;
@@ -967,7 +1044,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * DeductedByCoupons.
+             * <p>The amount deducted by coupons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByCoupons(Double deductedByCoupons) {
                 this.deductedByCoupons = deductedByCoupons;
@@ -975,7 +1055,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * DeductedByPrepaidCard.
+             * <p>The amount paid with a prepaid card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByPrepaidCard(Double deductedByPrepaidCard) {
                 this.deductedByPrepaidCard = deductedByPrepaidCard;
@@ -983,7 +1066,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * ExpenditureAmount.
+             * <p>The expenditure amount (which can be invoiced).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expenditureAmount(Double expenditureAmount) {
                 this.expenditureAmount = expenditureAmount;
@@ -991,7 +1077,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * InvoiceDiscount.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder invoiceDiscount(Double invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -999,7 +1088,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * PretaxAmount.
+             * <p>The pretax amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxAmount(Double pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -1007,7 +1099,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * PretaxGrossAmount.
+             * <p>The list price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxGrossAmount(Double pretaxGrossAmount) {
                 this.pretaxGrossAmount = pretaxGrossAmount;
@@ -1015,7 +1110,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * PreviouslyAmortizedAfterDiscountAmount.
+             * <p>The previously amortized amount after discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedAfterDiscountAmount(Double previouslyAmortizedAfterDiscountAmount) {
                 this.previouslyAmortizedAfterDiscountAmount = previouslyAmortizedAfterDiscountAmount;
@@ -1023,7 +1121,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * PreviouslyAmortizedDeductedByCashCoupons.
+             * <p>The previously amortized amount deducted by cash coupons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedDeductedByCashCoupons(Double previouslyAmortizedDeductedByCashCoupons) {
                 this.previouslyAmortizedDeductedByCashCoupons = previouslyAmortizedDeductedByCashCoupons;
@@ -1031,7 +1132,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * PreviouslyAmortizedDeductedByCoupons.
+             * <p>The previously amortized amount deducted by coupons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedDeductedByCoupons(Double previouslyAmortizedDeductedByCoupons) {
                 this.previouslyAmortizedDeductedByCoupons = previouslyAmortizedDeductedByCoupons;
@@ -1039,7 +1143,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * PreviouslyAmortizedDeductedByPrepaidCard.
+             * <p>The previously amortized amount paid with a prepaid card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedDeductedByPrepaidCard(Double previouslyAmortizedDeductedByPrepaidCard) {
                 this.previouslyAmortizedDeductedByPrepaidCard = previouslyAmortizedDeductedByPrepaidCard;
@@ -1047,7 +1154,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * PreviouslyAmortizedExpenditureAmount.
+             * <p>The previously amortized expenditure amount (which can be invoiced).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedExpenditureAmount(Double previouslyAmortizedExpenditureAmount) {
                 this.previouslyAmortizedExpenditureAmount = previouslyAmortizedExpenditureAmount;
@@ -1055,7 +1165,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * PreviouslyAmortizedInvoiceDiscount.
+             * <p>The previously amortized discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedInvoiceDiscount(Double previouslyAmortizedInvoiceDiscount) {
                 this.previouslyAmortizedInvoiceDiscount = previouslyAmortizedInvoiceDiscount;
@@ -1063,7 +1176,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * PreviouslyAmortizedPretaxAmount.
+             * <p>The previously amortized pretax amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedPretaxAmount(Double previouslyAmortizedPretaxAmount) {
                 this.previouslyAmortizedPretaxAmount = previouslyAmortizedPretaxAmount;
@@ -1071,7 +1187,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * PreviouslyAmortizedPretaxGrossAmount.
+             * <p>The previously amortized list price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedPretaxGrossAmount(Double previouslyAmortizedPretaxGrossAmount) {
                 this.previouslyAmortizedPretaxGrossAmount = previouslyAmortizedPretaxGrossAmount;
@@ -1079,7 +1198,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * PreviouslyAmortizedRoundDownDiscount.
+             * <p>The previously amortized amount deducted by rounding down.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedRoundDownDiscount(Double previouslyAmortizedRoundDownDiscount) {
                 this.previouslyAmortizedRoundDownDiscount = previouslyAmortizedRoundDownDiscount;
@@ -1087,7 +1209,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * ProductCode.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -1095,7 +1220,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * ProductDetail.
+             * <p>The product details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云数据库RDS</p>
              */
             public Builder productDetail(String productDetail) {
                 this.productDetail = productDetail;
@@ -1103,7 +1231,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * ProductDetailCode.
+             * <p>The code of the product details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productDetailCode(String productDetailCode) {
                 this.productDetailCode = productDetailCode;
@@ -1111,7 +1242,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * ProductName.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云数据库RDS</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -1119,7 +1253,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * RemainingAmortizationAfterDiscountAmount.
+             * <p>The remaining unamortized amount after discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationAfterDiscountAmount(Double remainingAmortizationAfterDiscountAmount) {
                 this.remainingAmortizationAfterDiscountAmount = remainingAmortizationAfterDiscountAmount;
@@ -1127,7 +1264,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * RemainingAmortizationDeductedByCashCoupons.
+             * <p>The remaining unamortized amount deducted by cash coupons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationDeductedByCashCoupons(Double remainingAmortizationDeductedByCashCoupons) {
                 this.remainingAmortizationDeductedByCashCoupons = remainingAmortizationDeductedByCashCoupons;
@@ -1135,7 +1275,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * RemainingAmortizationDeductedByCoupons.
+             * <p>The remaining unamortized amount deducted by coupons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationDeductedByCoupons(Double remainingAmortizationDeductedByCoupons) {
                 this.remainingAmortizationDeductedByCoupons = remainingAmortizationDeductedByCoupons;
@@ -1143,7 +1286,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * RemainingAmortizationDeductedByPrepaidCard.
+             * <p>The remaining unamortized amount paid with a prepaid card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationDeductedByPrepaidCard(Double remainingAmortizationDeductedByPrepaidCard) {
                 this.remainingAmortizationDeductedByPrepaidCard = remainingAmortizationDeductedByPrepaidCard;
@@ -1151,7 +1297,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * RemainingAmortizationExpenditureAmount.
+             * <p>The remaining unamortized expenditure amount (which can be invoiced).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationExpenditureAmount(Double remainingAmortizationExpenditureAmount) {
                 this.remainingAmortizationExpenditureAmount = remainingAmortizationExpenditureAmount;
@@ -1159,7 +1308,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * RemainingAmortizationInvoiceDiscount.
+             * <p>The remaining unamortized discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationInvoiceDiscount(Double remainingAmortizationInvoiceDiscount) {
                 this.remainingAmortizationInvoiceDiscount = remainingAmortizationInvoiceDiscount;
@@ -1167,7 +1319,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * RemainingAmortizationPretaxAmount.
+             * <p>The remaining unamortized pretax amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationPretaxAmount(Double remainingAmortizationPretaxAmount) {
                 this.remainingAmortizationPretaxAmount = remainingAmortizationPretaxAmount;
@@ -1175,7 +1330,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * RemainingAmortizationPretaxGrossAmount.
+             * <p>The remaining unamortized list price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationPretaxGrossAmount(Double remainingAmortizationPretaxGrossAmount) {
                 this.remainingAmortizationPretaxGrossAmount = remainingAmortizationPretaxGrossAmount;
@@ -1183,7 +1341,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * RemainingAmortizationRoundDownDiscount.
+             * <p>The remaining unamortized amount deducted by rounding down.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationRoundDownDiscount(Double remainingAmortizationRoundDownDiscount) {
                 this.remainingAmortizationRoundDownDiscount = remainingAmortizationRoundDownDiscount;
@@ -1191,7 +1352,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * RoundDownDiscount.
+             * <p>The amount deducted by rounding down.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder roundDownDiscount(Double roundDownDiscount) {
                 this.roundDownDiscount = roundDownDiscount;
@@ -1199,7 +1363,16 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * SubscriptionType.
+             * <p>The subscription type. Valid values:</p>
+             * <ul>
+             * <li><p>Subscription: subscription.</p>
+             * </li>
+             * <li><p>PayAsYouGo: pay-as-you-go.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -1318,7 +1491,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             } 
 
             /**
-             * AccountID.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185766xxxx</p>
              */
             public Builder accountID(String accountID) {
                 this.accountID = accountID;
@@ -1326,7 +1502,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * AccountName.
+             * <p>The user account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -1334,7 +1513,7 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * Items.
+             * <p>The data entries.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -1342,7 +1521,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * MaxResults.
+             * <p>The maximum number of entries returned for the current request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -1350,7 +1532,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * NextToken.
+             * <p>The token that marks the position of the next query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -1358,7 +1543,10 @@ public class DescribeProductAmortizedCostByConsumePeriodResponseBody extends Tea
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

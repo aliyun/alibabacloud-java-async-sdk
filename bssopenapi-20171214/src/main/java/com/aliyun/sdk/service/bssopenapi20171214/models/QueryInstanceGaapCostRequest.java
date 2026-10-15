@@ -130,6 +130,7 @@ public class QueryInstanceGaapCostRequest extends Request {
         } 
 
         /**
+         * <p>The billing cycle, in the YYYY-MM format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,10 @@ public class QueryInstanceGaapCostRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -151,7 +155,10 @@ public class QueryInstanceGaapCostRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +167,10 @@ public class QueryInstanceGaapCostRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The product code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -169,7 +179,10 @@ public class QueryInstanceGaapCostRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -178,7 +191,16 @@ public class QueryInstanceGaapCostRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><p><code>Subscription</code>: subscription</p>
+         * </li>
+         * <li><p><code>PayAsYouGo</code>: pay-as-you-go</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

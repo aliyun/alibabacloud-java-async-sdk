@@ -144,7 +144,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>The code of the service to which the instance belongs.</p>
+         * <p>The product code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +179,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>The type of the service.</p>
+         * <p>The product type.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -191,12 +191,21 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>The duration of the subscription renewal. Unit: months. Valid values:</p>
+         * <p>The renewal period for the subscription instance. Unit: months. Valid values:</p>
          * <ul>
-         * <li>1 to 9</li>
-         * <li>12</li>
-         * <li>24</li>
-         * <li>36</li>
+         * <li>1 to 9.</li>
+         * <li><ol start="12">
+         * <li></li>
+         * </ol>
+         * </li>
+         * <li><ol start="24">
+         * <li></li>
+         * </ol>
+         * </li>
+         * <li><ol start="36">
+         * <li></li>
+         * </ol>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

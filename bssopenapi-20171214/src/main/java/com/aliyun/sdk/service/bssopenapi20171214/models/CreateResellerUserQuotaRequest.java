@@ -104,6 +104,7 @@ public class CreateResellerUserQuotaRequest extends Request {
         } 
 
         /**
+         * <p>The amount in CNY. This parameter is required to activate a quota.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,10 +117,11 @@ public class CreateResellerUserQuotaRequest extends Request {
         }
 
         /**
+         * <p>The currency.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>CNY</p>
+         * <p>CNY：人民币。USD：美元。JPY：日元。</p>
          */
         public Builder currency(String currency) {
             this.putQueryParameter("Currency", currency);
@@ -128,7 +130,10 @@ public class CreateResellerUserQuotaRequest extends Request {
         }
 
         /**
-         * OutBizId.
+         * <p>The business transaction ID of the external system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ed0bedc-056e-4a71-9249-4581615c028f</p>
          */
         public Builder outBizId(String outBizId) {
             this.putQueryParameter("OutBizId", outBizId);

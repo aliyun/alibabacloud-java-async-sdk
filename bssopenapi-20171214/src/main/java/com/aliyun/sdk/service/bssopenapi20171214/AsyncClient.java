@@ -48,6 +48,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelOrderResponse> cancelOrder(CancelOrderRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deducts user quota consumption.</p>
+     * 
      * @param request the request parameters of ChangeResellerConsumeAmount  ChangeResellerConsumeAmountRequest
      * @return ChangeResellerConsumeAmountResponse
      */
@@ -55,7 +58,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>1\. A member needs to confirm an invitation only if a financial management relationship is established between the management account and the member and enterprise names used by the management account and the member for real-name verification are different. 2. The permissions to be confirmed must be the same as those granted to the member when the management account initiates the invitation.</p>
+     * <ol>
+     * <li>Currently, only financial management linking is supported. The linked account needs to confirm the invitation only when the real-name verification information of the main account and the linked account is inconsistent.</li>
+     * <li>The permissions to be confirmed must be exactly the same as the permissions specified in the invitation initiated by the main account for the confirmation to succeed.</li>
+     * </ol>
      * 
      * @param request the request parameters of ConfirmRelation  ConfirmRelationRequest
      * @return ConfirmRelationResponse
@@ -70,7 +76,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create an account so as to establish a master-member financial relationship.</p>
+     * <p>Creates a master-member relationship for financial management.</p>
      * 
      * @param request the request parameters of CreateAgAccount  CreateAgAccountRequest
      * @return CreateAgAccountResponse
@@ -115,7 +121,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is in beta testing and is only available for specific users in the whitelist. Excessive calls may result in performance issues. For example, the response times out.</p>
+     * <p>This OpenAPI is in beta and available only to whitelisted users. Excessive calls may cause performance issues, such as response timeouts.</p>
      * 
      * @param request the request parameters of DescribeCostBudgetsSummary  DescribeCostBudgetsSummaryRequest
      * @return DescribeCostBudgetsSummaryResponse
@@ -124,7 +130,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can view and export the allocated costs of the current month after 10:00 on the fourth day of the next month. The allocated costs of a single allocation month may involve orders or bills in different billing cycles. If a historical allocated amount is incorrect, the historical allocated costs need to be adjusted. As a result, the allocated costs displayed for a single allocation month may be different at different time points.</p>
+     * <ul>
+     * <li>Amortized costs cannot be used for settlement or reconciliation. They are used to allocate your subscription and pay-as-you-go fees based on specified allocation rules.</li>
+     * <li>The final data for a month is available after 12:00 on the sixth day of the following month. The reason for this delay is that scenarios such as delayed billing, refunds, bill adjustments, and overdue payment write-offs can occur during the month. The data for the current month does not include unsettled pay-as-you-go fees for which bills have not yet been generated.</li>
+     * <li>Amortized cost data from the last 12 months is available.</li>
+     * <li>Data for attached resources is reflected in the amortized costs 48 hours after the split bill is generated. To use this feature, you must first enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>. Data for items that are not attached resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>For months before August 2021, amortized costs are not updated intra-month. They are updated only after 12:00 on the sixth day of the following month. Consequently, specific costs for attached resources, such as domain names, buckets, and EIPs, for products such as CDN, OSS, and Internet Shared Bandwidth are not available for these months.</li>
+     * <li>Amortized cost data is available for querying 48 hours after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Cost</a> feature.</li>
+     * </ul>
      * 
      * @param request the request parameters of DescribeInstanceAmortizedCostByAmortizationPeriod  DescribeInstanceAmortizedCostByAmortizationPeriodRequest
      * @return DescribeInstanceAmortizedCostByAmortizationPeriodResponse
@@ -138,6 +151,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceAmortizedCostByAmortizationPeriodDateResponse> describeInstanceAmortizedCostByAmortizationPeriodDate(DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Amortized costs are not used for settlement or reconciliation. They are used to allocate your cloud expenses, including both subscription and pay-as-you-go fees, based on specified allocation rules.</li>
+     * <li>The final data for a month is available after 12:00 on the sixth day of the following month. This delay accounts for events such as delayed billing, refunds, bill adjustments, and overdue payment write-offs. Data for the current month does not include unsettled pay-as-you-go fees.</li>
+     * <li>Amortized cost data is available for the past 12 months.</li>
+     * <li>Data for attached resources in the amortized costs is updated 48 hours after the split bill is generated. To view the costs of attached resources, you must first enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>. Data for other resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>For months before August 2021, amortized costs are not updated mid-month. They are updated only after 12:00 on the sixth day of the following month. In addition, specific costs for attached resources, such as domain names, buckets, and EIPs, of products such as CDN, OSS, and Internet Shared Bandwidth, are not provided for this period.</li>
+     * <li>Amortized cost data is available only after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Costs</a> feature. The data becomes available 48 hours after enablement.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeInstanceAmortizedCostByConsumePeriod  DescribeInstanceAmortizedCostByConsumePeriodRequest
      * @return DescribeInstanceAmortizedCostByConsumePeriodResponse
      */
@@ -145,10 +168,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Instance bills are generated after the total bill is split. In most cases, the instance bills do not include data generated on the last day of the specified billing cycle.</p>
      * <ul>
-     * <li>The instance information may change during the billing cycle. The instance configurations and types in monthly bills are subject to the point in time when you query bills. For more information, see the corresponding bill details.</li>
-     * <li>You can query data generated after June 2020 for Cloud Communications services. You can query data generated after November 2020 for Alibaba Cloud Domains.</li>
+     * <li>The query results for the current month are for reference only and cannot be used as the basis for reconciliation. The final bill for the current month can be viewed or exported after 12:00 on the 3rd day of the next month. During the month, a few scenarios may occur, including but not limited to delayed billing, refunds, bill adjustments, and overdue payment write-offs.</li>
+     * <li>The bill data for the current month does not include unsettled pay-as-you-go data that is unbilled or accumulating.</li>
+     * <li>Data for the last 18 months is supported. </li>
+     * <li>Bill data is updated with a 24-hour delay compared to actual consumption. Information related to the instance ID, such as instance configuration, instance type, instance alias, resource group, public IP address, private IP address, and zone, is updated with a 48-hour delay.  </li>
+     * <li>Bill data does not provide the specific costs of individual split items, such as domain names, buckets, and EIPs, for split-type cloud services, such as CDN, OSS, and Internet Shared Bandwidth. To view data that includes split items, go to the split bill page.</li>
+     * <li>For cloud communication products, only detail data from June 2020 onwards is supported. For HiChina products, including domain names and trademarks, only detail data from November 2020 onwards is supported.</li>
+     * <li>The rate limit is 10 requests per second per user. If a timeout occurs, retry the request.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeInstanceBill  DescribeInstanceBillRequest
@@ -170,7 +197,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can view and export the allocated costs of the current month after 10:00 on the fourth day of the next month. The allocated costs of a single allocation month may involve orders or bills in different billing cycles. If a historical allocated amount is incorrect, the historical allocated costs need to be adjusted. As a result, the allocated costs displayed for a single allocation month may be different at different time points.</p>
+     * <ul>
+     * <li>Amortized costs are for cost allocation purposes only and cannot be used for settlement or reconciliation. This feature allocates your cloud expenses, including both subscription and pay-as-you-go fees, based on specified allocation rules.</li>
+     * <li>The final data for a month is available after 12:00 on the sixth day of the following month. Data for the current month is not final. This is because it does not include unsettled pay-as-you-go fees and may change due to events such as delayed billing, refunds, bill adjustments, and overdue payment write-offs.</li>
+     * <li>Amortized cost data for the past 12 months is available.</li>
+     * <li>Data for attached resources, which requires you to enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>, is updated 48 hours after the split bill is generated. Data for other resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>For months before August 2021, amortized costs were not updated during the month. They were updated only after 12:00 on the sixth day of the following month. In addition, cost details for attached resources, such as domain names, buckets, and EIPs, for products such as CDN, OSS, and Internet Shared Bandwidth are not available for this period.</li>
+     * <li>Amortized cost data becomes available 48 hours after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Cost</a> feature.</li>
+     * </ul>
      * 
      * @param request the request parameters of DescribeProductAmortizedCostByAmortizationPeriod  DescribeProductAmortizedCostByAmortizationPeriodRequest
      * @return DescribeProductAmortizedCostByAmortizationPeriodResponse
@@ -178,6 +212,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeProductAmortizedCostByAmortizationPeriodResponse> describeProductAmortizedCostByAmortizationPeriod(DescribeProductAmortizedCostByAmortizationPeriodRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Amortized costs are used for cost allocation and cannot be used for settlement or reconciliation. This feature allocates your cloud expenses, including both subscription and pay-as-you-go fees, based on specified rules.</li>
+     * <li>The final data for a given month is available after 12:00 on the sixth day of the following month. This delay ensures that potential mid-month events, such as delayed billing, refunds, bill adjustments, and overdue payment write-offs, are included. Data for the current month does not include unsettled pay-as-you-go fees that have not yet been billed or are still accumulating.</li>
+     * <li>Amortized cost data for the past 12 months is available.</li>
+     * <li>Data related to attached resources is updated in the amortized costs 48 hours after the corresponding split bill is generated. To view the costs of attached resources, you must first enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>. Data that is not related to attached resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>For months before August 2021, amortized costs were not updated mid-month and were only updated after 12:00 on the sixth day of the following month. Additionally, for this period, specific costs for attached resources, such as domain names, buckets, and EIPs, for products such as CDN, OSS, and Internet Shared Bandwidth are not available.</li>
+     * <li>Amortized cost data is provided only after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Cost</a> feature. The data is available 48 hours after you enable it.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeProductAmortizedCostByConsumePeriod  DescribeProductAmortizedCostByConsumePeriodRequest
      * @return DescribeProductAmortizedCostByConsumePeriodResponse
      */
@@ -185,9 +229,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>1\. The queried coverage details are the same as those displayed in the table on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-     * 2\. You can call this operation to query the coverage details of RIs or SCUs.
-     * 3\. You can call this operation to query coverage details at an hourly, daily, or monthly granularity.</p>
+     * <ol>
+     * <li>The data is consistent with the list data in the Coverage Overview section of the Resource Instance Management menu in the User Center.</li>
+     * <li>Currently, coverage queries are supported for reserved instances (RIs) and storage capacity units (SCUs).</li>
+     * <li>Coverage queries are provided in three dimensions: hour, day, and month.</li>
+     * </ol>
      * 
      * @param request the request parameters of DescribeResourceCoverageDetail  DescribeResourceCoverageDetailRequest
      * @return DescribeResourceCoverageDetailResponse
@@ -196,8 +242,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The queried total coverage data is the same as the aggregated data displayed on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-     * You can call this operation to query the total coverage data of RIs or SCUs.</p>
+     * <p>Returns the same summary data as the Coverage Overview in the Resource Instance Management menu of the User Center.
+     * Currently, coverage queries are supported for two resource types: reserved instances (RIs) and storage capacity units (SCUs).</p>
      * 
      * @param request the request parameters of DescribeResourceCoverageTotal  DescribeResourceCoverageTotalRequest
      * @return DescribeResourceCoverageTotalResponse
@@ -248,10 +294,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  The data that you query by calling this operation is the same as the data that is queried by billing cycles in the Split Bill module of Cost Allocation.</p>
      * <ul>
-     * <li>You can query split bills that were generated within the last 12 months by calling this operation.</li>
-     * <li>You can query split bills only after you enable the <a href="https://usercenter2-intl.aliyun.com/finance/split-bill">Split Bill</a> service in the User Center console.</li>
+     * <li>The query results for the current month\&quot;s split bills are for reference only and cannot be used as the basis for reconciliation. The final bill for the current month can be queried after 12:00 on the 4th day of the next month. The split bill data for the current month does not include unsettled pay-as-you-go data (unbilled or being accumulated).</li>
+     * <li>Split bill data is available for the last 12 months.</li>
+     * <li>Split bill data is updated with a 48-hour delay compared to actual expenses. For split cloud services (such as CDN, OSS, and Internet Shared Bandwidth), the specific expenses for each attached resource (such as domain names, buckets, and EIPs) are updated with a 72-hour delay.</li>
+     * <li>Split bill data is available only after you enable the feature on the &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/finance/split-bill">Split Bill</a> page in the console. The data becomes available 24 hours after you enable the feature.</li>
+     * <li>The rate limit is 10 requests per second per user. If a timeout occurs, retry the request.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSplitItemBill  DescribeSplitItemBillRequest
@@ -273,7 +321,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.</p>
+     * <p>The system queries the list of associated end customer UIDs based on the AccessKey pair in the request.</p>
      * 
      * @param request the request parameters of GetCustomerList  GetCustomerListRequest
      * @return GetCustomerListResponse
@@ -288,11 +336,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3>Usage notes</h3>
+     * <h3>Operation description</h3>
      * <ol>
-     * <li>Call the QueryProductList operation to obtain the code of the service. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">QueryProductList</a>.</li>
-     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of the service. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a>.</li>
-     * <li>Call the GetPayAsYouGoPrice operation to obtain the pay-as-you-go price of the service based on the returned configuration parameters.</li>
+     * <li>Call QueryProductList to obtain the product code. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">Query product information</a>.</li>
+     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of a product. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">Query pricing module information</a>.</li>
+     * <li>Call this operation with the obtained product configuration parameters to query the price of a pay-as-you-go product.</li>
      * </ol>
      * 
      * @param request the request parameters of GetPayAsYouGoPrice  GetPayAsYouGoPriceRequest
@@ -309,9 +357,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Call the QueryProductList operation to obtain the code of the service. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">QueryProductList</a>.</li>
-     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of the service. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a>.</li>
-     * <li>Call the GetSubscriptionPrice operation to obtain the pricing of the service based on the returned configuration parameters.</li>
+     * <li>Call QueryProductList to obtain the product code. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">Query product information</a>.</li>
+     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of the product. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">Query product module information</a>.</li>
+     * <li>Call this operation to query the prices of subscription products based on the obtained product configuration parameters.</li>
+     * <li>Concatenate the Config parameter under ModuleList based on the config parameter returned by the DescribePricingModule operation. Do not omit any parameters. Otherwise, an error occurs during the price inquiry.</li>
      * </ol>
      * 
      * @param request the request parameters of GetSubscriptionPrice  GetSubscriptionPriceRequest
@@ -322,9 +371,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ol>
-     * <li><strong>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</strong></li>
-     * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
-     * <li>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * <li><strong>Carefully verify the information about the resource to be unsubscribed, and confirm the unsubscription terms and refund amount. Resources cannot be recovered after unsubscription.</strong></li>
+     * <li>Only the actual paid amount is refunded. Used vouchers are not refunded.</li>
+     * <li>For other questions, refer to: &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM">Refund rules</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Refund rules for Alibaba Cloud International Website</a></li>
      * </ol>
      * 
      * @param request the request parameters of InquiryPriceRefundInstance  InquiryPriceRefundInstanceRequest
@@ -364,10 +413,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>Account bills are summarized based on instance bills. In most cases, the account bills do not include the data generated on the last day of the specified period.</li>
-     * <li>You can query the data generated in June 2020 or later for Cloud Communications services. However, the query results do not include the data of Alibaba Cloud Domains.</li>
+     * <li>Data for the current month is for reference only. Do not use it for reconciliation. The final bill for the current month is available to view or export after 12:00 on the third day of the next month. This delay accounts for mid-month events such as delayed billing, refunds, bill adjustments, and overdue payment write-offs.</li>
+     * <li>Data from the last 18 months is available.</li>
+     * <li>Billing data is updated 24 hours after actual resource consumption. Information related to instance IDs, such as instance configurations, instance types, instance nicknames, resource groups, public IP addresses, private IP addresses, and zones, is updated with a 48-hour delay.</li>
+     * <li>Billing data does not include the costs of attached resources, such as domain names, buckets, and elastic IP addresses (EIPs), for products such as CDN, OSS, and Internet Shared Bandwidth. To view statistics that include data for attached resources, go to Split Bill.</li>
+     * <li>For Alibaba Cloud Communications products, detailed data is available only from June 2020 onwards. For HiChina products, such as Domain Names and trademarks, detailed data is available only from November 2020 onwards.</li>
+     * <li>Each account is limited to 10 queries per second. If a timeout occurs, retry the request.</li>
      * </ul>
      * 
      * @param request the request parameters of QueryAccountBill  QueryAccountBillRequest
@@ -419,7 +471,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the information about a service based on the service code.</p>
+     * <p>Retrieves a list of commodity information based on a product code.</p>
      * 
      * @param request the request parameters of QueryCommodityList  QueryCommodityListRequest
      * @return QueryCommodityListResponse
@@ -448,7 +500,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>Limits:</p>
      * <ul>
-     * <li>Only the usage records within the past year can be queried.</li>
+     * <li>Only usage records from the past year are supported.</li>
      * </ul>
      * 
      * @param request the request parameters of QueryDPUtilizationDetail  QueryDPUtilizationDetailRequest
@@ -470,12 +522,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2></h2>
+     * <h2>API description</h2>
+     * <p>Note the following when you call this operation:</p>
      * <ul>
-     * <li>This API operation has been upgraded to DescribeInstanceBill. We recommend that you call the <a href="https://help.aliyun.com/document_detail/209402.html">DescribeInstanceBill</a> operation to query the bills of instances or billable items in a billing cycle. You can call the QueryInstanceBill operation to query a maximum of 50,000 data rows in a bill.</li>
-     * <li>Instance bills are generated after bills are split. In most cases, the instance bills do not include data generated on the last day of the specified period.</li>
-     * <li>The instance information changes within a billing cycle. The instance configurations and specifications and the time when the instance was used in the billing cycle are all recorded. For more information, see the corresponding bill details.</li>
-     * <li>You can query the data generated in June 2020 or later for Cloud Communications services, and the data generated in November 2020 or later for Alibaba Cloud Domains.</li>
+     * <li>The API for instance bills has been upgraded. We recommend that you use the new operation <a href="https://help.aliyun.com/document_detail/209402.html">DescribeInstanceBill</a>. This operation no longer supports querying data beyond the 50,000th row.</li>
+     * <li>Instance bills are generated based on split billing data. A delay of about one day may occur.</li>
+     * <li>Instance information may change within a billing cycle. The instance Config and Spec in the monthly summary reflect the information at the time the record was generated. For more information, see the corresponding detailed bill.</li>
+     * <li>Data for Alibaba Cloud Communications products is available from June 2020. Data for HiChina products is available from November 2020.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>For the international site (alibabacloud.com), select Singapore as the endpoint.</li>
      * </ul>
      * 
      * @param request the request parameters of QueryInstanceBill  QueryInstanceBillRequest
@@ -521,7 +576,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the billable items of a service. A billable item is the minimum unit used to calculate costs.</p>
+     * <p>Queries the pricing entities under a commodity. A pricing entity is the smallest product capability used for metering and cost calculation.</p>
      * 
      * @param request the request parameters of QueryPriceEntityList  QueryPriceEntityListRequest
      * @return QueryPriceEntityListResponse
@@ -559,6 +614,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryResellerAvailableQuotaResponse> queryResellerAvailableQuota(QueryResellerAvailableQuotaRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the alarm thresholds for low quotas.</p>
+     * 
      * @param request the request parameters of QueryResellerUserAlarmThreshold  QueryResellerUserAlarmThresholdRequest
      * @return QueryResellerUserAlarmThresholdResponse
      */
@@ -589,6 +647,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QuerySavingsPlansInstanceResponse> querySavingsPlansInstance(QuerySavingsPlansInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The query results for the current month are for reference only and cannot be used for reconciliation. The final bill for the current month is available for viewing or export after 12:00 on the 2nd of the following month. During the month, a few scenarios may occur, including but not limited to delayed billing, refunds, adjustments, and overdue payment write-offs.</li>
+     * <li>Bill data is updated with a 5-hour delay relative to actual cost consumption.</li>
+     * <li>For bills in the &quot;Unsettled&quot; state in historical billing cycles, the status is updated to settled 5 hours after payment. For bills in the &quot;Unsettled&quot; state in the current month, the status is updated to settled when the bill is generated at 12:00 on the 2nd of the following month.</li>
+     * <li>This API supports graceful backoff with a request rate of 600/60(s).</li>
+     * <li>The rate limit per user is 10 requests per second. If a timeout occurs, retry the request.</li>
+     * </ul>
+     * 
      * @param request the request parameters of QuerySettleBill  QuerySettleBillRequest
      * @return QuerySettleBillResponse
      */
@@ -602,11 +669,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This API operation has been upgraded to DescribeSplitItemBill. We recommend that you call the <a href="https://help.aliyun.com/document_detail/208169.html">DescribeSplitItemBill</a> operation to query split bills. You can call the QuerySplitItemBill operation to query a maximum of 50,000 data rows in a bill.</p>
      * <ul>
-     * <li>The data queried by calling the QuerySplitItemBill operation is consistent with the data that is displayed for the specified billing cycle on the Split Bill page in User Center.</li>
-     * <li>You can call this operation to query split bills generated within the last 12 months.</li>
-     * <li>This operation returns split bills only after you activate the <a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a> service in User Center.</li>
+     * <li>The API for split bills is upgraded. We recommend that you use the new <a href="https://help.aliyun.com/document_detail/208169.html">DescribeSplitItemBill</a> operation. This operation no longer supports querying more than 50,000 rows of data.</li>
+     * <li>The data is consistent with the split bill data for the specified billing cycle in the User Center.</li>
+     * <li>You can query split bills that were generated within the last 12 months.</li>
+     * <li>To use this feature, you must first enable it on the <a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a> page in the console.</li>
      * </ul>
      * 
      * @param request the request parameters of QuerySplitItemBill  QuerySplitItemBillRequest
@@ -616,12 +683,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the usage data of an Alibaba Cloud service. Take note of the following items:</p>
+     * <h2>API description</h2>
      * <ul>
-     * <li>The service code that you specify for querying the usage data of a specific Alibaba Cloud service must be valid. You can query the usage data by hour or by day.</li>
-     * <li>The time that you specify must follow the ISO8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.<ul>
-     * <li>Latency exists in data pushes. Therefore, if you set the DataType parameter to Hour, the integrity of usage data recorded in the last 24 hours can be ensured. If you set the DataType parameter to Day, the integrity of usage data recorded in the last two days can be ensured.</li>
-     * <li>You can query the usage data that is recorded in the last quarter.</li>
+     * <li>The specified cloud service parameter must be one of the following cloud service codes. The metering data types include hourly and daily.</li>
+     * <li>The time format must comply with the ISO 8601 standard. Time specification constraints:<ul>
+     * <li>   Due to delays in data push, the data integrity of hourly metering data is guaranteed for the past 24 hours, and the data integrity of daily metering data is guaranteed for the past 2 days.</li>
+     * <li>   The time span can cover the metering data of the most recent quarter.</li>
      * </ul>
      * </li>
      * </ul>
@@ -634,9 +701,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
-     * <li>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</li>
-     * <li>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * <li>Only the actual paid amount is refunded. Used vouchers are not refunded.</li>
+     * <li>Carefully verify the information about the resource to be unsubscribed, and confirm the unsubscription terms and refund amount. Resources cannot be recovered after unsubscription.</li>
+     * <li>This operation can be called only by direct customers. Reseller customers cannot use this operation.</li>
+     * <li>For other questions, refer to: &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM">Refund policy</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Refund rules for Alibaba Cloud International site</a></li>
      * </ol>
      * 
      * @param request the request parameters of RefundInstance  RefundInstanceRequest
@@ -690,18 +758,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetRenewalResponse> setRenewal(SetRenewalRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Configures low-balance alert rules for quotas.</p>
+     * 
      * @param request the request parameters of SetResellerUserAlarmThreshold  SetResellerUserAlarmThresholdRequest
      * @return SetResellerUserAlarmThresholdResponse
      */
     CompletableFuture<SetResellerUserAlarmThresholdResponse> setResellerUserAlarmThreshold(SetResellerUserAlarmThresholdRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>设置用户配额账本的Quota额度</p>
+     * 
      * @param request the request parameters of SetResellerUserQuota  SetResellerUserQuotaRequest
      * @return SetResellerUserQuotaResponse
      */
     CompletableFuture<SetResellerUserQuotaResponse> setResellerUserQuota(SetResellerUserQuotaRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Sets the status of a reseller\&quot;s user account, such as frozen or hosted.</p>
+     * 
      * @param request the request parameters of SetResellerUserStatus  SetResellerUserStatusRequest
      * @return SetResellerUserStatusResponse
      */
@@ -715,64 +792,62 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>Before calling this operation, note the following information:</p>
      * <ul>
-     * <li>You can subscribe to only one type of bill at a time.</li>
-     * <li>The bills generated on the previous day are pushed on a daily basis the next day after you subscribe to the bills. The full-data bills for the previous month are pushed on the fourth day of each month. The monthly bills in the PDF format for the previous month are pushed on the fourth day of each month.</li>
-     * <li>The daily bills may be delayed. The delayed bills are pushed the next day after they are generated. The delayed bills may include the bills that should have been pushed on the previous day. We recommend that you query the full-data bills for the previous month at the beginning of each month.</li>
-     * <li>The bill subscriber must have the <a href="https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission.</li>
-     * <li>The SubscribeBillToOSS operation has the same functionality as the Save Expense Details to OSS Bucket feature in User Center.</li>
-     * <li>To subscribe to the bills stored in an OSS bucket, make sure that the directory name specified for the OSS bucket conforms to the following naming rules:</li>
+     * <li>You can subscribe to one type of bill file at a time.</li>
+     * <li>After subscription, the bill file generated on the previous day is pushed daily starting from the next day. On the 4th of each month, the full bill files for the entire billing cycle of the previous month are pushed. The monthly bill PDF is pushed on the 4th of each month for the previous month.</li>
+     * <li>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from earlier days that were delayed until the previous day. Pull the full files for the previous month at the beginning of each month.<blockquote>
+     * <p>To use OSS subscription for the first time, grant the <a href="https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission to the subscribing user. If the authorization is revoked, the system stops pushing files, and the user must re-authorize.</p>
+     * </blockquote>
+     * </li>
+     * <li>This subscription is the same feature as &quot;Bill Data Storage&quot; in the Expenses and Costs console. Subscriptions are synchronized between the two.</li>
+     * <li>When subscribing to a directory under a bucket, follow the directory naming conventions:<ul>
+     * <li>Emojis are not allowed. Use valid UTF-8 characters.</li>
+     * <li>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
+     * <li>A subdirectory named .. is not allowed.</li>
+     * <li>The total length must be 1 to 254 characters.</li>
      * </ul>
-     * <ol>
-     * <li><ol>
-     * <li>The directory name can contain only UTF-8 characters and cannot contain emoticons.</li>
-     * </ol>
      * </li>
-     * <li><ol start="2">
-     * <li>Forward slashes (/) are used to separate paths and can be used to create subdirectories with ease. The directory name cannot start with a forward slash (/), a backslash (\\), or consecutive forward slashes (/).</li>
-     * </ol>
-     * </li>
-     * <li><ol start="3">
-     * <li>The name of a subdirectory cannot be set to two consecutive periods (..).</li>
-     * </ol>
-     * </li>
-     * <li><ol start="4">
-     * <li>The directory name must be 1 to 254 characters in length.</li>
-     * </ol>
-     * </li>
-     * </ol>
-     * <ul>
      * <li>File names:<ul>
-     * <li><strong>BillingItemDetailForBillingPeriod</strong> (Detailed bills of billable items)<ul>
-     * <li>File name format for a daily push: <code>UID_BillingItemDetail_YYYYMMDD</code>. Example: <code>169**_BillingItemDetail_20190310</code>.</li>
-     * <li>File name format for a full-data push at the beginning of the next month: <code>UID_BillingItemDetail_YYYYMM</code>. Example: <code>169**_BillingItemDetail_201903</code>.</li>
-     * </ul>
+     * <li><p><strong>BillingItemDetailForBillingPeriod</strong> (billing item details)</p>
+     * <ul>
+     * <li><p>Daily push file name format: <code>UID_BillingItemDetail_YYYYMMDD</code>, for example, <code>169**_BillingItemDetail_20190310</code>.</p>
      * </li>
-     * <li><strong>InstanceDetailForBillingPeriod</strong> (Detailed bills of instances)<ul>
-     * <li>File name format for a daily push: <code>UID_InstanceDetail_YYYYMMDD</code>. Example: <code>169**_InstanceDetail_20190310</code>.</li>
-     * <li>File name format for a full-data push at the beginning of the next month: <code>UID_InstanceDetail_YYYYMM</code>. Example: <code>169**_InstanceDetail_201903</code>.</li>
-     * </ul>
-     * </li>
-     * <li><strong>InstanceDetailMonthly</strong> (Instance-based bills summarized by billing cycle)<ul>
-     * <li>File name format for a daily push: <code>UID_InstanceDetailMonthly_YYYYMM</code>. Example: <code>169**_InstanceDetailMonthly_201903</code>. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.</li>
-     * </ul>
-     * </li>
-     * <li><strong>BillingItemDetailMonthly</strong> (Billable item-based bills summarized by billing cycle)<ul>
-     * <li>File name format for a daily push: <code>UID_BillingItemDetailMonthly_YYYYMM</code>. Example: <code>169**_BillingItemDetailMonthly_201903</code>. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.</li>
-     * </ul>
-     * </li>
-     * <li><strong>SplitItemDetailDaily</strong> (Split bills summarized by day)<ul>
-     * <li>File name format for a daily push: <code>UID_SplitItemDetailDaily_YYYYMM</code>. Example: <code>169**_SplitItemDetailDaily_201903</code>. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.</li>
-     * </ul>
-     * </li>
-     * <li><strong>MonthBill</strong> (Monthly bill in the PDF format)<ul>
-     * <li>File name format for a monthly push: <code>UID_MonthBill_YYYYMM</code>. Example: <code>169**_MonthBill_201903</code>. The bill for the previous month is pushed on the fourth day of each month.</li>
-     * </ul>
+     * <li><p>Full file name format at the beginning of the next month: <code>UID_BillingItemDetail_YYYYMM</code>, for example, <code>169**_BillingItemDetail_201903</code>.</p>
      * </li>
      * </ul>
      * </li>
-     * <li>The bills of the MonthBill type are PDF files, whereas the bills of other types are CSV files. If the number of data rows in a bill exceeds a threshold, the bill is automatically split into multiple CSV files. Then, the multiple CSV files are automatically merged and compressed into a ZIP file that has the same name format as the original file.</li>
+     * <li><p><strong>InstanceDetailForBillingPeriod</strong> (instance bill details)</p>
+     * <ul>
+     * <li><p>Daily push file name format: <code>UID_InstanceDetail_YYYYMMDD</code>, for example, <code>169**_InstanceDetail_20190310</code>.</p>
+     * </li>
+     * <li><p>Full file name format at the beginning of the next month: <code>UID_InstanceDetail_YYYYMM</code>, for example, <code>169**_InstanceDetail_201903</code>.</p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p><strong>InstanceDetailMonthly</strong> (instance bill summary by billing cycle)</p>
+     * <ul>
+     * <li>Daily push file name format: <code>UID_InstanceDetailMonthly_YYYYMM</code>, for example, <code>169**_InstanceDetailMonthly_201903</code>. This file is updated daily with full data from the beginning of the month to the current day, until the 4th of the next month.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>BillingItemDetailMonthly</strong> (billing item summary by billing cycle)</p>
+     * <ul>
+     * <li>Daily push file name format: <code>UID_BillingItemDetailMonthly_YYYYMM</code>, for example, <code>169**_BillingItemDetailMonthly_201903</code>. This file is updated daily with full data from the beginning of the month to the current day, until the 4th of the next month.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>SplitItemDetailDaily</strong> (split bill daily summary)</p>
+     * <ul>
+     * <li>Daily push file name format: <code>UID_SplitItemDetailDaily_YYYYMM</code>, for example, <code>169**_SplitItemDetailDaily_201903</code>. This file is updated daily with full data from the beginning of the month to the current day, until the 4th of the next month.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>MonthBill</strong> (monthly bill PDF)</p>
+     * <ul>
+     * <li>Monthly push file name format: <code>UID_MonthBill_YYYYMM</code>, for example, <code>169**_MonthBill_201903</code>. The file for the previous month is pushed on the 4th of each month.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>Except for MonthBill, which is a PDF file, all other file types are CSV files. If the number of rows in a bill file exceeds a certain threshold, the file is automatically split into multiple CSV files, which are then compressed into a single ZIP file. The ZIP file name follows the same format.</li>
      * </ul>
      * 
      * @param request the request parameters of SubscribeBillToOSS  SubscribeBillToOSSRequest

@@ -215,7 +215,7 @@ public class QueryInstanceBillRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.</p>
+         * <p>The ID of the account that owns the resources. This account is the actual user of the resources.</p>
          * 
          * <strong>example:</strong>
          * <p>122</p>
@@ -227,7 +227,7 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * <p>The billing cycle. Format: YYYY-MM.</p>
+         * <p>The billing cycle in YYYY-MM format. Data from the last 18 months is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +240,7 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * <p>The billing date. This parameter is required only if the <strong>Granularity</strong> parameter is set to DAILY. Format: YYYY-MM-DD.</p>
+         * <p>The billing date. This parameter is required only when the <strong>Granularity</strong> parameter is set to DAILY. The value must be in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-03-03</p>
@@ -252,12 +252,14 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * <p>The granularity at which bills are queried. Valid values:</p>
+         * <p>The granularity at which to query bills. Valid values:</p>
          * <ul>
-         * <li>MONTHLY: queries bills by month. The data queried is consistent with the data that is displayed for the specified billing cycle on the Billing Details tab of the Bill Details page in User Center.</li>
-         * <li>DAILY: queries bills by day. The data queried is consistent with the data that is displayed for the specified day on the Billing Details tab of the Bill Details page in User Center.</li>
+         * <li><p>MONTHLY: queries bills by month. The data is consistent with the bill details on the Billing Cycle tab of the Bills page in the User Center.</p>
+         * </li>
+         * <li><p>DAILY: queries bills by day. The data is consistent with the bill details on the By Day tab of the Bills page in the User Center.</p>
+         * </li>
          * </ul>
-         * <p>You must set the <strong>BillingDate</strong> parameter before you can set the Granularity parameter to DAILY.</p>
+         * <p>If you set this parameter to DAILY, you must also specify the <strong>BillingDate</strong> parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>MONTHLY</p>
@@ -269,10 +271,12 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query data by billable item. Valid values:</p>
+         * <p>Specifies whether to query data by billable item.</p>
          * <ul>
-         * <li>false: does not query data by billable item. The data queried is consistent with the data that is displayed for the specified instance on the Billing Details tab of the Bill Details page in User Center.</li>
-         * <li>true: queries data by billable item. The data queried is consistent with the data that is displayed for the specified billable item on the Billing Details tab of the Bill Details page in User Center.</li>
+         * <li><p>false: The data is consistent with the bill details on the Instance tab of the Bills page in the User Center.</p>
+         * </li>
+         * <li><p>true: The data is consistent with the bill details on the Billable Item tab of the Bills page in the User Center.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -286,10 +290,12 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter out a bill whose pretax gross amount and pretax amount are 0. Default value: false.******** Valid values:</p>
+         * <p>Specifies whether to filter out bills for which the pretax gross amount (<strong>PretaxGrossAmount</strong>) and pretax amount (<strong>PretaxAmount</strong>) are both 0. Valid values:</p>
          * <ul>
-         * <li>false: does not filter the bill.</li>
-         * <li>true: filters the bill.</li>
+         * <li><p>false.</p>
+         * </li>
+         * <li><p>true.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -311,7 +317,7 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -323,7 +329,7 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+         * <p>The number of entries per page. Default value: 20. Maximum value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -335,7 +341,7 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * <p>The code of the service.</p>
+         * <p>The code of the product.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -347,7 +353,7 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * <p>The type of the service. This parameter is required if the ProductCode parameter is set to the service code of Alibaba Cloud Marketplace.</p>
+         * <p>The type of the product. Required when the ProductCode parameter is set to the code of an Alibaba Cloud Marketplace product.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -359,13 +365,16 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The subscription type. Valid values:</p>
          * <ul>
-         * <li>Subscription: the subscription billing method</li>
-         * <li>PayAsYouGo: the pay-as-you-go billing method</li>
+         * <li><p>Subscription: subscription.</p>
+         * </li>
+         * <li><p>PayAsYouGo: pay-as-you-go.</p>
+         * </li>
          * </ul>
-         * <p>**</p>
-         * <p>****This parameter must be used together with the <strong>ProductCode</strong> parameter.</p>
+         * <blockquote>
+         * <p>This parameter must be used with the <strong>ProductCode</strong> parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>PayAsYouGo</p>

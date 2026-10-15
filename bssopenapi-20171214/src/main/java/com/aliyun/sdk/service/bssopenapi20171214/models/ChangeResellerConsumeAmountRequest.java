@@ -164,7 +164,12 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         } 
 
         /**
-         * <p>The type of the consumption amount adjustment. Valid values: increase: The consumption amount increases because new consumption occurs. decrease: The consumption amount decreases because funds are added to the account. This parameter is required.</p>
+         * <p>The adjustment direction of the consumption amount. Valid values:</p>
+         * <ul>
+         * <li>increase: Increases the consumption amount.</li>
+         * <li>decrease: Decreases the consumption amount for user top-ups.
+         * This parameter is required.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,7 +182,7 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * <p>The amount to be adjusted. Unit: CNY</p>
+         * <p>The adjustment amount in CNY. The amount must be greater than 0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +195,7 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * <p>The type of the business.</p>
+         * <p>The business type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +208,7 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * <p>The type of the currency.</p>
+         * <p>The currency.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +221,7 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * <p>The extended field of a message.</p>
+         * <p>The extended message fields.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -228,7 +233,7 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * <p>The ID of the primary key for external business. The ID is used for idempotence verification.</p>
+         * <p>The external business primary key ID used for idempotence verification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +255,7 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * <p>The source of the request. Specify the system name for the parameter.</p>
+         * <p>The request source. Specify the system name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

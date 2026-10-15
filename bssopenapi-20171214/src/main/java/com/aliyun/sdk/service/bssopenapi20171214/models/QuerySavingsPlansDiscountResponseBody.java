@@ -106,7 +106,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>PARAM_ERROR</p>
@@ -117,7 +117,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>data</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>This API is not applicable for caller.</p>
@@ -136,7 +136,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
@@ -147,7 +147,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -320,10 +320,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the service.</p>
+             * <p>The product details.</p>
              * 
              * <strong>example:</strong>
-             * <p>Pay-as-you-go Elastic Compute Service (ECS) instance</p>
+             * <p>云服务器ECS-按量付费</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -331,7 +331,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The contracted discount.</p>
+             * <p>The contract discount rate.</p>
              * 
              * <strong>example:</strong>
              * <p>0.85</p>
@@ -342,7 +342,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cycle based on which queries were performed.</p>
+             * <p>The query cycle.</p>
              * 
              * <strong>example:</strong>
              * <p>1:Year</p>
@@ -353,7 +353,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount provided by the official website.</p>
+             * <p>The official discount rate.</p>
              * 
              * <strong>example:</strong>
              * <p>0.85</p>
@@ -367,7 +367,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
              * <p>The name of the pricing module.</p>
              * 
              * <strong>example:</strong>
-             * <p>Instance</p>
+             * <p>实例</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -375,11 +375,14 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The payment mode. Valid values:</p>
+             * <p>The payment mode.</p>
              * <ul>
-             * <li>total: all upfront</li>
-             * <li>half: half upfront</li>
-             * <li>zero: no upfront</li>
+             * <li><p>total: All upfront</p>
+             * </li>
+             * <li><p>half: Partial upfront</p>
+             * </li>
+             * <li><p>zero: No upfront</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -391,10 +394,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region.</p>
              * 
              * <strong>example:</strong>
-             * <p>cn-zhangjiakou-na62-a01</p>
+             * <p>张家口</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -402,7 +405,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26231.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</p>
+             * <p>The ID of the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/26231.html">DescribeDBInstanceAttribute</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -413,7 +416,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource.</p>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.g6</p>
@@ -494,7 +497,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the request.</p>
+             * <p>The request IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>100.104.180.109</p>
@@ -505,7 +508,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the discounts on saving plans.</p>
+             * <p>The list of discount information.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

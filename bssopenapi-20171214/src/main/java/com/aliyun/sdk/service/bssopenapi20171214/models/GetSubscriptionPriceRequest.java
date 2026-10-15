@@ -203,7 +203,7 @@ public class GetSubscriptionPriceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance for which the price is queried. This parameter is required if you upgrade an instance. You can specify this parameter to obtain the pre-upgrade configurations of the instance.</p>
+         * <p>The ID of the instance for which you want to inquire about the price. This parameter is required in upgrade scenarios to obtain the configurations of the instance before the upgrade.</p>
          * 
          * <strong>example:</strong>
          * <p>i-khkjhxxxxxxxxx</p>
@@ -215,7 +215,7 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * <p>The information about the pricing module.</p>
+         * <p>The list of pricing modules.</p>
          * <p>This parameter is required.</p>
          */
         public Builder moduleList(java.util.List<ModuleList> moduleList) {
@@ -225,11 +225,11 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * <p>The type of the order. Valid values:</p>
+         * <p>The order type. Valid values:</p>
          * <ul>
-         * <li>NewOrder: purchases an instance of an Alibaba Cloud service.</li>
-         * <li>Renewal: renews an instance of an Alibaba Cloud service.</li>
-         * <li>Upgrade: upgrades an instance of an Alibaba Cloud service.</li>
+         * <li>NewOrder: new purchase.</li>
+         * <li>Renewal: renewal.</li>
+         * <li>Upgrade: upgrade.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -252,7 +252,7 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * <p>The code of the service. For more information about the service code, see <strong>Codes of Alibaba Cloud Services</strong>.</p>
+         * <p>The product code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * <p>The type of the service. Specify the parameter based on the pricing document of the specific service.</p>
+         * <p>The product type. Whether this parameter is required depends on the price inquiry documentation of the specific product.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -289,7 +289,7 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -301,7 +301,7 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * <p>The service duration.</p>
+         * <p>The service period.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -313,10 +313,10 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * <p>The unit of the service duration. Valid values:</p>
+         * <p>The unit of the service period. Valid values:</p>
          * <ul>
-         * <li>Year</li>
-         * <li>Month</li>
+         * <li>Year: years.</li>
+         * <li>Month: months.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,7 +329,7 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Set the value to Subscription.</p>
+         * <p>The subscription type. Valid value: Subscription (subscription).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -429,7 +429,7 @@ public class GetSubscriptionPriceRequest extends Request {
             } 
 
             /**
-             * <p>The configurations of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.</p>
+             * <p>The configuration of the nth pricing module. Valid values of n: 1 to 50. Format: AA:aa,BB:bb. AA and BB are the identifiers of the pricing module attributes, and aa and bb are the attribute values of the pricing module attributes.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -441,7 +441,7 @@ public class GetSubscriptionPriceRequest extends Request {
             }
 
             /**
-             * <p>The identifier of the Nth pricing module.</p>
+             * <p>The identifier of the nth pricing module.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -453,10 +453,10 @@ public class GetSubscriptionPriceRequest extends Request {
             }
 
             /**
-             * <p>The status of the pricing module. This parameter is required only if the order type is Upgrade. Valid values:</p>
+             * <p>The change status of the pricing module for this inquiry. This parameter is required only when the order type is Upgrade. Valid values:</p>
              * <ul>
-             * <li>1: adds one or more instances.</li>
-             * <li>2: modifies the configurations of an instance. In the upgrade scenario, if the configurations of the pricing module change, you must specify this value for the parameter.</li>
+             * <li>1: add.</li>
+             * <li>2: modify. If the configuration of the pricing module changes in an upgrade scenario, you must explicitly specify this value.</li>
              * </ul>
              * <p>Default value: 1.</p>
              * 
@@ -469,7 +469,7 @@ public class GetSubscriptionPriceRequest extends Request {
             }
 
             /**
-             * <p>The tag of the specified resource. This parameter is required only if you upgrade or modify the configurations of an Alibaba Cloud service. For example, if you want to modify the configurations of a disk, you can use a tag to identify the ID of the disk.</p>
+             * <p>The identifier of the specified resource. This parameter is required only for the upgrade and configuration change of specific products. For example, if you change the configuration of a cloud disk, you can use Tag to identify the ID of the specific cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>213213123</p>

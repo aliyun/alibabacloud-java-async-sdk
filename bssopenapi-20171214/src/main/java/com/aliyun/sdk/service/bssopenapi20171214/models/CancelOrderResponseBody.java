@@ -117,7 +117,7 @@ public class CancelOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -136,7 +136,7 @@ public class CancelOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30D2285E-A848-4ECB-AA74-4954C60858A1</p>
@@ -147,7 +147,7 @@ public class CancelOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -203,7 +203,7 @@ public class CancelOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the host.</p>
+             * <p>The host ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn</p>

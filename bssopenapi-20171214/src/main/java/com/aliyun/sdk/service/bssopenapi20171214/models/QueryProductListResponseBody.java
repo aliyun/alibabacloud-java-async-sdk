@@ -106,7 +106,7 @@ public class QueryProductListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class QueryProductListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about all Alibaba Cloud services.</p>
+         * <p>The Alibaba Cloud product information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class QueryProductListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>This API is not applicable for caller.</p>
@@ -136,7 +136,7 @@ public class QueryProductListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>94858229-2758-4663-A7D0-99490D541F15</p>
@@ -242,10 +242,7 @@ public class QueryProductListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cdn</p>
+             * ProductCode.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -253,10 +250,7 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CDN (Pay-as-you-go)</p>
+             * ProductName.
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -264,10 +258,7 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CDN</p>
+             * ProductType.
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -275,14 +266,7 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method. Valid values:</p>
-             * <ul>
-             * <li>Subscription: subscription</li>
-             * <li>PayAsYouGo: pay-as-you-go</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>PayAsYouGo</p>
+             * SubscriptionType.
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -429,7 +413,7 @@ public class QueryProductListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -440,7 +424,7 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned on each page.</p>
+             * <p>The number of records displayed per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -451,7 +435,7 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service definitions.</p>
+             * ProductList.
              */
             public Builder productList(ProductList productList) {
                 this.productList = productList;
@@ -459,7 +443,7 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of services.</p>
+             * <p>The total number of product records.</p>
              * 
              * <strong>example:</strong>
              * <p>449</p>

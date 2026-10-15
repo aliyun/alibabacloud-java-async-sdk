@@ -106,7 +106,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -136,7 +136,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DF58589C-A06C-4224-8615-7797E6474FA3</p>
@@ -372,10 +372,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The deduction date.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019/5/23 12:00</p>
+             * DeductDate.
              */
             public Builder deductDate(String deductDate) {
                 this.deductDate = deductDate;
@@ -383,10 +380,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total computing capacity or storage capacity of the RI or SCU during the deduction.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * DeductFactorTotal.
              */
             public Builder deductFactorTotal(Float deductFactorTotal) {
                 this.deductFactorTotal = deductFactorTotal;
@@ -394,10 +388,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deduct factor. This parameter is returned only if the CommodityCode parameter is set to ecsRi.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>24</p>
+             * DeductHours.
              */
             public Builder deductHours(Float deductHours) {
                 this.deductHours = deductHours;
@@ -405,10 +396,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original measured amount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * DeductMeasure.
              */
             public Builder deductMeasure(Float deductMeasure) {
                 this.deductMeasure = deductMeasure;
@@ -416,10 +404,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The computing capacity or storage capacity that is deducted in a pay-as-you-go instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * DeductQuantity.
              */
             public Builder deductQuantity(Float deductQuantity) {
                 this.deductQuantity = deductQuantity;
@@ -427,10 +412,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the deducted service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rds</p>
+             * DeductedCommodityCode.
              */
             public Builder deductedCommodityCode(String deductedCommodityCode) {
                 this.deductedCommodityCode = deductedCommodityCode;
@@ -438,10 +420,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the deducted instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>oss-123123</p>
+             * DeductedInstanceId.
              */
             public Builder deductedInstanceId(String deductedInstanceId) {
                 this.deductedInstanceId = deductedInstanceId;
@@ -449,10 +428,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the deducted service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ApsaraDB RDS</p>
+             * DeductedProductDetail.
              */
             public Builder deductedProductDetail(String deductedProductDetail) {
                 this.deductedProductDetail = deductedProductDetail;
@@ -460,10 +436,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RI.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>oss-123123</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -471,10 +444,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type of the deducted instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rds.mysql.s3.large</p>
+             * InstanceSpec.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -482,10 +452,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region in which the instance resides. This parameter can be left empty.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -493,10 +460,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billable item.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PutRequest</p>
+             * ResCode.
              */
             public Builder resCode(String resCode) {
                 this.resCode = resCode;
@@ -504,14 +468,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the deducted instance.</p>
-             * <ul>
-             * <li>If the deduction is shared, the value of this parameter indicates the UID of the deducted instance.</li>
-             * <li>If the deduction is not shared, the value of this parameter is the same as that of the uid parameter.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1111111111</p>
+             * ShareUid.
              */
             public Builder shareUid(Long shareUid) {
                 this.shareUid = shareUid;
@@ -519,10 +476,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the deducted instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1111111111</p>
+             * Uid.
              */
             public Builder uid(Long uid) {
                 this.uid = uid;
@@ -643,7 +597,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The detailed resource plan usage.</p>
+             * DetailList.
              */
             public Builder detailList(DataDetailList detailList) {
                 this.detailList = detailList;
@@ -651,7 +605,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token that is used to retrieve the next page of results. You can set the LastToken parameter to this value in the next request. If null is returned, all results are queried.</p>
+             * <p>The token that specifies the start position of the next query. Pass this value to the LastToken parameter in the next request. If this parameter is returned as null, the query is complete.</p>
              * 
              * <strong>example:</strong>
              * <p>CAESF***zNTAw</p>

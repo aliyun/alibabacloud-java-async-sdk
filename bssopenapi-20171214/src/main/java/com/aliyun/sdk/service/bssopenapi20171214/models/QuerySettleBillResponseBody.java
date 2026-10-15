@@ -106,7 +106,10 @@ public class QuerySettleBillResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class QuerySettleBillResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class QuerySettleBillResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class QuerySettleBillResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE3F4057-DFC9-4B81-8858-F620651010C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class QuerySettleBillResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -1091,7 +1103,10 @@ public class QuerySettleBillResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountID.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185xxxxx489</p>
              */
             public Builder accountID(String accountID) {
                 this.accountID = accountID;
@@ -1099,7 +1114,10 @@ public class QuerySettleBillResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -1107,7 +1125,10 @@ public class QuerySettleBillResponseBody extends TeaModel {
             }
 
             /**
-             * BillingCycle.
+             * <p>The billing cycle, in the format of YYYY-MM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02</p>
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -1123,7 +1144,10 @@ public class QuerySettleBillResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * <p>The maximum number of records returned in this request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -1131,7 +1155,10 @@ public class QuerySettleBillResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token that indicates the position where the current call reads to. An empty value indicates that all data has been read.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUQARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -1139,7 +1166,10 @@ public class QuerySettleBillResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

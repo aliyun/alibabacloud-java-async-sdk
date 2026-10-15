@@ -106,7 +106,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,10 +125,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Successful</p>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,7 +136,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7EA6C02D-06D0-4213-9C3B-E67910F7D1EB</p>
@@ -320,10 +320,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The services to which the prepaid card is applicable.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>All Alibaba Cloud services</p>
+             * ApplicableProducts.
              */
             public Builder applicableProducts(String applicableProducts) {
                 this.applicableProducts = applicableProducts;
@@ -331,10 +328,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scenario to which the prepaid card is applicable.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * ApplicableScenarios.
              */
             public Builder applicableScenarios(String applicableScenarios) {
                 this.applicableScenarios = applicableScenarios;
@@ -342,10 +336,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The balance of the prepaid card.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100.00</p>
+             * Balance.
              */
             public Builder balance(String balance) {
                 this.balance = balance;
@@ -353,10 +344,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the prepaid card took effect.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-08-03T01:39:11Z</p>
+             * EffectiveTime.
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -364,10 +352,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the prepaid card expired.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-08-04T01:39:11Z</p>
+             * ExpiryTime.
              */
             public Builder expiryTime(String expiryTime) {
                 this.expiryTime = expiryTime;
@@ -375,10 +360,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the prepaid card was issued.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-08-03T01:39:11Z</p>
+             * GrantedTime.
              */
             public Builder grantedTime(String grantedTime) {
                 this.grantedTime = grantedTime;
@@ -386,10 +368,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nominal value of the prepaid card.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100.00</p>
+             * NominalValue.
              */
             public Builder nominalValue(String nominalValue) {
                 this.nominalValue = nominalValue;
@@ -397,10 +376,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the prepaid card.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>213432432</p>
+             * PrepaidCardId.
              */
             public Builder prepaidCardId(Long prepaidCardId) {
                 this.prepaidCardId = prepaidCardId;
@@ -408,10 +384,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the prepaid card.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Q-7edaab979fc9</p>
+             * PrepaidCardNo.
              */
             public Builder prepaidCardNo(String prepaidCardNo) {
                 this.prepaidCardNo = prepaidCardNo;
@@ -419,15 +392,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the prepaid card. Valid values:</p>
-             * <ul>
-             * <li>Available: The prepaid card is valid.</li>
-             * <li>Expired: The prepaid card expired.</li>
-             * <li>Cancelled: The prepaid card is invalid.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Available</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

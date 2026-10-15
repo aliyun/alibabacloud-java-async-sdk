@@ -115,7 +115,7 @@ public class RefundInstanceRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is required for scenarios that need idempotence. The UUID that is used to ensure the idempotence of the request.</p>
+         * <p>Required for idempotent scenarios. A UUID-generated string. This field is used for idempotence. If the same value is passed in multiple calls, the result of the first call is returned. If a result is returned after the call, you can parse the refund order ID, which indicates that the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>793F021C-B589-1225-82A9-99232AEBE494</p>
@@ -127,7 +127,7 @@ public class RefundInstanceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required for unsubscription scenarios. Valid values: 1 and 0. A value of 1 specifies that the instance is immediately released. A value of 0 specifies that the instance is shut down based on the shutdown policy. This parameter is supported only for specified services. Default value: 1.</p>
+         * <p>Required for unsubscription scenarios. Valid values: 1: immediately releases the instance. 0: stops the instance first based on the shutdown policy. Only some products support this value. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,7 +139,7 @@ public class RefundInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. This parameter is required for unsubscription scenarios. Do not specify a custom name for this parameter.</p>
+         * <p>Required for unsubscription scenarios. The instance ID, not the custom name.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1etb69sqxgl4*******</p>
@@ -151,7 +151,7 @@ public class RefundInstanceRequest extends Request {
         }
 
         /**
-         * <p>The code of the service. This parameter is required for unsubscription scenarios.</p>
+         * <p>Required for unsubscription scenarios. The product code. If the error code returned after the call indicates that the product is not supported, submit a ticket to request that the cloud service enable this feature.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -163,10 +163,10 @@ public class RefundInstanceRequest extends Request {
         }
 
         /**
-         * <p>The type of the service. This parameter is required for unsubscription scenarios. Unless otherwise specified, set this parameter to an empty string.</p>
+         * <p>Required for unsubscription scenarios. The product type. Unless otherwise specified, pass an empty string. In the debugging tool, you do not need to manually enter a value. Hover over the input box, and a button labeled &quot;Enter empty string&quot; appears. Click this button. When initiating an unsubscription through code, pass an empty string &quot;&quot;.</p>
          * 
          * <strong>example:</strong>
-         * <p>”“</p>
+         * <p>Empty string</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);

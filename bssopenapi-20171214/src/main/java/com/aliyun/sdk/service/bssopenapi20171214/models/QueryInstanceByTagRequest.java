@@ -88,7 +88,7 @@ public class QueryInstanceByTagRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of resources.</p>
+         * <p>A list of resource IDs.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -97,7 +97,7 @@ public class QueryInstanceByTagRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Specify the savings plan instance as the type of the resource.</p>
+         * <p>The type of the resource. Set this parameter to <code>instance</code> to query savings plan instances.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class QueryInstanceByTagRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>A list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);

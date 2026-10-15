@@ -106,7 +106,10 @@ public class QueryResellerAvailableQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned if the call fails. See the &quot;Error codes&quot; section of this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class QueryResellerAvailableQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The available quota balance of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class QueryResellerAvailableQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Additional information about the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class QueryResellerAvailableQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class QueryResellerAvailableQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. A value of <code>true</code> indicates that the call was successful. A value of <code>false</code> indicates that the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

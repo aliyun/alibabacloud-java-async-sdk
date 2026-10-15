@@ -147,11 +147,7 @@ public class CreateResourcePackageRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the resource plan.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -160,10 +156,7 @@ public class CreateResourcePackageRequest extends Request {
         }
 
         /**
-         * <p>The data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-03-03T12:00:00Z</p>
+         * EffectiveDate.
          */
         public Builder effectiveDate(String effectiveDate) {
             this.putQueryParameter("EffectiveDate", effectiveDate);
@@ -181,11 +174,7 @@ public class CreateResourcePackageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the order.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FPT_ossbag_absolute_Storage_sh</p>
          */
         public Builder packageType(String packageType) {
             this.putQueryParameter("PackageType", packageType);
@@ -203,11 +192,7 @@ public class CreateResourcePackageRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ossbag</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -216,11 +201,7 @@ public class CreateResourcePackageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the order.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40</p>
          */
         public Builder specification(String specification) {
             this.putQueryParameter("Specification", specification);

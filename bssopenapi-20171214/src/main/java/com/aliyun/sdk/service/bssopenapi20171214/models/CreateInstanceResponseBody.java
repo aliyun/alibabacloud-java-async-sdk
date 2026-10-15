@@ -117,7 +117,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful！</p>
@@ -136,7 +136,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C880B065-A781-4F19-B6DD-3E0E3B715C64</p>
@@ -216,7 +216,7 @@ public class CreateInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the instance for which the order was created.</p>
+             * <p>The instance ID associated with the order.</p>
              * 
              * <strong>example:</strong>
              * <p>OSSBAG-cn-v1hxxxxx23</p>

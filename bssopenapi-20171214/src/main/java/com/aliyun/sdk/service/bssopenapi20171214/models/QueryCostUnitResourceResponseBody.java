@@ -117,7 +117,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -136,7 +136,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04332CB7-9A57-4461-97E0-02821D044414</p>
@@ -242,7 +242,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The user ID of the cost center owner.</p>
+             * <p>The user ID of the financial unit owner.</p>
              * 
              * <strong>example:</strong>
              * <p>321432</p>
@@ -253,7 +253,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+             * <p>The ID of the parent financial unit. A value of -1 indicates the root financial unit.</p>
              * 
              * <strong>example:</strong>
              * <p>23421</p>
@@ -264,7 +264,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cost center.</p>
+             * <p>The ID of the financial unit.</p>
              * 
              * <strong>example:</strong>
              * <p>123412</p>
@@ -275,7 +275,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cost center.</p>
+             * <p>The name of the financial unit.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -410,7 +410,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of resource instances in the cost center.</p>
+             * <p>The number of resource instances in the current financial unit.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -421,7 +421,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of resource groups in the cost center.</p>
+             * <p>The number of resource groups in the current financial unit.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -432,7 +432,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sub-cost centers in the cost center.</p>
+             * <p>The number of sub-units in the current financial unit.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -443,7 +443,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of resource instances, including resource instances of sub-cost centers, in the cost center.</p>
+             * <p>The total number of resource instances in the current financial unit, including those in sub-financial units.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -454,7 +454,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of resource groups, including resource groups of sub-cost centers, in the cost center.</p>
+             * <p>The total number of resource groups in the current financial unit, including those in sub-financial units.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -465,7 +465,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of the associated accounts, including associated accounts of sub-cost centers, in the cost center.</p>
+             * <p>The total number of linked accounts in the current financial unit, including those in sub-financial units.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -476,7 +476,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sub-cost centers in the cost center.</p>
+             * <p>The number of sub-units in the current financial unit.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -715,7 +715,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The split code of the resource.</p>
+             * <p>The attached resource code.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -726,7 +726,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The split name of the resource.</p>
+             * <p>The attached resource name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -737,7 +737,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product code of the resource.</p>
+             * <p>The commodity code of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -759,7 +759,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the service. The code is the same as that in Cost Center.</p>
+             * <p>The product code, which is the same as the product code in User Center bills.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -784,7 +784,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
              * <p>The resource group to which the resource belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>Default Resource Group</p>
+             * <p>Default resource group</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -803,7 +803,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom name of the resource.</p>
+             * <p>The custom nickname of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>testResource</p>
@@ -814,10 +814,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the resource. Value:</p>
+             * <p>The source of the resource. Valid values:</p>
              * <ul>
-             * <li>AUTO_ALLOCATE</li>
-             * <li>MANUAL_ALLOCATE</li>
+             * <li>AUTO_ALLOCATE: automatic allocation.</li>
+             * <li>MANUAL_ALLOCATE: manual allocation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -840,7 +840,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the resource.</p>
+             * <p>The tag of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>testResource</p>
@@ -995,7 +995,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the cost center.</p>
+             * <p>The financial unit information.</p>
              */
             public Builder costUnit(CostUnit costUnit) {
                 this.costUnit = costUnit;
@@ -1003,7 +1003,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical information about the cost center.</p>
+             * <p>The statistics information of the financial unit.</p>
              */
             public Builder costUnitStatisInfo(CostUnitStatisInfo costUnitStatisInfo) {
                 this.costUnitStatisInfo = costUnitStatisInfo;
@@ -1011,7 +1011,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1022,7 +1022,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1033,7 +1033,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource instances.</p>
+             * <p>The list of resource instances.</p>
              */
             public Builder resourceInstanceDtoList(java.util.List<ResourceInstanceDtoList> resourceInstanceDtoList) {
                 this.resourceInstanceDtoList = resourceInstanceDtoList;
@@ -1041,7 +1041,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>

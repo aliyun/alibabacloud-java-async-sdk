@@ -115,10 +115,10 @@ public class QueryRedeemRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether the redemption coupon takes effect. Valid values:</p>
+         * <p>Specifies whether the redemption ticket is effective. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Effective.</li>
+         * <li>false: Not effective.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -132,7 +132,7 @@ public class QueryRedeemRequest extends Request {
         }
 
         /**
-         * <p>The end time when the redemption coupon expires. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The end time of the expiration period. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-08-01T00:00:00Z</p>
@@ -144,7 +144,7 @@ public class QueryRedeemRequest extends Request {
         }
 
         /**
-         * <p>The start time when the redemption coupon expires. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The start time of the expiration period. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-08-01T00:00:00Z</p>
@@ -156,7 +156,7 @@ public class QueryRedeemRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,7 +168,7 @@ public class QueryRedeemRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page. The value cannot exceed 300.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

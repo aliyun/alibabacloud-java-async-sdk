@@ -117,7 +117,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -136,7 +136,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1537A007-72D7-4165-8A26-8694A38E219A</p>
@@ -147,7 +147,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -255,10 +255,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The discount price.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * CostAfterDiscount.
              */
             public Builder costAfterDiscount(Float costAfterDiscount) {
                 this.costAfterDiscount = costAfterDiscount;
@@ -266,10 +263,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount that was applied.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * InvoiceDiscount.
              */
             public Builder invoiceDiscount(Float invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -277,10 +271,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the pricing module.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>InstanceType</p>
+             * ModuleCode.
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -288,10 +279,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original price.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.77</p>
+             * OriginalCost.
              */
             public Builder originalCost(Float originalCost) {
                 this.originalCost = originalCost;
@@ -299,10 +287,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit price.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * UnitPrice.
              */
             public Builder unitPrice(Float unitPrice) {
                 this.unitPrice = unitPrice;
@@ -436,10 +421,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the discount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This discount allows you to use a service at the minimum price and is provided for testing purposes only.</p>
+             * PromotionDesc.
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -447,10 +429,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the discount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10200210</p>
+             * PromotionId.
              */
             public Builder promotionId(Long promotionId) {
                 this.promotionId = promotionId;
@@ -458,10 +437,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the discount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This discount allows you to use a service at the minimum price and is provided for testing purposes only.</p>
+             * PromotionName.
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -595,11 +571,11 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the currency. Valid values:</p>
+             * <p>The currency. Valid values:</p>
              * <ul>
-             * <li>CNY: Chinese Yuan</li>
-             * <li>USD: US dollar</li>
-             * <li>JPY: Japanese Yen</li>
+             * <li>CNY: Chinese Yuan.</li>
+             * <li>USD: US Dollar.</li>
+             * <li>JPY: Japanese Yen.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -611,7 +587,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price details of the pricing module.</p>
+             * ModuleDetails.
              */
             public Builder moduleDetails(ModuleDetails moduleDetails) {
                 this.moduleDetails = moduleDetails;
@@ -619,7 +595,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the discount.</p>
+             * PromotionDetails.
              */
             public Builder promotionDetails(PromotionDetails promotionDetails) {
                 this.promotionDetails = promotionDetails;

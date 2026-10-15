@@ -106,7 +106,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful！</p>
@@ -136,7 +136,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8634E02D-0942-4B1D-8295-5352FE9A1F39</p>
@@ -359,10 +359,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The amount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Amount.
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -370,10 +367,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The balance of the account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Balance.
              */
             public Builder balance(String balance) {
                 this.balance = balance;
@@ -381,10 +375,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing cycle. Format: YYYY-MM.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-03</p>
+             * BillingCycle.
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -392,16 +383,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of transaction payment. Valid values:</p>
-             * <ul>
-             * <li>Cash: pay for the transaction in cash.</li>
-             * <li>Deposit: pay for the transaction with deposit.</li>
-             * <li>RegularBankCreditRefund: pay for the transaction with credit refund controlled by a bank.</li>
-             * <li>DirectPay: directly pay for the transaction.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Cash</p>
+             * FundType.
              */
             public Builder fundType(String fundType) {
                 this.fundType = fundType;
@@ -409,10 +391,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the order or bill.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020030242</p>
+             * RecordID.
              */
             public Builder recordID(String recordID) {
                 this.recordID = recordID;
@@ -420,10 +399,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks on the transaction.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>NAT_GW</p>
+             * Remarks.
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -431,10 +407,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction account. For example, the account is a recharge account in Alipay or a transfer account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>213562146</p>
+             * TransactionAccount.
              */
             public Builder transactionAccount(String transactionAccount) {
                 this.transactionAccount = transactionAccount;
@@ -442,22 +415,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction channel.</p>
-             * <ul>
-             * <li>AccountBalance</li>
-             * <li>BankTransfer</li>
-             * <li>Alipay</li>
-             * <li>AntCreditPay</li>
-             * <li>OfflineRemittance</li>
-             * <li>RegularBankCreditRefund</li>
-             * <li>CreditCard</li>
-             * <li>MyBankCredit</li>
-             * <li>HuaxiaBankCInstallment</li>
-             * <li>ApplePay</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>AccountBalance</p>
+             * TransactionChannel.
              */
             public Builder transactionChannel(String transactionChannel) {
                 this.transactionChannel = transactionChannel;
@@ -465,10 +423,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the transaction channel.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1234354325</p>
+             * TransactionChannelSN.
              */
             public Builder transactionChannelSN(String transactionChannelSN) {
                 this.transactionChannelSN = transactionChannelSN;
@@ -476,14 +431,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the transaction flow.</p>
-             * <ul>
-             * <li>Income</li>
-             * <li>Expense</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Expense</p>
+             * TransactionFlow.
              */
             public Builder transactionFlow(String transactionFlow) {
                 this.transactionFlow = transactionFlow;
@@ -491,10 +439,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the transaction.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>43342334</p>
+             * TransactionNumber.
              */
             public Builder transactionNumber(String transactionNumber) {
                 this.transactionNumber = transactionNumber;
@@ -502,10 +447,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the transaction was made.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-03-10T02:03:20Z</p>
+             * TransactionTime.
              */
             public Builder transactionTime(String transactionTime) {
                 this.transactionTime = transactionTime;
@@ -513,18 +455,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the transaction.</p>
-             * <ul>
-             * <li>Payment</li>
-             * <li>Withdraw</li>
-             * <li>Refund</li>
-             * <li>Consumption</li>
-             * <li>Transfer</li>
-             * <li>Adjust</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Consumption</p>
+             * TransactionType.
              */
             public Builder transactionType(String transactionType) {
                 this.transactionType = transactionType;
@@ -684,7 +615,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of your Alibaba Cloud account.</p>
+             * <p>The user account.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
@@ -695,7 +626,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about transactions.</p>
+             * AccountTransactionsList.
              */
             public Builder accountTransactionsList(DataAccountTransactionsList accountTransactionsList) {
                 this.accountTransactionsList = accountTransactionsList;
@@ -703,7 +634,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -714,7 +645,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -725,7 +656,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

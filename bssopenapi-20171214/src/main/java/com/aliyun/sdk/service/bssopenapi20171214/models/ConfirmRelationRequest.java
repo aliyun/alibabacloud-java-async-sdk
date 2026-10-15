@@ -148,7 +148,7 @@ public class ConfirmRelationRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used as the member.</p>
+         * <p>The Alibaba Cloud UID of the linked account.</p>
          * 
          * <strong>example:</strong>
          * <p>1512996702208737</p>
@@ -160,11 +160,11 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * <p>The operation to be performed to confirm the invitation. Valid values:</p>
+         * <p>The confirmation action. Valid values:</p>
          * <ul>
-         * <li>child_agree: The member accepts the invitation.</li>
-         * <li>child_disagree: The member rejects the invitation.</li>
-         * <li>Canceled by the master account: The management account cancels the confirmation.</li>
+         * <li>child_agree: The linked account agrees.</li>
+         * <li>child_disagree: The linked account rejects.</li>
+         * <li>主账号取消确认: The main account cancels the confirmation.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -178,7 +178,7 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used as the management account.</p>
+         * <p>The Alibaba Cloud UID of the main account.</p>
          * 
          * <strong>example:</strong>
          * <p>1738376485192612</p>
@@ -190,15 +190,15 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * <p>The permissions that can be granted to the member. Valid values:</p>
+         * <p>The permissions granted to the linked account. Valid values:</p>
          * <ul>
-         * <li>SYNCHRONIZE_FINANCE_IDENTITY: allows the credit control identity to be shared with the member.</li>
-         * <li>SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: allows the discount policy to be shared with the member.</li>
-         * <li>FORBID_WITHDRAW_CASH: does not allow the member to withdraw the balance.</li>
-         * <li>FORBID_MANAGE_INVOICE: does not allow the member to manage invoices.</li>
-         * <li>CHECK_FINANCE_INFO: requests to view information about the financial relationship.</li>
-         * <li>MANAGE_TARGET_INVOICE: allows the member to manage invoices.</li>
-         * <li>CHECK_TARGET_CONSUMPTION: allows the member to view the bills.</li>
+         * <li>SYNCHRONIZE_FINANCE_IDENTITY: Allows synchronizing the credit-based payment identity to the linked account.</li>
+         * <li>SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: Allows synchronizing discounts to the linked account.</li>
+         * <li>FORBID_WITHDRAW_CASH: Prohibits the linked account from withdrawing cash from the balance.</li>
+         * <li>FORBID_MANAGE_INVOICE: Prohibits the linked account from managing invoices.</li>
+         * <li>CHECK_FINANCE_INFO: Allows requesting to view the account linking information.</li>
+         * <li>MANAGE_TARGET_INVOICE: Allows managing invoices of the target account.</li>
+         * <li>CHECK_TARGET_CONSUMPTION: Allows viewing the consumption information of the linked account.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -212,7 +212,7 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the financial relationship. Set this parameter to the value of the RelationId response parameter returned by calling the QueryRelationList operation.</p>
+         * <p>The relationship ID. You can obtain the value from the relationId field in the response of the QueryRelationList operation.</p>
          * 
          * <strong>example:</strong>
          * <p>51463</p>
@@ -224,10 +224,10 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * <p>The type of the financial relationship. Set the value to enterprise_group.</p>
+         * <p>The relationship type. Valid values: enterprise_group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Type of the financial relationship</p>
+         * <p>enterprise_group</p>
          */
         public Builder relationType(String relationType) {
             this.putQueryParameter("RelationType", relationType);
@@ -236,7 +236,7 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The unique identifier of the request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

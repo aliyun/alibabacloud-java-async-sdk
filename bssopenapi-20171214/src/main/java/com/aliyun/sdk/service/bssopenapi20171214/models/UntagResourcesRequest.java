@@ -103,7 +103,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to remove all tags. This parameter is valid only if the TagKey.n parameter is not set. Valid values: true and false.</p>
+         * <p>Specifies whether to remove all tags. This parameter is valid only when <code>TagKey.N</code> is not specified. Valid values: <code>true</code> and <code>false</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -115,7 +115,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of resources.</p>
+         * <p>The list of resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -125,7 +125,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Specify the savings plan instance as the type of the resource.</p>
+         * <p>The resource type. Set the value to <code>instance</code>. This value indicates a savings plan instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tag keys.</p>
+         * <p>The list of tag keys.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

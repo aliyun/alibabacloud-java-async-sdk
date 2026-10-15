@@ -117,7 +117,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful！</p>
@@ -136,7 +136,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D35FF10E-1B2E-4ABA-8401-0AE17725F50B</p>
@@ -463,10 +463,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The billing cycle.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>202002</p>
+             * BillCycle.
              */
             public Builder billCycle(String billCycle) {
                 this.billCycle = billCycle;
@@ -474,10 +471,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the bill.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>234543254325</p>
+             * BillId.
              */
             public Builder billId(Long billId) {
                 this.billId = billId;
@@ -485,10 +479,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-10-10 18:05:44</p>
+             * BizTime.
              */
             public Builder bizTime(String bizTime) {
                 this.bizTime = bizTime;
@@ -496,14 +487,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The market type in the invoice. Valid values:</p>
-             * <ul>
-             * <li>ALIYUN: Alibaba Cloud</li>
-             * <li>MARKETPLACE: Alibaba Cloud Marketplace</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ALIYUN</p>
+             * BizType.
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -511,10 +495,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The invoiceable amount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123213</p>
+             * CanInvoiceAmount.
              */
             public Builder canInvoiceAmount(Long canInvoiceAmount) {
                 this.canInvoiceAmount = canInvoiceAmount;
@@ -522,10 +503,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-10-10 18:05:44</p>
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -533,10 +511,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-10-10 18:05:44</p>
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -544,10 +519,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the invoice.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1325321532</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -555,10 +527,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The invoiced amount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10000</p>
+             * InvoicedAmount.
              */
             public Builder invoicedAmount(Long invoicedAmount) {
                 this.invoicedAmount = invoicedAmount;
@@ -566,10 +535,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the item.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>23453245</p>
+             * ItemId.
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -577,10 +543,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the object to be invoiced.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Refund of a voucher with denomination marked</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -588,10 +551,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If a refund is issued due to an order such as an unsubscription order or a configuration downgrade order, the refund amount is used to offset the amount of the invoice. The value is consistent with the value of the <strong>OffsetCostAmount</strong> parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>500</p>
+             * OffsetAcceptAmount.
              */
             public Builder offsetAcceptAmount(Long offsetAcceptAmount) {
                 this.offsetAcceptAmount = offsetAcceptAmount;
@@ -599,10 +559,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The refund amount used to offset the amount of the invoice. If a refund is issued due to an order such as an unsubscription order or a configuration downgrade order, the refund amount is used to offset the amount of the invoice. The value is consistent with the value of the <strong>OffsetAcceptAmount</strong> parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>500</p>
+             * OffsetCostAmount.
              */
             public Builder offsetCostAmount(Long offsetCostAmount) {
                 this.offsetCostAmount = offsetCostAmount;
@@ -610,10 +567,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the external object.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12341</p>
+             * OpId.
              */
             public Builder opId(String opId) {
                 this.opId = opId;
@@ -621,10 +575,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original amount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>-10000</p>
+             * OriginalAmount.
              */
             public Builder originalAmount(Long originalAmount) {
                 this.originalAmount = originalAmount;
@@ -632,10 +583,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the external order.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>124324213421</p>
+             * OutBizId.
              */
             public Builder outBizId(String outBizId) {
                 this.outBizId = outBizId;
@@ -643,10 +591,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The balance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>-10000</p>
+             * PresentAmount.
              */
             public Builder presentAmount(Long presentAmount) {
                 this.presentAmount = presentAmount;
@@ -654,10 +599,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the invoiceable amount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -665,19 +607,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of orders that are queried. Valid values:</p>
-             * <ul>
-             * <li>1: the orders in which the invoiceable amount is negative.</li>
-             * <li>2: the orders in which the invoiceable amount is positive.</li>
-             * <li>3: the orders in which the invoiceable amount is not 0.</li>
-             * <li>4: the orders in which the amount that has been invoiced is greater than 0.</li>
-             * </ul>
-             * <blockquote>
-             * <p> By default, this parameter is left empty. If this parameter is left empty, all orders are queried.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Type.
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -685,10 +615,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2738543</p>
+             * UserId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -696,10 +623,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nickname of the user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * UserNick.
              */
             public Builder userNick(String userNick) {
                 this.userNick = userNick;
@@ -885,7 +809,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data returned.</p>
+             * EvaluateList.
              */
             public Builder evaluateList(EvaluateList evaluateList) {
                 this.evaluateList = evaluateList;
@@ -894,9 +818,6 @@ public class QueryEvaluateListResponseBody extends TeaModel {
 
             /**
              * <p>The ID of the host.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -904,7 +825,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the page returned.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -915,7 +836,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -926,7 +847,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -937,10 +858,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The invoiced amount that meets the query conditions. Unit: Cent.</p>
+             * <p>The total invoiced amount that meets the filter criteria. Unit: cents.</p>
              * 
              * <strong>example:</strong>
-             * <p>12344</p>
+             * <p>10000</p>
              */
             public Builder totalInvoiceAmount(Long totalInvoiceAmount) {
                 this.totalInvoiceAmount = totalInvoiceAmount;
@@ -948,7 +869,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The invoiceable amount that meets the query conditions. Unit: Cent.</p>
+             * <p>The total invoiceable amount that meets the filter criteria. Unit: cents.</p>
              * 
              * <strong>example:</strong>
              * <p>12344</p>

@@ -117,7 +117,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -136,7 +136,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BBEF51A3-E933-4F40-A534-C673CBDB9C80</p>
@@ -463,10 +463,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of invoice that was changed to.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * AdjustType.
              */
             public Builder adjustType(Long adjustType) {
                 this.adjustType = adjustType;
@@ -474,10 +471,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bank that issues the invoice.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test Bank</p>
+             * Bank.
              */
             public Builder bank(String bank) {
                 this.bank = bank;
@@ -485,10 +479,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bank account number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>389576348573296349853476</p>
+             * BankNo.
              */
             public Builder bankNo(String bankNo) {
                 this.bankNo = bankNo;
@@ -496,14 +487,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication type of Alipay. Valid values:</p>
-             * <ul>
-             * <li>1: individual</li>
-             * <li>2: company</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * CustomerType.
              */
             public Builder customerType(Long customerType) {
                 this.customerType = customerType;
@@ -511,10 +495,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default note that is attached when the title is specified.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PO Code: 12984554</p>
+             * DefaultRemark.
              */
             public Builder defaultRemark(String defaultRemark) {
                 this.defaultRemark = defaultRemark;
@@ -522,10 +503,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the payment ended.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>202003</p>
+             * EndCycle.
              */
             public Builder endCycle(Long endCycle) {
                 this.endCycle = endCycle;
@@ -533,10 +511,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the invoice was created. The time was in the yyyy-mm-dd hh:mm:ss format.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-09-07 15:26:20</p>
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -544,10 +519,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the invoice.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>239875502738</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -555,10 +527,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The company name in the invoice title.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test Company</p>
+             * InvoiceTitle.
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -566,10 +535,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of issue.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * IssueType.
              */
             public Builder issueType(Long issueType) {
                 this.issueType = issueType;
@@ -577,10 +543,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The address of the business license.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>XXX, XXX district, XXX city, XXX province</p>
+             * OperatingLicenseAddress.
              */
             public Builder operatingLicenseAddress(String operatingLicenseAddress) {
                 this.operatingLicenseAddress = operatingLicenseAddress;
@@ -588,10 +551,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phone number of the business license.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>138xxxxxxxx</p>
+             * OperatingLicensePhone.
              */
             public Builder operatingLicensePhone(String operatingLicensePhone) {
                 this.operatingLicensePhone = operatingLicensePhone;
@@ -599,10 +559,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tax registration number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>21343245342534</p>
+             * RegisterNo.
              */
             public Builder registerNo(String registerNo) {
                 this.registerNo = registerNo;
@@ -610,10 +567,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the payment started.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>202002</p>
+             * StartCycle.
              */
             public Builder startCycle(Long startCycle) {
                 this.startCycle = startCycle;
@@ -621,10 +575,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the invoice title.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Status.
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -632,10 +583,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path and file name of the scanned copy of the tax registration certificate.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>taxationLicense.jpg</p>
+             * TaxationLicense.
              */
             public Builder taxationLicense(String taxationLicense) {
                 this.taxationLicense = taxationLicense;
@@ -643,14 +591,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the taxpayer. Valid values:</p>
-             * <ul>
-             * <li>1: general taxpayer</li>
-             * <li>2: special taxpayer</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * TaxpayerType.
              */
             public Builder taxpayerType(Long taxpayerType) {
                 this.taxpayerType = taxpayerType;
@@ -658,10 +599,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instruction document of the invoice title change.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>instruction.doc</p>
+             * TitleChangeInstructions.
              */
             public Builder titleChangeInstructions(String titleChangeInstructions) {
                 this.titleChangeInstructions = titleChangeInstructions;
@@ -669,14 +607,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the invoice. Valid values:</p>
-             * <ul>
-             * <li>0: plain value-added tax (VAT) invoice</li>
-             * <li>1: special VAT invoice</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Type.
              */
             public Builder type(Long type) {
                 this.type = type;
@@ -684,10 +615,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>34565465675</p>
+             * UserId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -695,10 +623,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nickname of the user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testNick</p>
+             * UserNick.
              */
             public Builder userNick(String userNick) {
                 this.userNick = userNick;
@@ -806,7 +731,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the invoice.</p>
+             * CustomerInvoiceList.
              */
             public Builder customerInvoiceList(CustomerInvoiceList customerInvoiceList) {
                 this.customerInvoiceList = customerInvoiceList;

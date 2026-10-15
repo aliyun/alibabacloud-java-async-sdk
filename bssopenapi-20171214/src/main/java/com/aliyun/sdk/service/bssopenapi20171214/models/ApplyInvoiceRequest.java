@@ -204,7 +204,7 @@ public class ApplyInvoiceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the address to which the invoice is delivered. This parameter is required if the invoice is a paper invoice. Set the ID to the value of the AddressId parameter returned by calling the QueryCustomerAddressList operation.</p>
+         * <p>The ID of the mailing address, which corresponds to the ID parameter returned by the QueryCustomerAddressList operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * <p>The nickname of the applicant. The system does not verify the nickname.</p>
+         * <p>The nickname of the applicant. The system does not verify this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +230,7 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the customer. Set the ID to the value of the CustomerId parameter returned by calling the QueryInvoicingCustomerList operation.</p>
+         * <p>The ID of the invoice title information, which corresponds to the ID parameter returned by the QueryInvoicingCustomerList operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,11 +243,11 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * <p>The amount of the invoice. Unit: Cent.</p>
+         * <p>The requested invoice amount, in cents.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>124132</p>
+         * <p>10000</p>
          */
         public Builder invoiceAmount(Long invoiceAmount) {
             this.putQueryParameter("InvoiceAmount", invoiceAmount);
@@ -256,7 +256,7 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to invoice by amount. A value of true indicates that the user applies for the invoice based on the InvoiceAmount parameter. A value of false indicates that the user applies for the invoice based on the total amount of the invoicing items.</p>
+         * <p>Specifies whether to issue the invoice based on a specified amount. If this parameter is set to true, the invoice is applied for based on the specified InvoiceAmount. Otherwise, the invoice is applied for based on the total amount of the selected objects to be invoiced.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -268,10 +268,10 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * <p>The type of the invoice. Valid values:</p>
+         * <p>The invoice type. Valid values:</p>
          * <ul>
-         * <li>0: paper invoice</li>
-         * <li>1: electronic invoice</li>
+         * <li>0: VAT special invoice.</li>
+         * <li>1: VAT general invoice.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -293,7 +293,11 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * <p>The channel that is used to process the invoice. A value of 0 indicates that the invoice is processed by Alibaba Cloud. A value of 1 indicates that the invoice is processed by the tax platform. Set the value to 1.</p>
+         * <p>The invoicing channel. Set this parameter to 1. Valid values:</p>
+         * <ul>
+         * <li>0: Processed by Alibaba Cloud.</li>
+         * <li>1: Processed by the tax platform.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -305,7 +309,7 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the selected invoicing items. Set the IDs to the IDs returned by calling the QueryEvaluateList operation.</p>
+         * <p>The list of IDs of the selected objects to be invoiced, which correspond to the ID parameters returned by the QueryEvaluateList operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,7 +322,7 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * <p>The remarks made by the user.</p>
+         * <p>The user remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -330,7 +334,10 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * emails.
+         * <p>The email addresses for receiving the invoice. The maximum length of this field is 200 characters. Separate multiple email addresses with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:aaa@aa.com">aaa@aa.com</a>,<a href="mailto:bbb@bb.com">bbb@bb.com</a></p>
          */
         public Builder emails(String emails) {
             this.putQueryParameter("emails", emails);

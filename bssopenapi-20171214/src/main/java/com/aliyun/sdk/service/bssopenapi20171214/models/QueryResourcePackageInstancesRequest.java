@@ -143,7 +143,7 @@ public class QueryResourcePackageInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The end of the expiration time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The expiration end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-02-02T13:00:00Z</p>
@@ -155,7 +155,7 @@ public class QueryResourcePackageInstancesRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the expiration time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The expiration start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-02-02T12:00:00Z</p>
@@ -167,7 +167,7 @@ public class QueryResourcePackageInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether partners are involved.</p>
+         * <p>Specifies whether to include partners.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -188,7 +188,7 @@ public class QueryResourcePackageInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -200,7 +200,7 @@ public class QueryResourcePackageInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+         * <p>The number of entries per page. Default value: 20. Maximum value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -212,7 +212,7 @@ public class QueryResourcePackageInstancesRequest extends Request {
         }
 
         /**
-         * <p>The code of the service.</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>

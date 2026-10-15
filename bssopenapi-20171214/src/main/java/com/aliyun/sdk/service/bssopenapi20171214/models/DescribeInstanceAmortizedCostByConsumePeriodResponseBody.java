@@ -106,7 +106,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful！</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -984,7 +996,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             } 
 
             /**
-             * AfterDiscountAmount.
+             * <p>The amount after a discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder afterDiscountAmount(Double afterDiscountAmount) {
                 this.afterDiscountAmount = afterDiscountAmount;
@@ -992,7 +1007,11 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * AmortizationPeriod.
+             * <p>The amortization month.
+             * Format: YYYYMM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202210</p>
              */
             public Builder amortizationPeriod(String amortizationPeriod) {
                 this.amortizationPeriod = amortizationPeriod;
@@ -1000,7 +1019,16 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * AmortizationStatus.
+             * <p>The amortization status. Valid values:</p>
+             * <ul>
+             * <li><p>amortized: The cost is amortized.</p>
+             * </li>
+             * <li><p>unAmortized: The cost is not amortized.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>amortized</p>
              */
             public Builder amortizationStatus(String amortizationStatus) {
                 this.amortizationStatus = amortizationStatus;
@@ -1008,7 +1036,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * BillAccountID.
+             * <p>The ID of the account to which the bill belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185xxxxx489</p>
              */
             public Builder billAccountID(Long billAccountID) {
                 this.billAccountID = billAccountID;
@@ -1016,7 +1047,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * BillAccountName.
+             * <p>The name of the account to which the bill belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder billAccountName(String billAccountName) {
                 this.billAccountName = billAccountName;
@@ -1024,7 +1058,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * BillOwnerID.
+             * <p>The ID of the resource owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185xxxxx489</p>
              */
             public Builder billOwnerID(Long billOwnerID) {
                 this.billOwnerID = billOwnerID;
@@ -1032,7 +1069,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * BillOwnerName.
+             * <p>The name of the resource owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder billOwnerName(String billOwnerName) {
                 this.billOwnerName = billOwnerName;
@@ -1040,7 +1080,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * BizType.
+             * <p>The business type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trusteeship</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -1048,7 +1091,11 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * ConsumePeriod.
+             * <p>The billing cycle.
+             * Format: YYYYMM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202210</p>
              */
             public Builder consumePeriod(String consumePeriod) {
                 this.consumePeriod = consumePeriod;
@@ -1056,7 +1103,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * CostUnit.
+             * <p>The cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>未分配</p>
              */
             public Builder costUnit(String costUnit) {
                 this.costUnit = costUnit;
@@ -1064,7 +1114,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * CostUnitCode.
+             * <p>The code of the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder costUnitCode(String costUnitCode) {
                 this.costUnitCode = costUnitCode;
@@ -1072,7 +1125,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * CurrentAmortizationAfterDiscountAmount.
+             * <p>The amount after a discount for the cost that is amortized in the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationAfterDiscountAmount(Double currentAmortizationAfterDiscountAmount) {
                 this.currentAmortizationAfterDiscountAmount = currentAmortizationAfterDiscountAmount;
@@ -1080,7 +1136,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * CurrentAmortizationDeductedByCashCoupons.
+             * <p>The amount deducted by cash coupons from the cost that is amortized in the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationDeductedByCashCoupons(Double currentAmortizationDeductedByCashCoupons) {
                 this.currentAmortizationDeductedByCashCoupons = currentAmortizationDeductedByCashCoupons;
@@ -1088,7 +1147,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * CurrentAmortizationDeductedByCoupons.
+             * <p>The amount deducted by coupons from the cost that is amortized in the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationDeductedByCoupons(Double currentAmortizationDeductedByCoupons) {
                 this.currentAmortizationDeductedByCoupons = currentAmortizationDeductedByCoupons;
@@ -1096,7 +1158,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * CurrentAmortizationDeductedByPrepaidCard.
+             * <p>The amount paid with a prepaid card for the cost that is amortized in the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationDeductedByPrepaidCard(Double currentAmortizationDeductedByPrepaidCard) {
                 this.currentAmortizationDeductedByPrepaidCard = currentAmortizationDeductedByPrepaidCard;
@@ -1104,7 +1169,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * CurrentAmortizationExpenditureAmount.
+             * <p>The expenditure amount of the cost that is amortized in the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationExpenditureAmount(Double currentAmortizationExpenditureAmount) {
                 this.currentAmortizationExpenditureAmount = currentAmortizationExpenditureAmount;
@@ -1112,7 +1180,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * CurrentAmortizationInvoiceDiscount.
+             * <p>The discount on the cost that is amortized in the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationInvoiceDiscount(Double currentAmortizationInvoiceDiscount) {
                 this.currentAmortizationInvoiceDiscount = currentAmortizationInvoiceDiscount;
@@ -1120,7 +1191,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * CurrentAmortizationPretaxAmount.
+             * <p>The pretax amount of the cost that is amortized in the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationPretaxAmount(Double currentAmortizationPretaxAmount) {
                 this.currentAmortizationPretaxAmount = currentAmortizationPretaxAmount;
@@ -1128,7 +1202,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * CurrentAmortizationPretaxGrossAmount.
+             * <p>The list price of the cost that is amortized in the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationPretaxGrossAmount(Double currentAmortizationPretaxGrossAmount) {
                 this.currentAmortizationPretaxGrossAmount = currentAmortizationPretaxGrossAmount;
@@ -1136,7 +1213,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * CurrentAmortizationRoundDownDiscount.
+             * <p>The rounding discount of the cost that is amortized in the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationRoundDownDiscount(Double currentAmortizationRoundDownDiscount) {
                 this.currentAmortizationRoundDownDiscount = currentAmortizationRoundDownDiscount;
@@ -1144,7 +1224,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * DeductedByCashCoupons.
+             * <p>The amount deducted by cash coupons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByCashCoupons(Double deductedByCashCoupons) {
                 this.deductedByCashCoupons = deductedByCashCoupons;
@@ -1152,7 +1235,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * DeductedByCoupons.
+             * <p>The amount deducted by coupons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByCoupons(Double deductedByCoupons) {
                 this.deductedByCoupons = deductedByCoupons;
@@ -1160,7 +1246,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * DeductedByPrepaidCard.
+             * <p>The amount paid with a prepaid card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByPrepaidCard(Double deductedByPrepaidCard) {
                 this.deductedByPrepaidCard = deductedByPrepaidCard;
@@ -1168,7 +1257,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * ExpenditureAmount.
+             * <p>The expenditure amount (invoicable).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expenditureAmount(Double expenditureAmount) {
                 this.expenditureAmount = expenditureAmount;
@@ -1176,7 +1268,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * InstanceID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-kjhdskjgshfdlkjfdh</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -1184,7 +1279,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * InternetIP.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34.xx.x.x</p>
              */
             public Builder internetIP(String internetIP) {
                 this.internetIP = internetIP;
@@ -1192,7 +1290,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * IntranetIP.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.xx.xx.xx</p>
              */
             public Builder intranetIP(String intranetIP) {
                 this.intranetIP = intranetIP;
@@ -1200,7 +1301,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * InvoiceDiscount.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder invoiceDiscount(Double invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -1208,7 +1312,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * PretaxAmount.
+             * <p>The pretax amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxAmount(Double pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -1216,7 +1323,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * PretaxGrossAmount.
+             * <p>The list price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxGrossAmount(Double pretaxGrossAmount) {
                 this.pretaxGrossAmount = pretaxGrossAmount;
@@ -1224,7 +1334,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * PreviouslyAmortizedAfterDiscountAmount.
+             * <p>The amount after a discount for the cost that was amortized before the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedAfterDiscountAmount(Double previouslyAmortizedAfterDiscountAmount) {
                 this.previouslyAmortizedAfterDiscountAmount = previouslyAmortizedAfterDiscountAmount;
@@ -1232,7 +1345,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * PreviouslyAmortizedDeductedByCashCoupons.
+             * <p>The amount deducted by cash coupons from the cost that was amortized before the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedDeductedByCashCoupons(Double previouslyAmortizedDeductedByCashCoupons) {
                 this.previouslyAmortizedDeductedByCashCoupons = previouslyAmortizedDeductedByCashCoupons;
@@ -1240,7 +1356,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * PreviouslyAmortizedDeductedByCoupons.
+             * <p>The amount deducted by coupons from the cost that was amortized before the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedDeductedByCoupons(Double previouslyAmortizedDeductedByCoupons) {
                 this.previouslyAmortizedDeductedByCoupons = previouslyAmortizedDeductedByCoupons;
@@ -1248,7 +1367,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * PreviouslyAmortizedDeductedByPrepaidCard.
+             * <p>The amount paid with a prepaid card for the cost that was amortized before the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedDeductedByPrepaidCard(Double previouslyAmortizedDeductedByPrepaidCard) {
                 this.previouslyAmortizedDeductedByPrepaidCard = previouslyAmortizedDeductedByPrepaidCard;
@@ -1256,7 +1378,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * PreviouslyAmortizedExpenditureAmount.
+             * <p>The expenditure amount of the cost that was amortized before the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedExpenditureAmount(Double previouslyAmortizedExpenditureAmount) {
                 this.previouslyAmortizedExpenditureAmount = previouslyAmortizedExpenditureAmount;
@@ -1264,7 +1389,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * PreviouslyAmortizedInvoiceDiscount.
+             * <p>The discount on the cost that was amortized before the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedInvoiceDiscount(Double previouslyAmortizedInvoiceDiscount) {
                 this.previouslyAmortizedInvoiceDiscount = previouslyAmortizedInvoiceDiscount;
@@ -1272,7 +1400,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * PreviouslyAmortizedPretaxAmount.
+             * <p>The pretax amount of the cost that was amortized before the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedPretaxAmount(Double previouslyAmortizedPretaxAmount) {
                 this.previouslyAmortizedPretaxAmount = previouslyAmortizedPretaxAmount;
@@ -1280,7 +1411,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * PreviouslyAmortizedPretaxGrossAmount.
+             * <p>The list price of the cost that was amortized before the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedPretaxGrossAmount(Double previouslyAmortizedPretaxGrossAmount) {
                 this.previouslyAmortizedPretaxGrossAmount = previouslyAmortizedPretaxGrossAmount;
@@ -1288,7 +1422,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * PreviouslyAmortizedRoundDownDiscount.
+             * <p>The rounding discount of the cost that was amortized before the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedRoundDownDiscount(Double previouslyAmortizedRoundDownDiscount) {
                 this.previouslyAmortizedRoundDownDiscount = previouslyAmortizedRoundDownDiscount;
@@ -1296,7 +1433,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * ProductCode.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -1304,7 +1444,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * ProductDetail.
+             * <p>The details of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云数据库RDS</p>
              */
             public Builder productDetail(String productDetail) {
                 this.productDetail = productDetail;
@@ -1312,7 +1455,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * ProductDetailCode.
+             * <p>The code of the product details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productDetailCode(String productDetailCode) {
                 this.productDetailCode = productDetailCode;
@@ -1320,7 +1466,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * ProductName.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云数据库RDS</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -1328,7 +1477,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * Region.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>杭州</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1336,7 +1488,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * RemainingAmortizationAfterDiscountAmount.
+             * <p>The amount after a discount for the cost that is not amortized at the end of the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationAfterDiscountAmount(Double remainingAmortizationAfterDiscountAmount) {
                 this.remainingAmortizationAfterDiscountAmount = remainingAmortizationAfterDiscountAmount;
@@ -1344,7 +1499,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * RemainingAmortizationDeductedByCashCoupons.
+             * <p>The amount deducted by cash coupons from the cost that is not amortized at the end of the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationDeductedByCashCoupons(Double remainingAmortizationDeductedByCashCoupons) {
                 this.remainingAmortizationDeductedByCashCoupons = remainingAmortizationDeductedByCashCoupons;
@@ -1352,7 +1510,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * RemainingAmortizationDeductedByCoupons.
+             * <p>The amount deducted by coupons from the cost that is not amortized at the end of the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationDeductedByCoupons(Double remainingAmortizationDeductedByCoupons) {
                 this.remainingAmortizationDeductedByCoupons = remainingAmortizationDeductedByCoupons;
@@ -1360,7 +1521,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * RemainingAmortizationDeductedByPrepaidCard.
+             * <p>The amount paid with a prepaid card for the cost that is not amortized at the end of the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationDeductedByPrepaidCard(Double remainingAmortizationDeductedByPrepaidCard) {
                 this.remainingAmortizationDeductedByPrepaidCard = remainingAmortizationDeductedByPrepaidCard;
@@ -1368,7 +1532,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * RemainingAmortizationExpenditureAmount.
+             * <p>The expenditure amount of the cost that is not amortized at the end of the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationExpenditureAmount(Double remainingAmortizationExpenditureAmount) {
                 this.remainingAmortizationExpenditureAmount = remainingAmortizationExpenditureAmount;
@@ -1376,7 +1543,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * RemainingAmortizationInvoiceDiscount.
+             * <p>The discount on the cost that is not amortized at the end of the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationInvoiceDiscount(Double remainingAmortizationInvoiceDiscount) {
                 this.remainingAmortizationInvoiceDiscount = remainingAmortizationInvoiceDiscount;
@@ -1384,7 +1554,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * RemainingAmortizationPretaxAmount.
+             * <p>The pretax amount of the cost that is not amortized at the end of the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationPretaxAmount(Double remainingAmortizationPretaxAmount) {
                 this.remainingAmortizationPretaxAmount = remainingAmortizationPretaxAmount;
@@ -1392,7 +1565,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * RemainingAmortizationPretaxGrossAmount.
+             * <p>The list price of the cost that is not amortized at the end of the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationPretaxGrossAmount(Double remainingAmortizationPretaxGrossAmount) {
                 this.remainingAmortizationPretaxGrossAmount = remainingAmortizationPretaxGrossAmount;
@@ -1400,7 +1576,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * RemainingAmortizationRoundDownDiscount.
+             * <p>The rounding discount of the cost that is not amortized at the end of the current amortization period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationRoundDownDiscount(Double remainingAmortizationRoundDownDiscount) {
                 this.remainingAmortizationRoundDownDiscount = remainingAmortizationRoundDownDiscount;
@@ -1408,7 +1587,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * ResourceGroup.
+             * <p>The resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认资源组</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -1416,7 +1598,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * RoundDownDiscount.
+             * <p>The amount deducted by rounding down.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder roundDownDiscount(Double roundDownDiscount) {
                 this.roundDownDiscount = roundDownDiscount;
@@ -1424,7 +1609,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * SplitAccountName.
+             * <p>The name of the account to which the attached resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test**1122</p>
              */
             public Builder splitAccountName(String splitAccountName) {
                 this.splitAccountName = splitAccountName;
@@ -1432,7 +1620,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * SplitItemID.
+             * <p>The ID of the attached resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-28bycvyb4</p>
              */
             public Builder splitItemID(String splitItemID) {
                 this.splitItemID = splitItemID;
@@ -1440,7 +1631,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * SplitItemName.
+             * <p>The name of the attached resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iZ28bycvyb4Z</p>
              */
             public Builder splitItemName(String splitItemName) {
                 this.splitItemName = splitItemName;
@@ -1448,7 +1642,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * SplitProductDetail.
+             * <p>The name of the attached resource\&quot;s product details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder splitProductDetail(String splitProductDetail) {
                 this.splitProductDetail = splitProductDetail;
@@ -1456,7 +1653,16 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * SubscriptionType.
+             * <p>The subscription type. Valid values:</p>
+             * <ul>
+             * <li><p>Subscription: subscription.</p>
+             * </li>
+             * <li><p>PayAsYouGo: pay-as-you-go.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -1464,7 +1670,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * Tag.
+             * <p>The tags of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1472,7 +1681,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * Zone.
+             * <p>The zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>杭州1</p>
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -1591,7 +1803,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             } 
 
             /**
-             * AccountID.
+             * <p>The ID of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185766xxxx</p>
              */
             public Builder accountID(String accountID) {
                 this.accountID = accountID;
@@ -1599,7 +1814,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * AccountName.
+             * <p>The name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -1607,7 +1825,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * Items.
+             * <p>The data entries.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -1615,7 +1833,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * MaxResults.
+             * <p>The maximum number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -1623,7 +1844,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * NextToken.
+             * <p>The token that is used to retrieve the next page of results. If this parameter is empty, all the results are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -1631,7 +1855,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -117,7 +117,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -136,7 +136,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F5B803CF-94D8-43AF-ADB3-D819AAD30E27</p>
@@ -147,7 +147,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -229,7 +229,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the cost center was modified.</p>
+             * <p>Indicates whether the operation was successful.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -240,7 +240,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the cost center owner.</p>
+             * <p>The user ID of the financial unit owner.</p>
              * 
              * <strong>example:</strong>
              * <p>823756287</p>
@@ -251,7 +251,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cost center.</p>
+             * <p>The ID of the new financial unit.</p>
              * 
              * <strong>example:</strong>
              * <p>356349875</p>

@@ -106,7 +106,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful！</p>
@@ -136,7 +136,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -147,7 +147,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -996,7 +996,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             } 
 
             /**
-             * AfterDiscountAmount.
+             * <p>The amount after a discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder afterDiscountAmount(Double afterDiscountAmount) {
                 this.afterDiscountAmount = afterDiscountAmount;
@@ -1004,7 +1007,8 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The allocation month. Format: YYYYMM.</p>
+             * <p>The amortization month.
+             * Format: YYYYMM.</p>
              * 
              * <strong>example:</strong>
              * <p>202210</p>
@@ -1015,10 +1019,12 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The allocation status. Valid values:</p>
+             * <p>The amortization status. Valid values:</p>
              * <ul>
-             * <li>amortized: allocated</li>
-             * <li>unAmortized: not allocated</li>
+             * <li><p>amortized: amortized</p>
+             * </li>
+             * <li><p>unAmortized: unamortized</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1085,7 +1091,8 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The billing cycle. Format: YYYYMM.</p>
+             * <p>The billing cycle.
+             * Format: YYYYMM.</p>
              * 
              * <strong>example:</strong>
              * <p>202210</p>
@@ -1099,7 +1106,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
              * <p>The cost center.</p>
              * 
              * <strong>example:</strong>
-             * <p>Not allocated</p>
+             * <p>未分配</p>
              */
             public Builder costUnit(String costUnit) {
                 this.costUnit = costUnit;
@@ -1118,7 +1125,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * CurrentAmortizationAfterDiscountAmount.
+             * <p>Current amortized amount after discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationAfterDiscountAmount(Double currentAmortizationAfterDiscountAmount) {
                 this.currentAmortizationAfterDiscountAmount = currentAmortizationAfterDiscountAmount;
@@ -1126,7 +1136,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The amount deducted by using vouchers and allocated to the current allocation month.</p>
+             * <p>Current amortized deduction by cash coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1137,7 +1147,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The amount deducted by using coupons and allocated to the current allocation month.</p>
+             * <p>Current amortized deduction by coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1148,7 +1158,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The amount deducted by using prepaid cards and allocated to the current allocation month.</p>
+             * <p>Current amortized payment by prepaid card.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1159,7 +1169,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The expenditure amount allocated to the current allocation month. Invoicing is supported.</p>
+             * <p>Current amortized expenditure amount (invoicable).</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1170,7 +1180,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The discount amount allocated to the current allocation month.</p>
+             * <p>Current amortized discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1181,7 +1191,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The pretax amount allocated to the current allocation month.</p>
+             * <p>Current amortized pretax amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1192,7 +1202,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The pretax gross amount allocated to the current allocation month.</p>
+             * <p>Current amortized list price.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1203,7 +1213,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The round-off amount allocated to the current allocation month.</p>
+             * <p>Current amortized rounded-down discount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1214,7 +1224,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The amount deducted by using vouchers.</p>
+             * <p>The amount deducted by cash coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1225,7 +1235,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The amount deducted by using coupons.</p>
+             * <p>The amount deducted by coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1236,7 +1246,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The amount deducted by using prepaid cards.</p>
+             * <p>The amount paid with a prepaid card.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1247,7 +1257,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The expenditure amount. Invoicing is supported.</p>
+             * <p>The expenditure amount (invoicable).</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1258,7 +1268,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-kjhdskjgshfdlkjfdh</p>
@@ -1269,7 +1279,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The public IP address of the instance.</p>
+             * <p>The public IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>34.xx.x.x</p>
@@ -1280,7 +1290,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The private IP address of the instance.</p>
+             * <p>The internal IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>192.xx.xx.xx</p>
@@ -1313,7 +1323,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The pretax gross amount.</p>
+             * <p>The list price.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1324,7 +1334,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * PreviouslyAmortizedAfterDiscountAmount.
+             * <p>Previously amortized amount after discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedAfterDiscountAmount(Double previouslyAmortizedAfterDiscountAmount) {
                 this.previouslyAmortizedAfterDiscountAmount = previouslyAmortizedAfterDiscountAmount;
@@ -1332,7 +1345,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The amount deducted by using vouchers and allocated before the current allocation month.</p>
+             * <p>Previously amortized deduction by cash coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1343,7 +1356,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The amount deducted by using coupons and allocated before the current allocation month.</p>
+             * <p>Previously amortized deduction by coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1354,7 +1367,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The amount deducted by using prepaid cards and allocated before the current allocation month.</p>
+             * <p>Previously amortized payment by prepaid card.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1365,7 +1378,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The expenditure amount allocated before the allocation month. Invoicing is supported.</p>
+             * <p>Previously amortized expenditure amount (invoicable).</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1376,7 +1389,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The discount amount allocated before the current allocation month.</p>
+             * <p>Previously amortized discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1387,7 +1400,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The pretax amount allocated before the current allocation month.</p>
+             * <p>Previously amortized pretax amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1398,7 +1411,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The pretax gross amount allocated before the current allocation month.</p>
+             * <p>Previously amortized list price.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1409,7 +1422,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The round-off amount allocated before the current allocation month.</p>
+             * <p>Previously amortized rounding discount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1420,7 +1433,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The code of the service.</p>
+             * <p>The product code.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -1431,10 +1444,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The specific service resource.</p>
+             * <p>The product details.</p>
              * 
              * <strong>example:</strong>
-             * <p>ApsaraDB RDS</p>
+             * <p>云数据库RDS</p>
              */
             public Builder productDetail(String productDetail) {
                 this.productDetail = productDetail;
@@ -1442,7 +1455,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The code of the specific service resource.</p>
+             * <p>The code of the product details.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -1453,10 +1466,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The product name.</p>
              * 
              * <strong>example:</strong>
-             * <p>ApsaraDB RDS</p>
+             * <p>云数据库RDS</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -1467,7 +1480,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
              * <p>The region.</p>
              * 
              * <strong>example:</strong>
-             * <p>China (Hangzhou)</p>
+             * <p>杭州</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1475,7 +1488,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * RemainingAmortizationAfterDiscountAmount.
+             * <p>Remaining unamortized amount after discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationAfterDiscountAmount(Double remainingAmortizationAfterDiscountAmount) {
                 this.remainingAmortizationAfterDiscountAmount = remainingAmortizationAfterDiscountAmount;
@@ -1483,7 +1499,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The amount deducted by using vouchers and to be allocated to one or more future allocation months.</p>
+             * <p>Remaining unamortized deduction by cash coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1494,7 +1510,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The amount deducted by using coupons and to be allocated to one or more future allocation months.</p>
+             * <p>Remaining unamortized deduction by coupons.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1505,7 +1521,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The amount deducted by using prepaid cards and to be allocated to one or more future allocation months.</p>
+             * <p>Remaining unamortized payment by prepaid card.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1516,7 +1532,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The expenditure amount to be allocated to one or more future allocation months. Invoicing is supported.</p>
+             * <p>Remaining unamortized expenditure amount (invoicable).</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1527,7 +1543,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The discount amount to be allocated to one or more future allocation months.</p>
+             * <p>Remaining unamortized discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1538,7 +1554,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The pretax amount to be allocated to one or more future allocation months.</p>
+             * <p>Remaining unamortized pretax amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1549,7 +1565,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The pretax gross amount to be allocated to one or more future allocation months.</p>
+             * <p>Remaining unamortized list price.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1560,7 +1576,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The round-off amount to be allocated to one or more future allocation months.</p>
+             * <p>Remaining unamortized rounding discount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1571,10 +1587,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The name of the resource group.</p>
+             * <p>The resource group.</p>
              * 
              * <strong>example:</strong>
-             * <p>Default resource group</p>
+             * <p>默认资源组</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -1582,7 +1598,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The round-off amount.</p>
+             * <p>The rounded-down discount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1593,7 +1609,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The name of the account to which the split item belongs.</p>
+             * <p>The name of the account to which the attached resource belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>test**1122</p>
@@ -1604,7 +1620,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The ID of the split item.</p>
+             * <p>The ID of the attached resource.</p>
              * 
              * <strong>example:</strong>
              * <p>i-28bycvyb4</p>
@@ -1615,7 +1631,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The name of the split item.</p>
+             * <p>The name of the attached resource.</p>
              * 
              * <strong>example:</strong>
              * <p>iZ28bycvyb4Z</p>
@@ -1626,7 +1642,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The name of the specific service resource to which the split item belongs.</p>
+             * <p>The name of the product details for the attached resource.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -1637,10 +1653,12 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The billing method. Valid values:</p>
+             * <p>The subscription type. Valid values:</p>
              * <ul>
-             * <li>Subscription: the subscription billing method</li>
-             * <li>PayAsYouGo: the pay-as-you-go billing method</li>
+             * <li><p>Subscription: subscription.</p>
+             * </li>
+             * <li><p>PayAsYouGo: pay-as-you-go.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1652,7 +1670,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The tag of the instance.</p>
+             * <p>The tags of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>tag</p>
@@ -1663,10 +1681,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The ID of the zone.</p>
+             * <p>The zone.</p>
              * 
              * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * <p>杭州1</p>
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -1785,7 +1803,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             } 
 
             /**
-             * <p>The ID of the account.</p>
+             * <p>The account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>185766xxxx</p>
@@ -1796,7 +1814,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The name of the account.</p>
+             * <p>The account.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
@@ -1807,7 +1825,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The data entries returned.</p>
+             * <p>The data entries.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -1815,7 +1833,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The maximum number of entries returned.</p>
+             * <p>The maximum number of entries returned for the current request.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1826,7 +1844,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The position from which the results started to return. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.</p>
+             * <p>The position from which to start reading the current call. The value of this parameter must be empty or the value of NextToken that is returned in the last call. Otherwise, an error is reported. If this parameter is empty, the query starts from the beginning.</p>
              * 
              * <strong>example:</strong>
              * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
@@ -1837,7 +1855,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

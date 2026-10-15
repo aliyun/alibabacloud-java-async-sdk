@@ -59,7 +59,7 @@ public class CreateCostUnitRequest extends Request {
         } 
 
         /**
-         * <p>The list of cost centers.</p>
+         * <p>The list of financial units.</p>
          */
         public Builder unitEntityList(java.util.List<UnitEntityList> unitEntityList) {
             this.putQueryParameter("UnitEntityList", unitEntityList);
@@ -143,7 +143,7 @@ public class CreateCostUnitRequest extends Request {
             } 
 
             /**
-             * <p>The user ID of the owner of the cost center.</p>
+             * <p>The ID of the owner of the new financial unit.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class CreateCostUnitRequest extends Request {
             }
 
             /**
-             * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+             * <p>The ID of the parent financial unit. A value of -1 indicates the root financial unit.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class CreateCostUnitRequest extends Request {
             }
 
             /**
-             * <p>The name of the cost center.</p>
+             * <p>The name of the financial unit.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

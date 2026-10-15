@@ -112,7 +112,7 @@ public class DescribePricingModuleRequest extends Request {
         }
 
         /**
-         * <p>The service code. You can query the service code by calling the <strong>QueryProductList</strong> operation.</p>
+         * <p>The product code. You can call the <strong>QueryProductList</strong> operation to query product codes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,10 @@ public class DescribePricingModuleRequest extends Request {
         }
 
         /**
-         * <p>The type of the service. You can query the service type by calling the <strong>QueryProductList</strong> operation.</p>
+         * <p>The product type. You can call the <strong>QueryProductList</strong> operation to query product types.</p>
+         * <blockquote>
+         * <p>Notice: The value must be the same as the product type returned by the <strong>QueryProductList</strong> operation.</notice></p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -137,10 +140,10 @@ public class DescribePricingModuleRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The subscription type. Valid values:</p>
          * <ul>
-         * <li>Subscription: subscription</li>
-         * <li>PayAsYouGo: pay-as-you-go</li>
+         * <li>Subscription: subscription.</li>
+         * <li>PayAsYouGo: pay-as-you-go.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

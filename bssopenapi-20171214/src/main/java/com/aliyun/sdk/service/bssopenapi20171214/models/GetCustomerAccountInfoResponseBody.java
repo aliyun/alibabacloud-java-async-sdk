@@ -106,7 +106,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -136,7 +136,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>94017C56-1725-5DD9-AB41-B3BAE791D600</p>
@@ -147,7 +147,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</p>
+         * <p>Indicates whether the call was successful. A value of true indicates that the call was completed. A value of false indicates that an error occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -268,7 +268,11 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the account. A value of 1 indicates an enterprise account. A value of 0 indicates an individual account.</p>
+             * <p>The account type. Valid values:</p>
+             * <ul>
+             * <li>1: enterprise account.</li>
+             * <li>0: individual account.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -279,11 +283,18 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business status of the customer. Valid values:</p>
-             * <p>Freeze: The business is frozen.</p>
-             * <p>Thaw: The business is unfrozen.</p>
-             * <p>Trusteeship: The business is hosted.</p>
-             * <p>TrusteeshipCancel: The business is not hosted.</p>
+             * <p>The business type of the end user.</p>
+             * <p>Valid values:</p>
+             * <ol>
+             * <li><p>Freeze: The user is in a frozen state.</p>
+             * </li>
+             * <li><p>Thaw: The user is in a thawed state.</p>
+             * </li>
+             * <li><p>Trusteeship: The user is in a trusteeship state.</p>
+             * </li>
+             * <li><p>TrusteeshipCancel: The user is in a non-trusteeship state.</p>
+             * </li>
+             * </ol>
              * 
              * <strong>example:</strong>
              * <p>Freeze</p>
@@ -294,9 +305,14 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hosting status of the credit information and instances of the customer. If the credit information and instances of the customer are managed on Alibaba Cloud, Alibaba Cloud suspends a customer service upon overdue payment. Valid values:</p>
-             * <p>FREEZE: The business of the customer is frozen.</p>
-             * <p>TRUSTEESHIP: The business of the customer is hosted.</p>
+             * <p>The hosting status. This parameter is provided by the credit control system and indicates whether the instance is managed by Alibaba Cloud. If the instance is managed, Alibaba Cloud handles resource suspension/resumption due to overdue payments.</p>
+             * <p>Valid values:</p>
+             * <ol>
+             * <li><p>FREEZE: The user\&quot;s business is frozen.</p>
+             * </li>
+             * <li><p>TRUSTEESHIP: The user\&quot;s business is under trusteeship.</p>
+             * </li>
+             * </ol>
              * 
              * <strong>example:</strong>
              * <p>FREEZE</p>
@@ -307,7 +323,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the account passes the real-name verification.</p>
+             * <p>The real-name verification status.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -318,7 +334,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email address of the customer.</p>
+             * <p>The email address of the end customer.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:xxxx@aliyun.com">xxxx@aliyun.com</a></p>
@@ -329,7 +345,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the management account.</p>
+             * <p>The MPK of the parent account.</p>
              * 
              * <strong>example:</strong>
              * <p>1051360339779133</p>

@@ -117,7 +117,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -136,7 +136,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -147,7 +147,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -801,10 +801,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The amount deducted with credit refund.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * AdjustAmount.
              */
             public Builder adjustAmount(Float adjustAmount) {
                 this.adjustAmount = adjustAmount;
@@ -812,7 +809,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * AfterDiscountAmount.
+             * <p>The amount after discount, including the payable amount after coupon deduction. Calculation rule: Amount after discount = List price - Discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder afterDiscountAmount(Float afterDiscountAmount) {
                 this.afterDiscountAmount = afterDiscountAmount;
@@ -842,7 +842,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing date. This parameter is returned only if the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.</p>
+             * <p>The billing date. This parameter has a value only when Granularity is set to DAILY. Format: YYYY-MM-DD.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-03-20</p>
@@ -853,7 +853,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billable item. A value is returned only if the IsBillingItem parameter is set to true.</p>
+             * <p>The billable item. This parameter has a value only when IsBillingItem is set to true.</p>
              * 
              * <strong>example:</strong>
              * <p>Bandwidth</p>
@@ -864,7 +864,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the billable item.</p>
+             * <p>The billable item code.</p>
              * 
              * <strong>example:</strong>
              * <p>disk</p>
@@ -886,7 +886,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of business.</p>
+             * <p>The business type.</p>
              * 
              * <strong>example:</strong>
              * <p>trusteeship</p>
@@ -897,10 +897,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount paid in cash. The amount deducted with credit refund is not included.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * CashAmount.
              */
             public Builder cashAmount(Float cashAmount) {
                 this.cashAmount = cashAmount;
@@ -908,7 +905,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the commodity. The code is the same as that in Cost Center.</p>
+             * <p>The commodity code, which is the same as the product detail code in the User Center.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -919,10 +916,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost center.</p>
+             * <p>The cost unit.</p>
              * 
              * <strong>example:</strong>
-             * <p>Not allocated</p>
+             * <p>Unallocated</p>
              */
             public Builder costUnit(String costUnit) {
                 this.costUnit = costUnit;
@@ -930,7 +927,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of currency. Valid values:</p>
+             * <p>The currency. Valid values:</p>
              * <ul>
              * <li>CNY</li>
              * <li>USD</li>
@@ -946,10 +943,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount deducted with vouchers.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.1</p>
+             * DeductedByCashCoupons.
              */
             public Builder deductedByCashCoupons(Float deductedByCashCoupons) {
                 this.deductedByCashCoupons = deductedByCashCoupons;
@@ -957,7 +951,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount deducted with coupons.</p>
+             * <p>The coupon discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1</p>
@@ -968,10 +962,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount deducted with prepaid cards.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.1</p>
+             * DeductedByPrepaidCard.
              */
             public Builder deductedByPrepaidCard(Float deductedByPrepaidCard) {
                 this.deductedByPrepaidCard = deductedByPrepaidCard;
@@ -979,7 +970,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount deducted with resource plans. This parameter is valid only when the isBillingItem parameter is set to true.</p>
+             * <p>The amount deducted by resource plans. This parameter is valid only when isBillingItem is set to true.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1</p>
@@ -990,10 +981,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the instance.</p>
+             * <p>The detailed instance configuration.</p>
              * 
              * <strong>example:</strong>
-             * <p>CPU:12</p>
+             * <p>CPU：12</p>
              */
             public Builder instanceConfig(String instanceConfig) {
                 this.instanceConfig = instanceConfig;
@@ -1001,7 +992,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-dadada</p>
@@ -1012,7 +1003,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance.</p>
+             * <p>The instance specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.sn1ne.3xlarge</p>
@@ -1034,7 +1025,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address.</p>
+             * <p>The internal IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>192.xx.xx.xx</p>
@@ -1056,12 +1047,12 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the bill.</p>
+             * <p>The bill type. Valid values:</p>
              * <ul>
-             * <li>SubscriptionOrder: the subscription bill.</li>
-             * <li>PayAsYouGoBill: the pay-as-you-go bill,</li>
-             * <li>Refund: the refund.</li>
-             * <li>Adjustment: the adjustment bill.</li>
+             * <li>SubscriptionOrder: subscription order</li>
+             * <li>PayAsYouGoBill: pay-as-you-go bill</li>
+             * <li>Refund: refund</li>
+             * <li>Adjustment: adjustment</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1073,7 +1064,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the project.</p>
+             * <p>The item name.</p>
              * 
              * <strong>example:</strong>
              * <p>iZ28bycvyb4Z</p>
@@ -1084,7 +1075,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit price of the service. This parameter is valid only when the isBillingItem parameter is set to true.</p>
+             * <p>The unit price. This parameter is valid only when isBillingItem is set to true.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1095,7 +1086,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the unit price. This parameter is valid only when the isBillingItem parameter is set to true.</p>
+             * <p>The unit of the unit price. This parameter is valid only when isBillingItem is set to true.</p>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -1106,7 +1097,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
+             * <p>The instance nickname.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1117,10 +1108,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unsettled amount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.1</p>
+             * OutstandingAmount.
              */
             public Builder outstandingAmount(Float outstandingAmount) {
                 this.outstandingAmount = outstandingAmount;
@@ -1128,7 +1116,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the account that owns the resource. This parameter is returned in multi-account payment scenario.</p>
+             * <p>The account ID of the resource owner in multi-account payment scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -1139,10 +1127,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount paid in cash. The amount deducted with credit refund is not included.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.1</p>
+             * PaymentAmount.
              */
             public Builder paymentAmount(Float paymentAmount) {
                 this.paymentAmount = paymentAmount;
@@ -1150,7 +1135,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the service. The code is the same as that in Cost Center.</p>
+             * <p>The product code, which is consistent with the product code in the bills of the User Center.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -1161,7 +1146,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pretax amount.</p>
+             * <p>The payable amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1</p>
@@ -1172,7 +1157,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pretax gross amount.</p>
+             * <p>The original amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1</p>
@@ -1183,7 +1168,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the service.</p>
+             * <p>The product code.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -1194,7 +1179,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the service.</p>
+             * <p>The product detail.</p>
              * 
              * <strong>example:</strong>
              * <p>ApsaraDB RDS</p>
@@ -1205,7 +1190,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The product name.</p>
              * 
              * <strong>example:</strong>
              * <p>ApsaraDB RDS</p>
@@ -1216,7 +1201,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the service.</p>
+             * <p>The product type.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -1227,10 +1212,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region.</p>
              * 
              * <strong>example:</strong>
-             * <p>China (Hangzhou)</p>
+             * <p>Hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1238,7 +1223,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>Default resource group</p>
@@ -1263,7 +1248,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
              * <p>The unit of the service duration.</p>
              * 
              * <strong>example:</strong>
-             * <p>Second</p>
+             * <p>Seconds</p>
              */
             public Builder servicePeriodUnit(String servicePeriodUnit) {
                 this.servicePeriodUnit = servicePeriodUnit;
@@ -1271,10 +1256,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method. Valid values:</p>
+             * <p>The subscription type. Valid values:</p>
              * <ul>
-             * <li>Subscription: the subscription billing method.</li>
-             * <li>PayAsYouGo: the pay-as-you-go billing method.</li>
+             * <li>Subscription: subscription</li>
+             * <li>PayAsYouGo: pay-as-you-go</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1286,7 +1271,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the resource.</p>
+             * <p>The resource tag.</p>
              * 
              * <strong>example:</strong>
              * <p>key:testKey value:testValue; key:testKey1 value:testValues1</p>
@@ -1297,7 +1282,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage of the service. This parameter is valid only when the isBillingItem parameter is set to true. The usage is the total usage in all bills in the billing cycle, not the amount that you purchase. For example, if 1 GB of storage is used and bills are generated every hour, the usage is 1 GB per hour. In this case, the usage is 24 GB per day.</p>
+             * <p>The usage.</p>
+             * <blockquote>
+             * <p>This parameter is valid only when isBillingItem is set to true. The usage data is the sum of usage across all bills within the cycle, not the actual purchased amount. For example, if 1 GB of storage is used and billed hourly, the hourly usage is 1 GB, and the daily aggregated bill usage is 1 GB × 24 = 24 GB.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1308,7 +1296,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of usage. This parameter is valid only when the isBillingItem parameter is set to true.</p>
+             * <p>The usage unit. This parameter is valid only when isBillingItem is set to true.</p>
              * 
              * <strong>example:</strong>
              * <p>GB</p>
@@ -1319,10 +1307,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone.</p>
+             * <p>The zone.</p>
              * 
              * <strong>example:</strong>
-             * <p>Hangzhou Zone B</p>
+             * <p>Hangzhou Zone 1</p>
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -1454,7 +1442,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the account.</p>
+             * <p>The account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>122</p>
@@ -1465,7 +1453,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the account.</p>
+             * <p>The user account.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
@@ -1476,7 +1464,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing cycle in the YYYY-MM format.</p>
+             * <p>The billing date. Format: YYYY-MM.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-03</p>
@@ -1487,7 +1475,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the bill.</p>
+             * <p>The bill details.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -1495,7 +1483,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of entries returned.</p>
+             * <p>The maximum number of records returned for the current request.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1506,7 +1494,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The position where the query stopped. If this parameter is left empty, all the results are returned. If you perform another call, you must set the NextToken parameter to the value of this parameter.</p>
+             * <p>The token that indicates the position from which the current call resumes reading. An empty value indicates that all data has been read. For the next call, set this value to the NextToken request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>CAESEgoQCg4KCm</p>
@@ -1517,7 +1505,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

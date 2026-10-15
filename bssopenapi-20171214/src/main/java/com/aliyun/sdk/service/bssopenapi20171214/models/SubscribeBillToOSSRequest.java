@@ -158,7 +158,7 @@ public class SubscribeBillToOSSRequest extends Request {
         } 
 
         /**
-         * <p>The initial billing cycle from which bills start to be pushed. After you subscribe to the bills, the system automatically pushes the data that is generated from the initial billing cycle to the current time. If the SubscribeType parameter is set to MonthBill, this parameter is invalid. Historical data is not pushed again. The data generated within the last year can be pushed.</p>
+         * <p>The start billing cycle for pushing. After a successful subscription, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly bill PDF subscriptions, and historical data is not re-pushed. Data within the last year can be pushed.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03</p>
@@ -170,7 +170,7 @@ public class SubscribeBillToOSSRequest extends Request {
         }
 
         /**
-         * <p>The owner ID of the OSS bucket that stores the bills. This parameter is required if you are a bidder or reseller and want to push data to an OSS bucket of a member account. In this case, you must specify this account as the account used to call this operation and grant the AliyunConsumeDump2OSSRole permission to this account. If you are a regular user, you do not need to set this parameter. By default, your account is used to call this operation.</p>
+         * <p>The UID of the OSS owner that stores the files. Specify this parameter if you are a Bid/Reseller subscriber and need to push files to a sub-account\&quot;s OSS. The specified account must be a sub-account of the calling account, and the AliyunConsumeDump2OSSRole permission must be granted to this account. Regular users do not need to specify this parameter. The default value is the calling account.</p>
          * 
          * <strong>example:</strong>
          * <p>12341324</p>
@@ -182,7 +182,7 @@ public class SubscribeBillToOSSRequest extends Request {
         }
 
         /**
-         * <p>The path of the OSS bucket.</p>
+         * <p>The specified directory under the bucket to which the subscription is delivered.</p>
          * 
          * <strong>example:</strong>
          * <p>testpath</p>
@@ -194,10 +194,10 @@ public class SubscribeBillToOSSRequest extends Request {
         }
 
         /**
-         * <p>The type of the account whose bills are to be pushed if multi-tier accounts are involved. Valid values:</p>
+         * <p>For multi-level accounts, specifies the type of bills to push. Valid values:</p>
          * <ul>
-         * <li>MA: the master account and a non-managed member account in Finance Cloud</li>
-         * <li>ACP1: a member account of a virtual network operator (VNO)</li>
+         * <li>MA: Pushes bills for the primary account and non-trusteeship linked accounts in the financial cloud.</li>
+         * <li>ACP1: Pushes bills for Partner Platform V2.0 sub-accounts.</li>
          * </ul>
          * <p>Default value: MA.</p>
          * 
@@ -211,7 +211,7 @@ public class SubscribeBillToOSSRequest extends Request {
         }
 
         /**
-         * <p>The upper limit of the number of lines in a single file. When the bill file exceeds the upper limit, it will be split into multiple files and merged into a compressed package.</p>
+         * <p>The maximum number of rows per file. If a bill file exceeds this limit, it is split into multiple files and compressed into a single archive.</p>
          * 
          * <strong>example:</strong>
          * <p>300000</p>
@@ -223,7 +223,7 @@ public class SubscribeBillToOSSRequest extends Request {
         }
 
         /**
-         * <p>The OSS bucket that stores the bills to which you want to subscribe.</p>
+         * <p>The name of the OSS bucket that stores the subscribed bill files.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,14 +236,14 @@ public class SubscribeBillToOSSRequest extends Request {
         }
 
         /**
-         * <p>The type of the bill to which you want to subscribe. Valid values:</p>
+         * <p>The type of the subscribed bill. Valid values:</p>
          * <ul>
-         * <li>BillingItemDetailForBillingPeriod: detailed bills of billable items</li>
-         * <li>InstanceDetailForBillingPeriod: detailed bills of instances</li>
-         * <li>BillingItemDetailMonthly: billable item-based bills summarized by billing cycle</li>
-         * <li>InstanceDetailMonthly: instance-based bills summarized by billing cycle</li>
-         * <li>SplitItemDetailDaily: split bills summarized by day</li>
-         * <li>MonthBill: monthly bills in the PDF format. You can subscribe to the monthly PDF bills only of the master account.</li>
+         * <li>BillingItemDetailForBillingPeriod: billing item details.</li>
+         * <li>InstanceDetailForBillingPeriod: instance bill details.</li>
+         * <li>BillingItemDetailMonthly: billing item summary by billing cycle.</li>
+         * <li>InstanceDetailMonthly: instance bill summary by billing cycle.</li>
+         * <li>SplitItemDetailDaily: split bill daily summary.</li>
+         * <li>MonthBill: monthly bill PDF. Only MA subscription is supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,13 @@ public class SubscribeBillToOSSRequest extends Request {
         }
 
         /**
-         * <p>Whether to protect network communications through the SSL (Secure Sockets Layer) encryption protocol. When this parameter is set to true, it means that SSL encryption is enabled to ensure the security and integrity of data transmission.</p>
+         * <p>Specifies whether to use the Secure Sockets Layer (SSL) encryption protocol to protect network communication. Valid values:</p>
+         * <ul>
+         * <li><p>true: Enables SSL encryption to ensure the security and integrity of data transmission.</p>
+         * </li>
+         * <li><p>false (default): Does not enable SSL encryption.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

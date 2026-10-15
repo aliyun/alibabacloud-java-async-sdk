@@ -159,7 +159,7 @@ public class QuerySplitItemBillRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the member. If you specify a value for this parameter, you can query the split bills of the specified member. If you leave this parameter empty, the split bills of the current account are queried by default.</p>
+         * <p>The ID of the account that owns the resource. The resource owner is the account that actually uses the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -171,7 +171,7 @@ public class QuerySplitItemBillRequest extends Request {
         }
 
         /**
-         * <p>The billing cycle, in the YYYY-MM format.</p>
+         * <p>The billing cycle. Format: YYYY-MM.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class QuerySplitItemBillRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -205,7 +205,7 @@ public class QuerySplitItemBillRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+         * <p>The number of entries per page. Default value: 20. Maximum value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -217,7 +217,7 @@ public class QuerySplitItemBillRequest extends Request {
         }
 
         /**
-         * <p>The code of the service.</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -229,7 +229,7 @@ public class QuerySplitItemBillRequest extends Request {
         }
 
         /**
-         * <p>The type of the service.</p>
+         * <p>The product type.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -241,7 +241,10 @@ public class QuerySplitItemBillRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Valid values: Subscription: subscription PayAsYouGo: pay-as-you-go This parameter must be used together with the ProductCode parameter.</p>
+         * <p>The subscription type. Valid values:
+         * Subscription: subscription.
+         * PayAsYouGo: pay-as-you-go.
+         * Note: This parameter must be used with the ProductCode parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>PayAsYouGo</p>

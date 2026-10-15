@@ -216,9 +216,6 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest extend
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-05-10</p>
          */
         public Builder amortizationDateEnd(String amortizationDateEnd) {
             this.putBodyParameter("AmortizationDateEnd", amortizationDateEnd);
@@ -228,9 +225,6 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest extend
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-05-10</p>
          */
         public Builder amortizationDateStart(String amortizationDateStart) {
             this.putBodyParameter("AmortizationDateStart", amortizationDateStart);

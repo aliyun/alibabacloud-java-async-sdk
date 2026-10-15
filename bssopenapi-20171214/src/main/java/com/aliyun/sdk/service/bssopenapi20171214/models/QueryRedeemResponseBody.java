@@ -106,7 +106,7 @@ public class QueryRedeemResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class QueryRedeemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class QueryRedeemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -136,7 +136,7 @@ public class QueryRedeemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E503DC7B-E4F0-4B3C-BC89-BCECF1338F0B</p>
@@ -320,10 +320,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The services to which the redemption coupon is applicable.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Elastic Compute Service (ECS)</p>
+             * ApplicableProducts.
              */
             public Builder applicableProducts(String applicableProducts) {
                 this.applicableProducts = applicableProducts;
@@ -331,10 +328,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The balance of the redemption coupon.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Balance.
              */
             public Builder balance(String balance) {
                 this.balance = balance;
@@ -342,10 +336,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the redemption coupon took effect.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-05-14 20:25:00</p>
+             * EffectiveTime.
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -353,10 +344,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the redemption coupon expired.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-06-13 20:25:00</p>
+             * ExpiryTime.
              */
             public Builder expiryTime(String expiryTime) {
                 this.expiryTime = expiryTime;
@@ -364,10 +352,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the redemption coupon was issued.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-05-14 20:25:00</p>
+             * GrantedTime.
              */
             public Builder grantedTime(String grantedTime) {
                 this.grantedTime = grantedTime;
@@ -375,10 +360,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nominal value of the redemption coupon.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * NominalValue.
              */
             public Builder nominalValue(String nominalValue) {
                 this.nominalValue = nominalValue;
@@ -386,10 +368,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the redemption coupon.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1342</p>
+             * RedeemId.
              */
             public Builder redeemId(String redeemId) {
                 this.redeemId = redeemId;
@@ -397,10 +376,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the redemption coupon.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4889*****1610</p>
+             * RedeemNo.
              */
             public Builder redeemNo(String redeemNo) {
                 this.redeemNo = redeemNo;
@@ -408,10 +384,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the redemption coupon.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>N/A</p>
+             * Specification.
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -419,22 +392,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the redemption coupon. Valid values:</p>
-             * <ul>
-             * <li>Generated</li>
-             * <li>CallBack</li>
-             * <li>RefundPending</li>
-             * <li>Canceled</li>
-             * <li>Order_Canceled</li>
-             * <li>ActivePending</li>
-             * <li>ActiveSuccess</li>
-             * <li>ExchangePending</li>
-             * <li>ExchangeSuccess</li>
-             * <li>Expired</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Generated</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -581,7 +539,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -592,7 +550,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -603,7 +561,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the redemption coupon.</p>
+             * Redeem.
              */
             public Builder redeem(DataRedeem redeem) {
                 this.redeem = redeem;
@@ -611,7 +569,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

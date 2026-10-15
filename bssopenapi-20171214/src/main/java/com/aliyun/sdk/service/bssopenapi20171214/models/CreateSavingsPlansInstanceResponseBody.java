@@ -106,10 +106,7 @@ public class CreateSavingsPlansInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PARAM_ERROR</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +114,7 @@ public class CreateSavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,10 +122,7 @@ public class CreateSavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The parameter must be specified.</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,10 +130,7 @@ public class CreateSavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>26dabb0c-8ca0-4aa0-8143-30499f3fe304</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,10 +138,7 @@ public class CreateSavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -203,10 +191,7 @@ public class CreateSavingsPlansInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the order.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>202110260001</p>
+             * OrderId.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

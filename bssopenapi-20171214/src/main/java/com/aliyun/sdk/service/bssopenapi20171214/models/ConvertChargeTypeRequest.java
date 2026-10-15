@@ -132,7 +132,7 @@ public class ConvertChargeTypeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,12 +154,21 @@ public class ConvertChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration. Unit: months. This parameter is required if you switch the billing method to subscription. Valid values:</p>
+         * <p>The subscription period in months. If you convert the billing method to subscription, specify the subscription period. Valid values:</p>
          * <ul>
-         * <li>1 to 9</li>
-         * <li>12</li>
-         * <li>24</li>
-         * <li>36</li>
+         * <li>1 to 9.</li>
+         * <li><ol start="12">
+         * <li></li>
+         * </ol>
+         * </li>
+         * <li><ol start="24">
+         * <li></li>
+         * </ol>
+         * </li>
+         * <li><ol start="36">
+         * <li></li>
+         * </ol>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,7 +181,7 @@ public class ConvertChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The code of the service to which the instance belongs.</p>
+         * <p>The product code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +194,7 @@ public class ConvertChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The type of the service to which the instance belongs.</p>
+         * <p>The product type.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -197,13 +206,13 @@ public class ConvertChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The current billing method of the instance. Valid values:</p>
          * <ul>
-         * <li>Subscription: subscription</li>
-         * <li>PayAsYouGo: pay-as-you-go</li>
+         * <li>Subscription: subscription.</li>
+         * <li>PayAsYouGo: pay-as-you-go.</li>
          * </ul>
          * <blockquote>
-         * <p> After the call is successful, the billing method of the instance is switched.</p>
+         * <p>After a successful call, the resource is changed to the opposite billing method.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

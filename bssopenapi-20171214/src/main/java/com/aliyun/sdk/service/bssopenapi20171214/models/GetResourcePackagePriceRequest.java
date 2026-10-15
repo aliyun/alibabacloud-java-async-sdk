@@ -188,8 +188,8 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * <p>The time when the resource plan takes effect. If you do not specify this parameter, the resource plan immediately takes effect by default. 
-         * When the <strong>OrderType</strong> is <strong>BUY</strong>, resource packs with the <strong>EffectiveDate longer than the current time of 6 months</strong> are not supported. 
+         * <p>The time when the resource plan takes effect. If you do not specify this parameter, the resource plan immediately takes effect by default.
+         * When the <strong>OrderType</strong> is <strong>BUY</strong>, resource packs with the <strong>EffectiveDate longer than the current time of 6 months</strong> are not supported.
          * If the <strong>OrderType</strong> is <strong>UPGRADE</strong>, the <strong>EffectiveDate</strong> <strong>must be less than or equal to</strong> the actual expiration time of the upgraded instance.
          * Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time must be in UTC.</p>
          * 
@@ -217,9 +217,12 @@ public class GetResourcePackagePriceRequest extends Request {
         /**
          * <p>The type of the order. Valid values:</p>
          * <ul>
-         * <li>BUY: You place the order to purchase an instance.</li>
-         * <li>UPGRADE: You place the order to upgrade an instance.</li>
-         * <li>RENEW: You place the order to renew an instance.</li>
+         * <li><p>BUY: You place the order to purchase an instance.</p>
+         * </li>
+         * <li><p>UPGRADE: You place the order to upgrade an instance.</p>
+         * </li>
+         * <li><p>RENEW: You place the order to renew an instance.</p>
+         * </li>
          * </ul>
          * <p>Default value: BUY.</p>
          * 
@@ -257,8 +260,10 @@ public class GetResourcePackagePriceRequest extends Request {
         /**
          * <p>The unit of validity period of the resource plan. Valid values:</p>
          * <ul>
-         * <li>Month</li>
-         * <li>Year</li>
+         * <li><p>Month</p>
+         * </li>
+         * <li><p>Year</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -117,7 +117,7 @@ public class QueryOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class QueryOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -136,7 +136,7 @@ public class QueryOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>61293E7A-3406-4447-8620-EC88B0AA66AD</p>
@@ -147,7 +147,7 @@ public class QueryOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -411,10 +411,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The aftertax amount of the order.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>66</p>
+             * AfterTaxAmount.
              */
             public Builder afterTaxAmount(String afterTaxAmount) {
                 this.afterTaxAmount = afterTaxAmount;
@@ -422,10 +419,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service code.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs</p>
+             * CommodityCode.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -433,10 +427,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the order was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-06-08T09:41:30Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -444,10 +435,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currency.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CNY</p>
+             * Currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -455,10 +443,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the order.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>34532532</p>
+             * OrderId.
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -466,16 +451,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the order. Valid values:</p>
-             * <ul>
-             * <li>New: purchases an instance.</li>
-             * <li>Renew: renews an instance.</li>
-             * <li>Upgrade: upgrades the configurations of an instance.</li>
-             * <li>Refund: applies for a refund.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>New</p>
+             * OrderType.
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -483,10 +459,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currency of payment.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CNY</p>
+             * PaymentCurrency.
              */
             public Builder paymentCurrency(String paymentCurrency) {
                 this.paymentCurrency = paymentCurrency;
@@ -494,18 +467,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of payment. Valid values for a non-refund order:</p>
-             * <ul>
-             * <li>Unpaid: The order is not paid.</li>
-             * <li>Paid: The order is paid.</li>
-             * <li>Cancelled: The order is canceled.</li>
-             * </ul>
-             * <blockquote>
-             * <p>: The value is NULL for a refund order.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>Paid</p>
+             * PaymentStatus.
              */
             public Builder paymentStatus(String paymentStatus) {
                 this.paymentStatus = paymentStatus;
@@ -513,10 +475,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of payment.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-06-08T09:41:30Z</p>
+             * PaymentTime.
              */
             public Builder paymentTime(String paymentTime) {
                 this.paymentTime = paymentTime;
@@ -524,10 +483,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pretax amount of the order.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * PretaxAmount.
              */
             public Builder pretaxAmount(String pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -535,10 +491,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pretax amount of the order in local currency.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * PretaxAmountLocal.
              */
             public Builder pretaxAmountLocal(String pretaxAmountLocal) {
                 this.pretaxAmountLocal = pretaxAmountLocal;
@@ -546,10 +499,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pretax gross amount of the order.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * PretaxGrossAmount.
              */
             public Builder pretaxGrossAmount(String pretaxGrossAmount) {
                 this.pretaxGrossAmount = pretaxGrossAmount;
@@ -557,10 +507,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the main service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rds</p>
+             * ProductCode.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -568,10 +515,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the main service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rds</p>
+             * ProductType.
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -579,10 +523,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the associated order.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>234535345345342</p>
+             * RelatedOrderId.
              */
             public Builder relatedOrderId(String relatedOrderId) {
                 this.relatedOrderId = relatedOrderId;
@@ -590,14 +531,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method. Valid values:</p>
-             * <ul>
-             * <li>Subscription: subscription</li>
-             * <li>PayAsYouGo: pay-as-you-go</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>PayAsYouGo</p>
+             * SubscriptionType.
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -605,10 +539,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tax of the order.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Tax.
              */
             public Builder tax(String tax) {
                 this.tax = tax;
@@ -779,7 +710,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The orders returned.</p>
+             * OrderList.
              */
             public Builder orderList(OrderList orderList) {
                 this.orderList = orderList;
@@ -787,7 +718,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -798,7 +729,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page. Set this parameter to a maximum of 20. A larger value may cause a timeout.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -809,7 +740,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

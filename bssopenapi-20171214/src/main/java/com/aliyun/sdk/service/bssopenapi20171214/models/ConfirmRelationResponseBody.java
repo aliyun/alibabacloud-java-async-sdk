@@ -106,7 +106,7 @@ public class ConfirmRelationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The backend business status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class ConfirmRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,10 +125,10 @@ public class ConfirmRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Message returned</p>
+         * <p>The returned message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,7 +136,7 @@ public class ConfirmRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The unique identifier of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>request_id</p>
@@ -203,7 +203,7 @@ public class ConfirmRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>HostId</p>
+             * <p>The host ID.</p>
              * 
              * <strong>example:</strong>
              * <p>HostId</p>

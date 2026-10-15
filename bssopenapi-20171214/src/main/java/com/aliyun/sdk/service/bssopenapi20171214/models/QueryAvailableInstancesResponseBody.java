@@ -106,7 +106,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -136,7 +136,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C7C15585-8349-4C62-BEE4-5A391841B9BE</p>
@@ -424,7 +424,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the specified instance was created.</p>
+             * <p>The creation time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2019-09-08T16:00:00Z</p>
@@ -435,7 +435,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was expired.</p>
+             * <p>The end time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2019-09-08T16:00:00Z</p>
@@ -446,7 +446,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the specified instance was expected to be released.</p>
+             * <p>The expected release time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2019-09-08T16:00:00Z</p>
@@ -457,7 +457,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1049056</p>
@@ -468,7 +468,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance owner.</p>
+             * <p>The owner ID.</p>
              * 
              * <strong>example:</strong>
              * <p>325352345</p>
@@ -479,7 +479,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the service.</p>
+             * <p>The product code.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -490,7 +490,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the service.</p>
+             * <p>The product type.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -501,7 +501,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region in which the instance resides.</p>
+             * <p>The region.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -512,7 +512,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was released.</p>
+             * <p>The release time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2019-09-08T16:00:00Z</p>
@@ -523,11 +523,11 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The renewal status of the specified instance. Valid values:</p>
+             * <p>The renewal status. Valid values:</p>
              * <ul>
-             * <li>AutoRenewal: The instance is automatically renewed.</li>
-             * <li>ManualRenewal: The instance is manually renewed.</li>
-             * <li>NotRenewal: The instance is not renewed.</li>
+             * <li>AutoRenewal: auto-renewal.</li>
+             * <li>ManualRenewal: manual renewal.</li>
+             * <li>NotRenewal: no renewal.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -539,7 +539,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of auto-renewal cycles.</p>
+             * <p>The number of auto-renewal epochs.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -550,10 +550,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the auto-renewal cycle. Valid values:</p>
+             * <p>The unit of the auto-renewal epoch. Valid values:</p>
              * <ul>
-             * <li>M: month</li>
-             * <li>Y: year</li>
+             * <li>M: month.</li>
+             * <li>Y: year.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -576,7 +576,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the seller.</p>
+             * <p>The seller ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123123123</p>
@@ -587,10 +587,13 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
-             * <p>Creating: The instance is being created. WaitForExpire: The instance is about to expire. Normal: The instance can properly run. Expired: The instance is expired.</p>
+             * <p>Creating - The resource is being created.
+             * WaitForExpire - The service is about to be suspended.
+             * Normal - Normal.
+             * Expired - The service is suspended</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -598,7 +601,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the specified instance was suspended.</p>
+             * <p>The stop time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2019-09-08T16:00:00Z</p>
@@ -609,10 +612,12 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-status of the specified instance.</p>
+             * <p>The sub-status.</p>
              * 
              * <strong>example:</strong>
-             * <p>Normal: The pay-as-you-go module can properly run. WaitForLimit: The pay-as-you-go module is about to be limited due to overdue payments. BandwidthLimited: The pay-as-you-go module is limited due to overdue payments.</p>
+             * <p>Normal - The pay-as-you-go module is normal.
+             * WaitForLimit - The pay-as-you-go module is about to be restricted due to overdue payments.
+             * BandwidthLimited - The pay-as-you-go module is restricted due to overdue payments</p>
              */
             public Builder subStatus(String subStatus) {
                 this.subStatus = subStatus;
@@ -620,10 +625,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method. Valid values:</p>
+             * <p>The subscription type. Valid values:</p>
              * <ul>
-             * <li>Subscription: subscription</li>
-             * <li>PayAsYouGo: pay-as-you-go</li>
+             * <li>Subscription: subscription.</li>
+             * <li>PayAsYouGo: pay-as-you-go.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -720,7 +725,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instances returned.</p>
+             * <p>The list of instance information.</p>
              */
             public Builder instanceList(java.util.List<InstanceList> instanceList) {
                 this.instanceList = instanceList;
@@ -728,7 +733,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -739,7 +744,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -750,7 +755,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>

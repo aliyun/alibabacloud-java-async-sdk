@@ -106,7 +106,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried data.</p>
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -227,7 +227,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage of resource plans.</p>
+             * <p>The usage percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1</p>
@@ -336,7 +336,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total costs of pay-as-you-go instances.</p>
+             * <p>The total cost of pay-as-you-go instances.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -347,7 +347,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total potential savings.</p>
+             * <p>The potential total savings.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -358,7 +358,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fee of purchased resource plans.</p>
+             * <p>The total resource purchase cost.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -380,7 +380,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total usage of resource plans.</p>
+             * <p>The total usage.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -450,7 +450,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The usage of resource plans in the specified period.</p>
+             * <p>The usage by period.</p>
              */
             public Builder periodCoverage(java.util.List<PeriodCoverage> periodCoverage) {
                 this.periodCoverage = periodCoverage;
@@ -458,7 +458,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total usage of resource plans.</p>
+             * <p>The total usage.</p>
              */
             public Builder totalUsage(TotalUsage totalUsage) {
                 this.totalUsage = totalUsage;

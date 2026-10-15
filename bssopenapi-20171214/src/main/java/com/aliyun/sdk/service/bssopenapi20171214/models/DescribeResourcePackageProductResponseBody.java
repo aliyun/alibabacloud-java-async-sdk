@@ -240,10 +240,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the property.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>region</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -251,10 +248,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the property.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shenzhen</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -388,10 +382,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the validity period.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6 Month</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -399,15 +390,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the validity period for the resource plan. Valid values:</p>
-             * <ul>
-             * <li>Month</li>
-             * <li>Year</li>
-             * </ul>
-             * <p>Default value: Month.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Month</p>
+             * Unit.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -415,10 +398,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the validity period.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6</p>
+             * Value.
              */
             public Builder value(Integer value) {
                 this.value = value;
@@ -552,7 +532,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The validity periods available for the resource plan.</p>
+             * AvailableDurations.
              */
             public Builder availableDurations(AvailableDurations availableDurations) {
                 this.availableDurations = availableDurations;
@@ -560,10 +540,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the specification.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1TB</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -571,10 +548,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the specification.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1024</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -721,10 +695,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the resource plan.</p>
+             * <p>The status code returned.</p>
              * 
              * <strong>example:</strong>
-             * <p>FPT_ossbag_deadlineAcc_CdnOut_common_sz</p>
+             * <p>Success</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -732,10 +706,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource plan type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Back-to-origin traffic plan - China (Shenzhen)</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -743,7 +714,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The properties of the resource plan.</p>
+             * Properties.
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -751,7 +722,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the resource plan.</p>
+             * Specifications.
              */
             public Builder specifications(Specifications specifications) {
                 this.specifications = specifications;
@@ -898,10 +869,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the resource plan.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Object Storage Service (OSS) resource plan (monthly)</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -909,7 +877,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The types of the resource plans.</p>
+             * PackageTypes.
              */
             public Builder packageTypes(PackageTypes packageTypes) {
                 this.packageTypes = packageTypes;
@@ -917,10 +885,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ossbag</p>
+             * ProductCode.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -928,10 +893,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ossbag</p>
+             * ProductType.
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -1039,7 +1001,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details about the resource plans.</p>
+             * ResourcePackages.
              */
             public Builder resourcePackages(ResourcePackages resourcePackages) {
                 this.resourcePackages = resourcePackages;

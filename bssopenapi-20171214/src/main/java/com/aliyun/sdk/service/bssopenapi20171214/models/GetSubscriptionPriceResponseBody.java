@@ -117,7 +117,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the service price.</p>
+         * <p>The product price information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -136,7 +136,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30E7066E-AE6F-4E59-AFE6-11386CE3AFA7</p>
@@ -255,10 +255,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The discount price.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * CostAfterDiscount.
              */
             public Builder costAfterDiscount(Float costAfterDiscount) {
                 this.costAfterDiscount = costAfterDiscount;
@@ -266,10 +263,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount that was applied.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * InvoiceDiscount.
              */
             public Builder invoiceDiscount(Float invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -277,10 +271,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the pricing module.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PackageCode</p>
+             * ModuleCode.
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -288,10 +279,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original price of the service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * OriginalCost.
              */
             public Builder originalCost(Float originalCost) {
                 this.originalCost = originalCost;
@@ -299,10 +287,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit price.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * UnitPrice.
              */
             public Builder unitPrice(Float unitPrice) {
                 this.unitPrice = unitPrice;
@@ -376,6 +361,163 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
      *
      * <p>GetSubscriptionPriceResponseBody</p>
      */
+    public static class PaymentScheme extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OrderDownPaymentFee")
+        private String orderDownPaymentFee;
+
+        @com.aliyun.core.annotation.NameInMap("OrderDownPaymentSettleFee")
+        private String orderDownPaymentSettleFee;
+
+        @com.aliyun.core.annotation.NameInMap("OrderTotalFee")
+        private String orderTotalFee;
+
+        @com.aliyun.core.annotation.NameInMap("OrderTotalSettleFee")
+        private String orderTotalSettleFee;
+
+        @com.aliyun.core.annotation.NameInMap("PaymentType")
+        private String paymentType;
+
+        private PaymentScheme(Builder builder) {
+            this.orderDownPaymentFee = builder.orderDownPaymentFee;
+            this.orderDownPaymentSettleFee = builder.orderDownPaymentSettleFee;
+            this.orderTotalFee = builder.orderTotalFee;
+            this.orderTotalSettleFee = builder.orderTotalSettleFee;
+            this.paymentType = builder.paymentType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PaymentScheme create() {
+            return builder().build();
+        }
+
+        /**
+         * @return orderDownPaymentFee
+         */
+        public String getOrderDownPaymentFee() {
+            return this.orderDownPaymentFee;
+        }
+
+        /**
+         * @return orderDownPaymentSettleFee
+         */
+        public String getOrderDownPaymentSettleFee() {
+            return this.orderDownPaymentSettleFee;
+        }
+
+        /**
+         * @return orderTotalFee
+         */
+        public String getOrderTotalFee() {
+            return this.orderTotalFee;
+        }
+
+        /**
+         * @return orderTotalSettleFee
+         */
+        public String getOrderTotalSettleFee() {
+            return this.orderTotalSettleFee;
+        }
+
+        /**
+         * @return paymentType
+         */
+        public String getPaymentType() {
+            return this.paymentType;
+        }
+
+        public static final class Builder {
+            private String orderDownPaymentFee; 
+            private String orderDownPaymentSettleFee; 
+            private String orderTotalFee; 
+            private String orderTotalSettleFee; 
+            private String paymentType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PaymentScheme model) {
+                this.orderDownPaymentFee = model.orderDownPaymentFee;
+                this.orderDownPaymentSettleFee = model.orderDownPaymentSettleFee;
+                this.orderTotalFee = model.orderTotalFee;
+                this.orderTotalSettleFee = model.orderTotalSettleFee;
+                this.paymentType = model.paymentType;
+            } 
+
+            /**
+             * <p>The payable amount for the order, in cents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35092</p>
+             */
+            public Builder orderDownPaymentFee(String orderDownPaymentFee) {
+                this.orderDownPaymentFee = orderDownPaymentFee;
+                return this;
+            }
+
+            /**
+             * <p>The payable amount in the settlement currency for the order, in cents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35092</p>
+             */
+            public Builder orderDownPaymentSettleFee(String orderDownPaymentSettleFee) {
+                this.orderDownPaymentSettleFee = orderDownPaymentSettleFee;
+                return this;
+            }
+
+            /**
+             * <p>The total payable amount for the order, including the prepayment and installment parts, in cents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70184</p>
+             */
+            public Builder orderTotalFee(String orderTotalFee) {
+                this.orderTotalFee = orderTotalFee;
+                return this;
+            }
+
+            /**
+             * <p>The total payable amount in the settlement currency for the order, including the prepayment and installment parts, in cents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70184</p>
+             */
+            public Builder orderTotalSettleFee(String orderTotalSettleFee) {
+                this.orderTotalSettleFee = orderTotalSettleFee;
+                return this;
+            }
+
+            /**
+             * <p>The fixed-fee installment type. Valid values:</p>
+             * <ul>
+             * <li>PAYMENT_NORMAL: non-fixed-fee installment products.</li>
+             * <li>PAYMENT_PHASED: fixed-fee installment products.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PAYMENT_NORMAL</p>
+             */
+            public Builder paymentType(String paymentType) {
+                this.paymentType = paymentType;
+                return this;
+            }
+
+            public PaymentScheme build() {
+                return new PaymentScheme(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetSubscriptionPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSubscriptionPriceResponseBody</p>
+     */
     public static class PromotionDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PromotionDesc")
         private String promotionDesc;
@@ -436,10 +578,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the discount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * PromotionDesc.
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -447,10 +586,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the discount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1021199213</p>
+             * PromotionId.
              */
             public Builder promotionId(Long promotionId) {
                 this.promotionId = promotionId;
@@ -458,10 +594,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the discount.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * PromotionName.
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -548,6 +681,9 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Float originalPrice;
 
+        @com.aliyun.core.annotation.NameInMap("PaymentScheme")
+        private PaymentScheme paymentScheme;
+
         @com.aliyun.core.annotation.NameInMap("PromotionDetails")
         private PromotionDetails promotionDetails;
 
@@ -562,6 +698,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             this.discountPrice = builder.discountPrice;
             this.moduleDetails = builder.moduleDetails;
             this.originalPrice = builder.originalPrice;
+            this.paymentScheme = builder.paymentScheme;
             this.promotionDetails = builder.promotionDetails;
             this.quantity = builder.quantity;
             this.tradePrice = builder.tradePrice;
@@ -604,6 +741,13 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return paymentScheme
+         */
+        public PaymentScheme getPaymentScheme() {
+            return this.paymentScheme;
+        }
+
+        /**
          * @return promotionDetails
          */
         public PromotionDetails getPromotionDetails() {
@@ -629,6 +773,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             private Float discountPrice; 
             private ModuleDetails moduleDetails; 
             private Float originalPrice; 
+            private PaymentScheme paymentScheme; 
             private PromotionDetails promotionDetails; 
             private Integer quantity; 
             private Float tradePrice; 
@@ -641,17 +786,18 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
                 this.discountPrice = model.discountPrice;
                 this.moduleDetails = model.moduleDetails;
                 this.originalPrice = model.originalPrice;
+                this.paymentScheme = model.paymentScheme;
                 this.promotionDetails = model.promotionDetails;
                 this.quantity = model.quantity;
                 this.tradePrice = model.tradePrice;
             } 
 
             /**
-             * <p>The type of currency. Valid values:</p>
+             * <p>The currency. Valid values:</p>
              * <ul>
-             * <li>CNY: Chinese Yuan</li>
-             * <li>USD: US dollar</li>
-             * <li>JPY: Japanese Yen</li>
+             * <li>CNY: Chinese yuan.</li>
+             * <li>USD: US dollar.</li>
+             * <li>JPY: Japanese yen.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -663,7 +809,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount that was applied.</p>
+             * <p>The discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -674,7 +820,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price details of the pricing module.</p>
+             * ModuleDetails.
              */
             public Builder moduleDetails(ModuleDetails moduleDetails) {
                 this.moduleDetails = moduleDetails;
@@ -682,7 +828,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original price of the service.</p>
+             * <p>The original price.</p>
              * 
              * <strong>example:</strong>
              * <p>900</p>
@@ -693,7 +839,15 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the discount.</p>
+             * <p>The parameters for fixed-fee installments.</p>
+             */
+            public Builder paymentScheme(PaymentScheme paymentScheme) {
+                this.paymentScheme = paymentScheme;
+                return this;
+            }
+
+            /**
+             * PromotionDetails.
              */
             public Builder promotionDetails(PromotionDetails promotionDetails) {
                 this.promotionDetails = promotionDetails;
@@ -712,7 +866,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount price.</p>
+             * <p>The discounted price.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

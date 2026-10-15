@@ -119,7 +119,7 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -130,7 +130,7 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful!</p>
@@ -171,7 +171,7 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -240,7 +240,7 @@ public class RenewResourcePackageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the resource plan.</p>
+             * <p>The ID of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>OSSBAG-cn-0xl0n****003</p>

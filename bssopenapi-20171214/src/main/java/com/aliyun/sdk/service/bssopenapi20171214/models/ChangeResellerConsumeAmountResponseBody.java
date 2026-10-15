@@ -106,7 +106,7 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the call failed. For more information, see the &quot;Error codes&quot; section of the topic.</p>
+         * <p>The error code returned when the call fails. For more information, see Error codes.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The consumption quota for the quota ledger after adjustment.</p>
+         * <p>The consumption quota of the corresponding quota ledger after the update.</p>
          * 
          * <strong>example:</strong>
          * <p>300.00</p>
@@ -128,7 +128,7 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The additional information about the call result.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -139,7 +139,7 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
@@ -150,7 +150,7 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</p>
+         * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that an error occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

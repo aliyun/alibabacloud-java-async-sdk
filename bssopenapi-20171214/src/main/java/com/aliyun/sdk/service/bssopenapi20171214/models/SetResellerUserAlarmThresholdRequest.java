@@ -89,7 +89,10 @@ public class SetResellerUserAlarmThresholdRequest extends Request {
         } 
 
         /**
-         * AlarmThresholds.
+         * <p>The list of user alert rules for this alert type. If this parameter is not specified, no alert threshold is set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;denominator\&quot;:100,\&quot;numerator\&quot;:30,\&quot;thresholdType\&quot;:1}]</p>
          */
         public Builder alarmThresholds(String alarmThresholds) {
             this.putQueryParameter("AlarmThresholds", alarmThresholds);
@@ -98,6 +101,7 @@ public class SetResellerUserAlarmThresholdRequest extends Request {
         }
 
         /**
+         * <p>The alert type. Valid value: quota_low_balance, which indicates a low-balance alert for quotas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
