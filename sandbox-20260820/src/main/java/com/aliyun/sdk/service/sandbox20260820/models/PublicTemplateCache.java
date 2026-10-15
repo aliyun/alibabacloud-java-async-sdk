@@ -158,7 +158,10 @@ public class PublicTemplateCache extends TeaModel {
         } 
 
         /**
-         * createdTime.
+         * <p>The creation time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-18T10:00:00Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -166,7 +169,10 @@ public class PublicTemplateCache extends TeaModel {
         }
 
         /**
-         * imageDigest.
+         * <p>The digest of the cached image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha256:8f3c2a1b</p>
          */
         public Builder imageDigest(String imageDigest) {
             this.imageDigest = imageDigest;
@@ -174,7 +180,10 @@ public class PublicTemplateCache extends TeaModel {
         }
 
         /**
-         * imageSizeMB.
+         * <p>The size of the cached image, in MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512</p>
          */
         public Builder imageSizeMB(Integer imageSizeMB) {
             this.imageSizeMB = imageSizeMB;
@@ -182,7 +191,10 @@ public class PublicTemplateCache extends TeaModel {
         }
 
         /**
-         * progress.
+         * <p>The prefetch progress percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -190,7 +202,10 @@ public class PublicTemplateCache extends TeaModel {
         }
 
         /**
-         * readyTime.
+         * <p>The ready time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-18T10:05:00Z</p>
          */
         public Builder readyTime(String readyTime) {
             this.readyTime = readyTime;
@@ -198,7 +213,10 @@ public class PublicTemplateCache extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The cache status. Valid values: InProgress, Success, Failed, Deleting, and Evicted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -206,7 +224,10 @@ public class PublicTemplateCache extends TeaModel {
         }
 
         /**
-         * statusReason.
+         * <p>The reason for the status. This parameter is backfilled when the status is not Success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The image prefetch task is queued</p>
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -214,7 +235,10 @@ public class PublicTemplateCache extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The team ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13b721e6-8cc8-5df2-af13-80316f7508af</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -222,7 +246,10 @@ public class PublicTemplateCache extends TeaModel {
         }
 
         /**
-         * templateID.
+         * <p>The unique identifier of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>us7dxqaezw5uu7aa2cm5</p>
          */
         public Builder templateID(String templateID) {
             this.templateID = templateID;

@@ -54,7 +54,7 @@ public class CreateTemplateEnvdInjectAction extends TeaModel {
         } 
 
         /**
-         * enabled.
+         * <p>Specifies whether to enable the envd injection action. This parameter is required when this action block is specified.</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;

@@ -93,7 +93,10 @@ public class CreateTemplateVPCConfig extends TeaModel {
         } 
 
         /**
-         * role.
+         * <p>The ARN of the RAM role assumed by the sandboxed container instance when accessing the VPC. Format: acs:ram::{account ID}:role/{role name}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1234567890123456:role/aliyunfcdefaultrole</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -101,7 +104,10 @@ public class CreateTemplateVPCConfig extends TeaModel {
         }
 
         /**
-         * securityGroupId.
+         * <p>The ID of the security group used by the sandboxed container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -109,7 +115,7 @@ public class CreateTemplateVPCConfig extends TeaModel {
         }
 
         /**
-         * vSwitchIds.
+         * <p>The list of vSwitch IDs that the sandboxed container instance connects to. Configure vSwitches in multiple zones to improve availability.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -117,7 +123,10 @@ public class CreateTemplateVPCConfig extends TeaModel {
         }
 
         /**
-         * vpcId.
+         * <p>The ID of the VPC that the sandboxed container instance connects to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

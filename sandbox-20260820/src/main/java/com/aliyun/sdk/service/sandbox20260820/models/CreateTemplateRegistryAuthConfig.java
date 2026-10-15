@@ -67,7 +67,10 @@ public class CreateTemplateRegistryAuthConfig extends TeaModel {
         } 
 
         /**
-         * password.
+         * <p>The logon password or access token for the image repository. The value is encrypted on the server side and is not returned in plaintext when queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Passw0rd****</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -75,7 +78,10 @@ public class CreateTemplateRegistryAuthConfig extends TeaModel {
         }
 
         /**
-         * userName.
+         * <p>The username for logging on to the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sandbox-puller</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

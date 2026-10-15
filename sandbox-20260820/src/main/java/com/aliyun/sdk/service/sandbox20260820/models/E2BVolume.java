@@ -236,7 +236,7 @@ public class E2BVolume extends TeaModel {
         } 
 
         /**
-         * agenticBucketVolumeConfig.
+         * <p>The AgenticBucket volume configuration.</p>
          */
         public Builder agenticBucketVolumeConfig(AgenticBucketVolumeConfig agenticBucketVolumeConfig) {
             this.agenticBucketVolumeConfig = agenticBucketVolumeConfig;
@@ -244,7 +244,7 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * agenticFSVolumeConfig.
+         * <p>The AgenticFS volume configuration.</p>
          */
         public Builder agenticFSVolumeConfig(AgenticFSVolumeConfig agenticFSVolumeConfig) {
             this.agenticFSVolumeConfig = agenticFSVolumeConfig;
@@ -252,7 +252,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The time when the volume was created, in UTC. The time is in the yyyy-MM-ddTHH:mm:ss.SSSSSSZ format, with exactly 6 decimal places for fractional seconds (microsecond precision).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-07T02:12:36.531000Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -260,7 +263,7 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * juiceFSVolumeConfig.
+         * <p>The JuiceFS volume configuration.</p>
          */
         public Builder juiceFSVolumeConfig(JuiceFSVolumeConfig juiceFSVolumeConfig) {
             this.juiceFSVolumeConfig = juiceFSVolumeConfig;
@@ -268,7 +271,7 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * mountConfig.
+         * <p>The mount configuration.</p>
          */
         public Builder mountConfig(VolumeMountConfig mountConfig) {
             this.mountConfig = mountConfig;
@@ -276,7 +279,7 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * ossVolumeConfig.
+         * <p>The OSS volume configuration.</p>
          */
         public Builder ossVolumeConfig(OSSVolumeConfig ossVolumeConfig) {
             this.ossVolumeConfig = ossVolumeConfig;
@@ -284,7 +287,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-****</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -292,7 +298,13 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The volume status. Valid values:</p>
+         * <ul>
+         * <li>AVAILABLE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -300,7 +312,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * statusReason.
+         * <p>The status reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -308,7 +323,14 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * storageClass.
+         * <p>The storage type. Valid values:</p>
+         * <ul>
+         * <li>OSS</li>
+         * <li>AGENTIC_FS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder storageClass(String storageClass) {
             this.storageClass = storageClass;
@@ -316,7 +338,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9f5a1fe9-****</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -324,7 +349,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time when the volume was last updated, in UTC. The time is in the yyyy-MM-ddTHH:mm:ss.SSSSSSZ format, with exactly 6 decimal places for fractional seconds (microsecond precision).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-07T03:48:05.274000Z</p>
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
@@ -332,7 +360,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * userID.
+         * <p>The UID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000****</p>
          */
         public Builder userID(String userID) {
             this.userID = userID;
@@ -340,7 +371,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * volumeID.
+         * <p>The unique identifier of the volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25878d34-****</p>
          */
         public Builder volumeID(String volumeID) {
             this.volumeID = volumeID;
@@ -348,7 +382,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * volumeName.
+         * <p>The name, which is unique within the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace</p>
          */
         public Builder volumeName(String volumeName) {
             this.volumeName = volumeName;

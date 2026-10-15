@@ -67,7 +67,7 @@ public class PublicUpdateTemplateInput extends TeaModel {
         } 
 
         /**
-         * buildConfig.
+         * <p>The build configuration.</p>
          */
         public Builder buildConfig(PublicUpdateTemplateBuildConfig buildConfig) {
             this.buildConfig = buildConfig;
@@ -75,7 +75,7 @@ public class PublicUpdateTemplateInput extends TeaModel {
         }
 
         /**
-         * runtimeConfig.
+         * <p>The runtime configuration.</p>
          */
         public Builder runtimeConfig(PublicUpdateTemplateRuntimeConfig runtimeConfig) {
             this.runtimeConfig = runtimeConfig;

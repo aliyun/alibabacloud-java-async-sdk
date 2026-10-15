@@ -106,7 +106,10 @@ public class PublicUpdateTemplateCopyAction extends TeaModel {
         } 
 
         /**
-         * acrInstanceId.
+         * <p>The ID of the destination ACR Enterprise instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-abc123</p>
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.acrInstanceId = acrInstanceId;
@@ -114,7 +117,7 @@ public class PublicUpdateTemplateCopyAction extends TeaModel {
         }
 
         /**
-         * enabled.
+         * <p>Indicates whether image replication is enabled.</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -122,7 +125,10 @@ public class PublicUpdateTemplateCopyAction extends TeaModel {
         }
 
         /**
-         * image.
+         * <p>The destination image address for replication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-hangzhou.aliyuncs.com/my/ns:v2</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -130,7 +136,7 @@ public class PublicUpdateTemplateCopyAction extends TeaModel {
         }
 
         /**
-         * registryConfig.
+         * <p>The image repository configuration.</p>
          */
         public Builder registryConfig(PublicUpdateTemplateRegistryConfig registryConfig) {
             this.registryConfig = registryConfig;
@@ -138,7 +144,10 @@ public class PublicUpdateTemplateCopyAction extends TeaModel {
         }
 
         /**
-         * registryType.
+         * <p>The type of the destination repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acr</p>
          */
         public Builder registryType(String registryType) {
             this.registryType = registryType;

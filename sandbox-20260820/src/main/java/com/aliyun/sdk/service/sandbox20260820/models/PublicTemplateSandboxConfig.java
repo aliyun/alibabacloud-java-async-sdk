@@ -38,6 +38,9 @@ public class PublicTemplateSandboxConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("startCommand")
     private String startCommand;
 
+    @com.aliyun.core.annotation.NameInMap("steps")
+    private java.util.List<PublicTemplateStep> steps;
+
     private PublicTemplateSandboxConfig(Builder builder) {
         this.acrInstanceId = builder.acrInstanceId;
         this.generation = builder.generation;
@@ -46,6 +49,7 @@ public class PublicTemplateSandboxConfig extends TeaModel {
         this.readyCommand = builder.readyCommand;
         this.registryConfig = builder.registryConfig;
         this.startCommand = builder.startCommand;
+        this.steps = builder.steps;
     }
 
     public static Builder builder() {
@@ -109,6 +113,13 @@ public class PublicTemplateSandboxConfig extends TeaModel {
         return this.startCommand;
     }
 
+    /**
+     * @return steps
+     */
+    public java.util.List<PublicTemplateStep> getSteps() {
+        return this.steps;
+    }
+
     public static final class Builder {
         private String acrInstanceId; 
         private Integer generation; 
@@ -117,6 +128,7 @@ public class PublicTemplateSandboxConfig extends TeaModel {
         private String readyCommand; 
         private PublicTemplateRegistryConfig registryConfig; 
         private String startCommand; 
+        private java.util.List<PublicTemplateStep> steps; 
 
         private Builder() {
         } 
@@ -129,10 +141,14 @@ public class PublicTemplateSandboxConfig extends TeaModel {
             this.readyCommand = model.readyCommand;
             this.registryConfig = model.registryConfig;
             this.startCommand = model.startCommand;
+            this.steps = model.steps;
         } 
 
         /**
-         * acrInstanceId.
+         * <p>The ID of the Container Registry Enterprise instance. This parameter is required when registryType is set to acree.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-****</p>
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.acrInstanceId = acrInstanceId;
@@ -140,7 +156,10 @@ public class PublicTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * generation.
+         * <p>The sandbox generation. Valid values: 1 (first generation) and 2 (second generation). Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder generation(Integer generation) {
             this.generation = generation;
@@ -148,7 +167,10 @@ public class PublicTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * image.
+         * <p>The address of the sandbox base image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com/sandbox-demo/python:3.12</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -156,7 +178,10 @@ public class PublicTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * osType.
+         * <p>The operating system type of the second-generation sandbox. Valid values: linux-amd64, android-36-osworld, and windows-osworld.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linux-amd64</p>
          */
         public Builder osType(String osType) {
             this.osType = osType;
@@ -164,7 +189,10 @@ public class PublicTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * readyCommand.
+         * <p>The readiness probe command for the sandbox. A successful execution indicates that the sandbox is ready to receive requests. This parameter is supported only by first-generation sandboxes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>curl -sf <a href="http://127.0.0.1:49983/health">http://127.0.0.1:49983/health</a></p>
          */
         public Builder readyCommand(String readyCommand) {
             this.readyCommand = readyCommand;
@@ -172,7 +200,7 @@ public class PublicTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * registryConfig.
+         * <p>The configuration used to access the image repository. For security reasons, only the network configuration is returned in query responses, and logon credentials are not returned.</p>
          */
         public Builder registryConfig(PublicTemplateRegistryConfig registryConfig) {
             this.registryConfig = registryConfig;
@@ -180,10 +208,21 @@ public class PublicTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * startCommand.
+         * <p>The startup command for the sandbox container. This parameter is supported only by first-generation sandboxes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local/bin/start.sh</p>
          */
         public Builder startCommand(String startCommand) {
             this.startCommand = startCommand;
+            return this;
+        }
+
+        /**
+         * <p>The list of custom build steps.</p>
+         */
+        public Builder steps(java.util.List<PublicTemplateStep> steps) {
+            this.steps = steps;
             return this;
         }
 

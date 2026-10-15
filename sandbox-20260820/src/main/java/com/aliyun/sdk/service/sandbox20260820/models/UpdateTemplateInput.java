@@ -93,7 +93,7 @@ public class UpdateTemplateInput extends TeaModel {
         } 
 
         /**
-         * containerConfiguration.
+         * <p>The new container image configuration of the template. When passed in, this overwrites the existing configuration entirely.</p>
          */
         public Builder containerConfiguration(ContainerConfiguration containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
@@ -101,7 +101,7 @@ public class UpdateTemplateInput extends TeaModel {
         }
 
         /**
-         * logConfiguration.
+         * <p>The new log delivery configuration of the template. When passed in, this overwrites the existing configuration entirely.</p>
          */
         public Builder logConfiguration(LogConfiguration logConfiguration) {
             this.logConfiguration = logConfiguration;
@@ -109,7 +109,7 @@ public class UpdateTemplateInput extends TeaModel {
         }
 
         /**
-         * networkConfiguration.
+         * <p>The new network configuration of the template. When passed in, this overwrites the existing configuration entirely.</p>
          */
         public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
@@ -117,7 +117,10 @@ public class UpdateTemplateInput extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The ID of the team to which the template belongs, in UUID format. This parameter is used to locate the template to be updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5f4a2c18-****</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;

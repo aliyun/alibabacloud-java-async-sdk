@@ -132,7 +132,10 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         } 
 
         /**
-         * cpu.
+         * <p>The CPU specification of the sandbox instance, in cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpu(Float cpu) {
             this.cpu = cpu;
@@ -140,7 +143,10 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * diskSize.
+         * <p>The disk specification of the sandbox instance, in MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder diskSize(Integer diskSize) {
             this.diskSize = diskSize;
@@ -148,7 +154,7 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * internetAccess.
+         * <p>Specifies whether the sandbox instance is allowed to access the Internet.</p>
          */
         public Builder internetAccess(Boolean internetAccess) {
             this.internetAccess = internetAccess;
@@ -156,7 +162,7 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * logConfig.
+         * <p>The log delivery configuration of the sandbox instance.</p>
          */
         public Builder logConfig(PublicTemplateLogConfig logConfig) {
             this.logConfig = logConfig;
@@ -164,7 +170,10 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * memorySize.
+         * <p>The memory specification of the sandbox instance, in MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder memorySize(Integer memorySize) {
             this.memorySize = memorySize;
@@ -172,7 +181,7 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * sandboxConfig.
+         * <p>The image and startup configuration of the sandbox instance.</p>
          */
         public Builder sandboxConfig(PublicTemplateSandboxConfig sandboxConfig) {
             this.sandboxConfig = sandboxConfig;
@@ -180,7 +189,7 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * vpcConfig.
+         * <p>The VPC configuration of the sandbox instance.</p>
          */
         public Builder vpcConfig(PublicTemplateVPCConfig vpcConfig) {
             this.vpcConfig = vpcConfig;

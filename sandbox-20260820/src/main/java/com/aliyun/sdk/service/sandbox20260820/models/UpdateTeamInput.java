@@ -93,7 +93,10 @@ public class UpdateTeamInput extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>The new description of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Production sandbox environment for the algorithm team</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -101,7 +104,10 @@ public class UpdateTeamInput extends TeaModel {
         }
 
         /**
-         * plan.
+         * <p>The new plan specification of the team. Valid values: eco (economy), std (standard), pro (professional), ent (enterprise).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pro</p>
          */
         public Builder plan(String plan) {
             this.plan = plan;
@@ -109,7 +115,10 @@ public class UpdateTeamInput extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The ID of the new Alibaba Cloud resource group to which the team belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-****</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -117,7 +126,10 @@ public class UpdateTeamInput extends TeaModel {
         }
 
         /**
-         * teamName.
+         * <p>The new name of the team. The name can be modified only when allowUpdateTeamName of the team is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sandbox-prod</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;

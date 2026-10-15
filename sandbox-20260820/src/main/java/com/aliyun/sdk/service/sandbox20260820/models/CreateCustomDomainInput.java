@@ -93,7 +93,7 @@ public class CreateCustomDomainInput extends TeaModel {
         } 
 
         /**
-         * certConfig.
+         * <p>The HTTPS certificate configuration used by the domain name.</p>
          */
         public Builder certConfig(CertConfig certConfig) {
             this.certConfig = certConfig;
@@ -101,7 +101,10 @@ public class CreateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the custom domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Entry domain name for the sandbox preview environment</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -109,7 +112,10 @@ public class CreateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * domainName.
+         * <p>The custom domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sandbox.example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -117,7 +123,7 @@ public class CreateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * tlsConfig.
+         * <p>The TLS protocol configuration used by the domain name.</p>
          */
         public Builder tlsConfig(TLSConfig tlsConfig) {
             this.tlsConfig = tlsConfig;

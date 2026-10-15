@@ -93,7 +93,10 @@ public class CreateTeamInput extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>The description of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sandbox environment for the algorithm team</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -101,7 +104,10 @@ public class CreateTeamInput extends TeaModel {
         }
 
         /**
-         * plan.
+         * <p>The plan specification of the team. Valid values: eco (economy), std (standard), pro (professional), ent (enterprise).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>std</p>
          */
         public Builder plan(String plan) {
             this.plan = plan;
@@ -109,7 +115,10 @@ public class CreateTeamInput extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The ID of the Alibaba Cloud resource group to which the team belongs. If this parameter is not specified, the default resource group of the account is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-****</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -117,7 +126,10 @@ public class CreateTeamInput extends TeaModel {
         }
 
         /**
-         * teamName.
+         * <p>The name of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sandbox-dev</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;

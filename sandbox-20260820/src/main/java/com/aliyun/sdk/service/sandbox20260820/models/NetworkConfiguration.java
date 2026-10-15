@@ -93,7 +93,10 @@ public class NetworkConfiguration extends TeaModel {
         } 
 
         /**
-         * networkMode.
+         * <p>The network access mode. Valid values: PUBLIC (public network only), PRIVATE (VPC only), PUBLIC_AND_PRIVATE (both public network and VPC are reachable).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC_AND_PRIVATE</p>
          */
         public Builder networkMode(String networkMode) {
             this.networkMode = networkMode;
@@ -101,7 +104,10 @@ public class NetworkConfiguration extends TeaModel {
         }
 
         /**
-         * securityGroupID.
+         * <p>The ID of the security group used by the sandboxed container instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-****</p>
          */
         public Builder securityGroupID(String securityGroupID) {
             this.securityGroupID = securityGroupID;
@@ -109,7 +115,10 @@ public class NetworkConfiguration extends TeaModel {
         }
 
         /**
-         * vpcID.
+         * <p>The ID of the VPC to which the sandboxed container instances are connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-****</p>
          */
         public Builder vpcID(String vpcID) {
             this.vpcID = vpcID;
@@ -117,7 +126,7 @@ public class NetworkConfiguration extends TeaModel {
         }
 
         /**
-         * vswitchIDs.
+         * <p>The list of vSwitch IDs to which the sandboxed container instances are connected. Configure vSwitches in multiple zones to improve availability.</p>
          */
         public Builder vswitchIDs(java.util.List<String> vswitchIDs) {
             this.vswitchIDs = vswitchIDs;

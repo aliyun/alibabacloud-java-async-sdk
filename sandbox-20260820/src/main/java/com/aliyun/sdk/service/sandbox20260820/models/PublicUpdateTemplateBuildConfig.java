@@ -23,9 +23,13 @@ public class PublicUpdateTemplateBuildConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("envdInject")
     private PublicUpdateTemplateEnvdInjectAction envdInject;
 
+    @com.aliyun.core.annotation.NameInMap("installStorageClients")
+    private Boolean installStorageClients;
+
     private PublicUpdateTemplateBuildConfig(Builder builder) {
         this.copy = builder.copy;
         this.envdInject = builder.envdInject;
+        this.installStorageClients = builder.installStorageClients;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class PublicUpdateTemplateBuildConfig extends TeaModel {
         return this.envdInject;
     }
 
+    /**
+     * @return installStorageClients
+     */
+    public Boolean getInstallStorageClients() {
+        return this.installStorageClients;
+    }
+
     public static final class Builder {
         private PublicUpdateTemplateCopyAction copy; 
         private PublicUpdateTemplateEnvdInjectAction envdInject; 
+        private Boolean installStorageClients; 
 
         private Builder() {
         } 
@@ -64,10 +76,11 @@ public class PublicUpdateTemplateBuildConfig extends TeaModel {
         private Builder(PublicUpdateTemplateBuildConfig model) {
             this.copy = model.copy;
             this.envdInject = model.envdInject;
+            this.installStorageClients = model.installStorageClients;
         } 
 
         /**
-         * copy.
+         * <p>The image replication action configuration.</p>
          */
         public Builder copy(PublicUpdateTemplateCopyAction copy) {
             this.copy = copy;
@@ -75,10 +88,18 @@ public class PublicUpdateTemplateBuildConfig extends TeaModel {
         }
 
         /**
-         * envdInject.
+         * <p>The envd injection action configuration.</p>
          */
         public Builder envdInject(PublicUpdateTemplateEnvdInjectAction envdInject) {
             this.envdInject = envdInject;
+            return this;
+        }
+
+        /**
+         * <p>Installs the clients required for storage mounting.</p>
+         */
+        public Builder installStorageClients(Boolean installStorageClients) {
+            this.installStorageClients = installStorageClients;
             return this;
         }
 

@@ -106,7 +106,10 @@ public class CreateTemplateCopyAction extends TeaModel {
         } 
 
         /**
-         * acrInstanceId.
+         * <p>The ID of the destination Container Registry Enterprise instance. This field does not inherit the instance ID from the source image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-****</p>
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.acrInstanceId = acrInstanceId;
@@ -114,7 +117,7 @@ public class CreateTemplateCopyAction extends TeaModel {
         }
 
         /**
-         * enabled.
+         * <p>Specifies whether to enable the image replication action. Required when this action block is included.</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -122,7 +125,10 @@ public class CreateTemplateCopyAction extends TeaModel {
         }
 
         /**
-         * image.
+         * <p>The destination image address to push to. If not specified, the service derives a new tag under the repository where the source image resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com/sandbox-demo/python:3.12-envd</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -130,7 +136,7 @@ public class CreateTemplateCopyAction extends TeaModel {
         }
 
         /**
-         * registryConfig.
+         * <p>The credentials, TLS, and network configuration required to access the destination image repository.</p>
          */
         public Builder registryConfig(CreateTemplateRegistryConfig registryConfig) {
             this.registryConfig = registryConfig;
@@ -138,7 +144,10 @@ public class CreateTemplateCopyAction extends TeaModel {
         }
 
         /**
-         * registryType.
+         * <p>The type of the destination image repository. Valid values: oci (standard OCI repository), acr (Container Registry Personal Edition), acree (Container Registry Enterprise Edition). If not specified, the type is inferred from the destination image address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acree</p>
          */
         public Builder registryType(String registryType) {
             this.registryType = registryType;

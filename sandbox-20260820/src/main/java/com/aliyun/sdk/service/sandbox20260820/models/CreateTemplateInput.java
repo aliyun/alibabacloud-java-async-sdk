@@ -93,7 +93,7 @@ public class CreateTemplateInput extends TeaModel {
         } 
 
         /**
-         * buildConfig.
+         * <p>The build configuration of the template. The build process is specified in blocks by action. If this parameter is not specified, the service automatically infers the configuration based on the source image: public runtime images are used directly without building, and other images automatically execute copy and envdInject.</p>
          */
         public Builder buildConfig(CreateTemplateBuildConfig buildConfig) {
             this.buildConfig = buildConfig;
@@ -101,7 +101,10 @@ public class CreateTemplateInput extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The template name, which must be unique within the same team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python-data-analysis</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -109,7 +112,7 @@ public class CreateTemplateInput extends TeaModel {
         }
 
         /**
-         * runtimeConfig.
+         * <p>The runtime configuration of the template. This configuration determines the specifications and environment of sandbox instances created from this template.</p>
          */
         public Builder runtimeConfig(CreateTemplateRuntimeConfig runtimeConfig) {
             this.runtimeConfig = runtimeConfig;
@@ -117,7 +120,10 @@ public class CreateTemplateInput extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The ID of the team to which the template belongs, in UUID format. If this parameter is not specified, the default team of the current account is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5f4a2c18-****</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;

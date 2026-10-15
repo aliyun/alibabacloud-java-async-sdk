@@ -106,7 +106,10 @@ public class AgenticBucketVolumeConfig extends TeaModel {
         } 
 
         /**
-         * agenticBucket.
+         * <p>The name of the AgenticBucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace01</p>
          */
         public Builder agenticBucket(String agenticBucket) {
             this.agenticBucket = agenticBucket;
@@ -114,7 +117,10 @@ public class AgenticBucketVolumeConfig extends TeaModel {
         }
 
         /**
-         * bucketName.
+         * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sandbox-test</p>
          */
         public Builder bucketName(String bucketName) {
             this.bucketName = bucketName;
@@ -122,7 +128,10 @@ public class AgenticBucketVolumeConfig extends TeaModel {
         }
 
         /**
-         * bucketPath.
+         * <p>The path of the mounted OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder bucketPath(String bucketPath) {
             this.bucketPath = bucketPath;
@@ -130,7 +139,10 @@ public class AgenticBucketVolumeConfig extends TeaModel {
         }
 
         /**
-         * endpoint.
+         * <p>The OSS endpoint address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -138,7 +150,14 @@ public class AgenticBucketVolumeConfig extends TeaModel {
         }
 
         /**
-         * readOnly.
+         * <p>Specifies whether the mount directory has read-only access permissions after the OSS bucket is mounted. Valid values:</p>
+         * <ul>
+         * <li>true: Read-only.</li>
+         * <li>false: Read and write.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = readOnly;

@@ -93,7 +93,10 @@ public class ImportApiKeyInput extends TeaModel {
         } 
 
         /**
-         * apiKeyName.
+         * <p>The API key name. The name can be up to 128 characters in length and can contain letters, digits, spaces, hyphens (-), underscores (_), and periods (.).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>migrated-key</p>
          */
         public Builder apiKeyName(String apiKeyName) {
             this.apiKeyName = apiKeyName;
@@ -101,7 +104,10 @@ public class ImportApiKeyInput extends TeaModel {
         }
 
         /**
-         * apiKeyValue.
+         * <p>The plaintext value of the API key to import. After the import, the source of the key is set to custom.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e2b_****</p>
          */
         public Builder apiKeyValue(String apiKeyValue) {
             this.apiKeyValue = apiKeyValue;
@@ -109,7 +115,10 @@ public class ImportApiKeyInput extends TeaModel {
         }
 
         /**
-         * expireTime.
+         * <p>The expiration time of the API key in UTC. The time is in RFC 3339 format. If this parameter is left empty, the API key never expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2099-12-31T23:59:59Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -117,7 +126,10 @@ public class ImportApiKeyInput extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The ID of the team to which the API key belongs, in UUID format. If this parameter is not specified, the default team of the current account is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5f4a2c18-****</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;

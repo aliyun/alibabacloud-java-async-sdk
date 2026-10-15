@@ -54,7 +54,7 @@ public class PublicUpdateTemplateEnvdInjectAction extends TeaModel {
         } 
 
         /**
-         * enabled.
+         * <p>Specifies whether envd injection is enabled.</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;

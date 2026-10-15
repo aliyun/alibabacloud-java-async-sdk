@@ -171,7 +171,7 @@ public class E2BTeam extends TeaModel {
         } 
 
         /**
-         * allowUpdateTeamName.
+         * <p>Specifies whether the team name can be modified. The default team does not allow modification.</p>
          */
         public Builder allowUpdateTeamName(Boolean allowUpdateTeamName) {
             this.allowUpdateTeamName = allowUpdateTeamName;
@@ -179,7 +179,10 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * createdTime.
+         * <p>The creation time of the team in UTC, in RFC 3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-20T08:30:00Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -187,7 +190,10 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The team description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sandbox environment for the algorithm team</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -195,7 +201,16 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * plan.
+         * <p>The team plan specification. Valid values:</p>
+         * <ul>
+         * <li>eco: economy.</li>
+         * <li>std: standard.</li>
+         * <li>pro: professional.</li>
+         * <li>ent: enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>std</p>
          */
         public Builder plan(String plan) {
             this.plan = plan;
@@ -203,7 +218,7 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * readOnly.
+         * <p>Indicates whether the current caller has read-only access to the team. If the value is true, the team configuration cannot be modified.</p>
          */
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = readOnly;
@@ -211,7 +226,10 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The ID of the Alibaba Cloud resource group to which the team belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-****</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -219,7 +237,15 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The team status. Valid values:</p>
+         * <ul>
+         * <li>active: Normal.</li>
+         * <li>deleting: Being deleted.</li>
+         * <li>delete_failed: Failed to delete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -227,7 +253,10 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The ID of the team to which the resource belongs, in UUID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5f4a2c18-****</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -235,7 +264,10 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * teamName.
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sandbox-dev</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -243,7 +275,10 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * userID.
+         * <p>The user ID of the team creator, in UUID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9c1d4e72-****</p>
          */
         public Builder userID(String userID) {
             this.userID = userID;

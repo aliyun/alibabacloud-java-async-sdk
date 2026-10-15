@@ -93,7 +93,10 @@ public class Quota extends TeaModel {
         } 
 
         /**
-         * cpuCores.
+         * <p>The vCPU quota. Unit: cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder cpuCores(Integer cpuCores) {
             this.cpuCores = cpuCores;
@@ -101,7 +104,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * instanceCount.
+         * <p>The quota for the number of running instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = instanceCount;
@@ -109,7 +115,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * memoryGB.
+         * <p>The memory quota. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder memoryGB(Integer memoryGB) {
             this.memoryGB = memoryGB;
@@ -117,7 +126,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * tagValue.
+         * <p>The quota tag value, which is set to the team ID. Quotas are independently calculated based on this dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7696f4cf-****</p>
          */
         public Builder tagValue(String tagValue) {
             this.tagValue = tagValue;

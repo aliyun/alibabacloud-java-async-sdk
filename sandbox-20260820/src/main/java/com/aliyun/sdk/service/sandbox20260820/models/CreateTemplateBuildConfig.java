@@ -23,9 +23,13 @@ public class CreateTemplateBuildConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("envdInject")
     private CreateTemplateEnvdInjectAction envdInject;
 
+    @com.aliyun.core.annotation.NameInMap("installStorageClients")
+    private Boolean installStorageClients;
+
     private CreateTemplateBuildConfig(Builder builder) {
         this.copy = builder.copy;
         this.envdInject = builder.envdInject;
+        this.installStorageClients = builder.installStorageClients;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class CreateTemplateBuildConfig extends TeaModel {
         return this.envdInject;
     }
 
+    /**
+     * @return installStorageClients
+     */
+    public Boolean getInstallStorageClients() {
+        return this.installStorageClients;
+    }
+
     public static final class Builder {
         private CreateTemplateCopyAction copy; 
         private CreateTemplateEnvdInjectAction envdInject; 
+        private Boolean installStorageClients; 
 
         private Builder() {
         } 
@@ -64,10 +76,11 @@ public class CreateTemplateBuildConfig extends TeaModel {
         private Builder(CreateTemplateBuildConfig model) {
             this.copy = model.copy;
             this.envdInject = model.envdInject;
+            this.installStorageClients = model.installStorageClients;
         } 
 
         /**
-         * copy.
+         * <p>The action configuration for pulling the source image and pushing it to the destination repository.</p>
          */
         public Builder copy(CreateTemplateCopyAction copy) {
             this.copy = copy;
@@ -75,10 +88,18 @@ public class CreateTemplateBuildConfig extends TeaModel {
         }
 
         /**
-         * envdInject.
+         * <p>The action configuration for packaging the envd daemon process into the image. This is an optional intermediate step in the copy process and is supported only by first-generation sandboxes.</p>
          */
         public Builder envdInject(CreateTemplateEnvdInjectAction envdInject) {
             this.envdInject = envdInject;
+            return this;
+        }
+
+        /**
+         * <p>The installation of clients required for storage mounting.</p>
+         */
+        public Builder installStorageClients(Boolean installStorageClients) {
+            this.installStorageClients = installStorageClients;
             return this;
         }
 

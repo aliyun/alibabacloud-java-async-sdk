@@ -80,7 +80,10 @@ public class ContainerConfiguration extends TeaModel {
         } 
 
         /**
-         * acrInstanceId.
+         * <p>The instance ID of the Container Registry Enterprise instance. Required when registryType is set to acree.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-****</p>
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.acrInstanceId = acrInstanceId;
@@ -88,7 +91,10 @@ public class ContainerConfiguration extends TeaModel {
         }
 
         /**
-         * image.
+         * <p>The base image address of the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com/sandbox-demo/python:3.12</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -96,7 +102,7 @@ public class ContainerConfiguration extends TeaModel {
         }
 
         /**
-         * registryCredential.
+         * <p>The repository access credentials used to pull the image. Not required when using a public image.</p>
          */
         public Builder registryCredential(RegistryCredential registryCredential) {
             this.registryCredential = registryCredential;
@@ -162,7 +168,10 @@ public class ContainerConfiguration extends TeaModel {
             } 
 
             /**
-             * password.
+             * <p>The logon password or access token for the image repository. Stored with server-side encryption and not returned in plaintext when queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Passw0rd****</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -170,7 +179,10 @@ public class ContainerConfiguration extends TeaModel {
             }
 
             /**
-             * username.
+             * <p>The username for logging on to the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sandbox-puller</p>
              */
             public Builder username(String username) {
                 this.username = username;

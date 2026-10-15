@@ -197,7 +197,10 @@ public class InnerCreateSandboxInput extends TeaModel {
         } 
 
         /**
-         * allowInternetAccess.
+         * <p>Specifies whether the sandbox is allowed to access external networks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowInternetAccess(Boolean allowInternetAccess) {
             this.allowInternetAccess = allowInternetAccess;
@@ -205,7 +208,10 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * autoPause.
+         * <p>Specifies whether to automatically pause after timeout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPause(Boolean autoPause) {
             this.autoPause = autoPause;
@@ -213,7 +219,10 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * autoResume.
+         * <p>Specifies whether to automatically resume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoResume(Boolean autoResume) {
             this.autoResume = autoResume;
@@ -221,7 +230,7 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * envVars.
+         * <p>The environment variable configuration.</p>
          */
         public Builder envVars(java.util.Map<String, String> envVars) {
             this.envVars = envVars;
@@ -229,7 +238,7 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * metadata.
+         * <p>The metadata configuration.</p>
          */
         public Builder metadata(java.util.Map<String, String> metadata) {
             this.metadata = metadata;
@@ -237,7 +246,7 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * network.
+         * <p>The network configuration.</p>
          */
         public Builder network(E2BNetwork network) {
             this.network = network;
@@ -245,7 +254,7 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * runtime.
+         * <p>The runtime configuration.</p>
          */
         public Builder runtime(InnerSandboxRuntimeConfig runtime) {
             this.runtime = runtime;
@@ -253,7 +262,10 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * secure.
+         * <p>Specifies whether authentication is required to access the sandbox envd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder secure(Boolean secure) {
             this.secure = secure;
@@ -261,7 +273,10 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76eeecaa-****</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -269,7 +284,10 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * templateID.
+         * <p>The unique identifier of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v9vjyzw64bsu83vw0dgs</p>
          */
         public Builder templateID(String templateID) {
             this.templateID = templateID;
@@ -277,7 +295,10 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * timeout.
+         * <p>The timeout period. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;
@@ -285,7 +306,7 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * volumeMounts.
+         * <p>The volume mount configuration.</p>
          */
         public Builder volumeMounts(InnerCreateSandboxVolumeMounts volumeMounts) {
             this.volumeMounts = volumeMounts;

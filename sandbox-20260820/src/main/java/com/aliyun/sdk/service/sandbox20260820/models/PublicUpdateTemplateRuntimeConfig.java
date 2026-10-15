@@ -132,7 +132,10 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
         } 
 
         /**
-         * cpu.
+         * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpu(Float cpu) {
             this.cpu = cpu;
@@ -140,7 +143,10 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * diskSize.
+         * <p>The system cloud disk size, in MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512</p>
          */
         public Builder diskSize(Integer diskSize) {
             this.diskSize = diskSize;
@@ -148,7 +154,7 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * internetAccess.
+         * <p>Specifies whether the sandbox is allowed to access the Internet.</p>
          */
         public Builder internetAccess(Boolean internetAccess) {
             this.internetAccess = internetAccess;
@@ -156,7 +162,7 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * logConfig.
+         * <p>The log configuration.</p>
          */
         public Builder logConfig(PublicUpdateTemplateLogConfig logConfig) {
             this.logConfig = logConfig;
@@ -164,7 +170,10 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * memorySize.
+         * <p>The memory size, in MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder memorySize(Integer memorySize) {
             this.memorySize = memorySize;
@@ -172,7 +181,7 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * sandboxConfig.
+         * <p>The sandbox configuration.</p>
          */
         public Builder sandboxConfig(PublicUpdateTemplateSandboxConfig sandboxConfig) {
             this.sandboxConfig = sandboxConfig;
@@ -180,7 +189,7 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * vpcConfig.
+         * <p>The VPC network configuration.</p>
          */
         public Builder vpcConfig(PublicUpdateTemplateVPCConfig vpcConfig) {
             this.vpcConfig = vpcConfig;

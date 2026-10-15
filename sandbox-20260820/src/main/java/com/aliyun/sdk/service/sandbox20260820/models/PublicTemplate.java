@@ -145,7 +145,10 @@ public class PublicTemplate extends TeaModel {
         } 
 
         /**
-         * createdTime.
+         * <p>The creation time of the template, in UTC and formatted as RFC 3339.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-20T08:30:00Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -153,7 +156,10 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The template name, which is unique within the same team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python-data-analysis</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -161,7 +167,10 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The ID of the Alibaba Cloud resource group to which the team belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-****</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -169,7 +178,7 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * runtimeConfig.
+         * <p>The runtime configuration of the template, which determines the specifications and environment of sandbox instances created from this template.</p>
          */
         public Builder runtimeConfig(PublicTemplateRuntimeConfig runtimeConfig) {
             this.runtimeConfig = runtimeConfig;
@@ -177,7 +186,7 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The current status of the template.</p>
          */
         public Builder status(PublicTemplateStatus status) {
             this.status = status;
@@ -185,7 +194,10 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The ID of the team to which the resource belongs, in UUID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5f4a2c18-****</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -193,7 +205,10 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * teamName.
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sandbox-dev</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -201,7 +216,10 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * templateID.
+         * <p>The sandbox template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tm-8f3a2c7b5e14d806</p>
          */
         public Builder templateID(String templateID) {
             this.templateID = templateID;

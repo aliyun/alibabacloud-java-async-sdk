@@ -288,7 +288,16 @@ public class E2BTemplate extends TeaModel {
         } 
 
         /**
-         * buildStatus.
+         * <p>The template build status. Valid values:</p>
+         * <ul>
+         * <li>waiting: Waiting to build.</li>
+         * <li>building: Building in progress.</li>
+         * <li>ready: Build succeeded.</li>
+         * <li>error: Build failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ready</p>
          */
         public Builder buildStatus(String buildStatus) {
             this.buildStatus = buildStatus;
@@ -296,7 +305,14 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * category.
+         * <p>The template category. Valid values:</p>
+         * <ul>
+         * <li>builtin: Built-in system template.</li>
+         * <li>custom: User-created custom template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -304,7 +320,7 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * containerConfiguration.
+         * <p>The container image configuration of the template.</p>
          */
         public Builder containerConfiguration(ContainerConfiguration containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
@@ -312,7 +328,10 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * cpuCount.
+         * <p>The CPU specification of the sandbox instance, in cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = cpuCount;
@@ -320,7 +339,10 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The creation time in UTC, in RFC 3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-20T08:30:00Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -328,7 +350,7 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * logConfiguration.
+         * <p>The log delivery configuration of the template.</p>
          */
         public Builder logConfiguration(LogConfiguration logConfiguration) {
             this.logConfiguration = logConfiguration;
@@ -336,7 +358,10 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * memoryMB.
+         * <p>The memory specification of the sandbox instance, in MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder memoryMB(Integer memoryMB) {
             this.memoryMB = memoryMB;
@@ -344,7 +369,7 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * names.
+         * <p>The list of template names, including the template name and all its aliases.</p>
          */
         public Builder names(java.util.List<String> names) {
             this.names = names;
@@ -352,7 +377,7 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * networkConfiguration.
+         * <p>The network configuration of the template.</p>
          */
         public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
@@ -360,7 +385,7 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * public.
+         * <p>Indicates whether the template is public to all teams.</p>
          */
         public Builder _public(Boolean _public) {
             this._public = _public;
@@ -368,7 +393,10 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The Alibaba Cloud resource group ID to which the team belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-****</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -376,7 +404,10 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * statusReason.
+         * <p>The desensitized description of the reason why the template build failed. This value is empty when the build succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to pull source image: invalid authentication credentials</p>
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -384,7 +415,7 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The list of template tags. Each tag points to a specific build.</p>
          */
         public Builder tags(java.util.List<E2BTemplateTag> tags) {
             this.tags = tags;
@@ -392,7 +423,10 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The ID of the team to which the resource belongs, in UUID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5f4a2c18-****</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -400,7 +434,10 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * teamName.
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sandbox-dev</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -408,7 +445,16 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * teamPlan.
+         * <p>The team plan specification. Valid values:</p>
+         * <ul>
+         * <li>eco: economy.</li>
+         * <li>std: standard.</li>
+         * <li>pro: professional.</li>
+         * <li>ent: enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>std</p>
          */
         public Builder teamPlan(String teamPlan) {
             this.teamPlan = teamPlan;
@@ -416,7 +462,10 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * templateID.
+         * <p>The sandbox template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tm-8f3a2c7b5e14d806</p>
          */
         public Builder templateID(String templateID) {
             this.templateID = templateID;
@@ -424,7 +473,10 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The last update time in UTC, in RFC 3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-21T09:15:30Z</p>
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
@@ -432,7 +484,10 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
-         * userID.
+         * <p>The user ID of the resource creator, in UUID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9c1d4e72-****</p>
          */
         public Builder userID(String userID) {
             this.userID = userID;

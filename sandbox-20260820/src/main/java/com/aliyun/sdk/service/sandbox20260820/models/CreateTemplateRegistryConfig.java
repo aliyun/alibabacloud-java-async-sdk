@@ -80,7 +80,7 @@ public class CreateTemplateRegistryConfig extends TeaModel {
         } 
 
         /**
-         * authConfig.
+         * <p>The logon credentials for the image repository. No configuration is required when accessing a public repository.</p>
          */
         public Builder authConfig(CreateTemplateRegistryAuthConfig authConfig) {
             this.authConfig = authConfig;
@@ -88,7 +88,7 @@ public class CreateTemplateRegistryConfig extends TeaModel {
         }
 
         /**
-         * certConfig.
+         * <p>The certificate validation configuration for accessing the image repository.</p>
          */
         public Builder certConfig(CreateTemplateRegistryCertConfig certConfig) {
             this.certConfig = certConfig;
@@ -96,7 +96,7 @@ public class CreateTemplateRegistryConfig extends TeaModel {
         }
 
         /**
-         * networkConfig.
+         * <p>The VPC configuration used to access the image repository. Configuration is required only when the repository is reachable only within a VPC.</p>
          */
         public Builder networkConfig(CreateTemplateRegistryNetworkConfig networkConfig) {
             this.networkConfig = networkConfig;

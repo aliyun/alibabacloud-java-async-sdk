@@ -392,7 +392,10 @@ public class E2BSandbox extends TeaModel {
         } 
 
         /**
-         * accessEndpoint.
+         * <p>The access endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sbx-xxxx.ap-southeast-1.sandbox.aliyun.com</p>
          */
         public Builder accessEndpoint(String accessEndpoint) {
             this.accessEndpoint = accessEndpoint;
@@ -400,7 +403,7 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * allowInternetAccess.
+         * <p>Specifies whether the sandbox is allowed to access external networks.</p>
          */
         public Builder allowInternetAccess(Boolean allowInternetAccess) {
             this.allowInternetAccess = allowInternetAccess;
@@ -408,7 +411,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * cpuCount.
+         * <p>The vCPU specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = cpuCount;
@@ -416,7 +422,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * diskSizeMB.
+         * <p>The ephemeral disk specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder diskSizeMB(Integer diskSizeMB) {
             this.diskSizeMB = diskSizeMB;
@@ -424,7 +433,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * domain.
+         * <p>The access domain name of the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1.sandbox.aliyun.com</p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -432,7 +444,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * endAt.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-04T02:03:43.826Z</p>
          */
         public Builder endAt(String endAt) {
             this.endAt = endAt;
@@ -440,7 +455,7 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * envVars.
+         * <p>The environment variables.</p>
          */
         public Builder envVars(java.util.Map<String, String> envVars) {
             this.envVars = envVars;
@@ -448,7 +463,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * envdAccessToken.
+         * <p>The authentication credential for accessing the envd daemon process inside the sandbox, in UUID format. Automatically generated only when secure is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4b1e9d07-****</p>
          */
         public Builder envdAccessToken(String envdAccessToken) {
             this.envdAccessToken = envdAccessToken;
@@ -456,7 +474,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * fcFunctionName.
+         * <p>The Function Compute function name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template-d391c80b5d1527de</p>
          */
         public Builder fcFunctionName(String fcFunctionName) {
             this.fcFunctionName = fcFunctionName;
@@ -464,7 +485,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * fcInstanceID.
+         * <p>The Function Compute instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-6a9d1501-133e6f48-b3f07782dd47</p>
          */
         public Builder fcInstanceID(String fcInstanceID) {
             this.fcInstanceID = fcInstanceID;
@@ -472,7 +496,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * fcSessionID.
+         * <p>The Function Compute session ID corresponding to the sandbox, in UUID format. Used to locate the underlying session when pausing, resuming, or deleting the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3a7ecd09-****</p>
          */
         public Builder fcSessionID(String fcSessionID) {
             this.fcSessionID = fcSessionID;
@@ -480,7 +507,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * generation.
+         * <p>The sandbox version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder generation(Integer generation) {
             this.generation = generation;
@@ -488,7 +518,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * memoryMB.
+         * <p>The memory specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder memoryMB(Integer memoryMB) {
             this.memoryMB = memoryMB;
@@ -496,7 +529,7 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * metadata.
+         * <p>The metadata configuration.</p>
          */
         public Builder metadata(java.util.Map<String, String> metadata) {
             this.metadata = metadata;
@@ -504,7 +537,7 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * network.
+         * <p>The network configuration.</p>
          */
         public Builder network(E2BNetwork network) {
             this.network = network;
@@ -512,7 +545,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-****</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -520,7 +556,7 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * runtime.
+         * <p>The runtime configuration.</p>
          */
         public Builder runtime(InnerSandboxRuntimeConfig runtime) {
             this.runtime = runtime;
@@ -528,7 +564,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * sandboxID.
+         * <p>The unique identifier of the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sbx-xxxx</p>
          */
         public Builder sandboxID(String sandboxID) {
             this.sandboxID = sandboxID;
@@ -536,7 +575,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * startedAt.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-04T02:02:43.826Z</p>
          */
         public Builder startedAt(String startedAt) {
             this.startedAt = startedAt;
@@ -544,7 +586,21 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * state.
+         * <p>The sandbox status. Valid values:</p>
+         * <ul>
+         * <li>running: Running.</li>
+         * <li>pausing: Pausing.</li>
+         * <li>paused: Paused.</li>
+         * <li>resuming: Resuming.</li>
+         * <li>pause_fail: Pause failed.</li>
+         * <li>resume_fail: Resume failed.</li>
+         * <li>snapshotting: Creating a snapshot.</li>
+         * <li>snapshot_failed: Snapshot creation failed.</li>
+         * <li>terminated: Terminated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -552,7 +608,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eea033af-****</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -560,7 +619,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * teamName.
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -568,7 +630,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * teamPlan.
+         * <p>The QoS version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eco</p>
          */
         public Builder teamPlan(String teamPlan) {
             this.teamPlan = teamPlan;
@@ -576,7 +641,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * templateID.
+         * <p>The unique identifier of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v9vjyzw64bsu83vw0dgs</p>
          */
         public Builder templateID(String templateID) {
             this.templateID = templateID;
@@ -584,7 +652,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * templateName.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -592,7 +663,10 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * userID.
+         * <p>The UID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000****</p>
          */
         public Builder userID(String userID) {
             this.userID = userID;
@@ -600,7 +674,7 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * volumeMounts.
+         * <p>The mount configuration.</p>
          */
         public Builder volumeMounts(InnerSandboxVolumeMount volumeMounts) {
             this.volumeMounts = volumeMounts;

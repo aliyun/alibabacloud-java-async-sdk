@@ -80,7 +80,10 @@ public class PublicUpdateTemplateRegistryNetworkConfig extends TeaModel {
         } 
 
         /**
-         * securityGroupId.
+         * <p>The ID of the security group used to access the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1abc123</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -88,7 +91,10 @@ public class PublicUpdateTemplateRegistryNetworkConfig extends TeaModel {
         }
 
         /**
-         * vSwitchId.
+         * <p>The ID of the vSwitch where the repository resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1abc123</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -96,7 +102,10 @@ public class PublicUpdateTemplateRegistryNetworkConfig extends TeaModel {
         }
 
         /**
-         * vpcId.
+         * <p>The ID of the VPC where the repository resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1abc123</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

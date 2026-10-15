@@ -106,7 +106,7 @@ public class JuiceFSVolumeConfig extends TeaModel {
         } 
 
         /**
-         * args.
+         * <p>The additional mount parameters.</p>
          */
         public Builder args(java.util.List<String> args) {
             this.args = args;
@@ -114,7 +114,10 @@ public class JuiceFSVolumeConfig extends TeaModel {
         }
 
         /**
-         * baseURL.
+         * <p>The access point address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a></p>
          */
         public Builder baseURL(String baseURL) {
             this.baseURL = baseURL;
@@ -122,7 +125,10 @@ public class JuiceFSVolumeConfig extends TeaModel {
         }
 
         /**
-         * remoteDir.
+         * <p>The remote mount directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/sandbox/workspace</p>
          */
         public Builder remoteDir(String remoteDir) {
             this.remoteDir = remoteDir;
@@ -130,7 +136,10 @@ public class JuiceFSVolumeConfig extends TeaModel {
         }
 
         /**
-         * token.
+         * <p>The access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder token(String token) {
             this.token = token;
@@ -138,7 +147,10 @@ public class JuiceFSVolumeConfig extends TeaModel {
         }
 
         /**
-         * volumeName.
+         * <p>The JuiceFS volume name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data</p>
          */
         public Builder volumeName(String volumeName) {
             this.volumeName = volumeName;

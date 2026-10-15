@@ -93,7 +93,10 @@ public class PublicUpdateTemplateVPCConfig extends TeaModel {
         } 
 
         /**
-         * role.
+         * <p>The ARN of the RAM role used to access VPC resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456789012:role/sandbox-vpc-role</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -101,7 +104,10 @@ public class PublicUpdateTemplateVPCConfig extends TeaModel {
         }
 
         /**
-         * securityGroupId.
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1abc123</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -109,7 +115,7 @@ public class PublicUpdateTemplateVPCConfig extends TeaModel {
         }
 
         /**
-         * vSwitchIds.
+         * <p>The list of vSwitch IDs.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -117,7 +123,10 @@ public class PublicUpdateTemplateVPCConfig extends TeaModel {
         }
 
         /**
-         * vpcId.
+         * <p>VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1abc123</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

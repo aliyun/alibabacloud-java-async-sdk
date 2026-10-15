@@ -145,7 +145,10 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
         } 
 
         /**
-         * acrInstanceId.
+         * <p>The ID of the Container Registry Enterprise instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-abc123</p>
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.acrInstanceId = acrInstanceId;
@@ -153,7 +156,10 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * generation.
+         * <p>The sandbox generation. A value of 1 indicates rund, and a value of 2 indicates micro.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder generation(Integer generation) {
             this.generation = generation;
@@ -161,7 +167,10 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * image.
+         * <p>The image address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-hangzhou.aliyuncs.com/my/ns:v1</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -169,7 +178,10 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * osType.
+         * <p>The operating system type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder osType(String osType) {
             this.osType = osType;
@@ -177,7 +189,10 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * readyCommand.
+         * <p>The readiness probe command for the micro sandbox. Only the second generation supports this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/ready</p>
          */
         public Builder readyCommand(String readyCommand) {
             this.readyCommand = readyCommand;
@@ -185,7 +200,7 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * registryConfig.
+         * <p>The image repository configuration.</p>
          */
         public Builder registryConfig(PublicUpdateTemplateRegistryConfig registryConfig) {
             this.registryConfig = registryConfig;
@@ -193,7 +208,10 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * registryType.
+         * <p>The image repository type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acr</p>
          */
         public Builder registryType(String registryType) {
             this.registryType = registryType;
@@ -201,7 +219,10 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * startCommand.
+         * <p>The startup command for the micro sandbox. Only the second generation supports this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/start-coroutines.sh</p>
          */
         public Builder startCommand(String startCommand) {
             this.startCommand = startCommand;

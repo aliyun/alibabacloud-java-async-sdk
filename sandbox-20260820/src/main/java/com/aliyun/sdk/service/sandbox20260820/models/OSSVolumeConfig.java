@@ -93,7 +93,10 @@ public class OSSVolumeConfig extends TeaModel {
         } 
 
         /**
-         * bucketName.
+         * <p>The name of the OSS bucket to mount as a storage volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sandbox-shared-data</p>
          */
         public Builder bucketName(String bucketName) {
             this.bucketName = bucketName;
@@ -101,7 +104,10 @@ public class OSSVolumeConfig extends TeaModel {
         }
 
         /**
-         * bucketPath.
+         * <p>The path prefix within the bucket to use as the mount source. If this parameter is not specified, the entire bucket is mounted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/workspace/</p>
          */
         public Builder bucketPath(String bucketPath) {
             this.bucketPath = bucketPath;
@@ -109,7 +115,10 @@ public class OSSVolumeConfig extends TeaModel {
         }
 
         /**
-         * endpoint.
+         * <p>The OSS service registration address used to access the bucket. Use an internal network address in the same region as the sandboxed container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -117,7 +126,7 @@ public class OSSVolumeConfig extends TeaModel {
         }
 
         /**
-         * readOnly.
+         * <p>Specifies whether the storage volume is mounted as read-only in the sandboxed container.</p>
          */
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = readOnly;

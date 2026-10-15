@@ -93,7 +93,7 @@ public class E2BNetwork extends TeaModel {
         } 
 
         /**
-         * allowOut.
+         * <p>The allowlist for outbound access from the sandbox. After configuration, the sandbox can access only the destinations in the list.</p>
          */
         public Builder allowOut(java.util.List<String> allowOut) {
             this.allowOut = allowOut;
@@ -101,7 +101,7 @@ public class E2BNetwork extends TeaModel {
         }
 
         /**
-         * allowPublicTraffic.
+         * <p>Specifies whether to allow Direct Internet Access to the sandbox.</p>
          */
         public Builder allowPublicTraffic(Boolean allowPublicTraffic) {
             this.allowPublicTraffic = allowPublicTraffic;
@@ -109,7 +109,7 @@ public class E2BNetwork extends TeaModel {
         }
 
         /**
-         * denyOut.
+         * <p>The denylist for outbound access from the sandbox. After configuration, the sandbox cannot access the destinations in the list.</p>
          */
         public Builder denyOut(java.util.List<String> denyOut) {
             this.denyOut = denyOut;
@@ -117,7 +117,10 @@ public class E2BNetwork extends TeaModel {
         }
 
         /**
-         * maskRequestHost.
+         * <p>The domain name used to rewrite the request Host header when accessing the sandbox. If this parameter is not specified, the original Host is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sandbox.example.com</p>
          */
         public Builder maskRequestHost(String maskRequestHost) {
             this.maskRequestHost = maskRequestHost;
