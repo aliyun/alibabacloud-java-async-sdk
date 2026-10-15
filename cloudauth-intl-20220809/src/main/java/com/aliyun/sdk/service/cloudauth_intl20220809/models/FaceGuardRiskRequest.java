@@ -127,7 +127,7 @@ public class FaceGuardRiskRequest extends Request {
         }
 
         /**
-         * <p>The device token obtained from the Face Guard SDK.</p>
+         * <p>The device token obtained through the Face Guard SDK.</p>
          * 
          * <strong>example:</strong>
          * <p>Tk9SSUQuMS*****************ZDNmNWY5NzQxOW1o</p>
@@ -139,7 +139,7 @@ public class FaceGuardRiskRequest extends Request {
         }
 
         /**
-         * <p>The merchant-defined unique business identifier, used for subsequent troubleshooting. The value can contain letters and digits with a maximum length of 32 characters. Make sure the value is unique.</p>
+         * <p>The custom unique business identifier on the merchant side, used for subsequent troubleshooting. It supports a combination of letters and digits, with a maximum length of 32 characters. Ensure that the value is unique.</p>
          * 
          * <strong>example:</strong>
          * <p>0c83ce0101d34eff886b1f7d1cdef67f</p>

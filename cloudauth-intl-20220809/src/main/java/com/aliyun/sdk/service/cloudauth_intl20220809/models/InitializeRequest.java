@@ -162,6 +162,10 @@ public class InitializeRequest extends Request {
     private String model;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedMultiFaceCheck")
+    private String needMultiFaceCheck;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ocr")
     private String ocr;
 
@@ -291,6 +295,7 @@ public class InitializeRequest extends Request {
         this.metaInfo = builder.metaInfo;
         this.mobile = builder.mobile;
         this.model = builder.model;
+        this.needMultiFaceCheck = builder.needMultiFaceCheck;
         this.ocr = builder.ocr;
         this.ocrValueStandard = builder.ocrValueStandard;
         this.pages = builder.pages;
@@ -582,6 +587,13 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return needMultiFaceCheck
+     */
+    public String getNeedMultiFaceCheck() {
+        return this.needMultiFaceCheck;
+    }
+
+    /**
      * @return ocr
      */
     public String getOcr() {
@@ -779,6 +791,7 @@ public class InitializeRequest extends Request {
         private String metaInfo; 
         private String mobile; 
         private String model; 
+        private String needMultiFaceCheck; 
         private String ocr; 
         private String ocrValueStandard; 
         private String pages; 
@@ -845,6 +858,7 @@ public class InitializeRequest extends Request {
             this.metaInfo = request.metaInfo;
             this.mobile = request.mobile;
             this.model = request.model;
+            this.needMultiFaceCheck = request.needMultiFaceCheck;
             this.ocr = request.ocr;
             this.ocrValueStandard = request.ocrValueStandard;
             this.pages = request.pages;
@@ -901,6 +915,9 @@ public class InitializeRequest extends Request {
 
         /**
          * <p>The automatic document classification configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;BRA01001&quot;:&quot;01&quot;,&quot;BRA01002&quot;:&quot;01,02&quot;}</p>
          */
         public Builder autoDocPageConfig(String autoDocPageConfig) {
             this.putQueryParameter("AutoDocPageConfig", autoDocPageConfig);
@@ -1133,6 +1150,9 @@ public class InitializeRequest extends Request {
 
         /**
          * <p>Specifies whether to enable face attribute check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N</p>
          */
         public Builder faceAttributeCheck(String faceAttributeCheck) {
             this.putQueryParameter("FaceAttributeCheck", faceAttributeCheck);
@@ -1343,6 +1363,15 @@ public class InitializeRequest extends Request {
         public Builder model(String model) {
             this.putQueryParameter("Model", model);
             this.model = model;
+            return this;
+        }
+
+        /**
+         * NeedMultiFaceCheck.
+         */
+        public Builder needMultiFaceCheck(String needMultiFaceCheck) {
+            this.putQueryParameter("NeedMultiFaceCheck", needMultiFaceCheck);
+            this.needMultiFaceCheck = needMultiFaceCheck;
             return this;
         }
 
@@ -1630,6 +1659,9 @@ public class InitializeRequest extends Request {
 
         /**
          * <p>Specifies whether to overwrite the existing face with the current face when MerchantUserId already exists during automatic registration. Y: overwrite. N: do not overwrite and return a message indicating that the UserId already exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N</p>
          */
         public Builder updateFaceIfUserExists(String updateFaceIfUserExists) {
             this.putQueryParameter("UpdateFaceIfUserExists", updateFaceIfUserExists);
