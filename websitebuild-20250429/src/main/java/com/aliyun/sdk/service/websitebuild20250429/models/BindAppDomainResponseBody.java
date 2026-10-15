@@ -184,7 +184,7 @@ public class BindAppDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Detailed reason for access denial.</p>
+         * <p>The detailed reason why access was denied.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class BindAppDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether retry is allowed</p>
+         * <p>Indicates whether retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class BindAppDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>App Name.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -217,7 +217,7 @@ public class BindAppDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error Code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -228,9 +228,9 @@ public class BindAppDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error message, used to replace the <strong>%s</strong> in the error message of the returned parameter <strong>ErrMessage</strong>.</p>
+         * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the input request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class BindAppDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned error parameters</p>
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -250,13 +250,13 @@ public class BindAppDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data table module.</p>
+         * <p>The data table module.</p>
          * <ul>
-         * <li><p>ABTest: Experiment data table</p>
+         * <li><p>ABTest: experiment data table</p>
          * </li>
-         * <li><p>ExperimentTool: Experiment tool table</p>
+         * <li><p>ExperimentTool: experiment tool table</p>
          * </li>
-         * <li><p>DataDiagnosis: Data diagnosis</p>
+         * <li><p>DataDiagnosis: data diagnostics</p>
          * </li>
          * </ul>
          */
@@ -266,7 +266,7 @@ public class BindAppDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>The unique ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -277,7 +277,7 @@ public class BindAppDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error Code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.EROR</p>
@@ -288,10 +288,10 @@ public class BindAppDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Exception Message</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -299,7 +299,7 @@ public class BindAppDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether to process synchronously</p>
+         * <p>Indicates whether the request is processed synchronously.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -394,7 +394,10 @@ public class BindAppDomainResponseBody extends TeaModel {
             } 
 
             /**
-             * Host.
+             * <p>The host record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>www</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -402,7 +405,10 @@ public class BindAppDomainResponseBody extends TeaModel {
             }
 
             /**
-             * RecordType.
+             * <p>The record type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder recordType(String recordType) {
                 this.recordType = recordType;
@@ -410,7 +416,10 @@ public class BindAppDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the conflicting DNS record. A value of ENABLE indicates that the record is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -418,7 +427,10 @@ public class BindAppDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The record value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.2.1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -511,7 +523,7 @@ public class BindAppDomainResponseBody extends TeaModel {
             } 
 
             /**
-             * CanAutoResolve.
+             * <p>Indicates whether automatic overwrite is supported. A value of true indicates the current Alibaba Cloud account, and a value of false indicates other accounts.</p>
              */
             public Builder canAutoResolve(Boolean canAutoResolve) {
                 this.canAutoResolve = canAutoResolve;
@@ -519,7 +531,7 @@ public class BindAppDomainResponseBody extends TeaModel {
             }
 
             /**
-             * HasConflict.
+             * <p>Indicates whether a conflict exists.</p>
              */
             public Builder hasConflict(Boolean hasConflict) {
                 this.hasConflict = hasConflict;
@@ -527,7 +539,10 @@ public class BindAppDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The user-facing prompt message. Different guidance text is generated based on the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A conflicting DNS record (A 192.0.2.1) exists for the domain name <a href="http://www.example.com">www.example.com</a>. Delete the conflicting record from your DNS provider and try again</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -535,7 +550,7 @@ public class BindAppDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Records.
+             * <p>The list of conflicting DNS records. This reuses the existing AppDomainDnsRecordDTO.</p>
              */
             public Builder records(java.util.List<Records> records) {
                 this.records = records;
@@ -602,7 +617,7 @@ public class BindAppDomainResponseBody extends TeaModel {
             } 
 
             /**
-             * DnsConflict.
+             * <p>The DNS conflict information. This parameter is returned when a conflict is detected during synchronous verification.</p>
              */
             public Builder dnsConflict(DnsConflict dnsConflict) {
                 this.dnsConflict = dnsConflict;
@@ -610,7 +625,7 @@ public class BindAppDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicator of whether the request was successful.</p>
+             * <p>Indicates whether the request was successful.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

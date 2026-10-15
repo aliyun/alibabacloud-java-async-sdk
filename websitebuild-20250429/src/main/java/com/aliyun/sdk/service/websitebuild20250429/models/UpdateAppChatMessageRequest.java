@@ -124,7 +124,10 @@ public class UpdateAppChatMessageRequest extends Request {
         }
 
         /**
-         * AddedMetaData.
+         * <p>The appended message metadata in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder addedMetaData(String addedMetaData) {
             this.putQueryParameter("AddedMetaData", addedMetaData);
@@ -133,7 +136,10 @@ public class UpdateAppChatMessageRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>The message content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FormatVersion: OOS-2019-06-01nTasks:n  - Name: runCommandn    Action: \&quot;ACS::ECS::RunCommand\&quot;n    Properties:n      commandContent: \&quot; echo Hksqj@@883289</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -142,7 +148,10 @@ public class UpdateAppChatMessageRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>The conversation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81bc5a34-1d8d-4ef7-a208-7401c51b054b</p>
          */
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);
@@ -151,7 +160,10 @@ public class UpdateAppChatMessageRequest extends Request {
         }
 
         /**
-         * MessageId.
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7baf7d67-1897-42ed-a380-f6ae825d6907</p>
          */
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);

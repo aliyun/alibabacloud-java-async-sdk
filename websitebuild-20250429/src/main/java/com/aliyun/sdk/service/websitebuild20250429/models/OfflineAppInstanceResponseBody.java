@@ -184,7 +184,10 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The deprecated parameter. You can ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DocdbSortingCode</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,10 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +239,7 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +247,10 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>Indicates whether the shift was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;TotalPageNum\&quot;: 1, \&quot;ResultLimit\&quot;: False, \&quot;CurrentPageNum\&quot;: 0, \&quot;PageSize\&quot;: 0, \&quot;TotalItemNum\&quot;: 0}</p>
          */
         public Builder module(java.util.Map<String, ?> module) {
             this.module = module;
@@ -251,7 +269,10 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +280,10 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +291,10 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;

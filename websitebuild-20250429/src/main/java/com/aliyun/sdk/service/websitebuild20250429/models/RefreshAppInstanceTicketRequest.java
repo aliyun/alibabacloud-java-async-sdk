@@ -87,7 +87,7 @@ public class RefreshAppInstanceTicketRequest extends Request {
         } 
 
         /**
-         * <p>Business ID of the application instance</p>
+         * <p>The business ID of the application instance.</p>
          * 
          * <strong>example:</strong>
          * <p>WD20250703155602000001</p>
@@ -99,7 +99,7 @@ public class RefreshAppInstanceTicketRequest extends Request {
         }
 
         /**
-         * <p>Updated token information</p>
+         * <p>The updated token information.</p>
          * 
          * <strong>example:</strong>
          * <hr>

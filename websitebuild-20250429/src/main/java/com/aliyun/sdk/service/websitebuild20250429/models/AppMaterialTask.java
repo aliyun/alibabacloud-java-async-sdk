@@ -184,7 +184,10 @@ public class AppMaterialTask extends TeaModel {
         } 
 
         /**
-         * BizGroupId.
+         * <p>The business group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder bizGroupId(String bizGroupId) {
             this.bizGroupId = bizGroupId;
@@ -192,7 +195,10 @@ public class AppMaterialTask extends TeaModel {
         }
 
         /**
-         * CompleteTime.
+         * <p>The task completion time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-26 11:30:05</p>
          */
         public Builder completeTime(String completeTime) {
             this.completeTime = completeTime;
@@ -200,7 +206,10 @@ public class AppMaterialTask extends TeaModel {
         }
 
         /**
-         * CompleteTimeFormat.
+         * <p>The display format of the completion time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 minute ago</p>
          */
         public Builder completeTimeFormat(String completeTimeFormat) {
             this.completeTimeFormat = completeTimeFormat;
@@ -208,7 +217,10 @@ public class AppMaterialTask extends TeaModel {
         }
 
         /**
-         * FailReason.
+         * <p>The failure reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid parameters</p>
          */
         public Builder failReason(String failReason) {
             this.failReason = failReason;
@@ -216,7 +228,7 @@ public class AppMaterialTask extends TeaModel {
         }
 
         /**
-         * FinalFileUrls.
+         * <p>The list of final files.</p>
          */
         public Builder finalFileUrls(java.util.List<String> finalFileUrls) {
             this.finalFileUrls = finalFileUrls;
@@ -224,7 +236,10 @@ public class AppMaterialTask extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -232,7 +247,10 @@ public class AppMaterialTask extends TeaModel {
         }
 
         /**
-         * SubStatus.
+         * <p>The task substatus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PENDING</p>
          */
         public Builder subStatus(String subStatus) {
             this.subStatus = subStatus;
@@ -240,7 +258,10 @@ public class AppMaterialTask extends TeaModel {
         }
 
         /**
-         * SubmitTime.
+         * <p>The submit time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-26 11:30:05</p>
          */
         public Builder submitTime(String submitTime) {
             this.submitTime = submitTime;
@@ -248,7 +269,10 @@ public class AppMaterialTask extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81d04d62c3483b32bacf1d306d2622b2</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -256,7 +280,14 @@ public class AppMaterialTask extends TeaModel {
         }
 
         /**
-         * TaskParam.
+         * <p>The task parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;brandName&quot;: &quot;Brand name&quot;,
+         *     &quot;direction&quot;: &quot;HORIZONTAL&quot;,
+         *     &quot;userPrompt&quot;: &quot;Design requirements&quot;
+         * }</p>
          */
         public Builder taskParam(String taskParam) {
             this.taskParam = taskParam;
@@ -264,7 +295,10 @@ public class AppMaterialTask extends TeaModel {
         }
 
         /**
-         * TaskType.
+         * <p>The task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE_LOGO</p>
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;

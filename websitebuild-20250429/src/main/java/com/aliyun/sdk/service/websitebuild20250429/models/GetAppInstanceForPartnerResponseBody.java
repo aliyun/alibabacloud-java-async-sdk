@@ -184,7 +184,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason for the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retries are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dewuApp</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D</a></p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +269,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +280,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +291,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -359,7 +386,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * StaffId.
+             * <p>The staff ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>370196</p>
              */
             public Builder staffId(String staffId) {
                 this.staffId = staffId;
@@ -367,7 +397,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * StaffName.
+             * <p>The staff name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StaffName</p>
              */
             public Builder staffName(String staffName) {
                 this.staffName = staffName;
@@ -375,7 +408,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * StaffType.
+             * <p>The staff type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StaffType</p>
              */
             public Builder staffType(String staffType) {
                 this.staffType = staffType;
@@ -383,7 +419,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The staff status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -682,7 +721,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * <p>The customer business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WS20250801151731000007</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -701,7 +743,16 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ColorStyle.
+             * <p>The specified color. Valid values:</p>
+             * <ul>
+             * <li><strong>black</strong>: Black.</li>
+             * <li><strong>white</strong>: White.</li>
+             * <li><strong>red</strong>: Red.</li>
+             * <li><strong>blue</strong>: Blue.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>style</p>
              */
             public Builder colorStyle(String colorStyle) {
                 this.colorStyle = colorStyle;
@@ -709,7 +760,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * CompanyName.
+             * <p>The enterprise name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bvt_test</p>
              */
             public Builder companyName(String companyName) {
                 this.companyName = companyName;
@@ -717,7 +771,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * DeployArea.
+             * <p>The deployment region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HongKong</p>
              */
             public Builder deployArea(String deployArea) {
                 this.deployArea = deployArea;
@@ -725,7 +782,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-21T08:27:03Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -733,7 +793,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Wed Sep 10 09:53:35 CST 2025</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -741,7 +804,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m1zumwgy6u</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -837,7 +903,16 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * SiteType.
+             * <p>The application type. Valid values:</p>
+             * <ul>
+             * <li>web: Web and H5.</li>
+             * <li>miniapp: Mini program.</li>
+             * <li>ios: iOS.</li>
+             * <li>android: Android.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>web</p>
              */
             public Builder siteType(String siteType) {
                 this.siteType = siteType;
@@ -941,7 +1016,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * ActionKey.
+             * <p>The action key, which uniquely identifies an operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BeginDialogue</p>
              */
             public Builder actionKey(String actionKey) {
                 this.actionKey = actionKey;
@@ -949,7 +1027,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ActionText.
+             * <p>The display text for the action, which is used to show the action name in the interface.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder actionText(String actionText) {
                 this.actionText = actionText;
@@ -957,7 +1038,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>The enabled status, which indicates whether the action is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -965,7 +1049,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Href.
+             * <p>The link URL to which you are redirected when you click the action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder href(String href) {
                 this.href = href;
@@ -1058,7 +1145,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * ActionKey.
+             * <p>The action key, which uniquely identifies an operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CollectedNumber</p>
              */
             public Builder actionKey(String actionKey) {
                 this.actionKey = actionKey;
@@ -1066,7 +1156,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ActionText.
+             * <p>The display text for the action, which is used to show the action name in the interface.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder actionText(String actionText) {
                 this.actionText = actionText;
@@ -1074,7 +1167,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>The enabled status, which indicates whether the action is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1082,7 +1178,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Href.
+             * <p>The link URL to which you are redirected when you click the action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder href(String href) {
                 this.href = href;
@@ -1253,7 +1352,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * Actions.
+             * <p>The list of console operation buttons.</p>
              */
             public Builder actions(java.util.List<Actions> actions) {
                 this.actions = actions;
@@ -1261,7 +1360,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * AiCustomerConfigUrl.
+             * <p>The customer service design URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder aiCustomerConfigUrl(String aiCustomerConfigUrl) {
                 this.aiCustomerConfigUrl = aiCustomerConfigUrl;
@@ -1269,7 +1371,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * AiDesignUrl.
+             * <p>The AI design URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder aiDesignUrl(String aiDesignUrl) {
                 this.aiDesignUrl = aiDesignUrl;
@@ -1277,7 +1382,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * AppPublishUrl.
+             * <p>The application publishing URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder appPublishUrl(String appPublishUrl) {
                 this.appPublishUrl = appPublishUrl;
@@ -1285,7 +1393,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * DashboardActions.
+             * <p>The list of action buttons on the overview page.</p>
              */
             public Builder dashboardActions(java.util.List<DashboardActions> dashboardActions) {
                 this.dashboardActions = dashboardActions;
@@ -1293,7 +1401,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * DesignUrl.
+             * <p>The professional design URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder designUrl(String designUrl) {
                 this.designUrl = designUrl;
@@ -1301,7 +1412,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceLoginUrl.
+             * <p>The logon URL of the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder instanceLoginUrl(String instanceLoginUrl) {
                 this.instanceLoginUrl = instanceLoginUrl;
@@ -1309,7 +1423,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * RenewBuyUrl.
+             * <p>The renewal URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder renewBuyUrl(String renewBuyUrl) {
                 this.renewBuyUrl = renewBuyUrl;
@@ -1317,7 +1434,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ServerDeliveryUrl.
+             * <p>The service delivery URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder serverDeliveryUrl(String serverDeliveryUrl) {
                 this.serverDeliveryUrl = serverDeliveryUrl;
@@ -1325,7 +1445,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeBuyUrl.
+             * <p>The upgrade URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder upgradeBuyUrl(String upgradeBuyUrl) {
                 this.upgradeBuyUrl = upgradeBuyUrl;
@@ -1431,7 +1554,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d75fvq3ctk</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1439,7 +1565,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The website name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mda-sb037wmidshg3w9v.mp4</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1469,7 +1598,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The temporary access URL for the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://static.yipigai.cn/timuocr/tmp_57bc9cb3be1075f4e5cdae87f5cbb86abc54a694aaf10965.jpg">https://static.yipigai.cn/timuocr/tmp_57bc9cb3be1075f4e5cdae87f5cbb86abc54a694aaf10965.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1640,7 +1772,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * Children.
+             * <p>The child folder objects.</p>
              */
             public Builder children(java.util.List<?> children) {
                 this.children = children;
@@ -1648,7 +1780,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * FinalStepNo.
+             * <p>The sequence number of the last node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinalStepNo</p>
              */
             public Builder finalStepNo(Integer finalStepNo) {
                 this.finalStepNo = finalStepNo;
@@ -1656,7 +1791,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The completion timestamp of the baseline instance. This parameter is returned when the FinishStatus parameter (the completion status of the baseline instance) is FINISH.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-13T07:58:12Z</p>
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -1675,7 +1813,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The ID of the OBServer node where the resource node resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2927b500-c4e2-4241-bacf-0a2991c4be12</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -1683,7 +1824,11 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>&lt;props=&quot;china&quot;&gt;The name of the matrix.
+             * &lt;props=&quot;intl&quot;&gt;This parameter is not available for public use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Single-channel output</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -1691,7 +1836,14 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * NodeStatus.
+             * <p>The running status of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>UP</strong>: The node is running.</li>
+             * <li><strong>DOWN</strong>: The node has failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NodeStatus</p>
              */
             public Builder nodeStatus(String nodeStatus) {
                 this.nodeStatus = nodeStatus;
@@ -1699,7 +1851,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorRole.
+             * <p>The role of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OperatorRole</p>
              */
             public Builder operatorRole(String operatorRole) {
                 this.operatorRole = operatorRole;
@@ -1707,7 +1862,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ParentNodeId.
+             * <p>The ID of the parent node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dpYLaezmVNRMGX56Cg4gLjrrVrMqPxX6</p>
              */
             public Builder parentNodeId(String parentNodeId) {
                 this.parentNodeId = parentNodeId;
@@ -1715,7 +1873,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * StepNo.
+             * <p>The sequence number of the process node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StepNo</p>
              */
             public Builder stepNo(Integer stepNo) {
                 this.stepNo = stepNo;
@@ -1808,7 +1969,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * ActionKey.
+             * <p>The action key, which uniquely identifies an operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CollectedNumber</p>
              */
             public Builder actionKey(String actionKey) {
                 this.actionKey = actionKey;
@@ -1816,7 +1980,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ActionText.
+             * <p>The display text for the action, which is used to show the action name in the interface.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ActionText</p>
              */
             public Builder actionText(String actionText) {
                 this.actionText = actionText;
@@ -1824,7 +1991,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>The enabled status, which indicates whether the action is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1832,7 +2002,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Href.
+             * <p>The link URL to which you are redirected when you click the action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Href</p>
              */
             public Builder href(String href) {
                 this.href = href;
@@ -1925,7 +2098,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * ActionKey.
+             * <p>The action key, which uniquely identifies an operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AbortDialogue</p>
              */
             public Builder actionKey(String actionKey) {
                 this.actionKey = actionKey;
@@ -1933,7 +2109,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ActionText.
+             * <p>The display text for the action, which is used to show the action name in the interface.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ActionText</p>
              */
             public Builder actionText(String actionText) {
                 this.actionText = actionText;
@@ -1941,7 +2120,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>The enabled status, which indicates whether the action is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1949,7 +2131,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Href.
+             * <p>The link URL to which you are redirected when you click the action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Href</p>
              */
             public Builder href(String href) {
                 this.href = href;
@@ -2120,7 +2305,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * Actions.
+             * <p>The list of console operation buttons.</p>
              */
             public Builder actions(java.util.List<OperationAddressActions> actions) {
                 this.actions = actions;
@@ -2128,7 +2313,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * AiCustomerConfigUrl.
+             * <p>The customer service design URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AiCustomerConfigUrl</p>
              */
             public Builder aiCustomerConfigUrl(String aiCustomerConfigUrl) {
                 this.aiCustomerConfigUrl = aiCustomerConfigUrl;
@@ -2136,7 +2324,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * AiDesignUrl.
+             * <p>The AI design URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AiDesignUrl</p>
              */
             public Builder aiDesignUrl(String aiDesignUrl) {
                 this.aiDesignUrl = aiDesignUrl;
@@ -2144,7 +2335,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * AppPublishUrl.
+             * <p>The application publishing URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AppPublishUrl</p>
              */
             public Builder appPublishUrl(String appPublishUrl) {
                 this.appPublishUrl = appPublishUrl;
@@ -2152,7 +2346,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * DashboardActions.
+             * <p>The list of action buttons on the overview page.</p>
              */
             public Builder dashboardActions(java.util.List<OperationAddressDashboardActions> dashboardActions) {
                 this.dashboardActions = dashboardActions;
@@ -2160,7 +2354,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * DesignUrl.
+             * <p>The professional design URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DesignUrl</p>
              */
             public Builder designUrl(String designUrl) {
                 this.designUrl = designUrl;
@@ -2168,7 +2365,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceLoginUrl.
+             * <p>The logon URL of the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceLoginUrl</p>
              */
             public Builder instanceLoginUrl(String instanceLoginUrl) {
                 this.instanceLoginUrl = instanceLoginUrl;
@@ -2176,7 +2376,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * RenewBuyUrl.
+             * <p>The renewal URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>renewBuyUrl</p>
              */
             public Builder renewBuyUrl(String renewBuyUrl) {
                 this.renewBuyUrl = renewBuyUrl;
@@ -2184,7 +2387,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ServerDeliveryUrl.
+             * <p>The service delivery URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServerDeliveryUrl</p>
              */
             public Builder serverDeliveryUrl(String serverDeliveryUrl) {
                 this.serverDeliveryUrl = serverDeliveryUrl;
@@ -2192,7 +2398,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeBuyUrl.
+             * <p>The upgrade URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UpgradeBuyUrl</p>
              */
             public Builder upgradeBuyUrl(String upgradeBuyUrl) {
                 this.upgradeBuyUrl = upgradeBuyUrl;
@@ -2376,7 +2585,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * BizId.
+             * <p>The business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WS20250801003834000003</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -2384,7 +2596,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * DesignType.
+             * <p>The design type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DesignType</p>
              */
             public Builder designType(String designType) {
                 this.designType = designType;
@@ -2392,7 +2607,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * DesignTypeText.
+             * <p>The description of the design type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DesignTypeText</p>
              */
             public Builder designTypeText(String designTypeText) {
                 this.designTypeText = designTypeText;
@@ -2400,7 +2618,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620711265000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -2408,7 +2629,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mon Sep 25 14:48:49 CST 2023</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -2416,7 +2640,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>108232</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -2424,7 +2651,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * LxInstanceId.
+             * <p>The Lingxiao instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LxInstanceId</p>
              */
             public Builder lxInstanceId(String lxInstanceId) {
                 this.lxInstanceId = lxInstanceId;
@@ -2432,7 +2662,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256146659280026</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -2440,7 +2673,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceSpec.
+             * <p>The service specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder serviceSpec(String serviceSpec) {
                 this.serviceSpec = serviceSpec;
@@ -2448,7 +2684,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceSpecText.
+             * <p>The description of the service specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServiceSpecText</p>
              */
             public Builder serviceSpecText(String serviceSpecText) {
                 this.serviceSpecText = serviceSpecText;
@@ -2456,7 +2695,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeStatus.
+             * <p>The upgrade status.</p>
              */
             public Builder upgradeStatus(String upgradeStatus) {
                 this.upgradeStatus = upgradeStatus;
@@ -2744,7 +2983,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * BizId.
+             * <p>The business ID of the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WS20251211153330000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -2752,7 +2994,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Deleted.
+             * <p>The deletion flag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fase</p>
              */
             public Builder deleted(Integer deleted) {
                 this.deleted = deleted;
@@ -2760,7 +3005,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. The value is in ISO 8601 format and uses the UTC (Z) time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-18T02:23:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -2779,7 +3027,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-30T02:08:40Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -2787,7 +3038,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tue Sep 09 10:27:49 CST 2025</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -2795,7 +3049,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Group.
+             * <p>The application operation URL.</p>
              */
             public Builder group(Group group) {
                 this.group = group;
@@ -2803,7 +3057,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceBizId.
+             * <p>The associated business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceBizId</p>
              */
             public Builder instanceBizId(String instanceBizId) {
                 this.instanceBizId = instanceBizId;
@@ -2811,7 +3068,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19609820.png</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2819,7 +3079,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * NodeList.
+             * <p>The delivery process.</p>
              */
             public Builder nodeList(java.util.List<NodeList> nodeList) {
                 this.nodeList = nodeList;
@@ -2827,7 +3087,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OperationAddress.
+             * <p>The unique identifier for an operation.</p>
              */
             public Builder operationAddress(OperationAddress operationAddress) {
                 this.operationAddress = operationAddress;
@@ -2835,7 +3095,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253790948890026</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -2843,7 +3106,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The service configuration of the instance.</p>
              */
             public Builder profile(Profile profile) {
                 this.profile = profile;
@@ -2851,7 +3114,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The service type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WEBSITE_DESIGN</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -2859,7 +3125,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceTypeText.
+             * <p>The description of the service type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServiceTypeText</p>
              */
             public Builder serviceTypeText(String serviceTypeText) {
                 this.serviceTypeText = serviceTypeText;
@@ -2867,7 +3136,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Slug.
+             * <p>The application identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Slug</p>
              */
             public Builder slug(String slug) {
                 this.slug = slug;
@@ -2875,7 +3147,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1754447102000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -2883,7 +3158,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2891,10 +3169,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>userid</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>userid</p>
+             * <p>UserId</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -3063,7 +3341,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * <p>The external bizId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WS20250801153127000002</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -3071,7 +3352,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672123722000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -3079,7 +3363,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Wed Nov 26 10:15:28 CST 2025</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -3087,7 +3374,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GrantAliyunPk.
+             * <p>The owner of the ICP filing service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>grantAliyunPk</p>
              */
             public Builder grantAliyunPk(String grantAliyunPk) {
                 this.grantAliyunPk = grantAliyunPk;
@@ -3095,7 +3385,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -3114,7 +3407,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * PartnerId.
+             * <p>The external associated partnerId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder partnerId(String partnerId) {
                 this.partnerId = partnerId;
@@ -3122,7 +3418,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * UserDisplayName.
+             * <p>The display name of the bound user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>diaplayName</p>
              */
             public Builder userDisplayName(String userDisplayName) {
                 this.userDisplayName = userDisplayName;
@@ -3210,7 +3509,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * PartnerId.
+             * <p>The partner ID, which is an extended parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder partnerId(String partnerId) {
                 this.partnerId = partnerId;
@@ -3218,7 +3520,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Valid values: unknown, init, testing, and online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -3662,7 +3967,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * AdminUrl.
+             * <p>The admin console URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder adminUrl(String adminUrl) {
                 this.adminUrl = adminUrl;
@@ -3670,7 +3978,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationType.
+             * <p>The application type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PC_WebSite</p>
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
@@ -3678,7 +3989,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationTypeText.
+             * <p>The text description of the application type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder applicationTypeText(String applicationTypeText) {
                 this.applicationTypeText = applicationTypeText;
@@ -3686,7 +4000,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * BindCname.
+             * <p>The bound CNAME record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder bindCname(String bindCname) {
                 this.bindCname = bindCname;
@@ -3694,7 +4011,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * <p>The business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WS20250801152128000005</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -3702,7 +4022,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -3710,7 +4033,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerService.
+             * <p>The customer service information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder customerService(String customerService) {
                 this.customerService = customerService;
@@ -3718,7 +4044,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * DeployArea.
+             * <p>The deployment region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ChineseMainland</p>
              */
             public Builder deployArea(String deployArea) {
                 this.deployArea = deployArea;
@@ -3726,7 +4055,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * DomainList.
+             * <p>The domain name list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[white:],<em>.eduresource.cn,</em>.dingtalk.com,<em>.aliyun.com,</em>.aliyuncs.com,euser.edu-aliyun.com,s-gm.mmstat.com</p>
              */
             public Builder domainList(String domainList) {
                 this.domainList = domainList;
@@ -3734,7 +4066,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * EditorUrl.
+             * <p>The editor URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder editorUrl(String editorUrl) {
                 this.editorUrl = editorUrl;
@@ -3742,7 +4077,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605280632000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -3750,7 +4088,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-06T03:07:45Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -3758,7 +4099,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * IcpbaNo.
+             * <p>The ICP filing number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder icpbaNo(String icpbaNo) {
                 this.icpbaNo = icpbaNo;
@@ -3766,7 +4110,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ImageList.
+             * <p>The image list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;Image\&quot;: []}</p>
              */
             public Builder imageList(String imageList) {
                 this.imageList = imageList;
@@ -3774,7 +4121,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * LxInstanceId.
+             * <p>The Lx instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder lxInstanceId(String lxInstanceId) {
                 this.lxInstanceId = lxInstanceId;
@@ -3782,7 +4132,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OrdTime.
+             * <p>The order time, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-17 10:30:00</p>
              */
             public Builder ordTime(String ordTime) {
                 this.ordTime = ordTime;
@@ -3790,7 +4143,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256146659280026</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -3798,7 +4154,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OrderNum.
+             * <p>The order quantity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder orderNum(Integer orderNum) {
                 this.orderNum = orderNum;
@@ -3806,7 +4165,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * PartnerId.
+             * <p>The partner business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100086</p>
              */
             public Builder partnerId(String partnerId) {
                 this.partnerId = partnerId;
@@ -3814,7 +4176,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * PayTime.
+             * <p>The payment time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-17 10:35:00</p>
              */
             public Builder payTime(String payTime) {
                 this.payTime = payTime;
@@ -3822,7 +4187,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * PreviewUrl.
+             * <p>The preview URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://preview-lyj.aliyuncs.com/preview/1daacb3ebbb8435d9091fb950c528d0f?subSceneIds=682185">https://preview-lyj.aliyuncs.com/preview/1daacb3ebbb8435d9091fb950c528d0f?subSceneIds=682185</a></p>
              */
             public Builder previewUrl(String previewUrl) {
                 this.previewUrl = previewUrl;
@@ -3830,7 +4198,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * SeoSite.
+             * <p>The SEO site information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder seoSite(String seoSite) {
                 this.seoSite = seoSite;
@@ -3838,10 +4209,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>sitelogo</p>
+             * <p>The site logo.</p>
              * 
              * <strong>example:</strong>
-             * <p>logo</p>
+             * <p>placeHolder</p>
              */
             public Builder siteLogo(String siteLogo) {
                 this.siteLogo = siteLogo;
@@ -3849,7 +4220,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * SiteVersion.
+             * <p>The site version code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Basic_Edition</p>
              */
             public Builder siteVersion(String siteVersion) {
                 this.siteVersion = siteVersion;
@@ -3857,7 +4231,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * SiteVersionText.
+             * <p>The text description of the site version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder siteVersionText(String siteVersionText) {
                 this.siteVersionText = siteVersionText;
@@ -3865,7 +4242,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edasmsc</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -3873,7 +4253,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateEtag.
+             * <p>The template ETag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder templateEtag(String templateEtag) {
                 this.templateEtag = templateEtag;
@@ -3881,7 +4264,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4644</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -3889,7 +4275,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * TextList.
+             * <p>The text list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder textList(String textList) {
                 this.textList = textList;
@@ -3897,7 +4286,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Thumbnail.
+             * <p>The thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aloss-recruit-aiinterview.oss-cn-beijing.aliyuncs.com/thumbnail-1753495551714-10000.png">https://aloss-recruit-aiinterview.oss-cn-beijing.aliyuncs.com/thumbnail-1753495551714-10000.png</a></p>
              */
             public Builder thumbnail(String thumbnail) {
                 this.thumbnail = thumbnail;
@@ -3905,7 +4297,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeStatus.
+             * <p>The upgrade status.</p>
              */
             public Builder upgradeStatus(String upgradeStatus) {
                 this.upgradeStatus = upgradeStatus;
@@ -4349,7 +4741,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * AdminUrl.
+             * <p>The admin console URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder adminUrl(String adminUrl) {
                 this.adminUrl = adminUrl;
@@ -4357,7 +4752,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationType.
+             * <p>The application type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PC_WebSite</p>
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
@@ -4365,7 +4763,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationTypeText.
+             * <p>The text description of the application type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder applicationTypeText(String applicationTypeText) {
                 this.applicationTypeText = applicationTypeText;
@@ -4373,7 +4774,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * BindCname.
+             * <p>The bound CNAME record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder bindCname(String bindCname) {
                 this.bindCname = bindCname;
@@ -4381,7 +4785,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * <p>The business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WS20250801153127000002</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -4389,7 +4796,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -4397,7 +4807,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerService.
+             * <p>The customer service information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder customerService(String customerService) {
                 this.customerService = customerService;
@@ -4405,7 +4818,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * DeployArea.
+             * <p>The deployment region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ChineseMainland</p>
              */
             public Builder deployArea(String deployArea) {
                 this.deployArea = deployArea;
@@ -4413,7 +4829,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * DomainList.
+             * <p>The domain name list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[\&quot;activity.syruijia.top\&quot;, \&quot;admin.syruijia.top\&quot;, \&quot;api.syruijia.top\&quot;, \&quot;game-admin.syruijia.top\&quot;, \&quot;h5game.syruijia.top\&quot;, \&quot;home.syruijia.top\&quot;, \&quot;invite.syruijia.top\&quot;]</p>
              */
             public Builder domainList(String domainList) {
                 this.domainList = domainList;
@@ -4421,7 +4840,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * EditorUrl.
+             * <p>The editor URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder editorUrl(String editorUrl) {
                 this.editorUrl = editorUrl;
@@ -4429,7 +4851,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621734214000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -4437,7 +4862,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Thu Oct 24 09:12:31 CST 2024</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -4445,7 +4873,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * IcpbaNo.
+             * <p>The ICP filing number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder icpbaNo(String icpbaNo) {
                 this.icpbaNo = icpbaNo;
@@ -4453,7 +4884,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ImageList.
+             * <p>The image list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;Image\&quot;: []}</p>
              */
             public Builder imageList(String imageList) {
                 this.imageList = imageList;
@@ -4461,7 +4895,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * LxInstanceId.
+             * <p>The Lx instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder lxInstanceId(String lxInstanceId) {
                 this.lxInstanceId = lxInstanceId;
@@ -4469,7 +4906,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OrdTime.
+             * <p>The order time, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-17 10:30:00</p>
              */
             public Builder ordTime(String ordTime) {
                 this.ordTime = ordTime;
@@ -4477,7 +4917,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>248808934190692</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -4485,7 +4928,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OrderNum.
+             * <p>The order quantity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder orderNum(Integer orderNum) {
                 this.orderNum = orderNum;
@@ -4493,7 +4939,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * PartnerId.
+             * <p>The partner business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100086</p>
              */
             public Builder partnerId(String partnerId) {
                 this.partnerId = partnerId;
@@ -4501,7 +4950,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * PayTime.
+             * <p>The payment time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-17 10:35:00</p>
              */
             public Builder payTime(String payTime) {
                 this.payTime = payTime;
@@ -4509,7 +4961,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * PreviewUrl.
+             * <p>The preview URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://preview-lyj.aliyuncs.com/preview/temp/9fb36fc05d0a48cdb92d7397336c214f?subSceneIds=734285&type=interim">https://preview-lyj.aliyuncs.com/preview/temp/9fb36fc05d0a48cdb92d7397336c214f?subSceneIds=734285&amp;type=interim</a></p>
              */
             public Builder previewUrl(String previewUrl) {
                 this.previewUrl = previewUrl;
@@ -4517,7 +4972,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * SeoSite.
+             * <p>The SEO site information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder seoSite(String seoSite) {
                 this.seoSite = seoSite;
@@ -4525,10 +4983,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>sitelogo</p>
+             * <p>The site logo.</p>
              * 
              * <strong>example:</strong>
-             * <p>logo</p>
+             * <p>placeHolder</p>
              */
             public Builder siteLogo(String siteLogo) {
                 this.siteLogo = siteLogo;
@@ -4536,7 +4994,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * SiteVersion.
+             * <p>The site version code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Trial_Edition</p>
              */
             public Builder siteVersion(String siteVersion) {
                 this.siteVersion = siteVersion;
@@ -4544,7 +5005,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * SiteVersionText.
+             * <p>The text description of the site version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder siteVersionText(String siteVersionText) {
                 this.siteVersionText = siteVersionText;
@@ -4552,7 +5016,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.71.130.205</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -4560,7 +5027,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateEtag.
+             * <p>The template ETag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder templateEtag(String templateEtag) {
                 this.templateEtag = templateEtag;
@@ -4568,7 +5038,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4644</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -4576,7 +5049,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * TextList.
+             * <p>The text list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder textList(String textList) {
                 this.textList = textList;
@@ -4584,7 +5060,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Thumbnail.
+             * <p>The thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aloss-recruit-aiinterview.oss-cn-beijing.aliyuncs.com/thumbnail-1766456326256-0.png">https://aloss-recruit-aiinterview.oss-cn-beijing.aliyuncs.com/thumbnail-1766456326256-0.png</a></p>
              */
             public Builder thumbnail(String thumbnail) {
                 this.thumbnail = thumbnail;
@@ -4592,7 +5071,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeStatus.
+             * <p>The upgrade status.</p>
              */
             public Builder upgradeStatus(String upgradeStatus) {
                 this.upgradeStatus = upgradeStatus;
@@ -5010,7 +5489,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * AppSubType.
+             * <p>The application subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder appSubType(String appSubType) {
                 this.appSubType = appSubType;
@@ -5018,7 +5500,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * AppType.
+             * <p>The application type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -5026,7 +5511,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * <p>The business ID of the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WS20250929173805000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -5034,7 +5522,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * BuildType.
+             * <p>The build type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder buildType(String buildType) {
                 this.buildType = buildType;
@@ -5042,7 +5533,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Deleted.
+             * <p>Indicates whether the item is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fase</p>
              */
             public Builder deleted(Integer deleted) {
                 this.deleted = deleted;
@@ -5050,7 +5544,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The application description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>base</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -5069,7 +5566,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * DesignSpecId.
+             * <p>The design specification ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder designSpecId(String designSpecId) {
                 this.designSpecId = designSpecId;
@@ -5077,7 +5577,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The primary domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>shikuntech.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -5085,7 +5588,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. The value is in ISO 8601 format and uses the UTC (Z) time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-23T15:01:25.891Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -5093,7 +5599,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pre</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -5101,10 +5610,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>esp bizId</p>
+             * <p>The associated delivery order ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>EspBizId</p>
+             * <p>placeHolder</p>
              */
             public Builder espBizId(String espBizId) {
                 this.espBizId = espBizId;
@@ -5112,7 +5621,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-19T07:39:55Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -5120,7 +5632,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtDelete.
+             * <p>The deletion time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder gmtDelete(String gmtDelete) {
                 this.gmtDelete = gmtDelete;
@@ -5128,7 +5643,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-14T09:09:57Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -5136,7 +5654,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtPublish.
+             * <p>The publish time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder gmtPublish(String gmtPublish) {
                 this.gmtPublish = gmtPublish;
@@ -5144,7 +5665,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * IconUrl.
+             * <p>The application icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1617863868712071/1749090558651_%E9%AB%98%E5%BE%B7.png">https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1617863868712071/1749090558651_%E9%AB%98%E5%BE%B7.png</a></p>
              */
             public Builder iconUrl(String iconUrl) {
                 this.iconUrl = iconUrl;
@@ -5152,7 +5676,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19609820.png</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -5160,7 +5687,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>264987642530867,264988827010867,264982589530867,264985058640867,264982290930867,264982387520867,264987147460867,264985752990867,264988432850867</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -5168,7 +5698,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The instance configuration.</p>
              */
             public Builder profile(RelatedInstanceListProfile profile) {
                 this.profile = profile;
@@ -5176,7 +5706,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * SiteHost.
+             * <p>The website domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder siteHost(String siteHost) {
                 this.siteHost = siteHost;
@@ -5184,7 +5717,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Slug.
+             * <p>The application identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder slug(String slug) {
                 this.slug = slug;
@@ -5192,7 +5728,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The source type. Valid values: MARKET_CLOUD_DREAM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MARKET_CLOUD_DREAM</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -5200,7 +5739,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time in ISO 8601 format in the UTC time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-22T02:23:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -5208,7 +5750,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -5216,7 +5761,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * StatusText.
+             * <p>The task status text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder statusText(String statusText) {
                 this.statusText = statusText;
@@ -5224,7 +5772,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ThumbnailUrl.
+             * <p>The application thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder thumbnailUrl(String thumbnailUrl) {
                 this.thumbnailUrl = thumbnailUrl;
@@ -5232,10 +5783,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>userid</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>userid</p>
+             * <p>placeHolder</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -5243,7 +5794,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The application instance version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-04-02</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -5739,7 +6293,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * AiStaffList.
+             * <p>The list of AI staff associated with the application.</p>
              */
             public Builder aiStaffList(java.util.List<AiStaffList> aiStaffList) {
                 this.aiStaffList = aiStaffList;
@@ -5747,7 +6301,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * AppDesignSpec.
+             * <p>The design order associated with the application.</p>
              */
             public Builder appDesignSpec(AppDesignSpec appDesignSpec) {
                 this.appDesignSpec = appDesignSpec;
@@ -5755,7 +6309,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * AppOperationAddress.
+             * <p>The application operation URL.</p>
              */
             public Builder appOperationAddress(AppOperationAddress appOperationAddress) {
                 this.appOperationAddress = appOperationAddress;
@@ -5763,7 +6317,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * AppServiceList.
+             * <p>The list of service instances associated with the application.</p>
              */
             public Builder appServiceList(java.util.List<AppServiceList> appServiceList) {
                 this.appServiceList = appServiceList;
@@ -5771,7 +6325,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * AppSubType.
+             * <p>The application subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder appSubType(String appSubType) {
                 this.appSubType = appSubType;
@@ -5779,7 +6336,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * AppType.
+             * <p>The application type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TRACE</p>
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -5787,7 +6347,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * <p>The business ID of the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WS20250915163734000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -5795,7 +6358,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * BuildType.
+             * <p>The build type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder buildType(String buildType) {
                 this.buildType = buildType;
@@ -5803,7 +6369,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Deleted.
+             * <p>Indicates whether the item is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fase</p>
              */
             public Builder deleted(Integer deleted) {
                 this.deleted = deleted;
@@ -5811,7 +6380,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The application description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/bak-&gt;serverless.handler(2020091300200279)</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -5830,7 +6402,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * DesignSpecId.
+             * <p>The design specification ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder designSpecId(String designSpecId) {
                 this.designSpecId = designSpecId;
@@ -5838,7 +6413,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The primary domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stxycw.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -5846,7 +6424,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. The value is in ISO 8601 format and uses the UTC (Z) time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-05T15:59:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -5854,7 +6435,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pre</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -5862,10 +6446,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>esp bizId</p>
+             * <p>The associated delivery order ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>EspBizId</p>
+             * <p>placeHolder</p>
              */
             public Builder espBizId(String espBizId) {
                 this.espBizId = espBizId;
@@ -5873,7 +6457,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1740479834</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -5881,7 +6468,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtDelete.
+             * <p>The deletion time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder gmtDelete(String gmtDelete) {
                 this.gmtDelete = gmtDelete;
@@ -5889,7 +6479,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-28T02:25:41Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -5897,7 +6490,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtPublish.
+             * <p>The publish time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder gmtPublish(String gmtPublish) {
                 this.gmtPublish = gmtPublish;
@@ -5905,7 +6501,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * IconUrl.
+             * <p>The application icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://yzm.zshud.com:34901/cloud-phone/Wellness_1763631730804.png">https://yzm.zshud.com:34901/cloud-phone/Wellness_1763631730804.png</a></p>
              */
             public Builder iconUrl(String iconUrl) {
                 this.iconUrl = iconUrl;
@@ -5913,7 +6512,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>File name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -5921,7 +6523,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>250822465990301</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -5929,7 +6534,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * PartnerDetail.
+             * <p>The details.</p>
              */
             public Builder partnerDetail(PartnerDetail partnerDetail) {
                 this.partnerDetail = partnerDetail;
@@ -5937,7 +6542,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The instance configuration.</p>
              */
             public Builder profile(ModuleProfile profile) {
                 this.profile = profile;
@@ -5945,7 +6550,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedInstanceList.
+             * <p>The list of instances associated with the application.</p>
              */
             public Builder relatedInstanceList(java.util.List<RelatedInstanceList> relatedInstanceList) {
                 this.relatedInstanceList = relatedInstanceList;
@@ -5953,7 +6558,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * SiteHost.
+             * <p>The website domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd.scd.wanwang.xin</p>
              */
             public Builder siteHost(String siteHost) {
                 this.siteHost = siteHost;
@@ -5961,7 +6569,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Slug.
+             * <p>The application identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder slug(String slug) {
                 this.slug = slug;
@@ -5969,7 +6580,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The source type. Valid values: MARKET_CLOUD_DREAM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MARKET_CLOUD_DREAM</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -5977,7 +6591,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time in ISO 8601 format in the UTC time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-24T10:10Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -5985,7 +6602,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -5993,7 +6613,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * StatusText.
+             * <p>The task status text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FILE_DOWNLOAD_FAILED</p>
              */
             public Builder statusText(String statusText) {
                 this.statusText = statusText;
@@ -6001,7 +6624,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ThumbnailUrl.
+             * <p>The application thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeHolder</p>
              */
             public Builder thumbnailUrl(String thumbnailUrl) {
                 this.thumbnailUrl = thumbnailUrl;
@@ -6009,10 +6635,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>userid</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>userid</p>
+             * <p>placeHolder</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -6020,7 +6646,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The application instance version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-04-02</p>
              */
             public Builder version(String version) {
                 this.version = version;

@@ -223,7 +223,10 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -231,7 +234,10 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -239,7 +245,10 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name. The application with this name is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dewuApp</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -247,7 +256,10 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -255,7 +267,10 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -263,7 +278,7 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -271,7 +286,10 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -279,7 +297,10 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -287,7 +308,7 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -306,7 +327,10 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -314,7 +338,10 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -322,7 +349,10 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -330,7 +360,10 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is synchronously processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -383,7 +416,7 @@ public class QueryMaterialDirectoryTreeResponseBody extends TeaModel {
             } 
 
             /**
-             * DirectoryList.
+             * <p>The first-level folders.</p>
              */
             public Builder directoryList(java.util.List<AppMaterialDirectory> directoryList) {
                 this.directoryList = directoryList;

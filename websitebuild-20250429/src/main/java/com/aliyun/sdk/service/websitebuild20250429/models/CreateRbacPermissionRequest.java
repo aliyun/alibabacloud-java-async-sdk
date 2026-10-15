@@ -96,7 +96,10 @@ public class CreateRbacPermissionRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250821161210000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -105,7 +108,10 @@ public class CreateRbacPermissionRequest extends Request {
         }
 
         /**
-         * PermissionData.
+         * <p>The permission parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;resource&quot;:&quot;post&quot;,&quot;action&quot;:&quot;read&quot;,&quot;description&quot;:&quot;read post&quot;}</p>
          */
         public Builder permissionData(String permissionData) {
             this.putQueryParameter("PermissionData", permissionData);

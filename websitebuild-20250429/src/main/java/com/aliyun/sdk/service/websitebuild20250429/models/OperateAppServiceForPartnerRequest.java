@@ -101,7 +101,10 @@ public class OperateAppServiceForPartnerRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS00001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -110,7 +113,10 @@ public class OperateAppServiceForPartnerRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>Other extended information in JSON format for future parameter expansion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;user_device_id\&quot;:\&quot;6bef45cb0c76de284d24de074c088b73\&quot;}\n</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -119,7 +125,11 @@ public class OperateAppServiceForPartnerRequest extends Request {
         }
 
         /**
-         * OperateEvent.
+         * <p>The operation event. Valid values:
+         * SERVICE_FINISH: the service is completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SERVICE_FINISH</p>
          */
         public Builder operateEvent(String operateEvent) {
             this.putQueryParameter("OperateEvent", operateEvent);
@@ -128,7 +138,19 @@ public class OperateAppServiceForPartnerRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * <p>The service type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>private: deployment under the user account.</p>
+         * </li>
+         * <li><p>managed: hosted under the service provider account.</p>
+         * </li>
+         * <li><p>operation: Alibaba Cloud Managed Services.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WEBSITE_DESIGN</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);

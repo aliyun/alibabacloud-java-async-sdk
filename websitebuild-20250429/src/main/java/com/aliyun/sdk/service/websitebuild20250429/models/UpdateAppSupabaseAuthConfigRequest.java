@@ -96,7 +96,10 @@ public class UpdateAppSupabaseAuthConfigRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -105,7 +108,10 @@ public class UpdateAppSupabaseAuthConfigRequest extends Request {
         }
 
         /**
-         * ConfigsJson.
+         * <p>The configuration JSON.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder configsJson(String configsJson) {
             this.putQueryParameter("ConfigsJson", configsJson);

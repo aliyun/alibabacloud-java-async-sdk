@@ -223,7 +223,10 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -231,7 +234,10 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retries are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -239,7 +245,10 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name. The application with this name is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dewuApp</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -247,7 +256,10 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -255,7 +267,10 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -263,7 +278,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters returned.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -271,7 +286,10 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code. The ErrorCode field is not returned if the request is successful. The ErrorCode field is returned if the request fails. For more information, see the error codes in this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -279,7 +297,10 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -287,7 +308,10 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>Indicates whether the folder was moved successfully.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder module(Boolean module) {
             this.module = module;
@@ -306,7 +330,10 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The root error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -314,7 +341,10 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The root error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -322,7 +352,10 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -330,7 +363,10 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;

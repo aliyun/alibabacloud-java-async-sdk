@@ -128,6 +128,7 @@ public class MoveMaterialDirectoryRequest extends Request {
         }
 
         /**
+         * <p>The application instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class MoveMaterialDirectoryRequest extends Request {
         }
 
         /**
+         * <p>The folder ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class MoveMaterialDirectoryRequest extends Request {
         }
 
         /**
+         * <p>The parent folder ID after the move.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +167,7 @@ public class MoveMaterialDirectoryRequest extends Request {
         }
 
         /**
+         * <p>The sort number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

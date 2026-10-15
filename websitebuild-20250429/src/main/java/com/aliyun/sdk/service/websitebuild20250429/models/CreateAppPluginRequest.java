@@ -222,7 +222,10 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * Category.
+         * <p>The category of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Depth\&quot;: 4, \&quot;ParentCategoryId\&quot;: 5281, \&quot;Name\&quot;: \&quot;1\&quot;, \&quot;CategoryId\&quot;: 5282, \&quot;CreateTime\&quot;: \&quot;2025-08-26 10:20:37\&quot;}</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -231,7 +234,10 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the plug-in. The value must be 10 to 512 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -240,7 +246,10 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * DownloadUrl.
+         * <p>The downloadable ZIP URL. This parameter is mutually exclusive with OssKey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv6-inner/common/v1.20230608104522.dex?Expires=1753324652&OSSAccessKeyId=x6R87i97yKeKRggz&Signature=IwS6V56TlgjcX0AgikXLvf3CVtw%3D">http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv6-inner/common/v1.20230608104522.dex?Expires=1753324652&amp;OSSAccessKeyId=x6R87i97yKeKRggz&amp;Signature=IwS6V56TlgjcX0AgikXLvf3CVtw%3D</a></p>
          */
         public Builder downloadUrl(String downloadUrl) {
             this.putQueryParameter("DownloadUrl", downloadUrl);
@@ -249,7 +258,10 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>The extended JSON. This parameter is optional and uses the same format as the extend field in sandbox synchronization. If this parameter is not empty, the value is written to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;user_device_id\&quot;:\&quot;6bef45cb0c76de284d24de074c088b73\&quot;}\n</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -258,7 +270,10 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * Icon.
+         * <p>The URL of the icon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder icon(String icon) {
             this.putQueryParameter("Icon", icon);
@@ -267,7 +282,10 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * OssKey.
+         * <p>The OSS key after frontend direct upload. This parameter is mutually exclusive with DownloadUrl.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</p>
          */
         public Builder ossKey(String ossKey) {
             this.putQueryParameter("OssKey", ossKey);
@@ -276,7 +294,10 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * <p>The unique identifier of the plug-in. The value can contain lowercase letters, digits, and hyphens (-), and must be 3 to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -285,7 +306,10 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * PluginName.
+         * <p>The name of the plug-in. The value must be 2 to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alisecguard</p>
          */
         public Builder pluginName(String pluginName) {
             this.putQueryParameter("PluginName", pluginName);
@@ -294,7 +318,10 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * PluginVersion.
+         * <p>The version number in semver format. Default value: 0.1.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.6</p>
          */
         public Builder pluginVersion(String pluginVersion) {
             this.putQueryParameter("PluginVersion", pluginVersion);
@@ -303,7 +330,10 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags, separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -312,7 +342,10 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * <p>The visibility of the plug-in. Default value: private.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);

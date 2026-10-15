@@ -96,7 +96,10 @@ public class GetAppConversationRequest extends Request {
         }
 
         /**
-         * BotId.
+         * <p>The bot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zero2</p>
          */
         public Builder botId(String botId) {
             this.putQueryParameter("BotId", botId);
@@ -105,7 +108,10 @@ public class GetAppConversationRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>The conversation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81bc5a34-1d8d-4ef7-a208-7401c51b054b</p>
          */
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);

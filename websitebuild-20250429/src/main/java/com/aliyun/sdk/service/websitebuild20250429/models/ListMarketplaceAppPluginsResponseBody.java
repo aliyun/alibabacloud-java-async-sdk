@@ -184,7 +184,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason for access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether a retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +269,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +280,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +291,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -463,7 +490,16 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The category of the system cloud disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>cloud_essd: ESSD.</li>
+             * <li>cloud: basic cloud disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>basic</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -471,7 +507,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The scenario description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lshm-mysql-coypt</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -479,7 +518,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Extend.
+             * <p>The extended information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -487,7 +529,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1756951455000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -495,7 +540,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1556529068000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -503,7 +551,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * HotCount.
+             * <p>The popularity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hotCount(Integer hotCount) {
                 this.hotCount = hotCount;
@@ -511,7 +562,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Icon.
+             * <p>The plug-in description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@lALPM2X6xumibpPNAgDNAgA</p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -519,7 +573,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginId.
+             * <p>The plug-in ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat-ai</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -527,7 +584,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginName.
+             * <p>The plug-in name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trafficControl</p>
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -535,7 +595,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The file status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -543,7 +606,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The API version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V2.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -551,7 +617,14 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * <p>The visibility. Valid values:</p>
+             * <ul>
+             * <li><strong>PUBLIC</strong>: public.</li>
+             * <li><strong>PRIVATE</strong>: private.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;
@@ -722,7 +795,15 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The category of data cloud disk N. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>cloud_essd: ESSD.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;Status\&quot;: 0, \&quot;Name\&quot;: u\&quot;\u81ea\u52a8\u521b\u5efacom.alibaba.cloudrobot.apitest.resource.AbstractResource1773800213419\&quot;, \&quot;BizCode\&quot;: \&quot;\&quot;, \&quot;CategoryId\&quot;: 30000941833, \&quot;ParentCategoryId\&quot;: 30000941832}</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -730,7 +811,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The scenario description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lx_supabase_test_02</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -738,7 +822,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-17 20:43:21</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -746,7 +833,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-18T10:03:56+08:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -754,7 +844,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Icon.
+             * <p>The plug-in description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -762,7 +855,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginId.
+             * <p>The plug-in ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alipay-isv</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -770,7 +866,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginName.
+             * <p>The plug-in name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tf_testaccapigatewayplugin68046</p>
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -778,7 +877,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. Valid values: unknown, init, testing, and online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeeded</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -786,7 +888,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The API version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V2.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -794,7 +899,14 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * <p>Specifies whether the bucket to which the uploaded file belongs is publicly accessible. Valid values:</p>
+             * <ul>
+             * <li><strong>public</strong>: The file is uploaded to a public bucket.</li>
+             * <li><strong>private</strong>: The file is uploaded to a private bucket, and authorization is required for access.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;
@@ -952,7 +1064,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPageNum(Integer currentPageNum) {
                 this.currentPageNum = currentPageNum;
@@ -960,7 +1075,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The request result.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -968,7 +1083,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Next.
+             * <p>The next feature ID.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -976,7 +1091,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * NextPage.
+             * <p>Indicates whether a next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder nextPage(Boolean nextPage) {
                 this.nextPage = nextPage;
@@ -984,7 +1102,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -992,7 +1113,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PrePage.
+             * <p>Indicates whether a previous page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder prePage(Boolean prePage) {
                 this.prePage = prePage;
@@ -1000,7 +1124,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultLimit.
+             * <p>Indicates whether the query result is limited. In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;
@@ -1008,7 +1135,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItemNum.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalItemNum(Integer totalItemNum) {
                 this.totalItemNum = totalItemNum;
@@ -1016,7 +1146,10 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageNum.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPageNum(Integer totalPageNum) {
                 this.totalPageNum = totalPageNum;

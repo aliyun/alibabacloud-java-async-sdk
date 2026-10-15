@@ -110,7 +110,7 @@ public class ListAppDomainRedirectRecordsRequest extends Request {
         }
 
         /**
-         * <p>Application instance business ID</p>
+         * <p>The business ID of the application instance.</p>
          * 
          * <strong>example:</strong>
          * <p>WD20250703155602000001</p>
@@ -122,8 +122,8 @@ public class ListAppDomainRedirectRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of results per query.</p>
-         * <p>Range: 10~100. Default value: 20.</p>
+         * <p>The number of entries per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -135,7 +135,7 @@ public class ListAppDomainRedirectRecordsRequest extends Request {
         }
 
         /**
-         * <p>Token for the next query. It is empty if there is no next query.</p>
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>yPkgBbQln0gmUnIZSGizGw==</p>

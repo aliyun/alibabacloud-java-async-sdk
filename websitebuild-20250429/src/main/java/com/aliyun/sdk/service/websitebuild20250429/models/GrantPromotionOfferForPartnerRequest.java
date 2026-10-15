@@ -152,7 +152,7 @@ public class GrantPromotionOfferForPartnerRequest extends Request {
         }
 
         /**
-         * ActivityCode.
+         * <p>The activity code.</p>
          */
         public Builder activityCode(String activityCode) {
             this.putQueryParameter("ActivityCode", activityCode);
@@ -161,7 +161,10 @@ public class GrantPromotionOfferForPartnerRequest extends Request {
         }
 
         /**
-         * ActivityId.
+         * <p>The activity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>232</p>
          */
         public Builder activityId(String activityId) {
             this.putQueryParameter("ActivityId", activityId);
@@ -170,7 +173,10 @@ public class GrantPromotionOfferForPartnerRequest extends Request {
         }
 
         /**
-         * BelongId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder belongId(String belongId) {
             this.putQueryParameter("BelongId", belongId);
@@ -179,7 +185,10 @@ public class GrantPromotionOfferForPartnerRequest extends Request {
         }
 
         /**
-         * Channel.
+         * <p>The channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WECHAT</p>
          */
         public Builder channel(String channel) {
             this.putQueryParameter("Channel", channel);
@@ -188,7 +197,10 @@ public class GrantPromotionOfferForPartnerRequest extends Request {
         }
 
         /**
-         * EmployeeCode.
+         * <p>The employee code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WB02409424</p>
          */
         public Builder employeeCode(String employeeCode) {
             this.putQueryParameter("EmployeeCode", employeeCode);
@@ -197,7 +209,10 @@ public class GrantPromotionOfferForPartnerRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The operation remark (audit information).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hz-maven</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

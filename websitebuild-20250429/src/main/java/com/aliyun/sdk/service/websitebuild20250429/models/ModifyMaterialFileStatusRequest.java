@@ -113,6 +113,7 @@ public class ModifyMaterialFileStatusRequest extends Request {
         }
 
         /**
+         * <p>The business instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class ModifyMaterialFileStatusRequest extends Request {
         }
 
         /**
+         * <p>The file IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder fileIds(java.util.List<String> fileIds) {
@@ -135,6 +137,7 @@ public class ModifyMaterialFileStatusRequest extends Request {
         }
 
         /**
+         * <p>The updated status.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

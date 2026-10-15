@@ -132,7 +132,10 @@ public class TemplateRecord extends TeaModel {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250915163734000001</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -140,7 +143,7 @@ public class TemplateRecord extends TeaModel {
         }
 
         /**
-         * CopyStatus.
+         * <p>The replication status.</p>
          */
         public Builder copyStatus(String copyStatus) {
             this.copyStatus = copyStatus;
@@ -148,7 +151,11 @@ public class TemplateRecord extends TeaModel {
         }
 
         /**
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-21T08:27:03Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -156,7 +163,11 @@ public class TemplateRecord extends TeaModel {
         }
 
         /**
+         * <p>The modification time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-08-28T02:25:41Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -164,7 +175,10 @@ public class TemplateRecord extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9953352</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -172,7 +186,10 @@ public class TemplateRecord extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de10bf7d782392a70f293a3b1f7bb8fc</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -180,7 +197,7 @@ public class TemplateRecord extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

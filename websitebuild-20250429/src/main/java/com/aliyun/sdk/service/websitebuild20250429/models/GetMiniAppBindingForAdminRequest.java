@@ -87,7 +87,10 @@ public class GetMiniAppBindingForAdminRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250801152639000005</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -96,7 +99,10 @@ public class GetMiniAppBindingForAdminRequest extends Request {
         }
 
         /**
-         * Channel.
+         * <p>The channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WECHAT</p>
          */
         public Builder channel(String channel) {
             this.putQueryParameter("Channel", channel);
@@ -105,7 +111,10 @@ public class GetMiniAppBindingForAdminRequest extends Request {
         }
 
         /**
-         * PlatformAppid.
+         * <p>The mini program ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder platformAppid(String platformAppid) {
             this.putQueryParameter("PlatformAppid", platformAppid);

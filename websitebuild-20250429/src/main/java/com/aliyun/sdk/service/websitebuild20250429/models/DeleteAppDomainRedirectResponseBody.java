@@ -184,7 +184,7 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Detailed reason for access denial.</p>
+         * <p>The detailed reason why access was denied.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether retry is allowed</p>
+         * <p>Indicates whether retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Application name, to query this named application</p>
+         * <p>The application name used for the query.</p>
          * 
          * <strong>example:</strong>
          * <p>watermark</p>
@@ -217,7 +217,7 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error code.</p>
+         * <p>The dynamic error code.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -228,7 +228,7 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic message.</p>
+         * <p>The dynamic message.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_ERROR</p>
@@ -239,7 +239,7 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned error parameters</p>
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -247,7 +247,7 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response data</p>
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -255,7 +255,7 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -266,7 +266,7 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -277,10 +277,10 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Exception message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -288,7 +288,7 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether it is processed synchronously</p>
+         * <p>Indicates whether the request was processed synchronously.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -344,7 +344,7 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether the operation was successful</p>
+             * <p>Indicates whether the operation was successful.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>

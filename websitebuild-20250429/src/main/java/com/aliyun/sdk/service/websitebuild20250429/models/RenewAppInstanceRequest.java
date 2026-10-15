@@ -129,7 +129,7 @@ public class RenewAppInstanceRequest extends Request {
         } 
 
         /**
-         * <p>Business ID</p>
+         * <p>The business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>WD20250718165839000001</p>
@@ -141,7 +141,7 @@ public class RenewAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Ensures idempotence of requests. Generate a unique value from your client to ensure it is unique across different requests. ClientToken only supports ASCII characters and cannot exceed 64 characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>fdfjafdfadfenjeora</p>
@@ -165,10 +165,10 @@ public class RenewAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Extended information</p>
+         * <p>The extended information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;deliveryNodeName&quot;:&quot;交付质检&quot;,&quot;deliveryNodeStatus&quot;:&quot;Finish&quot;,&quot;deliveryOperatorRole&quot;:&quot;Provider&quot;}</p>
+         * <p>{\&quot;deliveryNodeName\&quot;:\&quot;交付质检\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -177,7 +177,7 @@ public class RenewAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Payment type</p>
+         * <p>The payment type.</p>
          * 
          * <strong>example:</strong>
          * <p>PayAsYouGo</p>
@@ -189,7 +189,13 @@ public class RenewAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Required. The unit of the subscription period, Year: Year, Month: Month, Day: Day, Hour: Hour.</p>
+         * <p>Required. The unit of the subscription period. Valid values:</p>
+         * <ul>
+         * <li>Year: year</li>
+         * <li>Month: month</li>
+         * <li>Day: day</li>
+         * <li>Hour: hour.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Month</p>

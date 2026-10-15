@@ -166,7 +166,10 @@ public class QueryInspirationAccountDetailsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. The time is in ISO 8601 format and in the UTC (Z) time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-07-23T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -175,7 +178,10 @@ public class QueryInspirationAccountDetailsRequest extends Request {
         }
 
         /**
-         * OrderColumn.
+         * <p>The field by which to sort the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtCreated</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -184,7 +190,10 @@ public class QueryInspirationAccountDetailsRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The sort order. Valid values: ASC and DESC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -193,7 +202,10 @@ public class QueryInspirationAccountDetailsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -202,7 +214,10 @@ public class QueryInspirationAccountDetailsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -211,7 +226,10 @@ public class QueryInspirationAccountDetailsRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The filter for the source type. Examples: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MARKET_CLOUD_DREAM</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -220,7 +238,10 @@ public class QueryInspirationAccountDetailsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. The time is in ISO 8601 format and in the UTC (Z) time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-21T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

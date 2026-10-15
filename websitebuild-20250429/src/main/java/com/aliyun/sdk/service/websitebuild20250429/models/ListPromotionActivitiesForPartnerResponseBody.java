@@ -210,7 +210,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denied details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -218,7 +221,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -226,7 +232,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -234,7 +243,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -242,7 +254,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -250,7 +265,7 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error arguments.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -258,7 +273,11 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -266,7 +285,7 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -274,7 +293,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -293,7 +315,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -301,7 +326,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The root error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -309,7 +337,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is synchronously processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -583,7 +614,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * ActivityCode.
+             * <p>The activity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acwfradoj5u</p>
              */
             public Builder activityCode(String activityCode) {
                 this.activityCode = activityCode;
@@ -591,7 +625,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ActivityName.
+             * <p>The activity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IP segment filtering statistics</p>
              */
             public Builder activityName(String activityName) {
                 this.activityName = activityName;
@@ -599,7 +636,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ActivityType.
+             * <p>The activity type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SCALE_IN</p>
              */
             public Builder activityType(String activityType) {
                 this.activityType = activityType;
@@ -607,7 +647,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumedQuota.
+             * <p>The consumed quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder consumedQuota(Long consumedQuota) {
                 this.consumedQuota = consumedQuota;
@@ -615,7 +658,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-14 11:57:51</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -623,7 +669,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedBy.
+             * <p>The user who created the activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>onlinehoztestrolebasicallow1755461756261068111(300216315676902267)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -631,7 +680,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * EligibilityConfig.
+             * <p>The eligibility configuration in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder eligibilityConfig(String eligibilityConfig) {
                 this.eligibilityConfig = eligibilityConfig;
@@ -639,7 +691,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * EndDate.
+             * <p>The end date. The value is in the YYYY-MM-DD HH:mm:ss Z format, where Z is the time zone offset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-22 10:18:51 +0800</p>
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -647,7 +702,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OfferConfig.
+             * <p>The offer configuration in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder offerConfig(String offerConfig) {
                 this.offerConfig = offerConfig;
@@ -655,7 +713,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OfferConfigSummary.
+             * <p>The offer configuration summary.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder offerConfigSummary(String offerConfigSummary) {
                 this.offerConfigSummary = offerConfigSummary;
@@ -663,7 +724,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * RemainingQuota.
+             * <p>The remaining quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder remainingQuota(Long remainingQuota) {
                 this.remainingQuota = remainingQuota;
@@ -671,7 +735,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * StartDate.
+             * <p>The start date. The value is in the ISO 8601 format with the time zone set to UTC (Z).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-12T16:00:00.000Z</p>
              */
             public Builder startDate(String startDate) {
                 this.startDate = startDate;
@@ -679,7 +746,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The activity status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FE_ABORTING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -687,7 +757,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQuota.
+             * <p>The total quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalQuota(Long totalQuota) {
                 this.totalQuota = totalQuota;
@@ -695,7 +768,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * TouchpointConfig.
+             * <p>The touchpoint configuration in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder touchpointConfig(String touchpointConfig) {
                 this.touchpointConfig = touchpointConfig;
@@ -703,7 +779,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The value is in the ISO 8601 format with a time zone offset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-10-11T21:13:38.164526965+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -711,7 +790,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * <p>The user who last updated the activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123414</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -719,7 +801,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * WarningThreshold.
+             * <p>The warning threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder warningThreshold(Integer warningThreshold) {
                 this.warningThreshold = warningThreshold;
@@ -786,7 +871,7 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * Activities.
+             * <p>The list of promotional activities.</p>
              */
             public Builder activities(java.util.List<Activities> activities) {
                 this.activities = activities;
@@ -794,7 +879,10 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

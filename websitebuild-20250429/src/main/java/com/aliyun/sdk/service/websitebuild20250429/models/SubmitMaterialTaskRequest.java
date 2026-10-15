@@ -112,7 +112,10 @@ public class SubmitMaterialTaskRequest extends Request {
         }
 
         /**
-         * BizGroupId.
+         * <p>The business group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder bizGroupId(String bizGroupId) {
             this.putQueryParameter("BizGroupId", bizGroupId);
@@ -121,7 +124,15 @@ public class SubmitMaterialTaskRequest extends Request {
         }
 
         /**
+         * <p>The task parameters.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;brandName&quot;: &quot;Brand name&quot;,
+         *     &quot;direction&quot;: &quot;HORIZONTAL&quot;,
+         *     &quot;userPrompt&quot;: &quot;Design requirements&quot;
+         * }</p>
          */
         public Builder taskParam(String taskParam) {
             this.putQueryParameter("TaskParam", taskParam);
@@ -130,6 +141,7 @@ public class SubmitMaterialTaskRequest extends Request {
         }
 
         /**
+         * <p>The task type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

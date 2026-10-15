@@ -87,7 +87,10 @@ public class GetAppWorkspaceDirectoryRequest extends Request {
         } 
 
         /**
-         * ConversationId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b7105a2-2999-430b-ba23-ba09149d5434</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -96,7 +99,10 @@ public class GetAppWorkspaceDirectoryRequest extends Request {
         }
 
         /**
-         * Deep.
+         * <p>The directory depth. This parameter is optional. If set to null or 0, all levels are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder deep(Integer deep) {
             this.putBodyParameter("Deep", deep);
@@ -105,7 +111,10 @@ public class GetAppWorkspaceDirectoryRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>The directory path. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder filePath(String filePath) {
             this.putBodyParameter("FilePath", filePath);

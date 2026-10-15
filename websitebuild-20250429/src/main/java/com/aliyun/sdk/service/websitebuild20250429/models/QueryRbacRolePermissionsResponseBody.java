@@ -184,7 +184,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name. The application with this name is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +239,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters returned.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +247,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>Indicates whether the operation is successful.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +266,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +277,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +288,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is synchronously processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -359,7 +383,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The operation that you want to perform. Set the value to <strong>DeleteIntegration</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>js</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -367,7 +394,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The scenario description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lshm-mysql-coypt</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -375,7 +405,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9953352</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -383,7 +416,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p>The alert rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-uf6wxzsjwavr2kyq92slf-80-clb4</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -476,7 +512,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The operation that you want to perform. Set the value to <strong>GetCreateCustomerInfomation</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accept</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -484,7 +523,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The scenario description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lx_supabase_test_02</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -492,7 +534,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000039405002</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -500,7 +545,11 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p>The statistical method for the Warn level.</p>
+             * <p>The value of <code>Statistics</code> varies by cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring items</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mwaf-apisec0629.wafqax.top-waf</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -658,7 +707,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder currentPageNum(Integer currentPageNum) {
                 this.currentPageNum = currentPageNum;
@@ -666,7 +718,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The request result.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -674,7 +726,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * Next.
+             * <p>The next feature ID.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -682,7 +734,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * NextPage.
+             * <p>Indicates whether a next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder nextPage(Boolean nextPage) {
                 this.nextPage = nextPage;
@@ -690,7 +745,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -698,7 +756,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * PrePage.
+             * <p>Indicates whether a previous page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder prePage(Boolean prePage) {
                 this.prePage = prePage;
@@ -706,7 +767,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultLimit.
+             * <p>The server processes up to 1,000 recent records beyond the pagination limit for the current query. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;
@@ -714,7 +778,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItemNum.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalItemNum(Integer totalItemNum) {
                 this.totalItemNum = totalItemNum;
@@ -722,7 +789,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageNum.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPageNum(Integer totalPageNum) {
                 this.totalPageNum = totalPageNum;

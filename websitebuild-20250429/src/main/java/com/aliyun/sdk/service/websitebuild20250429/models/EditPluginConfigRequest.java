@@ -138,7 +138,10 @@ public class EditPluginConfigRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -147,7 +150,10 @@ public class EditPluginConfigRequest extends Request {
         }
 
         /**
-         * PluginConfig.
+         * <p>The plug-in configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder pluginConfig(String pluginConfig) {
             this.putQueryParameter("PluginConfig", pluginConfig);
@@ -156,7 +162,10 @@ public class EditPluginConfigRequest extends Request {
         }
 
         /**
-         * PluginDesc.
+         * <p>The plug-in description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>根据关键字查询相关的Github Repositories</p>
          */
         public Builder pluginDesc(String pluginDesc) {
             this.putQueryParameter("PluginDesc", pluginDesc);
@@ -165,7 +174,10 @@ public class EditPluginConfigRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * <p>The plug-in ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliplayer-react</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -174,7 +186,10 @@ public class EditPluginConfigRequest extends Request {
         }
 
         /**
-         * PluginName.
+         * <p>The plug-in name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alisecguard</p>
          */
         public Builder pluginName(String pluginName) {
             this.putQueryParameter("PluginName", pluginName);

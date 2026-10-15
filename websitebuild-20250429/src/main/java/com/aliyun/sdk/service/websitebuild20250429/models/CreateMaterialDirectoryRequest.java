@@ -113,6 +113,7 @@ public class CreateMaterialDirectoryRequest extends Request {
         }
 
         /**
+         * <p>The application instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +126,11 @@ public class CreateMaterialDirectoryRequest extends Request {
         }
 
         /**
+         * <p>The folder name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>图片管理</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -134,6 +139,7 @@ public class CreateMaterialDirectoryRequest extends Request {
         }
 
         /**
+         * <p>The parent folder ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

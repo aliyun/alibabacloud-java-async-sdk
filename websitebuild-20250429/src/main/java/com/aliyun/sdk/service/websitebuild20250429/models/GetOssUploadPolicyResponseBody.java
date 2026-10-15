@@ -184,7 +184,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,14 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed. Valid values:</p>
+         * <ul>
+         * <li>false: Retry is not allowed.</li>
+         * <li>true: Retry is allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +210,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ish-intelligence-store-platform-admin-web</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +221,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +232,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +243,7 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters returned.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +251,7 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The task object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +270,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +281,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +292,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is synchronously processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -411,7 +439,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * Dir.
+             * <p>The upload directory path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pano_src/100070-2679478/images/</p>
              */
             public Builder dir(String dir) {
                 this.dir = dir;
@@ -419,7 +450,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The OSS bucket host address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -427,7 +461,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>The Base64-encoded policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Accept</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -435,7 +472,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * <p>The Security Token Service (STS) token. This value is null in non-STS scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -443,7 +483,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * <p>The calculated signature.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -451,7 +494,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The signature version, such as OSS4-HMAC-SHA256.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-04-02</p>
              */
             public Builder version(String version) {
                 this.version = version;

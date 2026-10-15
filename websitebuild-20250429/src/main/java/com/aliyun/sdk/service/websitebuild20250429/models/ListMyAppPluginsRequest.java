@@ -138,7 +138,10 @@ public class ListMyAppPluginsRequest extends Request {
         }
 
         /**
-         * Category.
+         * <p>Filters by category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Status\&quot;: 0, \&quot;Name\&quot;: \&quot;JGHDDLT\&quot;, \&quot;BizCode\&quot;: \&quot;\&quot;, \&quot;CategoryId\&quot;: 30000952447, \&quot;ParentCategoryId\&quot;: 30000952446}</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -147,7 +150,10 @@ public class ListMyAppPluginsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The search keyword that matches name/description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -156,7 +162,10 @@ public class ListMyAppPluginsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -165,7 +174,10 @@ public class ListMyAppPluginsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +186,10 @@ public class ListMyAppPluginsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Filters by status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

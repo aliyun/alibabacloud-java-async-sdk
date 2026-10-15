@@ -210,7 +210,10 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -218,7 +221,10 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -226,7 +232,10 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -234,7 +243,10 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -242,7 +254,13 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> return parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -250,7 +268,7 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -258,7 +276,11 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -266,7 +288,7 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(java.util.List<Module> module) {
             this.module = module;
@@ -274,7 +296,10 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -293,7 +318,10 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -301,7 +329,10 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception.</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -309,7 +340,10 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is synchronously processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -427,7 +461,10 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
             } 
 
             /**
-             * DictCode.
+             * <p>The dictionary code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder dictCode(String dictCode) {
                 this.dictCode = dictCode;
@@ -435,7 +472,10 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
             }
 
             /**
-             * DictLabel.
+             * <p>The dictionary label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>label</p>
              */
             public Builder dictLabel(String dictLabel) {
                 this.dictLabel = dictLabel;
@@ -443,7 +483,10 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
             }
 
             /**
-             * DictType.
+             * <p>The template dictionary type enumeration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product_version</p>
              */
             public Builder dictType(String dictType) {
                 this.dictType = dictType;
@@ -451,7 +494,10 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
             }
 
             /**
-             * DictValue.
+             * <p>The dictionary value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder dictValue(String dictValue) {
                 this.dictValue = dictValue;
@@ -459,7 +505,7 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
             }
 
             /**
-             * HasTemplates.
+             * <p>Indicates whether templates exist.</p>
              */
             public Builder hasTemplates(Boolean hasTemplates) {
                 this.hasTemplates = hasTemplates;
@@ -467,7 +513,17 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
             }
 
             /**
-             * SortOrder.
+             * <p>The sort order. Default value: DESC.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>ASC: Ascending order.</p>
+             * </li>
+             * <li><p>DESC: Descending order.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder sortOrder(Integer sortOrder) {
                 this.sortOrder = sortOrder;

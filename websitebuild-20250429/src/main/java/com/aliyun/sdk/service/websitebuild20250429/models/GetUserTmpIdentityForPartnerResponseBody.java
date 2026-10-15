@@ -106,7 +106,7 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The request result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -141,7 +147,10 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -233,7 +242,10 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * EncryptedAccessKeyId.
+             * <p>The encrypted temporary AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7t2Rzt37ND7-xxx</p>
              */
             public Builder encryptedAccessKeyId(String encryptedAccessKeyId) {
                 this.encryptedAccessKeyId = encryptedAccessKeyId;
@@ -241,7 +253,10 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptedAccessKeySecret.
+             * <p>The encrypted temporary AccessKey secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7t2Rzt37ND7-xxx</p>
              */
             public Builder encryptedAccessKeySecret(String encryptedAccessKeySecret) {
                 this.encryptedAccessKeySecret = encryptedAccessKeySecret;
@@ -249,7 +264,10 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptedSecurityToken.
+             * <p>The encrypted STS token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7t2Rzt37ND7-xxx</p>
              */
             public Builder encryptedSecurityToken(String encryptedSecurityToken) {
                 this.encryptedSecurityToken = encryptedSecurityToken;
@@ -257,7 +275,10 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Expiration.
+             * <p>The estimated expiration time of the credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-29T14:00:00Z</p>
              */
             public Builder expiration(String expiration) {
                 this.expiration = expiration;
@@ -324,7 +345,7 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * Credentials.
+             * <p>The security token.</p>
              */
             public Builder credentials(Credentials credentials) {
                 this.credentials = credentials;
@@ -332,7 +353,7 @@ public class GetUserTmpIdentityForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * HasCustomRoleAuth.
+             * <p>Indicates whether the customer authorization has been obtained.</p>
              */
             public Builder hasCustomRoleAuth(Boolean hasCustomRoleAuth) {
                 this.hasCustomRoleAuth = hasCustomRoleAuth;

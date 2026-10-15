@@ -194,7 +194,10 @@ public class QueryMaterialTaskListRequest extends Request {
         }
 
         /**
-         * BizGroupId.
+         * <p>The ID of the business group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder bizGroupId(String bizGroupId) {
             this.putQueryParameter("BizGroupId", bizGroupId);
@@ -203,7 +206,11 @@ public class QueryMaterialTaskListRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -212,7 +219,10 @@ public class QueryMaterialTaskListRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -221,7 +231,10 @@ public class QueryMaterialTaskListRequest extends Request {
         }
 
         /**
-         * OrderColumn.
+         * <p>The field used for sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtCreated</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -230,7 +243,10 @@ public class QueryMaterialTaskListRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The sort type. Valid values: ASC and DESC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -239,7 +255,10 @@ public class QueryMaterialTaskListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -248,7 +267,10 @@ public class QueryMaterialTaskListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -257,7 +279,7 @@ public class QueryMaterialTaskListRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * <p>The list of task statuses.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             String statusListShrink = shrink(statusList, "StatusList", "json");
@@ -267,7 +289,7 @@ public class QueryMaterialTaskListRequest extends Request {
         }
 
         /**
-         * TaskTypeList.
+         * <p>The list of task types.</p>
          */
         public Builder taskTypeList(java.util.List<String> taskTypeList) {
             String taskTypeListShrink = shrink(taskTypeList, "TaskTypeList", "json");

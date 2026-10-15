@@ -184,7 +184,10 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether a retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ish-intelligence-store-platform-admin-web</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,10 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +239,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters returned.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +247,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +266,10 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +277,10 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +288,10 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -346,7 +370,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
             } 
 
             /**
-             * Children.
+             * <p>The child content.</p>
              */
             public Builder children(java.util.List<?> children) {
                 this.children = children;
@@ -354,7 +378,10 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The full path relative to the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PolarDBInnoDBRedoLogWrites</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -362,7 +389,10 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Evaluable=true</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -429,7 +459,10 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentTime.
+             * <p>The current time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026</p>
              */
             public Builder currentTime(String currentTime) {
                 this.currentTime = currentTime;
@@ -437,7 +470,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryList.
+             * <p>The directory structure.</p>
              */
             public Builder directoryList(java.util.List<DirectoryList> directoryList) {
                 this.directoryList = directoryList;

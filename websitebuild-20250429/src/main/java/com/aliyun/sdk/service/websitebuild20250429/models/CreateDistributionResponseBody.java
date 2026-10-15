@@ -184,7 +184,10 @@ public class CreateDistributionResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,14 @@ public class CreateDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed. Valid values:</p>
+         * <ul>
+         * <li>false: Retry is not allowed.</li>
+         * <li>true: Retry is allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +210,10 @@ public class CreateDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>watermark</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +221,10 @@ public class CreateDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +232,10 @@ public class CreateDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +243,7 @@ public class CreateDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +251,7 @@ public class CreateDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +270,10 @@ public class CreateDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +281,10 @@ public class CreateDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +292,10 @@ public class CreateDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is processed synchronously.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -346,7 +374,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             } 
 
             /**
-             * MaterialFileId.
+             * <p>The file ID in the material center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder materialFileId(String materialFileId) {
                 this.materialFileId = materialFileId;
@@ -354,7 +385,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * OssUrl.
+             * <p>The CDN URL of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://another-bucket.oss-cn-hangzhou.aliyuncs.com/path/to/file3%5C%5C%22%5C%5C%22%60curl">http://another-bucket.oss-cn-hangzhou.aliyuncs.com/path/to/file3\\&quot;\\&quot;`curl</a> YFLd1vS4.popscan.xaliyun.com`\&quot;\&quot;</p>
              */
             public Builder ossUrl(String ossUrl) {
                 this.ossUrl = ossUrl;
@@ -362,7 +396,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * SortOrder.
+             * <p>The sort order number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Desc</p>
              */
             public Builder sortOrder(Integer sortOrder) {
                 this.sortOrder = sortOrder;
@@ -397,6 +434,9 @@ public class CreateDistributionResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ChannelAccount")
         private String channelAccount;
+
+        @com.aliyun.core.annotation.NameInMap("ChannelAccountName")
+        private String channelAccountName;
 
         @com.aliyun.core.annotation.NameInMap("ChannelName")
         private String channelName;
@@ -434,6 +474,7 @@ public class CreateDistributionResponseBody extends TeaModel {
             this.adaptedTitle = builder.adaptedTitle;
             this.channel = builder.channel;
             this.channelAccount = builder.channelAccount;
+            this.channelAccountName = builder.channelAccountName;
             this.channelName = builder.channelName;
             this.channelType = builder.channelType;
             this.coverImages = builder.coverImages;
@@ -487,6 +528,13 @@ public class CreateDistributionResponseBody extends TeaModel {
          */
         public String getChannelAccount() {
             return this.channelAccount;
+        }
+
+        /**
+         * @return channelAccountName
+         */
+        public String getChannelAccountName() {
+            return this.channelAccountName;
         }
 
         /**
@@ -565,6 +613,7 @@ public class CreateDistributionResponseBody extends TeaModel {
             private String adaptedTitle; 
             private String channel; 
             private String channelAccount; 
+            private String channelAccountName; 
             private String channelName; 
             private String channelType; 
             private java.util.List<CoverImages> coverImages; 
@@ -585,6 +634,7 @@ public class CreateDistributionResponseBody extends TeaModel {
                 this.adaptedTitle = model.adaptedTitle;
                 this.channel = model.channel;
                 this.channelAccount = model.channelAccount;
+                this.channelAccountName = model.channelAccountName;
                 this.channelName = model.channelName;
                 this.channelType = model.channelType;
                 this.coverImages = model.coverImages;
@@ -598,7 +648,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             } 
 
             /**
-             * AdaptStatus.
+             * <p>The AI adaptation status. Valid values: NONE, ADAPTING, DONE, and FAILED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder adaptStatus(String adaptStatus) {
                 this.adaptStatus = adaptStatus;
@@ -606,7 +659,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * AdaptedContent.
+             * <p>The channel-adapted content body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder adaptedContent(String adaptedContent) {
                 this.adaptedContent = adaptedContent;
@@ -614,7 +670,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * AdaptedTitle.
+             * <p>The channel-adapted title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder adaptedTitle(String adaptedTitle) {
                 this.adaptedTitle = adaptedTitle;
@@ -622,7 +681,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * Channel.
+             * <p>The channel enumeration value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WECHAT</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -630,7 +692,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelAccount.
+             * <p>The publishing account snapshot. For overseas channels, this is the OWLAIS socialAccountNo.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder channelAccount(String channelAccount) {
                 this.channelAccount = channelAccount;
@@ -638,7 +703,21 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelName.
+             * <p>The display name of the publishing account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
+             */
+            public Builder channelAccountName(String channelAccountName) {
+                this.channelAccountName = channelAccountName;
+                return this;
+            }
+
+            /**
+             * <p>The display name of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ch3</p>
              */
             public Builder channelName(String channelName) {
                 this.channelName = channelName;
@@ -646,7 +725,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelType.
+             * <p>The channel type. Valid values: DOMESTIC, OVERSEA, and INTERNAL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -654,7 +736,7 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * CoverImages.
+             * <p>The list of channel cover images.</p>
              */
             public Builder coverImages(java.util.List<CoverImages> coverImages) {
                 this.coverImages = coverImages;
@@ -662,7 +744,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * DraftId.
+             * <p>The channel draft ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>draft-789</p>
              */
             public Builder draftId(String draftId) {
                 this.draftId = draftId;
@@ -670,7 +755,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalId.
+             * <p>The ID returned by the platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1378080</p>
              */
             public Builder externalId(String externalId) {
                 this.externalId = externalId;
@@ -678,7 +766,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalUrl.
+             * <p>The redirect URL of the platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://net-video.mistong.com:10160/api/preview/video/2026/04/15/67603b7c84694e619435e4662e98cb23_20260415095633.mp4">https://net-video.mistong.com:10160/api/preview/video/2026/04/15/67603b7c84694e619435e4662e98cb23_20260415095633.mp4</a></p>
              */
             public Builder externalUrl(String externalUrl) {
                 this.externalUrl = externalUrl;
@@ -686,7 +777,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * FailReason.
+             * <p>The failure reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder failReason(String failReason) {
                 this.failReason = failReason;
@@ -694,7 +788,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * PublishConfig.
+             * <p>The channel-specific publish configuration in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder publishConfig(String publishConfig) {
                 this.publishConfig = publishConfig;
@@ -702,7 +799,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * PublishedAt.
+             * <p>The publish time, in millisecond timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder publishedAt(Long publishedAt) {
                 this.publishedAt = publishedAt;
@@ -710,7 +810,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. Valid values: EDITING, PUBLISHING, SUCCESS, and FAILED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -803,7 +906,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             } 
 
             /**
-             * ArticleId.
+             * <p>The article ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28733</p>
              */
             public Builder articleId(String articleId) {
                 this.articleId = articleId;
@@ -811,7 +917,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * BatchId.
+             * <p>The distribution batch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pcb-uf6dkhq311uxuwo2</p>
              */
             public Builder batchId(String batchId) {
                 this.batchId = batchId;
@@ -819,7 +928,10 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time, in millisecond timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-03 02:05:01</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -827,7 +939,7 @@ public class CreateDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * Drafts.
+             * <p>The list of channel drafts within the batch.</p>
              */
             public Builder drafts(java.util.List<Drafts> drafts) {
                 this.drafts = drafts;

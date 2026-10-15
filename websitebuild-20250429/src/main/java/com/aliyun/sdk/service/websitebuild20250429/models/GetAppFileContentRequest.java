@@ -96,7 +96,10 @@ public class GetAppFileContentRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>The conversation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</p>
          */
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);
@@ -105,7 +108,10 @@ public class GetAppFileContentRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index.html</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);

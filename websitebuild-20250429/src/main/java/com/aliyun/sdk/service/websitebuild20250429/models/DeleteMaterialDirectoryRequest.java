@@ -96,7 +96,10 @@ public class DeleteMaterialDirectoryRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -105,7 +108,10 @@ public class DeleteMaterialDirectoryRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * <p>The folder ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68157a0a-769a-4364-bbdc-a0e2cf3d5ad</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);

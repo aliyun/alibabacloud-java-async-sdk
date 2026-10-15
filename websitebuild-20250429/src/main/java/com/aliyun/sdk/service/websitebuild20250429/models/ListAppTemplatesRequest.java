@@ -236,7 +236,10 @@ public class ListAppTemplatesRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>The application type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TRACE</p>
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -245,7 +248,10 @@ public class ListAppTemplatesRequest extends Request {
         }
 
         /**
-         * ColorScheme.
+         * <p>The color scheme.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Red</p>
          */
         public Builder colorScheme(String colorScheme) {
             this.putQueryParameter("ColorScheme", colorScheme);
@@ -254,7 +260,10 @@ public class ListAppTemplatesRequest extends Request {
         }
 
         /**
-         * Industry.
+         * <p>The industry category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Retail</p>
          */
         public Builder industry(String industry) {
             this.putQueryParameter("Industry", industry);
@@ -263,7 +272,10 @@ public class ListAppTemplatesRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -272,7 +284,10 @@ public class ListAppTemplatesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of results returned per query. Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -281,7 +296,10 @@ public class ListAppTemplatesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query. This parameter is empty if there is no next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -308,7 +326,10 @@ public class ListAppTemplatesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -317,7 +338,10 @@ public class ListAppTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -326,7 +350,10 @@ public class ListAppTemplatesRequest extends Request {
         }
 
         /**
-         * ProductVersion.
+         * <p>The edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V2</p>
          */
         public Builder productVersion(String productVersion) {
             this.putQueryParameter("ProductVersion", productVersion);
@@ -335,7 +362,10 @@ public class ListAppTemplatesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The template status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

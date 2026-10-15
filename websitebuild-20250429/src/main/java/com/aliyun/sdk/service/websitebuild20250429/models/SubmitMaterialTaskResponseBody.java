@@ -223,7 +223,10 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the permission verification failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -231,7 +234,14 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed. Valid values:</p>
+         * <ul>
+         * <li>false: Retry is not allowed.</li>
+         * <li>true: Retry is allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -239,7 +249,10 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name. The application with this name is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dewuApp</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -247,7 +260,10 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -255,7 +271,10 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERRROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -263,7 +282,7 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -271,7 +290,10 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code. The ErrorCode field is not returned if the request is successful. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -279,7 +301,10 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -287,7 +312,7 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -306,7 +331,10 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The root error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -314,7 +342,10 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The root error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -322,7 +353,10 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -330,7 +364,10 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is processed synchronously.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -396,7 +433,10 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * BizGroupId.
+             * <p>The business group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder bizGroupId(String bizGroupId) {
                 this.bizGroupId = bizGroupId;
@@ -404,7 +444,10 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01baf7bcdd5c3a4c8d481cdd57c15837</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

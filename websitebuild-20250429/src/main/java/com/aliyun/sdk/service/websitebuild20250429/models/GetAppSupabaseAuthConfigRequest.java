@@ -96,7 +96,10 @@ public class GetAppSupabaseAuthConfigRequest extends Request {
         }
 
         /**
-         * AuthType.
+         * <p>The authentication type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL_AUTH_FLAG</p>
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -105,7 +108,10 @@ public class GetAppSupabaseAuthConfigRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250801152639000005</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);

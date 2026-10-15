@@ -96,7 +96,10 @@ public class SaveAppSupabaseSecretsRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -105,7 +108,10 @@ public class SaveAppSupabaseSecretsRequest extends Request {
         }
 
         /**
-         * SecretsJson.
+         * <p>The JSON string of the secrets list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;abc&quot;}</p>
          */
         public Builder secretsJson(String secretsJson) {
             this.putQueryParameter("SecretsJson", secretsJson);

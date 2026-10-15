@@ -83,6 +83,7 @@ public class DeleteMaterialTaskRequest extends Request {
         }
 
         /**
+         * <p>The list of task IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {

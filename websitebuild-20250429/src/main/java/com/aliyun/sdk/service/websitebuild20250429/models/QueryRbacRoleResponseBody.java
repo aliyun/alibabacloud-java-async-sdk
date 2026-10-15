@@ -184,7 +184,10 @@ public class QueryRbacRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,14 @@ public class QueryRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed. Valid values:</p>
+         * <ul>
+         * <li>false: Retry is not allowed.</li>
+         * <li>true: Retry is allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +210,10 @@ public class QueryRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name. The application with this name is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +221,10 @@ public class QueryRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +232,10 @@ public class QueryRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +243,7 @@ public class QueryRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters returned.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +251,7 @@ public class QueryRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +270,10 @@ public class QueryRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +281,10 @@ public class QueryRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +292,10 @@ public class QueryRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -385,7 +413,10 @@ public class QueryRbacRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The time when the task was created, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-06T10:20:09Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -393,7 +424,10 @@ public class QueryRbacRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16257</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -401,7 +435,14 @@ public class QueryRbacRoleResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>The default status. Valid values:</p>
+             * <ul>
+             * <li>0: not default.</li>
+             * <li>1: default.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -409,7 +450,11 @@ public class QueryRbacRoleResponseBody extends TeaModel {
             }
 
             /**
-             * IsSystem.
+             * <p>Indicates whether the approval template is system-defined. Valid values:</p>
+             * <ul>
+             * <li>1: Yes.</li>
+             * <li>0: No.</li>
+             * </ul>
              */
             public Builder isSystem(Boolean isSystem) {
                 this.isSystem = isSystem;
@@ -417,7 +462,10 @@ public class QueryRbacRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://anchashiscan.oss-cn-hangzhou.aliyuncs.com/prodpopscansDZBFBGr</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -425,7 +473,10 @@ public class QueryRbacRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>文件名</p>
              */
             public Builder name(String name) {
                 this.name = name;

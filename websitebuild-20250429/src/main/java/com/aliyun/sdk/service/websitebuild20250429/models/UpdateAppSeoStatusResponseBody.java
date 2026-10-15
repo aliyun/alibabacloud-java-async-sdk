@@ -184,7 +184,7 @@ public class UpdateAppSeoStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Detailed reason for access denial.</p>
+         * <p>The detailed reason why access is denied.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class UpdateAppSeoStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether retry is allowed</p>
+         * <p>Indicates whether retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class UpdateAppSeoStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Application name</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>
@@ -217,7 +217,7 @@ public class UpdateAppSeoStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error code.</p>
+         * <p>The dynamic error code.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -228,9 +228,9 @@ public class UpdateAppSeoStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error message, used to replace the <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+         * <p>The dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the input request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class UpdateAppSeoStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned error parameters</p>
+         * <p>The error parameters returned.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -250,7 +250,7 @@ public class UpdateAppSeoStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response data</p>
+         * <p>The response data.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -261,7 +261,7 @@ public class UpdateAppSeoStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -272,7 +272,7 @@ public class UpdateAppSeoStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -283,10 +283,10 @@ public class UpdateAppSeoStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Exception message</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -294,7 +294,7 @@ public class UpdateAppSeoStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

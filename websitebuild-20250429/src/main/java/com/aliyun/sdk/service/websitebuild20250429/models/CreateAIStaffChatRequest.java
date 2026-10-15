@@ -115,7 +115,10 @@ public class CreateAIStaffChatRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250801154628000001</p>
          */
         public Builder bizId(String bizId) {
             this.putBodyParameter("BizId", bizId);
@@ -124,7 +127,10 @@ public class CreateAIStaffChatRequest extends Request {
         }
 
         /**
-         * ChatId.
+         * <p>The chat ID. Pass in this parameter to resume a conversation after an interruption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3b465fe1-6f06-4899-af9f-d43d9338df25</p>
          */
         public Builder chatId(String chatId) {
             this.putBodyParameter("ChatId", chatId);
@@ -133,7 +139,10 @@ public class CreateAIStaffChatRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>The conversation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b7105a2-2999-430b-ba23-ba09149d5434</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -142,7 +151,7 @@ public class CreateAIStaffChatRequest extends Request {
         }
 
         /**
-         * Messages.
+         * <p>The list of conversation messages.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
             this.putBodyParameter("Messages", messages);
@@ -151,7 +160,7 @@ public class CreateAIStaffChatRequest extends Request {
         }
 
         /**
-         * MetaData.
+         * <p>The additional information for the conversation.</p>
          */
         public Builder metaData(java.util.Map<String, String> metaData) {
             this.putBodyParameter("MetaData", metaData);
@@ -258,7 +267,10 @@ public class CreateAIStaffChatRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <p>The message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;CodeRevision\&quot;: \&quot;1750040991876284109\&quot;}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -266,7 +278,10 @@ public class CreateAIStaffChatRequest extends Request {
             }
 
             /**
-             * ContentType.
+             * <p>The content type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application/octet-stream</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -274,7 +289,7 @@ public class CreateAIStaffChatRequest extends Request {
             }
 
             /**
-             * MetaData.
+             * <p>The business extension metadata in Map format. The value must be a JSON string.</p>
              */
             public Builder metaData(java.util.Map<String, String> metaData) {
                 this.metaData = metaData;
@@ -282,7 +297,10 @@ public class CreateAIStaffChatRequest extends Request {
             }
 
             /**
-             * Role.
+             * <p>The conversation role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx_dn</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -290,7 +308,10 @@ public class CreateAIStaffChatRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>risk</p>
              */
             public Builder type(String type) {
                 this.type = type;

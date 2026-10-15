@@ -73,7 +73,10 @@ public class GetIcpFilingInfoForPartnerRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The customer business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -82,7 +85,10 @@ public class GetIcpFilingInfoForPartnerRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yjdw.bpu.edu.cn-waf</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);

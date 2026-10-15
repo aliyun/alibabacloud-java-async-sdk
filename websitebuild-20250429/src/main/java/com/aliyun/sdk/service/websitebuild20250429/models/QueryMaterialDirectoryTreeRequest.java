@@ -111,7 +111,10 @@ public class QueryMaterialDirectoryTreeRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The application instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250731233102000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -120,7 +123,7 @@ public class QueryMaterialDirectoryTreeRequest extends Request {
         }
 
         /**
-         * HiddenPublic.
+         * <p>Specifies whether to hide shared folders.</p>
          */
         public Builder hiddenPublic(Boolean hiddenPublic) {
             this.putQueryParameter("HiddenPublic", hiddenPublic);
@@ -129,6 +132,7 @@ public class QueryMaterialDirectoryTreeRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to request the first-level root folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

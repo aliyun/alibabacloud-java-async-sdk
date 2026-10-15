@@ -275,7 +275,10 @@ public class AppServiceAggregate extends TeaModel {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20251211153330000001</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -283,7 +286,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * Deleted.
+         * <p>The deletion flag.</p>
          */
         public Builder deleted(Integer deleted) {
             this.deleted = deleted;
@@ -291,7 +294,10 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. It is in ISO 8601 format and uses the UTC (Z) time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-07-18T02:23:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -299,7 +305,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * EspBizId.
+         * <p>esp bizId</p>
          */
         public Builder espBizId(String espBizId) {
             this.espBizId = espBizId;
@@ -307,7 +313,10 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * GmtCreate.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-07-30T02:08:40Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -315,7 +324,10 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tue Sep 09 10:27:49 CST 2025</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -323,7 +335,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * Group.
+         * <p>The operation address of the application.</p>
          */
         public Builder group(AppServiceGroup group) {
             this.group = group;
@@ -331,7 +343,10 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * InstanceBizId.
+         * <p>The associated business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250915163734000001</p>
          */
         public Builder instanceBizId(String instanceBizId) {
             this.instanceBizId = instanceBizId;
@@ -339,7 +354,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The service name.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -347,7 +362,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * NodeList.
+         * <p>The list of flow nodes.</p>
          */
         public Builder nodeList(java.util.List<TreeNode> nodeList) {
             this.nodeList = nodeList;
@@ -355,7 +370,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * OperationAddress.
+         * <p>The unique identifier for an operation.</p>
          */
         public Builder operationAddress(AppOperationAddress operationAddress) {
             this.operationAddress = operationAddress;
@@ -363,7 +378,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * Profile.
+         * <p>The configuration information of the application service.</p>
          */
         public Builder profile(AppServiceProfile profile) {
             this.profile = profile;
@@ -371,7 +386,10 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * ServiceType.
+         * <p>The service type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEBSITE_DESIGN</p>
          */
         public Builder serviceType(String serviceType) {
             this.serviceType = serviceType;
@@ -379,7 +397,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * ServiceTypeText.
+         * <p>The description of the service type.</p>
          */
         public Builder serviceTypeText(String serviceTypeText) {
             this.serviceTypeText = serviceTypeText;
@@ -387,7 +405,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * Slug.
+         * <p>The application identifier.</p>
          */
         public Builder slug(String slug) {
             this.slug = slug;
@@ -395,7 +413,10 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. It is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1754447102000</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -403,7 +424,10 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -411,7 +435,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

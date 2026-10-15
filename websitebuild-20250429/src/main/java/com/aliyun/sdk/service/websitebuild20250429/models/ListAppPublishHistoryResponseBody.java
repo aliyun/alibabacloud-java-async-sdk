@@ -210,7 +210,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -218,7 +221,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retries are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -226,7 +232,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The name of the frontend application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -234,7 +243,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -242,7 +254,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message. This parameter is not used and can be ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -250,7 +265,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -258,7 +273,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return for a single query. Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -266,7 +284,12 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The data table module. Valid values:</p>
+         * <ul>
+         * <li>ABTest: experiment data table</li>
+         * <li>ExperimentTool: experiment tool table</li>
+         * <li>DataDiagnosis: data diagnostics</li>
+         * </ul>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -274,7 +297,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query. This parameter is empty if no next query is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -293,7 +319,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -301,7 +330,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -309,7 +341,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -609,7 +644,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CanQuickRevert.
+             * <p>Indicates whether quick rollback is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canQuickRevert(String canQuickRevert) {
                 this.canQuickRevert = canQuickRevert;
@@ -617,7 +655,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * CommitHash.
+             * <p>The commit hash of the code.</p>
              */
             public Builder commitHash(String commitHash) {
                 this.commitHash = commitHash;
@@ -625,7 +663,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStep.
+             * <p>The current step number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE_CHECK</p>
              */
             public Builder currentStep(String currentStep) {
                 this.currentStep = currentStep;
@@ -633,7 +674,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStepCode.
+             * <p>The code of the current release step.</p>
              */
             public Builder currentStepCode(String currentStepCode) {
                 this.currentStepCode = currentStepCode;
@@ -641,7 +682,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * DeployChannel.
+             * <p>The deployment channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PC</p>
              */
             public Builder deployChannel(String deployChannel) {
                 this.deployChannel = deployChannel;
@@ -649,7 +693,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The application description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PSKB</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -657,7 +704,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorStep.
+             * <p>The release process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error</p>
              */
             public Builder errorStep(String errorStep) {
                 this.errorStep = errorStep;
@@ -665,7 +715,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorStepCode.
+             * <p>The code of the release step where the error occurred.</p>
              */
             public Builder errorStepCode(String errorStepCode) {
                 this.errorStepCode = errorStepCode;
@@ -673,7 +723,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * IsFinish.
+             * <p>Indicates whether the operation is completed.</p>
              */
             public Builder isFinish(Boolean isFinish) {
                 this.isFinish = isFinish;
@@ -681,7 +731,14 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * IsSuccess.
+             * <p>Indicates whether the resource allocation for the financial unit is successful. Valid values:</p>
+             * <ul>
+             * <li>true: successful</li>
+             * <li>false: failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isSuccess(Boolean isSuccess) {
                 this.isSuccess = isSuccess;
@@ -689,7 +746,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -697,7 +757,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * <p>The sort order. Valid values: ASC and DESC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DESC</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -705,7 +768,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * OrderTypeCode.
+             * <p>The code of the release order type.</p>
              */
             public Builder orderTypeCode(String orderTypeCode) {
                 this.orderTypeCode = orderTypeCode;
@@ -713,7 +776,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * <p>The transcoding progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder percent(Integer percent) {
                 this.percent = percent;
@@ -721,7 +787,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * PublishNumber.
+             * <p>The release number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder publishNumber(String publishNumber) {
                 this.publishNumber = publishNumber;
@@ -729,7 +798,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * PublishOrderId.
+             * <p>The release order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder publishOrderId(Long publishOrderId) {
                 this.publishOrderId = publishOrderId;
@@ -737,6 +809,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The release time, in the UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -748,7 +821,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * StepCodes.
+             * <p>The list of release step codes.</p>
              */
             public Builder stepCodes(java.util.List<String> stepCodes) {
                 this.stepCodes = stepCodes;
@@ -756,7 +829,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Steps.
+             * <p>The specific configurations of the component.</p>
              */
             public Builder steps(java.util.List<String> steps) {
                 this.steps = steps;
@@ -764,7 +837,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Subchannel.
+             * <p>The release subchannel.</p>
              */
             public Builder subchannel(String subchannel) {
                 this.subchannel = subchannel;
@@ -870,7 +943,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPublishOrderId.
+             * <p>The ID of the current release order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder currentPublishOrderId(Long currentPublishOrderId) {
                 this.currentPublishOrderId = currentPublishOrderId;
@@ -878,7 +954,11 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * History.
+             * <p>Specifies whether to display the history of applying alert templates to application groups. Valid values:</p>
+             * <ul>
+             * <li>true: displayed.</li>
+             * <li>false: not displayed. Default value.</li>
+             * </ul>
              */
             public Builder history(java.util.List<History> history) {
                 this.history = history;
@@ -886,7 +966,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -894,7 +977,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -902,7 +988,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

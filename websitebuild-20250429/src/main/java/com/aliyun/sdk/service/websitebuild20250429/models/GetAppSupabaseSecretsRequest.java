@@ -96,7 +96,10 @@ public class GetAppSupabaseSecretsRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250801154628000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -105,7 +108,10 @@ public class GetAppSupabaseSecretsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2_</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

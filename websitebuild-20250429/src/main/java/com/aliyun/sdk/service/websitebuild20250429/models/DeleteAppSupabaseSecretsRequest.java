@@ -96,7 +96,10 @@ public class DeleteAppSupabaseSecretsRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250801154628000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -105,7 +108,10 @@ public class DeleteAppSupabaseSecretsRequest extends Request {
         }
 
         /**
-         * KeysJson.
+         * <p>The JSON list of keys to be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;key&quot;}</p>
          */
         public Builder keysJson(String keysJson) {
             this.putQueryParameter("KeysJson", keysJson);

@@ -184,7 +184,10 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason for the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retries are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,7 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The application module.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +269,10 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +280,10 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +291,10 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -287,11 +314,17 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
      * <p>CheckResourceMeasureResponseBody</p>
      */
     public static class Module extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DesiredTotal")
+        private Long desiredTotal;
+
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("Limit")
+        private Long limit;
 
         @com.aliyun.core.annotation.NameInMap("Passed")
         private Boolean passed;
@@ -299,11 +332,17 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceCode")
         private String resourceCode;
 
+        @com.aliyun.core.annotation.NameInMap("UpgradeAvailable")
+        private Boolean upgradeAvailable;
+
         private Module(Builder builder) {
+            this.desiredTotal = builder.desiredTotal;
             this.errorCode = builder.errorCode;
             this.errorMessage = builder.errorMessage;
+            this.limit = builder.limit;
             this.passed = builder.passed;
             this.resourceCode = builder.resourceCode;
+            this.upgradeAvailable = builder.upgradeAvailable;
         }
 
         public static Builder builder() {
@@ -312,6 +351,13 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
 
         public static Module create() {
             return builder().build();
+        }
+
+        /**
+         * @return desiredTotal
+         */
+        public Long getDesiredTotal() {
+            return this.desiredTotal;
         }
 
         /**
@@ -329,6 +375,13 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
+         * @return limit
+         */
+        public Long getLimit() {
+            return this.limit;
+        }
+
+        /**
          * @return passed
          */
         public Boolean getPassed() {
@@ -342,24 +395,51 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
             return this.resourceCode;
         }
 
+        /**
+         * @return upgradeAvailable
+         */
+        public Boolean getUpgradeAvailable() {
+            return this.upgradeAvailable;
+        }
+
         public static final class Builder {
+            private Long desiredTotal; 
             private String errorCode; 
             private String errorMessage; 
+            private Long limit; 
             private Boolean passed; 
             private String resourceCode; 
+            private Boolean upgradeAvailable; 
 
             private Builder() {
             } 
 
             private Builder(Module model) {
+                this.desiredTotal = model.desiredTotal;
                 this.errorCode = model.errorCode;
                 this.errorMessage = model.errorMessage;
+                this.limit = model.limit;
                 this.passed = model.passed;
                 this.resourceCode = model.resourceCode;
+                this.upgradeAvailable = model.upgradeAvailable;
             } 
 
             /**
-             * ErrorCode.
+             * <p>This field is returned only for APP_WORKSPACE quantity pre-checks. It specifies the final total quantity to be saved, not the current increment. The issue quantity is the sum of common issues and word-of-mouth issues, and the competitor quantity is the total number of competitors after editing. This field is empty for APP and USER checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
+             */
+            public Builder desiredTotal(Long desiredTotal) {
+                this.desiredTotal = desiredTotal;
+                return this;
+            }
+
+            /**
+             * <p>The error code returned when the check fails. This field is null when the check passes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -367,7 +447,10 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message returned when the check fails. This field is null when the check passes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stream push failed</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -375,7 +458,21 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
             }
 
             /**
-             * Passed.
+             * <p>This field is returned only for APP_WORKSPACE quantity pre-checks. It specifies the maximum number of issues or competitors allowed by the current commodity edition, not the remaining quota. This field is empty for APP and USER checks, or when the edition benefits cannot be determined.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
+             */
+            public Builder limit(Long limit) {
+                this.limit = limit;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the check is passed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder passed(Boolean passed) {
                 this.passed = passed;
@@ -383,10 +480,24 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceCode.
+             * <p>The resource identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TransitRouterVpcAttachment</p>
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether a purchasable higher edition exists that can accommodate the DesiredTotal. This field is true only when the capacity of the current edition is insufficient and a higher edition meets the requirement. Otherwise, it is false. This field may be empty for APP and USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder upgradeAvailable(Boolean upgradeAvailable) {
+                this.upgradeAvailable = upgradeAvailable;
                 return this;
             }
 

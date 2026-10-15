@@ -106,7 +106,10 @@ public class CreateLogoTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error codes in this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +117,10 @@ public class CreateLogoTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -133,7 +139,10 @@ public class CreateLogoTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +150,10 @@ public class CreateLogoTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID returned when the call is successful. Keep this ID safe. This ID is required when you query the creation status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c3r127e325at9yd</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

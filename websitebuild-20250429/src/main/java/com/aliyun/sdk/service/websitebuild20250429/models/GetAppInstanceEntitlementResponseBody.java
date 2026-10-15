@@ -184,7 +184,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denied details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ish-intelligence-store-platform-admin-web</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error arguments.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +269,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +280,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The root error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +291,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -528,7 +555,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             } 
 
             /**
-             * Allocated.
+             * <p>Indicates whether an instance is allocated.</p>
              */
             public Builder allocated(Boolean allocated) {
                 this.allocated = allocated;
@@ -536,7 +563,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * Available.
+             * <p>Indicates whether this entitlement item is currently available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -544,7 +574,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The code of the entitlement item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -552,7 +585,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * Configured.
+             * <p>Indicates whether the configuration is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder configured(Boolean configured) {
                 this.configured = configured;
@@ -560,7 +596,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * Entitled.
+             * <p>Indicates whether the edition grants this entitlement item.</p>
              */
             public Builder entitled(Boolean entitled) {
                 this.entitled = entitled;
@@ -568,7 +604,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureType.
+             * <p>The feature source type. Valid values: PLUGIN, SKILL, CHANNEL, and SYSTEM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder featureType(String featureType) {
                 this.featureType = featureType;
@@ -576,7 +615,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The runtime instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_v2intl_public_intl-sg-i5c43rcpw04</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -584,7 +626,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the entitlement item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4e46d24b56bfa944b5e6f2305715bc4e.jpg</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -592,7 +637,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * PluginId.
+             * <p>The plug-in ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alipay-isv</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -600,7 +648,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * Quota.
+             * <p>The total quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder quota(Long quota) {
                 this.quota = quota;
@@ -608,7 +659,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * Remaining.
+             * <p>The remaining amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder remaining(Long remaining) {
                 this.remaining = remaining;
@@ -616,7 +670,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceCode.
+             * <p>The association code of the resource domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SmsCount</p>
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
@@ -624,7 +681,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type. Valid values: QUOTA and LIMIT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>filesystem</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -632,7 +692,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * Running.
+             * <p>Indicates whether the instance is running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder running(Boolean running) {
                 this.running = running;
@@ -640,7 +703,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The entitlement type. Valid values: FEATURE, RESOURCE, and RUNTIME.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>question</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -648,7 +714,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * UsagePercent.
+             * <p>The usage percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usagePercent(Integer usagePercent) {
                 this.usagePercent = usagePercent;
@@ -656,7 +725,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * Used.
+             * <p>The used amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3295422523872</p>
              */
             public Builder used(Long used) {
                 this.used = used;
@@ -723,7 +795,10 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             } 
 
             /**
-             * BizId.
+             * <p>The business ID of the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WD20250703155602000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -731,7 +806,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * <p>The list of all entitlement items.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

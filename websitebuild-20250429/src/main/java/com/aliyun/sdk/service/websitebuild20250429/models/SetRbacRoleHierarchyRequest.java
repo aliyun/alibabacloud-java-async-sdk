@@ -110,7 +110,10 @@ public class SetRbacRoleHierarchyRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -119,7 +122,10 @@ public class SetRbacRoleHierarchyRequest extends Request {
         }
 
         /**
-         * ChildRoleId.
+         * <p>The child role ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fc94cc51-310f-4485-adb2-ed8c706aff3b</p>
          */
         public Builder childRoleId(String childRoleId) {
             this.putQueryParameter("ChildRoleId", childRoleId);
@@ -128,7 +134,10 @@ public class SetRbacRoleHierarchyRequest extends Request {
         }
 
         /**
-         * ParentRoleId.
+         * <p>The parent role ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71e07711-9a17-49f4-9f83-387a60ee5b64</p>
          */
         public Builder parentRoleId(String parentRoleId) {
             this.putQueryParameter("ParentRoleId", parentRoleId);

@@ -67,7 +67,7 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The request result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -209,7 +209,10 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthStatus.
+             * <p>The authorization status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disabled</p>
              */
             public Builder authStatus(String authStatus) {
                 this.authStatus = authStatus;
@@ -217,7 +220,10 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * <p>The business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WS20260206134402000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -225,7 +231,10 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
             }
 
             /**
-             * IcpFiled.
+             * <p>The ICP filing status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder icpFiled(Boolean icpFiled) {
                 this.icpFiled = icpFiled;
@@ -233,7 +242,10 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
             }
 
             /**
-             * PlatformAppid.
+             * <p>The mini program ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wx7f122a7d23fdxxxx</p>
              */
             public Builder platformAppid(String platformAppid) {
                 this.platformAppid = platformAppid;
@@ -241,7 +253,10 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
             }
 
             /**
-             * PreviewQrCodeUrl.
+             * <p>The preview QR code URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx">http://xxxx</a></p>
              */
             public Builder previewQrCodeUrl(String previewQrCodeUrl) {
                 this.previewQrCodeUrl = previewQrCodeUrl;
@@ -249,7 +264,10 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
             }
 
             /**
-             * ProductionQrCodeUrl.
+             * <p>The production QR code URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx">http://xxxx</a></p>
              */
             public Builder productionQrCodeUrl(String productionQrCodeUrl) {
                 this.productionQrCodeUrl = productionQrCodeUrl;
@@ -257,7 +275,7 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
             }
 
             /**
-             * SettingValues.
+             * <p>The extension information.</p>
              */
             public Builder settingValues(java.util.Map<String, String> settingValues) {
                 this.settingValues = settingValues;

@@ -124,7 +124,10 @@ public class GetAppRecommendedCommoditiesRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID of the application instance. This parameter is required in Scenario 1 and is used to filter instance versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -133,7 +136,7 @@ public class GetAppRecommendedCommoditiesRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>The extended information.</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -142,7 +145,7 @@ public class GetAppRecommendedCommoditiesRequest extends Request {
         }
 
         /**
-         * ResourceConditions.
+         * <p>The resource filtering conditions.</p>
          */
         public Builder resourceConditions(String resourceConditions) {
             this.putQueryParameter("ResourceConditions", resourceConditions);
@@ -151,7 +154,10 @@ public class GetAppRecommendedCommoditiesRequest extends Request {
         }
 
         /**
-         * Scene.
+         * <p>The scenarios. Valid values: ai_chat and inspiration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataworksManualTask</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);

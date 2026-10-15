@@ -93,7 +93,10 @@ public class AppOperateAction extends TeaModel {
         } 
 
         /**
-         * <p>用于唯一标识一个操作行为</p>
+         * <p>The key used to uniquely identify an action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BeginDialogue</p>
          */
         public Builder actionKey(String actionKey) {
             this.actionKey = actionKey;
@@ -101,7 +104,7 @@ public class AppOperateAction extends TeaModel {
         }
 
         /**
-         * <p>用于在界面中展示操作名称</p>
+         * <p>The text used to display the action name in the user interface.</p>
          */
         public Builder actionText(String actionText) {
             this.actionText = actionText;
@@ -109,7 +112,7 @@ public class AppOperateAction extends TeaModel {
         }
 
         /**
-         * <p>标识该操作是否可用</p>
+         * <p>Indicates whether the action is available.</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -117,7 +120,7 @@ public class AppOperateAction extends TeaModel {
         }
 
         /**
-         * <p>点击操作时跳转的URL地址</p>
+         * <p>The URL to navigate to when the action is clicked.</p>
          */
         public Builder href(String href) {
             this.href = href;

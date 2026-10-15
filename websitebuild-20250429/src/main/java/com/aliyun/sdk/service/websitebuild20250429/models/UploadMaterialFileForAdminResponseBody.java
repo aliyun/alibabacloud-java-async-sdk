@@ -184,7 +184,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether a retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +239,7 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +247,7 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The file object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +266,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +277,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +288,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is processed synchronously.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -489,7 +513,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
             } 
 
             /**
-             * BizId.
+             * <p>The business instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WD20250703155602000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -497,7 +524,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * ContentType.
+             * <p>The file content type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image/png</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -505,7 +535,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-03 02:05:01</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -513,7 +546,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * DeletedTime.
+             * <p>The time when the file was moved to the recycle bin or deleted. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-03 02:05:01</p>
              */
             public Builder deletedTime(String deletedTime) {
                 this.deletedTime = deletedTime;
@@ -521,7 +557,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * <p>The directory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddddwww</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -529,7 +568,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The unique ID of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d75e1e9693cc460da218419d67735567</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -537,7 +579,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx.xxx.cn/original-data/pdf/mndj_report/cd649b2cc2102c0df57bfa1ae62931d6.zip">https://xxx.xxx.cn/original-data/pdf/mndj_report/cd649b2cc2102c0df57bfa1ae62931d6.zip</a></p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -545,7 +590,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -553,7 +601,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FileName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -561,7 +612,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The file status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -569,7 +623,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * <p>The file size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23M</p>
              */
             public Builder storageSize(String storageSize) {
                 this.storageSize = storageSize;
@@ -577,7 +634,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * Suffix.
+             * <p>The file suffix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>png</p>
              */
             public Builder suffix(String suffix) {
                 this.suffix = suffix;
@@ -585,7 +645,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -593,7 +656,10 @@ public class UploadMaterialFileForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder width(Integer width) {
                 this.width = width;

@@ -96,7 +96,7 @@ public class OperateAppTemplateLikeRequest extends Request {
         }
 
         /**
-         * Liked.
+         * <p>Specifies whether the template is favorited.</p>
          */
         public Builder liked(Boolean liked) {
             this.putQueryParameter("Liked", liked);
@@ -105,7 +105,10 @@ public class OperateAppTemplateLikeRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K191WHV12URYQN06</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

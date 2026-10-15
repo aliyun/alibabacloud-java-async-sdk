@@ -67,7 +67,10 @@ public class ModuleNextPropertiesValue extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Property code, such as &quot;aliyun_commodity_agreement&quot;</p>
+         * 
+         * <strong>example:</strong>
+         * <p>placeholder</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -75,7 +78,7 @@ public class ModuleNextPropertiesValue extends TeaModel {
         }
 
         /**
-         * Values.
+         * <p>Property value list</p>
          */
         public Builder values(java.util.List<Values> values) {
             this.values = values;

@@ -184,7 +184,10 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denied details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ish-intelligence-store-platform-admin-web</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,10 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +239,7 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +247,7 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +266,10 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +277,10 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +288,10 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -385,7 +409,10 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * Remaining.
+             * <p>The remaining amount, calculated as totalQuota minus totalUsed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder remaining(Long remaining) {
                 this.remaining = remaining;
@@ -393,7 +420,10 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * RemainingStr.
+             * <p>The remaining amount as a precise value. This field is of the String type and supports decimal display.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder remainingStr(String remainingStr) {
                 this.remainingStr = remainingStr;
@@ -401,7 +431,10 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQuota.
+             * <p>The total quota, which is the sum of initQuota for all valid accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalQuota(Long totalQuota) {
                 this.totalQuota = totalQuota;
@@ -409,7 +442,10 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQuotaStr.
+             * <p>The total quota as a precise value. This field is of the String type and supports decimal display.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalQuotaStr(String totalQuotaStr) {
                 this.totalQuotaStr = totalQuotaStr;
@@ -417,7 +453,10 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUsed.
+             * <p>The total consumed amount, which is the sum of used for all valid accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalUsed(Long totalUsed) {
                 this.totalUsed = totalUsed;
@@ -425,7 +464,10 @@ public class QueryInspirationBalanceForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUsedStr.
+             * <p>The total consumed amount as a precise value. This field is of the String type and supports decimal display.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalUsedStr(String totalUsedStr) {
                 this.totalUsedStr = totalUsedStr;

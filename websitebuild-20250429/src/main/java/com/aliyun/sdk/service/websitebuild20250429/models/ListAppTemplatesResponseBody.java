@@ -210,7 +210,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -218,7 +221,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retries are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -226,7 +232,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The app name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -234,7 +243,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -242,7 +254,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message. This parameter is not used and can be ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -250,7 +265,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -258,7 +273,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of results returned per query. Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -266,7 +284,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -274,7 +292,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query. This parameter is empty if there is no next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -293,7 +314,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -301,7 +325,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -309,7 +336,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -687,7 +717,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppType.
+             * <p>The application type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>supabase</p>
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -695,7 +728,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * <p>The application instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WD20250703155602000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -703,7 +739,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ColorScheme.
+             * <p>The color scheme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Red</p>
              */
             public Builder colorScheme(String colorScheme) {
                 this.colorScheme = colorScheme;
@@ -711,7 +750,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ColorSchemeName.
+             * <p>The color scheme name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>red</p>
              */
             public Builder colorSchemeName(String colorSchemeName) {
                 this.colorSchemeName = colorSchemeName;
@@ -719,7 +761,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CopyCount.
+             * <p>The actual amount of data copied from the original table during a DMS lock-free change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder copyCount(Integer copyCount) {
                 this.copyCount = copyCount;
@@ -727,7 +772,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SOAR</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -735,6 +783,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time. The time is displayed in ISO 8601 format in UTC (Z).</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -746,6 +795,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The modification time. The time is a UNIX timestamp in milliseconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -757,7 +807,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9953352</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -765,7 +818,14 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Industry.
+             * <p>The industry of the file to be analyzed. Default value: <strong>common</strong> (general industry). Select an appropriate industry so that the backend can match the applicable algorithm combination. Valid values: </p>
+             * <ul>
+             * <li><strong>microVideo</strong>: short video industry</li>
+             * <li><strong>common</strong>: general industry</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NOUSE</p>
              */
             public Builder industry(String industry) {
                 this.industry = industry;
@@ -773,7 +833,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * IndustryName.
+             * <p>The industry name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder industryName(String industryName) {
                 this.industryName = industryName;
@@ -781,7 +844,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * IsRecommended.
+             * <p>Specifies whether the template is recommended.</p>
              */
             public Builder isRecommended(Boolean isRecommended) {
                 this.isRecommended = isRecommended;
@@ -789,7 +852,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The last modifier ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder lastModifier(String lastModifier) {
                 this.lastModifier = lastModifier;
@@ -797,7 +863,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LikeCount.
+             * <p>The number of likes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder likeCount(Integer likeCount) {
                 this.likeCount = likeCount;
@@ -805,7 +874,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Liked.
+             * <p>Indicates whether the current user has liked the item.</p>
              */
             public Builder liked(Boolean liked) {
                 this.liked = liked;
@@ -813,7 +882,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * <p>The repair action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;memFrom\&quot;: \&quot;text\&quot;, \&quot;uid\&quot;: \&quot;text\&quot;, \&quot;labels\&quot;: \&quot;jsonb\&quot;, \&quot;content\&quot;: \&quot;text\&quot;, \&quot;fromId\&quot;: \&quot;text\&quot;, \&quot;uuid\&quot;: \&quot;text\&quot;}</p>
              */
             public Builder metadata(String metadata) {
                 this.metadata = metadata;
@@ -821,7 +893,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PreviewUrl.
+             * <p>The preview URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://preview-lyj.aliyuncs.com/preview/b2c5a245c44946b99cf5435210bbb8b8?subSceneIds=728166">https://preview-lyj.aliyuncs.com/preview/b2c5a245c44946b99cf5435210bbb8b8?subSceneIds=728166</a></p>
              */
             public Builder previewUrl(String previewUrl) {
                 this.previewUrl = previewUrl;
@@ -829,7 +904,14 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductVersion.
+             * <p>The product version. Valid values:</p>
+             * <ul>
+             * <li><strong>BasicVersion</strong>: Basic Edition</li>
+             * <li><strong>EnterpriseVersion</strong>: Enterprise Edition</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EnterpriseVersion</p>
              */
             public Builder productVersion(String productVersion) {
                 this.productVersion = productVersion;
@@ -837,7 +919,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductVersionName.
+             * <p>The edition name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.1</p>
              */
             public Builder productVersionName(String productVersionName) {
                 this.productVersionName = productVersionName;
@@ -845,7 +930,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ShareCount.
+             * <p>The number of shares.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder shareCount(Integer shareCount) {
                 this.shareCount = shareCount;
@@ -853,7 +941,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The file status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -861,7 +952,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de10bf7d782392a70f293a3b1f7bb8fc</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -869,7 +963,13 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * <ul>
+             * <li>The maximum length is 128 characters.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cfdna6</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -877,7 +977,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ThumbnailUrl.
+             * <p>The application thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
              */
             public Builder thumbnailUrl(String thumbnailUrl) {
                 this.thumbnailUrl = thumbnailUrl;
@@ -885,7 +988,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ViewCount.
+             * <p>The number of views.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder viewCount(Integer viewCount) {
                 this.viewCount = viewCount;
@@ -893,7 +999,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * <p>The weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -1272,7 +1381,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppType.
+             * <p>The application type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>memory</p>
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -1280,7 +1392,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * <p>The bizId of the associated application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WS20260502160409000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -1288,7 +1403,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ColorScheme.
+             * <p>The color scheme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>red</p>
              */
             public Builder colorScheme(String colorScheme) {
                 this.colorScheme = colorScheme;
@@ -1296,7 +1414,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ColorSchemeName.
+             * <p>The color scheme name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>red</p>
              */
             public Builder colorSchemeName(String colorSchemeName) {
                 this.colorSchemeName = colorSchemeName;
@@ -1304,7 +1425,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CopyCount.
+             * <p>The actual amount of data copied from the original table during a DMS lock-free change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder copyCount(Integer copyCount) {
                 this.copyCount = copyCount;
@@ -1312,7 +1436,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The tenant user information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>208116853206125255</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -1320,7 +1447,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-17 20:43:21</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1328,7 +1458,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-18T10:03:56+08:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1336,7 +1469,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000039405002</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1344,7 +1480,16 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Industry.
+             * <p>The industry. Default value: <strong>common</strong> (General industry). Valid values:</p>
+             * <ul>
+             * <li><p><strong>microVideo</strong>: Short video industry.</p>
+             * </li>
+             * <li><p><strong>common</strong>: General industry.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NOUSE</p>
              */
             public Builder industry(String industry) {
                 this.industry = industry;
@@ -1352,7 +1497,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * IndustryName.
+             * <p>The industry name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder industryName(String industryName) {
                 this.industryName = industryName;
@@ -1360,7 +1508,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * IsRecommended.
+             * <p>Specifies whether the template is recommended.</p>
              */
             public Builder isRecommended(Boolean isRecommended) {
                 this.isRecommended = isRecommended;
@@ -1368,7 +1516,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The ID of the last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder lastModifier(String lastModifier) {
                 this.lastModifier = lastModifier;
@@ -1376,7 +1527,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LikeCount.
+             * <p>The number of likes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder likeCount(Integer likeCount) {
                 this.likeCount = likeCount;
@@ -1384,7 +1538,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Liked.
+             * <p>Indicates whether the current user has liked the item.</p>
              */
             public Builder liked(Boolean liked) {
                 this.liked = liked;
@@ -1392,7 +1546,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * <p>The fix details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;knowledge_point\&quot;:\&quot;text\&quot;,\&quot;trunk_id\&quot;:\&quot;text\&quot;,\&quot;doc_name\&quot;:\&quot;text\&quot;,\&quot;knowledge_point_id\&quot;:\&quot;text\&quot;,\&quot;doc_id\&quot;:\&quot;text\&quot;,\&quot;trunk_content\&quot;:\&quot;text\&quot;}</p>
              */
             public Builder metadata(String metadata) {
                 this.metadata = metadata;
@@ -1400,7 +1557,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PreviewUrl.
+             * <p>The preview URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://preview-lyj.aliyuncs.com/preview/b989c9ac526e4fb48e018805f43d5fb1?subSceneIds=816576">https://preview-lyj.aliyuncs.com/preview/b989c9ac526e4fb48e018805f43d5fb1?subSceneIds=816576</a></p>
              */
             public Builder previewUrl(String previewUrl) {
                 this.previewUrl = previewUrl;
@@ -1408,7 +1568,17 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductVersion.
+             * <p>The product version. Valid values:</p>
+             * <ul>
+             * <li><strong>BasicVersion</strong>: Basic Edition.</li>
+             * <li><strong>EnterpriseVersion</strong>: Enterprise Edition.<blockquote>
+             * <p>Specify this parameter only when ProductForm is set to IntegrationForm.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BasicVersion</p>
              */
             public Builder productVersion(String productVersion) {
                 this.productVersion = productVersion;
@@ -1416,7 +1586,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductVersionName.
+             * <p>The edition name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.2</p>
              */
             public Builder productVersionName(String productVersionName) {
                 this.productVersionName = productVersionName;
@@ -1424,7 +1597,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ShareCount.
+             * <p>The number of shares.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder shareCount(Integer shareCount) {
                 this.shareCount = shareCount;
@@ -1432,7 +1608,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. Valid values: unknown, init, testing, and online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeeded</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1440,7 +1619,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3802aefc8cb0003b71286c47afc83624</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -1448,7 +1630,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iem</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1456,7 +1641,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ThumbnailUrl.
+             * <p>The application thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
              */
             public Builder thumbnailUrl(String thumbnailUrl) {
                 this.thumbnailUrl = thumbnailUrl;
@@ -1464,7 +1652,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ViewCount.
+             * <p>The number of views.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder viewCount(Integer viewCount) {
                 this.viewCount = viewCount;
@@ -1472,7 +1663,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * <p>The weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -1630,7 +1824,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPageNum(Integer currentPageNum) {
                 this.currentPageNum = currentPageNum;
@@ -1638,7 +1835,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The request results.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -1646,7 +1843,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Next.
+             * <p>The decision weight.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -1654,7 +1851,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * NextPage.
+             * <p>Indicates whether a next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder nextPage(Boolean nextPage) {
                 this.nextPage = nextPage;
@@ -1662,7 +1862,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1670,7 +1873,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PrePage.
+             * <p>Indicates whether a previous page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder prePage(Boolean prePage) {
                 this.prePage = prePage;
@@ -1678,7 +1884,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ResultLimit.
+             * <p>Indicates whether the query result is truncated. In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is set to <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is set to <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;
@@ -1686,7 +1895,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItemNum.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalItemNum(Integer totalItemNum) {
                 this.totalItemNum = totalItemNum;
@@ -1694,7 +1906,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageNum.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPageNum(Integer totalPageNum) {
                 this.totalPageNum = totalPageNum;

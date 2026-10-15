@@ -184,7 +184,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the permission verification failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +239,7 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +247,7 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +266,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +277,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +288,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -372,7 +396,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-27 16:02:28</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -380,7 +407,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9953352</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -388,7 +418,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * OrgId.
+             * <p>The enterprise identifier, also known as the enterprise ID, in string format. You can obtain it from the Yunxiao access URL, such as <a href="https://devops.aliyun.com/organization/%E3%80%90OrgId%E3%80%91">https://devops.aliyun.com/organization/【OrgId】</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5ffd468b1e45db3c1cc26ad6</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -396,7 +429,16 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>The preset workspace role ID. Existing roles are overwritten. Valid values:</p>
+             * <ul>
+             * <li>25: workspace administrator</li>
+             * <li>26: workspace developer</li>
+             * <li>27: workspace analyst</li>
+             * <li>30: workspace viewer</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>111111112</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -404,7 +446,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The site end-user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -510,7 +555,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The creation time. The time is in the ISO 8601 format in UTC (Z).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-05T02:10:20Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -518,7 +566,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000039405002</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -526,7 +577,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * OrgId.
+             * <p>The enterprise organization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org_f93535f3d7a94e6093276bcfb35d4801</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -534,7 +588,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>The role ID. This is a unique identifier automatically generated by the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2113b424-8164-482f-a7a6-ccd0a2ffcb38</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -542,7 +599,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The site end-user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -700,7 +760,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPageNum(Integer currentPageNum) {
                 this.currentPageNum = currentPageNum;
@@ -708,7 +771,7 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The request result.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -716,7 +779,7 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Next.
+             * <p>The next feature ID.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -724,7 +787,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * NextPage.
+             * <p>Indicates whether a next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder nextPage(Boolean nextPage) {
                 this.nextPage = nextPage;
@@ -732,7 +798,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -740,7 +809,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * PrePage.
+             * <p>Indicates whether a previous page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder prePage(Boolean prePage) {
                 this.prePage = prePage;
@@ -748,7 +820,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * ResultLimit.
+             * <p>Apart from the pagination limit, the server processes up to 1,000 recent records for the current query. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;
@@ -756,7 +831,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItemNum.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalItemNum(Integer totalItemNum) {
                 this.totalItemNum = totalItemNum;
@@ -764,7 +842,10 @@ public class QueryRbacUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageNum.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPageNum(Integer totalPageNum) {
                 this.totalPageNum = totalPageNum;

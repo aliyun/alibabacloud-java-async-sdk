@@ -98,6 +98,7 @@ public class QueryMaterialFileDetailRequest extends Request {
         }
 
         /**
+         * <p>The application instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class QueryMaterialFileDetailRequest extends Request {
         }
 
         /**
+         * <p>The file ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

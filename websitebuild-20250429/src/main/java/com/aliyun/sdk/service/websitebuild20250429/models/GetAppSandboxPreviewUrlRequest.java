@@ -73,7 +73,10 @@ public class GetAppSandboxPreviewUrlRequest extends Request {
         } 
 
         /**
-         * ConversationId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -82,7 +85,10 @@ public class GetAppSandboxPreviewUrlRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the application process. This parameter is optional. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putBodyParameter("Restart", restart);

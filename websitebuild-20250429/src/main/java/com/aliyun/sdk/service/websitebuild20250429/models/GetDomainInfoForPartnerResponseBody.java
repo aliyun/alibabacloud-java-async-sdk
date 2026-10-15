@@ -67,7 +67,7 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The request result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,10 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * Account.
+             * <p>The member name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1189245564569485</p>
              */
             public Builder account(String account) {
                 this.account = account;
@@ -152,7 +155,10 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Provider.
+             * <p>The provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pai</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -245,7 +251,10 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * DomainName.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>playnew-alilive.daotantan.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -253,7 +262,10 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * NameServers.
+             * <p>The list of DNS server IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NS3.ALIYUN.COM,NS4.ALIYUN.COM</p>
              */
             public Builder nameServers(String nameServers) {
                 this.nameServers = nameServers;
@@ -261,7 +273,7 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Ownership.
+             * <p>The IP ownership.</p>
              */
             public Builder ownership(Ownership ownership) {
                 this.ownership = ownership;
@@ -269,7 +281,10 @@ public class GetDomainInfoForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Registrar.
+             * <p>The domain name registrar.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder registrar(String registrar) {
                 this.registrar = registrar;

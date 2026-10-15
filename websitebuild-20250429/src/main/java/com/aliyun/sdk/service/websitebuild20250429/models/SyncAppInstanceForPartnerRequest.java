@@ -115,7 +115,7 @@ public class SyncAppInstanceForPartnerRequest extends Request {
         } 
 
         /**
-         * AppInstance.
+         * <p>The website instance object data.</p>
          */
         public Builder appInstance(AppInstance appInstance) {
             String appInstanceShrink = shrink(appInstance, "AppInstance", "json");
@@ -125,7 +125,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
         }
 
         /**
-         * EventType.
+         * <p>The type of the system event. Valid values: CREATE, UPDATE, and COMPLETE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -134,7 +137,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
         }
 
         /**
-         * Operator.
+         * <p>The employee ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder operator(String operator) {
             this.putQueryParameter("Operator", operator);
@@ -143,7 +149,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
         }
 
         /**
-         * SourceBizId.
+         * <p>The source business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31104757</p>
          */
         public Builder sourceBizId(String sourceBizId) {
             this.putQueryParameter("SourceBizId", sourceBizId);
@@ -152,7 +161,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The source. Set this parameter to MARKET_CLOUD_DREAM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MARKET_CLOUD_DREAM</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -272,7 +284,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             } 
 
             /**
-             * DeployArea.
+             * <p>The deployment region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ChineseMainland</p>
              */
             public Builder deployArea(String deployArea) {
                 this.deployArea = deployArea;
@@ -280,7 +295,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * LxInstanceId.
+             * <p>The Lingxiao instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12313213</p>
              */
             public Builder lxInstanceId(String lxInstanceId) {
                 this.lxInstanceId = lxInstanceId;
@@ -288,7 +306,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222217928591</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -296,7 +317,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * SiteVersion.
+             * <p>The version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Basic_Edition</p>
              */
             public Builder siteVersion(String siteVersion) {
                 this.siteVersion = siteVersion;
@@ -304,7 +328,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * TemplateEtag.
+             * <p>The template identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DC4D30B7BADDAFE9928A6C36416A2A4C</p>
              */
             public Builder templateEtag(String templateEtag) {
                 this.templateEtag = templateEtag;
@@ -312,7 +339,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>The model template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ST20211231160247sYG4</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -561,7 +591,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             } 
 
             /**
-             * AppType.
+             * <p>The application type. Set this parameter to WEBSITE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WEBSITE</p>
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -569,7 +602,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * BizId.
+             * <p>The website business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WD20250711094503000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -577,7 +613,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * Deleted.
+             * <p>Indicates whether the instance is logically deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fase</p>
              */
             public Builder deleted(String deleted) {
                 this.deleted = deleted;
@@ -585,7 +624,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alliveout.xntv.tv</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -593,7 +635,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the event. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-23T02:14:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -601,7 +646,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * GmtDelete.
+             * <p>The deletion time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01 00:00:00</p>
              */
             public Builder gmtDelete(String gmtDelete) {
                 this.gmtDelete = gmtDelete;
@@ -609,7 +657,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * GmtPublish.
+             * <p>The timestamp when the vulnerability was published. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01 00:00:00</p>
              */
             public Builder gmtPublish(String gmtPublish) {
                 this.gmtPublish = gmtPublish;
@@ -617,7 +668,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * IconUrl.
+             * <p>The URL of the application icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>icon/WS20250626112715000001/thumbnail.jpg</p>
              */
             public Builder iconUrl(String iconUrl) {
                 this.iconUrl = iconUrl;
@@ -625,7 +679,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The website name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AI Website Builder</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -633,7 +690,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * Profile.
+             * <p>The website configuration information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Website configuration information</p>
              */
             public Builder profile(Profile profile) {
                 this.profile = profile;
@@ -652,7 +712,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * Slug.
+             * <p>The website SiteID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31104757</p>
              */
             public Builder slug(String slug) {
                 this.slug = slug;
@@ -660,7 +723,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the query. If you do not specify the start time or end time, all historical deployment records of the instance are queried. Specify the time in the ISO 8601 standard in the UTC (Z) time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-15T16:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -668,7 +734,20 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The running status of the instance. Valid values:</p>
+             * <ul>
+             * <li>NotRun: Not running.</li>
+             * <li>Running: Running.</li>
+             * <li>WaitTime: Waiting for the trigger time.</li>
+             * <li>CheckingCondition: Checking branch conditions.</li>
+             * <li>WaitResource: Waiting for resources.</li>
+             * <li>Failure: Execution failed.</li>
+             * <li>Success: Execution succeeded.</li>
+             * <li>Checking: Submitted for data quality check.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;Phase\&quot;: \&quot;Running\&quot;, \&quot;SlotNum\&quot;: 1, \&quot;UsedCapacity\&quot;: \&quot;500.0Gi\&quot;}</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -676,7 +755,10 @@ public class SyncAppInstanceForPartnerRequest extends Request {
             }
 
             /**
-             * ThumbnailUrl.
+             * <p>The URL of the thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>thumbnails/WS20250626112715000001/thumbnail.jpg</p>
              */
             public Builder thumbnailUrl(String thumbnailUrl) {
                 this.thumbnailUrl = thumbnailUrl;

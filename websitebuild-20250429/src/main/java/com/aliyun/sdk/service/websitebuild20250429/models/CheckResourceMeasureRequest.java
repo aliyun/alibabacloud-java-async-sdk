@@ -34,6 +34,10 @@ public class CheckResourceMeasureRequest extends Request {
     private String bizType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesiredTotal")
+    private Long desiredTotal;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EspBizId")
     private String espBizId;
 
@@ -55,6 +59,7 @@ public class CheckResourceMeasureRequest extends Request {
         this.belongId = builder.belongId;
         this.belongIdType = builder.belongIdType;
         this.bizType = builder.bizType;
+        this.desiredTotal = builder.desiredTotal;
         this.espBizId = builder.espBizId;
         this.orderComponentParams = builder.orderComponentParams;
         this.resourceCode = builder.resourceCode;
@@ -103,6 +108,13 @@ public class CheckResourceMeasureRequest extends Request {
     }
 
     /**
+     * @return desiredTotal
+     */
+    public Long getDesiredTotal() {
+        return this.desiredTotal;
+    }
+
+    /**
      * @return espBizId
      */
     public String getEspBizId() {
@@ -135,6 +147,7 @@ public class CheckResourceMeasureRequest extends Request {
         private String belongId; 
         private String belongIdType; 
         private String bizType; 
+        private Long desiredTotal; 
         private String espBizId; 
         private String orderComponentParams; 
         private String resourceCode; 
@@ -150,6 +163,7 @@ public class CheckResourceMeasureRequest extends Request {
             this.belongId = request.belongId;
             this.belongIdType = request.belongIdType;
             this.bizType = request.bizType;
+            this.desiredTotal = request.desiredTotal;
             this.espBizId = request.espBizId;
             this.orderComponentParams = request.orderComponentParams;
             this.resourceCode = request.resourceCode;
@@ -166,7 +180,10 @@ public class CheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * BelongId.
+         * <p>The owner ID, which can be a website ID or an Alibaba Cloud user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder belongId(String belongId) {
             this.putQueryParameter("BelongId", belongId);
@@ -175,7 +192,10 @@ public class CheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * BelongIdType.
+         * <p>The owner ID type. Valid values: siteId and uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder belongIdType(String belongIdType) {
             this.putQueryParameter("BelongIdType", belongIdType);
@@ -184,7 +204,10 @@ public class CheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>The ESP business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -193,7 +216,22 @@ public class CheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * EspBizId.
+         * <p>This parameter is used only for APP_WORKSPACE. It specifies the final total amount of issues or competitors after editing. For legacy APP or USER, it retains the incremental semantics of ResourceValue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
+         */
+        public Builder desiredTotal(Long desiredTotal) {
+            this.putQueryParameter("DesiredTotal", desiredTotal);
+            this.desiredTotal = desiredTotal;
+            return this;
+        }
+
+        /**
+         * <p>The ESP business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p20202933455</p>
          */
         public Builder espBizId(String espBizId) {
             this.putQueryParameter("EspBizId", espBizId);
@@ -202,7 +240,10 @@ public class CheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * OrderComponentParams.
+         * <p>The order component parameters. If this parameter is empty, EspBizId and BizType cannot be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;siteversion&quot;:&quot;test&quot;}</p>
          */
         public Builder orderComponentParams(String orderComponentParams) {
             this.putQueryParameter("OrderComponentParams", orderComponentParams);
@@ -211,7 +252,10 @@ public class CheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * ResourceCode.
+         * <p>The resource identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InspirationTokens</p>
          */
         public Builder resourceCode(String resourceCode) {
             this.putQueryParameter("ResourceCode", resourceCode);
@@ -220,7 +264,14 @@ public class CheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * ResourceValue.
+         * <p>The resource value. This parameter is required only for feature resources and is empty by default. Valid values:</p>
+         * <ul>
+         * <li>0: Not supported.</li>
+         * <li>1: Supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder resourceValue(Long resourceValue) {
             this.putQueryParameter("ResourceValue", resourceValue);

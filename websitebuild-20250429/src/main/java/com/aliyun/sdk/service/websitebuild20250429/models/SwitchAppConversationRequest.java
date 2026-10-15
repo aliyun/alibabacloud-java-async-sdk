@@ -110,7 +110,10 @@ public class SwitchAppConversationRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID of the agent task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250814102215000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -119,7 +122,10 @@ public class SwitchAppConversationRequest extends Request {
         }
 
         /**
-         * BotId.
+         * <p>The bot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zero2</p>
          */
         public Builder botId(String botId) {
             this.putQueryParameter("BotId", botId);
@@ -128,7 +134,10 @@ public class SwitchAppConversationRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the agent task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE_LOGO</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

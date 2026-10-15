@@ -138,7 +138,10 @@ public class CreateAppChatRequest extends Request {
         }
 
         /**
-         * BotId.
+         * <p>The bot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zero2</p>
          */
         public Builder botId(String botId) {
             this.putBodyParameter("BotId", botId);
@@ -147,7 +150,10 @@ public class CreateAppChatRequest extends Request {
         }
 
         /**
-         * ChatId.
+         * <p>The chat ID passed in to resume a conversation after execution is interrupted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3b465fe1-6f06-4899-af9f-d43d9338df25</p>
          */
         public Builder chatId(String chatId) {
             this.putBodyParameter("ChatId", chatId);
@@ -156,7 +162,10 @@ public class CreateAppChatRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>The conversation ID. This parameter is required from the second round onward in multi-turn conversation scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -165,7 +174,10 @@ public class CreateAppChatRequest extends Request {
         }
 
         /**
-         * Messages.
+         * <p>The list of conversation messages in JSON array format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\r\n  {\r\n    \&quot;role\&quot;: \&quot;user\&quot;,\r\n    \&quot;content\&quot;: \&quot;Prove that there are only five platonic solids, namely the tetrahedron, octahedron, icosahedron, cube, and dodecahedron.\&quot;\r\n  }\r\n]</p>
          */
         public Builder messages(String messages) {
             this.putBodyParameter("Messages", messages);
@@ -174,7 +186,10 @@ public class CreateAppChatRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>857240041851344</p>
          */
         public Builder siteId(String siteId) {
             this.putBodyParameter("SiteId", siteId);

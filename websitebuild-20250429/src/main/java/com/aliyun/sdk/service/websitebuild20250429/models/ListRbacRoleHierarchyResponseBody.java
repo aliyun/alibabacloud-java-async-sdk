@@ -210,7 +210,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denied details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -218,7 +221,14 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether a retry is allowed. Valid values:</p>
+         * <ul>
+         * <li>false: No retry is allowed.</li>
+         * <li>true: A retry is allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -226,7 +236,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -234,7 +247,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -242,7 +258,13 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> response parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -250,7 +272,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -258,7 +280,11 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -266,7 +292,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -274,7 +300,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -293,7 +322,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -301,7 +333,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -309,7 +344,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is synchronously processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -375,7 +413,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
             } 
 
             /**
-             * ChildRoleId.
+             * <p>The child role ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fc94cc51-310f-4485-adb2-ed8c706aff3b</p>
              */
             public Builder childRoleId(String childRoleId) {
                 this.childRoleId = childRoleId;
@@ -383,7 +424,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
             }
 
             /**
-             * ParentRoleId.
+             * <p>The parent role ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>71e07711-9a17-49f4-9f83-387a60ee5b64</p>
              */
             public Builder parentRoleId(String parentRoleId) {
                 this.parentRoleId = parentRoleId;
@@ -450,7 +494,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
             } 
 
             /**
-             * ChildRoleId.
+             * <p>The child role ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fc94cc51-310f-4485-adb2-ed8c706aff3b</p>
              */
             public Builder childRoleId(String childRoleId) {
                 this.childRoleId = childRoleId;
@@ -458,7 +505,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
             }
 
             /**
-             * ParentRoleId.
+             * <p>The parent role ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>71e07711-9a17-49f4-9f83-387a60ee5b64</p>
              */
             public Builder parentRoleId(String parentRoleId) {
                 this.parentRoleId = parentRoleId;
@@ -616,7 +666,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPageNum(Integer currentPageNum) {
                 this.currentPageNum = currentPageNum;
@@ -624,7 +677,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The request results.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -632,7 +685,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
             }
 
             /**
-             * Next.
+             * <p>The decision weight.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -640,7 +693,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
             }
 
             /**
-             * NextPage.
+             * <p>Indicates whether a next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder nextPage(Boolean nextPage) {
                 this.nextPage = nextPage;
@@ -648,7 +704,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -656,7 +715,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
             }
 
             /**
-             * PrePage.
+             * <p>Indicates whether a previous page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder prePage(Boolean prePage) {
                 this.prePage = prePage;
@@ -664,7 +726,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
             }
 
             /**
-             * ResultLimit.
+             * <p>The server processes up to 1,000 most recent records beyond the pagination limit. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;
@@ -672,7 +737,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItemNum.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalItemNum(Integer totalItemNum) {
                 this.totalItemNum = totalItemNum;
@@ -680,7 +748,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageNum.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPageNum(Integer totalPageNum) {
                 this.totalPageNum = totalPageNum;

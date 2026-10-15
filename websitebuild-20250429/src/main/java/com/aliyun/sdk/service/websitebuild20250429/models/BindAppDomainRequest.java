@@ -26,6 +26,10 @@ public class BindAppDomainRequest extends Request {
     private String bizId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployType")
+    private String deployType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
@@ -45,6 +49,7 @@ public class BindAppDomainRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
+        this.deployType = builder.deployType;
         this.domainName = builder.domainName;
         this.domainType = builder.domainType;
         this.extend = builder.extend;
@@ -79,6 +84,13 @@ public class BindAppDomainRequest extends Request {
     }
 
     /**
+     * @return deployType
+     */
+    public String getDeployType() {
+        return this.deployType;
+    }
+
+    /**
      * @return domainName
      */
     public String getDomainName() {
@@ -109,6 +121,7 @@ public class BindAppDomainRequest extends Request {
     public static final class Builder extends Request.Builder<BindAppDomainRequest, Builder> {
         private String regionId; 
         private String bizId; 
+        private String deployType; 
         private String domainName; 
         private String domainType; 
         private String extend; 
@@ -122,6 +135,7 @@ public class BindAppDomainRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.bizId = request.bizId;
+            this.deployType = request.deployType;
             this.domainName = request.domainName;
             this.domainType = request.domainType;
             this.extend = request.extend;
@@ -138,7 +152,7 @@ public class BindAppDomainRequest extends Request {
         }
 
         /**
-         * <p>Business ID</p>
+         * <p>The business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>WD20250820143531000001</p>
@@ -150,7 +164,23 @@ public class BindAppDomainRequest extends Request {
         }
 
         /**
-         * <p>Domain Name</p>
+         * <p>The domain hosting method. Valid values:</p>
+         * <ul>
+         * <li>CUSTOMER_ESA: Uses the customer\&quot;s own Edge Security Acceleration (ESA). Only supported when DomainType is set to CUSTOM.</li>
+         * </ul>
+         * <p>If this parameter is not specified, the original hosting process is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDN</p>
+         */
+        public Builder deployType(String deployType) {
+            this.putQueryParameter("DeployType", deployType);
+            this.deployType = deployType;
+            return this;
+        }
+
+        /**
+         * <p>The domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>xiaoniu.link</p>
@@ -162,7 +192,15 @@ public class BindAppDomainRequest extends Request {
         }
 
         /**
-         * DomainType.
+         * <p>The domain management type. Valid values:</p>
+         * <ul>
+         * <li>CUSTOM</li>
+         * <li>PLATFORM_PREFIX</li>
+         * </ul>
+         * <p>Default value: CUSTOM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTOM</p>
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -171,10 +209,10 @@ public class BindAppDomainRequest extends Request {
         }
 
         /**
-         * <p>Extended Information (OverwriteExistingRecord)</p>
+         * <p>The extended information (OverwriteExistingRecord).</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;deliveryNodeName&quot;:&quot;网站验收&quot;,&quot;deliveryNodeStatus&quot;:&quot;Reject&quot;,&quot;deliveryOperatorRole&quot;:&quot;Customer&quot;}</p>
+         * <p>{\&quot;deliveryNodeName\&quot;:\&quot;Website acceptance\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -183,7 +221,7 @@ public class BindAppDomainRequest extends Request {
         }
 
         /**
-         * <p>Domain Binding - Operation Type</p>
+         * <p>The operation type for domain binding.</p>
          * 
          * <strong>example:</strong>
          * <p>vul_fix</p>

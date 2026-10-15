@@ -166,7 +166,10 @@ public class ListRbacOrgTreeRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -175,7 +178,11 @@ public class ListRbacOrgTreeRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -184,7 +191,10 @@ public class ListRbacOrgTreeRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -193,7 +203,10 @@ public class ListRbacOrgTreeRequest extends Request {
         }
 
         /**
-         * OrderColumn.
+         * <p>The field by which to sort the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtCreated</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -202,7 +215,14 @@ public class ListRbacOrgTreeRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>ASC: ascending order.</li>
+         * <li>DESC: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -211,7 +231,10 @@ public class ListRbacOrgTreeRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -220,7 +243,10 @@ public class ListRbacOrgTreeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -184,7 +184,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Specifies whether retries are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The name of the application to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ish-intelligence-store-platform-admin-web</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message. This parameter is not used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +239,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +247,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>Specifies whether the deletion is successful.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +266,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +277,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +288,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Specifies whether the request is processed synchronously.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -398,7 +422,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The number of consumed inspiration points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder amount(Long amount) {
                 this.amount = amount;
@@ -406,7 +433,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * AmountStr.
+             * <p>The exact number of consumed inspiration points. The value is a string that supports decimal display.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder amountStr(String amountStr) {
                 this.amountStr = amountStr;
@@ -414,7 +444,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumeTime.
+             * <p>The consumption time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-01 12:00:00</p>
              */
             public Builder consumeTime(String consumeTime) {
                 this.consumeTime = consumeTime;
@@ -422,7 +455,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumeType.
+             * <p>The consumption type.</p>
              */
             public Builder consumeType(String consumeType) {
                 this.consumeType = consumeType;
@@ -430,7 +463,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * MetaData.
+             * <p>The extended information in JSON string format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;MD5\&quot;:\&quot;296f6c01e7fea2697ffe1cf41082b774\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;12845825\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:true,\&quot;uefi_preferred\&quot;:false}</p>
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -438,7 +474,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordKey.
+             * <p>The unique identifier of the consumption record.</p>
              */
             public Builder recordKey(String recordKey) {
                 this.recordKey = recordKey;
@@ -446,7 +482,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * <p>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, or AI content creation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Home improvement</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -565,7 +604,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The number of consumed inspiration points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder amount(Long amount) {
                 this.amount = amount;
@@ -573,7 +615,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * AmountStr.
+             * <p>The exact number of consumed inspiration points. The value is a string that supports decimal display.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder amountStr(String amountStr) {
                 this.amountStr = amountStr;
@@ -581,7 +626,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumeTime.
+             * <p>The consumption time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-01 12:00:00</p>
              */
             public Builder consumeTime(String consumeTime) {
                 this.consumeTime = consumeTime;
@@ -589,7 +637,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumeType.
+             * <p>The consumption type.</p>
              */
             public Builder consumeType(String consumeType) {
                 this.consumeType = consumeType;
@@ -597,7 +645,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * MetaData.
+             * <p>The extended information in JSON string format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;MD5\&quot;:\&quot;1042e65a2b7cdd3059b6a873ee1a3260\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;12845825\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:true,\&quot;uefi_preferred\&quot;:false}</p>
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -605,7 +656,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * <p>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, or AI content creation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Home improvement</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -763,7 +817,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPageNum(Integer currentPageNum) {
                 this.currentPageNum = currentPageNum;
@@ -771,7 +828,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The request results.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -779,7 +836,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Next.
+             * <p>The ID of the next feature.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -787,7 +844,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * NextPage.
+             * <p>Specifies whether a next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder nextPage(Boolean nextPage) {
                 this.nextPage = nextPage;
@@ -795,7 +855,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -803,7 +866,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PrePage.
+             * <p>Specifies whether a previous page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder prePage(Boolean prePage) {
                 this.prePage = prePage;
@@ -811,7 +877,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultLimit.
+             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;
@@ -819,7 +885,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItemNum.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalItemNum(Integer totalItemNum) {
                 this.totalItemNum = totalItemNum;
@@ -827,7 +896,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageNum.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPageNum(Integer totalPageNum) {
                 this.totalPageNum = totalPageNum;

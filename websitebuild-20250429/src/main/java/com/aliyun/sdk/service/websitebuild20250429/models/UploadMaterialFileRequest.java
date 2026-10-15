@@ -140,6 +140,7 @@ public class UploadMaterialFileRequest extends Request {
         }
 
         /**
+         * <p>The business ID of the application instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +153,7 @@ public class UploadMaterialFileRequest extends Request {
         }
 
         /**
+         * <p>The ID of the parent folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +166,10 @@ public class UploadMaterialFileRequest extends Request {
         }
 
         /**
-         * FileUrl.
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/4a7f_209934244261306272_14fd429b731245a79f291c64acf3ac77">http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/4a7f_209934244261306272_14fd429b731245a79f291c64acf3ac77</a></p>
          */
         public Builder fileUrl(String fileUrl) {
             this.putQueryParameter("FileUrl", fileUrl);
@@ -173,7 +178,10 @@ public class UploadMaterialFileRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestFile</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -182,7 +190,10 @@ public class UploadMaterialFileRequest extends Request {
         }
 
         /**
-         * OssKey.
+         * <p>The OSS object key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</p>
          */
         public Builder ossKey(String ossKey) {
             this.putQueryParameter("OssKey", ossKey);

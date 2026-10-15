@@ -93,7 +93,7 @@ public class AppServiceGroup extends TeaModel {
         } 
 
         /**
-         * Name.
+         * <p>The name.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -101,7 +101,7 @@ public class AppServiceGroup extends TeaModel {
         }
 
         /**
-         * QrCode.
+         * <p>The QR code.</p>
          */
         public Builder qrCode(String qrCode) {
             this.qrCode = qrCode;
@@ -109,7 +109,10 @@ public class AppServiceGroup extends TeaModel {
         }
 
         /**
-         * <p>例如：dingtalk、wx 等</p>
+         * <p>The group type, such as dingtalk and wx.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -117,7 +120,10 @@ public class AppServiceGroup extends TeaModel {
         }
 
         /**
-         * Url.
+         * <p>The URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/example.jpg">https://example.com/example.jpg</a></p>
          */
         public Builder url(String url) {
             this.url = url;

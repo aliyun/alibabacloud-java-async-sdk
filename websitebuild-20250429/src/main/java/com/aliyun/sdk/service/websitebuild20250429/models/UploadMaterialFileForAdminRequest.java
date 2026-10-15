@@ -126,7 +126,10 @@ public class UploadMaterialFileForAdminRequest extends Request {
         }
 
         /**
-         * BelongId.
+         * <p>The ID of the owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder belongId(String belongId) {
             this.putQueryParameter("BelongId", belongId);
@@ -135,6 +138,7 @@ public class UploadMaterialFileForAdminRequest extends Request {
         }
 
         /**
+         * <p>The business instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +151,7 @@ public class UploadMaterialFileForAdminRequest extends Request {
         }
 
         /**
+         * <p>The file URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +164,10 @@ public class UploadMaterialFileForAdminRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Video</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

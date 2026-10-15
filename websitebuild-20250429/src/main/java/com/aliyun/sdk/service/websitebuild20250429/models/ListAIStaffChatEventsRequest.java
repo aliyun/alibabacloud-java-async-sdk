@@ -101,7 +101,10 @@ public class ListAIStaffChatEventsRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250731233102000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -110,7 +113,10 @@ public class ListAIStaffChatEventsRequest extends Request {
         }
 
         /**
-         * ChatId.
+         * <p>The chat ID. This parameter is optional. If you do not specify this parameter, the latest chat ID is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20833ba4-d189-4c50-9a44-a6bcbda2c93b</p>
          */
         public Builder chatId(String chatId) {
             this.putBodyParameter("ChatId", chatId);
@@ -119,7 +125,10 @@ public class ListAIStaffChatEventsRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>The conversation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -128,7 +137,10 @@ public class ListAIStaffChatEventsRequest extends Request {
         }
 
         /**
-         * LastEventId.
+         * <p>The ID of the last event. This parameter is used to retrieve incremental events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event-71ece53b7d474e01b755a9b5fa5305e6</p>
          */
         public Builder lastEventId(Integer lastEventId) {
             this.putBodyParameter("LastEventId", lastEventId);

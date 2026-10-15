@@ -266,6 +266,7 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
+         * <p>The business ID of the application instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -278,6 +279,7 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
+         * <p>The folder ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +292,10 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * MaxFileSize.
+         * <p>The maximum file size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder maxFileSize(Long maxFileSize) {
             this.putQueryParameter("MaxFileSize", maxFileSize);
@@ -299,7 +304,11 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -308,7 +317,10 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * MinFileSize.
+         * <p>The minimum file size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder minFileSize(Long minFileSize) {
             this.putQueryParameter("MinFileSize", minFileSize);
@@ -317,7 +329,10 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The website name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -326,7 +341,10 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -335,7 +353,10 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * OrderColumn.
+         * <p>The field by which to sort the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtCreated</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -344,7 +365,10 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The sort order. Valid values: ASC and DESC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -353,7 +377,10 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -362,7 +389,10 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -371,7 +401,7 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * <p>The list of statuses.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             String statusListShrink = shrink(statusList, "StatusList", "json");
@@ -381,7 +411,7 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * SuffixList.
+         * <p>The list of file suffixes.</p>
          */
         public Builder suffixList(java.util.List<String> suffixList) {
             String suffixListShrink = shrink(suffixList, "SuffixList", "json");
@@ -391,7 +421,7 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * TypeList.
+         * <p>The list of file types.</p>
          */
         public Builder typeList(java.util.List<String> typeList) {
             String typeListShrink = shrink(typeList, "TypeList", "json");

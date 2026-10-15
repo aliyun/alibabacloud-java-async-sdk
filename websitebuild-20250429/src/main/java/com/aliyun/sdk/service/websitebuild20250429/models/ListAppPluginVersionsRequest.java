@@ -110,7 +110,10 @@ public class ListAppPluginVersionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number. The value must be an integer greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -119,7 +122,10 @@ public class ListAppPluginVersionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -128,7 +134,10 @@ public class ListAppPluginVersionsRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * <p>The gateway plug-in ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);

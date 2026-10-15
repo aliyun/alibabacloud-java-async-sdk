@@ -73,7 +73,10 @@ public class DeleteAppFileRequest extends Request {
         } 
 
         /**
-         * ConversationId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -82,7 +85,10 @@ public class DeleteAppFileRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>The file path. The path is restricted to the ./public/ directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pt3/01/31/pengpeixin.png</p>
          */
         public Builder filePath(String filePath) {
             this.putBodyParameter("FilePath", filePath);

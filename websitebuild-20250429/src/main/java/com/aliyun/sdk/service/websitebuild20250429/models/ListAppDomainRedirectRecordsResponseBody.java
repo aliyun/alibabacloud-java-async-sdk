@@ -210,7 +210,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Detailed reason for access denial.</p>
+         * <p>The details about the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -221,7 +221,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether retry is allowed</p>
+         * <p>Indicates whether retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -232,7 +232,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Frontend application name.</p>
+         * <p>The frontend application name.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>
@@ -243,7 +243,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error code.</p>
+         * <p>The dynamic error code.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -254,7 +254,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic message, currently unused, please ignore</p>
+         * <p>The dynamic message. Currently not used. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_ERROR</p>
@@ -265,7 +265,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error parameters</p>
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -273,8 +273,8 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of results per query.</p>
-         * <p>Range: 10~100. Default value: 20.</p>
+         * <p>The number of entries per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -285,7 +285,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned object.</p>
+         * <p>The returned object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -293,7 +293,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>下一个查询开始的Token。没有下一个查询时为空。</p>
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -304,7 +304,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -315,7 +315,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -326,7 +326,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Exception message</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
          * <p>系统异常</p>
@@ -337,7 +337,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether it is processed synchronously</p>
+         * <p>Indicates whether the request is processed synchronously.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -419,7 +419,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Redirect record ID</p>
+             * <p>The redirect record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>f0379419-433d-410e-98d9-bf5c72f47227</p>
@@ -430,7 +430,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Source domain</p>
+             * <p>The source domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>abc.wanwang.xin</p>
@@ -441,7 +441,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目标域名</p>
+             * <p>The destination domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyuncs.com</p>
@@ -524,7 +524,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Redirect record ID</p>
+             * <p>The redirect record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>936956504373539840</p>
@@ -535,7 +535,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Source domain</p>
+             * <p>The source domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>abc.wanwang.xin</p>
@@ -546,7 +546,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Target domain</p>
+             * <p>The destination domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyuncs.com</p>
@@ -707,7 +707,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Current page number.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -718,7 +718,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Member name.</p>
+             * <p>The member name.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -726,7 +726,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Next feature ID</p>
+             * <p>The next feature ID.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -734,7 +734,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether there is a next page</p>
+             * <p>Indicates whether a next page exists.</p>
              */
             public Builder nextPage(Boolean nextPage) {
                 this.nextPage = nextPage;
@@ -742,7 +742,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page size.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -753,7 +753,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether there is a previous page.</p>
+             * <p>Indicates whether a previous page exists.</p>
              */
             public Builder prePage(Boolean prePage) {
                 this.prePage = prePage;
@@ -761,7 +761,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Apart from pagination limits, the server processes up to the most recent 1000 records. If the result exceeds 1000, <strong>ResultLimit</strong> is <strong>true</strong>, please narrow down the time range and search again; otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * <p>Apart from pagination limits, the server processes up to 1000 recent records per query. If the results exceed 1000 records, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;
@@ -769,7 +769,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of items.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -780,7 +780,7 @@ public class ListAppDomainRedirectRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of pages.</p>
+             * <p>The total number of pages.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

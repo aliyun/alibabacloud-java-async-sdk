@@ -180,7 +180,10 @@ public class ListAppConversationsRequest extends Request {
         }
 
         /**
-         * BotId.
+         * <p>The bot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zero2</p>
          */
         public Builder botId(String botId) {
             this.putQueryParameter("BotId", botId);
@@ -189,7 +192,10 @@ public class ListAppConversationsRequest extends Request {
         }
 
         /**
-         * EndModifyTime.
+         * <p>The end modification time in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20201212</p>
          */
         public Builder endModifyTime(String endModifyTime) {
             this.putQueryParameter("EndModifyTime", endModifyTime);
@@ -198,7 +204,11 @@ public class ListAppConversationsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -207,7 +217,10 @@ public class ListAppConversationsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -216,7 +229,10 @@ public class ListAppConversationsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -225,7 +241,10 @@ public class ListAppConversationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,7 +253,10 @@ public class ListAppConversationsRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1168642640022064</p>
          */
         public Builder siteId(String siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -243,7 +265,10 @@ public class ListAppConversationsRequest extends Request {
         }
 
         /**
-         * StartModifyTime.
+         * <p>The start modification time in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20200101</p>
          */
         public Builder startModifyTime(String startModifyTime) {
             this.putQueryParameter("StartModifyTime", startModifyTime);

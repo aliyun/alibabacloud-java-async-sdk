@@ -106,7 +106,10 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code. Valid values: If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +117,10 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -133,7 +139,10 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +150,7 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Task.
+         * <p>The task information.</p>
          */
         public Builder task(Task task) {
             this.task = task;
@@ -220,7 +229,10 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>604860995</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -228,7 +240,17 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The current status of the task. Valid values:</p>
+             * <ul>
+             * <li>pending: Pending execution.</li>
+             * <li>configuring: Being configured.</li>
+             * <li>success: Succeeded.</li>
+             * <li>failed: Failed.</li>
+             * <li>partialFailed: Partially failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -236,7 +258,7 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Urls.
+             * <p>The URL of the prefetched resource.</p>
              */
             public Builder urls(java.util.List<String> urls) {
                 this.urls = urls;

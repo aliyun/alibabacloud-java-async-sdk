@@ -119,7 +119,10 @@ public class AppMaterialDirectory extends TeaModel {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250814102215000001</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -127,7 +130,7 @@ public class AppMaterialDirectory extends TeaModel {
         }
 
         /**
-         * Children.
+         * <p>The list of subfolders.</p>
          */
         public Builder children(java.util.List<AppMaterialDirectory> children) {
             this.children = children;
@@ -135,7 +138,10 @@ public class AppMaterialDirectory extends TeaModel {
         }
 
         /**
-         * DirectoryId.
+         * <p>The folder ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20260206134746000001-system</p>
          */
         public Builder directoryId(String directoryId) {
             this.directoryId = directoryId;
@@ -143,7 +149,10 @@ public class AppMaterialDirectory extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>图片管理</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -151,7 +160,10 @@ public class AppMaterialDirectory extends TeaModel {
         }
 
         /**
-         * SortNum.
+         * <p>The sort number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sortNum(String sortNum) {
             this.sortNum = sortNum;
@@ -159,7 +171,10 @@ public class AppMaterialDirectory extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The folder type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTOM</p>
          */
         public Builder type(String type) {
             this.type = type;

@@ -210,7 +210,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -218,7 +221,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -226,7 +232,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -234,7 +243,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -242,7 +254,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -250,7 +265,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -258,7 +273,11 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -266,7 +285,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -274,7 +293,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -293,7 +315,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -301,7 +326,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -309,7 +337,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -427,7 +458,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The creation date. The value is in ISO 8601 format with the time zone set to UTC (Z).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-28T17:59:55Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -435,7 +469,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9953352</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -443,7 +480,14 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether this is the default report. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Not the default report.</li>
+             * <li><strong>1</strong>: The default report.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -451,7 +495,11 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * IsSystem.
+             * <p>Indicates whether the approval template is system-defined. Valid values:</p>
+             * <ul>
+             * <li>1: Yes.</li>
+             * <li>0: No.</li>
+             * </ul>
              */
             public Builder isSystem(Boolean isSystem) {
                 this.isSystem = isSystem;
@@ -459,7 +507,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun:dnm329@cn-shanghai+dir-8452400651</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -467,7 +518,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FileName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -586,7 +640,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The time when the task was created. The value is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-27 16:02:28</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -594,7 +651,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000039405002</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -602,7 +662,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether this is the default dedicated gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -610,7 +673,11 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * IsSystem.
+             * <p>Indicates whether the approval template is system-defined. Valid values:</p>
+             * <ul>
+             * <li>1: Yes.</li>
+             * <li>0: No.</li>
+             * </ul>
              */
             public Builder isSystem(Boolean isSystem) {
                 this.isSystem = isSystem;
@@ -618,7 +685,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>label-03\&quot;&amp;$(curl D93PCxNZ.popscan.xaliyun.com)%3B</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -626,7 +696,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The scenario name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>docs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -784,7 +857,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPageNum(Integer currentPageNum) {
                 this.currentPageNum = currentPageNum;
@@ -792,7 +868,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The query results.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -800,7 +876,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Next.
+             * <p>The decision weight.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -808,7 +884,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * NextPage.
+             * <p>Indicates whether a next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder nextPage(Boolean nextPage) {
                 this.nextPage = nextPage;
@@ -816,7 +895,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -824,7 +906,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * PrePage.
+             * <p>Indicates whether a previous page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder prePage(Boolean prePage) {
                 this.prePage = prePage;
@@ -832,7 +917,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * ResultLimit.
+             * <p>Indicates whether the server-side result limit is reached. The server processes up to 1,000 recent records beyond pagination limits. If the results exceed 1,000, <strong>ResultLimit</strong> is <strong>true</strong> and you must narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;
@@ -840,7 +928,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItemNum.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalItemNum(Integer totalItemNum) {
                 this.totalItemNum = totalItemNum;
@@ -848,7 +939,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageNum.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPageNum(Integer totalPageNum) {
                 this.totalPageNum = totalPageNum;

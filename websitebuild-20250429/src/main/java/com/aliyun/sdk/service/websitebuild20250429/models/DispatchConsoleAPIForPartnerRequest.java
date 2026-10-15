@@ -127,6 +127,14 @@ public class DispatchConsoleAPIForPartnerRequest extends Request {
         }
 
         /**
+         * <p>The operation to perform on the alert. Valid values:</p>
+         * <ul>
+         * <li><strong>deal</strong>: handles the alert (quarantine).</li>
+         * <li><strong>ignore</strong>: ignores the alert.</li>
+         * <li><strong>mark_mis_info</strong>: marks the alert as a false positive (adds it to the whitelist).</li>
+         * <li><strong>rm_mark_mis_info</strong>: unmarks the alert as a false positive (removes it from the whitelist).</li>
+         * <li><strong>offline_handled</strong>: marks the alert as handled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +147,10 @@ public class DispatchConsoleAPIForPartnerRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The error parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;\&quot;]</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);
@@ -148,6 +159,7 @@ public class DispatchConsoleAPIForPartnerRequest extends Request {
         }
 
         /**
+         * <p>The product code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -184,7 +184,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the permission verification failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,14 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retries are allowed. Valid values:</p>
+         * <ul>
+         * <li>false: Retries are not allowed.</li>
+         * <li>true: Retries are allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +210,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The name of the application. The system queries the application with this name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +221,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +232,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +243,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +251,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +270,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +281,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +292,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is processed synchronously.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -437,7 +465,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * AcquisitionTime.
+             * <p>The acquisition time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-03 12:00:00</p>
              */
             public Builder acquisitionTime(String acquisitionTime) {
                 this.acquisitionTime = acquisitionTime;
@@ -445,7 +476,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Balance.
+             * <p>The balance, which is calculated by subtracting the used amount from the initial quota (initQuota - used).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder balance(Long balance) {
                 this.balance = balance;
@@ -453,7 +487,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * BalanceStr.
+             * <p>The exact value of the balance. The value is of the String type to support decimal display.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder balanceStr(String balanceStr) {
                 this.balanceStr = balanceStr;
@@ -461,7 +498,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * EndDate.
+             * <p>The expiration time of the validity period. The time is in the YYYY-MM-DD HH:mm:ss Z format, where Z is the time zone offset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-11 10:26:27 +0800</p>
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -469,7 +509,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Expired.
+             * <p>Indicates whether the quota has expired (endDate &lt; current time). The frontend displays the item in gray based on this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -477,7 +520,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * InitQuota.
+             * <p>The acquired amount, which is the initial quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123</p>
              */
             public Builder initQuota(Long initQuota) {
                 this.initQuota = initQuota;
@@ -485,7 +531,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * InitQuotaStr.
+             * <p>The exact value of the acquired amount. The value is of the String type to support decimal display.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123</p>
              */
             public Builder initQuotaStr(String initQuotaStr) {
                 this.initQuotaStr = initQuotaStr;
@@ -493,7 +542,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The code of the source type. Examples: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MARKET_CLOUD_DREAM</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -501,7 +553,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTypeName.
+             * <p>The Chinese name of the source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FREE_TRIAL_GIFT</p>
              */
             public Builder sourceTypeName(String sourceTypeName) {
                 this.sourceTypeName = sourceTypeName;
@@ -509,7 +564,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the inspiration credit account.</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -667,7 +722,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * AcquisitionTime.
+             * <p>The acquisition time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-03 12:00:00</p>
              */
             public Builder acquisitionTime(String acquisitionTime) {
                 this.acquisitionTime = acquisitionTime;
@@ -675,7 +733,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Balance.
+             * <p>The balance, which is calculated by subtracting the used amount from the initial quota (initQuota - used).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder balance(Long balance) {
                 this.balance = balance;
@@ -683,7 +744,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * BalanceStr.
+             * <p>The exact value of the balance. The value is of the String type to support decimal display.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder balanceStr(String balanceStr) {
                 this.balanceStr = balanceStr;
@@ -691,7 +755,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * EndDate.
+             * <p>The expiration time of the validity period. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-25 10:11:25</p>
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -699,7 +766,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Expired.
+             * <p>Indicates whether the quota has expired (endDate &lt; current time). The frontend displays the item in gray based on this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -707,7 +777,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * InitQuota.
+             * <p>The acquired amount, which is the initial quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123</p>
              */
             public Builder initQuota(Long initQuota) {
                 this.initQuota = initQuota;
@@ -715,7 +788,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * InitQuotaStr.
+             * <p>The exact value of the acquired amount. The value is of the String type to support decimal display.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123</p>
              */
             public Builder initQuotaStr(String initQuotaStr) {
                 this.initQuotaStr = initQuotaStr;
@@ -723,7 +799,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The code of the source type. Examples: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MARKET_CLOUD_DREAM</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -731,7 +810,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTypeName.
+             * <p>The Chinese name of the source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FREE_TRIAL_GIFT</p>
              */
             public Builder sourceTypeName(String sourceTypeName) {
                 this.sourceTypeName = sourceTypeName;
@@ -889,7 +971,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder currentPageNum(Integer currentPageNum) {
                 this.currentPageNum = currentPageNum;
@@ -897,7 +982,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The request results.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -905,7 +990,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Next.
+             * <p>The decision weight.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -913,7 +998,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * NextPage.
+             * <p>Indicates whether a next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder nextPage(Boolean nextPage) {
                 this.nextPage = nextPage;
@@ -921,7 +1009,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -929,7 +1020,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PrePage.
+             * <p>Indicates whether a previous page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder prePage(Boolean prePage) {
                 this.prePage = prePage;
@@ -937,7 +1031,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultLimit.
+             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow down the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;
@@ -945,7 +1039,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItemNum.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalItemNum(Integer totalItemNum) {
                 this.totalItemNum = totalItemNum;
@@ -953,7 +1050,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageNum.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPageNum(Integer totalPageNum) {
                 this.totalPageNum = totalPageNum;

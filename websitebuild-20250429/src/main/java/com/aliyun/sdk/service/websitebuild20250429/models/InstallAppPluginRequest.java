@@ -96,7 +96,10 @@ public class InstallAppPluginRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * <p>The gateway plug-in ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -105,7 +108,10 @@ public class InstallAppPluginRequest extends Request {
         }
 
         /**
-         * PluginVersion.
+         * <p>The locked version. Leave empty to follow the latest version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.7</p>
          */
         public Builder pluginVersion(String pluginVersion) {
             this.putQueryParameter("PluginVersion", pluginVersion);

@@ -87,7 +87,7 @@ public class CreateAppInstanceTicketRequest extends Request {
         } 
 
         /**
-         * <p>Customer business ID</p>
+         * <p>The customer business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>WS20250801154628000001</p>
@@ -99,7 +99,7 @@ public class CreateAppInstanceTicketRequest extends Request {
         }
 
         /**
-         * <p>Client ID of the device that needs to revoke the access token.</p>
+         * <p>The Client ID of the device for which you want to revoke the access credential.</p>
          * 
          * <strong>example:</strong>
          * <p>d566aaf2-7c88-40a4-982f-6abef0be13c9</p>

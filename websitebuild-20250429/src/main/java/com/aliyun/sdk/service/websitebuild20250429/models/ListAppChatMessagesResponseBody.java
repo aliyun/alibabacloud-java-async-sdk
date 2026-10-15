@@ -210,7 +210,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denied details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -218,7 +221,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Specifies whether a retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -226,7 +232,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The app name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dewuApp</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -234,7 +243,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -242,7 +254,13 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -250,7 +268,7 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -258,7 +276,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results per query. Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -266,7 +287,7 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(java.util.List<Module> module) {
             this.module = module;
@@ -274,7 +295,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query. This parameter is empty if there is no next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -293,7 +317,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.EROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -301,7 +328,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -309,7 +339,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -544,7 +577,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * BotId.
+             * <p>The bot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zero2</p>
              */
             public Builder botId(String botId) {
                 this.botId = botId;
@@ -552,7 +588,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * ChatId.
+             * <p>The unique ID of the utterance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat-xrz3etcl2bsygwlx8g</p>
              */
             public Builder chatId(String chatId) {
                 this.chatId = chatId;
@@ -560,7 +599,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * ChatStatus.
+             * <p>The current conversation status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder chatStatus(String chatStatus) {
                 this.chatStatus = chatStatus;
@@ -568,7 +610,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The ID of the called data API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;code\&quot;: \&quot;200\&quot;, \&quot;success\&quot;: True, \&quot;content\&quot;: True, \&quot;requestId\&quot;: \&quot;028993DE-097E-5F4E-AC48-64A2D5ED5F30\&quot;, \&quot;businessError\&quot;: False, \&quot;message\&quot;: \&quot;success\&quot;, \&quot;httpStatusCode\&quot;: 200}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -576,7 +621,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * ContentType.
+             * <p>The content type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image/png</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -584,7 +632,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationId.
+             * <p>The conversation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>872be9bc-3097-433d-b462-596202455102</p>
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
@@ -592,6 +643,7 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time. The value is a UNIX timestamp in seconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -603,6 +655,7 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The modification time. The time is in ISO 8601 format and the UTC time zone (Z).</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -614,7 +667,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * MessageId.
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ee60f5a6-88ca-4074-ad37-515f065bbbd2</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -622,7 +678,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * MetaData.
+             * <p>The business extension metadata. The value must be a JSON string in map format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;appId\&quot;:\&quot;WS20260506101154000001\&quot;,\&quot;inputTokens\&quot;:1148,\&quot;outputTokens\&quot;:60}</p>
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -630,7 +689,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * No.
+             * <p><strong>[Deprecated]</strong> The region sequence number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder no(Integer no) {
                 this.no = no;
@@ -638,7 +700,24 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of the conversation participant. Valid values:</p>
+             * <ul>
+             * <li><p>user: User</p>
+             * </li>
+             * <li><p>assistant: Assistant</p>
+             * </li>
+             * <li><p>system: System</p>
+             * </li>
+             * <li><p>function: Function</p>
+             * </li>
+             * <li><p>plugin: Plug-in</p>
+             * </li>
+             * <li><p>tool: Tool</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LoC</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -646,7 +725,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * SectionId.
+             * <p>The section ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder sectionId(String sectionId) {
                 this.sectionId = sectionId;
@@ -654,7 +736,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>865181640657408</p>
              */
             public Builder siteId(String siteId) {
                 this.siteId = siteId;
@@ -662,7 +747,10 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder type(String type) {
                 this.type = type;

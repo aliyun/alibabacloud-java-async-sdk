@@ -67,7 +67,7 @@ public class GetIcpFilingInfoForPartnerResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The request result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,7 +157,10 @@ public class GetIcpFilingInfoForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * IcpNumber.
+             * <p>The ICP filing number associated with the domain name. Both entity ICP filing numbers and website ICP filing numbers are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>京ICP备15023563号-3</p>
              */
             public Builder icpNumber(String icpNumber) {
                 this.icpNumber = icpNumber;
@@ -165,7 +168,7 @@ public class GetIcpFilingInfoForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Recorded.
+             * <p>Indicates whether the domain name has an ICP filing.</p>
              */
             public Builder recorded(Boolean recorded) {
                 this.recorded = recorded;
@@ -173,7 +176,10 @@ public class GetIcpFilingInfoForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * SiteRecordNumber.
+             * <p>The website ICP filing number associated with the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>湘ICP备14011526号-3A</p>
              */
             public Builder siteRecordNumber(String siteRecordNumber) {
                 this.siteRecordNumber = siteRecordNumber;

@@ -83,6 +83,10 @@ public class GetUserAccessTokenForPartnerRequest extends Request {
         }
 
         /**
+         * <p>The credential for connecting to the cloud application.</p>
+         * <blockquote>
+         * <p>This parameter is displayed for non-initial calls.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

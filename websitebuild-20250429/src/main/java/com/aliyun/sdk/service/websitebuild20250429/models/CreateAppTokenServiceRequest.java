@@ -82,7 +82,10 @@ public class CreateAppTokenServiceRequest extends Request {
         }
 
         /**
-         * CreateAction.
+         * <p>The subscription type: OPEN_SUBSCRIPTION.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_SUBSCRIPTION</p>
          */
         public Builder createAction(String createAction) {
             this.putQueryParameter("CreateAction", createAction);

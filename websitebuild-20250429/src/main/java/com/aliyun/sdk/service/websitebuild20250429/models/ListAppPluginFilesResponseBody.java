@@ -184,7 +184,10 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the permission verification failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,10 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +239,7 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +247,7 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +266,10 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +277,10 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception.</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +288,10 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -359,7 +383,10 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The file content, returned when POP displays SKILL.md.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>domain cnamen</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -367,7 +394,10 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -386,7 +416,10 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The number of returned results. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -453,7 +486,7 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * Files.
+             * <p>The task execution progress.</p>
              */
             public Builder files(java.util.List<Files> files) {
                 this.files = files;
@@ -461,7 +494,10 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The application instance version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-04-02</p>
              */
             public Builder version(String version) {
                 this.version = version;

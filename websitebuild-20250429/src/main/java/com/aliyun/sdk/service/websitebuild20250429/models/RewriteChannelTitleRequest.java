@@ -97,6 +97,7 @@ public class RewriteChannelTitleRequest extends Request {
         }
 
         /**
+         * <p>The channel draft ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class RewriteChannelTitleRequest extends Request {
         }
 
         /**
-         * UserRequirement.
+         * <p>The user personalization requirement in free text. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder userRequirement(String userRequirement) {
             this.putQueryParameter("UserRequirement", userRequirement);

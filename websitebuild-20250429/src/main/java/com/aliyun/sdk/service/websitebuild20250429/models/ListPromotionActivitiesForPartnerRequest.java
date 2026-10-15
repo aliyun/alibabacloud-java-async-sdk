@@ -124,7 +124,10 @@ public class ListPromotionActivitiesForPartnerRequest extends Request {
         }
 
         /**
-         * Channel.
+         * <p>The channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WECHAT</p>
          */
         public Builder channel(String channel) {
             this.putQueryParameter("Channel", channel);
@@ -133,7 +136,10 @@ public class ListPromotionActivitiesForPartnerRequest extends Request {
         }
 
         /**
-         * EmployeeCode.
+         * <p>The employee code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder employeeCode(String employeeCode) {
             this.putQueryParameter("EmployeeCode", employeeCode);
@@ -142,7 +148,11 @@ public class ListPromotionActivitiesForPartnerRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -151,7 +161,10 @@ public class ListPromotionActivitiesForPartnerRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

@@ -210,7 +210,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -218,7 +221,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -226,7 +232,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name. The application with this name is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>watermark</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -234,7 +243,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -242,7 +254,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message. This message is used to replace the %s variable in the ErrMessage response parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -250,7 +265,7 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -258,7 +273,11 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -266,7 +285,7 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -274,7 +293,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -293,7 +315,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -301,7 +326,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -309,7 +337,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -479,7 +510,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * ActivityCode.
+             * <p>The activity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acwfradoj5u</p>
              */
             public Builder activityCode(String activityCode) {
                 this.activityCode = activityCode;
@@ -487,7 +521,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * ActivityName.
+             * <p>The activity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IP segment filtering statistics</p>
              */
             public Builder activityName(String activityName) {
                 this.activityName = activityName;
@@ -495,7 +532,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * EmployeeCode.
+             * <p>The employee code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder employeeCode(String employeeCode) {
                 this.employeeCode = employeeCode;
@@ -503,7 +543,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * FailReason.
+             * <p>The failure reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_ERROR</p>
              */
             public Builder failReason(String failReason) {
                 this.failReason = failReason;
@@ -511,7 +554,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * IssuanceTime.
+             * <p>The issuance time. Format: YYYY-MM-DD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-01</p>
              */
             public Builder issuanceTime(String issuanceTime) {
                 this.issuanceTime = issuanceTime;
@@ -519,7 +565,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * OfferSnapshot.
+             * <p>The benefit snapshot in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder offerSnapshot(String offerSnapshot) {
                 this.offerSnapshot = offerSnapshot;
@@ -527,7 +576,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * RecordId.
+             * <p>The record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5094</p>
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;
@@ -535,7 +587,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The operation remark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -543,7 +598,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The issuance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FE_RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -551,7 +609,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123241414</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -644,7 +705,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -652,7 +716,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -660,7 +727,7 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * Records.
+             * <p>The list of issuance records.</p>
              */
             public Builder records(java.util.List<Records> records) {
                 this.records = records;
@@ -668,7 +735,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

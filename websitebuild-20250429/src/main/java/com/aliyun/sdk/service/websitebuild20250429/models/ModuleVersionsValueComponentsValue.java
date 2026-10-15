@@ -106,7 +106,10 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
         } 
 
         /**
-         * ComponentCode.
+         * <p>组件唯一编码（系统内部标识）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ComponentCode</p>
          */
         public Builder componentCode(String componentCode) {
             this.componentCode = componentCode;
@@ -114,7 +117,10 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
         }
 
         /**
-         * ComponentName.
+         * <p>组件显示名称（用户可见名称）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ComponentName</p>
          */
         public Builder componentName(String componentName) {
             this.componentName = componentName;
@@ -122,7 +128,7 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
         }
 
         /**
-         * InstanceProperty.
+         * <p>组件实例属性配置</p>
          */
         public Builder instanceProperty(java.util.List<InstanceProperty> instanceProperty) {
             this.instanceProperty = instanceProperty;
@@ -130,7 +136,7 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
         }
 
         /**
-         * Properties.
+         * <p>组件实例属性配置</p>
          */
         public Builder properties(java.util.Map<String, ModuleVersionsValueComponentsValuePropertiesValue> properties) {
             this.properties = properties;
@@ -138,7 +144,10 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
         }
 
         /**
-         * ModuleAttrStatus.
+         * <p>模块属性状态</p>
+         * 
+         * <strong>example:</strong>
+         * <p>attr</p>
          */
         public Builder moduleAttrStatus(Integer moduleAttrStatus) {
             this.moduleAttrStatus = moduleAttrStatus;
@@ -217,7 +226,10 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>属性编码（系统内部标识）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -225,7 +237,10 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>属性值编码（系统内部值）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -233,7 +248,10 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>属性显示名称（用户可见名称）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -326,7 +344,10 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>属性编码（系统内部标识）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -334,7 +355,10 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>属性显示名称（用户可见名称）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,7 +366,10 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>属性值编码（系统内部值）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -350,7 +377,7 @@ public class ModuleVersionsValueComponentsValue extends TeaModel {
             }
 
             /**
-             * Values.
+             * <p>模块属性值列表</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;

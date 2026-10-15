@@ -59,7 +59,10 @@ public class GetAppInstanceTempShortUrlRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The application business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putBodyParameter("BizId", bizId);

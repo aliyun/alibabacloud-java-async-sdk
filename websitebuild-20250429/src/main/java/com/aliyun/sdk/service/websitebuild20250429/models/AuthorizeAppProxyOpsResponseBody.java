@@ -184,7 +184,10 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The deprecated parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,10 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +239,7 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +247,7 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +266,10 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +277,10 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The root error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +288,10 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is synchronously processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -346,7 +370,10 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
             } 
 
             /**
-             * Authorized.
+             * <p>Indicates whether the service-linked role is authorized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder authorized(Boolean authorized) {
                 this.authorized = authorized;
@@ -354,7 +381,10 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
             }
 
             /**
-             * RamAuthLink.
+             * <p>The RAM service role authorization link returned when the service-linked role is not authorized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>url</p>
              */
             public Builder ramAuthLink(String ramAuthLink) {
                 this.ramAuthLink = ramAuthLink;
@@ -362,7 +392,10 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
             }
 
             /**
-             * TmpTicket.
+             * <p>The authorization URL built with tmpTicket, returned when the service-linked role is authorized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345rert</p>
              */
             public Builder tmpTicket(String tmpTicket) {
                 this.tmpTicket = tmpTicket;

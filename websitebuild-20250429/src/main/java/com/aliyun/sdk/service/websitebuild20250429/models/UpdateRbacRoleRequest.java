@@ -110,7 +110,10 @@ public class UpdateRbacRoleRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The application instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250814102215000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -119,7 +122,11 @@ public class UpdateRbacRoleRequest extends Request {
         }
 
         /**
-         * RoleData.
+         * <p>The role data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;customer&quot;,&quot;label&quot;:&quot;xx1
+         * &quot;,&quot;is_default&quot;:true,&quot;is_system&quot;:false}</p>
          */
         public Builder roleData(String roleData) {
             this.putQueryParameter("RoleData", roleData);
@@ -128,7 +135,10 @@ public class UpdateRbacRoleRequest extends Request {
         }
 
         /**
-         * RoleId.
+         * <p>The role ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ly-online</p>
          */
         public Builder roleId(String roleId) {
             this.putQueryParameter("RoleId", roleId);

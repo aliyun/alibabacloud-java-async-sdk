@@ -184,7 +184,10 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reasons for access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Specifies whether retries are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The app name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The invalid parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,7 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The returned object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +269,10 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +280,10 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +291,10 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Specifies whether the request is processed synchronously.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -346,7 +373,10 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;Recorded\&quot;: False}</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -354,7 +384,10 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10426</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -362,7 +395,10 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The website name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Article material 2026050704</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -455,7 +491,10 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * ChatId.
+             * <p>The unique ID of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat-xrz3etcl2bsygwlx8g</p>
              */
             public Builder chatId(String chatId) {
                 this.chatId = chatId;
@@ -463,7 +502,10 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationId.
+             * <p>The conversation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>872be9bc-3097-433d-b462-596202455102</p>
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
@@ -471,7 +513,7 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Events.
+             * <p>The object ID.</p>
              */
             public Builder events(java.util.List<Events> events) {
                 this.events = events;
@@ -479,7 +521,10 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
             }
 
             /**
-             * LastEventId.
+             * <p>The ID of the last SSE event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>event-21dd6124760a4a259ae33bbd878f6e20</p>
              */
             public Builder lastEventId(Integer lastEventId) {
                 this.lastEventId = lastEventId;

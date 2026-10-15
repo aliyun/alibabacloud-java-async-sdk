@@ -491,7 +491,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * AppOperationAddress.
+         * <p>The application operation address.</p>
          */
         public Builder appOperationAddress(AppOperationAddress appOperationAddress) {
             this.appOperationAddress = appOperationAddress;
@@ -507,7 +507,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * AppSubType.
+         * <p>The application subtype.</p>
          */
         public Builder appSubType(String appSubType) {
             this.appSubType = appSubType;
@@ -515,7 +515,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * AppType.
+         * <p>The application type.</p>
          */
         public Builder appType(String appType) {
             this.appType = appType;
@@ -523,7 +523,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * BizId.
+         * <p>The business ID of the application instance.</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -531,7 +531,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * BuildType.
+         * <p>The build type.</p>
          */
         public Builder buildType(String buildType) {
             this.buildType = buildType;
@@ -539,7 +539,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -547,7 +547,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * Deleted.
+         * <p>Indicates whether the instance is deleted.</p>
          */
         public Builder deleted(Integer deleted) {
             this.deleted = deleted;
@@ -555,7 +555,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The application description.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -563,7 +563,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * DesignSpecBizId.
+         * <p>The business ID of the design specification.</p>
          */
         public Builder designSpecBizId(String designSpecBizId) {
             this.designSpecBizId = designSpecBizId;
@@ -571,7 +571,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * DesignSpecId.
+         * <p>The design specification ID.</p>
          */
         public Builder designSpecId(String designSpecId) {
             this.designSpecId = designSpecId;
@@ -579,7 +579,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * Domain.
+         * <p>The primary domain name.</p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -587,7 +587,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time.</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -595,7 +595,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * EspBizId.
+         * <p>The ID of the associated delivery order.</p>
          */
         public Builder espBizId(String espBizId) {
             this.espBizId = espBizId;
@@ -603,7 +603,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * GmtDelete.
+         * <p>The deletion time.</p>
          */
         public Builder gmtDelete(String gmtDelete) {
             this.gmtDelete = gmtDelete;
@@ -611,7 +611,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The modification time.</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -619,7 +619,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * GmtPublish.
+         * <p>The publish time.</p>
          */
         public Builder gmtPublish(String gmtPublish) {
             this.gmtPublish = gmtPublish;
@@ -627,7 +627,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * IconUrl.
+         * <p>The application icon.</p>
          */
         public Builder iconUrl(String iconUrl) {
             this.iconUrl = iconUrl;
@@ -635,7 +635,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The application name.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -643,7 +643,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * PartnerDetail.
+         * <p>The details.</p>
          */
         public Builder partnerDetail(PartnerDetail partnerDetail) {
             this.partnerDetail = partnerDetail;
@@ -667,7 +667,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * SiteHost.
+         * <p>The website domain name.</p>
          */
         public Builder siteHost(String siteHost) {
             this.siteHost = siteHost;
@@ -675,7 +675,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * Slug.
+         * <p>The application identifier.</p>
          */
         public Builder slug(String slug) {
             this.slug = slug;
@@ -683,7 +683,10 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * SourceType.
+         * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MARKET_CLOUD_DREAM</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -691,7 +694,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time.</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -707,7 +710,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * StatusText.
+         * <p>The status text.</p>
          */
         public Builder statusText(String statusText) {
             this.statusText = statusText;
@@ -731,7 +734,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * ThumbnailUrl.
+         * <p>The application thumbnail.</p>
          */
         public Builder thumbnailUrl(String thumbnailUrl) {
             this.thumbnailUrl = thumbnailUrl;
@@ -739,7 +742,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -747,7 +750,7 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version.</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -891,7 +894,7 @@ public class AppInstanceAggregate extends TeaModel {
             } 
 
             /**
-             * BizId.
+             * <p>The business ID of the application instance.</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -899,7 +902,7 @@ public class AppInstanceAggregate extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -907,7 +910,7 @@ public class AppInstanceAggregate extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -915,7 +918,7 @@ public class AppInstanceAggregate extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The record ID.</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -923,7 +926,10 @@ public class AppInstanceAggregate extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>The mobile phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -931,7 +937,7 @@ public class AppInstanceAggregate extends TeaModel {
             }
 
             /**
-             * ParentPk.
+             * <p>The primary key of the parent record.</p>
              */
             public Builder parentPk(String parentPk) {
                 this.parentPk = parentPk;
@@ -939,7 +945,7 @@ public class AppInstanceAggregate extends TeaModel {
             }
 
             /**
-             * PartnerId.
+             * <p>The partner ID.</p>
              */
             public Builder partnerId(String partnerId) {
                 this.partnerId = partnerId;
@@ -947,7 +953,7 @@ public class AppInstanceAggregate extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1027,7 +1033,7 @@ public class AppInstanceAggregate extends TeaModel {
             } 
 
             /**
-             * BindData.
+             * <p>data</p>
              */
             public Builder bindData(BindData bindData) {
                 this.bindData = bindData;
@@ -1035,7 +1041,7 @@ public class AppInstanceAggregate extends TeaModel {
             }
 
             /**
-             * PartnerId.
+             * <p>The partner ID.</p>
              */
             public Builder partnerId(String partnerId) {
                 this.partnerId = partnerId;
@@ -1110,7 +1116,11 @@ public class AppInstanceAggregate extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. If this parameter is specified, it cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Group</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1118,7 +1128,8 @@ public class AppInstanceAggregate extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. If this parameter is specified, it can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

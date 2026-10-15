@@ -96,7 +96,10 @@ public class DeleteRbacPermissionRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250814102215000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -105,7 +108,10 @@ public class DeleteRbacPermissionRequest extends Request {
         }
 
         /**
-         * PermissionId.
+         * <p>The permission ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>804a6b2a-82ac-49f2-960a-a6c2ed9e73dd</p>
          */
         public Builder permissionId(String permissionId) {
             this.putQueryParameter("PermissionId", permissionId);

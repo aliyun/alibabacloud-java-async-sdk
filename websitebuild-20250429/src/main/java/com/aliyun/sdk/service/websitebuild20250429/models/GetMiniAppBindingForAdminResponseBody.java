@@ -67,7 +67,7 @@ public class GetMiniAppBindingForAdminResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The request result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,7 +157,10 @@ public class GetMiniAppBindingForAdminResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthStatus.
+             * <p>The authorization status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AUTHORIZED</p>
              */
             public Builder authStatus(String authStatus) {
                 this.authStatus = authStatus;
@@ -165,7 +168,10 @@ public class GetMiniAppBindingForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * <p>The business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WS20250801004817000002</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -173,7 +179,10 @@ public class GetMiniAppBindingForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * PlatformAppid.
+             * <p>The mini program ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder platformAppid(String platformAppid) {
                 this.platformAppid = platformAppid;

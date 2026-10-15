@@ -96,7 +96,10 @@ public class ListAppPluginFilesRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * <p>The gateway plug-in ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliplayer-react</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -105,7 +108,10 @@ public class ListAppPluginFilesRequest extends Request {
         }
 
         /**
-         * PluginVersion.
+         * <p>The version number. If not specified, the currently active version is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.3</p>
          */
         public Builder pluginVersion(String pluginVersion) {
             this.putQueryParameter("PluginVersion", pluginVersion);

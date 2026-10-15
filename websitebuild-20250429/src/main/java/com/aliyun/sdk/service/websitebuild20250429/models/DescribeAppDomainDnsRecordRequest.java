@@ -110,7 +110,7 @@ public class DescribeAppDomainDnsRecordRequest extends Request {
         }
 
         /**
-         * <p>Business ID</p>
+         * <p>Business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>WD20250821114240000001</p>
@@ -122,7 +122,7 @@ public class DescribeAppDomainDnsRecordRequest extends Request {
         }
 
         /**
-         * <p>Domain name</p>
+         * <p>Domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>rayihealth.cn</p>
@@ -134,7 +134,7 @@ public class DescribeAppDomainDnsRecordRequest extends Request {
         }
 
         /**
-         * <p>Purpose for querying DNS configuration</p>
+         * <p>The purpose of querying DNS configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>restore</p>

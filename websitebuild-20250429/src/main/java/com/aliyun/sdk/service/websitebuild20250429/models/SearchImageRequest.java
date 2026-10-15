@@ -256,7 +256,10 @@ public class SearchImageRequest extends Request {
         } 
 
         /**
-         * ColorHex.
+         * <p>The color.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#B0B0B0</p>
          */
         public Builder colorHex(String colorHex) {
             this.putQueryParameter("ColorHex", colorHex);
@@ -265,7 +268,10 @@ public class SearchImageRequest extends Request {
         }
 
         /**
-         * HasPerson.
+         * <p>Specifies whether the image contains a person.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder hasPerson(Boolean hasPerson) {
             this.putQueryParameter("HasPerson", hasPerson);
@@ -274,7 +280,15 @@ public class SearchImageRequest extends Request {
         }
 
         /**
-         * ImageCategory.
+         * <p>The image category. Valid values:</p>
+         * <ul>
+         * <li>normal: illustrations or article images.</li>
+         * <li>banner: background images or carousel images.</li>
+         * <li>goods: product or service images.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WindowsWithMssqlStdLicense</p>
          */
         public Builder imageCategory(String imageCategory) {
             this.putQueryParameter("ImageCategory", imageCategory);
@@ -283,7 +297,16 @@ public class SearchImageRequest extends Request {
         }
 
         /**
-         * ImageRatio.
+         * <p>The aspect ratio of the image. Valid values:
+         * &quot;16:9&quot;
+         * &quot;4:3&quot;
+         * &quot;2:1&quot;
+         * &quot;1:1&quot;
+         * &quot;3:4&quot;
+         * &quot;9:16&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16:9</p>
          */
         public Builder imageRatio(String imageRatio) {
             this.putQueryParameter("ImageRatio", imageRatio);
@@ -292,7 +315,10 @@ public class SearchImageRequest extends Request {
         }
 
         /**
-         * MaxHeight.
+         * <p>The maximum height of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4000</p>
          */
         public Builder maxHeight(Integer maxHeight) {
             this.putQueryParameter("MaxHeight", maxHeight);
@@ -301,7 +327,10 @@ public class SearchImageRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for paging queries. Maximum value: 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -310,7 +339,10 @@ public class SearchImageRequest extends Request {
         }
 
         /**
-         * MaxWidth.
+         * <p>The maximum width of the image, inclusive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4000</p>
          */
         public Builder maxWidth(Integer maxWidth) {
             this.putQueryParameter("MaxWidth", maxWidth);
@@ -319,7 +351,10 @@ public class SearchImageRequest extends Request {
         }
 
         /**
-         * MinHeight.
+         * <p>The minimum height of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder minHeight(Integer minHeight) {
             this.putQueryParameter("MinHeight", minHeight);
@@ -328,7 +363,10 @@ public class SearchImageRequest extends Request {
         }
 
         /**
-         * MinWidth.
+         * <p>The minimum width of the image, inclusive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder minWidth(Integer minWidth) {
             this.putQueryParameter("MinWidth", minWidth);
@@ -337,7 +375,10 @@ public class SearchImageRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request. If NextToken is specified, the PageSize and PageNumber request parameters do not take effect, and the TotalCount value in the response is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -346,7 +387,7 @@ public class SearchImageRequest extends Request {
         }
 
         /**
-         * <p>Osskey。</p>
+         * <p>The OSS key.</p>
          * 
          * <strong>example:</strong>
          * <p>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</p>
@@ -358,7 +399,10 @@ public class SearchImageRequest extends Request {
         }
 
         /**
-         * Size.
+         * <p>The number of returned results. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
@@ -367,7 +411,10 @@ public class SearchImageRequest extends Request {
         }
 
         /**
-         * Start.
+         * <p>The start position of the returned results. Valid values: 0 to 499. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder start(Integer start) {
             this.putQueryParameter("Start", start);
@@ -376,7 +423,7 @@ public class SearchImageRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "Tags", "simple");
@@ -386,7 +433,13 @@ public class SearchImageRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>The description text used to search for images.</p>
+         * <blockquote>
+         * <p>Maximum length: 512 characters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>卫浴五金产品，表面采用拉丝不锈钢材质，整体色调为现代银灰色，呈现简约且富有质感的风格。产品包括淋浴花洒、水龙头及毛巾架等配件，均具备防锈、耐腐蚀性能，适用于潮湿环境。各部件连接处设计精密，配有隐藏式螺丝结构，提升整体美观度。水龙头和花洒喷头支持多模式出水，把手操作顺滑，符合人体工学设计。所有五金件通过国家节水认证，支持冷热水接入，安装方式为壁挂式。</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);

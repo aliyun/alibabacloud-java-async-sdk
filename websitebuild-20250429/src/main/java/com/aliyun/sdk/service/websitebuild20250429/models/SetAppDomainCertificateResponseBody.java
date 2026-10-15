@@ -184,7 +184,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>No permission information</p>
+         * <p>The access denied details.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,10 +195,10 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether to allow retry. Values:</p>
+         * <p>Indicates whether retry is allowed. Valid values:</p>
          * <ul>
-         * <li>false: Do not allow retry.</li>
-         * <li>true: Allow retry.</li>
+         * <li>false: Retry is not allowed.</li>
+         * <li>true: Retry is allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>应用名称</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>mar</p>
@@ -221,7 +221,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error code</p>
+         * <p>The dynamic error code.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -232,10 +232,10 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic message.</p>
+         * <p>The dynamic message.</p>
          * 
          * <strong>example:</strong>
-         * <p>SYSTEM_ERROR</p>
+         * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/uoa11auyf2565k6/uoa11auyf2565k6.sql.zip?Expires=1730520371&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=WIutxAQYbbwxX0aeKmdObduLnDg%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/uoa11auyf2565k6/uoa11auyf2565k6.sql.zip?Expires=1730520371&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=WIutxAQYbbwxX0aeKmdObduLnDg%3D</a></p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -243,7 +243,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return error parameters</p>
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -251,7 +251,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response data</p>
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -259,7 +259,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -270,7 +270,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -281,7 +281,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Exception message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>系统异常</p>
@@ -292,7 +292,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether it is processed synchronously</p>
+         * <p>Indicates whether the request is synchronously processed.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -348,7 +348,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether it is successful</p>
+             * <p>Indicates whether the operation is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>

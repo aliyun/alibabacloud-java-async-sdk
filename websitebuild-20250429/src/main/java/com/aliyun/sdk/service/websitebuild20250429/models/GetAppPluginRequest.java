@@ -82,7 +82,10 @@ public class GetAppPluginRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * <p>The gateway plug-in ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);

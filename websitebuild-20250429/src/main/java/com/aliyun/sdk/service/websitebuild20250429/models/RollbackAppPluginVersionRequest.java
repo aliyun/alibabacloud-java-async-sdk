@@ -96,7 +96,10 @@ public class RollbackAppPluginVersionRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * <p>The gateway plug-in ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -105,7 +108,10 @@ public class RollbackAppPluginVersionRequest extends Request {
         }
 
         /**
-         * PluginVersion.
+         * <p>The target version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder pluginVersion(String pluginVersion) {
             this.putQueryParameter("PluginVersion", pluginVersion);

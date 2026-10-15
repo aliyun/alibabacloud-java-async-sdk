@@ -110,7 +110,10 @@ public class GetAppPublishStatusRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250731233102000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -119,7 +122,10 @@ public class GetAppPublishStatusRequest extends Request {
         }
 
         /**
-         * DeployOrderId.
+         * <p>The deployment order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4998717</p>
          */
         public Builder deployOrderId(Long deployOrderId) {
             this.putQueryParameter("DeployOrderId", deployOrderId);
@@ -128,7 +134,10 @@ public class GetAppPublishStatusRequest extends Request {
         }
 
         /**
-         * WebsiteDomain.
+         * <p>The website domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder websiteDomain(String websiteDomain) {
             this.putQueryParameter("WebsiteDomain", websiteDomain);

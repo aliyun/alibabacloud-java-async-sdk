@@ -180,7 +180,10 @@ public class ListPromotionOfferRecordsForPartnerRequest extends Request {
         }
 
         /**
-         * ActivityCode.
+         * <p>The activity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acwfradoj5u</p>
          */
         public Builder activityCode(String activityCode) {
             this.putQueryParameter("ActivityCode", activityCode);
@@ -189,7 +192,10 @@ public class ListPromotionOfferRecordsForPartnerRequest extends Request {
         }
 
         /**
-         * BelongId.
+         * <p>The belonging ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder belongId(String belongId) {
             this.putQueryParameter("BelongId", belongId);
@@ -198,7 +204,11 @@ public class ListPromotionOfferRecordsForPartnerRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -207,7 +217,10 @@ public class ListPromotionOfferRecordsForPartnerRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -216,7 +229,10 @@ public class ListPromotionOfferRecordsForPartnerRequest extends Request {
         }
 
         /**
-         * OrderColumn.
+         * <p>The field used for sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtCreated</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -225,7 +241,10 @@ public class ListPromotionOfferRecordsForPartnerRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The sort type. Valid values: ASC and DESC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -234,7 +253,10 @@ public class ListPromotionOfferRecordsForPartnerRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -243,7 +265,10 @@ public class ListPromotionOfferRecordsForPartnerRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

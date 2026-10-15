@@ -96,7 +96,10 @@ public class GetAppDatabaseTableSchemasRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -105,7 +108,10 @@ public class GetAppDatabaseTableSchemasRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default.ai_advertising_material_rec_train_v1103</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

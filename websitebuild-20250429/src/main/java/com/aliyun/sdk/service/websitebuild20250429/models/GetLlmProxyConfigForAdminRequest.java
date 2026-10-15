@@ -96,7 +96,10 @@ public class GetLlmProxyConfigForAdminRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250814102215000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -105,7 +108,10 @@ public class GetLlmProxyConfigForAdminRequest extends Request {
         }
 
         /**
-         * Capability.
+         * <p>The capability type. Valid values: llm, image, and video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>understand</p>
          */
         public Builder capability(String capability) {
             this.putQueryParameter("Capability", capability);

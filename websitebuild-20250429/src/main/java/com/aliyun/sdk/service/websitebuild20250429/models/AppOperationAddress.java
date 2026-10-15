@@ -171,7 +171,7 @@ public class AppOperationAddress extends TeaModel {
         } 
 
         /**
-         * Actions.
+         * <p>The operation button list.</p>
          */
         public Builder actions(java.util.List<AppOperateAction> actions) {
             this.actions = actions;
@@ -179,7 +179,7 @@ public class AppOperationAddress extends TeaModel {
         }
 
         /**
-         * AiCustomerConfigUrl.
+         * <p>The customer service design URL.</p>
          */
         public Builder aiCustomerConfigUrl(String aiCustomerConfigUrl) {
             this.aiCustomerConfigUrl = aiCustomerConfigUrl;
@@ -187,7 +187,7 @@ public class AppOperationAddress extends TeaModel {
         }
 
         /**
-         * AiDesignUrl.
+         * <p>The AI design URL.</p>
          */
         public Builder aiDesignUrl(String aiDesignUrl) {
             this.aiDesignUrl = aiDesignUrl;
@@ -195,7 +195,7 @@ public class AppOperationAddress extends TeaModel {
         }
 
         /**
-         * AppPublishUrl.
+         * <p>The application publishing URL.</p>
          */
         public Builder appPublishUrl(String appPublishUrl) {
             this.appPublishUrl = appPublishUrl;
@@ -203,7 +203,7 @@ public class AppOperationAddress extends TeaModel {
         }
 
         /**
-         * DashboardActions.
+         * <p>The overview page operation button list.</p>
          */
         public Builder dashboardActions(java.util.List<AppOperateAction> dashboardActions) {
             this.dashboardActions = dashboardActions;
@@ -211,7 +211,7 @@ public class AppOperationAddress extends TeaModel {
         }
 
         /**
-         * DesignUrl.
+         * <p>The professional design URL.</p>
          */
         public Builder designUrl(String designUrl) {
             this.designUrl = designUrl;
@@ -219,7 +219,7 @@ public class AppOperationAddress extends TeaModel {
         }
 
         /**
-         * InstanceLoginUrl.
+         * <p>The application instance logon URL.</p>
          */
         public Builder instanceLoginUrl(String instanceLoginUrl) {
             this.instanceLoginUrl = instanceLoginUrl;
@@ -227,7 +227,7 @@ public class AppOperationAddress extends TeaModel {
         }
 
         /**
-         * RenewBuyUrl.
+         * <p>The renewal purchase URL.</p>
          */
         public Builder renewBuyUrl(String renewBuyUrl) {
             this.renewBuyUrl = renewBuyUrl;
@@ -235,7 +235,7 @@ public class AppOperationAddress extends TeaModel {
         }
 
         /**
-         * ServerDeliveryUrl.
+         * <p>The service delivery URL.</p>
          */
         public Builder serverDeliveryUrl(String serverDeliveryUrl) {
             this.serverDeliveryUrl = serverDeliveryUrl;
@@ -243,7 +243,7 @@ public class AppOperationAddress extends TeaModel {
         }
 
         /**
-         * UpgradeBuyUrl.
+         * <p>The upgrade purchase URL.</p>
          */
         public Builder upgradeBuyUrl(String upgradeBuyUrl) {
             this.upgradeBuyUrl = upgradeBuyUrl;

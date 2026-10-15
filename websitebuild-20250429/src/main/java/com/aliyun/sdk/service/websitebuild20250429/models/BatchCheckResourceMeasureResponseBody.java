@@ -184,7 +184,10 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reasons for access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Specifies whether a retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The name of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>watermark</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,10 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +239,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +247,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The returned object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +266,10 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +277,10 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +288,10 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Specifies whether synchronous processing is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -333,7 +357,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
             } 
 
             /**
-             * AllPassed.
+             * <p>Indicates whether all checks are passed.</p>
              */
             public Builder allPassed(Boolean allPassed) {
                 this.allPassed = allPassed;
@@ -341,7 +365,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>The check results for each resource. The key is the resourceCode.</p>
              */
             public Builder results(java.util.Map<String, ModuleResultsValue> results) {
                 this.results = results;

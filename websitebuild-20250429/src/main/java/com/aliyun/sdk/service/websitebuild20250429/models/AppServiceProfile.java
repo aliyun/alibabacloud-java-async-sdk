@@ -132,7 +132,10 @@ public class AppServiceProfile extends TeaModel {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250801003834000003</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -140,7 +143,7 @@ public class AppServiceProfile extends TeaModel {
         }
 
         /**
-         * DesignType.
+         * <p>The design type.</p>
          */
         public Builder designType(String designType) {
             this.designType = designType;
@@ -148,7 +151,7 @@ public class AppServiceProfile extends TeaModel {
         }
 
         /**
-         * DesignTypeText.
+         * <p>The design type description.</p>
          */
         public Builder designTypeText(String designTypeText) {
             this.designTypeText = designTypeText;
@@ -156,7 +159,7 @@ public class AppServiceProfile extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The Lingxiao instance ID.</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -164,7 +167,10 @@ public class AppServiceProfile extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>256146659280026</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -172,7 +178,10 @@ public class AppServiceProfile extends TeaModel {
         }
 
         /**
-         * ServiceSpec.
+         * <p>The service specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder serviceSpec(String serviceSpec) {
             this.serviceSpec = serviceSpec;
@@ -180,7 +189,7 @@ public class AppServiceProfile extends TeaModel {
         }
 
         /**
-         * ServiceSpecText.
+         * <p>The service specification description.</p>
          */
         public Builder serviceSpecText(String serviceSpecText) {
             this.serviceSpecText = serviceSpecText;

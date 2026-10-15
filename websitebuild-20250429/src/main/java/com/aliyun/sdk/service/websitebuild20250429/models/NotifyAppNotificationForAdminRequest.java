@@ -124,7 +124,10 @@ public class NotifyAppNotificationForAdminRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20260206134746000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -133,7 +136,10 @@ public class NotifyAppNotificationForAdminRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>staging</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -142,7 +148,7 @@ public class NotifyAppNotificationForAdminRequest extends Request {
         }
 
         /**
-         * Payload.
+         * <p>The notification content.</p>
          */
         public Builder payload(String payload) {
             this.putQueryParameter("Payload", payload);
@@ -151,7 +157,10 @@ public class NotifyAppNotificationForAdminRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>The scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8c909373-6c33-41a7-aa38-3650e288a63e</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);

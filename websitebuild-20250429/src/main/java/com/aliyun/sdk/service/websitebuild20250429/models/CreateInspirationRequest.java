@@ -166,7 +166,10 @@ public class CreateInspirationRequest extends Request {
         }
 
         /**
-         * Amountspec.
+         * <p>The specification of the resource plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder amountspec(String amountspec) {
             this.putQueryParameter("Amountspec", amountspec);
@@ -175,7 +178,10 @@ public class CreateInspirationRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotency token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -184,7 +190,10 @@ public class CreateInspirationRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>The subscription duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -193,7 +202,10 @@ public class CreateInspirationRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>The extended information in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -202,7 +214,10 @@ public class CreateInspirationRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * <p>The payment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTO_PAY</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -211,7 +226,16 @@ public class CreateInspirationRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>The unit of the subscription cycle. Valid values:</p>
+         * <ul>
+         * <li>Year: year</li>
+         * <li>Month: month</li>
+         * <li>Day: day</li>
+         * <li>Hour: hour</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -220,7 +244,10 @@ public class CreateInspirationRequest extends Request {
         }
 
         /**
-         * Quantity.
+         * <p>The number of instances to subscribe to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);

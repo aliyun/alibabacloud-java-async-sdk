@@ -184,7 +184,10 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,14 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed. Valid values:</p>
+         * <ul>
+         * <li>false: Retry is not allowed.</li>
+         * <li>true: Retry is allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +210,10 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +221,10 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +232,13 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> response parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +246,7 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +254,7 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +273,10 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.EROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +284,10 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +295,10 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is synchronously processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -359,7 +390,10 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>curl GCEA6fET.popscan.xaliyun.com</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -367,7 +401,10 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOGO3.png</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -375,7 +412,18 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * SecretType.
+             * <p>The credential type. Valid values:</p>
+             * <ul>
+             * <li>Generic: generic credential.  </li>
+             * <li>Rds: ApsaraDB RDS credential.  </li>
+             * <li>Redis: Redis/Tair credential.</li>
+             * <li>RAMCredentials: RAM credential.  </li>
+             * <li>ECS: ECS credential.</li>
+             * <li>PolarDB: PolarDB credential.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Opaque</p>
              */
             public Builder secretType(String secretType) {
                 this.secretType = secretType;
@@ -383,7 +431,10 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The record value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>58.16.60.28</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -437,7 +488,7 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
             } 
 
             /**
-             * Secrets.
+             * <p>The instance ID.</p>
              */
             public Builder secrets(java.util.List<Secrets> secrets) {
                 this.secrets = secrets;

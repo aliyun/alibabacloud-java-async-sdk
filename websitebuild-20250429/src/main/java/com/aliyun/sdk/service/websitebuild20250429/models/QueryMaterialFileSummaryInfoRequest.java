@@ -196,6 +196,7 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
+         * <p>The business instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,6 +209,7 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
+         * <p>The ID of the directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +222,10 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文件名</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -229,7 +234,10 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
-         * OrderColumn.
+         * <p>The field by which to sort the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreationTime</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -238,7 +246,10 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The sort order. Valid values: ASC and DESC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -247,7 +258,10 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -256,7 +270,10 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -265,7 +282,7 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * <p>The file status.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             String statusListShrink = shrink(statusList, "StatusList", "json");
@@ -275,7 +292,7 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
-         * TypeList.
+         * <p>The file type.</p>
          */
         public Builder typeList(java.util.List<String> typeList) {
             String typeListShrink = shrink(typeList, "TypeList", "json");

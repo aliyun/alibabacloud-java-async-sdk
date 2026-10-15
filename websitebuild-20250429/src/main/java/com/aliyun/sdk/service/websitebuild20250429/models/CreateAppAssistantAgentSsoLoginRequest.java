@@ -110,7 +110,10 @@ public class CreateAppAssistantAgentSsoLoginRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250821161210000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -119,7 +122,10 @@ public class CreateAppAssistantAgentSsoLoginRequest extends Request {
         }
 
         /**
-         * PlatformType.
+         * <p>The platform type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder platformType(String platformType) {
             this.putQueryParameter("PlatformType", platformType);
@@ -128,7 +134,10 @@ public class CreateAppAssistantAgentSsoLoginRequest extends Request {
         }
 
         /**
-         * TargetUrl.
+         * <p>The target URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://172.16.70.16:9410/metrics">http://172.16.70.16:9410/metrics</a></p>
          */
         public Builder targetUrl(String targetUrl) {
             this.putQueryParameter("TargetUrl", targetUrl);

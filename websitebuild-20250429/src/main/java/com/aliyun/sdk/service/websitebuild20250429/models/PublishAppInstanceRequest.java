@@ -152,7 +152,10 @@ public class PublishAppInstanceRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250821161210000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -161,7 +164,10 @@ public class PublishAppInstanceRequest extends Request {
         }
 
         /**
-         * DeployChannel.
+         * <p>The deployment channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PC</p>
          */
         public Builder deployChannel(String deployChannel) {
             this.putQueryParameter("DeployChannel", deployChannel);
@@ -170,7 +176,10 @@ public class PublishAppInstanceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The publish description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_BY_NLB.nlb-jcvs5sm9l8um84zbfa</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -179,7 +188,10 @@ public class PublishAppInstanceRequest extends Request {
         }
 
         /**
-         * LogicalNumber.
+         * <p>The logical version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder logicalNumber(Integer logicalNumber) {
             this.putQueryParameter("LogicalNumber", logicalNumber);
@@ -188,7 +200,10 @@ public class PublishAppInstanceRequest extends Request {
         }
 
         /**
-         * PublishNumber.
+         * <p>The publish number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder publishNumber(String publishNumber) {
             this.putQueryParameter("PublishNumber", publishNumber);
@@ -197,7 +212,10 @@ public class PublishAppInstanceRequest extends Request {
         }
 
         /**
-         * WeappAction.
+         * <p>The action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUILD</p>
          */
         public Builder weappAction(String weappAction) {
             this.putQueryParameter("WeappAction", weappAction);

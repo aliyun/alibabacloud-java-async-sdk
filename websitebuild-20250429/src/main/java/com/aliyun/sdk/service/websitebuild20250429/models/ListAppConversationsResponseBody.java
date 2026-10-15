@@ -210,7 +210,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -218,7 +221,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether a retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -226,7 +232,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name. The application with this name is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dewuApp</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -234,7 +243,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -242,7 +254,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -250,7 +265,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -258,7 +273,11 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -266,7 +285,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -274,7 +293,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -293,7 +315,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -301,7 +326,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -309,7 +337,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -503,7 +534,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * BotId.
+             * <p>The bot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zero2</p>
              */
             public Builder botId(String botId) {
                 this.botId = botId;
@@ -511,7 +545,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * ChatNum.
+             * <p>The number of chat records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder chatNum(Integer chatNum) {
                 this.chatNum = chatNum;
@@ -519,7 +556,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationId.
+             * <p>The conversation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>799EAC1246C855CAC75B77955E43D841</p>
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
@@ -527,6 +567,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time in ISO 8601 format with a time zone offset.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -538,6 +579,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The modification time in ISO 8601 format with the UTC (Z) time zone.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -549,7 +591,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * MetaData.
+             * <p>The extended information in JSON string format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;MD5\&quot;:\&quot;296f6c01e7fea2697ffe1cf41082b774\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;12845825\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:true,\&quot;uefi_preferred\&quot;:false}</p>
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -557,7 +602,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * SectionId.
+             * <p>The section ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder sectionId(String sectionId) {
                 this.sectionId = sectionId;
@@ -565,7 +613,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1068725896006128</p>
              */
             public Builder siteId(String siteId) {
                 this.siteId = siteId;
@@ -573,7 +624,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The current viewpoint, equivalent to the news title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sometimes When We Touch</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -581,7 +635,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -674,7 +731,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The request result.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -682,7 +739,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -690,7 +750,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -698,7 +761,10 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The resource count that matches the conditional filter criteria.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

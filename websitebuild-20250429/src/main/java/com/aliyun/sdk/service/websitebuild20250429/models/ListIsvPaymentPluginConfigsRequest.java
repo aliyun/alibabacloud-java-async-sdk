@@ -110,7 +110,10 @@ public class ListIsvPaymentPluginConfigsRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250821161210000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -119,7 +122,11 @@ public class ListIsvPaymentPluginConfigsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -128,7 +135,10 @@ public class ListIsvPaymentPluginConfigsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to start the next query. If no more results are available, this value is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

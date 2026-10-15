@@ -184,7 +184,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retries are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message returned by <strong>ErrMessage</strong>.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,15 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The data table module.</p>
+         * <ul>
+         * <li><p>ABTest: experiment data table</p>
+         * </li>
+         * <li><p>ExperimentTool: experiment tool table</p>
+         * </li>
+         * <li><p>DataDiagnosis: data diagnosis</p>
+         * </li>
+         * </ul>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +277,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +288,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +299,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is processed synchronously.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -450,7 +485,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             } 
 
             /**
-             * ActionType.
+             * <p>The click action type. Valid values: CONSULT (add WeCom), BUY (purchase), and AUTO (automatic issuance).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSULT</p>
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -458,7 +496,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code. This parameter applies to both resource plans and marketing commodities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -466,7 +507,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The display description of the recommendation.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -474,7 +515,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             }
 
             /**
-             * Extend.
+             * <p>The extended fields, such as unsupportedReason.</p>
              */
             public Builder extend(java.util.Map<String, String> extend) {
                 this.extend = extend;
@@ -482,7 +523,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * <p>The order type. Valid values: BUY (purchase) and UPGRADE (upgrade).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DESC</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -490,7 +534,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The sort priority. A smaller value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -498,7 +545,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionCommodityId.
+             * <p>The ID of the marketing commodity. This parameter is returned only for new purchases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder promotionCommodityId(String promotionCommodityId) {
                 this.promotionCommodityId = promotionCommodityId;
@@ -506,7 +556,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             }
 
             /**
-             * RecommendType.
+             * <p>The recommendation type. Valid values: COMMODITY (commodity recommendation) and ACTIVITY (promotion activity recommendation).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMMODITY</p>
              */
             public Builder recommendType(String recommendType) {
                 this.recommendType = recommendType;
@@ -514,7 +567,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             }
 
             /**
-             * RedirectUrl.
+             * <p>The redirect URL. This parameter is returned when a redirect is required in scenarios such as upgrades.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ecs-workbench-disposable.aliyun.com/account/disposable/login/sst/1291612921555690/edvo2gevfh">https://ecs-workbench-disposable.aliyun.com/account/disposable/login/sst/1291612921555690/edvo2gevfh</a></p>
              */
             public Builder redirectUrl(String redirectUrl) {
                 this.redirectUrl = redirectUrl;
@@ -522,7 +578,10 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the commodity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -530,7 +589,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The display title of the recommendation.</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -584,7 +643,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             } 
 
             /**
-             * Commodities.
+             * <p>The list of marketing commodities.</p>
              */
             public Builder commodities(java.util.List<Commodities> commodities) {
                 this.commodities = commodities;

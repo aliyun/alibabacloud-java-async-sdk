@@ -166,7 +166,10 @@ public class UploadAppPluginVersionRequest extends Request {
         }
 
         /**
-         * Changelog.
+         * <p>The changelog description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x x x</p>
          */
         public Builder changelog(String changelog) {
             this.putQueryParameter("Changelog", changelog);
@@ -175,7 +178,10 @@ public class UploadAppPluginVersionRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description. This parameter is optional. If a non-empty value is specified, the description field in the main table is also updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -184,7 +190,10 @@ public class UploadAppPluginVersionRequest extends Request {
         }
 
         /**
-         * DownloadUrl.
+         * <p>The downloadable ZIP URL. This parameter is mutually exclusive with OssKey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://sfile.chatglm.cn/chatglm4/file/a8/a87340a5ba.pdf">https://sfile.chatglm.cn/chatglm4/file/a8/a87340a5ba.pdf</a></p>
          */
         public Builder downloadUrl(String downloadUrl) {
             this.putQueryParameter("DownloadUrl", downloadUrl);
@@ -193,7 +202,10 @@ public class UploadAppPluginVersionRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>The extended JSON. This parameter is optional and uses the same format as the sandbox-synced extend field. If a non-empty value is specified, the extend field in the main table is also updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;deliveryNodeName\&quot;:\&quot;Delivery QA\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -202,7 +214,10 @@ public class UploadAppPluginVersionRequest extends Request {
         }
 
         /**
-         * OssKey.
+         * <p>The OSS key obtained after frontend direct upload. This parameter is mutually exclusive with DownloadUrl.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</p>
          */
         public Builder ossKey(String ossKey) {
             this.putQueryParameter("OssKey", ossKey);
@@ -211,7 +226,10 @@ public class UploadAppPluginVersionRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * <p>The gateway plug-in ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliplayer-react</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -220,7 +238,10 @@ public class UploadAppPluginVersionRequest extends Request {
         }
 
         /**
-         * PluginVersion.
+         * <p>The new version number in semver format. The version must be greater than the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder pluginVersion(String pluginVersion) {
             this.putQueryParameter("PluginVersion", pluginVersion);

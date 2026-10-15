@@ -26,6 +26,10 @@ public class DeleteAppDomainRedirectRequest extends Request {
     private String bizId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    private String domainName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecordId")
     private Long recordId;
 
@@ -33,6 +37,7 @@ public class DeleteAppDomainRedirectRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
+        this.domainName = builder.domainName;
         this.recordId = builder.recordId;
     }
 
@@ -64,6 +69,13 @@ public class DeleteAppDomainRedirectRequest extends Request {
     }
 
     /**
+     * @return domainName
+     */
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    /**
      * @return recordId
      */
     public Long getRecordId() {
@@ -73,6 +85,7 @@ public class DeleteAppDomainRedirectRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteAppDomainRedirectRequest, Builder> {
         private String regionId; 
         private String bizId; 
+        private String domainName; 
         private Long recordId; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class DeleteAppDomainRedirectRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.bizId = request.bizId;
+            this.domainName = request.domainName;
             this.recordId = request.recordId;
         } 
 
@@ -96,7 +110,7 @@ public class DeleteAppDomainRedirectRequest extends Request {
         }
 
         /**
-         * <p>Business ID of the application instance</p>
+         * <p>The business ID of the application instance.</p>
          * 
          * <strong>example:</strong>
          * <p>WD20250703155602000001</p>
@@ -108,7 +122,19 @@ public class DeleteAppDomainRedirectRequest extends Request {
         }
 
         /**
-         * <p>ID of the domain redirect record</p>
+         * <p>aliyun.com</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
+        public Builder domainName(String domainName) {
+            this.putQueryParameter("DomainName", domainName);
+            this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the domain name redirect record.</p>
          * 
          * <strong>example:</strong>
          * <p>803858889404426240</p>

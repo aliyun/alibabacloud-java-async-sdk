@@ -138,7 +138,10 @@ public class UpdateAppSupabaseSecretRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250731233102000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -147,7 +150,10 @@ public class UpdateAppSupabaseSecretRequest extends Request {
         }
 
         /**
-         * SecretKey.
+         * <p>The secret key.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder secretKey(String secretKey) {
             this.putQueryParameter("SecretKey", secretKey);
@@ -156,7 +162,10 @@ public class UpdateAppSupabaseSecretRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * <p>The secret name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>277356_pre_auth</p>
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -165,7 +174,10 @@ public class UpdateAppSupabaseSecretRequest extends Request {
         }
 
         /**
-         * SecretType.
+         * <p>The secret type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Opaque</p>
          */
         public Builder secretType(String secretType) {
             this.putQueryParameter("SecretType", secretType);
@@ -174,7 +186,10 @@ public class UpdateAppSupabaseSecretRequest extends Request {
         }
 
         /**
-         * SecretValue.
+         * <p>The secret value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231</p>
          */
         public Builder secretValue(String secretValue) {
             this.putQueryParameter("SecretValue", secretValue);

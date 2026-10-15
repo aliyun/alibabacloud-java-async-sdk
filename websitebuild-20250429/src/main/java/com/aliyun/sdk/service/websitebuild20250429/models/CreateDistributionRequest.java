@@ -98,6 +98,7 @@ public class CreateDistributionRequest extends Request {
         }
 
         /**
+         * <p>The article ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class CreateDistributionRequest extends Request {
         }
 
         /**
+         * <p>The list of selected channels.</p>
          * <p>This parameter is required.</p>
          */
         public Builder channels(java.util.List<String> channels) {

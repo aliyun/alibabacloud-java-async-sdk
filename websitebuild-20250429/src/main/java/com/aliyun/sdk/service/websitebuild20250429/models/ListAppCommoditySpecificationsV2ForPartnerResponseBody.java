@@ -210,7 +210,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denied detail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -218,7 +221,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -226,7 +232,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * AppName.
+         * <p>The app name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -234,7 +243,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -242,7 +254,13 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> error message of the response parameters.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -250,7 +268,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -258,7 +276,11 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * MaxResults.
+         * <p>The number of results per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -266,7 +288,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -274,7 +296,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty when there is no next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -293,7 +318,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -301,7 +329,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -309,7 +340,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is processed synchronously.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -401,7 +435,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             } 
 
             /**
-             * Code.
+             * <p>The API status or POP error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -409,7 +446,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * Components.
+             * <p>The default values.</p>
              */
             public Builder components(java.util.Map<String, ModuleDataComponentsValue> components) {
                 this.components = components;
@@ -417,7 +454,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * Name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>文件名</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -425,7 +465,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * Properties.
+             * <p>The duration.</p>
              */
             public Builder properties(java.util.Map<String, ModuleDataPropertiesValue> properties) {
                 this.properties = properties;
@@ -518,7 +558,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             } 
 
             /**
-             * Code.
+             * <p>The API status or POP error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -526,7 +569,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * Components.
+             * <p>The default values.</p>
              */
             public Builder components(java.util.Map<String, ModuleNextComponentsValue> components) {
                 this.components = components;
@@ -534,7 +577,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * Name.
+             * <p>The website name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>docs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -542,7 +588,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * Properties.
+             * <p>The frame rate.</p>
              */
             public Builder properties(java.util.Map<String, ModuleNextPropertiesValue> properties) {
                 this.properties = properties;
@@ -700,7 +746,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             } 
 
             /**
-             * CurrentPageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder currentPageNum(Integer currentPageNum) {
                 this.currentPageNum = currentPageNum;
@@ -708,7 +757,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * Data.
+             * <p>The request result.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -716,7 +765,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * Next.
+             * <p>The next feature ID.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -724,7 +773,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * NextPage.
+             * <p>Indicates whether there is a next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder nextPage(Boolean nextPage) {
                 this.nextPage = nextPage;
@@ -732,7 +784,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -740,7 +795,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * PrePage.
+             * <p>Indicates whether there is a previous page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder prePage(Boolean prePage) {
                 this.prePage = prePage;
@@ -748,7 +806,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * ResultLimit.
+             * <p>In addition to pagination limits, the server processes a maximum of the most recent 1000 records per query. If the results exceed 1000, <strong>ResultLimit</strong> is <strong>true</strong>, and you need to narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;
@@ -756,7 +814,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * TotalItemNum.
+             * <p>The total number of items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalItemNum(Integer totalItemNum) {
                 this.totalItemNum = totalItemNum;
@@ -764,7 +825,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerResponseBody extends TeaM
             }
 
             /**
-             * TotalPageNum.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPageNum(Integer totalPageNum) {
                 this.totalPageNum = totalPageNum;

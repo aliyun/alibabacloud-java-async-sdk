@@ -184,7 +184,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether a retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> return parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters returned.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,7 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The task object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +269,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +280,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception.</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +291,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -424,7 +451,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * AnonKey.
+             * <p>The anonymous key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1111</p>
              */
             public Builder anonKey(String anonKey) {
                 this.anonKey = anonKey;
@@ -432,7 +462,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * <p>The business ID of the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WS20250915163734000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -440,7 +473,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceId.
+             * <p>The database instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-2bl4djolb02</p>
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -448,7 +484,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DbPublicUrl.
+             * <p>The public URL of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder dbPublicUrl(String dbPublicUrl) {
                 this.dbPublicUrl = dbPublicUrl;
@@ -456,7 +495,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCreateStatus.
+             * <p>The instance creation status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1111</p>
              */
             public Builder instanceCreateStatus(String instanceCreateStatus) {
                 this.instanceCreateStatus = instanceCreateStatus;
@@ -464,7 +506,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceKey.
+             * <p>The service key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e80f5a7a08514709a2fb</p>
              */
             public Builder serviceKey(String serviceKey) {
                 this.serviceKey = serviceKey;
@@ -483,7 +528,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SupabaseInstanceId.
+             * <p>The Supabase instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1111</p>
              */
             public Builder supabaseInstanceId(String supabaseInstanceId) {
                 this.supabaseInstanceId = supabaseInstanceId;
@@ -491,7 +539,10 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SupabasePublicUrl.
+             * <p>The public URL of the Supabase instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder supabasePublicUrl(String supabasePublicUrl) {
                 this.supabasePublicUrl = supabasePublicUrl;

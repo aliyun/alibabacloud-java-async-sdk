@@ -96,7 +96,10 @@ public class DeleteRbacOrgUnitRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -105,7 +108,10 @@ public class DeleteRbacOrgUnitRequest extends Request {
         }
 
         /**
-         * OrgUnitId.
+         * <p>The organization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f0534aa7-94ec-4368-a34a-310390f66253</p>
          */
         public Builder orgUnitId(String orgUnitId) {
             this.putQueryParameter("OrgUnitId", orgUnitId);

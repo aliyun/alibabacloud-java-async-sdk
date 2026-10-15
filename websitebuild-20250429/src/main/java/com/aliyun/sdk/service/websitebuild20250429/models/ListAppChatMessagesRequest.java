@@ -138,7 +138,10 @@ public class ListAppChatMessagesRequest extends Request {
         }
 
         /**
-         * ChatId.
+         * <p>The chat ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20833ba4-d189-4c50-9a44-a6bcbda2c93b</p>
          */
         public Builder chatId(String chatId) {
             this.putQueryParameter("ChatId", chatId);
@@ -147,7 +150,10 @@ public class ListAppChatMessagesRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>The conversation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</p>
          */
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);
@@ -156,7 +162,10 @@ public class ListAppChatMessagesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results per query. Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -165,7 +174,10 @@ public class ListAppChatMessagesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query. This parameter is empty if there is no next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -174,7 +186,10 @@ public class ListAppChatMessagesRequest extends Request {
         }
 
         /**
-         * SectionId.
+         * <p>The section ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169</p>
          */
         public Builder sectionId(String sectionId) {
             this.putQueryParameter("SectionId", sectionId);

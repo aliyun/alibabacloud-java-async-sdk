@@ -96,7 +96,10 @@ public class CreateRbacOrgUnitRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -105,7 +108,10 @@ public class CreateRbacOrgUnitRequest extends Request {
         }
 
         /**
-         * OrgUnitData.
+         * <p>The organization parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;xx&quot;,&quot;path&quot;:&quot;root.shanghai&quot;}</p>
          */
         public Builder orgUnitData(String orgUnitData) {
             this.putQueryParameter("OrgUnitData", orgUnitData);

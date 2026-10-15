@@ -138,7 +138,10 @@ public class ListAppPluginsRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250820143531000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -147,7 +150,10 @@ public class ListAppPluginsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -156,7 +162,10 @@ public class ListAppPluginsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query. If there is no next query, this value is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -165,7 +174,15 @@ public class ListAppPluginsRequest extends Request {
         }
 
         /**
-         * Phase.
+         * <p>The status of the dataset acceleration instance. Valid values:</p>
+         * <ul>
+         * <li>Created: Initialized.</li>
+         * <li>Running: Running.</li>
+         * <li>Stopped: Stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>http_whitelist</p>
          */
         public Builder phase(String phase) {
             this.putQueryParameter("Phase", phase);
@@ -174,7 +191,10 @@ public class ListAppPluginsRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>The platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linux/amd64</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);

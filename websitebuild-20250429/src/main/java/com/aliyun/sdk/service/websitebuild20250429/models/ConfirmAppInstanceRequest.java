@@ -236,7 +236,10 @@ public class ConfirmAppInstanceRequest extends Request {
         }
 
         /**
-         * ApplicationType.
+         * <p>The application type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PC_WebSite</p>
          */
         public Builder applicationType(String applicationType) {
             this.putQueryParameter("ApplicationType", applicationType);
@@ -245,7 +248,10 @@ public class ConfirmAppInstanceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal upon expiration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -254,7 +260,10 @@ public class ConfirmAppInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -263,7 +272,10 @@ public class ConfirmAppInstanceRequest extends Request {
         }
 
         /**
-         * DeployArea.
+         * <p>The deployment region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HongKong</p>
          */
         public Builder deployArea(String deployArea) {
             this.putQueryParameter("DeployArea", deployArea);
@@ -272,7 +284,10 @@ public class ConfirmAppInstanceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>Required. The number of subscription periods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -281,7 +296,10 @@ public class ConfirmAppInstanceRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>The extended information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;deliveryNodeName\&quot;:\&quot;视觉设计确认\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -290,7 +308,10 @@ public class ConfirmAppInstanceRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * <p>The payment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTO_PAY</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -299,7 +320,16 @@ public class ConfirmAppInstanceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>Required. The unit of the subscription period. Valid values:</p>
+         * <ul>
+         * <li>Year: year</li>
+         * <li>Month: month</li>
+         * <li>Day: day</li>
+         * <li>Hour: hour.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -308,7 +338,10 @@ public class ConfirmAppInstanceRequest extends Request {
         }
 
         /**
-         * Quantity.
+         * <p>Required. The number of instances to purchase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -317,7 +350,10 @@ public class ConfirmAppInstanceRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The website version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic_Edition</p>
          */
         public Builder siteVersion(String siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);
@@ -326,7 +362,10 @@ public class ConfirmAppInstanceRequest extends Request {
         }
 
         /**
-         * TrialBizId.
+         * <p>The business ID of the trial instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS123456</p>
          */
         public Builder trialBizId(String trialBizId) {
             this.putQueryParameter("TrialBizId", trialBizId);

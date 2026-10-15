@@ -152,7 +152,10 @@ public class UploadAppSiteValidationFileRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -161,7 +164,10 @@ public class UploadAppSiteValidationFileRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yjdw.bpu.edu.cn-waf</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -170,7 +176,10 @@ public class UploadAppSiteValidationFileRequest extends Request {
         }
 
         /**
-         * File.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;URI\&quot;: \&quot;oss://imm-test-co-cn-chengdu/zqh/input/Image/indexImage/nn1.jpg\&quot;, \&quot;LatLong\&quot;:\&quot;+39.998800,+116.480900\&quot;}</p>
          */
         public Builder file(String file) {
             this.putQueryParameter("File", file);
@@ -179,7 +188,10 @@ public class UploadAppSiteValidationFileRequest extends Request {
         }
 
         /**
-         * FileContent.
+         * <p>The file content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder fileContent(String fileContent) {
             this.putQueryParameter("FileContent", fileContent);
@@ -188,7 +200,10 @@ public class UploadAppSiteValidationFileRequest extends Request {
         }
 
         /**
-         * FileType.
+         * <p>The file type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP_MAPPING</p>
          */
         public Builder fileType(String fileType) {
             this.putQueryParameter("FileType", fileType);
@@ -197,7 +212,10 @@ public class UploadAppSiteValidationFileRequest extends Request {
         }
 
         /**
-         * SiteHost.
+         * <p>The site host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder siteHost(String siteHost) {
             this.putQueryParameter("SiteHost", siteHost);

@@ -22,6 +22,10 @@ public class ReportChannelPublishResultRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelAccountName")
+    private String channelAccountName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DraftId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String draftId;
@@ -46,6 +50,7 @@ public class ReportChannelPublishResultRequest extends Request {
     private ReportChannelPublishResultRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.channelAccountName = builder.channelAccountName;
         this.draftId = builder.draftId;
         this.externalId = builder.externalId;
         this.externalUrl = builder.externalUrl;
@@ -71,6 +76,13 @@ public class ReportChannelPublishResultRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return channelAccountName
+     */
+    public String getChannelAccountName() {
+        return this.channelAccountName;
     }
 
     /**
@@ -110,6 +122,7 @@ public class ReportChannelPublishResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<ReportChannelPublishResultRequest, Builder> {
         private String regionId; 
+        private String channelAccountName; 
         private String draftId; 
         private String externalId; 
         private String externalUrl; 
@@ -123,6 +136,7 @@ public class ReportChannelPublishResultRequest extends Request {
         private Builder(ReportChannelPublishResultRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.channelAccountName = request.channelAccountName;
             this.draftId = request.draftId;
             this.externalId = request.externalId;
             this.externalUrl = request.externalUrl;
@@ -140,6 +154,19 @@ public class ReportChannelPublishResultRequest extends Request {
         }
 
         /**
+         * <p>The display name of the publishing account. A null value does not overwrite the original value. Maximum length: 256 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
+        public Builder channelAccountName(String channelAccountName) {
+            this.putQueryParameter("ChannelAccountName", channelAccountName);
+            this.channelAccountName = channelAccountName;
+            return this;
+        }
+
+        /**
+         * <p>The channel draft ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +179,10 @@ public class ReportChannelPublishResultRequest extends Request {
         }
 
         /**
-         * ExternalId.
+         * <p>The ID returned by the platform. Set this parameter when the publishing is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5467410713875420090</p>
          */
         public Builder externalId(String externalId) {
             this.putQueryParameter("ExternalId", externalId);
@@ -161,7 +191,10 @@ public class ReportChannelPublishResultRequest extends Request {
         }
 
         /**
-         * ExternalUrl.
+         * <p>The redirect URL of the platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://hf-groot.lingostarcdn.com/sparkenglish-sv/groot-parent/1-698a94b7-133b20ab-42ae793d40f6/05a0caf1-abb0-415d-941c-eecf0b613eae.mp4">https://hf-groot.lingostarcdn.com/sparkenglish-sv/groot-parent/1-698a94b7-133b20ab-42ae793d40f6/05a0caf1-abb0-415d-941c-eecf0b613eae.mp4</a></p>
          */
         public Builder externalUrl(String externalUrl) {
             this.putQueryParameter("ExternalUrl", externalUrl);
@@ -170,7 +203,10 @@ public class ReportChannelPublishResultRequest extends Request {
         }
 
         /**
-         * FailReason.
+         * <p>The failure reason. Set this parameter when the publishing fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder failReason(String failReason) {
             this.putQueryParameter("FailReason", failReason);
@@ -179,6 +215,7 @@ public class ReportChannelPublishResultRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the publishing is successful (true/false).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

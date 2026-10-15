@@ -184,7 +184,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,14 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retries are allowed. Valid values:</p>
+         * <ul>
+         * <li>false: Retries are not allowed.</li>
+         * <li>true: Retries are allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +210,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name. The application with this name is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +221,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +232,13 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message. This parameter is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <blockquote>
+         * <p>For example, if the <strong>ErrMessage</strong> parameter returns <strong>The Value of Input Parameter %s is not valid</strong> and the <strong>DynamicMessage</strong> parameter returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +246,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +254,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The returned object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +273,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +284,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +295,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is synchronously processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -515,7 +546,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowedModels.
+             * <p>The list of supported models.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3.5-plus</p>
              */
             public Builder allowedModels(String allowedModels) {
                 this.allowedModels = allowedModels;
@@ -523,7 +557,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * <p>The business ID of the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WD20250703155602000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -531,7 +568,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * BlockedModels.
+             * <p>The list of blocked models.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3.5-plus</p>
              */
             public Builder blockedModels(String blockedModels) {
                 this.blockedModels = blockedModels;
@@ -539,7 +579,13 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * Capability.
+             * <p>Grants specific permissions to processes in the container. Only NET_ADMIN and NET_RAW are supported.</p>
+             * <blockquote>
+             * <p>NET_RAW is not supported by default. Submit a ticket to apply for this permission.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>adds2</p>
              */
             public Builder capability(String capability) {
                 this.capability = capability;
@@ -547,7 +593,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * DailyLimit.
+             * <p>The maximum number of requests per day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder dailyLimit(Integer dailyLimit) {
                 this.dailyLimit = dailyLimit;
@@ -555,7 +604,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * DailyTokenLimit.
+             * <p>The maximum number of tokens per day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder dailyTokenLimit(Long dailyTokenLimit) {
                 this.dailyTokenLimit = dailyTokenLimit;
@@ -563,7 +615,15 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether scheduled delivery of resource snapshots is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -571,7 +631,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * Extend.
+             * <p>The extended configuration in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;deliveryNodeName\&quot;:\&quot;绑定域名及发布\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</p>
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -579,7 +642,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1740479834</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -587,7 +653,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-28T02:25:41Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -595,7 +664,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16257</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -603,7 +675,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * IpBlacklist.
+             * <p>The IP blacklist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121.41.11.161,10.200.255.60</p>
              */
             public Builder ipBlacklist(String ipBlacklist) {
                 this.ipBlacklist = ipBlacklist;
@@ -611,7 +686,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * IpWhitelist.
+             * <p>The IP whitelist. Separate multiple IP addresses with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121.41.11.161,10.200.255.60</p>
              */
             public Builder ipWhitelist(String ipWhitelist) {
                 this.ipWhitelist = ipWhitelist;
@@ -619,7 +697,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * RpmLimit.
+             * <p>The maximum number of requests per minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder rpmLimit(Integer rpmLimit) {
                 this.rpmLimit = rpmLimit;
@@ -638,7 +719,10 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
             }
 
             /**
-             * SuspendReason.
+             * <p>The reason for suspension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder suspendReason(String suspendReason) {
                 this.suspendReason = suspendReason;

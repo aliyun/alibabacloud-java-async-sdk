@@ -106,7 +106,10 @@ public class ModuleNextComponentsValue extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Component unique code (internal system identifier)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>placeholder</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class ModuleNextComponentsValue extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Component display name (user-visible name)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>placeholder</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -122,7 +128,7 @@ public class ModuleNextComponentsValue extends TeaModel {
         }
 
         /**
-         * InstanceProperty.
+         * <p>Component instance property configuration</p>
          */
         public Builder instanceProperty(java.util.List<InstanceProperty> instanceProperty) {
             this.instanceProperty = instanceProperty;
@@ -130,7 +136,7 @@ public class ModuleNextComponentsValue extends TeaModel {
         }
 
         /**
-         * Properties.
+         * <p>Component instance property configuration</p>
          */
         public Builder properties(java.util.Map<String, ModuleNextComponentsValuePropertiesValue> properties) {
             this.properties = properties;
@@ -138,7 +144,10 @@ public class ModuleNextComponentsValue extends TeaModel {
         }
 
         /**
-         * ModuleAttrStatus.
+         * <p>Module property status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>placeholder</p>
          */
         public Builder moduleAttrStatus(Integer moduleAttrStatus) {
             this.moduleAttrStatus = moduleAttrStatus;
@@ -217,7 +226,10 @@ public class ModuleNextComponentsValue extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>Property code (internal system identifier)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeholder</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -225,7 +237,10 @@ public class ModuleNextComponentsValue extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Property value code (internal system value)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeholder</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -233,7 +248,10 @@ public class ModuleNextComponentsValue extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Property display name (user-visible name)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeholder</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -326,7 +344,10 @@ public class ModuleNextComponentsValue extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>Property code (internal system identifier)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeholder</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -334,7 +355,10 @@ public class ModuleNextComponentsValue extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Property display name (user-visible name)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeholder</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,7 +366,10 @@ public class ModuleNextComponentsValue extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Property value code (internal system value)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>placeholder</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -350,7 +377,7 @@ public class ModuleNextComponentsValue extends TeaModel {
             }
 
             /**
-             * Values.
+             * <p>Module property value list</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;

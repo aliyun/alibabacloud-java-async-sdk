@@ -82,7 +82,10 @@ public class RenewAppSandboxRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b7105a2-2999-430b-ba23-ba09149d5434</p>
          */
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);

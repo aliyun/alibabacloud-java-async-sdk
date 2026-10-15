@@ -184,7 +184,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Detailed reason for access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * AppName.
+         * <p>App Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * DynamicCode.
+         * <p>Dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * DynamicMessage.
+         * <p>Dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * ErrorArgs.
+         * <p>Returned error parameters</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * Module.
+         * <p>Returned object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +269,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * RootErrorCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +280,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * RootErrorMsg.
+         * <p>Abnormal message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +291,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         }
 
         /**
-         * Synchro.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -463,7 +490,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             } 
 
             /**
-             * AccessTokenExpiresAt.
+             * <p>Access token time-to-live (TTL)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T22:30:00+08:00</p>
              */
             public Builder accessTokenExpiresAt(String accessTokenExpiresAt) {
                 this.accessTokenExpiresAt = accessTokenExpiresAt;
@@ -471,7 +501,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * AccessTokenIssuedAt.
+             * <p>Access token issue Time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T22:30:00+08:00</p>
              */
             public Builder accessTokenIssuedAt(String accessTokenIssuedAt) {
                 this.accessTokenIssuedAt = accessTokenIssuedAt;
@@ -479,7 +512,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * AccessTokenValue.
+             * <p>Access token value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2108341e17661121129745384e79f9</p>
              */
             public Builder accessTokenValue(String accessTokenValue) {
                 this.accessTokenValue = accessTokenValue;
@@ -498,7 +534,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * Attributes.
+             * <p>Extension property</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder attributes(String attributes) {
                 this.attributes = attributes;
@@ -506,7 +545,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * AuthorizationGrantType.
+             * <p>Authorization code Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>authorization_code</p>
              */
             public Builder authorizationGrantType(String authorizationGrantType) {
                 this.authorizationGrantType = authorizationGrantType;
@@ -525,7 +567,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * ParentPk.
+             * <p>Parent Alibaba Cloud PK</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12343131221311</p>
              */
             public Builder parentPk(String parentPk) {
                 this.parentPk = parentPk;
@@ -533,7 +578,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * RefreshTokenExpiresAt.
+             * <p>Time-to-live (TTL) of the refresh token</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1768619049924</p>
              */
             public Builder refreshTokenExpiresAt(String refreshTokenExpiresAt) {
                 this.refreshTokenExpiresAt = refreshTokenExpiresAt;
@@ -541,7 +589,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * RefreshTokenIssuedAt.
+             * <p>Refresh token issue Time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1768619049924</p>
              */
             public Builder refreshTokenIssuedAt(String refreshTokenIssuedAt) {
                 this.refreshTokenIssuedAt = refreshTokenIssuedAt;
@@ -549,7 +600,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * RefreshTokenValue.
+             * <p>Refresh token value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>be9750d595b6cd7c93a80b46</p>
              */
             public Builder refreshTokenValue(String refreshTokenValue) {
                 this.refreshTokenValue = refreshTokenValue;
@@ -557,7 +611,10 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
             }
 
             /**
-             * Uuid.
+             * <p>Externally Unique</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdm_33be9750d595b6cd7c93a80b46734b22</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

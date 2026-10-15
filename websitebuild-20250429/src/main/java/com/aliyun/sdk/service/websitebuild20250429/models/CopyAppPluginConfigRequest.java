@@ -96,7 +96,10 @@ public class CopyAppPluginConfigRequest extends Request {
         }
 
         /**
-         * SourceBizId.
+         * <p>The source business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31104757</p>
          */
         public Builder sourceBizId(String sourceBizId) {
             this.putQueryParameter("SourceBizId", sourceBizId);
@@ -105,7 +108,10 @@ public class CopyAppPluginConfigRequest extends Request {
         }
 
         /**
-         * TargetBizId.
+         * <p>The target business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31104758</p>
          */
         public Builder targetBizId(String targetBizId) {
             this.putQueryParameter("TargetBizId", targetBizId);

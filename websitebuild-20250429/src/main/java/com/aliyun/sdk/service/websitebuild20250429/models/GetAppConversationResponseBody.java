@@ -184,7 +184,10 @@ public class GetAppConversationResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class GetAppConversationResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Specifies whether retries are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class GetAppConversationResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The app name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dewuApp</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class GetAppConversationResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class GetAppConversationResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class GetAppConversationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,7 @@ public class GetAppConversationResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +269,10 @@ public class GetAppConversationResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +280,10 @@ public class GetAppConversationResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System error</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +291,10 @@ public class GetAppConversationResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Specifies whether the request is processed synchronously.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -450,7 +477,10 @@ public class GetAppConversationResponseBody extends TeaModel {
             } 
 
             /**
-             * AliyunPk.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12343131221311</p>
              */
             public Builder aliyunPk(String aliyunPk) {
                 this.aliyunPk = aliyunPk;
@@ -458,7 +488,10 @@ public class GetAppConversationResponseBody extends TeaModel {
             }
 
             /**
-             * BotId.
+             * <p>The bot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zero2</p>
              */
             public Builder botId(String botId) {
                 this.botId = botId;
@@ -466,7 +499,10 @@ public class GetAppConversationResponseBody extends TeaModel {
             }
 
             /**
-             * ChatNum.
+             * <p>The chat records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder chatNum(Integer chatNum) {
                 this.chatNum = chatNum;
@@ -474,7 +510,10 @@ public class GetAppConversationResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationId.
+             * <p>The conversation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>872be9bc-3097-433d-b462-596202455102</p>
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
@@ -482,10 +521,11 @@ public class GetAppConversationResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time. The value is a UNIX timestamp in seconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
-             * <p>None</p>
+             * <p>1740479834</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -493,6 +533,7 @@ public class GetAppConversationResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The update time in ISO 8601 format in the UTC time zone.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -504,7 +545,10 @@ public class GetAppConversationResponseBody extends TeaModel {
             }
 
             /**
-             * MetaData.
+             * <p>The extended information in JSON string format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;appId\&quot;:\&quot;WS20260507200853000001\&quot;,\&quot;inputTokens\&quot;:1411,\&quot;outputTokens\&quot;:51}</p>
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -512,7 +556,10 @@ public class GetAppConversationResponseBody extends TeaModel {
             }
 
             /**
-             * SectionId.
+             * <p>The section ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder sectionId(String sectionId) {
                 this.sectionId = sectionId;
@@ -520,7 +567,10 @@ public class GetAppConversationResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>865181640657408</p>
              */
             public Builder siteId(String siteId) {
                 this.siteId = siteId;
@@ -528,7 +578,10 @@ public class GetAppConversationResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The current viewpoint, which is equivalent to the news title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Feel Like Makin\&quot; Love</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -536,7 +589,10 @@ public class GetAppConversationResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User ID</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

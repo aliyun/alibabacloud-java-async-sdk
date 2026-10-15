@@ -184,7 +184,10 @@ public class GetAppPluginResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class GetAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retries are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class GetAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dewuApp</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class GetAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class GetAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class GetAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters returned.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,7 @@ public class GetAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The application module.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +269,10 @@ public class GetAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +280,10 @@ public class GetAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +291,10 @@ public class GetAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -580,7 +607,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Archive</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -588,7 +618,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigItems.
+             * <p>The configuration form in React JSON Schema format.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder configItems(String configItems) {
                 this.configItems = configItems;
@@ -596,7 +629,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedBy.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adminSubuser(264859988988056208)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -604,7 +640,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The application description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/bak-&gt;serverless.handler(2020091300200279)</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -612,7 +651,14 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * Display.
+             * <p>The image display mode. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong> (None): Not displayed.</li>
+             * <li><strong>1</strong> (Always): Always displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>always</p>
              */
             public Builder display(Integer display) {
                 this.display = display;
@@ -620,7 +666,15 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Specifies whether scheduled delivery of resource snapshots is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder enabled(Integer enabled) {
                 this.enabled = enabled;
@@ -628,7 +682,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * Extend.
+             * <p>The extended information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;deliveryNodeName\&quot;:\&quot;bindDomainAndPublish\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</p>
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -636,7 +693,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * GitRef.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v0.1.0</p>
              */
             public Builder gitRef(String gitRef) {
                 this.gitRef = gitRef;
@@ -644,7 +704,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1740479834</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -652,7 +715,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-28T02:25:41Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -660,7 +726,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * Hooks.
+             * <p>The hook definitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder hooks(String hooks) {
                 this.hooks = hooks;
@@ -668,7 +737,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * HotCount.
+             * <p>The popularity count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hotCount(Integer hotCount) {
                 this.hotCount = hotCount;
@@ -676,7 +748,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * Icon.
+             * <p>The plug-in description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@lALPM2AwTOg9IUHNAUDNAUA</p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -684,7 +759,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * PluginId.
+             * <p>The bound API Gateway plug-in ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -692,7 +770,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * PluginName.
+             * <p>The plug-in name. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tf_testaccapigatewayplugin29311</p>
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -700,7 +781,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * RepositoryUrl.
+             * <p>The image repository URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder repositoryUrl(String repositoryUrl) {
                 this.repositoryUrl = repositoryUrl;
@@ -708,7 +792,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * SkillHeader.
+             * <p>The skill header information for model selection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>header</p>
              */
             public Builder skillHeader(String skillHeader) {
                 this.skillHeader = skillHeader;
@@ -727,7 +814,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The category tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;Key\&quot;: \&quot;kubernetes.io/cluster-id\&quot;, \&quot;Value\&quot;: \&quot;cc67198b13db948c9848599654da5586e\&quot;}, {\&quot;Key\&quot;: \&quot;created-by\&quot;, \&quot;Value\&quot;: \&quot;alibabacloud-imagecache-controller\&quot;}]</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -735,7 +825,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The application instance version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-04-02</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -743,7 +836,10 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * <p><strong>The visibility level.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;

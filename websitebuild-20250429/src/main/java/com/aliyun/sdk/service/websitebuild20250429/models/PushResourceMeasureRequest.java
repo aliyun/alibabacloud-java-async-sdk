@@ -194,7 +194,10 @@ public class PushResourceMeasureRequest extends Request {
         }
 
         /**
-         * Amount.
+         * <p>The resource usage amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder amount(Long amount) {
             this.putQueryParameter("Amount", amount);
@@ -203,7 +206,10 @@ public class PushResourceMeasureRequest extends Request {
         }
 
         /**
-         * BelongId.
+         * <p>The owner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder belongId(String belongId) {
             this.putQueryParameter("BelongId", belongId);
@@ -212,7 +218,10 @@ public class PushResourceMeasureRequest extends Request {
         }
 
         /**
-         * BelongIdType.
+         * <p>The type of the owner ID (siteId or uid).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder belongIdType(String belongIdType) {
             this.putQueryParameter("BelongIdType", belongIdType);
@@ -221,7 +230,10 @@ public class PushResourceMeasureRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID associated with this push, such as a session ID, task ID, or file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250801154628000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -230,7 +242,10 @@ public class PushResourceMeasureRequest extends Request {
         }
 
         /**
-         * MeasureData.
+         * <p>The metering data used to flexibly push multiple data points such as the number of model calls and token usage. The value must be a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;MD5\&quot;:\&quot;8ba46100bd898461f0f589704f2fad25\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;769\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:false,\&quot;uefi_preferred\&quot;:false}</p>
          */
         public Builder measureData(String measureData) {
             this.putQueryParameter("MeasureData", measureData);
@@ -239,7 +254,10 @@ public class PushResourceMeasureRequest extends Request {
         }
 
         /**
-         * MetaData.
+         * <p>The business extension metadata in Map format. The value must be a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;MD5\&quot;:\&quot;8ba46100bd898461f0f589704f2fad25\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;769\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:false,\&quot;uefi_preferred\&quot;:false}</p>
          */
         public Builder metaData(String metaData) {
             this.putQueryParameter("MetaData", metaData);
@@ -248,7 +266,10 @@ public class PushResourceMeasureRequest extends Request {
         }
 
         /**
-         * ResourceCode.
+         * <p>The resource identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InspirationTokens</p>
          */
         public Builder resourceCode(String resourceCode) {
             this.putQueryParameter("ResourceCode", resourceCode);
@@ -257,7 +278,10 @@ public class PushResourceMeasureRequest extends Request {
         }
 
         /**
-         * UseTime.
+         * <p>The usage time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yyyy-MM-dd HH:mm:ss</p>
          */
         public Builder useTime(String useTime) {
             this.putQueryParameter("UseTime", useTime);
@@ -266,7 +290,10 @@ public class PushResourceMeasureRequest extends Request {
         }
 
         /**
-         * UseType.
+         * <p>The usage type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MANUAL_BIZ</p>
          */
         public Builder useType(String useType) {
             this.putQueryParameter("UseType", useType);

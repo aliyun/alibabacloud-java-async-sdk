@@ -110,7 +110,10 @@ public class CreateAppAssistantAgentRequest extends Request {
         }
 
         /**
-         * AgentName.
+         * <p>The name of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试业务空间</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -119,7 +122,10 @@ public class CreateAppAssistantAgentRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250731233102000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -128,7 +134,10 @@ public class CreateAppAssistantAgentRequest extends Request {
         }
 
         /**
-         * PlatformType.
+         * <p>The platform type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LINUX64</p>
          */
         public Builder platformType(String platformType) {
             this.putQueryParameter("PlatformType", platformType);

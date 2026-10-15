@@ -152,7 +152,10 @@ public class QueryRbacUserRolesRequest extends Request {
         }
 
         /**
-         * ApplicationUserId.
+         * <p>The site end-user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder applicationUserId(String applicationUserId) {
             this.putQueryParameter("ApplicationUserId", applicationUserId);
@@ -161,7 +164,10 @@ public class QueryRbacUserRolesRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -170,7 +176,10 @@ public class QueryRbacUserRolesRequest extends Request {
         }
 
         /**
-         * OrderColumn.
+         * <p>The field used for sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtCreated</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -179,7 +188,10 @@ public class QueryRbacUserRolesRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The sort type. Valid values: ASC and DESC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -188,7 +200,10 @@ public class QueryRbacUserRolesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -197,7 +212,10 @@ public class QueryRbacUserRolesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

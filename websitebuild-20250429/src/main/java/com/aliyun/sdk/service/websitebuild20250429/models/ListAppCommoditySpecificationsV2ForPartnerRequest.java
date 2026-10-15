@@ -96,7 +96,11 @@ public class ListAppCommoditySpecificationsV2ForPartnerRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of results per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -105,7 +109,10 @@ public class ListAppCommoditySpecificationsV2ForPartnerRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty when there is no next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

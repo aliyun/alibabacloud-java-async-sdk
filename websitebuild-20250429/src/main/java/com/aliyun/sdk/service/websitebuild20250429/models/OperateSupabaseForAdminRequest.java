@@ -237,6 +237,7 @@ public class OperateSupabaseForAdminRequest extends Request {
         }
 
         /**
+         * <p>The business ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +250,7 @@ public class OperateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier.</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -258,7 +259,10 @@ public class OperateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * ExecuteSql.
+         * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from profiles</p>
          */
         public Builder executeSql(String executeSql) {
             this.putQueryParameter("ExecuteSql", executeSql);
@@ -267,7 +271,10 @@ public class OperateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * OperateType.
+         * <p>The operation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vul_fix</p>
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -276,7 +283,10 @@ public class OperateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * OrderByClause.
+         * <p>The ORDER BY clause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder orderByClause(String orderByClause) {
             this.putQueryParameter("OrderByClause", orderByClause);
@@ -285,7 +295,10 @@ public class OperateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * OrderColumn.
+         * <p>The column used for sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreationTime</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -294,7 +307,10 @@ public class OperateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The sort type. Valid values: ASC and DESC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -303,7 +319,10 @@ public class OperateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -312,7 +331,10 @@ public class OperateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -321,7 +343,10 @@ public class OperateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default.ai_advertising_material_rec_train_v1103</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -330,7 +355,10 @@ public class OperateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -339,7 +367,10 @@ public class OperateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * WhereClause.
+         * <p>The WHERE clause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder whereClause(String whereClause) {
             this.putQueryParameter("WhereClause", whereClause);

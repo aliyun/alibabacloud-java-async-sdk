@@ -167,6 +167,7 @@ public class AllocateSupabaseForAdminRequest extends Request {
         }
 
         /**
+         * <p>The business ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +180,7 @@ public class AllocateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier.</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -188,7 +189,10 @@ public class AllocateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * OrderColumn.
+         * <p>The field by which to sort the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtCreated</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -197,7 +201,10 @@ public class AllocateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The sort order. Valid values: ASC and DESC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -206,7 +213,10 @@ public class AllocateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -215,7 +225,10 @@ public class AllocateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -224,7 +237,10 @@ public class AllocateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

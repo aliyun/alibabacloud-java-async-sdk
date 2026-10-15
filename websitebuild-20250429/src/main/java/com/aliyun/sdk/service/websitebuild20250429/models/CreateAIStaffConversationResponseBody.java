@@ -184,7 +184,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name. The application with this name is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +239,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters returned.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +247,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +266,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +277,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +288,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -385,7 +409,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
             } 
 
             /**
-             * BotId.
+             * <p>The chatbot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zero2</p>
              */
             public Builder botId(String botId) {
                 this.botId = botId;
@@ -393,7 +420,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
             }
 
             /**
-             * ChatId.
+             * <p>The chat ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>53467af9-8c4e-4498-9032-1f26978007f8</p>
              */
             public Builder chatId(String chatId) {
                 this.chatId = chatId;
@@ -401,7 +431,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8642d886-0322-43a9-b12f-6629b067978c</p>
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
@@ -409,7 +442,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
             }
 
             /**
-             * SectionId.
+             * <p>The section ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder sectionId(String sectionId) {
                 this.sectionId = sectionId;
@@ -417,7 +453,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The site ID. You can obtain this value by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>865181640657408</p>
              */
             public Builder siteId(String siteId) {
                 this.siteId = siteId;
@@ -425,7 +464,10 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The current viewpoint, equivalent to the news title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Feel Like Makin\&quot; Love</p>
              */
             public Builder title(String title) {
                 this.title = title;

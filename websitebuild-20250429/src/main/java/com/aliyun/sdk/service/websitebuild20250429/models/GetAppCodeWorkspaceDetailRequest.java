@@ -82,7 +82,10 @@ public class GetAppCodeWorkspaceDetailRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1071596645435968</p>
          */
         public Builder siteId(String siteId) {
             this.putQueryParameter("SiteId", siteId);

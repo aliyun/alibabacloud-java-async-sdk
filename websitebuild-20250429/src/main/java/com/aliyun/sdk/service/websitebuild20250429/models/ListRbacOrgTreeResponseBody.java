@@ -210,7 +210,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -218,7 +221,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether a retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -226,7 +232,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name. The application with this name is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -234,7 +243,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -242,7 +254,13 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> return parameter.</p>
+         * <blockquote>
+         * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -250,7 +268,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -258,7 +276,11 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -266,7 +288,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The task object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -274,7 +296,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -293,7 +318,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -301,7 +329,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -309,7 +340,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -414,7 +448,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The creation time. The time is in ISO 8601 format in the UTC (Z) time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-08T02:28:26Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -422,7 +459,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * Depth.
+             * <p>The directory level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FirstChildDepth</p>
              */
             public Builder depth(Integer depth) {
                 this.depth = depth;
@@ -430,7 +470,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9953352</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -438,7 +481,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FileName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -446,7 +492,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The script path.</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -552,7 +598,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The creation date. The time is in ISO 8601 format in the UTC (Z) time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-15T02:29:22Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -560,7 +609,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * Depth.
+             * <p>The category level. The root category is 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder depth(Integer depth) {
                 this.depth = depth;
@@ -568,7 +620,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000039405002</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -576,7 +631,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The scenario name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>docs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -584,7 +642,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The request path of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/h6sRMdP&amp;LTdQz/44ImvD/JtjSeUza/wVcp1i/dsxnl0FlL0/bvL/d+0~V6Fi5+R/P8ebktwGxe/l&amp;AqBD_/Y+TstdpTo06U_Q/4i4:EDPGo/7.fIVgd.//AOJtXP5/X</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -742,7 +803,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder currentPageNum(Integer currentPageNum) {
                 this.currentPageNum = currentPageNum;
@@ -750,7 +814,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The query results.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -758,7 +822,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * Next.
+             * <p>The next feature ID.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -766,7 +830,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * NextPage.
+             * <p>Indicates whether a next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder nextPage(Boolean nextPage) {
                 this.nextPage = nextPage;
@@ -774,7 +841,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -782,7 +852,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * PrePage.
+             * <p>Indicates whether a previous page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder prePage(Boolean prePage) {
                 this.prePage = prePage;
@@ -790,7 +863,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * ResultLimit.
+             * <p>In addition to pagination limits, the server processes up to 1,000 recent records for the current query. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;
@@ -798,7 +874,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItemNum.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalItemNum(Integer totalItemNum) {
                 this.totalItemNum = totalItemNum;
@@ -806,7 +885,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageNum.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPageNum(Integer totalPageNum) {
                 this.totalPageNum = totalPageNum;

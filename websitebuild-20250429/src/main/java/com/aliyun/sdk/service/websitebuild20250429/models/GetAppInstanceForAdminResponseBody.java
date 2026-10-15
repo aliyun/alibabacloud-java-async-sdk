@@ -184,7 +184,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Detailed reason for access denial.</p>
+         * <p>The details of the permission verification failure.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether retry is allowed</p>
+         * <p>Indicates whether retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the application. The name must be 4 to 26 characters in length. The name can contain letters, digits, and underscores (_), and must start with a letter.</p>
+         * <p>The application name. The application with this name is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -217,7 +217,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error code.</p>
+         * <p>The dynamic error code.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -228,10 +228,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error message, used to replace <code>%s</code> in the error message of the returned parameter <strong>ErrMessage</strong>.</p>
-         * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it means that the input request parameter <strong>DtsJobId</strong> is invalid.</p>
-         * </blockquote>
+         * <p>The dynamic error message.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -242,7 +239,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The parameter whose value is invalid.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -250,15 +247,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data table module.</p>
-         * <ul>
-         * <li><p>ABTest: Experiment data table</p>
-         * </li>
-         * <li><p>ExperimentTool: Experiment tool table</p>
-         * </li>
-         * <li><p>DataDiagnosis: Data diagnosis</p>
-         * </li>
-         * </ul>
+         * <p>The response data.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -280,7 +269,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error Code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -291,10 +280,10 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -302,7 +291,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

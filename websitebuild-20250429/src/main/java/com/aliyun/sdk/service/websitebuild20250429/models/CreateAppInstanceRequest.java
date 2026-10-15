@@ -269,7 +269,7 @@ public class CreateAppInstanceRequest extends Request {
         } 
 
         /**
-         * <p>Application type</p>
+         * <p>The application type.</p>
          * 
          * <strong>example:</strong>
          * <p>PC_WebSite</p>
@@ -281,7 +281,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable auto-renewal upon expiration</p>
+         * <p>Specifies whether to enable auto-renewal upon expiration.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -293,7 +293,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Ensures idempotence of the request. Generate a unique value from your client to ensure that it is unique across different requests. ClientToken only supports ASCII characters and cannot exceed 64 characters</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>210713a117660695309606626a</p>
@@ -314,7 +314,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Deployment area</p>
+         * <p>The deployment region.</p>
          * 
          * <strong>example:</strong>
          * <p>ChineseMainland</p>
@@ -335,7 +335,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Required. The number of subscription periods</p>
+         * <p>Required. The number of subscription periods.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -347,7 +347,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Extended information</p>
+         * <p>The extended information.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -368,7 +368,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Payment type</p>
+         * <p>The payment type.</p>
          * 
          * <strong>example:</strong>
          * <p>AUTO_PAY</p>
@@ -380,7 +380,13 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Required. The unit of the subscription period, Year: Year, Month: Month, Day: Day, Hour: Hour</p>
+         * <p>Required. The unit of the subscription period. Valid values:</p>
+         * <ul>
+         * <li>Year: year</li>
+         * <li>Month: month</li>
+         * <li>Day: day</li>
+         * <li>Hour: hour.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Year</p>
@@ -392,7 +398,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Required. The quantity of instances to be ordered.</p>
+         * <p>Required. The number of instances to subscribe to.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -404,7 +410,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2smovqqpvuly</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -413,7 +422,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Site version</p>
+         * <p>The website version.</p>
          * 
          * <strong>example:</strong>
          * <p>Basic_Edition</p>
@@ -425,7 +434,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -503,7 +512,10 @@ public class CreateAppInstanceRequest extends Request {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Group</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -511,7 +523,10 @@ public class CreateAppInstanceRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>The value of tag 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ufo</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

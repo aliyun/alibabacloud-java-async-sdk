@@ -93,7 +93,10 @@ public class DispatchConsoleAPIForPartnerResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error codes in this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +104,7 @@ public class DispatchConsoleAPIForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -120,7 +123,10 @@ public class DispatchConsoleAPIForPartnerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -173,7 +179,10 @@ public class DispatchConsoleAPIForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The request result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;HasCustomRoleAuth\&quot;: False}</p>
              */
             public Builder data(String data) {
                 this.data = data;

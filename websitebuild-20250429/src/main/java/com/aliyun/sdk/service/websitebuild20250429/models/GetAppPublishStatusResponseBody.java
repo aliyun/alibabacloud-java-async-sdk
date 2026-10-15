@@ -184,7 +184,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retries are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +239,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +247,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +266,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +277,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +288,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -567,7 +591,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * CanQuickRevert.
+             * <p>Indicates whether quick rollback is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canQuickRevert(String canQuickRevert) {
                 this.canQuickRevert = canQuickRevert;
@@ -575,7 +602,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStep.
+             * <p>The current step of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE_CHECK</p>
              */
             public Builder currentStep(String currentStep) {
                 this.currentStep = currentStep;
@@ -583,7 +613,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStepCode.
+             * <p>The code of the current publish step.</p>
              */
             public Builder currentStepCode(String currentStepCode) {
                 this.currentStepCode = currentStepCode;
@@ -591,7 +621,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeployChannel.
+             * <p>The deployment channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PC,WEAPP</p>
              */
             public Builder deployChannel(String deployChannel) {
                 this.deployChannel = deployChannel;
@@ -599,7 +632,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The application description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/bak-&gt;serverless.handler(2020091300200279)</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -607,7 +643,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorStep.
+             * <p>The publish process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder errorStep(String errorStep) {
                 this.errorStep = errorStep;
@@ -615,7 +654,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorStepCode.
+             * <p>The code of the publish step where the error occurred.</p>
              */
             public Builder errorStepCode(String errorStepCode) {
                 this.errorStepCode = errorStepCode;
@@ -623,7 +662,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * IsFinish.
+             * <p>Indicates whether the task is completed.</p>
              */
             public Builder isFinish(Boolean isFinish) {
                 this.isFinish = isFinish;
@@ -631,7 +670,16 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * IsSuccess.
+             * <p>Indicates whether the call is successful. Valid values:</p>
+             * <ul>
+             * <li><p><code>true</code>: The call is successful.</p>
+             * </li>
+             * <li><p><code>false</code>: The call fails.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isSuccess(Boolean isSuccess) {
                 this.isSuccess = isSuccess;
@@ -639,7 +687,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>common notify successfully.</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -647,7 +698,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * <p>The sort order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DESC</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -655,7 +709,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * OrderTypeCode.
+             * <p>The code of the publish order type.</p>
              */
             public Builder orderTypeCode(String orderTypeCode) {
                 this.orderTypeCode = orderTypeCode;
@@ -663,7 +717,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * <p>The task completion percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder percent(Integer percent) {
                 this.percent = percent;
@@ -671,7 +728,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PublishNumber.
+             * <p>The publish number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder publishNumber(String publishNumber) {
                 this.publishNumber = publishNumber;
@@ -679,7 +739,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PublishOrderId.
+             * <p>The publish order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder publishOrderId(Long publishOrderId) {
                 this.publishOrderId = publishOrderId;
@@ -687,6 +750,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The scheduled publish time in the UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -698,7 +762,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>865181640657408</p>
              */
             public Builder siteId(String siteId) {
                 this.siteId = siteId;
@@ -706,7 +773,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * StepCodes.
+             * <p>The list of publish step codes.</p>
              */
             public Builder stepCodes(java.util.List<String> stepCodes) {
                 this.stepCodes = stepCodes;
@@ -714,7 +781,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Steps.
+             * <p>The error level. Valid values: FATAL, ERROR, WARNING, and CRITICAL.</p>
              */
             public Builder steps(java.util.List<String> steps) {
                 this.steps = steps;
@@ -722,7 +789,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Subchannel.
+             * <p>The publish subchannel.</p>
              */
             public Builder subchannel(String subchannel) {
                 this.subchannel = subchannel;

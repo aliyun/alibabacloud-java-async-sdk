@@ -124,7 +124,10 @@ public class ReconnectAppChatRequest extends Request {
         }
 
         /**
-         * ChatId.
+         * <p>The chat record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20833ba4-d189-4c50-9a44-a6bcbda2c93b</p>
          */
         public Builder chatId(String chatId) {
             this.putBodyParameter("ChatId", chatId);
@@ -133,7 +136,10 @@ public class ReconnectAppChatRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>The conversation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b7105a2-2999-430b-ba23-ba09149d5434</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -142,7 +148,7 @@ public class ReconnectAppChatRequest extends Request {
         }
 
         /**
-         * LastEventId.
+         * <p>The last event ID.</p>
          */
         public Builder lastEventId(Integer lastEventId) {
             this.putBodyParameter("LastEventId", lastEventId);
@@ -151,7 +157,7 @@ public class ReconnectAppChatRequest extends Request {
         }
 
         /**
-         * LatestMessageCreateTime.
+         * <p>The creation time of the latest message.</p>
          */
         public Builder latestMessageCreateTime(String latestMessageCreateTime) {
             this.putBodyParameter("LatestMessageCreateTime", latestMessageCreateTime);

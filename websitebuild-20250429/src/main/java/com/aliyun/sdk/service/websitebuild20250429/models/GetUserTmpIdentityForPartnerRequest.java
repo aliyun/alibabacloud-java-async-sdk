@@ -115,7 +115,10 @@ public class GetUserTmpIdentityForPartnerRequest extends Request {
         } 
 
         /**
-         * AuthPurpose.
+         * <p>The purpose of the authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BindDomain</p>
          */
         public Builder authPurpose(String authPurpose) {
             this.putQueryParameter("AuthPurpose", authPurpose);
@@ -124,7 +127,10 @@ public class GetUserTmpIdentityForPartnerRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID of the customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -133,7 +139,10 @@ public class GetUserTmpIdentityForPartnerRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>Specifies whether fuzzy match is supported for port numbers. Set this parameter to <strong>1</strong> to enable fuzzy match. Other values or an empty value indicate that fuzzy match is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;deliveryNodeName\&quot;:\&quot;视觉设计确认\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -142,7 +151,13 @@ public class GetUserTmpIdentityForPartnerRequest extends Request {
         }
 
         /**
-         * ServiceLinkedRole.
+         * <p>The service-linked role.</p>
+         * <blockquote>
+         * <p>For information about the service-linked roles supported by ApsaraDB RDS, see <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked roles</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForSasCspm</p>
          */
         public Builder serviceLinkedRole(String serviceLinkedRole) {
             this.putQueryParameter("ServiceLinkedRole", serviceLinkedRole);
@@ -151,7 +166,10 @@ public class GetUserTmpIdentityForPartnerRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231331311</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

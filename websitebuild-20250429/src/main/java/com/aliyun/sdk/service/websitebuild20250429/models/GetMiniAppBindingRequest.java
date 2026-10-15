@@ -87,7 +87,10 @@ public class GetMiniAppBindingRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250814102215000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -96,7 +99,10 @@ public class GetMiniAppBindingRequest extends Request {
         }
 
         /**
-         * Channel.
+         * <p>The channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WECHAT</p>
          */
         public Builder channel(String channel) {
             this.putQueryParameter("Channel", channel);
@@ -105,7 +111,10 @@ public class GetMiniAppBindingRequest extends Request {
         }
 
         /**
-         * SettingKeys.
+         * <p>The list of extension information keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SERVER_DOMAIN</p>
          */
         public Builder settingKeys(java.util.List<String> settingKeys) {
             String settingKeysShrink = shrink(settingKeys, "SettingKeys", "json");

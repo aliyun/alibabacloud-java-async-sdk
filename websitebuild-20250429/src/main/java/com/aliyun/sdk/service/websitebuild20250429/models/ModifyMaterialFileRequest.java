@@ -113,6 +113,7 @@ public class ModifyMaterialFileRequest extends Request {
         }
 
         /**
+         * <p>The business ID of the application instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class ModifyMaterialFileRequest extends Request {
         }
 
         /**
+         * <p>The file ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +139,11 @@ public class ModifyMaterialFileRequest extends Request {
         }
 
         /**
+         * <p>The new name of the file after modification.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文件</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

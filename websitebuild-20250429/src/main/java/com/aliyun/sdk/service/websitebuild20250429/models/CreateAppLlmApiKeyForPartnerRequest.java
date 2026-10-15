@@ -101,7 +101,10 @@ public class CreateAppLlmApiKeyForPartnerRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250814102215000001</p>
          */
         public Builder bizId(String bizId) {
             this.putBodyParameter("BizId", bizId);
@@ -110,7 +113,10 @@ public class CreateAppLlmApiKeyForPartnerRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotency token. This parameter is reserved for future use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx-xxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -119,7 +125,10 @@ public class CreateAppLlmApiKeyForPartnerRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the API key usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -128,7 +137,7 @@ public class CreateAppLlmApiKeyForPartnerRequest extends Request {
         }
 
         /**
-         * IpWhiteList.
+         * <p>The custom IP address whitelist defined by the invoker. The system default IP ranges are appended by the backend.</p>
          */
         public Builder ipWhiteList(java.util.List<String> ipWhiteList) {
             this.putBodyParameter("IpWhiteList", ipWhiteList);

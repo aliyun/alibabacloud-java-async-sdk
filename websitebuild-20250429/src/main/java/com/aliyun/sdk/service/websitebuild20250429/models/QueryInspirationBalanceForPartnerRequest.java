@@ -96,7 +96,10 @@ public class QueryInspirationBalanceForPartnerRequest extends Request {
         }
 
         /**
-         * BelongId.
+         * <p>The owner ID, which can be a website ID or an Alibaba Cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder belongId(String belongId) {
             this.putQueryParameter("BelongId", belongId);
@@ -105,7 +108,10 @@ public class QueryInspirationBalanceForPartnerRequest extends Request {
         }
 
         /**
-         * BelongIdType.
+         * <p>The type of the owner ID. Valid values: siteId and uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder belongIdType(String belongIdType) {
             this.putQueryParameter("BelongIdType", belongIdType);

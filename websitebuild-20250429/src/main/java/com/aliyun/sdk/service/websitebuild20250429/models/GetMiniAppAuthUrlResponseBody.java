@@ -67,7 +67,7 @@ public class GetMiniAppAuthUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The request result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetMiniAppAuthUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class GetMiniAppAuthUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthUrl.
+             * <p>The authorization URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://nschiper.oneclick.accounts.logi.com/identity/oauth2/token">https://nschiper.oneclick.accounts.logi.com/identity/oauth2/token</a></p>
              */
             public Builder authUrl(String authUrl) {
                 this.authUrl = authUrl;

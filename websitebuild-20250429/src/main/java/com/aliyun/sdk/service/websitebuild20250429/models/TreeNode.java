@@ -171,7 +171,7 @@ public class TreeNode extends TeaModel {
         } 
 
         /**
-         * Children.
+         * <p>The list of child nodes.</p>
          */
         public Builder children(java.util.List<TreeNode> children) {
             this.children = children;
@@ -179,7 +179,10 @@ public class TreeNode extends TeaModel {
         }
 
         /**
-         * FinalStepNo.
+         * <p>The final step number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder finalStepNo(Integer finalStepNo) {
             this.finalStepNo = finalStepNo;
@@ -187,7 +190,7 @@ public class TreeNode extends TeaModel {
         }
 
         /**
-         * FinishTime.
+         * <p>The completion time.</p>
          */
         public Builder finishTime(Long finishTime) {
             this.finishTime = finishTime;
@@ -195,7 +198,7 @@ public class TreeNode extends TeaModel {
         }
 
         /**
-         * IsContainerNode.
+         * <p>Specifies whether the node is a container node.</p>
          */
         public Builder isContainerNode(Boolean isContainerNode) {
             this.isContainerNode = isContainerNode;
@@ -203,7 +206,10 @@ public class TreeNode extends TeaModel {
         }
 
         /**
-         * NodeId.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2927b500-c4e2-4241-bacf-0a2991c4be12</p>
          */
         public Builder nodeId(String nodeId) {
             this.nodeId = nodeId;
@@ -211,7 +217,10 @@ public class TreeNode extends TeaModel {
         }
 
         /**
-         * NodeName.
+         * <p>The node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Single-channel output</p>
          */
         public Builder nodeName(String nodeName) {
             this.nodeName = nodeName;
@@ -219,7 +228,10 @@ public class TreeNode extends TeaModel {
         }
 
         /**
-         * NodeStatus.
+         * <p>The node status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UP</p>
          */
         public Builder nodeStatus(String nodeStatus) {
             this.nodeStatus = nodeStatus;
@@ -227,7 +239,7 @@ public class TreeNode extends TeaModel {
         }
 
         /**
-         * OperatorRole.
+         * <p>The operator role.</p>
          */
         public Builder operatorRole(String operatorRole) {
             this.operatorRole = operatorRole;
@@ -235,7 +247,10 @@ public class TreeNode extends TeaModel {
         }
 
         /**
-         * ParentNodeId.
+         * <p>The parent node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dpYLaezmVNRMGX56Cg4gLjrrVrMqPxX6</p>
          */
         public Builder parentNodeId(String parentNodeId) {
             this.parentNodeId = parentNodeId;
@@ -243,7 +258,10 @@ public class TreeNode extends TeaModel {
         }
 
         /**
-         * StepNo.
+         * <p>The step number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder stepNo(Integer stepNo) {
             this.stepNo = stepNo;

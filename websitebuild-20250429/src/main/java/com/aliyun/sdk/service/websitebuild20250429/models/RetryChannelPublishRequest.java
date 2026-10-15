@@ -83,6 +83,7 @@ public class RetryChannelPublishRequest extends Request {
         }
 
         /**
+         * <p>The channel draft ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

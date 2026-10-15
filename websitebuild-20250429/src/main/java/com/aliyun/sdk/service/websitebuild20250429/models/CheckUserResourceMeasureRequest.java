@@ -166,7 +166,10 @@ public class CheckUserResourceMeasureRequest extends Request {
         }
 
         /**
-         * BelongId.
+         * <p>The owner ID, which can be a website ID or an Alibaba Cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder belongId(String belongId) {
             this.putQueryParameter("BelongId", belongId);
@@ -175,7 +178,14 @@ public class CheckUserResourceMeasureRequest extends Request {
         }
 
         /**
-         * BelongIdType.
+         * <p>The type of the owner ID. Valid values:</p>
+         * <ul>
+         * <li>siteId</li>
+         * <li>uid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder belongIdType(String belongIdType) {
             this.putQueryParameter("BelongIdType", belongIdType);
@@ -184,7 +194,10 @@ public class CheckUserResourceMeasureRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>The ESP business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -193,7 +206,10 @@ public class CheckUserResourceMeasureRequest extends Request {
         }
 
         /**
-         * EspBizId.
+         * <p>The ESP business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p20202933455</p>
          */
         public Builder espBizId(String espBizId) {
             this.putQueryParameter("EspBizId", espBizId);
@@ -202,7 +218,10 @@ public class CheckUserResourceMeasureRequest extends Request {
         }
 
         /**
-         * OrderComponentParams.
+         * <p>The order module information. If this parameter is empty, espBizId and bizType cannot be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;siteversion&quot;:&quot;test&quot;}</p>
          */
         public Builder orderComponentParams(String orderComponentParams) {
             this.putQueryParameter("OrderComponentParams", orderComponentParams);
@@ -211,7 +230,10 @@ public class CheckUserResourceMeasureRequest extends Request {
         }
 
         /**
-         * ResourceCode.
+         * <p>The resource identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InspirationTokens</p>
          */
         public Builder resourceCode(String resourceCode) {
             this.putQueryParameter("ResourceCode", resourceCode);
@@ -220,7 +242,14 @@ public class CheckUserResourceMeasureRequest extends Request {
         }
 
         /**
-         * ResourceValue.
+         * <p>The resource value. This parameter is empty by default and is required only for feature-type resources. Valid values:</p>
+         * <ul>
+         * <li>0: Not supported.</li>
+         * <li>1: Supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder resourceValue(Long resourceValue) {
             this.putQueryParameter("ResourceValue", resourceValue);

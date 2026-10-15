@@ -93,7 +93,10 @@ public class AppAiStaff extends TeaModel {
         } 
 
         /**
-         * StaffId.
+         * <p>The employee ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>370196</p>
          */
         public Builder staffId(String staffId) {
             this.staffId = staffId;
@@ -101,7 +104,7 @@ public class AppAiStaff extends TeaModel {
         }
 
         /**
-         * StaffName.
+         * <p>The employee name.</p>
          */
         public Builder staffName(String staffName) {
             this.staffName = staffName;
@@ -109,7 +112,7 @@ public class AppAiStaff extends TeaModel {
         }
 
         /**
-         * StaffType.
+         * <p>The employee type.</p>
          */
         public Builder staffType(String staffType) {
             this.staffType = staffType;
@@ -117,7 +120,10 @@ public class AppAiStaff extends TeaModel {
         }
 
         /**
-         * <p>可能的值：unknown, init, testing, online</p>
+         * <p>Valid values: unknown, init, testing, and online.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -249,7 +249,10 @@ public class AppService extends TeaModel {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20251211153330000001</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -257,7 +260,10 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time in ISO 8601 format in the UTC time zone (Z).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-07-30T02:08:40Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -265,7 +271,7 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * Deleted.
+         * <p>The deletion flag.</p>
          */
         public Builder deleted(Integer deleted) {
             this.deleted = deleted;
@@ -273,7 +279,10 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time in ISO 8601 format in the UTC time zone (Z).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-07-18T02:23:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -281,7 +290,7 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * EspBizId.
+         * <p>esp bizId</p>
          */
         public Builder espBizId(String espBizId) {
             this.espBizId = espBizId;
@@ -289,7 +298,10 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tue Sep 09 10:27:49 CST 2025</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -297,7 +309,10 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * InstanceBizId.
+         * <p>The associated business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250915163734000001</p>
          */
         public Builder instanceBizId(String instanceBizId) {
             this.instanceBizId = instanceBizId;
@@ -305,7 +320,7 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The service name.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -313,7 +328,7 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * NodeList.
+         * <p>The list of flow nodes.</p>
          */
         public Builder nodeList(java.util.List<TreeNode> nodeList) {
             this.nodeList = nodeList;
@@ -321,7 +336,7 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * Profile.
+         * <p>The application service configuration information.</p>
          */
         public Builder profile(AppServiceProfile profile) {
             this.profile = profile;
@@ -329,7 +344,10 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * ServiceType.
+         * <p>The service type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEBSITE_DESIGN</p>
          */
         public Builder serviceType(String serviceType) {
             this.serviceType = serviceType;
@@ -337,7 +355,7 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * ServiceTypeText.
+         * <p>The service type description.</p>
          */
         public Builder serviceTypeText(String serviceTypeText) {
             this.serviceTypeText = serviceTypeText;
@@ -345,7 +363,7 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * Slug.
+         * <p>The application identifier.</p>
          */
         public Builder slug(String slug) {
             this.slug = slug;
@@ -353,7 +371,10 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1754447102000</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -361,7 +382,10 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -369,7 +393,7 @@ public class AppService extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

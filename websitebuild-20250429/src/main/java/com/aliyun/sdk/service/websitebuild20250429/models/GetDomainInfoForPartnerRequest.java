@@ -90,6 +90,7 @@ public class GetDomainInfoForPartnerRequest extends Request {
         } 
 
         /**
+         * <p>The customer business ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class GetDomainInfoForPartnerRequest extends Request {
         }
 
         /**
+         * <p>The domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class GetDomainInfoForPartnerRequest extends Request {
         }
 
         /**
+         * <p>The Alibaba Cloud account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

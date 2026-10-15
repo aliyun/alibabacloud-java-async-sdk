@@ -184,7 +184,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denied details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message. This parameter is not in use. Ignore it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +239,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +247,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +266,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +277,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +288,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -489,7 +513,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * BotId.
+             * <p>The bot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zero2</p>
              */
             public Builder botId(String botId) {
                 this.botId = botId;
@@ -497,7 +524,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * ChatId.
+             * <p>The ID of the current conversation turn.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54a0bfa0-41bd-4e96-acd9-fb13c0474452</p>
              */
             public Builder chatId(String chatId) {
                 this.chatId = chatId;
@@ -505,7 +535,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * ChatStatus.
+             * <p>The current conversation status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder chatStatus(String chatStatus) {
                 this.chatStatus = chatStatus;
@@ -513,7 +546,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The ID of the data API operation that is called.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>domain cnamen<a href="http://www.buyhao8.com">www.buyhao8.com</a> <a href="http://www.buyhao8.com.a1.initrr.comn">www.buyhao8.com.a1.initrr.comn</a></p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -521,7 +557,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * ContentType.
+             * <p>The content type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application/octet-stream</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -529,7 +568,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationId.
+             * <p>The conversation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-675163021891846144</p>
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
@@ -537,7 +579,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1723532098</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -545,7 +590,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1591339051000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -553,7 +601,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * MessageId.
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1dafa033-e72b-44c2-99b7-bc202c5b6198</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -561,7 +612,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * MetaData.
+             * <p>The business extension metadata in Map format. The value must be a JSON string.</p>
              */
             public Builder metaData(java.util.Map<String, ?> metaData) {
                 this.metaData = metaData;
@@ -569,7 +620,24 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of the conversation participant. Valid values:</p>
+             * <ul>
+             * <li><p>user: User.</p>
+             * </li>
+             * <li><p>assistant: Assistant.</p>
+             * </li>
+             * <li><p>system: System.</p>
+             * </li>
+             * <li><p>function: Function.</p>
+             * </li>
+             * <li><p>plugin: Plugin.</p>
+             * </li>
+             * <li><p>tool: Tool.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -577,7 +645,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * SectionId.
+             * <p>The section ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>324</p>
              */
             public Builder sectionId(String sectionId) {
                 this.sectionId = sectionId;
@@ -585,7 +656,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The site ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>928636774795776</p>
              */
             public Builder siteId(String siteId) {
                 this.siteId = siteId;
@@ -593,7 +667,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SINGLE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -647,7 +724,13 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Messages.
+             * <p>The sender type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><strong>ADMIN</strong>: System.</li>
+             * <li><strong>CUSTOMER</strong>: Visitor.</li>
+             * <li><strong>AGENT</strong>: Agent.</li>
+             * </ul>
              */
             public Builder messages(java.util.List<Messages> messages) {
                 this.messages = messages;

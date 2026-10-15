@@ -124,7 +124,10 @@ public class RefundAppInstanceForPartnerRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The ID of the website building service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -133,7 +136,10 @@ public class RefundAppInstanceForPartnerRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotence token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c6f7e8b9-a0b1-4c2d-9e0f-1a2b3c4d5e6f</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -142,7 +148,10 @@ public class RefundAppInstanceForPartnerRequest extends Request {
         }
 
         /**
-         * RefundReason.
+         * <p>The reason for the refund.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>渠道商退款</p>
          */
         public Builder refundReason(String refundReason) {
             this.putQueryParameter("RefundReason", refundReason);
@@ -151,7 +160,10 @@ public class RefundAppInstanceForPartnerRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

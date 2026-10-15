@@ -96,7 +96,10 @@ public class ListAppAssistantAgentsRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -105,7 +108,10 @@ public class ListAppAssistantAgentsRequest extends Request {
         }
 
         /**
-         * PlatformType.
+         * <p>The platform type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ChannelOps</p>
          */
         public Builder platformType(String platformType) {
             this.putQueryParameter("PlatformType", platformType);

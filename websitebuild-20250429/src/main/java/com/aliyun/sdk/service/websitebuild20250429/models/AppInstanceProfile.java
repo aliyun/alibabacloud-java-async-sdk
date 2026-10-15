@@ -26,6 +26,12 @@ public class AppInstanceProfile extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
+    @com.aliyun.core.annotation.NameInMap("CaseAuditStatus")
+    private String caseAuditStatus;
+
+    @com.aliyun.core.annotation.NameInMap("CaseShelfStatus")
+    private String caseShelfStatus;
+
     @com.aliyun.core.annotation.NameInMap("ChatbiTaskId")
     private String chatbiTaskId;
 
@@ -43,6 +49,9 @@ public class AppInstanceProfile extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("IcpbaNo")
     private String icpbaNo;
+
+    @com.aliyun.core.annotation.NameInMap("IndependentDeployment")
+    private IndependentDeployment independentDeployment;
 
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
@@ -87,12 +96,15 @@ public class AppInstanceProfile extends TeaModel {
         this.applicationType = builder.applicationType;
         this.applicationTypeText = builder.applicationTypeText;
         this.bizId = builder.bizId;
+        this.caseAuditStatus = builder.caseAuditStatus;
+        this.caseShelfStatus = builder.caseShelfStatus;
         this.chatbiTaskId = builder.chatbiTaskId;
         this.chatbiTaskStatus = builder.chatbiTaskStatus;
         this.commodityCode = builder.commodityCode;
         this.customerService = builder.customerService;
         this.deployArea = builder.deployArea;
         this.icpbaNo = builder.icpbaNo;
+        this.independentDeployment = builder.independentDeployment;
         this.instanceId = builder.instanceId;
         this.openChatBi = builder.openChatBi;
         this.ordTime = builder.ordTime;
@@ -142,6 +154,20 @@ public class AppInstanceProfile extends TeaModel {
     }
 
     /**
+     * @return caseAuditStatus
+     */
+    public String getCaseAuditStatus() {
+        return this.caseAuditStatus;
+    }
+
+    /**
+     * @return caseShelfStatus
+     */
+    public String getCaseShelfStatus() {
+        return this.caseShelfStatus;
+    }
+
+    /**
      * @return chatbiTaskId
      */
     public String getChatbiTaskId() {
@@ -181,6 +207,13 @@ public class AppInstanceProfile extends TeaModel {
      */
     public String getIcpbaNo() {
         return this.icpbaNo;
+    }
+
+    /**
+     * @return independentDeployment
+     */
+    public IndependentDeployment getIndependentDeployment() {
+        return this.independentDeployment;
     }
 
     /**
@@ -278,12 +311,15 @@ public class AppInstanceProfile extends TeaModel {
         private String applicationType; 
         private String applicationTypeText; 
         private String bizId; 
+        private String caseAuditStatus; 
+        private String caseShelfStatus; 
         private String chatbiTaskId; 
         private String chatbiTaskStatus; 
         private String commodityCode; 
         private String customerService; 
         private String deployArea; 
         private String icpbaNo; 
+        private IndependentDeployment independentDeployment; 
         private String instanceId; 
         private Boolean openChatBi; 
         private String ordTime; 
@@ -305,12 +341,15 @@ public class AppInstanceProfile extends TeaModel {
             this.applicationType = model.applicationType;
             this.applicationTypeText = model.applicationTypeText;
             this.bizId = model.bizId;
+            this.caseAuditStatus = model.caseAuditStatus;
+            this.caseShelfStatus = model.caseShelfStatus;
             this.chatbiTaskId = model.chatbiTaskId;
             this.chatbiTaskStatus = model.chatbiTaskStatus;
             this.commodityCode = model.commodityCode;
             this.customerService = model.customerService;
             this.deployArea = model.deployArea;
             this.icpbaNo = model.icpbaNo;
+            this.independentDeployment = model.independentDeployment;
             this.instanceId = model.instanceId;
             this.openChatBi = model.openChatBi;
             this.ordTime = model.ordTime;
@@ -327,7 +366,10 @@ public class AppInstanceProfile extends TeaModel {
         } 
 
         /**
-         * ApplicationType.
+         * <p>The application type code. For example, PC_WebSite indicates a PC website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PC_WebSite</p>
          */
         public Builder applicationType(String applicationType) {
             this.applicationType = applicationType;
@@ -335,7 +377,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * ApplicationTypeText.
+         * <p>The display name of the application type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PC Website</p>
          */
         public Builder applicationTypeText(String applicationTypeText) {
             this.applicationTypeText = applicationTypeText;
@@ -343,7 +388,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * BizId.
+         * <p>The business identifier of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS_SITE_1</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -351,7 +399,32 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * ChatbiTaskId.
+         * <p>The audit status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder caseAuditStatus(String caseAuditStatus) {
+            this.caseAuditStatus = caseAuditStatus;
+            return this;
+        }
+
+        /**
+         * <p>The listing status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
+         */
+        public Builder caseShelfStatus(String caseShelfStatus) {
+            this.caseShelfStatus = caseShelfStatus;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the ChatBI BuildSchemaIndex asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-1</p>
          */
         public Builder chatbiTaskId(String chatbiTaskId) {
             this.chatbiTaskId = chatbiTaskId;
@@ -359,7 +432,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * ChatbiTaskStatus.
+         * <p>The status of the ChatBI BuildSchemaIndex task. Valid values: running, finish, and failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>finish</p>
          */
         public Builder chatbiTaskStatus(String chatbiTaskStatus) {
             this.chatbiTaskStatus = chatbiTaskStatus;
@@ -367,7 +443,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * CommodityCode.
+         * <p>The commodity code used when placing the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>domain_website_public_cn</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.commodityCode = commodityCode;
@@ -375,7 +454,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * CustomerService.
+         * <p>The customer service contact information or description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:support@example.com">support@example.com</a></p>
          */
         public Builder customerService(String customerService) {
             this.customerService = customerService;
@@ -383,7 +465,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * DeployArea.
+         * <p>The deployment region code of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HongKong</p>
          */
         public Builder deployArea(String deployArea) {
             this.deployArea = deployArea;
@@ -391,7 +476,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * IcpbaNo.
+         * <p>The ICP filing number bound to the custom domain name. Multiple filing numbers are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>京ICP备12345678号-1</p>
          */
         public Builder icpbaNo(String icpbaNo) {
             this.icpbaNo = icpbaNo;
@@ -399,7 +487,18 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The dedicated server information. This field is computed in real time by DescribeAppInstance and is not populated in list API responses.</p>
+         */
+        public Builder independentDeployment(IndependentDeployment independentDeployment) {
+            this.independentDeployment = independentDeployment;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the associated Lingxiao instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lx-1</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -407,7 +506,7 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * OpenChatBi.
+         * <p>Indicates whether the current user is included in the ChatBI feature canary release whitelist.</p>
          */
         public Builder openChatBi(Boolean openChatBi) {
             this.openChatBi = openChatBi;
@@ -415,7 +514,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * OrdTime.
+         * <p>The time when the order was placed, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-17 10:30:00</p>
          */
         public Builder ordTime(String ordTime) {
             this.ordTime = ordTime;
@@ -423,7 +525,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order-1</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -431,7 +536,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * PayTime.
+         * <p>The time when the payment was made, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-17 10:35:00</p>
          */
         public Builder payTime(String payTime) {
             this.payTime = payTime;
@@ -439,7 +547,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * PreviewUrl.
+         * <p>The URL used to access the application preview page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/preview">https://example.com/preview</a></p>
          */
         public Builder previewUrl(String previewUrl) {
             this.previewUrl = previewUrl;
@@ -447,7 +558,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * SeoSite.
+         * <p>The SEO site configuration identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>seo-site-1</p>
          */
         public Builder seoSite(String seoSite) {
             this.seoSite = seoSite;
@@ -455,7 +569,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * ShareRenderWatermark.
+         * <p>The switch for the share rendering watermark. A value of 1 indicates enabled, and a value of 0 indicates disabled. This field is empty if not configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder shareRenderWatermark(String shareRenderWatermark) {
             this.shareRenderWatermark = shareRenderWatermark;
@@ -463,7 +580,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * SiteVersion.
+         * <p>The site version code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Max_Edition</p>
          */
         public Builder siteVersion(String siteVersion) {
             this.siteVersion = siteVersion;
@@ -471,7 +591,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * SiteVersionText.
+         * <p>The display name of the site version, including the deployment region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Flagship Edition [Hong Kong]</p>
          */
         public Builder siteVersionText(String siteVersionText) {
             this.siteVersionText = siteVersionText;
@@ -479,7 +602,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * Source.
+         * <p>The identifier of the creation or synchronization source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MARKET_CLOUD_DREAM</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -487,7 +613,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * TemplateEtag.
+         * <p>The ETag identifier of the current application template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>etag-1</p>
          */
         public Builder templateEtag(String templateEtag) {
             this.templateEtag = templateEtag;
@@ -495,7 +624,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID used by the current application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tpl-1</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -508,4 +640,237 @@ public class AppInstanceProfile extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AppInstanceProfile} extends {@link TeaModel}
+     *
+     * <p>AppInstanceProfile</p>
+     */
+    public static class IndependentDeployment extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CanRetry")
+        private Boolean canRetry;
+
+        @com.aliyun.core.annotation.NameInMap("DeployArea")
+        private String deployArea;
+
+        @com.aliyun.core.annotation.NameInMap("DnsRecordType")
+        private String dnsRecordType;
+
+        @com.aliyun.core.annotation.NameInMap("Eligibility")
+        private String eligibility;
+
+        @com.aliyun.core.annotation.NameInMap("EnableStatus")
+        private String enableStatus;
+
+        @com.aliyun.core.annotation.NameInMap("IndependentIp")
+        private String independentIp;
+
+        @com.aliyun.core.annotation.NameInMap("ServerSpec")
+        private String serverSpec;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private Long taskId;
+
+        private IndependentDeployment(Builder builder) {
+            this.canRetry = builder.canRetry;
+            this.deployArea = builder.deployArea;
+            this.dnsRecordType = builder.dnsRecordType;
+            this.eligibility = builder.eligibility;
+            this.enableStatus = builder.enableStatus;
+            this.independentIp = builder.independentIp;
+            this.serverSpec = builder.serverSpec;
+            this.taskId = builder.taskId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IndependentDeployment create() {
+            return builder().build();
+        }
+
+        /**
+         * @return canRetry
+         */
+        public Boolean getCanRetry() {
+            return this.canRetry;
+        }
+
+        /**
+         * @return deployArea
+         */
+        public String getDeployArea() {
+            return this.deployArea;
+        }
+
+        /**
+         * @return dnsRecordType
+         */
+        public String getDnsRecordType() {
+            return this.dnsRecordType;
+        }
+
+        /**
+         * @return eligibility
+         */
+        public String getEligibility() {
+            return this.eligibility;
+        }
+
+        /**
+         * @return enableStatus
+         */
+        public String getEnableStatus() {
+            return this.enableStatus;
+        }
+
+        /**
+         * @return independentIp
+         */
+        public String getIndependentIp() {
+            return this.independentIp;
+        }
+
+        /**
+         * @return serverSpec
+         */
+        public String getServerSpec() {
+            return this.serverSpec;
+        }
+
+        /**
+         * @return taskId
+         */
+        public Long getTaskId() {
+            return this.taskId;
+        }
+
+        public static final class Builder {
+            private Boolean canRetry; 
+            private String deployArea; 
+            private String dnsRecordType; 
+            private String eligibility; 
+            private String enableStatus; 
+            private String independentIp; 
+            private String serverSpec; 
+            private Long taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(IndependentDeployment model) {
+                this.canRetry = model.canRetry;
+                this.deployArea = model.deployArea;
+                this.dnsRecordType = model.dnsRecordType;
+                this.eligibility = model.eligibility;
+                this.enableStatus = model.enableStatus;
+                this.independentIp = model.independentIp;
+                this.serverSpec = model.serverSpec;
+                this.taskId = model.taskId;
+            } 
+
+            /**
+             * <p>Specifies whether a retry is allowed after the dedicated server fails to start.</p>
+             */
+            public Builder canRetry(Boolean canRetry) {
+                this.canRetry = canRetry;
+                return this;
+            }
+
+            /**
+             * <p>The deployment region code of the dedicated server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HongKong</p>
+             */
+            public Builder deployArea(String deployArea) {
+                this.deployArea = deployArea;
+                return this;
+            }
+
+            /**
+             * <p>The DNS record type used when binding a domain name to the dedicated IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
+             */
+            public Builder dnsRecordType(String dnsRecordType) {
+                this.dnsRecordType = dnsRecordType;
+                return this;
+            }
+
+            /**
+             * <p>The eligibility status of the dedicated server. Valid values:</p>
+             * <ul>
+             * <li>UPGRADE_REQUIRED: A version upgrade is required.</li>
+             * <li>AVAILABLE: The dedicated server can be started.</li>
+             * <li>UNAVAILABLE: The dedicated server is currently unavailable.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
+             */
+            public Builder eligibility(String eligibility) {
+                this.eligibility = eligibility;
+                return this;
+            }
+
+            /**
+             * <p>The status of the dedicated server. Valid values:</p>
+             * <ul>
+             * <li>NOT_ENABLED: Not started.</li>
+             * <li>ENABLING: Starting.</li>
+             * <li>ACTIVE: Started.</li>
+             * <li>FAILED: Failed to start.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
+             */
+            public Builder enableStatus(String enableStatus) {
+                this.enableStatus = enableStatus;
+                return this;
+            }
+
+            /**
+             * <p>The dedicated IP address assigned after the dedicated server is started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.0.113.10</p>
+             */
+            public Builder independentIp(String independentIp) {
+                this.independentIp = independentIp;
+                return this;
+            }
+
+            /**
+             * <p>The display specification of the dedicated server. This does not represent the real-time resource usage of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2 vCPUs 2 GB</p>
+             */
+            public Builder serverSpec(String serverSpec) {
+                this.serverSpec = serverSpec;
+                return this;
+            }
+
+            /**
+             * <p>The task ID for starting the dedicated server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
+             */
+            public Builder taskId(Long taskId) {
+                this.taskId = taskId;
+                return this;
+            }
+
+            public IndependentDeployment build() {
+                return new IndependentDeployment(this);
+            } 
+
+        } 
+
+    }
 }

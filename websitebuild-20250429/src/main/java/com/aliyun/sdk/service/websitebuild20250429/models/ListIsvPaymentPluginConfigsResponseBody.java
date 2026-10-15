@@ -210,7 +210,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reasons why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -218,7 +221,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Specifies whether retries are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -226,7 +232,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The app name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dewuApp</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -234,7 +243,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic code. This parameter is not used and can be ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -242,7 +254,13 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -250,7 +268,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -258,7 +276,11 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -266,7 +288,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(java.util.List<Module> module) {
             this.module = module;
@@ -274,7 +296,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to start the next query. If no more results are available, this value is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -293,7 +318,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -301,7 +329,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -309,7 +340,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -492,7 +526,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * BizId.
+             * <p>The business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WS20250915163734000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -500,7 +537,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Extend.
+             * <p>The extended information.</p>
              */
             public Builder extend(java.util.Map<String, String> extend) {
                 this.extend = extend;
@@ -508,6 +545,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time. The value is a UNIX timestamp in seconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -519,6 +557,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The update time. The value is in the ISO 8601 format and the UTC time zone.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -530,7 +569,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16257</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -538,7 +580,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginConfig.
+             * <p>The plugin configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder pluginConfig(String pluginConfig) {
                 this.pluginConfig = pluginConfig;
@@ -546,7 +591,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginDesc.
+             * <p>The plugin description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a simple test plugin</p>
              */
             public Builder pluginDesc(String pluginDesc) {
                 this.pluginDesc = pluginDesc;
@@ -554,7 +602,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginId.
+             * <p>The plugin ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -562,7 +613,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginName.
+             * <p>The plugin name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tf_testaccapigatewayplugin29311</p>
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -570,7 +624,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteName.
+             * <p>The site name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jugaocai.com</p>
              */
             public Builder siteName(String siteName) {
                 this.siteName = siteName;
@@ -578,7 +635,10 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

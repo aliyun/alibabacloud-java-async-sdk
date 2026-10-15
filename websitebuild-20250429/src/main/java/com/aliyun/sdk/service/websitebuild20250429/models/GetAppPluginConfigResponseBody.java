@@ -106,7 +106,10 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code or POP error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance <code>wget h33E1En5.popscan.xaliyun.com</code> does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,7 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -141,7 +147,10 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -298,7 +307,10 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * BizId.
+             * <p>The business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WD20250703155602000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -306,7 +318,10 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1740479834</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -314,7 +329,10 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-28T02:25:41Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -322,7 +340,10 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16257</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -330,7 +351,10 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PluginConfig.
+             * <p>The specific component configuration in JSON string format. Refer to the toJsonString method of the subclasses related to com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig. Developers should inherit this component configuration class and implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder pluginConfig(String pluginConfig) {
                 this.pluginConfig = pluginConfig;
@@ -338,7 +362,10 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PluginDesc.
+             * <p>The description of the plugin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a simple test plugin</p>
              */
             public Builder pluginDesc(String pluginDesc) {
                 this.pluginDesc = pluginDesc;
@@ -346,7 +373,10 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PluginId.
+             * <p>The ID of the bound API gateway plugin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -354,7 +384,10 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PluginName.
+             * <p>The plugin name. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tf_testaccapigatewayplugin29311</p>
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -362,7 +395,10 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

@@ -241,7 +241,7 @@ public class ListAppInstancesRequest extends Request {
         } 
 
         /**
-         * <p>Business ID</p>
+         * <p>The business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>WS20250731233102000001</p>
@@ -253,7 +253,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * BizIds.
+         * <p>The list of business IDs for the application instances.</p>
          */
         public Builder bizIds(java.util.List<String> bizIds) {
             String bizIdsShrink = shrink(bizIds, "BizIds", "json");
@@ -263,7 +263,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>End time start</p>
+         * <p>The expiration start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-18T14:30:00Z</p>
@@ -275,7 +275,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>End time end</p>
+         * <p>The expiration end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-31T14:30:00Z</p>
@@ -287,7 +287,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>Extended information</p>
+         * <p>The extended information.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -299,8 +299,8 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>Number of results per query.</p>
-         * <p>Range: 10~100. Default value: 20.</p>
+         * <p>The maximum number of results per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -312,7 +312,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>Token for the next query. It will be empty if there is no next query.</p>
+         * <p>The token used to start the next query. This parameter is empty if no next query exists.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -324,7 +324,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>Order column</p>
+         * <p>The sort field.</p>
          * 
          * <strong>example:</strong>
          * <p>gmtCreated</p>
@@ -336,7 +336,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>Order type ASC|DESC</p>
+         * <p>The sort order. Valid values: ASC and DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>DOWNGRADE</p>
@@ -348,7 +348,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>Page number, default is 1</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -360,7 +360,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>Page size, default is 10</p>
+         * <p>The number of entries per page. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -372,10 +372,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>Query parameter</p>
+         * <p>The query parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;RequestId&quot;:&quot;&quot;}</p>
+         * <p>{\&quot;RequestId\&quot;:\&quot;\&quot;}</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -384,7 +384,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * QueryMode.
+         * <p>The query mode. A value of CONTENT_CREATION indicates a lightweight query for the content creation site selector, which queries only published sites and does not load aggregated information such as profiles, services, and AI staff.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTENT_CREATION</p>
          */
         public Builder queryMode(String queryMode) {
             this.putQueryParameter("QueryMode", queryMode);
@@ -393,7 +396,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>Status range</p>
+         * <p>The status range.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             String statusListShrink = shrink(statusList, "StatusList", "json");

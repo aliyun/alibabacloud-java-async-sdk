@@ -275,7 +275,10 @@ public class PromotionActivity extends TeaModel {
         } 
 
         /**
-         * ActivityCode.
+         * <p>The campaign code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acwfradoj5u</p>
          */
         public Builder activityCode(String activityCode) {
             this.activityCode = activityCode;
@@ -283,7 +286,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * ActivityName.
+         * <p>The campaign name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IP CIDR block filtering statistics</p>
          */
         public Builder activityName(String activityName) {
             this.activityName = activityName;
@@ -291,7 +297,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * ActivityType.
+         * <p>The campaign type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SCALE_IN</p>
          */
         public Builder activityType(String activityType) {
             this.activityType = activityType;
@@ -299,7 +308,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * ConsumedQuota.
+         * <p>The consumed quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder consumedQuota(Long consumedQuota) {
             this.consumedQuota = consumedQuota;
@@ -307,7 +319,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-11T21:13:38.164526965+08:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -315,7 +330,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * CreatedBy.
+         * <p>The creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123414</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -323,7 +341,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * EligibilityConfig.
+         * <p>The eligibility configuration in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder eligibilityConfig(String eligibilityConfig) {
             this.eligibilityConfig = eligibilityConfig;
@@ -331,7 +352,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * EndDate.
+         * <p>The end date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-22 10:18:51 +0800</p>
          */
         public Builder endDate(String endDate) {
             this.endDate = endDate;
@@ -339,7 +363,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * OfferConfig.
+         * <p>The privilege configuration in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder offerConfig(String offerConfig) {
             this.offerConfig = offerConfig;
@@ -347,7 +374,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * OfferConfigSummary.
+         * <p>The privilege configuration summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder offerConfigSummary(String offerConfigSummary) {
             this.offerConfigSummary = offerConfigSummary;
@@ -355,7 +385,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * RemainingQuota.
+         * <p>The remaining quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder remainingQuota(Long remainingQuota) {
             this.remainingQuota = remainingQuota;
@@ -363,7 +396,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * StartDate.
+         * <p>The start date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-12T16:00:00.000Z</p>
          */
         public Builder startDate(String startDate) {
             this.startDate = startDate;
@@ -371,7 +407,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The campaign status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE_ABORTING</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -379,7 +418,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * TotalQuota.
+         * <p>The total quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalQuota(Long totalQuota) {
             this.totalQuota = totalQuota;
@@ -387,7 +429,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * TouchpointConfig.
+         * <p>The touchpoint configuration in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder touchpointConfig(String touchpointConfig) {
             this.touchpointConfig = touchpointConfig;
@@ -395,7 +440,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-11T21:13:38.164526965+08:00</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -403,7 +451,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * UpdatedBy.
+         * <p>The updater.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123414</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;
@@ -411,7 +462,10 @@ public class PromotionActivity extends TeaModel {
         }
 
         /**
-         * WarningThreshold.
+         * <p>The warning threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder warningThreshold(Integer warningThreshold) {
             this.warningThreshold = warningThreshold;

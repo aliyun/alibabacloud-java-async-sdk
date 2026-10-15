@@ -67,7 +67,7 @@ public class SyncAppInstanceForPartnerResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The request result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +131,10 @@ public class SyncAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * BizId.
+             * <p>The customer business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WD20250626114752000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -185,7 +188,7 @@ public class SyncAppInstanceForPartnerResponseBody extends TeaModel {
             } 
 
             /**
-             * AppInstance.
+             * <p>The website instance information.</p>
              */
             public Builder appInstance(AppInstance appInstance) {
                 this.appInstance = appInstance;

@@ -110,7 +110,10 @@ public class UpdateAppFileRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>The file content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>verify_46630893e2b5efde444c82b4e3707adb</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -119,7 +122,10 @@ public class UpdateAppFileRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</p>
          */
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);
@@ -128,7 +134,10 @@ public class UpdateAppFileRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pt3/01/31/pengpeixin.png</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);

@@ -124,7 +124,10 @@ public class CheckAppVerifyCodeRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -133,7 +136,10 @@ public class CheckAppVerifyCodeRequest extends Request {
         }
 
         /**
-         * Code.
+         * <p>The verification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.putQueryParameter("Code", code);
@@ -142,7 +148,10 @@ public class CheckAppVerifyCodeRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>The phone number or email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>docker.io</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -151,7 +160,10 @@ public class CheckAppVerifyCodeRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The recipient type: phone or email.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>question</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -166,7 +166,10 @@ public class QueryInspirationConsumeRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1762999521</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -175,7 +178,10 @@ public class QueryInspirationConsumeRecordsRequest extends Request {
         }
 
         /**
-         * OrderColumn.
+         * <p>The field by which to sort the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreationTime</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -184,7 +190,10 @@ public class QueryInspirationConsumeRecordsRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The sort order. Valid values: ASC, DESC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -193,7 +202,10 @@ public class QueryInspirationConsumeRecordsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -202,7 +214,10 @@ public class QueryInspirationConsumeRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -211,7 +226,10 @@ public class QueryInspirationConsumeRecordsRequest extends Request {
         }
 
         /**
-         * SceneName.
+         * <p>The name of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Skylark-Personnel Authentication</p>
          */
         public Builder sceneName(String sceneName) {
             this.putQueryParameter("SceneName", sceneName);
@@ -220,7 +238,10 @@ public class QueryInspirationConsumeRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. The time is in ISO 8601 format and the time zone is UTC (Z).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-19T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

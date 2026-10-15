@@ -110,7 +110,10 @@ public class GetAppSeoStatusRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250814102215000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -119,7 +122,10 @@ public class GetAppSeoStatusRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yjdw.bpu.edu.cn-waf</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -128,7 +134,10 @@ public class GetAppSeoStatusRequest extends Request {
         }
 
         /**
-         * SeType.
+         * <p>The search engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>type</p>
          */
         public Builder seType(String seType) {
             this.putQueryParameter("SeType", seType);

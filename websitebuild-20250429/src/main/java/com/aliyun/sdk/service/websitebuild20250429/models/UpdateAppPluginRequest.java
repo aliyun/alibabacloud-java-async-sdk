@@ -236,7 +236,10 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * Category.
+         * <p>The category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataManagement</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -245,7 +248,10 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * ConfigItems.
+         * <p>The configuration form in React JSON Schema format.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder configItems(String configItems) {
             this.putQueryParameter("ConfigItems", configItems);
@@ -254,7 +260,10 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The application description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myapp</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -263,7 +272,10 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>Other extension information in JSON format for future parameter expansion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -272,7 +284,10 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * Hooks.
+         * <p>The hook definitions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder hooks(String hooks) {
             this.putQueryParameter("Hooks", hooks);
@@ -281,7 +296,10 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * Icon.
+         * <p>The plug-in description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/imgextra/i4/O1CN01ANcLnQ1bCX7tZPVMJ_!!6000000003429-2-tps-100-100.png">https://img.alicdn.com/imgextra/i4/O1CN01ANcLnQ1bCX7tZPVMJ_!!6000000003429-2-tps-100-100.png</a></p>
          */
         public Builder icon(String icon) {
             this.putQueryParameter("Icon", icon);
@@ -290,7 +308,10 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * <p>The gateway plug-in ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -299,7 +320,10 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * PluginName.
+         * <p>The plug-in name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alisecguard</p>
          */
         public Builder pluginName(String pluginName) {
             this.putQueryParameter("PluginName", pluginName);
@@ -308,7 +332,10 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * PluginVersion.
+         * <p>The plug-in version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder pluginVersion(String pluginVersion) {
             this.putQueryParameter("PluginVersion", pluginVersion);
@@ -317,7 +344,10 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * SkillHeader.
+         * <p>The skill header information for model selection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder skillHeader(String skillHeader) {
             this.putQueryParameter("SkillHeader", skillHeader);
@@ -326,7 +356,10 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -335,7 +368,10 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * <p>The visibility.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);

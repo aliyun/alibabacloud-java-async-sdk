@@ -101,7 +101,10 @@ public class UpdateMiniAppBindingRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250801154628000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -110,7 +113,10 @@ public class UpdateMiniAppBindingRequest extends Request {
         }
 
         /**
-         * Channel.
+         * <p>The channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WECHAT</p>
          */
         public Builder channel(String channel) {
             this.putQueryParameter("Channel", channel);
@@ -119,7 +125,10 @@ public class UpdateMiniAppBindingRequest extends Request {
         }
 
         /**
-         * SettingKey.
+         * <p>The configuration key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder settingKey(String settingKey) {
             this.putQueryParameter("SettingKey", settingKey);
@@ -128,7 +137,10 @@ public class UpdateMiniAppBindingRequest extends Request {
         }
 
         /**
-         * SettingValue.
+         * <p>The configuration value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder settingValue(String settingValue) {
             this.putQueryParameter("SettingValue", settingValue);

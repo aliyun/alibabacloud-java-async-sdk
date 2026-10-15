@@ -152,7 +152,7 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * <p>Business ID of the application instance</p>
+         * <p>The business ID of the application instance.</p>
          * 
          * <strong>example:</strong>
          * <p>WD20250821161210000001</p>
@@ -164,7 +164,7 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * <p>SSL certificate name</p>
+         * <p>The SSL certificate name.</p>
          * 
          * <strong>example:</strong>
          * <p>2024</p>
@@ -176,7 +176,7 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * <p>Certificate type: Default free certificate or customer&quot;s own certificate</p>
+         * <p>The certificate type: default free certificate or customer-owned certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>Server</p>
@@ -188,7 +188,7 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * <p>Domain name</p>
+         * <p>The domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>kaibaidu.com</p>
@@ -200,7 +200,7 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * <p>Private key</p>
+         * <p>The private key.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -212,7 +212,7 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * <p>Public key</p>
+         * <p>The public key.</p>
          * 
          * <strong>example:</strong>
          * <p>c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSUxGQnQxUUpyT3IxK2hTTGRkbERMZUx4WGRIZ3hBalBxWHJIbWNFNWxqSk8gbm93Y29kZXJAbm93Y29kZXJkZU1hY0Jvb2stUHJvLmxvY2Fs</p>

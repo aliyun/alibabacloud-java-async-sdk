@@ -184,7 +184,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denied details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether a retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dewuApp</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +269,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +280,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +291,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -333,7 +360,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * Extra.
+             * <p>The extended field.</p>
              */
             public Builder extra(java.util.Map<String, String> extra) {
                 this.extra = extra;
@@ -341,7 +368,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -408,7 +438,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * Extra.
+             * <p>The extended field.</p>
              */
             public Builder extra(java.util.Map<String, String> extra) {
                 this.extra = extra;
@@ -416,7 +446,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             }
 
             /**
-             * RawScript.
+             * <p>The raw embedding script.</p>
              */
             public Builder rawScript(String rawScript) {
                 this.rawScript = rawScript;
@@ -613,7 +643,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>The agent ID returned by the platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>duanwei@qianrutest</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -621,7 +654,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>The name of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试业务空间</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -629,7 +665,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * <p>The business ID of the associated application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WD20250703155602000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -637,7 +676,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Credential.
+             * <p>The authentication credential.</p>
              */
             public Builder credential(Credential credential) {
                 this.credential = credential;
@@ -645,7 +684,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             }
 
             /**
-             * EmbedConfig.
+             * <p>The embedding configuration.</p>
              */
             public Builder embedConfig(EmbedConfig embedConfig) {
                 this.embedConfig = embedConfig;
@@ -653,7 +692,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraParams.
+             * <p>The extended parameters.</p>
              */
             public Builder extraParams(java.util.Map<String, String> extraParams) {
                 this.extraParams = extraParams;
@@ -661,7 +700,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1740479834</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -669,7 +711,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-28T02:25:41Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -677,7 +722,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             }
 
             /**
-             * PlatformAppId.
+             * <p>The application ID of the agent on the platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WA12313131313</p>
              */
             public Builder platformAppId(String platformAppId) {
                 this.platformAppId = platformAppId;
@@ -685,7 +733,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             }
 
             /**
-             * PlatformType.
+             * <p>The platform type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VMWARE</p>
              */
             public Builder platformType(String platformType) {
                 this.platformType = platformType;
@@ -693,7 +744,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -701,7 +755,10 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231313131</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

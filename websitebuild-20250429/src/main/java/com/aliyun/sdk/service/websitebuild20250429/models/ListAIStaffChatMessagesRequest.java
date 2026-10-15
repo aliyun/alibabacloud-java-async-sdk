@@ -101,7 +101,10 @@ public class ListAIStaffChatMessagesRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -110,7 +113,10 @@ public class ListAIStaffChatMessagesRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>The conversation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81bc5a34-1d8d-4ef7-a208-7401c51b054b</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -119,7 +125,10 @@ public class ListAIStaffChatMessagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Valid values: 10 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -128,7 +137,10 @@ public class ListAIStaffChatMessagesRequest extends Request {
         }
 
         /**
-         * StartCreateTime.
+         * <p>The gmtCreate value of the last record on the previous page. Leave this parameter empty for the first page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder startCreateTime(String startCreateTime) {
             this.putBodyParameter("StartCreateTime", startCreateTime);

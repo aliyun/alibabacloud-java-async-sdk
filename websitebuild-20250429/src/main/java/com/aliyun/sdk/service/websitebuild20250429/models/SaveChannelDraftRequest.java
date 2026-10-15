@@ -30,6 +30,10 @@ public class SaveChannelDraftRequest extends Request {
     private String adaptedTitle;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelAccountName")
+    private String channelAccountName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CoverImages")
     private java.util.List<CoverImages> coverImages;
 
@@ -38,13 +42,19 @@ public class SaveChannelDraftRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String draftId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebsiteNavName")
+    private String websiteNavName;
+
     private SaveChannelDraftRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.adaptedContent = builder.adaptedContent;
         this.adaptedTitle = builder.adaptedTitle;
+        this.channelAccountName = builder.channelAccountName;
         this.coverImages = builder.coverImages;
         this.draftId = builder.draftId;
+        this.websiteNavName = builder.websiteNavName;
     }
 
     public static Builder builder() {
@@ -82,6 +92,13 @@ public class SaveChannelDraftRequest extends Request {
     }
 
     /**
+     * @return channelAccountName
+     */
+    public String getChannelAccountName() {
+        return this.channelAccountName;
+    }
+
+    /**
      * @return coverImages
      */
     public java.util.List<CoverImages> getCoverImages() {
@@ -95,12 +112,21 @@ public class SaveChannelDraftRequest extends Request {
         return this.draftId;
     }
 
+    /**
+     * @return websiteNavName
+     */
+    public String getWebsiteNavName() {
+        return this.websiteNavName;
+    }
+
     public static final class Builder extends Request.Builder<SaveChannelDraftRequest, Builder> {
         private String regionId; 
         private String adaptedContent; 
         private String adaptedTitle; 
+        private String channelAccountName; 
         private java.util.List<CoverImages> coverImages; 
         private String draftId; 
+        private String websiteNavName; 
 
         private Builder() {
             super();
@@ -111,8 +137,10 @@ public class SaveChannelDraftRequest extends Request {
             this.regionId = request.regionId;
             this.adaptedContent = request.adaptedContent;
             this.adaptedTitle = request.adaptedTitle;
+            this.channelAccountName = request.channelAccountName;
             this.coverImages = request.coverImages;
             this.draftId = request.draftId;
+            this.websiteNavName = request.websiteNavName;
         } 
 
         /**
@@ -125,7 +153,10 @@ public class SaveChannelDraftRequest extends Request {
         }
 
         /**
-         * AdaptedContent.
+         * <p>The channel content (outside China only).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x</p>
          */
         public Builder adaptedContent(String adaptedContent) {
             this.putQueryParameter("AdaptedContent", adaptedContent);
@@ -134,7 +165,10 @@ public class SaveChannelDraftRequest extends Request {
         }
 
         /**
-         * AdaptedTitle.
+         * <p>The channel title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder adaptedTitle(String adaptedTitle) {
             this.putQueryParameter("AdaptedTitle", adaptedTitle);
@@ -143,7 +177,19 @@ public class SaveChannelDraftRequest extends Request {
         }
 
         /**
-         * CoverImages.
+         * <p>The display name of the publishing account. A null value does not overwrite the original value. Maximum length: 256 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
+        public Builder channelAccountName(String channelAccountName) {
+            this.putQueryParameter("ChannelAccountName", channelAccountName);
+            this.channelAccountName = channelAccountName;
+            return this;
+        }
+
+        /**
+         * <p>The collection of channel cover images (full overwrite).</p>
          */
         public Builder coverImages(java.util.List<CoverImages> coverImages) {
             String coverImagesShrink = shrink(coverImages, "CoverImages", "json");
@@ -153,6 +199,7 @@ public class SaveChannelDraftRequest extends Request {
         }
 
         /**
+         * <p>The channel draft ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +208,18 @@ public class SaveChannelDraftRequest extends Request {
         public Builder draftId(String draftId) {
             this.putQueryParameter("DraftId", draftId);
             this.draftId = draftId;
+            return this;
+        }
+
+        /**
+         * <p>The article column name for Wanxiaozhi 1.0. This parameter is required only when the website has not enabled an article column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Article</p>
+         */
+        public Builder websiteNavName(String websiteNavName) {
+            this.putQueryParameter("WebsiteNavName", websiteNavName);
+            this.websiteNavName = websiteNavName;
             return this;
         }
 
@@ -239,7 +298,11 @@ public class SaveChannelDraftRequest extends Request {
             } 
 
             /**
+             * <p>The image URL.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://campus-retail-prod.oss-cn-hangzhou.aliyuncs.com/d1c5efed9b3a419bb54b75056d54dae6.jpg?Expires=4928263770&OSSAccessKeyId=LTAI5tLYirCpzCVXoArh1VYt&Signature=">http://campus-retail-prod.oss-cn-hangzhou.aliyuncs.com/d1c5efed9b3a419bb54b75056d54dae6.jpg?Expires=4928263770&amp;OSSAccessKeyId=LTAI5tLYirCpzCVXoArh1VYt&amp;Signature=</a>******************************</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -247,7 +310,10 @@ public class SaveChannelDraftRequest extends Request {
             }
 
             /**
-             * MaterialFileId.
+             * <p>The material center file ID (optional).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder materialFileId(String materialFileId) {
                 this.materialFileId = materialFileId;
@@ -255,6 +321,7 @@ public class SaveChannelDraftRequest extends Request {
             }
 
             /**
+             * <p>The sort order.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

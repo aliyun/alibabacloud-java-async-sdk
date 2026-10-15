@@ -143,7 +143,7 @@ public class ModifyAppInstanceSpecRequest extends Request {
         } 
 
         /**
-         * <p>Application type</p>
+         * <p>The application type.</p>
          * 
          * <strong>example:</strong>
          * <p>Application</p>
@@ -155,7 +155,7 @@ public class ModifyAppInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>Business ID</p>
+         * <p>The business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>WD20250703155602000001</p>
@@ -167,7 +167,7 @@ public class ModifyAppInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>Ensures idempotence of requests. Generate a unique value from your client to ensure it is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>2108341e17661121129745384e79f9</p>
@@ -179,7 +179,7 @@ public class ModifyAppInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>Deployment area</p>
+         * <p>The deployment region.</p>
          * 
          * <strong>example:</strong>
          * <p>HongKong</p>
@@ -191,10 +191,10 @@ public class ModifyAppInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>Extended information</p>
+         * <p>The extended information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;deliveryNodeName&quot;:&quot;网站验收&quot;,&quot;deliveryNodeStatus&quot;:&quot;Reject&quot;,&quot;deliveryOperatorRole&quot;:&quot;Customer&quot;}</p>
+         * <p>{\&quot;deliveryNodeName\&quot;:\&quot;Website acceptance\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -203,7 +203,7 @@ public class ModifyAppInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>Payment type</p>
+         * <p>The payment type.</p>
          * 
          * <strong>example:</strong>
          * <p>PayAsYouGo</p>
@@ -215,7 +215,7 @@ public class ModifyAppInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>Site version</p>
+         * <p>The website version.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

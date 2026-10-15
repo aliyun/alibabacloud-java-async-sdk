@@ -73,7 +73,10 @@ public class GetAIStaffPreviewUrlRequest extends Request {
         } 
 
         /**
-         * ConversationId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81bc5a34-1d8d-4ef7-a208-7401c51b054b</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -82,7 +85,10 @@ public class GetAIStaffPreviewUrlRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putBodyParameter("Restart", restart);

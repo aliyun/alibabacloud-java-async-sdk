@@ -236,7 +236,10 @@ public class ListAppPublishHistoryRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -245,7 +248,7 @@ public class ListAppPublishHistoryRequest extends Request {
         }
 
         /**
-         * DeployChannel.
+         * <p>The deployment channel.</p>
          */
         public Builder deployChannel(String deployChannel) {
             this.putQueryParameter("DeployChannel", deployChannel);
@@ -254,7 +257,10 @@ public class ListAppPublishHistoryRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1_Operations Support Department_Sales Operations</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -263,7 +269,10 @@ public class ListAppPublishHistoryRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return for a single query. Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -272,7 +281,10 @@ public class ListAppPublishHistoryRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query. This parameter is empty if no next query is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -281,7 +293,10 @@ public class ListAppPublishHistoryRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -290,7 +305,10 @@ public class ListAppPublishHistoryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -299,7 +317,7 @@ public class ListAppPublishHistoryRequest extends Request {
         }
 
         /**
-         * PublishEnv.
+         * <p>The release environment.</p>
          */
         public Builder publishEnv(String publishEnv) {
             this.putQueryParameter("PublishEnv", publishEnv);
@@ -308,7 +326,10 @@ public class ListAppPublishHistoryRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EndTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -317,7 +338,10 @@ public class ListAppPublishHistoryRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The release status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -326,7 +350,7 @@ public class ListAppPublishHistoryRequest extends Request {
         }
 
         /**
-         * Subchannel.
+         * <p>The release subchannel.</p>
          */
         public Builder subchannel(String subchannel) {
             this.putQueryParameter("Subchannel", subchannel);
@@ -335,7 +359,10 @@ public class ListAppPublishHistoryRequest extends Request {
         }
 
         /**
-         * WebsiteDomain.
+         * <p>The website domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder websiteDomain(String websiteDomain) {
             this.putQueryParameter("WebsiteDomain", websiteDomain);

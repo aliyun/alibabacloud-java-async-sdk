@@ -59,7 +59,10 @@ public class GetOssUploadPolicyRequest extends Request {
         } 
 
         /**
-         * Scenario.
+         * <p>The scenario, such as knowledge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder scenario(String scenario) {
             this.putBodyParameter("Scenario", scenario);

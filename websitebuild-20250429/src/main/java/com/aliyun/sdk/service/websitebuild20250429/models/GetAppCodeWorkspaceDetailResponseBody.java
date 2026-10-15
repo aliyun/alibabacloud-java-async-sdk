@@ -184,7 +184,10 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,14 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Specifies whether retry is allowed. Valid values:</p>
+         * <ul>
+         * <li>false: Retry is not allowed.</li>
+         * <li>true: Retry is allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +210,10 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +221,10 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +232,13 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message. This value is used to replace the <code>%s</code> placeholder in the error message returned in the <strong>ErrMessage</strong> parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +246,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +254,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The application module.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +273,10 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +284,10 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +295,10 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -346,7 +377,12 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * ChangeLog.
+             * <p>The SDK change log.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li>Add Params.</li>
+             * </ul>
              */
             public Builder changeLog(String changeLog) {
                 this.changeLog = changeLog;
@@ -354,6 +390,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time in UTC. The time follows the ISO 8601 standard.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -365,7 +402,10 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LogicalNumber.
+             * <p>The logical value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder logicalNumber(Integer logicalNumber) {
                 this.logicalNumber = logicalNumber;
@@ -495,7 +535,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CommitHash.
+             * <p>The code commit hash value.</p>
              */
             public Builder commitHash(String commitHash) {
                 this.commitHash = commitHash;
@@ -525,7 +565,10 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SiteId.
+             * <p>The site ID. You can call <a href="~~ListSites~~">ListSites</a> to retrieve the site ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>865181640657408</p>
              */
             public Builder siteId(String siteId) {
                 this.siteId = siteId;
@@ -533,7 +576,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Snapshots.
+             * <p>The operation description information.</p>
              */
             public Builder snapshots(java.util.List<Snapshots> snapshots) {
                 this.snapshots = snapshots;

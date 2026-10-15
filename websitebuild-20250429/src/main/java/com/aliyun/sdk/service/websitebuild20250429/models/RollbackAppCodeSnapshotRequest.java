@@ -96,7 +96,10 @@ public class RollbackAppCodeSnapshotRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1067072706415168</p>
          */
         public Builder siteId(String siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -105,7 +108,10 @@ public class RollbackAppCodeSnapshotRequest extends Request {
         }
 
         /**
-         * TargetLogicalNumber.
+         * <p>The target snapshot version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231</p>
          */
         public Builder targetLogicalNumber(Integer targetLogicalNumber) {
             this.putQueryParameter("TargetLogicalNumber", targetLogicalNumber);

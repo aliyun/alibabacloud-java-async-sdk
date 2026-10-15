@@ -184,7 +184,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retry is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dewuApp</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> return parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,7 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The response data.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -251,7 +269,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +280,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>The exception message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System exception.</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +291,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether the request is processed synchronously.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -450,7 +477,16 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The Ray cluster type. Valid values:</p>
+             * <ul>
+             * <li><p>BASIC: basic type, non-high-availability.</p>
+             * </li>
+             * <li><p>HIGH_AVAILABILITY: high-availability type.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>high_performance</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -458,7 +494,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The scenario description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lshm-mysql-coypt</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -466,7 +505,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1763605196000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -474,7 +516,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-10-11 16:05:43</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -482,7 +527,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * HotCount.
+             * <p>The popularity count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hotCount(Integer hotCount) {
                 this.hotCount = hotCount;
@@ -490,7 +538,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Icon.
+             * <p>The plug-in icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@lALPM2AwTOg9IUHNAUDNAUA</p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -498,7 +549,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginId.
+             * <p>The plug-in ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alipay-isv</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -506,7 +560,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginName.
+             * <p>The plug-in name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wx*</p>
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -514,7 +571,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The file status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -522,7 +582,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The API version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-29</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -530,7 +593,14 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * <p>The visibility. Valid values:</p>
+             * <ul>
+             * <li><strong>PUBLIC</strong>: Public.</li>
+             * <li><strong>PRIVATE</strong>: Private.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;
@@ -701,7 +771,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;Depth\&quot;: 2, \&quot;ParentCategoryId\&quot;: 5260, \&quot;Name\&quot;: \&quot;2\&quot;, \&quot;CategoryId\&quot;: 5280, \&quot;CreateTime\&quot;: \&quot;2025-08-26 10:20:37\&quot;}</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -709,7 +782,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The scenario description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lx_supabase_test_02</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -717,7 +793,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-17 20:43:21</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -725,7 +804,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-18T10:03:56+08:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -733,7 +815,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Icon.
+             * <p>The plug-in icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@lADPD0-jULc8yJ3NC9DNC9A</p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -741,7 +826,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginId.
+             * <p>The bound API Gateway plug-in ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alipay-isv</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -749,7 +837,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginName.
+             * <p>The plug-in name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>errorMapping</p>
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -757,7 +848,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Valid values: unknown, init, testing, online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeeded</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -765,7 +859,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The API version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V2.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -773,7 +870,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * <p>Filters by visibility level. Multiple values can be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;
@@ -931,7 +1031,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder currentPageNum(Integer currentPageNum) {
                 this.currentPageNum = currentPageNum;
@@ -939,7 +1042,7 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The request results.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -947,7 +1050,7 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Next.
+             * <p>The decision weight.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -955,7 +1058,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * NextPage.
+             * <p>Indicates whether a next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder nextPage(Boolean nextPage) {
                 this.nextPage = nextPage;
@@ -963,7 +1069,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -971,7 +1080,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PrePage.
+             * <p>Indicates whether a previous page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder prePage(Boolean prePage) {
                 this.prePage = prePage;
@@ -979,7 +1091,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultLimit.
+             * <p>Apart from pagination limits, the server processes a maximum of 1000 recent records for the current query. If the results exceed 1000 entries, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;
@@ -987,7 +1102,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItemNum.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalItemNum(Integer totalItemNum) {
                 this.totalItemNum = totalItemNum;
@@ -995,7 +1113,10 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageNum.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPageNum(Integer totalPageNum) {
                 this.totalPageNum = totalPageNum;

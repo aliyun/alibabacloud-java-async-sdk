@@ -110,7 +110,10 @@ public class UpdateRbacOrgUnitRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -119,7 +122,10 @@ public class UpdateRbacOrgUnitRequest extends Request {
         }
 
         /**
-         * OrgUnitData.
+         * <p>The organization parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;xx&quot;}</p>
          */
         public Builder orgUnitData(String orgUnitData) {
             this.putQueryParameter("OrgUnitData", orgUnitData);
@@ -128,7 +134,10 @@ public class UpdateRbacOrgUnitRequest extends Request {
         }
 
         /**
-         * OrgUnitId.
+         * <p>The organization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f0534aa7-94ec-4368-a34a-310390f66253</p>
          */
         public Builder orgUnitId(String orgUnitId) {
             this.putQueryParameter("OrgUnitId", orgUnitId);

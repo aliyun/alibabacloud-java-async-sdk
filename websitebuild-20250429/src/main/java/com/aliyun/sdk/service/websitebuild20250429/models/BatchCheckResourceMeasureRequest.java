@@ -152,7 +152,10 @@ public class BatchCheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * BelongId.
+         * <p>The ownership ID, which can be a website ID or an Alibaba Cloud user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder belongId(String belongId) {
             this.putQueryParameter("BelongId", belongId);
@@ -161,7 +164,10 @@ public class BatchCheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * BelongIdType.
+         * <p>The type of the ownership ID, such as siteId or uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder belongIdType(String belongIdType) {
             this.putQueryParameter("BelongIdType", belongIdType);
@@ -170,7 +176,10 @@ public class BatchCheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>The ESP business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -179,7 +188,10 @@ public class BatchCheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * EspBizId.
+         * <p>The ESP business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p20202933455</p>
          */
         public Builder espBizId(String espBizId) {
             this.putQueryParameter("EspBizId", espBizId);
@@ -188,7 +200,10 @@ public class BatchCheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * OrderComponentParams.
+         * <p>The order module information. This parameter is automatically populated when it is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;siteversion&quot;:&quot;test&quot;}</p>
          */
         public Builder orderComponentParams(String orderComponentParams) {
             this.putQueryParameter("OrderComponentParams", orderComponentParams);
@@ -197,7 +212,15 @@ public class BatchCheckResourceMeasureRequest extends Request {
         }
 
         /**
-         * ResourceCheckItems.
+         * <p>The list of resource check items in JSON array format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *                   {
+         *                     &quot;resourceCode&quot;: &quot;InspirationTokens&quot;,
+         *                     &quot;resourceValue&quot;: &quot;0&quot;
+         *                   }
+         *                 ]</p>
          */
         public Builder resourceCheckItems(String resourceCheckItems) {
             this.putQueryParameter("ResourceCheckItems", resourceCheckItems);

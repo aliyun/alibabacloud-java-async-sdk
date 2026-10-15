@@ -138,7 +138,7 @@ public class UpdateAppSeoStatusRequest extends Request {
         }
 
         /**
-         * <p>Business ID</p>
+         * <p>The business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>WS20250801154628000001</p>
@@ -150,7 +150,7 @@ public class UpdateAppSeoStatusRequest extends Request {
         }
 
         /**
-         * <p>Domain Name</p>
+         * <p>The domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>yjdw.bpu.edu.cn-waf</p>
@@ -162,7 +162,10 @@ public class UpdateAppSeoStatusRequest extends Request {
         }
 
         /**
-         * SeAuthInfo.
+         * <p>The security authentication information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder seAuthInfo(String seAuthInfo) {
             this.putQueryParameter("SeAuthInfo", seAuthInfo);
@@ -171,7 +174,7 @@ public class UpdateAppSeoStatusRequest extends Request {
         }
 
         /**
-         * SeIndexStatus.
+         * <p>The index status.</p>
          */
         public Builder seIndexStatus(Integer seIndexStatus) {
             this.putQueryParameter("SeIndexStatus", seIndexStatus);
@@ -180,7 +183,7 @@ public class UpdateAppSeoStatusRequest extends Request {
         }
 
         /**
-         * <p>Search Engine Type</p>
+         * <p>The search engine type.</p>
          * 
          * <strong>example:</strong>
          * <p>type</p>

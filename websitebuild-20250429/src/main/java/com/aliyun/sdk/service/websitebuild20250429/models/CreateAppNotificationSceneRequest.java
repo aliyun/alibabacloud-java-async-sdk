@@ -26,6 +26,14 @@ public class CreateAppNotificationSceneRequest extends Request {
     private String bizId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ButlerChannelTypesJson")
+    private String butlerChannelTypesJson;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ButlerFieldsJson")
+    private String butlerFieldsJson;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelsJson")
     private String channelsJson;
 
@@ -73,6 +81,8 @@ public class CreateAppNotificationSceneRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
+        this.butlerChannelTypesJson = builder.butlerChannelTypesJson;
+        this.butlerFieldsJson = builder.butlerFieldsJson;
         this.channelsJson = builder.channelsJson;
         this.description = builder.description;
         this.emailFieldsJson = builder.emailFieldsJson;
@@ -111,6 +121,20 @@ public class CreateAppNotificationSceneRequest extends Request {
      */
     public String getBizId() {
         return this.bizId;
+    }
+
+    /**
+     * @return butlerChannelTypesJson
+     */
+    public String getButlerChannelTypesJson() {
+        return this.butlerChannelTypesJson;
+    }
+
+    /**
+     * @return butlerFieldsJson
+     */
+    public String getButlerFieldsJson() {
+        return this.butlerFieldsJson;
     }
 
     /**
@@ -193,6 +217,8 @@ public class CreateAppNotificationSceneRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAppNotificationSceneRequest, Builder> {
         private String regionId; 
         private String bizId; 
+        private String butlerChannelTypesJson; 
+        private String butlerFieldsJson; 
         private String channelsJson; 
         private String description; 
         private String emailFieldsJson; 
@@ -213,6 +239,8 @@ public class CreateAppNotificationSceneRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.bizId = request.bizId;
+            this.butlerChannelTypesJson = request.butlerChannelTypesJson;
+            this.butlerFieldsJson = request.butlerFieldsJson;
             this.channelsJson = request.channelsJson;
             this.description = request.description;
             this.emailFieldsJson = request.emailFieldsJson;
@@ -236,7 +264,10 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -245,7 +276,34 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * ChannelsJson.
+         * <p>The list of mobile butler delivery platform types in a JSON string array. Valid values: wechat, dingtalk, wecom, and feishu.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;feishu&quot;]</p>
+         */
+        public Builder butlerChannelTypesJson(String butlerChannelTypesJson) {
+            this.putQueryParameter("ButlerChannelTypesJson", butlerChannelTypesJson);
+            this.butlerChannelTypesJson = butlerChannelTypesJson;
+            return this;
+        }
+
+        /**
+         * <p>The list of mobile butler notification fields in a JSON string array. This parameter is required when the butler channel is selected. A maximum of 10 fields are supported. The butler fields in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;id&quot;,&quot;phone&quot;,&quot;name&quot;,&quot;city&quot;,&quot;message&quot;,&quot;is_deleted&quot;,&quot;updated_at&quot;,&quot;created_at&quot;,&quot;status&quot;,&quot;budget&quot;]</p>
+         */
+        public Builder butlerFieldsJson(String butlerFieldsJson) {
+            this.putQueryParameter("ButlerFieldsJson", butlerFieldsJson);
+            this.butlerFieldsJson = butlerFieldsJson;
+            return this;
+        }
+
+        /**
+         * <p>The notification channels in a JSON array string, such as [&quot;sms&quot;,&quot;email&quot;].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sms&quot;,&quot;email&quot;]</p>
          */
         public Builder channelsJson(String channelsJson) {
             this.putQueryParameter("ChannelsJson", channelsJson);
@@ -254,7 +312,10 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn_graph_prod</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -263,7 +324,10 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * EmailFieldsJson.
+         * <p>The email notification fields in a JSON array string. A maximum of 10 fields are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder emailFieldsJson(String emailFieldsJson) {
             this.putQueryParameter("EmailFieldsJson", emailFieldsJson);
@@ -272,7 +336,10 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * EmailLimitJson.
+         * <p>The email sending limit in a JSON string, including the minInterval and dailyLimit fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder emailLimitJson(String emailLimitJson) {
             this.putQueryParameter("EmailLimitJson", emailLimitJson);
@@ -281,7 +348,10 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * EmailRecipientIdsJson.
+         * <p>The list of email recipient IDs in a JSON array string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder emailRecipientIdsJson(String emailRecipientIdsJson) {
             this.putQueryParameter("EmailRecipientIdsJson", emailRecipientIdsJson);
@@ -290,7 +360,10 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Device Capability Manual</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -299,7 +372,10 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * PhoneRecipientIdsJson.
+         * <p>The list of SMS recipient IDs in a JSON array string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder phoneRecipientIdsJson(String phoneRecipientIdsJson) {
             this.putQueryParameter("PhoneRecipientIdsJson", phoneRecipientIdsJson);
@@ -308,7 +384,10 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * SmsFieldsJson.
+         * <p>The SMS notification fields in a JSON array string. A maximum of 3 fields are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder smsFieldsJson(String smsFieldsJson) {
             this.putQueryParameter("SmsFieldsJson", smsFieldsJson);
@@ -317,7 +396,10 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * SmsLimitJson.
+         * <p>The SMS sending limit in a JSON string, including the minInterval and dailyLimit fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder smsLimitJson(String smsLimitJson) {
             this.putQueryParameter("SmsLimitJson", smsLimitJson);
@@ -326,7 +408,10 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>The name of the monitored data table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default.ai_advertising_material_rec_train_v1103</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -335,7 +420,10 @@ public class CreateAppNotificationSceneRequest extends Request {
         }
 
         /**
-         * TriggerEventsJson.
+         * <p>The trigger events in a JSON array string, such as [&quot;INSERT&quot;,&quot;UPDATE&quot;,&quot;DELETE&quot;].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;INSERT&quot;,&quot;UPDATE&quot;,&quot;DELETE&quot;]</p>
          */
         public Builder triggerEventsJson(String triggerEventsJson) {
             this.putQueryParameter("TriggerEventsJson", triggerEventsJson);

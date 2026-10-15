@@ -124,7 +124,10 @@ public class RollbackAppInstancePublishRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -133,7 +136,10 @@ public class RollbackAppInstancePublishRequest extends Request {
         }
 
         /**
-         * DeployChannel.
+         * <p>The deployment channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PC</p>
          */
         public Builder deployChannel(String deployChannel) {
             this.putQueryParameter("DeployChannel", deployChannel);
@@ -142,7 +148,10 @@ public class RollbackAppInstancePublishRequest extends Request {
         }
 
         /**
-         * PublishNumber.
+         * <p>The publish number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder publishNumber(String publishNumber) {
             this.putQueryParameter("PublishNumber", publishNumber);
@@ -151,7 +160,10 @@ public class RollbackAppInstancePublishRequest extends Request {
         }
 
         /**
-         * QuickRollback.
+         * <p>Specifies whether to perform a quick rollback.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder quickRollback(String quickRollback) {
             this.putQueryParameter("QuickRollback", quickRollback);

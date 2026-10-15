@@ -87,7 +87,10 @@ public class GetMiniAppAuthUrlRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250731233102000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -96,7 +99,10 @@ public class GetMiniAppAuthUrlRequest extends Request {
         }
 
         /**
-         * Channel.
+         * <p>The channel information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WECHAT</p>
          */
         public Builder channel(String channel) {
             this.putQueryParameter("Channel", channel);
@@ -105,7 +111,10 @@ public class GetMiniAppAuthUrlRequest extends Request {
         }
 
         /**
-         * RedirectUri.
+         * <p>The redirect URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder redirectUri(String redirectUri) {
             this.putQueryParameter("RedirectUri", redirectUri);
