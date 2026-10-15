@@ -145,7 +145,7 @@ public class ScalingRule extends TeaModel {
         } 
 
         /**
-         * <p>The adjustment information of the scaling rule.</p>
+         * <p>The list of target resource configurations for each component.</p>
          */
         public Builder adjustInfos(java.util.List<AdjustInfos> adjustInfos) {
             this.adjustInfos = adjustInfos;
@@ -153,7 +153,7 @@ public class ScalingRule extends TeaModel {
         }
 
         /**
-         * <p>The cron expression for the scaling schedule.</p>
+         * <p>The scheduled execution expression of the rule.</p>
          */
         public Builder cronStr(String cronStr) {
             this.cronStr = cronStr;
@@ -161,7 +161,7 @@ public class ScalingRule extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the scaling rule is disabled.</p>
+         * <p>Indicates whether the rule is disabled.</p>
          */
         public Builder disabled(Boolean disabled) {
             this.disabled = disabled;
@@ -169,7 +169,7 @@ public class ScalingRule extends TeaModel {
         }
 
         /**
-         * <p>The end time of the scaling rule. Unit: milliseconds.</p>
+         * <p>The end time of the effective period for the rule.</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -177,7 +177,7 @@ public class ScalingRule extends TeaModel {
         }
 
         /**
-         * <p>The ID of the scaling rule.</p>
+         * <p>The ID of the elastic scaling rule.</p>
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;
@@ -185,7 +185,7 @@ public class ScalingRule extends TeaModel {
         }
 
         /**
-         * <p>The name of the scaling rule.</p>
+         * <p>The name of the elastic scaling rule.</p>
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.scalingRuleName = scalingRuleName;
@@ -193,7 +193,7 @@ public class ScalingRule extends TeaModel {
         }
 
         /**
-         * <p>The start time of the scaling rule. Unit: milliseconds.</p>
+         * <p>The start time of the effective period for the rule.</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -201,7 +201,10 @@ public class ScalingRule extends TeaModel {
         }
 
         /**
-         * <p>The time zone of the scaling rule.</p>
+         * <p>The time zone used for the execution time of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timeZone(String timeZone) {
             this.timeZone = timeZone;
@@ -267,7 +270,7 @@ public class ScalingRule extends TeaModel {
             } 
 
             /**
-             * <p>The type of the component to be adjusted.</p>
+             * <p>index  query data proxy streaming mix_coordinator</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -275,7 +278,10 @@ public class ScalingRule extends TeaModel {
             }
 
             /**
-             * <p>The target value for the adjustment.</p>
+             * <p>The target number of nodes for the component after the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder targetValue(String targetValue) {
                 this.targetValue = targetValue;

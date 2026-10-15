@@ -210,7 +210,7 @@ public class ScalingActivity extends TeaModel {
         } 
 
         /**
-         * <p>The types of components involved in the scaling activity.</p>
+         * <p>The types of components involved in the auto scaling activity.</p>
          */
         public Builder componentTypes(String componentTypes) {
             this.componentTypes = componentTypes;
@@ -218,7 +218,7 @@ public class ScalingActivity extends TeaModel {
         }
 
         /**
-         * <p>The description of the scaling activity.</p>
+         * <p>The detailed description of the auto scaling activity, which can be used to identify the cause when the activity fails.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -226,7 +226,7 @@ public class ScalingActivity extends TeaModel {
         }
 
         /**
-         * <p>The end time of the scaling activity.</p>
+         * <p>The end time of the auto scaling activity.</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -234,7 +234,7 @@ public class ScalingActivity extends TeaModel {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Milvus instance.</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -242,7 +242,7 @@ public class ScalingActivity extends TeaModel {
         }
 
         /**
-         * <p>The type of the scaling policy.</p>
+         * <p>The type of the elastic scaling policy.</p>
          */
         public Builder policyType(String policyType) {
             this.policyType = policyType;
@@ -250,7 +250,7 @@ public class ScalingActivity extends TeaModel {
         }
 
         /**
-         * <p>The ID of the scaling activity.</p>
+         * <p>The ID of the elastic scaling activity.</p>
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.scalingActivityId = scalingActivityId;
@@ -258,7 +258,7 @@ public class ScalingActivity extends TeaModel {
         }
 
         /**
-         * <p>The state of the scaling activity.</p>
+         * <p>The execution status of the auto scaling activity.</p>
          */
         public Builder scalingActivityState(String scalingActivityState) {
             this.scalingActivityState = scalingActivityState;
@@ -266,7 +266,7 @@ public class ScalingActivity extends TeaModel {
         }
 
         /**
-         * <p>The ID of the scaling policy.</p>
+         * <p>The ID of the elastic scaling policy.</p>
          */
         public Builder scalingPolicyId(String scalingPolicyId) {
             this.scalingPolicyId = scalingPolicyId;
@@ -274,7 +274,7 @@ public class ScalingActivity extends TeaModel {
         }
 
         /**
-         * <p>The details of the scaling rule.</p>
+         * <p>The details of the elastic scaling rule.</p>
          */
         public Builder scalingRuleDetail(String scalingRuleDetail) {
             this.scalingRuleDetail = scalingRuleDetail;
@@ -282,7 +282,7 @@ public class ScalingActivity extends TeaModel {
         }
 
         /**
-         * <p>The ID of the scaling rule.</p>
+         * <p>The ID of the elastic scaling rule.</p>
          */
         public Builder scalingRuleId(String scalingRuleId) {
             this.scalingRuleId = scalingRuleId;
@@ -290,7 +290,7 @@ public class ScalingActivity extends TeaModel {
         }
 
         /**
-         * <p>The name of the scaling rule that triggered the activity.</p>
+         * <p>The name of the rule that triggered the auto scaling activity.</p>
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.scalingRuleName = scalingRuleName;
@@ -298,7 +298,7 @@ public class ScalingActivity extends TeaModel {
         }
 
         /**
-         * <p>The start time of the scaling activity.</p>
+         * <p>The start time of the auto scaling activity.</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -306,7 +306,7 @@ public class ScalingActivity extends TeaModel {
         }
 
         /**
-         * <p>The time zone of the scaling activity.</p>
+         * <p>The time zone used by the elastic scaling rule.</p>
          */
         public Builder timeZone(String timeZone) {
             this.timeZone = timeZone;

@@ -340,7 +340,7 @@ public class InstanceDetail extends TeaModel {
         } 
 
         /**
-         * <p>The automatic backup configuration.</p>
+         * <p>The automatic backup.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -395,7 +395,7 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether data encryption is enabled.</p>
+         * <p>Specifies whether data encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -418,7 +418,7 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether high availability is enabled.</p>
+         * <p>Specifies whether high availability is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -451,7 +451,7 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * <p>kms key Id。</p>
+         * <p>The KMS key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>key-xxx</p>
@@ -462,7 +462,7 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * <p>The multi-zone deployment mode.</p>
+         * <p>The multi-zone mode.</p>
          * 
          * <strong>example:</strong>
          * <p>Single</p>
@@ -484,7 +484,11 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * <p>The billing method. Valid values: PayAsYouGo: pay-as-you-go billing method. Subscription: subscription.</p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PayAsYouGo: pay-as-you-go billing method.</li>
+         * <li>Subscription: subscription.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PayAsYouGo</p>
@@ -538,12 +542,12 @@ public class InstanceDetail extends TeaModel {
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li>creating: Being created.</li>
-         * <li>running: Running.</li>
-         * <li>updating: Being upgraded. This includes specification changes, configuration changes, and public network access changes.</li>
-         * <li>disable: Unavailable. The cluster has expired and requires renewal to reactivate.</li>
-         * <li>deleting: Being deleted.</li>
-         * <li>deleted: Deleted.</li>
+         * <li>creating: The instance is being created.</li>
+         * <li>running: The instance is running.</li>
+         * <li>updating: The instance is being upgraded, such as cluster scaling, configuration changes, and enabling or disabling public network access.</li>
+         * <li>disable: The instance is unavailable. The cluster has expired and must be renewed for activation.</li>
+         * <li>deleting: The instance is being deleted.</li>
+         * <li>deleted: The instance is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -677,7 +681,7 @@ public class InstanceDetail extends TeaModel {
             } 
 
             /**
-             * enabled.
+             * <p>Specifies whether to enable the data cloud disk for the query node.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -685,7 +689,7 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
-             * performanceLevel.
+             * <p>The performance level of the ESSD.</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -693,7 +697,7 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
-             * size.
+             * <p>The capacity of the data cloud disk, in GiB.</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -701,7 +705,7 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
-             * storageClass.
+             * <p>The storage class of the data cloud disk.</p>
              */
             public Builder storageClass(String storageClass) {
                 this.storageClass = storageClass;
@@ -768,7 +772,7 @@ public class InstanceDetail extends TeaModel {
             } 
 
             /**
-             * podId.
+             * <p>The Pod ID.</p>
              */
             public Builder podId(String podId) {
                 this.podId = podId;
@@ -776,7 +780,7 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
-             * podName.
+             * <p>The pod name.</p>
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -943,7 +947,7 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
-             * dataDisk.
+             * <p>The query node data cloud disk configuration.</p>
              */
             public Builder dataDisk(DataDisk dataDisk) {
                 this.dataDisk = dataDisk;
@@ -951,7 +955,7 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
-             * <p>The disk size type for the Query Node. Set this parameter to Large for storage-optimized configurations, and to Normal for other configurations.</p>
+             * <p>The disk size type of the query node. The value is Large for storage-optimized configurations, and Normal for other configurations.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -962,7 +966,7 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
-             * payType.
+             * <p>The billing method of the component.</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -970,7 +974,7 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
-             * podsList.
+             * <p>The pod list of the component.</p>
              */
             public Builder podsList(java.util.List<PodsList> podsList) {
                 this.podsList = podsList;

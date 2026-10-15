@@ -132,7 +132,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The access denied details.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</p>
@@ -195,7 +195,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -264,7 +264,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * podId.
+             * <p>The pod ID.</p>
              */
             public Builder podId(String podId) {
                 this.podId = podId;
@@ -272,7 +272,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * podName.
+             * <p>The name of the pod.</p>
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -536,7 +536,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The billing method of the component.</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -555,7 +555,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The ID of the zone where the component is deployed.</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -574,7 +574,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data cloud disk capacity, in GiB.</p>
+             * <p>The capacity of the data cloud disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -585,7 +585,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The StorageClass of the data cloud disk.</p>
+             * <p>The storage class of the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>alicloud-disk-essd-pl1</p>
@@ -596,7 +596,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * podsList.
+             * <p>The list of pods for the component.</p>
              */
             public Builder podsList(java.util.List<PodsList> podsList) {
                 this.podsList = podsList;
@@ -819,7 +819,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Attu component port.</p>
+             * <p>The port of the Attu component.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -830,7 +830,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTPS download URL of the CA certificate.</p>
+             * <p>The HTTPS download URL for the CA certificate.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/ca.pem">https://example.com/ca.pem</a></p>
@@ -882,7 +882,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS storage data size.</p>
+             * <p>The size of data stored in OSS.</p>
              * 
              * <strong>example:</strong>
              * <p>125.15 GB</p>
@@ -893,7 +893,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS storage metric timestamp.</p>
+             * <p>The time when the OSS storage metric is collected.</p>
              * 
              * <strong>example:</strong>
              * <p>1718604000000</p>
@@ -904,7 +904,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The proxy port.</p>
+             * <p>The port of the proxy.</p>
              * 
              * <strong>example:</strong>
              * <p>19530</p>
@@ -1055,7 +1055,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentActiveAZ.
+             * <p>The current active zone.</p>
              */
             public Builder currentActiveAZ(String currentActiveAZ) {
                 this.currentActiveAZ = currentActiveAZ;
@@ -1063,7 +1063,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The high availability pattern.</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -1071,7 +1071,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryZoneId.
+             * <p>The ID of the primary zone in the high availability deployment.</p>
              */
             public Builder primaryZoneId(String primaryZoneId) {
                 this.primaryZoneId = primaryZoneId;
@@ -1079,7 +1079,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SecondaryZoneId.
+             * <p>The ID of the secondary zone in the high availability deployment.</p>
              */
             public Builder secondaryZoneId(String secondaryZoneId) {
                 this.secondaryZoneId = secondaryZoneId;
@@ -1250,7 +1250,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of CUs for data nodes.</p>
+             * <p>The number of compute units (CUs) for data nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1272,7 +1272,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CUs for index nodes.</p>
+             * <p>The number of compute units (CUs) for index nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1294,7 +1294,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CUs for MixCoordinator nodes.</p>
+             * <p>The number of compute units (CUs) for MixCoordinator nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1316,7 +1316,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CUs for proxy nodes.</p>
+             * <p>The number of compute units (CUs) for proxy nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1338,7 +1338,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CUs for query nodes.</p>
+             * <p>The number of compute units (CUs) for query nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1419,7 +1419,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -1430,7 +1430,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>
@@ -1500,7 +1500,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * VswId.
+             * <p>The vSwitch ID.</p>
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -1508,7 +1508,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID of the vSwitch.</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1991,7 +1991,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The public network access control ACL ID.</p>
+             * <p>The ID of the public network access control list (ACL).</p>
              * 
              * <strong>example:</strong>
              * <p>acl-123xxx</p>
@@ -2002,7 +2002,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time.</p>
+             * <p>The start time. It is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1716863508000</p>
@@ -2054,7 +2054,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether high availability (HA) is enabled.</p>
+             * <p>Indicates whether high availability is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2065,7 +2065,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Encrypted.
+             * <p>The encryption information of the instance.</p>
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -2073,7 +2073,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time.</p>
+             * <p>The expiration time. It is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1721664000000</p>
@@ -2084,7 +2084,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HighAvailability.
+             * <p>The high availability configuration information of the instance.</p>
              */
             public Builder highAvailability(HighAvailability highAvailability) {
                 this.highAvailability = highAvailability;
@@ -2105,12 +2105,12 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             /**
              * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li>creating: Being created.</li>
-             * <li>running: Running.</li>
-             * <li>updating: Being upgraded. This includes specification changes, configuration changes, and public network access toggling.</li>
-             * <li>disable: Unavailable. The cluster has expired and requires renewal to reactivate.</li>
-             * <li>deleting: Being deleted.</li>
-             * <li>deleted: Deleted.</li>
+             * <li>creating: The instance is being created.</li>
+             * <li>running: The instance is running.</li>
+             * <li>updating: The instance is being updated. This includes specification changes, configuration changes, and enabling or disabling public network access.</li>
+             * <li>disable: The instance is unavailable. The cluster has expired and must be renewed to be activated.</li>
+             * <li>deleting: The instance is being deleted.</li>
+             * <li>deleted: The instance is deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2122,7 +2122,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * KmsKeyId.
+             * <p>The KMS key ID.</p>
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
@@ -2130,7 +2130,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainablePeriod.
+             * <p>The maintenance window of the instance.</p>
              */
             public Builder maintainablePeriod(String maintainablePeriod) {
                 this.maintainablePeriod = maintainablePeriod;
@@ -2146,7 +2146,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Single,Two,Three</p>
+             * <p>The zone deployment mode of the instance.</p>
              */
             public Builder multiZoneMode(String multiZoneMode) {
                 this.multiZoneMode = multiZoneMode;
@@ -2156,8 +2156,8 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             /**
              * <p>The node type. Valid values:</p>
              * <ul>
-             * <li>perf: compute-optimized instance.</li>
-             * <li>cap: storage-optimized.</li>
+             * <li>perf: compute-optimized</li>
+             * <li>cap: storage-optimized</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2180,10 +2180,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The edition. Valid values:</p>
+             * <p>The edition details. Valid values:</p>
              * <ul>
-             * <li>trial: Trial Edition.</li>
-             * <li>standard: Standard Edition.</li>
+             * <li>trial: starter edition</li>
+             * <li>standard: standard edition</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2195,10 +2195,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing type. Valid values:</p>
+             * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>0: pay-as-you-go.</li>
-             * <li>1: subscription.</li>
+             * <li>0: pay-as-you-go</li>
+             * <li>1: subscription</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2243,7 +2243,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running time.</p>
+             * <p>The running time of the instance, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1743679</p>
@@ -2284,7 +2284,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined configuration.</p>
+             * <p>The custom user configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>dataCoord:\n  segment:\n    maxSize: 1024</p>
@@ -2295,7 +2295,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitches.
+             * <p>The list of vSwitches associated with the instance.</p>
              */
             public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
                 this.vSwitches = vSwitches;

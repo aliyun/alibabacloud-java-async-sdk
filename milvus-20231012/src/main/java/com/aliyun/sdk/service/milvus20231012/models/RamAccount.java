@@ -93,7 +93,7 @@ public class RamAccount extends TeaModel {
         } 
 
         /**
-         * <p>Specifies whether the RamAccount can be bound to other resources.</p>
+         * <p>Indicates whether the RAM user can be bound.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -104,7 +104,7 @@ public class RamAccount extends TeaModel {
         }
 
         /**
-         * <p>The display name for the RamAccount, which appears in the console.</p>
+         * <p>The display name.</p>
          * 
          * <strong>example:</strong>
          * <p>Test User</p>
@@ -115,7 +115,7 @@ public class RamAccount extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier for the RamAccount.</p>
+         * <p>The Alibaba Cloud UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
@@ -126,7 +126,7 @@ public class RamAccount extends TeaModel {
         }
 
         /**
-         * <p>The user name for the RamAccount.</p>
+         * <p>The RAM username.</p>
          * 
          * <strong>example:</strong>
          * <p>test-user</p>

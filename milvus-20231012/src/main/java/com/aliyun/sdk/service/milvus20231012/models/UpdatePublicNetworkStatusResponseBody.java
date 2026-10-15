@@ -132,7 +132,7 @@ public class UpdatePublicNetworkStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the access denied error.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</p>
@@ -143,7 +143,7 @@ public class UpdatePublicNetworkStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -198,7 +198,7 @@ public class UpdatePublicNetworkStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

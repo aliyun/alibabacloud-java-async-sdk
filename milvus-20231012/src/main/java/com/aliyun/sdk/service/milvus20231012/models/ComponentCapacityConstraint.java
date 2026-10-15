@@ -80,7 +80,7 @@ public class ComponentCapacityConstraint extends TeaModel {
         } 
 
         /**
-         * componentType.
+         * <p>The component type.</p>
          */
         public Builder componentType(String componentType) {
             this.componentType = componentType;
@@ -88,7 +88,7 @@ public class ComponentCapacityConstraint extends TeaModel {
         }
 
         /**
-         * maxCapacity.
+         * <p>The maximum capacity allowed for the component.</p>
          */
         public Builder maxCapacity(Integer maxCapacity) {
             this.maxCapacity = maxCapacity;
@@ -96,7 +96,7 @@ public class ComponentCapacityConstraint extends TeaModel {
         }
 
         /**
-         * minCapacity.
+         * <p>The minimum capacity allowed for the component.</p>
          */
         public Builder minCapacity(Integer minCapacity) {
             this.minCapacity = minCapacity;

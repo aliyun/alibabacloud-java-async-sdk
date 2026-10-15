@@ -73,7 +73,7 @@ public class ListAclGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-123xxx</p>

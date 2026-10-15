@@ -93,7 +93,7 @@ public class ListAclGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the access denial. Returned only for requests denied due to insufficient RAM permissions.</p>
+         * <p>The details of the access denial. This field is returned only when access is denied due to insufficient RAM permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -104,7 +104,7 @@ public class ListAclGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -244,7 +244,7 @@ public class ListAclGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CIDR blocks in the group.</p>
+             * <p>The CIDR block.</p>
              */
             public Builder cidrs(java.util.List<String> cidrs) {
                 this.cidrs = cidrs;
@@ -252,7 +252,7 @@ public class ListAclGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the group\&quot;s creation.</p>
+             * <p>The creation time in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-10-17T13:53:27Z</p>
@@ -274,7 +274,7 @@ public class ListAclGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The group ID.</p>
+             * <p>The audio ID.</p>
              * 
              * <strong>example:</strong>
              * <p>376774</p>
@@ -296,7 +296,7 @@ public class ListAclGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account. This parameter is read-only.</p>
+             * <p>The ID of the current Alibaba Cloud account. This field is read-only.</p>
              * 
              * <strong>example:</strong>
              * <p>50832118</p>

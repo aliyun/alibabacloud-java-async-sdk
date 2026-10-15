@@ -80,7 +80,7 @@ public class DlfDatabase extends TeaModel {
         } 
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>my_database</p>
@@ -91,7 +91,7 @@ public class DlfDatabase extends TeaModel {
         }
 
         /**
-         * <p>The description of the database.</p>
+         * <p>The database description.</p>
          * 
          * <strong>example:</strong>
          * <p>Test database</p>
@@ -102,7 +102,7 @@ public class DlfDatabase extends TeaModel {
         }
 
         /**
-         * <p>The number of tables in the database. Read-only.</p>
+         * <p>The number of tables.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

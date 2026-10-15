@@ -88,7 +88,7 @@ public class MigrationSource extends TeaModel {
         }
 
         /**
-         * <p>The name of the database to migrate.</p>
+         * <p>The name of the database to be migrated.</p>
          */
         public Builder database(String database) {
             this.database = database;
@@ -279,7 +279,7 @@ public class MigrationSource extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint address of the migration source.</p>
+             * <p>The endpoint of the migration source.</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;

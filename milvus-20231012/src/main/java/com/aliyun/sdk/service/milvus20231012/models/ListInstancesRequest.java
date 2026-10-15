@@ -286,7 +286,7 @@ public class ListInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -297,7 +297,7 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>

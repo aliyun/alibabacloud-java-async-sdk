@@ -132,7 +132,7 @@ public class PromotionInfo extends TeaModel {
         } 
 
         /**
-         * <p>The fee that can be covered by the promotion.</p>
+         * <p>The available discount amount.</p>
          */
         public Builder canPromFee(String canPromFee) {
             this.canPromFee = canPromFee;
@@ -140,7 +140,7 @@ public class PromotionInfo extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the promotion is selected.</p>
+         * <p>Specifies whether the promotion is selected.</p>
          */
         public Builder isSelected(Boolean isSelected) {
             this.isSelected = isSelected;
@@ -148,7 +148,7 @@ public class PromotionInfo extends TeaModel {
         }
 
         /**
-         * <p>The description of the promotion.</p>
+         * <p>The promotion description.</p>
          */
         public Builder promotionDesc(String promotionDesc) {
             this.promotionDesc = promotionDesc;
@@ -156,7 +156,7 @@ public class PromotionInfo extends TeaModel {
         }
 
         /**
-         * <p>The name of the promotion.</p>
+         * <p>The promotion name.</p>
          */
         public Builder promotionName(String promotionName) {
             this.promotionName = promotionName;
@@ -164,7 +164,7 @@ public class PromotionInfo extends TeaModel {
         }
 
         /**
-         * <p>The code of the promotion option.</p>
+         * <p>The promotion option code.</p>
          */
         public Builder promotionOptionCode(String promotionOptionCode) {
             this.promotionOptionCode = promotionOptionCode;
@@ -172,7 +172,7 @@ public class PromotionInfo extends TeaModel {
         }
 
         /**
-         * <p>The number of the promotion option.</p>
+         * <p>The promotion option number.</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.promotionOptionNo = promotionOptionNo;

@@ -80,7 +80,7 @@ public class RamBindingEntry extends TeaModel {
         } 
 
         /**
-         * <p>The unique identifier (UID) of the bound RAM user.</p>
+         * <p>The bound Alibaba Cloud UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
@@ -91,7 +91,7 @@ public class RamBindingEntry extends TeaModel {
         }
 
         /**
-         * <p>The bound RAM username.</p>
+         * <p>The name of the bound RAM user.</p>
          * 
          * <strong>example:</strong>
          * <p>test-user</p>
@@ -102,7 +102,7 @@ public class RamBindingEntry extends TeaModel {
         }
 
         /**
-         * <p>The Milvus username.</p>
+         * <p>The Milvus database username.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>

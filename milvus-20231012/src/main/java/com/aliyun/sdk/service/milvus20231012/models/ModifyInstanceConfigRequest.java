@@ -35,12 +35,17 @@ public class ModifyInstanceConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("UserConfig")
     private String userConfig;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    private ModifyInstanceConfigRequestBody body;
+
     private ModifyInstanceConfigRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.reason = builder.reason;
         this.userConfig = builder.userConfig;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -84,11 +89,19 @@ public class ModifyInstanceConfigRequest extends Request {
         return this.userConfig;
     }
 
+    /**
+     * @return body
+     */
+    public ModifyInstanceConfigRequestBody getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<ModifyInstanceConfigRequest, Builder> {
         private String regionId; 
         private String instanceId; 
         private String reason; 
         private String userConfig; 
+        private ModifyInstanceConfigRequestBody body; 
 
         private Builder() {
             super();
@@ -100,6 +113,7 @@ public class ModifyInstanceConfigRequest extends Request {
             this.instanceId = request.instanceId;
             this.reason = request.reason;
             this.userConfig = request.userConfig;
+            this.body = request.body;
         } 
 
         /**
@@ -138,7 +152,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>The user-defined configuration.</p>
+         * <p>The custom configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>dataCoord:\n  segment:\n    maxSize: 1024</p>
@@ -149,6 +163,16 @@ public class ModifyInstanceConfigRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>Submits the instance configurations to be updated as a JSON object.</p>
+         */
+        public Builder body(ModifyInstanceConfigRequestBody body) {
+            String bodyShrink = shrink(body, "body", "json");
+            this.putBodyParameter("body", bodyShrink);
+            this.body = body;
+            return this;
+        }
+
         @Override
         public ModifyInstanceConfigRequest build() {
             return new ModifyInstanceConfigRequest(this);
@@ -156,4 +180,61 @@ public class ModifyInstanceConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyInstanceConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceConfigRequest</p>
+     */
+    public static class ModifyInstanceConfigRequestBody extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("userConfig")
+        private String userConfig;
+
+        private ModifyInstanceConfigRequestBody(Builder builder) {
+            this.userConfig = builder.userConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModifyInstanceConfigRequestBody create() {
+            return builder().build();
+        }
+
+        /**
+         * @return userConfig
+         */
+        public String getUserConfig() {
+            return this.userConfig;
+        }
+
+        public static final class Builder {
+            private String userConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModifyInstanceConfigRequestBody model) {
+                this.userConfig = model.userConfig;
+            } 
+
+            /**
+             * <p>The configuration content to write to the instance, formatted as a YAML string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataCoord:\n  segment:\n    maxSize: 1024</p>
+             */
+            public Builder userConfig(String userConfig) {
+                this.userConfig = userConfig;
+                return this;
+            }
+
+            public ModifyInstanceConfigRequestBody build() {
+                return new ModifyInstanceConfigRequestBody(this);
+            } 
+
+        } 
+
+    }
 }
